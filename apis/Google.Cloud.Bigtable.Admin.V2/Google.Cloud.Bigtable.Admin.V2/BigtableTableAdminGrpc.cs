@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -34,118 +34,118 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   {
     static readonly string __ServiceName = "google.bigtable.admin.v2.BigtableTableAdmin";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest> __Marshaller_CreateTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Table> __Marshaller_Table = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest> __Marshaller_CreateTableFromSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest> __Marshaller_ListTablesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> __Marshaller_ListTablesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest> __Marshaller_GetTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest> __Marshaller_DeleteTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest> __Marshaller_ModifyColumnFamiliesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest> __Marshaller_DropRowRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest> __Marshaller_GenerateConsistencyTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> __Marshaller_GenerateConsistencyTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest> __Marshaller_CheckConsistencyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> __Marshaller_CheckConsistencyResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest> __Marshaller_SnapshotTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest> __Marshaller_GetSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> __Marshaller_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest> __Marshaller_ListSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> __Marshaller_ListSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest> __Marshaller_DeleteSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest> __Marshaller_google_bigtable_admin_v2_CreateTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Table> __Marshaller_google_bigtable_admin_v2_Table = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest> __Marshaller_google_bigtable_admin_v2_CreateTableFromSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest> __Marshaller_google_bigtable_admin_v2_ListTablesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> __Marshaller_google_bigtable_admin_v2_ListTablesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest> __Marshaller_google_bigtable_admin_v2_GetTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest> __Marshaller_google_bigtable_admin_v2_DeleteTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest> __Marshaller_google_bigtable_admin_v2_ModifyColumnFamiliesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest> __Marshaller_google_bigtable_admin_v2_DropRowRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest> __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest> __Marshaller_google_bigtable_admin_v2_CheckConsistencyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> __Marshaller_google_bigtable_admin_v2_CheckConsistencyResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest> __Marshaller_google_bigtable_admin_v2_SnapshotTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest> __Marshaller_google_bigtable_admin_v2_GetSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> __Marshaller_google_bigtable_admin_v2_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest> __Marshaller_google_bigtable_admin_v2_ListSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> __Marshaller_google_bigtable_admin_v2_ListSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest> __Marshaller_google_bigtable_admin_v2_DeleteSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_CreateTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateTable",
-        __Marshaller_CreateTableRequest,
-        __Marshaller_Table);
+        __Marshaller_google_bigtable_admin_v2_CreateTableRequest,
+        __Marshaller_google_bigtable_admin_v2_Table);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation> __Method_CreateTableFromSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateTableFromSnapshot",
-        __Marshaller_CreateTableFromSnapshotRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_bigtable_admin_v2_CreateTableFromSnapshotRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> __Method_ListTables = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListTables",
-        __Marshaller_ListTablesRequest,
-        __Marshaller_ListTablesResponse);
+        __Marshaller_google_bigtable_admin_v2_ListTablesRequest,
+        __Marshaller_google_bigtable_admin_v2_ListTablesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_GetTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetTable",
-        __Marshaller_GetTableRequest,
-        __Marshaller_Table);
+        __Marshaller_google_bigtable_admin_v2_GetTableRequest,
+        __Marshaller_google_bigtable_admin_v2_Table);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteTable",
-        __Marshaller_DeleteTableRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_bigtable_admin_v2_DeleteTableRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_ModifyColumnFamilies = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ModifyColumnFamilies",
-        __Marshaller_ModifyColumnFamiliesRequest,
-        __Marshaller_Table);
+        __Marshaller_google_bigtable_admin_v2_ModifyColumnFamiliesRequest,
+        __Marshaller_google_bigtable_admin_v2_Table);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DropRowRange = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DropRowRange",
-        __Marshaller_DropRowRangeRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_bigtable_admin_v2_DropRowRangeRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> __Method_GenerateConsistencyToken = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GenerateConsistencyToken",
-        __Marshaller_GenerateConsistencyTokenRequest,
-        __Marshaller_GenerateConsistencyTokenResponse);
+        __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenRequest,
+        __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> __Method_CheckConsistency = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CheckConsistency",
-        __Marshaller_CheckConsistencyRequest,
-        __Marshaller_CheckConsistencyResponse);
+        __Marshaller_google_bigtable_admin_v2_CheckConsistencyRequest,
+        __Marshaller_google_bigtable_admin_v2_CheckConsistencyResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest, global::Google.LongRunning.Operation> __Method_SnapshotTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SnapshotTable",
-        __Marshaller_SnapshotTableRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_bigtable_admin_v2_SnapshotTableRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest, global::Google.Cloud.Bigtable.Admin.V2.Snapshot> __Method_GetSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest, global::Google.Cloud.Bigtable.Admin.V2.Snapshot>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetSnapshot",
-        __Marshaller_GetSnapshotRequest,
-        __Marshaller_Snapshot);
+        __Marshaller_google_bigtable_admin_v2_GetSnapshotRequest,
+        __Marshaller_google_bigtable_admin_v2_Snapshot);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> __Method_ListSnapshots = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListSnapshots",
-        __Marshaller_ListSnapshotsRequest,
-        __Marshaller_ListSnapshotsResponse);
+        __Marshaller_google_bigtable_admin_v2_ListSnapshotsRequest,
+        __Marshaller_google_bigtable_admin_v2_ListSnapshotsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSnapshot",
-        __Marshaller_DeleteSnapshotRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_bigtable_admin_v2_DeleteSnapshotRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -154,6 +154,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     }
 
     /// <summary>Base class for server-side implementations of BigtableTableAdmin</summary>
+    [grpc::BindServiceMethod(typeof(BigtableTableAdmin), "BindService")]
     public abstract partial class BigtableTableAdminBase
     {
       /// <summary>
@@ -1141,6 +1142,27 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_GetSnapshot, serviceImpl.GetSnapshot)
           .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
           .AddMethod(__Method_DeleteSnapshot, serviceImpl.DeleteSnapshot).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, BigtableTableAdminBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(serviceImpl.CreateTable));
+      serviceBinder.AddMethod(__Method_CreateTableFromSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateTableFromSnapshot));
+      serviceBinder.AddMethod(__Method_ListTables, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse>(serviceImpl.ListTables));
+      serviceBinder.AddMethod(__Method_GetTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(serviceImpl.GetTable));
+      serviceBinder.AddMethod(__Method_DeleteTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTable));
+      serviceBinder.AddMethod(__Method_ModifyColumnFamilies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(serviceImpl.ModifyColumnFamilies));
+      serviceBinder.AddMethod(__Method_DropRowRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DropRowRange));
+      serviceBinder.AddMethod(__Method_GenerateConsistencyToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>(serviceImpl.GenerateConsistencyToken));
+      serviceBinder.AddMethod(__Method_CheckConsistency, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse>(serviceImpl.CheckConsistency));
+      serviceBinder.AddMethod(__Method_SnapshotTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest, global::Google.LongRunning.Operation>(serviceImpl.SnapshotTable));
+      serviceBinder.AddMethod(__Method_GetSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest, global::Google.Cloud.Bigtable.Admin.V2.Snapshot>(serviceImpl.GetSnapshot));
+      serviceBinder.AddMethod(__Method_ListSnapshots, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse>(serviceImpl.ListSnapshots));
+      serviceBinder.AddMethod(__Method_DeleteSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSnapshot));
     }
 
   }

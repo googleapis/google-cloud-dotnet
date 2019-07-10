@@ -766,7 +766,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.uptimeCheckConfig_ != null) {
         if (uptimeCheckConfig_ == null) {
-          uptimeCheckConfig_ = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
+          UptimeCheckConfig = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
         }
         UptimeCheckConfig.MergeFrom(other.UptimeCheckConfig);
       }
@@ -787,9 +787,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 18: {
             if (uptimeCheckConfig_ == null) {
-              uptimeCheckConfig_ = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
+              UptimeCheckConfig = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
             }
-            input.ReadMessage(uptimeCheckConfig_);
+            input.ReadMessage(UptimeCheckConfig);
             break;
           }
         }
@@ -948,13 +948,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
       if (other.uptimeCheckConfig_ != null) {
         if (uptimeCheckConfig_ == null) {
-          uptimeCheckConfig_ = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
+          UptimeCheckConfig = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
         }
         UptimeCheckConfig.MergeFrom(other.UptimeCheckConfig);
       }
@@ -971,16 +971,16 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 26: {
             if (uptimeCheckConfig_ == null) {
-              uptimeCheckConfig_ = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
+              UptimeCheckConfig = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig();
             }
-            input.ReadMessage(uptimeCheckConfig_);
+            input.ReadMessage(UptimeCheckConfig);
             break;
           }
         }

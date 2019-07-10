@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,49 +31,49 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.TenantService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest> __Marshaller_CreateTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Tenant> __Marshaller_Tenant = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetTenantRequest> __Marshaller_GetTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetTenantRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest> __Marshaller_UpdateTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest> __Marshaller_DeleteTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest> __Marshaller_ListTenantsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse> __Marshaller_ListTenantsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest> __Marshaller_google_cloud_talent_v4beta1_CreateTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Tenant> __Marshaller_google_cloud_talent_v4beta1_Tenant = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetTenantRequest> __Marshaller_google_cloud_talent_v4beta1_GetTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetTenantRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteTenantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest> __Marshaller_google_cloud_talent_v4beta1_ListTenantsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse> __Marshaller_google_cloud_talent_v4beta1_ListTenantsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant> __Method_CreateTenant = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateTenant",
-        __Marshaller_CreateTenantRequest,
-        __Marshaller_Tenant);
+        __Marshaller_google_cloud_talent_v4beta1_CreateTenantRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Tenant);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant> __Method_GetTenant = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetTenant",
-        __Marshaller_GetTenantRequest,
-        __Marshaller_Tenant);
+        __Marshaller_google_cloud_talent_v4beta1_GetTenantRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Tenant);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant> __Method_UpdateTenant = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateTenant",
-        __Marshaller_UpdateTenantRequest,
-        __Marshaller_Tenant);
+        __Marshaller_google_cloud_talent_v4beta1_UpdateTenantRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Tenant);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTenant = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteTenant",
-        __Marshaller_DeleteTenantRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_talent_v4beta1_DeleteTenantRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest, global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse> __Method_ListTenants = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest, global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListTenants",
-        __Marshaller_ListTenantsRequest,
-        __Marshaller_ListTenantsResponse);
+        __Marshaller_google_cloud_talent_v4beta1_ListTenantsRequest,
+        __Marshaller_google_cloud_talent_v4beta1_ListTenantsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -82,6 +82,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of TenantService</summary>
+    [grpc::BindServiceMethod(typeof(TenantService), "BindService")]
     public abstract partial class TenantServiceBase
     {
       /// <summary>
@@ -401,6 +402,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
           .AddMethod(__Method_UpdateTenant, serviceImpl.UpdateTenant)
           .AddMethod(__Method_DeleteTenant, serviceImpl.DeleteTenant)
           .AddMethod(__Method_ListTenants, serviceImpl.ListTenants).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, TenantServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateTenant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant>(serviceImpl.CreateTenant));
+      serviceBinder.AddMethod(__Method_GetTenant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.GetTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant>(serviceImpl.GetTenant));
+      serviceBinder.AddMethod(__Method_UpdateTenant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest, global::Google.Cloud.Talent.V4Beta1.Tenant>(serviceImpl.UpdateTenant));
+      serviceBinder.AddMethod(__Method_DeleteTenant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTenant));
+      serviceBinder.AddMethod(__Method_ListTenants, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest, global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse>(serviceImpl.ListTenants));
     }
 
   }

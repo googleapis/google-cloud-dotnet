@@ -482,7 +482,7 @@ namespace Google.Cloud.Iam.V1 {
       members_.Add(other.members_);
       if (other.condition_ != null) {
         if (condition_ == null) {
-          condition_ = new global::Google.Type.Expr();
+          Condition = new global::Google.Type.Expr();
         }
         Condition.MergeFrom(other.Condition);
       }
@@ -507,9 +507,9 @@ namespace Google.Cloud.Iam.V1 {
           }
           case 26: {
             if (condition_ == null) {
-              condition_ = new global::Google.Type.Expr();
+              Condition = new global::Google.Type.Expr();
             }
-            input.ReadMessage(condition_);
+            input.ReadMessage(Condition);
             break;
           }
         }
@@ -869,7 +869,7 @@ namespace Google.Cloud.Iam.V1 {
       }
       if (other.condition_ != null) {
         if (condition_ == null) {
-          condition_ = new global::Google.Type.Expr();
+          Condition = new global::Google.Type.Expr();
         }
         Condition.MergeFrom(other.Condition);
       }
@@ -885,7 +885,7 @@ namespace Google.Cloud.Iam.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            action_ = (global::Google.Cloud.Iam.V1.BindingDelta.Types.Action) input.ReadEnum();
+            Action = (global::Google.Cloud.Iam.V1.BindingDelta.Types.Action) input.ReadEnum();
             break;
           }
           case 18: {
@@ -898,9 +898,9 @@ namespace Google.Cloud.Iam.V1 {
           }
           case 34: {
             if (condition_ == null) {
-              condition_ = new global::Google.Type.Expr();
+              Condition = new global::Google.Type.Expr();
             }
-            input.ReadMessage(condition_);
+            input.ReadMessage(Condition);
             break;
           }
         }
@@ -1150,7 +1150,7 @@ namespace Google.Cloud.Iam.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            action_ = (global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action) input.ReadEnum();
+            Action = (global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action) input.ReadEnum();
             break;
           }
           case 18: {

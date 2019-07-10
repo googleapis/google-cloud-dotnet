@@ -462,7 +462,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.incident_ != null) {
         if (incident_ == null) {
-          incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+          Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
         }
         Incident.MergeFrom(other.Incident);
       }
@@ -482,9 +482,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           case 10: {
             if (incident_ == null) {
-              incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+              Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
             }
-            input.ReadMessage(incident_);
+            input.ReadMessage(Incident);
             break;
           }
           case 18: {
@@ -770,13 +770,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.incident_ != null) {
         if (incident_ == null) {
-          incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+          Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
         }
         Incident.MergeFrom(other.Incident);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -793,16 +793,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           case 10: {
             if (incident_ == null) {
-              incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+              Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
             }
-            input.ReadMessage(incident_);
+            input.ReadMessage(Incident);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -1284,7 +1284,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           if (other.incident_ != null) {
             if (incident_ == null) {
-              incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+              Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
             }
             Incident.MergeFrom(other.Incident);
           }
@@ -1301,9 +1301,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
                 break;
               case 10: {
                 if (incident_ == null) {
-                  incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+                  Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
                 }
-                input.ReadMessage(incident_);
+                input.ReadMessage(Incident);
                 break;
               }
             }
@@ -1458,7 +1458,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.annotation_ != null) {
         if (annotation_ == null) {
-          annotation_ = new global::Google.Cloud.Irm.V1Alpha2.Annotation();
+          Annotation = new global::Google.Cloud.Irm.V1Alpha2.Annotation();
         }
         Annotation.MergeFrom(other.Annotation);
       }
@@ -1479,9 +1479,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (annotation_ == null) {
-              annotation_ = new global::Google.Cloud.Irm.V1Alpha2.Annotation();
+              Annotation = new global::Google.Cloud.Irm.V1Alpha2.Annotation();
             }
-            input.ReadMessage(annotation_);
+            input.ReadMessage(Annotation);
             break;
           }
         }
@@ -1987,7 +1987,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.tag_ != null) {
         if (tag_ == null) {
-          tag_ = new global::Google.Cloud.Irm.V1Alpha2.Tag();
+          Tag = new global::Google.Cloud.Irm.V1Alpha2.Tag();
         }
         Tag.MergeFrom(other.Tag);
       }
@@ -2008,9 +2008,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (tag_ == null) {
-              tag_ = new global::Google.Cloud.Irm.V1Alpha2.Tag();
+              Tag = new global::Google.Cloud.Irm.V1Alpha2.Tag();
             }
-            input.ReadMessage(tag_);
+            input.ReadMessage(Tag);
             break;
           }
         }
@@ -2651,7 +2651,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.signal_ != null) {
         if (signal_ == null) {
-          signal_ = new global::Google.Cloud.Irm.V1Alpha2.Signal();
+          Signal = new global::Google.Cloud.Irm.V1Alpha2.Signal();
         }
         Signal.MergeFrom(other.Signal);
       }
@@ -2672,9 +2672,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (signal_ == null) {
-              signal_ = new global::Google.Cloud.Irm.V1Alpha2.Signal();
+              Signal = new global::Google.Cloud.Irm.V1Alpha2.Signal();
             }
-            input.ReadMessage(signal_);
+            input.ReadMessage(Signal);
             break;
           }
         }
@@ -3600,13 +3600,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.signal_ != null) {
         if (signal_ == null) {
-          signal_ = new global::Google.Cloud.Irm.V1Alpha2.Signal();
+          Signal = new global::Google.Cloud.Irm.V1Alpha2.Signal();
         }
         Signal.MergeFrom(other.Signal);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -3623,16 +3623,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           case 10: {
             if (signal_ == null) {
-              signal_ = new global::Google.Cloud.Irm.V1Alpha2.Signal();
+              Signal = new global::Google.Cloud.Irm.V1Alpha2.Signal();
             }
-            input.ReadMessage(signal_);
+            input.ReadMessage(Signal);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -4323,13 +4323,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.incident_ != null) {
         if (incident_ == null) {
-          incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+          Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
         }
         Incident.MergeFrom(other.Incident);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -4350,16 +4350,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           case 10: {
             if (incident_ == null) {
-              incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+              Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
             }
-            input.ReadMessage(incident_);
+            input.ReadMessage(Incident);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 26: {
@@ -4569,7 +4569,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.incident_ != null) {
         if (incident_ == null) {
-          incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+          Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
         }
         Incident.MergeFrom(other.Incident);
       }
@@ -4590,9 +4590,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           case 10: {
             if (incident_ == null) {
-              incident_ = new global::Google.Cloud.Irm.V1Alpha2.Incident();
+              Incident = new global::Google.Cloud.Irm.V1Alpha2.Incident();
             }
-            input.ReadMessage(incident_);
+            input.ReadMessage(Incident);
             break;
           }
           case 18: {
@@ -4758,7 +4758,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.artifact_ != null) {
         if (artifact_ == null) {
-          artifact_ = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
+          Artifact = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
         }
         Artifact.MergeFrom(other.Artifact);
       }
@@ -4779,9 +4779,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (artifact_ == null) {
-              artifact_ = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
+              Artifact = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
             }
-            input.ReadMessage(artifact_);
+            input.ReadMessage(Artifact);
             break;
           }
         }
@@ -5283,13 +5283,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.artifact_ != null) {
         if (artifact_ == null) {
-          artifact_ = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
+          Artifact = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
         }
         Artifact.MergeFrom(other.Artifact);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -5306,16 +5306,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           case 10: {
             if (artifact_ == null) {
-              artifact_ = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
+              Artifact = new global::Google.Cloud.Irm.V1Alpha2.Artifact();
             }
-            input.ReadMessage(artifact_);
+            input.ReadMessage(Artifact);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -6244,7 +6244,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.subscription_ != null) {
         if (subscription_ == null) {
-          subscription_ = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
+          Subscription = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
         }
         Subscription.MergeFrom(other.Subscription);
       }
@@ -6265,9 +6265,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (subscription_ == null) {
-              subscription_ = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
+              Subscription = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
             }
-            input.ReadMessage(subscription_);
+            input.ReadMessage(Subscription);
             break;
           }
         }
@@ -6413,13 +6413,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.subscription_ != null) {
         if (subscription_ == null) {
-          subscription_ = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
+          Subscription = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
         }
         Subscription.MergeFrom(other.Subscription);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -6436,16 +6436,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           case 10: {
             if (subscription_ == null) {
-              subscription_ = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
+              Subscription = new global::Google.Cloud.Irm.V1Alpha2.Subscription();
             }
-            input.ReadMessage(subscription_);
+            input.ReadMessage(Subscription);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -7086,7 +7086,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.incidentRoleAssignment_ != null) {
         if (incidentRoleAssignment_ == null) {
-          incidentRoleAssignment_ = new global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment();
+          IncidentRoleAssignment = new global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment();
         }
         IncidentRoleAssignment.MergeFrom(other.IncidentRoleAssignment);
       }
@@ -7107,9 +7107,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (incidentRoleAssignment_ == null) {
-              incidentRoleAssignment_ = new global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment();
+              IncidentRoleAssignment = new global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment();
             }
-            input.ReadMessage(incidentRoleAssignment_);
+            input.ReadMessage(IncidentRoleAssignment);
             break;
           }
         }
@@ -7749,7 +7749,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.newAssignee_ != null) {
         if (newAssignee_ == null) {
-          newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         NewAssignee.MergeFrom(other.NewAssignee);
       }
@@ -7770,9 +7770,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (newAssignee_ == null) {
-              newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(newAssignee_);
+            input.ReadMessage(NewAssignee);
             break;
           }
         }
@@ -7922,7 +7922,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.newAssignee_ != null) {
         if (newAssignee_ == null) {
-          newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         NewAssignee.MergeFrom(other.NewAssignee);
       }
@@ -7943,9 +7943,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (newAssignee_ == null) {
-              newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(newAssignee_);
+            input.ReadMessage(NewAssignee);
             break;
           }
         }
@@ -8095,7 +8095,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.newAssignee_ != null) {
         if (newAssignee_ == null) {
-          newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         NewAssignee.MergeFrom(other.NewAssignee);
       }
@@ -8116,9 +8116,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (newAssignee_ == null) {
-              newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(newAssignee_);
+            input.ReadMessage(NewAssignee);
             break;
           }
         }
@@ -8269,7 +8269,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.newAssignee_ != null) {
         if (newAssignee_ == null) {
-          newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         NewAssignee.MergeFrom(other.NewAssignee);
       }
@@ -8290,9 +8290,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (newAssignee_ == null) {
-              newAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              NewAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(newAssignee_);
+            input.ReadMessage(NewAssignee);
             break;
           }
         }

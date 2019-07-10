@@ -425,19 +425,19 @@ namespace Google.Cloud.SecurityCenter.V1 {
       sourceProperties_.Add(other.sourceProperties_);
       if (other.securityMarks_ != null) {
         if (securityMarks_ == null) {
-          securityMarks_ = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
+          SecurityMarks = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
         }
         SecurityMarks.MergeFrom(other.SecurityMarks);
       }
       if (other.eventTime_ != null) {
         if (eventTime_ == null) {
-          eventTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EventTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EventTime.MergeFrom(other.EventTime);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
@@ -465,7 +465,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             break;
           }
           case 32: {
-            state_ = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.State) input.ReadEnum();
             break;
           }
           case 42: {
@@ -482,23 +482,23 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 66: {
             if (securityMarks_ == null) {
-              securityMarks_ = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
+              SecurityMarks = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
             }
-            input.ReadMessage(securityMarks_);
+            input.ReadMessage(SecurityMarks);
             break;
           }
           case 74: {
             if (eventTime_ == null) {
-              eventTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EventTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(eventTime_);
+            input.ReadMessage(EventTime);
             break;
           }
           case 82: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
         }

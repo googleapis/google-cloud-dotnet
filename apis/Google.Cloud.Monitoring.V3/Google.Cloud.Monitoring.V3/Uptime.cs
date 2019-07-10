@@ -865,13 +865,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.period_ != null) {
         if (period_ == null) {
-          period_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          Period = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Period.MergeFrom(other.Period);
       }
       if (other.timeout_ != null) {
         if (timeout_ == null) {
-          timeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Timeout.MergeFrom(other.Timeout);
       }
@@ -968,16 +968,16 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 58: {
             if (period_ == null) {
-              period_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              Period = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(period_);
+            input.ReadMessage(Period);
             break;
           }
           case 66: {
             if (timeout_ == null) {
-              timeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timeout_);
+            input.ReadMessage(Timeout);
             break;
           }
           case 74: {
@@ -1164,7 +1164,7 @@ namespace Google.Cloud.Monitoring.V3 {
                 break;
               }
               case 16: {
-                resourceType_ = (global::Google.Cloud.Monitoring.V3.GroupResourceType) input.ReadEnum();
+                ResourceType = (global::Google.Cloud.Monitoring.V3.GroupResourceType) input.ReadEnum();
                 break;
               }
             }
@@ -1426,7 +1426,7 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (other.authInfo_ != null) {
             if (authInfo_ == null) {
-              authInfo_ = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication();
+              AuthInfo = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication();
             }
             AuthInfo.MergeFrom(other.AuthInfo);
           }
@@ -1459,9 +1459,9 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               case 34: {
                 if (authInfo_ == null) {
-                  authInfo_ = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication();
+                  AuthInfo = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication();
                 }
-                input.ReadMessage(authInfo_);
+                input.ReadMessage(AuthInfo);
                 break;
               }
               case 40: {
@@ -2118,7 +2118,7 @@ namespace Google.Cloud.Monitoring.V3 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            region_ = (global::Google.Cloud.Monitoring.V3.UptimeCheckRegion) input.ReadEnum();
+            Region = (global::Google.Cloud.Monitoring.V3.UptimeCheckRegion) input.ReadEnum();
             break;
           }
           case 18: {

@@ -325,7 +325,7 @@ namespace Grafeas.V1 {
       }
       if (other.provenance_ != null) {
         if (provenance_ == null) {
-          provenance_ = new global::Grafeas.V1.BuildProvenance();
+          Provenance = new global::Grafeas.V1.BuildProvenance();
         }
         Provenance.MergeFrom(other.Provenance);
       }
@@ -345,9 +345,9 @@ namespace Grafeas.V1 {
             break;
           case 10: {
             if (provenance_ == null) {
-              provenance_ = new global::Grafeas.V1.BuildProvenance();
+              Provenance = new global::Grafeas.V1.BuildProvenance();
             }
-            input.ReadMessage(provenance_);
+            input.ReadMessage(Provenance);
             break;
           }
           case 18: {

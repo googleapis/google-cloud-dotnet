@@ -311,13 +311,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -334,16 +334,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 24: {
@@ -821,7 +821,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.params_ != null) {
         if (params_ == null) {
-          params_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Params = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Params.MergeFrom(other.Params);
       }
@@ -830,7 +830,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.scheduleOptions_ != null) {
         if (scheduleOptions_ == null) {
-          scheduleOptions_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
+          ScheduleOptions = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
         }
         ScheduleOptions.MergeFrom(other.ScheduleOptions);
       }
@@ -842,13 +842,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.nextRunTime_ != null) {
         if (nextRunTime_ == null) {
-          nextRunTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          NextRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         NextRunTime.MergeFrom(other.NextRunTime);
       }
@@ -886,9 +886,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 34: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 42: {
@@ -901,20 +901,20 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 66: {
             if (nextRunTime_ == null) {
-              nextRunTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              NextRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(nextRunTime_);
+            input.ReadMessage(NextRunTime);
             break;
           }
           case 74: {
             if (params_ == null) {
-              params_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Params = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(params_);
+            input.ReadMessage(Params);
             break;
           }
           case 80: {
-            state_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState) input.ReadEnum();
+            State = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState) input.ReadEnum();
             break;
           }
           case 88: {
@@ -935,9 +935,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 194: {
             if (scheduleOptions_ == null) {
-              scheduleOptions_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
+              ScheduleOptions = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
             }
-            input.ReadMessage(scheduleOptions_);
+            input.ReadMessage(ScheduleOptions);
             break;
           }
         }
@@ -1360,43 +1360,43 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.scheduleTime_ != null) {
         if (scheduleTime_ == null) {
-          scheduleTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ScheduleTime.MergeFrom(other.ScheduleTime);
       }
       if (other.runTime_ != null) {
         if (runTime_ == null) {
-          runTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          RunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         RunTime.MergeFrom(other.RunTime);
       }
       if (other.errorStatus_ != null) {
         if (errorStatus_ == null) {
-          errorStatus_ = new global::Google.Rpc.Status();
+          ErrorStatus = new global::Google.Rpc.Status();
         }
         ErrorStatus.MergeFrom(other.ErrorStatus);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.params_ != null) {
         if (params_ == null) {
-          params_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Params = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Params.MergeFrom(other.Params);
       }
@@ -1436,30 +1436,30 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 26: {
             if (scheduleTime_ == null) {
-              scheduleTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(scheduleTime_);
+            input.ReadMessage(ScheduleTime);
             break;
           }
           case 34: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 42: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 50: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 58: {
@@ -1467,21 +1467,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           }
           case 64: {
-            state_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState) input.ReadEnum();
+            State = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState) input.ReadEnum();
             break;
           }
           case 74: {
             if (params_ == null) {
-              params_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Params = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(params_);
+            input.ReadMessage(Params);
             break;
           }
           case 82: {
             if (runTime_ == null) {
-              runTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              RunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(runTime_);
+            input.ReadMessage(RunTime);
             break;
           }
           case 88: {
@@ -1494,9 +1494,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 170: {
             if (errorStatus_ == null) {
-              errorStatus_ = new global::Google.Rpc.Status();
+              ErrorStatus = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(errorStatus_);
+            input.ReadMessage(ErrorStatus);
             break;
           }
         }
@@ -1666,7 +1666,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.messageTime_ != null) {
         if (messageTime_ == null) {
-          messageTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          MessageTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         MessageTime.MergeFrom(other.MessageTime);
       }
@@ -1689,13 +1689,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           case 10: {
             if (messageTime_ == null) {
-              messageTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              MessageTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(messageTime_);
+            input.ReadMessage(MessageTime);
             break;
           }
           case 16: {
-            severity_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) input.ReadEnum();
+            Severity = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) input.ReadEnum();
             break;
           }
           case 26: {

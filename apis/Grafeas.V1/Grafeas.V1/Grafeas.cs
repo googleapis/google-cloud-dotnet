@@ -660,13 +660,13 @@ namespace Grafeas.V1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
@@ -739,7 +739,7 @@ namespace Grafeas.V1 {
             break;
           }
           case 32: {
-            kind_ = (global::Grafeas.V1.NoteKind) input.ReadEnum();
+            Kind = (global::Grafeas.V1.NoteKind) input.ReadEnum();
             break;
           }
           case 42: {
@@ -748,16 +748,16 @@ namespace Grafeas.V1 {
           }
           case 50: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 58: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 66: {
@@ -1350,19 +1350,19 @@ namespace Grafeas.V1 {
       relatedUrl_.Add(other.relatedUrl_);
       if (other.expirationTime_ != null) {
         if (expirationTime_ == null) {
-          expirationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ExpirationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ExpirationTime.MergeFrom(other.ExpirationTime);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
@@ -1436,7 +1436,7 @@ namespace Grafeas.V1 {
             break;
           }
           case 32: {
-            kind_ = (global::Grafeas.V1.NoteKind) input.ReadEnum();
+            Kind = (global::Grafeas.V1.NoteKind) input.ReadEnum();
             break;
           }
           case 42: {
@@ -1445,23 +1445,23 @@ namespace Grafeas.V1 {
           }
           case 50: {
             if (expirationTime_ == null) {
-              expirationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ExpirationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(expirationTime_);
+            input.ReadMessage(ExpirationTime);
             break;
           }
           case 58: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 66: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 74: {
@@ -2340,7 +2340,7 @@ namespace Grafeas.V1 {
       }
       if (other.occurrence_ != null) {
         if (occurrence_ == null) {
-          occurrence_ = new global::Grafeas.V1.Occurrence();
+          Occurrence = new global::Grafeas.V1.Occurrence();
         }
         Occurrence.MergeFrom(other.Occurrence);
       }
@@ -2361,9 +2361,9 @@ namespace Grafeas.V1 {
           }
           case 18: {
             if (occurrence_ == null) {
-              occurrence_ = new global::Grafeas.V1.Occurrence();
+              Occurrence = new global::Grafeas.V1.Occurrence();
             }
-            input.ReadMessage(occurrence_);
+            input.ReadMessage(Occurrence);
             break;
           }
         }
@@ -2537,13 +2537,13 @@ namespace Grafeas.V1 {
       }
       if (other.occurrence_ != null) {
         if (occurrence_ == null) {
-          occurrence_ = new global::Grafeas.V1.Occurrence();
+          Occurrence = new global::Grafeas.V1.Occurrence();
         }
         Occurrence.MergeFrom(other.Occurrence);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -2564,16 +2564,16 @@ namespace Grafeas.V1 {
           }
           case 18: {
             if (occurrence_ == null) {
-              occurrence_ = new global::Grafeas.V1.Occurrence();
+              Occurrence = new global::Grafeas.V1.Occurrence();
             }
-            input.ReadMessage(occurrence_);
+            input.ReadMessage(Occurrence);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -3548,7 +3548,7 @@ namespace Grafeas.V1 {
       }
       if (other.note_ != null) {
         if (note_ == null) {
-          note_ = new global::Grafeas.V1.Note();
+          Note = new global::Grafeas.V1.Note();
         }
         Note.MergeFrom(other.Note);
       }
@@ -3573,9 +3573,9 @@ namespace Grafeas.V1 {
           }
           case 26: {
             if (note_ == null) {
-              note_ = new global::Grafeas.V1.Note();
+              Note = new global::Grafeas.V1.Note();
             }
-            input.ReadMessage(note_);
+            input.ReadMessage(Note);
             break;
           }
         }
@@ -3749,13 +3749,13 @@ namespace Grafeas.V1 {
       }
       if (other.note_ != null) {
         if (note_ == null) {
-          note_ = new global::Grafeas.V1.Note();
+          Note = new global::Grafeas.V1.Note();
         }
         Note.MergeFrom(other.Note);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -3776,16 +3776,16 @@ namespace Grafeas.V1 {
           }
           case 18: {
             if (note_ == null) {
-              note_ = new global::Grafeas.V1.Note();
+              Note = new global::Grafeas.V1.Note();
             }
-            input.ReadMessage(note_);
+            input.ReadMessage(Note);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

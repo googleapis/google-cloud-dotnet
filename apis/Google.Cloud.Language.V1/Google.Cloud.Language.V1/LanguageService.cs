@@ -527,7 +527,7 @@ namespace Google.Cloud.Language.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Google.Cloud.Language.V1.Document.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.Language.V1.Document.Types.Type) input.ReadEnum();
             break;
           }
           case 18: {
@@ -712,13 +712,13 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.text_ != null) {
         if (text_ == null) {
-          text_ = new global::Google.Cloud.Language.V1.TextSpan();
+          Text = new global::Google.Cloud.Language.V1.TextSpan();
         }
         Text.MergeFrom(other.Text);
       }
       if (other.sentiment_ != null) {
         if (sentiment_ == null) {
-          sentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+          Sentiment = new global::Google.Cloud.Language.V1.Sentiment();
         }
         Sentiment.MergeFrom(other.Sentiment);
       }
@@ -735,16 +735,16 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (text_ == null) {
-              text_ = new global::Google.Cloud.Language.V1.TextSpan();
+              Text = new global::Google.Cloud.Language.V1.TextSpan();
             }
-            input.ReadMessage(text_);
+            input.ReadMessage(Text);
             break;
           }
           case 18: {
             if (sentiment_ == null) {
-              sentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+              Sentiment = new global::Google.Cloud.Language.V1.Sentiment();
             }
-            input.ReadMessage(sentiment_);
+            input.ReadMessage(Sentiment);
             break;
           }
         }
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Language.V1 {
       mentions_.Add(other.mentions_);
       if (other.sentiment_ != null) {
         if (sentiment_ == null) {
-          sentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+          Sentiment = new global::Google.Cloud.Language.V1.Sentiment();
         }
         Sentiment.MergeFrom(other.Sentiment);
       }
@@ -1020,7 +1020,7 @@ namespace Google.Cloud.Language.V1 {
             break;
           }
           case 16: {
-            type_ = (global::Google.Cloud.Language.V1.Entity.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.Language.V1.Entity.Types.Type) input.ReadEnum();
             break;
           }
           case 26: {
@@ -1037,9 +1037,9 @@ namespace Google.Cloud.Language.V1 {
           }
           case 50: {
             if (sentiment_ == null) {
-              sentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+              Sentiment = new global::Google.Cloud.Language.V1.Sentiment();
             }
-            input.ReadMessage(sentiment_);
+            input.ReadMessage(Sentiment);
             break;
           }
         }
@@ -1326,19 +1326,19 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.text_ != null) {
         if (text_ == null) {
-          text_ = new global::Google.Cloud.Language.V1.TextSpan();
+          Text = new global::Google.Cloud.Language.V1.TextSpan();
         }
         Text.MergeFrom(other.Text);
       }
       if (other.partOfSpeech_ != null) {
         if (partOfSpeech_ == null) {
-          partOfSpeech_ = new global::Google.Cloud.Language.V1.PartOfSpeech();
+          PartOfSpeech = new global::Google.Cloud.Language.V1.PartOfSpeech();
         }
         PartOfSpeech.MergeFrom(other.PartOfSpeech);
       }
       if (other.dependencyEdge_ != null) {
         if (dependencyEdge_ == null) {
-          dependencyEdge_ = new global::Google.Cloud.Language.V1.DependencyEdge();
+          DependencyEdge = new global::Google.Cloud.Language.V1.DependencyEdge();
         }
         DependencyEdge.MergeFrom(other.DependencyEdge);
       }
@@ -1358,23 +1358,23 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (text_ == null) {
-              text_ = new global::Google.Cloud.Language.V1.TextSpan();
+              Text = new global::Google.Cloud.Language.V1.TextSpan();
             }
-            input.ReadMessage(text_);
+            input.ReadMessage(Text);
             break;
           }
           case 18: {
             if (partOfSpeech_ == null) {
-              partOfSpeech_ = new global::Google.Cloud.Language.V1.PartOfSpeech();
+              PartOfSpeech = new global::Google.Cloud.Language.V1.PartOfSpeech();
             }
-            input.ReadMessage(partOfSpeech_);
+            input.ReadMessage(PartOfSpeech);
             break;
           }
           case 26: {
             if (dependencyEdge_ == null) {
-              dependencyEdge_ = new global::Google.Cloud.Language.V1.DependencyEdge();
+              DependencyEdge = new global::Google.Cloud.Language.V1.DependencyEdge();
             }
-            input.ReadMessage(dependencyEdge_);
+            input.ReadMessage(DependencyEdge);
             break;
           }
           case 34: {
@@ -1982,51 +1982,51 @@ namespace Google.Cloud.Language.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            tag_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag) input.ReadEnum();
+            Tag = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag) input.ReadEnum();
             break;
           }
           case 16: {
-            aspect_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect) input.ReadEnum();
+            Aspect = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect) input.ReadEnum();
             break;
           }
           case 24: {
-            case_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case) input.ReadEnum();
+            Case = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case) input.ReadEnum();
             break;
           }
           case 32: {
-            form_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form) input.ReadEnum();
+            Form = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form) input.ReadEnum();
             break;
           }
           case 40: {
-            gender_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender) input.ReadEnum();
+            Gender = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender) input.ReadEnum();
             break;
           }
           case 48: {
-            mood_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood) input.ReadEnum();
+            Mood = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood) input.ReadEnum();
             break;
           }
           case 56: {
-            number_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number) input.ReadEnum();
+            Number = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number) input.ReadEnum();
             break;
           }
           case 64: {
-            person_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person) input.ReadEnum();
+            Person = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person) input.ReadEnum();
             break;
           }
           case 72: {
-            proper_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper) input.ReadEnum();
+            Proper = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper) input.ReadEnum();
             break;
           }
           case 80: {
-            reciprocity_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity) input.ReadEnum();
+            Reciprocity = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity) input.ReadEnum();
             break;
           }
           case 88: {
-            tense_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense) input.ReadEnum();
+            Tense = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense) input.ReadEnum();
             break;
           }
           case 96: {
-            voice_ = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice) input.ReadEnum();
+            Voice = (global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice) input.ReadEnum();
             break;
           }
         }
@@ -2612,7 +2612,7 @@ namespace Google.Cloud.Language.V1 {
             break;
           }
           case 16: {
-            label_ = (global::Google.Cloud.Language.V1.DependencyEdge.Types.Label) input.ReadEnum();
+            Label = (global::Google.Cloud.Language.V1.DependencyEdge.Types.Label) input.ReadEnum();
             break;
           }
         }
@@ -3131,7 +3131,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.text_ != null) {
         if (text_ == null) {
-          text_ = new global::Google.Cloud.Language.V1.TextSpan();
+          Text = new global::Google.Cloud.Language.V1.TextSpan();
         }
         Text.MergeFrom(other.Text);
       }
@@ -3140,7 +3140,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.sentiment_ != null) {
         if (sentiment_ == null) {
-          sentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+          Sentiment = new global::Google.Cloud.Language.V1.Sentiment();
         }
         Sentiment.MergeFrom(other.Sentiment);
       }
@@ -3157,20 +3157,20 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (text_ == null) {
-              text_ = new global::Google.Cloud.Language.V1.TextSpan();
+              Text = new global::Google.Cloud.Language.V1.TextSpan();
             }
-            input.ReadMessage(text_);
+            input.ReadMessage(Text);
             break;
           }
           case 16: {
-            type_ = (global::Google.Cloud.Language.V1.EntityMention.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.Language.V1.EntityMention.Types.Type) input.ReadEnum();
             break;
           }
           case 26: {
             if (sentiment_ == null) {
-              sentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+              Sentiment = new global::Google.Cloud.Language.V1.Sentiment();
             }
-            input.ReadMessage(sentiment_);
+            input.ReadMessage(Sentiment);
             break;
           }
         }
@@ -3676,7 +3676,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Google.Cloud.Language.V1.Document();
+          Document = new global::Google.Cloud.Language.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -3696,13 +3696,13 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Google.Cloud.Language.V1.Document();
+              Document = new global::Google.Cloud.Language.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 16: {
-            encodingType_ = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
+            EncodingType = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
             break;
           }
         }
@@ -3868,7 +3868,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.documentSentiment_ != null) {
         if (documentSentiment_ == null) {
-          documentSentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+          DocumentSentiment = new global::Google.Cloud.Language.V1.Sentiment();
         }
         DocumentSentiment.MergeFrom(other.DocumentSentiment);
       }
@@ -3889,9 +3889,9 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (documentSentiment_ == null) {
-              documentSentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+              DocumentSentiment = new global::Google.Cloud.Language.V1.Sentiment();
             }
-            input.ReadMessage(documentSentiment_);
+            input.ReadMessage(DocumentSentiment);
             break;
           }
           case 18: {
@@ -4045,7 +4045,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Google.Cloud.Language.V1.Document();
+          Document = new global::Google.Cloud.Language.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -4065,13 +4065,13 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Google.Cloud.Language.V1.Document();
+              Document = new global::Google.Cloud.Language.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 16: {
-            encodingType_ = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
+            EncodingType = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
             break;
           }
         }
@@ -4377,7 +4377,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Google.Cloud.Language.V1.Document();
+          Document = new global::Google.Cloud.Language.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -4397,13 +4397,13 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Google.Cloud.Language.V1.Document();
+              Document = new global::Google.Cloud.Language.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 16: {
-            encodingType_ = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
+            EncodingType = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
             break;
           }
         }
@@ -4709,7 +4709,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Google.Cloud.Language.V1.Document();
+          Document = new global::Google.Cloud.Language.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -4729,13 +4729,13 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Google.Cloud.Language.V1.Document();
+              Document = new global::Google.Cloud.Language.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 16: {
-            encodingType_ = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
+            EncodingType = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
             break;
           }
         }
@@ -5040,7 +5040,7 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Google.Cloud.Language.V1.Document();
+          Document = new global::Google.Cloud.Language.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -5057,9 +5057,9 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Google.Cloud.Language.V1.Document();
+              Document = new global::Google.Cloud.Language.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
         }
@@ -5357,13 +5357,13 @@ namespace Google.Cloud.Language.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Google.Cloud.Language.V1.Document();
+          Document = new global::Google.Cloud.Language.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
       if (other.features_ != null) {
         if (features_ == null) {
-          features_ = new global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features();
+          Features = new global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features();
         }
         Features.MergeFrom(other.Features);
       }
@@ -5383,20 +5383,20 @@ namespace Google.Cloud.Language.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Google.Cloud.Language.V1.Document();
+              Document = new global::Google.Cloud.Language.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 18: {
             if (features_ == null) {
-              features_ = new global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features();
+              Features = new global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features();
             }
-            input.ReadMessage(features_);
+            input.ReadMessage(Features);
             break;
           }
           case 24: {
-            encodingType_ = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
+            EncodingType = (global::Google.Cloud.Language.V1.EncodingType) input.ReadEnum();
             break;
           }
         }
@@ -5892,7 +5892,7 @@ namespace Google.Cloud.Language.V1 {
       entities_.Add(other.entities_);
       if (other.documentSentiment_ != null) {
         if (documentSentiment_ == null) {
-          documentSentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+          DocumentSentiment = new global::Google.Cloud.Language.V1.Sentiment();
         }
         DocumentSentiment.MergeFrom(other.DocumentSentiment);
       }
@@ -5925,9 +5925,9 @@ namespace Google.Cloud.Language.V1 {
           }
           case 34: {
             if (documentSentiment_ == null) {
-              documentSentiment_ = new global::Google.Cloud.Language.V1.Sentiment();
+              DocumentSentiment = new global::Google.Cloud.Language.V1.Sentiment();
             }
-            input.ReadMessage(documentSentiment_);
+            input.ReadMessage(DocumentSentiment);
             break;
           }
           case 42: {

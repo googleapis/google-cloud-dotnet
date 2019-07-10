@@ -553,7 +553,7 @@ namespace Grafeas.V1 {
       }
       if (other.fingerprint_ != null) {
         if (fingerprint_ == null) {
-          fingerprint_ = new global::Grafeas.V1.Fingerprint();
+          Fingerprint = new global::Grafeas.V1.Fingerprint();
         }
         Fingerprint.MergeFrom(other.Fingerprint);
       }
@@ -574,9 +574,9 @@ namespace Grafeas.V1 {
           }
           case 18: {
             if (fingerprint_ == null) {
-              fingerprint_ = new global::Grafeas.V1.Fingerprint();
+              Fingerprint = new global::Grafeas.V1.Fingerprint();
             }
-            input.ReadMessage(fingerprint_);
+            input.ReadMessage(Fingerprint);
             break;
           }
         }
@@ -770,7 +770,7 @@ namespace Grafeas.V1 {
       }
       if (other.fingerprint_ != null) {
         if (fingerprint_ == null) {
-          fingerprint_ = new global::Grafeas.V1.Fingerprint();
+          Fingerprint = new global::Grafeas.V1.Fingerprint();
         }
         Fingerprint.MergeFrom(other.Fingerprint);
       }
@@ -794,9 +794,9 @@ namespace Grafeas.V1 {
             break;
           case 10: {
             if (fingerprint_ == null) {
-              fingerprint_ = new global::Grafeas.V1.Fingerprint();
+              Fingerprint = new global::Grafeas.V1.Fingerprint();
             }
-            input.ReadMessage(fingerprint_);
+            input.ReadMessage(Fingerprint);
             break;
           }
           case 16: {

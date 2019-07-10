@@ -1386,7 +1386,7 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (other.readTimestamp_ != null) {
         if (readTimestamp_ == null) {
-          readTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ReadTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ReadTimestamp.MergeFrom(other.ReadTimestamp);
       }
@@ -1407,9 +1407,9 @@ namespace Google.Cloud.Spanner.V1 {
           }
           case 18: {
             if (readTimestamp_ == null) {
-              readTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ReadTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(readTimestamp_);
+            input.ReadMessage(ReadTimestamp);
             break;
           }
         }

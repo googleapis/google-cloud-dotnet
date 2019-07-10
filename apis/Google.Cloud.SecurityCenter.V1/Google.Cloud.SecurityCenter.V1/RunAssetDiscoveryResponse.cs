@@ -189,7 +189,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.duration_ != null) {
         if (duration_ == null) {
-          duration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Duration.MergeFrom(other.Duration);
       }
@@ -205,14 +205,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            state_ = (global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State) input.ReadEnum();
             break;
           }
           case 18: {
             if (duration_ == null) {
-              duration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(duration_);
+            input.ReadMessage(Duration);
             break;
           }
         }

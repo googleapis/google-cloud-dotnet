@@ -476,7 +476,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           }
           case 48: {
-            writeDisposition_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.WriteDisposition) input.ReadEnum();
+            WriteDisposition = (global::Google.Cloud.BigQuery.DataTransfer.V1.WriteDisposition) input.ReadEnum();
             break;
           }
           case 82: {
@@ -773,7 +773,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           if (other.schema_ != null) {
             if (schema_ == null) {
-              schema_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
+              Schema = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
             }
             Schema.MergeFrom(other.Schema);
           }
@@ -793,7 +793,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
                 break;
               }
               case 16: {
-                type_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.FieldSchema.Types.Type) input.ReadEnum();
+                Type = (global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.FieldSchema.Types.Type) input.ReadEnum();
                 break;
               }
               case 24: {
@@ -806,9 +806,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
               }
               case 42: {
                 if (schema_ == null) {
-                  schema_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
+                  Schema = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
                 }
-                input.ReadMessage(schema_);
+                input.ReadMessage(Schema);
                 break;
               }
             }
@@ -1174,6 +1174,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
 
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as TableDefinition);
@@ -1306,13 +1307,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           if (other.csvOptions_ != null) {
             if (csvOptions_ == null) {
-              csvOptions_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.TableDefinition.Types.CsvOptions();
+              CsvOptions = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.TableDefinition.Types.CsvOptions();
             }
             CsvOptions.MergeFrom(other.CsvOptions);
           }
           if (other.schema_ != null) {
             if (schema_ == null) {
-              schema_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
+              Schema = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
             }
             Schema.MergeFrom(other.Schema);
           }
@@ -1341,7 +1342,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
                 break;
               }
               case 24: {
-                format_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.Format) input.ReadEnum();
+                Format = (global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.Format) input.ReadEnum();
                 break;
               }
               case 32: {
@@ -1349,21 +1350,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
                 break;
               }
               case 40: {
-                encoding_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.Encoding) input.ReadEnum();
+                Encoding = (global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.Encoding) input.ReadEnum();
                 break;
               }
               case 50: {
                 if (csvOptions_ == null) {
-                  csvOptions_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.TableDefinition.Types.CsvOptions();
+                  CsvOptions = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.TableDefinition.Types.CsvOptions();
                 }
-                input.ReadMessage(csvOptions_);
+                input.ReadMessage(CsvOptions);
                 break;
               }
               case 58: {
                 if (schema_ == null) {
-                  schema_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
+                  Schema = new global::Google.Cloud.BigQuery.DataTransfer.V1.ImportedDataInfo.Types.RecordSchema();
                 }
-                input.ReadMessage(schema_);
+                input.ReadMessage(Schema);
                 break;
               }
               case 82: {
@@ -1438,6 +1439,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
               }
             }
 
+
             /// <summary>Field number for the "allow_quoted_newlines" field.</summary>
             public const int AllowQuotedNewlinesFieldNumber = 2;
             private static readonly pb::FieldCodec<bool?> _single_allowQuotedNewlines_codec = pb::FieldCodec.ForStructWrapper<bool>(18);
@@ -1453,6 +1455,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
                 allowQuotedNewlines_ = value;
               }
             }
+
 
             /// <summary>Field number for the "quote_char" field.</summary>
             public const int QuoteCharFieldNumber = 3;
@@ -1471,6 +1474,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
               }
             }
 
+
             /// <summary>Field number for the "skip_leading_rows" field.</summary>
             public const int SkipLeadingRowsFieldNumber = 4;
             private static readonly pb::FieldCodec<long?> _single_skipLeadingRows_codec = pb::FieldCodec.ForStructWrapper<long>(34);
@@ -1486,6 +1490,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
               }
             }
 
+
             /// <summary>Field number for the "allow_jagged_rows" field.</summary>
             public const int AllowJaggedRowsFieldNumber = 5;
             private static readonly pb::FieldCodec<bool?> _single_allowJaggedRows_codec = pb::FieldCodec.ForStructWrapper<bool>(42);
@@ -1500,6 +1505,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
                 allowJaggedRows_ = value;
               }
             }
+
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override bool Equals(object other) {
@@ -1818,13 +1824,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.transferRun_ != null) {
         if (transferRun_ == null) {
-          transferRun_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun();
+          TransferRun = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun();
         }
         TransferRun.MergeFrom(other.TransferRun);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1841,16 +1847,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           case 10: {
             if (transferRun_ == null) {
-              transferRun_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun();
+              TransferRun = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun();
             }
-            input.ReadMessage(transferRun_);
+            input.ReadMessage(TransferRun);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -2519,7 +2525,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.dataSourceDefinition_ != null) {
         if (dataSourceDefinition_ == null) {
-          dataSourceDefinition_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
+          DataSourceDefinition = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
         }
         DataSourceDefinition.MergeFrom(other.DataSourceDefinition);
       }
@@ -2540,9 +2546,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 18: {
             if (dataSourceDefinition_ == null) {
-              dataSourceDefinition_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
+              DataSourceDefinition = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
             }
-            input.ReadMessage(dataSourceDefinition_);
+            input.ReadMessage(DataSourceDefinition);
             break;
           }
         }
@@ -2688,13 +2694,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.dataSourceDefinition_ != null) {
         if (dataSourceDefinition_ == null) {
-          dataSourceDefinition_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
+          DataSourceDefinition = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
         }
         DataSourceDefinition.MergeFrom(other.DataSourceDefinition);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -2711,16 +2717,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           case 10: {
             if (dataSourceDefinition_ == null) {
-              dataSourceDefinition_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
+              DataSourceDefinition = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition();
             }
-            input.ReadMessage(dataSourceDefinition_);
+            input.ReadMessage(DataSourceDefinition);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -3712,7 +3718,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.dataSource_ != null) {
         if (dataSource_ == null) {
-          dataSource_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource();
+          DataSource = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource();
         }
         DataSource.MergeFrom(other.DataSource);
       }
@@ -3721,7 +3727,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.runTimeOffset_ != null) {
         if (runTimeOffset_ == null) {
-          runTimeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          RunTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         RunTimeOffset.MergeFrom(other.RunTimeOffset);
       }
@@ -3751,9 +3757,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           case 10: {
             if (dataSource_ == null) {
-              dataSource_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource();
+              DataSource = new global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource();
             }
-            input.ReadMessage(dataSource_);
+            input.ReadMessage(DataSource);
             break;
           }
           case 18: {
@@ -3774,9 +3780,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 130: {
             if (runTimeOffset_ == null) {
-              runTimeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              RunTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(runTimeOffset_);
+            input.ReadMessage(RunTimeOffset);
             break;
           }
           case 170: {

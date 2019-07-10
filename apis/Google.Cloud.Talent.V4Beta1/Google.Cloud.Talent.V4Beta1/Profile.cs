@@ -338,6 +338,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
@@ -907,19 +908,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.resume_ != null) {
         if (resume_ == null) {
-          resume_ = new global::Google.Cloud.Talent.V4Beta1.Resume();
+          Resume = new global::Google.Cloud.Talent.V4Beta1.Resume();
         }
         Resume.MergeFrom(other.Resume);
       }
@@ -985,16 +986,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 58: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 66: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 90: {
@@ -1071,9 +1072,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 426: {
             if (resume_ == null) {
-              resume_ = new global::Google.Cloud.Talent.V4Beta1.Resume();
+              Resume = new global::Google.Cloud.Talent.V4Beta1.Resume();
             }
-            input.ReadMessage(resume_);
+            input.ReadMessage(Resume);
             break;
           }
         }
@@ -1253,7 +1254,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 16: {
-            resumeType_ = (global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType) input.ReadEnum();
+            ResumeType = (global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType) input.ReadEnum();
             break;
           }
         }
@@ -1948,6 +1949,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+
     private object address_;
     /// <summary>Enum of possible cases for the "address" oneof.</summary>
     public enum AddressOneofCase {
@@ -2087,7 +2089,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            usage_ = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
+            Usage = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2272,7 +2274,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            usage_ = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
+            Usage = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2502,11 +2504,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            usage_ = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
+            Usage = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
             break;
           }
           case 16: {
-            type_ = (global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType) input.ReadEnum();
+            Type = (global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -2908,7 +2910,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            usage_ = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
+            Usage = (global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3101,6 +3103,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+
     /// <summary>Field number for the "is_self_employed" field.</summary>
     public const int IsSelfEmployedFieldNumber = 9;
     private static readonly pb::FieldCodec<bool?> _single_isSelfEmployed_codec = pb::FieldCodec.ForStructWrapper<bool>(74);
@@ -3116,6 +3119,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+
     /// <summary>Field number for the "is_current" field.</summary>
     public const int IsCurrentFieldNumber = 10;
     private static readonly pb::FieldCodec<bool?> _single_isCurrent_codec = pb::FieldCodec.ForStructWrapper<bool>(82);
@@ -3130,6 +3134,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         isCurrent_ = value;
       }
     }
+
 
     /// <summary>Field number for the "job_title_snippet" field.</summary>
     public const int JobTitleSnippetFieldNumber = 11;
@@ -3352,13 +3357,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.startDate_ != null) {
         if (startDate_ == null) {
-          startDate_ = new global::Google.Type.Date();
+          StartDate = new global::Google.Type.Date();
         }
         StartDate.MergeFrom(other.StartDate);
       }
       if (other.endDate_ != null) {
         if (endDate_ == null) {
-          endDate_ = new global::Google.Type.Date();
+          EndDate = new global::Google.Type.Date();
         }
         EndDate.MergeFrom(other.EndDate);
       }
@@ -3370,7 +3375,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.address_ != null) {
         if (address_ == null) {
-          address_ = new global::Google.Cloud.Talent.V4Beta1.Address();
+          Address = new global::Google.Cloud.Talent.V4Beta1.Address();
         }
         Address.MergeFrom(other.Address);
       }
@@ -3417,16 +3422,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (startDate_ == null) {
-              startDate_ = new global::Google.Type.Date();
+              StartDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(startDate_);
+            input.ReadMessage(StartDate);
             break;
           }
           case 18: {
             if (endDate_ == null) {
-              endDate_ = new global::Google.Type.Date();
+              EndDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(endDate_);
+            input.ReadMessage(EndDate);
             break;
           }
           case 26: {
@@ -3439,9 +3444,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 42: {
             if (address_ == null) {
-              address_ = new global::Google.Cloud.Talent.V4Beta1.Address();
+              Address = new global::Google.Cloud.Talent.V4Beta1.Address();
             }
-            input.ReadMessage(address_);
+            input.ReadMessage(Address);
             break;
           }
           case 50: {
@@ -3682,6 +3687,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+
     /// <summary>Field number for the "school_name_snippet" field.</summary>
     public const int SchoolNameSnippetFieldNumber = 10;
     private string schoolNameSnippet_ = "";
@@ -3890,19 +3896,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.startDate_ != null) {
         if (startDate_ == null) {
-          startDate_ = new global::Google.Type.Date();
+          StartDate = new global::Google.Type.Date();
         }
         StartDate.MergeFrom(other.StartDate);
       }
       if (other.endDate_ != null) {
         if (endDate_ == null) {
-          endDate_ = new global::Google.Type.Date();
+          EndDate = new global::Google.Type.Date();
         }
         EndDate.MergeFrom(other.EndDate);
       }
       if (other.expectedGraduationDate_ != null) {
         if (expectedGraduationDate_ == null) {
-          expectedGraduationDate_ = new global::Google.Type.Date();
+          ExpectedGraduationDate = new global::Google.Type.Date();
         }
         ExpectedGraduationDate.MergeFrom(other.ExpectedGraduationDate);
       }
@@ -3911,7 +3917,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.address_ != null) {
         if (address_ == null) {
-          address_ = new global::Google.Cloud.Talent.V4Beta1.Address();
+          Address = new global::Google.Cloud.Talent.V4Beta1.Address();
         }
         Address.MergeFrom(other.Address);
       }
@@ -3954,23 +3960,23 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (startDate_ == null) {
-              startDate_ = new global::Google.Type.Date();
+              StartDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(startDate_);
+            input.ReadMessage(StartDate);
             break;
           }
           case 18: {
             if (endDate_ == null) {
-              endDate_ = new global::Google.Type.Date();
+              EndDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(endDate_);
+            input.ReadMessage(EndDate);
             break;
           }
           case 26: {
             if (expectedGraduationDate_ == null) {
-              expectedGraduationDate_ = new global::Google.Type.Date();
+              ExpectedGraduationDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(expectedGraduationDate_);
+            input.ReadMessage(ExpectedGraduationDate);
             break;
           }
           case 34: {
@@ -3979,9 +3985,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 42: {
             if (address_ == null) {
-              address_ = new global::Google.Cloud.Talent.V4Beta1.Address();
+              Address = new global::Google.Cloud.Talent.V4Beta1.Address();
             }
-            input.ReadMessage(address_);
+            input.ReadMessage(Address);
             break;
           }
           case 50: {
@@ -4202,7 +4208,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            degreeType_ = (global::Google.Cloud.Talent.V4Beta1.DegreeType) input.ReadEnum();
+            DegreeType = (global::Google.Cloud.Talent.V4Beta1.DegreeType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -4561,13 +4567,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.createDate_ != null) {
         if (createDate_ == null) {
-          createDate_ = new global::Google.Type.Date();
+          CreateDate = new global::Google.Type.Date();
         }
         CreateDate.MergeFrom(other.CreateDate);
       }
       if (other.updateDate_ != null) {
         if (updateDate_ == null) {
-          updateDate_ = new global::Google.Type.Date();
+          UpdateDate = new global::Google.Type.Date();
         }
         UpdateDate.MergeFrom(other.UpdateDate);
       }
@@ -4605,16 +4611,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 34: {
             if (createDate_ == null) {
-              createDate_ = new global::Google.Type.Date();
+              CreateDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(createDate_);
+            input.ReadMessage(CreateDate);
             break;
           }
           case 42: {
             if (updateDate_ == null) {
-              updateDate_ = new global::Google.Type.Date();
+              UpdateDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(updateDate_);
+            input.ReadMessage(UpdateDate);
             break;
           }
           case 50: {
@@ -4974,7 +4980,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.publicationDate_ != null) {
         if (publicationDate_ == null) {
-          publicationDate_ = new global::Google.Type.Date();
+          PublicationDate = new global::Google.Type.Date();
         }
         PublicationDate.MergeFrom(other.PublicationDate);
       }
@@ -5021,9 +5027,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 58: {
             if (publicationDate_ == null) {
-              publicationDate_ = new global::Google.Type.Date();
+              PublicationDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(publicationDate_);
+            input.ReadMessage(PublicationDate);
             break;
           }
           case 66: {
@@ -5352,13 +5358,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.patentStatusDate_ != null) {
         if (patentStatusDate_ == null) {
-          patentStatusDate_ = new global::Google.Type.Date();
+          PatentStatusDate = new global::Google.Type.Date();
         }
         PatentStatusDate.MergeFrom(other.PatentStatusDate);
       }
       if (other.patentFilingDate_ != null) {
         if (patentFilingDate_ == null) {
-          patentFilingDate_ = new global::Google.Type.Date();
+          PatentFilingDate = new global::Google.Type.Date();
         }
         PatentFilingDate.MergeFrom(other.PatentFilingDate);
       }
@@ -5397,16 +5403,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 34: {
             if (patentStatusDate_ == null) {
-              patentStatusDate_ = new global::Google.Type.Date();
+              PatentStatusDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(patentStatusDate_);
+            input.ReadMessage(PatentStatusDate);
             break;
           }
           case 42: {
             if (patentFilingDate_ == null) {
-              patentFilingDate_ = new global::Google.Type.Date();
+              PatentFilingDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(patentFilingDate_);
+            input.ReadMessage(PatentFilingDate);
             break;
           }
           case 50: {

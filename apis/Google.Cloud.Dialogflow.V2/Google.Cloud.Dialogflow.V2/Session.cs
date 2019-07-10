@@ -364,19 +364,19 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.queryParams_ != null) {
         if (queryParams_ == null) {
-          queryParams_ = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
+          QueryParams = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
         }
         QueryParams.MergeFrom(other.QueryParams);
       }
       if (other.queryInput_ != null) {
         if (queryInput_ == null) {
-          queryInput_ = new global::Google.Cloud.Dialogflow.V2.QueryInput();
+          QueryInput = new global::Google.Cloud.Dialogflow.V2.QueryInput();
         }
         QueryInput.MergeFrom(other.QueryInput);
       }
       if (other.outputAudioConfig_ != null) {
         if (outputAudioConfig_ == null) {
-          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+          OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
         }
         OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
@@ -400,23 +400,23 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (queryParams_ == null) {
-              queryParams_ = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
+              QueryParams = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
             }
-            input.ReadMessage(queryParams_);
+            input.ReadMessage(QueryParams);
             break;
           }
           case 26: {
             if (queryInput_ == null) {
-              queryInput_ = new global::Google.Cloud.Dialogflow.V2.QueryInput();
+              QueryInput = new global::Google.Cloud.Dialogflow.V2.QueryInput();
             }
-            input.ReadMessage(queryInput_);
+            input.ReadMessage(QueryInput);
             break;
           }
           case 34: {
             if (outputAudioConfig_ == null) {
-              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+              OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
             }
-            input.ReadMessage(outputAudioConfig_);
+            input.ReadMessage(OutputAudioConfig);
             break;
           }
           case 42: {
@@ -648,13 +648,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.queryResult_ != null) {
         if (queryResult_ == null) {
-          queryResult_ = new global::Google.Cloud.Dialogflow.V2.QueryResult();
+          QueryResult = new global::Google.Cloud.Dialogflow.V2.QueryResult();
         }
         QueryResult.MergeFrom(other.QueryResult);
       }
       if (other.webhookStatus_ != null) {
         if (webhookStatus_ == null) {
-          webhookStatus_ = new global::Google.Rpc.Status();
+          WebhookStatus = new global::Google.Rpc.Status();
         }
         WebhookStatus.MergeFrom(other.WebhookStatus);
       }
@@ -663,7 +663,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.outputAudioConfig_ != null) {
         if (outputAudioConfig_ == null) {
-          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+          OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
         }
         OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
@@ -684,16 +684,16 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (queryResult_ == null) {
-              queryResult_ = new global::Google.Cloud.Dialogflow.V2.QueryResult();
+              QueryResult = new global::Google.Cloud.Dialogflow.V2.QueryResult();
             }
-            input.ReadMessage(queryResult_);
+            input.ReadMessage(QueryResult);
             break;
           }
           case 26: {
             if (webhookStatus_ == null) {
-              webhookStatus_ = new global::Google.Rpc.Status();
+              WebhookStatus = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(webhookStatus_);
+            input.ReadMessage(WebhookStatus);
             break;
           }
           case 34: {
@@ -702,9 +702,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 50: {
             if (outputAudioConfig_ == null) {
-              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+              OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
             }
-            input.ReadMessage(outputAudioConfig_);
+            input.ReadMessage(OutputAudioConfig);
             break;
           }
         }
@@ -970,7 +970,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.geoLocation_ != null) {
         if (geoLocation_ == null) {
-          geoLocation_ = new global::Google.Type.LatLng();
+          GeoLocation = new global::Google.Type.LatLng();
         }
         GeoLocation.MergeFrom(other.GeoLocation);
       }
@@ -981,13 +981,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       sessionEntityTypes_.Add(other.sessionEntityTypes_);
       if (other.payload_ != null) {
         if (payload_ == null) {
-          payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Payload.MergeFrom(other.Payload);
       }
       if (other.sentimentAnalysisRequestConfig_ != null) {
         if (sentimentAnalysisRequestConfig_ == null) {
-          sentimentAnalysisRequestConfig_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig();
+          SentimentAnalysisRequestConfig = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig();
         }
         SentimentAnalysisRequestConfig.MergeFrom(other.SentimentAnalysisRequestConfig);
       }
@@ -1008,9 +1008,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (geoLocation_ == null) {
-              geoLocation_ = new global::Google.Type.LatLng();
+              GeoLocation = new global::Google.Type.LatLng();
             }
-            input.ReadMessage(geoLocation_);
+            input.ReadMessage(GeoLocation);
             break;
           }
           case 26: {
@@ -1027,16 +1027,16 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 50: {
             if (payload_ == null) {
-              payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(payload_);
+            input.ReadMessage(Payload);
             break;
           }
           case 82: {
             if (sentimentAnalysisRequestConfig_ == null) {
-              sentimentAnalysisRequestConfig_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig();
+              SentimentAnalysisRequestConfig = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig();
             }
-            input.ReadMessage(sentimentAnalysisRequestConfig_);
+            input.ReadMessage(SentimentAnalysisRequestConfig);
             break;
           }
         }
@@ -1794,7 +1794,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.parameters_ != null) {
         if (parameters_ == null) {
-          parameters_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Parameters = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Parameters.MergeFrom(other.Parameters);
       }
@@ -1810,14 +1810,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.webhookPayload_ != null) {
         if (webhookPayload_ == null) {
-          webhookPayload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          WebhookPayload = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         WebhookPayload.MergeFrom(other.WebhookPayload);
       }
       outputContexts_.Add(other.outputContexts_);
       if (other.intent_ != null) {
         if (intent_ == null) {
-          intent_ = new global::Google.Cloud.Dialogflow.V2.Intent();
+          Intent = new global::Google.Cloud.Dialogflow.V2.Intent();
         }
         Intent.MergeFrom(other.Intent);
       }
@@ -1826,13 +1826,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.diagnosticInfo_ != null) {
         if (diagnosticInfo_ == null) {
-          diagnosticInfo_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          DiagnosticInfo = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         DiagnosticInfo.MergeFrom(other.DiagnosticInfo);
       }
       if (other.sentimentAnalysisResult_ != null) {
         if (sentimentAnalysisResult_ == null) {
-          sentimentAnalysisResult_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult();
+          SentimentAnalysisResult = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult();
         }
         SentimentAnalysisResult.MergeFrom(other.SentimentAnalysisResult);
       }
@@ -1861,9 +1861,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 34: {
             if (parameters_ == null) {
-              parameters_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Parameters = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(parameters_);
+            input.ReadMessage(Parameters);
             break;
           }
           case 40: {
@@ -1884,9 +1884,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 74: {
             if (webhookPayload_ == null) {
-              webhookPayload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              WebhookPayload = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(webhookPayload_);
+            input.ReadMessage(WebhookPayload);
             break;
           }
           case 82: {
@@ -1895,9 +1895,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 90: {
             if (intent_ == null) {
-              intent_ = new global::Google.Cloud.Dialogflow.V2.Intent();
+              Intent = new global::Google.Cloud.Dialogflow.V2.Intent();
             }
-            input.ReadMessage(intent_);
+            input.ReadMessage(Intent);
             break;
           }
           case 101: {
@@ -1906,9 +1906,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 114: {
             if (diagnosticInfo_ == null) {
-              diagnosticInfo_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              DiagnosticInfo = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(diagnosticInfo_);
+            input.ReadMessage(DiagnosticInfo);
             break;
           }
           case 122: {
@@ -1917,9 +1917,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 138: {
             if (sentimentAnalysisResult_ == null) {
-              sentimentAnalysisResult_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult();
+              SentimentAnalysisResult = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult();
             }
-            input.ReadMessage(sentimentAnalysisResult_);
+            input.ReadMessage(SentimentAnalysisResult);
             break;
           }
         }
@@ -2197,13 +2197,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.queryParams_ != null) {
         if (queryParams_ == null) {
-          queryParams_ = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
+          QueryParams = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
         }
         QueryParams.MergeFrom(other.QueryParams);
       }
       if (other.queryInput_ != null) {
         if (queryInput_ == null) {
-          queryInput_ = new global::Google.Cloud.Dialogflow.V2.QueryInput();
+          QueryInput = new global::Google.Cloud.Dialogflow.V2.QueryInput();
         }
         QueryInput.MergeFrom(other.QueryInput);
       }
@@ -2212,7 +2212,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.outputAudioConfig_ != null) {
         if (outputAudioConfig_ == null) {
-          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+          OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
         }
         OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
@@ -2236,16 +2236,16 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (queryParams_ == null) {
-              queryParams_ = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
+              QueryParams = new global::Google.Cloud.Dialogflow.V2.QueryParameters();
             }
-            input.ReadMessage(queryParams_);
+            input.ReadMessage(QueryParams);
             break;
           }
           case 26: {
             if (queryInput_ == null) {
-              queryInput_ = new global::Google.Cloud.Dialogflow.V2.QueryInput();
+              QueryInput = new global::Google.Cloud.Dialogflow.V2.QueryInput();
             }
-            input.ReadMessage(queryInput_);
+            input.ReadMessage(QueryInput);
             break;
           }
           case 32: {
@@ -2254,9 +2254,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 42: {
             if (outputAudioConfig_ == null) {
-              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+              OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
             }
-            input.ReadMessage(outputAudioConfig_);
+            input.ReadMessage(OutputAudioConfig);
             break;
           }
           case 50: {
@@ -2522,19 +2522,19 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.recognitionResult_ != null) {
         if (recognitionResult_ == null) {
-          recognitionResult_ = new global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult();
+          RecognitionResult = new global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult();
         }
         RecognitionResult.MergeFrom(other.RecognitionResult);
       }
       if (other.queryResult_ != null) {
         if (queryResult_ == null) {
-          queryResult_ = new global::Google.Cloud.Dialogflow.V2.QueryResult();
+          QueryResult = new global::Google.Cloud.Dialogflow.V2.QueryResult();
         }
         QueryResult.MergeFrom(other.QueryResult);
       }
       if (other.webhookStatus_ != null) {
         if (webhookStatus_ == null) {
-          webhookStatus_ = new global::Google.Rpc.Status();
+          WebhookStatus = new global::Google.Rpc.Status();
         }
         WebhookStatus.MergeFrom(other.WebhookStatus);
       }
@@ -2543,7 +2543,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.outputAudioConfig_ != null) {
         if (outputAudioConfig_ == null) {
-          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+          OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
         }
         OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
@@ -2564,23 +2564,23 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (recognitionResult_ == null) {
-              recognitionResult_ = new global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult();
+              RecognitionResult = new global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult();
             }
-            input.ReadMessage(recognitionResult_);
+            input.ReadMessage(RecognitionResult);
             break;
           }
           case 26: {
             if (queryResult_ == null) {
-              queryResult_ = new global::Google.Cloud.Dialogflow.V2.QueryResult();
+              QueryResult = new global::Google.Cloud.Dialogflow.V2.QueryResult();
             }
-            input.ReadMessage(queryResult_);
+            input.ReadMessage(QueryResult);
             break;
           }
           case 34: {
             if (webhookStatus_ == null) {
-              webhookStatus_ = new global::Google.Rpc.Status();
+              WebhookStatus = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(webhookStatus_);
+            input.ReadMessage(WebhookStatus);
             break;
           }
           case 42: {
@@ -2589,9 +2589,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 50: {
             if (outputAudioConfig_ == null) {
-              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+              OutputAudioConfig = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
             }
-            input.ReadMessage(outputAudioConfig_);
+            input.ReadMessage(OutputAudioConfig);
             break;
           }
         }
@@ -2849,7 +2849,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            messageType_ = (global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult.Types.MessageType) input.ReadEnum();
+            MessageType = (global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult.Types.MessageType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3242,7 +3242,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.parameters_ != null) {
         if (parameters_ == null) {
-          parameters_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Parameters = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Parameters.MergeFrom(other.Parameters);
       }
@@ -3266,9 +3266,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (parameters_ == null) {
-              parameters_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Parameters = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(parameters_);
+            input.ReadMessage(Parameters);
             break;
           }
           case 26: {
@@ -3532,7 +3532,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.queryTextSentiment_ != null) {
         if (queryTextSentiment_ == null) {
-          queryTextSentiment_ = new global::Google.Cloud.Dialogflow.V2.Sentiment();
+          QueryTextSentiment = new global::Google.Cloud.Dialogflow.V2.Sentiment();
         }
         QueryTextSentiment.MergeFrom(other.QueryTextSentiment);
       }
@@ -3549,9 +3549,9 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           case 10: {
             if (queryTextSentiment_ == null) {
-              queryTextSentiment_ = new global::Google.Cloud.Dialogflow.V2.Sentiment();
+              QueryTextSentiment = new global::Google.Cloud.Dialogflow.V2.Sentiment();
             }
-            input.ReadMessage(queryTextSentiment_);
+            input.ReadMessage(QueryTextSentiment);
             break;
           }
         }

@@ -1334,7 +1334,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.metricDescriptor_ != null) {
         if (metricDescriptor_ == null) {
-          metricDescriptor_ = new global::Google.Api.MetricDescriptor();
+          MetricDescriptor = new global::Google.Api.MetricDescriptor();
         }
         MetricDescriptor.MergeFrom(other.MetricDescriptor);
       }
@@ -1351,9 +1351,9 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (metricDescriptor_ == null) {
-              metricDescriptor_ = new global::Google.Api.MetricDescriptor();
+              MetricDescriptor = new global::Google.Api.MetricDescriptor();
             }
-            input.ReadMessage(metricDescriptor_);
+            input.ReadMessage(MetricDescriptor);
             break;
           }
           case 26: {
@@ -1809,13 +1809,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+          Interval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
       if (other.aggregation_ != null) {
         if (aggregation_ == null) {
-          aggregation_ = new global::Google.Cloud.Monitoring.V3.Aggregation();
+          Aggregation = new global::Google.Cloud.Monitoring.V3.Aggregation();
         }
         Aggregation.MergeFrom(other.Aggregation);
       }
@@ -1848,16 +1848,16 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 34: {
             if (interval_ == null) {
-              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+              Interval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
-            input.ReadMessage(interval_);
+            input.ReadMessage(Interval);
             break;
           }
           case 42: {
             if (aggregation_ == null) {
-              aggregation_ = new global::Google.Cloud.Monitoring.V3.Aggregation();
+              Aggregation = new global::Google.Cloud.Monitoring.V3.Aggregation();
             }
-            input.ReadMessage(aggregation_);
+            input.ReadMessage(Aggregation);
             break;
           }
           case 50: {
@@ -1865,7 +1865,7 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           }
           case 56: {
-            view_ = (global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) input.ReadEnum();
+            View = (global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) input.ReadEnum();
             break;
           }
           case 64: {
@@ -2396,13 +2396,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.timeSeries_ != null) {
         if (timeSeries_ == null) {
-          timeSeries_ = new global::Google.Cloud.Monitoring.V3.TimeSeries();
+          TimeSeries = new global::Google.Cloud.Monitoring.V3.TimeSeries();
         }
         TimeSeries.MergeFrom(other.TimeSeries);
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Rpc.Status();
+          Status = new global::Google.Rpc.Status();
         }
         Status.MergeFrom(other.Status);
       }
@@ -2419,16 +2419,16 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 10: {
             if (timeSeries_ == null) {
-              timeSeries_ = new global::Google.Cloud.Monitoring.V3.TimeSeries();
+              TimeSeries = new global::Google.Cloud.Monitoring.V3.TimeSeries();
             }
-            input.ReadMessage(timeSeries_);
+            input.ReadMessage(TimeSeries);
             break;
           }
           case 18: {
             if (status_ == null) {
-              status_ = new global::Google.Rpc.Status();
+              Status = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
         }

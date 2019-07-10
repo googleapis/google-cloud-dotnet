@@ -711,13 +711,13 @@ namespace Google.Cloud.Trace.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -741,7 +741,7 @@ namespace Google.Cloud.Trace.V1 {
             break;
           }
           case 16: {
-            kind_ = (global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind) input.ReadEnum();
+            Kind = (global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind) input.ReadEnum();
             break;
           }
           case 26: {
@@ -750,16 +750,16 @@ namespace Google.Cloud.Trace.V1 {
           }
           case 34: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 42: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 49: {
@@ -1145,13 +1145,13 @@ namespace Google.Cloud.Trace.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -1177,7 +1177,7 @@ namespace Google.Cloud.Trace.V1 {
             break;
           }
           case 16: {
-            view_ = (global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType) input.ReadEnum();
+            View = (global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -1190,16 +1190,16 @@ namespace Google.Cloud.Trace.V1 {
           }
           case 42: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 50: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 58: {
@@ -1715,7 +1715,7 @@ namespace Google.Cloud.Trace.V1 {
       }
       if (other.traces_ != null) {
         if (traces_ == null) {
-          traces_ = new global::Google.Cloud.Trace.V1.Traces();
+          Traces = new global::Google.Cloud.Trace.V1.Traces();
         }
         Traces.MergeFrom(other.Traces);
       }
@@ -1736,9 +1736,9 @@ namespace Google.Cloud.Trace.V1 {
           }
           case 18: {
             if (traces_ == null) {
-              traces_ = new global::Google.Cloud.Trace.V1.Traces();
+              Traces = new global::Google.Cloud.Trace.V1.Traces();
             }
-            input.ReadMessage(traces_);
+            input.ReadMessage(Traces);
             break;
           }
         }

@@ -852,7 +852,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (other.queue_ != null) {
         if (queue_ == null) {
-          queue_ = new global::Google.Cloud.Tasks.V2Beta3.Queue();
+          Queue = new global::Google.Cloud.Tasks.V2Beta3.Queue();
         }
         Queue.MergeFrom(other.Queue);
       }
@@ -873,9 +873,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           case 18: {
             if (queue_ == null) {
-              queue_ = new global::Google.Cloud.Tasks.V2Beta3.Queue();
+              Queue = new global::Google.Cloud.Tasks.V2Beta3.Queue();
             }
-            input.ReadMessage(queue_);
+            input.ReadMessage(Queue);
             break;
           }
         }
@@ -1031,13 +1031,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (other.queue_ != null) {
         if (queue_ == null) {
-          queue_ = new global::Google.Cloud.Tasks.V2Beta3.Queue();
+          Queue = new global::Google.Cloud.Tasks.V2Beta3.Queue();
         }
         Queue.MergeFrom(other.Queue);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1054,16 +1054,16 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             break;
           case 10: {
             if (queue_ == null) {
-              queue_ = new global::Google.Cloud.Tasks.V2Beta3.Queue();
+              Queue = new global::Google.Cloud.Tasks.V2Beta3.Queue();
             }
-            input.ReadMessage(queue_);
+            input.ReadMessage(Queue);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -1864,7 +1864,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             break;
           }
           case 16: {
-            responseView_ = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
+            ResponseView = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
             break;
           }
           case 24: {
@@ -2216,7 +2216,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             break;
           }
           case 16: {
-            responseView_ = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
+            ResponseView = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
             break;
           }
         }
@@ -2439,7 +2439,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (other.task_ != null) {
         if (task_ == null) {
-          task_ = new global::Google.Cloud.Tasks.V2Beta3.Task();
+          Task = new global::Google.Cloud.Tasks.V2Beta3.Task();
         }
         Task.MergeFrom(other.Task);
       }
@@ -2463,13 +2463,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           case 18: {
             if (task_ == null) {
-              task_ = new global::Google.Cloud.Tasks.V2Beta3.Task();
+              Task = new global::Google.Cloud.Tasks.V2Beta3.Task();
             }
-            input.ReadMessage(task_);
+            input.ReadMessage(Task);
             break;
           }
           case 24: {
-            responseView_ = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
+            ResponseView = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
             break;
           }
         }
@@ -2789,7 +2789,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             break;
           }
           case 16: {
-            responseView_ = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
+            ResponseView = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
             break;
           }
         }

@@ -281,7 +281,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           }
           case 16: {
-            queryScope_ = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope) input.ReadEnum();
+            QueryScope = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope) input.ReadEnum();
             break;
           }
           case 26: {
@@ -289,7 +289,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           }
           case 32: {
-            state_ = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) input.ReadEnum();
             break;
           }
         }

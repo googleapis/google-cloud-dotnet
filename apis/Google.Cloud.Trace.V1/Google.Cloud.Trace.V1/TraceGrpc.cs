@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -34,33 +34,33 @@ namespace Google.Cloud.Trace.V1 {
   {
     static readonly string __ServiceName = "google.devtools.cloudtrace.v1.TraceService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesRequest> __Marshaller_ListTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesResponse> __Marshaller_ListTracesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.GetTraceRequest> __Marshaller_GetTraceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.Trace> __Marshaller_Trace = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.Trace.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.PatchTracesRequest> __Marshaller_PatchTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesRequest> __Marshaller_google_devtools_cloudtrace_v1_ListTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesResponse> __Marshaller_google_devtools_cloudtrace_v1_ListTracesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.GetTraceRequest> __Marshaller_google_devtools_cloudtrace_v1_GetTraceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.Trace> __Marshaller_google_devtools_cloudtrace_v1_Trace = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.Trace.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.PatchTracesRequest> __Marshaller_google_devtools_cloudtrace_v1_PatchTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse> __Method_ListTraces = new grpc::Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListTraces",
-        __Marshaller_ListTracesRequest,
-        __Marshaller_ListTracesResponse);
+        __Marshaller_google_devtools_cloudtrace_v1_ListTracesRequest,
+        __Marshaller_google_devtools_cloudtrace_v1_ListTracesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace> __Method_GetTrace = new grpc::Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetTrace",
-        __Marshaller_GetTraceRequest,
-        __Marshaller_Trace);
+        __Marshaller_google_devtools_cloudtrace_v1_GetTraceRequest,
+        __Marshaller_google_devtools_cloudtrace_v1_Trace);
 
     static readonly grpc::Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PatchTraces = new grpc::Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PatchTraces",
-        __Marshaller_PatchTracesRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_devtools_cloudtrace_v1_PatchTracesRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,6 +69,7 @@ namespace Google.Cloud.Trace.V1 {
     }
 
     /// <summary>Base class for server-side implementations of TraceService</summary>
+    [grpc::BindServiceMethod(typeof(TraceService), "BindService")]
     public abstract partial class TraceServiceBase
     {
       /// <summary>
@@ -296,6 +297,17 @@ namespace Google.Cloud.Trace.V1 {
           .AddMethod(__Method_ListTraces, serviceImpl.ListTraces)
           .AddMethod(__Method_GetTrace, serviceImpl.GetTrace)
           .AddMethod(__Method_PatchTraces, serviceImpl.PatchTraces).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, TraceServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListTraces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse>(serviceImpl.ListTraces));
+      serviceBinder.AddMethod(__Method_GetTrace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace>(serviceImpl.GetTrace));
+      serviceBinder.AddMethod(__Method_PatchTraces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PatchTraces));
     }
 
   }

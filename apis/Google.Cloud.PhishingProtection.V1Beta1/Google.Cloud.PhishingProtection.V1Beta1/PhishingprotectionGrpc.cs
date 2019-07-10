@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,15 +31,15 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest> __Marshaller_ReportPhishingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse> __Marshaller_ReportPhishingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest> __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse> __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest, global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse> __Method_ReportPhishing = new grpc::Method<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest, global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ReportPhishing",
-        __Marshaller_ReportPhishingRequest,
-        __Marshaller_ReportPhishingResponse);
+        __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingRequest,
+        __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -48,6 +48,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of PhishingProtectionServiceV1Beta1</summary>
+    [grpc::BindServiceMethod(typeof(PhishingProtectionServiceV1Beta1), "BindService")]
     public abstract partial class PhishingProtectionServiceV1Beta1Base
     {
       /// <summary>
@@ -168,6 +169,15 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ReportPhishing, serviceImpl.ReportPhishing).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, PhishingProtectionServiceV1Beta1Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ReportPhishing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest, global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse>(serviceImpl.ReportPhishing));
     }
 
   }

@@ -163,7 +163,7 @@ namespace Grafeas.V1 {
       }
       if (other.hint_ != null) {
         if (hint_ == null) {
-          hint_ = new global::Grafeas.V1.AttestationNote.Types.Hint();
+          Hint = new global::Grafeas.V1.AttestationNote.Types.Hint();
         }
         Hint.MergeFrom(other.Hint);
       }
@@ -180,9 +180,9 @@ namespace Grafeas.V1 {
             break;
           case 10: {
             if (hint_ == null) {
-              hint_ = new global::Grafeas.V1.AttestationNote.Types.Hint();
+              Hint = new global::Grafeas.V1.AttestationNote.Types.Hint();
             }
-            input.ReadMessage(hint_);
+            input.ReadMessage(Hint);
             break;
           }
         }

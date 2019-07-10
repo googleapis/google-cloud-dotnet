@@ -615,7 +615,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
             break;
           }
           case 24: {
-            ssmlGender_ = (global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender) input.ReadEnum();
+            SsmlGender = (global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender) input.ReadEnum();
             break;
           }
           case 32: {
@@ -789,19 +789,19 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (other.input_ != null) {
         if (input_ == null) {
-          input_ = new global::Google.Cloud.TextToSpeech.V1.SynthesisInput();
+          Input = new global::Google.Cloud.TextToSpeech.V1.SynthesisInput();
         }
         Input.MergeFrom(other.Input);
       }
       if (other.voice_ != null) {
         if (voice_ == null) {
-          voice_ = new global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams();
+          Voice = new global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams();
         }
         Voice.MergeFrom(other.Voice);
       }
       if (other.audioConfig_ != null) {
         if (audioConfig_ == null) {
-          audioConfig_ = new global::Google.Cloud.TextToSpeech.V1.AudioConfig();
+          AudioConfig = new global::Google.Cloud.TextToSpeech.V1.AudioConfig();
         }
         AudioConfig.MergeFrom(other.AudioConfig);
       }
@@ -818,23 +818,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
             break;
           case 10: {
             if (input_ == null) {
-              input_ = new global::Google.Cloud.TextToSpeech.V1.SynthesisInput();
+              Input = new global::Google.Cloud.TextToSpeech.V1.SynthesisInput();
             }
-            input.ReadMessage(input_);
+            input.ReadMessage(Input);
             break;
           }
           case 18: {
             if (voice_ == null) {
-              voice_ = new global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams();
+              Voice = new global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams();
             }
-            input.ReadMessage(voice_);
+            input.ReadMessage(Voice);
             break;
           }
           case 26: {
             if (audioConfig_ == null) {
-              audioConfig_ = new global::Google.Cloud.TextToSpeech.V1.AudioConfig();
+              AudioConfig = new global::Google.Cloud.TextToSpeech.V1.AudioConfig();
             }
-            input.ReadMessage(audioConfig_);
+            input.ReadMessage(AudioConfig);
             break;
           }
         }
@@ -1249,7 +1249,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
             break;
           }
           case 24: {
-            ssmlGender_ = (global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender) input.ReadEnum();
+            SsmlGender = (global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender) input.ReadEnum();
             break;
           }
         }
@@ -1535,7 +1535,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            audioEncoding_ = (global::Google.Cloud.TextToSpeech.V1.AudioEncoding) input.ReadEnum();
+            AudioEncoding = (global::Google.Cloud.TextToSpeech.V1.AudioEncoding) input.ReadEnum();
             break;
           }
           case 17: {

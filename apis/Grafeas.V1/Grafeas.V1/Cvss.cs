@@ -448,35 +448,35 @@ namespace Grafeas.V1 {
             break;
           }
           case 40: {
-            attackVector_ = (global::Grafeas.V1.CVSSv3.Types.AttackVector) input.ReadEnum();
+            AttackVector = (global::Grafeas.V1.CVSSv3.Types.AttackVector) input.ReadEnum();
             break;
           }
           case 48: {
-            attackComplexity_ = (global::Grafeas.V1.CVSSv3.Types.AttackComplexity) input.ReadEnum();
+            AttackComplexity = (global::Grafeas.V1.CVSSv3.Types.AttackComplexity) input.ReadEnum();
             break;
           }
           case 56: {
-            privilegesRequired_ = (global::Grafeas.V1.CVSSv3.Types.PrivilegesRequired) input.ReadEnum();
+            PrivilegesRequired = (global::Grafeas.V1.CVSSv3.Types.PrivilegesRequired) input.ReadEnum();
             break;
           }
           case 64: {
-            userInteraction_ = (global::Grafeas.V1.CVSSv3.Types.UserInteraction) input.ReadEnum();
+            UserInteraction = (global::Grafeas.V1.CVSSv3.Types.UserInteraction) input.ReadEnum();
             break;
           }
           case 72: {
-            scope_ = (global::Grafeas.V1.CVSSv3.Types.Scope) input.ReadEnum();
+            Scope = (global::Grafeas.V1.CVSSv3.Types.Scope) input.ReadEnum();
             break;
           }
           case 80: {
-            confidentialityImpact_ = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
+            ConfidentialityImpact = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
             break;
           }
           case 88: {
-            integrityImpact_ = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
+            IntegrityImpact = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
             break;
           }
           case 96: {
-            availabilityImpact_ = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
+            AvailabilityImpact = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
             break;
           }
         }

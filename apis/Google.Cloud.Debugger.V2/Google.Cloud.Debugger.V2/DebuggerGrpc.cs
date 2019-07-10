@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -42,51 +42,51 @@ namespace Google.Cloud.Debugger.V2 {
   {
     static readonly string __ServiceName = "google.devtools.clouddebugger.v2.Debugger2";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.SetBreakpointRequest> __Marshaller_SetBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.SetBreakpointRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.SetBreakpointResponse> __Marshaller_SetBreakpointResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.SetBreakpointResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.GetBreakpointRequest> __Marshaller_GetBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.GetBreakpointRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.GetBreakpointResponse> __Marshaller_GetBreakpointResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.GetBreakpointResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest> __Marshaller_DeleteBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListBreakpointsRequest> __Marshaller_ListBreakpointsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListBreakpointsResponse> __Marshaller_ListBreakpointsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListBreakpointsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListDebuggeesRequest> __Marshaller_ListDebuggeesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListDebuggeesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListDebuggeesResponse> __Marshaller_ListDebuggeesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListDebuggeesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.SetBreakpointRequest> __Marshaller_google_devtools_clouddebugger_v2_SetBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.SetBreakpointRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.SetBreakpointResponse> __Marshaller_google_devtools_clouddebugger_v2_SetBreakpointResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.SetBreakpointResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.GetBreakpointRequest> __Marshaller_google_devtools_clouddebugger_v2_GetBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.GetBreakpointRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.GetBreakpointResponse> __Marshaller_google_devtools_clouddebugger_v2_GetBreakpointResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.GetBreakpointResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest> __Marshaller_google_devtools_clouddebugger_v2_DeleteBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListBreakpointsRequest> __Marshaller_google_devtools_clouddebugger_v2_ListBreakpointsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListBreakpointsResponse> __Marshaller_google_devtools_clouddebugger_v2_ListBreakpointsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListBreakpointsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListDebuggeesRequest> __Marshaller_google_devtools_clouddebugger_v2_ListDebuggeesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListDebuggeesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListDebuggeesResponse> __Marshaller_google_devtools_clouddebugger_v2_ListDebuggeesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListDebuggeesResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.SetBreakpointRequest, global::Google.Cloud.Debugger.V2.SetBreakpointResponse> __Method_SetBreakpoint = new grpc::Method<global::Google.Cloud.Debugger.V2.SetBreakpointRequest, global::Google.Cloud.Debugger.V2.SetBreakpointResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetBreakpoint",
-        __Marshaller_SetBreakpointRequest,
-        __Marshaller_SetBreakpointResponse);
+        __Marshaller_google_devtools_clouddebugger_v2_SetBreakpointRequest,
+        __Marshaller_google_devtools_clouddebugger_v2_SetBreakpointResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.GetBreakpointRequest, global::Google.Cloud.Debugger.V2.GetBreakpointResponse> __Method_GetBreakpoint = new grpc::Method<global::Google.Cloud.Debugger.V2.GetBreakpointRequest, global::Google.Cloud.Debugger.V2.GetBreakpointResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetBreakpoint",
-        __Marshaller_GetBreakpointRequest,
-        __Marshaller_GetBreakpointResponse);
+        __Marshaller_google_devtools_clouddebugger_v2_GetBreakpointRequest,
+        __Marshaller_google_devtools_clouddebugger_v2_GetBreakpointResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBreakpoint = new grpc::Method<global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteBreakpoint",
-        __Marshaller_DeleteBreakpointRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_devtools_clouddebugger_v2_DeleteBreakpointRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.ListBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListBreakpointsResponse> __Method_ListBreakpoints = new grpc::Method<global::Google.Cloud.Debugger.V2.ListBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListBreakpointsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListBreakpoints",
-        __Marshaller_ListBreakpointsRequest,
-        __Marshaller_ListBreakpointsResponse);
+        __Marshaller_google_devtools_clouddebugger_v2_ListBreakpointsRequest,
+        __Marshaller_google_devtools_clouddebugger_v2_ListBreakpointsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.ListDebuggeesRequest, global::Google.Cloud.Debugger.V2.ListDebuggeesResponse> __Method_ListDebuggees = new grpc::Method<global::Google.Cloud.Debugger.V2.ListDebuggeesRequest, global::Google.Cloud.Debugger.V2.ListDebuggeesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListDebuggees",
-        __Marshaller_ListDebuggeesRequest,
-        __Marshaller_ListDebuggeesResponse);
+        __Marshaller_google_devtools_clouddebugger_v2_ListDebuggeesRequest,
+        __Marshaller_google_devtools_clouddebugger_v2_ListDebuggeesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -95,6 +95,7 @@ namespace Google.Cloud.Debugger.V2 {
     }
 
     /// <summary>Base class for server-side implementations of Debugger2</summary>
+    [grpc::BindServiceMethod(typeof(Debugger2), "BindService")]
     public abstract partial class Debugger2Base
     {
       /// <summary>
@@ -414,6 +415,19 @@ namespace Google.Cloud.Debugger.V2 {
           .AddMethod(__Method_DeleteBreakpoint, serviceImpl.DeleteBreakpoint)
           .AddMethod(__Method_ListBreakpoints, serviceImpl.ListBreakpoints)
           .AddMethod(__Method_ListDebuggees, serviceImpl.ListDebuggees).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, Debugger2Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_SetBreakpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.SetBreakpointRequest, global::Google.Cloud.Debugger.V2.SetBreakpointResponse>(serviceImpl.SetBreakpoint));
+      serviceBinder.AddMethod(__Method_GetBreakpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.GetBreakpointRequest, global::Google.Cloud.Debugger.V2.GetBreakpointResponse>(serviceImpl.GetBreakpoint));
+      serviceBinder.AddMethod(__Method_DeleteBreakpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBreakpoint));
+      serviceBinder.AddMethod(__Method_ListBreakpoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.ListBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListBreakpointsResponse>(serviceImpl.ListBreakpoints));
+      serviceBinder.AddMethod(__Method_ListDebuggees, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.ListDebuggeesRequest, global::Google.Cloud.Debugger.V2.ListDebuggeesResponse>(serviceImpl.ListDebuggees));
     }
 
   }

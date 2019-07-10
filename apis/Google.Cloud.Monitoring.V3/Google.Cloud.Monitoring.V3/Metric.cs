@@ -198,13 +198,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+          Interval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
       if (other.value_ != null) {
         if (value_ == null) {
-          value_ = new global::Google.Cloud.Monitoring.V3.TypedValue();
+          Value = new global::Google.Cloud.Monitoring.V3.TypedValue();
         }
         Value.MergeFrom(other.Value);
       }
@@ -221,16 +221,16 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 10: {
             if (interval_ == null) {
-              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+              Interval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
-            input.ReadMessage(interval_);
+            input.ReadMessage(Interval);
             break;
           }
           case 18: {
             if (value_ == null) {
-              value_ = new global::Google.Cloud.Monitoring.V3.TypedValue();
+              Value = new global::Google.Cloud.Monitoring.V3.TypedValue();
             }
-            input.ReadMessage(value_);
+            input.ReadMessage(Value);
             break;
           }
         }
@@ -493,19 +493,19 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.metric_ != null) {
         if (metric_ == null) {
-          metric_ = new global::Google.Api.Metric();
+          Metric = new global::Google.Api.Metric();
         }
         Metric.MergeFrom(other.Metric);
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::Google.Api.MonitoredResource();
+          Resource = new global::Google.Api.MonitoredResource();
         }
         Resource.MergeFrom(other.Resource);
       }
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Api.MonitoredResourceMetadata();
+          Metadata = new global::Google.Api.MonitoredResourceMetadata();
         }
         Metadata.MergeFrom(other.Metadata);
       }
@@ -529,24 +529,24 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 10: {
             if (metric_ == null) {
-              metric_ = new global::Google.Api.Metric();
+              Metric = new global::Google.Api.Metric();
             }
-            input.ReadMessage(metric_);
+            input.ReadMessage(Metric);
             break;
           }
           case 18: {
             if (resource_ == null) {
-              resource_ = new global::Google.Api.MonitoredResource();
+              Resource = new global::Google.Api.MonitoredResource();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
           case 24: {
-            metricKind_ = (global::Google.Api.MetricDescriptor.Types.MetricKind) input.ReadEnum();
+            MetricKind = (global::Google.Api.MetricDescriptor.Types.MetricKind) input.ReadEnum();
             break;
           }
           case 32: {
-            valueType_ = (global::Google.Api.MetricDescriptor.Types.ValueType) input.ReadEnum();
+            ValueType = (global::Google.Api.MetricDescriptor.Types.ValueType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -555,9 +555,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 58: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Api.MonitoredResourceMetadata();
+              Metadata = new global::Google.Api.MonitoredResourceMetadata();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
         }

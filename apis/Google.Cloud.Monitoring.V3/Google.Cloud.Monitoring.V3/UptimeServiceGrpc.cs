@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -38,58 +38,58 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.UptimeCheckService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest> __Marshaller_ListUptimeCheckConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> __Marshaller_ListUptimeCheckConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest> __Marshaller_GetUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Marshaller_UptimeCheckConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest> __Marshaller_CreateUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest> __Marshaller_UpdateUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest> __Marshaller_DeleteUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest> __Marshaller_ListUptimeCheckIpsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> __Marshaller_ListUptimeCheckIpsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest> __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_GetUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Marshaller_google_monitoring_v3_UptimeCheckConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_CreateUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_UpdateUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_DeleteUptimeCheckConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest> __Marshaller_google_monitoring_v3_ListUptimeCheckIpsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> __Marshaller_google_monitoring_v3_ListUptimeCheckIpsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> __Method_ListUptimeCheckConfigs = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListUptimeCheckConfigs",
-        __Marshaller_ListUptimeCheckConfigsRequest,
-        __Marshaller_ListUptimeCheckConfigsResponse);
+        __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsRequest,
+        __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Method_GetUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetUptimeCheckConfig",
-        __Marshaller_GetUptimeCheckConfigRequest,
-        __Marshaller_UptimeCheckConfig);
+        __Marshaller_google_monitoring_v3_GetUptimeCheckConfigRequest,
+        __Marshaller_google_monitoring_v3_UptimeCheckConfig);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Method_CreateUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateUptimeCheckConfig",
-        __Marshaller_CreateUptimeCheckConfigRequest,
-        __Marshaller_UptimeCheckConfig);
+        __Marshaller_google_monitoring_v3_CreateUptimeCheckConfigRequest,
+        __Marshaller_google_monitoring_v3_UptimeCheckConfig);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Method_UpdateUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateUptimeCheckConfig",
-        __Marshaller_UpdateUptimeCheckConfigRequest,
-        __Marshaller_UptimeCheckConfig);
+        __Marshaller_google_monitoring_v3_UpdateUptimeCheckConfigRequest,
+        __Marshaller_google_monitoring_v3_UptimeCheckConfig);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteUptimeCheckConfig",
-        __Marshaller_DeleteUptimeCheckConfigRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_monitoring_v3_DeleteUptimeCheckConfigRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> __Method_ListUptimeCheckIps = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListUptimeCheckIps",
-        __Marshaller_ListUptimeCheckIpsRequest,
-        __Marshaller_ListUptimeCheckIpsResponse);
+        __Marshaller_google_monitoring_v3_ListUptimeCheckIpsRequest,
+        __Marshaller_google_monitoring_v3_ListUptimeCheckIpsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -98,6 +98,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Base class for server-side implementations of UptimeCheckService</summary>
+    [grpc::BindServiceMethod(typeof(UptimeCheckService), "BindService")]
     public abstract partial class UptimeCheckServiceBase
     {
       /// <summary>
@@ -503,6 +504,20 @@ namespace Google.Cloud.Monitoring.V3 {
           .AddMethod(__Method_UpdateUptimeCheckConfig, serviceImpl.UpdateUptimeCheckConfig)
           .AddMethod(__Method_DeleteUptimeCheckConfig, serviceImpl.DeleteUptimeCheckConfig)
           .AddMethod(__Method_ListUptimeCheckIps, serviceImpl.ListUptimeCheckIps).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, UptimeCheckServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListUptimeCheckConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse>(serviceImpl.ListUptimeCheckConfigs));
+      serviceBinder.AddMethod(__Method_GetUptimeCheckConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(serviceImpl.GetUptimeCheckConfig));
+      serviceBinder.AddMethod(__Method_CreateUptimeCheckConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(serviceImpl.CreateUptimeCheckConfig));
+      serviceBinder.AddMethod(__Method_UpdateUptimeCheckConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(serviceImpl.UpdateUptimeCheckConfig));
+      serviceBinder.AddMethod(__Method_DeleteUptimeCheckConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUptimeCheckConfig));
+      serviceBinder.AddMethod(__Method_ListUptimeCheckIps, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse>(serviceImpl.ListUptimeCheckIps));
     }
 
   }

@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,24 +31,24 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.recaptchaenterprise.v1beta1.RecaptchaEnterpriseServiceV1Beta1";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest> __Marshaller_CreateAssessmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> __Marshaller_Assessment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest> __Marshaller_AnnotateAssessmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> __Marshaller_AnnotateAssessmentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_CreateAssessmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Assessment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> __Method_CreateAssessment = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateAssessment",
-        __Marshaller_CreateAssessmentRequest,
-        __Marshaller_Assessment);
+        __Marshaller_google_cloud_recaptchaenterprise_v1beta1_CreateAssessmentRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Assessment);
 
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> __Method_AnnotateAssessment = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AnnotateAssessment",
-        __Marshaller_AnnotateAssessmentRequest,
-        __Marshaller_AnnotateAssessmentResponse);
+        __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -57,6 +57,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of RecaptchaEnterpriseServiceV1Beta1</summary>
+    [grpc::BindServiceMethod(typeof(RecaptchaEnterpriseServiceV1Beta1), "BindService")]
     public abstract partial class RecaptchaEnterpriseServiceV1Beta1Base
     {
       /// <summary>
@@ -213,6 +214,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateAssessment, serviceImpl.CreateAssessment)
           .AddMethod(__Method_AnnotateAssessment, serviceImpl.AnnotateAssessment).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, RecaptchaEnterpriseServiceV1Beta1Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateAssessment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment>(serviceImpl.CreateAssessment));
+      serviceBinder.AddMethod(__Method_AnnotateAssessment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse>(serviceImpl.AnnotateAssessment));
     }
 
   }

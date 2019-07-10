@@ -817,7 +817,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 48: {
-            webhookState_ = (global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState) input.ReadEnum();
+            WebhookState = (global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState) input.ReadEnum();
             break;
           }
           case 58: {
@@ -1123,7 +1123,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 break;
               }
               case 16: {
-                type_ = (global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type) input.ReadEnum();
+                Type = (global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type) input.ReadEnum();
                 break;
               }
               case 26: {
@@ -2323,7 +2323,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 break;
               }
               case 48: {
-                platform_ = (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform) input.ReadEnum();
+                Platform = (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform) input.ReadEnum();
                 break;
               }
               case 58: {
@@ -3882,7 +3882,7 @@ namespace Google.Cloud.Dialogflow.V2 {
               }
               if (other.image_ != null) {
                 if (image_ == null) {
-                  image_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
+                  Image = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
                 }
                 Image.MergeFrom(other.Image);
               }
@@ -3912,9 +3912,9 @@ namespace Google.Cloud.Dialogflow.V2 {
                   }
                   case 34: {
                     if (image_ == null) {
-                      image_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
+                      Image = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
                     }
-                    input.ReadMessage(image_);
+                    input.ReadMessage(Image);
                     break;
                   }
                   case 42: {
@@ -4069,7 +4069,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                   }
                   if (other.openUriAction_ != null) {
                     if (openUriAction_ == null) {
-                      openUriAction_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction();
+                      OpenUriAction = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction();
                     }
                     OpenUriAction.MergeFrom(other.OpenUriAction);
                   }
@@ -4090,9 +4090,9 @@ namespace Google.Cloud.Dialogflow.V2 {
                       }
                       case 18: {
                         if (openUriAction_ == null) {
-                          openUriAction_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction();
+                          OpenUriAction = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction();
                         }
-                        input.ReadMessage(openUriAction_);
+                        input.ReadMessage(OpenUriAction);
                         break;
                       }
                     }
@@ -5024,7 +5024,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                   }
                   if (other.info_ != null) {
                     if (info_ == null) {
-                      info_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
+                      Info = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
                     }
                     Info.MergeFrom(other.Info);
                   }
@@ -5036,7 +5036,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                   }
                   if (other.image_ != null) {
                     if (image_ == null) {
-                      image_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
+                      Image = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
                     }
                     Image.MergeFrom(other.Image);
                   }
@@ -5053,9 +5053,9 @@ namespace Google.Cloud.Dialogflow.V2 {
                         break;
                       case 10: {
                         if (info_ == null) {
-                          info_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
+                          Info = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
                         }
-                        input.ReadMessage(info_);
+                        input.ReadMessage(Info);
                         break;
                       }
                       case 18: {
@@ -5068,9 +5068,9 @@ namespace Google.Cloud.Dialogflow.V2 {
                       }
                       case 34: {
                         if (image_ == null) {
-                          image_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
+                          Image = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
                         }
-                        input.ReadMessage(image_);
+                        input.ReadMessage(Image);
                         break;
                       }
                     }
@@ -5398,7 +5398,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                   }
                   if (other.info_ != null) {
                     if (info_ == null) {
-                      info_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
+                      Info = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
                     }
                     Info.MergeFrom(other.Info);
                   }
@@ -5410,7 +5410,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                   }
                   if (other.image_ != null) {
                     if (image_ == null) {
-                      image_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
+                      Image = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
                     }
                     Image.MergeFrom(other.Image);
                   }
@@ -5427,9 +5427,9 @@ namespace Google.Cloud.Dialogflow.V2 {
                         break;
                       case 10: {
                         if (info_ == null) {
-                          info_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
+                          Info = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo();
                         }
-                        input.ReadMessage(info_);
+                        input.ReadMessage(Info);
                         break;
                       }
                       case 18: {
@@ -5442,9 +5442,9 @@ namespace Google.Cloud.Dialogflow.V2 {
                       }
                       case 34: {
                         if (image_ == null) {
-                          image_ = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
+                          Image = new global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image();
                         }
-                        input.ReadMessage(image_);
+                        input.ReadMessage(Image);
                         break;
                       }
                     }
@@ -6046,7 +6046,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 24: {
-            intentView_ = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
+            IntentView = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
             break;
           }
           case 32: {
@@ -6417,7 +6417,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 24: {
-            intentView_ = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
+            IntentView = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
             break;
           }
         }
@@ -6620,7 +6620,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.intent_ != null) {
         if (intent_ == null) {
-          intent_ = new global::Google.Cloud.Dialogflow.V2.Intent();
+          Intent = new global::Google.Cloud.Dialogflow.V2.Intent();
         }
         Intent.MergeFrom(other.Intent);
       }
@@ -6647,9 +6647,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (intent_ == null) {
-              intent_ = new global::Google.Cloud.Dialogflow.V2.Intent();
+              Intent = new global::Google.Cloud.Dialogflow.V2.Intent();
             }
-            input.ReadMessage(intent_);
+            input.ReadMessage(Intent);
             break;
           }
           case 26: {
@@ -6657,7 +6657,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 32: {
-            intentView_ = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
+            IntentView = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
             break;
           }
         }
@@ -6856,7 +6856,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.intent_ != null) {
         if (intent_ == null) {
-          intent_ = new global::Google.Cloud.Dialogflow.V2.Intent();
+          Intent = new global::Google.Cloud.Dialogflow.V2.Intent();
         }
         Intent.MergeFrom(other.Intent);
       }
@@ -6865,7 +6865,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -6885,9 +6885,9 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           case 10: {
             if (intent_ == null) {
-              intent_ = new global::Google.Cloud.Dialogflow.V2.Intent();
+              Intent = new global::Google.Cloud.Dialogflow.V2.Intent();
             }
-            input.ReadMessage(intent_);
+            input.ReadMessage(Intent);
             break;
           }
           case 18: {
@@ -6896,13 +6896,13 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 32: {
-            intentView_ = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
+            IntentView = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
             break;
           }
         }
@@ -7323,7 +7323,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -7376,13 +7376,13 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 42: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 48: {
-            intentView_ = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
+            IntentView = (global::Google.Cloud.Dialogflow.V2.IntentView) input.ReadEnum();
             break;
           }
         }

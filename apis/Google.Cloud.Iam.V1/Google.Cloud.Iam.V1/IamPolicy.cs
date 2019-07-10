@@ -204,7 +204,7 @@ namespace Google.Cloud.Iam.V1 {
       }
       if (other.policy_ != null) {
         if (policy_ == null) {
-          policy_ = new global::Google.Cloud.Iam.V1.Policy();
+          Policy = new global::Google.Cloud.Iam.V1.Policy();
         }
         Policy.MergeFrom(other.Policy);
       }
@@ -225,9 +225,9 @@ namespace Google.Cloud.Iam.V1 {
           }
           case 18: {
             if (policy_ == null) {
-              policy_ = new global::Google.Cloud.Iam.V1.Policy();
+              Policy = new global::Google.Cloud.Iam.V1.Policy();
             }
-            input.ReadMessage(policy_);
+            input.ReadMessage(Policy);
             break;
           }
         }
@@ -378,7 +378,7 @@ namespace Google.Cloud.Iam.V1 {
       }
       if (other.options_ != null) {
         if (options_ == null) {
-          options_ = new global::Google.Cloud.Iam.V1.GetPolicyOptions();
+          Options = new global::Google.Cloud.Iam.V1.GetPolicyOptions();
         }
         Options.MergeFrom(other.Options);
       }
@@ -399,9 +399,9 @@ namespace Google.Cloud.Iam.V1 {
           }
           case 18: {
             if (options_ == null) {
-              options_ = new global::Google.Cloud.Iam.V1.GetPolicyOptions();
+              Options = new global::Google.Cloud.Iam.V1.GetPolicyOptions();
             }
-            input.ReadMessage(options_);
+            input.ReadMessage(Options);
             break;
           }
         }

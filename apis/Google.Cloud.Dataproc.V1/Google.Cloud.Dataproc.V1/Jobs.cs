@@ -688,7 +688,7 @@ namespace Google.Cloud.Dataproc.V1 {
       properties_.Add(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
-          loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+          LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
       }
@@ -742,9 +742,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 66: {
             if (loggingConfig_ == null) {
-              loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+              LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
             }
-            input.ReadMessage(loggingConfig_);
+            input.ReadMessage(LoggingConfig);
             break;
           }
         }
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.Dataproc.V1 {
       properties_.Add(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
-          loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+          LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
       }
@@ -1102,9 +1102,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 66: {
             if (loggingConfig_ == null) {
-              loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+              LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
             }
-            input.ReadMessage(loggingConfig_);
+            input.ReadMessage(LoggingConfig);
             break;
           }
         }
@@ -1380,7 +1380,7 @@ namespace Google.Cloud.Dataproc.V1 {
       properties_.Add(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
-          loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+          LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
       }
@@ -1425,9 +1425,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 66: {
             if (loggingConfig_ == null) {
-              loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+              LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
             }
-            input.ReadMessage(loggingConfig_);
+            input.ReadMessage(LoggingConfig);
             break;
           }
         }
@@ -2140,7 +2140,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
-          loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+          LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
       }
@@ -2190,9 +2190,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 50: {
             if (loggingConfig_ == null) {
-              loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+              LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
             }
-            input.ReadMessage(loggingConfig_);
+            input.ReadMessage(LoggingConfig);
             break;
           }
           case 450: {
@@ -2486,7 +2486,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
-          loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+          LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
       }
@@ -2544,9 +2544,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 58: {
             if (loggingConfig_ == null) {
-              loggingConfig_ = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+              LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
             }
-            input.ReadMessage(loggingConfig_);
+            input.ReadMessage(LoggingConfig);
             break;
           }
         }
@@ -2915,7 +2915,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.stateStartTime_ != null) {
         if (stateStartTime_ == null) {
-          stateStartTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StateStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StateStartTime.MergeFrom(other.StateStartTime);
       }
@@ -2934,7 +2934,7 @@ namespace Google.Cloud.Dataproc.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            state_ = (global::Google.Cloud.Dataproc.V1.JobStatus.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Dataproc.V1.JobStatus.Types.State) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2943,13 +2943,13 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 50: {
             if (stateStartTime_ == null) {
-              stateStartTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StateStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(stateStartTime_);
+            input.ReadMessage(StateStartTime);
             break;
           }
           case 56: {
-            substate_ = (global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate) input.ReadEnum();
+            Substate = (global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate) input.ReadEnum();
             break;
           }
         }
@@ -3438,7 +3438,7 @@ namespace Google.Cloud.Dataproc.V1 {
             break;
           }
           case 16: {
-            state_ = (global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State) input.ReadEnum();
             break;
           }
           case 29: {
@@ -4020,19 +4020,19 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.reference_ != null) {
         if (reference_ == null) {
-          reference_ = new global::Google.Cloud.Dataproc.V1.JobReference();
+          Reference = new global::Google.Cloud.Dataproc.V1.JobReference();
         }
         Reference.MergeFrom(other.Reference);
       }
       if (other.placement_ != null) {
         if (placement_ == null) {
-          placement_ = new global::Google.Cloud.Dataproc.V1.JobPlacement();
+          Placement = new global::Google.Cloud.Dataproc.V1.JobPlacement();
         }
         Placement.MergeFrom(other.Placement);
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Cloud.Dataproc.V1.JobStatus();
+          Status = new global::Google.Cloud.Dataproc.V1.JobStatus();
         }
         Status.MergeFrom(other.Status);
       }
@@ -4047,7 +4047,7 @@ namespace Google.Cloud.Dataproc.V1 {
       labels_.Add(other.labels_);
       if (other.scheduling_ != null) {
         if (scheduling_ == null) {
-          scheduling_ = new global::Google.Cloud.Dataproc.V1.JobScheduling();
+          Scheduling = new global::Google.Cloud.Dataproc.V1.JobScheduling();
         }
         Scheduling.MergeFrom(other.Scheduling);
       }
@@ -4106,16 +4106,16 @@ namespace Google.Cloud.Dataproc.V1 {
             break;
           case 10: {
             if (reference_ == null) {
-              reference_ = new global::Google.Cloud.Dataproc.V1.JobReference();
+              Reference = new global::Google.Cloud.Dataproc.V1.JobReference();
             }
-            input.ReadMessage(reference_);
+            input.ReadMessage(Reference);
             break;
           }
           case 18: {
             if (placement_ == null) {
-              placement_ = new global::Google.Cloud.Dataproc.V1.JobPlacement();
+              Placement = new global::Google.Cloud.Dataproc.V1.JobPlacement();
             }
-            input.ReadMessage(placement_);
+            input.ReadMessage(Placement);
             break;
           }
           case 26: {
@@ -4165,9 +4165,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 66: {
             if (status_ == null) {
-              status_ = new global::Google.Cloud.Dataproc.V1.JobStatus();
+              Status = new global::Google.Cloud.Dataproc.V1.JobStatus();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 74: {
@@ -4201,9 +4201,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 162: {
             if (scheduling_ == null) {
-              scheduling_ = new global::Google.Cloud.Dataproc.V1.JobScheduling();
+              Scheduling = new global::Google.Cloud.Dataproc.V1.JobScheduling();
             }
-            input.ReadMessage(scheduling_);
+            input.ReadMessage(Scheduling);
             break;
           }
           case 178: {
@@ -4560,7 +4560,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.job_ != null) {
         if (job_ == null) {
-          job_ = new global::Google.Cloud.Dataproc.V1.Job();
+          Job = new global::Google.Cloud.Dataproc.V1.Job();
         }
         Job.MergeFrom(other.Job);
       }
@@ -4584,9 +4584,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 18: {
             if (job_ == null) {
-              job_ = new global::Google.Cloud.Dataproc.V1.Job();
+              Job = new global::Google.Cloud.Dataproc.V1.Job();
             }
-            input.ReadMessage(job_);
+            input.ReadMessage(Job);
             break;
           }
           case 26: {
@@ -5124,7 +5124,7 @@ namespace Google.Cloud.Dataproc.V1 {
             break;
           }
           case 40: {
-            jobStateMatcher_ = (global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher) input.ReadEnum();
+            JobStateMatcher = (global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher) input.ReadEnum();
             break;
           }
           case 50: {
@@ -5391,13 +5391,13 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.job_ != null) {
         if (job_ == null) {
-          job_ = new global::Google.Cloud.Dataproc.V1.Job();
+          Job = new global::Google.Cloud.Dataproc.V1.Job();
         }
         Job.MergeFrom(other.Job);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -5426,16 +5426,16 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 34: {
             if (job_ == null) {
-              job_ = new global::Google.Cloud.Dataproc.V1.Job();
+              Job = new global::Google.Cloud.Dataproc.V1.Job();
             }
-            input.ReadMessage(job_);
+            input.ReadMessage(Job);
             break;
           }
           case 42: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

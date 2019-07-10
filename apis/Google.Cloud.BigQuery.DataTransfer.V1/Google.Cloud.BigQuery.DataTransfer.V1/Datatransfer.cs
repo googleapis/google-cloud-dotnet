@@ -432,6 +432,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+
     /// <summary>Field number for the "max_value" field.</summary>
     public const int MaxValueFieldNumber = 10;
     private static readonly pb::FieldCodec<double?> _single_maxValue_codec = pb::FieldCodec.ForStructWrapper<double>(82);
@@ -446,6 +447,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         maxValue_ = value;
       }
     }
+
 
     /// <summary>Field number for the "fields" field.</summary>
     public const int FieldsFieldNumber = 11;
@@ -787,7 +789,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           }
           case 32: {
-            type_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type) input.ReadEnum();
             break;
           }
           case 40: {
@@ -1465,7 +1467,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.minimumScheduleInterval_ != null) {
         if (minimumScheduleInterval_ == null) {
-          minimumScheduleInterval_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MinimumScheduleInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MinimumScheduleInterval.MergeFrom(other.MinimumScheduleInterval);
       }
@@ -1505,7 +1507,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           }
           case 56: {
-            transferType_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType) input.ReadEnum();
+            TransferType = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType) input.ReadEnum();
             break;
           }
           case 64: {
@@ -1533,11 +1535,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           }
           case 112: {
-            authorizationType_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType) input.ReadEnum();
+            AuthorizationType = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType) input.ReadEnum();
             break;
           }
           case 120: {
-            dataRefreshType_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType) input.ReadEnum();
+            DataRefreshType = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType) input.ReadEnum();
             break;
           }
           case 128: {
@@ -1550,9 +1552,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 146: {
             if (minimumScheduleInterval_ == null) {
-              minimumScheduleInterval_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MinimumScheduleInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(minimumScheduleInterval_);
+            input.ReadMessage(MinimumScheduleInterval);
             break;
           }
         }
@@ -2325,7 +2327,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.transferConfig_ != null) {
         if (transferConfig_ == null) {
-          transferConfig_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
+          TransferConfig = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
         }
         TransferConfig.MergeFrom(other.TransferConfig);
       }
@@ -2352,9 +2354,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 18: {
             if (transferConfig_ == null) {
-              transferConfig_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
+              TransferConfig = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
             }
-            input.ReadMessage(transferConfig_);
+            input.ReadMessage(TransferConfig);
             break;
           }
           case 26: {
@@ -2577,7 +2579,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.transferConfig_ != null) {
         if (transferConfig_ == null) {
-          transferConfig_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
+          TransferConfig = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
         }
         TransferConfig.MergeFrom(other.TransferConfig);
       }
@@ -2586,7 +2588,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -2606,9 +2608,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           case 10: {
             if (transferConfig_ == null) {
-              transferConfig_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
+              TransferConfig = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
             }
-            input.ReadMessage(transferConfig_);
+            input.ReadMessage(TransferConfig);
             break;
           }
           case 26: {
@@ -2617,9 +2619,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 34: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 42: {
@@ -3814,7 +3816,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             break;
           }
           case 40: {
-            runAttempt_ = (global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt) input.ReadEnum();
+            RunAttempt = (global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt) input.ReadEnum();
             break;
           }
         }
@@ -4836,13 +4838,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -4863,16 +4865,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           case 18: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 26: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -5400,13 +5402,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
           if (other.startTime_ != null) {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             StartTime.MergeFrom(other.StartTime);
           }
           if (other.endTime_ != null) {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             EndTime.MergeFrom(other.EndTime);
           }
@@ -5423,16 +5425,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
                 break;
               case 10: {
                 if (startTime_ == null) {
-                  startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(startTime_);
+                input.ReadMessage(StartTime);
                 break;
               }
               case 18: {
                 if (endTime_ == null) {
-                  endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(endTime_);
+                input.ReadMessage(EndTime);
                 break;
               }
             }

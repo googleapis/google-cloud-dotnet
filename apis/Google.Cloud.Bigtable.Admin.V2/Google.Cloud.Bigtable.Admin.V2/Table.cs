@@ -301,7 +301,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           }
           case 32: {
-            granularity_ = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity) input.ReadEnum();
+            Granularity = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity) input.ReadEnum();
             break;
           }
         }
@@ -482,7 +482,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                replicationState_ = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) input.ReadEnum();
+                ReplicationState = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) input.ReadEnum();
                 break;
               }
             }
@@ -653,7 +653,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.gcRule_ != null) {
         if (gcRule_ == null) {
-          gcRule_ = new global::Google.Cloud.Bigtable.Admin.V2.GcRule();
+          GcRule = new global::Google.Cloud.Bigtable.Admin.V2.GcRule();
         }
         GcRule.MergeFrom(other.GcRule);
       }
@@ -670,9 +670,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           case 10: {
             if (gcRule_ == null) {
-              gcRule_ = new global::Google.Cloud.Bigtable.Admin.V2.GcRule();
+              GcRule = new global::Google.Cloud.Bigtable.Admin.V2.GcRule();
             }
-            input.ReadMessage(gcRule_);
+            input.ReadMessage(GcRule);
             break;
           }
         }
@@ -1512,7 +1512,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.sourceTable_ != null) {
         if (sourceTable_ == null) {
-          sourceTable_ = new global::Google.Cloud.Bigtable.Admin.V2.Table();
+          SourceTable = new global::Google.Cloud.Bigtable.Admin.V2.Table();
         }
         SourceTable.MergeFrom(other.SourceTable);
       }
@@ -1521,13 +1521,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.deleteTime_ != null) {
         if (deleteTime_ == null) {
-          deleteTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
@@ -1554,9 +1554,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 18: {
             if (sourceTable_ == null) {
-              sourceTable_ = new global::Google.Cloud.Bigtable.Admin.V2.Table();
+              SourceTable = new global::Google.Cloud.Bigtable.Admin.V2.Table();
             }
-            input.ReadMessage(sourceTable_);
+            input.ReadMessage(SourceTable);
             break;
           }
           case 24: {
@@ -1565,20 +1565,20 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 34: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 42: {
             if (deleteTime_ == null) {
-              deleteTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(deleteTime_);
+            input.ReadMessage(DeleteTime);
             break;
           }
           case 48: {
-            state_ = (global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) input.ReadEnum();
             break;
           }
           case 58: {

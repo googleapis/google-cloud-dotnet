@@ -787,7 +787,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.notificationChannel_ != null) {
         if (notificationChannel_ == null) {
-          notificationChannel_ = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
+          NotificationChannel = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
         }
         NotificationChannel.MergeFrom(other.NotificationChannel);
       }
@@ -804,9 +804,9 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (notificationChannel_ == null) {
-              notificationChannel_ = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
+              NotificationChannel = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
             }
-            input.ReadMessage(notificationChannel_);
+            input.ReadMessage(NotificationChannel);
             break;
           }
           case 26: {
@@ -1534,13 +1534,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
       if (other.notificationChannel_ != null) {
         if (notificationChannel_ == null) {
-          notificationChannel_ = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
+          NotificationChannel = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
         }
         NotificationChannel.MergeFrom(other.NotificationChannel);
       }
@@ -1557,16 +1557,16 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 26: {
             if (notificationChannel_ == null) {
-              notificationChannel_ = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
+              NotificationChannel = new global::Google.Cloud.Monitoring.V3.NotificationChannel();
             }
-            input.ReadMessage(notificationChannel_);
+            input.ReadMessage(NotificationChannel);
             break;
           }
         }
@@ -2030,7 +2030,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.expireTime_ != null) {
         if (expireTime_ == null) {
-          expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
@@ -2051,9 +2051,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 18: {
             if (expireTime_ == null) {
-              expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(expireTime_);
+            input.ReadMessage(ExpireTime);
             break;
           }
         }
@@ -2207,7 +2207,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.expireTime_ != null) {
         if (expireTime_ == null) {
-          expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
@@ -2228,9 +2228,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 18: {
             if (expireTime_ == null) {
-              expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(expireTime_);
+            input.ReadMessage(ExpireTime);
             break;
           }
         }

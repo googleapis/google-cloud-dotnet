@@ -313,7 +313,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
+          Group = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
         }
         Group.MergeFrom(other.Group);
       }
@@ -330,9 +330,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             break;
           case 10: {
             if (group_ == null) {
-              group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
+              Group = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
             }
-            input.ReadMessage(group_);
+            input.ReadMessage(Group);
             break;
           }
         }

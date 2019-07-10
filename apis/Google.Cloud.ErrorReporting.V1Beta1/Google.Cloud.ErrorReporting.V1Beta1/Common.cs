@@ -585,13 +585,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.eventTime_ != null) {
         if (eventTime_ == null) {
-          eventTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EventTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EventTime.MergeFrom(other.EventTime);
       }
       if (other.serviceContext_ != null) {
         if (serviceContext_ == null) {
-          serviceContext_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
+          ServiceContext = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
         }
         ServiceContext.MergeFrom(other.ServiceContext);
       }
@@ -600,7 +600,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
+          Context = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
         }
         Context.MergeFrom(other.Context);
       }
@@ -617,16 +617,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             break;
           case 10: {
             if (eventTime_ == null) {
-              eventTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EventTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(eventTime_);
+            input.ReadMessage(EventTime);
             break;
           }
           case 18: {
             if (serviceContext_ == null) {
-              serviceContext_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
+              ServiceContext = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
             }
-            input.ReadMessage(serviceContext_);
+            input.ReadMessage(ServiceContext);
             break;
           }
           case 26: {
@@ -635,9 +635,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 42: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
+              Context = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
         }
@@ -1032,7 +1032,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.httpRequest_ != null) {
         if (httpRequest_ == null) {
-          httpRequest_ = new global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext();
+          HttpRequest = new global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext();
         }
         HttpRequest.MergeFrom(other.HttpRequest);
       }
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.reportLocation_ != null) {
         if (reportLocation_ == null) {
-          reportLocation_ = new global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation();
+          ReportLocation = new global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation();
         }
         ReportLocation.MergeFrom(other.ReportLocation);
       }
@@ -1058,9 +1058,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             break;
           case 10: {
             if (httpRequest_ == null) {
-              httpRequest_ = new global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext();
+              HttpRequest = new global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext();
             }
-            input.ReadMessage(httpRequest_);
+            input.ReadMessage(HttpRequest);
             break;
           }
           case 18: {
@@ -1069,9 +1069,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 26: {
             if (reportLocation_ == null) {
-              reportLocation_ = new global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation();
+              ReportLocation = new global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation();
             }
-            input.ReadMessage(reportLocation_);
+            input.ReadMessage(ReportLocation);
             break;
           }
         }

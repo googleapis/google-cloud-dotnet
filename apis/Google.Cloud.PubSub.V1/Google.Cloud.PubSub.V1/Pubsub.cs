@@ -580,7 +580,7 @@ namespace Google.Cloud.PubSub.V1 {
       labels_.Add(other.labels_);
       if (other.messageStoragePolicy_ != null) {
         if (messageStoragePolicy_ == null) {
-          messageStoragePolicy_ = new global::Google.Cloud.PubSub.V1.MessageStoragePolicy();
+          MessageStoragePolicy = new global::Google.Cloud.PubSub.V1.MessageStoragePolicy();
         }
         MessageStoragePolicy.MergeFrom(other.MessageStoragePolicy);
       }
@@ -608,9 +608,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 26: {
             if (messageStoragePolicy_ == null) {
-              messageStoragePolicy_ = new global::Google.Cloud.PubSub.V1.MessageStoragePolicy();
+              MessageStoragePolicy = new global::Google.Cloud.PubSub.V1.MessageStoragePolicy();
             }
-            input.ReadMessage(messageStoragePolicy_);
+            input.ReadMessage(MessageStoragePolicy);
             break;
           }
           case 42: {
@@ -852,7 +852,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.publishTime_ != null) {
         if (publishTime_ == null) {
-          publishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PublishTime.MergeFrom(other.PublishTime);
       }
@@ -884,9 +884,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 34: {
             if (publishTime_ == null) {
-              publishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(publishTime_);
+            input.ReadMessage(PublishTime);
             break;
           }
           case 42: {
@@ -1176,13 +1176,13 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.topic_ != null) {
         if (topic_ == null) {
-          topic_ = new global::Google.Cloud.PubSub.V1.Topic();
+          Topic = new global::Google.Cloud.PubSub.V1.Topic();
         }
         Topic.MergeFrom(other.Topic);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1199,16 +1199,16 @@ namespace Google.Cloud.PubSub.V1 {
             break;
           case 10: {
             if (topic_ == null) {
-              topic_ = new global::Google.Cloud.PubSub.V1.Topic();
+              Topic = new global::Google.Cloud.PubSub.V1.Topic();
             }
-            input.ReadMessage(topic_);
+            input.ReadMessage(Topic);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -3077,7 +3077,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.pushConfig_ != null) {
         if (pushConfig_ == null) {
-          pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
+          PushConfig = new global::Google.Cloud.PubSub.V1.PushConfig();
         }
         PushConfig.MergeFrom(other.PushConfig);
       }
@@ -3089,7 +3089,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.messageRetentionDuration_ != null) {
         if (messageRetentionDuration_ == null) {
-          messageRetentionDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MessageRetentionDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MessageRetentionDuration.MergeFrom(other.MessageRetentionDuration);
       }
@@ -3099,7 +3099,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.expirationPolicy_ != null) {
         if (expirationPolicy_ == null) {
-          expirationPolicy_ = new global::Google.Cloud.PubSub.V1.ExpirationPolicy();
+          ExpirationPolicy = new global::Google.Cloud.PubSub.V1.ExpirationPolicy();
         }
         ExpirationPolicy.MergeFrom(other.ExpirationPolicy);
       }
@@ -3124,9 +3124,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 34: {
             if (pushConfig_ == null) {
-              pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
+              PushConfig = new global::Google.Cloud.PubSub.V1.PushConfig();
             }
-            input.ReadMessage(pushConfig_);
+            input.ReadMessage(PushConfig);
             break;
           }
           case 40: {
@@ -3139,9 +3139,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 66: {
             if (messageRetentionDuration_ == null) {
-              messageRetentionDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MessageRetentionDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(messageRetentionDuration_);
+            input.ReadMessage(MessageRetentionDuration);
             break;
           }
           case 74: {
@@ -3154,9 +3154,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 90: {
             if (expirationPolicy_ == null) {
-              expirationPolicy_ = new global::Google.Cloud.PubSub.V1.ExpirationPolicy();
+              ExpirationPolicy = new global::Google.Cloud.PubSub.V1.ExpirationPolicy();
             }
-            input.ReadMessage(expirationPolicy_);
+            input.ReadMessage(ExpirationPolicy);
             break;
           }
         }
@@ -3284,7 +3284,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.ttl_ != null) {
         if (ttl_ == null) {
-          ttl_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Ttl.MergeFrom(other.Ttl);
       }
@@ -3301,9 +3301,9 @@ namespace Google.Cloud.PubSub.V1 {
             break;
           case 10: {
             if (ttl_ == null) {
-              ttl_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(ttl_);
+            input.ReadMessage(Ttl);
             break;
           }
         }
@@ -3883,7 +3883,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.message_ != null) {
         if (message_ == null) {
-          message_ = new global::Google.Cloud.PubSub.V1.PubsubMessage();
+          Message = new global::Google.Cloud.PubSub.V1.PubsubMessage();
         }
         Message.MergeFrom(other.Message);
       }
@@ -3904,9 +3904,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 18: {
             if (message_ == null) {
-              message_ = new global::Google.Cloud.PubSub.V1.PubsubMessage();
+              Message = new global::Google.Cloud.PubSub.V1.PubsubMessage();
             }
-            input.ReadMessage(message_);
+            input.ReadMessage(Message);
             break;
           }
         }
@@ -4189,13 +4189,13 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.subscription_ != null) {
         if (subscription_ == null) {
-          subscription_ = new global::Google.Cloud.PubSub.V1.Subscription();
+          Subscription = new global::Google.Cloud.PubSub.V1.Subscription();
         }
         Subscription.MergeFrom(other.Subscription);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -4212,16 +4212,16 @@ namespace Google.Cloud.PubSub.V1 {
             break;
           case 10: {
             if (subscription_ == null) {
-              subscription_ = new global::Google.Cloud.PubSub.V1.Subscription();
+              Subscription = new global::Google.Cloud.PubSub.V1.Subscription();
             }
-            input.ReadMessage(subscription_);
+            input.ReadMessage(Subscription);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -4872,7 +4872,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.pushConfig_ != null) {
         if (pushConfig_ == null) {
-          pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
+          PushConfig = new global::Google.Cloud.PubSub.V1.PushConfig();
         }
         PushConfig.MergeFrom(other.PushConfig);
       }
@@ -4893,9 +4893,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 18: {
             if (pushConfig_ == null) {
-              pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
+              PushConfig = new global::Google.Cloud.PubSub.V1.PushConfig();
             }
-            input.ReadMessage(pushConfig_);
+            input.ReadMessage(PushConfig);
             break;
           }
         }
@@ -6325,13 +6325,13 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.snapshot_ != null) {
         if (snapshot_ == null) {
-          snapshot_ = new global::Google.Cloud.PubSub.V1.Snapshot();
+          Snapshot = new global::Google.Cloud.PubSub.V1.Snapshot();
         }
         Snapshot.MergeFrom(other.Snapshot);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -6348,16 +6348,16 @@ namespace Google.Cloud.PubSub.V1 {
             break;
           case 10: {
             if (snapshot_ == null) {
-              snapshot_ = new global::Google.Cloud.PubSub.V1.Snapshot();
+              Snapshot = new global::Google.Cloud.PubSub.V1.Snapshot();
             }
-            input.ReadMessage(snapshot_);
+            input.ReadMessage(Snapshot);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -6566,7 +6566,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.expireTime_ != null) {
         if (expireTime_ == null) {
-          expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
@@ -6592,9 +6592,9 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 26: {
             if (expireTime_ == null) {
-              expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(expireTime_);
+            input.ReadMessage(ExpireTime);
             break;
           }
           case 34: {

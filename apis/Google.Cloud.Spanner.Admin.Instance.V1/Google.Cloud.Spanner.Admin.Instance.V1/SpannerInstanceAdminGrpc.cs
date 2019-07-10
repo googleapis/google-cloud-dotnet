@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -50,94 +50,94 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   {
     static readonly string __ServiceName = "google.spanner.admin.instance.v1.InstanceAdmin";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest> __Marshaller_ListInstanceConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Marshaller_ListInstanceConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest> __Marshaller_GetInstanceConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Marshaller_InstanceConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest> __Marshaller_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Marshaller_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest> __Marshaller_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> __Marshaller_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest> __Marshaller_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest> __Marshaller_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest> __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest> __Marshaller_google_spanner_admin_instance_v1_GetInstanceConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Marshaller_google_spanner_admin_instance_v1_InstanceConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest> __Marshaller_google_spanner_admin_instance_v1_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Marshaller_google_spanner_admin_instance_v1_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> __Marshaller_google_spanner_admin_instance_v1_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Method_ListInstanceConfigs = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListInstanceConfigs",
-        __Marshaller_ListInstanceConfigsRequest,
-        __Marshaller_ListInstanceConfigsResponse);
+        __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigsRequest,
+        __Marshaller_google_spanner_admin_instance_v1_ListInstanceConfigsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Method_GetInstanceConfig = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetInstanceConfig",
-        __Marshaller_GetInstanceConfigRequest,
-        __Marshaller_InstanceConfig);
+        __Marshaller_google_spanner_admin_instance_v1_GetInstanceConfigRequest,
+        __Marshaller_google_spanner_admin_instance_v1_InstanceConfig);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListInstances",
-        __Marshaller_ListInstancesRequest,
-        __Marshaller_ListInstancesResponse);
+        __Marshaller_google_spanner_admin_instance_v1_ListInstancesRequest,
+        __Marshaller_google_spanner_admin_instance_v1_ListInstancesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> __Method_GetInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetInstance",
-        __Marshaller_GetInstanceRequest,
-        __Marshaller_Instance);
+        __Marshaller_google_spanner_admin_instance_v1_GetInstanceRequest,
+        __Marshaller_google_spanner_admin_instance_v1_Instance);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateInstance",
-        __Marshaller_CreateInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_spanner_admin_instance_v1_CreateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation> __Method_UpdateInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateInstance",
-        __Marshaller_UpdateInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_spanner_admin_instance_v1_UpdateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteInstance",
-        __Marshaller_DeleteInstanceRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_spanner_admin_instance_v1_DeleteInstanceRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetIamPolicy",
-        __Marshaller_SetIamPolicyRequest,
-        __Marshaller_Policy);
+        __Marshaller_google_iam_v1_SetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetIamPolicy",
-        __Marshaller_GetIamPolicyRequest,
-        __Marshaller_Policy);
+        __Marshaller_google_iam_v1_GetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "TestIamPermissions",
-        __Marshaller_TestIamPermissionsRequest,
-        __Marshaller_TestIamPermissionsResponse);
+        __Marshaller_google_iam_v1_TestIamPermissionsRequest,
+        __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -146,6 +146,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     }
 
     /// <summary>Base class for server-side implementations of InstanceAdmin</summary>
+    [grpc::BindServiceMethod(typeof(InstanceAdmin), "BindService")]
     public abstract partial class InstanceAdminBase
     {
       /// <summary>
@@ -1220,6 +1221,24 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, InstanceAdminBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListInstanceConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse>(serviceImpl.ListInstanceConfigs));
+      serviceBinder.AddMethod(__Method_GetInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>(serviceImpl.GetInstanceConfig));
+      serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse>(serviceImpl.ListInstances));
+      serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance>(serviceImpl.GetInstance));
+      serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
+      serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
+      serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteInstance));
+      serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
+      serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
+      serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
     }
 
   }

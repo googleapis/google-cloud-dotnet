@@ -180,7 +180,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.mutateTime_ != null) {
         if (mutateTime_ == null) {
-          mutateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          MutateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         MutateTime.MergeFrom(other.MutateTime);
       }
@@ -200,9 +200,9 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 10: {
             if (mutateTime_ == null) {
-              mutateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              MutateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(mutateTime_);
+            input.ReadMessage(MutateTime);
             break;
           }
           case 18: {

@@ -320,7 +320,7 @@ namespace Grafeas.V1 {
       }
       if (other.latestVersion_ != null) {
         if (latestVersion_ == null) {
-          latestVersion_ = new global::Grafeas.V1.Version();
+          LatestVersion = new global::Grafeas.V1.Version();
         }
         LatestVersion.MergeFrom(other.LatestVersion);
       }
@@ -349,14 +349,14 @@ namespace Grafeas.V1 {
             break;
           }
           case 16: {
-            architecture_ = (global::Grafeas.V1.Architecture) input.ReadEnum();
+            Architecture = (global::Grafeas.V1.Architecture) input.ReadEnum();
             break;
           }
           case 26: {
             if (latestVersion_ == null) {
-              latestVersion_ = new global::Grafeas.V1.Version();
+              LatestVersion = new global::Grafeas.V1.Version();
             }
-            input.ReadMessage(latestVersion_);
+            input.ReadMessage(LatestVersion);
             break;
           }
           case 34: {
@@ -543,7 +543,7 @@ namespace Grafeas.V1 {
       }
       if (other.version_ != null) {
         if (version_ == null) {
-          version_ = new global::Grafeas.V1.Version();
+          Version = new global::Grafeas.V1.Version();
         }
         Version.MergeFrom(other.Version);
       }
@@ -567,9 +567,9 @@ namespace Grafeas.V1 {
           }
           case 18: {
             if (version_ == null) {
-              version_ = new global::Grafeas.V1.Version();
+              Version = new global::Grafeas.V1.Version();
             }
-            input.ReadMessage(version_);
+            input.ReadMessage(Version);
             break;
           }
           case 26: {
@@ -1150,7 +1150,7 @@ namespace Grafeas.V1 {
             break;
           }
           case 32: {
-            kind_ = (global::Grafeas.V1.Version.Types.VersionKind) input.ReadEnum();
+            Kind = (global::Grafeas.V1.Version.Types.VersionKind) input.ReadEnum();
             break;
           }
           case 42: {

@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -30,23 +30,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   {
     static readonly string __ServiceName = "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest> __Marshaller_GetGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Marshaller_ErrorGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest> __Marshaller_UpdateGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_GetGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Marshaller_google_devtools_clouderrorreporting_v1beta1_ErrorGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_UpdateGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Method_GetGroup = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetGroup",
-        __Marshaller_GetGroupRequest,
-        __Marshaller_ErrorGroup);
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_GetGroupRequest,
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_ErrorGroup);
 
     static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Method_UpdateGroup = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateGroup",
-        __Marshaller_UpdateGroupRequest,
-        __Marshaller_ErrorGroup);
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_UpdateGroupRequest,
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_ErrorGroup);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -55,6 +55,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of ErrorGroupService</summary>
+    [grpc::BindServiceMethod(typeof(ErrorGroupService), "BindService")]
     public abstract partial class ErrorGroupServiceBase
     {
       /// <summary>
@@ -211,6 +212,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetGroup, serviceImpl.GetGroup)
           .AddMethod(__Method_UpdateGroup, serviceImpl.UpdateGroup).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, ErrorGroupServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_GetGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>(serviceImpl.GetGroup));
+      serviceBinder.AddMethod(__Method_UpdateGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>(serviceImpl.UpdateGroup));
     }
 
   }

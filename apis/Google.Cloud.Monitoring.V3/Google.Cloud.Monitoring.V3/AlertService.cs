@@ -227,7 +227,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.alertPolicy_ != null) {
         if (alertPolicy_ == null) {
-          alertPolicy_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
+          AlertPolicy = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
         }
         AlertPolicy.MergeFrom(other.AlertPolicy);
       }
@@ -244,9 +244,9 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (alertPolicy_ == null) {
-              alertPolicy_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
+              AlertPolicy = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
             }
-            input.ReadMessage(alertPolicy_);
+            input.ReadMessage(AlertPolicy);
             break;
           }
           case 26: {
@@ -994,13 +994,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
       if (other.alertPolicy_ != null) {
         if (alertPolicy_ == null) {
-          alertPolicy_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
+          AlertPolicy = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
         }
         AlertPolicy.MergeFrom(other.AlertPolicy);
       }
@@ -1017,16 +1017,16 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 26: {
             if (alertPolicy_ == null) {
-              alertPolicy_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
+              AlertPolicy = new global::Google.Cloud.Monitoring.V3.AlertPolicy();
             }
-            input.ReadMessage(alertPolicy_);
+            input.ReadMessage(AlertPolicy);
             break;
           }
         }

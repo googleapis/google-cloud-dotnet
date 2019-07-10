@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,90 +31,90 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.JobService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateJobRequest> __Marshaller_CreateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Job> __Marshaller_Job = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Job.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetJobRequest> __Marshaller_GetJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest> __Marshaller_UpdateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest> __Marshaller_DeleteJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListJobsRequest> __Marshaller_ListJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListJobsResponse> __Marshaller_ListJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest> __Marshaller_BatchDeleteJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest> __Marshaller_SearchJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse> __Marshaller_SearchJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest> __Marshaller_BatchCreateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest> __Marshaller_BatchUpdateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateJobRequest> __Marshaller_google_cloud_talent_v4beta1_CreateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Job> __Marshaller_google_cloud_talent_v4beta1_Job = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Job.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetJobRequest> __Marshaller_google_cloud_talent_v4beta1_GetJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListJobsRequest> __Marshaller_google_cloud_talent_v4beta1_ListJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListJobsResponse> __Marshaller_google_cloud_talent_v4beta1_ListJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListJobsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest> __Marshaller_google_cloud_talent_v4beta1_BatchDeleteJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest> __Marshaller_google_cloud_talent_v4beta1_SearchJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse> __Marshaller_google_cloud_talent_v4beta1_SearchJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest> __Marshaller_google_cloud_talent_v4beta1_BatchCreateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest> __Marshaller_google_cloud_talent_v4beta1_BatchUpdateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job> __Method_CreateJob = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateJob",
-        __Marshaller_CreateJobRequest,
-        __Marshaller_Job);
+        __Marshaller_google_cloud_talent_v4beta1_CreateJobRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Job);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetJobRequest, global::Google.Cloud.Talent.V4Beta1.Job> __Method_GetJob = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetJobRequest, global::Google.Cloud.Talent.V4Beta1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetJob",
-        __Marshaller_GetJobRequest,
-        __Marshaller_Job);
+        __Marshaller_google_cloud_talent_v4beta1_GetJobRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Job);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job> __Method_UpdateJob = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateJob",
-        __Marshaller_UpdateJobRequest,
-        __Marshaller_Job);
+        __Marshaller_google_cloud_talent_v4beta1_UpdateJobRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Job);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteJob = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteJob",
-        __Marshaller_DeleteJobRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_talent_v4beta1_DeleteJobRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListJobsRequest, global::Google.Cloud.Talent.V4Beta1.ListJobsResponse> __Method_ListJobs = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListJobsRequest, global::Google.Cloud.Talent.V4Beta1.ListJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListJobs",
-        __Marshaller_ListJobsRequest,
-        __Marshaller_ListJobsResponse);
+        __Marshaller_google_cloud_talent_v4beta1_ListJobsRequest,
+        __Marshaller_google_cloud_talent_v4beta1_ListJobsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchDeleteJobs = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchDeleteJobs",
-        __Marshaller_BatchDeleteJobsRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_talent_v4beta1_BatchDeleteJobsRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse> __Method_SearchJobs = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchJobs",
-        __Marshaller_SearchJobsRequest,
-        __Marshaller_SearchJobsResponse);
+        __Marshaller_google_cloud_talent_v4beta1_SearchJobsRequest,
+        __Marshaller_google_cloud_talent_v4beta1_SearchJobsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse> __Method_SearchJobsForAlert = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchJobsForAlert",
-        __Marshaller_SearchJobsRequest,
-        __Marshaller_SearchJobsResponse);
+        __Marshaller_google_cloud_talent_v4beta1_SearchJobsRequest,
+        __Marshaller_google_cloud_talent_v4beta1_SearchJobsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest, global::Google.LongRunning.Operation> __Method_BatchCreateJobs = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchCreateJobs",
-        __Marshaller_BatchCreateJobsRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_talent_v4beta1_BatchCreateJobsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest, global::Google.LongRunning.Operation> __Method_BatchUpdateJobs = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchUpdateJobs",
-        __Marshaller_BatchUpdateJobsRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_talent_v4beta1_BatchUpdateJobsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -123,6 +123,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of JobService</summary>
+    [grpc::BindServiceMethod(typeof(JobService), "BindService")]
     public abstract partial class JobServiceBase
     {
       /// <summary>
@@ -857,6 +858,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
           .AddMethod(__Method_SearchJobsForAlert, serviceImpl.SearchJobsForAlert)
           .AddMethod(__Method_BatchCreateJobs, serviceImpl.BatchCreateJobs)
           .AddMethod(__Method_BatchUpdateJobs, serviceImpl.BatchUpdateJobs).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, JobServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.CreateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job>(serviceImpl.CreateJob));
+      serviceBinder.AddMethod(__Method_GetJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.GetJobRequest, global::Google.Cloud.Talent.V4Beta1.Job>(serviceImpl.GetJob));
+      serviceBinder.AddMethod(__Method_UpdateJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job>(serviceImpl.UpdateJob));
+      serviceBinder.AddMethod(__Method_DeleteJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteJob));
+      serviceBinder.AddMethod(__Method_ListJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.ListJobsRequest, global::Google.Cloud.Talent.V4Beta1.ListJobsResponse>(serviceImpl.ListJobs));
+      serviceBinder.AddMethod(__Method_BatchDeleteJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BatchDeleteJobs));
+      serviceBinder.AddMethod(__Method_SearchJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse>(serviceImpl.SearchJobs));
+      serviceBinder.AddMethod(__Method_SearchJobsForAlert, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse>(serviceImpl.SearchJobsForAlert));
+      serviceBinder.AddMethod(__Method_BatchCreateJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchCreateJobs));
+      serviceBinder.AddMethod(__Method_BatchUpdateJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchUpdateJobs));
     }
 
   }

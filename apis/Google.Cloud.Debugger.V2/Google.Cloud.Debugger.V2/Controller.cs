@@ -191,7 +191,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.debuggee_ != null) {
         if (debuggee_ == null) {
-          debuggee_ = new global::Google.Cloud.Debugger.V2.Debuggee();
+          Debuggee = new global::Google.Cloud.Debugger.V2.Debuggee();
         }
         Debuggee.MergeFrom(other.Debuggee);
       }
@@ -208,9 +208,9 @@ namespace Google.Cloud.Debugger.V2 {
             break;
           case 10: {
             if (debuggee_ == null) {
-              debuggee_ = new global::Google.Cloud.Debugger.V2.Debuggee();
+              Debuggee = new global::Google.Cloud.Debugger.V2.Debuggee();
             }
-            input.ReadMessage(debuggee_);
+            input.ReadMessage(Debuggee);
             break;
           }
         }
@@ -336,7 +336,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.debuggee_ != null) {
         if (debuggee_ == null) {
-          debuggee_ = new global::Google.Cloud.Debugger.V2.Debuggee();
+          Debuggee = new global::Google.Cloud.Debugger.V2.Debuggee();
         }
         Debuggee.MergeFrom(other.Debuggee);
       }
@@ -353,9 +353,9 @@ namespace Google.Cloud.Debugger.V2 {
             break;
           case 10: {
             if (debuggee_ == null) {
-              debuggee_ = new global::Google.Cloud.Debugger.V2.Debuggee();
+              Debuggee = new global::Google.Cloud.Debugger.V2.Debuggee();
             }
-            input.ReadMessage(debuggee_);
+            input.ReadMessage(Debuggee);
             break;
           }
         }
@@ -904,7 +904,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.breakpoint_ != null) {
         if (breakpoint_ == null) {
-          breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+          Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
         }
         Breakpoint.MergeFrom(other.Breakpoint);
       }
@@ -925,9 +925,9 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 18: {
             if (breakpoint_ == null) {
-              breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+              Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
             }
-            input.ReadMessage(breakpoint_);
+            input.ReadMessage(Breakpoint);
             break;
           }
         }

@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -32,91 +32,91 @@ namespace Google.Cloud.Logging.V2 {
   {
     static readonly string __ServiceName = "google.logging.v2.ConfigServiceV2";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksRequest> __Marshaller_ListSinksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksResponse> __Marshaller_ListSinksResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetSinkRequest> __Marshaller_GetSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogSink> __Marshaller_LogSink = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogSink.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateSinkRequest> __Marshaller_CreateSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateSinkRequest> __Marshaller_UpdateSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteSinkRequest> __Marshaller_DeleteSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListExclusionsRequest> __Marshaller_ListExclusionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListExclusionsResponse> __Marshaller_ListExclusionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetExclusionRequest> __Marshaller_GetExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogExclusion> __Marshaller_LogExclusion = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogExclusion.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateExclusionRequest> __Marshaller_CreateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateExclusionRequest> __Marshaller_UpdateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteExclusionRequest> __Marshaller_DeleteExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksRequest> __Marshaller_google_logging_v2_ListSinksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksResponse> __Marshaller_google_logging_v2_ListSinksResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetSinkRequest> __Marshaller_google_logging_v2_GetSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogSink> __Marshaller_google_logging_v2_LogSink = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogSink.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateSinkRequest> __Marshaller_google_logging_v2_CreateSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateSinkRequest> __Marshaller_google_logging_v2_UpdateSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteSinkRequest> __Marshaller_google_logging_v2_DeleteSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListExclusionsRequest> __Marshaller_google_logging_v2_ListExclusionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListExclusionsResponse> __Marshaller_google_logging_v2_ListExclusionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetExclusionRequest> __Marshaller_google_logging_v2_GetExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogExclusion> __Marshaller_google_logging_v2_LogExclusion = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogExclusion.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateExclusionRequest> __Marshaller_google_logging_v2_CreateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateExclusionRequest> __Marshaller_google_logging_v2_UpdateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteExclusionRequest> __Marshaller_google_logging_v2_DeleteExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse> __Method_ListSinks = new grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListSinks",
-        __Marshaller_ListSinksRequest,
-        __Marshaller_ListSinksResponse);
+        __Marshaller_google_logging_v2_ListSinksRequest,
+        __Marshaller_google_logging_v2_ListSinksResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_GetSink = new grpc::Method<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetSink",
-        __Marshaller_GetSinkRequest,
-        __Marshaller_LogSink);
+        __Marshaller_google_logging_v2_GetSinkRequest,
+        __Marshaller_google_logging_v2_LogSink);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_CreateSink = new grpc::Method<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateSink",
-        __Marshaller_CreateSinkRequest,
-        __Marshaller_LogSink);
+        __Marshaller_google_logging_v2_CreateSinkRequest,
+        __Marshaller_google_logging_v2_LogSink);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_UpdateSink = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSink",
-        __Marshaller_UpdateSinkRequest,
-        __Marshaller_LogSink);
+        __Marshaller_google_logging_v2_UpdateSinkRequest,
+        __Marshaller_google_logging_v2_LogSink);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteSinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSink = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteSinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSink",
-        __Marshaller_DeleteSinkRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_logging_v2_DeleteSinkRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListExclusionsRequest, global::Google.Cloud.Logging.V2.ListExclusionsResponse> __Method_ListExclusions = new grpc::Method<global::Google.Cloud.Logging.V2.ListExclusionsRequest, global::Google.Cloud.Logging.V2.ListExclusionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListExclusions",
-        __Marshaller_ListExclusionsRequest,
-        __Marshaller_ListExclusionsResponse);
+        __Marshaller_google_logging_v2_ListExclusionsRequest,
+        __Marshaller_google_logging_v2_ListExclusionsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion> __Method_GetExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.GetExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetExclusion",
-        __Marshaller_GetExclusionRequest,
-        __Marshaller_LogExclusion);
+        __Marshaller_google_logging_v2_GetExclusionRequest,
+        __Marshaller_google_logging_v2_LogExclusion);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.CreateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion> __Method_CreateExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.CreateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateExclusion",
-        __Marshaller_CreateExclusionRequest,
-        __Marshaller_LogExclusion);
+        __Marshaller_google_logging_v2_CreateExclusionRequest,
+        __Marshaller_google_logging_v2_LogExclusion);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion> __Method_UpdateExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateExclusion",
-        __Marshaller_UpdateExclusionRequest,
-        __Marshaller_LogExclusion);
+        __Marshaller_google_logging_v2_UpdateExclusionRequest,
+        __Marshaller_google_logging_v2_LogExclusion);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteExclusionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteExclusionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteExclusion",
-        __Marshaller_DeleteExclusionRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_logging_v2_DeleteExclusionRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -125,6 +125,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Base class for server-side implementations of ConfigServiceV2</summary>
+    [grpc::BindServiceMethod(typeof(ConfigServiceV2), "BindService")]
     public abstract partial class ConfigServiceV2Base
     {
       /// <summary>
@@ -769,6 +770,24 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_CreateExclusion, serviceImpl.CreateExclusion)
           .AddMethod(__Method_UpdateExclusion, serviceImpl.UpdateExclusion)
           .AddMethod(__Method_DeleteExclusion, serviceImpl.DeleteExclusion).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, ConfigServiceV2Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListSinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(serviceImpl.ListSinks));
+      serviceBinder.AddMethod(__Method_GetSink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(serviceImpl.GetSink));
+      serviceBinder.AddMethod(__Method_CreateSink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(serviceImpl.CreateSink));
+      serviceBinder.AddMethod(__Method_UpdateSink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(serviceImpl.UpdateSink));
+      serviceBinder.AddMethod(__Method_DeleteSink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteSinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSink));
+      serviceBinder.AddMethod(__Method_ListExclusions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListExclusionsRequest, global::Google.Cloud.Logging.V2.ListExclusionsResponse>(serviceImpl.ListExclusions));
+      serviceBinder.AddMethod(__Method_GetExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(serviceImpl.GetExclusion));
+      serviceBinder.AddMethod(__Method_CreateExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(serviceImpl.CreateExclusion));
+      serviceBinder.AddMethod(__Method_UpdateExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(serviceImpl.UpdateExclusion));
+      serviceBinder.AddMethod(__Method_DeleteExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteExclusionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteExclusion));
     }
 
   }

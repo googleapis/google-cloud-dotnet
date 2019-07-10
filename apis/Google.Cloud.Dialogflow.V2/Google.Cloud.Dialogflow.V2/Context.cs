@@ -266,7 +266,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.parameters_ != null) {
         if (parameters_ == null) {
-          parameters_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Parameters = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Parameters.MergeFrom(other.Parameters);
       }
@@ -291,9 +291,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 26: {
             if (parameters_ == null) {
-              parameters_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Parameters = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(parameters_);
+            input.ReadMessage(Parameters);
             break;
           }
         }
@@ -938,7 +938,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.Dialogflow.V2.Context();
+          Context = new global::Google.Cloud.Dialogflow.V2.Context();
         }
         Context.MergeFrom(other.Context);
       }
@@ -959,9 +959,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.Dialogflow.V2.Context();
+              Context = new global::Google.Cloud.Dialogflow.V2.Context();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
         }
@@ -1107,13 +1107,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.Dialogflow.V2.Context();
+          Context = new global::Google.Cloud.Dialogflow.V2.Context();
         }
         Context.MergeFrom(other.Context);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1130,16 +1130,16 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           case 10: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.Dialogflow.V2.Context();
+              Context = new global::Google.Cloud.Dialogflow.V2.Context();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

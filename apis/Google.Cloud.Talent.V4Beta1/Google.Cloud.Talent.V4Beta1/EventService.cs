@@ -199,7 +199,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.clientEvent_ != null) {
         if (clientEvent_ == null) {
-          clientEvent_ = new global::Google.Cloud.Talent.V4Beta1.ClientEvent();
+          ClientEvent = new global::Google.Cloud.Talent.V4Beta1.ClientEvent();
         }
         ClientEvent.MergeFrom(other.ClientEvent);
       }
@@ -220,9 +220,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             if (clientEvent_ == null) {
-              clientEvent_ = new global::Google.Cloud.Talent.V4Beta1.ClientEvent();
+              ClientEvent = new global::Google.Cloud.Talent.V4Beta1.ClientEvent();
             }
-            input.ReadMessage(clientEvent_);
+            input.ReadMessage(ClientEvent);
             break;
           }
         }

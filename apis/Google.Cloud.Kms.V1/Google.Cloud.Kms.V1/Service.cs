@@ -787,7 +787,7 @@ namespace Google.Cloud.Kms.V1 {
             break;
           }
           case 32: {
-            versionView_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) input.ReadEnum();
+            VersionView = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) input.ReadEnum();
             break;
           }
           case 42: {
@@ -1084,7 +1084,7 @@ namespace Google.Cloud.Kms.V1 {
             break;
           }
           case 32: {
-            view_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) input.ReadEnum();
+            View = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) input.ReadEnum();
             break;
           }
           case 42: {
@@ -2973,7 +2973,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.keyRing_ != null) {
         if (keyRing_ == null) {
-          keyRing_ = new global::Google.Cloud.Kms.V1.KeyRing();
+          KeyRing = new global::Google.Cloud.Kms.V1.KeyRing();
         }
         KeyRing.MergeFrom(other.KeyRing);
       }
@@ -2998,9 +2998,9 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 26: {
             if (keyRing_ == null) {
-              keyRing_ = new global::Google.Cloud.Kms.V1.KeyRing();
+              KeyRing = new global::Google.Cloud.Kms.V1.KeyRing();
             }
-            input.ReadMessage(keyRing_);
+            input.ReadMessage(KeyRing);
             break;
           }
         }
@@ -3206,7 +3206,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.cryptoKey_ != null) {
         if (cryptoKey_ == null) {
-          cryptoKey_ = new global::Google.Cloud.Kms.V1.CryptoKey();
+          CryptoKey = new global::Google.Cloud.Kms.V1.CryptoKey();
         }
         CryptoKey.MergeFrom(other.CryptoKey);
       }
@@ -3234,9 +3234,9 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 26: {
             if (cryptoKey_ == null) {
-              cryptoKey_ = new global::Google.Cloud.Kms.V1.CryptoKey();
+              CryptoKey = new global::Google.Cloud.Kms.V1.CryptoKey();
             }
-            input.ReadMessage(cryptoKey_);
+            input.ReadMessage(CryptoKey);
             break;
           }
           case 40: {
@@ -3390,7 +3390,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.cryptoKeyVersion_ != null) {
         if (cryptoKeyVersion_ == null) {
-          cryptoKeyVersion_ = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
+          CryptoKeyVersion = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
         }
         CryptoKeyVersion.MergeFrom(other.CryptoKeyVersion);
       }
@@ -3411,9 +3411,9 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 18: {
             if (cryptoKeyVersion_ == null) {
-              cryptoKeyVersion_ = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
+              CryptoKeyVersion = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
             }
-            input.ReadMessage(cryptoKeyVersion_);
+            input.ReadMessage(CryptoKeyVersion);
             break;
           }
         }
@@ -3683,7 +3683,7 @@ namespace Google.Cloud.Kms.V1 {
             break;
           }
           case 16: {
-            algorithm_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm) input.ReadEnum();
+            Algorithm = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm) input.ReadEnum();
             break;
           }
           case 34: {
@@ -3869,7 +3869,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.importJob_ != null) {
         if (importJob_ == null) {
-          importJob_ = new global::Google.Cloud.Kms.V1.ImportJob();
+          ImportJob = new global::Google.Cloud.Kms.V1.ImportJob();
         }
         ImportJob.MergeFrom(other.ImportJob);
       }
@@ -3894,9 +3894,9 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 26: {
             if (importJob_ == null) {
-              importJob_ = new global::Google.Cloud.Kms.V1.ImportJob();
+              ImportJob = new global::Google.Cloud.Kms.V1.ImportJob();
             }
-            input.ReadMessage(importJob_);
+            input.ReadMessage(ImportJob);
             break;
           }
         }
@@ -4042,13 +4042,13 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.cryptoKey_ != null) {
         if (cryptoKey_ == null) {
-          cryptoKey_ = new global::Google.Cloud.Kms.V1.CryptoKey();
+          CryptoKey = new global::Google.Cloud.Kms.V1.CryptoKey();
         }
         CryptoKey.MergeFrom(other.CryptoKey);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -4065,16 +4065,16 @@ namespace Google.Cloud.Kms.V1 {
             break;
           case 10: {
             if (cryptoKey_ == null) {
-              cryptoKey_ = new global::Google.Cloud.Kms.V1.CryptoKey();
+              CryptoKey = new global::Google.Cloud.Kms.V1.CryptoKey();
             }
-            input.ReadMessage(cryptoKey_);
+            input.ReadMessage(CryptoKey);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -4220,13 +4220,13 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.cryptoKeyVersion_ != null) {
         if (cryptoKeyVersion_ == null) {
-          cryptoKeyVersion_ = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
+          CryptoKeyVersion = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
         }
         CryptoKeyVersion.MergeFrom(other.CryptoKeyVersion);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -4243,16 +4243,16 @@ namespace Google.Cloud.Kms.V1 {
             break;
           case 10: {
             if (cryptoKeyVersion_ == null) {
-              cryptoKeyVersion_ = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
+              CryptoKeyVersion = new global::Google.Cloud.Kms.V1.CryptoKeyVersion();
             }
-            input.ReadMessage(cryptoKeyVersion_);
+            input.ReadMessage(CryptoKeyVersion);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -4819,7 +4819,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.digest_ != null) {
         if (digest_ == null) {
-          digest_ = new global::Google.Cloud.Kms.V1.Digest();
+          Digest = new global::Google.Cloud.Kms.V1.Digest();
         }
         Digest.MergeFrom(other.Digest);
       }
@@ -4840,9 +4840,9 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 26: {
             if (digest_ == null) {
-              digest_ = new global::Google.Cloud.Kms.V1.Digest();
+              Digest = new global::Google.Cloud.Kms.V1.Digest();
             }
-            input.ReadMessage(digest_);
+            input.ReadMessage(Digest);
             break;
           }
         }

@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -32,76 +32,76 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.MetricService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest> __Marshaller_ListMonitoredResourceDescriptorsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> __Marshaller_ListMonitoredResourceDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest> __Marshaller_GetMonitoredResourceDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Api.MonitoredResourceDescriptor> __Marshaller_MonitoredResourceDescriptor = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Api.MonitoredResourceDescriptor.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest> __Marshaller_ListMetricDescriptorsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> __Marshaller_ListMetricDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest> __Marshaller_GetMetricDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Api.MetricDescriptor> __Marshaller_MetricDescriptor = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Api.MetricDescriptor.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest> __Marshaller_CreateMetricDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest> __Marshaller_DeleteMetricDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest> __Marshaller_ListTimeSeriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> __Marshaller_ListTimeSeriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest> __Marshaller_CreateTimeSeriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest> __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest> __Marshaller_google_monitoring_v3_GetMonitoredResourceDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Api.MonitoredResourceDescriptor> __Marshaller_google_api_MonitoredResourceDescriptor = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Api.MonitoredResourceDescriptor.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest> __Marshaller_google_monitoring_v3_ListMetricDescriptorsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> __Marshaller_google_monitoring_v3_ListMetricDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest> __Marshaller_google_monitoring_v3_GetMetricDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Api.MetricDescriptor> __Marshaller_google_api_MetricDescriptor = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Api.MetricDescriptor.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest> __Marshaller_google_monitoring_v3_CreateMetricDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest> __Marshaller_google_monitoring_v3_DeleteMetricDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest> __Marshaller_google_monitoring_v3_ListTimeSeriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> __Marshaller_google_monitoring_v3_ListTimeSeriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest> __Marshaller_google_monitoring_v3_CreateTimeSeriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> __Method_ListMonitoredResourceDescriptors = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListMonitoredResourceDescriptors",
-        __Marshaller_ListMonitoredResourceDescriptorsRequest,
-        __Marshaller_ListMonitoredResourceDescriptorsResponse);
+        __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsRequest,
+        __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest, global::Google.Api.MonitoredResourceDescriptor> __Method_GetMonitoredResourceDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest, global::Google.Api.MonitoredResourceDescriptor>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetMonitoredResourceDescriptor",
-        __Marshaller_GetMonitoredResourceDescriptorRequest,
-        __Marshaller_MonitoredResourceDescriptor);
+        __Marshaller_google_monitoring_v3_GetMonitoredResourceDescriptorRequest,
+        __Marshaller_google_api_MonitoredResourceDescriptor);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> __Method_ListMetricDescriptors = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListMetricDescriptors",
-        __Marshaller_ListMetricDescriptorsRequest,
-        __Marshaller_ListMetricDescriptorsResponse);
+        __Marshaller_google_monitoring_v3_ListMetricDescriptorsRequest,
+        __Marshaller_google_monitoring_v3_ListMetricDescriptorsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest, global::Google.Api.MetricDescriptor> __Method_GetMetricDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest, global::Google.Api.MetricDescriptor>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetMetricDescriptor",
-        __Marshaller_GetMetricDescriptorRequest,
-        __Marshaller_MetricDescriptor);
+        __Marshaller_google_monitoring_v3_GetMetricDescriptorRequest,
+        __Marshaller_google_api_MetricDescriptor);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest, global::Google.Api.MetricDescriptor> __Method_CreateMetricDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest, global::Google.Api.MetricDescriptor>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateMetricDescriptor",
-        __Marshaller_CreateMetricDescriptorRequest,
-        __Marshaller_MetricDescriptor);
+        __Marshaller_google_monitoring_v3_CreateMetricDescriptorRequest,
+        __Marshaller_google_api_MetricDescriptor);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteMetricDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteMetricDescriptor",
-        __Marshaller_DeleteMetricDescriptorRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_monitoring_v3_DeleteMetricDescriptorRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> __Method_ListTimeSeries = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListTimeSeries",
-        __Marshaller_ListTimeSeriesRequest,
-        __Marshaller_ListTimeSeriesResponse);
+        __Marshaller_google_monitoring_v3_ListTimeSeriesRequest,
+        __Marshaller_google_monitoring_v3_ListTimeSeriesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CreateTimeSeries = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateTimeSeries",
-        __Marshaller_CreateTimeSeriesRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_monitoring_v3_CreateTimeSeriesRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -110,6 +110,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Base class for server-side implementations of MetricService</summary>
+    [grpc::BindServiceMethod(typeof(MetricService), "BindService")]
     public abstract partial class MetricServiceBase
     {
       /// <summary>
@@ -652,6 +653,22 @@ namespace Google.Cloud.Monitoring.V3 {
           .AddMethod(__Method_DeleteMetricDescriptor, serviceImpl.DeleteMetricDescriptor)
           .AddMethod(__Method_ListTimeSeries, serviceImpl.ListTimeSeries)
           .AddMethod(__Method_CreateTimeSeries, serviceImpl.CreateTimeSeries).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, MetricServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse>(serviceImpl.ListMonitoredResourceDescriptors));
+      serviceBinder.AddMethod(__Method_GetMonitoredResourceDescriptor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest, global::Google.Api.MonitoredResourceDescriptor>(serviceImpl.GetMonitoredResourceDescriptor));
+      serviceBinder.AddMethod(__Method_ListMetricDescriptors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse>(serviceImpl.ListMetricDescriptors));
+      serviceBinder.AddMethod(__Method_GetMetricDescriptor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest, global::Google.Api.MetricDescriptor>(serviceImpl.GetMetricDescriptor));
+      serviceBinder.AddMethod(__Method_CreateMetricDescriptor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest, global::Google.Api.MetricDescriptor>(serviceImpl.CreateMetricDescriptor));
+      serviceBinder.AddMethod(__Method_DeleteMetricDescriptor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMetricDescriptor));
+      serviceBinder.AddMethod(__Method_ListTimeSeries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse>(serviceImpl.ListTimeSeries));
+      serviceBinder.AddMethod(__Method_CreateTimeSeries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CreateTimeSeries));
     }
 
   }

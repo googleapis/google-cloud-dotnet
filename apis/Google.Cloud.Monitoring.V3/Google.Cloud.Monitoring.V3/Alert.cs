@@ -260,6 +260,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+
     /// <summary>Field number for the "notification_channels" field.</summary>
     public const int NotificationChannelsFieldNumber = 14;
     private static readonly pb::FieldCodec<string> _repeated_notificationChannels_codec
@@ -445,7 +446,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.documentation_ != null) {
         if (documentation_ == null) {
-          documentation_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation();
+          Documentation = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation();
         }
         Documentation.MergeFrom(other.Documentation);
       }
@@ -462,13 +463,13 @@ namespace Google.Cloud.Monitoring.V3 {
       notificationChannels_.Add(other.notificationChannels_);
       if (other.creationRecord_ != null) {
         if (creationRecord_ == null) {
-          creationRecord_ = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+          CreationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
         }
         CreationRecord.MergeFrom(other.CreationRecord);
       }
       if (other.mutationRecord_ != null) {
         if (mutationRecord_ == null) {
-          mutationRecord_ = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+          MutationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
         }
         MutationRecord.MergeFrom(other.MutationRecord);
       }
@@ -492,21 +493,21 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           }
           case 48: {
-            combiner_ = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) input.ReadEnum();
+            Combiner = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) input.ReadEnum();
             break;
           }
           case 82: {
             if (creationRecord_ == null) {
-              creationRecord_ = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+              CreationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
             }
-            input.ReadMessage(creationRecord_);
+            input.ReadMessage(CreationRecord);
             break;
           }
           case 90: {
             if (mutationRecord_ == null) {
-              mutationRecord_ = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+              MutationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
             }
-            input.ReadMessage(mutationRecord_);
+            input.ReadMessage(MutationRecord);
             break;
           }
           case 98: {
@@ -515,9 +516,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 106: {
             if (documentation_ == null) {
-              documentation_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation();
+              Documentation = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation();
             }
-            input.ReadMessage(documentation_);
+            input.ReadMessage(Documentation);
             break;
           }
           case 114: {
@@ -1599,13 +1600,13 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               if (other.duration_ != null) {
                 if (duration_ == null) {
-                  duration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+                  Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
                 }
                 Duration.MergeFrom(other.Duration);
               }
               if (other.trigger_ != null) {
                 if (trigger_ == null) {
-                  trigger_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
+                  Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
                 }
                 Trigger.MergeFrom(other.Trigger);
               }
@@ -1625,7 +1626,7 @@ namespace Google.Cloud.Monitoring.V3 {
                     break;
                   }
                   case 32: {
-                    comparison_ = (global::Google.Cloud.Monitoring.V3.ComparisonType) input.ReadEnum();
+                    Comparison = (global::Google.Cloud.Monitoring.V3.ComparisonType) input.ReadEnum();
                     break;
                   }
                   case 41: {
@@ -1634,16 +1635,16 @@ namespace Google.Cloud.Monitoring.V3 {
                   }
                   case 50: {
                     if (duration_ == null) {
-                      duration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+                      Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
                     }
-                    input.ReadMessage(duration_);
+                    input.ReadMessage(Duration);
                     break;
                   }
                   case 58: {
                     if (trigger_ == null) {
-                      trigger_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
+                      Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
                     }
-                    input.ReadMessage(trigger_);
+                    input.ReadMessage(Trigger);
                     break;
                   }
                   case 66: {
@@ -1879,13 +1880,13 @@ namespace Google.Cloud.Monitoring.V3 {
               aggregations_.Add(other.aggregations_);
               if (other.duration_ != null) {
                 if (duration_ == null) {
-                  duration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+                  Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
                 }
                 Duration.MergeFrom(other.Duration);
               }
               if (other.trigger_ != null) {
                 if (trigger_ == null) {
-                  trigger_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
+                  Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
                 }
                 Trigger.MergeFrom(other.Trigger);
               }
@@ -1906,16 +1907,16 @@ namespace Google.Cloud.Monitoring.V3 {
                   }
                   case 18: {
                     if (duration_ == null) {
-                      duration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+                      Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
                     }
-                    input.ReadMessage(duration_);
+                    input.ReadMessage(Duration);
                     break;
                   }
                   case 26: {
                     if (trigger_ == null) {
-                      trigger_ = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
+                      Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
                     }
-                    input.ReadMessage(trigger_);
+                    input.ReadMessage(Trigger);
                     break;
                   }
                   case 42: {

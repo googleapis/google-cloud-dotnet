@@ -371,19 +371,19 @@ namespace Google.Cloud.Tasks.V2 {
       }
       if (other.appEngineRoutingOverride_ != null) {
         if (appEngineRoutingOverride_ == null) {
-          appEngineRoutingOverride_ = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
+          AppEngineRoutingOverride = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
         }
         AppEngineRoutingOverride.MergeFrom(other.AppEngineRoutingOverride);
       }
       if (other.rateLimits_ != null) {
         if (rateLimits_ == null) {
-          rateLimits_ = new global::Google.Cloud.Tasks.V2.RateLimits();
+          RateLimits = new global::Google.Cloud.Tasks.V2.RateLimits();
         }
         RateLimits.MergeFrom(other.RateLimits);
       }
       if (other.retryConfig_ != null) {
         if (retryConfig_ == null) {
-          retryConfig_ = new global::Google.Cloud.Tasks.V2.RetryConfig();
+          RetryConfig = new global::Google.Cloud.Tasks.V2.RetryConfig();
         }
         RetryConfig.MergeFrom(other.RetryConfig);
       }
@@ -392,7 +392,7 @@ namespace Google.Cloud.Tasks.V2 {
       }
       if (other.purgeTime_ != null) {
         if (purgeTime_ == null) {
-          purgeTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PurgeTime.MergeFrom(other.PurgeTime);
       }
@@ -413,34 +413,34 @@ namespace Google.Cloud.Tasks.V2 {
           }
           case 18: {
             if (appEngineRoutingOverride_ == null) {
-              appEngineRoutingOverride_ = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
+              AppEngineRoutingOverride = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
             }
-            input.ReadMessage(appEngineRoutingOverride_);
+            input.ReadMessage(AppEngineRoutingOverride);
             break;
           }
           case 26: {
             if (rateLimits_ == null) {
-              rateLimits_ = new global::Google.Cloud.Tasks.V2.RateLimits();
+              RateLimits = new global::Google.Cloud.Tasks.V2.RateLimits();
             }
-            input.ReadMessage(rateLimits_);
+            input.ReadMessage(RateLimits);
             break;
           }
           case 34: {
             if (retryConfig_ == null) {
-              retryConfig_ = new global::Google.Cloud.Tasks.V2.RetryConfig();
+              RetryConfig = new global::Google.Cloud.Tasks.V2.RetryConfig();
             }
-            input.ReadMessage(retryConfig_);
+            input.ReadMessage(RetryConfig);
             break;
           }
           case 40: {
-            state_ = (global::Google.Cloud.Tasks.V2.Queue.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Tasks.V2.Queue.Types.State) input.ReadEnum();
             break;
           }
           case 50: {
             if (purgeTime_ == null) {
-              purgeTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(purgeTime_);
+            input.ReadMessage(PurgeTime);
             break;
           }
         }
@@ -1049,19 +1049,19 @@ namespace Google.Cloud.Tasks.V2 {
       }
       if (other.maxRetryDuration_ != null) {
         if (maxRetryDuration_ == null) {
-          maxRetryDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MaxRetryDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MaxRetryDuration.MergeFrom(other.MaxRetryDuration);
       }
       if (other.minBackoff_ != null) {
         if (minBackoff_ == null) {
-          minBackoff_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MinBackoff = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MinBackoff.MergeFrom(other.MinBackoff);
       }
       if (other.maxBackoff_ != null) {
         if (maxBackoff_ == null) {
-          maxBackoff_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MaxBackoff = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MaxBackoff.MergeFrom(other.MaxBackoff);
       }
@@ -1085,23 +1085,23 @@ namespace Google.Cloud.Tasks.V2 {
           }
           case 18: {
             if (maxRetryDuration_ == null) {
-              maxRetryDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MaxRetryDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(maxRetryDuration_);
+            input.ReadMessage(MaxRetryDuration);
             break;
           }
           case 26: {
             if (minBackoff_ == null) {
-              minBackoff_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MinBackoff = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(minBackoff_);
+            input.ReadMessage(MinBackoff);
             break;
           }
           case 34: {
             if (maxBackoff_ == null) {
-              maxBackoff_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MaxBackoff = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(maxBackoff_);
+            input.ReadMessage(MaxBackoff);
             break;
           }
           case 40: {

@@ -1014,7 +1014,7 @@ namespace Google.Cloud.OsLogin.V1 {
       }
       if (other.sshPublicKey_ != null) {
         if (sshPublicKey_ == null) {
-          sshPublicKey_ = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
+          SshPublicKey = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
         }
         SshPublicKey.MergeFrom(other.SshPublicKey);
       }
@@ -1038,9 +1038,9 @@ namespace Google.Cloud.OsLogin.V1 {
           }
           case 18: {
             if (sshPublicKey_ == null) {
-              sshPublicKey_ = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
+              SshPublicKey = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
             }
-            input.ReadMessage(sshPublicKey_);
+            input.ReadMessage(SshPublicKey);
             break;
           }
           case 26: {
@@ -1166,7 +1166,7 @@ namespace Google.Cloud.OsLogin.V1 {
       }
       if (other.loginProfile_ != null) {
         if (loginProfile_ == null) {
-          loginProfile_ = new global::Google.Cloud.OsLogin.V1.LoginProfile();
+          LoginProfile = new global::Google.Cloud.OsLogin.V1.LoginProfile();
         }
         LoginProfile.MergeFrom(other.LoginProfile);
       }
@@ -1183,9 +1183,9 @@ namespace Google.Cloud.OsLogin.V1 {
             break;
           case 10: {
             if (loginProfile_ == null) {
-              loginProfile_ = new global::Google.Cloud.OsLogin.V1.LoginProfile();
+              LoginProfile = new global::Google.Cloud.OsLogin.V1.LoginProfile();
             }
-            input.ReadMessage(loginProfile_);
+            input.ReadMessage(LoginProfile);
             break;
           }
         }
@@ -1360,13 +1360,13 @@ namespace Google.Cloud.OsLogin.V1 {
       }
       if (other.sshPublicKey_ != null) {
         if (sshPublicKey_ == null) {
-          sshPublicKey_ = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
+          SshPublicKey = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
         }
         SshPublicKey.MergeFrom(other.SshPublicKey);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1387,16 +1387,16 @@ namespace Google.Cloud.OsLogin.V1 {
           }
           case 18: {
             if (sshPublicKey_ == null) {
-              sshPublicKey_ = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
+              SshPublicKey = new global::Google.Cloud.OsLogin.Common.SshPublicKey();
             }
-            input.ReadMessage(sshPublicKey_);
+            input.ReadMessage(SshPublicKey);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

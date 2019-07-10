@@ -483,7 +483,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             break;
           }
           case 16: {
-            httpMethod_ = (global::Google.Cloud.Tasks.V2Beta3.HttpMethod) input.ReadEnum();
+            HttpMethod = (global::Google.Cloud.Tasks.V2Beta3.HttpMethod) input.ReadEnum();
             break;
           }
           case 26: {
@@ -648,7 +648,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (other.appEngineRoutingOverride_ != null) {
         if (appEngineRoutingOverride_ == null) {
-          appEngineRoutingOverride_ = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
+          AppEngineRoutingOverride = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
         }
         AppEngineRoutingOverride.MergeFrom(other.AppEngineRoutingOverride);
       }
@@ -665,9 +665,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             break;
           case 10: {
             if (appEngineRoutingOverride_ == null) {
-              appEngineRoutingOverride_ = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
+              AppEngineRoutingOverride = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
             }
-            input.ReadMessage(appEngineRoutingOverride_);
+            input.ReadMessage(AppEngineRoutingOverride);
             break;
           }
         }
@@ -1005,7 +1005,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (other.appEngineRouting_ != null) {
         if (appEngineRouting_ == null) {
-          appEngineRouting_ = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
+          AppEngineRouting = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
         }
         AppEngineRouting.MergeFrom(other.AppEngineRouting);
       }
@@ -1028,14 +1028,14 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            httpMethod_ = (global::Google.Cloud.Tasks.V2Beta3.HttpMethod) input.ReadEnum();
+            HttpMethod = (global::Google.Cloud.Tasks.V2Beta3.HttpMethod) input.ReadEnum();
             break;
           }
           case 18: {
             if (appEngineRouting_ == null) {
-              appEngineRouting_ = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
+              AppEngineRouting = new global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting();
             }
-            input.ReadMessage(appEngineRouting_);
+            input.ReadMessage(AppEngineRouting);
             break;
           }
           case 26: {

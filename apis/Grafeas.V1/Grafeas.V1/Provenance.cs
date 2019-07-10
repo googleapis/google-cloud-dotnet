@@ -489,19 +489,19 @@ namespace Grafeas.V1 {
       builtArtifacts_.Add(other.builtArtifacts_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -513,7 +513,7 @@ namespace Grafeas.V1 {
       }
       if (other.sourceProvenance_ != null) {
         if (sourceProvenance_ == null) {
-          sourceProvenance_ = new global::Grafeas.V1.Source();
+          SourceProvenance = new global::Grafeas.V1.Source();
         }
         SourceProvenance.MergeFrom(other.SourceProvenance);
       }
@@ -553,23 +553,23 @@ namespace Grafeas.V1 {
           }
           case 42: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 50: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 58: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 66: {
@@ -582,9 +582,9 @@ namespace Grafeas.V1 {
           }
           case 82: {
             if (sourceProvenance_ == null) {
-              sourceProvenance_ = new global::Grafeas.V1.Source();
+              SourceProvenance = new global::Grafeas.V1.Source();
             }
-            input.ReadMessage(sourceProvenance_);
+            input.ReadMessage(SourceProvenance);
             break;
           }
           case 90: {
@@ -793,7 +793,7 @@ namespace Grafeas.V1 {
       fileHashes_.Add(other.fileHashes_);
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Grafeas.V1.SourceContext();
+          Context = new global::Grafeas.V1.SourceContext();
         }
         Context.MergeFrom(other.Context);
       }
@@ -819,9 +819,9 @@ namespace Grafeas.V1 {
           }
           case 26: {
             if (context_ == null) {
-              context_ = new global::Grafeas.V1.SourceContext();
+              Context = new global::Grafeas.V1.SourceContext();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
           case 34: {
@@ -2024,7 +2024,7 @@ namespace Grafeas.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            kind_ = (global::Grafeas.V1.AliasContext.Types.Kind) input.ReadEnum();
+            Kind = (global::Grafeas.V1.AliasContext.Types.Kind) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2257,7 +2257,7 @@ namespace Grafeas.V1 {
       }
       if (other.repoId_ != null) {
         if (repoId_ == null) {
-          repoId_ = new global::Grafeas.V1.RepoId();
+          RepoId = new global::Grafeas.V1.RepoId();
         }
         RepoId.MergeFrom(other.RepoId);
       }
@@ -2286,9 +2286,9 @@ namespace Grafeas.V1 {
             break;
           case 10: {
             if (repoId_ == null) {
-              repoId_ = new global::Grafeas.V1.RepoId();
+              RepoId = new global::Grafeas.V1.RepoId();
             }
-            input.ReadMessage(repoId_);
+            input.ReadMessage(RepoId);
             break;
           }
           case 18: {

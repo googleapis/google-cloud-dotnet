@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -46,159 +46,159 @@ namespace Google.Cloud.Vision.V1 {
   {
     static readonly string __ServiceName = "google.cloud.vision.v1.ProductSearch";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateProductSetRequest> __Marshaller_CreateProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.CreateProductSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ProductSet> __Marshaller_ProductSet = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ProductSet.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductSetsRequest> __Marshaller_ListProductSetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductSetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductSetsResponse> __Marshaller_ListProductSetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductSetsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetProductSetRequest> __Marshaller_GetProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.GetProductSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.UpdateProductSetRequest> __Marshaller_UpdateProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.UpdateProductSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteProductSetRequest> __Marshaller_DeleteProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.DeleteProductSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateProductRequest> __Marshaller_CreateProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.CreateProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.Product> __Marshaller_Product = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.Product.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsRequest> __Marshaller_ListProductsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsResponse> __Marshaller_ListProductsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetProductRequest> __Marshaller_GetProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.GetProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.UpdateProductRequest> __Marshaller_UpdateProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.UpdateProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteProductRequest> __Marshaller_DeleteProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.DeleteProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest> __Marshaller_CreateReferenceImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.CreateReferenceImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ReferenceImage> __Marshaller_ReferenceImage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ReferenceImage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest> __Marshaller_DeleteReferenceImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest> __Marshaller_ListReferenceImagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListReferenceImagesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> __Marshaller_ListReferenceImagesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListReferenceImagesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetReferenceImageRequest> __Marshaller_GetReferenceImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.GetReferenceImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest> __Marshaller_AddProductToProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.AddProductToProductSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest> __Marshaller_RemoveProductFromProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest> __Marshaller_ListProductsInProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> __Marshaller_ListProductsInProductSetResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ImportProductSetsRequest> __Marshaller_ImportProductSetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ImportProductSetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateProductSetRequest> __Marshaller_google_cloud_vision_v1_CreateProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.CreateProductSetRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ProductSet> __Marshaller_google_cloud_vision_v1_ProductSet = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ProductSet.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductSetsRequest> __Marshaller_google_cloud_vision_v1_ListProductSetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductSetsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductSetsResponse> __Marshaller_google_cloud_vision_v1_ListProductSetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductSetsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetProductSetRequest> __Marshaller_google_cloud_vision_v1_GetProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.GetProductSetRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.UpdateProductSetRequest> __Marshaller_google_cloud_vision_v1_UpdateProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.UpdateProductSetRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteProductSetRequest> __Marshaller_google_cloud_vision_v1_DeleteProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.DeleteProductSetRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateProductRequest> __Marshaller_google_cloud_vision_v1_CreateProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.CreateProductRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.Product> __Marshaller_google_cloud_vision_v1_Product = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.Product.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsRequest> __Marshaller_google_cloud_vision_v1_ListProductsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsResponse> __Marshaller_google_cloud_vision_v1_ListProductsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetProductRequest> __Marshaller_google_cloud_vision_v1_GetProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.GetProductRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.UpdateProductRequest> __Marshaller_google_cloud_vision_v1_UpdateProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.UpdateProductRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteProductRequest> __Marshaller_google_cloud_vision_v1_DeleteProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.DeleteProductRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest> __Marshaller_google_cloud_vision_v1_CreateReferenceImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.CreateReferenceImageRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ReferenceImage> __Marshaller_google_cloud_vision_v1_ReferenceImage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ReferenceImage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest> __Marshaller_google_cloud_vision_v1_DeleteReferenceImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest> __Marshaller_google_cloud_vision_v1_ListReferenceImagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListReferenceImagesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> __Marshaller_google_cloud_vision_v1_ListReferenceImagesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListReferenceImagesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetReferenceImageRequest> __Marshaller_google_cloud_vision_v1_GetReferenceImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.GetReferenceImageRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest> __Marshaller_google_cloud_vision_v1_AddProductToProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.AddProductToProductSetRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest> __Marshaller_google_cloud_vision_v1_RemoveProductFromProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest> __Marshaller_google_cloud_vision_v1_ListProductsInProductSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> __Marshaller_google_cloud_vision_v1_ListProductsInProductSetResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ImportProductSetsRequest> __Marshaller_google_cloud_vision_v1_ImportProductSetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ImportProductSetsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet> __Method_CreateProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateProductSet",
-        __Marshaller_CreateProductSetRequest,
-        __Marshaller_ProductSet);
+        __Marshaller_google_cloud_vision_v1_CreateProductSetRequest,
+        __Marshaller_google_cloud_vision_v1_ProductSet);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListProductSetsRequest, global::Google.Cloud.Vision.V1.ListProductSetsResponse> __Method_ListProductSets = new grpc::Method<global::Google.Cloud.Vision.V1.ListProductSetsRequest, global::Google.Cloud.Vision.V1.ListProductSetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListProductSets",
-        __Marshaller_ListProductSetsRequest,
-        __Marshaller_ListProductSetsResponse);
+        __Marshaller_google_cloud_vision_v1_ListProductSetsRequest,
+        __Marshaller_google_cloud_vision_v1_ListProductSetsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.GetProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet> __Method_GetProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.GetProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetProductSet",
-        __Marshaller_GetProductSetRequest,
-        __Marshaller_ProductSet);
+        __Marshaller_google_cloud_vision_v1_GetProductSetRequest,
+        __Marshaller_google_cloud_vision_v1_ProductSet);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet> __Method_UpdateProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateProductSet",
-        __Marshaller_UpdateProductSetRequest,
-        __Marshaller_ProductSet);
+        __Marshaller_google_cloud_vision_v1_UpdateProductSetRequest,
+        __Marshaller_google_cloud_vision_v1_ProductSet);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteProductSet",
-        __Marshaller_DeleteProductSetRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_vision_v1_DeleteProductSetRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.CreateProductRequest, global::Google.Cloud.Vision.V1.Product> __Method_CreateProduct = new grpc::Method<global::Google.Cloud.Vision.V1.CreateProductRequest, global::Google.Cloud.Vision.V1.Product>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateProduct",
-        __Marshaller_CreateProductRequest,
-        __Marshaller_Product);
+        __Marshaller_google_cloud_vision_v1_CreateProductRequest,
+        __Marshaller_google_cloud_vision_v1_Product);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListProductsRequest, global::Google.Cloud.Vision.V1.ListProductsResponse> __Method_ListProducts = new grpc::Method<global::Google.Cloud.Vision.V1.ListProductsRequest, global::Google.Cloud.Vision.V1.ListProductsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListProducts",
-        __Marshaller_ListProductsRequest,
-        __Marshaller_ListProductsResponse);
+        __Marshaller_google_cloud_vision_v1_ListProductsRequest,
+        __Marshaller_google_cloud_vision_v1_ListProductsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.GetProductRequest, global::Google.Cloud.Vision.V1.Product> __Method_GetProduct = new grpc::Method<global::Google.Cloud.Vision.V1.GetProductRequest, global::Google.Cloud.Vision.V1.Product>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetProduct",
-        __Marshaller_GetProductRequest,
-        __Marshaller_Product);
+        __Marshaller_google_cloud_vision_v1_GetProductRequest,
+        __Marshaller_google_cloud_vision_v1_Product);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductRequest, global::Google.Cloud.Vision.V1.Product> __Method_UpdateProduct = new grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductRequest, global::Google.Cloud.Vision.V1.Product>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateProduct",
-        __Marshaller_UpdateProductRequest,
-        __Marshaller_Product);
+        __Marshaller_google_cloud_vision_v1_UpdateProductRequest,
+        __Marshaller_google_cloud_vision_v1_Product);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteProduct = new grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteProduct",
-        __Marshaller_DeleteProductRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_vision_v1_DeleteProductRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage> __Method_CreateReferenceImage = new grpc::Method<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateReferenceImage",
-        __Marshaller_CreateReferenceImageRequest,
-        __Marshaller_ReferenceImage);
+        __Marshaller_google_cloud_vision_v1_CreateReferenceImageRequest,
+        __Marshaller_google_cloud_vision_v1_ReferenceImage);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteReferenceImage = new grpc::Method<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteReferenceImage",
-        __Marshaller_DeleteReferenceImageRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_vision_v1_DeleteReferenceImageRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest, global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> __Method_ListReferenceImages = new grpc::Method<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest, global::Google.Cloud.Vision.V1.ListReferenceImagesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListReferenceImages",
-        __Marshaller_ListReferenceImagesRequest,
-        __Marshaller_ListReferenceImagesResponse);
+        __Marshaller_google_cloud_vision_v1_ListReferenceImagesRequest,
+        __Marshaller_google_cloud_vision_v1_ListReferenceImagesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.GetReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage> __Method_GetReferenceImage = new grpc::Method<global::Google.Cloud.Vision.V1.GetReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetReferenceImage",
-        __Marshaller_GetReferenceImageRequest,
-        __Marshaller_ReferenceImage);
+        __Marshaller_google_cloud_vision_v1_GetReferenceImageRequest,
+        __Marshaller_google_cloud_vision_v1_ReferenceImage);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_AddProductToProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AddProductToProductSet",
-        __Marshaller_AddProductToProductSetRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_vision_v1_AddProductToProductSetRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_RemoveProductFromProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RemoveProductFromProductSet",
-        __Marshaller_RemoveProductFromProductSetRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_vision_v1_RemoveProductFromProductSetRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest, global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> __Method_ListProductsInProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest, global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListProductsInProductSet",
-        __Marshaller_ListProductsInProductSetRequest,
-        __Marshaller_ListProductsInProductSetResponse);
+        __Marshaller_google_cloud_vision_v1_ListProductsInProductSetRequest,
+        __Marshaller_google_cloud_vision_v1_ListProductsInProductSetResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ImportProductSetsRequest, global::Google.LongRunning.Operation> __Method_ImportProductSets = new grpc::Method<global::Google.Cloud.Vision.V1.ImportProductSetsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ImportProductSets",
-        __Marshaller_ImportProductSetsRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_vision_v1_ImportProductSetsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -207,6 +207,7 @@ namespace Google.Cloud.Vision.V1 {
     }
 
     /// <summary>Base class for server-side implementations of ProductSearch</summary>
+    [grpc::BindServiceMethod(typeof(ProductSearch), "BindService")]
     public abstract partial class ProductSearchBase
     {
       /// <summary>
@@ -1824,6 +1825,32 @@ namespace Google.Cloud.Vision.V1 {
           .AddMethod(__Method_RemoveProductFromProductSet, serviceImpl.RemoveProductFromProductSet)
           .AddMethod(__Method_ListProductsInProductSet, serviceImpl.ListProductsInProductSet)
           .AddMethod(__Method_ImportProductSets, serviceImpl.ImportProductSets).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, ProductSearchBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(serviceImpl.CreateProductSet));
+      serviceBinder.AddMethod(__Method_ListProductSets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.ListProductSetsRequest, global::Google.Cloud.Vision.V1.ListProductSetsResponse>(serviceImpl.ListProductSets));
+      serviceBinder.AddMethod(__Method_GetProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.GetProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(serviceImpl.GetProductSet));
+      serviceBinder.AddMethod(__Method_UpdateProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.UpdateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(serviceImpl.UpdateProductSet));
+      serviceBinder.AddMethod(__Method_DeleteProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.DeleteProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteProductSet));
+      serviceBinder.AddMethod(__Method_CreateProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.CreateProductRequest, global::Google.Cloud.Vision.V1.Product>(serviceImpl.CreateProduct));
+      serviceBinder.AddMethod(__Method_ListProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.ListProductsRequest, global::Google.Cloud.Vision.V1.ListProductsResponse>(serviceImpl.ListProducts));
+      serviceBinder.AddMethod(__Method_GetProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.GetProductRequest, global::Google.Cloud.Vision.V1.Product>(serviceImpl.GetProduct));
+      serviceBinder.AddMethod(__Method_UpdateProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.UpdateProductRequest, global::Google.Cloud.Vision.V1.Product>(serviceImpl.UpdateProduct));
+      serviceBinder.AddMethod(__Method_DeleteProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.DeleteProductRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteProduct));
+      serviceBinder.AddMethod(__Method_CreateReferenceImage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage>(serviceImpl.CreateReferenceImage));
+      serviceBinder.AddMethod(__Method_DeleteReferenceImage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReferenceImage));
+      serviceBinder.AddMethod(__Method_ListReferenceImages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest, global::Google.Cloud.Vision.V1.ListReferenceImagesResponse>(serviceImpl.ListReferenceImages));
+      serviceBinder.AddMethod(__Method_GetReferenceImage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.GetReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage>(serviceImpl.GetReferenceImage));
+      serviceBinder.AddMethod(__Method_AddProductToProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.AddProductToProductSet));
+      serviceBinder.AddMethod(__Method_RemoveProductFromProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RemoveProductFromProductSet));
+      serviceBinder.AddMethod(__Method_ListProductsInProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest, global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse>(serviceImpl.ListProductsInProductSet));
+      serviceBinder.AddMethod(__Method_ImportProductSets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.ImportProductSetsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportProductSets));
     }
 
   }

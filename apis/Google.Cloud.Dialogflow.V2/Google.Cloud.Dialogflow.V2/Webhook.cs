@@ -259,13 +259,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.queryResult_ != null) {
         if (queryResult_ == null) {
-          queryResult_ = new global::Google.Cloud.Dialogflow.V2.QueryResult();
+          QueryResult = new global::Google.Cloud.Dialogflow.V2.QueryResult();
         }
         QueryResult.MergeFrom(other.QueryResult);
       }
       if (other.originalDetectIntentRequest_ != null) {
         if (originalDetectIntentRequest_ == null) {
-          originalDetectIntentRequest_ = new global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest();
+          OriginalDetectIntentRequest = new global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest();
         }
         OriginalDetectIntentRequest.MergeFrom(other.OriginalDetectIntentRequest);
       }
@@ -286,16 +286,16 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (queryResult_ == null) {
-              queryResult_ = new global::Google.Cloud.Dialogflow.V2.QueryResult();
+              QueryResult = new global::Google.Cloud.Dialogflow.V2.QueryResult();
             }
-            input.ReadMessage(queryResult_);
+            input.ReadMessage(QueryResult);
             break;
           }
           case 26: {
             if (originalDetectIntentRequest_ == null) {
-              originalDetectIntentRequest_ = new global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest();
+              OriginalDetectIntentRequest = new global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest();
             }
-            input.ReadMessage(originalDetectIntentRequest_);
+            input.ReadMessage(OriginalDetectIntentRequest);
             break;
           }
           case 34: {
@@ -564,14 +564,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Payload.MergeFrom(other.Payload);
       }
       outputContexts_.Add(other.outputContexts_);
       if (other.followupEventInput_ != null) {
         if (followupEventInput_ == null) {
-          followupEventInput_ = new global::Google.Cloud.Dialogflow.V2.EventInput();
+          FollowupEventInput = new global::Google.Cloud.Dialogflow.V2.EventInput();
         }
         FollowupEventInput.MergeFrom(other.FollowupEventInput);
       }
@@ -600,9 +600,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 34: {
             if (payload_ == null) {
-              payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(payload_);
+            input.ReadMessage(Payload);
             break;
           }
           case 42: {
@@ -611,9 +611,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 50: {
             if (followupEventInput_ == null) {
-              followupEventInput_ = new global::Google.Cloud.Dialogflow.V2.EventInput();
+              FollowupEventInput = new global::Google.Cloud.Dialogflow.V2.EventInput();
             }
-            input.ReadMessage(followupEventInput_);
+            input.ReadMessage(FollowupEventInput);
             break;
           }
         }
@@ -804,7 +804,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Payload.MergeFrom(other.Payload);
       }
@@ -829,9 +829,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 26: {
             if (payload_ == null) {
-              payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(payload_);
+            input.ReadMessage(Payload);
             break;
           }
         }

@@ -250,7 +250,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.stateStartTime_ != null) {
         if (stateStartTime_ == null) {
-          stateStartTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StateStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StateStartTime.MergeFrom(other.StateStartTime);
       }
@@ -266,7 +266,7 @@ namespace Google.Cloud.Dataproc.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            state_ = (global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) input.ReadEnum();
             break;
           }
           case 18: {
@@ -279,9 +279,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 34: {
             if (stateStartTime_ == null) {
-              stateStartTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StateStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(stateStartTime_);
+            input.ReadMessage(StateStartTime);
             break;
           }
         }
@@ -588,7 +588,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Cloud.Dataproc.V1.ClusterOperationStatus();
+          Status = new global::Google.Cloud.Dataproc.V1.ClusterOperationStatus();
         }
         Status.MergeFrom(other.Status);
       }
@@ -622,9 +622,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 74: {
             if (status_ == null) {
-              status_ = new global::Google.Cloud.Dataproc.V1.ClusterOperationStatus();
+              Status = new global::Google.Cloud.Dataproc.V1.ClusterOperationStatus();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 82: {

@@ -728,7 +728,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
@@ -804,13 +804,13 @@ namespace Google.Cloud.Redis.V1Beta1 {
           }
           case 106: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 112: {
-            state_ = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.State) input.ReadEnum();
             break;
           }
           case 122: {
@@ -822,7 +822,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
             break;
           }
           case 136: {
-            tier_ = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier) input.ReadEnum();
+            Tier = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier) input.ReadEnum();
             break;
           }
           case 144: {
@@ -1622,7 +1622,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if (other.instance_ != null) {
         if (instance_ == null) {
-          instance_ = new global::Google.Cloud.Redis.V1Beta1.Instance();
+          Instance = new global::Google.Cloud.Redis.V1Beta1.Instance();
         }
         Instance.MergeFrom(other.Instance);
       }
@@ -1647,9 +1647,9 @@ namespace Google.Cloud.Redis.V1Beta1 {
           }
           case 26: {
             if (instance_ == null) {
-              instance_ = new global::Google.Cloud.Redis.V1Beta1.Instance();
+              Instance = new global::Google.Cloud.Redis.V1Beta1.Instance();
             }
-            input.ReadMessage(instance_);
+            input.ReadMessage(Instance);
             break;
           }
         }
@@ -1803,13 +1803,13 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
       if (other.instance_ != null) {
         if (instance_ == null) {
-          instance_ = new global::Google.Cloud.Redis.V1Beta1.Instance();
+          Instance = new global::Google.Cloud.Redis.V1Beta1.Instance();
         }
         Instance.MergeFrom(other.Instance);
       }
@@ -1826,16 +1826,16 @@ namespace Google.Cloud.Redis.V1Beta1 {
             break;
           case 10: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
           case 18: {
             if (instance_ == null) {
-              instance_ = new global::Google.Cloud.Redis.V1Beta1.Instance();
+              Instance = new global::Google.Cloud.Redis.V1Beta1.Instance();
             }
-            input.ReadMessage(instance_);
+            input.ReadMessage(Instance);
             break;
           }
         }
@@ -2429,7 +2429,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if (other.inputConfig_ != null) {
         if (inputConfig_ == null) {
-          inputConfig_ = new global::Google.Cloud.Redis.V1Beta1.InputConfig();
+          InputConfig = new global::Google.Cloud.Redis.V1Beta1.InputConfig();
         }
         InputConfig.MergeFrom(other.InputConfig);
       }
@@ -2450,9 +2450,9 @@ namespace Google.Cloud.Redis.V1Beta1 {
           }
           case 26: {
             if (inputConfig_ == null) {
-              inputConfig_ = new global::Google.Cloud.Redis.V1Beta1.InputConfig();
+              InputConfig = new global::Google.Cloud.Redis.V1Beta1.InputConfig();
             }
-            input.ReadMessage(inputConfig_);
+            input.ReadMessage(InputConfig);
             break;
           }
         }
@@ -2910,7 +2910,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          outputConfig_ = new global::Google.Cloud.Redis.V1Beta1.OutputConfig();
+          OutputConfig = new global::Google.Cloud.Redis.V1Beta1.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -2931,9 +2931,9 @@ namespace Google.Cloud.Redis.V1Beta1 {
           }
           case 26: {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Redis.V1Beta1.OutputConfig();
+              OutputConfig = new global::Google.Cloud.Redis.V1Beta1.OutputConfig();
             }
-            input.ReadMessage(outputConfig_);
+            input.ReadMessage(OutputConfig);
             break;
           }
         }
@@ -3102,7 +3102,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
             break;
           }
           case 16: {
-            dataProtectionMode_ = (global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode) input.ReadEnum();
+            DataProtectionMode = (global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode) input.ReadEnum();
             break;
           }
         }

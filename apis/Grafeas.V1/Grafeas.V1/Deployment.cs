@@ -429,13 +429,13 @@ namespace Grafeas.V1 {
       }
       if (other.deployTime_ != null) {
         if (deployTime_ == null) {
-          deployTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          DeployTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DeployTime.MergeFrom(other.DeployTime);
       }
       if (other.undeployTime_ != null) {
         if (undeployTime_ == null) {
-          undeployTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UndeployTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UndeployTime.MergeFrom(other.UndeployTime);
       }
@@ -466,16 +466,16 @@ namespace Grafeas.V1 {
           }
           case 18: {
             if (deployTime_ == null) {
-              deployTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              DeployTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(deployTime_);
+            input.ReadMessage(DeployTime);
             break;
           }
           case 26: {
             if (undeployTime_ == null) {
-              undeployTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UndeployTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(undeployTime_);
+            input.ReadMessage(UndeployTime);
             break;
           }
           case 34: {
@@ -491,7 +491,7 @@ namespace Grafeas.V1 {
             break;
           }
           case 56: {
-            platform_ = (global::Grafeas.V1.DeploymentOccurrence.Types.Platform) input.ReadEnum();
+            Platform = (global::Grafeas.V1.DeploymentOccurrence.Types.Platform) input.ReadEnum();
             break;
           }
         }

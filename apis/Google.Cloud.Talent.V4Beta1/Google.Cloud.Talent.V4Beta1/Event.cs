@@ -341,7 +341,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
@@ -384,9 +384,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 34: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 42: {
@@ -606,7 +606,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) input.ReadEnum();
+            Type = (global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -925,7 +925,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) input.ReadEnum();
+            Type = (global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) input.ReadEnum();
             break;
           }
           case 18: {

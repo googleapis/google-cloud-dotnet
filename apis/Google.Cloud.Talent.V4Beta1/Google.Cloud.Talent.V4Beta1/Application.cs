@@ -287,6 +287,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 19;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
@@ -363,6 +364,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         isMatch_ = value;
       }
     }
+
 
     /// <summary>Field number for the "job_title_snippet" field.</summary>
     public const int JobTitleSnippetFieldNumber = 29;
@@ -585,7 +587,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.applicationDate_ != null) {
         if (applicationDate_ == null) {
-          applicationDate_ = new global::Google.Type.Date();
+          ApplicationDate = new global::Google.Type.Date();
         }
         ApplicationDate.MergeFrom(other.ApplicationDate);
       }
@@ -603,13 +605,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
@@ -656,17 +658,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 58: {
             if (applicationDate_ == null) {
-              applicationDate_ = new global::Google.Type.Date();
+              ApplicationDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(applicationDate_);
+            input.ReadMessage(ApplicationDate);
             break;
           }
           case 88: {
-            stage_ = (global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) input.ReadEnum();
+            Stage = (global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) input.ReadEnum();
             break;
           }
           case 104: {
-            state_ = (global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState) input.ReadEnum();
+            State = (global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState) input.ReadEnum();
             break;
           }
           case 130: {
@@ -682,16 +684,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 154: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 162: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 170: {
@@ -699,7 +701,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 176: {
-            outcome_ = (global::Google.Cloud.Talent.V4Beta1.Outcome) input.ReadEnum();
+            Outcome = (global::Google.Cloud.Talent.V4Beta1.Outcome) input.ReadEnum();
             break;
           }
           case 226: {

@@ -728,25 +728,25 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.closeTime_ != null) {
         if (closeTime_ == null) {
-          closeTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CloseTime.MergeFrom(other.CloseTime);
       }
       if (other.detectTime_ != null) {
         if (detectTime_ == null) {
-          detectTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          DetectTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DetectTime.MergeFrom(other.DetectTime);
       }
       if (other.creator_ != null) {
         if (creator_ == null) {
-          creator_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          Creator = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         Creator.MergeFrom(other.Creator);
       }
@@ -788,16 +788,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 34: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 42: {
             if (creator_ == null) {
-              creator_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              Creator = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(creator_);
+            input.ReadMessage(Creator);
             break;
           }
           case 50: {
@@ -813,21 +813,21 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           }
           case 72: {
-            signalState_ = (global::Google.Cloud.Irm.V1Alpha2.Signal.Types.State) input.ReadEnum();
+            SignalState = (global::Google.Cloud.Irm.V1Alpha2.Signal.Types.State) input.ReadEnum();
             break;
           }
           case 82: {
             if (closeTime_ == null) {
-              closeTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(closeTime_);
+            input.ReadMessage(CloseTime);
             break;
           }
           case 122: {
             if (detectTime_ == null) {
-              detectTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              DetectTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(detectTime_);
+            input.ReadMessage(DetectTime);
             break;
           }
           case 130: {
@@ -1273,13 +1273,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.author_ != null) {
         if (author_ == null) {
-          author_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          Author = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         Author.MergeFrom(other.Author);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
@@ -1306,16 +1306,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             if (author_ == null) {
-              author_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              Author = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(author_);
+            input.ReadMessage(Author);
             break;
           }
           case 26: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 34: {
@@ -1692,13 +1692,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.author_ != null) {
         if (author_ == null) {
-          author_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          Author = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         Author.MergeFrom(other.Author);
       }
@@ -1723,16 +1723,16 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 26: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 34: {
             if (author_ == null) {
-              author_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              Author = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(author_);
+            input.ReadMessage(Author);
             break;
           }
         }
@@ -2101,19 +2101,19 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.synopsis_ != null) {
         if (synopsis_ == null) {
-          synopsis_ = new global::Google.Cloud.Irm.V1Alpha2.Synopsis();
+          Synopsis = new global::Google.Cloud.Irm.V1Alpha2.Synopsis();
         }
         Synopsis.MergeFrom(other.Synopsis);
       }
       if (other.communicationVenue_ != null) {
         if (communicationVenue_ == null) {
-          communicationVenue_ = new global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue();
+          CommunicationVenue = new global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue();
         }
         CommunicationVenue.MergeFrom(other.CommunicationVenue);
       }
@@ -2137,7 +2137,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           }
           case 24: {
-            escalationLevel_ = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.EscalationLevel) input.ReadEnum();
+            EscalationLevel = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.EscalationLevel) input.ReadEnum();
             break;
           }
           case 34: {
@@ -2145,25 +2145,25 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           }
           case 40: {
-            severity_ = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Severity) input.ReadEnum();
+            Severity = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Severity) input.ReadEnum();
             break;
           }
           case 48: {
-            stage_ = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Stage) input.ReadEnum();
+            Stage = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Stage) input.ReadEnum();
             break;
           }
           case 58: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 66: {
             if (synopsis_ == null) {
-              synopsis_ = new global::Google.Cloud.Irm.V1Alpha2.Synopsis();
+              Synopsis = new global::Google.Cloud.Irm.V1Alpha2.Synopsis();
             }
-            input.ReadMessage(synopsis_);
+            input.ReadMessage(Synopsis);
             break;
           }
           case 74: {
@@ -2172,9 +2172,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 82: {
             if (communicationVenue_ == null) {
-              communicationVenue_ = new global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue();
+              CommunicationVenue = new global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue();
             }
-            input.ReadMessage(communicationVenue_);
+            input.ReadMessage(CommunicationVenue);
             break;
           }
         }
@@ -2461,7 +2461,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
                 break;
               }
               case 24: {
-                channelType_ = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue.Types.ChannelType) input.ReadEnum();
+                ChannelType = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue.Types.ChannelType) input.ReadEnum();
                 break;
               }
             }
@@ -2682,7 +2682,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Google.Cloud.Irm.V1Alpha2.IncidentRole.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.Irm.V1Alpha2.IncidentRole.Types.Type) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2989,19 +2989,19 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.role_ != null) {
         if (role_ == null) {
-          role_ = new global::Google.Cloud.Irm.V1Alpha2.IncidentRole();
+          Role = new global::Google.Cloud.Irm.V1Alpha2.IncidentRole();
         }
         Role.MergeFrom(other.Role);
       }
       if (other.assignee_ != null) {
         if (assignee_ == null) {
-          assignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          Assignee = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         Assignee.MergeFrom(other.Assignee);
       }
       if (other.proposedAssignee_ != null) {
         if (proposedAssignee_ == null) {
-          proposedAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+          ProposedAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
         }
         ProposedAssignee.MergeFrom(other.ProposedAssignee);
       }
@@ -3026,23 +3026,23 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 26: {
             if (role_ == null) {
-              role_ = new global::Google.Cloud.Irm.V1Alpha2.IncidentRole();
+              Role = new global::Google.Cloud.Irm.V1Alpha2.IncidentRole();
             }
-            input.ReadMessage(role_);
+            input.ReadMessage(Role);
             break;
           }
           case 34: {
             if (assignee_ == null) {
-              assignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              Assignee = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(assignee_);
+            input.ReadMessage(Assignee);
             break;
           }
           case 42: {
             if (proposedAssignee_ == null) {
-              proposedAssignee_ = new global::Google.Cloud.Irm.V1Alpha2.User();
+              ProposedAssignee = new global::Google.Cloud.Irm.V1Alpha2.User();
             }
-            input.ReadMessage(proposedAssignee_);
+            input.ReadMessage(ProposedAssignee);
             break;
           }
         }
@@ -3304,7 +3304,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             break;
           }
           case 40: {
-            type_ = (global::Google.Cloud.Irm.V1Alpha2.Artifact.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.Irm.V1Alpha2.Artifact.Types.Type) input.ReadEnum();
             break;
           }
         }
@@ -4019,7 +4019,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (other.subscriptionChannel_ != null) {
         if (subscriptionChannel_ == null) {
-          subscriptionChannel_ = new global::Google.Cloud.Irm.V1Alpha2.CommunicationChannel();
+          SubscriptionChannel = new global::Google.Cloud.Irm.V1Alpha2.CommunicationChannel();
         }
         SubscriptionChannel.MergeFrom(other.SubscriptionChannel);
       }
@@ -4045,9 +4045,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 26: {
             if (subscriptionChannel_ == null) {
-              subscriptionChannel_ = new global::Google.Cloud.Irm.V1Alpha2.CommunicationChannel();
+              SubscriptionChannel = new global::Google.Cloud.Irm.V1Alpha2.CommunicationChannel();
             }
-            input.ReadMessage(subscriptionChannel_);
+            input.ReadMessage(SubscriptionChannel);
             break;
           }
           case 34:

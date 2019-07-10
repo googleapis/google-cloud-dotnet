@@ -264,7 +264,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.breakpoint_ != null) {
         if (breakpoint_ == null) {
-          breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+          Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
         }
         Breakpoint.MergeFrom(other.Breakpoint);
       }
@@ -288,9 +288,9 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 18: {
             if (breakpoint_ == null) {
-              breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+              Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
             }
-            input.ReadMessage(breakpoint_);
+            input.ReadMessage(Breakpoint);
             break;
           }
           case 34: {
@@ -417,7 +417,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.breakpoint_ != null) {
         if (breakpoint_ == null) {
-          breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+          Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
         }
         Breakpoint.MergeFrom(other.Breakpoint);
       }
@@ -434,9 +434,9 @@ namespace Google.Cloud.Debugger.V2 {
             break;
           case 10: {
             if (breakpoint_ == null) {
-              breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+              Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
             }
-            input.ReadMessage(breakpoint_);
+            input.ReadMessage(Breakpoint);
             break;
           }
         }
@@ -757,7 +757,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.breakpoint_ != null) {
         if (breakpoint_ == null) {
-          breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+          Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
         }
         Breakpoint.MergeFrom(other.Breakpoint);
       }
@@ -774,9 +774,9 @@ namespace Google.Cloud.Debugger.V2 {
             break;
           case 10: {
             if (breakpoint_ == null) {
-              breakpoint_ = new global::Google.Cloud.Debugger.V2.Breakpoint();
+              Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
             }
-            input.ReadMessage(breakpoint_);
+            input.ReadMessage(Breakpoint);
             break;
           }
         }
@@ -1258,7 +1258,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.action_ != null) {
         if (action_ == null) {
-          action_ = new global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue();
+          Action = new global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue();
         }
         Action.MergeFrom(other.Action);
       }
@@ -1296,9 +1296,9 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 34: {
             if (action_ == null) {
-              action_ = new global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue();
+              Action = new global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue();
             }
-            input.ReadMessage(action_);
+            input.ReadMessage(Action);
             break;
           }
           case 40: {
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.Debugger.V2 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                value_ = (global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action) input.ReadEnum();
+                Value = (global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action) input.ReadEnum();
                 break;
               }
             }

@@ -277,7 +277,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          entity_ = new global::Google.Cloud.Datastore.V1.Entity();
+          Entity = new global::Google.Cloud.Datastore.V1.Entity();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -300,9 +300,9 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 10: {
             if (entity_ == null) {
-              entity_ = new global::Google.Cloud.Datastore.V1.Entity();
+              Entity = new global::Google.Cloud.Datastore.V1.Entity();
             }
-            input.ReadMessage(entity_);
+            input.ReadMessage(Entity);
             break;
           }
           case 26: {
@@ -533,6 +533,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Query);
@@ -648,7 +649,7 @@ namespace Google.Cloud.Datastore.V1 {
       kind_.Add(other.kind_);
       if (other.filter_ != null) {
         if (filter_ == null) {
-          filter_ = new global::Google.Cloud.Datastore.V1.Filter();
+          Filter = new global::Google.Cloud.Datastore.V1.Filter();
         }
         Filter.MergeFrom(other.Filter);
       }
@@ -689,9 +690,9 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 34: {
             if (filter_ == null) {
-              filter_ = new global::Google.Cloud.Datastore.V1.Filter();
+              Filter = new global::Google.Cloud.Datastore.V1.Filter();
             }
-            input.ReadMessage(filter_);
+            input.ReadMessage(Filter);
             break;
           }
           case 42: {
@@ -1111,7 +1112,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Datastore.V1.PropertyReference();
+          Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
         }
         Property.MergeFrom(other.Property);
       }
@@ -1128,9 +1129,9 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Datastore.V1.PropertyReference();
+              Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
         }
@@ -1276,7 +1277,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Datastore.V1.PropertyReference();
+          Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
         }
         Property.MergeFrom(other.Property);
       }
@@ -1296,13 +1297,13 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Datastore.V1.PropertyReference();
+              Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 16: {
-            direction_ = (global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction) input.ReadEnum();
+            Direction = (global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction) input.ReadEnum();
             break;
           }
         }
@@ -1695,7 +1696,7 @@ namespace Google.Cloud.Datastore.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            op_ = (global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator) input.ReadEnum();
+            Op = (global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator) input.ReadEnum();
             break;
           }
           case 18: {
@@ -1890,7 +1891,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Datastore.V1.PropertyReference();
+          Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
         }
         Property.MergeFrom(other.Property);
       }
@@ -1899,7 +1900,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.value_ != null) {
         if (value_ == null) {
-          value_ = new global::Google.Cloud.Datastore.V1.Value();
+          Value = new global::Google.Cloud.Datastore.V1.Value();
         }
         Value.MergeFrom(other.Value);
       }
@@ -1916,20 +1917,20 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Datastore.V1.PropertyReference();
+              Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 16: {
-            op_ = (global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator) input.ReadEnum();
+            Op = (global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator) input.ReadEnum();
             break;
           }
           case 26: {
             if (value_ == null) {
-              value_ = new global::Google.Cloud.Datastore.V1.Value();
+              Value = new global::Google.Cloud.Datastore.V1.Value();
             }
-            input.ReadMessage(value_);
+            input.ReadMessage(Value);
             break;
           }
         }
@@ -2699,7 +2700,7 @@ namespace Google.Cloud.Datastore.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            entityResultType_ = (global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) input.ReadEnum();
+            EntityResultType = (global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2715,7 +2716,7 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           }
           case 40: {
-            moreResults_ = (global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType) input.ReadEnum();
+            MoreResults = (global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType) input.ReadEnum();
             break;
           }
           case 48: {

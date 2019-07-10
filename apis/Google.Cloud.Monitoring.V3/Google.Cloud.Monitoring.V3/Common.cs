@@ -595,13 +595,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
@@ -618,16 +618,16 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -860,7 +860,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.alignmentPeriod_ != null) {
         if (alignmentPeriod_ == null) {
-          alignmentPeriod_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          AlignmentPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         AlignmentPeriod.MergeFrom(other.AlignmentPeriod);
       }
@@ -884,17 +884,17 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 10: {
             if (alignmentPeriod_ == null) {
-              alignmentPeriod_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              AlignmentPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(alignmentPeriod_);
+            input.ReadMessage(AlignmentPeriod);
             break;
           }
           case 16: {
-            perSeriesAligner_ = (global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner) input.ReadEnum();
+            PerSeriesAligner = (global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner) input.ReadEnum();
             break;
           }
           case 32: {
-            crossSeriesReducer_ = (global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) input.ReadEnum();
+            CrossSeriesReducer = (global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) input.ReadEnum();
             break;
           }
           case 42: {

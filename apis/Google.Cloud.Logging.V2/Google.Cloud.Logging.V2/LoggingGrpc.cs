@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,51 +31,51 @@ namespace Google.Cloud.Logging.V2 {
   {
     static readonly string __ServiceName = "google.logging.v2.LoggingServiceV2";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteLogRequest> __Marshaller_DeleteLogRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteLogRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest> __Marshaller_WriteLogEntriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.WriteLogEntriesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> __Marshaller_WriteLogEntriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.WriteLogEntriesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogEntriesRequest> __Marshaller_ListLogEntriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> __Marshaller_ListLogEntriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest> __Marshaller_ListMonitoredResourceDescriptorsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> __Marshaller_ListMonitoredResourceDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsRequest> __Marshaller_ListLogsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsResponse> __Marshaller_ListLogsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteLogRequest> __Marshaller_google_logging_v2_DeleteLogRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteLogRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest> __Marshaller_google_logging_v2_WriteLogEntriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.WriteLogEntriesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> __Marshaller_google_logging_v2_WriteLogEntriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.WriteLogEntriesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogEntriesRequest> __Marshaller_google_logging_v2_ListLogEntriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> __Marshaller_google_logging_v2_ListLogEntriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest> __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsRequest> __Marshaller_google_logging_v2_ListLogsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsResponse> __Marshaller_google_logging_v2_ListLogsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteLog = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteLog",
-        __Marshaller_DeleteLogRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_logging_v2_DeleteLogRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest, global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> __Method_WriteLogEntries = new grpc::Method<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest, global::Google.Cloud.Logging.V2.WriteLogEntriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "WriteLogEntries",
-        __Marshaller_WriteLogEntriesRequest,
-        __Marshaller_WriteLogEntriesResponse);
+        __Marshaller_google_logging_v2_WriteLogEntriesRequest,
+        __Marshaller_google_logging_v2_WriteLogEntriesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListLogEntriesRequest, global::Google.Cloud.Logging.V2.ListLogEntriesResponse> __Method_ListLogEntries = new grpc::Method<global::Google.Cloud.Logging.V2.ListLogEntriesRequest, global::Google.Cloud.Logging.V2.ListLogEntriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListLogEntries",
-        __Marshaller_ListLogEntriesRequest,
-        __Marshaller_ListLogEntriesResponse);
+        __Marshaller_google_logging_v2_ListLogEntriesRequest,
+        __Marshaller_google_logging_v2_ListLogEntriesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> __Method_ListMonitoredResourceDescriptors = new grpc::Method<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListMonitoredResourceDescriptors",
-        __Marshaller_ListMonitoredResourceDescriptorsRequest,
-        __Marshaller_ListMonitoredResourceDescriptorsResponse);
+        __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsRequest,
+        __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse> __Method_ListLogs = new grpc::Method<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListLogs",
-        __Marshaller_ListLogsRequest,
-        __Marshaller_ListLogsResponse);
+        __Marshaller_google_logging_v2_ListLogsRequest,
+        __Marshaller_google_logging_v2_ListLogsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -84,6 +84,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Base class for server-side implementations of LoggingServiceV2</summary>
+    [grpc::BindServiceMethod(typeof(LoggingServiceV2), "BindService")]
     public abstract partial class LoggingServiceV2Base
     {
       /// <summary>
@@ -463,6 +464,19 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_ListLogEntries, serviceImpl.ListLogEntries)
           .AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl.ListMonitoredResourceDescriptors)
           .AddMethod(__Method_ListLogs, serviceImpl.ListLogs).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, LoggingServiceV2Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_DeleteLog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteLog));
+      serviceBinder.AddMethod(__Method_WriteLogEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest, global::Google.Cloud.Logging.V2.WriteLogEntriesResponse>(serviceImpl.WriteLogEntries));
+      serviceBinder.AddMethod(__Method_ListLogEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListLogEntriesRequest, global::Google.Cloud.Logging.V2.ListLogEntriesResponse>(serviceImpl.ListLogEntries));
+      serviceBinder.AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse>(serviceImpl.ListMonitoredResourceDescriptors));
+      serviceBinder.AddMethod(__Method_ListLogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse>(serviceImpl.ListLogs));
     }
 
   }

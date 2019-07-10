@@ -271,6 +271,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as StructuredQuery);
@@ -385,27 +386,27 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.select_ != null) {
         if (select_ == null) {
-          select_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection();
+          Select = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection();
         }
         Select.MergeFrom(other.Select);
       }
       from_.Add(other.from_);
       if (other.where_ != null) {
         if (where_ == null) {
-          where_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter();
+          Where = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter();
         }
         Where.MergeFrom(other.Where);
       }
       orderBy_.Add(other.orderBy_);
       if (other.startAt_ != null) {
         if (startAt_ == null) {
-          startAt_ = new global::Google.Cloud.Firestore.V1.Cursor();
+          StartAt = new global::Google.Cloud.Firestore.V1.Cursor();
         }
         StartAt.MergeFrom(other.StartAt);
       }
       if (other.endAt_ != null) {
         if (endAt_ == null) {
-          endAt_ = new global::Google.Cloud.Firestore.V1.Cursor();
+          EndAt = new global::Google.Cloud.Firestore.V1.Cursor();
         }
         EndAt.MergeFrom(other.EndAt);
       }
@@ -430,9 +431,9 @@ namespace Google.Cloud.Firestore.V1 {
             break;
           case 10: {
             if (select_ == null) {
-              select_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection();
+              Select = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection();
             }
-            input.ReadMessage(select_);
+            input.ReadMessage(Select);
             break;
           }
           case 18: {
@@ -441,9 +442,9 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 26: {
             if (where_ == null) {
-              where_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter();
+              Where = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter();
             }
-            input.ReadMessage(where_);
+            input.ReadMessage(Where);
             break;
           }
           case 34: {
@@ -463,16 +464,16 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 58: {
             if (startAt_ == null) {
-              startAt_ = new global::Google.Cloud.Firestore.V1.Cursor();
+              StartAt = new global::Google.Cloud.Firestore.V1.Cursor();
             }
-            input.ReadMessage(startAt_);
+            input.ReadMessage(StartAt);
             break;
           }
           case 66: {
             if (endAt_ == null) {
-              endAt_ = new global::Google.Cloud.Firestore.V1.Cursor();
+              EndAt = new global::Google.Cloud.Firestore.V1.Cursor();
             }
-            input.ReadMessage(endAt_);
+            input.ReadMessage(EndAt);
             break;
           }
         }
@@ -1071,7 +1072,7 @@ namespace Google.Cloud.Firestore.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                op_ = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) input.ReadEnum();
+                Op = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) input.ReadEnum();
                 break;
               }
               case 18: {
@@ -1266,7 +1267,7 @@ namespace Google.Cloud.Firestore.V1 {
           }
           if (other.field_ != null) {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
+              Field = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
             }
             Field.MergeFrom(other.Field);
           }
@@ -1275,7 +1276,7 @@ namespace Google.Cloud.Firestore.V1 {
           }
           if (other.value_ != null) {
             if (value_ == null) {
-              value_ = new global::Google.Cloud.Firestore.V1.Value();
+              Value = new global::Google.Cloud.Firestore.V1.Value();
             }
             Value.MergeFrom(other.Value);
           }
@@ -1292,20 +1293,20 @@ namespace Google.Cloud.Firestore.V1 {
                 break;
               case 10: {
                 if (field_ == null) {
-                  field_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
+                  Field = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
                 }
-                input.ReadMessage(field_);
+                input.ReadMessage(Field);
                 break;
               }
               case 16: {
-                op_ = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) input.ReadEnum();
+                Op = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) input.ReadEnum();
                 break;
               }
               case 26: {
                 if (value_ == null) {
-                  value_ = new global::Google.Cloud.Firestore.V1.Value();
+                  Value = new global::Google.Cloud.Firestore.V1.Value();
                 }
-                input.ReadMessage(value_);
+                input.ReadMessage(Value);
                 break;
               }
             }
@@ -1540,7 +1541,7 @@ namespace Google.Cloud.Firestore.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                op_ = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) input.ReadEnum();
+                Op = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) input.ReadEnum();
                 break;
               }
               case 18: {
@@ -1852,7 +1853,7 @@ namespace Google.Cloud.Firestore.V1 {
           }
           if (other.field_ != null) {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
+              Field = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
             }
             Field.MergeFrom(other.Field);
           }
@@ -1872,13 +1873,13 @@ namespace Google.Cloud.Firestore.V1 {
                 break;
               case 10: {
                 if (field_ == null) {
-                  field_ = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
+                  Field = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
                 }
-                input.ReadMessage(field_);
+                input.ReadMessage(Field);
                 break;
               }
               case 16: {
-                direction_ = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) input.ReadEnum();
+                Direction = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) input.ReadEnum();
                 break;
               }
             }

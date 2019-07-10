@@ -596,7 +596,7 @@ namespace Google.Cloud.Scheduler.V1 {
       }
       if (other.userUpdateTime_ != null) {
         if (userUpdateTime_ == null) {
-          userUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UserUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UserUpdateTime.MergeFrom(other.UserUpdateTime);
       }
@@ -605,31 +605,31 @@ namespace Google.Cloud.Scheduler.V1 {
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Rpc.Status();
+          Status = new global::Google.Rpc.Status();
         }
         Status.MergeFrom(other.Status);
       }
       if (other.scheduleTime_ != null) {
         if (scheduleTime_ == null) {
-          scheduleTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ScheduleTime.MergeFrom(other.ScheduleTime);
       }
       if (other.lastAttemptTime_ != null) {
         if (lastAttemptTime_ == null) {
-          lastAttemptTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          LastAttemptTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastAttemptTime.MergeFrom(other.LastAttemptTime);
       }
       if (other.retryConfig_ != null) {
         if (retryConfig_ == null) {
-          retryConfig_ = new global::Google.Cloud.Scheduler.V1.RetryConfig();
+          RetryConfig = new global::Google.Cloud.Scheduler.V1.RetryConfig();
         }
         RetryConfig.MergeFrom(other.RetryConfig);
       }
       if (other.attemptDeadline_ != null) {
         if (attemptDeadline_ == null) {
-          attemptDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          AttemptDeadline = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         AttemptDeadline.MergeFrom(other.AttemptDeadline);
       }
@@ -702,41 +702,41 @@ namespace Google.Cloud.Scheduler.V1 {
           }
           case 74: {
             if (userUpdateTime_ == null) {
-              userUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UserUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(userUpdateTime_);
+            input.ReadMessage(UserUpdateTime);
             break;
           }
           case 80: {
-            state_ = (global::Google.Cloud.Scheduler.V1.Job.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Scheduler.V1.Job.Types.State) input.ReadEnum();
             break;
           }
           case 90: {
             if (status_ == null) {
-              status_ = new global::Google.Rpc.Status();
+              Status = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 138: {
             if (scheduleTime_ == null) {
-              scheduleTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(scheduleTime_);
+            input.ReadMessage(ScheduleTime);
             break;
           }
           case 146: {
             if (lastAttemptTime_ == null) {
-              lastAttemptTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              LastAttemptTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(lastAttemptTime_);
+            input.ReadMessage(LastAttemptTime);
             break;
           }
           case 154: {
             if (retryConfig_ == null) {
-              retryConfig_ = new global::Google.Cloud.Scheduler.V1.RetryConfig();
+              RetryConfig = new global::Google.Cloud.Scheduler.V1.RetryConfig();
             }
-            input.ReadMessage(retryConfig_);
+            input.ReadMessage(RetryConfig);
             break;
           }
           case 162: {
@@ -749,9 +749,9 @@ namespace Google.Cloud.Scheduler.V1 {
           }
           case 178: {
             if (attemptDeadline_ == null) {
-              attemptDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              AttemptDeadline = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(attemptDeadline_);
+            input.ReadMessage(AttemptDeadline);
             break;
           }
         }
@@ -1059,19 +1059,19 @@ namespace Google.Cloud.Scheduler.V1 {
       }
       if (other.maxRetryDuration_ != null) {
         if (maxRetryDuration_ == null) {
-          maxRetryDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MaxRetryDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MaxRetryDuration.MergeFrom(other.MaxRetryDuration);
       }
       if (other.minBackoffDuration_ != null) {
         if (minBackoffDuration_ == null) {
-          minBackoffDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MinBackoffDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MinBackoffDuration.MergeFrom(other.MinBackoffDuration);
       }
       if (other.maxBackoffDuration_ != null) {
         if (maxBackoffDuration_ == null) {
-          maxBackoffDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MaxBackoffDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MaxBackoffDuration.MergeFrom(other.MaxBackoffDuration);
       }
@@ -1095,23 +1095,23 @@ namespace Google.Cloud.Scheduler.V1 {
           }
           case 18: {
             if (maxRetryDuration_ == null) {
-              maxRetryDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MaxRetryDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(maxRetryDuration_);
+            input.ReadMessage(MaxRetryDuration);
             break;
           }
           case 26: {
             if (minBackoffDuration_ == null) {
-              minBackoffDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MinBackoffDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(minBackoffDuration_);
+            input.ReadMessage(MinBackoffDuration);
             break;
           }
           case 34: {
             if (maxBackoffDuration_ == null) {
-              maxBackoffDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MaxBackoffDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(maxBackoffDuration_);
+            input.ReadMessage(MaxBackoffDuration);
             break;
           }
           case 40: {

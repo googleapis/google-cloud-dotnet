@@ -250,7 +250,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.index_ != null) {
         if (index_ == null) {
-          index_ = new global::Google.Cloud.Firestore.Admin.V1.Index();
+          Index = new global::Google.Cloud.Firestore.Admin.V1.Index();
         }
         Index.MergeFrom(other.Index);
       }
@@ -271,9 +271,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 18: {
             if (index_ == null) {
-              index_ = new global::Google.Cloud.Firestore.Admin.V1.Index();
+              Index = new global::Google.Cloud.Firestore.Admin.V1.Index();
             }
-            input.ReadMessage(index_);
+            input.ReadMessage(Index);
             break;
           }
         }
@@ -1082,13 +1082,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.field_ != null) {
         if (field_ == null) {
-          field_ = new global::Google.Cloud.Firestore.Admin.V1.Field();
+          Field = new global::Google.Cloud.Firestore.Admin.V1.Field();
         }
         Field.MergeFrom(other.Field);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1105,16 +1105,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           case 10: {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Firestore.Admin.V1.Field();
+              Field = new global::Google.Cloud.Firestore.Admin.V1.Field();
             }
-            input.ReadMessage(field_);
+            input.ReadMessage(Field);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

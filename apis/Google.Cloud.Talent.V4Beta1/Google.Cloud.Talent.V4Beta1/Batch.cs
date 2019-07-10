@@ -361,19 +361,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -389,7 +389,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            state_ = (global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State) input.ReadEnum();
             break;
           }
           case 18: {
@@ -410,23 +410,23 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 50: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 58: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 66: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -758,13 +758,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           if (other.job_ != null) {
             if (job_ == null) {
-              job_ = new global::Google.Cloud.Talent.V4Beta1.Job();
+              Job = new global::Google.Cloud.Talent.V4Beta1.Job();
             }
             Job.MergeFrom(other.Job);
           }
           if (other.status_ != null) {
             if (status_ == null) {
-              status_ = new global::Google.Rpc.Status();
+              Status = new global::Google.Rpc.Status();
             }
             Status.MergeFrom(other.Status);
           }
@@ -781,16 +781,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
                 break;
               case 10: {
                 if (job_ == null) {
-                  job_ = new global::Google.Cloud.Talent.V4Beta1.Job();
+                  Job = new global::Google.Cloud.Talent.V4Beta1.Job();
                 }
-                input.ReadMessage(job_);
+                input.ReadMessage(Job);
                 break;
               }
               case 18: {
                 if (status_ == null) {
-                  status_ = new global::Google.Rpc.Status();
+                  Status = new global::Google.Rpc.Status();
                 }
-                input.ReadMessage(status_);
+                input.ReadMessage(Status);
                 break;
               }
             }

@@ -450,7 +450,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.metricDescriptor_ != null) {
         if (metricDescriptor_ == null) {
-          metricDescriptor_ = new global::Google.Api.MetricDescriptor();
+          MetricDescriptor = new global::Google.Api.MetricDescriptor();
         }
         MetricDescriptor.MergeFrom(other.MetricDescriptor);
       }
@@ -460,7 +460,7 @@ namespace Google.Cloud.Logging.V2 {
       labelExtractors_.Add(other.labelExtractors_);
       if (other.bucketOptions_ != null) {
         if (bucketOptions_ == null) {
-          bucketOptions_ = new global::Google.Api.Distribution.Types.BucketOptions();
+          BucketOptions = new global::Google.Api.Distribution.Types.BucketOptions();
         }
         BucketOptions.MergeFrom(other.BucketOptions);
       }
@@ -491,14 +491,14 @@ namespace Google.Cloud.Logging.V2 {
             break;
           }
           case 32: {
-            version_ = (global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) input.ReadEnum();
+            Version = (global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) input.ReadEnum();
             break;
           }
           case 42: {
             if (metricDescriptor_ == null) {
-              metricDescriptor_ = new global::Google.Api.MetricDescriptor();
+              MetricDescriptor = new global::Google.Api.MetricDescriptor();
             }
-            input.ReadMessage(metricDescriptor_);
+            input.ReadMessage(MetricDescriptor);
             break;
           }
           case 50: {
@@ -511,9 +511,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 66: {
             if (bucketOptions_ == null) {
-              bucketOptions_ = new global::Google.Api.Distribution.Types.BucketOptions();
+              BucketOptions = new global::Google.Api.Distribution.Types.BucketOptions();
             }
-            input.ReadMessage(bucketOptions_);
+            input.ReadMessage(BucketOptions);
             break;
           }
         }
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.metric_ != null) {
         if (metric_ == null) {
-          metric_ = new global::Google.Cloud.Logging.V2.LogMetric();
+          Metric = new global::Google.Cloud.Logging.V2.LogMetric();
         }
         Metric.MergeFrom(other.Metric);
       }
@@ -1210,9 +1210,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             if (metric_ == null) {
-              metric_ = new global::Google.Cloud.Logging.V2.LogMetric();
+              Metric = new global::Google.Cloud.Logging.V2.LogMetric();
             }
-            input.ReadMessage(metric_);
+            input.ReadMessage(Metric);
             break;
           }
         }
@@ -1367,7 +1367,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.metric_ != null) {
         if (metric_ == null) {
-          metric_ = new global::Google.Cloud.Logging.V2.LogMetric();
+          Metric = new global::Google.Cloud.Logging.V2.LogMetric();
         }
         Metric.MergeFrom(other.Metric);
       }
@@ -1388,9 +1388,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             if (metric_ == null) {
-              metric_ = new global::Google.Cloud.Logging.V2.LogMetric();
+              Metric = new global::Google.Cloud.Logging.V2.LogMetric();
             }
-            input.ReadMessage(metric_);
+            input.ReadMessage(Metric);
             break;
           }
         }

@@ -1463,7 +1463,7 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           }
           case 32: {
-            matchingType_ = (global::Google.Cloud.Dlp.V2.MatchingType) input.ReadEnum();
+            MatchingType = (global::Google.Cloud.Dlp.V2.MatchingType) input.ReadEnum();
             break;
           }
         }
@@ -2115,7 +2115,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.limits_ != null) {
         if (limits_ == null) {
-          limits_ = new global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits();
+          Limits = new global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits();
         }
         Limits.MergeFrom(other.Limits);
       }
@@ -2144,14 +2144,14 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           }
           case 16: {
-            minLikelihood_ = (global::Google.Cloud.Dlp.V2.Likelihood) input.ReadEnum();
+            MinLikelihood = (global::Google.Cloud.Dlp.V2.Likelihood) input.ReadEnum();
             break;
           }
           case 26: {
             if (limits_ == null) {
-              limits_ = new global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits();
+              Limits = new global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits();
             }
-            input.ReadMessage(limits_);
+            input.ReadMessage(Limits);
             break;
           }
           case 32: {
@@ -2517,7 +2517,7 @@ namespace Google.Cloud.Dlp.V2 {
               }
               if (other.infoType_ != null) {
                 if (infoType_ == null) {
-                  infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+                  InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
                 }
                 InfoType.MergeFrom(other.InfoType);
               }
@@ -2537,9 +2537,9 @@ namespace Google.Cloud.Dlp.V2 {
                     break;
                   case 10: {
                     if (infoType_ == null) {
-                      infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+                      InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
                     }
-                    input.ReadMessage(infoType_);
+                    input.ReadMessage(InfoType);
                     break;
                   }
                   case 16: {
@@ -2715,7 +2715,7 @@ namespace Google.Cloud.Dlp.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType) input.ReadEnum();
+            Type = (global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3675,7 +3675,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.infoType_ != null) {
         if (infoType_ == null) {
-          infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+          InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
         }
         InfoType.MergeFrom(other.InfoType);
       }
@@ -3684,19 +3684,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          location_ = new global::Google.Cloud.Dlp.V2.Location();
+          Location = new global::Google.Cloud.Dlp.V2.Location();
         }
         Location.MergeFrom(other.Location);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.quoteInfo_ != null) {
         if (quoteInfo_ == null) {
-          quoteInfo_ = new global::Google.Cloud.Dlp.V2.QuoteInfo();
+          QuoteInfo = new global::Google.Cloud.Dlp.V2.QuoteInfo();
         }
         QuoteInfo.MergeFrom(other.QuoteInfo);
       }
@@ -3717,34 +3717,34 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (infoType_ == null) {
-              infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+              InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
             }
-            input.ReadMessage(infoType_);
+            input.ReadMessage(InfoType);
             break;
           }
           case 24: {
-            likelihood_ = (global::Google.Cloud.Dlp.V2.Likelihood) input.ReadEnum();
+            Likelihood = (global::Google.Cloud.Dlp.V2.Likelihood) input.ReadEnum();
             break;
           }
           case 34: {
             if (location_ == null) {
-              location_ = new global::Google.Cloud.Dlp.V2.Location();
+              Location = new global::Google.Cloud.Dlp.V2.Location();
             }
-            input.ReadMessage(location_);
+            input.ReadMessage(Location);
             break;
           }
           case 50: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 58: {
             if (quoteInfo_ == null) {
-              quoteInfo_ = new global::Google.Cloud.Dlp.V2.QuoteInfo();
+              QuoteInfo = new global::Google.Cloud.Dlp.V2.QuoteInfo();
             }
-            input.ReadMessage(quoteInfo_);
+            input.ReadMessage(QuoteInfo);
             break;
           }
         }
@@ -3915,13 +3915,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.byteRange_ != null) {
         if (byteRange_ == null) {
-          byteRange_ = new global::Google.Cloud.Dlp.V2.Range();
+          ByteRange = new global::Google.Cloud.Dlp.V2.Range();
         }
         ByteRange.MergeFrom(other.ByteRange);
       }
       if (other.codepointRange_ != null) {
         if (codepointRange_ == null) {
-          codepointRange_ = new global::Google.Cloud.Dlp.V2.Range();
+          CodepointRange = new global::Google.Cloud.Dlp.V2.Range();
         }
         CodepointRange.MergeFrom(other.CodepointRange);
       }
@@ -3939,16 +3939,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (byteRange_ == null) {
-              byteRange_ = new global::Google.Cloud.Dlp.V2.Range();
+              ByteRange = new global::Google.Cloud.Dlp.V2.Range();
             }
-            input.ReadMessage(byteRange_);
+            input.ReadMessage(ByteRange);
             break;
           }
           case 18: {
             if (codepointRange_ == null) {
-              codepointRange_ = new global::Google.Cloud.Dlp.V2.Range();
+              CodepointRange = new global::Google.Cloud.Dlp.V2.Range();
             }
-            input.ReadMessage(codepointRange_);
+            input.ReadMessage(CodepointRange);
             break;
           }
           case 58: {
@@ -4241,7 +4241,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.containerTimestamp_ != null) {
         if (containerTimestamp_ == null) {
-          containerTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ContainerTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ContainerTimestamp.MergeFrom(other.ContainerTimestamp);
       }
@@ -4313,9 +4313,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 50: {
             if (containerTimestamp_ == null) {
-              containerTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ContainerTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(containerTimestamp_);
+            input.ReadMessage(ContainerTimestamp);
             break;
           }
           case 58: {
@@ -4625,19 +4625,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.recordKey_ != null) {
         if (recordKey_ == null) {
-          recordKey_ = new global::Google.Cloud.Dlp.V2.RecordKey();
+          RecordKey = new global::Google.Cloud.Dlp.V2.RecordKey();
         }
         RecordKey.MergeFrom(other.RecordKey);
       }
       if (other.fieldId_ != null) {
         if (fieldId_ == null) {
-          fieldId_ = new global::Google.Cloud.Dlp.V2.FieldId();
+          FieldId = new global::Google.Cloud.Dlp.V2.FieldId();
         }
         FieldId.MergeFrom(other.FieldId);
       }
       if (other.tableLocation_ != null) {
         if (tableLocation_ == null) {
-          tableLocation_ = new global::Google.Cloud.Dlp.V2.TableLocation();
+          TableLocation = new global::Google.Cloud.Dlp.V2.TableLocation();
         }
         TableLocation.MergeFrom(other.TableLocation);
       }
@@ -4654,23 +4654,23 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (recordKey_ == null) {
-              recordKey_ = new global::Google.Cloud.Dlp.V2.RecordKey();
+              RecordKey = new global::Google.Cloud.Dlp.V2.RecordKey();
             }
-            input.ReadMessage(recordKey_);
+            input.ReadMessage(RecordKey);
             break;
           }
           case 18: {
             if (fieldId_ == null) {
-              fieldId_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              FieldId = new global::Google.Cloud.Dlp.V2.FieldId();
             }
-            input.ReadMessage(fieldId_);
+            input.ReadMessage(FieldId);
             break;
           }
           case 26: {
             if (tableLocation_ == null) {
-              tableLocation_ = new global::Google.Cloud.Dlp.V2.TableLocation();
+              TableLocation = new global::Google.Cloud.Dlp.V2.TableLocation();
             }
-            input.ReadMessage(tableLocation_);
+            input.ReadMessage(TableLocation);
             break;
           }
         }
@@ -5543,7 +5543,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.inspectConfig_ != null) {
         if (inspectConfig_ == null) {
-          inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+          InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
         }
         InspectConfig.MergeFrom(other.InspectConfig);
       }
@@ -5553,7 +5553,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.byteItem_ != null) {
         if (byteItem_ == null) {
-          byteItem_ = new global::Google.Cloud.Dlp.V2.ByteContentItem();
+          ByteItem = new global::Google.Cloud.Dlp.V2.ByteContentItem();
         }
         ByteItem.MergeFrom(other.ByteItem);
       }
@@ -5574,9 +5574,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (inspectConfig_ == null) {
-              inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
             }
-            input.ReadMessage(inspectConfig_);
+            input.ReadMessage(InspectConfig);
             break;
           }
           case 42: {
@@ -5589,9 +5589,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 58: {
             if (byteItem_ == null) {
-              byteItem_ = new global::Google.Cloud.Dlp.V2.ByteContentItem();
+              ByteItem = new global::Google.Cloud.Dlp.V2.ByteContentItem();
             }
-            input.ReadMessage(byteItem_);
+            input.ReadMessage(ByteItem);
             break;
           }
         }
@@ -5796,7 +5796,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.redactionColor_ != null) {
             if (redactionColor_ == null) {
-              redactionColor_ = new global::Google.Cloud.Dlp.V2.Color();
+              RedactionColor = new global::Google.Cloud.Dlp.V2.Color();
             }
             RedactionColor.MergeFrom(other.RedactionColor);
           }
@@ -5838,9 +5838,9 @@ namespace Google.Cloud.Dlp.V2 {
               }
               case 26: {
                 if (redactionColor_ == null) {
-                  redactionColor_ = new global::Google.Cloud.Dlp.V2.Color();
+                  RedactionColor = new global::Google.Cloud.Dlp.V2.Color();
                 }
-                input.ReadMessage(redactionColor_);
+                input.ReadMessage(RedactionColor);
                 break;
               }
             }
@@ -6220,7 +6220,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.inspectResult_ != null) {
         if (inspectResult_ == null) {
-          inspectResult_ = new global::Google.Cloud.Dlp.V2.InspectResult();
+          InspectResult = new global::Google.Cloud.Dlp.V2.InspectResult();
         }
         InspectResult.MergeFrom(other.InspectResult);
       }
@@ -6245,9 +6245,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 26: {
             if (inspectResult_ == null) {
-              inspectResult_ = new global::Google.Cloud.Dlp.V2.InspectResult();
+              InspectResult = new global::Google.Cloud.Dlp.V2.InspectResult();
             }
-            input.ReadMessage(inspectResult_);
+            input.ReadMessage(InspectResult);
             break;
           }
         }
@@ -6504,19 +6504,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.deidentifyConfig_ != null) {
         if (deidentifyConfig_ == null) {
-          deidentifyConfig_ = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+          DeidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
         }
         DeidentifyConfig.MergeFrom(other.DeidentifyConfig);
       }
       if (other.inspectConfig_ != null) {
         if (inspectConfig_ == null) {
-          inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+          InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
         }
         InspectConfig.MergeFrom(other.InspectConfig);
       }
       if (other.item_ != null) {
         if (item_ == null) {
-          item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+          Item = new global::Google.Cloud.Dlp.V2.ContentItem();
         }
         Item.MergeFrom(other.Item);
       }
@@ -6543,23 +6543,23 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (deidentifyConfig_ == null) {
-              deidentifyConfig_ = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+              DeidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
             }
-            input.ReadMessage(deidentifyConfig_);
+            input.ReadMessage(DeidentifyConfig);
             break;
           }
           case 26: {
             if (inspectConfig_ == null) {
-              inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
             }
-            input.ReadMessage(inspectConfig_);
+            input.ReadMessage(InspectConfig);
             break;
           }
           case 34: {
             if (item_ == null) {
-              item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
             }
-            input.ReadMessage(item_);
+            input.ReadMessage(Item);
             break;
           }
           case 42: {
@@ -6713,13 +6713,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.item_ != null) {
         if (item_ == null) {
-          item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+          Item = new global::Google.Cloud.Dlp.V2.ContentItem();
         }
         Item.MergeFrom(other.Item);
       }
       if (other.overview_ != null) {
         if (overview_ == null) {
-          overview_ = new global::Google.Cloud.Dlp.V2.TransformationOverview();
+          Overview = new global::Google.Cloud.Dlp.V2.TransformationOverview();
         }
         Overview.MergeFrom(other.Overview);
       }
@@ -6736,16 +6736,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (item_ == null) {
-              item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
             }
-            input.ReadMessage(item_);
+            input.ReadMessage(Item);
             break;
           }
           case 18: {
             if (overview_ == null) {
-              overview_ = new global::Google.Cloud.Dlp.V2.TransformationOverview();
+              Overview = new global::Google.Cloud.Dlp.V2.TransformationOverview();
             }
-            input.ReadMessage(overview_);
+            input.ReadMessage(Overview);
             break;
           }
         }
@@ -7007,19 +7007,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.reidentifyConfig_ != null) {
         if (reidentifyConfig_ == null) {
-          reidentifyConfig_ = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+          ReidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
         }
         ReidentifyConfig.MergeFrom(other.ReidentifyConfig);
       }
       if (other.inspectConfig_ != null) {
         if (inspectConfig_ == null) {
-          inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+          InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
         }
         InspectConfig.MergeFrom(other.InspectConfig);
       }
       if (other.item_ != null) {
         if (item_ == null) {
-          item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+          Item = new global::Google.Cloud.Dlp.V2.ContentItem();
         }
         Item.MergeFrom(other.Item);
       }
@@ -7046,23 +7046,23 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (reidentifyConfig_ == null) {
-              reidentifyConfig_ = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+              ReidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
             }
-            input.ReadMessage(reidentifyConfig_);
+            input.ReadMessage(ReidentifyConfig);
             break;
           }
           case 26: {
             if (inspectConfig_ == null) {
-              inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
             }
-            input.ReadMessage(inspectConfig_);
+            input.ReadMessage(InspectConfig);
             break;
           }
           case 34: {
             if (item_ == null) {
-              item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
             }
-            input.ReadMessage(item_);
+            input.ReadMessage(Item);
             break;
           }
           case 42: {
@@ -7216,13 +7216,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.item_ != null) {
         if (item_ == null) {
-          item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+          Item = new global::Google.Cloud.Dlp.V2.ContentItem();
         }
         Item.MergeFrom(other.Item);
       }
       if (other.overview_ != null) {
         if (overview_ == null) {
-          overview_ = new global::Google.Cloud.Dlp.V2.TransformationOverview();
+          Overview = new global::Google.Cloud.Dlp.V2.TransformationOverview();
         }
         Overview.MergeFrom(other.Overview);
       }
@@ -7239,16 +7239,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (item_ == null) {
-              item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
             }
-            input.ReadMessage(item_);
+            input.ReadMessage(Item);
             break;
           }
           case 18: {
             if (overview_ == null) {
-              overview_ = new global::Google.Cloud.Dlp.V2.TransformationOverview();
+              Overview = new global::Google.Cloud.Dlp.V2.TransformationOverview();
             }
-            input.ReadMessage(overview_);
+            input.ReadMessage(Overview);
             break;
           }
         }
@@ -7450,13 +7450,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.inspectConfig_ != null) {
         if (inspectConfig_ == null) {
-          inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+          InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
         }
         InspectConfig.MergeFrom(other.InspectConfig);
       }
       if (other.item_ != null) {
         if (item_ == null) {
-          item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+          Item = new global::Google.Cloud.Dlp.V2.ContentItem();
         }
         Item.MergeFrom(other.Item);
       }
@@ -7480,16 +7480,16 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (inspectConfig_ == null) {
-              inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
             }
-            input.ReadMessage(inspectConfig_);
+            input.ReadMessage(InspectConfig);
             break;
           }
           case 26: {
             if (item_ == null) {
-              item_ = new global::Google.Cloud.Dlp.V2.ContentItem();
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
             }
-            input.ReadMessage(item_);
+            input.ReadMessage(Item);
             break;
           }
           case 34: {
@@ -7615,7 +7615,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.result_ != null) {
         if (result_ == null) {
-          result_ = new global::Google.Cloud.Dlp.V2.InspectResult();
+          Result = new global::Google.Cloud.Dlp.V2.InspectResult();
         }
         Result.MergeFrom(other.Result);
       }
@@ -7632,9 +7632,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (result_ == null) {
-              result_ = new global::Google.Cloud.Dlp.V2.InspectResult();
+              Result = new global::Google.Cloud.Dlp.V2.InspectResult();
             }
-            input.ReadMessage(result_);
+            input.ReadMessage(Result);
             break;
           }
         }
@@ -7857,7 +7857,7 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           }
           case 24: {
-            outputSchema_ = (global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema) input.ReadEnum();
+            OutputSchema = (global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema) input.ReadEnum();
             break;
           }
         }
@@ -8038,7 +8038,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.infoType_ != null) {
         if (infoType_ == null) {
-          infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+          InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
         }
         InfoType.MergeFrom(other.InfoType);
       }
@@ -8058,9 +8058,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (infoType_ == null) {
-              infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+              InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
             }
-            input.ReadMessage(infoType_);
+            input.ReadMessage(InfoType);
             break;
           }
           case 16: {
@@ -8210,13 +8210,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.requestedOptions_ != null) {
         if (requestedOptions_ == null) {
-          requestedOptions_ = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions();
+          RequestedOptions = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions();
         }
         RequestedOptions.MergeFrom(other.RequestedOptions);
       }
       if (other.result_ != null) {
         if (result_ == null) {
-          result_ = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result();
+          Result = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result();
         }
         Result.MergeFrom(other.Result);
       }
@@ -8233,16 +8233,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 18: {
             if (requestedOptions_ == null) {
-              requestedOptions_ = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions();
+              RequestedOptions = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions();
             }
-            input.ReadMessage(requestedOptions_);
+            input.ReadMessage(RequestedOptions);
             break;
           }
           case 26: {
             if (result_ == null) {
-              result_ = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result();
+              Result = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result();
             }
-            input.ReadMessage(result_);
+            input.ReadMessage(Result);
             break;
           }
         }
@@ -8385,13 +8385,13 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.snapshotInspectTemplate_ != null) {
             if (snapshotInspectTemplate_ == null) {
-              snapshotInspectTemplate_ = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+              SnapshotInspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
             }
             SnapshotInspectTemplate.MergeFrom(other.SnapshotInspectTemplate);
           }
           if (other.jobConfig_ != null) {
             if (jobConfig_ == null) {
-              jobConfig_ = new global::Google.Cloud.Dlp.V2.InspectJobConfig();
+              JobConfig = new global::Google.Cloud.Dlp.V2.InspectJobConfig();
             }
             JobConfig.MergeFrom(other.JobConfig);
           }
@@ -8408,16 +8408,16 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (snapshotInspectTemplate_ == null) {
-                  snapshotInspectTemplate_ = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+                  SnapshotInspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
                 }
-                input.ReadMessage(snapshotInspectTemplate_);
+                input.ReadMessage(SnapshotInspectTemplate);
                 break;
               }
               case 26: {
                 if (jobConfig_ == null) {
-                  jobConfig_ = new global::Google.Cloud.Dlp.V2.InspectJobConfig();
+                  JobConfig = new global::Google.Cloud.Dlp.V2.InspectJobConfig();
                 }
-                input.ReadMessage(jobConfig_);
+                input.ReadMessage(JobConfig);
                 break;
               }
             }
@@ -9296,13 +9296,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.privacyMetric_ != null) {
         if (privacyMetric_ == null) {
-          privacyMetric_ = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
+          PrivacyMetric = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
         }
         PrivacyMetric.MergeFrom(other.PrivacyMetric);
       }
       if (other.sourceTable_ != null) {
         if (sourceTable_ == null) {
-          sourceTable_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+          SourceTable = new global::Google.Cloud.Dlp.V2.BigQueryTable();
         }
         SourceTable.MergeFrom(other.SourceTable);
       }
@@ -9320,16 +9320,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (privacyMetric_ == null) {
-              privacyMetric_ = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
+              PrivacyMetric = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
             }
-            input.ReadMessage(privacyMetric_);
+            input.ReadMessage(PrivacyMetric);
             break;
           }
           case 18: {
             if (sourceTable_ == null) {
-              sourceTable_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+              SourceTable = new global::Google.Cloud.Dlp.V2.BigQueryTable();
             }
-            input.ReadMessage(sourceTable_);
+            input.ReadMessage(SourceTable);
             break;
           }
           case 26: {
@@ -9565,7 +9565,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.field_ != null) {
         if (field_ == null) {
-          field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+          Field = new global::Google.Cloud.Dlp.V2.FieldId();
         }
         Field.MergeFrom(other.Field);
       }
@@ -9600,9 +9600,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
             }
-            input.ReadMessage(field_);
+            input.ReadMessage(Field);
             break;
           }
           case 18: {
@@ -9796,14 +9796,14 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.table_ != null) {
         if (table_ == null) {
-          table_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+          Table = new global::Google.Cloud.Dlp.V2.BigQueryTable();
         }
         Table.MergeFrom(other.Table);
       }
       quasiIds_.Add(other.quasiIds_);
       if (other.relativeFrequency_ != null) {
         if (relativeFrequency_ == null) {
-          relativeFrequency_ = new global::Google.Cloud.Dlp.V2.FieldId();
+          RelativeFrequency = new global::Google.Cloud.Dlp.V2.FieldId();
         }
         RelativeFrequency.MergeFrom(other.RelativeFrequency);
       }
@@ -9824,16 +9824,16 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (relativeFrequency_ == null) {
-              relativeFrequency_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              RelativeFrequency = new global::Google.Cloud.Dlp.V2.FieldId();
             }
-            input.ReadMessage(relativeFrequency_);
+            input.ReadMessage(RelativeFrequency);
             break;
           }
           case 26: {
             if (table_ == null) {
-              table_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+              Table = new global::Google.Cloud.Dlp.V2.BigQueryTable();
             }
-            input.ReadMessage(table_);
+            input.ReadMessage(Table);
             break;
           }
         }
@@ -9976,7 +9976,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.field_ != null) {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
             }
             Field.MergeFrom(other.Field);
           }
@@ -9996,9 +9996,9 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (field_ == null) {
-                  field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
                 }
-                input.ReadMessage(field_);
+                input.ReadMessage(Field);
                 break;
               }
               case 18: {
@@ -10496,7 +10496,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.field_ != null) {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
             }
             Field.MergeFrom(other.Field);
           }
@@ -10513,9 +10513,9 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (field_ == null) {
-                  field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
                 }
-                input.ReadMessage(field_);
+                input.ReadMessage(Field);
                 break;
               }
             }
@@ -10641,7 +10641,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.field_ != null) {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
             }
             Field.MergeFrom(other.Field);
           }
@@ -10658,9 +10658,9 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (field_ == null) {
-                  field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
                 }
-                input.ReadMessage(field_);
+                input.ReadMessage(Field);
                 break;
               }
             }
@@ -10814,7 +10814,7 @@ namespace Google.Cloud.Dlp.V2 {
           quasiIds_.Add(other.quasiIds_);
           if (other.entityId_ != null) {
             if (entityId_ == null) {
-              entityId_ = new global::Google.Cloud.Dlp.V2.EntityId();
+              EntityId = new global::Google.Cloud.Dlp.V2.EntityId();
             }
             EntityId.MergeFrom(other.EntityId);
           }
@@ -10835,9 +10835,9 @@ namespace Google.Cloud.Dlp.V2 {
               }
               case 18: {
                 if (entityId_ == null) {
-                  entityId_ = new global::Google.Cloud.Dlp.V2.EntityId();
+                  EntityId = new global::Google.Cloud.Dlp.V2.EntityId();
                 }
-                input.ReadMessage(entityId_);
+                input.ReadMessage(EntityId);
                 break;
               }
             }
@@ -10980,7 +10980,7 @@ namespace Google.Cloud.Dlp.V2 {
           quasiIds_.Add(other.quasiIds_);
           if (other.sensitiveAttribute_ != null) {
             if (sensitiveAttribute_ == null) {
-              sensitiveAttribute_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              SensitiveAttribute = new global::Google.Cloud.Dlp.V2.FieldId();
             }
             SensitiveAttribute.MergeFrom(other.SensitiveAttribute);
           }
@@ -11001,9 +11001,9 @@ namespace Google.Cloud.Dlp.V2 {
               }
               case 18: {
                 if (sensitiveAttribute_ == null) {
-                  sensitiveAttribute_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                  SensitiveAttribute = new global::Google.Cloud.Dlp.V2.FieldId();
                 }
-                input.ReadMessage(sensitiveAttribute_);
+                input.ReadMessage(SensitiveAttribute);
                 break;
               }
             }
@@ -11426,7 +11426,7 @@ namespace Google.Cloud.Dlp.V2 {
               }
               if (other.field_ != null) {
                 if (field_ == null) {
-                  field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
                 }
                 Field.MergeFrom(other.Field);
               }
@@ -11461,9 +11461,9 @@ namespace Google.Cloud.Dlp.V2 {
                     break;
                   case 10: {
                     if (field_ == null) {
-                      field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                      Field = new global::Google.Cloud.Dlp.V2.FieldId();
                     }
-                    input.ReadMessage(field_);
+                    input.ReadMessage(Field);
                     break;
                   }
                   case 18: {
@@ -11657,14 +11657,14 @@ namespace Google.Cloud.Dlp.V2 {
               }
               if (other.table_ != null) {
                 if (table_ == null) {
-                  table_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+                  Table = new global::Google.Cloud.Dlp.V2.BigQueryTable();
                 }
                 Table.MergeFrom(other.Table);
               }
               quasiIds_.Add(other.quasiIds_);
               if (other.relativeFrequency_ != null) {
                 if (relativeFrequency_ == null) {
-                  relativeFrequency_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                  RelativeFrequency = new global::Google.Cloud.Dlp.V2.FieldId();
                 }
                 RelativeFrequency.MergeFrom(other.RelativeFrequency);
               }
@@ -11685,16 +11685,16 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                   case 18: {
                     if (relativeFrequency_ == null) {
-                      relativeFrequency_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                      RelativeFrequency = new global::Google.Cloud.Dlp.V2.FieldId();
                     }
-                    input.ReadMessage(relativeFrequency_);
+                    input.ReadMessage(RelativeFrequency);
                     break;
                   }
                   case 26: {
                     if (table_ == null) {
-                      table_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+                      Table = new global::Google.Cloud.Dlp.V2.BigQueryTable();
                     }
-                    input.ReadMessage(table_);
+                    input.ReadMessage(Table);
                     break;
                   }
                 }
@@ -11837,7 +11837,7 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                   if (other.field_ != null) {
                     if (field_ == null) {
-                      field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                      Field = new global::Google.Cloud.Dlp.V2.FieldId();
                     }
                     Field.MergeFrom(other.Field);
                   }
@@ -11857,9 +11857,9 @@ namespace Google.Cloud.Dlp.V2 {
                         break;
                       case 10: {
                         if (field_ == null) {
-                          field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                          Field = new global::Google.Cloud.Dlp.V2.FieldId();
                         }
-                        input.ReadMessage(field_);
+                        input.ReadMessage(Field);
                         break;
                       }
                       case 18: {
@@ -12379,13 +12379,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.requestedPrivacyMetric_ != null) {
         if (requestedPrivacyMetric_ == null) {
-          requestedPrivacyMetric_ = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
+          RequestedPrivacyMetric = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
         }
         RequestedPrivacyMetric.MergeFrom(other.RequestedPrivacyMetric);
       }
       if (other.requestedSourceTable_ != null) {
         if (requestedSourceTable_ == null) {
-          requestedSourceTable_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+          RequestedSourceTable = new global::Google.Cloud.Dlp.V2.BigQueryTable();
         }
         RequestedSourceTable.MergeFrom(other.RequestedSourceTable);
       }
@@ -12441,16 +12441,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (requestedPrivacyMetric_ == null) {
-              requestedPrivacyMetric_ = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
+              RequestedPrivacyMetric = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
             }
-            input.ReadMessage(requestedPrivacyMetric_);
+            input.ReadMessage(RequestedPrivacyMetric);
             break;
           }
           case 18: {
             if (requestedSourceTable_ == null) {
-              requestedSourceTable_ = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+              RequestedSourceTable = new global::Google.Cloud.Dlp.V2.BigQueryTable();
             }
-            input.ReadMessage(requestedSourceTable_);
+            input.ReadMessage(RequestedSourceTable);
             break;
           }
           case 26: {
@@ -12671,13 +12671,13 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.minValue_ != null) {
             if (minValue_ == null) {
-              minValue_ = new global::Google.Cloud.Dlp.V2.Value();
+              MinValue = new global::Google.Cloud.Dlp.V2.Value();
             }
             MinValue.MergeFrom(other.MinValue);
           }
           if (other.maxValue_ != null) {
             if (maxValue_ == null) {
-              maxValue_ = new global::Google.Cloud.Dlp.V2.Value();
+              MaxValue = new global::Google.Cloud.Dlp.V2.Value();
             }
             MaxValue.MergeFrom(other.MaxValue);
           }
@@ -12695,16 +12695,16 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (minValue_ == null) {
-                  minValue_ = new global::Google.Cloud.Dlp.V2.Value();
+                  MinValue = new global::Google.Cloud.Dlp.V2.Value();
                 }
-                input.ReadMessage(minValue_);
+                input.ReadMessage(MinValue);
                 break;
               }
               case 18: {
                 if (maxValue_ == null) {
-                  maxValue_ = new global::Google.Cloud.Dlp.V2.Value();
+                  MaxValue = new global::Google.Cloud.Dlp.V2.Value();
                 }
-                input.ReadMessage(maxValue_);
+                input.ReadMessage(MaxValue);
                 break;
               }
               case 34: {
@@ -15510,7 +15510,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.value_ != null) {
         if (value_ == null) {
-          value_ = new global::Google.Cloud.Dlp.V2.Value();
+          Value = new global::Google.Cloud.Dlp.V2.Value();
         }
         Value.MergeFrom(other.Value);
       }
@@ -15530,9 +15530,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (value_ == null) {
-              value_ = new global::Google.Cloud.Dlp.V2.Value();
+              Value = new global::Google.Cloud.Dlp.V2.Value();
             }
-            input.ReadMessage(value_);
+            input.ReadMessage(Value);
             break;
           }
           case 16: {
@@ -16301,7 +16301,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.date_ != null) {
         if (date_ == null) {
-          date_ = new global::Google.Type.Date();
+          Date = new global::Google.Type.Date();
         }
         Date.MergeFrom(other.Date);
       }
@@ -16310,13 +16310,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.time_ != null) {
         if (time_ == null) {
-          time_ = new global::Google.Type.TimeOfDay();
+          Time = new global::Google.Type.TimeOfDay();
         }
         Time.MergeFrom(other.Time);
       }
       if (other.timeZone_ != null) {
         if (timeZone_ == null) {
-          timeZone_ = new global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone();
+          TimeZone = new global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone();
         }
         TimeZone.MergeFrom(other.TimeZone);
       }
@@ -16333,27 +16333,27 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (date_ == null) {
-              date_ = new global::Google.Type.Date();
+              Date = new global::Google.Type.Date();
             }
-            input.ReadMessage(date_);
+            input.ReadMessage(Date);
             break;
           }
           case 16: {
-            dayOfWeek_ = (global::Google.Type.DayOfWeek) input.ReadEnum();
+            DayOfWeek = (global::Google.Type.DayOfWeek) input.ReadEnum();
             break;
           }
           case 26: {
             if (time_ == null) {
-              time_ = new global::Google.Type.TimeOfDay();
+              Time = new global::Google.Type.TimeOfDay();
             }
-            input.ReadMessage(time_);
+            input.ReadMessage(Time);
             break;
           }
           case 34: {
             if (timeZone_ == null) {
-              timeZone_ = new global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone();
+              TimeZone = new global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone();
             }
-            input.ReadMessage(timeZone_);
+            input.ReadMessage(TimeZone);
             break;
           }
         }
@@ -17400,7 +17400,7 @@ namespace Google.Cloud.Dlp.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            partToExtract_ = (global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart) input.ReadEnum();
+            PartToExtract = (global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart) input.ReadEnum();
             break;
           }
         }
@@ -17563,7 +17563,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.cryptoKey_ != null) {
         if (cryptoKey_ == null) {
-          cryptoKey_ = new global::Google.Cloud.Dlp.V2.CryptoKey();
+          CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
         }
         CryptoKey.MergeFrom(other.CryptoKey);
       }
@@ -17580,9 +17580,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (cryptoKey_ == null) {
-              cryptoKey_ = new global::Google.Cloud.Dlp.V2.CryptoKey();
+              CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
             }
-            input.ReadMessage(cryptoKey_);
+            input.ReadMessage(CryptoKey);
             break;
           }
         }
@@ -17797,19 +17797,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.cryptoKey_ != null) {
         if (cryptoKey_ == null) {
-          cryptoKey_ = new global::Google.Cloud.Dlp.V2.CryptoKey();
+          CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
         }
         CryptoKey.MergeFrom(other.CryptoKey);
       }
       if (other.surrogateInfoType_ != null) {
         if (surrogateInfoType_ == null) {
-          surrogateInfoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+          SurrogateInfoType = new global::Google.Cloud.Dlp.V2.InfoType();
         }
         SurrogateInfoType.MergeFrom(other.SurrogateInfoType);
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.Dlp.V2.FieldId();
+          Context = new global::Google.Cloud.Dlp.V2.FieldId();
         }
         Context.MergeFrom(other.Context);
       }
@@ -17826,23 +17826,23 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (cryptoKey_ == null) {
-              cryptoKey_ = new global::Google.Cloud.Dlp.V2.CryptoKey();
+              CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
             }
-            input.ReadMessage(cryptoKey_);
+            input.ReadMessage(CryptoKey);
             break;
           }
           case 18: {
             if (surrogateInfoType_ == null) {
-              surrogateInfoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+              SurrogateInfoType = new global::Google.Cloud.Dlp.V2.InfoType();
             }
-            input.ReadMessage(surrogateInfoType_);
+            input.ReadMessage(SurrogateInfoType);
             break;
           }
           case 26: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Context = new global::Google.Cloud.Dlp.V2.FieldId();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
         }
@@ -17964,7 +17964,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.newValue_ != null) {
         if (newValue_ == null) {
-          newValue_ = new global::Google.Cloud.Dlp.V2.Value();
+          NewValue = new global::Google.Cloud.Dlp.V2.Value();
         }
         NewValue.MergeFrom(other.NewValue);
       }
@@ -17981,9 +17981,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (newValue_ == null) {
-              newValue_ = new global::Google.Cloud.Dlp.V2.Value();
+              NewValue = new global::Google.Cloud.Dlp.V2.Value();
             }
-            input.ReadMessage(newValue_);
+            input.ReadMessage(NewValue);
             break;
           }
         }
@@ -18845,13 +18845,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.lowerBound_ != null) {
         if (lowerBound_ == null) {
-          lowerBound_ = new global::Google.Cloud.Dlp.V2.Value();
+          LowerBound = new global::Google.Cloud.Dlp.V2.Value();
         }
         LowerBound.MergeFrom(other.LowerBound);
       }
       if (other.upperBound_ != null) {
         if (upperBound_ == null) {
-          upperBound_ = new global::Google.Cloud.Dlp.V2.Value();
+          UpperBound = new global::Google.Cloud.Dlp.V2.Value();
         }
         UpperBound.MergeFrom(other.UpperBound);
       }
@@ -18871,16 +18871,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (lowerBound_ == null) {
-              lowerBound_ = new global::Google.Cloud.Dlp.V2.Value();
+              LowerBound = new global::Google.Cloud.Dlp.V2.Value();
             }
-            input.ReadMessage(lowerBound_);
+            input.ReadMessage(LowerBound);
             break;
           }
           case 18: {
             if (upperBound_ == null) {
-              upperBound_ = new global::Google.Cloud.Dlp.V2.Value();
+              UpperBound = new global::Google.Cloud.Dlp.V2.Value();
             }
-            input.ReadMessage(upperBound_);
+            input.ReadMessage(UpperBound);
             break;
           }
           case 25: {
@@ -19193,19 +19193,19 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.min_ != null) {
             if (min_ == null) {
-              min_ = new global::Google.Cloud.Dlp.V2.Value();
+              Min = new global::Google.Cloud.Dlp.V2.Value();
             }
             Min.MergeFrom(other.Min);
           }
           if (other.max_ != null) {
             if (max_ == null) {
-              max_ = new global::Google.Cloud.Dlp.V2.Value();
+              Max = new global::Google.Cloud.Dlp.V2.Value();
             }
             Max.MergeFrom(other.Max);
           }
           if (other.replacementValue_ != null) {
             if (replacementValue_ == null) {
-              replacementValue_ = new global::Google.Cloud.Dlp.V2.Value();
+              ReplacementValue = new global::Google.Cloud.Dlp.V2.Value();
             }
             ReplacementValue.MergeFrom(other.ReplacementValue);
           }
@@ -19222,23 +19222,23 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (min_ == null) {
-                  min_ = new global::Google.Cloud.Dlp.V2.Value();
+                  Min = new global::Google.Cloud.Dlp.V2.Value();
                 }
-                input.ReadMessage(min_);
+                input.ReadMessage(Min);
                 break;
               }
               case 18: {
                 if (max_ == null) {
-                  max_ = new global::Google.Cloud.Dlp.V2.Value();
+                  Max = new global::Google.Cloud.Dlp.V2.Value();
                 }
-                input.ReadMessage(max_);
+                input.ReadMessage(Max);
                 break;
               }
               case 26: {
                 if (replacementValue_ == null) {
-                  replacementValue_ = new global::Google.Cloud.Dlp.V2.Value();
+                  ReplacementValue = new global::Google.Cloud.Dlp.V2.Value();
                 }
-                input.ReadMessage(replacementValue_);
+                input.ReadMessage(ReplacementValue);
                 break;
               }
             }
@@ -19574,19 +19574,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.cryptoKey_ != null) {
         if (cryptoKey_ == null) {
-          cryptoKey_ = new global::Google.Cloud.Dlp.V2.CryptoKey();
+          CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
         }
         CryptoKey.MergeFrom(other.CryptoKey);
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.Dlp.V2.FieldId();
+          Context = new global::Google.Cloud.Dlp.V2.FieldId();
         }
         Context.MergeFrom(other.Context);
       }
       if (other.surrogateInfoType_ != null) {
         if (surrogateInfoType_ == null) {
-          surrogateInfoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+          SurrogateInfoType = new global::Google.Cloud.Dlp.V2.InfoType();
         }
         SurrogateInfoType.MergeFrom(other.SurrogateInfoType);
       }
@@ -19615,16 +19615,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (cryptoKey_ == null) {
-              cryptoKey_ = new global::Google.Cloud.Dlp.V2.CryptoKey();
+              CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
             }
-            input.ReadMessage(cryptoKey_);
+            input.ReadMessage(CryptoKey);
             break;
           }
           case 18: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Context = new global::Google.Cloud.Dlp.V2.FieldId();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
           case 32: {
@@ -19642,9 +19642,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 66: {
             if (surrogateInfoType_ == null) {
-              surrogateInfoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+              SurrogateInfoType = new global::Google.Cloud.Dlp.V2.InfoType();
             }
-            input.ReadMessage(surrogateInfoType_);
+            input.ReadMessage(SurrogateInfoType);
             break;
           }
         }
@@ -20609,7 +20609,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.Dlp.V2.FieldId();
+          Context = new global::Google.Cloud.Dlp.V2.FieldId();
         }
         Context.MergeFrom(other.Context);
       }
@@ -20643,9 +20643,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 26: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Context = new global::Google.Cloud.Dlp.V2.FieldId();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
           case 34: {
@@ -20931,7 +20931,7 @@ namespace Google.Cloud.Dlp.V2 {
           infoTypes_.Add(other.infoTypes_);
           if (other.primitiveTransformation_ != null) {
             if (primitiveTransformation_ == null) {
-              primitiveTransformation_ = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
+              PrimitiveTransformation = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
             }
             PrimitiveTransformation.MergeFrom(other.PrimitiveTransformation);
           }
@@ -20952,9 +20952,9 @@ namespace Google.Cloud.Dlp.V2 {
               }
               case 18: {
                 if (primitiveTransformation_ == null) {
-                  primitiveTransformation_ = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
+                  PrimitiveTransformation = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
                 }
-                input.ReadMessage(primitiveTransformation_);
+                input.ReadMessage(PrimitiveTransformation);
                 break;
               }
             }
@@ -21185,7 +21185,7 @@ namespace Google.Cloud.Dlp.V2 {
       fields_.Add(other.fields_);
       if (other.condition_ != null) {
         if (condition_ == null) {
-          condition_ = new global::Google.Cloud.Dlp.V2.RecordCondition();
+          Condition = new global::Google.Cloud.Dlp.V2.RecordCondition();
         }
         Condition.MergeFrom(other.Condition);
       }
@@ -21221,9 +21221,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 26: {
             if (condition_ == null) {
-              condition_ = new global::Google.Cloud.Dlp.V2.RecordCondition();
+              Condition = new global::Google.Cloud.Dlp.V2.RecordCondition();
             }
-            input.ReadMessage(condition_);
+            input.ReadMessage(Condition);
             break;
           }
           case 34: {
@@ -21517,7 +21517,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.condition_ != null) {
         if (condition_ == null) {
-          condition_ = new global::Google.Cloud.Dlp.V2.RecordCondition();
+          Condition = new global::Google.Cloud.Dlp.V2.RecordCondition();
         }
         Condition.MergeFrom(other.Condition);
       }
@@ -21534,9 +21534,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (condition_ == null) {
-              condition_ = new global::Google.Cloud.Dlp.V2.RecordCondition();
+              Condition = new global::Google.Cloud.Dlp.V2.RecordCondition();
             }
-            input.ReadMessage(condition_);
+            input.ReadMessage(Condition);
             break;
           }
         }
@@ -21659,7 +21659,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.expressions_ != null) {
         if (expressions_ == null) {
-          expressions_ = new global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions();
+          Expressions = new global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions();
         }
         Expressions.MergeFrom(other.Expressions);
       }
@@ -21676,9 +21676,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 26: {
             if (expressions_ == null) {
-              expressions_ = new global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions();
+              Expressions = new global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions();
             }
-            input.ReadMessage(expressions_);
+            input.ReadMessage(Expressions);
             break;
           }
         }
@@ -21868,7 +21868,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.field_ != null) {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
             }
             Field.MergeFrom(other.Field);
           }
@@ -21877,7 +21877,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.value_ != null) {
             if (value_ == null) {
-              value_ = new global::Google.Cloud.Dlp.V2.Value();
+              Value = new global::Google.Cloud.Dlp.V2.Value();
             }
             Value.MergeFrom(other.Value);
           }
@@ -21894,20 +21894,20 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (field_ == null) {
-                  field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
                 }
-                input.ReadMessage(field_);
+                input.ReadMessage(Field);
                 break;
               }
               case 24: {
-                operator_ = (global::Google.Cloud.Dlp.V2.RelationalOperator) input.ReadEnum();
+                Operator = (global::Google.Cloud.Dlp.V2.RelationalOperator) input.ReadEnum();
                 break;
               }
               case 34: {
                 if (value_ == null) {
-                  value_ = new global::Google.Cloud.Dlp.V2.Value();
+                  Value = new global::Google.Cloud.Dlp.V2.Value();
                 }
-                input.ReadMessage(value_);
+                input.ReadMessage(Value);
                 break;
               }
             }
@@ -22222,7 +22222,7 @@ namespace Google.Cloud.Dlp.V2 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                logicalOperator_ = (global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator) input.ReadEnum();
+                LogicalOperator = (global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator) input.ReadEnum();
                 break;
               }
               case 26: {
@@ -22661,26 +22661,26 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.infoType_ != null) {
         if (infoType_ == null) {
-          infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+          InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
         }
         InfoType.MergeFrom(other.InfoType);
       }
       if (other.field_ != null) {
         if (field_ == null) {
-          field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+          Field = new global::Google.Cloud.Dlp.V2.FieldId();
         }
         Field.MergeFrom(other.Field);
       }
       if (other.transformation_ != null) {
         if (transformation_ == null) {
-          transformation_ = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
+          Transformation = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
         }
         Transformation.MergeFrom(other.Transformation);
       }
       fieldTransformations_.Add(other.fieldTransformations_);
       if (other.recordSuppress_ != null) {
         if (recordSuppress_ == null) {
-          recordSuppress_ = new global::Google.Cloud.Dlp.V2.RecordSuppression();
+          RecordSuppress = new global::Google.Cloud.Dlp.V2.RecordSuppression();
         }
         RecordSuppress.MergeFrom(other.RecordSuppress);
       }
@@ -22701,23 +22701,23 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (infoType_ == null) {
-              infoType_ = new global::Google.Cloud.Dlp.V2.InfoType();
+              InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
             }
-            input.ReadMessage(infoType_);
+            input.ReadMessage(InfoType);
             break;
           }
           case 18: {
             if (field_ == null) {
-              field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
             }
-            input.ReadMessage(field_);
+            input.ReadMessage(Field);
             break;
           }
           case 26: {
             if (transformation_ == null) {
-              transformation_ = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
+              Transformation = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
             }
-            input.ReadMessage(transformation_);
+            input.ReadMessage(Transformation);
             break;
           }
           case 34: {
@@ -22730,9 +22730,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 50: {
             if (recordSuppress_ == null) {
-              recordSuppress_ = new global::Google.Cloud.Dlp.V2.RecordSuppression();
+              RecordSuppress = new global::Google.Cloud.Dlp.V2.RecordSuppression();
             }
-            input.ReadMessage(recordSuppress_);
+            input.ReadMessage(RecordSuppress);
             break;
           }
           case 56: {
@@ -22936,7 +22936,7 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               }
               case 16: {
-                code_ = (global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode) input.ReadEnum();
+                Code = (global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode) input.ReadEnum();
                 break;
               }
               case 26: {
@@ -23381,19 +23381,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.inspectConfig_ != null) {
         if (inspectConfig_ == null) {
-          inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+          InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
         }
         InspectConfig.MergeFrom(other.InspectConfig);
       }
@@ -23422,23 +23422,23 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 34: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 42: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 50: {
             if (inspectConfig_ == null) {
-              inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
             }
-            input.ReadMessage(inspectConfig_);
+            input.ReadMessage(InspectConfig);
             break;
           }
         }
@@ -23694,19 +23694,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.deidentifyConfig_ != null) {
         if (deidentifyConfig_ == null) {
-          deidentifyConfig_ = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+          DeidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
         }
         DeidentifyConfig.MergeFrom(other.DeidentifyConfig);
       }
@@ -23735,23 +23735,23 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 34: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 42: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 50: {
             if (deidentifyConfig_ == null) {
-              deidentifyConfig_ = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+              DeidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
             }
-            input.ReadMessage(deidentifyConfig_);
+            input.ReadMessage(DeidentifyConfig);
             break;
           }
         }
@@ -23890,7 +23890,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.details_ != null) {
         if (details_ == null) {
-          details_ = new global::Google.Rpc.Status();
+          Details = new global::Google.Rpc.Status();
         }
         Details.MergeFrom(other.Details);
       }
@@ -23908,9 +23908,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (details_ == null) {
-              details_ = new global::Google.Rpc.Status();
+              Details = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(details_);
+            input.ReadMessage(Details);
             break;
           }
           case 18: {
@@ -24281,19 +24281,19 @@ namespace Google.Cloud.Dlp.V2 {
       errors_.Add(other.errors_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.lastRunTime_ != null) {
         if (lastRunTime_ == null) {
-          lastRunTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          LastRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastRunTime.MergeFrom(other.LastRunTime);
       }
@@ -24351,27 +24351,27 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 58: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 66: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 74: {
             if (lastRunTime_ == null) {
-              lastRunTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              LastRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(lastRunTime_);
+            input.ReadMessage(LastRunTime);
             break;
           }
           case 80: {
-            status_ = (global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status) input.ReadEnum();
+            Status = (global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status) input.ReadEnum();
             break;
           }
         }
@@ -25036,7 +25036,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
           if (other.outputConfig_ != null) {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Dlp.V2.OutputStorageConfig();
+              OutputConfig = new global::Google.Cloud.Dlp.V2.OutputStorageConfig();
             }
             OutputConfig.MergeFrom(other.OutputConfig);
           }
@@ -25053,9 +25053,9 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
               case 10: {
                 if (outputConfig_ == null) {
-                  outputConfig_ = new global::Google.Cloud.Dlp.V2.OutputStorageConfig();
+                  OutputConfig = new global::Google.Cloud.Dlp.V2.OutputStorageConfig();
                 }
-                input.ReadMessage(outputConfig_);
+                input.ReadMessage(OutputConfig);
                 break;
               }
             }
@@ -25710,7 +25710,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.inspectTemplate_ != null) {
         if (inspectTemplate_ == null) {
-          inspectTemplate_ = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+          InspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
         }
         InspectTemplate.MergeFrom(other.InspectTemplate);
       }
@@ -25734,9 +25734,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (inspectTemplate_ == null) {
-              inspectTemplate_ = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+              InspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
             }
-            input.ReadMessage(inspectTemplate_);
+            input.ReadMessage(InspectTemplate);
             break;
           }
           case 26: {
@@ -25915,13 +25915,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.inspectTemplate_ != null) {
         if (inspectTemplate_ == null) {
-          inspectTemplate_ = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+          InspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
         }
         InspectTemplate.MergeFrom(other.InspectTemplate);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -25942,16 +25942,16 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (inspectTemplate_ == null) {
-              inspectTemplate_ = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+              InspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
             }
-            input.ReadMessage(inspectTemplate_);
+            input.ReadMessage(InspectTemplate);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -26803,7 +26803,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.jobTrigger_ != null) {
         if (jobTrigger_ == null) {
-          jobTrigger_ = new global::Google.Cloud.Dlp.V2.JobTrigger();
+          JobTrigger = new global::Google.Cloud.Dlp.V2.JobTrigger();
         }
         JobTrigger.MergeFrom(other.JobTrigger);
       }
@@ -26827,9 +26827,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (jobTrigger_ == null) {
-              jobTrigger_ = new global::Google.Cloud.Dlp.V2.JobTrigger();
+              JobTrigger = new global::Google.Cloud.Dlp.V2.JobTrigger();
             }
-            input.ReadMessage(jobTrigger_);
+            input.ReadMessage(JobTrigger);
             break;
           }
           case 26: {
@@ -27143,13 +27143,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.jobTrigger_ != null) {
         if (jobTrigger_ == null) {
-          jobTrigger_ = new global::Google.Cloud.Dlp.V2.JobTrigger();
+          JobTrigger = new global::Google.Cloud.Dlp.V2.JobTrigger();
         }
         JobTrigger.MergeFrom(other.JobTrigger);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -27170,16 +27170,16 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (jobTrigger_ == null) {
-              jobTrigger_ = new global::Google.Cloud.Dlp.V2.JobTrigger();
+              JobTrigger = new global::Google.Cloud.Dlp.V2.JobTrigger();
             }
-            input.ReadMessage(jobTrigger_);
+            input.ReadMessage(JobTrigger);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -28369,13 +28369,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.storageConfig_ != null) {
         if (storageConfig_ == null) {
-          storageConfig_ = new global::Google.Cloud.Dlp.V2.StorageConfig();
+          StorageConfig = new global::Google.Cloud.Dlp.V2.StorageConfig();
         }
         StorageConfig.MergeFrom(other.StorageConfig);
       }
       if (other.inspectConfig_ != null) {
         if (inspectConfig_ == null) {
-          inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+          InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
         }
         InspectConfig.MergeFrom(other.InspectConfig);
       }
@@ -28396,16 +28396,16 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (storageConfig_ == null) {
-              storageConfig_ = new global::Google.Cloud.Dlp.V2.StorageConfig();
+              StorageConfig = new global::Google.Cloud.Dlp.V2.StorageConfig();
             }
-            input.ReadMessage(storageConfig_);
+            input.ReadMessage(StorageConfig);
             break;
           }
           case 18: {
             if (inspectConfig_ == null) {
-              inspectConfig_ = new global::Google.Cloud.Dlp.V2.InspectConfig();
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
             }
-            input.ReadMessage(inspectConfig_);
+            input.ReadMessage(InspectConfig);
             break;
           }
           case 26: {
@@ -28783,19 +28783,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -28834,11 +28834,11 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           }
           case 16: {
-            type_ = (global::Google.Cloud.Dlp.V2.DlpJobType) input.ReadEnum();
+            Type = (global::Google.Cloud.Dlp.V2.DlpJobType) input.ReadEnum();
             break;
           }
           case 24: {
-            state_ = (global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState) input.ReadEnum();
+            State = (global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState) input.ReadEnum();
             break;
           }
           case 34: {
@@ -28861,23 +28861,23 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 50: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 58: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 66: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 82: {
@@ -29376,7 +29376,7 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           }
           case 40: {
-            type_ = (global::Google.Cloud.Dlp.V2.DlpJobType) input.ReadEnum();
+            Type = (global::Google.Cloud.Dlp.V2.DlpJobType) input.ReadEnum();
             break;
           }
           case 50: {
@@ -29985,7 +29985,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.deidentifyTemplate_ != null) {
         if (deidentifyTemplate_ == null) {
-          deidentifyTemplate_ = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
+          DeidentifyTemplate = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
         }
         DeidentifyTemplate.MergeFrom(other.DeidentifyTemplate);
       }
@@ -30009,9 +30009,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (deidentifyTemplate_ == null) {
-              deidentifyTemplate_ = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
+              DeidentifyTemplate = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
             }
-            input.ReadMessage(deidentifyTemplate_);
+            input.ReadMessage(DeidentifyTemplate);
             break;
           }
           case 26: {
@@ -30190,13 +30190,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.deidentifyTemplate_ != null) {
         if (deidentifyTemplate_ == null) {
-          deidentifyTemplate_ = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
+          DeidentifyTemplate = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
         }
         DeidentifyTemplate.MergeFrom(other.DeidentifyTemplate);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -30217,16 +30217,16 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (deidentifyTemplate_ == null) {
-              deidentifyTemplate_ = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
+              DeidentifyTemplate = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
             }
-            input.ReadMessage(deidentifyTemplate_);
+            input.ReadMessage(DeidentifyTemplate);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -31109,7 +31109,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.outputPath_ != null) {
         if (outputPath_ == null) {
-          outputPath_ = new global::Google.Cloud.Dlp.V2.CloudStoragePath();
+          OutputPath = new global::Google.Cloud.Dlp.V2.CloudStoragePath();
         }
         OutputPath.MergeFrom(other.OutputPath);
       }
@@ -31141,9 +31141,9 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (outputPath_ == null) {
-              outputPath_ = new global::Google.Cloud.Dlp.V2.CloudStoragePath();
+              OutputPath = new global::Google.Cloud.Dlp.V2.CloudStoragePath();
             }
-            input.ReadMessage(outputPath_);
+            input.ReadMessage(OutputPath);
             break;
           }
           case 18: {
@@ -31925,13 +31925,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+          Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
         }
         Config.MergeFrom(other.Config);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
@@ -31941,7 +31941,7 @@ namespace Google.Cloud.Dlp.V2 {
       errors_.Add(other.errors_);
       if (other.stats_ != null) {
         if (stats_ == null) {
-          stats_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeStats();
+          Stats = new global::Google.Cloud.Dlp.V2.StoredInfoTypeStats();
         }
         Stats.MergeFrom(other.Stats);
       }
@@ -31958,20 +31958,20 @@ namespace Google.Cloud.Dlp.V2 {
             break;
           case 10: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+              Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 18: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 24: {
-            state_ = (global::Google.Cloud.Dlp.V2.StoredInfoTypeState) input.ReadEnum();
+            State = (global::Google.Cloud.Dlp.V2.StoredInfoTypeState) input.ReadEnum();
             break;
           }
           case 34: {
@@ -31980,9 +31980,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 42: {
             if (stats_ == null) {
-              stats_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeStats();
+              Stats = new global::Google.Cloud.Dlp.V2.StoredInfoTypeStats();
             }
-            input.ReadMessage(stats_);
+            input.ReadMessage(Stats);
             break;
           }
         }
@@ -32151,7 +32151,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.currentVersion_ != null) {
         if (currentVersion_ == null) {
-          currentVersion_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion();
+          CurrentVersion = new global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion();
         }
         CurrentVersion.MergeFrom(other.CurrentVersion);
       }
@@ -32173,9 +32173,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (currentVersion_ == null) {
-              currentVersion_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion();
+              CurrentVersion = new global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion();
             }
-            input.ReadMessage(currentVersion_);
+            input.ReadMessage(CurrentVersion);
             break;
           }
           case 26: {
@@ -32356,7 +32356,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+          Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
         }
         Config.MergeFrom(other.Config);
       }
@@ -32380,9 +32380,9 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+              Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 26: {
@@ -32563,13 +32563,13 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+          Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
         }
         Config.MergeFrom(other.Config);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -32590,16 +32590,16 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+              Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

@@ -543,7 +543,7 @@ namespace Google.Cloud.Logging.Type {
       }
       if (other.latency_ != null) {
         if (latency_ == null) {
-          latency_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          Latency = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Latency.MergeFrom(other.Latency);
       }
@@ -627,9 +627,9 @@ namespace Google.Cloud.Logging.Type {
           }
           case 114: {
             if (latency_ == null) {
-              latency_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              Latency = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(latency_);
+            input.ReadMessage(Latency);
             break;
           }
           case 122: {

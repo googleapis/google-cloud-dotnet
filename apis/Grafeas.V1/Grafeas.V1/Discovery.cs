@@ -180,7 +180,7 @@ namespace Grafeas.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            analysisKind_ = (global::Grafeas.V1.NoteKind) input.ReadEnum();
+            AnalysisKind = (global::Grafeas.V1.NoteKind) input.ReadEnum();
             break;
           }
         }
@@ -358,7 +358,7 @@ namespace Grafeas.V1 {
       }
       if (other.analysisStatusError_ != null) {
         if (analysisStatusError_ == null) {
-          analysisStatusError_ = new global::Google.Rpc.Status();
+          AnalysisStatusError = new global::Google.Rpc.Status();
         }
         AnalysisStatusError.MergeFrom(other.AnalysisStatusError);
       }
@@ -374,18 +374,18 @@ namespace Grafeas.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            continuousAnalysis_ = (global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis) input.ReadEnum();
+            ContinuousAnalysis = (global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis) input.ReadEnum();
             break;
           }
           case 16: {
-            analysisStatus_ = (global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) input.ReadEnum();
+            AnalysisStatus = (global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) input.ReadEnum();
             break;
           }
           case 26: {
             if (analysisStatusError_ == null) {
-              analysisStatusError_ = new global::Google.Rpc.Status();
+              AnalysisStatusError = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(analysisStatusError_);
+            input.ReadMessage(AnalysisStatusError);
             break;
           }
         }

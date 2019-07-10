@@ -745,7 +745,7 @@ namespace Google.Cloud.Spanner.V1 {
           }
           if (other.keySet_ != null) {
             if (keySet_ == null) {
-              keySet_ = new global::Google.Cloud.Spanner.V1.KeySet();
+              KeySet = new global::Google.Cloud.Spanner.V1.KeySet();
             }
             KeySet.MergeFrom(other.KeySet);
           }
@@ -766,9 +766,9 @@ namespace Google.Cloud.Spanner.V1 {
               }
               case 18: {
                 if (keySet_ == null) {
-                  keySet_ = new global::Google.Cloud.Spanner.V1.KeySet();
+                  KeySet = new global::Google.Cloud.Spanner.V1.KeySet();
                 }
-                input.ReadMessage(keySet_);
+                input.ReadMessage(KeySet);
                 break;
               }
             }

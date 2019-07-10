@@ -232,7 +232,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.application_ != null) {
         if (application_ == null) {
-          application_ = new global::Google.Cloud.Talent.V4Beta1.Application();
+          Application = new global::Google.Cloud.Talent.V4Beta1.Application();
         }
         Application.MergeFrom(other.Application);
       }
@@ -253,9 +253,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             if (application_ == null) {
-              application_ = new global::Google.Cloud.Talent.V4Beta1.Application();
+              Application = new global::Google.Cloud.Talent.V4Beta1.Application();
             }
-            input.ReadMessage(application_);
+            input.ReadMessage(Application);
             break;
           }
         }
@@ -553,13 +553,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.application_ != null) {
         if (application_ == null) {
-          application_ = new global::Google.Cloud.Talent.V4Beta1.Application();
+          Application = new global::Google.Cloud.Talent.V4Beta1.Application();
         }
         Application.MergeFrom(other.Application);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -576,16 +576,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (application_ == null) {
-              application_ = new global::Google.Cloud.Talent.V4Beta1.Application();
+              Application = new global::Google.Cloud.Talent.V4Beta1.Application();
             }
-            input.ReadMessage(application_);
+            input.ReadMessage(Application);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -1099,7 +1099,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
+          Metadata = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
         }
         Metadata.MergeFrom(other.Metadata);
       }
@@ -1124,9 +1124,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 26: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
+              Metadata = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
         }

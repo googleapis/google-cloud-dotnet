@@ -582,7 +582,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 72: {
-            matchMode_ = (global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode) input.ReadEnum();
+            MatchMode = (global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode) input.ReadEnum();
             break;
           }
           case 85: {
@@ -590,11 +590,11 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 112: {
-            apiVersion_ = (global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion) input.ReadEnum();
+            ApiVersion = (global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion) input.ReadEnum();
             break;
           }
           case 120: {
-            tier_ = (global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier) input.ReadEnum();
+            Tier = (global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier) input.ReadEnum();
             break;
           }
         }
@@ -947,13 +947,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.agent_ != null) {
         if (agent_ == null) {
-          agent_ = new global::Google.Cloud.Dialogflow.V2.Agent();
+          Agent = new global::Google.Cloud.Dialogflow.V2.Agent();
         }
         Agent.MergeFrom(other.Agent);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -970,16 +970,16 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           case 10: {
             if (agent_ == null) {
-              agent_ = new global::Google.Cloud.Dialogflow.V2.Agent();
+              Agent = new global::Google.Cloud.Dialogflow.V2.Agent();
             }
-            input.ReadMessage(agent_);
+            input.ReadMessage(Agent);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

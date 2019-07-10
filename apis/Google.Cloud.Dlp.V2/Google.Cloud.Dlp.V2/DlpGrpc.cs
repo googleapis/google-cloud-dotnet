@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -39,270 +39,270 @@ namespace Google.Cloud.Dlp.V2 {
   {
     static readonly string __ServiceName = "google.privacy.dlp.v2.DlpService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectContentRequest> __Marshaller_InspectContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.InspectContentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectContentResponse> __Marshaller_InspectContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.InspectContentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.RedactImageRequest> __Marshaller_RedactImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.RedactImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.RedactImageResponse> __Marshaller_RedactImageResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.RedactImageResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest> __Marshaller_DeidentifyContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeidentifyContentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> __Marshaller_DeidentifyContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeidentifyContentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest> __Marshaller_ReidentifyContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ReidentifyContentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> __Marshaller_ReidentifyContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ReidentifyContentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest> __Marshaller_ListInfoTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInfoTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> __Marshaller_ListInfoTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInfoTypesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest> __Marshaller_CreateInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectTemplate> __Marshaller_InspectTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.InspectTemplate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest> __Marshaller_UpdateInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest> __Marshaller_GetInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest> __Marshaller_ListInspectTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> __Marshaller_ListInspectTemplatesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest> __Marshaller_DeleteInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest> __Marshaller_CreateDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Marshaller_DeidentifyTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeidentifyTemplate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest> __Marshaller_UpdateDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest> __Marshaller_GetDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest> __Marshaller_ListDeidentifyTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> __Marshaller_ListDeidentifyTemplatesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest> __Marshaller_DeleteDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest> __Marshaller_CreateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.JobTrigger> __Marshaller_JobTrigger = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.JobTrigger.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest> __Marshaller_UpdateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest> __Marshaller_GetJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetJobTriggerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest> __Marshaller_ListJobTriggersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> __Marshaller_ListJobTriggersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest> __Marshaller_DeleteJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest> __Marshaller_ActivateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DlpJob> __Marshaller_DlpJob = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DlpJob.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest> __Marshaller_CreateDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest> __Marshaller_ListDlpJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDlpJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> __Marshaller_ListDlpJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDlpJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDlpJobRequest> __Marshaller_GetDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetDlpJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest> __Marshaller_DeleteDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest> __Marshaller_CancelDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CancelDlpJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest> __Marshaller_CreateStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.StoredInfoType> __Marshaller_StoredInfoType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.StoredInfoType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest> __Marshaller_UpdateStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest> __Marshaller_GetStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest> __Marshaller_ListStoredInfoTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Marshaller_ListStoredInfoTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest> __Marshaller_DeleteStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectContentRequest> __Marshaller_google_privacy_dlp_v2_InspectContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.InspectContentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectContentResponse> __Marshaller_google_privacy_dlp_v2_InspectContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.InspectContentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.RedactImageRequest> __Marshaller_google_privacy_dlp_v2_RedactImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.RedactImageRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.RedactImageResponse> __Marshaller_google_privacy_dlp_v2_RedactImageResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.RedactImageResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest> __Marshaller_google_privacy_dlp_v2_DeidentifyContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeidentifyContentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> __Marshaller_google_privacy_dlp_v2_DeidentifyContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeidentifyContentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest> __Marshaller_google_privacy_dlp_v2_ReidentifyContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ReidentifyContentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> __Marshaller_google_privacy_dlp_v2_ReidentifyContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ReidentifyContentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest> __Marshaller_google_privacy_dlp_v2_ListInfoTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInfoTypesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> __Marshaller_google_privacy_dlp_v2_ListInfoTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInfoTypesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_CreateInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectTemplate> __Marshaller_google_privacy_dlp_v2_InspectTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.InspectTemplate.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_UpdateInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_GetInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest> __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_DeleteInspectTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_CreateDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeidentifyTemplate.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_UpdateDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_GetDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest> __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_DeleteDeidentifyTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_CreateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.JobTrigger> __Marshaller_google_privacy_dlp_v2_JobTrigger = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.JobTrigger.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_UpdateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_GetJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetJobTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest> __Marshaller_google_privacy_dlp_v2_ListJobTriggersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> __Marshaller_google_privacy_dlp_v2_ListJobTriggersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_DeleteJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_ActivateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DlpJob> __Marshaller_google_privacy_dlp_v2_DlpJob = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DlpJob.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest> __Marshaller_google_privacy_dlp_v2_CreateDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest> __Marshaller_google_privacy_dlp_v2_ListDlpJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDlpJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> __Marshaller_google_privacy_dlp_v2_ListDlpJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDlpJobsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDlpJobRequest> __Marshaller_google_privacy_dlp_v2_GetDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetDlpJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest> __Marshaller_google_privacy_dlp_v2_DeleteDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest> __Marshaller_google_privacy_dlp_v2_CancelDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CancelDlpJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_CreateStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.StoredInfoType> __Marshaller_google_privacy_dlp_v2_StoredInfoType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.StoredInfoType.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_UpdateStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_GetStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest> __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_DeleteStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse> __Method_InspectContent = new grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "InspectContent",
-        __Marshaller_InspectContentRequest,
-        __Marshaller_InspectContentResponse);
+        __Marshaller_google_privacy_dlp_v2_InspectContentRequest,
+        __Marshaller_google_privacy_dlp_v2_InspectContentResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.RedactImageRequest, global::Google.Cloud.Dlp.V2.RedactImageResponse> __Method_RedactImage = new grpc::Method<global::Google.Cloud.Dlp.V2.RedactImageRequest, global::Google.Cloud.Dlp.V2.RedactImageResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RedactImage",
-        __Marshaller_RedactImageRequest,
-        __Marshaller_RedactImageResponse);
+        __Marshaller_google_privacy_dlp_v2_RedactImageRequest,
+        __Marshaller_google_privacy_dlp_v2_RedactImageResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest, global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> __Method_DeidentifyContent = new grpc::Method<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest, global::Google.Cloud.Dlp.V2.DeidentifyContentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeidentifyContent",
-        __Marshaller_DeidentifyContentRequest,
-        __Marshaller_DeidentifyContentResponse);
+        __Marshaller_google_privacy_dlp_v2_DeidentifyContentRequest,
+        __Marshaller_google_privacy_dlp_v2_DeidentifyContentResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest, global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> __Method_ReidentifyContent = new grpc::Method<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest, global::Google.Cloud.Dlp.V2.ReidentifyContentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ReidentifyContent",
-        __Marshaller_ReidentifyContentRequest,
-        __Marshaller_ReidentifyContentResponse);
+        __Marshaller_google_privacy_dlp_v2_ReidentifyContentRequest,
+        __Marshaller_google_privacy_dlp_v2_ReidentifyContentResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> __Method_ListInfoTypes = new grpc::Method<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListInfoTypesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListInfoTypes",
-        __Marshaller_ListInfoTypesRequest,
-        __Marshaller_ListInfoTypesResponse);
+        __Marshaller_google_privacy_dlp_v2_ListInfoTypesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListInfoTypesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate> __Method_CreateInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateInspectTemplate",
-        __Marshaller_CreateInspectTemplateRequest,
-        __Marshaller_InspectTemplate);
+        __Marshaller_google_privacy_dlp_v2_CreateInspectTemplateRequest,
+        __Marshaller_google_privacy_dlp_v2_InspectTemplate);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate> __Method_UpdateInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateInspectTemplate",
-        __Marshaller_UpdateInspectTemplateRequest,
-        __Marshaller_InspectTemplate);
+        __Marshaller_google_privacy_dlp_v2_UpdateInspectTemplateRequest,
+        __Marshaller_google_privacy_dlp_v2_InspectTemplate);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate> __Method_GetInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetInspectTemplate",
-        __Marshaller_GetInspectTemplateRequest,
-        __Marshaller_InspectTemplate);
+        __Marshaller_google_privacy_dlp_v2_GetInspectTemplateRequest,
+        __Marshaller_google_privacy_dlp_v2_InspectTemplate);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest, global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> __Method_ListInspectTemplates = new grpc::Method<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest, global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListInspectTemplates",
-        __Marshaller_ListInspectTemplatesRequest,
-        __Marshaller_ListInspectTemplatesResponse);
+        __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteInspectTemplate",
-        __Marshaller_DeleteInspectTemplateRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_privacy_dlp_v2_DeleteInspectTemplateRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Method_CreateDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateDeidentifyTemplate",
-        __Marshaller_CreateDeidentifyTemplateRequest,
-        __Marshaller_DeidentifyTemplate);
+        __Marshaller_google_privacy_dlp_v2_CreateDeidentifyTemplateRequest,
+        __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Method_UpdateDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateDeidentifyTemplate",
-        __Marshaller_UpdateDeidentifyTemplateRequest,
-        __Marshaller_DeidentifyTemplate);
+        __Marshaller_google_privacy_dlp_v2_UpdateDeidentifyTemplateRequest,
+        __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Method_GetDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetDeidentifyTemplate",
-        __Marshaller_GetDeidentifyTemplateRequest,
-        __Marshaller_DeidentifyTemplate);
+        __Marshaller_google_privacy_dlp_v2_GetDeidentifyTemplateRequest,
+        __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest, global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> __Method_ListDeidentifyTemplates = new grpc::Method<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest, global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListDeidentifyTemplates",
-        __Marshaller_ListDeidentifyTemplatesRequest,
-        __Marshaller_ListDeidentifyTemplatesResponse);
+        __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteDeidentifyTemplate",
-        __Marshaller_DeleteDeidentifyTemplateRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_privacy_dlp_v2_DeleteDeidentifyTemplateRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger> __Method_CreateJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateJobTrigger",
-        __Marshaller_CreateJobTriggerRequest,
-        __Marshaller_JobTrigger);
+        __Marshaller_google_privacy_dlp_v2_CreateJobTriggerRequest,
+        __Marshaller_google_privacy_dlp_v2_JobTrigger);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger> __Method_UpdateJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateJobTrigger",
-        __Marshaller_UpdateJobTriggerRequest,
-        __Marshaller_JobTrigger);
+        __Marshaller_google_privacy_dlp_v2_UpdateJobTriggerRequest,
+        __Marshaller_google_privacy_dlp_v2_JobTrigger);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger> __Method_GetJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetJobTrigger",
-        __Marshaller_GetJobTriggerRequest,
-        __Marshaller_JobTrigger);
+        __Marshaller_google_privacy_dlp_v2_GetJobTriggerRequest,
+        __Marshaller_google_privacy_dlp_v2_JobTrigger);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> __Method_ListJobTriggers = new grpc::Method<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListJobTriggers",
-        __Marshaller_ListJobTriggersRequest,
-        __Marshaller_ListJobTriggersResponse);
+        __Marshaller_google_privacy_dlp_v2_ListJobTriggersRequest,
+        __Marshaller_google_privacy_dlp_v2_ListJobTriggersResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteJobTrigger",
-        __Marshaller_DeleteJobTriggerRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_privacy_dlp_v2_DeleteJobTriggerRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_ActivateJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ActivateJobTrigger",
-        __Marshaller_ActivateJobTriggerRequest,
-        __Marshaller_DlpJob);
+        __Marshaller_google_privacy_dlp_v2_ActivateJobTriggerRequest,
+        __Marshaller_google_privacy_dlp_v2_DlpJob);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_CreateDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateDlpJob",
-        __Marshaller_CreateDlpJobRequest,
-        __Marshaller_DlpJob);
+        __Marshaller_google_privacy_dlp_v2_CreateDlpJobRequest,
+        __Marshaller_google_privacy_dlp_v2_DlpJob);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest, global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> __Method_ListDlpJobs = new grpc::Method<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest, global::Google.Cloud.Dlp.V2.ListDlpJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListDlpJobs",
-        __Marshaller_ListDlpJobsRequest,
-        __Marshaller_ListDlpJobsResponse);
+        __Marshaller_google_privacy_dlp_v2_ListDlpJobsRequest,
+        __Marshaller_google_privacy_dlp_v2_ListDlpJobsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_GetDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.GetDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetDlpJob",
-        __Marshaller_GetDlpJobRequest,
-        __Marshaller_DlpJob);
+        __Marshaller_google_privacy_dlp_v2_GetDlpJobRequest,
+        __Marshaller_google_privacy_dlp_v2_DlpJob);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteDlpJob",
-        __Marshaller_DeleteDlpJobRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_privacy_dlp_v2_DeleteDlpJobRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CancelDlpJob",
-        __Marshaller_CancelDlpJobRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_privacy_dlp_v2_CancelDlpJobRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_CreateStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateStoredInfoType",
-        __Marshaller_CreateStoredInfoTypeRequest,
-        __Marshaller_StoredInfoType);
+        __Marshaller_google_privacy_dlp_v2_CreateStoredInfoTypeRequest,
+        __Marshaller_google_privacy_dlp_v2_StoredInfoType);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_UpdateStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateStoredInfoType",
-        __Marshaller_UpdateStoredInfoTypeRequest,
-        __Marshaller_StoredInfoType);
+        __Marshaller_google_privacy_dlp_v2_UpdateStoredInfoTypeRequest,
+        __Marshaller_google_privacy_dlp_v2_StoredInfoType);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_GetStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetStoredInfoType",
-        __Marshaller_GetStoredInfoTypeRequest,
-        __Marshaller_StoredInfoType);
+        __Marshaller_google_privacy_dlp_v2_GetStoredInfoTypeRequest,
+        __Marshaller_google_privacy_dlp_v2_StoredInfoType);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Method_ListStoredInfoTypes = new grpc::Method<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListStoredInfoTypes",
-        __Marshaller_ListStoredInfoTypesRequest,
-        __Marshaller_ListStoredInfoTypesResponse);
+        __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteStoredInfoType",
-        __Marshaller_DeleteStoredInfoTypeRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_privacy_dlp_v2_DeleteStoredInfoTypeRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -311,6 +311,7 @@ namespace Google.Cloud.Dlp.V2 {
     }
 
     /// <summary>Base class for server-side implementations of DlpService</summary>
+    [grpc::BindServiceMethod(typeof(DlpService), "BindService")]
     public abstract partial class DlpServiceBase
     {
       /// <summary>
@@ -2486,6 +2487,45 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_GetStoredInfoType, serviceImpl.GetStoredInfoType)
           .AddMethod(__Method_ListStoredInfoTypes, serviceImpl.ListStoredInfoTypes)
           .AddMethod(__Method_DeleteStoredInfoType, serviceImpl.DeleteStoredInfoType).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, DlpServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_InspectContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse>(serviceImpl.InspectContent));
+      serviceBinder.AddMethod(__Method_RedactImage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.RedactImageRequest, global::Google.Cloud.Dlp.V2.RedactImageResponse>(serviceImpl.RedactImage));
+      serviceBinder.AddMethod(__Method_DeidentifyContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest, global::Google.Cloud.Dlp.V2.DeidentifyContentResponse>(serviceImpl.DeidentifyContent));
+      serviceBinder.AddMethod(__Method_ReidentifyContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest, global::Google.Cloud.Dlp.V2.ReidentifyContentResponse>(serviceImpl.ReidentifyContent));
+      serviceBinder.AddMethod(__Method_ListInfoTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListInfoTypesResponse>(serviceImpl.ListInfoTypes));
+      serviceBinder.AddMethod(__Method_CreateInspectTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(serviceImpl.CreateInspectTemplate));
+      serviceBinder.AddMethod(__Method_UpdateInspectTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(serviceImpl.UpdateInspectTemplate));
+      serviceBinder.AddMethod(__Method_GetInspectTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(serviceImpl.GetInspectTemplate));
+      serviceBinder.AddMethod(__Method_ListInspectTemplates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest, global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse>(serviceImpl.ListInspectTemplates));
+      serviceBinder.AddMethod(__Method_DeleteInspectTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteInspectTemplate));
+      serviceBinder.AddMethod(__Method_CreateDeidentifyTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(serviceImpl.CreateDeidentifyTemplate));
+      serviceBinder.AddMethod(__Method_UpdateDeidentifyTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(serviceImpl.UpdateDeidentifyTemplate));
+      serviceBinder.AddMethod(__Method_GetDeidentifyTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(serviceImpl.GetDeidentifyTemplate));
+      serviceBinder.AddMethod(__Method_ListDeidentifyTemplates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest, global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse>(serviceImpl.ListDeidentifyTemplates));
+      serviceBinder.AddMethod(__Method_DeleteDeidentifyTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDeidentifyTemplate));
+      serviceBinder.AddMethod(__Method_CreateJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(serviceImpl.CreateJobTrigger));
+      serviceBinder.AddMethod(__Method_UpdateJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(serviceImpl.UpdateJobTrigger));
+      serviceBinder.AddMethod(__Method_GetJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(serviceImpl.GetJobTrigger));
+      serviceBinder.AddMethod(__Method_ListJobTriggers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse>(serviceImpl.ListJobTriggers));
+      serviceBinder.AddMethod(__Method_DeleteJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteJobTrigger));
+      serviceBinder.AddMethod(__Method_ActivateJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob>(serviceImpl.ActivateJobTrigger));
+      serviceBinder.AddMethod(__Method_CreateDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(serviceImpl.CreateDlpJob));
+      serviceBinder.AddMethod(__Method_ListDlpJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest, global::Google.Cloud.Dlp.V2.ListDlpJobsResponse>(serviceImpl.ListDlpJobs));
+      serviceBinder.AddMethod(__Method_GetDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(serviceImpl.GetDlpJob));
+      serviceBinder.AddMethod(__Method_DeleteDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDlpJob));
+      serviceBinder.AddMethod(__Method_CancelDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelDlpJob));
+      serviceBinder.AddMethod(__Method_CreateStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(serviceImpl.CreateStoredInfoType));
+      serviceBinder.AddMethod(__Method_UpdateStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(serviceImpl.UpdateStoredInfoType));
+      serviceBinder.AddMethod(__Method_GetStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(serviceImpl.GetStoredInfoType));
+      serviceBinder.AddMethod(__Method_ListStoredInfoTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse>(serviceImpl.ListStoredInfoTypes));
+      serviceBinder.AddMethod(__Method_DeleteStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteStoredInfoType));
     }
 
   }
