@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -32,84 +32,84 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   {
     static readonly string __ServiceName = "google.firestore.admin.v1.FirestoreAdmin";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest> __Marshaller_CreateIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest> __Marshaller_ListIndexesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse> __Marshaller_ListIndexesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest> __Marshaller_GetIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Index> __Marshaller_Index = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.Index.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest> __Marshaller_DeleteIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest> __Marshaller_GetFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Field> __Marshaller_Field = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.Field.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest> __Marshaller_UpdateFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest> __Marshaller_ListFieldsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse> __Marshaller_ListFieldsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest> __Marshaller_ExportDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest> __Marshaller_ImportDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest> __Marshaller_google_firestore_admin_v1_CreateIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest> __Marshaller_google_firestore_admin_v1_ListIndexesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse> __Marshaller_google_firestore_admin_v1_ListIndexesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest> __Marshaller_google_firestore_admin_v1_GetIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Index> __Marshaller_google_firestore_admin_v1_Index = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.Index.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest> __Marshaller_google_firestore_admin_v1_DeleteIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest> __Marshaller_google_firestore_admin_v1_GetFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Field> __Marshaller_google_firestore_admin_v1_Field = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.Field.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest> __Marshaller_google_firestore_admin_v1_UpdateFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest> __Marshaller_google_firestore_admin_v1_ListFieldsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse> __Marshaller_google_firestore_admin_v1_ListFieldsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ExportDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateIndex",
-        __Marshaller_CreateIndexRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_firestore_admin_v1_CreateIndexRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest, global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse> __Method_ListIndexes = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest, global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListIndexes",
-        __Marshaller_ListIndexesRequest,
-        __Marshaller_ListIndexesResponse);
+        __Marshaller_google_firestore_admin_v1_ListIndexesRequest,
+        __Marshaller_google_firestore_admin_v1_ListIndexesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest, global::Google.Cloud.Firestore.Admin.V1.Index> __Method_GetIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest, global::Google.Cloud.Firestore.Admin.V1.Index>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetIndex",
-        __Marshaller_GetIndexRequest,
-        __Marshaller_Index);
+        __Marshaller_google_firestore_admin_v1_GetIndexRequest,
+        __Marshaller_google_firestore_admin_v1_Index);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteIndex",
-        __Marshaller_DeleteIndexRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_firestore_admin_v1_DeleteIndexRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest, global::Google.Cloud.Firestore.Admin.V1.Field> __Method_GetField = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest, global::Google.Cloud.Firestore.Admin.V1.Field>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetField",
-        __Marshaller_GetFieldRequest,
-        __Marshaller_Field);
+        __Marshaller_google_firestore_admin_v1_GetFieldRequest,
+        __Marshaller_google_firestore_admin_v1_Field);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest, global::Google.LongRunning.Operation> __Method_UpdateField = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateField",
-        __Marshaller_UpdateFieldRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_firestore_admin_v1_UpdateFieldRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest, global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse> __Method_ListFields = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest, global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListFields",
-        __Marshaller_ListFieldsRequest,
-        __Marshaller_ListFieldsResponse);
+        __Marshaller_google_firestore_admin_v1_ListFieldsRequest,
+        __Marshaller_google_firestore_admin_v1_ListFieldsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest, global::Google.LongRunning.Operation> __Method_ExportDocuments = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ExportDocuments",
-        __Marshaller_ExportDocumentsRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_firestore_admin_v1_ExportDocumentsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest, global::Google.LongRunning.Operation> __Method_ImportDocuments = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ImportDocuments",
-        __Marshaller_ImportDocumentsRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +118,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     }
 
     /// <summary>Base class for server-side implementations of FirestoreAdmin</summary>
+    [grpc::BindServiceMethod(typeof(FirestoreAdmin), "BindService")]
     public abstract partial class FirestoreAdminBase
     {
       /// <summary>
@@ -811,6 +812,23 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_ListFields, serviceImpl.ListFields)
           .AddMethod(__Method_ExportDocuments, serviceImpl.ExportDocuments)
           .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, FirestoreAdminBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateIndex));
+      serviceBinder.AddMethod(__Method_ListIndexes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest, global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse>(serviceImpl.ListIndexes));
+      serviceBinder.AddMethod(__Method_GetIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest, global::Google.Cloud.Firestore.Admin.V1.Index>(serviceImpl.GetIndex));
+      serviceBinder.AddMethod(__Method_DeleteIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteIndex));
+      serviceBinder.AddMethod(__Method_GetField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest, global::Google.Cloud.Firestore.Admin.V1.Field>(serviceImpl.GetField));
+      serviceBinder.AddMethod(__Method_UpdateField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateField));
+      serviceBinder.AddMethod(__Method_ListFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest, global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse>(serviceImpl.ListFields));
+      serviceBinder.AddMethod(__Method_ExportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportDocuments));
+      serviceBinder.AddMethod(__Method_ImportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDocuments));
     }
 
   }

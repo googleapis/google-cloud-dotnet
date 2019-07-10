@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -34,23 +34,23 @@ namespace Google.Cloud.Trace.V2 {
   {
     static readonly string __ServiceName = "google.devtools.cloudtrace.v2.TraceService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V2.BatchWriteSpansRequest> __Marshaller_BatchWriteSpansRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V2.BatchWriteSpansRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V2.Span> __Marshaller_Span = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V2.Span.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V2.BatchWriteSpansRequest> __Marshaller_google_devtools_cloudtrace_v2_BatchWriteSpansRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V2.BatchWriteSpansRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V2.Span> __Marshaller_google_devtools_cloudtrace_v2_Span = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V2.Span.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Trace.V2.BatchWriteSpansRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchWriteSpans = new grpc::Method<global::Google.Cloud.Trace.V2.BatchWriteSpansRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchWriteSpans",
-        __Marshaller_BatchWriteSpansRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_devtools_cloudtrace_v2_BatchWriteSpansRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Trace.V2.Span, global::Google.Cloud.Trace.V2.Span> __Method_CreateSpan = new grpc::Method<global::Google.Cloud.Trace.V2.Span, global::Google.Cloud.Trace.V2.Span>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateSpan",
-        __Marshaller_Span,
-        __Marshaller_Span);
+        __Marshaller_google_devtools_cloudtrace_v2_Span,
+        __Marshaller_google_devtools_cloudtrace_v2_Span);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -59,6 +59,7 @@ namespace Google.Cloud.Trace.V2 {
     }
 
     /// <summary>Base class for server-side implementations of TraceService</summary>
+    [grpc::BindServiceMethod(typeof(TraceService), "BindService")]
     public abstract partial class TraceServiceBase
     {
       /// <summary>
@@ -215,6 +216,16 @@ namespace Google.Cloud.Trace.V2 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_BatchWriteSpans, serviceImpl.BatchWriteSpans)
           .AddMethod(__Method_CreateSpan, serviceImpl.CreateSpan).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, TraceServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_BatchWriteSpans, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Trace.V2.BatchWriteSpansRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BatchWriteSpans));
+      serviceBinder.AddMethod(__Method_CreateSpan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Trace.V2.Span, global::Google.Cloud.Trace.V2.Span>(serviceImpl.CreateSpan));
     }
 
   }

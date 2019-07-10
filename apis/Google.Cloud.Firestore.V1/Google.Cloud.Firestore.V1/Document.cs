@@ -282,13 +282,13 @@ namespace Google.Cloud.Firestore.V1 {
       fields_.Add(other.fields_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
@@ -313,16 +313,16 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 26: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 34: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
         }

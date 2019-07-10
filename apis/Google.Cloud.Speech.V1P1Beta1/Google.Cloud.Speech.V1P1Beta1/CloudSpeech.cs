@@ -298,13 +298,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+          Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
         }
         Config.MergeFrom(other.Config);
       }
       if (other.audio_ != null) {
         if (audio_ == null) {
-          audio_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
+          Audio = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
         }
         Audio.MergeFrom(other.Audio);
       }
@@ -321,16 +321,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           case 10: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+              Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 18: {
             if (audio_ == null) {
-              audio_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
+              Audio = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
             }
-            input.ReadMessage(audio_);
+            input.ReadMessage(Audio);
             break;
           }
         }
@@ -478,13 +478,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+          Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
         }
         Config.MergeFrom(other.Config);
       }
       if (other.audio_ != null) {
         if (audio_ == null) {
-          audio_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
+          Audio = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
         }
         Audio.MergeFrom(other.Audio);
       }
@@ -501,16 +501,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           case 10: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+              Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 18: {
             if (audio_ == null) {
-              audio_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
+              Audio = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
             }
-            input.ReadMessage(audio_);
+            input.ReadMessage(Audio);
             break;
           }
         }
@@ -913,7 +913,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+          Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
         }
         Config.MergeFrom(other.Config);
       }
@@ -936,9 +936,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           case 10: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+              Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 16: {
@@ -1588,7 +1588,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata();
+          Metadata = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata();
         }
         Metadata.MergeFrom(other.Metadata);
       }
@@ -1610,7 +1610,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            encoding_ = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding) input.ReadEnum();
+            Encoding = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding) input.ReadEnum();
             break;
           }
           case 16: {
@@ -1643,9 +1643,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
           case 74: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata();
+              Metadata = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
           case 88: {
@@ -2128,7 +2128,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            interactionType_ = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.InteractionType) input.ReadEnum();
+            InteractionType = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.InteractionType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -2136,15 +2136,15 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           }
           case 32: {
-            microphoneDistance_ = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.MicrophoneDistance) input.ReadEnum();
+            MicrophoneDistance = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.MicrophoneDistance) input.ReadEnum();
             break;
           }
           case 40: {
-            originalMediaType_ = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.OriginalMediaType) input.ReadEnum();
+            OriginalMediaType = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.OriginalMediaType) input.ReadEnum();
             break;
           }
           case 48: {
-            recordingDeviceType_ = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.RecordingDeviceType) input.ReadEnum();
+            RecordingDeviceType = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.RecordingDeviceType) input.ReadEnum();
             break;
           }
           case 58: {
@@ -3117,13 +3117,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.lastUpdateTime_ != null) {
         if (lastUpdateTime_ == null) {
-          lastUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastUpdateTime.MergeFrom(other.LastUpdateTime);
       }
@@ -3144,16 +3144,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
           case 18: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 26: {
             if (lastUpdateTime_ == null) {
-              lastUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(lastUpdateTime_);
+            input.ReadMessage(LastUpdateTime);
             break;
           }
         }
@@ -3369,7 +3369,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.error_ != null) {
         if (error_ == null) {
-          error_ = new global::Google.Rpc.Status();
+          Error = new global::Google.Rpc.Status();
         }
         Error.MergeFrom(other.Error);
       }
@@ -3390,9 +3390,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           case 10: {
             if (error_ == null) {
-              error_ = new global::Google.Rpc.Status();
+              Error = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(error_);
+            input.ReadMessage(Error);
             break;
           }
           case 18: {
@@ -3400,7 +3400,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           }
           case 32: {
-            speechEventType_ = (global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse.Types.SpeechEventType) input.ReadEnum();
+            SpeechEventType = (global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse.Types.SpeechEventType) input.ReadEnum();
             break;
           }
         }
@@ -3688,7 +3688,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.resultEndTime_ != null) {
         if (resultEndTime_ == null) {
-          resultEndTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          ResultEndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         ResultEndTime.MergeFrom(other.ResultEndTime);
       }
@@ -3723,9 +3723,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
           case 34: {
             if (resultEndTime_ == null) {
-              resultEndTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              ResultEndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(resultEndTime_);
+            input.ReadMessage(ResultEndTime);
             break;
           }
           case 40: {
@@ -4365,13 +4365,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -4397,16 +4397,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 26: {

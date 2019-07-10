@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,280 +31,280 @@ namespace Google.Cloud.Irm.V1Alpha2 {
   {
     static readonly string __ServiceName = "google.cloud.irm.v1alpha2.IncidentService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRequest> __Marshaller_CreateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Incident> __Marshaller_Incident = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Incident.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.GetIncidentRequest> __Marshaller_GetIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.GetIncidentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsRequest> __Marshaller_SearchIncidentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsResponse> __Marshaller_SearchIncidentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateIncidentRequest> __Marshaller_UpdateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateIncidentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsRequest> __Marshaller_SearchSimilarIncidentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsResponse> __Marshaller_SearchSimilarIncidentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateAnnotationRequest> __Marshaller_CreateAnnotationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateAnnotationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Annotation> __Marshaller_Annotation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Annotation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest> __Marshaller_ListAnnotationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse> __Marshaller_ListAnnotationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest> __Marshaller_CreateTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Tag> __Marshaller_Tag = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Tag.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest> __Marshaller_DeleteTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListTagsRequest> __Marshaller_ListTagsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListTagsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse> __Marshaller_ListTagsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest> __Marshaller_CreateSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Signal> __Marshaller_Signal = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Signal.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest> __Marshaller_SearchSignalsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> __Marshaller_SearchSignalsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest> __Marshaller_LookupSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest> __Marshaller_GetSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest> __Marshaller_UpdateSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest> __Marshaller_EscalateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse> __Marshaller_EscalateIncidentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest> __Marshaller_CreateArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Artifact> __Marshaller_Artifact = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Artifact.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsRequest> __Marshaller_ListArtifactsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListArtifactsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse> __Marshaller_ListArtifactsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest> __Marshaller_UpdateArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest> __Marshaller_DeleteArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest> __Marshaller_SendShiftHandoffRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse> __Marshaller_SendShiftHandoffResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest> __Marshaller_CreateSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Subscription> __Marshaller_Subscription = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Subscription.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest> __Marshaller_UpdateSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest> __Marshaller_ListSubscriptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse> __Marshaller_ListSubscriptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest> __Marshaller_DeleteSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRoleAssignmentRequest> __Marshaller_CreateIncidentRoleAssignmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRoleAssignmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment> __Marshaller_IncidentRoleAssignment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteIncidentRoleAssignmentRequest> __Marshaller_DeleteIncidentRoleAssignmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteIncidentRoleAssignmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsRequest> __Marshaller_ListIncidentRoleAssignmentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsResponse> __Marshaller_ListIncidentRoleAssignmentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.RequestIncidentRoleHandoverRequest> __Marshaller_RequestIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.RequestIncidentRoleHandoverRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ConfirmIncidentRoleHandoverRequest> __Marshaller_ConfirmIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ConfirmIncidentRoleHandoverRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ForceIncidentRoleHandoverRequest> __Marshaller_ForceIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ForceIncidentRoleHandoverRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CancelIncidentRoleHandoverRequest> __Marshaller_CancelIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CancelIncidentRoleHandoverRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRequest> __Marshaller_google_cloud_irm_v1alpha2_CreateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Incident> __Marshaller_google_cloud_irm_v1alpha2_Incident = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Incident.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.GetIncidentRequest> __Marshaller_google_cloud_irm_v1alpha2_GetIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.GetIncidentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsRequest> __Marshaller_google_cloud_irm_v1alpha2_SearchIncidentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsResponse> __Marshaller_google_cloud_irm_v1alpha2_SearchIncidentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateIncidentRequest> __Marshaller_google_cloud_irm_v1alpha2_UpdateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateIncidentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsRequest> __Marshaller_google_cloud_irm_v1alpha2_SearchSimilarIncidentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsResponse> __Marshaller_google_cloud_irm_v1alpha2_SearchSimilarIncidentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateAnnotationRequest> __Marshaller_google_cloud_irm_v1alpha2_CreateAnnotationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateAnnotationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Annotation> __Marshaller_google_cloud_irm_v1alpha2_Annotation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Annotation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest> __Marshaller_google_cloud_irm_v1alpha2_ListAnnotationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse> __Marshaller_google_cloud_irm_v1alpha2_ListAnnotationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest> __Marshaller_google_cloud_irm_v1alpha2_CreateTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Tag> __Marshaller_google_cloud_irm_v1alpha2_Tag = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Tag.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest> __Marshaller_google_cloud_irm_v1alpha2_DeleteTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListTagsRequest> __Marshaller_google_cloud_irm_v1alpha2_ListTagsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListTagsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse> __Marshaller_google_cloud_irm_v1alpha2_ListTagsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest> __Marshaller_google_cloud_irm_v1alpha2_CreateSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Signal> __Marshaller_google_cloud_irm_v1alpha2_Signal = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Signal.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest> __Marshaller_google_cloud_irm_v1alpha2_SearchSignalsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> __Marshaller_google_cloud_irm_v1alpha2_SearchSignalsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest> __Marshaller_google_cloud_irm_v1alpha2_LookupSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest> __Marshaller_google_cloud_irm_v1alpha2_GetSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest> __Marshaller_google_cloud_irm_v1alpha2_UpdateSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest> __Marshaller_google_cloud_irm_v1alpha2_EscalateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse> __Marshaller_google_cloud_irm_v1alpha2_EscalateIncidentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest> __Marshaller_google_cloud_irm_v1alpha2_CreateArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Artifact> __Marshaller_google_cloud_irm_v1alpha2_Artifact = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Artifact.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsRequest> __Marshaller_google_cloud_irm_v1alpha2_ListArtifactsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListArtifactsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse> __Marshaller_google_cloud_irm_v1alpha2_ListArtifactsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest> __Marshaller_google_cloud_irm_v1alpha2_UpdateArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest> __Marshaller_google_cloud_irm_v1alpha2_DeleteArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest> __Marshaller_google_cloud_irm_v1alpha2_SendShiftHandoffRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse> __Marshaller_google_cloud_irm_v1alpha2_SendShiftHandoffResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest> __Marshaller_google_cloud_irm_v1alpha2_CreateSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Subscription> __Marshaller_google_cloud_irm_v1alpha2_Subscription = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Subscription.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest> __Marshaller_google_cloud_irm_v1alpha2_UpdateSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest> __Marshaller_google_cloud_irm_v1alpha2_ListSubscriptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse> __Marshaller_google_cloud_irm_v1alpha2_ListSubscriptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest> __Marshaller_google_cloud_irm_v1alpha2_DeleteSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRoleAssignmentRequest> __Marshaller_google_cloud_irm_v1alpha2_CreateIncidentRoleAssignmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRoleAssignmentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment> __Marshaller_google_cloud_irm_v1alpha2_IncidentRoleAssignment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteIncidentRoleAssignmentRequest> __Marshaller_google_cloud_irm_v1alpha2_DeleteIncidentRoleAssignmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteIncidentRoleAssignmentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsRequest> __Marshaller_google_cloud_irm_v1alpha2_ListIncidentRoleAssignmentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsResponse> __Marshaller_google_cloud_irm_v1alpha2_ListIncidentRoleAssignmentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.RequestIncidentRoleHandoverRequest> __Marshaller_google_cloud_irm_v1alpha2_RequestIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.RequestIncidentRoleHandoverRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ConfirmIncidentRoleHandoverRequest> __Marshaller_google_cloud_irm_v1alpha2_ConfirmIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ConfirmIncidentRoleHandoverRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ForceIncidentRoleHandoverRequest> __Marshaller_google_cloud_irm_v1alpha2_ForceIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ForceIncidentRoleHandoverRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CancelIncidentRoleHandoverRequest> __Marshaller_google_cloud_irm_v1alpha2_CancelIncidentRoleHandoverRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CancelIncidentRoleHandoverRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident> __Method_CreateIncident = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateIncident",
-        __Marshaller_CreateIncidentRequest,
-        __Marshaller_Incident);
+        __Marshaller_google_cloud_irm_v1alpha2_CreateIncidentRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Incident);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident> __Method_GetIncident = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetIncident",
-        __Marshaller_GetIncidentRequest,
-        __Marshaller_Incident);
+        __Marshaller_google_cloud_irm_v1alpha2_GetIncidentRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Incident);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsResponse> __Method_SearchIncidents = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchIncidents",
-        __Marshaller_SearchIncidentsRequest,
-        __Marshaller_SearchIncidentsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_SearchIncidentsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_SearchIncidentsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident> __Method_UpdateIncident = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateIncident",
-        __Marshaller_UpdateIncidentRequest,
-        __Marshaller_Incident);
+        __Marshaller_google_cloud_irm_v1alpha2_UpdateIncidentRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Incident);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsResponse> __Method_SearchSimilarIncidents = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchSimilarIncidents",
-        __Marshaller_SearchSimilarIncidentsRequest,
-        __Marshaller_SearchSimilarIncidentsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_SearchSimilarIncidentsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_SearchSimilarIncidentsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateAnnotationRequest, global::Google.Cloud.Irm.V1Alpha2.Annotation> __Method_CreateAnnotation = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateAnnotationRequest, global::Google.Cloud.Irm.V1Alpha2.Annotation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateAnnotation",
-        __Marshaller_CreateAnnotationRequest,
-        __Marshaller_Annotation);
+        __Marshaller_google_cloud_irm_v1alpha2_CreateAnnotationRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Annotation);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest, global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse> __Method_ListAnnotations = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest, global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListAnnotations",
-        __Marshaller_ListAnnotationsRequest,
-        __Marshaller_ListAnnotationsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_ListAnnotationsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_ListAnnotationsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest, global::Google.Cloud.Irm.V1Alpha2.Tag> __Method_CreateTag = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest, global::Google.Cloud.Irm.V1Alpha2.Tag>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateTag",
-        __Marshaller_CreateTagRequest,
-        __Marshaller_Tag);
+        __Marshaller_google_cloud_irm_v1alpha2_CreateTagRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Tag);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTag = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteTag",
-        __Marshaller_DeleteTagRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_irm_v1alpha2_DeleteTagRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListTagsRequest, global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse> __Method_ListTags = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListTagsRequest, global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListTags",
-        __Marshaller_ListTagsRequest,
-        __Marshaller_ListTagsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_ListTagsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_ListTagsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal> __Method_CreateSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateSignal",
-        __Marshaller_CreateSignalRequest,
-        __Marshaller_Signal);
+        __Marshaller_google_cloud_irm_v1alpha2_CreateSignalRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Signal);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> __Method_SearchSignals = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchSignals",
-        __Marshaller_SearchSignalsRequest,
-        __Marshaller_SearchSignalsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_SearchSignalsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_SearchSignalsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal> __Method_LookupSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(
         grpc::MethodType.Unary,
         __ServiceName,
         "LookupSignal",
-        __Marshaller_LookupSignalRequest,
-        __Marshaller_Signal);
+        __Marshaller_google_cloud_irm_v1alpha2_LookupSignalRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Signal);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal> __Method_GetSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetSignal",
-        __Marshaller_GetSignalRequest,
-        __Marshaller_Signal);
+        __Marshaller_google_cloud_irm_v1alpha2_GetSignalRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Signal);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal> __Method_UpdateSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSignal",
-        __Marshaller_UpdateSignalRequest,
-        __Marshaller_Signal);
+        __Marshaller_google_cloud_irm_v1alpha2_UpdateSignalRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Signal);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse> __Method_EscalateIncident = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "EscalateIncident",
-        __Marshaller_EscalateIncidentRequest,
-        __Marshaller_EscalateIncidentResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_EscalateIncidentRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_EscalateIncidentResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest, global::Google.Cloud.Irm.V1Alpha2.Artifact> __Method_CreateArtifact = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest, global::Google.Cloud.Irm.V1Alpha2.Artifact>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateArtifact",
-        __Marshaller_CreateArtifactRequest,
-        __Marshaller_Artifact);
+        __Marshaller_google_cloud_irm_v1alpha2_CreateArtifactRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Artifact);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsRequest, global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse> __Method_ListArtifacts = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsRequest, global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListArtifacts",
-        __Marshaller_ListArtifactsRequest,
-        __Marshaller_ListArtifactsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_ListArtifactsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_ListArtifactsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest, global::Google.Cloud.Irm.V1Alpha2.Artifact> __Method_UpdateArtifact = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest, global::Google.Cloud.Irm.V1Alpha2.Artifact>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateArtifact",
-        __Marshaller_UpdateArtifactRequest,
-        __Marshaller_Artifact);
+        __Marshaller_google_cloud_irm_v1alpha2_UpdateArtifactRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Artifact);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteArtifact = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteArtifact",
-        __Marshaller_DeleteArtifactRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_irm_v1alpha2_DeleteArtifactRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest, global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse> __Method_SendShiftHandoff = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest, global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SendShiftHandoff",
-        __Marshaller_SendShiftHandoffRequest,
-        __Marshaller_SendShiftHandoffResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_SendShiftHandoffRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_SendShiftHandoffResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription> __Method_CreateSubscription = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateSubscription",
-        __Marshaller_CreateSubscriptionRequest,
-        __Marshaller_Subscription);
+        __Marshaller_google_cloud_irm_v1alpha2_CreateSubscriptionRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Subscription);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription> __Method_UpdateSubscription = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSubscription",
-        __Marshaller_UpdateSubscriptionRequest,
-        __Marshaller_Subscription);
+        __Marshaller_google_cloud_irm_v1alpha2_UpdateSubscriptionRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_Subscription);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest, global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse> __Method_ListSubscriptions = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest, global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListSubscriptions",
-        __Marshaller_ListSubscriptionsRequest,
-        __Marshaller_ListSubscriptionsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_ListSubscriptionsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_ListSubscriptionsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSubscription = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSubscription",
-        __Marshaller_DeleteSubscriptionRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_irm_v1alpha2_DeleteSubscriptionRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRoleAssignmentRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment> __Method_CreateIncidentRoleAssignment = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRoleAssignmentRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateIncidentRoleAssignment",
-        __Marshaller_CreateIncidentRoleAssignmentRequest,
-        __Marshaller_IncidentRoleAssignment);
+        __Marshaller_google_cloud_irm_v1alpha2_CreateIncidentRoleAssignmentRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_IncidentRoleAssignment);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteIncidentRoleAssignmentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteIncidentRoleAssignment = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.DeleteIncidentRoleAssignmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteIncidentRoleAssignment",
-        __Marshaller_DeleteIncidentRoleAssignmentRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_irm_v1alpha2_DeleteIncidentRoleAssignmentRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsRequest, global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsResponse> __Method_ListIncidentRoleAssignments = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsRequest, global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListIncidentRoleAssignments",
-        __Marshaller_ListIncidentRoleAssignmentsRequest,
-        __Marshaller_ListIncidentRoleAssignmentsResponse);
+        __Marshaller_google_cloud_irm_v1alpha2_ListIncidentRoleAssignmentsRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_ListIncidentRoleAssignmentsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.RequestIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment> __Method_RequestIncidentRoleHandover = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.RequestIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RequestIncidentRoleHandover",
-        __Marshaller_RequestIncidentRoleHandoverRequest,
-        __Marshaller_IncidentRoleAssignment);
+        __Marshaller_google_cloud_irm_v1alpha2_RequestIncidentRoleHandoverRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_IncidentRoleAssignment);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ConfirmIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment> __Method_ConfirmIncidentRoleHandover = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ConfirmIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ConfirmIncidentRoleHandover",
-        __Marshaller_ConfirmIncidentRoleHandoverRequest,
-        __Marshaller_IncidentRoleAssignment);
+        __Marshaller_google_cloud_irm_v1alpha2_ConfirmIncidentRoleHandoverRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_IncidentRoleAssignment);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ForceIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment> __Method_ForceIncidentRoleHandover = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ForceIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ForceIncidentRoleHandover",
-        __Marshaller_ForceIncidentRoleHandoverRequest,
-        __Marshaller_IncidentRoleAssignment);
+        __Marshaller_google_cloud_irm_v1alpha2_ForceIncidentRoleHandoverRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_IncidentRoleAssignment);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CancelIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment> __Method_CancelIncidentRoleHandover = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CancelIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CancelIncidentRoleHandover",
-        __Marshaller_CancelIncidentRoleHandoverRequest,
-        __Marshaller_IncidentRoleAssignment);
+        __Marshaller_google_cloud_irm_v1alpha2_CancelIncidentRoleHandoverRequest,
+        __Marshaller_google_cloud_irm_v1alpha2_IncidentRoleAssignment);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -313,6 +313,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     }
 
     /// <summary>Base class for server-side implementations of IncidentService</summary>
+    [grpc::BindServiceMethod(typeof(IncidentService), "BindService")]
     public abstract partial class IncidentServiceBase
     {
       /// <summary>
@@ -2264,6 +2265,46 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           .AddMethod(__Method_ConfirmIncidentRoleHandover, serviceImpl.ConfirmIncidentRoleHandover)
           .AddMethod(__Method_ForceIncidentRoleHandover, serviceImpl.ForceIncidentRoleHandover)
           .AddMethod(__Method_CancelIncidentRoleHandover, serviceImpl.CancelIncidentRoleHandover).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, IncidentServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateIncident, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident>(serviceImpl.CreateIncident));
+      serviceBinder.AddMethod(__Method_GetIncident, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.GetIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident>(serviceImpl.GetIncident));
+      serviceBinder.AddMethod(__Method_SearchIncidents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchIncidentsResponse>(serviceImpl.SearchIncidents));
+      serviceBinder.AddMethod(__Method_UpdateIncident, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.UpdateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.Incident>(serviceImpl.UpdateIncident));
+      serviceBinder.AddMethod(__Method_SearchSimilarIncidents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSimilarIncidentsResponse>(serviceImpl.SearchSimilarIncidents));
+      serviceBinder.AddMethod(__Method_CreateAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CreateAnnotationRequest, global::Google.Cloud.Irm.V1Alpha2.Annotation>(serviceImpl.CreateAnnotation));
+      serviceBinder.AddMethod(__Method_ListAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest, global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse>(serviceImpl.ListAnnotations));
+      serviceBinder.AddMethod(__Method_CreateTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest, global::Google.Cloud.Irm.V1Alpha2.Tag>(serviceImpl.CreateTag));
+      serviceBinder.AddMethod(__Method_DeleteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTag));
+      serviceBinder.AddMethod(__Method_ListTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.ListTagsRequest, global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse>(serviceImpl.ListTags));
+      serviceBinder.AddMethod(__Method_CreateSignal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(serviceImpl.CreateSignal));
+      serviceBinder.AddMethod(__Method_SearchSignals, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse>(serviceImpl.SearchSignals));
+      serviceBinder.AddMethod(__Method_LookupSignal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(serviceImpl.LookupSignal));
+      serviceBinder.AddMethod(__Method_GetSignal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(serviceImpl.GetSignal));
+      serviceBinder.AddMethod(__Method_UpdateSignal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(serviceImpl.UpdateSignal));
+      serviceBinder.AddMethod(__Method_EscalateIncident, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse>(serviceImpl.EscalateIncident));
+      serviceBinder.AddMethod(__Method_CreateArtifact, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest, global::Google.Cloud.Irm.V1Alpha2.Artifact>(serviceImpl.CreateArtifact));
+      serviceBinder.AddMethod(__Method_ListArtifacts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsRequest, global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse>(serviceImpl.ListArtifacts));
+      serviceBinder.AddMethod(__Method_UpdateArtifact, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest, global::Google.Cloud.Irm.V1Alpha2.Artifact>(serviceImpl.UpdateArtifact));
+      serviceBinder.AddMethod(__Method_DeleteArtifact, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteArtifact));
+      serviceBinder.AddMethod(__Method_SendShiftHandoff, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest, global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse>(serviceImpl.SendShiftHandoff));
+      serviceBinder.AddMethod(__Method_CreateSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription>(serviceImpl.CreateSubscription));
+      serviceBinder.AddMethod(__Method_UpdateSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription>(serviceImpl.UpdateSubscription));
+      serviceBinder.AddMethod(__Method_ListSubscriptions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest, global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse>(serviceImpl.ListSubscriptions));
+      serviceBinder.AddMethod(__Method_DeleteSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSubscription));
+      serviceBinder.AddMethod(__Method_CreateIncidentRoleAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CreateIncidentRoleAssignmentRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(serviceImpl.CreateIncidentRoleAssignment));
+      serviceBinder.AddMethod(__Method_DeleteIncidentRoleAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.DeleteIncidentRoleAssignmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteIncidentRoleAssignment));
+      serviceBinder.AddMethod(__Method_ListIncidentRoleAssignments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsRequest, global::Google.Cloud.Irm.V1Alpha2.ListIncidentRoleAssignmentsResponse>(serviceImpl.ListIncidentRoleAssignments));
+      serviceBinder.AddMethod(__Method_RequestIncidentRoleHandover, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.RequestIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(serviceImpl.RequestIncidentRoleHandover));
+      serviceBinder.AddMethod(__Method_ConfirmIncidentRoleHandover, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.ConfirmIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(serviceImpl.ConfirmIncidentRoleHandover));
+      serviceBinder.AddMethod(__Method_ForceIncidentRoleHandover, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.ForceIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(serviceImpl.ForceIncidentRoleHandover));
+      serviceBinder.AddMethod(__Method_CancelIncidentRoleHandover, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Irm.V1Alpha2.CancelIncidentRoleHandoverRequest, global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment>(serviceImpl.CancelIncidentRoleHandover));
     }
 
   }

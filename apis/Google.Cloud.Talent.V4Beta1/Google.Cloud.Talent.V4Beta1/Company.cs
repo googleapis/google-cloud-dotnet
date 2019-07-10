@@ -516,7 +516,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       keywordSearchableJobCustomAttributes_.Add(other.keywordSearchableJobCustomAttributes_);
       if (other.derivedInfo_ != null) {
         if (derivedInfo_ == null) {
-          derivedInfo_ = new global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo();
+          DerivedInfo = new global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo();
         }
         DerivedInfo.MergeFrom(other.DerivedInfo);
       }
@@ -547,7 +547,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 32: {
-            size_ = (global::Google.Cloud.Talent.V4Beta1.CompanySize) input.ReadEnum();
+            Size = (global::Google.Cloud.Talent.V4Beta1.CompanySize) input.ReadEnum();
             break;
           }
           case 42: {
@@ -580,9 +580,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 98: {
             if (derivedInfo_ == null) {
-              derivedInfo_ = new global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo();
+              DerivedInfo = new global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo();
             }
-            input.ReadMessage(derivedInfo_);
+            input.ReadMessage(DerivedInfo);
             break;
           }
           case 104: {
@@ -712,7 +712,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           if (other.headquartersLocation_ != null) {
             if (headquartersLocation_ == null) {
-              headquartersLocation_ = new global::Google.Cloud.Talent.V4Beta1.Location();
+              HeadquartersLocation = new global::Google.Cloud.Talent.V4Beta1.Location();
             }
             HeadquartersLocation.MergeFrom(other.HeadquartersLocation);
           }
@@ -729,9 +729,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
                 break;
               case 10: {
                 if (headquartersLocation_ == null) {
-                  headquartersLocation_ = new global::Google.Cloud.Talent.V4Beta1.Location();
+                  HeadquartersLocation = new global::Google.Cloud.Talent.V4Beta1.Location();
                 }
-                input.ReadMessage(headquartersLocation_);
+                input.ReadMessage(HeadquartersLocation);
                 break;
               }
             }

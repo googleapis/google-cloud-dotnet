@@ -320,11 +320,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           }
           case 24: {
-            state_ = (global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State) input.ReadEnum();
             break;
           }
           case 32: {
-            type_ = (global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) input.ReadEnum();
             break;
           }
           case 42: {
@@ -645,7 +645,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           }
           case 24: {
-            state_ = (global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) input.ReadEnum();
             break;
           }
           case 32: {
@@ -653,7 +653,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           }
           case 40: {
-            defaultStorageType_ = (global::Google.Cloud.Bigtable.Admin.V2.StorageType) input.ReadEnum();
+            DefaultStorageType = (global::Google.Cloud.Bigtable.Admin.V2.StorageType) input.ReadEnum();
             break;
           }
         }

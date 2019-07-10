@@ -478,7 +478,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            audioEncoding_ = (global::Google.Cloud.Dialogflow.V2.AudioEncoding) input.ReadEnum();
+            AudioEncoding = (global::Google.Cloud.Dialogflow.V2.AudioEncoding) input.ReadEnum();
             break;
           }
           case 16: {
@@ -494,7 +494,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 80: {
-            modelVariant_ = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
+            ModelVariant = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
             break;
           }
         }
@@ -665,7 +665,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 16: {
-            ssmlGender_ = (global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender) input.ReadEnum();
+            SsmlGender = (global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender) input.ReadEnum();
             break;
           }
         }
@@ -901,7 +901,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       effectsProfileId_.Add(other.effectsProfileId_);
       if (other.voice_ != null) {
         if (voice_ == null) {
-          voice_ = new global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams();
+          Voice = new global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams();
         }
         Voice.MergeFrom(other.Voice);
       }
@@ -930,9 +930,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 34: {
             if (voice_ == null) {
-              voice_ = new global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams();
+              Voice = new global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams();
             }
-            input.ReadMessage(voice_);
+            input.ReadMessage(Voice);
             break;
           }
           case 42: {
@@ -1116,7 +1116,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.synthesizeSpeechConfig_ != null) {
         if (synthesizeSpeechConfig_ == null) {
-          synthesizeSpeechConfig_ = new global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig();
+          SynthesizeSpeechConfig = new global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig();
         }
         SynthesizeSpeechConfig.MergeFrom(other.SynthesizeSpeechConfig);
       }
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            audioEncoding_ = (global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding) input.ReadEnum();
+            AudioEncoding = (global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding) input.ReadEnum();
             break;
           }
           case 16: {
@@ -1141,9 +1141,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 26: {
             if (synthesizeSpeechConfig_ == null) {
-              synthesizeSpeechConfig_ = new global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig();
+              SynthesizeSpeechConfig = new global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig();
             }
-            input.ReadMessage(synthesizeSpeechConfig_);
+            input.ReadMessage(SynthesizeSpeechConfig);
             break;
           }
         }

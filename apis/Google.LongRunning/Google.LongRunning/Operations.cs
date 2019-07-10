@@ -335,7 +335,7 @@ namespace Google.LongRunning {
       }
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Protobuf.WellKnownTypes.Any();
+          Metadata = new global::Google.Protobuf.WellKnownTypes.Any();
         }
         Metadata.MergeFrom(other.Metadata);
       }
@@ -374,9 +374,9 @@ namespace Google.LongRunning {
           }
           case 18: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Protobuf.WellKnownTypes.Any();
+              Metadata = new global::Google.Protobuf.WellKnownTypes.Any();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
           case 24: {
@@ -1340,7 +1340,7 @@ namespace Google.LongRunning {
       }
       if (other.timeout_ != null) {
         if (timeout_ == null) {
-          timeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Timeout.MergeFrom(other.Timeout);
       }
@@ -1361,9 +1361,9 @@ namespace Google.LongRunning {
           }
           case 18: {
             if (timeout_ == null) {
-              timeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timeout_);
+            input.ReadMessage(Timeout);
             break;
           }
         }

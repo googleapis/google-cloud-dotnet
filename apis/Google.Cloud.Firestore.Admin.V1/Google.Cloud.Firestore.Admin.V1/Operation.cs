@@ -371,13 +371,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -389,13 +389,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.progressDocuments_ != null) {
         if (progressDocuments_ == null) {
-          progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressDocuments.MergeFrom(other.ProgressDocuments);
       }
       if (other.progressBytes_ != null) {
         if (progressBytes_ == null) {
-          progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressBytes.MergeFrom(other.ProgressBytes);
       }
@@ -412,16 +412,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 26: {
@@ -429,21 +429,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           }
           case 32: {
-            state_ = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            State = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
             break;
           }
           case 42: {
             if (progressDocuments_ == null) {
-              progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressDocuments_);
+            input.ReadMessage(ProgressDocuments);
             break;
           }
           case 50: {
             if (progressBytes_ == null) {
-              progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressBytes_);
+            input.ReadMessage(ProgressBytes);
             break;
           }
         }
@@ -707,13 +707,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -726,13 +726,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.progressDocuments_ != null) {
         if (progressDocuments_ == null) {
-          progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressDocuments.MergeFrom(other.ProgressDocuments);
       }
       if (other.progressBytes_ != null) {
         if (progressBytes_ == null) {
-          progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressBytes.MergeFrom(other.ProgressBytes);
       }
@@ -749,16 +749,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 26: {
@@ -770,21 +770,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           }
           case 40: {
-            state_ = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            State = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
             break;
           }
           case 50: {
             if (progressDocuments_ == null) {
-              progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressDocuments_);
+            input.ReadMessage(ProgressDocuments);
             break;
           }
           case 58: {
             if (progressBytes_ == null) {
-              progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressBytes_);
+            input.ReadMessage(ProgressBytes);
             break;
           }
         }
@@ -935,7 +935,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           if (other.index_ != null) {
             if (index_ == null) {
-              index_ = new global::Google.Cloud.Firestore.Admin.V1.Index();
+              Index = new global::Google.Cloud.Firestore.Admin.V1.Index();
             }
             Index.MergeFrom(other.Index);
           }
@@ -951,14 +951,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                changeType_ = (global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) input.ReadEnum();
+                ChangeType = (global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) input.ReadEnum();
                 break;
               }
               case 18: {
                 if (index_ == null) {
-                  index_ = new global::Google.Cloud.Firestore.Admin.V1.Index();
+                  Index = new global::Google.Cloud.Firestore.Admin.V1.Index();
                 }
-                input.ReadMessage(index_);
+                input.ReadMessage(Index);
                 break;
               }
             }
@@ -1250,13 +1250,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -1265,13 +1265,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.progressDocuments_ != null) {
         if (progressDocuments_ == null) {
-          progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressDocuments.MergeFrom(other.ProgressDocuments);
       }
       if (other.progressBytes_ != null) {
         if (progressBytes_ == null) {
-          progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressBytes.MergeFrom(other.ProgressBytes);
       }
@@ -1292,34 +1292,34 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 24: {
-            operationState_ = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            OperationState = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
             break;
           }
           case 34: {
             if (progressDocuments_ == null) {
-              progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressDocuments_);
+            input.ReadMessage(ProgressDocuments);
             break;
           }
           case 42: {
             if (progressBytes_ == null) {
-              progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressBytes_);
+            input.ReadMessage(ProgressBytes);
             break;
           }
           case 50: {
@@ -1589,13 +1589,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -1604,13 +1604,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.progressDocuments_ != null) {
         if (progressDocuments_ == null) {
-          progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressDocuments.MergeFrom(other.ProgressDocuments);
       }
       if (other.progressBytes_ != null) {
         if (progressBytes_ == null) {
-          progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+          ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
         }
         ProgressBytes.MergeFrom(other.ProgressBytes);
       }
@@ -1631,34 +1631,34 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 24: {
-            operationState_ = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            OperationState = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
             break;
           }
           case 34: {
             if (progressDocuments_ == null) {
-              progressDocuments_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressDocuments = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressDocuments_);
+            input.ReadMessage(ProgressDocuments);
             break;
           }
           case 42: {
             if (progressBytes_ == null) {
-              progressBytes_ = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+              ProgressBytes = new global::Google.Cloud.Firestore.Admin.V1.Progress();
             }
-            input.ReadMessage(progressBytes_);
+            input.ReadMessage(ProgressBytes);
             break;
           }
           case 50: {

@@ -255,7 +255,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.boundingPoly_ != null) {
         if (boundingPoly_ == null) {
-          boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingPoly.MergeFrom(other.BoundingPoly);
       }
@@ -291,9 +291,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 74: {
             if (boundingPoly_ == null) {
-              boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingPoly_);
+            input.ReadMessage(BoundingPoly);
             break;
           }
         }
@@ -456,7 +456,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.indexTime_ != null) {
         if (indexTime_ == null) {
-          indexTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          IndexTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         IndexTime.MergeFrom(other.IndexTime);
       }
@@ -475,9 +475,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 18: {
             if (indexTime_ == null) {
-              indexTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              IndexTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(indexTime_);
+            input.ReadMessage(IndexTime);
             break;
           }
           case 42: {
@@ -659,7 +659,7 @@ namespace Google.Cloud.Vision.V1 {
           }
           if (other.product_ != null) {
             if (product_ == null) {
-              product_ = new global::Google.Cloud.Vision.V1.Product();
+              Product = new global::Google.Cloud.Vision.V1.Product();
             }
             Product.MergeFrom(other.Product);
           }
@@ -682,9 +682,9 @@ namespace Google.Cloud.Vision.V1 {
                 break;
               case 10: {
                 if (product_ == null) {
-                  product_ = new global::Google.Cloud.Vision.V1.Product();
+                  Product = new global::Google.Cloud.Vision.V1.Product();
                 }
-                input.ReadMessage(product_);
+                input.ReadMessage(Product);
                 break;
               }
               case 21: {
@@ -833,7 +833,7 @@ namespace Google.Cloud.Vision.V1 {
           }
           if (other.boundingPoly_ != null) {
             if (boundingPoly_ == null) {
-              boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
             BoundingPoly.MergeFrom(other.BoundingPoly);
           }
@@ -851,9 +851,9 @@ namespace Google.Cloud.Vision.V1 {
                 break;
               case 10: {
                 if (boundingPoly_ == null) {
-                  boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+                  BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
                 }
-                input.ReadMessage(boundingPoly_);
+                input.ReadMessage(BoundingPoly);
                 break;
               }
               case 18: {

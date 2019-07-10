@@ -218,7 +218,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.indexConfig_ != null) {
         if (indexConfig_ == null) {
-          indexConfig_ = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig();
+          IndexConfig = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig();
         }
         IndexConfig.MergeFrom(other.IndexConfig);
       }
@@ -239,9 +239,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 18: {
             if (indexConfig_ == null) {
-              indexConfig_ = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig();
+              IndexConfig = new global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig();
             }
-            input.ReadMessage(indexConfig_);
+            input.ReadMessage(IndexConfig);
             break;
           }
         }

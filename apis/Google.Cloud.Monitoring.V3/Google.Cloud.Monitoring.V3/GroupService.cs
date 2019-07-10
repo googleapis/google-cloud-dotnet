@@ -885,7 +885,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Cloud.Monitoring.V3.Group();
+          Group = new global::Google.Cloud.Monitoring.V3.Group();
         }
         Group.MergeFrom(other.Group);
       }
@@ -905,9 +905,9 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (group_ == null) {
-              group_ = new global::Google.Cloud.Monitoring.V3.Group();
+              Group = new global::Google.Cloud.Monitoring.V3.Group();
             }
-            input.ReadMessage(group_);
+            input.ReadMessage(Group);
             break;
           }
           case 24: {
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Cloud.Monitoring.V3.Group();
+          Group = new global::Google.Cloud.Monitoring.V3.Group();
         }
         Group.MergeFrom(other.Group);
       }
@@ -1082,9 +1082,9 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 18: {
             if (group_ == null) {
-              group_ = new global::Google.Cloud.Monitoring.V3.Group();
+              Group = new global::Google.Cloud.Monitoring.V3.Group();
             }
-            input.ReadMessage(group_);
+            input.ReadMessage(Group);
             break;
           }
           case 24: {
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+          Interval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
@@ -1495,9 +1495,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 50: {
             if (interval_ == null) {
-              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+              Interval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
-            input.ReadMessage(interval_);
+            input.ReadMessage(Interval);
             break;
           }
           case 58: {

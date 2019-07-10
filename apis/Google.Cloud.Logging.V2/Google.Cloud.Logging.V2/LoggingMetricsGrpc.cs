@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,49 +31,49 @@ namespace Google.Cloud.Logging.V2 {
   {
     static readonly string __ServiceName = "google.logging.v2.MetricsServiceV2";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsRequest> __Marshaller_ListLogMetricsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsResponse> __Marshaller_ListLogMetricsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetLogMetricRequest> __Marshaller_GetLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogMetric> __Marshaller_LogMetric = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogMetric.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateLogMetricRequest> __Marshaller_CreateLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateLogMetricRequest> __Marshaller_UpdateLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteLogMetricRequest> __Marshaller_DeleteLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsRequest> __Marshaller_google_logging_v2_ListLogMetricsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsResponse> __Marshaller_google_logging_v2_ListLogMetricsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetLogMetricRequest> __Marshaller_google_logging_v2_GetLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogMetric> __Marshaller_google_logging_v2_LogMetric = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogMetric.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateLogMetricRequest> __Marshaller_google_logging_v2_CreateLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateLogMetricRequest> __Marshaller_google_logging_v2_UpdateLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteLogMetricRequest> __Marshaller_google_logging_v2_DeleteLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListLogMetricsRequest, global::Google.Cloud.Logging.V2.ListLogMetricsResponse> __Method_ListLogMetrics = new grpc::Method<global::Google.Cloud.Logging.V2.ListLogMetricsRequest, global::Google.Cloud.Logging.V2.ListLogMetricsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListLogMetrics",
-        __Marshaller_ListLogMetricsRequest,
-        __Marshaller_ListLogMetricsResponse);
+        __Marshaller_google_logging_v2_ListLogMetricsRequest,
+        __Marshaller_google_logging_v2_ListLogMetricsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric> __Method_GetLogMetric = new grpc::Method<global::Google.Cloud.Logging.V2.GetLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetLogMetric",
-        __Marshaller_GetLogMetricRequest,
-        __Marshaller_LogMetric);
+        __Marshaller_google_logging_v2_GetLogMetricRequest,
+        __Marshaller_google_logging_v2_LogMetric);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.CreateLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric> __Method_CreateLogMetric = new grpc::Method<global::Google.Cloud.Logging.V2.CreateLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateLogMetric",
-        __Marshaller_CreateLogMetricRequest,
-        __Marshaller_LogMetric);
+        __Marshaller_google_logging_v2_CreateLogMetricRequest,
+        __Marshaller_google_logging_v2_LogMetric);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric> __Method_UpdateLogMetric = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateLogMetric",
-        __Marshaller_UpdateLogMetricRequest,
-        __Marshaller_LogMetric);
+        __Marshaller_google_logging_v2_UpdateLogMetricRequest,
+        __Marshaller_google_logging_v2_LogMetric);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteLogMetric = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteLogMetric",
-        __Marshaller_DeleteLogMetricRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_logging_v2_DeleteLogMetricRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -82,6 +82,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Base class for server-side implementations of MetricsServiceV2</summary>
+    [grpc::BindServiceMethod(typeof(MetricsServiceV2), "BindService")]
     public abstract partial class MetricsServiceV2Base
     {
       /// <summary>
@@ -401,6 +402,19 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_CreateLogMetric, serviceImpl.CreateLogMetric)
           .AddMethod(__Method_UpdateLogMetric, serviceImpl.UpdateLogMetric)
           .AddMethod(__Method_DeleteLogMetric, serviceImpl.DeleteLogMetric).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, MetricsServiceV2Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListLogMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListLogMetricsRequest, global::Google.Cloud.Logging.V2.ListLogMetricsResponse>(serviceImpl.ListLogMetrics));
+      serviceBinder.AddMethod(__Method_GetLogMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric>(serviceImpl.GetLogMetric));
+      serviceBinder.AddMethod(__Method_CreateLogMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric>(serviceImpl.CreateLogMetric));
+      serviceBinder.AddMethod(__Method_UpdateLogMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateLogMetricRequest, global::Google.Cloud.Logging.V2.LogMetric>(serviceImpl.UpdateLogMetric));
+      serviceBinder.AddMethod(__Method_DeleteLogMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteLogMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteLogMetric));
     }
 
   }

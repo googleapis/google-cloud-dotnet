@@ -335,13 +335,13 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.rows_ != null) {
         if (rows_ == null) {
-          rows_ = new global::Google.Cloud.Bigtable.V2.RowSet();
+          Rows = new global::Google.Cloud.Bigtable.V2.RowSet();
         }
         Rows.MergeFrom(other.Rows);
       }
       if (other.filter_ != null) {
         if (filter_ == null) {
-          filter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+          Filter = new global::Google.Cloud.Bigtable.V2.RowFilter();
         }
         Filter.MergeFrom(other.Filter);
       }
@@ -365,16 +365,16 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 18: {
             if (rows_ == null) {
-              rows_ = new global::Google.Cloud.Bigtable.V2.RowSet();
+              Rows = new global::Google.Cloud.Bigtable.V2.RowSet();
             }
-            input.ReadMessage(rows_);
+            input.ReadMessage(Rows);
             break;
           }
           case 26: {
             if (filter_ == null) {
-              filter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+              Filter = new global::Google.Cloud.Bigtable.V2.RowFilter();
             }
-            input.ReadMessage(filter_);
+            input.ReadMessage(Filter);
             break;
           }
           case 32: {
@@ -644,6 +644,7 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
 
+
         /// <summary>Field number for the "qualifier" field.</summary>
         public const int QualifierFieldNumber = 3;
         private static readonly pb::FieldCodec<pb::ByteString> _single_qualifier_codec = pb::FieldCodec.ForClassWrapper<pb::ByteString>(26);
@@ -662,6 +663,7 @@ namespace Google.Cloud.Bigtable.V2 {
             qualifier_ = value;
           }
         }
+
 
         /// <summary>Field number for the "timestamp_micros" field.</summary>
         public const int TimestampMicrosFieldNumber = 4;
@@ -2308,7 +2310,7 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           if (other.status_ != null) {
             if (status_ == null) {
-              status_ = new global::Google.Rpc.Status();
+              Status = new global::Google.Rpc.Status();
             }
             Status.MergeFrom(other.Status);
           }
@@ -2329,9 +2331,9 @@ namespace Google.Cloud.Bigtable.V2 {
               }
               case 18: {
                 if (status_ == null) {
-                  status_ = new global::Google.Rpc.Status();
+                  Status = new global::Google.Rpc.Status();
                 }
-                input.ReadMessage(status_);
+                input.ReadMessage(Status);
                 break;
               }
             }
@@ -2590,7 +2592,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.predicateFilter_ != null) {
         if (predicateFilter_ == null) {
-          predicateFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+          PredicateFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
         }
         PredicateFilter.MergeFrom(other.PredicateFilter);
       }
@@ -2625,9 +2627,9 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 50: {
             if (predicateFilter_ == null) {
-              predicateFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+              PredicateFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
             }
-            input.ReadMessage(predicateFilter_);
+            input.ReadMessage(PredicateFilter);
             break;
           }
           case 58: {
@@ -3115,7 +3117,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.row_ != null) {
         if (row_ == null) {
-          row_ = new global::Google.Cloud.Bigtable.V2.Row();
+          Row = new global::Google.Cloud.Bigtable.V2.Row();
         }
         Row.MergeFrom(other.Row);
       }
@@ -3132,9 +3134,9 @@ namespace Google.Cloud.Bigtable.V2 {
             break;
           case 10: {
             if (row_ == null) {
-              row_ = new global::Google.Cloud.Bigtable.V2.Row();
+              Row = new global::Google.Cloud.Bigtable.V2.Row();
             }
-            input.ReadMessage(row_);
+            input.ReadMessage(Row);
             break;
           }
         }

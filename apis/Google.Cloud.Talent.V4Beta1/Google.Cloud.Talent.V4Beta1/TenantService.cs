@@ -223,7 +223,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.tenant_ != null) {
         if (tenant_ == null) {
-          tenant_ = new global::Google.Cloud.Talent.V4Beta1.Tenant();
+          Tenant = new global::Google.Cloud.Talent.V4Beta1.Tenant();
         }
         Tenant.MergeFrom(other.Tenant);
       }
@@ -244,9 +244,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             if (tenant_ == null) {
-              tenant_ = new global::Google.Cloud.Talent.V4Beta1.Tenant();
+              Tenant = new global::Google.Cloud.Talent.V4Beta1.Tenant();
             }
-            input.ReadMessage(tenant_);
+            input.ReadMessage(Tenant);
             break;
           }
         }
@@ -542,13 +542,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.tenant_ != null) {
         if (tenant_ == null) {
-          tenant_ = new global::Google.Cloud.Talent.V4Beta1.Tenant();
+          Tenant = new global::Google.Cloud.Talent.V4Beta1.Tenant();
         }
         Tenant.MergeFrom(other.Tenant);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -565,16 +565,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (tenant_ == null) {
-              tenant_ = new global::Google.Cloud.Talent.V4Beta1.Tenant();
+              Tenant = new global::Google.Cloud.Talent.V4Beta1.Tenant();
             }
-            input.ReadMessage(tenant_);
+            input.ReadMessage(Tenant);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -1084,7 +1084,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
+          Metadata = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
         }
         Metadata.MergeFrom(other.Metadata);
       }
@@ -1109,9 +1109,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 26: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
+              Metadata = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
         }

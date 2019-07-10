@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -39,49 +39,49 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.AlertPolicyService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest> __Marshaller_ListAlertPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> __Marshaller_ListAlertPoliciesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest> __Marshaller_GetAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.AlertPolicy> __Marshaller_AlertPolicy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest> __Marshaller_CreateAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest> __Marshaller_DeleteAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest> __Marshaller_UpdateAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest> __Marshaller_google_monitoring_v3_ListAlertPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> __Marshaller_google_monitoring_v3_ListAlertPoliciesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest> __Marshaller_google_monitoring_v3_GetAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.AlertPolicy> __Marshaller_google_monitoring_v3_AlertPolicy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest> __Marshaller_google_monitoring_v3_CreateAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest> __Marshaller_google_monitoring_v3_DeleteAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest> __Marshaller_google_monitoring_v3_UpdateAlertPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> __Method_ListAlertPolicies = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListAlertPolicies",
-        __Marshaller_ListAlertPoliciesRequest,
-        __Marshaller_ListAlertPoliciesResponse);
+        __Marshaller_google_monitoring_v3_ListAlertPoliciesRequest,
+        __Marshaller_google_monitoring_v3_ListAlertPoliciesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy> __Method_GetAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAlertPolicy",
-        __Marshaller_GetAlertPolicyRequest,
-        __Marshaller_AlertPolicy);
+        __Marshaller_google_monitoring_v3_GetAlertPolicyRequest,
+        __Marshaller_google_monitoring_v3_AlertPolicy);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy> __Method_CreateAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateAlertPolicy",
-        __Marshaller_CreateAlertPolicyRequest,
-        __Marshaller_AlertPolicy);
+        __Marshaller_google_monitoring_v3_CreateAlertPolicyRequest,
+        __Marshaller_google_monitoring_v3_AlertPolicy);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteAlertPolicy",
-        __Marshaller_DeleteAlertPolicyRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_monitoring_v3_DeleteAlertPolicyRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy> __Method_UpdateAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateAlertPolicy",
-        __Marshaller_UpdateAlertPolicyRequest,
-        __Marshaller_AlertPolicy);
+        __Marshaller_google_monitoring_v3_UpdateAlertPolicyRequest,
+        __Marshaller_google_monitoring_v3_AlertPolicy);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -90,6 +90,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Base class for server-side implementations of AlertPolicyService</summary>
+    [grpc::BindServiceMethod(typeof(AlertPolicyService), "BindService")]
     public abstract partial class AlertPolicyServiceBase
     {
       /// <summary>
@@ -424,6 +425,19 @@ namespace Google.Cloud.Monitoring.V3 {
           .AddMethod(__Method_CreateAlertPolicy, serviceImpl.CreateAlertPolicy)
           .AddMethod(__Method_DeleteAlertPolicy, serviceImpl.DeleteAlertPolicy)
           .AddMethod(__Method_UpdateAlertPolicy, serviceImpl.UpdateAlertPolicy).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, AlertPolicyServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListAlertPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse>(serviceImpl.ListAlertPolicies));
+      serviceBinder.AddMethod(__Method_GetAlertPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(serviceImpl.GetAlertPolicy));
+      serviceBinder.AddMethod(__Method_CreateAlertPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(serviceImpl.CreateAlertPolicy));
+      serviceBinder.AddMethod(__Method_DeleteAlertPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAlertPolicy));
+      serviceBinder.AddMethod(__Method_UpdateAlertPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(serviceImpl.UpdateAlertPolicy));
     }
 
   }

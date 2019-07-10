@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,15 +31,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.EventService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest> __Marshaller_CreateClientEventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ClientEvent> __Marshaller_ClientEvent = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest> __Marshaller_google_cloud_talent_v4beta1_CreateClientEventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ClientEvent> __Marshaller_google_cloud_talent_v4beta1_ClientEvent = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest, global::Google.Cloud.Talent.V4Beta1.ClientEvent> __Method_CreateClientEvent = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest, global::Google.Cloud.Talent.V4Beta1.ClientEvent>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateClientEvent",
-        __Marshaller_CreateClientEventRequest,
-        __Marshaller_ClientEvent);
+        __Marshaller_google_cloud_talent_v4beta1_CreateClientEventRequest,
+        __Marshaller_google_cloud_talent_v4beta1_ClientEvent);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -48,6 +48,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of EventService</summary>
+    [grpc::BindServiceMethod(typeof(EventService), "BindService")]
     public abstract partial class EventServiceBase
     {
       /// <summary>
@@ -173,6 +174,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateClientEvent, serviceImpl.CreateClientEvent).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, EventServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateClientEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest, global::Google.Cloud.Talent.V4Beta1.ClientEvent>(serviceImpl.CreateClientEvent));
     }
 
   }

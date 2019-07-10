@@ -206,7 +206,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.event_ != null) {
         if (event_ == null) {
-          event_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent();
+          Event = new global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent();
         }
         Event.MergeFrom(other.Event);
       }
@@ -227,9 +227,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 18: {
             if (event_ == null) {
-              event_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent();
+              Event = new global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent();
             }
-            input.ReadMessage(event_);
+            input.ReadMessage(Event);
             break;
           }
         }
@@ -533,13 +533,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.eventTime_ != null) {
         if (eventTime_ == null) {
-          eventTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EventTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EventTime.MergeFrom(other.EventTime);
       }
       if (other.serviceContext_ != null) {
         if (serviceContext_ == null) {
-          serviceContext_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
+          ServiceContext = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
         }
         ServiceContext.MergeFrom(other.ServiceContext);
       }
@@ -548,7 +548,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
+          Context = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
         }
         Context.MergeFrom(other.Context);
       }
@@ -565,16 +565,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             break;
           case 10: {
             if (eventTime_ == null) {
-              eventTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EventTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(eventTime_);
+            input.ReadMessage(EventTime);
             break;
           }
           case 18: {
             if (serviceContext_ == null) {
-              serviceContext_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
+              ServiceContext = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
             }
-            input.ReadMessage(serviceContext_);
+            input.ReadMessage(ServiceContext);
             break;
           }
           case 26: {
@@ -583,9 +583,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 34: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
+              Context = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
         }

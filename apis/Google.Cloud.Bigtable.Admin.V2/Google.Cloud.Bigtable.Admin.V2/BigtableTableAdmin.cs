@@ -362,7 +362,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.table_ != null) {
         if (table_ == null) {
-          table_ = new global::Google.Cloud.Bigtable.Admin.V2.Table();
+          Table = new global::Google.Cloud.Bigtable.Admin.V2.Table();
         }
         Table.MergeFrom(other.Table);
       }
@@ -388,9 +388,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 26: {
             if (table_ == null) {
-              table_ = new global::Google.Cloud.Bigtable.Admin.V2.Table();
+              Table = new global::Google.Cloud.Bigtable.Admin.V2.Table();
             }
-            input.ReadMessage(table_);
+            input.ReadMessage(Table);
             break;
           }
           case 34: {
@@ -1200,7 +1200,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           }
           case 16: {
-            view_ = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) input.ReadEnum();
+            View = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) input.ReadEnum();
             break;
           }
           case 26: {
@@ -1539,7 +1539,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           }
           case 16: {
-            view_ = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) input.ReadEnum();
+            View = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) input.ReadEnum();
             break;
           }
         }
@@ -2952,7 +2952,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.ttl_ != null) {
         if (ttl_ == null) {
-          ttl_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Ttl.MergeFrom(other.Ttl);
       }
@@ -2984,9 +2984,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 34: {
             if (ttl_ == null) {
-              ttl_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(ttl_);
+            input.ReadMessage(Ttl);
             break;
           }
           case 42: {
@@ -3825,19 +3825,19 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.originalRequest_ != null) {
         if (originalRequest_ == null) {
-          originalRequest_ = new global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest();
+          OriginalRequest = new global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest();
         }
         OriginalRequest.MergeFrom(other.OriginalRequest);
       }
       if (other.requestTime_ != null) {
         if (requestTime_ == null) {
-          requestTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          RequestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         RequestTime.MergeFrom(other.RequestTime);
       }
       if (other.finishTime_ != null) {
         if (finishTime_ == null) {
-          finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         FinishTime.MergeFrom(other.FinishTime);
       }
@@ -3854,23 +3854,23 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           case 10: {
             if (originalRequest_ == null) {
-              originalRequest_ = new global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest();
+              OriginalRequest = new global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest();
             }
-            input.ReadMessage(originalRequest_);
+            input.ReadMessage(OriginalRequest);
             break;
           }
           case 18: {
             if (requestTime_ == null) {
-              requestTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              RequestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(requestTime_);
+            input.ReadMessage(RequestTime);
             break;
           }
           case 26: {
             if (finishTime_ == null) {
-              finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(finishTime_);
+            input.ReadMessage(FinishTime);
             break;
           }
         }
@@ -4046,19 +4046,19 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.originalRequest_ != null) {
         if (originalRequest_ == null) {
-          originalRequest_ = new global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest();
+          OriginalRequest = new global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest();
         }
         OriginalRequest.MergeFrom(other.OriginalRequest);
       }
       if (other.requestTime_ != null) {
         if (requestTime_ == null) {
-          requestTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          RequestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         RequestTime.MergeFrom(other.RequestTime);
       }
       if (other.finishTime_ != null) {
         if (finishTime_ == null) {
-          finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         FinishTime.MergeFrom(other.FinishTime);
       }
@@ -4075,23 +4075,23 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           case 10: {
             if (originalRequest_ == null) {
-              originalRequest_ = new global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest();
+              OriginalRequest = new global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest();
             }
-            input.ReadMessage(originalRequest_);
+            input.ReadMessage(OriginalRequest);
             break;
           }
           case 18: {
             if (requestTime_ == null) {
-              requestTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              RequestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(requestTime_);
+            input.ReadMessage(RequestTime);
             break;
           }
           case 26: {
             if (finishTime_ == null) {
-              finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              FinishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(finishTime_);
+            input.ReadMessage(FinishTime);
             break;
           }
         }

@@ -276,7 +276,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 24: {
-            usageType_ = (global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) input.ReadEnum();
+            UsageType = (global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) input.ReadEnum();
             break;
           }
           case 34: {

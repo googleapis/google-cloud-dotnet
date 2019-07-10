@@ -570,7 +570,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       features_.Add(other.features_);
       if (other.videoContext_ != null) {
         if (videoContext_ == null) {
-          videoContext_ = new global::Google.Cloud.VideoIntelligence.V1.VideoContext();
+          VideoContext = new global::Google.Cloud.VideoIntelligence.V1.VideoContext();
         }
         VideoContext.MergeFrom(other.VideoContext);
       }
@@ -602,9 +602,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 26: {
             if (videoContext_ == null) {
-              videoContext_ = new global::Google.Cloud.VideoIntelligence.V1.VideoContext();
+              VideoContext = new global::Google.Cloud.VideoIntelligence.V1.VideoContext();
             }
-            input.ReadMessage(videoContext_);
+            input.ReadMessage(VideoContext);
             break;
           }
           case 34: {
@@ -903,43 +903,43 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       segments_.Add(other.segments_);
       if (other.labelDetectionConfig_ != null) {
         if (labelDetectionConfig_ == null) {
-          labelDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig();
+          LabelDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig();
         }
         LabelDetectionConfig.MergeFrom(other.LabelDetectionConfig);
       }
       if (other.shotChangeDetectionConfig_ != null) {
         if (shotChangeDetectionConfig_ == null) {
-          shotChangeDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig();
+          ShotChangeDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig();
         }
         ShotChangeDetectionConfig.MergeFrom(other.ShotChangeDetectionConfig);
       }
       if (other.explicitContentDetectionConfig_ != null) {
         if (explicitContentDetectionConfig_ == null) {
-          explicitContentDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig();
+          ExplicitContentDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig();
         }
         ExplicitContentDetectionConfig.MergeFrom(other.ExplicitContentDetectionConfig);
       }
       if (other.faceDetectionConfig_ != null) {
         if (faceDetectionConfig_ == null) {
-          faceDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig();
+          FaceDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig();
         }
         FaceDetectionConfig.MergeFrom(other.FaceDetectionConfig);
       }
       if (other.speechTranscriptionConfig_ != null) {
         if (speechTranscriptionConfig_ == null) {
-          speechTranscriptionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig();
+          SpeechTranscriptionConfig = new global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig();
         }
         SpeechTranscriptionConfig.MergeFrom(other.SpeechTranscriptionConfig);
       }
       if (other.textDetectionConfig_ != null) {
         if (textDetectionConfig_ == null) {
-          textDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig();
+          TextDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig();
         }
         TextDetectionConfig.MergeFrom(other.TextDetectionConfig);
       }
       if (other.objectTrackingConfig_ != null) {
         if (objectTrackingConfig_ == null) {
-          objectTrackingConfig_ = new global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig();
+          ObjectTrackingConfig = new global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig();
         }
         ObjectTrackingConfig.MergeFrom(other.ObjectTrackingConfig);
       }
@@ -960,51 +960,51 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 18: {
             if (labelDetectionConfig_ == null) {
-              labelDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig();
+              LabelDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig();
             }
-            input.ReadMessage(labelDetectionConfig_);
+            input.ReadMessage(LabelDetectionConfig);
             break;
           }
           case 26: {
             if (shotChangeDetectionConfig_ == null) {
-              shotChangeDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig();
+              ShotChangeDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig();
             }
-            input.ReadMessage(shotChangeDetectionConfig_);
+            input.ReadMessage(ShotChangeDetectionConfig);
             break;
           }
           case 34: {
             if (explicitContentDetectionConfig_ == null) {
-              explicitContentDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig();
+              ExplicitContentDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig();
             }
-            input.ReadMessage(explicitContentDetectionConfig_);
+            input.ReadMessage(ExplicitContentDetectionConfig);
             break;
           }
           case 42: {
             if (faceDetectionConfig_ == null) {
-              faceDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig();
+              FaceDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig();
             }
-            input.ReadMessage(faceDetectionConfig_);
+            input.ReadMessage(FaceDetectionConfig);
             break;
           }
           case 50: {
             if (speechTranscriptionConfig_ == null) {
-              speechTranscriptionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig();
+              SpeechTranscriptionConfig = new global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig();
             }
-            input.ReadMessage(speechTranscriptionConfig_);
+            input.ReadMessage(SpeechTranscriptionConfig);
             break;
           }
           case 66: {
             if (textDetectionConfig_ == null) {
-              textDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig();
+              TextDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig();
             }
-            input.ReadMessage(textDetectionConfig_);
+            input.ReadMessage(TextDetectionConfig);
             break;
           }
           case 106: {
             if (objectTrackingConfig_ == null) {
-              objectTrackingConfig_ = new global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig();
+              ObjectTrackingConfig = new global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig();
             }
-            input.ReadMessage(objectTrackingConfig_);
+            input.ReadMessage(ObjectTrackingConfig);
             break;
           }
         }
@@ -1263,7 +1263,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            labelDetectionMode_ = (global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode) input.ReadEnum();
+            LabelDetectionMode = (global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode) input.ReadEnum();
             break;
           }
           case 16: {
@@ -2170,13 +2170,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.startTimeOffset_ != null) {
         if (startTimeOffset_ == null) {
-          startTimeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          StartTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         StartTimeOffset.MergeFrom(other.StartTimeOffset);
       }
       if (other.endTimeOffset_ != null) {
         if (endTimeOffset_ == null) {
-          endTimeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          EndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         EndTimeOffset.MergeFrom(other.EndTimeOffset);
       }
@@ -2193,16 +2193,16 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (startTimeOffset_ == null) {
-              startTimeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              StartTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(startTimeOffset_);
+            input.ReadMessage(StartTimeOffset);
             break;
           }
           case 18: {
             if (endTimeOffset_ == null) {
-              endTimeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              EndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(endTimeOffset_);
+            input.ReadMessage(EndTimeOffset);
             break;
           }
         }
@@ -2348,7 +2348,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.segment_ != null) {
         if (segment_ == null) {
-          segment_ = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+          Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
         }
         Segment.MergeFrom(other.Segment);
       }
@@ -2368,9 +2368,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (segment_ == null) {
-              segment_ = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
             }
-            input.ReadMessage(segment_);
+            input.ReadMessage(Segment);
             break;
           }
           case 21: {
@@ -2521,7 +2521,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.timeOffset_ != null) {
         if (timeOffset_ == null) {
-          timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         TimeOffset.MergeFrom(other.TimeOffset);
       }
@@ -2541,9 +2541,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (timeOffset_ == null) {
-              timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timeOffset_);
+            input.ReadMessage(TimeOffset);
             break;
           }
           case 21: {
@@ -2925,7 +2925,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          entity_ = new global::Google.Cloud.VideoIntelligence.V1.Entity();
+          Entity = new global::Google.Cloud.VideoIntelligence.V1.Entity();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -2945,9 +2945,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (entity_ == null) {
-              entity_ = new global::Google.Cloud.VideoIntelligence.V1.Entity();
+              Entity = new global::Google.Cloud.VideoIntelligence.V1.Entity();
             }
-            input.ReadMessage(entity_);
+            input.ReadMessage(Entity);
             break;
           }
           case 18: {
@@ -3106,7 +3106,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.timeOffset_ != null) {
         if (timeOffset_ == null) {
-          timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         TimeOffset.MergeFrom(other.TimeOffset);
       }
@@ -3126,13 +3126,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (timeOffset_ == null) {
-              timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timeOffset_);
+            input.ReadMessage(TimeOffset);
             break;
           }
           case 16: {
-            pornographyLikelihood_ = (global::Google.Cloud.VideoIntelligence.V1.Likelihood) input.ReadEnum();
+            PornographyLikelihood = (global::Google.Cloud.VideoIntelligence.V1.Likelihood) input.ReadEnum();
             break;
           }
         }
@@ -3613,7 +3613,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.segment_ != null) {
         if (segment_ == null) {
-          segment_ = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+          Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
         }
         Segment.MergeFrom(other.Segment);
       }
@@ -3630,9 +3630,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (segment_ == null) {
-              segment_ = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
             }
-            input.ReadMessage(segment_);
+            input.ReadMessage(Segment);
             break;
           }
         }
@@ -3776,7 +3776,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       normalizedBoundingBoxes_.Add(other.normalizedBoundingBoxes_);
       if (other.timeOffset_ != null) {
         if (timeOffset_ == null) {
-          timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         TimeOffset.MergeFrom(other.TimeOffset);
       }
@@ -3797,9 +3797,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 18: {
             if (timeOffset_ == null) {
-              timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timeOffset_);
+            input.ReadMessage(TimeOffset);
             break;
           }
         }
@@ -4309,7 +4309,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       shotAnnotations_.Add(other.shotAnnotations_);
       if (other.explicitAnnotation_ != null) {
         if (explicitAnnotation_ == null) {
-          explicitAnnotation_ = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation();
+          ExplicitAnnotation = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation();
         }
         ExplicitAnnotation.MergeFrom(other.ExplicitAnnotation);
       }
@@ -4318,7 +4318,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       objectAnnotations_.Add(other.objectAnnotations_);
       if (other.error_ != null) {
         if (error_ == null) {
-          error_ = new global::Google.Rpc.Status();
+          Error = new global::Google.Rpc.Status();
         }
         Error.MergeFrom(other.Error);
       }
@@ -4359,16 +4359,16 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 58: {
             if (explicitAnnotation_ == null) {
-              explicitAnnotation_ = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation();
+              ExplicitAnnotation = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation();
             }
-            input.ReadMessage(explicitAnnotation_);
+            input.ReadMessage(ExplicitAnnotation);
             break;
           }
           case 74: {
             if (error_ == null) {
-              error_ = new global::Google.Rpc.Status();
+              Error = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(error_);
+            input.ReadMessage(Error);
             break;
           }
           case 90: {
@@ -4711,13 +4711,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
@@ -4742,16 +4742,16 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 26: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 34: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
         }
@@ -6001,13 +6001,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -6033,16 +6033,16 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 26: {
@@ -6530,7 +6530,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.segment_ != null) {
         if (segment_ == null) {
-          segment_ = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+          Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
         }
         Segment.MergeFrom(other.Segment);
       }
@@ -6551,9 +6551,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (segment_ == null) {
-              segment_ = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
             }
-            input.ReadMessage(segment_);
+            input.ReadMessage(Segment);
             break;
           }
           case 21: {
@@ -6709,13 +6709,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.rotatedBoundingBox_ != null) {
         if (rotatedBoundingBox_ == null) {
-          rotatedBoundingBox_ = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly();
+          RotatedBoundingBox = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly();
         }
         RotatedBoundingBox.MergeFrom(other.RotatedBoundingBox);
       }
       if (other.timeOffset_ != null) {
         if (timeOffset_ == null) {
-          timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         TimeOffset.MergeFrom(other.TimeOffset);
       }
@@ -6732,16 +6732,16 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (rotatedBoundingBox_ == null) {
-              rotatedBoundingBox_ = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly();
+              RotatedBoundingBox = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly();
             }
-            input.ReadMessage(rotatedBoundingBox_);
+            input.ReadMessage(RotatedBoundingBox);
             break;
           }
           case 18: {
             if (timeOffset_ == null) {
-              timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timeOffset_);
+            input.ReadMessage(TimeOffset);
             break;
           }
         }
@@ -7048,13 +7048,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.normalizedBoundingBox_ != null) {
         if (normalizedBoundingBox_ == null) {
-          normalizedBoundingBox_ = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox();
+          NormalizedBoundingBox = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox();
         }
         NormalizedBoundingBox.MergeFrom(other.NormalizedBoundingBox);
       }
       if (other.timeOffset_ != null) {
         if (timeOffset_ == null) {
-          timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         TimeOffset.MergeFrom(other.TimeOffset);
       }
@@ -7071,16 +7071,16 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (normalizedBoundingBox_ == null) {
-              normalizedBoundingBox_ = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox();
+              NormalizedBoundingBox = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox();
             }
-            input.ReadMessage(normalizedBoundingBox_);
+            input.ReadMessage(NormalizedBoundingBox);
             break;
           }
           case 18: {
             if (timeOffset_ == null) {
-              timeOffset_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timeOffset_);
+            input.ReadMessage(TimeOffset);
             break;
           }
         }
@@ -7329,7 +7329,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          entity_ = new global::Google.Cloud.VideoIntelligence.V1.Entity();
+          Entity = new global::Google.Cloud.VideoIntelligence.V1.Entity();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -7362,9 +7362,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             if (entity_ == null) {
-              entity_ = new global::Google.Cloud.VideoIntelligence.V1.Entity();
+              Entity = new global::Google.Cloud.VideoIntelligence.V1.Entity();
             }
-            input.ReadMessage(entity_);
+            input.ReadMessage(Entity);
             break;
           }
           case 18: {

@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -33,82 +33,82 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   {
     static readonly string __ServiceName = "google.cloud.bigquery.datatransfer.v1.DataSourceService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferRunRequest> __Marshaller_UpdateTransferRunRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferRunRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> __Marshaller_TransferRun = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.LogTransferRunMessagesRequest> __Marshaller_LogTransferRunMessagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.LogTransferRunMessagesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.StartBigQueryJobsRequest> __Marshaller_StartBigQueryJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.StartBigQueryJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.FinishRunRequest> __Marshaller_FinishRunRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.FinishRunRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateDataSourceDefinitionRequest> __Marshaller_CreateDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.CreateDataSourceDefinitionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition> __Marshaller_DataSourceDefinition = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateDataSourceDefinitionRequest> __Marshaller_UpdateDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateDataSourceDefinitionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteDataSourceDefinitionRequest> __Marshaller_DeleteDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteDataSourceDefinitionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceDefinitionRequest> __Marshaller_GetDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceDefinitionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsRequest> __Marshaller_ListDataSourceDefinitionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsResponse> __Marshaller_ListDataSourceDefinitionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferRunRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_UpdateTransferRunRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferRunRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferRun = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.LogTransferRunMessagesRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_LogTransferRunMessagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.LogTransferRunMessagesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.StartBigQueryJobsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_StartBigQueryJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.StartBigQueryJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.FinishRunRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_FinishRunRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.FinishRunRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateDataSourceDefinitionRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_CreateDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.CreateDataSourceDefinitionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition> __Marshaller_google_cloud_bigquery_datatransfer_v1_DataSourceDefinition = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateDataSourceDefinitionRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_UpdateDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateDataSourceDefinitionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteDataSourceDefinitionRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_DeleteDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteDataSourceDefinitionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceDefinitionRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_GetDataSourceDefinitionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceDefinitionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourceDefinitionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourceDefinitionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferRunRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> __Method_UpdateTransferRun = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferRunRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateTransferRun",
-        __Marshaller_UpdateTransferRunRequest,
-        __Marshaller_TransferRun);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_UpdateTransferRunRequest,
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferRun);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.LogTransferRunMessagesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_LogTransferRunMessages = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.LogTransferRunMessagesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "LogTransferRunMessages",
-        __Marshaller_LogTransferRunMessagesRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_LogTransferRunMessagesRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.StartBigQueryJobsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_StartBigQueryJobs = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.StartBigQueryJobsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "StartBigQueryJobs",
-        __Marshaller_StartBigQueryJobsRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_StartBigQueryJobsRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.FinishRunRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_FinishRun = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.FinishRunRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "FinishRun",
-        __Marshaller_FinishRunRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_FinishRunRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition> __Method_CreateDataSourceDefinition = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateDataSourceDefinition",
-        __Marshaller_CreateDataSourceDefinitionRequest,
-        __Marshaller_DataSourceDefinition);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_CreateDataSourceDefinitionRequest,
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_DataSourceDefinition);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition> __Method_UpdateDataSourceDefinition = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateDataSourceDefinition",
-        __Marshaller_UpdateDataSourceDefinitionRequest,
-        __Marshaller_DataSourceDefinition);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_UpdateDataSourceDefinitionRequest,
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_DataSourceDefinition);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteDataSourceDefinitionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDataSourceDefinition = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteDataSourceDefinitionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteDataSourceDefinition",
-        __Marshaller_DeleteDataSourceDefinitionRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_DeleteDataSourceDefinitionRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition> __Method_GetDataSourceDefinition = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetDataSourceDefinition",
-        __Marshaller_GetDataSourceDefinitionRequest,
-        __Marshaller_DataSourceDefinition);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_GetDataSourceDefinitionRequest,
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_DataSourceDefinition);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsResponse> __Method_ListDataSourceDefinitions = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListDataSourceDefinitions",
-        __Marshaller_ListDataSourceDefinitionsRequest,
-        __Marshaller_ListDataSourceDefinitionsResponse);
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourceDefinitionsRequest,
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourceDefinitionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -117,6 +117,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     /// <summary>Base class for server-side implementations of DataSourceService</summary>
+    [grpc::BindServiceMethod(typeof(DataSourceService), "BindService")]
     public abstract partial class DataSourceServiceBase
     {
       /// <summary>
@@ -840,6 +841,23 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           .AddMethod(__Method_DeleteDataSourceDefinition, serviceImpl.DeleteDataSourceDefinition)
           .AddMethod(__Method_GetDataSourceDefinition, serviceImpl.GetDataSourceDefinition)
           .AddMethod(__Method_ListDataSourceDefinitions, serviceImpl.ListDataSourceDefinitions).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, DataSourceServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_UpdateTransferRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferRunRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>(serviceImpl.UpdateTransferRun));
+      serviceBinder.AddMethod(__Method_LogTransferRunMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.LogTransferRunMessagesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.LogTransferRunMessages));
+      serviceBinder.AddMethod(__Method_StartBigQueryJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.StartBigQueryJobsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.StartBigQueryJobs));
+      serviceBinder.AddMethod(__Method_FinishRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.FinishRunRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.FinishRun));
+      serviceBinder.AddMethod(__Method_CreateDataSourceDefinition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition>(serviceImpl.CreateDataSourceDefinition));
+      serviceBinder.AddMethod(__Method_UpdateDataSourceDefinition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition>(serviceImpl.UpdateDataSourceDefinition));
+      serviceBinder.AddMethod(__Method_DeleteDataSourceDefinition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteDataSourceDefinitionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDataSourceDefinition));
+      serviceBinder.AddMethod(__Method_GetDataSourceDefinition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceDefinitionRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceDefinition>(serviceImpl.GetDataSourceDefinition));
+      serviceBinder.AddMethod(__Method_ListDataSourceDefinitions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourceDefinitionsResponse>(serviceImpl.ListDataSourceDefinitions));
     }
 
   }

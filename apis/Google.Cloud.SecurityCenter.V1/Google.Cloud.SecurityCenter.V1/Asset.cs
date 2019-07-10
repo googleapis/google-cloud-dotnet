@@ -331,32 +331,32 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.securityCenterProperties_ != null) {
         if (securityCenterProperties_ == null) {
-          securityCenterProperties_ = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties();
+          SecurityCenterProperties = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties();
         }
         SecurityCenterProperties.MergeFrom(other.SecurityCenterProperties);
       }
       resourceProperties_.Add(other.resourceProperties_);
       if (other.securityMarks_ != null) {
         if (securityMarks_ == null) {
-          securityMarks_ = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
+          SecurityMarks = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
         }
         SecurityMarks.MergeFrom(other.SecurityMarks);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.iamPolicy_ != null) {
         if (iamPolicy_ == null) {
-          iamPolicy_ = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy();
+          IamPolicy = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy();
         }
         IamPolicy.MergeFrom(other.IamPolicy);
       }
@@ -377,9 +377,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 18: {
             if (securityCenterProperties_ == null) {
-              securityCenterProperties_ = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties();
+              SecurityCenterProperties = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties();
             }
-            input.ReadMessage(securityCenterProperties_);
+            input.ReadMessage(SecurityCenterProperties);
             break;
           }
           case 58: {
@@ -388,30 +388,30 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 66: {
             if (securityMarks_ == null) {
-              securityMarks_ = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
+              SecurityMarks = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
             }
-            input.ReadMessage(securityMarks_);
+            input.ReadMessage(SecurityMarks);
             break;
           }
           case 74: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 82: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 90: {
             if (iamPolicy_ == null) {
-              iamPolicy_ = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy();
+              IamPolicy = new global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy();
             }
-            input.ReadMessage(iamPolicy_);
+            input.ReadMessage(IamPolicy);
             break;
           }
         }

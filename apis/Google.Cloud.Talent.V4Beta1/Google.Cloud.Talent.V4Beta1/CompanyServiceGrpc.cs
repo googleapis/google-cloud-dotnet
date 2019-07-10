@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,49 +31,49 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.CompanyService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest> __Marshaller_CreateCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Company> __Marshaller_Company = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Company.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest> __Marshaller_GetCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest> __Marshaller_UpdateCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest> __Marshaller_DeleteCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest> __Marshaller_ListCompaniesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> __Marshaller_ListCompaniesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_CreateCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Company> __Marshaller_google_cloud_talent_v4beta1_Company = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Company.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_GetCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company> __Method_CreateCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateCompany",
-        __Marshaller_CreateCompanyRequest,
-        __Marshaller_Company);
+        __Marshaller_google_cloud_talent_v4beta1_CreateCompanyRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Company);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company> __Method_GetCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCompany",
-        __Marshaller_GetCompanyRequest,
-        __Marshaller_Company);
+        __Marshaller_google_cloud_talent_v4beta1_GetCompanyRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Company);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company> __Method_UpdateCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCompany",
-        __Marshaller_UpdateCompanyRequest,
-        __Marshaller_Company);
+        __Marshaller_google_cloud_talent_v4beta1_UpdateCompanyRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Company);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteCompany",
-        __Marshaller_DeleteCompanyRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_talent_v4beta1_DeleteCompanyRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest, global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> __Method_ListCompanies = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest, global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListCompanies",
-        __Marshaller_ListCompaniesRequest,
-        __Marshaller_ListCompaniesResponse);
+        __Marshaller_google_cloud_talent_v4beta1_ListCompaniesRequest,
+        __Marshaller_google_cloud_talent_v4beta1_ListCompaniesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -82,6 +82,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of CompanyService</summary>
+    [grpc::BindServiceMethod(typeof(CompanyService), "BindService")]
     public abstract partial class CompanyServiceBase
     {
       /// <summary>
@@ -406,6 +407,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
           .AddMethod(__Method_UpdateCompany, serviceImpl.UpdateCompany)
           .AddMethod(__Method_DeleteCompany, serviceImpl.DeleteCompany)
           .AddMethod(__Method_ListCompanies, serviceImpl.ListCompanies).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, CompanyServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(serviceImpl.CreateCompany));
+      serviceBinder.AddMethod(__Method_GetCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(serviceImpl.GetCompany));
+      serviceBinder.AddMethod(__Method_UpdateCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(serviceImpl.UpdateCompany));
+      serviceBinder.AddMethod(__Method_DeleteCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCompany));
+      serviceBinder.AddMethod(__Method_ListCompanies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest, global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse>(serviceImpl.ListCompanies));
     }
 
   }

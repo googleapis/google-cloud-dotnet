@@ -1068,14 +1068,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
       addresses_.Add(other.addresses_);
       if (other.applicationInfo_ != null) {
         if (applicationInfo_ == null) {
-          applicationInfo_ = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo();
+          ApplicationInfo = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo();
         }
         ApplicationInfo.MergeFrom(other.ApplicationInfo);
       }
       jobBenefits_.Add(other.jobBenefits_);
       if (other.compensationInfo_ != null) {
         if (compensationInfo_ == null) {
-          compensationInfo_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo();
+          CompensationInfo = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo();
         }
         CompensationInfo.MergeFrom(other.CompensationInfo);
       }
@@ -1111,37 +1111,37 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.jobStartTime_ != null) {
         if (jobStartTime_ == null) {
-          jobStartTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          JobStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         JobStartTime.MergeFrom(other.JobStartTime);
       }
       if (other.jobEndTime_ != null) {
         if (jobEndTime_ == null) {
-          jobEndTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          JobEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         JobEndTime.MergeFrom(other.JobEndTime);
       }
       if (other.postingPublishTime_ != null) {
         if (postingPublishTime_ == null) {
-          postingPublishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          PostingPublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PostingPublishTime.MergeFrom(other.PostingPublishTime);
       }
       if (other.postingExpireTime_ != null) {
         if (postingExpireTime_ == null) {
-          postingExpireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          PostingExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PostingExpireTime.MergeFrom(other.PostingExpireTime);
       }
       if (other.postingCreateTime_ != null) {
         if (postingCreateTime_ == null) {
-          postingCreateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          PostingCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PostingCreateTime.MergeFrom(other.PostingCreateTime);
       }
       if (other.postingUpdateTime_ != null) {
         if (postingUpdateTime_ == null) {
-          postingUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          PostingUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PostingUpdateTime.MergeFrom(other.PostingUpdateTime);
       }
@@ -1150,13 +1150,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.derivedInfo_ != null) {
         if (derivedInfo_ == null) {
-          derivedInfo_ = new global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo();
+          DerivedInfo = new global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo();
         }
         DerivedInfo.MergeFrom(other.DerivedInfo);
       }
       if (other.processingOptions_ != null) {
         if (processingOptions_ == null) {
-          processingOptions_ = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions();
+          ProcessingOptions = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions();
         }
         ProcessingOptions.MergeFrom(other.ProcessingOptions);
       }
@@ -1197,9 +1197,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 58: {
             if (applicationInfo_ == null) {
-              applicationInfo_ = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo();
+              ApplicationInfo = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo();
             }
-            input.ReadMessage(applicationInfo_);
+            input.ReadMessage(ApplicationInfo);
             break;
           }
           case 66:
@@ -1209,9 +1209,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 74: {
             if (compensationInfo_ == null) {
-              compensationInfo_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo();
+              CompensationInfo = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo();
             }
-            input.ReadMessage(compensationInfo_);
+            input.ReadMessage(CompensationInfo);
             break;
           }
           case 82: {
@@ -1241,7 +1241,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 128: {
-            jobLevel_ = (global::Google.Cloud.Talent.V4Beta1.JobLevel) input.ReadEnum();
+            JobLevel = (global::Google.Cloud.Talent.V4Beta1.JobLevel) input.ReadEnum();
             break;
           }
           case 136: {
@@ -1257,53 +1257,53 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 160: {
-            postingRegion_ = (global::Google.Cloud.Talent.V4Beta1.PostingRegion) input.ReadEnum();
+            PostingRegion = (global::Google.Cloud.Talent.V4Beta1.PostingRegion) input.ReadEnum();
             break;
           }
           case 168: {
-            visibility_ = (global::Google.Cloud.Talent.V4Beta1.Visibility) input.ReadEnum();
+            Visibility = (global::Google.Cloud.Talent.V4Beta1.Visibility) input.ReadEnum();
             break;
           }
           case 178: {
             if (jobStartTime_ == null) {
-              jobStartTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              JobStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(jobStartTime_);
+            input.ReadMessage(JobStartTime);
             break;
           }
           case 186: {
             if (jobEndTime_ == null) {
-              jobEndTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              JobEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(jobEndTime_);
+            input.ReadMessage(JobEndTime);
             break;
           }
           case 194: {
             if (postingPublishTime_ == null) {
-              postingPublishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              PostingPublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(postingPublishTime_);
+            input.ReadMessage(PostingPublishTime);
             break;
           }
           case 202: {
             if (postingExpireTime_ == null) {
-              postingExpireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              PostingExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(postingExpireTime_);
+            input.ReadMessage(PostingExpireTime);
             break;
           }
           case 210: {
             if (postingCreateTime_ == null) {
-              postingCreateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              PostingCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(postingCreateTime_);
+            input.ReadMessage(PostingCreateTime);
             break;
           }
           case 218: {
             if (postingUpdateTime_ == null) {
-              postingUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              PostingUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(postingUpdateTime_);
+            input.ReadMessage(PostingUpdateTime);
             break;
           }
           case 226: {
@@ -1312,16 +1312,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 234: {
             if (derivedInfo_ == null) {
-              derivedInfo_ = new global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo();
+              DerivedInfo = new global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo();
             }
-            input.ReadMessage(derivedInfo_);
+            input.ReadMessage(DerivedInfo);
             break;
           }
           case 242: {
             if (processingOptions_ == null) {
-              processingOptions_ = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions();
+              ProcessingOptions = new global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions();
             }
-            input.ReadMessage(processingOptions_);
+            input.ReadMessage(ProcessingOptions);
             break;
           }
         }
@@ -1858,7 +1858,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
                 break;
               }
               case 16: {
-                htmlSanitization_ = (global::Google.Cloud.Talent.V4Beta1.HtmlSanitization) input.ReadEnum();
+                HtmlSanitization = (global::Google.Cloud.Talent.V4Beta1.HtmlSanitization) input.ReadEnum();
                 break;
               }
             }

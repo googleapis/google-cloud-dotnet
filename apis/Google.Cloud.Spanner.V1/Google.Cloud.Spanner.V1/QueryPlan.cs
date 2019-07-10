@@ -336,19 +336,19 @@ namespace Google.Cloud.Spanner.V1 {
       childLinks_.Add(other.childLinks_);
       if (other.shortRepresentation_ != null) {
         if (shortRepresentation_ == null) {
-          shortRepresentation_ = new global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation();
+          ShortRepresentation = new global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation();
         }
         ShortRepresentation.MergeFrom(other.ShortRepresentation);
       }
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Metadata = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Metadata.MergeFrom(other.Metadata);
       }
       if (other.executionStats_ != null) {
         if (executionStats_ == null) {
-          executionStats_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          ExecutionStats = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         ExecutionStats.MergeFrom(other.ExecutionStats);
       }
@@ -368,7 +368,7 @@ namespace Google.Cloud.Spanner.V1 {
             break;
           }
           case 16: {
-            kind_ = (global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind) input.ReadEnum();
+            Kind = (global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind) input.ReadEnum();
             break;
           }
           case 26: {
@@ -381,23 +381,23 @@ namespace Google.Cloud.Spanner.V1 {
           }
           case 42: {
             if (shortRepresentation_ == null) {
-              shortRepresentation_ = new global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation();
+              ShortRepresentation = new global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation();
             }
-            input.ReadMessage(shortRepresentation_);
+            input.ReadMessage(ShortRepresentation);
             break;
           }
           case 50: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Metadata = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
           case 58: {
             if (executionStats_ == null) {
-              executionStats_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              ExecutionStats = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(executionStats_);
+            input.ReadMessage(ExecutionStats);
             break;
           }
         }

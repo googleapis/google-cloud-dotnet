@@ -573,7 +573,7 @@ namespace Google.Cloud.Vision.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                type_ = (global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType) input.ReadEnum();
+                Type = (global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType) input.ReadEnum();
                 break;
               }
               case 16: {
@@ -756,7 +756,7 @@ namespace Google.Cloud.Vision.V1 {
           detectedLanguages_.Add(other.detectedLanguages_);
           if (other.detectedBreak_ != null) {
             if (detectedBreak_ == null) {
-              detectedBreak_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak();
+              DetectedBreak = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak();
             }
             DetectedBreak.MergeFrom(other.DetectedBreak);
           }
@@ -777,9 +777,9 @@ namespace Google.Cloud.Vision.V1 {
               }
               case 18: {
                 if (detectedBreak_ == null) {
-                  detectedBreak_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak();
+                  DetectedBreak = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak();
                 }
-                input.ReadMessage(detectedBreak_);
+                input.ReadMessage(DetectedBreak);
                 break;
               }
             }
@@ -998,7 +998,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+          Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
@@ -1025,9 +1025,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+              Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 16: {
@@ -1274,13 +1274,13 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+          Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -1304,16 +1304,16 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+              Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {
@@ -1321,7 +1321,7 @@ namespace Google.Cloud.Vision.V1 {
             break;
           }
           case 32: {
-            blockType_ = (global::Google.Cloud.Vision.V1.Block.Types.BlockType) input.ReadEnum();
+            BlockType = (global::Google.Cloud.Vision.V1.Block.Types.BlockType) input.ReadEnum();
             break;
           }
           case 45: {
@@ -1564,13 +1564,13 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+          Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -1591,16 +1591,16 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+              Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {
@@ -1811,13 +1811,13 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+          Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -1838,16 +1838,16 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+              Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {
@@ -2063,13 +2063,13 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.property_ != null) {
         if (property_ == null) {
-          property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+          Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
         }
         Property.MergeFrom(other.Property);
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -2092,16 +2092,16 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (property_ == null) {
-              property_ = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
+              Property = new global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty();
             }
-            input.ReadMessage(property_);
+            input.ReadMessage(Property);
             break;
           }
           case 18: {
             if (boundingBox_ == null) {
-              boundingBox_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingBox = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingBox_);
+            input.ReadMessage(BoundingBox);
             break;
           }
           case 26: {

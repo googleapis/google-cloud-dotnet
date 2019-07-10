@@ -628,14 +628,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
       jobCategories_.Add(other.jobCategories_);
       if (other.commuteFilter_ != null) {
         if (commuteFilter_ == null) {
-          commuteFilter_ = new global::Google.Cloud.Talent.V4Beta1.CommuteFilter();
+          CommuteFilter = new global::Google.Cloud.Talent.V4Beta1.CommuteFilter();
         }
         CommuteFilter.MergeFrom(other.CommuteFilter);
       }
       companyDisplayNames_.Add(other.companyDisplayNames_);
       if (other.compensationFilter_ != null) {
         if (compensationFilter_ == null) {
-          compensationFilter_ = new global::Google.Cloud.Talent.V4Beta1.CompensationFilter();
+          CompensationFilter = new global::Google.Cloud.Talent.V4Beta1.CompensationFilter();
         }
         CompensationFilter.MergeFrom(other.CompensationFilter);
       }
@@ -649,7 +649,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       languageCodes_.Add(other.languageCodes_);
       if (other.publishTimeRange_ != null) {
         if (publishTimeRange_ == null) {
-          publishTimeRange_ = new global::Google.Cloud.Talent.V4Beta1.TimestampRange();
+          PublishTimeRange = new global::Google.Cloud.Talent.V4Beta1.TimestampRange();
         }
         PublishTimeRange.MergeFrom(other.PublishTimeRange);
       }
@@ -684,9 +684,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 42: {
             if (commuteFilter_ == null) {
-              commuteFilter_ = new global::Google.Cloud.Talent.V4Beta1.CommuteFilter();
+              CommuteFilter = new global::Google.Cloud.Talent.V4Beta1.CommuteFilter();
             }
-            input.ReadMessage(commuteFilter_);
+            input.ReadMessage(CommuteFilter);
             break;
           }
           case 50: {
@@ -695,9 +695,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 58: {
             if (compensationFilter_ == null) {
-              compensationFilter_ = new global::Google.Cloud.Talent.V4Beta1.CompensationFilter();
+              CompensationFilter = new global::Google.Cloud.Talent.V4Beta1.CompensationFilter();
             }
-            input.ReadMessage(compensationFilter_);
+            input.ReadMessage(CompensationFilter);
             break;
           }
           case 66: {
@@ -719,9 +719,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 98: {
             if (publishTimeRange_ == null) {
-              publishTimeRange_ = new global::Google.Cloud.Talent.V4Beta1.TimestampRange();
+              PublishTimeRange = new global::Google.Cloud.Talent.V4Beta1.TimestampRange();
             }
-            input.ReadMessage(publishTimeRange_);
+            input.ReadMessage(PublishTimeRange);
             break;
           }
           case 106: {
@@ -975,6 +975,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         hirableFilter_ = value;
       }
     }
+
 
     /// <summary>Field number for the "application_date_filters" field.</summary>
     public const int ApplicationDateFiltersFieldNumber = 10;
@@ -1234,7 +1235,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.candidateAvailabilityFilter_ != null) {
         if (candidateAvailabilityFilter_ == null) {
-          candidateAvailabilityFilter_ = new global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter();
+          CandidateAvailabilityFilter = new global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter();
         }
         CandidateAvailabilityFilter.MergeFrom(other.CandidateAvailabilityFilter);
       }
@@ -1306,9 +1307,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 130: {
             if (candidateAvailabilityFilter_ == null) {
-              candidateAvailabilityFilter_ = new global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter();
+              CandidateAvailabilityFilter = new global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter();
             }
-            input.ReadMessage(candidateAvailabilityFilter_);
+            input.ReadMessage(CandidateAvailabilityFilter);
             break;
           }
         }
@@ -1592,7 +1593,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.latLng_ != null) {
         if (latLng_ == null) {
-          latLng_ = new global::Google.Type.LatLng();
+          LatLng = new global::Google.Type.LatLng();
         }
         LatLng.MergeFrom(other.LatLng);
       }
@@ -1626,9 +1627,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 26: {
             if (latLng_ == null) {
-              latLng_ = new global::Google.Type.LatLng();
+              LatLng = new global::Google.Type.LatLng();
             }
-            input.ReadMessage(latLng_);
+            input.ReadMessage(LatLng);
             break;
           }
           case 33: {
@@ -1636,7 +1637,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 40: {
-            telecommutePreference_ = (global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) input.ReadEnum();
+            TelecommutePreference = (global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) input.ReadEnum();
             break;
           }
           case 48: {
@@ -1861,7 +1862,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       units_.Add(other.units_);
       if (other.range_ != null) {
         if (range_ == null) {
-          range_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
+          Range = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
         }
         Range.MergeFrom(other.Range);
       }
@@ -1880,7 +1881,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) input.ReadEnum();
+            Type = (global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) input.ReadEnum();
             break;
           }
           case 18:
@@ -1890,9 +1891,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 26: {
             if (range_ == null) {
-              range_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
+              Range = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
             }
-            input.ReadMessage(range_);
+            input.ReadMessage(Range);
             break;
           }
           case 32: {
@@ -2244,13 +2245,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.startCoordinates_ != null) {
         if (startCoordinates_ == null) {
-          startCoordinates_ = new global::Google.Type.LatLng();
+          StartCoordinates = new global::Google.Type.LatLng();
         }
         StartCoordinates.MergeFrom(other.StartCoordinates);
       }
       if (other.travelDuration_ != null) {
         if (travelDuration_ == null) {
-          travelDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          TravelDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         TravelDuration.MergeFrom(other.TravelDuration);
       }
@@ -2281,21 +2282,21 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            commuteMethod_ = (global::Google.Cloud.Talent.V4Beta1.CommuteMethod) input.ReadEnum();
+            CommuteMethod = (global::Google.Cloud.Talent.V4Beta1.CommuteMethod) input.ReadEnum();
             break;
           }
           case 18: {
             if (startCoordinates_ == null) {
-              startCoordinates_ = new global::Google.Type.LatLng();
+              StartCoordinates = new global::Google.Type.LatLng();
             }
-            input.ReadMessage(startCoordinates_);
+            input.ReadMessage(StartCoordinates);
             break;
           }
           case 26: {
             if (travelDuration_ == null) {
-              travelDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              TravelDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(travelDuration_);
+            input.ReadMessage(TravelDuration);
             break;
           }
           case 32: {
@@ -2878,7 +2879,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 16: {
-            mode_ = (global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode) input.ReadEnum();
+            Mode = (global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode) input.ReadEnum();
             break;
           }
           case 24: {
@@ -3148,7 +3149,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 24: {
-            degreeType_ = (global::Google.Cloud.Talent.V4Beta1.DegreeType) input.ReadEnum();
+            DegreeType = (global::Google.Cloud.Talent.V4Beta1.DegreeType) input.ReadEnum();
             break;
           }
           case 48: {
@@ -3306,13 +3307,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.minExperience_ != null) {
         if (minExperience_ == null) {
-          minExperience_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MinExperience = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MinExperience.MergeFrom(other.MinExperience);
       }
       if (other.maxExperience_ != null) {
         if (maxExperience_ == null) {
-          maxExperience_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          MaxExperience = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         MaxExperience.MergeFrom(other.MaxExperience);
       }
@@ -3329,16 +3330,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (minExperience_ == null) {
-              minExperience_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MinExperience = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(minExperience_);
+            input.ReadMessage(MinExperience);
             break;
           }
           case 18: {
             if (maxExperience_ == null) {
-              maxExperience_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              MaxExperience = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(maxExperience_);
+            input.ReadMessage(MaxExperience);
             break;
           }
         }
@@ -3496,13 +3497,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.startDate_ != null) {
         if (startDate_ == null) {
-          startDate_ = new global::Google.Type.Date();
+          StartDate = new global::Google.Type.Date();
         }
         StartDate.MergeFrom(other.StartDate);
       }
       if (other.endDate_ != null) {
         if (endDate_ == null) {
-          endDate_ = new global::Google.Type.Date();
+          EndDate = new global::Google.Type.Date();
         }
         EndDate.MergeFrom(other.EndDate);
       }
@@ -3519,16 +3520,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (startDate_ == null) {
-              startDate_ = new global::Google.Type.Date();
+              StartDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(startDate_);
+            input.ReadMessage(StartDate);
             break;
           }
           case 18: {
             if (endDate_ == null) {
-              endDate_ = new global::Google.Type.Date();
+              EndDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(endDate_);
+            input.ReadMessage(EndDate);
             break;
           }
         }
@@ -4086,13 +4087,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -4112,20 +4113,20 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 24: {
-            timeField_ = (global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) input.ReadEnum();
+            TimeField = (global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) input.ReadEnum();
             break;
           }
         }

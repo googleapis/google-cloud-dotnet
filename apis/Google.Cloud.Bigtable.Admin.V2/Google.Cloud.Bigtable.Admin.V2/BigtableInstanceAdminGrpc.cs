@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -33,166 +33,166 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   {
     static readonly string __ServiceName = "google.bigtable.admin.v2.BigtableInstanceAdmin";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest> __Marshaller_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest> __Marshaller_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Instance> __Marshaller_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest> __Marshaller_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse> __Marshaller_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest> __Marshaller_PartialUpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest> __Marshaller_CreateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest> __Marshaller_GetClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Cluster> __Marshaller_Cluster = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest> __Marshaller_ListClustersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse> __Marshaller_ListClustersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest> __Marshaller_DeleteClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest> __Marshaller_CreateAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Marshaller_AppProfile = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest> __Marshaller_GetAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest> __Marshaller_ListAppProfilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> __Marshaller_ListAppProfilesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest> __Marshaller_UpdateAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest> __Marshaller_DeleteAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest> __Marshaller_google_bigtable_admin_v2_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest> __Marshaller_google_bigtable_admin_v2_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Instance> __Marshaller_google_bigtable_admin_v2_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest> __Marshaller_google_bigtable_admin_v2_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse> __Marshaller_google_bigtable_admin_v2_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest> __Marshaller_google_bigtable_admin_v2_PartialUpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest> __Marshaller_google_bigtable_admin_v2_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest> __Marshaller_google_bigtable_admin_v2_CreateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest> __Marshaller_google_bigtable_admin_v2_GetClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Cluster> __Marshaller_google_bigtable_admin_v2_Cluster = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest> __Marshaller_google_bigtable_admin_v2_ListClustersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse> __Marshaller_google_bigtable_admin_v2_ListClustersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest> __Marshaller_google_bigtable_admin_v2_DeleteClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest> __Marshaller_google_bigtable_admin_v2_CreateAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Marshaller_google_bigtable_admin_v2_AppProfile = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest> __Marshaller_google_bigtable_admin_v2_GetAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest> __Marshaller_google_bigtable_admin_v2_ListAppProfilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> __Marshaller_google_bigtable_admin_v2_ListAppProfilesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest> __Marshaller_google_bigtable_admin_v2_UpdateAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest> __Marshaller_google_bigtable_admin_v2_DeleteAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateInstance",
-        __Marshaller_CreateInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_bigtable_admin_v2_CreateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest, global::Google.Cloud.Bigtable.Admin.V2.Instance> __Method_GetInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest, global::Google.Cloud.Bigtable.Admin.V2.Instance>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetInstance",
-        __Marshaller_GetInstanceRequest,
-        __Marshaller_Instance);
+        __Marshaller_google_bigtable_admin_v2_GetInstanceRequest,
+        __Marshaller_google_bigtable_admin_v2_Instance);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListInstances",
-        __Marshaller_ListInstancesRequest,
-        __Marshaller_ListInstancesResponse);
+        __Marshaller_google_bigtable_admin_v2_ListInstancesRequest,
+        __Marshaller_google_bigtable_admin_v2_ListInstancesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.Instance, global::Google.Cloud.Bigtable.Admin.V2.Instance> __Method_UpdateInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.Instance, global::Google.Cloud.Bigtable.Admin.V2.Instance>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateInstance",
-        __Marshaller_Instance,
-        __Marshaller_Instance);
+        __Marshaller_google_bigtable_admin_v2_Instance,
+        __Marshaller_google_bigtable_admin_v2_Instance);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest, global::Google.LongRunning.Operation> __Method_PartialUpdateInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PartialUpdateInstance",
-        __Marshaller_PartialUpdateInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_bigtable_admin_v2_PartialUpdateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteInstance",
-        __Marshaller_DeleteInstanceRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_bigtable_admin_v2_DeleteInstanceRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest, global::Google.LongRunning.Operation> __Method_CreateCluster = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateCluster",
-        __Marshaller_CreateClusterRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_bigtable_admin_v2_CreateClusterRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest, global::Google.Cloud.Bigtable.Admin.V2.Cluster> __Method_GetCluster = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest, global::Google.Cloud.Bigtable.Admin.V2.Cluster>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCluster",
-        __Marshaller_GetClusterRequest,
-        __Marshaller_Cluster);
+        __Marshaller_google_bigtable_admin_v2_GetClusterRequest,
+        __Marshaller_google_bigtable_admin_v2_Cluster);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest, global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest, global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListClusters",
-        __Marshaller_ListClustersRequest,
-        __Marshaller_ListClustersResponse);
+        __Marshaller_google_bigtable_admin_v2_ListClustersRequest,
+        __Marshaller_google_bigtable_admin_v2_ListClustersResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.Cluster, global::Google.LongRunning.Operation> __Method_UpdateCluster = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.Cluster, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCluster",
-        __Marshaller_Cluster,
-        __Marshaller_Operation);
+        __Marshaller_google_bigtable_admin_v2_Cluster,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCluster = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteCluster",
-        __Marshaller_DeleteClusterRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_bigtable_admin_v2_DeleteClusterRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Method_CreateAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateAppProfile",
-        __Marshaller_CreateAppProfileRequest,
-        __Marshaller_AppProfile);
+        __Marshaller_google_bigtable_admin_v2_CreateAppProfileRequest,
+        __Marshaller_google_bigtable_admin_v2_AppProfile);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Method_GetAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAppProfile",
-        __Marshaller_GetAppProfileRequest,
-        __Marshaller_AppProfile);
+        __Marshaller_google_bigtable_admin_v2_GetAppProfileRequest,
+        __Marshaller_google_bigtable_admin_v2_AppProfile);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> __Method_ListAppProfiles = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListAppProfiles",
-        __Marshaller_ListAppProfilesRequest,
-        __Marshaller_ListAppProfilesResponse);
+        __Marshaller_google_bigtable_admin_v2_ListAppProfilesRequest,
+        __Marshaller_google_bigtable_admin_v2_ListAppProfilesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest, global::Google.LongRunning.Operation> __Method_UpdateAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateAppProfile",
-        __Marshaller_UpdateAppProfileRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_bigtable_admin_v2_UpdateAppProfileRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteAppProfile",
-        __Marshaller_DeleteAppProfileRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_bigtable_admin_v2_DeleteAppProfileRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetIamPolicy",
-        __Marshaller_GetIamPolicyRequest,
-        __Marshaller_Policy);
+        __Marshaller_google_iam_v1_GetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetIamPolicy",
-        __Marshaller_SetIamPolicyRequest,
-        __Marshaller_Policy);
+        __Marshaller_google_iam_v1_SetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "TestIamPermissions",
-        __Marshaller_TestIamPermissionsRequest,
-        __Marshaller_TestIamPermissionsResponse);
+        __Marshaller_google_iam_v1_TestIamPermissionsRequest,
+        __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -201,6 +201,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     }
 
     /// <summary>Base class for server-side implementations of BigtableInstanceAdmin</summary>
+    [grpc::BindServiceMethod(typeof(BigtableInstanceAdmin), "BindService")]
     public abstract partial class BigtableInstanceAdminBase
     {
       /// <summary>
@@ -1314,6 +1315,33 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, BigtableInstanceAdminBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
+      serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest, global::Google.Cloud.Bigtable.Admin.V2.Instance>(serviceImpl.GetInstance));
+      serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse>(serviceImpl.ListInstances));
+      serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.Instance, global::Google.Cloud.Bigtable.Admin.V2.Instance>(serviceImpl.UpdateInstance));
+      serviceBinder.AddMethod(__Method_PartialUpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.PartialUpdateInstance));
+      serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteInstance));
+      serviceBinder.AddMethod(__Method_CreateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCluster));
+      serviceBinder.AddMethod(__Method_GetCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest, global::Google.Cloud.Bigtable.Admin.V2.Cluster>(serviceImpl.GetCluster));
+      serviceBinder.AddMethod(__Method_ListClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest, global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse>(serviceImpl.ListClusters));
+      serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.Cluster, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
+      serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCluster));
+      serviceBinder.AddMethod(__Method_CreateAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(serviceImpl.CreateAppProfile));
+      serviceBinder.AddMethod(__Method_GetAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(serviceImpl.GetAppProfile));
+      serviceBinder.AddMethod(__Method_ListAppProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse>(serviceImpl.ListAppProfiles));
+      serviceBinder.AddMethod(__Method_UpdateAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAppProfile));
+      serviceBinder.AddMethod(__Method_DeleteAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAppProfile));
+      serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
+      serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
+      serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
     }
 
   }

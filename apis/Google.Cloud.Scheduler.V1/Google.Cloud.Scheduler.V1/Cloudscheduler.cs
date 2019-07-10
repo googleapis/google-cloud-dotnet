@@ -751,7 +751,7 @@ namespace Google.Cloud.Scheduler.V1 {
       }
       if (other.job_ != null) {
         if (job_ == null) {
-          job_ = new global::Google.Cloud.Scheduler.V1.Job();
+          Job = new global::Google.Cloud.Scheduler.V1.Job();
         }
         Job.MergeFrom(other.Job);
       }
@@ -772,9 +772,9 @@ namespace Google.Cloud.Scheduler.V1 {
           }
           case 18: {
             if (job_ == null) {
-              job_ = new global::Google.Cloud.Scheduler.V1.Job();
+              Job = new global::Google.Cloud.Scheduler.V1.Job();
             }
-            input.ReadMessage(job_);
+            input.ReadMessage(Job);
             break;
           }
         }
@@ -925,13 +925,13 @@ namespace Google.Cloud.Scheduler.V1 {
       }
       if (other.job_ != null) {
         if (job_ == null) {
-          job_ = new global::Google.Cloud.Scheduler.V1.Job();
+          Job = new global::Google.Cloud.Scheduler.V1.Job();
         }
         Job.MergeFrom(other.Job);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -948,16 +948,16 @@ namespace Google.Cloud.Scheduler.V1 {
             break;
           case 10: {
             if (job_ == null) {
-              job_ = new global::Google.Cloud.Scheduler.V1.Job();
+              Job = new global::Google.Cloud.Scheduler.V1.Job();
             }
-            input.ReadMessage(job_);
+            input.ReadMessage(Job);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

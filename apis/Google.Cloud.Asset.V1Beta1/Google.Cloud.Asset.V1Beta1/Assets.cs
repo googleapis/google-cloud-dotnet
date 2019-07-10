@@ -221,7 +221,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       if (other.window_ != null) {
         if (window_ == null) {
-          window_ = new global::Google.Cloud.Asset.V1Beta1.TimeWindow();
+          Window = new global::Google.Cloud.Asset.V1Beta1.TimeWindow();
         }
         Window.MergeFrom(other.Window);
       }
@@ -230,7 +230,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       if (other.asset_ != null) {
         if (asset_ == null) {
-          asset_ = new global::Google.Cloud.Asset.V1Beta1.Asset();
+          Asset = new global::Google.Cloud.Asset.V1Beta1.Asset();
         }
         Asset.MergeFrom(other.Asset);
       }
@@ -247,9 +247,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
             break;
           case 10: {
             if (window_ == null) {
-              window_ = new global::Google.Cloud.Asset.V1Beta1.TimeWindow();
+              Window = new global::Google.Cloud.Asset.V1Beta1.TimeWindow();
             }
-            input.ReadMessage(window_);
+            input.ReadMessage(Window);
             break;
           }
           case 16: {
@@ -258,9 +258,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
           }
           case 26: {
             if (asset_ == null) {
-              asset_ = new global::Google.Cloud.Asset.V1Beta1.Asset();
+              Asset = new global::Google.Cloud.Asset.V1Beta1.Asset();
             }
-            input.ReadMessage(asset_);
+            input.ReadMessage(Asset);
             break;
           }
         }
@@ -407,13 +407,13 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -430,16 +430,16 @@ namespace Google.Cloud.Asset.V1Beta1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -645,13 +645,13 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::Google.Cloud.Asset.V1Beta1.Resource();
+          Resource = new global::Google.Cloud.Asset.V1Beta1.Resource();
         }
         Resource.MergeFrom(other.Resource);
       }
       if (other.iamPolicy_ != null) {
         if (iamPolicy_ == null) {
-          iamPolicy_ = new global::Google.Cloud.Iam.V1.Policy();
+          IamPolicy = new global::Google.Cloud.Iam.V1.Policy();
         }
         IamPolicy.MergeFrom(other.IamPolicy);
       }
@@ -676,16 +676,16 @@ namespace Google.Cloud.Asset.V1Beta1 {
           }
           case 26: {
             if (resource_ == null) {
-              resource_ = new global::Google.Cloud.Asset.V1Beta1.Resource();
+              Resource = new global::Google.Cloud.Asset.V1Beta1.Resource();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
           case 34: {
             if (iamPolicy_ == null) {
-              iamPolicy_ = new global::Google.Cloud.Iam.V1.Policy();
+              IamPolicy = new global::Google.Cloud.Iam.V1.Policy();
             }
-            input.ReadMessage(iamPolicy_);
+            input.ReadMessage(IamPolicy);
             break;
           }
         }
@@ -963,7 +963,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+          Data = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Data.MergeFrom(other.Data);
       }
@@ -1000,9 +1000,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
           }
           case 50: {
             if (data_ == null) {
-              data_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+              Data = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
         }

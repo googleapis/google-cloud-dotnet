@@ -286,7 +286,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           }
           case 16: {
-            entityOverrideMode_ = (global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode) input.ReadEnum();
+            EntityOverrideMode = (global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode) input.ReadEnum();
             break;
           }
           case 26: {
@@ -970,7 +970,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.sessionEntityType_ != null) {
         if (sessionEntityType_ == null) {
-          sessionEntityType_ = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
+          SessionEntityType = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
         }
         SessionEntityType.MergeFrom(other.SessionEntityType);
       }
@@ -991,9 +991,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             if (sessionEntityType_ == null) {
-              sessionEntityType_ = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
+              SessionEntityType = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
             }
-            input.ReadMessage(sessionEntityType_);
+            input.ReadMessage(SessionEntityType);
             break;
           }
         }
@@ -1141,13 +1141,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.sessionEntityType_ != null) {
         if (sessionEntityType_ == null) {
-          sessionEntityType_ = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
+          SessionEntityType = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
         }
         SessionEntityType.MergeFrom(other.SessionEntityType);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1164,16 +1164,16 @@ namespace Google.Cloud.Dialogflow.V2 {
             break;
           case 10: {
             if (sessionEntityType_ == null) {
-              sessionEntityType_ = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
+              SessionEntityType = new global::Google.Cloud.Dialogflow.V2.SessionEntityType();
             }
-            input.ReadMessage(sessionEntityType_);
+            input.ReadMessage(SessionEntityType);
             break;
           }
           case 18: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -33,58 +33,58 @@ namespace Google.Cloud.OsLogin.V1Beta {
   {
     static readonly string __ServiceName = "google.cloud.oslogin.v1beta.OsLoginService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.DeletePosixAccountRequest> __Marshaller_DeletePosixAccountRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.DeletePosixAccountRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest> __Marshaller_DeleteSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest> __Marshaller_GetLoginProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.LoginProfile> __Marshaller_LoginProfile = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.LoginProfile.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest> __Marshaller_GetSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.Common.SshPublicKey> __Marshaller_SshPublicKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest> __Marshaller_ImportSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse> __Marshaller_ImportSshPublicKeyResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest> __Marshaller_UpdateSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.DeletePosixAccountRequest> __Marshaller_google_cloud_oslogin_v1beta_DeletePosixAccountRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.DeletePosixAccountRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1beta_DeleteSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest> __Marshaller_google_cloud_oslogin_v1beta_GetLoginProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.LoginProfile> __Marshaller_google_cloud_oslogin_v1beta_LoginProfile = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.LoginProfile.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1beta_GetSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.Common.SshPublicKey> __Marshaller_google_cloud_oslogin_common_SshPublicKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1beta_ImportSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse> __Marshaller_google_cloud_oslogin_v1beta_ImportSshPublicKeyResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1beta_UpdateSshPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.DeletePosixAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePosixAccount = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.DeletePosixAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeletePosixAccount",
-        __Marshaller_DeletePosixAccountRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_oslogin_v1beta_DeletePosixAccountRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSshPublicKey",
-        __Marshaller_DeleteSshPublicKeyRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_oslogin_v1beta_DeleteSshPublicKeyRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest, global::Google.Cloud.OsLogin.V1Beta.LoginProfile> __Method_GetLoginProfile = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest, global::Google.Cloud.OsLogin.V1Beta.LoginProfile>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetLoginProfile",
-        __Marshaller_GetLoginProfileRequest,
-        __Marshaller_LoginProfile);
+        __Marshaller_google_cloud_oslogin_v1beta_GetLoginProfileRequest,
+        __Marshaller_google_cloud_oslogin_v1beta_LoginProfile);
 
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey> __Method_GetSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetSshPublicKey",
-        __Marshaller_GetSshPublicKeyRequest,
-        __Marshaller_SshPublicKey);
+        __Marshaller_google_cloud_oslogin_v1beta_GetSshPublicKeyRequest,
+        __Marshaller_google_cloud_oslogin_common_SshPublicKey);
 
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse> __Method_ImportSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ImportSshPublicKey",
-        __Marshaller_ImportSshPublicKeyRequest,
-        __Marshaller_ImportSshPublicKeyResponse);
+        __Marshaller_google_cloud_oslogin_v1beta_ImportSshPublicKeyRequest,
+        __Marshaller_google_cloud_oslogin_v1beta_ImportSshPublicKeyResponse);
 
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey> __Method_UpdateSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSshPublicKey",
-        __Marshaller_UpdateSshPublicKeyRequest,
-        __Marshaller_SshPublicKey);
+        __Marshaller_google_cloud_oslogin_v1beta_UpdateSshPublicKeyRequest,
+        __Marshaller_google_cloud_oslogin_common_SshPublicKey);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -93,6 +93,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
     }
 
     /// <summary>Base class for server-side implementations of OsLoginService</summary>
+    [grpc::BindServiceMethod(typeof(OsLoginService), "BindService")]
     public abstract partial class OsLoginServiceBase
     {
       /// <summary>
@@ -488,6 +489,20 @@ namespace Google.Cloud.OsLogin.V1Beta {
           .AddMethod(__Method_GetSshPublicKey, serviceImpl.GetSshPublicKey)
           .AddMethod(__Method_ImportSshPublicKey, serviceImpl.ImportSshPublicKey)
           .AddMethod(__Method_UpdateSshPublicKey, serviceImpl.UpdateSshPublicKey).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, OsLoginServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_DeletePosixAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.DeletePosixAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeletePosixAccount));
+      serviceBinder.AddMethod(__Method_DeleteSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSshPublicKey));
+      serviceBinder.AddMethod(__Method_GetLoginProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest, global::Google.Cloud.OsLogin.V1Beta.LoginProfile>(serviceImpl.GetLoginProfile));
+      serviceBinder.AddMethod(__Method_GetSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(serviceImpl.GetSshPublicKey));
+      serviceBinder.AddMethod(__Method_ImportSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse>(serviceImpl.ImportSshPublicKey));
+      serviceBinder.AddMethod(__Method_UpdateSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(serviceImpl.UpdateSshPublicKey));
     }
 
   }

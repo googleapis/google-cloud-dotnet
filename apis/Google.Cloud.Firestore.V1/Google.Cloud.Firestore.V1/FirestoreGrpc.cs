@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -46,120 +46,120 @@ namespace Google.Cloud.Firestore.V1 {
   {
     static readonly string __ServiceName = "google.firestore.v1.Firestore";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.GetDocumentRequest> __Marshaller_GetDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.Document> __Marshaller_Document = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.Document.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsRequest> __Marshaller_ListDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> __Marshaller_ListDocumentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListDocumentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CreateDocumentRequest> __Marshaller_CreateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest> __Marshaller_UpdateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest> __Marshaller_DeleteDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest> __Marshaller_BatchGetDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> __Marshaller_BatchGetDocumentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BeginTransactionRequest> __Marshaller_BeginTransactionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BeginTransactionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BeginTransactionResponse> __Marshaller_BeginTransactionResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BeginTransactionResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CommitRequest> __Marshaller_CommitRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CommitRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CommitResponse> __Marshaller_CommitResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CommitResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RollbackRequest> __Marshaller_RollbackRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.RollbackRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunQueryRequest> __Marshaller_RunQueryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunQueryResponse> __Marshaller_RunQueryResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.WriteRequest> __Marshaller_WriteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.WriteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.WriteResponse> __Marshaller_WriteResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.WriteResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListenRequest> __Marshaller_ListenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListenRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListenResponse> __Marshaller_ListenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListenResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest> __Marshaller_ListCollectionIdsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> __Marshaller_ListCollectionIdsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.GetDocumentRequest> __Marshaller_google_firestore_v1_GetDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.Document> __Marshaller_google_firestore_v1_Document = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.Document.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsRequest> __Marshaller_google_firestore_v1_ListDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> __Marshaller_google_firestore_v1_ListDocumentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListDocumentsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CreateDocumentRequest> __Marshaller_google_firestore_v1_CreateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest> __Marshaller_google_firestore_v1_UpdateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest> __Marshaller_google_firestore_v1_DeleteDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest> __Marshaller_google_firestore_v1_BatchGetDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> __Marshaller_google_firestore_v1_BatchGetDocumentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BeginTransactionRequest> __Marshaller_google_firestore_v1_BeginTransactionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BeginTransactionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BeginTransactionResponse> __Marshaller_google_firestore_v1_BeginTransactionResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.BeginTransactionResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CommitRequest> __Marshaller_google_firestore_v1_CommitRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CommitRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CommitResponse> __Marshaller_google_firestore_v1_CommitResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CommitResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RollbackRequest> __Marshaller_google_firestore_v1_RollbackRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.RollbackRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunQueryRequest> __Marshaller_google_firestore_v1_RunQueryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunQueryResponse> __Marshaller_google_firestore_v1_RunQueryResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.WriteRequest> __Marshaller_google_firestore_v1_WriteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.WriteRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.WriteResponse> __Marshaller_google_firestore_v1_WriteResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.WriteResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListenRequest> __Marshaller_google_firestore_v1_ListenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListenRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListenResponse> __Marshaller_google_firestore_v1_ListenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListenResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest> __Marshaller_google_firestore_v1_ListCollectionIdsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> __Marshaller_google_firestore_v1_ListCollectionIdsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_GetDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetDocument",
-        __Marshaller_GetDocumentRequest,
-        __Marshaller_Document);
+        __Marshaller_google_firestore_v1_GetDocumentRequest,
+        __Marshaller_google_firestore_v1_Document);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.ListDocumentsRequest, global::Google.Cloud.Firestore.V1.ListDocumentsResponse> __Method_ListDocuments = new grpc::Method<global::Google.Cloud.Firestore.V1.ListDocumentsRequest, global::Google.Cloud.Firestore.V1.ListDocumentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListDocuments",
-        __Marshaller_ListDocumentsRequest,
-        __Marshaller_ListDocumentsResponse);
+        __Marshaller_google_firestore_v1_ListDocumentsRequest,
+        __Marshaller_google_firestore_v1_ListDocumentsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_CreateDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateDocument",
-        __Marshaller_CreateDocumentRequest,
-        __Marshaller_Document);
+        __Marshaller_google_firestore_v1_CreateDocumentRequest,
+        __Marshaller_google_firestore_v1_Document);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_UpdateDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateDocument",
-        __Marshaller_UpdateDocumentRequest,
-        __Marshaller_Document);
+        __Marshaller_google_firestore_v1_UpdateDocumentRequest,
+        __Marshaller_google_firestore_v1_Document);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteDocument",
-        __Marshaller_DeleteDocumentRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_firestore_v1_DeleteDocumentRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest, global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> __Method_BatchGetDocuments = new grpc::Method<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest, global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "BatchGetDocuments",
-        __Marshaller_BatchGetDocumentsRequest,
-        __Marshaller_BatchGetDocumentsResponse);
+        __Marshaller_google_firestore_v1_BatchGetDocumentsRequest,
+        __Marshaller_google_firestore_v1_BatchGetDocumentsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.BeginTransactionRequest, global::Google.Cloud.Firestore.V1.BeginTransactionResponse> __Method_BeginTransaction = new grpc::Method<global::Google.Cloud.Firestore.V1.BeginTransactionRequest, global::Google.Cloud.Firestore.V1.BeginTransactionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BeginTransaction",
-        __Marshaller_BeginTransactionRequest,
-        __Marshaller_BeginTransactionResponse);
+        __Marshaller_google_firestore_v1_BeginTransactionRequest,
+        __Marshaller_google_firestore_v1_BeginTransactionResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.CommitRequest, global::Google.Cloud.Firestore.V1.CommitResponse> __Method_Commit = new grpc::Method<global::Google.Cloud.Firestore.V1.CommitRequest, global::Google.Cloud.Firestore.V1.CommitResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Commit",
-        __Marshaller_CommitRequest,
-        __Marshaller_CommitResponse);
+        __Marshaller_google_firestore_v1_CommitRequest,
+        __Marshaller_google_firestore_v1_CommitResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Rollback = new grpc::Method<global::Google.Cloud.Firestore.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Rollback",
-        __Marshaller_RollbackRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_firestore_v1_RollbackRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.RunQueryRequest, global::Google.Cloud.Firestore.V1.RunQueryResponse> __Method_RunQuery = new grpc::Method<global::Google.Cloud.Firestore.V1.RunQueryRequest, global::Google.Cloud.Firestore.V1.RunQueryResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "RunQuery",
-        __Marshaller_RunQueryRequest,
-        __Marshaller_RunQueryResponse);
+        __Marshaller_google_firestore_v1_RunQueryRequest,
+        __Marshaller_google_firestore_v1_RunQueryResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse> __Method_Write = new grpc::Method<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
         "Write",
-        __Marshaller_WriteRequest,
-        __Marshaller_WriteResponse);
+        __Marshaller_google_firestore_v1_WriteRequest,
+        __Marshaller_google_firestore_v1_WriteResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse> __Method_Listen = new grpc::Method<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
         "Listen",
-        __Marshaller_ListenRequest,
-        __Marshaller_ListenResponse);
+        __Marshaller_google_firestore_v1_ListenRequest,
+        __Marshaller_google_firestore_v1_ListenResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest, global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> __Method_ListCollectionIds = new grpc::Method<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest, global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListCollectionIds",
-        __Marshaller_ListCollectionIdsRequest,
-        __Marshaller_ListCollectionIdsResponse);
+        __Marshaller_google_firestore_v1_ListCollectionIdsRequest,
+        __Marshaller_google_firestore_v1_ListCollectionIdsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -168,6 +168,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     /// <summary>Base class for server-side implementations of Firestore</summary>
+    [grpc::BindServiceMethod(typeof(Firestore), "BindService")]
     public abstract partial class FirestoreBase
     {
       /// <summary>
@@ -856,6 +857,27 @@ namespace Google.Cloud.Firestore.V1 {
           .AddMethod(__Method_Write, serviceImpl.Write)
           .AddMethod(__Method_Listen, serviceImpl.Listen)
           .AddMethod(__Method_ListCollectionIds, serviceImpl.ListCollectionIds).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, FirestoreBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.GetDocument));
+      serviceBinder.AddMethod(__Method_ListDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.ListDocumentsRequest, global::Google.Cloud.Firestore.V1.ListDocumentsResponse>(serviceImpl.ListDocuments));
+      serviceBinder.AddMethod(__Method_CreateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.CreateDocument));
+      serviceBinder.AddMethod(__Method_UpdateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.UpdateDocument));
+      serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDocument));
+      serviceBinder.AddMethod(__Method_BatchGetDocuments, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest, global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse>(serviceImpl.BatchGetDocuments));
+      serviceBinder.AddMethod(__Method_BeginTransaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.BeginTransactionRequest, global::Google.Cloud.Firestore.V1.BeginTransactionResponse>(serviceImpl.BeginTransaction));
+      serviceBinder.AddMethod(__Method_Commit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.CommitRequest, global::Google.Cloud.Firestore.V1.CommitResponse>(serviceImpl.Commit));
+      serviceBinder.AddMethod(__Method_Rollback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Rollback));
+      serviceBinder.AddMethod(__Method_RunQuery, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Firestore.V1.RunQueryRequest, global::Google.Cloud.Firestore.V1.RunQueryResponse>(serviceImpl.RunQuery));
+      serviceBinder.AddMethod(__Method_Write, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse>(serviceImpl.Write));
+      serviceBinder.AddMethod(__Method_Listen, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse>(serviceImpl.Listen));
+      serviceBinder.AddMethod(__Method_ListCollectionIds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest, global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse>(serviceImpl.ListCollectionIds));
     }
 
   }

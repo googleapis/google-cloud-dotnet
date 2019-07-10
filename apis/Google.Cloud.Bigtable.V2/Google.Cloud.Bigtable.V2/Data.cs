@@ -3436,19 +3436,19 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           if (other.predicateFilter_ != null) {
             if (predicateFilter_ == null) {
-              predicateFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+              PredicateFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
             }
             PredicateFilter.MergeFrom(other.PredicateFilter);
           }
           if (other.trueFilter_ != null) {
             if (trueFilter_ == null) {
-              trueFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+              TrueFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
             }
             TrueFilter.MergeFrom(other.TrueFilter);
           }
           if (other.falseFilter_ != null) {
             if (falseFilter_ == null) {
-              falseFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+              FalseFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
             }
             FalseFilter.MergeFrom(other.FalseFilter);
           }
@@ -3465,23 +3465,23 @@ namespace Google.Cloud.Bigtable.V2 {
                 break;
               case 10: {
                 if (predicateFilter_ == null) {
-                  predicateFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+                  PredicateFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
                 }
-                input.ReadMessage(predicateFilter_);
+                input.ReadMessage(PredicateFilter);
                 break;
               }
               case 18: {
                 if (trueFilter_ == null) {
-                  trueFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+                  TrueFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
                 }
-                input.ReadMessage(trueFilter_);
+                input.ReadMessage(TrueFilter);
                 break;
               }
               case 26: {
                 if (falseFilter_ == null) {
-                  falseFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
+                  FalseFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
                 }
-                input.ReadMessage(falseFilter_);
+                input.ReadMessage(FalseFilter);
                 break;
               }
             }
@@ -4198,7 +4198,7 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           if (other.timeRange_ != null) {
             if (timeRange_ == null) {
-              timeRange_ = new global::Google.Cloud.Bigtable.V2.TimestampRange();
+              TimeRange = new global::Google.Cloud.Bigtable.V2.TimestampRange();
             }
             TimeRange.MergeFrom(other.TimeRange);
           }
@@ -4223,9 +4223,9 @@ namespace Google.Cloud.Bigtable.V2 {
               }
               case 26: {
                 if (timeRange_ == null) {
-                  timeRange_ = new global::Google.Cloud.Bigtable.V2.TimestampRange();
+                  TimeRange = new global::Google.Cloud.Bigtable.V2.TimestampRange();
                 }
-                input.ReadMessage(timeRange_);
+                input.ReadMessage(TimeRange);
                 break;
               }
             }

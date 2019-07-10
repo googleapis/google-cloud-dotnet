@@ -555,6 +555,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as NotificationChannel);
@@ -725,7 +726,7 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           }
           case 72: {
-            verificationStatus_ = (global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus) input.ReadEnum();
+            VerificationStatus = (global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus) input.ReadEnum();
             break;
           }
           case 90: {

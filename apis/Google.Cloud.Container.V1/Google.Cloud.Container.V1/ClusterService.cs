@@ -1296,7 +1296,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.clientCertificateConfig_ != null) {
         if (clientCertificateConfig_ == null) {
-          clientCertificateConfig_ = new global::Google.Cloud.Container.V1.ClientCertificateConfig();
+          ClientCertificateConfig = new global::Google.Cloud.Container.V1.ClientCertificateConfig();
         }
         ClientCertificateConfig.MergeFrom(other.ClientCertificateConfig);
       }
@@ -1330,9 +1330,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 26: {
             if (clientCertificateConfig_ == null) {
-              clientCertificateConfig_ = new global::Google.Cloud.Container.V1.ClientCertificateConfig();
+              ClientCertificateConfig = new global::Google.Cloud.Container.V1.ClientCertificateConfig();
             }
-            input.ReadMessage(clientCertificateConfig_);
+            input.ReadMessage(ClientCertificateConfig);
             break;
           }
           case 802: {
@@ -1679,25 +1679,25 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.httpLoadBalancing_ != null) {
         if (httpLoadBalancing_ == null) {
-          httpLoadBalancing_ = new global::Google.Cloud.Container.V1.HttpLoadBalancing();
+          HttpLoadBalancing = new global::Google.Cloud.Container.V1.HttpLoadBalancing();
         }
         HttpLoadBalancing.MergeFrom(other.HttpLoadBalancing);
       }
       if (other.horizontalPodAutoscaling_ != null) {
         if (horizontalPodAutoscaling_ == null) {
-          horizontalPodAutoscaling_ = new global::Google.Cloud.Container.V1.HorizontalPodAutoscaling();
+          HorizontalPodAutoscaling = new global::Google.Cloud.Container.V1.HorizontalPodAutoscaling();
         }
         HorizontalPodAutoscaling.MergeFrom(other.HorizontalPodAutoscaling);
       }
       if (other.kubernetesDashboard_ != null) {
         if (kubernetesDashboard_ == null) {
-          kubernetesDashboard_ = new global::Google.Cloud.Container.V1.KubernetesDashboard();
+          KubernetesDashboard = new global::Google.Cloud.Container.V1.KubernetesDashboard();
         }
         KubernetesDashboard.MergeFrom(other.KubernetesDashboard);
       }
       if (other.networkPolicyConfig_ != null) {
         if (networkPolicyConfig_ == null) {
-          networkPolicyConfig_ = new global::Google.Cloud.Container.V1.NetworkPolicyConfig();
+          NetworkPolicyConfig = new global::Google.Cloud.Container.V1.NetworkPolicyConfig();
         }
         NetworkPolicyConfig.MergeFrom(other.NetworkPolicyConfig);
       }
@@ -1714,30 +1714,30 @@ namespace Google.Cloud.Container.V1 {
             break;
           case 10: {
             if (httpLoadBalancing_ == null) {
-              httpLoadBalancing_ = new global::Google.Cloud.Container.V1.HttpLoadBalancing();
+              HttpLoadBalancing = new global::Google.Cloud.Container.V1.HttpLoadBalancing();
             }
-            input.ReadMessage(httpLoadBalancing_);
+            input.ReadMessage(HttpLoadBalancing);
             break;
           }
           case 18: {
             if (horizontalPodAutoscaling_ == null) {
-              horizontalPodAutoscaling_ = new global::Google.Cloud.Container.V1.HorizontalPodAutoscaling();
+              HorizontalPodAutoscaling = new global::Google.Cloud.Container.V1.HorizontalPodAutoscaling();
             }
-            input.ReadMessage(horizontalPodAutoscaling_);
+            input.ReadMessage(HorizontalPodAutoscaling);
             break;
           }
           case 26: {
             if (kubernetesDashboard_ == null) {
-              kubernetesDashboard_ = new global::Google.Cloud.Container.V1.KubernetesDashboard();
+              KubernetesDashboard = new global::Google.Cloud.Container.V1.KubernetesDashboard();
             }
-            input.ReadMessage(kubernetesDashboard_);
+            input.ReadMessage(KubernetesDashboard);
             break;
           }
           case 34: {
             if (networkPolicyConfig_ == null) {
-              networkPolicyConfig_ = new global::Google.Cloud.Container.V1.NetworkPolicyConfig();
+              NetworkPolicyConfig = new global::Google.Cloud.Container.V1.NetworkPolicyConfig();
             }
-            input.ReadMessage(networkPolicyConfig_);
+            input.ReadMessage(NetworkPolicyConfig);
             break;
           }
         }
@@ -3187,7 +3187,7 @@ namespace Google.Cloud.Container.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            provider_ = (global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider) input.ReadEnum();
+            Provider = (global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider) input.ReadEnum();
             break;
           }
           case 16: {
@@ -4800,13 +4800,13 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.nodeConfig_ != null) {
         if (nodeConfig_ == null) {
-          nodeConfig_ = new global::Google.Cloud.Container.V1.NodeConfig();
+          NodeConfig = new global::Google.Cloud.Container.V1.NodeConfig();
         }
         NodeConfig.MergeFrom(other.NodeConfig);
       }
       if (other.masterAuth_ != null) {
         if (masterAuth_ == null) {
-          masterAuth_ = new global::Google.Cloud.Container.V1.MasterAuth();
+          MasterAuth = new global::Google.Cloud.Container.V1.MasterAuth();
         }
         MasterAuth.MergeFrom(other.MasterAuth);
       }
@@ -4824,7 +4824,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.addonsConfig_ != null) {
         if (addonsConfig_ == null) {
-          addonsConfig_ = new global::Google.Cloud.Container.V1.AddonsConfig();
+          AddonsConfig = new global::Google.Cloud.Container.V1.AddonsConfig();
         }
         AddonsConfig.MergeFrom(other.AddonsConfig);
       }
@@ -4842,43 +4842,43 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.legacyAbac_ != null) {
         if (legacyAbac_ == null) {
-          legacyAbac_ = new global::Google.Cloud.Container.V1.LegacyAbac();
+          LegacyAbac = new global::Google.Cloud.Container.V1.LegacyAbac();
         }
         LegacyAbac.MergeFrom(other.LegacyAbac);
       }
       if (other.networkPolicy_ != null) {
         if (networkPolicy_ == null) {
-          networkPolicy_ = new global::Google.Cloud.Container.V1.NetworkPolicy();
+          NetworkPolicy = new global::Google.Cloud.Container.V1.NetworkPolicy();
         }
         NetworkPolicy.MergeFrom(other.NetworkPolicy);
       }
       if (other.ipAllocationPolicy_ != null) {
         if (ipAllocationPolicy_ == null) {
-          ipAllocationPolicy_ = new global::Google.Cloud.Container.V1.IPAllocationPolicy();
+          IpAllocationPolicy = new global::Google.Cloud.Container.V1.IPAllocationPolicy();
         }
         IpAllocationPolicy.MergeFrom(other.IpAllocationPolicy);
       }
       if (other.masterAuthorizedNetworksConfig_ != null) {
         if (masterAuthorizedNetworksConfig_ == null) {
-          masterAuthorizedNetworksConfig_ = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
+          MasterAuthorizedNetworksConfig = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
         }
         MasterAuthorizedNetworksConfig.MergeFrom(other.MasterAuthorizedNetworksConfig);
       }
       if (other.maintenancePolicy_ != null) {
         if (maintenancePolicy_ == null) {
-          maintenancePolicy_ = new global::Google.Cloud.Container.V1.MaintenancePolicy();
+          MaintenancePolicy = new global::Google.Cloud.Container.V1.MaintenancePolicy();
         }
         MaintenancePolicy.MergeFrom(other.MaintenancePolicy);
       }
       if (other.networkConfig_ != null) {
         if (networkConfig_ == null) {
-          networkConfig_ = new global::Google.Cloud.Container.V1.NetworkConfig();
+          NetworkConfig = new global::Google.Cloud.Container.V1.NetworkConfig();
         }
         NetworkConfig.MergeFrom(other.NetworkConfig);
       }
       if (other.privateClusterConfig_ != null) {
         if (privateClusterConfig_ == null) {
-          privateClusterConfig_ = new global::Google.Cloud.Container.V1.PrivateClusterConfig();
+          PrivateClusterConfig = new global::Google.Cloud.Container.V1.PrivateClusterConfig();
         }
         PrivateClusterConfig.MergeFrom(other.PrivateClusterConfig);
       }
@@ -4950,16 +4950,16 @@ namespace Google.Cloud.Container.V1 {
           }
           case 34: {
             if (nodeConfig_ == null) {
-              nodeConfig_ = new global::Google.Cloud.Container.V1.NodeConfig();
+              NodeConfig = new global::Google.Cloud.Container.V1.NodeConfig();
             }
-            input.ReadMessage(nodeConfig_);
+            input.ReadMessage(NodeConfig);
             break;
           }
           case 42: {
             if (masterAuth_ == null) {
-              masterAuth_ = new global::Google.Cloud.Container.V1.MasterAuth();
+              MasterAuth = new global::Google.Cloud.Container.V1.MasterAuth();
             }
-            input.ReadMessage(masterAuth_);
+            input.ReadMessage(MasterAuth);
             break;
           }
           case 50: {
@@ -4980,9 +4980,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 82: {
             if (addonsConfig_ == null) {
-              addonsConfig_ = new global::Google.Cloud.Container.V1.AddonsConfig();
+              AddonsConfig = new global::Google.Cloud.Container.V1.AddonsConfig();
             }
-            input.ReadMessage(addonsConfig_);
+            input.ReadMessage(AddonsConfig);
             break;
           }
           case 90: {
@@ -5011,51 +5011,51 @@ namespace Google.Cloud.Container.V1 {
           }
           case 146: {
             if (legacyAbac_ == null) {
-              legacyAbac_ = new global::Google.Cloud.Container.V1.LegacyAbac();
+              LegacyAbac = new global::Google.Cloud.Container.V1.LegacyAbac();
             }
-            input.ReadMessage(legacyAbac_);
+            input.ReadMessage(LegacyAbac);
             break;
           }
           case 154: {
             if (networkPolicy_ == null) {
-              networkPolicy_ = new global::Google.Cloud.Container.V1.NetworkPolicy();
+              NetworkPolicy = new global::Google.Cloud.Container.V1.NetworkPolicy();
             }
-            input.ReadMessage(networkPolicy_);
+            input.ReadMessage(NetworkPolicy);
             break;
           }
           case 162: {
             if (ipAllocationPolicy_ == null) {
-              ipAllocationPolicy_ = new global::Google.Cloud.Container.V1.IPAllocationPolicy();
+              IpAllocationPolicy = new global::Google.Cloud.Container.V1.IPAllocationPolicy();
             }
-            input.ReadMessage(ipAllocationPolicy_);
+            input.ReadMessage(IpAllocationPolicy);
             break;
           }
           case 178: {
             if (masterAuthorizedNetworksConfig_ == null) {
-              masterAuthorizedNetworksConfig_ = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
+              MasterAuthorizedNetworksConfig = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
             }
-            input.ReadMessage(masterAuthorizedNetworksConfig_);
+            input.ReadMessage(MasterAuthorizedNetworksConfig);
             break;
           }
           case 186: {
             if (maintenancePolicy_ == null) {
-              maintenancePolicy_ = new global::Google.Cloud.Container.V1.MaintenancePolicy();
+              MaintenancePolicy = new global::Google.Cloud.Container.V1.MaintenancePolicy();
             }
-            input.ReadMessage(maintenancePolicy_);
+            input.ReadMessage(MaintenancePolicy);
             break;
           }
           case 218: {
             if (networkConfig_ == null) {
-              networkConfig_ = new global::Google.Cloud.Container.V1.NetworkConfig();
+              NetworkConfig = new global::Google.Cloud.Container.V1.NetworkConfig();
             }
-            input.ReadMessage(networkConfig_);
+            input.ReadMessage(NetworkConfig);
             break;
           }
           case 298: {
             if (privateClusterConfig_ == null) {
-              privateClusterConfig_ = new global::Google.Cloud.Container.V1.PrivateClusterConfig();
+              PrivateClusterConfig = new global::Google.Cloud.Container.V1.PrivateClusterConfig();
             }
-            input.ReadMessage(privateClusterConfig_);
+            input.ReadMessage(PrivateClusterConfig);
             break;
           }
           case 802: {
@@ -5087,7 +5087,7 @@ namespace Google.Cloud.Container.V1 {
             break;
           }
           case 856: {
-            status_ = (global::Google.Cloud.Container.V1.Cluster.Types.Status) input.ReadEnum();
+            Status = (global::Google.Cloud.Container.V1.Cluster.Types.Status) input.ReadEnum();
             break;
           }
           case 866: {
@@ -5513,7 +5513,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.desiredAddonsConfig_ != null) {
         if (desiredAddonsConfig_ == null) {
-          desiredAddonsConfig_ = new global::Google.Cloud.Container.V1.AddonsConfig();
+          DesiredAddonsConfig = new global::Google.Cloud.Container.V1.AddonsConfig();
         }
         DesiredAddonsConfig.MergeFrom(other.DesiredAddonsConfig);
       }
@@ -5525,14 +5525,14 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.desiredNodePoolAutoscaling_ != null) {
         if (desiredNodePoolAutoscaling_ == null) {
-          desiredNodePoolAutoscaling_ = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
+          DesiredNodePoolAutoscaling = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
         }
         DesiredNodePoolAutoscaling.MergeFrom(other.DesiredNodePoolAutoscaling);
       }
       desiredLocations_.Add(other.desiredLocations_);
       if (other.desiredMasterAuthorizedNetworksConfig_ != null) {
         if (desiredMasterAuthorizedNetworksConfig_ == null) {
-          desiredMasterAuthorizedNetworksConfig_ = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
+          DesiredMasterAuthorizedNetworksConfig = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
         }
         DesiredMasterAuthorizedNetworksConfig.MergeFrom(other.DesiredMasterAuthorizedNetworksConfig);
       }
@@ -5560,9 +5560,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 50: {
             if (desiredAddonsConfig_ == null) {
-              desiredAddonsConfig_ = new global::Google.Cloud.Container.V1.AddonsConfig();
+              DesiredAddonsConfig = new global::Google.Cloud.Container.V1.AddonsConfig();
             }
-            input.ReadMessage(desiredAddonsConfig_);
+            input.ReadMessage(DesiredAddonsConfig);
             break;
           }
           case 58: {
@@ -5575,9 +5575,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 74: {
             if (desiredNodePoolAutoscaling_ == null) {
-              desiredNodePoolAutoscaling_ = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
+              DesiredNodePoolAutoscaling = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
             }
-            input.ReadMessage(desiredNodePoolAutoscaling_);
+            input.ReadMessage(DesiredNodePoolAutoscaling);
             break;
           }
           case 82: {
@@ -5586,9 +5586,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 98: {
             if (desiredMasterAuthorizedNetworksConfig_ == null) {
-              desiredMasterAuthorizedNetworksConfig_ = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
+              DesiredMasterAuthorizedNetworksConfig = new global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig();
             }
-            input.ReadMessage(desiredMasterAuthorizedNetworksConfig_);
+            input.ReadMessage(DesiredMasterAuthorizedNetworksConfig);
             break;
           }
           case 802: {
@@ -6015,11 +6015,11 @@ namespace Google.Cloud.Container.V1 {
             break;
           }
           case 24: {
-            operationType_ = (global::Google.Cloud.Container.V1.Operation.Types.Type) input.ReadEnum();
+            OperationType = (global::Google.Cloud.Container.V1.Operation.Types.Type) input.ReadEnum();
             break;
           }
           case 32: {
-            status_ = (global::Google.Cloud.Container.V1.Operation.Types.Status) input.ReadEnum();
+            Status = (global::Google.Cloud.Container.V1.Operation.Types.Status) input.ReadEnum();
             break;
           }
           case 42: {
@@ -6363,7 +6363,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.cluster_ != null) {
         if (cluster_ == null) {
-          cluster_ = new global::Google.Cloud.Container.V1.Cluster();
+          Cluster = new global::Google.Cloud.Container.V1.Cluster();
         }
         Cluster.MergeFrom(other.Cluster);
       }
@@ -6391,9 +6391,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 26: {
             if (cluster_ == null) {
-              cluster_ = new global::Google.Cloud.Container.V1.Cluster();
+              Cluster = new global::Google.Cloud.Container.V1.Cluster();
             }
-            input.ReadMessage(cluster_);
+            input.ReadMessage(Cluster);
             break;
           }
           case 42: {
@@ -6872,7 +6872,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.update_ != null) {
         if (update_ == null) {
-          update_ = new global::Google.Cloud.Container.V1.ClusterUpdate();
+          Update = new global::Google.Cloud.Container.V1.ClusterUpdate();
         }
         Update.MergeFrom(other.Update);
       }
@@ -6904,9 +6904,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 34: {
             if (update_ == null) {
-              update_ = new global::Google.Cloud.Container.V1.ClusterUpdate();
+              Update = new global::Google.Cloud.Container.V1.ClusterUpdate();
             }
-            input.ReadMessage(update_);
+            input.ReadMessage(Update);
             break;
           }
           case 42: {
@@ -7521,7 +7521,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.autoscaling_ != null) {
         if (autoscaling_ == null) {
-          autoscaling_ = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
+          Autoscaling = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
         }
         Autoscaling.MergeFrom(other.Autoscaling);
       }
@@ -7557,9 +7557,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 42: {
             if (autoscaling_ == null) {
-              autoscaling_ = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
+              Autoscaling = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
             }
-            input.ReadMessage(autoscaling_);
+            input.ReadMessage(Autoscaling);
             break;
           }
           case 50: {
@@ -8346,7 +8346,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.addonsConfig_ != null) {
         if (addonsConfig_ == null) {
-          addonsConfig_ = new global::Google.Cloud.Container.V1.AddonsConfig();
+          AddonsConfig = new global::Google.Cloud.Container.V1.AddonsConfig();
         }
         AddonsConfig.MergeFrom(other.AddonsConfig);
       }
@@ -8378,9 +8378,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 34: {
             if (addonsConfig_ == null) {
-              addonsConfig_ = new global::Google.Cloud.Container.V1.AddonsConfig();
+              AddonsConfig = new global::Google.Cloud.Container.V1.AddonsConfig();
             }
-            input.ReadMessage(addonsConfig_);
+            input.ReadMessage(AddonsConfig);
             break;
           }
           case 50: {
@@ -9193,7 +9193,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.update_ != null) {
         if (update_ == null) {
-          update_ = new global::Google.Cloud.Container.V1.MasterAuth();
+          Update = new global::Google.Cloud.Container.V1.MasterAuth();
         }
         Update.MergeFrom(other.Update);
       }
@@ -9224,14 +9224,14 @@ namespace Google.Cloud.Container.V1 {
             break;
           }
           case 32: {
-            action_ = (global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action) input.ReadEnum();
+            Action = (global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action) input.ReadEnum();
             break;
           }
           case 42: {
             if (update_ == null) {
-              update_ = new global::Google.Cloud.Container.V1.MasterAuth();
+              Update = new global::Google.Cloud.Container.V1.MasterAuth();
             }
-            input.ReadMessage(update_);
+            input.ReadMessage(Update);
             break;
           }
           case 58: {
@@ -11371,7 +11371,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.nodePool_ != null) {
         if (nodePool_ == null) {
-          nodePool_ = new global::Google.Cloud.Container.V1.NodePool();
+          NodePool = new global::Google.Cloud.Container.V1.NodePool();
         }
         NodePool.MergeFrom(other.NodePool);
       }
@@ -11403,9 +11403,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 34: {
             if (nodePool_ == null) {
-              nodePool_ = new global::Google.Cloud.Container.V1.NodePool();
+              NodePool = new global::Google.Cloud.Container.V1.NodePool();
             }
-            input.ReadMessage(nodePool_);
+            input.ReadMessage(NodePool);
             break;
           }
           case 50: {
@@ -12538,7 +12538,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Container.V1.NodeConfig();
+          Config = new global::Google.Cloud.Container.V1.NodeConfig();
         }
         Config.MergeFrom(other.Config);
       }
@@ -12560,13 +12560,13 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.autoscaling_ != null) {
         if (autoscaling_ == null) {
-          autoscaling_ = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
+          Autoscaling = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
         }
         Autoscaling.MergeFrom(other.Autoscaling);
       }
       if (other.management_ != null) {
         if (management_ == null) {
-          management_ = new global::Google.Cloud.Container.V1.NodeManagement();
+          Management = new global::Google.Cloud.Container.V1.NodeManagement();
         }
         Management.MergeFrom(other.Management);
       }
@@ -12587,9 +12587,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 18: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Container.V1.NodeConfig();
+              Config = new global::Google.Cloud.Container.V1.NodeConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 24: {
@@ -12598,16 +12598,16 @@ namespace Google.Cloud.Container.V1 {
           }
           case 34: {
             if (autoscaling_ == null) {
-              autoscaling_ = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
+              Autoscaling = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
             }
-            input.ReadMessage(autoscaling_);
+            input.ReadMessage(Autoscaling);
             break;
           }
           case 42: {
             if (management_ == null) {
-              management_ = new global::Google.Cloud.Container.V1.NodeManagement();
+              Management = new global::Google.Cloud.Container.V1.NodeManagement();
             }
-            input.ReadMessage(management_);
+            input.ReadMessage(Management);
             break;
           }
           case 802: {
@@ -12623,7 +12623,7 @@ namespace Google.Cloud.Container.V1 {
             break;
           }
           case 824: {
-            status_ = (global::Google.Cloud.Container.V1.NodePool.Types.Status) input.ReadEnum();
+            Status = (global::Google.Cloud.Container.V1.NodePool.Types.Status) input.ReadEnum();
             break;
           }
           case 834: {
@@ -12857,7 +12857,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.upgradeOptions_ != null) {
         if (upgradeOptions_ == null) {
-          upgradeOptions_ = new global::Google.Cloud.Container.V1.AutoUpgradeOptions();
+          UpgradeOptions = new global::Google.Cloud.Container.V1.AutoUpgradeOptions();
         }
         UpgradeOptions.MergeFrom(other.UpgradeOptions);
       }
@@ -12882,9 +12882,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 82: {
             if (upgradeOptions_ == null) {
-              upgradeOptions_ = new global::Google.Cloud.Container.V1.AutoUpgradeOptions();
+              UpgradeOptions = new global::Google.Cloud.Container.V1.AutoUpgradeOptions();
             }
-            input.ReadMessage(upgradeOptions_);
+            input.ReadMessage(UpgradeOptions);
             break;
           }
         }
@@ -13176,7 +13176,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.window_ != null) {
         if (window_ == null) {
-          window_ = new global::Google.Cloud.Container.V1.MaintenanceWindow();
+          Window = new global::Google.Cloud.Container.V1.MaintenanceWindow();
         }
         Window.MergeFrom(other.Window);
       }
@@ -13193,9 +13193,9 @@ namespace Google.Cloud.Container.V1 {
             break;
           case 10: {
             if (window_ == null) {
-              window_ = new global::Google.Cloud.Container.V1.MaintenanceWindow();
+              Window = new global::Google.Cloud.Container.V1.MaintenanceWindow();
             }
-            input.ReadMessage(window_);
+            input.ReadMessage(Window);
             break;
           }
         }
@@ -13805,7 +13805,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.management_ != null) {
         if (management_ == null) {
-          management_ = new global::Google.Cloud.Container.V1.NodeManagement();
+          Management = new global::Google.Cloud.Container.V1.NodeManagement();
         }
         Management.MergeFrom(other.Management);
       }
@@ -13841,9 +13841,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 42: {
             if (management_ == null) {
-              management_ = new global::Google.Cloud.Container.V1.NodeManagement();
+              Management = new global::Google.Cloud.Container.V1.NodeManagement();
             }
-            input.ReadMessage(management_);
+            input.ReadMessage(Management);
             break;
           }
           case 58: {
@@ -16233,7 +16233,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.networkPolicy_ != null) {
         if (networkPolicy_ == null) {
-          networkPolicy_ = new global::Google.Cloud.Container.V1.NetworkPolicy();
+          NetworkPolicy = new global::Google.Cloud.Container.V1.NetworkPolicy();
         }
         NetworkPolicy.MergeFrom(other.NetworkPolicy);
       }
@@ -16265,9 +16265,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 34: {
             if (networkPolicy_ == null) {
-              networkPolicy_ = new global::Google.Cloud.Container.V1.NetworkPolicy();
+              NetworkPolicy = new global::Google.Cloud.Container.V1.NetworkPolicy();
             }
-            input.ReadMessage(networkPolicy_);
+            input.ReadMessage(NetworkPolicy);
             break;
           }
           case 50: {
@@ -16504,7 +16504,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.maintenancePolicy_ != null) {
         if (maintenancePolicy_ == null) {
-          maintenancePolicy_ = new global::Google.Cloud.Container.V1.MaintenancePolicy();
+          MaintenancePolicy = new global::Google.Cloud.Container.V1.MaintenancePolicy();
         }
         MaintenancePolicy.MergeFrom(other.MaintenancePolicy);
       }
@@ -16536,9 +16536,9 @@ namespace Google.Cloud.Container.V1 {
           }
           case 34: {
             if (maintenancePolicy_ == null) {
-              maintenancePolicy_ = new global::Google.Cloud.Container.V1.MaintenancePolicy();
+              MaintenancePolicy = new global::Google.Cloud.Container.V1.MaintenancePolicy();
             }
-            input.ReadMessage(maintenancePolicy_);
+            input.ReadMessage(MaintenancePolicy);
             break;
           }
           case 42: {

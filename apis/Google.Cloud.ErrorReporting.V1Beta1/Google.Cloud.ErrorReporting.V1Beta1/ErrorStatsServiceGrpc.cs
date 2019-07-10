@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,33 +31,33 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   {
     static readonly string __ServiceName = "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest> __Marshaller_ListGroupStatsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> __Marshaller_ListGroupStatsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest> __Marshaller_ListEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> __Marshaller_ListEventsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest> __Marshaller_DeleteEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> __Marshaller_DeleteEventsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListGroupStatsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListGroupStatsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListEventsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_DeleteEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> __Marshaller_google_devtools_clouderrorreporting_v1beta1_DeleteEventsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> __Method_ListGroupStats = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListGroupStats",
-        __Marshaller_ListGroupStatsRequest,
-        __Marshaller_ListGroupStatsResponse);
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListGroupStatsRequest,
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListGroupStatsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> __Method_ListEvents = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListEvents",
-        __Marshaller_ListEventsRequest,
-        __Marshaller_ListEventsResponse);
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListEventsRequest,
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_ListEventsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> __Method_DeleteEvents = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteEvents",
-        __Marshaller_DeleteEventsRequest,
-        __Marshaller_DeleteEventsResponse);
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_DeleteEventsRequest,
+        __Marshaller_google_devtools_clouderrorreporting_v1beta1_DeleteEventsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -66,6 +66,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of ErrorStatsService</summary>
+    [grpc::BindServiceMethod(typeof(ErrorStatsService), "BindService")]
     public abstract partial class ErrorStatsServiceBase
     {
       /// <summary>
@@ -273,6 +274,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           .AddMethod(__Method_ListGroupStats, serviceImpl.ListGroupStats)
           .AddMethod(__Method_ListEvents, serviceImpl.ListEvents)
           .AddMethod(__Method_DeleteEvents, serviceImpl.DeleteEvents).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, ErrorStatsServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListGroupStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse>(serviceImpl.ListGroupStats));
+      serviceBinder.AddMethod(__Method_ListEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse>(serviceImpl.ListEvents));
+      serviceBinder.AddMethod(__Method_DeleteEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>(serviceImpl.DeleteEvents));
     }
 
   }

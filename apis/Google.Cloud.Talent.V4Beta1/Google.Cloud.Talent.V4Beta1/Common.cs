@@ -917,13 +917,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -940,16 +940,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -1159,13 +1159,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.postalAddress_ != null) {
         if (postalAddress_ == null) {
-          postalAddress_ = new global::Google.Type.PostalAddress();
+          PostalAddress = new global::Google.Type.PostalAddress();
         }
         PostalAddress.MergeFrom(other.PostalAddress);
       }
       if (other.latLng_ != null) {
         if (latLng_ == null) {
-          latLng_ = new global::Google.Type.LatLng();
+          LatLng = new global::Google.Type.LatLng();
         }
         LatLng.MergeFrom(other.LatLng);
       }
@@ -1184,21 +1184,21 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            locationType_ = (global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) input.ReadEnum();
+            LocationType = (global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) input.ReadEnum();
             break;
           }
           case 18: {
             if (postalAddress_ == null) {
-              postalAddress_ = new global::Google.Type.PostalAddress();
+              PostalAddress = new global::Google.Type.PostalAddress();
             }
-            input.ReadMessage(postalAddress_);
+            input.ReadMessage(PostalAddress);
             break;
           }
           case 26: {
             if (latLng_ == null) {
-              latLng_ = new global::Google.Type.LatLng();
+              LatLng = new global::Google.Type.LatLng();
             }
-            input.ReadMessage(latLng_);
+            input.ReadMessage(LatLng);
             break;
           }
           case 33: {
@@ -1549,7 +1549,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.deviceInfo_ != null) {
         if (deviceInfo_ == null) {
-          deviceInfo_ = new global::Google.Cloud.Talent.V4Beta1.DeviceInfo();
+          DeviceInfo = new global::Google.Cloud.Talent.V4Beta1.DeviceInfo();
         }
         DeviceInfo.MergeFrom(other.DeviceInfo);
       }
@@ -1582,9 +1582,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 42: {
             if (deviceInfo_ == null) {
-              deviceInfo_ = new global::Google.Cloud.Talent.V4Beta1.DeviceInfo();
+              DeviceInfo = new global::Google.Cloud.Talent.V4Beta1.DeviceInfo();
             }
-            input.ReadMessage(deviceInfo_);
+            input.ReadMessage(DeviceInfo);
             break;
           }
         }
@@ -1886,7 +1886,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            deviceType_ = (global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType) input.ReadEnum();
+            DeviceType = (global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2529,13 +2529,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       entries_.Add(other.entries_);
       if (other.annualizedBaseCompensationRange_ != null) {
         if (annualizedBaseCompensationRange_ == null) {
-          annualizedBaseCompensationRange_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
+          AnnualizedBaseCompensationRange = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
         }
         AnnualizedBaseCompensationRange.MergeFrom(other.AnnualizedBaseCompensationRange);
       }
       if (other.annualizedTotalCompensationRange_ != null) {
         if (annualizedTotalCompensationRange_ == null) {
-          annualizedTotalCompensationRange_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
+          AnnualizedTotalCompensationRange = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
         }
         AnnualizedTotalCompensationRange.MergeFrom(other.AnnualizedTotalCompensationRange);
       }
@@ -2556,16 +2556,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             if (annualizedBaseCompensationRange_ == null) {
-              annualizedBaseCompensationRange_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
+              AnnualizedBaseCompensationRange = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
             }
-            input.ReadMessage(annualizedBaseCompensationRange_);
+            input.ReadMessage(AnnualizedBaseCompensationRange);
             break;
           }
           case 26: {
             if (annualizedTotalCompensationRange_ == null) {
-              annualizedTotalCompensationRange_ = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
+              AnnualizedTotalCompensationRange = new global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange();
             }
-            input.ReadMessage(annualizedTotalCompensationRange_);
+            input.ReadMessage(AnnualizedTotalCompensationRange);
             break;
           }
         }
@@ -2851,6 +2851,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
         }
 
+
         private object compensationAmount_;
         /// <summary>Enum of possible cases for the "compensation_amount" oneof.</summary>
         public enum CompensationAmountOneofCase {
@@ -3017,11 +3018,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 8: {
-                type_ = (global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType) input.ReadEnum();
+                Type = (global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType) input.ReadEnum();
                 break;
               }
               case 16: {
-                unit_ = (global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit) input.ReadEnum();
+                Unit = (global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit) input.ReadEnum();
                 break;
               }
               case 26: {
@@ -3200,13 +3201,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           if (other.maxCompensation_ != null) {
             if (maxCompensation_ == null) {
-              maxCompensation_ = new global::Google.Type.Money();
+              MaxCompensation = new global::Google.Type.Money();
             }
             MaxCompensation.MergeFrom(other.MaxCompensation);
           }
           if (other.minCompensation_ != null) {
             if (minCompensation_ == null) {
-              minCompensation_ = new global::Google.Type.Money();
+              MinCompensation = new global::Google.Type.Money();
             }
             MinCompensation.MergeFrom(other.MinCompensation);
           }
@@ -3223,16 +3224,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
                 break;
               case 10: {
                 if (minCompensation_ == null) {
-                  minCompensation_ = new global::Google.Type.Money();
+                  MinCompensation = new global::Google.Type.Money();
                 }
-                input.ReadMessage(minCompensation_);
+                input.ReadMessage(MinCompensation);
                 break;
               }
               case 18: {
                 if (maxCompensation_ == null) {
-                  maxCompensation_ = new global::Google.Type.Money();
+                  MaxCompensation = new global::Google.Type.Money();
                 }
-                input.ReadMessage(maxCompensation_);
+                input.ReadMessage(MaxCompensation);
                 break;
               }
             }
@@ -3464,13 +3465,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.acquireDate_ != null) {
         if (acquireDate_ == null) {
-          acquireDate_ = new global::Google.Type.Date();
+          AcquireDate = new global::Google.Type.Date();
         }
         AcquireDate.MergeFrom(other.AcquireDate);
       }
       if (other.expireDate_ != null) {
         if (expireDate_ == null) {
-          expireDate_ = new global::Google.Type.Date();
+          ExpireDate = new global::Google.Type.Date();
         }
         ExpireDate.MergeFrom(other.ExpireDate);
       }
@@ -3497,16 +3498,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             if (acquireDate_ == null) {
-              acquireDate_ = new global::Google.Type.Date();
+              AcquireDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(acquireDate_);
+            input.ReadMessage(AcquireDate);
             break;
           }
           case 26: {
             if (expireDate_ == null) {
-              expireDate_ = new global::Google.Type.Date();
+              ExpireDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(expireDate_);
+            input.ReadMessage(ExpireDate);
             break;
           }
           case 34: {
@@ -3746,7 +3747,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.lastUsedDate_ != null) {
         if (lastUsedDate_ == null) {
-          lastUsedDate_ = new global::Google.Type.Date();
+          LastUsedDate = new global::Google.Type.Date();
         }
         LastUsedDate.MergeFrom(other.LastUsedDate);
       }
@@ -3776,13 +3777,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             if (lastUsedDate_ == null) {
-              lastUsedDate_ = new global::Google.Type.Date();
+              LastUsedDate = new global::Google.Type.Date();
             }
-            input.ReadMessage(lastUsedDate_);
+            input.ReadMessage(LastUsedDate);
             break;
           }
           case 24: {
-            level_ = (global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel) input.ReadEnum();
+            Level = (global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel) input.ReadEnum();
             break;
           }
           case 34: {
@@ -3937,7 +3938,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.rating_ != null) {
         if (rating_ == null) {
-          rating_ = new global::Google.Cloud.Talent.V4Beta1.Rating();
+          Rating = new global::Google.Cloud.Talent.V4Beta1.Rating();
         }
         Rating.MergeFrom(other.Rating);
       }
@@ -3957,13 +3958,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 50: {
             if (rating_ == null) {
-              rating_ = new global::Google.Cloud.Talent.V4Beta1.Rating();
+              Rating = new global::Google.Cloud.Talent.V4Beta1.Rating();
             }
-            input.ReadMessage(rating_);
+            input.ReadMessage(Rating);
             break;
           }
           case 56: {
-            outcome_ = (global::Google.Cloud.Talent.V4Beta1.Outcome) input.ReadEnum();
+            Outcome = (global::Google.Cloud.Talent.V4Beta1.Outcome) input.ReadEnum();
             break;
           }
         }

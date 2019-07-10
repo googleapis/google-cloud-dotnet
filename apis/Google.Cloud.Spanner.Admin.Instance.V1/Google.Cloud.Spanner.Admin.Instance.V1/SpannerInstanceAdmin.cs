@@ -606,7 +606,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             break;
           }
           case 48: {
-            state_ = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) input.ReadEnum();
             break;
           }
           case 58: {
@@ -1458,7 +1458,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (other.instance_ != null) {
         if (instance_ == null) {
-          instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+          Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
         }
         Instance.MergeFrom(other.Instance);
       }
@@ -1483,9 +1483,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           }
           case 26: {
             if (instance_ == null) {
-              instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+              Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
             }
-            input.ReadMessage(instance_);
+            input.ReadMessage(Instance);
             break;
           }
         }
@@ -2053,13 +2053,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (other.instance_ != null) {
         if (instance_ == null) {
-          instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+          Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
         }
         Instance.MergeFrom(other.Instance);
       }
       if (other.fieldMask_ != null) {
         if (fieldMask_ == null) {
-          fieldMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         FieldMask.MergeFrom(other.FieldMask);
       }
@@ -2076,16 +2076,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             break;
           case 10: {
             if (instance_ == null) {
-              instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+              Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
             }
-            input.ReadMessage(instance_);
+            input.ReadMessage(Instance);
             break;
           }
           case 18: {
             if (fieldMask_ == null) {
-              fieldMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(fieldMask_);
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -2421,25 +2421,25 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (other.instance_ != null) {
         if (instance_ == null) {
-          instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+          Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
         }
         Instance.MergeFrom(other.Instance);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.cancelTime_ != null) {
         if (cancelTime_ == null) {
-          cancelTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CancelTime.MergeFrom(other.CancelTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -2456,30 +2456,30 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             break;
           case 10: {
             if (instance_ == null) {
-              instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+              Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
             }
-            input.ReadMessage(instance_);
+            input.ReadMessage(Instance);
             break;
           }
           case 18: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 26: {
             if (cancelTime_ == null) {
-              cancelTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(cancelTime_);
+            input.ReadMessage(CancelTime);
             break;
           }
           case 34: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -2678,25 +2678,25 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (other.instance_ != null) {
         if (instance_ == null) {
-          instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+          Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
         }
         Instance.MergeFrom(other.Instance);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.cancelTime_ != null) {
         if (cancelTime_ == null) {
-          cancelTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CancelTime.MergeFrom(other.CancelTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -2713,30 +2713,30 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             break;
           case 10: {
             if (instance_ == null) {
-              instance_ = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
+              Instance = new global::Google.Cloud.Spanner.Admin.Instance.V1.Instance();
             }
-            input.ReadMessage(instance_);
+            input.ReadMessage(Instance);
             break;
           }
           case 18: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 26: {
             if (cancelTime_ == null) {
-              cancelTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(cancelTime_);
+            input.ReadMessage(CancelTime);
             break;
           }
           case 34: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }

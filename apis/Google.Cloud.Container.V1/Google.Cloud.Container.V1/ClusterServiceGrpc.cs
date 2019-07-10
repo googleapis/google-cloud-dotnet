@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,254 +31,254 @@ namespace Google.Cloud.Container.V1 {
   {
     static readonly string __ServiceName = "google.container.v1.ClusterManager";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListClustersRequest> __Marshaller_ListClustersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListClustersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListClustersResponse> __Marshaller_ListClustersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListClustersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetClusterRequest> __Marshaller_GetClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.Cluster> __Marshaller_Cluster = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.Cluster.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CreateClusterRequest> __Marshaller_CreateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CreateClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.UpdateClusterRequest> __Marshaller_UpdateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.UpdateClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.UpdateNodePoolRequest> __Marshaller_UpdateNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.UpdateNodePoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest> __Marshaller_SetNodePoolAutoscalingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLoggingServiceRequest> __Marshaller_SetLoggingServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLoggingServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetMonitoringServiceRequest> __Marshaller_SetMonitoringServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetMonitoringServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetAddonsConfigRequest> __Marshaller_SetAddonsConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetAddonsConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLocationsRequest> __Marshaller_SetLocationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLocationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.UpdateMasterRequest> __Marshaller_UpdateMasterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.UpdateMasterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetMasterAuthRequest> __Marshaller_SetMasterAuthRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetMasterAuthRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.DeleteClusterRequest> __Marshaller_DeleteClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.DeleteClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListOperationsRequest> __Marshaller_ListOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListOperationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListOperationsResponse> __Marshaller_ListOperationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListOperationsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetOperationRequest> __Marshaller_GetOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CancelOperationRequest> __Marshaller_CancelOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CancelOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetServerConfigRequest> __Marshaller_GetServerConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetServerConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ServerConfig> __Marshaller_ServerConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ServerConfig.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListNodePoolsRequest> __Marshaller_ListNodePoolsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListNodePoolsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListNodePoolsResponse> __Marshaller_ListNodePoolsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListNodePoolsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetNodePoolRequest> __Marshaller_GetNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetNodePoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.NodePool> __Marshaller_NodePool = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.NodePool.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CreateNodePoolRequest> __Marshaller_CreateNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CreateNodePoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.DeleteNodePoolRequest> __Marshaller_DeleteNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.DeleteNodePoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest> __Marshaller_RollbackNodePoolUpgradeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNodePoolManagementRequest> __Marshaller_SetNodePoolManagementRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNodePoolManagementRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLabelsRequest> __Marshaller_SetLabelsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLabelsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLegacyAbacRequest> __Marshaller_SetLegacyAbacRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLegacyAbacRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.StartIPRotationRequest> __Marshaller_StartIPRotationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.StartIPRotationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CompleteIPRotationRequest> __Marshaller_CompleteIPRotationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CompleteIPRotationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNodePoolSizeRequest> __Marshaller_SetNodePoolSizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNodePoolSizeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest> __Marshaller_SetNetworkPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNetworkPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest> __Marshaller_SetMaintenancePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListClustersRequest> __Marshaller_google_container_v1_ListClustersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListClustersRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListClustersResponse> __Marshaller_google_container_v1_ListClustersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListClustersResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetClusterRequest> __Marshaller_google_container_v1_GetClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.Cluster> __Marshaller_google_container_v1_Cluster = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.Cluster.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CreateClusterRequest> __Marshaller_google_container_v1_CreateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CreateClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.Operation> __Marshaller_google_container_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.UpdateClusterRequest> __Marshaller_google_container_v1_UpdateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.UpdateClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.UpdateNodePoolRequest> __Marshaller_google_container_v1_UpdateNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.UpdateNodePoolRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest> __Marshaller_google_container_v1_SetNodePoolAutoscalingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLoggingServiceRequest> __Marshaller_google_container_v1_SetLoggingServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLoggingServiceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetMonitoringServiceRequest> __Marshaller_google_container_v1_SetMonitoringServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetMonitoringServiceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetAddonsConfigRequest> __Marshaller_google_container_v1_SetAddonsConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetAddonsConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLocationsRequest> __Marshaller_google_container_v1_SetLocationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLocationsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.UpdateMasterRequest> __Marshaller_google_container_v1_UpdateMasterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.UpdateMasterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetMasterAuthRequest> __Marshaller_google_container_v1_SetMasterAuthRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetMasterAuthRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.DeleteClusterRequest> __Marshaller_google_container_v1_DeleteClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.DeleteClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListOperationsRequest> __Marshaller_google_container_v1_ListOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListOperationsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListOperationsResponse> __Marshaller_google_container_v1_ListOperationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListOperationsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetOperationRequest> __Marshaller_google_container_v1_GetOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetOperationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CancelOperationRequest> __Marshaller_google_container_v1_CancelOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CancelOperationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetServerConfigRequest> __Marshaller_google_container_v1_GetServerConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetServerConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ServerConfig> __Marshaller_google_container_v1_ServerConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ServerConfig.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListNodePoolsRequest> __Marshaller_google_container_v1_ListNodePoolsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListNodePoolsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListNodePoolsResponse> __Marshaller_google_container_v1_ListNodePoolsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListNodePoolsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetNodePoolRequest> __Marshaller_google_container_v1_GetNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetNodePoolRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.NodePool> __Marshaller_google_container_v1_NodePool = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.NodePool.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CreateNodePoolRequest> __Marshaller_google_container_v1_CreateNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CreateNodePoolRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.DeleteNodePoolRequest> __Marshaller_google_container_v1_DeleteNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.DeleteNodePoolRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest> __Marshaller_google_container_v1_RollbackNodePoolUpgradeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNodePoolManagementRequest> __Marshaller_google_container_v1_SetNodePoolManagementRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNodePoolManagementRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLabelsRequest> __Marshaller_google_container_v1_SetLabelsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLabelsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetLegacyAbacRequest> __Marshaller_google_container_v1_SetLegacyAbacRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetLegacyAbacRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.StartIPRotationRequest> __Marshaller_google_container_v1_StartIPRotationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.StartIPRotationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CompleteIPRotationRequest> __Marshaller_google_container_v1_CompleteIPRotationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.CompleteIPRotationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNodePoolSizeRequest> __Marshaller_google_container_v1_SetNodePoolSizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNodePoolSizeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest> __Marshaller_google_container_v1_SetNetworkPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNetworkPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest> __Marshaller_google_container_v1_SetMaintenancePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListClusters",
-        __Marshaller_ListClustersRequest,
-        __Marshaller_ListClustersResponse);
+        __Marshaller_google_container_v1_ListClustersRequest,
+        __Marshaller_google_container_v1_ListClustersResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.GetClusterRequest, global::Google.Cloud.Container.V1.Cluster> __Method_GetCluster = new grpc::Method<global::Google.Cloud.Container.V1.GetClusterRequest, global::Google.Cloud.Container.V1.Cluster>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCluster",
-        __Marshaller_GetClusterRequest,
-        __Marshaller_Cluster);
+        __Marshaller_google_container_v1_GetClusterRequest,
+        __Marshaller_google_container_v1_Cluster);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.CreateClusterRequest, global::Google.Cloud.Container.V1.Operation> __Method_CreateCluster = new grpc::Method<global::Google.Cloud.Container.V1.CreateClusterRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateCluster",
-        __Marshaller_CreateClusterRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_CreateClusterRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.UpdateClusterRequest, global::Google.Cloud.Container.V1.Operation> __Method_UpdateCluster = new grpc::Method<global::Google.Cloud.Container.V1.UpdateClusterRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCluster",
-        __Marshaller_UpdateClusterRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_UpdateClusterRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.UpdateNodePoolRequest, global::Google.Cloud.Container.V1.Operation> __Method_UpdateNodePool = new grpc::Method<global::Google.Cloud.Container.V1.UpdateNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateNodePool",
-        __Marshaller_UpdateNodePoolRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_UpdateNodePoolRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetNodePoolAutoscaling = new grpc::Method<global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetNodePoolAutoscaling",
-        __Marshaller_SetNodePoolAutoscalingRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetNodePoolAutoscalingRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetLoggingServiceRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetLoggingService = new grpc::Method<global::Google.Cloud.Container.V1.SetLoggingServiceRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetLoggingService",
-        __Marshaller_SetLoggingServiceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetLoggingServiceRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetMonitoringServiceRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetMonitoringService = new grpc::Method<global::Google.Cloud.Container.V1.SetMonitoringServiceRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetMonitoringService",
-        __Marshaller_SetMonitoringServiceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetMonitoringServiceRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetAddonsConfigRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetAddonsConfig = new grpc::Method<global::Google.Cloud.Container.V1.SetAddonsConfigRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetAddonsConfig",
-        __Marshaller_SetAddonsConfigRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetAddonsConfigRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetLocationsRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetLocations = new grpc::Method<global::Google.Cloud.Container.V1.SetLocationsRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetLocations",
-        __Marshaller_SetLocationsRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetLocationsRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.UpdateMasterRequest, global::Google.Cloud.Container.V1.Operation> __Method_UpdateMaster = new grpc::Method<global::Google.Cloud.Container.V1.UpdateMasterRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateMaster",
-        __Marshaller_UpdateMasterRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_UpdateMasterRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetMasterAuthRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetMasterAuth = new grpc::Method<global::Google.Cloud.Container.V1.SetMasterAuthRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetMasterAuth",
-        __Marshaller_SetMasterAuthRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetMasterAuthRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.DeleteClusterRequest, global::Google.Cloud.Container.V1.Operation> __Method_DeleteCluster = new grpc::Method<global::Google.Cloud.Container.V1.DeleteClusterRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteCluster",
-        __Marshaller_DeleteClusterRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_DeleteClusterRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.ListOperationsRequest, global::Google.Cloud.Container.V1.ListOperationsResponse> __Method_ListOperations = new grpc::Method<global::Google.Cloud.Container.V1.ListOperationsRequest, global::Google.Cloud.Container.V1.ListOperationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListOperations",
-        __Marshaller_ListOperationsRequest,
-        __Marshaller_ListOperationsResponse);
+        __Marshaller_google_container_v1_ListOperationsRequest,
+        __Marshaller_google_container_v1_ListOperationsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.GetOperationRequest, global::Google.Cloud.Container.V1.Operation> __Method_GetOperation = new grpc::Method<global::Google.Cloud.Container.V1.GetOperationRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetOperation",
-        __Marshaller_GetOperationRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_GetOperationRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelOperation = new grpc::Method<global::Google.Cloud.Container.V1.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CancelOperation",
-        __Marshaller_CancelOperationRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_container_v1_CancelOperationRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.GetServerConfigRequest, global::Google.Cloud.Container.V1.ServerConfig> __Method_GetServerConfig = new grpc::Method<global::Google.Cloud.Container.V1.GetServerConfigRequest, global::Google.Cloud.Container.V1.ServerConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetServerConfig",
-        __Marshaller_GetServerConfigRequest,
-        __Marshaller_ServerConfig);
+        __Marshaller_google_container_v1_GetServerConfigRequest,
+        __Marshaller_google_container_v1_ServerConfig);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.ListNodePoolsRequest, global::Google.Cloud.Container.V1.ListNodePoolsResponse> __Method_ListNodePools = new grpc::Method<global::Google.Cloud.Container.V1.ListNodePoolsRequest, global::Google.Cloud.Container.V1.ListNodePoolsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListNodePools",
-        __Marshaller_ListNodePoolsRequest,
-        __Marshaller_ListNodePoolsResponse);
+        __Marshaller_google_container_v1_ListNodePoolsRequest,
+        __Marshaller_google_container_v1_ListNodePoolsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.GetNodePoolRequest, global::Google.Cloud.Container.V1.NodePool> __Method_GetNodePool = new grpc::Method<global::Google.Cloud.Container.V1.GetNodePoolRequest, global::Google.Cloud.Container.V1.NodePool>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetNodePool",
-        __Marshaller_GetNodePoolRequest,
-        __Marshaller_NodePool);
+        __Marshaller_google_container_v1_GetNodePoolRequest,
+        __Marshaller_google_container_v1_NodePool);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.CreateNodePoolRequest, global::Google.Cloud.Container.V1.Operation> __Method_CreateNodePool = new grpc::Method<global::Google.Cloud.Container.V1.CreateNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateNodePool",
-        __Marshaller_CreateNodePoolRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_CreateNodePoolRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.DeleteNodePoolRequest, global::Google.Cloud.Container.V1.Operation> __Method_DeleteNodePool = new grpc::Method<global::Google.Cloud.Container.V1.DeleteNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteNodePool",
-        __Marshaller_DeleteNodePoolRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_DeleteNodePoolRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest, global::Google.Cloud.Container.V1.Operation> __Method_RollbackNodePoolUpgrade = new grpc::Method<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RollbackNodePoolUpgrade",
-        __Marshaller_RollbackNodePoolUpgradeRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_RollbackNodePoolUpgradeRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetNodePoolManagementRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetNodePoolManagement = new grpc::Method<global::Google.Cloud.Container.V1.SetNodePoolManagementRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetNodePoolManagement",
-        __Marshaller_SetNodePoolManagementRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetNodePoolManagementRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetLabelsRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetLabels = new grpc::Method<global::Google.Cloud.Container.V1.SetLabelsRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetLabels",
-        __Marshaller_SetLabelsRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetLabelsRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetLegacyAbacRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetLegacyAbac = new grpc::Method<global::Google.Cloud.Container.V1.SetLegacyAbacRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetLegacyAbac",
-        __Marshaller_SetLegacyAbacRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetLegacyAbacRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.StartIPRotationRequest, global::Google.Cloud.Container.V1.Operation> __Method_StartIPRotation = new grpc::Method<global::Google.Cloud.Container.V1.StartIPRotationRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "StartIPRotation",
-        __Marshaller_StartIPRotationRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_StartIPRotationRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.CompleteIPRotationRequest, global::Google.Cloud.Container.V1.Operation> __Method_CompleteIPRotation = new grpc::Method<global::Google.Cloud.Container.V1.CompleteIPRotationRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CompleteIPRotation",
-        __Marshaller_CompleteIPRotationRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_CompleteIPRotationRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetNodePoolSizeRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetNodePoolSize = new grpc::Method<global::Google.Cloud.Container.V1.SetNodePoolSizeRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetNodePoolSize",
-        __Marshaller_SetNodePoolSizeRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetNodePoolSizeRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetNetworkPolicy = new grpc::Method<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetNetworkPolicy",
-        __Marshaller_SetNetworkPolicyRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetNetworkPolicyRequest,
+        __Marshaller_google_container_v1_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest, global::Google.Cloud.Container.V1.Operation> __Method_SetMaintenancePolicy = new grpc::Method<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest, global::Google.Cloud.Container.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetMaintenancePolicy",
-        __Marshaller_SetMaintenancePolicyRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_container_v1_SetMaintenancePolicyRequest,
+        __Marshaller_google_container_v1_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -287,6 +287,7 @@ namespace Google.Cloud.Container.V1 {
     }
 
     /// <summary>Base class for server-side implementations of ClusterManager</summary>
+    [grpc::BindServiceMethod(typeof(ClusterManager), "BindService")]
     public abstract partial class ClusterManagerBase
     {
       /// <summary>
@@ -2126,6 +2127,44 @@ namespace Google.Cloud.Container.V1 {
           .AddMethod(__Method_SetNodePoolSize, serviceImpl.SetNodePoolSize)
           .AddMethod(__Method_SetNetworkPolicy, serviceImpl.SetNetworkPolicy)
           .AddMethod(__Method_SetMaintenancePolicy, serviceImpl.SetMaintenancePolicy).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, ClusterManagerBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse>(serviceImpl.ListClusters));
+      serviceBinder.AddMethod(__Method_GetCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetClusterRequest, global::Google.Cloud.Container.V1.Cluster>(serviceImpl.GetCluster));
+      serviceBinder.AddMethod(__Method_CreateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CreateClusterRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.CreateCluster));
+      serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.UpdateClusterRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.UpdateCluster));
+      serviceBinder.AddMethod(__Method_UpdateNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.UpdateNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.UpdateNodePool));
+      serviceBinder.AddMethod(__Method_SetNodePoolAutoscaling, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNodePoolAutoscaling));
+      serviceBinder.AddMethod(__Method_SetLoggingService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetLoggingServiceRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetLoggingService));
+      serviceBinder.AddMethod(__Method_SetMonitoringService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetMonitoringServiceRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetMonitoringService));
+      serviceBinder.AddMethod(__Method_SetAddonsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetAddonsConfigRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetAddonsConfig));
+      serviceBinder.AddMethod(__Method_SetLocations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetLocationsRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetLocations));
+      serviceBinder.AddMethod(__Method_UpdateMaster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.UpdateMasterRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.UpdateMaster));
+      serviceBinder.AddMethod(__Method_SetMasterAuth, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetMasterAuthRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetMasterAuth));
+      serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.DeleteClusterRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.DeleteCluster));
+      serviceBinder.AddMethod(__Method_ListOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.ListOperationsRequest, global::Google.Cloud.Container.V1.ListOperationsResponse>(serviceImpl.ListOperations));
+      serviceBinder.AddMethod(__Method_GetOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetOperationRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.GetOperation));
+      serviceBinder.AddMethod(__Method_CancelOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelOperation));
+      serviceBinder.AddMethod(__Method_GetServerConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetServerConfigRequest, global::Google.Cloud.Container.V1.ServerConfig>(serviceImpl.GetServerConfig));
+      serviceBinder.AddMethod(__Method_ListNodePools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.ListNodePoolsRequest, global::Google.Cloud.Container.V1.ListNodePoolsResponse>(serviceImpl.ListNodePools));
+      serviceBinder.AddMethod(__Method_GetNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetNodePoolRequest, global::Google.Cloud.Container.V1.NodePool>(serviceImpl.GetNodePool));
+      serviceBinder.AddMethod(__Method_CreateNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CreateNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.CreateNodePool));
+      serviceBinder.AddMethod(__Method_DeleteNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.DeleteNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.DeleteNodePool));
+      serviceBinder.AddMethod(__Method_RollbackNodePoolUpgrade, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.RollbackNodePoolUpgrade));
+      serviceBinder.AddMethod(__Method_SetNodePoolManagement, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNodePoolManagementRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNodePoolManagement));
+      serviceBinder.AddMethod(__Method_SetLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetLabelsRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetLabels));
+      serviceBinder.AddMethod(__Method_SetLegacyAbac, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetLegacyAbacRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetLegacyAbac));
+      serviceBinder.AddMethod(__Method_StartIPRotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.StartIPRotationRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.StartIPRotation));
+      serviceBinder.AddMethod(__Method_CompleteIPRotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CompleteIPRotationRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.CompleteIPRotation));
+      serviceBinder.AddMethod(__Method_SetNodePoolSize, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNodePoolSizeRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNodePoolSize));
+      serviceBinder.AddMethod(__Method_SetNetworkPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNetworkPolicy));
+      serviceBinder.AddMethod(__Method_SetMaintenancePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetMaintenancePolicy));
     }
 
   }

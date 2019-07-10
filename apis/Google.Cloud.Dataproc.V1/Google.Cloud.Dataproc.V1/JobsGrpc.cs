@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,57 +31,57 @@ namespace Google.Cloud.Dataproc.V1 {
   {
     static readonly string __ServiceName = "google.cloud.dataproc.v1.JobController";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.SubmitJobRequest> __Marshaller_SubmitJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.Job> __Marshaller_Job = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.Job.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetJobRequest> __Marshaller_GetJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.GetJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListJobsRequest> __Marshaller_ListJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListJobsResponse> __Marshaller_ListJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateJobRequest> __Marshaller_UpdateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.UpdateJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CancelJobRequest> __Marshaller_CancelJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.CancelJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteJobRequest> __Marshaller_DeleteJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.DeleteJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.SubmitJobRequest> __Marshaller_google_cloud_dataproc_v1_SubmitJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.Job> __Marshaller_google_cloud_dataproc_v1_Job = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.Job.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetJobRequest> __Marshaller_google_cloud_dataproc_v1_GetJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.GetJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListJobsRequest> __Marshaller_google_cloud_dataproc_v1_ListJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListJobsResponse> __Marshaller_google_cloud_dataproc_v1_ListJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListJobsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateJobRequest> __Marshaller_google_cloud_dataproc_v1_UpdateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.UpdateJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CancelJobRequest> __Marshaller_google_cloud_dataproc_v1_CancelJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.CancelJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteJobRequest> __Marshaller_google_cloud_dataproc_v1_DeleteJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.DeleteJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.SubmitJobRequest, global::Google.Cloud.Dataproc.V1.Job> __Method_SubmitJob = new grpc::Method<global::Google.Cloud.Dataproc.V1.SubmitJobRequest, global::Google.Cloud.Dataproc.V1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SubmitJob",
-        __Marshaller_SubmitJobRequest,
-        __Marshaller_Job);
+        __Marshaller_google_cloud_dataproc_v1_SubmitJobRequest,
+        __Marshaller_google_cloud_dataproc_v1_Job);
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.GetJobRequest, global::Google.Cloud.Dataproc.V1.Job> __Method_GetJob = new grpc::Method<global::Google.Cloud.Dataproc.V1.GetJobRequest, global::Google.Cloud.Dataproc.V1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetJob",
-        __Marshaller_GetJobRequest,
-        __Marshaller_Job);
+        __Marshaller_google_cloud_dataproc_v1_GetJobRequest,
+        __Marshaller_google_cloud_dataproc_v1_Job);
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.ListJobsRequest, global::Google.Cloud.Dataproc.V1.ListJobsResponse> __Method_ListJobs = new grpc::Method<global::Google.Cloud.Dataproc.V1.ListJobsRequest, global::Google.Cloud.Dataproc.V1.ListJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListJobs",
-        __Marshaller_ListJobsRequest,
-        __Marshaller_ListJobsResponse);
+        __Marshaller_google_cloud_dataproc_v1_ListJobsRequest,
+        __Marshaller_google_cloud_dataproc_v1_ListJobsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.UpdateJobRequest, global::Google.Cloud.Dataproc.V1.Job> __Method_UpdateJob = new grpc::Method<global::Google.Cloud.Dataproc.V1.UpdateJobRequest, global::Google.Cloud.Dataproc.V1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateJob",
-        __Marshaller_UpdateJobRequest,
-        __Marshaller_Job);
+        __Marshaller_google_cloud_dataproc_v1_UpdateJobRequest,
+        __Marshaller_google_cloud_dataproc_v1_Job);
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.CancelJobRequest, global::Google.Cloud.Dataproc.V1.Job> __Method_CancelJob = new grpc::Method<global::Google.Cloud.Dataproc.V1.CancelJobRequest, global::Google.Cloud.Dataproc.V1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CancelJob",
-        __Marshaller_CancelJobRequest,
-        __Marshaller_Job);
+        __Marshaller_google_cloud_dataproc_v1_CancelJobRequest,
+        __Marshaller_google_cloud_dataproc_v1_Job);
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteJob = new grpc::Method<global::Google.Cloud.Dataproc.V1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteJob",
-        __Marshaller_DeleteJobRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_dataproc_v1_DeleteJobRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -90,6 +90,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     /// <summary>Base class for server-side implementations of JobController</summary>
+    [grpc::BindServiceMethod(typeof(JobController), "BindService")]
     public abstract partial class JobControllerBase
     {
       /// <summary>
@@ -490,6 +491,20 @@ namespace Google.Cloud.Dataproc.V1 {
           .AddMethod(__Method_UpdateJob, serviceImpl.UpdateJob)
           .AddMethod(__Method_CancelJob, serviceImpl.CancelJob)
           .AddMethod(__Method_DeleteJob, serviceImpl.DeleteJob).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, JobControllerBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_SubmitJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.SubmitJobRequest, global::Google.Cloud.Dataproc.V1.Job>(serviceImpl.SubmitJob));
+      serviceBinder.AddMethod(__Method_GetJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.GetJobRequest, global::Google.Cloud.Dataproc.V1.Job>(serviceImpl.GetJob));
+      serviceBinder.AddMethod(__Method_ListJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.ListJobsRequest, global::Google.Cloud.Dataproc.V1.ListJobsResponse>(serviceImpl.ListJobs));
+      serviceBinder.AddMethod(__Method_UpdateJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.UpdateJobRequest, global::Google.Cloud.Dataproc.V1.Job>(serviceImpl.UpdateJob));
+      serviceBinder.AddMethod(__Method_CancelJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.CancelJobRequest, global::Google.Cloud.Dataproc.V1.Job>(serviceImpl.CancelJob));
+      serviceBinder.AddMethod(__Method_DeleteJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteJob));
     }
 
   }

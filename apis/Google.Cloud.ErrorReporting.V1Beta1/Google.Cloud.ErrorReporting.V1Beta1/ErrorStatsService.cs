@@ -529,19 +529,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       groupId_.Add(other.groupId_);
       if (other.serviceFilter_ != null) {
         if (serviceFilter_ == null) {
-          serviceFilter_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
+          ServiceFilter = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
         }
         ServiceFilter.MergeFrom(other.ServiceFilter);
       }
       if (other.timeRange_ != null) {
         if (timeRange_ == null) {
-          timeRange_ = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
+          TimeRange = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
         }
         TimeRange.MergeFrom(other.TimeRange);
       }
       if (other.timedCountDuration_ != null) {
         if (timedCountDuration_ == null) {
-          timedCountDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+          TimedCountDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         TimedCountDuration.MergeFrom(other.TimedCountDuration);
       }
@@ -550,7 +550,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.alignmentTime_ != null) {
         if (alignmentTime_ == null) {
-          alignmentTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          AlignmentTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         AlignmentTime.MergeFrom(other.AlignmentTime);
       }
@@ -584,38 +584,38 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 26: {
             if (serviceFilter_ == null) {
-              serviceFilter_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
+              ServiceFilter = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
             }
-            input.ReadMessage(serviceFilter_);
+            input.ReadMessage(ServiceFilter);
             break;
           }
           case 42: {
             if (timeRange_ == null) {
-              timeRange_ = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
+              TimeRange = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
             }
-            input.ReadMessage(timeRange_);
+            input.ReadMessage(TimeRange);
             break;
           }
           case 50: {
             if (timedCountDuration_ == null) {
-              timedCountDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+              TimedCountDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
-            input.ReadMessage(timedCountDuration_);
+            input.ReadMessage(TimedCountDuration);
             break;
           }
           case 56: {
-            alignment_ = (global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment) input.ReadEnum();
+            Alignment = (global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment) input.ReadEnum();
             break;
           }
           case 66: {
             if (alignmentTime_ == null) {
-              alignmentTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              AlignmentTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(alignmentTime_);
+            input.ReadMessage(AlignmentTime);
             break;
           }
           case 72: {
-            order_ = (global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder) input.ReadEnum();
+            Order = (global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder) input.ReadEnum();
             break;
           }
           case 88: {
@@ -796,7 +796,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.timeRangeBegin_ != null) {
         if (timeRangeBegin_ == null) {
-          timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          TimeRangeBegin = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         TimeRangeBegin.MergeFrom(other.TimeRangeBegin);
       }
@@ -821,9 +821,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 34: {
             if (timeRangeBegin_ == null) {
-              timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              TimeRangeBegin = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(timeRangeBegin_);
+            input.ReadMessage(TimeRangeBegin);
             break;
           }
         }
@@ -1154,7 +1154,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
+          Group = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
         }
         Group.MergeFrom(other.Group);
       }
@@ -1167,13 +1167,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       timedCounts_.Add(other.timedCounts_);
       if (other.firstSeenTime_ != null) {
         if (firstSeenTime_ == null) {
-          firstSeenTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          FirstSeenTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         FirstSeenTime.MergeFrom(other.FirstSeenTime);
       }
       if (other.lastSeenTime_ != null) {
         if (lastSeenTime_ == null) {
-          lastSeenTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          LastSeenTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastSeenTime.MergeFrom(other.LastSeenTime);
       }
@@ -1183,7 +1183,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.representative_ != null) {
         if (representative_ == null) {
-          representative_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent();
+          Representative = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent();
         }
         Representative.MergeFrom(other.Representative);
       }
@@ -1200,9 +1200,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             break;
           case 10: {
             if (group_ == null) {
-              group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
+              Group = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
             }
-            input.ReadMessage(group_);
+            input.ReadMessage(Group);
             break;
           }
           case 16: {
@@ -1219,16 +1219,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 42: {
             if (firstSeenTime_ == null) {
-              firstSeenTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              FirstSeenTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(firstSeenTime_);
+            input.ReadMessage(FirstSeenTime);
             break;
           }
           case 50: {
             if (lastSeenTime_ == null) {
-              lastSeenTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              LastSeenTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(lastSeenTime_);
+            input.ReadMessage(LastSeenTime);
             break;
           }
           case 58: {
@@ -1241,9 +1241,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 74: {
             if (representative_ == null) {
-              representative_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent();
+              Representative = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent();
             }
-            input.ReadMessage(representative_);
+            input.ReadMessage(Representative);
             break;
           }
         }
@@ -1418,13 +1418,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -1445,16 +1445,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 18: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 26: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -1710,13 +1710,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.serviceFilter_ != null) {
         if (serviceFilter_ == null) {
-          serviceFilter_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
+          ServiceFilter = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
         }
         ServiceFilter.MergeFrom(other.ServiceFilter);
       }
       if (other.timeRange_ != null) {
         if (timeRange_ == null) {
-          timeRange_ = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
+          TimeRange = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
         }
         TimeRange.MergeFrom(other.TimeRange);
       }
@@ -1747,16 +1747,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 26: {
             if (serviceFilter_ == null) {
-              serviceFilter_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
+              ServiceFilter = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter();
             }
-            input.ReadMessage(serviceFilter_);
+            input.ReadMessage(ServiceFilter);
             break;
           }
           case 34: {
             if (timeRange_ == null) {
-              timeRange_ = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
+              TimeRange = new global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange();
             }
-            input.ReadMessage(timeRange_);
+            input.ReadMessage(TimeRange);
             break;
           }
           case 48: {
@@ -1934,7 +1934,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.timeRangeBegin_ != null) {
         if (timeRangeBegin_ == null) {
-          timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          TimeRangeBegin = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         TimeRangeBegin.MergeFrom(other.TimeRangeBegin);
       }
@@ -1959,9 +1959,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 34: {
             if (timeRangeBegin_ == null) {
-              timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              TimeRangeBegin = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(timeRangeBegin_);
+            input.ReadMessage(TimeRangeBegin);
             break;
           }
         }
@@ -2097,7 +2097,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            period_ = (global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period) input.ReadEnum();
+            Period = (global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period) input.ReadEnum();
             break;
           }
         }

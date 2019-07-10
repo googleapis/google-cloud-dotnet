@@ -327,7 +327,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       }
       if (other.constraints_ != null) {
         if (constraints_ == null) {
-          constraints_ = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints();
+          Constraints = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints();
         }
         Constraints.MergeFrom(other.Constraints);
       }
@@ -343,7 +343,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            threatType_ = (global::Google.Cloud.WebRisk.V1Beta1.ThreatType) input.ReadEnum();
+            ThreatType = (global::Google.Cloud.WebRisk.V1Beta1.ThreatType) input.ReadEnum();
             break;
           }
           case 18: {
@@ -352,9 +352,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
           case 26: {
             if (constraints_ == null) {
-              constraints_ = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints();
+              Constraints = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints();
             }
-            input.ReadMessage(constraints_);
+            input.ReadMessage(Constraints);
             break;
           }
         }
@@ -805,13 +805,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       }
       if (other.additions_ != null) {
         if (additions_ == null) {
-          additions_ = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions();
+          Additions = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions();
         }
         Additions.MergeFrom(other.Additions);
       }
       if (other.removals_ != null) {
         if (removals_ == null) {
-          removals_ = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals();
+          Removals = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals();
         }
         Removals.MergeFrom(other.Removals);
       }
@@ -820,13 +820,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       }
       if (other.checksum_ != null) {
         if (checksum_ == null) {
-          checksum_ = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum();
+          Checksum = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum();
         }
         Checksum.MergeFrom(other.Checksum);
       }
       if (other.recommendedNextDiff_ != null) {
         if (recommendedNextDiff_ == null) {
-          recommendedNextDiff_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          RecommendedNextDiff = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         RecommendedNextDiff.MergeFrom(other.RecommendedNextDiff);
       }
@@ -843,27 +843,27 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
             break;
           case 18: {
             if (recommendedNextDiff_ == null) {
-              recommendedNextDiff_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              RecommendedNextDiff = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(recommendedNextDiff_);
+            input.ReadMessage(RecommendedNextDiff);
             break;
           }
           case 32: {
-            responseType_ = (global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType) input.ReadEnum();
+            ResponseType = (global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType) input.ReadEnum();
             break;
           }
           case 42: {
             if (additions_ == null) {
-              additions_ = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions();
+              Additions = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions();
             }
-            input.ReadMessage(additions_);
+            input.ReadMessage(Additions);
             break;
           }
           case 50: {
             if (removals_ == null) {
-              removals_ = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals();
+              Removals = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals();
             }
-            input.ReadMessage(removals_);
+            input.ReadMessage(Removals);
             break;
           }
           case 58: {
@@ -872,9 +872,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
           case 66: {
             if (checksum_ == null) {
-              checksum_ = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum();
+              Checksum = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum();
             }
-            input.ReadMessage(checksum_);
+            input.ReadMessage(Checksum);
             break;
           }
         }
@@ -1315,7 +1315,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       }
       if (other.threat_ != null) {
         if (threat_ == null) {
-          threat_ = new global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri();
+          Threat = new global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri();
         }
         Threat.MergeFrom(other.Threat);
       }
@@ -1332,9 +1332,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
             break;
           case 10: {
             if (threat_ == null) {
-              threat_ = new global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri();
+              Threat = new global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri();
             }
-            input.ReadMessage(threat_);
+            input.ReadMessage(Threat);
             break;
           }
         }
@@ -1478,7 +1478,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           threatTypes_.Add(other.threatTypes_);
           if (other.expireTime_ != null) {
             if (expireTime_ == null) {
-              expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             ExpireTime.MergeFrom(other.ExpireTime);
           }
@@ -1500,9 +1500,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
               }
               case 18: {
                 if (expireTime_ == null) {
-                  expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                  ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(expireTime_);
+                input.ReadMessage(ExpireTime);
                 break;
               }
             }
@@ -1807,7 +1807,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       threats_.Add(other.threats_);
       if (other.negativeExpireTime_ != null) {
         if (negativeExpireTime_ == null) {
-          negativeExpireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          NegativeExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         NegativeExpireTime.MergeFrom(other.NegativeExpireTime);
       }
@@ -1828,9 +1828,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
           case 18: {
             if (negativeExpireTime_ == null) {
-              negativeExpireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              NegativeExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(negativeExpireTime_);
+            input.ReadMessage(NegativeExpireTime);
             break;
           }
         }
@@ -2003,7 +2003,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
           if (other.expireTime_ != null) {
             if (expireTime_ == null) {
-              expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             ExpireTime.MergeFrom(other.ExpireTime);
           }
@@ -2029,9 +2029,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
               }
               case 26: {
                 if (expireTime_ == null) {
-                  expireTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                  ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(expireTime_);
+                input.ReadMessage(ExpireTime);
                 break;
               }
             }
@@ -2181,7 +2181,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       rawHashes_.Add(other.rawHashes_);
       if (other.riceHashes_ != null) {
         if (riceHashes_ == null) {
-          riceHashes_ = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
+          RiceHashes = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
         }
         RiceHashes.MergeFrom(other.RiceHashes);
       }
@@ -2202,9 +2202,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
           case 18: {
             if (riceHashes_ == null) {
-              riceHashes_ = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
+              RiceHashes = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
             }
-            input.ReadMessage(riceHashes_);
+            input.ReadMessage(RiceHashes);
             break;
           }
         }
@@ -2353,13 +2353,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       }
       if (other.rawIndices_ != null) {
         if (rawIndices_ == null) {
-          rawIndices_ = new global::Google.Cloud.WebRisk.V1Beta1.RawIndices();
+          RawIndices = new global::Google.Cloud.WebRisk.V1Beta1.RawIndices();
         }
         RawIndices.MergeFrom(other.RawIndices);
       }
       if (other.riceIndices_ != null) {
         if (riceIndices_ == null) {
-          riceIndices_ = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
+          RiceIndices = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
         }
         RiceIndices.MergeFrom(other.RiceIndices);
       }
@@ -2376,16 +2376,16 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
             break;
           case 10: {
             if (rawIndices_ == null) {
-              rawIndices_ = new global::Google.Cloud.WebRisk.V1Beta1.RawIndices();
+              RawIndices = new global::Google.Cloud.WebRisk.V1Beta1.RawIndices();
             }
-            input.ReadMessage(rawIndices_);
+            input.ReadMessage(RawIndices);
             break;
           }
           case 18: {
             if (riceIndices_ == null) {
-              riceIndices_ = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
+              RiceIndices = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
             }
-            input.ReadMessage(riceIndices_);
+            input.ReadMessage(RiceIndices);
             break;
           }
         }

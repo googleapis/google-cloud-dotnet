@@ -226,7 +226,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.assetDiscoveryConfig_ != null) {
         if (assetDiscoveryConfig_ == null) {
-          assetDiscoveryConfig_ = new global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig();
+          AssetDiscoveryConfig = new global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig();
         }
         AssetDiscoveryConfig.MergeFrom(other.AssetDiscoveryConfig);
       }
@@ -251,9 +251,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 26: {
             if (assetDiscoveryConfig_ == null) {
-              assetDiscoveryConfig_ = new global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig();
+              AssetDiscoveryConfig = new global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig();
             }
-            input.ReadMessage(assetDiscoveryConfig_);
+            input.ReadMessage(AssetDiscoveryConfig);
             break;
           }
         }
@@ -413,7 +413,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
                 break;
               }
               case 16: {
-                inclusionMode_ = (global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode) input.ReadEnum();
+                InclusionMode = (global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode) input.ReadEnum();
                 break;
               }
             }

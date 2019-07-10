@@ -517,20 +517,20 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       labels_.Add(other.labels_);
       if (other.placement_ != null) {
         if (placement_ == null) {
-          placement_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement();
+          Placement = new global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement();
         }
         Placement.MergeFrom(other.Placement);
       }
@@ -561,16 +561,16 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 34: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 42: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 50: {
@@ -579,9 +579,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 58: {
             if (placement_ == null) {
-              placement_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement();
+              Placement = new global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement();
             }
-            input.ReadMessage(placement_);
+            input.ReadMessage(Placement);
             break;
           }
           case 66: {
@@ -988,7 +988,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Dataproc.V1.ClusterConfig();
+          Config = new global::Google.Cloud.Dataproc.V1.ClusterConfig();
         }
         Config.MergeFrom(other.Config);
       }
@@ -1010,9 +1010,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 26: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Dataproc.V1.ClusterConfig();
+              Config = new global::Google.Cloud.Dataproc.V1.ClusterConfig();
             }
-            input.ReadMessage(config_);
+            input.ReadMessage(Config);
             break;
           }
           case 34: {
@@ -1569,7 +1569,7 @@ namespace Google.Cloud.Dataproc.V1 {
       labels_.Add(other.labels_);
       if (other.scheduling_ != null) {
         if (scheduling_ == null) {
-          scheduling_ = new global::Google.Cloud.Dataproc.V1.JobScheduling();
+          Scheduling = new global::Google.Cloud.Dataproc.V1.JobScheduling();
         }
         Scheduling.MergeFrom(other.Scheduling);
       }
@@ -1688,9 +1688,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 74: {
             if (scheduling_ == null) {
-              scheduling_ = new global::Google.Cloud.Dataproc.V1.JobScheduling();
+              Scheduling = new global::Google.Cloud.Dataproc.V1.JobScheduling();
             }
-            input.ReadMessage(scheduling_);
+            input.ReadMessage(Scheduling);
             break;
           }
           case 82: {
@@ -1947,7 +1947,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.validation_ != null) {
         if (validation_ == null) {
-          validation_ = new global::Google.Cloud.Dataproc.V1.ParameterValidation();
+          Validation = new global::Google.Cloud.Dataproc.V1.ParameterValidation();
         }
         Validation.MergeFrom(other.Validation);
       }
@@ -1976,9 +1976,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 34: {
             if (validation_ == null) {
-              validation_ = new global::Google.Cloud.Dataproc.V1.ParameterValidation();
+              Validation = new global::Google.Cloud.Dataproc.V1.ParameterValidation();
             }
-            input.ReadMessage(validation_);
+            input.ReadMessage(Validation);
             break;
           }
         }
@@ -2810,19 +2810,19 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.createCluster_ != null) {
         if (createCluster_ == null) {
-          createCluster_ = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
+          CreateCluster = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
         }
         CreateCluster.MergeFrom(other.CreateCluster);
       }
       if (other.graph_ != null) {
         if (graph_ == null) {
-          graph_ = new global::Google.Cloud.Dataproc.V1.WorkflowGraph();
+          Graph = new global::Google.Cloud.Dataproc.V1.WorkflowGraph();
         }
         Graph.MergeFrom(other.Graph);
       }
       if (other.deleteCluster_ != null) {
         if (deleteCluster_ == null) {
-          deleteCluster_ = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
+          DeleteCluster = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
         }
         DeleteCluster.MergeFrom(other.DeleteCluster);
       }
@@ -2835,13 +2835,13 @@ namespace Google.Cloud.Dataproc.V1 {
       parameters_.Add(other.parameters_);
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -2869,27 +2869,27 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 26: {
             if (createCluster_ == null) {
-              createCluster_ = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
+              CreateCluster = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
             }
-            input.ReadMessage(createCluster_);
+            input.ReadMessage(CreateCluster);
             break;
           }
           case 34: {
             if (graph_ == null) {
-              graph_ = new global::Google.Cloud.Dataproc.V1.WorkflowGraph();
+              Graph = new global::Google.Cloud.Dataproc.V1.WorkflowGraph();
             }
-            input.ReadMessage(graph_);
+            input.ReadMessage(Graph);
             break;
           }
           case 42: {
             if (deleteCluster_ == null) {
-              deleteCluster_ = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
+              DeleteCluster = new global::Google.Cloud.Dataproc.V1.ClusterOperation();
             }
-            input.ReadMessage(deleteCluster_);
+            input.ReadMessage(DeleteCluster);
             break;
           }
           case 48: {
-            state_ = (global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State) input.ReadEnum();
             break;
           }
           case 58: {
@@ -2902,16 +2902,16 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 74: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 82: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 90: {
@@ -3515,7 +3515,7 @@ namespace Google.Cloud.Dataproc.V1 {
             break;
           }
           case 40: {
-            state_ = (global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState) input.ReadEnum();
+            State = (global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState) input.ReadEnum();
             break;
           }
           case 50: {
@@ -3708,7 +3708,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.template_ != null) {
         if (template_ == null) {
-          template_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
+          Template = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
         }
         Template.MergeFrom(other.Template);
       }
@@ -3729,9 +3729,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 18: {
             if (template_ == null) {
-              template_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
+              Template = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
             }
-            input.ReadMessage(template_);
+            input.ReadMessage(Template);
             break;
           }
         }
@@ -4321,7 +4321,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.template_ != null) {
         if (template_ == null) {
-          template_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
+          Template = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
         }
         Template.MergeFrom(other.Template);
       }
@@ -4345,9 +4345,9 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 18: {
             if (template_ == null) {
-              template_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
+              Template = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
             }
-            input.ReadMessage(template_);
+            input.ReadMessage(Template);
             break;
           }
           case 26: {
@@ -4475,7 +4475,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.template_ != null) {
         if (template_ == null) {
-          template_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
+          Template = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
         }
         Template.MergeFrom(other.Template);
       }
@@ -4492,9 +4492,9 @@ namespace Google.Cloud.Dataproc.V1 {
             break;
           case 10: {
             if (template_ == null) {
-              template_ = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
+              Template = new global::Google.Cloud.Dataproc.V1.WorkflowTemplate();
             }
-            input.ReadMessage(template_);
+            input.ReadMessage(Template);
             break;
           }
         }

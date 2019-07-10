@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -43,126 +43,126 @@ namespace Grafeas.V1 {
   {
     static readonly string __ServiceName = "grafeas.v1.Grafeas";
 
-    static readonly grpc::Marshaller<global::Grafeas.V1.GetOccurrenceRequest> __Marshaller_GetOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.GetOccurrenceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.Occurrence> __Marshaller_Occurrence = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.Occurrence.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.ListOccurrencesRequest> __Marshaller_ListOccurrencesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListOccurrencesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.ListOccurrencesResponse> __Marshaller_ListOccurrencesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListOccurrencesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.DeleteOccurrenceRequest> __Marshaller_DeleteOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.DeleteOccurrenceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.CreateOccurrenceRequest> __Marshaller_CreateOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.CreateOccurrenceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateOccurrencesRequest> __Marshaller_BatchCreateOccurrencesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateOccurrencesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateOccurrencesResponse> __Marshaller_BatchCreateOccurrencesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateOccurrencesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.UpdateOccurrenceRequest> __Marshaller_UpdateOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.UpdateOccurrenceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.GetOccurrenceNoteRequest> __Marshaller_GetOccurrenceNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.GetOccurrenceNoteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.Note> __Marshaller_Note = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.Note.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.GetNoteRequest> __Marshaller_GetNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.GetNoteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.ListNotesRequest> __Marshaller_ListNotesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNotesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.ListNotesResponse> __Marshaller_ListNotesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNotesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.DeleteNoteRequest> __Marshaller_DeleteNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.DeleteNoteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.CreateNoteRequest> __Marshaller_CreateNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.CreateNoteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateNotesRequest> __Marshaller_BatchCreateNotesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateNotesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateNotesResponse> __Marshaller_BatchCreateNotesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateNotesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.UpdateNoteRequest> __Marshaller_UpdateNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.UpdateNoteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.ListNoteOccurrencesRequest> __Marshaller_ListNoteOccurrencesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNoteOccurrencesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grafeas.V1.ListNoteOccurrencesResponse> __Marshaller_ListNoteOccurrencesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNoteOccurrencesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.GetOccurrenceRequest> __Marshaller_grafeas_v1_GetOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.GetOccurrenceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.Occurrence> __Marshaller_grafeas_v1_Occurrence = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.Occurrence.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.ListOccurrencesRequest> __Marshaller_grafeas_v1_ListOccurrencesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListOccurrencesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.ListOccurrencesResponse> __Marshaller_grafeas_v1_ListOccurrencesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListOccurrencesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.DeleteOccurrenceRequest> __Marshaller_grafeas_v1_DeleteOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.DeleteOccurrenceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.CreateOccurrenceRequest> __Marshaller_grafeas_v1_CreateOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.CreateOccurrenceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateOccurrencesRequest> __Marshaller_grafeas_v1_BatchCreateOccurrencesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateOccurrencesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateOccurrencesResponse> __Marshaller_grafeas_v1_BatchCreateOccurrencesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateOccurrencesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.UpdateOccurrenceRequest> __Marshaller_grafeas_v1_UpdateOccurrenceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.UpdateOccurrenceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.GetOccurrenceNoteRequest> __Marshaller_grafeas_v1_GetOccurrenceNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.GetOccurrenceNoteRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.Note> __Marshaller_grafeas_v1_Note = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.Note.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.GetNoteRequest> __Marshaller_grafeas_v1_GetNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.GetNoteRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.ListNotesRequest> __Marshaller_grafeas_v1_ListNotesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNotesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.ListNotesResponse> __Marshaller_grafeas_v1_ListNotesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNotesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.DeleteNoteRequest> __Marshaller_grafeas_v1_DeleteNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.DeleteNoteRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.CreateNoteRequest> __Marshaller_grafeas_v1_CreateNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.CreateNoteRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateNotesRequest> __Marshaller_grafeas_v1_BatchCreateNotesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateNotesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.BatchCreateNotesResponse> __Marshaller_grafeas_v1_BatchCreateNotesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.BatchCreateNotesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.UpdateNoteRequest> __Marshaller_grafeas_v1_UpdateNoteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.UpdateNoteRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.ListNoteOccurrencesRequest> __Marshaller_grafeas_v1_ListNoteOccurrencesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNoteOccurrencesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grafeas.V1.ListNoteOccurrencesResponse> __Marshaller_grafeas_v1_ListNoteOccurrencesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grafeas.V1.ListNoteOccurrencesResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Grafeas.V1.GetOccurrenceRequest, global::Grafeas.V1.Occurrence> __Method_GetOccurrence = new grpc::Method<global::Grafeas.V1.GetOccurrenceRequest, global::Grafeas.V1.Occurrence>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetOccurrence",
-        __Marshaller_GetOccurrenceRequest,
-        __Marshaller_Occurrence);
+        __Marshaller_grafeas_v1_GetOccurrenceRequest,
+        __Marshaller_grafeas_v1_Occurrence);
 
     static readonly grpc::Method<global::Grafeas.V1.ListOccurrencesRequest, global::Grafeas.V1.ListOccurrencesResponse> __Method_ListOccurrences = new grpc::Method<global::Grafeas.V1.ListOccurrencesRequest, global::Grafeas.V1.ListOccurrencesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListOccurrences",
-        __Marshaller_ListOccurrencesRequest,
-        __Marshaller_ListOccurrencesResponse);
+        __Marshaller_grafeas_v1_ListOccurrencesRequest,
+        __Marshaller_grafeas_v1_ListOccurrencesResponse);
 
     static readonly grpc::Method<global::Grafeas.V1.DeleteOccurrenceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteOccurrence = new grpc::Method<global::Grafeas.V1.DeleteOccurrenceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteOccurrence",
-        __Marshaller_DeleteOccurrenceRequest,
-        __Marshaller_Empty);
+        __Marshaller_grafeas_v1_DeleteOccurrenceRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Grafeas.V1.CreateOccurrenceRequest, global::Grafeas.V1.Occurrence> __Method_CreateOccurrence = new grpc::Method<global::Grafeas.V1.CreateOccurrenceRequest, global::Grafeas.V1.Occurrence>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateOccurrence",
-        __Marshaller_CreateOccurrenceRequest,
-        __Marshaller_Occurrence);
+        __Marshaller_grafeas_v1_CreateOccurrenceRequest,
+        __Marshaller_grafeas_v1_Occurrence);
 
     static readonly grpc::Method<global::Grafeas.V1.BatchCreateOccurrencesRequest, global::Grafeas.V1.BatchCreateOccurrencesResponse> __Method_BatchCreateOccurrences = new grpc::Method<global::Grafeas.V1.BatchCreateOccurrencesRequest, global::Grafeas.V1.BatchCreateOccurrencesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchCreateOccurrences",
-        __Marshaller_BatchCreateOccurrencesRequest,
-        __Marshaller_BatchCreateOccurrencesResponse);
+        __Marshaller_grafeas_v1_BatchCreateOccurrencesRequest,
+        __Marshaller_grafeas_v1_BatchCreateOccurrencesResponse);
 
     static readonly grpc::Method<global::Grafeas.V1.UpdateOccurrenceRequest, global::Grafeas.V1.Occurrence> __Method_UpdateOccurrence = new grpc::Method<global::Grafeas.V1.UpdateOccurrenceRequest, global::Grafeas.V1.Occurrence>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateOccurrence",
-        __Marshaller_UpdateOccurrenceRequest,
-        __Marshaller_Occurrence);
+        __Marshaller_grafeas_v1_UpdateOccurrenceRequest,
+        __Marshaller_grafeas_v1_Occurrence);
 
     static readonly grpc::Method<global::Grafeas.V1.GetOccurrenceNoteRequest, global::Grafeas.V1.Note> __Method_GetOccurrenceNote = new grpc::Method<global::Grafeas.V1.GetOccurrenceNoteRequest, global::Grafeas.V1.Note>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetOccurrenceNote",
-        __Marshaller_GetOccurrenceNoteRequest,
-        __Marshaller_Note);
+        __Marshaller_grafeas_v1_GetOccurrenceNoteRequest,
+        __Marshaller_grafeas_v1_Note);
 
     static readonly grpc::Method<global::Grafeas.V1.GetNoteRequest, global::Grafeas.V1.Note> __Method_GetNote = new grpc::Method<global::Grafeas.V1.GetNoteRequest, global::Grafeas.V1.Note>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetNote",
-        __Marshaller_GetNoteRequest,
-        __Marshaller_Note);
+        __Marshaller_grafeas_v1_GetNoteRequest,
+        __Marshaller_grafeas_v1_Note);
 
     static readonly grpc::Method<global::Grafeas.V1.ListNotesRequest, global::Grafeas.V1.ListNotesResponse> __Method_ListNotes = new grpc::Method<global::Grafeas.V1.ListNotesRequest, global::Grafeas.V1.ListNotesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListNotes",
-        __Marshaller_ListNotesRequest,
-        __Marshaller_ListNotesResponse);
+        __Marshaller_grafeas_v1_ListNotesRequest,
+        __Marshaller_grafeas_v1_ListNotesResponse);
 
     static readonly grpc::Method<global::Grafeas.V1.DeleteNoteRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteNote = new grpc::Method<global::Grafeas.V1.DeleteNoteRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteNote",
-        __Marshaller_DeleteNoteRequest,
-        __Marshaller_Empty);
+        __Marshaller_grafeas_v1_DeleteNoteRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Grafeas.V1.CreateNoteRequest, global::Grafeas.V1.Note> __Method_CreateNote = new grpc::Method<global::Grafeas.V1.CreateNoteRequest, global::Grafeas.V1.Note>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateNote",
-        __Marshaller_CreateNoteRequest,
-        __Marshaller_Note);
+        __Marshaller_grafeas_v1_CreateNoteRequest,
+        __Marshaller_grafeas_v1_Note);
 
     static readonly grpc::Method<global::Grafeas.V1.BatchCreateNotesRequest, global::Grafeas.V1.BatchCreateNotesResponse> __Method_BatchCreateNotes = new grpc::Method<global::Grafeas.V1.BatchCreateNotesRequest, global::Grafeas.V1.BatchCreateNotesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchCreateNotes",
-        __Marshaller_BatchCreateNotesRequest,
-        __Marshaller_BatchCreateNotesResponse);
+        __Marshaller_grafeas_v1_BatchCreateNotesRequest,
+        __Marshaller_grafeas_v1_BatchCreateNotesResponse);
 
     static readonly grpc::Method<global::Grafeas.V1.UpdateNoteRequest, global::Grafeas.V1.Note> __Method_UpdateNote = new grpc::Method<global::Grafeas.V1.UpdateNoteRequest, global::Grafeas.V1.Note>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateNote",
-        __Marshaller_UpdateNoteRequest,
-        __Marshaller_Note);
+        __Marshaller_grafeas_v1_UpdateNoteRequest,
+        __Marshaller_grafeas_v1_Note);
 
     static readonly grpc::Method<global::Grafeas.V1.ListNoteOccurrencesRequest, global::Grafeas.V1.ListNoteOccurrencesResponse> __Method_ListNoteOccurrences = new grpc::Method<global::Grafeas.V1.ListNoteOccurrencesRequest, global::Grafeas.V1.ListNoteOccurrencesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListNoteOccurrences",
-        __Marshaller_ListNoteOccurrencesRequest,
-        __Marshaller_ListNoteOccurrencesResponse);
+        __Marshaller_grafeas_v1_ListNoteOccurrencesRequest,
+        __Marshaller_grafeas_v1_ListNoteOccurrencesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -171,6 +171,7 @@ namespace Grafeas.V1 {
     }
 
     /// <summary>Base class for server-side implementations of Grafeas</summary>
+    [grpc::BindServiceMethod(typeof(Grafeas), "BindService")]
     public abstract partial class GrafeasBase
     {
       /// <summary>
@@ -1019,6 +1020,28 @@ namespace Grafeas.V1 {
           .AddMethod(__Method_BatchCreateNotes, serviceImpl.BatchCreateNotes)
           .AddMethod(__Method_UpdateNote, serviceImpl.UpdateNote)
           .AddMethod(__Method_ListNoteOccurrences, serviceImpl.ListNoteOccurrences).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, GrafeasBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_GetOccurrence, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.GetOccurrenceRequest, global::Grafeas.V1.Occurrence>(serviceImpl.GetOccurrence));
+      serviceBinder.AddMethod(__Method_ListOccurrences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.ListOccurrencesRequest, global::Grafeas.V1.ListOccurrencesResponse>(serviceImpl.ListOccurrences));
+      serviceBinder.AddMethod(__Method_DeleteOccurrence, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.DeleteOccurrenceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteOccurrence));
+      serviceBinder.AddMethod(__Method_CreateOccurrence, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.CreateOccurrenceRequest, global::Grafeas.V1.Occurrence>(serviceImpl.CreateOccurrence));
+      serviceBinder.AddMethod(__Method_BatchCreateOccurrences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.BatchCreateOccurrencesRequest, global::Grafeas.V1.BatchCreateOccurrencesResponse>(serviceImpl.BatchCreateOccurrences));
+      serviceBinder.AddMethod(__Method_UpdateOccurrence, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.UpdateOccurrenceRequest, global::Grafeas.V1.Occurrence>(serviceImpl.UpdateOccurrence));
+      serviceBinder.AddMethod(__Method_GetOccurrenceNote, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.GetOccurrenceNoteRequest, global::Grafeas.V1.Note>(serviceImpl.GetOccurrenceNote));
+      serviceBinder.AddMethod(__Method_GetNote, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.GetNoteRequest, global::Grafeas.V1.Note>(serviceImpl.GetNote));
+      serviceBinder.AddMethod(__Method_ListNotes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.ListNotesRequest, global::Grafeas.V1.ListNotesResponse>(serviceImpl.ListNotes));
+      serviceBinder.AddMethod(__Method_DeleteNote, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.DeleteNoteRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteNote));
+      serviceBinder.AddMethod(__Method_CreateNote, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.CreateNoteRequest, global::Grafeas.V1.Note>(serviceImpl.CreateNote));
+      serviceBinder.AddMethod(__Method_BatchCreateNotes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.BatchCreateNotesRequest, global::Grafeas.V1.BatchCreateNotesResponse>(serviceImpl.BatchCreateNotes));
+      serviceBinder.AddMethod(__Method_UpdateNote, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.UpdateNoteRequest, global::Grafeas.V1.Note>(serviceImpl.UpdateNote));
+      serviceBinder.AddMethod(__Method_ListNoteOccurrences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grafeas.V1.ListNoteOccurrencesRequest, global::Grafeas.V1.ListNoteOccurrencesResponse>(serviceImpl.ListNoteOccurrences));
     }
 
   }

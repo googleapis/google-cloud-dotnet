@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -43,49 +43,49 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.v2.SessionEntityTypes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest> __Marshaller_ListSessionEntityTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse> __Marshaller_ListSessionEntityTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest> __Marshaller_GetSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SessionEntityType> __Marshaller_SessionEntityType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SessionEntityType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest> __Marshaller_CreateSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest> __Marshaller_UpdateSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest> __Marshaller_DeleteSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest> __Marshaller_google_cloud_dialogflow_v2_ListSessionEntityTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse> __Marshaller_google_cloud_dialogflow_v2_ListSessionEntityTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_GetSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SessionEntityType> __Marshaller_google_cloud_dialogflow_v2_SessionEntityType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SessionEntityType.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_CreateSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteSessionEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest, global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse> __Method_ListSessionEntityTypes = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest, global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListSessionEntityTypes",
-        __Marshaller_ListSessionEntityTypesRequest,
-        __Marshaller_ListSessionEntityTypesResponse);
+        __Marshaller_google_cloud_dialogflow_v2_ListSessionEntityTypesRequest,
+        __Marshaller_google_cloud_dialogflow_v2_ListSessionEntityTypesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType> __Method_GetSessionEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetSessionEntityType",
-        __Marshaller_GetSessionEntityTypeRequest,
-        __Marshaller_SessionEntityType);
+        __Marshaller_google_cloud_dialogflow_v2_GetSessionEntityTypeRequest,
+        __Marshaller_google_cloud_dialogflow_v2_SessionEntityType);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType> __Method_CreateSessionEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateSessionEntityType",
-        __Marshaller_CreateSessionEntityTypeRequest,
-        __Marshaller_SessionEntityType);
+        __Marshaller_google_cloud_dialogflow_v2_CreateSessionEntityTypeRequest,
+        __Marshaller_google_cloud_dialogflow_v2_SessionEntityType);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType> __Method_UpdateSessionEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSessionEntityType",
-        __Marshaller_UpdateSessionEntityTypeRequest,
-        __Marshaller_SessionEntityType);
+        __Marshaller_google_cloud_dialogflow_v2_UpdateSessionEntityTypeRequest,
+        __Marshaller_google_cloud_dialogflow_v2_SessionEntityType);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSessionEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSessionEntityType",
-        __Marshaller_DeleteSessionEntityTypeRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_dialogflow_v2_DeleteSessionEntityTypeRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -94,6 +94,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     /// <summary>Base class for server-side implementations of SessionEntityTypes</summary>
+    [grpc::BindServiceMethod(typeof(SessionEntityTypes), "BindService")]
     public abstract partial class SessionEntityTypesBase
     {
       /// <summary>
@@ -428,6 +429,19 @@ namespace Google.Cloud.Dialogflow.V2 {
           .AddMethod(__Method_CreateSessionEntityType, serviceImpl.CreateSessionEntityType)
           .AddMethod(__Method_UpdateSessionEntityType, serviceImpl.UpdateSessionEntityType)
           .AddMethod(__Method_DeleteSessionEntityType, serviceImpl.DeleteSessionEntityType).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, SessionEntityTypesBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListSessionEntityTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest, global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse>(serviceImpl.ListSessionEntityTypes));
+      serviceBinder.AddMethod(__Method_GetSessionEntityType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType>(serviceImpl.GetSessionEntityType));
+      serviceBinder.AddMethod(__Method_CreateSessionEntityType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType>(serviceImpl.CreateSessionEntityType));
+      serviceBinder.AddMethod(__Method_UpdateSessionEntityType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest, global::Google.Cloud.Dialogflow.V2.SessionEntityType>(serviceImpl.UpdateSessionEntityType));
+      serviceBinder.AddMethod(__Method_DeleteSessionEntityType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSessionEntityType));
     }
 
   }

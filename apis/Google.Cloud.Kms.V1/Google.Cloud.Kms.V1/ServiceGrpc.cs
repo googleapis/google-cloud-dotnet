@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -41,203 +41,203 @@ namespace Google.Cloud.Kms.V1 {
   {
     static readonly string __ServiceName = "google.cloud.kms.v1.KeyManagementService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListKeyRingsRequest> __Marshaller_ListKeyRingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListKeyRingsResponse> __Marshaller_ListKeyRingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListKeyRingsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest> __Marshaller_ListCryptoKeysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> __Marshaller_ListCryptoKeysResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeysResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest> __Marshaller_ListCryptoKeyVersionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> __Marshaller_ListCryptoKeyVersionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListImportJobsRequest> __Marshaller_ListImportJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListImportJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListImportJobsResponse> __Marshaller_ListImportJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListImportJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetKeyRingRequest> __Marshaller_GetKeyRingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetKeyRingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.KeyRing> __Marshaller_KeyRing = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.KeyRing.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest> __Marshaller_GetCryptoKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetCryptoKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKey> __Marshaller_CryptoKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CryptoKey.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest> __Marshaller_GetCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Marshaller_CryptoKeyVersion = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetPublicKeyRequest> __Marshaller_GetPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetPublicKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.PublicKey> __Marshaller_PublicKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.PublicKey.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetImportJobRequest> __Marshaller_GetImportJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetImportJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportJob> __Marshaller_ImportJob = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ImportJob.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateKeyRingRequest> __Marshaller_CreateKeyRingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest> __Marshaller_CreateCryptoKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest> __Marshaller_CreateCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest> __Marshaller_ImportCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateImportJobRequest> __Marshaller_CreateImportJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest> __Marshaller_UpdateCryptoKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest> __Marshaller_UpdateCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EncryptRequest> __Marshaller_EncryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.EncryptRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EncryptResponse> __Marshaller_EncryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.EncryptResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptRequest> __Marshaller_DecryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DecryptRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptResponse> __Marshaller_DecryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DecryptResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignRequest> __Marshaller_AsymmetricSignRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Marshaller_AsymmetricSignResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest> __Marshaller_AsymmetricDecryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> __Marshaller_AsymmetricDecryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest> __Marshaller_UpdateCryptoKeyPrimaryVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest> __Marshaller_DestroyCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest> __Marshaller_RestoreCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListKeyRingsRequest> __Marshaller_google_cloud_kms_v1_ListKeyRingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListKeyRingsResponse> __Marshaller_google_cloud_kms_v1_ListKeyRingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListKeyRingsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest> __Marshaller_google_cloud_kms_v1_ListCryptoKeysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> __Marshaller_google_cloud_kms_v1_ListCryptoKeysResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeysResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest> __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListImportJobsRequest> __Marshaller_google_cloud_kms_v1_ListImportJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListImportJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListImportJobsResponse> __Marshaller_google_cloud_kms_v1_ListImportJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ListImportJobsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetKeyRingRequest> __Marshaller_google_cloud_kms_v1_GetKeyRingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetKeyRingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.KeyRing> __Marshaller_google_cloud_kms_v1_KeyRing = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.KeyRing.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_GetCryptoKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetCryptoKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKey> __Marshaller_google_cloud_kms_v1_CryptoKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CryptoKey.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_GetCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Marshaller_google_cloud_kms_v1_CryptoKeyVersion = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetPublicKeyRequest> __Marshaller_google_cloud_kms_v1_GetPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetPublicKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.PublicKey> __Marshaller_google_cloud_kms_v1_PublicKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.PublicKey.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetImportJobRequest> __Marshaller_google_cloud_kms_v1_GetImportJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetImportJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportJob> __Marshaller_google_cloud_kms_v1_ImportJob = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ImportJob.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateKeyRingRequest> __Marshaller_google_cloud_kms_v1_CreateKeyRingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_CreateCryptoKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_CreateCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_ImportCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateImportJobRequest> __Marshaller_google_cloud_kms_v1_CreateImportJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EncryptRequest> __Marshaller_google_cloud_kms_v1_EncryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.EncryptRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EncryptResponse> __Marshaller_google_cloud_kms_v1_EncryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.EncryptResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptRequest> __Marshaller_google_cloud_kms_v1_DecryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DecryptRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptResponse> __Marshaller_google_cloud_kms_v1_DecryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DecryptResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignRequest> __Marshaller_google_cloud_kms_v1_AsymmetricSignRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Marshaller_google_cloud_kms_v1_AsymmetricSignResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest> __Marshaller_google_cloud_kms_v1_AsymmetricDecryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> __Marshaller_google_cloud_kms_v1_AsymmetricDecryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest> __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyPrimaryVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_DestroyCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_RestoreCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListKeyRingsRequest, global::Google.Cloud.Kms.V1.ListKeyRingsResponse> __Method_ListKeyRings = new grpc::Method<global::Google.Cloud.Kms.V1.ListKeyRingsRequest, global::Google.Cloud.Kms.V1.ListKeyRingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListKeyRings",
-        __Marshaller_ListKeyRingsRequest,
-        __Marshaller_ListKeyRingsResponse);
+        __Marshaller_google_cloud_kms_v1_ListKeyRingsRequest,
+        __Marshaller_google_cloud_kms_v1_ListKeyRingsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest, global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> __Method_ListCryptoKeys = new grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest, global::Google.Cloud.Kms.V1.ListCryptoKeysResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListCryptoKeys",
-        __Marshaller_ListCryptoKeysRequest,
-        __Marshaller_ListCryptoKeysResponse);
+        __Marshaller_google_cloud_kms_v1_ListCryptoKeysRequest,
+        __Marshaller_google_cloud_kms_v1_ListCryptoKeysResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> __Method_ListCryptoKeyVersions = new grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListCryptoKeyVersions",
-        __Marshaller_ListCryptoKeyVersionsRequest,
-        __Marshaller_ListCryptoKeyVersionsResponse);
+        __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsRequest,
+        __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListImportJobsRequest, global::Google.Cloud.Kms.V1.ListImportJobsResponse> __Method_ListImportJobs = new grpc::Method<global::Google.Cloud.Kms.V1.ListImportJobsRequest, global::Google.Cloud.Kms.V1.ListImportJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListImportJobs",
-        __Marshaller_ListImportJobsRequest,
-        __Marshaller_ListImportJobsResponse);
+        __Marshaller_google_cloud_kms_v1_ListImportJobsRequest,
+        __Marshaller_google_cloud_kms_v1_ListImportJobsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing> __Method_GetKeyRing = new grpc::Method<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetKeyRing",
-        __Marshaller_GetKeyRingRequest,
-        __Marshaller_KeyRing);
+        __Marshaller_google_cloud_kms_v1_GetKeyRingRequest,
+        __Marshaller_google_cloud_kms_v1_KeyRing);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_GetCryptoKey = new grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCryptoKey",
-        __Marshaller_GetCryptoKeyRequest,
-        __Marshaller_CryptoKey);
+        __Marshaller_google_cloud_kms_v1_GetCryptoKeyRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKey);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_GetCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCryptoKeyVersion",
-        __Marshaller_GetCryptoKeyVersionRequest,
-        __Marshaller_CryptoKeyVersion);
+        __Marshaller_google_cloud_kms_v1_GetCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey> __Method_GetPublicKey = new grpc::Method<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetPublicKey",
-        __Marshaller_GetPublicKeyRequest,
-        __Marshaller_PublicKey);
+        __Marshaller_google_cloud_kms_v1_GetPublicKeyRequest,
+        __Marshaller_google_cloud_kms_v1_PublicKey);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob> __Method_GetImportJob = new grpc::Method<global::Google.Cloud.Kms.V1.GetImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetImportJob",
-        __Marshaller_GetImportJobRequest,
-        __Marshaller_ImportJob);
+        __Marshaller_google_cloud_kms_v1_GetImportJobRequest,
+        __Marshaller_google_cloud_kms_v1_ImportJob);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing> __Method_CreateKeyRing = new grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateKeyRing",
-        __Marshaller_CreateKeyRingRequest,
-        __Marshaller_KeyRing);
+        __Marshaller_google_cloud_kms_v1_CreateKeyRingRequest,
+        __Marshaller_google_cloud_kms_v1_KeyRing);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_CreateCryptoKey = new grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateCryptoKey",
-        __Marshaller_CreateCryptoKeyRequest,
-        __Marshaller_CryptoKey);
+        __Marshaller_google_cloud_kms_v1_CreateCryptoKeyRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKey);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_CreateCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateCryptoKeyVersion",
-        __Marshaller_CreateCryptoKeyVersionRequest,
-        __Marshaller_CryptoKeyVersion);
+        __Marshaller_google_cloud_kms_v1_CreateCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_ImportCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ImportCryptoKeyVersion",
-        __Marshaller_ImportCryptoKeyVersionRequest,
-        __Marshaller_CryptoKeyVersion);
+        __Marshaller_google_cloud_kms_v1_ImportCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob> __Method_CreateImportJob = new grpc::Method<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateImportJob",
-        __Marshaller_CreateImportJobRequest,
-        __Marshaller_ImportJob);
+        __Marshaller_google_cloud_kms_v1_CreateImportJobRequest,
+        __Marshaller_google_cloud_kms_v1_ImportJob);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_UpdateCryptoKey = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCryptoKey",
-        __Marshaller_UpdateCryptoKeyRequest,
-        __Marshaller_CryptoKey);
+        __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKey);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_UpdateCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCryptoKeyVersion",
-        __Marshaller_UpdateCryptoKeyVersionRequest,
-        __Marshaller_CryptoKeyVersion);
+        __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.EncryptRequest, global::Google.Cloud.Kms.V1.EncryptResponse> __Method_Encrypt = new grpc::Method<global::Google.Cloud.Kms.V1.EncryptRequest, global::Google.Cloud.Kms.V1.EncryptResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Encrypt",
-        __Marshaller_EncryptRequest,
-        __Marshaller_EncryptResponse);
+        __Marshaller_google_cloud_kms_v1_EncryptRequest,
+        __Marshaller_google_cloud_kms_v1_EncryptResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.DecryptRequest, global::Google.Cloud.Kms.V1.DecryptResponse> __Method_Decrypt = new grpc::Method<global::Google.Cloud.Kms.V1.DecryptRequest, global::Google.Cloud.Kms.V1.DecryptResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Decrypt",
-        __Marshaller_DecryptRequest,
-        __Marshaller_DecryptResponse);
+        __Marshaller_google_cloud_kms_v1_DecryptRequest,
+        __Marshaller_google_cloud_kms_v1_DecryptResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Method_AsymmetricSign = new grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AsymmetricSign",
-        __Marshaller_AsymmetricSignRequest,
-        __Marshaller_AsymmetricSignResponse);
+        __Marshaller_google_cloud_kms_v1_AsymmetricSignRequest,
+        __Marshaller_google_cloud_kms_v1_AsymmetricSignResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> __Method_AsymmetricDecrypt = new grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AsymmetricDecrypt",
-        __Marshaller_AsymmetricDecryptRequest,
-        __Marshaller_AsymmetricDecryptResponse);
+        __Marshaller_google_cloud_kms_v1_AsymmetricDecryptRequest,
+        __Marshaller_google_cloud_kms_v1_AsymmetricDecryptResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_UpdateCryptoKeyPrimaryVersion = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCryptoKeyPrimaryVersion",
-        __Marshaller_UpdateCryptoKeyPrimaryVersionRequest,
-        __Marshaller_CryptoKey);
+        __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyPrimaryVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKey);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_DestroyCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DestroyCryptoKeyVersion",
-        __Marshaller_DestroyCryptoKeyVersionRequest,
-        __Marshaller_CryptoKeyVersion);
+        __Marshaller_google_cloud_kms_v1_DestroyCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_RestoreCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RestoreCryptoKeyVersion",
-        __Marshaller_RestoreCryptoKeyVersionRequest,
-        __Marshaller_CryptoKeyVersion);
+        __Marshaller_google_cloud_kms_v1_RestoreCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -246,6 +246,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     /// <summary>Base class for server-side implementations of KeyManagementService</summary>
+    [grpc::BindServiceMethod(typeof(KeyManagementService), "BindService")]
     public abstract partial class KeyManagementServiceBase
     {
       /// <summary>
@@ -1823,6 +1824,37 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_UpdateCryptoKeyPrimaryVersion, serviceImpl.UpdateCryptoKeyPrimaryVersion)
           .AddMethod(__Method_DestroyCryptoKeyVersion, serviceImpl.DestroyCryptoKeyVersion)
           .AddMethod(__Method_RestoreCryptoKeyVersion, serviceImpl.RestoreCryptoKeyVersion).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, KeyManagementServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListKeyRings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListKeyRingsRequest, global::Google.Cloud.Kms.V1.ListKeyRingsResponse>(serviceImpl.ListKeyRings));
+      serviceBinder.AddMethod(__Method_ListCryptoKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest, global::Google.Cloud.Kms.V1.ListCryptoKeysResponse>(serviceImpl.ListCryptoKeys));
+      serviceBinder.AddMethod(__Method_ListCryptoKeyVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse>(serviceImpl.ListCryptoKeyVersions));
+      serviceBinder.AddMethod(__Method_ListImportJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListImportJobsRequest, global::Google.Cloud.Kms.V1.ListImportJobsResponse>(serviceImpl.ListImportJobs));
+      serviceBinder.AddMethod(__Method_GetKeyRing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(serviceImpl.GetKeyRing));
+      serviceBinder.AddMethod(__Method_GetCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.GetCryptoKey));
+      serviceBinder.AddMethod(__Method_GetCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.GetCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_GetPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey>(serviceImpl.GetPublicKey));
+      serviceBinder.AddMethod(__Method_GetImportJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(serviceImpl.GetImportJob));
+      serviceBinder.AddMethod(__Method_CreateKeyRing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(serviceImpl.CreateKeyRing));
+      serviceBinder.AddMethod(__Method_CreateCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.CreateCryptoKey));
+      serviceBinder.AddMethod(__Method_CreateCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.CreateCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_ImportCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.ImportCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_CreateImportJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(serviceImpl.CreateImportJob));
+      serviceBinder.AddMethod(__Method_UpdateCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.UpdateCryptoKey));
+      serviceBinder.AddMethod(__Method_UpdateCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.UpdateCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_Encrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.EncryptRequest, global::Google.Cloud.Kms.V1.EncryptResponse>(serviceImpl.Encrypt));
+      serviceBinder.AddMethod(__Method_Decrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DecryptRequest, global::Google.Cloud.Kms.V1.DecryptResponse>(serviceImpl.Decrypt));
+      serviceBinder.AddMethod(__Method_AsymmetricSign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse>(serviceImpl.AsymmetricSign));
+      serviceBinder.AddMethod(__Method_AsymmetricDecrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse>(serviceImpl.AsymmetricDecrypt));
+      serviceBinder.AddMethod(__Method_UpdateCryptoKeyPrimaryVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.UpdateCryptoKeyPrimaryVersion));
+      serviceBinder.AddMethod(__Method_DestroyCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.DestroyCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_RestoreCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.RestoreCryptoKeyVersion));
     }
 
   }

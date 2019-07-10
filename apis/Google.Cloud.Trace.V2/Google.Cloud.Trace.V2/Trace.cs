@@ -366,6 +366,7 @@ namespace Google.Cloud.Trace.V2 {
       }
     }
 
+
     /// <summary>Field number for the "child_span_count" field.</summary>
     public const int ChildSpanCountFieldNumber = 13;
     private static readonly pb::FieldCodec<int?> _single_childSpanCount_codec = pb::FieldCodec.ForStructWrapper<int>(106);
@@ -381,6 +382,7 @@ namespace Google.Cloud.Trace.V2 {
         childSpanCount_ = value;
       }
     }
+
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
@@ -559,49 +561,49 @@ namespace Google.Cloud.Trace.V2 {
       }
       if (other.displayName_ != null) {
         if (displayName_ == null) {
-          displayName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+          DisplayName = new global::Google.Cloud.Trace.V2.TruncatableString();
         }
         DisplayName.MergeFrom(other.DisplayName);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
       if (other.attributes_ != null) {
         if (attributes_ == null) {
-          attributes_ = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
+          Attributes = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
         }
         Attributes.MergeFrom(other.Attributes);
       }
       if (other.stackTrace_ != null) {
         if (stackTrace_ == null) {
-          stackTrace_ = new global::Google.Cloud.Trace.V2.StackTrace();
+          StackTrace = new global::Google.Cloud.Trace.V2.StackTrace();
         }
         StackTrace.MergeFrom(other.StackTrace);
       }
       if (other.timeEvents_ != null) {
         if (timeEvents_ == null) {
-          timeEvents_ = new global::Google.Cloud.Trace.V2.Span.Types.TimeEvents();
+          TimeEvents = new global::Google.Cloud.Trace.V2.Span.Types.TimeEvents();
         }
         TimeEvents.MergeFrom(other.TimeEvents);
       }
       if (other.links_ != null) {
         if (links_ == null) {
-          links_ = new global::Google.Cloud.Trace.V2.Span.Types.Links();
+          Links = new global::Google.Cloud.Trace.V2.Span.Types.Links();
         }
         Links.MergeFrom(other.Links);
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Rpc.Status();
+          Status = new global::Google.Rpc.Status();
         }
         Status.MergeFrom(other.Status);
       }
@@ -640,58 +642,58 @@ namespace Google.Cloud.Trace.V2 {
           }
           case 34: {
             if (displayName_ == null) {
-              displayName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+              DisplayName = new global::Google.Cloud.Trace.V2.TruncatableString();
             }
-            input.ReadMessage(displayName_);
+            input.ReadMessage(DisplayName);
             break;
           }
           case 42: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 50: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 58: {
             if (attributes_ == null) {
-              attributes_ = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
+              Attributes = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
             }
-            input.ReadMessage(attributes_);
+            input.ReadMessage(Attributes);
             break;
           }
           case 66: {
             if (stackTrace_ == null) {
-              stackTrace_ = new global::Google.Cloud.Trace.V2.StackTrace();
+              StackTrace = new global::Google.Cloud.Trace.V2.StackTrace();
             }
-            input.ReadMessage(stackTrace_);
+            input.ReadMessage(StackTrace);
             break;
           }
           case 74: {
             if (timeEvents_ == null) {
-              timeEvents_ = new global::Google.Cloud.Trace.V2.Span.Types.TimeEvents();
+              TimeEvents = new global::Google.Cloud.Trace.V2.Span.Types.TimeEvents();
             }
-            input.ReadMessage(timeEvents_);
+            input.ReadMessage(TimeEvents);
             break;
           }
           case 82: {
             if (links_ == null) {
-              links_ = new global::Google.Cloud.Trace.V2.Span.Types.Links();
+              Links = new global::Google.Cloud.Trace.V2.Span.Types.Links();
             }
-            input.ReadMessage(links_);
+            input.ReadMessage(Links);
             break;
           }
           case 90: {
             if (status_ == null) {
-              status_ = new global::Google.Rpc.Status();
+              Status = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 98: {
@@ -1072,7 +1074,7 @@ namespace Google.Cloud.Trace.V2 {
           }
           if (other.time_ != null) {
             if (time_ == null) {
-              time_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              Time = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             Time.MergeFrom(other.Time);
           }
@@ -1104,9 +1106,9 @@ namespace Google.Cloud.Trace.V2 {
                 break;
               case 10: {
                 if (time_ == null) {
-                  time_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                  Time = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(time_);
+                input.ReadMessage(Time);
                 break;
               }
               case 18: {
@@ -1274,13 +1276,13 @@ namespace Google.Cloud.Trace.V2 {
               }
               if (other.description_ != null) {
                 if (description_ == null) {
-                  description_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+                  Description = new global::Google.Cloud.Trace.V2.TruncatableString();
                 }
                 Description.MergeFrom(other.Description);
               }
               if (other.attributes_ != null) {
                 if (attributes_ == null) {
-                  attributes_ = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
+                  Attributes = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
                 }
                 Attributes.MergeFrom(other.Attributes);
               }
@@ -1297,16 +1299,16 @@ namespace Google.Cloud.Trace.V2 {
                     break;
                   case 10: {
                     if (description_ == null) {
-                      description_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+                      Description = new global::Google.Cloud.Trace.V2.TruncatableString();
                     }
-                    input.ReadMessage(description_);
+                    input.ReadMessage(Description);
                     break;
                   }
                   case 18: {
                     if (attributes_ == null) {
-                      attributes_ = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
+                      Attributes = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
                     }
-                    input.ReadMessage(attributes_);
+                    input.ReadMessage(Attributes);
                     break;
                   }
                 }
@@ -1526,7 +1528,7 @@ namespace Google.Cloud.Trace.V2 {
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                     break;
                   case 8: {
-                    type_ = (global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type) input.ReadEnum();
+                    Type = (global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type) input.ReadEnum();
                     break;
                   }
                   case 16: {
@@ -1968,7 +1970,7 @@ namespace Google.Cloud.Trace.V2 {
           }
           if (other.attributes_ != null) {
             if (attributes_ == null) {
-              attributes_ = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
+              Attributes = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
             }
             Attributes.MergeFrom(other.Attributes);
           }
@@ -1992,14 +1994,14 @@ namespace Google.Cloud.Trace.V2 {
                 break;
               }
               case 24: {
-                type_ = (global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type) input.ReadEnum();
+                Type = (global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type) input.ReadEnum();
                 break;
               }
               case 34: {
                 if (attributes_ == null) {
-                  attributes_ = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
+                  Attributes = new global::Google.Cloud.Trace.V2.Span.Types.Attributes();
                 }
-                input.ReadMessage(attributes_);
+                input.ReadMessage(Attributes);
                 break;
               }
             }
@@ -2583,7 +2585,7 @@ namespace Google.Cloud.Trace.V2 {
       }
       if (other.stackFrames_ != null) {
         if (stackFrames_ == null) {
-          stackFrames_ = new global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames();
+          StackFrames = new global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames();
         }
         StackFrames.MergeFrom(other.StackFrames);
       }
@@ -2603,9 +2605,9 @@ namespace Google.Cloud.Trace.V2 {
             break;
           case 10: {
             if (stackFrames_ == null) {
-              stackFrames_ = new global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames();
+              StackFrames = new global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames();
             }
-            input.ReadMessage(stackFrames_);
+            input.ReadMessage(StackFrames);
             break;
           }
           case 16: {
@@ -2882,19 +2884,19 @@ namespace Google.Cloud.Trace.V2 {
           }
           if (other.functionName_ != null) {
             if (functionName_ == null) {
-              functionName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+              FunctionName = new global::Google.Cloud.Trace.V2.TruncatableString();
             }
             FunctionName.MergeFrom(other.FunctionName);
           }
           if (other.originalFunctionName_ != null) {
             if (originalFunctionName_ == null) {
-              originalFunctionName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+              OriginalFunctionName = new global::Google.Cloud.Trace.V2.TruncatableString();
             }
             OriginalFunctionName.MergeFrom(other.OriginalFunctionName);
           }
           if (other.fileName_ != null) {
             if (fileName_ == null) {
-              fileName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+              FileName = new global::Google.Cloud.Trace.V2.TruncatableString();
             }
             FileName.MergeFrom(other.FileName);
           }
@@ -2906,13 +2908,13 @@ namespace Google.Cloud.Trace.V2 {
           }
           if (other.loadModule_ != null) {
             if (loadModule_ == null) {
-              loadModule_ = new global::Google.Cloud.Trace.V2.Module();
+              LoadModule = new global::Google.Cloud.Trace.V2.Module();
             }
             LoadModule.MergeFrom(other.LoadModule);
           }
           if (other.sourceVersion_ != null) {
             if (sourceVersion_ == null) {
-              sourceVersion_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+              SourceVersion = new global::Google.Cloud.Trace.V2.TruncatableString();
             }
             SourceVersion.MergeFrom(other.SourceVersion);
           }
@@ -2929,23 +2931,23 @@ namespace Google.Cloud.Trace.V2 {
                 break;
               case 10: {
                 if (functionName_ == null) {
-                  functionName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+                  FunctionName = new global::Google.Cloud.Trace.V2.TruncatableString();
                 }
-                input.ReadMessage(functionName_);
+                input.ReadMessage(FunctionName);
                 break;
               }
               case 18: {
                 if (originalFunctionName_ == null) {
-                  originalFunctionName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+                  OriginalFunctionName = new global::Google.Cloud.Trace.V2.TruncatableString();
                 }
-                input.ReadMessage(originalFunctionName_);
+                input.ReadMessage(OriginalFunctionName);
                 break;
               }
               case 26: {
                 if (fileName_ == null) {
-                  fileName_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+                  FileName = new global::Google.Cloud.Trace.V2.TruncatableString();
                 }
-                input.ReadMessage(fileName_);
+                input.ReadMessage(FileName);
                 break;
               }
               case 32: {
@@ -2958,16 +2960,16 @@ namespace Google.Cloud.Trace.V2 {
               }
               case 50: {
                 if (loadModule_ == null) {
-                  loadModule_ = new global::Google.Cloud.Trace.V2.Module();
+                  LoadModule = new global::Google.Cloud.Trace.V2.Module();
                 }
-                input.ReadMessage(loadModule_);
+                input.ReadMessage(LoadModule);
                 break;
               }
               case 58: {
                 if (sourceVersion_ == null) {
-                  sourceVersion_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+                  SourceVersion = new global::Google.Cloud.Trace.V2.TruncatableString();
                 }
-                input.ReadMessage(sourceVersion_);
+                input.ReadMessage(SourceVersion);
                 break;
               }
             }
@@ -3280,13 +3282,13 @@ namespace Google.Cloud.Trace.V2 {
       }
       if (other.module_ != null) {
         if (module_ == null) {
-          module_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+          Module_ = new global::Google.Cloud.Trace.V2.TruncatableString();
         }
         Module_.MergeFrom(other.Module_);
       }
       if (other.buildId_ != null) {
         if (buildId_ == null) {
-          buildId_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+          BuildId = new global::Google.Cloud.Trace.V2.TruncatableString();
         }
         BuildId.MergeFrom(other.BuildId);
       }
@@ -3303,16 +3305,16 @@ namespace Google.Cloud.Trace.V2 {
             break;
           case 10: {
             if (module_ == null) {
-              module_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+              Module_ = new global::Google.Cloud.Trace.V2.TruncatableString();
             }
-            input.ReadMessage(module_);
+            input.ReadMessage(Module_);
             break;
           }
           case 18: {
             if (buildId_ == null) {
-              buildId_ = new global::Google.Cloud.Trace.V2.TruncatableString();
+              BuildId = new global::Google.Cloud.Trace.V2.TruncatableString();
             }
-            input.ReadMessage(buildId_);
+            input.ReadMessage(BuildId);
             break;
           }
         }

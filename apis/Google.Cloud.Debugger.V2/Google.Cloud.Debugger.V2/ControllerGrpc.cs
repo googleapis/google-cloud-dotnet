@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -50,33 +50,33 @@ namespace Google.Cloud.Debugger.V2 {
   {
     static readonly string __ServiceName = "google.devtools.clouddebugger.v2.Controller2";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest> __Marshaller_RegisterDebuggeeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> __Marshaller_RegisterDebuggeeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest> __Marshaller_ListActiveBreakpointsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> __Marshaller_ListActiveBreakpointsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest> __Marshaller_UpdateActiveBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> __Marshaller_UpdateActiveBreakpointResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest> __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest> __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest> __Marshaller_google_devtools_clouddebugger_v2_UpdateActiveBreakpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> __Marshaller_google_devtools_clouddebugger_v2_UpdateActiveBreakpointResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest, global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> __Method_RegisterDebuggee = new grpc::Method<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest, global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RegisterDebuggee",
-        __Marshaller_RegisterDebuggeeRequest,
-        __Marshaller_RegisterDebuggeeResponse);
+        __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeRequest,
+        __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> __Method_ListActiveBreakpoints = new grpc::Method<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListActiveBreakpoints",
-        __Marshaller_ListActiveBreakpointsRequest,
-        __Marshaller_ListActiveBreakpointsResponse);
+        __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsRequest,
+        __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest, global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> __Method_UpdateActiveBreakpoint = new grpc::Method<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest, global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateActiveBreakpoint",
-        __Marshaller_UpdateActiveBreakpointRequest,
-        __Marshaller_UpdateActiveBreakpointResponse);
+        __Marshaller_google_devtools_clouddebugger_v2_UpdateActiveBreakpointRequest,
+        __Marshaller_google_devtools_clouddebugger_v2_UpdateActiveBreakpointResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -85,6 +85,7 @@ namespace Google.Cloud.Debugger.V2 {
     }
 
     /// <summary>Base class for server-side implementations of Controller2</summary>
+    [grpc::BindServiceMethod(typeof(Controller2), "BindService")]
     public abstract partial class Controller2Base
     {
       /// <summary>
@@ -432,6 +433,17 @@ namespace Google.Cloud.Debugger.V2 {
           .AddMethod(__Method_RegisterDebuggee, serviceImpl.RegisterDebuggee)
           .AddMethod(__Method_ListActiveBreakpoints, serviceImpl.ListActiveBreakpoints)
           .AddMethod(__Method_UpdateActiveBreakpoint, serviceImpl.UpdateActiveBreakpoint).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, Controller2Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_RegisterDebuggee, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest, global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse>(serviceImpl.RegisterDebuggee));
+      serviceBinder.AddMethod(__Method_ListActiveBreakpoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse>(serviceImpl.ListActiveBreakpoints));
+      serviceBinder.AddMethod(__Method_UpdateActiveBreakpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest, global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse>(serviceImpl.UpdateActiveBreakpoint));
     }
 
   }

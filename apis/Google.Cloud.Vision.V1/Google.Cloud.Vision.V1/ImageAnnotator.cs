@@ -486,7 +486,7 @@ namespace Google.Cloud.Vision.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Google.Cloud.Vision.V1.Feature.Types.Type) input.ReadEnum();
+            Type = (global::Google.Cloud.Vision.V1.Feature.Types.Type) input.ReadEnum();
             break;
           }
           case 16: {
@@ -904,7 +904,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.source_ != null) {
         if (source_ == null) {
-          source_ = new global::Google.Cloud.Vision.V1.ImageSource();
+          Source = new global::Google.Cloud.Vision.V1.ImageSource();
         }
         Source.MergeFrom(other.Source);
       }
@@ -925,9 +925,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 18: {
             if (source_ == null) {
-              source_ = new global::Google.Cloud.Vision.V1.ImageSource();
+              Source = new global::Google.Cloud.Vision.V1.ImageSource();
             }
-            input.ReadMessage(source_);
+            input.ReadMessage(Source);
             break;
           }
         }
@@ -1395,13 +1395,13 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.boundingPoly_ != null) {
         if (boundingPoly_ == null) {
-          boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingPoly.MergeFrom(other.BoundingPoly);
       }
       if (other.fdBoundingPoly_ != null) {
         if (fdBoundingPoly_ == null) {
-          fdBoundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          FdBoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         FdBoundingPoly.MergeFrom(other.FdBoundingPoly);
       }
@@ -1455,16 +1455,16 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (boundingPoly_ == null) {
-              boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingPoly_);
+            input.ReadMessage(BoundingPoly);
             break;
           }
           case 18: {
             if (fdBoundingPoly_ == null) {
-              fdBoundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              FdBoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(fdBoundingPoly_);
+            input.ReadMessage(FdBoundingPoly);
             break;
           }
           case 26: {
@@ -1492,31 +1492,31 @@ namespace Google.Cloud.Vision.V1 {
             break;
           }
           case 72: {
-            joyLikelihood_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            JoyLikelihood = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 80: {
-            sorrowLikelihood_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            SorrowLikelihood = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 88: {
-            angerLikelihood_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            AngerLikelihood = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 96: {
-            surpriseLikelihood_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            SurpriseLikelihood = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 104: {
-            underExposedLikelihood_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            UnderExposedLikelihood = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 112: {
-            blurredLikelihood_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            BlurredLikelihood = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 120: {
-            headwearLikelihood_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            HeadwearLikelihood = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
         }
@@ -1667,7 +1667,7 @@ namespace Google.Cloud.Vision.V1 {
           }
           if (other.position_ != null) {
             if (position_ == null) {
-              position_ = new global::Google.Cloud.Vision.V1.Position();
+              Position = new global::Google.Cloud.Vision.V1.Position();
             }
             Position.MergeFrom(other.Position);
           }
@@ -1683,14 +1683,14 @@ namespace Google.Cloud.Vision.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 24: {
-                type_ = (global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type) input.ReadEnum();
+                Type = (global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type) input.ReadEnum();
                 break;
               }
               case 34: {
                 if (position_ == null) {
-                  position_ = new global::Google.Cloud.Vision.V1.Position();
+                  Position = new global::Google.Cloud.Vision.V1.Position();
                 }
-                input.ReadMessage(position_);
+                input.ReadMessage(Position);
                 break;
               }
             }
@@ -1973,7 +1973,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.latLng_ != null) {
         if (latLng_ == null) {
-          latLng_ = new global::Google.Type.LatLng();
+          LatLng = new global::Google.Type.LatLng();
         }
         LatLng.MergeFrom(other.LatLng);
       }
@@ -1990,9 +1990,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (latLng_ == null) {
-              latLng_ = new global::Google.Type.LatLng();
+              LatLng = new global::Google.Type.LatLng();
             }
-            input.ReadMessage(latLng_);
+            input.ReadMessage(LatLng);
             break;
           }
         }
@@ -2527,7 +2527,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.boundingPoly_ != null) {
         if (boundingPoly_ == null) {
-          boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingPoly.MergeFrom(other.BoundingPoly);
       }
@@ -2570,9 +2570,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 58: {
             if (boundingPoly_ == null) {
-              boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingPoly_);
+            input.ReadMessage(BoundingPoly);
             break;
           }
           case 66: {
@@ -2812,7 +2812,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.boundingPoly_ != null) {
         if (boundingPoly_ == null) {
-          boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingPoly.MergeFrom(other.BoundingPoly);
       }
@@ -2845,9 +2845,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 42: {
             if (boundingPoly_ == null) {
-              boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingPoly_);
+            input.ReadMessage(BoundingPoly);
             break;
           }
         }
@@ -3099,23 +3099,23 @@ namespace Google.Cloud.Vision.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            adult_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            Adult = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 16: {
-            spoof_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            Spoof = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 24: {
-            medical_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            Medical = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 32: {
-            violence_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            Violence = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
           case 72: {
-            racy_ = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
+            Racy = (global::Google.Cloud.Vision.V1.Likelihood) input.ReadEnum();
             break;
           }
         }
@@ -3261,13 +3261,13 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.minLatLng_ != null) {
         if (minLatLng_ == null) {
-          minLatLng_ = new global::Google.Type.LatLng();
+          MinLatLng = new global::Google.Type.LatLng();
         }
         MinLatLng.MergeFrom(other.MinLatLng);
       }
       if (other.maxLatLng_ != null) {
         if (maxLatLng_ == null) {
-          maxLatLng_ = new global::Google.Type.LatLng();
+          MaxLatLng = new global::Google.Type.LatLng();
         }
         MaxLatLng.MergeFrom(other.MaxLatLng);
       }
@@ -3284,16 +3284,16 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (minLatLng_ == null) {
-              minLatLng_ = new global::Google.Type.LatLng();
+              MinLatLng = new global::Google.Type.LatLng();
             }
-            input.ReadMessage(minLatLng_);
+            input.ReadMessage(MinLatLng);
             break;
           }
           case 18: {
             if (maxLatLng_ == null) {
-              maxLatLng_ = new global::Google.Type.LatLng();
+              MaxLatLng = new global::Google.Type.LatLng();
             }
-            input.ReadMessage(maxLatLng_);
+            input.ReadMessage(MaxLatLng);
             break;
           }
         }
@@ -3465,7 +3465,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.color_ != null) {
         if (color_ == null) {
-          color_ = new global::Google.Type.Color();
+          Color = new global::Google.Type.Color();
         }
         Color.MergeFrom(other.Color);
       }
@@ -3488,9 +3488,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (color_ == null) {
-              color_ = new global::Google.Type.Color();
+              Color = new global::Google.Type.Color();
             }
-            input.ReadMessage(color_);
+            input.ReadMessage(Color);
             break;
           }
           case 21: {
@@ -3747,7 +3747,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.dominantColors_ != null) {
         if (dominantColors_ == null) {
-          dominantColors_ = new global::Google.Cloud.Vision.V1.DominantColorsAnnotation();
+          DominantColors = new global::Google.Cloud.Vision.V1.DominantColorsAnnotation();
         }
         DominantColors.MergeFrom(other.DominantColors);
       }
@@ -3764,9 +3764,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (dominantColors_ == null) {
-              dominantColors_ = new global::Google.Cloud.Vision.V1.DominantColorsAnnotation();
+              DominantColors = new global::Google.Cloud.Vision.V1.DominantColorsAnnotation();
             }
-            input.ReadMessage(dominantColors_);
+            input.ReadMessage(DominantColors);
             break;
           }
         }
@@ -3938,7 +3938,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.boundingPoly_ != null) {
         if (boundingPoly_ == null) {
-          boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+          BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
         }
         BoundingPoly.MergeFrom(other.BoundingPoly);
       }
@@ -3961,9 +3961,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (boundingPoly_ == null) {
-              boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+              BoundingPoly = new global::Google.Cloud.Vision.V1.BoundingPoly();
             }
-            input.ReadMessage(boundingPoly_);
+            input.ReadMessage(BoundingPoly);
             break;
           }
           case 21: {
@@ -4585,26 +4585,26 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.latLongRect_ != null) {
         if (latLongRect_ == null) {
-          latLongRect_ = new global::Google.Cloud.Vision.V1.LatLongRect();
+          LatLongRect = new global::Google.Cloud.Vision.V1.LatLongRect();
         }
         LatLongRect.MergeFrom(other.LatLongRect);
       }
       languageHints_.Add(other.languageHints_);
       if (other.cropHintsParams_ != null) {
         if (cropHintsParams_ == null) {
-          cropHintsParams_ = new global::Google.Cloud.Vision.V1.CropHintsParams();
+          CropHintsParams = new global::Google.Cloud.Vision.V1.CropHintsParams();
         }
         CropHintsParams.MergeFrom(other.CropHintsParams);
       }
       if (other.productSearchParams_ != null) {
         if (productSearchParams_ == null) {
-          productSearchParams_ = new global::Google.Cloud.Vision.V1.ProductSearchParams();
+          ProductSearchParams = new global::Google.Cloud.Vision.V1.ProductSearchParams();
         }
         ProductSearchParams.MergeFrom(other.ProductSearchParams);
       }
       if (other.webDetectionParams_ != null) {
         if (webDetectionParams_ == null) {
-          webDetectionParams_ = new global::Google.Cloud.Vision.V1.WebDetectionParams();
+          WebDetectionParams = new global::Google.Cloud.Vision.V1.WebDetectionParams();
         }
         WebDetectionParams.MergeFrom(other.WebDetectionParams);
       }
@@ -4621,9 +4621,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (latLongRect_ == null) {
-              latLongRect_ = new global::Google.Cloud.Vision.V1.LatLongRect();
+              LatLongRect = new global::Google.Cloud.Vision.V1.LatLongRect();
             }
-            input.ReadMessage(latLongRect_);
+            input.ReadMessage(LatLongRect);
             break;
           }
           case 18: {
@@ -4632,23 +4632,23 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             if (cropHintsParams_ == null) {
-              cropHintsParams_ = new global::Google.Cloud.Vision.V1.CropHintsParams();
+              CropHintsParams = new global::Google.Cloud.Vision.V1.CropHintsParams();
             }
-            input.ReadMessage(cropHintsParams_);
+            input.ReadMessage(CropHintsParams);
             break;
           }
           case 42: {
             if (productSearchParams_ == null) {
-              productSearchParams_ = new global::Google.Cloud.Vision.V1.ProductSearchParams();
+              ProductSearchParams = new global::Google.Cloud.Vision.V1.ProductSearchParams();
             }
-            input.ReadMessage(productSearchParams_);
+            input.ReadMessage(ProductSearchParams);
             break;
           }
           case 50: {
             if (webDetectionParams_ == null) {
-              webDetectionParams_ = new global::Google.Cloud.Vision.V1.WebDetectionParams();
+              WebDetectionParams = new global::Google.Cloud.Vision.V1.WebDetectionParams();
             }
-            input.ReadMessage(webDetectionParams_);
+            input.ReadMessage(WebDetectionParams);
             break;
           }
         }
@@ -4813,14 +4813,14 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.image_ != null) {
         if (image_ == null) {
-          image_ = new global::Google.Cloud.Vision.V1.Image();
+          Image = new global::Google.Cloud.Vision.V1.Image();
         }
         Image.MergeFrom(other.Image);
       }
       features_.Add(other.features_);
       if (other.imageContext_ != null) {
         if (imageContext_ == null) {
-          imageContext_ = new global::Google.Cloud.Vision.V1.ImageContext();
+          ImageContext = new global::Google.Cloud.Vision.V1.ImageContext();
         }
         ImageContext.MergeFrom(other.ImageContext);
       }
@@ -4837,9 +4837,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (image_ == null) {
-              image_ = new global::Google.Cloud.Vision.V1.Image();
+              Image = new global::Google.Cloud.Vision.V1.Image();
             }
-            input.ReadMessage(image_);
+            input.ReadMessage(Image);
             break;
           }
           case 18: {
@@ -4848,9 +4848,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             if (imageContext_ == null) {
-              imageContext_ = new global::Google.Cloud.Vision.V1.ImageContext();
+              ImageContext = new global::Google.Cloud.Vision.V1.ImageContext();
             }
-            input.ReadMessage(imageContext_);
+            input.ReadMessage(ImageContext);
             break;
           }
         }
@@ -5429,49 +5429,49 @@ namespace Google.Cloud.Vision.V1 {
       textAnnotations_.Add(other.textAnnotations_);
       if (other.fullTextAnnotation_ != null) {
         if (fullTextAnnotation_ == null) {
-          fullTextAnnotation_ = new global::Google.Cloud.Vision.V1.TextAnnotation();
+          FullTextAnnotation = new global::Google.Cloud.Vision.V1.TextAnnotation();
         }
         FullTextAnnotation.MergeFrom(other.FullTextAnnotation);
       }
       if (other.safeSearchAnnotation_ != null) {
         if (safeSearchAnnotation_ == null) {
-          safeSearchAnnotation_ = new global::Google.Cloud.Vision.V1.SafeSearchAnnotation();
+          SafeSearchAnnotation = new global::Google.Cloud.Vision.V1.SafeSearchAnnotation();
         }
         SafeSearchAnnotation.MergeFrom(other.SafeSearchAnnotation);
       }
       if (other.imagePropertiesAnnotation_ != null) {
         if (imagePropertiesAnnotation_ == null) {
-          imagePropertiesAnnotation_ = new global::Google.Cloud.Vision.V1.ImageProperties();
+          ImagePropertiesAnnotation = new global::Google.Cloud.Vision.V1.ImageProperties();
         }
         ImagePropertiesAnnotation.MergeFrom(other.ImagePropertiesAnnotation);
       }
       if (other.cropHintsAnnotation_ != null) {
         if (cropHintsAnnotation_ == null) {
-          cropHintsAnnotation_ = new global::Google.Cloud.Vision.V1.CropHintsAnnotation();
+          CropHintsAnnotation = new global::Google.Cloud.Vision.V1.CropHintsAnnotation();
         }
         CropHintsAnnotation.MergeFrom(other.CropHintsAnnotation);
       }
       if (other.webDetection_ != null) {
         if (webDetection_ == null) {
-          webDetection_ = new global::Google.Cloud.Vision.V1.WebDetection();
+          WebDetection = new global::Google.Cloud.Vision.V1.WebDetection();
         }
         WebDetection.MergeFrom(other.WebDetection);
       }
       if (other.productSearchResults_ != null) {
         if (productSearchResults_ == null) {
-          productSearchResults_ = new global::Google.Cloud.Vision.V1.ProductSearchResults();
+          ProductSearchResults = new global::Google.Cloud.Vision.V1.ProductSearchResults();
         }
         ProductSearchResults.MergeFrom(other.ProductSearchResults);
       }
       if (other.error_ != null) {
         if (error_ == null) {
-          error_ = new global::Google.Rpc.Status();
+          Error = new global::Google.Rpc.Status();
         }
         Error.MergeFrom(other.Error);
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Cloud.Vision.V1.ImageAnnotationContext();
+          Context = new global::Google.Cloud.Vision.V1.ImageAnnotationContext();
         }
         Context.MergeFrom(other.Context);
       }
@@ -5508,58 +5508,58 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 50: {
             if (safeSearchAnnotation_ == null) {
-              safeSearchAnnotation_ = new global::Google.Cloud.Vision.V1.SafeSearchAnnotation();
+              SafeSearchAnnotation = new global::Google.Cloud.Vision.V1.SafeSearchAnnotation();
             }
-            input.ReadMessage(safeSearchAnnotation_);
+            input.ReadMessage(SafeSearchAnnotation);
             break;
           }
           case 66: {
             if (imagePropertiesAnnotation_ == null) {
-              imagePropertiesAnnotation_ = new global::Google.Cloud.Vision.V1.ImageProperties();
+              ImagePropertiesAnnotation = new global::Google.Cloud.Vision.V1.ImageProperties();
             }
-            input.ReadMessage(imagePropertiesAnnotation_);
+            input.ReadMessage(ImagePropertiesAnnotation);
             break;
           }
           case 74: {
             if (error_ == null) {
-              error_ = new global::Google.Rpc.Status();
+              Error = new global::Google.Rpc.Status();
             }
-            input.ReadMessage(error_);
+            input.ReadMessage(Error);
             break;
           }
           case 90: {
             if (cropHintsAnnotation_ == null) {
-              cropHintsAnnotation_ = new global::Google.Cloud.Vision.V1.CropHintsAnnotation();
+              CropHintsAnnotation = new global::Google.Cloud.Vision.V1.CropHintsAnnotation();
             }
-            input.ReadMessage(cropHintsAnnotation_);
+            input.ReadMessage(CropHintsAnnotation);
             break;
           }
           case 98: {
             if (fullTextAnnotation_ == null) {
-              fullTextAnnotation_ = new global::Google.Cloud.Vision.V1.TextAnnotation();
+              FullTextAnnotation = new global::Google.Cloud.Vision.V1.TextAnnotation();
             }
-            input.ReadMessage(fullTextAnnotation_);
+            input.ReadMessage(FullTextAnnotation);
             break;
           }
           case 106: {
             if (webDetection_ == null) {
-              webDetection_ = new global::Google.Cloud.Vision.V1.WebDetection();
+              WebDetection = new global::Google.Cloud.Vision.V1.WebDetection();
             }
-            input.ReadMessage(webDetection_);
+            input.ReadMessage(WebDetection);
             break;
           }
           case 114: {
             if (productSearchResults_ == null) {
-              productSearchResults_ = new global::Google.Cloud.Vision.V1.ProductSearchResults();
+              ProductSearchResults = new global::Google.Cloud.Vision.V1.ProductSearchResults();
             }
-            input.ReadMessage(productSearchResults_);
+            input.ReadMessage(ProductSearchResults);
             break;
           }
           case 170: {
             if (context_ == null) {
-              context_ = new global::Google.Cloud.Vision.V1.ImageAnnotationContext();
+              Context = new global::Google.Cloud.Vision.V1.ImageAnnotationContext();
             }
-            input.ReadMessage(context_);
+            input.ReadMessage(Context);
             break;
           }
           case 178: {
@@ -5728,7 +5728,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.inputConfig_ != null) {
         if (inputConfig_ == null) {
-          inputConfig_ = new global::Google.Cloud.Vision.V1.InputConfig();
+          InputConfig = new global::Google.Cloud.Vision.V1.InputConfig();
         }
         InputConfig.MergeFrom(other.InputConfig);
       }
@@ -5749,9 +5749,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (inputConfig_ == null) {
-              inputConfig_ = new global::Google.Cloud.Vision.V1.InputConfig();
+              InputConfig = new global::Google.Cloud.Vision.V1.InputConfig();
             }
-            input.ReadMessage(inputConfig_);
+            input.ReadMessage(InputConfig);
             break;
           }
           case 18: {
@@ -6208,14 +6208,14 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.inputConfig_ != null) {
         if (inputConfig_ == null) {
-          inputConfig_ = new global::Google.Cloud.Vision.V1.InputConfig();
+          InputConfig = new global::Google.Cloud.Vision.V1.InputConfig();
         }
         InputConfig.MergeFrom(other.InputConfig);
       }
       features_.Add(other.features_);
       if (other.imageContext_ != null) {
         if (imageContext_ == null) {
-          imageContext_ = new global::Google.Cloud.Vision.V1.ImageContext();
+          ImageContext = new global::Google.Cloud.Vision.V1.ImageContext();
         }
         ImageContext.MergeFrom(other.ImageContext);
       }
@@ -6233,9 +6233,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (inputConfig_ == null) {
-              inputConfig_ = new global::Google.Cloud.Vision.V1.InputConfig();
+              InputConfig = new global::Google.Cloud.Vision.V1.InputConfig();
             }
-            input.ReadMessage(inputConfig_);
+            input.ReadMessage(InputConfig);
             break;
           }
           case 18: {
@@ -6244,9 +6244,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             if (imageContext_ == null) {
-              imageContext_ = new global::Google.Cloud.Vision.V1.ImageContext();
+              ImageContext = new global::Google.Cloud.Vision.V1.ImageContext();
             }
-            input.ReadMessage(imageContext_);
+            input.ReadMessage(ImageContext);
             break;
           }
           case 34:
@@ -6695,20 +6695,20 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.inputConfig_ != null) {
         if (inputConfig_ == null) {
-          inputConfig_ = new global::Google.Cloud.Vision.V1.InputConfig();
+          InputConfig = new global::Google.Cloud.Vision.V1.InputConfig();
         }
         InputConfig.MergeFrom(other.InputConfig);
       }
       features_.Add(other.features_);
       if (other.imageContext_ != null) {
         if (imageContext_ == null) {
-          imageContext_ = new global::Google.Cloud.Vision.V1.ImageContext();
+          ImageContext = new global::Google.Cloud.Vision.V1.ImageContext();
         }
         ImageContext.MergeFrom(other.ImageContext);
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+          OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -6725,9 +6725,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (inputConfig_ == null) {
-              inputConfig_ = new global::Google.Cloud.Vision.V1.InputConfig();
+              InputConfig = new global::Google.Cloud.Vision.V1.InputConfig();
             }
-            input.ReadMessage(inputConfig_);
+            input.ReadMessage(InputConfig);
             break;
           }
           case 18: {
@@ -6736,16 +6736,16 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             if (imageContext_ == null) {
-              imageContext_ = new global::Google.Cloud.Vision.V1.ImageContext();
+              ImageContext = new global::Google.Cloud.Vision.V1.ImageContext();
             }
-            input.ReadMessage(imageContext_);
+            input.ReadMessage(ImageContext);
             break;
           }
           case 34: {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+              OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
             }
-            input.ReadMessage(outputConfig_);
+            input.ReadMessage(OutputConfig);
             break;
           }
         }
@@ -6867,7 +6867,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+          OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -6884,9 +6884,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+              OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
             }
-            input.ReadMessage(outputConfig_);
+            input.ReadMessage(OutputConfig);
             break;
           }
         }
@@ -7027,7 +7027,7 @@ namespace Google.Cloud.Vision.V1 {
       requests_.Add(other.requests_);
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+          OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -7048,9 +7048,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 18: {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+              OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
             }
-            input.ReadMessage(outputConfig_);
+            input.ReadMessage(OutputConfig);
             break;
           }
         }
@@ -7172,7 +7172,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+          OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -7189,9 +7189,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Vision.V1.OutputConfig();
+              OutputConfig = new global::Google.Cloud.Vision.V1.OutputConfig();
             }
-            input.ReadMessage(outputConfig_);
+            input.ReadMessage(OutputConfig);
             break;
           }
         }
@@ -7623,7 +7623,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.gcsSource_ != null) {
         if (gcsSource_ == null) {
-          gcsSource_ = new global::Google.Cloud.Vision.V1.GcsSource();
+          GcsSource = new global::Google.Cloud.Vision.V1.GcsSource();
         }
         GcsSource.MergeFrom(other.GcsSource);
       }
@@ -7646,9 +7646,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (gcsSource_ == null) {
-              gcsSource_ = new global::Google.Cloud.Vision.V1.GcsSource();
+              GcsSource = new global::Google.Cloud.Vision.V1.GcsSource();
             }
-            input.ReadMessage(gcsSource_);
+            input.ReadMessage(GcsSource);
             break;
           }
           case 18: {
@@ -7812,7 +7812,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.gcsDestination_ != null) {
         if (gcsDestination_ == null) {
-          gcsDestination_ = new global::Google.Cloud.Vision.V1.GcsDestination();
+          GcsDestination = new global::Google.Cloud.Vision.V1.GcsDestination();
         }
         GcsDestination.MergeFrom(other.GcsDestination);
       }
@@ -7832,9 +7832,9 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             if (gcsDestination_ == null) {
-              gcsDestination_ = new global::Google.Cloud.Vision.V1.GcsDestination();
+              GcsDestination = new global::Google.Cloud.Vision.V1.GcsDestination();
             }
-            input.ReadMessage(gcsDestination_);
+            input.ReadMessage(GcsDestination);
             break;
           }
           case 16: {
@@ -8303,13 +8303,13 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
@@ -8325,21 +8325,21 @@ namespace Google.Cloud.Vision.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            state_ = (global::Google.Cloud.Vision.V1.OperationMetadata.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Vision.V1.OperationMetadata.Types.State) input.ReadEnum();
             break;
           }
           case 42: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 50: {
             if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updateTime_);
+            input.ReadMessage(UpdateTime);
             break;
           }
         }

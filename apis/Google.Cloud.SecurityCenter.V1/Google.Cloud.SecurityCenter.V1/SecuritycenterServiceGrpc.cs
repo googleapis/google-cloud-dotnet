@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,162 +31,162 @@ namespace Google.Cloud.SecurityCenter.V1 {
   {
     static readonly string __ServiceName = "google.cloud.securitycenter.v1.SecurityCenter";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest> __Marshaller_CreateSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Source> __Marshaller_Source = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.Source.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest> __Marshaller_CreateFindingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Finding> __Marshaller_Finding = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.Finding.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest> __Marshaller_GetOrganizationSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Marshaller_OrganizationSettings = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest> __Marshaller_GetSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GetSourceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest> __Marshaller_GroupAssetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse> __Marshaller_GroupAssetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest> __Marshaller_GroupFindingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse> __Marshaller_GroupFindingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest> __Marshaller_ListAssetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse> __Marshaller_ListAssetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest> __Marshaller_ListFindingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse> __Marshaller_ListFindingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest> __Marshaller_ListSourcesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse> __Marshaller_ListSourcesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest> __Marshaller_RunAssetDiscoveryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest> __Marshaller_SetFindingStateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest> __Marshaller_UpdateFindingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest> __Marshaller_UpdateOrganizationSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest> __Marshaller_UpdateSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest> __Marshaller_UpdateSecurityMarksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SecurityMarks> __Marshaller_SecurityMarks = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.SecurityMarks.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest> __Marshaller_google_cloud_securitycenter_v1_CreateSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Source> __Marshaller_google_cloud_securitycenter_v1_Source = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.Source.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest> __Marshaller_google_cloud_securitycenter_v1_CreateFindingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Finding> __Marshaller_google_cloud_securitycenter_v1_Finding = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.Finding.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest> __Marshaller_google_cloud_securitycenter_v1_GetOrganizationSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Marshaller_google_cloud_securitycenter_v1_OrganizationSettings = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest> __Marshaller_google_cloud_securitycenter_v1_GetSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GetSourceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest> __Marshaller_google_cloud_securitycenter_v1_GroupAssetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse> __Marshaller_google_cloud_securitycenter_v1_GroupAssetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest> __Marshaller_google_cloud_securitycenter_v1_GroupFindingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse> __Marshaller_google_cloud_securitycenter_v1_GroupFindingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest> __Marshaller_google_cloud_securitycenter_v1_ListAssetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse> __Marshaller_google_cloud_securitycenter_v1_ListAssetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest> __Marshaller_google_cloud_securitycenter_v1_ListFindingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse> __Marshaller_google_cloud_securitycenter_v1_ListFindingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest> __Marshaller_google_cloud_securitycenter_v1_ListSourcesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse> __Marshaller_google_cloud_securitycenter_v1_ListSourcesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest> __Marshaller_google_cloud_securitycenter_v1_RunAssetDiscoveryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest> __Marshaller_google_cloud_securitycenter_v1_SetFindingStateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateFindingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateOrganizationSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityMarksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SecurityMarks> __Marshaller_google_cloud_securitycenter_v1_SecurityMarks = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.SecurityMarks.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source> __Method_CreateSource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateSource",
-        __Marshaller_CreateSourceRequest,
-        __Marshaller_Source);
+        __Marshaller_google_cloud_securitycenter_v1_CreateSourceRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Source);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding> __Method_CreateFinding = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateFinding",
-        __Marshaller_CreateFindingRequest,
-        __Marshaller_Finding);
+        __Marshaller_google_cloud_securitycenter_v1_CreateFindingRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Finding);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetIamPolicy",
-        __Marshaller_GetIamPolicyRequest,
-        __Marshaller_Policy);
+        __Marshaller_google_iam_v1_GetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Method_GetOrganizationSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetOrganizationSettings",
-        __Marshaller_GetOrganizationSettingsRequest,
-        __Marshaller_OrganizationSettings);
+        __Marshaller_google_cloud_securitycenter_v1_GetOrganizationSettingsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_OrganizationSettings);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source> __Method_GetSource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetSource",
-        __Marshaller_GetSourceRequest,
-        __Marshaller_Source);
+        __Marshaller_google_cloud_securitycenter_v1_GetSourceRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Source);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest, global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse> __Method_GroupAssets = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest, global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GroupAssets",
-        __Marshaller_GroupAssetsRequest,
-        __Marshaller_GroupAssetsResponse);
+        __Marshaller_google_cloud_securitycenter_v1_GroupAssetsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_GroupAssetsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest, global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse> __Method_GroupFindings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest, global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GroupFindings",
-        __Marshaller_GroupFindingsRequest,
-        __Marshaller_GroupFindingsResponse);
+        __Marshaller_google_cloud_securitycenter_v1_GroupFindingsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_GroupFindingsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest, global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse> __Method_ListAssets = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest, global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListAssets",
-        __Marshaller_ListAssetsRequest,
-        __Marshaller_ListAssetsResponse);
+        __Marshaller_google_cloud_securitycenter_v1_ListAssetsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListAssetsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse> __Method_ListFindings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListFindings",
-        __Marshaller_ListFindingsRequest,
-        __Marshaller_ListFindingsResponse);
+        __Marshaller_google_cloud_securitycenter_v1_ListFindingsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListFindingsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse> __Method_ListSources = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListSources",
-        __Marshaller_ListSourcesRequest,
-        __Marshaller_ListSourcesResponse);
+        __Marshaller_google_cloud_securitycenter_v1_ListSourcesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListSourcesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest, global::Google.LongRunning.Operation> __Method_RunAssetDiscovery = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RunAssetDiscovery",
-        __Marshaller_RunAssetDiscoveryRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_securitycenter_v1_RunAssetDiscoveryRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest, global::Google.Cloud.SecurityCenter.V1.Finding> __Method_SetFindingState = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetFindingState",
-        __Marshaller_SetFindingStateRequest,
-        __Marshaller_Finding);
+        __Marshaller_google_cloud_securitycenter_v1_SetFindingStateRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Finding);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetIamPolicy",
-        __Marshaller_SetIamPolicyRequest,
-        __Marshaller_Policy);
+        __Marshaller_google_iam_v1_SetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
 
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "TestIamPermissions",
-        __Marshaller_TestIamPermissionsRequest,
-        __Marshaller_TestIamPermissionsResponse);
+        __Marshaller_google_iam_v1_TestIamPermissionsRequest,
+        __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding> __Method_UpdateFinding = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateFinding",
-        __Marshaller_UpdateFindingRequest,
-        __Marshaller_Finding);
+        __Marshaller_google_cloud_securitycenter_v1_UpdateFindingRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Finding);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Method_UpdateOrganizationSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateOrganizationSettings",
-        __Marshaller_UpdateOrganizationSettingsRequest,
-        __Marshaller_OrganizationSettings);
+        __Marshaller_google_cloud_securitycenter_v1_UpdateOrganizationSettingsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_OrganizationSettings);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source> __Method_UpdateSource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSource",
-        __Marshaller_UpdateSourceRequest,
-        __Marshaller_Source);
+        __Marshaller_google_cloud_securitycenter_v1_UpdateSourceRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Source);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest, global::Google.Cloud.SecurityCenter.V1.SecurityMarks> __Method_UpdateSecurityMarks = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest, global::Google.Cloud.SecurityCenter.V1.SecurityMarks>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSecurityMarks",
-        __Marshaller_UpdateSecurityMarksRequest,
-        __Marshaller_SecurityMarks);
+        __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityMarksRequest,
+        __Marshaller_google_cloud_securitycenter_v1_SecurityMarks);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -195,6 +195,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
 
     /// <summary>Base class for server-side implementations of SecurityCenter</summary>
+    [grpc::BindServiceMethod(typeof(SecurityCenter), "BindService")]
     public abstract partial class SecurityCenterBase
     {
       /// <summary>
@@ -1317,6 +1318,32 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_UpdateOrganizationSettings, serviceImpl.UpdateOrganizationSettings)
           .AddMethod(__Method_UpdateSource, serviceImpl.UpdateSource)
           .AddMethod(__Method_UpdateSecurityMarks, serviceImpl.UpdateSecurityMarks).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, SecurityCenterBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.CreateSource));
+      serviceBinder.AddMethod(__Method_CreateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.CreateFinding));
+      serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
+      serviceBinder.AddMethod(__Method_GetOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.GetOrganizationSettings));
+      serviceBinder.AddMethod(__Method_GetSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.GetSource));
+      serviceBinder.AddMethod(__Method_GroupAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest, global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse>(serviceImpl.GroupAssets));
+      serviceBinder.AddMethod(__Method_GroupFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest, global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse>(serviceImpl.GroupFindings));
+      serviceBinder.AddMethod(__Method_ListAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest, global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse>(serviceImpl.ListAssets));
+      serviceBinder.AddMethod(__Method_ListFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse>(serviceImpl.ListFindings));
+      serviceBinder.AddMethod(__Method_ListSources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse>(serviceImpl.ListSources));
+      serviceBinder.AddMethod(__Method_RunAssetDiscovery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest, global::Google.LongRunning.Operation>(serviceImpl.RunAssetDiscovery));
+      serviceBinder.AddMethod(__Method_SetFindingState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.SetFindingState));
+      serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
+      serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_UpdateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.UpdateFinding));
+      serviceBinder.AddMethod(__Method_UpdateOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.UpdateOrganizationSettings));
+      serviceBinder.AddMethod(__Method_UpdateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.UpdateSource));
+      serviceBinder.AddMethod(__Method_UpdateSecurityMarks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest, global::Google.Cloud.SecurityCenter.V1.SecurityMarks>(serviceImpl.UpdateSecurityMarks));
     }
 
   }

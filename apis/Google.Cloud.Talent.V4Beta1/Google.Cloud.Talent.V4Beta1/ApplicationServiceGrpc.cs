@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -32,49 +32,49 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.ApplicationService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest> __Marshaller_CreateApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Application> __Marshaller_Application = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Application.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest> __Marshaller_GetApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest> __Marshaller_UpdateApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest> __Marshaller_DeleteApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest> __Marshaller_ListApplicationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse> __Marshaller_ListApplicationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest> __Marshaller_google_cloud_talent_v4beta1_CreateApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Application> __Marshaller_google_cloud_talent_v4beta1_Application = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Application.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest> __Marshaller_google_cloud_talent_v4beta1_GetApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteApplicationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest> __Marshaller_google_cloud_talent_v4beta1_ListApplicationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse> __Marshaller_google_cloud_talent_v4beta1_ListApplicationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application> __Method_CreateApplication = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateApplication",
-        __Marshaller_CreateApplicationRequest,
-        __Marshaller_Application);
+        __Marshaller_google_cloud_talent_v4beta1_CreateApplicationRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Application);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application> __Method_GetApplication = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetApplication",
-        __Marshaller_GetApplicationRequest,
-        __Marshaller_Application);
+        __Marshaller_google_cloud_talent_v4beta1_GetApplicationRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Application);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application> __Method_UpdateApplication = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateApplication",
-        __Marshaller_UpdateApplicationRequest,
-        __Marshaller_Application);
+        __Marshaller_google_cloud_talent_v4beta1_UpdateApplicationRequest,
+        __Marshaller_google_cloud_talent_v4beta1_Application);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteApplication = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteApplication",
-        __Marshaller_DeleteApplicationRequest,
-        __Marshaller_Empty);
+        __Marshaller_google_cloud_talent_v4beta1_DeleteApplicationRequest,
+        __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest, global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse> __Method_ListApplications = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest, global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListApplications",
-        __Marshaller_ListApplicationsRequest,
-        __Marshaller_ListApplicationsResponse);
+        __Marshaller_google_cloud_talent_v4beta1_ListApplicationsRequest,
+        __Marshaller_google_cloud_talent_v4beta1_ListApplicationsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -83,6 +83,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of ApplicationService</summary>
+    [grpc::BindServiceMethod(typeof(ApplicationService), "BindService")]
     public abstract partial class ApplicationServiceBase
     {
       /// <summary>
@@ -402,6 +403,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
           .AddMethod(__Method_UpdateApplication, serviceImpl.UpdateApplication)
           .AddMethod(__Method_DeleteApplication, serviceImpl.DeleteApplication)
           .AddMethod(__Method_ListApplications, serviceImpl.ListApplications).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, ApplicationServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application>(serviceImpl.CreateApplication));
+      serviceBinder.AddMethod(__Method_GetApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application>(serviceImpl.GetApplication));
+      serviceBinder.AddMethod(__Method_UpdateApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest, global::Google.Cloud.Talent.V4Beta1.Application>(serviceImpl.UpdateApplication));
+      serviceBinder.AddMethod(__Method_DeleteApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteApplication));
+      serviceBinder.AddMethod(__Method_ListApplications, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest, global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse>(serviceImpl.ListApplications));
     }
 
   }

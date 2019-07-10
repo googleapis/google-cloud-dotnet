@@ -228,7 +228,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (other.assessment_ != null) {
         if (assessment_ == null) {
-          assessment_ = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment();
+          Assessment = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment();
         }
         Assessment.MergeFrom(other.Assessment);
       }
@@ -249,9 +249,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
           }
           case 18: {
             if (assessment_ == null) {
-              assessment_ = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment();
+              Assessment = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment();
             }
-            input.ReadMessage(assessment_);
+            input.ReadMessage(Assessment);
             break;
           }
         }
@@ -418,7 +418,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             break;
           }
           case 16: {
-            annotation_ = (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation) input.ReadEnum();
+            Annotation = (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation) input.ReadEnum();
             break;
           }
         }
@@ -765,7 +765,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (other.event_ != null) {
         if (event_ == null) {
-          event_ = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event();
+          Event = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event();
         }
         Event.MergeFrom(other.Event);
       }
@@ -774,7 +774,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (other.tokenProperties_ != null) {
         if (tokenProperties_ == null) {
-          tokenProperties_ = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties();
+          TokenProperties = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties();
         }
         TokenProperties.MergeFrom(other.TokenProperties);
       }
@@ -796,9 +796,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
           }
           case 18: {
             if (event_ == null) {
-              event_ = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event();
+              Event = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event();
             }
-            input.ReadMessage(event_);
+            input.ReadMessage(Event);
             break;
           }
           case 29: {
@@ -807,9 +807,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
           }
           case 34: {
             if (tokenProperties_ == null) {
-              tokenProperties_ = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties();
+              TokenProperties = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties();
             }
-            input.ReadMessage(tokenProperties_);
+            input.ReadMessage(TokenProperties);
             break;
           }
           case 42:
@@ -1236,7 +1236,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
@@ -1262,14 +1262,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             break;
           }
           case 16: {
-            invalidReason_ = (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) input.ReadEnum();
+            InvalidReason = (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) input.ReadEnum();
             break;
           }
           case 26: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 34: {

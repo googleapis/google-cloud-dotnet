@@ -421,7 +421,7 @@ namespace Google.Cloud.Tasks.V2 {
       }
       if (other.appEngineRouting_ != null) {
         if (appEngineRouting_ == null) {
-          appEngineRouting_ = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
+          AppEngineRouting = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
         }
         AppEngineRouting.MergeFrom(other.AppEngineRouting);
       }
@@ -444,14 +444,14 @@ namespace Google.Cloud.Tasks.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            httpMethod_ = (global::Google.Cloud.Tasks.V2.HttpMethod) input.ReadEnum();
+            HttpMethod = (global::Google.Cloud.Tasks.V2.HttpMethod) input.ReadEnum();
             break;
           }
           case 18: {
             if (appEngineRouting_ == null) {
-              appEngineRouting_ = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
+              AppEngineRouting = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
             }
-            input.ReadMessage(appEngineRouting_);
+            input.ReadMessage(AppEngineRouting);
             break;
           }
           case 26: {

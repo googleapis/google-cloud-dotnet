@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -45,73 +45,73 @@ namespace Google.Cloud.Redis.V1 {
   {
     static readonly string __ServiceName = "google.cloud.redis.v1.CloudRedis";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ListInstancesRequest> __Marshaller_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ListInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ListInstancesResponse> __Marshaller_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ListInstancesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.GetInstanceRequest> __Marshaller_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.GetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.Instance> __Marshaller_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.Instance.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.CreateInstanceRequest> __Marshaller_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.CreateInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.UpdateInstanceRequest> __Marshaller_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.UpdateInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ImportInstanceRequest> __Marshaller_ImportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ImportInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ExportInstanceRequest> __Marshaller_ExportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ExportInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.FailoverInstanceRequest> __Marshaller_FailoverInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.DeleteInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ListInstancesRequest> __Marshaller_google_cloud_redis_v1_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ListInstancesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ListInstancesResponse> __Marshaller_google_cloud_redis_v1_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ListInstancesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.GetInstanceRequest> __Marshaller_google_cloud_redis_v1_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.GetInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.Instance> __Marshaller_google_cloud_redis_v1_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.Instance.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.CreateInstanceRequest> __Marshaller_google_cloud_redis_v1_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.CreateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.UpdateInstanceRequest> __Marshaller_google_cloud_redis_v1_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.UpdateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ImportInstanceRequest> __Marshaller_google_cloud_redis_v1_ImportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ImportInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ExportInstanceRequest> __Marshaller_google_cloud_redis_v1_ExportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ExportInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.FailoverInstanceRequest> __Marshaller_google_cloud_redis_v1_FailoverInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.DeleteInstanceRequest> __Marshaller_google_cloud_redis_v1_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.DeleteInstanceRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.ListInstancesRequest, global::Google.Cloud.Redis.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Redis.V1.ListInstancesRequest, global::Google.Cloud.Redis.V1.ListInstancesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListInstances",
-        __Marshaller_ListInstancesRequest,
-        __Marshaller_ListInstancesResponse);
+        __Marshaller_google_cloud_redis_v1_ListInstancesRequest,
+        __Marshaller_google_cloud_redis_v1_ListInstancesResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.GetInstanceRequest, global::Google.Cloud.Redis.V1.Instance> __Method_GetInstance = new grpc::Method<global::Google.Cloud.Redis.V1.GetInstanceRequest, global::Google.Cloud.Redis.V1.Instance>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetInstance",
-        __Marshaller_GetInstanceRequest,
-        __Marshaller_Instance);
+        __Marshaller_google_cloud_redis_v1_GetInstanceRequest,
+        __Marshaller_google_cloud_redis_v1_Instance);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Redis.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateInstance",
-        __Marshaller_CreateInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_redis_v1_CreateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation> __Method_UpdateInstance = new grpc::Method<global::Google.Cloud.Redis.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateInstance",
-        __Marshaller_UpdateInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_redis_v1_UpdateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.ImportInstanceRequest, global::Google.LongRunning.Operation> __Method_ImportInstance = new grpc::Method<global::Google.Cloud.Redis.V1.ImportInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ImportInstance",
-        __Marshaller_ImportInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_redis_v1_ImportInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.ExportInstanceRequest, global::Google.LongRunning.Operation> __Method_ExportInstance = new grpc::Method<global::Google.Cloud.Redis.V1.ExportInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ExportInstance",
-        __Marshaller_ExportInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_redis_v1_ExportInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.FailoverInstanceRequest, global::Google.LongRunning.Operation> __Method_FailoverInstance = new grpc::Method<global::Google.Cloud.Redis.V1.FailoverInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "FailoverInstance",
-        __Marshaller_FailoverInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_redis_v1_FailoverInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Redis.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteInstance",
-        __Marshaller_DeleteInstanceRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_redis_v1_DeleteInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -120,6 +120,7 @@ namespace Google.Cloud.Redis.V1 {
     }
 
     /// <summary>Base class for server-side implementations of CloudRedis</summary>
+    [grpc::BindServiceMethod(typeof(CloudRedis), "BindService")]
     public abstract partial class CloudRedisBase
     {
       /// <summary>
@@ -787,6 +788,22 @@ namespace Google.Cloud.Redis.V1 {
           .AddMethod(__Method_ExportInstance, serviceImpl.ExportInstance)
           .AddMethod(__Method_FailoverInstance, serviceImpl.FailoverInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, CloudRedisBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.ListInstancesRequest, global::Google.Cloud.Redis.V1.ListInstancesResponse>(serviceImpl.ListInstances));
+      serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.GetInstanceRequest, global::Google.Cloud.Redis.V1.Instance>(serviceImpl.GetInstance));
+      serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
+      serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
+      serviceBinder.AddMethod(__Method_ImportInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.ImportInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportInstance));
+      serviceBinder.AddMethod(__Method_ExportInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.ExportInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportInstance));
+      serviceBinder.AddMethod(__Method_FailoverInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.FailoverInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.FailoverInstance));
+      serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
     }
 
   }

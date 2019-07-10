@@ -446,7 +446,7 @@ namespace Google.Cloud.Scheduler.V1 {
             break;
           }
           case 16: {
-            httpMethod_ = (global::Google.Cloud.Scheduler.V1.HttpMethod) input.ReadEnum();
+            HttpMethod = (global::Google.Cloud.Scheduler.V1.HttpMethod) input.ReadEnum();
             break;
           }
           case 26: {
@@ -736,7 +736,7 @@ namespace Google.Cloud.Scheduler.V1 {
       }
       if (other.appEngineRouting_ != null) {
         if (appEngineRouting_ == null) {
-          appEngineRouting_ = new global::Google.Cloud.Scheduler.V1.AppEngineRouting();
+          AppEngineRouting = new global::Google.Cloud.Scheduler.V1.AppEngineRouting();
         }
         AppEngineRouting.MergeFrom(other.AppEngineRouting);
       }
@@ -759,14 +759,14 @@ namespace Google.Cloud.Scheduler.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            httpMethod_ = (global::Google.Cloud.Scheduler.V1.HttpMethod) input.ReadEnum();
+            HttpMethod = (global::Google.Cloud.Scheduler.V1.HttpMethod) input.ReadEnum();
             break;
           }
           case 18: {
             if (appEngineRouting_ == null) {
-              appEngineRouting_ = new global::Google.Cloud.Scheduler.V1.AppEngineRouting();
+              AppEngineRouting = new global::Google.Cloud.Scheduler.V1.AppEngineRouting();
             }
-            input.ReadMessage(appEngineRouting_);
+            input.ReadMessage(AppEngineRouting);
             break;
           }
           case 26: {

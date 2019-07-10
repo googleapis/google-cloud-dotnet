@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -32,33 +32,33 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.webrisk.v1beta1.WebRiskServiceV1Beta1";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest> __Marshaller_ComputeThreatListDiffRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> __Marshaller_ComputeThreatListDiffResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest> __Marshaller_SearchUrisRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> __Marshaller_SearchUrisResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest> __Marshaller_SearchHashesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> __Marshaller_SearchHashesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest> __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest> __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest> __Marshaller_google_cloud_webrisk_v1beta1_SearchHashesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> __Marshaller_google_cloud_webrisk_v1beta1_SearchHashesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> __Method_ComputeThreatListDiff = new grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ComputeThreatListDiff",
-        __Marshaller_ComputeThreatListDiffRequest,
-        __Marshaller_ComputeThreatListDiffResponse);
+        __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffRequest,
+        __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffResponse);
 
     static readonly grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> __Method_SearchUris = new grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchUris",
-        __Marshaller_SearchUrisRequest,
-        __Marshaller_SearchUrisResponse);
+        __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisRequest,
+        __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisResponse);
 
     static readonly grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> __Method_SearchHashes = new grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchHashes",
-        __Marshaller_SearchHashesRequest,
-        __Marshaller_SearchHashesResponse);
+        __Marshaller_google_cloud_webrisk_v1beta1_SearchHashesRequest,
+        __Marshaller_google_cloud_webrisk_v1beta1_SearchHashesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -67,6 +67,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of WebRiskServiceV1Beta1</summary>
+    [grpc::BindServiceMethod(typeof(WebRiskServiceV1Beta1), "BindService")]
     public abstract partial class WebRiskServiceV1Beta1Base
     {
       /// <summary>
@@ -294,6 +295,17 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           .AddMethod(__Method_ComputeThreatListDiff, serviceImpl.ComputeThreatListDiff)
           .AddMethod(__Method_SearchUris, serviceImpl.SearchUris)
           .AddMethod(__Method_SearchHashes, serviceImpl.SearchHashes).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, WebRiskServiceV1Beta1Base serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ComputeThreatListDiff, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse>(serviceImpl.ComputeThreatListDiff));
+      serviceBinder.AddMethod(__Method_SearchUris, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse>(serviceImpl.SearchUris));
+      serviceBinder.AddMethod(__Method_SearchHashes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse>(serviceImpl.SearchHashes));
     }
 
   }

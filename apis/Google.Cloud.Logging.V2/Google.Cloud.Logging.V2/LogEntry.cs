@@ -654,19 +654,19 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::Google.Api.MonitoredResource();
+          Resource = new global::Google.Api.MonitoredResource();
         }
         Resource.MergeFrom(other.Resource);
       }
       if (other.timestamp_ != null) {
         if (timestamp_ == null) {
-          timestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         Timestamp.MergeFrom(other.Timestamp);
       }
       if (other.receiveTimestamp_ != null) {
         if (receiveTimestamp_ == null) {
-          receiveTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ReceiveTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ReceiveTimestamp.MergeFrom(other.ReceiveTimestamp);
       }
@@ -678,20 +678,20 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.httpRequest_ != null) {
         if (httpRequest_ == null) {
-          httpRequest_ = new global::Google.Cloud.Logging.Type.HttpRequest();
+          HttpRequest = new global::Google.Cloud.Logging.Type.HttpRequest();
         }
         HttpRequest.MergeFrom(other.HttpRequest);
       }
       labels_.Add(other.labels_);
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Api.MonitoredResourceMetadata();
+          Metadata = new global::Google.Api.MonitoredResourceMetadata();
         }
         Metadata.MergeFrom(other.Metadata);
       }
       if (other.operation_ != null) {
         if (operation_ == null) {
-          operation_ = new global::Google.Cloud.Logging.V2.LogEntryOperation();
+          Operation = new global::Google.Cloud.Logging.V2.LogEntryOperation();
         }
         Operation.MergeFrom(other.Operation);
       }
@@ -706,7 +706,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.sourceLocation_ != null) {
         if (sourceLocation_ == null) {
-          sourceLocation_ = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
+          SourceLocation = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
         }
         SourceLocation.MergeFrom(other.SourceLocation);
       }
@@ -767,27 +767,27 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 58: {
             if (httpRequest_ == null) {
-              httpRequest_ = new global::Google.Cloud.Logging.Type.HttpRequest();
+              HttpRequest = new global::Google.Cloud.Logging.Type.HttpRequest();
             }
-            input.ReadMessage(httpRequest_);
+            input.ReadMessage(HttpRequest);
             break;
           }
           case 66: {
             if (resource_ == null) {
-              resource_ = new global::Google.Api.MonitoredResource();
+              Resource = new global::Google.Api.MonitoredResource();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
           case 74: {
             if (timestamp_ == null) {
-              timestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(timestamp_);
+            input.ReadMessage(Timestamp);
             break;
           }
           case 80: {
-            severity_ = (global::Google.Cloud.Logging.Type.LogSeverity) input.ReadEnum();
+            Severity = (global::Google.Cloud.Logging.Type.LogSeverity) input.ReadEnum();
             break;
           }
           case 90: {
@@ -800,9 +800,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 122: {
             if (operation_ == null) {
-              operation_ = new global::Google.Cloud.Logging.V2.LogEntryOperation();
+              Operation = new global::Google.Cloud.Logging.V2.LogEntryOperation();
             }
-            input.ReadMessage(operation_);
+            input.ReadMessage(Operation);
             break;
           }
           case 178: {
@@ -811,23 +811,23 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 186: {
             if (sourceLocation_ == null) {
-              sourceLocation_ = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
+              SourceLocation = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
             }
-            input.ReadMessage(sourceLocation_);
+            input.ReadMessage(SourceLocation);
             break;
           }
           case 194: {
             if (receiveTimestamp_ == null) {
-              receiveTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ReceiveTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(receiveTimestamp_);
+            input.ReadMessage(ReceiveTimestamp);
             break;
           }
           case 202: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Api.MonitoredResourceMetadata();
+              Metadata = new global::Google.Api.MonitoredResourceMetadata();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
           case 218: {

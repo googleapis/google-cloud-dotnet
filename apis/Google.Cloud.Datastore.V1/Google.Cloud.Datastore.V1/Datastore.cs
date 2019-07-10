@@ -293,7 +293,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.readOptions_ != null) {
         if (readOptions_ == null) {
-          readOptions_ = new global::Google.Cloud.Datastore.V1.ReadOptions();
+          ReadOptions = new global::Google.Cloud.Datastore.V1.ReadOptions();
         }
         ReadOptions.MergeFrom(other.ReadOptions);
       }
@@ -311,9 +311,9 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 10: {
             if (readOptions_ == null) {
-              readOptions_ = new global::Google.Cloud.Datastore.V1.ReadOptions();
+              ReadOptions = new global::Google.Cloud.Datastore.V1.ReadOptions();
             }
-            input.ReadMessage(readOptions_);
+            input.ReadMessage(ReadOptions);
             break;
           }
           case 26: {
@@ -752,13 +752,13 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.partitionId_ != null) {
         if (partitionId_ == null) {
-          partitionId_ = new global::Google.Cloud.Datastore.V1.PartitionId();
+          PartitionId = new global::Google.Cloud.Datastore.V1.PartitionId();
         }
         PartitionId.MergeFrom(other.PartitionId);
       }
       if (other.readOptions_ != null) {
         if (readOptions_ == null) {
-          readOptions_ = new global::Google.Cloud.Datastore.V1.ReadOptions();
+          ReadOptions = new global::Google.Cloud.Datastore.V1.ReadOptions();
         }
         ReadOptions.MergeFrom(other.ReadOptions);
       }
@@ -790,16 +790,16 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 10: {
             if (readOptions_ == null) {
-              readOptions_ = new global::Google.Cloud.Datastore.V1.ReadOptions();
+              ReadOptions = new global::Google.Cloud.Datastore.V1.ReadOptions();
             }
-            input.ReadMessage(readOptions_);
+            input.ReadMessage(ReadOptions);
             break;
           }
           case 18: {
             if (partitionId_ == null) {
-              partitionId_ = new global::Google.Cloud.Datastore.V1.PartitionId();
+              PartitionId = new global::Google.Cloud.Datastore.V1.PartitionId();
             }
-            input.ReadMessage(partitionId_);
+            input.ReadMessage(PartitionId);
             break;
           }
           case 26: {
@@ -968,13 +968,13 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.batch_ != null) {
         if (batch_ == null) {
-          batch_ = new global::Google.Cloud.Datastore.V1.QueryResultBatch();
+          Batch = new global::Google.Cloud.Datastore.V1.QueryResultBatch();
         }
         Batch.MergeFrom(other.Batch);
       }
       if (other.query_ != null) {
         if (query_ == null) {
-          query_ = new global::Google.Cloud.Datastore.V1.Query();
+          Query = new global::Google.Cloud.Datastore.V1.Query();
         }
         Query.MergeFrom(other.Query);
       }
@@ -991,16 +991,16 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 10: {
             if (batch_ == null) {
-              batch_ = new global::Google.Cloud.Datastore.V1.QueryResultBatch();
+              Batch = new global::Google.Cloud.Datastore.V1.QueryResultBatch();
             }
-            input.ReadMessage(batch_);
+            input.ReadMessage(Batch);
             break;
           }
           case 18: {
             if (query_ == null) {
-              query_ = new global::Google.Cloud.Datastore.V1.Query();
+              Query = new global::Google.Cloud.Datastore.V1.Query();
             }
-            input.ReadMessage(query_);
+            input.ReadMessage(Query);
             break;
           }
         }
@@ -1150,7 +1150,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.transactionOptions_ != null) {
         if (transactionOptions_ == null) {
-          transactionOptions_ = new global::Google.Cloud.Datastore.V1.TransactionOptions();
+          TransactionOptions = new global::Google.Cloud.Datastore.V1.TransactionOptions();
         }
         TransactionOptions.MergeFrom(other.TransactionOptions);
       }
@@ -1171,9 +1171,9 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 82: {
             if (transactionOptions_ == null) {
-              transactionOptions_ = new global::Google.Cloud.Datastore.V1.TransactionOptions();
+              TransactionOptions = new global::Google.Cloud.Datastore.V1.TransactionOptions();
             }
-            input.ReadMessage(transactionOptions_);
+            input.ReadMessage(TransactionOptions);
             break;
           }
         }
@@ -1836,7 +1836,7 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           }
           case 40: {
-            mode_ = (global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode) input.ReadEnum();
+            Mode = (global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode) input.ReadEnum();
             break;
           }
           case 50: {
@@ -3153,7 +3153,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.key_ != null) {
         if (key_ == null) {
-          key_ = new global::Google.Cloud.Datastore.V1.Key();
+          Key = new global::Google.Cloud.Datastore.V1.Key();
         }
         Key.MergeFrom(other.Key);
       }
@@ -3176,9 +3176,9 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 26: {
             if (key_ == null) {
-              key_ = new global::Google.Cloud.Datastore.V1.Key();
+              Key = new global::Google.Cloud.Datastore.V1.Key();
             }
-            input.ReadMessage(key_);
+            input.ReadMessage(Key);
             break;
           }
           case 32: {

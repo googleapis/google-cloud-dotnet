@@ -509,13 +509,13 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -543,7 +543,7 @@ namespace Google.Cloud.Logging.V2 {
             break;
           }
           case 48: {
-            outputVersionFormat_ = (global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) input.ReadEnum();
+            OutputVersionFormat = (global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) input.ReadEnum();
             break;
           }
           case 66: {
@@ -556,16 +556,16 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 82: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 90: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
         }
@@ -1293,7 +1293,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.sink_ != null) {
         if (sink_ == null) {
-          sink_ = new global::Google.Cloud.Logging.V2.LogSink();
+          Sink = new global::Google.Cloud.Logging.V2.LogSink();
         }
         Sink.MergeFrom(other.Sink);
       }
@@ -1317,9 +1317,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             if (sink_ == null) {
-              sink_ = new global::Google.Cloud.Logging.V2.LogSink();
+              Sink = new global::Google.Cloud.Logging.V2.LogSink();
             }
-            input.ReadMessage(sink_);
+            input.ReadMessage(Sink);
             break;
           }
           case 24: {
@@ -1553,7 +1553,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.sink_ != null) {
         if (sink_ == null) {
-          sink_ = new global::Google.Cloud.Logging.V2.LogSink();
+          Sink = new global::Google.Cloud.Logging.V2.LogSink();
         }
         Sink.MergeFrom(other.Sink);
       }
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -1583,9 +1583,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             if (sink_ == null) {
-              sink_ = new global::Google.Cloud.Logging.V2.LogSink();
+              Sink = new global::Google.Cloud.Logging.V2.LogSink();
             }
-            input.ReadMessage(sink_);
+            input.ReadMessage(Sink);
             break;
           }
           case 24: {
@@ -1594,9 +1594,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 34: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }
@@ -2651,7 +2651,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.exclusion_ != null) {
         if (exclusion_ == null) {
-          exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+          Exclusion = new global::Google.Cloud.Logging.V2.LogExclusion();
         }
         Exclusion.MergeFrom(other.Exclusion);
       }
@@ -2672,9 +2672,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             if (exclusion_ == null) {
-              exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+              Exclusion = new global::Google.Cloud.Logging.V2.LogExclusion();
             }
-            input.ReadMessage(exclusion_);
+            input.ReadMessage(Exclusion);
             break;
           }
         }
@@ -2862,13 +2862,13 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.exclusion_ != null) {
         if (exclusion_ == null) {
-          exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+          Exclusion = new global::Google.Cloud.Logging.V2.LogExclusion();
         }
         Exclusion.MergeFrom(other.Exclusion);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
-          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
@@ -2889,16 +2889,16 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             if (exclusion_ == null) {
-              exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+              Exclusion = new global::Google.Cloud.Logging.V2.LogExclusion();
             }
-            input.ReadMessage(exclusion_);
+            input.ReadMessage(Exclusion);
             break;
           }
           case 26: {
             if (updateMask_ == null) {
-              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(updateMask_);
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

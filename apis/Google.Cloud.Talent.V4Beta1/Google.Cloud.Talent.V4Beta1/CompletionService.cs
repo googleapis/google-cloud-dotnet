@@ -414,11 +414,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 48: {
-            scope_ = (global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope) input.ReadEnum();
+            Scope = (global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope) input.ReadEnum();
             break;
           }
           case 56: {
-            type_ = (global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) input.ReadEnum();
+            Type = (global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) input.ReadEnum();
             break;
           }
         }
@@ -610,7 +610,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       completionResults_.Add(other.completionResults_);
       if (other.metadata_ != null) {
         if (metadata_ == null) {
-          metadata_ = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
+          Metadata = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
         }
         Metadata.MergeFrom(other.Metadata);
       }
@@ -631,9 +631,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             if (metadata_ == null) {
-              metadata_ = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
+              Metadata = new global::Google.Cloud.Talent.V4Beta1.ResponseMetadata();
             }
-            input.ReadMessage(metadata_);
+            input.ReadMessage(Metadata);
             break;
           }
         }
@@ -831,7 +831,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
                 break;
               }
               case 16: {
-                type_ = (global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) input.ReadEnum();
+                Type = (global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) input.ReadEnum();
                 break;
               }
               case 26: {

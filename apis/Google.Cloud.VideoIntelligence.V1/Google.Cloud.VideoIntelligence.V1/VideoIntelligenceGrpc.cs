@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,15 +31,15 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   {
     static readonly string __ServiceName = "google.cloud.videointelligence.v1.VideoIntelligenceService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest> __Marshaller_AnnotateVideoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest> __Marshaller_google_cloud_videointelligence_v1_AnnotateVideoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest, global::Google.LongRunning.Operation> __Method_AnnotateVideo = new grpc::Method<global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AnnotateVideo",
-        __Marshaller_AnnotateVideoRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_videointelligence_v1_AnnotateVideoRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -48,6 +48,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     /// <summary>Base class for server-side implementations of VideoIntelligenceService</summary>
+    [grpc::BindServiceMethod(typeof(VideoIntelligenceService), "BindService")]
     public abstract partial class VideoIntelligenceServiceBase
     {
       /// <summary>
@@ -158,6 +159,15 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_AnnotateVideo, serviceImpl.AnnotateVideo).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, VideoIntelligenceServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_AnnotateVideo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest, global::Google.LongRunning.Operation>(serviceImpl.AnnotateVideo));
     }
 
   }

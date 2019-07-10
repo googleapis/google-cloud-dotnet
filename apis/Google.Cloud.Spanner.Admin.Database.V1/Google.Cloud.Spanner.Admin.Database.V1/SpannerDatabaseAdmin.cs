@@ -271,7 +271,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             break;
           }
           case 16: {
-            state_ = (global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State) input.ReadEnum();
             break;
           }
         }

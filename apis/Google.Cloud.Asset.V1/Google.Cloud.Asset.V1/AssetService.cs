@@ -314,7 +314,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (other.readTime_ != null) {
         if (readTime_ == null) {
-          readTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ReadTime.MergeFrom(other.ReadTime);
       }
@@ -324,7 +324,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          outputConfig_ = new global::Google.Cloud.Asset.V1.OutputConfig();
+          OutputConfig = new global::Google.Cloud.Asset.V1.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -345,9 +345,9 @@ namespace Google.Cloud.Asset.V1 {
           }
           case 18: {
             if (readTime_ == null) {
-              readTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(readTime_);
+            input.ReadMessage(ReadTime);
             break;
           }
           case 26: {
@@ -355,14 +355,14 @@ namespace Google.Cloud.Asset.V1 {
             break;
           }
           case 32: {
-            contentType_ = (global::Google.Cloud.Asset.V1.ContentType) input.ReadEnum();
+            ContentType = (global::Google.Cloud.Asset.V1.ContentType) input.ReadEnum();
             break;
           }
           case 42: {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Asset.V1.OutputConfig();
+              OutputConfig = new global::Google.Cloud.Asset.V1.OutputConfig();
             }
-            input.ReadMessage(outputConfig_);
+            input.ReadMessage(OutputConfig);
             break;
           }
         }
@@ -511,13 +511,13 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (other.readTime_ != null) {
         if (readTime_ == null) {
-          readTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ReadTime.MergeFrom(other.ReadTime);
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          outputConfig_ = new global::Google.Cloud.Asset.V1.OutputConfig();
+          OutputConfig = new global::Google.Cloud.Asset.V1.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -534,16 +534,16 @@ namespace Google.Cloud.Asset.V1 {
             break;
           case 10: {
             if (readTime_ == null) {
-              readTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(readTime_);
+            input.ReadMessage(ReadTime);
             break;
           }
           case 18: {
             if (outputConfig_ == null) {
-              outputConfig_ = new global::Google.Cloud.Asset.V1.OutputConfig();
+              OutputConfig = new global::Google.Cloud.Asset.V1.OutputConfig();
             }
-            input.ReadMessage(outputConfig_);
+            input.ReadMessage(OutputConfig);
             break;
           }
         }
@@ -753,7 +753,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (other.readTimeWindow_ != null) {
         if (readTimeWindow_ == null) {
-          readTimeWindow_ = new global::Google.Cloud.Asset.V1.TimeWindow();
+          ReadTimeWindow = new global::Google.Cloud.Asset.V1.TimeWindow();
         }
         ReadTimeWindow.MergeFrom(other.ReadTimeWindow);
       }
@@ -777,14 +777,14 @@ namespace Google.Cloud.Asset.V1 {
             break;
           }
           case 24: {
-            contentType_ = (global::Google.Cloud.Asset.V1.ContentType) input.ReadEnum();
+            ContentType = (global::Google.Cloud.Asset.V1.ContentType) input.ReadEnum();
             break;
           }
           case 34: {
             if (readTimeWindow_ == null) {
-              readTimeWindow_ = new global::Google.Cloud.Asset.V1.TimeWindow();
+              ReadTimeWindow = new global::Google.Cloud.Asset.V1.TimeWindow();
             }
-            input.ReadMessage(readTimeWindow_);
+            input.ReadMessage(ReadTimeWindow);
             break;
           }
         }

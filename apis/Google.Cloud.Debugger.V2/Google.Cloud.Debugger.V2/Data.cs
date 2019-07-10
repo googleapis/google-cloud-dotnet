@@ -439,7 +439,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.description_ != null) {
         if (description_ == null) {
-          description_ = new global::Google.Cloud.Debugger.V2.FormatMessage();
+          Description = new global::Google.Cloud.Debugger.V2.FormatMessage();
         }
         Description.MergeFrom(other.Description);
       }
@@ -459,14 +459,14 @@ namespace Google.Cloud.Debugger.V2 {
             break;
           }
           case 16: {
-            refersTo_ = (global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference) input.ReadEnum();
+            RefersTo = (global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference) input.ReadEnum();
             break;
           }
           case 26: {
             if (description_ == null) {
-              description_ = new global::Google.Cloud.Debugger.V2.FormatMessage();
+              Description = new global::Google.Cloud.Debugger.V2.FormatMessage();
             }
-            input.ReadMessage(description_);
+            input.ReadMessage(Description);
             break;
           }
         }
@@ -940,6 +940,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
     }
 
+
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 5;
     private global::Google.Cloud.Debugger.V2.StatusMessage status_;
@@ -1088,7 +1089,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Cloud.Debugger.V2.StatusMessage();
+          Status = new global::Google.Cloud.Debugger.V2.StatusMessage();
         }
         Status.MergeFrom(other.Status);
       }
@@ -1124,9 +1125,9 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 42: {
             if (status_ == null) {
-              status_ = new global::Google.Cloud.Debugger.V2.StatusMessage();
+              Status = new global::Google.Cloud.Debugger.V2.StatusMessage();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 50: {
@@ -1317,7 +1318,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          location_ = new global::Google.Cloud.Debugger.V2.SourceLocation();
+          Location = new global::Google.Cloud.Debugger.V2.SourceLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -1340,9 +1341,9 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 18: {
             if (location_ == null) {
-              location_ = new global::Google.Cloud.Debugger.V2.SourceLocation();
+              Location = new global::Google.Cloud.Debugger.V2.SourceLocation();
             }
-            input.ReadMessage(location_);
+            input.ReadMessage(Location);
             break;
           }
           case 26: {
@@ -1856,7 +1857,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.location_ != null) {
         if (location_ == null) {
-          location_ = new global::Google.Cloud.Debugger.V2.SourceLocation();
+          Location = new global::Google.Cloud.Debugger.V2.SourceLocation();
         }
         Location.MergeFrom(other.Location);
       }
@@ -1875,13 +1876,13 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
-          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.finalTime_ != null) {
         if (finalTime_ == null) {
-          finalTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          FinalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         FinalTime.MergeFrom(other.FinalTime);
       }
@@ -1890,7 +1891,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Cloud.Debugger.V2.StatusMessage();
+          Status = new global::Google.Cloud.Debugger.V2.StatusMessage();
         }
         Status.MergeFrom(other.Status);
       }
@@ -1915,9 +1916,9 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 18: {
             if (location_ == null) {
-              location_ = new global::Google.Cloud.Debugger.V2.SourceLocation();
+              Location = new global::Google.Cloud.Debugger.V2.SourceLocation();
             }
-            input.ReadMessage(location_);
+            input.ReadMessage(Location);
             break;
           }
           case 26: {
@@ -1946,27 +1947,27 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 82: {
             if (status_ == null) {
-              status_ = new global::Google.Cloud.Debugger.V2.StatusMessage();
+              Status = new global::Google.Cloud.Debugger.V2.StatusMessage();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 90: {
             if (createTime_ == null) {
-              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createTime_);
+            input.ReadMessage(CreateTime);
             break;
           }
           case 98: {
             if (finalTime_ == null) {
-              finalTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              FinalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(finalTime_);
+            input.ReadMessage(FinalTime);
             break;
           }
           case 104: {
-            action_ = (global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action) input.ReadEnum();
+            Action = (global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action) input.ReadEnum();
             break;
           }
           case 114: {
@@ -1974,7 +1975,7 @@ namespace Google.Cloud.Debugger.V2 {
             break;
           }
           case 120: {
-            logLevel_ = (global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel) input.ReadEnum();
+            LogLevel = (global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel) input.ReadEnum();
             break;
           }
           case 130: {
@@ -2412,7 +2413,7 @@ namespace Google.Cloud.Debugger.V2 {
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Google.Cloud.Debugger.V2.StatusMessage();
+          Status = new global::Google.Cloud.Debugger.V2.StatusMessage();
         }
         Status.MergeFrom(other.Status);
       }
@@ -2460,9 +2461,9 @@ namespace Google.Cloud.Debugger.V2 {
           }
           case 66: {
             if (status_ == null) {
-              status_ = new global::Google.Cloud.Debugger.V2.StatusMessage();
+              Status = new global::Google.Cloud.Debugger.V2.StatusMessage();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 74: {

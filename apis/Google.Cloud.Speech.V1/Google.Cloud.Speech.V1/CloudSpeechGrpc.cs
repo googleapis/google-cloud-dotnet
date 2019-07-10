@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -31,33 +31,33 @@ namespace Google.Cloud.Speech.V1 {
   {
     static readonly string __ServiceName = "google.cloud.speech.v1.Speech";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeRequest> __Marshaller_RecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.RecognizeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeResponse> __Marshaller_RecognizeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest> __Marshaller_LongRunningRecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest> __Marshaller_StreamingRecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeResponse> __Marshaller_StreamingRecognizeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeRequest> __Marshaller_google_cloud_speech_v1_RecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.RecognizeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeResponse> __Marshaller_google_cloud_speech_v1_RecognizeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest> __Marshaller_google_cloud_speech_v1_LongRunningRecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest> __Marshaller_google_cloud_speech_v1_StreamingRecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeResponse> __Marshaller_google_cloud_speech_v1_StreamingRecognizeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Speech.V1.RecognizeRequest, global::Google.Cloud.Speech.V1.RecognizeResponse> __Method_Recognize = new grpc::Method<global::Google.Cloud.Speech.V1.RecognizeRequest, global::Google.Cloud.Speech.V1.RecognizeResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Recognize",
-        __Marshaller_RecognizeRequest,
-        __Marshaller_RecognizeResponse);
+        __Marshaller_google_cloud_speech_v1_RecognizeRequest,
+        __Marshaller_google_cloud_speech_v1_RecognizeResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest, global::Google.LongRunning.Operation> __Method_LongRunningRecognize = new grpc::Method<global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "LongRunningRecognize",
-        __Marshaller_LongRunningRecognizeRequest,
-        __Marshaller_Operation);
+        __Marshaller_google_cloud_speech_v1_LongRunningRecognizeRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1.StreamingRecognizeResponse> __Method_StreamingRecognize = new grpc::Method<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1.StreamingRecognizeResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
         "StreamingRecognize",
-        __Marshaller_StreamingRecognizeRequest,
-        __Marshaller_StreamingRecognizeResponse);
+        __Marshaller_google_cloud_speech_v1_StreamingRecognizeRequest,
+        __Marshaller_google_cloud_speech_v1_StreamingRecognizeResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -66,6 +66,7 @@ namespace Google.Cloud.Speech.V1 {
     }
 
     /// <summary>Base class for server-side implementations of Speech</summary>
+    [grpc::BindServiceMethod(typeof(Speech), "BindService")]
     public abstract partial class SpeechBase
     {
       /// <summary>
@@ -273,6 +274,17 @@ namespace Google.Cloud.Speech.V1 {
           .AddMethod(__Method_Recognize, serviceImpl.Recognize)
           .AddMethod(__Method_LongRunningRecognize, serviceImpl.LongRunningRecognize)
           .AddMethod(__Method_StreamingRecognize, serviceImpl.StreamingRecognize).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, SpeechBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_Recognize, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Speech.V1.RecognizeRequest, global::Google.Cloud.Speech.V1.RecognizeResponse>(serviceImpl.Recognize));
+      serviceBinder.AddMethod(__Method_LongRunningRecognize, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest, global::Google.LongRunning.Operation>(serviceImpl.LongRunningRecognize));
+      serviceBinder.AddMethod(__Method_StreamingRecognize, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1.StreamingRecognizeResponse>(serviceImpl.StreamingRecognize));
     }
 
   }

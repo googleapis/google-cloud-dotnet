@@ -525,7 +525,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::Google.Api.MonitoredResource();
+          Resource = new global::Google.Api.MonitoredResource();
         }
         Resource.MergeFrom(other.Resource);
       }
@@ -554,9 +554,9 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             if (resource_ == null) {
-              resource_ = new global::Google.Api.MonitoredResource();
+              Resource = new global::Google.Api.MonitoredResource();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
           case 26: {

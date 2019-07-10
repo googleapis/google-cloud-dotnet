@@ -18,7 +18,7 @@
 // limitations under the License.
 //
 //
-#pragma warning disable 1591
+#pragma warning disable 0414, 1591
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -34,24 +34,24 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.v2.Sessions";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DetectIntentRequest> __Marshaller_DetectIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DetectIntentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DetectIntentResponse> __Marshaller_DetectIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DetectIntentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest> __Marshaller_StreamingDetectIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse> __Marshaller_StreamingDetectIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DetectIntentRequest> __Marshaller_google_cloud_dialogflow_v2_DetectIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DetectIntentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DetectIntentResponse> __Marshaller_google_cloud_dialogflow_v2_DetectIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DetectIntentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest> __Marshaller_google_cloud_dialogflow_v2_StreamingDetectIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse> __Marshaller_google_cloud_dialogflow_v2_StreamingDetectIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.DetectIntentRequest, global::Google.Cloud.Dialogflow.V2.DetectIntentResponse> __Method_DetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.V2.DetectIntentRequest, global::Google.Cloud.Dialogflow.V2.DetectIntentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DetectIntent",
-        __Marshaller_DetectIntentRequest,
-        __Marshaller_DetectIntentResponse);
+        __Marshaller_google_cloud_dialogflow_v2_DetectIntentRequest,
+        __Marshaller_google_cloud_dialogflow_v2_DetectIntentResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse> __Method_StreamingDetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
         "StreamingDetectIntent",
-        __Marshaller_StreamingDetectIntentRequest,
-        __Marshaller_StreamingDetectIntentResponse);
+        __Marshaller_google_cloud_dialogflow_v2_StreamingDetectIntentRequest,
+        __Marshaller_google_cloud_dialogflow_v2_StreamingDetectIntentResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -60,6 +60,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     /// <summary>Base class for server-side implementations of Sessions</summary>
+    [grpc::BindServiceMethod(typeof(Sessions), "BindService")]
     public abstract partial class SessionsBase
     {
       /// <summary>
@@ -209,6 +210,16 @@ namespace Google.Cloud.Dialogflow.V2 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_DetectIntent, serviceImpl.DetectIntent)
           .AddMethod(__Method_StreamingDetectIntent, serviceImpl.StreamingDetectIntent).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, SessionsBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_DetectIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.DetectIntentRequest, global::Google.Cloud.Dialogflow.V2.DetectIntentResponse>(serviceImpl.DetectIntent));
+      serviceBinder.AddMethod(__Method_StreamingDetectIntent, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse>(serviceImpl.StreamingDetectIntent));
     }
 
   }
