@@ -21,8 +21,8 @@
     <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Rest" Version="2.7.0" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="4.0.0" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Rest" Version="2.9.0" />
     <PackageReference Include="Google.Apis.Compute.v1" Version="1.39.0.1553" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
