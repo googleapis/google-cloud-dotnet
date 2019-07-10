@@ -10,24 +10,40 @@
 
 The following libraries are available at a [GA](#versioning) quality level:
 
+* [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) - [V1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1) (GA)
+  * Additionally, the following library is available for access to beta API functionality:
+  * [V1Beta1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1Beta1/) (beta)
+* [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (GA)
 * [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.V2/) (GA)
 * [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.V2/) (GA)
   * Also the Bigtable admin API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.Admin.V2/) (GA)
+* [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Container.V1) (GA)
+* [Google Cloud Dataproc](https://cloud.google.com/dataproc/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dataproc.V1/) (GA)
 * [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Datastore.V1/) (GA)
+* [Google Cloud Debugger](https://cloud.google.com/debugger/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Debugger.V2) (GA)
 * Google Cloud Diagnostics for ASP.NET - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNet/) (GA)
 * Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (GA)
+* [Dialogflow Enterprise Edition](https://cloud.google.com/dialogflow-enterprise/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dialogflow.V2) (GA)
+* [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/)
+  * [V2 API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2/) (GA)
+  * The Google.Cloud.Dlp.V2Beta1 package has now been deprecated, and is unlisted on nuget.org.
+    Please update to Google.Cloud.Dlp.V2.
 * [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Kms.V1/) (GA)
 * [Google Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/) (GA)
   * Integration with Log4Net is provided via [Google.Cloud.Logging.Log4Net](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.Log4Net/) (GA)
   * Integration with NLog is provided via [Google.Cloud.Logging.NLog](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.NLog/) (GA)
 * [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (GA)
 * [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/) (GA)
+* [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (GA)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (GA)
+* [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1/) (GA)
+  * The [V1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) is also available (beta)
 * [Google Cloud Scheduler](https://cloud.google.com/scheduler/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Scheduler.V1) (GA)
+* [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.SecurityCenter.V1) (GA)
 * [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1/) (GA)
 * [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/) (GA)
 * [Stackdriver Trace v1](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (GA)
-* [Google Cloud Tasks](https://cloud.google.com/cloud-tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
+* [Google Cloud Tasks](https://cloud.google.com/tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
 * [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
 * [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
@@ -39,33 +55,17 @@ The following libraries are available at a [GA](#versioning) quality level:
   * [Google.Cloud.Spanner.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.V1/): Low-level access to Spanner API
   * [Google.Cloud.Spanner.Admin.Database.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Database.V1/): Database administration API
   * [Google.Cloud.Spanner.Admin.Instance.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Instance.V1/): Instance administration API
+* [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.TextToSpeech.V1/) (GA)
+* [Stackdriver Trace v2](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V2/) (GA)
 
 The following libraries are available at a [beta](#versioning) quality level:
 
-* [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
-  * [V1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1) (beta)
-  * [V1Beta1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1Beta1/) (beta)
-* [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (beta)
-* [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Container.V1) (beta)
-* [Google Cloud Dataproc](https://cloud.google.com/dataproc/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dataproc.V1/) (beta)
-* [Google Cloud Debugger](https://cloud.google.com/debugger/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Debugger.V2) (beta)
-* [Google Clond Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.DevTools.ContainerAnalysis.V1) (beta)
+* [Google Cloud Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.DevTools.ContainerAnalysis.V1) (beta)
   * This is an implementaiton of the [Grafeas](https://grafeas.io) API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Grafeas.V1) (beta)
-* [Dialogflow Enterprise Edition](https://cloud.google.com/dialogflow-enterprise/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dialogflow.V2) (beta)
-* [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/)
-  * [V2 API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2/) (beta)
-  * The Google.Cloud.Dlp.V2Beta1 package has now been deprecated, and is unlisted on nuget.org.
-    Please update to Google.Cloud.Dlp.V2.
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
 * [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both beta:
   * [Google.Cloud.Firestore](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
   * [Google.Cloud.Firestore.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1/): Low-level access to Firestore API
-* [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (beta)
-* [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1/) (beta)
-  * The [V1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) is also available (beta)
-* [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.SecurityCenter.V1) (beta)
-* [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.TextToSpeech.V1/) (beta)
-* [Stackdriver Trace v2](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V2/) (beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
