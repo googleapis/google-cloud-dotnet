@@ -49,8 +49,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
-        private const string DefaultGaxVersion = "2.7.0";
-        private const string GrpcVersion = "1.20.1";
+        private const string DefaultGaxVersion = "2.9.0";
+        private const string GrpcVersion = "1.22.0";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
@@ -66,7 +66,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // Hard-coded versions for all analyzer projects.
         private static readonly Dictionary<string, string> CommonAnalyzerDependencies = new Dictionary<string, string>
         {
-            { CSharpWorkspacesPackage, "2.4.0" }
+            { CSharpWorkspacesPackage, "3.1.0" }
         };
 
         // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
@@ -74,11 +74,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "15.8.0" },
-            { "xunit", "2.4.0" },
-            { "xunit.runner.visualstudio", "2.4.0" },
-            { "Xunit.SkippableFact", "1.3.6" },
-            { "Moq", "4.9.0" }
+            { "Microsoft.NET.Test.Sdk", "16.2.0" },
+            { "xunit", "2.4.1" },
+            { "xunit.runner.visualstudio", "2.4.1" },
+            { "Xunit.SkippableFact", "1.3.12" },
+            { "Moq", "4.12.0" }
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
@@ -86,7 +86,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
             { CompatibilityAnalyzer, "0.2.12-alpha" },
-            { ConfigureAwaitAnalyzer, "1.0.1" },
+            { ConfigureAwaitAnalyzer, "4.0.0" },
             { SourceLinkPackage, "2.8.3" }
         };
 
