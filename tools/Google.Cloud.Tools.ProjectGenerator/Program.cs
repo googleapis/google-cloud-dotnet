@@ -86,7 +86,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
             { CompatibilityAnalyzer, "0.2.12-alpha" },
-            { ConfigureAwaitAnalyzer, "4.0.0" },
+            { ConfigureAwaitAnalyzer, "1.0.1" },
             { SourceLinkPackage, "2.8.3" }
         };
 

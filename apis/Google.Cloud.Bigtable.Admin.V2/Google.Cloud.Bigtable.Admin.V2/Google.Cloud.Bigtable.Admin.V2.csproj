@@ -22,7 +22,7 @@
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="4.0.0" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.9.0" />
     <ProjectReference Include="..\..\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2.csproj" />
     <PackageReference Include="Google.Cloud.Iam.V1" Version="1.2.0" />

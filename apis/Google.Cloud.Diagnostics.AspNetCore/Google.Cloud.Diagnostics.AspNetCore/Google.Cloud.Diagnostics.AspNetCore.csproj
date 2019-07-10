@@ -22,7 +22,7 @@
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="4.0.0" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Cloud.Diagnostics.AspNetCore.Analyzers" Version="1.0.0-beta02" />
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj" />
     <PackageReference Include="Grpc.Core" Version="1.22.0" PrivateAssets="None" />

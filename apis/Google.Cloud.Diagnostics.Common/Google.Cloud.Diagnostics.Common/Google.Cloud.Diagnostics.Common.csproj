@@ -21,7 +21,7 @@
     <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="4.0.0" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.9.0" />
     <PackageReference Include="Google.Cloud.Logging.V2" Version="2.1.0" />
     <PackageReference Include="Google.Cloud.Trace.V1" Version="1.0.0" />
