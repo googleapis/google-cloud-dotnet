@@ -30,7 +30,7 @@ namespace Google.Cloud.Firestore.Converters
         // driven by how we use this. If we ever want a dictionary for readable properties, that's easy to do.
         private readonly IReadOnlyDictionary<string, AttributedProperty> _writableProperties;
         private readonly IReadOnlyList<AttributedProperty> _readableProperties;
-        private readonly ConstructorInfo _ctor;
+        private readonly Func<object> _createInstance;
         private readonly FirestoreDataAttribute _attribute;
 
         private AttributedTypeConverter(BclType targetType, FirestoreDataAttribute attribute) : base(targetType)
@@ -42,10 +42,7 @@ namespace Google.Cloud.Firestore.Converters
             GaxPreconditions.CheckState(Enum.IsDefined(typeof(UnknownPropertyHandling), _attribute.UnknownPropertyHandling),
                 "Type {0} has invalid {1} value", targetType.FullName, nameof(FirestoreDataAttribute.UnknownPropertyHandling));
 
-            _ctor = typeInfo
-                .GetConstructors(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance)
-                .SingleOrDefault(ctor => ctor.GetParameters().Length == 0);
-            GaxPreconditions.CheckState(_ctor != null, "Type {0} has no parameterless constructor", targetType.FullName);
+            _createInstance = CreateObjectCreator(typeInfo);
 
             List<AttributedProperty> readableProperties = new List<AttributedProperty>();
             Dictionary<string, AttributedProperty> writableProperties = new Dictionary<string, AttributedProperty>();
@@ -80,6 +77,34 @@ namespace Google.Cloud.Firestore.Converters
             _writableProperties = new ReadOnlyDictionary<string, AttributedProperty>(writableProperties);
         }
 
+        // Only used in the constructor, but extracted for readability.
+        private static Func<object> CreateObjectCreator(TypeInfo typeInfo)
+        {
+            if (typeInfo.IsValueType)
+            {
+                return () => Activator.CreateInstance(typeInfo);
+            }
+            else
+            {
+                // TODO: Consider using a compiled expression tree for this.
+                var ctor = typeInfo
+                    .GetConstructors(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance)
+                    .SingleOrDefault(c => c.GetParameters().Length == 0);
+                GaxPreconditions.CheckState(ctor != null, "Type {0} has no parameterless constructor", typeInfo.FullName);
+                return () =>
+                {
+                    try
+                    {
+                        return ctor.Invoke(parameters: null);
+                    }
+                    catch (TargetInvocationException e) when (e.InnerException != null)
+                    {
+                        throw e.InnerException;
+                    }
+                };
+            }
+        }
+
         /// <summary>
         /// Factory method to construct a converter for an attributed type.
         /// </summary>
@@ -97,16 +122,7 @@ namespace Google.Cloud.Firestore.Converters
 
         public override object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
         {
-            // TODO: Consider using a compiled expression tree for this.
-            object ret;
-            try
-            {
-                ret = _ctor.Invoke(parameters: null);
-            }
-            catch (TargetInvocationException e) when (e.InnerException != null)
-            {
-                throw e.InnerException;
-            }
+            object ret = _createInstance();
 
             foreach (var pair in values)
             {

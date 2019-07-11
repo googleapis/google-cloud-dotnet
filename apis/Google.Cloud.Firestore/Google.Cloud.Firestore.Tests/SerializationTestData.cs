@@ -166,6 +166,10 @@ namespace Google.Cloud.Firestore.Tests
                         { "EnumByNumber", new Value { IntegerValue = int.MaxValue } }
                     } } } },
 
+            // Attributed struct
+            { new StructModel { Name = "xyz", Value = 10 },
+                new Value { MapValue = new MapValue { Fields = { { "Name", new Value { StringValue = "xyz" } }, { "Value", new Value { IntegerValue = 10L } } } } } },
+
             // Nullable type handling
             { new NullableContainer { NullableValue = null },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
@@ -430,7 +434,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [FirestoreData(ConverterType = typeof(CustomValueTypeConverter))]
-        internal struct CustomValueType
+        internal struct CustomValueType : IEquatable<CustomValueType>
         {
             public string Name { get; }
             public int Value { get; }
@@ -440,6 +444,11 @@ namespace Google.Cloud.Firestore.Tests
                 Name = name;
                 Value = value;
             }
+
+            public override int GetHashCode() => Name.GetHashCode() + Value;
+            public override bool Equals(object obj) => obj is CustomValueType other && Equals(other);
+            public bool Equals(CustomValueType other) => Name == other.Name && Value == other.Value;
+            public override string ToString() => $"{nameof(CustomValueType)}: { new { Name, Value } }";
         }
 
         internal class CustomValueTypeConverter : IFirestoreConverter<CustomValueType>
@@ -459,6 +468,21 @@ namespace Google.Cloud.Firestore.Tests
                     ["Name"] = value.Name,
                     ["Value"] = value.Value
                 };
+        }
+
+        [FirestoreData]
+        internal struct StructModel : IEquatable<StructModel>
+        {
+            [FirestoreProperty]
+            public string Name { get; set; }
+            [FirestoreProperty]
+            public int Value { get; set; }
+
+            public override int GetHashCode() => Name.GetHashCode() + Value;
+            public override bool Equals(object obj) => obj is StructModel other && Equals(other);
+            public bool Equals(StructModel other) => Name == other.Name && Value == other.Value;
+
+            public override string ToString() => $"{nameof(StructModel)}: { new { Name, Value } }";
         }
     }
 }

@@ -159,6 +159,16 @@ Without the `FirestoreDocumentId` attribute, the document reference would still 
 `ChatRoom` object later wouldn't have access to it without extra code to populate it. The `FirestoreDocumentId` attribute just allows you to get at the document ID
 or reference without any additional code.
 
+**Note**: The `FirestoreData` attribute can be applied to a struct
+as well, but this only makes sense for mutable structs - which are
+generally discouraged. The struct will be boxed as part of
+serialization and deserialization, so there's no memory advantage
+in that sense. However, this is supported for the sake of code which
+wishes to use mutable structs for other reasons elsewhere.
+To support immutable structs (which are generally prefered), write
+a [custom converter](#custom-converters) in the same way as you
+would for a class.
+
 ## Mapping with dictionaries
 
 A map can be represented as a `Dictionary<string, object>` - or if you're only storing values of a particular type, a `Dictionary<string, int>`, `Dictionary<string, string>` etc.
