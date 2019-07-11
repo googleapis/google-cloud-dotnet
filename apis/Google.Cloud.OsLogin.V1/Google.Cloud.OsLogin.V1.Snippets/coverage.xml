@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.OsLogin.V1</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.Cloud.OsLogin.Common</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
