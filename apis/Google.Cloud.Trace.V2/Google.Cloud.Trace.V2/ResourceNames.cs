@@ -69,6 +69,14 @@ namespace Google.Cloud.Trace.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="SpanName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="traceId">The <c>trace</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="spanId">The <c>span</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SpanName"/>.</returns>
+        public static string Format(string projectId, string traceId, string spanId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(traceId, nameof(traceId)), gax::GaxPreconditions.CheckNotNull(spanId, nameof(spanId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="SpanName"/> resource name class
         /// from its component parts.

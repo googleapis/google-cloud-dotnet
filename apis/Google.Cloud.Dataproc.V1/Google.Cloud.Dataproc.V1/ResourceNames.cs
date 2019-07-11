@@ -68,6 +68,13 @@ namespace Google.Cloud.Dataproc.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="RegionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="regionId">The <c>region</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="RegionName"/>.</returns>
+        public static string Format(string projectId, string regionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(regionId, nameof(regionId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="RegionName"/> resource name class
         /// from its component parts.
@@ -159,6 +166,14 @@ namespace Google.Cloud.Dataproc.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="WorkflowTemplateName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="regionId">The <c>region</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="workflowTemplateId">The <c>workflowTemplate</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="WorkflowTemplateName"/>.</returns>
+        public static string Format(string projectId, string regionId, string workflowTemplateId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(regionId, nameof(regionId)), gax::GaxPreconditions.CheckNotNull(workflowTemplateId, nameof(workflowTemplateId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="WorkflowTemplateName"/> resource name class

@@ -69,6 +69,15 @@ namespace Google.Cloud.Talent.V4Beta1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ApplicationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="tenantId">The <c>tenant</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="profileId">The <c>profile</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="applicationId">The <c>application</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ApplicationName"/>.</returns>
+        public static string Format(string projectId, string tenantId, string profileId, string applicationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId)), gax::GaxPreconditions.CheckNotNull(profileId, nameof(profileId)), gax::GaxPreconditions.CheckNotNull(applicationId, nameof(applicationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ApplicationName"/> resource name class
         /// from its component parts.
@@ -174,6 +183,14 @@ namespace Google.Cloud.Talent.V4Beta1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="CompanyName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="tenantId">The <c>tenant</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="companyId">The <c>company</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="CompanyName"/>.</returns>
+        public static string Format(string projectId, string tenantId, string companyId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId)), gax::GaxPreconditions.CheckNotNull(companyId, nameof(companyId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="CompanyName"/> resource name class
@@ -478,6 +495,13 @@ namespace Google.Cloud.Talent.V4Beta1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="CompanyWithoutTenantName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="companyId">The <c>company</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="CompanyWithoutTenantName"/>.</returns>
+        public static string Format(string projectId, string companyId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(companyId, nameof(companyId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="CompanyWithoutTenantName"/> resource name class
         /// from its component parts.
@@ -569,6 +593,14 @@ namespace Google.Cloud.Talent.V4Beta1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="JobName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="tenantId">The <c>tenant</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="jobsId">The <c>jobs</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="JobName"/>.</returns>
+        public static string Format(string projectId, string tenantId, string jobsId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId)), gax::GaxPreconditions.CheckNotNull(jobsId, nameof(jobsId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="JobName"/> resource name class
@@ -873,6 +905,13 @@ namespace Google.Cloud.Talent.V4Beta1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="JobWithoutTenantName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="jobsId">The <c>jobs</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="JobWithoutTenantName"/>.</returns>
+        public static string Format(string projectId, string jobsId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(jobsId, nameof(jobsId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="JobWithoutTenantName"/> resource name class
         /// from its component parts.
@@ -964,6 +1003,14 @@ namespace Google.Cloud.Talent.V4Beta1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProfileName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="tenantId">The <c>tenant</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="profileId">The <c>profile</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProfileName"/>.</returns>
+        public static string Format(string projectId, string tenantId, string profileId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId)), gax::GaxPreconditions.CheckNotNull(profileId, nameof(profileId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ProfileName"/> resource name class
@@ -1063,6 +1110,13 @@ namespace Google.Cloud.Talent.V4Beta1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="TenantName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="tenantId">The <c>tenant</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="TenantName"/>.</returns>
+        public static string Format(string projectId, string tenantId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="TenantName"/> resource name class

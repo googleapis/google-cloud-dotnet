@@ -142,6 +142,13 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="SnapshotName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="snapshotId">The <c>snapshot</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SnapshotName"/>.</returns>
+        public static string Format(string projectId, string snapshotId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="SnapshotName"/> resource name class
         /// from its component parts.
@@ -234,6 +241,13 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="SubscriptionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="subscriptionId">The <c>subscription</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SubscriptionName"/>.</returns>
+        public static string Format(string projectId, string subscriptionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(subscriptionId, nameof(subscriptionId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="SubscriptionName"/> resource name class
         /// from its component parts.
@@ -325,6 +339,13 @@ namespace Google.Cloud.PubSub.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="TopicName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="topicId">The <c>topic</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="TopicName"/>.</returns>
+        public static string Format(string projectId, string topicId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(topicId, nameof(topicId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="TopicName"/> resource name class

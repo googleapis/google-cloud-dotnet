@@ -69,6 +69,12 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="BillingName"/>.</summary>
+        /// <param name="billingAccountId">The <c>billingAccount</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="BillingName"/>.</returns>
+        public static string Format(string billingAccountId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(billingAccountId, nameof(billingAccountId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="BillingName"/> resource name class
         /// from its component parts.
@@ -153,6 +159,13 @@ namespace Google.Cloud.Logging.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="BillingExclusionName"/>.</summary>
+        /// <param name="billingAccountId">The <c>billingAccount</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The <c>exclusion</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="BillingExclusionName"/>.</returns>
+        public static string Format(string billingAccountId, string exclusionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(billingAccountId, nameof(billingAccountId)), gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="BillingExclusionName"/> resource name class
@@ -246,6 +259,13 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="BillingLogName"/>.</summary>
+        /// <param name="billingAccountId">The <c>billingAccount</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="logId">The <c>log</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="BillingLogName"/>.</returns>
+        public static string Format(string billingAccountId, string logId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(billingAccountId, nameof(billingAccountId)), gax::GaxPreconditions.CheckNotNull(logId, nameof(logId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="BillingLogName"/> resource name class
         /// from its component parts.
@@ -338,6 +358,13 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="BillingSinkName"/>.</summary>
+        /// <param name="billingAccountId">The <c>billingAccount</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sinkId">The <c>sink</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="BillingSinkName"/>.</returns>
+        public static string Format(string billingAccountId, string sinkId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(billingAccountId, nameof(billingAccountId)), gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="BillingSinkName"/> resource name class
         /// from its component parts.
@@ -429,6 +456,13 @@ namespace Google.Cloud.Logging.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ExclusionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The <c>exclusion</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ExclusionName"/>.</returns>
+        public static string Format(string projectId, string exclusionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ExclusionName"/> resource name class
@@ -790,6 +824,12 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="FolderName"/>.</summary>
+        /// <param name="folderId">The <c>folder</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FolderName"/>.</returns>
+        public static string Format(string folderId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="FolderName"/> resource name class
         /// from its component parts.
@@ -874,6 +914,13 @@ namespace Google.Cloud.Logging.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="FolderExclusionName"/>.</summary>
+        /// <param name="folderId">The <c>folder</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The <c>exclusion</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FolderExclusionName"/>.</returns>
+        public static string Format(string folderId, string exclusionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="FolderExclusionName"/> resource name class
@@ -967,6 +1014,13 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="FolderLogName"/>.</summary>
+        /// <param name="folderId">The <c>folder</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="logId">The <c>log</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FolderLogName"/>.</returns>
+        public static string Format(string folderId, string logId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNull(logId, nameof(logId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="FolderLogName"/> resource name class
         /// from its component parts.
@@ -1059,6 +1113,13 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="FolderSinkName"/>.</summary>
+        /// <param name="folderId">The <c>folder</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sinkId">The <c>sink</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FolderSinkName"/>.</returns>
+        public static string Format(string folderId, string sinkId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="FolderSinkName"/> resource name class
         /// from its component parts.
@@ -1150,6 +1211,13 @@ namespace Google.Cloud.Logging.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="LogName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="logId">The <c>log</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LogName"/>.</returns>
+        public static string Format(string projectId, string logId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(logId, nameof(logId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="LogName"/> resource name class
@@ -1511,6 +1579,13 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="MetricName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="metricId">The <c>metric</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="MetricName"/>.</returns>
+        public static string Format(string projectId, string metricId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(metricId, nameof(metricId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="MetricName"/> resource name class
         /// from its component parts.
@@ -1775,6 +1850,12 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationName"/>.</returns>
+        public static string Format(string organizationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationName"/> resource name class
         /// from its component parts.
@@ -1859,6 +1940,13 @@ namespace Google.Cloud.Logging.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationExclusionName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The <c>exclusion</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationExclusionName"/>.</returns>
+        public static string Format(string organizationId, string exclusionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationExclusionName"/> resource name class
@@ -1952,6 +2040,13 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationLogName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="logId">The <c>log</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationLogName"/>.</returns>
+        public static string Format(string organizationId, string logId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(logId, nameof(logId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationLogName"/> resource name class
         /// from its component parts.
@@ -2043,6 +2138,13 @@ namespace Google.Cloud.Logging.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationSinkName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sinkId">The <c>sink</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationSinkName"/>.</returns>
+        public static string Format(string organizationId, string sinkId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationSinkName"/> resource name class
@@ -2404,6 +2506,12 @@ namespace Google.Cloud.Logging.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectName"/>.</returns>
+        public static string Format(string projectId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
         /// from its component parts.
@@ -2488,6 +2596,13 @@ namespace Google.Cloud.Logging.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="SinkName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sinkId">The <c>sink</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SinkName"/>.</returns>
+        public static string Format(string projectId, string sinkId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="SinkName"/> resource name class

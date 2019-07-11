@@ -70,6 +70,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="AppProfileName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="appProfileId">The <c>appProfile</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AppProfileName"/>.</returns>
+        public static string Format(string projectId, string instanceId, string appProfileId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNull(appProfileId, nameof(appProfileId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="AppProfileName"/> resource name class
         /// from its component parts.
@@ -168,6 +176,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ClusterName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="clusterId">The <c>cluster</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ClusterName"/>.</returns>
+        public static string Format(string projectId, string instanceId, string clusterId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNull(clusterId, nameof(clusterId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ClusterName"/> resource name class
@@ -268,6 +284,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="InstanceName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="InstanceName"/>.</returns>
+        public static string Format(string projectId, string instanceId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="InstanceName"/> resource name class
         /// from its component parts.
@@ -360,6 +383,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationName"/>.</returns>
+        public static string Format(string projectId, string locationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationName"/> resource name class
         /// from its component parts.
@@ -451,6 +481,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="SnapshotName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="clusterId">The <c>cluster</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="snapshotId">The <c>snapshot</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SnapshotName"/>.</returns>
+        public static string Format(string projectId, string instanceId, string clusterId, string snapshotId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNull(clusterId, nameof(clusterId)), gax::GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="SnapshotName"/> resource name class

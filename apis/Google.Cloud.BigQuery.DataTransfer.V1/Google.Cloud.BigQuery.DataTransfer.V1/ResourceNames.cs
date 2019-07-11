@@ -272,6 +272,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationName"/>.</returns>
+        public static string Format(string projectId, string locationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationName"/> resource name class
         /// from its component parts.
@@ -363,6 +370,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationDataSourceName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="dataSourceId">The <c>dataSource</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationDataSourceName"/>.</returns>
+        public static string Format(string projectId, string locationId, string dataSourceId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(dataSourceId, nameof(dataSourceId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationDataSourceName"/> resource name class
@@ -462,6 +477,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationRunName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="transferConfigId">The <c>transferConfig</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="runId">The <c>run</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationRunName"/>.</returns>
+        public static string Format(string projectId, string locationId, string transferConfigId, string runId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId)), gax::GaxPreconditions.CheckNotNull(runId, nameof(runId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationRunName"/> resource name class
@@ -568,6 +592,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationTransferConfigName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="transferConfigId">The <c>transferConfig</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationTransferConfigName"/>.</returns>
+        public static string Format(string projectId, string locationId, string transferConfigId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationTransferConfigName"/> resource name class
@@ -872,6 +904,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectDataSourceName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="dataSourceId">The <c>dataSource</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectDataSourceName"/>.</returns>
+        public static string Format(string projectId, string dataSourceId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(dataSourceId, nameof(dataSourceId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectDataSourceName"/> resource name class
         /// from its component parts.
@@ -963,6 +1002,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectRunName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="transferConfigId">The <c>transferConfig</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="runId">The <c>run</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectRunName"/>.</returns>
+        public static string Format(string projectId, string transferConfigId, string runId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId)), gax::GaxPreconditions.CheckNotNull(runId, nameof(runId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectRunName"/> resource name class
@@ -1062,6 +1109,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectTransferConfigName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="transferConfigId">The <c>transferConfig</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectTransferConfigName"/>.</returns>
+        public static string Format(string projectId, string transferConfigId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectTransferConfigName"/> resource name class

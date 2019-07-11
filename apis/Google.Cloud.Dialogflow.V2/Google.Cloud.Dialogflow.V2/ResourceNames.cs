@@ -69,6 +69,13 @@ namespace Google.Cloud.Dialogflow.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="AgentName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="agentId">The <c>agent</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AgentName"/>.</returns>
+        public static string Format(string projectId, string agentId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(agentId, nameof(agentId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="AgentName"/> resource name class
         /// from its component parts.
@@ -160,6 +167,14 @@ namespace Google.Cloud.Dialogflow.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ContextName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sessionId">The <c>session</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="contextId">The <c>context</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ContextName"/>.</returns>
+        public static string Format(string projectId, string sessionId, string contextId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId)), gax::GaxPreconditions.CheckNotNull(contextId, nameof(contextId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ContextName"/> resource name class
@@ -260,6 +275,13 @@ namespace Google.Cloud.Dialogflow.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="EntityTypeName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="entityTypeId">The <c>entityType</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="EntityTypeName"/>.</returns>
+        public static string Format(string projectId, string entityTypeId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(entityTypeId, nameof(entityTypeId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="EntityTypeName"/> resource name class
         /// from its component parts.
@@ -351,6 +373,13 @@ namespace Google.Cloud.Dialogflow.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="IntentName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="intentId">The <c>intent</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="IntentName"/>.</returns>
+        public static string Format(string projectId, string intentId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(intentId, nameof(intentId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="IntentName"/> resource name class
@@ -444,6 +473,12 @@ namespace Google.Cloud.Dialogflow.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectAgentName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectAgentName"/>.</returns>
+        public static string Format(string projectId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectAgentName"/> resource name class
         /// from its component parts.
@@ -528,6 +563,13 @@ namespace Google.Cloud.Dialogflow.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="SessionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sessionId">The <c>session</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SessionName"/>.</returns>
+        public static string Format(string projectId, string sessionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="SessionName"/> resource name class
@@ -620,6 +662,14 @@ namespace Google.Cloud.Dialogflow.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="SessionEntityTypeName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sessionId">The <c>session</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="entityTypeId">The <c>entityType</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SessionEntityTypeName"/>.</returns>
+        public static string Format(string projectId, string sessionId, string entityTypeId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId)), gax::GaxPreconditions.CheckNotNull(entityTypeId, nameof(entityTypeId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="SessionEntityTypeName"/> resource name class

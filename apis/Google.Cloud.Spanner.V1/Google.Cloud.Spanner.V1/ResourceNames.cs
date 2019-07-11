@@ -69,6 +69,15 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="SessionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sessionId">The <c>session</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SessionName"/>.</returns>
+        public static string Format(string projectId, string instanceId, string databaseId, string sessionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)), gax::GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="SessionName"/> resource name class
         /// from its component parts.

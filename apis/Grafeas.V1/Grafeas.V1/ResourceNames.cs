@@ -68,6 +68,13 @@ namespace Grafeas.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="NoteName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="noteId">The <c>note</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="NoteName"/>.</returns>
+        public static string Format(string projectId, string noteId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(noteId, nameof(noteId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="NoteName"/> resource name class
         /// from its component parts.
@@ -160,6 +167,13 @@ namespace Grafeas.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="OccurrenceName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="occurrenceId">The <c>occurrence</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OccurrenceName"/>.</returns>
+        public static string Format(string projectId, string occurrenceId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(occurrenceId, nameof(occurrenceId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="OccurrenceName"/> resource name class
         /// from its component parts.
@@ -251,6 +265,12 @@ namespace Grafeas.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectName"/>.</returns>
+        public static string Format(string projectId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectName"/> resource name class

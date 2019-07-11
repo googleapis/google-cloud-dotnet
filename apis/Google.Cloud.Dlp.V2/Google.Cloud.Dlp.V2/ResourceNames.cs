@@ -273,6 +273,13 @@ namespace Google.Cloud.Dlp.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="DlpJobName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="dlpJobId">The <c>dlpJob</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="DlpJobName"/>.</returns>
+        public static string Format(string projectId, string dlpJobId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(dlpJobId, nameof(dlpJobId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="DlpJobName"/> resource name class
         /// from its component parts.
@@ -569,6 +576,13 @@ namespace Google.Cloud.Dlp.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationDeidentifyTemplateName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="deidentifyTemplateId">The <c>deidentifyTemplate</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationDeidentifyTemplateName"/>.</returns>
+        public static string Format(string organizationId, string deidentifyTemplateId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationDeidentifyTemplateName"/> resource name class
         /// from its component parts.
@@ -660,6 +674,13 @@ namespace Google.Cloud.Dlp.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationInspectTemplateName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="inspectTemplateId">The <c>inspectTemplate</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationInspectTemplateName"/>.</returns>
+        public static string Format(string organizationId, string inspectTemplateId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationInspectTemplateName"/> resource name class
@@ -753,6 +774,13 @@ namespace Google.Cloud.Dlp.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationStoredInfoTypeName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="storedInfoTypeId">The <c>storedInfoType</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationStoredInfoTypeName"/>.</returns>
+        public static string Format(string organizationId, string storedInfoTypeId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(storedInfoTypeId, nameof(storedInfoTypeId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationStoredInfoTypeName"/> resource name class
         /// from its component parts.
@@ -844,6 +872,13 @@ namespace Google.Cloud.Dlp.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectDeidentifyTemplateName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="deidentifyTemplateId">The <c>deidentifyTemplate</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectDeidentifyTemplateName"/>.</returns>
+        public static string Format(string projectId, string deidentifyTemplateId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectDeidentifyTemplateName"/> resource name class
@@ -937,6 +972,13 @@ namespace Google.Cloud.Dlp.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectInspectTemplateName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="inspectTemplateId">The <c>inspectTemplate</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectInspectTemplateName"/>.</returns>
+        public static string Format(string projectId, string inspectTemplateId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectInspectTemplateName"/> resource name class
         /// from its component parts.
@@ -1029,6 +1071,13 @@ namespace Google.Cloud.Dlp.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectJobTriggerName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="jobTriggerId">The <c>jobTrigger</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectJobTriggerName"/>.</returns>
+        public static string Format(string projectId, string jobTriggerId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(jobTriggerId, nameof(jobTriggerId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectJobTriggerName"/> resource name class
         /// from its component parts.
@@ -1120,6 +1169,13 @@ namespace Google.Cloud.Dlp.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectStoredInfoTypeName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="storedInfoTypeId">The <c>storedInfoType</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectStoredInfoTypeName"/>.</returns>
+        public static string Format(string projectId, string storedInfoTypeId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(storedInfoTypeId, nameof(storedInfoTypeId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectStoredInfoTypeName"/> resource name class

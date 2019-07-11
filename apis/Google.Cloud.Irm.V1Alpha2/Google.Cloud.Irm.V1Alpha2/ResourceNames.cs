@@ -69,6 +69,14 @@ namespace Google.Cloud.Irm.V1Alpha2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="AnnotationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="incidentId">The <c>incident</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="annotationId">The <c>annotation</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AnnotationName"/>.</returns>
+        public static string Format(string projectId, string incidentId, string annotationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(incidentId, nameof(incidentId)), gax::GaxPreconditions.CheckNotNull(annotationId, nameof(annotationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="AnnotationName"/> resource name class
         /// from its component parts.
@@ -167,6 +175,14 @@ namespace Google.Cloud.Irm.V1Alpha2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ArtifactName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="incidentId">The <c>incident</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="artifactId">The <c>artifact</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ArtifactName"/>.</returns>
+        public static string Format(string projectId, string incidentId, string artifactId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(incidentId, nameof(incidentId)), gax::GaxPreconditions.CheckNotNull(artifactId, nameof(artifactId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ArtifactName"/> resource name class
@@ -267,6 +283,13 @@ namespace Google.Cloud.Irm.V1Alpha2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="IncidentName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="incidentId">The <c>incident</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="IncidentName"/>.</returns>
+        public static string Format(string projectId, string incidentId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(incidentId, nameof(incidentId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="IncidentName"/> resource name class
         /// from its component parts.
@@ -358,6 +381,14 @@ namespace Google.Cloud.Irm.V1Alpha2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="RoleAssignmentName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="incidentId">The <c>incident</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="roleAssignmentId">The <c>roleAssignment</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="RoleAssignmentName"/>.</returns>
+        public static string Format(string projectId, string incidentId, string roleAssignmentId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(incidentId, nameof(incidentId)), gax::GaxPreconditions.CheckNotNull(roleAssignmentId, nameof(roleAssignmentId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="RoleAssignmentName"/> resource name class
@@ -458,6 +489,13 @@ namespace Google.Cloud.Irm.V1Alpha2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="SignalName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="signalId">The <c>signal</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SignalName"/>.</returns>
+        public static string Format(string projectId, string signalId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(signalId, nameof(signalId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="SignalName"/> resource name class
         /// from its component parts.
@@ -549,6 +587,14 @@ namespace Google.Cloud.Irm.V1Alpha2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="SubscriptionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="incidentId">The <c>incident</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="subscriptionId">The <c>subscription</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SubscriptionName"/>.</returns>
+        public static string Format(string projectId, string incidentId, string subscriptionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(incidentId, nameof(incidentId)), gax::GaxPreconditions.CheckNotNull(subscriptionId, nameof(subscriptionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="SubscriptionName"/> resource name class
@@ -648,6 +694,14 @@ namespace Google.Cloud.Irm.V1Alpha2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="TagName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="incidentId">The <c>incident</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="tagId">The <c>tag</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="TagName"/>.</returns>
+        public static string Format(string projectId, string incidentId, string tagId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(incidentId, nameof(incidentId)), gax::GaxPreconditions.CheckNotNull(tagId, nameof(tagId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="TagName"/> resource name class
