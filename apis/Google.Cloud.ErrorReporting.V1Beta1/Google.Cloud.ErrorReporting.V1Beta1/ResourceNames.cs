@@ -69,6 +69,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="GroupName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="groupId">The <c>group</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="GroupName"/>.</returns>
+        public static string Format(string projectId, string groupId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(groupId, nameof(groupId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="GroupName"/> resource name class
         /// from its component parts.

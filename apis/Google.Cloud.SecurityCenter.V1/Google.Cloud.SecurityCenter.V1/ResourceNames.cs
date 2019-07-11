@@ -68,6 +68,13 @@ namespace Google.Cloud.SecurityCenter.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="AssetName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="assetId">The <c>asset</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AssetName"/>.</returns>
+        public static string Format(string organizationId, string assetId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(assetId, nameof(assetId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="AssetName"/> resource name class
         /// from its component parts.
@@ -160,6 +167,13 @@ namespace Google.Cloud.SecurityCenter.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="AssetSecurityMarksName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="assetId">The <c>asset</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AssetSecurityMarksName"/>.</returns>
+        public static string Format(string organizationId, string assetId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(assetId, nameof(assetId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="AssetSecurityMarksName"/> resource name class
         /// from its component parts.
@@ -251,6 +265,14 @@ namespace Google.Cloud.SecurityCenter.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="FindingName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sourceId">The <c>source</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="findingId">The <c>finding</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FindingName"/>.</returns>
+        public static string Format(string organizationId, string sourceId, string findingId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(sourceId, nameof(sourceId)), gax::GaxPreconditions.CheckNotNull(findingId, nameof(findingId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="FindingName"/> resource name class
@@ -351,6 +373,14 @@ namespace Google.Cloud.SecurityCenter.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="FindingSecurityMarksName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sourceId">The <c>source</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="findingId">The <c>finding</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FindingSecurityMarksName"/>.</returns>
+        public static string Format(string organizationId, string sourceId, string findingId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(sourceId, nameof(sourceId)), gax::GaxPreconditions.CheckNotNull(findingId, nameof(findingId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="FindingSecurityMarksName"/> resource name class
         /// from its component parts.
@@ -450,6 +480,12 @@ namespace Google.Cloud.SecurityCenter.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationName"/>.</returns>
+        public static string Format(string organizationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationName"/> resource name class
         /// from its component parts.
@@ -535,6 +571,12 @@ namespace Google.Cloud.SecurityCenter.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationSettingsName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationSettingsName"/>.</returns>
+        public static string Format(string organizationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationSettingsName"/> resource name class
         /// from its component parts.
@@ -619,6 +661,12 @@ namespace Google.Cloud.SecurityCenter.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="OrganizationSourcesName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="OrganizationSourcesName"/>.</returns>
+        public static string Format(string organizationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="OrganizationSourcesName"/> resource name class
@@ -908,6 +956,13 @@ namespace Google.Cloud.SecurityCenter.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="SourceName"/>.</summary>
+        /// <param name="organizationId">The <c>organization</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="sourceId">The <c>source</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SourceName"/>.</returns>
+        public static string Format(string organizationId, string sourceId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNull(sourceId, nameof(sourceId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="SourceName"/> resource name class

@@ -68,6 +68,15 @@ namespace Google.Cloud.Kms.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="CryptoKeyName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="keyRingId">The <c>keyRing</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="cryptoKeyId">The <c>cryptoKey</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="CryptoKeyName"/>.</returns>
+        public static string Format(string projectId, string locationId, string keyRingId, string cryptoKeyId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId)), gax::GaxPreconditions.CheckNotNull(cryptoKeyId, nameof(cryptoKeyId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="CryptoKeyName"/> resource name class
         /// from its component parts.
@@ -174,6 +183,15 @@ namespace Google.Cloud.Kms.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="CryptoKeyPathName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="keyRingId">The <c>keyRing</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="cryptoKeyPathId">The <c>cryptoKeyPath</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="CryptoKeyPathName"/>.</returns>
+        public static string Format(string projectId, string locationId, string keyRingId, string cryptoKeyPathId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId)), gax::GaxPreconditions.CheckNotNull(cryptoKeyPathId, nameof(cryptoKeyPathId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="CryptoKeyPathName"/> resource name class
         /// from its component parts.
@@ -279,6 +297,16 @@ namespace Google.Cloud.Kms.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="CryptoKeyVersionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="keyRingId">The <c>keyRing</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="cryptoKeyId">The <c>cryptoKey</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="cryptoKeyVersionId">The <c>cryptoKeyVersion</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="CryptoKeyVersionName"/>.</returns>
+        public static string Format(string projectId, string locationId, string keyRingId, string cryptoKeyId, string cryptoKeyVersionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId)), gax::GaxPreconditions.CheckNotNull(cryptoKeyId, nameof(cryptoKeyId)), gax::GaxPreconditions.CheckNotNull(cryptoKeyVersionId, nameof(cryptoKeyVersionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="CryptoKeyVersionName"/> resource name class
@@ -392,6 +420,15 @@ namespace Google.Cloud.Kms.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ImportJobName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="keyRingId">The <c>keyRing</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="importJobId">The <c>importJob</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ImportJobName"/>.</returns>
+        public static string Format(string projectId, string locationId, string keyRingId, string importJobId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId)), gax::GaxPreconditions.CheckNotNull(importJobId, nameof(importJobId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ImportJobName"/> resource name class
@@ -703,6 +740,14 @@ namespace Google.Cloud.Kms.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="KeyRingName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="keyRingId">The <c>keyRing</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="KeyRingName"/>.</returns>
+        public static string Format(string projectId, string locationId, string keyRingId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="KeyRingName"/> resource name class
         /// from its component parts.
@@ -801,6 +846,13 @@ namespace Google.Cloud.Kms.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationName"/>.</returns>
+        public static string Format(string projectId, string locationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationName"/> resource name class

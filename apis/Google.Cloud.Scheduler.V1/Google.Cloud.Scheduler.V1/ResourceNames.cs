@@ -68,6 +68,14 @@ namespace Google.Cloud.Scheduler.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="JobName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="jobId">The <c>job</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="JobName"/>.</returns>
+        public static string Format(string projectId, string locationId, string jobId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(jobId, nameof(jobId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="JobName"/> resource name class
         /// from its component parts.
@@ -166,6 +174,13 @@ namespace Google.Cloud.Scheduler.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationName"/>.</returns>
+        public static string Format(string projectId, string locationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationName"/> resource name class

@@ -68,6 +68,13 @@ namespace Google.Cloud.Monitoring.V3
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="AlertPolicyName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="alertPolicyId">The <c>alertPolicy</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AlertPolicyName"/>.</returns>
+        public static string Format(string projectId, string alertPolicyId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(alertPolicyId, nameof(alertPolicyId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="AlertPolicyName"/> resource name class
         /// from its component parts.
@@ -159,6 +166,14 @@ namespace Google.Cloud.Monitoring.V3
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="AlertPolicyConditionName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="alertPolicyId">The <c>alertPolicy</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="conditionId">The <c>condition</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AlertPolicyConditionName"/>.</returns>
+        public static string Format(string projectId, string alertPolicyId, string conditionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(alertPolicyId, nameof(alertPolicyId)), gax::GaxPreconditions.CheckNotNull(conditionId, nameof(conditionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="AlertPolicyConditionName"/> resource name class
@@ -259,6 +274,13 @@ namespace Google.Cloud.Monitoring.V3
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="GroupName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="groupId">The <c>group</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="GroupName"/>.</returns>
+        public static string Format(string projectId, string groupId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(groupId, nameof(groupId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="GroupName"/> resource name class
         /// from its component parts.
@@ -350,6 +372,13 @@ namespace Google.Cloud.Monitoring.V3
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="MetricDescriptorName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="metricDescriptorId">The <c>metricDescriptor</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="MetricDescriptorName"/>.</returns>
+        public static string Format(string projectId, string metricDescriptorId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(metricDescriptorId, nameof(metricDescriptorId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="MetricDescriptorName"/> resource name class
@@ -443,6 +472,13 @@ namespace Google.Cloud.Monitoring.V3
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="MonitoredResourceDescriptorName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="monitoredResourceDescriptorId">The <c>monitoredResourceDescriptor</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="MonitoredResourceDescriptorName"/>.</returns>
+        public static string Format(string projectId, string monitoredResourceDescriptorId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(monitoredResourceDescriptorId, nameof(monitoredResourceDescriptorId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="MonitoredResourceDescriptorName"/> resource name class
         /// from its component parts.
@@ -534,6 +570,13 @@ namespace Google.Cloud.Monitoring.V3
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="NotificationChannelName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="notificationChannelId">The <c>notificationChannel</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="NotificationChannelName"/>.</returns>
+        public static string Format(string projectId, string notificationChannelId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(notificationChannelId, nameof(notificationChannelId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="NotificationChannelName"/> resource name class
@@ -627,6 +670,13 @@ namespace Google.Cloud.Monitoring.V3
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="NotificationChannelDescriptorName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="channelDescriptorId">The <c>channelDescriptor</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="NotificationChannelDescriptorName"/>.</returns>
+        public static string Format(string projectId, string channelDescriptorId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(channelDescriptorId, nameof(channelDescriptorId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="NotificationChannelDescriptorName"/> resource name class
         /// from its component parts.
@@ -719,6 +769,12 @@ namespace Google.Cloud.Monitoring.V3
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectName"/>.</returns>
+        public static string Format(string projectId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
         /// from its component parts.
@@ -803,6 +859,13 @@ namespace Google.Cloud.Monitoring.V3
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="UptimeCheckConfigName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="uptimeCheckConfigId">The <c>uptimeCheckConfig</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="UptimeCheckConfigName"/>.</returns>
+        public static string Format(string projectId, string uptimeCheckConfigId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(uptimeCheckConfigId, nameof(uptimeCheckConfigId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="UptimeCheckConfigName"/> resource name class

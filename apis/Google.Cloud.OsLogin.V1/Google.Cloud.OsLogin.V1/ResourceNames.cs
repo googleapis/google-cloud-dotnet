@@ -68,6 +68,13 @@ namespace Google.Cloud.OsLogin.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="FingerprintName"/>.</summary>
+        /// <param name="userId">The <c>user</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="fingerprintId">The <c>fingerprint</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FingerprintName"/>.</returns>
+        public static string Format(string userId, string fingerprintId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(userId, nameof(userId)), gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="FingerprintName"/> resource name class
         /// from its component parts.
@@ -160,6 +167,13 @@ namespace Google.Cloud.OsLogin.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectName"/>.</summary>
+        /// <param name="userId">The <c>user</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProjectName"/>.</returns>
+        public static string Format(string userId, string projectId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(userId, nameof(userId)), gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
         /// from its component parts.
@@ -251,6 +265,12 @@ namespace Google.Cloud.OsLogin.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="UserName"/>.</summary>
+        /// <param name="userId">The <c>user</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="UserName"/>.</returns>
+        public static string Format(string userId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(userId, nameof(userId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="UserName"/> resource name class

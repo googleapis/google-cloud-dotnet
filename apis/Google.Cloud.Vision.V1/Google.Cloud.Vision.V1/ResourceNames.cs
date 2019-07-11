@@ -68,6 +68,13 @@ namespace Google.Cloud.Vision.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationName"/>.</returns>
+        public static string Format(string projectId, string locationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationName"/> resource name class
         /// from its component parts.
@@ -159,6 +166,14 @@ namespace Google.Cloud.Vision.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProductName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="productId">The <c>product</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProductName"/>.</returns>
+        public static string Format(string projectId, string locationId, string productId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(productId, nameof(productId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ProductName"/> resource name class
@@ -259,6 +274,14 @@ namespace Google.Cloud.Vision.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="ProductSetName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="productSetId">The <c>productSet</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ProductSetName"/>.</returns>
+        public static string Format(string projectId, string locationId, string productSetId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(productSetId, nameof(productSetId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="ProductSetName"/> resource name class
         /// from its component parts.
@@ -357,6 +380,15 @@ namespace Google.Cloud.Vision.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ReferenceImageName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="productId">The <c>product</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="referenceImageId">The <c>referenceImage</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ReferenceImageName"/>.</returns>
+        public static string Format(string projectId, string locationId, string productId, string referenceImageId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(productId, nameof(productId)), gax::GaxPreconditions.CheckNotNull(referenceImageId, nameof(referenceImageId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ReferenceImageName"/> resource name class

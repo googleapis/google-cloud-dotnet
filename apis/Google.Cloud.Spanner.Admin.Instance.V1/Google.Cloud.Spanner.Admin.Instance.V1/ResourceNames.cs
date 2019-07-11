@@ -70,6 +70,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="InstanceConfigName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceConfigId">The <c>instanceConfig</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="InstanceConfigName"/>.</returns>
+        public static string Format(string projectId, string instanceConfigId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceConfigId, nameof(instanceConfigId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="InstanceConfigName"/> resource name class
         /// from its component parts.

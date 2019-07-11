@@ -68,6 +68,13 @@ namespace Google.Cloud.Firestore.Admin.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="DatabaseName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="DatabaseName"/>.</returns>
+        public static string Format(string projectId, string databaseId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="DatabaseName"/> resource name class
         /// from its component parts.
@@ -159,6 +166,15 @@ namespace Google.Cloud.Firestore.Admin.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="FieldName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="collectionId">The <c>collection</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="fieldId">The <c>field</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="FieldName"/>.</returns>
+        public static string Format(string projectId, string databaseId, string collectionId, string fieldId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)), gax::GaxPreconditions.CheckNotNull(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNull(fieldId, nameof(fieldId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="FieldName"/> resource name class
@@ -266,6 +282,15 @@ namespace Google.Cloud.Firestore.Admin.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="IndexName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="collectionId">The <c>collection</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="indexId">The <c>index</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="IndexName"/>.</returns>
+        public static string Format(string projectId, string databaseId, string collectionId, string indexId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)), gax::GaxPreconditions.CheckNotNull(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNull(indexId, nameof(indexId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="IndexName"/> resource name class
         /// from its component parts.
@@ -371,6 +396,14 @@ namespace Google.Cloud.Firestore.Admin.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="ParentName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="collectionId">The <c>collection</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="ParentName"/>.</returns>
+        public static string Format(string projectId, string databaseId, string collectionId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)), gax::GaxPreconditions.CheckNotNull(collectionId, nameof(collectionId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="ParentName"/> resource name class

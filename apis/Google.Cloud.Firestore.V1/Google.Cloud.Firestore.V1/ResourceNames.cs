@@ -68,6 +68,15 @@ namespace Google.Cloud.Firestore.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="AnyPathName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="documentId">The <c>document</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="anyPathId">The <c>anyPath</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AnyPathName"/>.</returns>
+        public static string Format(string projectId, string databaseId, string documentId, string anyPathId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)), gax::GaxPreconditions.CheckNotNull(documentId, nameof(documentId)), gax::GaxPreconditions.CheckNotNull(anyPathId, nameof(anyPathId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="AnyPathName"/> resource name class
         /// from its component parts.
@@ -174,6 +183,13 @@ namespace Google.Cloud.Firestore.V1
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="DatabaseRootName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="DatabaseRootName"/>.</returns>
+        public static string Format(string projectId, string databaseId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="DatabaseRootName"/> resource name class
         /// from its component parts.
@@ -265,6 +281,14 @@ namespace Google.Cloud.Firestore.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="DocumentPathName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="documentPathId">The <c>documentPath</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="DocumentPathName"/>.</returns>
+        public static string Format(string projectId, string databaseId, string documentPathId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)), gax::GaxPreconditions.CheckNotNull(documentPathId, nameof(documentPathId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="DocumentPathName"/> resource name class
@@ -364,6 +388,13 @@ namespace Google.Cloud.Firestore.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="DocumentRootName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="DocumentRootName"/>.</returns>
+        public static string Format(string projectId, string databaseId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="DocumentRootName"/> resource name class

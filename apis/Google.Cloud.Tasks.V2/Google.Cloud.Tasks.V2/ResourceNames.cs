@@ -68,6 +68,13 @@ namespace Google.Cloud.Tasks.V2
             }
         }
 
+        /// <summary>Formats the IDs into the string representation of the <see cref="LocationName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="LocationName"/>.</returns>
+        public static string Format(string projectId, string locationId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)));
+
         /// <summary>
         /// Constructs a new instance of the <see cref="LocationName"/> resource name class
         /// from its component parts.
@@ -159,6 +166,14 @@ namespace Google.Cloud.Tasks.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="QueueName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="queueId">The <c>queue</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="QueueName"/>.</returns>
+        public static string Format(string projectId, string locationId, string queueId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(queueId, nameof(queueId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="QueueName"/> resource name class
@@ -258,6 +273,15 @@ namespace Google.Cloud.Tasks.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="TaskName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="queueId">The <c>queue</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="taskId">The <c>task</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="TaskName"/>.</returns>
+        public static string Format(string projectId, string locationId, string queueId, string taskId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(queueId, nameof(queueId)), gax::GaxPreconditions.CheckNotNull(taskId, nameof(taskId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="TaskName"/> resource name class
