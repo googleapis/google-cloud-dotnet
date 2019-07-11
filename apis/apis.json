@@ -603,7 +603,7 @@
     "description": "Version-agnostic types for the Google OS Login API.",
     "tags": [ "OsLogin", "Login" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0"
+      "Google.Api.CommonProtos": "1.7.0"
     }
   },
 
@@ -620,7 +620,7 @@
     "tags": [ "OsLogin", "Login" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "2.9.0",
-      "Google.Cloud.OsLogin.Common": "project",
+      "Google.Cloud.OsLogin.Common": "1.0.0",
       "Grpc.Core": "1.22.0"
     }
   },
@@ -637,7 +637,7 @@
     "description": "Recommended Google client library to manages OS login configuration for Google account users.",
     "tags": [ "OsLogin", "Login" ],
     "dependencies": {
-      "Google.Cloud.OsLogin.Common": "project"
+      "Google.Cloud.OsLogin.Common": "1.0.0"
     }
   },
 
