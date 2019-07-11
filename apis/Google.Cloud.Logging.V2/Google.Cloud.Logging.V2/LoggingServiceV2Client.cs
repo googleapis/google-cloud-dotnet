@@ -1952,7 +1952,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, pbwkt::Empty>(
                 GrpcClient.DeleteLogAsync, GrpcClient.DeleteLog, effectiveSettings.DeleteLogSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"log_name={request.LogName}"));
+                .WithGoogleRequestParam("log_name", request => request.LogName);
             _callWriteLogEntries = clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(
                 GrpcClient.WriteLogEntriesAsync, GrpcClient.WriteLogEntries, effectiveSettings.WriteLogEntriesSettings);
             _callListLogEntries = clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(
@@ -1961,7 +1961,7 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
             _callListLogs = clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>(
                 GrpcClient.ListLogsAsync, GrpcClient.ListLogs, effectiveSettings.ListLogsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callDeleteLog);
             Modify_DeleteLogApiCall(ref _callDeleteLog);
             Modify_ApiCall(ref _callWriteLogEntries);

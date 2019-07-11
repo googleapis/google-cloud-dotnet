@@ -2462,28 +2462,28 @@ namespace Google.Cloud.Redis.V1Beta1
                 grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(
                 GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(
                 GrpcClient.GetInstanceAsync, GrpcClient.GetInstance, effectiveSettings.GetInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(
                 GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>(
                 GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance?.Name}"));
+                .WithGoogleRequestParam("instance.name", request => request.Instance?.Name);
             _callImportInstance = clientHelper.BuildApiCall<ImportInstanceRequest, lro::Operation>(
                 GrpcClient.ImportInstanceAsync, GrpcClient.ImportInstance, effectiveSettings.ImportInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callExportInstance = clientHelper.BuildApiCall<ExportInstanceRequest, lro::Operation>(
                 GrpcClient.ExportInstanceAsync, GrpcClient.ExportInstance, effectiveSettings.ExportInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callFailoverInstance = clientHelper.BuildApiCall<FailoverInstanceRequest, lro::Operation>(
                 GrpcClient.FailoverInstanceAsync, GrpcClient.FailoverInstance, effectiveSettings.FailoverInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
             Modify_ApiCall(ref _callGetInstance);

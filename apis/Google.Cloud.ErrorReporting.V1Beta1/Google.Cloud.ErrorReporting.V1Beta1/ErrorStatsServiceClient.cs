@@ -1074,13 +1074,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(
                 GrpcClient.ListGroupStatsAsync, GrpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_name={request.ProjectName}"));
+                .WithGoogleRequestParam("project_name", request => request.ProjectName);
             _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(
                 GrpcClient.ListEventsAsync, GrpcClient.ListEvents, effectiveSettings.ListEventsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_name={request.ProjectName}"));
+                .WithGoogleRequestParam("project_name", request => request.ProjectName);
             _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(
                 GrpcClient.DeleteEventsAsync, GrpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_name={request.ProjectName}"));
+                .WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callListGroupStats);
             Modify_ListGroupStatsApiCall(ref _callListGroupStats);
             Modify_ApiCall(ref _callListEvents);

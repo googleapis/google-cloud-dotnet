@@ -430,7 +430,7 @@ namespace Google.Cloud.Talent.V4Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCompleteQuery = clientHelper.BuildApiCall<CompleteQueryRequest, CompleteQueryResponse>(
                 GrpcClient.CompleteQueryAsync, GrpcClient.CompleteQuery, effectiveSettings.CompleteQuerySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCompleteQuery);
             Modify_CompleteQueryApiCall(ref _callCompleteQuery);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

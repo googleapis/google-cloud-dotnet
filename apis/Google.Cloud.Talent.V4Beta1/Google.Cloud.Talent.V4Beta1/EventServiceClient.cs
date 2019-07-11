@@ -672,7 +672,7 @@ namespace Google.Cloud.Talent.V4Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateClientEvent = clientHelper.BuildApiCall<CreateClientEventRequest, ClientEvent>(
                 GrpcClient.CreateClientEventAsync, GrpcClient.CreateClientEvent, effectiveSettings.CreateClientEventSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateClientEvent);
             Modify_CreateClientEventApiCall(ref _callCreateClientEvent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

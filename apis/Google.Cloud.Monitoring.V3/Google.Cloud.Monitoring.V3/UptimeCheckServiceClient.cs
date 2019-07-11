@@ -1352,19 +1352,19 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListUptimeCheckConfigs = clientHelper.BuildApiCall<ListUptimeCheckConfigsRequest, ListUptimeCheckConfigsResponse>(
                 GrpcClient.ListUptimeCheckConfigsAsync, GrpcClient.ListUptimeCheckConfigs, effectiveSettings.ListUptimeCheckConfigsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetUptimeCheckConfig = clientHelper.BuildApiCall<GetUptimeCheckConfigRequest, UptimeCheckConfig>(
                 GrpcClient.GetUptimeCheckConfigAsync, GrpcClient.GetUptimeCheckConfig, effectiveSettings.GetUptimeCheckConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateUptimeCheckConfig = clientHelper.BuildApiCall<CreateUptimeCheckConfigRequest, UptimeCheckConfig>(
                 GrpcClient.CreateUptimeCheckConfigAsync, GrpcClient.CreateUptimeCheckConfig, effectiveSettings.CreateUptimeCheckConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateUptimeCheckConfig = clientHelper.BuildApiCall<UpdateUptimeCheckConfigRequest, UptimeCheckConfig>(
                 GrpcClient.UpdateUptimeCheckConfigAsync, GrpcClient.UpdateUptimeCheckConfig, effectiveSettings.UpdateUptimeCheckConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"uptime_check_config.name={request.UptimeCheckConfig?.Name}"));
+                .WithGoogleRequestParam("uptime_check_config.name", request => request.UptimeCheckConfig?.Name);
             _callDeleteUptimeCheckConfig = clientHelper.BuildApiCall<DeleteUptimeCheckConfigRequest, pbwkt::Empty>(
                 GrpcClient.DeleteUptimeCheckConfigAsync, GrpcClient.DeleteUptimeCheckConfig, effectiveSettings.DeleteUptimeCheckConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListUptimeCheckIps = clientHelper.BuildApiCall<ListUptimeCheckIpsRequest, ListUptimeCheckIpsResponse>(
                 GrpcClient.ListUptimeCheckIpsAsync, GrpcClient.ListUptimeCheckIps, effectiveSettings.ListUptimeCheckIpsSettings);
             Modify_ApiCall(ref _callListUptimeCheckConfigs);

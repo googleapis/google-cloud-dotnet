@@ -626,7 +626,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callReportPhishing = clientHelper.BuildApiCall<ReportPhishingRequest, ReportPhishingResponse>(
                 GrpcClient.ReportPhishingAsync, GrpcClient.ReportPhishing, effectiveSettings.ReportPhishingSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callReportPhishing);
             Modify_ReportPhishingApiCall(ref _callReportPhishing);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

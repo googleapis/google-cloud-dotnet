@@ -5501,58 +5501,58 @@ namespace Google.Cloud.Vision.V1
                 grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductSetsOperationsSettings);
             _callCreateProductSet = clientHelper.BuildApiCall<CreateProductSetRequest, ProductSet>(
                 GrpcClient.CreateProductSetAsync, GrpcClient.CreateProductSet, effectiveSettings.CreateProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callListProductSets = clientHelper.BuildApiCall<ListProductSetsRequest, ListProductSetsResponse>(
                 GrpcClient.ListProductSetsAsync, GrpcClient.ListProductSets, effectiveSettings.ListProductSetsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetProductSet = clientHelper.BuildApiCall<GetProductSetRequest, ProductSet>(
                 GrpcClient.GetProductSetAsync, GrpcClient.GetProductSet, effectiveSettings.GetProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateProductSet = clientHelper.BuildApiCall<UpdateProductSetRequest, ProductSet>(
                 GrpcClient.UpdateProductSetAsync, GrpcClient.UpdateProductSet, effectiveSettings.UpdateProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product_set.name={request.ProductSet?.Name}"));
+                .WithGoogleRequestParam("product_set.name", request => request.ProductSet?.Name);
             _callDeleteProductSet = clientHelper.BuildApiCall<DeleteProductSetRequest, pbwkt::Empty>(
                 GrpcClient.DeleteProductSetAsync, GrpcClient.DeleteProductSet, effectiveSettings.DeleteProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateProduct = clientHelper.BuildApiCall<CreateProductRequest, Product>(
                 GrpcClient.CreateProductAsync, GrpcClient.CreateProduct, effectiveSettings.CreateProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>(
                 GrpcClient.ListProductsAsync, GrpcClient.ListProducts, effectiveSettings.ListProductsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetProduct = clientHelper.BuildApiCall<GetProductRequest, Product>(
                 GrpcClient.GetProductAsync, GrpcClient.GetProduct, effectiveSettings.GetProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>(
                 GrpcClient.UpdateProductAsync, GrpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product.name={request.Product?.Name}"));
+                .WithGoogleRequestParam("product.name", request => request.Product?.Name);
             _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, pbwkt::Empty>(
                 GrpcClient.DeleteProductAsync, GrpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateReferenceImage = clientHelper.BuildApiCall<CreateReferenceImageRequest, ReferenceImage>(
                 GrpcClient.CreateReferenceImageAsync, GrpcClient.CreateReferenceImage, effectiveSettings.CreateReferenceImageSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteReferenceImage = clientHelper.BuildApiCall<DeleteReferenceImageRequest, pbwkt::Empty>(
                 GrpcClient.DeleteReferenceImageAsync, GrpcClient.DeleteReferenceImage, effectiveSettings.DeleteReferenceImageSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListReferenceImages = clientHelper.BuildApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse>(
                 GrpcClient.ListReferenceImagesAsync, GrpcClient.ListReferenceImages, effectiveSettings.ListReferenceImagesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetReferenceImage = clientHelper.BuildApiCall<GetReferenceImageRequest, ReferenceImage>(
                 GrpcClient.GetReferenceImageAsync, GrpcClient.GetReferenceImage, effectiveSettings.GetReferenceImageSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callAddProductToProductSet = clientHelper.BuildApiCall<AddProductToProductSetRequest, pbwkt::Empty>(
                 GrpcClient.AddProductToProductSetAsync, GrpcClient.AddProductToProductSet, effectiveSettings.AddProductToProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callRemoveProductFromProductSet = clientHelper.BuildApiCall<RemoveProductFromProductSetRequest, pbwkt::Empty>(
                 GrpcClient.RemoveProductFromProductSetAsync, GrpcClient.RemoveProductFromProductSet, effectiveSettings.RemoveProductFromProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListProductsInProductSet = clientHelper.BuildApiCall<ListProductsInProductSetRequest, ListProductsInProductSetResponse>(
                 GrpcClient.ListProductsInProductSetAsync, GrpcClient.ListProductsInProductSet, effectiveSettings.ListProductsInProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callImportProductSets = clientHelper.BuildApiCall<ImportProductSetsRequest, lro::Operation>(
                 GrpcClient.ImportProductSetsAsync, GrpcClient.ImportProductSets, effectiveSettings.ImportProductSetsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProductSet);
             Modify_CreateProductSetApiCall(ref _callCreateProductSet);
             Modify_ApiCall(ref _callListProductSets);

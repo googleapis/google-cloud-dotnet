@@ -1445,19 +1445,19 @@ namespace Google.Cloud.Talent.V4Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateApplication = clientHelper.BuildApiCall<CreateApplicationRequest, Application>(
                 GrpcClient.CreateApplicationAsync, GrpcClient.CreateApplication, effectiveSettings.CreateApplicationSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetApplication = clientHelper.BuildApiCall<GetApplicationRequest, Application>(
                 GrpcClient.GetApplicationAsync, GrpcClient.GetApplication, effectiveSettings.GetApplicationSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateApplication = clientHelper.BuildApiCall<UpdateApplicationRequest, Application>(
                 GrpcClient.UpdateApplicationAsync, GrpcClient.UpdateApplication, effectiveSettings.UpdateApplicationSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"application.name={request.Application?.Name}"));
+                .WithGoogleRequestParam("application.name", request => request.Application?.Name);
             _callDeleteApplication = clientHelper.BuildApiCall<DeleteApplicationRequest, pbwkt::Empty>(
                 GrpcClient.DeleteApplicationAsync, GrpcClient.DeleteApplication, effectiveSettings.DeleteApplicationSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListApplications = clientHelper.BuildApiCall<ListApplicationsRequest, ListApplicationsResponse>(
                 GrpcClient.ListApplicationsAsync, GrpcClient.ListApplications, effectiveSettings.ListApplicationsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateApplication);
             Modify_CreateApplicationApiCall(ref _callCreateApplication);
             Modify_ApiCall(ref _callGetApplication);

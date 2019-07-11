@@ -719,7 +719,7 @@ namespace Google.Cloud.Dialogflow.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>(
                 GrpcClient.DetectIntentAsync, GrpcClient.DetectIntent, effectiveSettings.DetectIntentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callStreamingDetectIntent = clientHelper.BuildApiCall<StreamingDetectIntentRequest, StreamingDetectIntentResponse>(
                 GrpcClient.StreamingDetectIntent, effectiveSettings.StreamingDetectIntentSettings, effectiveSettings.StreamingDetectIntentStreamingSettings);
             Modify_ApiCall(ref _callDetectIntent);

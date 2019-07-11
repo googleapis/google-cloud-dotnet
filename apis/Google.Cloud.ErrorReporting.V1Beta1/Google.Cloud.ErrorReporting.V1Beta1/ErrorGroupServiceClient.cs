@@ -741,10 +741,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, ErrorGroup>(
                 GrpcClient.GetGroupAsync, GrpcClient.GetGroup, effectiveSettings.GetGroupSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"group_name={request.GroupName}"));
+                .WithGoogleRequestParam("group_name", request => request.GroupName);
             _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, ErrorGroup>(
                 GrpcClient.UpdateGroupAsync, GrpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"group.name={request.Group?.Name}"));
+                .WithGoogleRequestParam("group.name", request => request.Group?.Name);
             Modify_ApiCall(ref _callGetGroup);
             Modify_GetGroupApiCall(ref _callGetGroup);
             Modify_ApiCall(ref _callUpdateGroup);

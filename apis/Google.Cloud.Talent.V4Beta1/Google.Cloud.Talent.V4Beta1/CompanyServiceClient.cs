@@ -1488,19 +1488,19 @@ namespace Google.Cloud.Talent.V4Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateCompany = clientHelper.BuildApiCall<CreateCompanyRequest, Company>(
                 GrpcClient.CreateCompanyAsync, GrpcClient.CreateCompany, effectiveSettings.CreateCompanySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetCompany = clientHelper.BuildApiCall<GetCompanyRequest, Company>(
                 GrpcClient.GetCompanyAsync, GrpcClient.GetCompany, effectiveSettings.GetCompanySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateCompany = clientHelper.BuildApiCall<UpdateCompanyRequest, Company>(
                 GrpcClient.UpdateCompanyAsync, GrpcClient.UpdateCompany, effectiveSettings.UpdateCompanySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"company.name={request.Company?.Name}"));
+                .WithGoogleRequestParam("company.name", request => request.Company?.Name);
             _callDeleteCompany = clientHelper.BuildApiCall<DeleteCompanyRequest, pbwkt::Empty>(
                 GrpcClient.DeleteCompanyAsync, GrpcClient.DeleteCompany, effectiveSettings.DeleteCompanySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListCompanies = clientHelper.BuildApiCall<ListCompaniesRequest, ListCompaniesResponse>(
                 GrpcClient.ListCompaniesAsync, GrpcClient.ListCompanies, effectiveSettings.ListCompaniesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCompany);
             Modify_CreateCompanyApiCall(ref _callCreateCompany);
             Modify_ApiCall(ref _callGetCompany);
