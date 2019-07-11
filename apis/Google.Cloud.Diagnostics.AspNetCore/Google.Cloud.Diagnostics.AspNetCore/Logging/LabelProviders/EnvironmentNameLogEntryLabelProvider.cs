@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Collections.Generic;
 using Google.Api.Gax;
 using Microsoft.AspNetCore.Hosting;
@@ -20,17 +19,25 @@ using Microsoft.AspNetCore.Hosting;
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
-    /// A <see cref="ILogEntryLabelProvider"/> implementation which adds the <see cref="IHostingEnvironment.EnvironmentName"/> to the log entry labels.
+    /// A <see cref="ILogEntryLabelProvider"/> implementation which adds the environment name to the log entry labels.
     /// </summary>
     public class EnvironmentNameLogEntryLabelProvider : ILogEntryLabelProvider
     {
+#if NETCOREAPP3_0
+        private readonly IWebHostEnvironment _hostingEnvironment;
+#elif NETSTANDARD2_0
         private readonly IHostingEnvironment _hostingEnvironment;
+#endif
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvironmentNameLogEntryLabelProvider"/> class.
         /// </summary>
-        /// <param name="hostingEnvironment">The <see cref="IHostingEnvironment"/> instance to retrieve the environment name from.</param>
+        /// <param name="hostingEnvironment">The hosting environment instance to retrieve the environment name from.</param>
+#if NETCOREAPP3_0
+        public EnvironmentNameLogEntryLabelProvider(IWebHostEnvironment hostingEnvironment)
+#elif NETSTANDARD2_0
         public EnvironmentNameLogEntryLabelProvider(IHostingEnvironment hostingEnvironment)
+#endif
         {
             _hostingEnvironment = GaxPreconditions.CheckNotNull(hostingEnvironment, nameof(hostingEnvironment));
         }
@@ -38,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <inheritdoc/>
         public void Invoke(Dictionary<string, string> labels)
         {
-            if(!string.IsNullOrEmpty(_hostingEnvironment.EnvironmentName))
+            if (!string.IsNullOrEmpty(_hostingEnvironment.EnvironmentName))
             {
                 labels["aspnetcore_environment"] = _hostingEnvironment.EnvironmentName;
             }

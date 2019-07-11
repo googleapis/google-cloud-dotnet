@@ -19,7 +19,6 @@ using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Internal;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -200,7 +199,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             while (currentLogScope != null)
             {
                 // Determine if the state of the scope are format params
-                if (currentLogScope.State is FormattedLogValues scopeFormatParams)
+                if (currentLogScope.State is IReadOnlyList<KeyValuePair<string, object>> scopeFormatParams)
                 {
                     scopeParamsList.Add(CreateStructValue(scopeFormatParams));
                 }

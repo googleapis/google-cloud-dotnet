@@ -256,7 +256,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public virtual void ConfigureServices(IServiceCollection services)
         {
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
             services.AddGoogleTrace(options =>
             {
                 options.ProjectId = ProjectId;

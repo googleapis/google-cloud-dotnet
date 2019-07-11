@@ -18,7 +18,6 @@ using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -117,9 +116,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             services.AddSingleton(tracerFactory);
 
-            // Only add the HttpContextAccessor if it's not already added.
             // This is needed to get the `TraceHeaderContext`. See `CreateTraceHeaderContext`.
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
 
             services.AddSingleton(ManagedTracer.CreateDelegatingTracer(ContextTracerManager.GetCurrentTracer));
 
