@@ -3088,93 +3088,93 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>(
                 GrpcClient.InspectContentAsync, GrpcClient.InspectContent, effectiveSettings.InspectContentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callRedactImage = clientHelper.BuildApiCall<RedactImageRequest, RedactImageResponse>(
                 GrpcClient.RedactImageAsync, GrpcClient.RedactImage, effectiveSettings.RedactImageSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeidentifyContent = clientHelper.BuildApiCall<DeidentifyContentRequest, DeidentifyContentResponse>(
                 GrpcClient.DeidentifyContentAsync, GrpcClient.DeidentifyContent, effectiveSettings.DeidentifyContentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callReidentifyContent = clientHelper.BuildApiCall<ReidentifyContentRequest, ReidentifyContentResponse>(
                 GrpcClient.ReidentifyContentAsync, GrpcClient.ReidentifyContent, effectiveSettings.ReidentifyContentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callListInfoTypes = clientHelper.BuildApiCall<ListInfoTypesRequest, ListInfoTypesResponse>(
                 GrpcClient.ListInfoTypesAsync, GrpcClient.ListInfoTypes, effectiveSettings.ListInfoTypesSettings);
             _callCreateInspectTemplate = clientHelper.BuildApiCall<CreateInspectTemplateRequest, InspectTemplate>(
                 GrpcClient.CreateInspectTemplateAsync, GrpcClient.CreateInspectTemplate, effectiveSettings.CreateInspectTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateInspectTemplate = clientHelper.BuildApiCall<UpdateInspectTemplateRequest, InspectTemplate>(
                 GrpcClient.UpdateInspectTemplateAsync, GrpcClient.UpdateInspectTemplate, effectiveSettings.UpdateInspectTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetInspectTemplate = clientHelper.BuildApiCall<GetInspectTemplateRequest, InspectTemplate>(
                 GrpcClient.GetInspectTemplateAsync, GrpcClient.GetInspectTemplate, effectiveSettings.GetInspectTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListInspectTemplates = clientHelper.BuildApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse>(
                 GrpcClient.ListInspectTemplatesAsync, GrpcClient.ListInspectTemplates, effectiveSettings.ListInspectTemplatesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteInspectTemplate = clientHelper.BuildApiCall<DeleteInspectTemplateRequest, pbwkt::Empty>(
                 GrpcClient.DeleteInspectTemplateAsync, GrpcClient.DeleteInspectTemplate, effectiveSettings.DeleteInspectTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateDeidentifyTemplate = clientHelper.BuildApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate>(
                 GrpcClient.CreateDeidentifyTemplateAsync, GrpcClient.CreateDeidentifyTemplate, effectiveSettings.CreateDeidentifyTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateDeidentifyTemplate = clientHelper.BuildApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate>(
                 GrpcClient.UpdateDeidentifyTemplateAsync, GrpcClient.UpdateDeidentifyTemplate, effectiveSettings.UpdateDeidentifyTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetDeidentifyTemplate = clientHelper.BuildApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate>(
                 GrpcClient.GetDeidentifyTemplateAsync, GrpcClient.GetDeidentifyTemplate, effectiveSettings.GetDeidentifyTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListDeidentifyTemplates = clientHelper.BuildApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse>(
                 GrpcClient.ListDeidentifyTemplatesAsync, GrpcClient.ListDeidentifyTemplates, effectiveSettings.ListDeidentifyTemplatesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteDeidentifyTemplate = clientHelper.BuildApiCall<DeleteDeidentifyTemplateRequest, pbwkt::Empty>(
                 GrpcClient.DeleteDeidentifyTemplateAsync, GrpcClient.DeleteDeidentifyTemplate, effectiveSettings.DeleteDeidentifyTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateDlpJob = clientHelper.BuildApiCall<CreateDlpJobRequest, DlpJob>(
                 GrpcClient.CreateDlpJobAsync, GrpcClient.CreateDlpJob, effectiveSettings.CreateDlpJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callListDlpJobs = clientHelper.BuildApiCall<ListDlpJobsRequest, ListDlpJobsResponse>(
                 GrpcClient.ListDlpJobsAsync, GrpcClient.ListDlpJobs, effectiveSettings.ListDlpJobsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetDlpJob = clientHelper.BuildApiCall<GetDlpJobRequest, DlpJob>(
                 GrpcClient.GetDlpJobAsync, GrpcClient.GetDlpJob, effectiveSettings.GetDlpJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDeleteDlpJob = clientHelper.BuildApiCall<DeleteDlpJobRequest, pbwkt::Empty>(
                 GrpcClient.DeleteDlpJobAsync, GrpcClient.DeleteDlpJob, effectiveSettings.DeleteDlpJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, pbwkt::Empty>(
                 GrpcClient.CancelDlpJobAsync, GrpcClient.CancelDlpJob, effectiveSettings.CancelDlpJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListJobTriggers = clientHelper.BuildApiCall<ListJobTriggersRequest, ListJobTriggersResponse>(
                 GrpcClient.ListJobTriggersAsync, GrpcClient.ListJobTriggers, effectiveSettings.ListJobTriggersSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetJobTrigger = clientHelper.BuildApiCall<GetJobTriggerRequest, JobTrigger>(
                 GrpcClient.GetJobTriggerAsync, GrpcClient.GetJobTrigger, effectiveSettings.GetJobTriggerSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, pbwkt::Empty>(
                 GrpcClient.DeleteJobTriggerAsync, GrpcClient.DeleteJobTrigger, effectiveSettings.DeleteJobTriggerSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateJobTrigger = clientHelper.BuildApiCall<UpdateJobTriggerRequest, JobTrigger>(
                 GrpcClient.UpdateJobTriggerAsync, GrpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateJobTrigger = clientHelper.BuildApiCall<CreateJobTriggerRequest, JobTrigger>(
                 GrpcClient.CreateJobTriggerAsync, GrpcClient.CreateJobTrigger, effectiveSettings.CreateJobTriggerSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callCreateStoredInfoType = clientHelper.BuildApiCall<CreateStoredInfoTypeRequest, StoredInfoType>(
                 GrpcClient.CreateStoredInfoTypeAsync, GrpcClient.CreateStoredInfoType, effectiveSettings.CreateStoredInfoTypeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateStoredInfoType = clientHelper.BuildApiCall<UpdateStoredInfoTypeRequest, StoredInfoType>(
                 GrpcClient.UpdateStoredInfoTypeAsync, GrpcClient.UpdateStoredInfoType, effectiveSettings.UpdateStoredInfoTypeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetStoredInfoType = clientHelper.BuildApiCall<GetStoredInfoTypeRequest, StoredInfoType>(
                 GrpcClient.GetStoredInfoTypeAsync, GrpcClient.GetStoredInfoType, effectiveSettings.GetStoredInfoTypeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListStoredInfoTypes = clientHelper.BuildApiCall<ListStoredInfoTypesRequest, ListStoredInfoTypesResponse>(
                 GrpcClient.ListStoredInfoTypesAsync, GrpcClient.ListStoredInfoTypes, effectiveSettings.ListStoredInfoTypesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteStoredInfoType = clientHelper.BuildApiCall<DeleteStoredInfoTypeRequest, pbwkt::Empty>(
                 GrpcClient.DeleteStoredInfoTypeAsync, GrpcClient.DeleteStoredInfoType, effectiveSettings.DeleteStoredInfoTypeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callInspectContent);
             Modify_InspectContentApiCall(ref _callInspectContent);
             Modify_ApiCall(ref _callRedactImage);
