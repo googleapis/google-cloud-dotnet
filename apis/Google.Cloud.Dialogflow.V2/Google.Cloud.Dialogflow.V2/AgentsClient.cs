@@ -1967,28 +1967,28 @@ namespace Google.Cloud.Dialogflow.V2
                 grpcClient.CreateOperationsClient(), effectiveSettings.RestoreAgentOperationsSettings);
             _callSetAgent = clientHelper.BuildApiCall<SetAgentRequest, Agent>(
                 GrpcClient.SetAgentAsync, GrpcClient.SetAgent, effectiveSettings.SetAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"agent.parent={request.Agent?.Parent}"));
+                .WithGoogleRequestParam("agent.parent", request => request.Agent?.Parent);
             _callDeleteAgent = clientHelper.BuildApiCall<DeleteAgentRequest, pbwkt::Empty>(
                 GrpcClient.DeleteAgentAsync, GrpcClient.DeleteAgent, effectiveSettings.DeleteAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetAgent = clientHelper.BuildApiCall<GetAgentRequest, Agent>(
                 GrpcClient.GetAgentAsync, GrpcClient.GetAgent, effectiveSettings.GetAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callSearchAgents = clientHelper.BuildApiCall<SearchAgentsRequest, SearchAgentsResponse>(
                 GrpcClient.SearchAgentsAsync, GrpcClient.SearchAgents, effectiveSettings.SearchAgentsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callTrainAgent = clientHelper.BuildApiCall<TrainAgentRequest, lro::Operation>(
                 GrpcClient.TrainAgentAsync, GrpcClient.TrainAgent, effectiveSettings.TrainAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callExportAgent = clientHelper.BuildApiCall<ExportAgentRequest, lro::Operation>(
                 GrpcClient.ExportAgentAsync, GrpcClient.ExportAgent, effectiveSettings.ExportAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callImportAgent = clientHelper.BuildApiCall<ImportAgentRequest, lro::Operation>(
                 GrpcClient.ImportAgentAsync, GrpcClient.ImportAgent, effectiveSettings.ImportAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callRestoreAgent = clientHelper.BuildApiCall<RestoreAgentRequest, lro::Operation>(
                 GrpcClient.RestoreAgentAsync, GrpcClient.RestoreAgent, effectiveSettings.RestoreAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSetAgent);
             Modify_SetAgentApiCall(ref _callSetAgent);
             Modify_ApiCall(ref _callDeleteAgent);
