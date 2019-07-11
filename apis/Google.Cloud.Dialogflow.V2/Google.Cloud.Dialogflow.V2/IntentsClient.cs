@@ -2511,25 +2511,25 @@ namespace Google.Cloud.Dialogflow.V2
                 grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteIntentsOperationsSettings);
             _callListIntents = clientHelper.BuildApiCall<ListIntentsRequest, ListIntentsResponse>(
                 GrpcClient.ListIntentsAsync, GrpcClient.ListIntents, effectiveSettings.ListIntentsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetIntent = clientHelper.BuildApiCall<GetIntentRequest, Intent>(
                 GrpcClient.GetIntentAsync, GrpcClient.GetIntent, effectiveSettings.GetIntentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateIntent = clientHelper.BuildApiCall<CreateIntentRequest, Intent>(
                 GrpcClient.CreateIntentAsync, GrpcClient.CreateIntent, effectiveSettings.CreateIntentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateIntent = clientHelper.BuildApiCall<UpdateIntentRequest, Intent>(
                 GrpcClient.UpdateIntentAsync, GrpcClient.UpdateIntent, effectiveSettings.UpdateIntentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"intent.name={request.Intent?.Name}"));
+                .WithGoogleRequestParam("intent.name", request => request.Intent?.Name);
             _callDeleteIntent = clientHelper.BuildApiCall<DeleteIntentRequest, pbwkt::Empty>(
                 GrpcClient.DeleteIntentAsync, GrpcClient.DeleteIntent, effectiveSettings.DeleteIntentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callBatchUpdateIntents = clientHelper.BuildApiCall<BatchUpdateIntentsRequest, lro::Operation>(
                 GrpcClient.BatchUpdateIntentsAsync, GrpcClient.BatchUpdateIntents, effectiveSettings.BatchUpdateIntentsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callBatchDeleteIntents = clientHelper.BuildApiCall<BatchDeleteIntentsRequest, lro::Operation>(
                 GrpcClient.BatchDeleteIntentsAsync, GrpcClient.BatchDeleteIntents, effectiveSettings.BatchDeleteIntentsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIntents);
             Modify_ListIntentsApiCall(ref _callListIntents);
             Modify_ApiCall(ref _callGetIntent);

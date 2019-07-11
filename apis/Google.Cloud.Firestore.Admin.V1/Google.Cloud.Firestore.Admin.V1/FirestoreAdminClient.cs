@@ -2420,31 +2420,31 @@ namespace Google.Cloud.Firestore.Admin.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>(
                 GrpcClient.CreateIndexAsync, GrpcClient.CreateIndex, effectiveSettings.CreateIndexSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>(
                 GrpcClient.ListIndexesAsync, GrpcClient.ListIndexes, effectiveSettings.ListIndexesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>(
                 GrpcClient.GetIndexAsync, GrpcClient.GetIndex, effectiveSettings.GetIndexSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, pbwkt::Empty>(
                 GrpcClient.DeleteIndexAsync, GrpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>(
                 GrpcClient.ImportDocumentsAsync, GrpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callExportDocuments = clientHelper.BuildApiCall<ExportDocumentsRequest, lro::Operation>(
                 GrpcClient.ExportDocumentsAsync, GrpcClient.ExportDocuments, effectiveSettings.ExportDocumentsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetField = clientHelper.BuildApiCall<GetFieldRequest, Field>(
                 GrpcClient.GetFieldAsync, GrpcClient.GetField, effectiveSettings.GetFieldSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListFields = clientHelper.BuildApiCall<ListFieldsRequest, ListFieldsResponse>(
                 GrpcClient.ListFieldsAsync, GrpcClient.ListFields, effectiveSettings.ListFieldsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateField = clientHelper.BuildApiCall<UpdateFieldRequest, lro::Operation>(
                 GrpcClient.UpdateFieldAsync, GrpcClient.UpdateField, effectiveSettings.UpdateFieldSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"field.name={request.Field?.Name}"));
+                .WithGoogleRequestParam("field.name", request => request.Field?.Name);
             Modify_ApiCall(ref _callCreateIndex);
             Modify_CreateIndexApiCall(ref _callCreateIndex);
             Modify_ApiCall(ref _callListIndexes);

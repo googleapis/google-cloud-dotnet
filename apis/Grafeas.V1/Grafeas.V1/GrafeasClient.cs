@@ -3506,46 +3506,46 @@ namespace Grafeas.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callGetOccurrence = clientHelper.BuildApiCall<GetOccurrenceRequest, Occurrence>(
                 GrpcClient.GetOccurrenceAsync, GrpcClient.GetOccurrence, effectiveSettings.GetOccurrenceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListOccurrences = clientHelper.BuildApiCall<ListOccurrencesRequest, ListOccurrencesResponse>(
                 GrpcClient.ListOccurrencesAsync, GrpcClient.ListOccurrences, effectiveSettings.ListOccurrencesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteOccurrence = clientHelper.BuildApiCall<DeleteOccurrenceRequest, pbwkt::Empty>(
                 GrpcClient.DeleteOccurrenceAsync, GrpcClient.DeleteOccurrence, effectiveSettings.DeleteOccurrenceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateOccurrence = clientHelper.BuildApiCall<CreateOccurrenceRequest, Occurrence>(
                 GrpcClient.CreateOccurrenceAsync, GrpcClient.CreateOccurrence, effectiveSettings.CreateOccurrenceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callBatchCreateOccurrences = clientHelper.BuildApiCall<BatchCreateOccurrencesRequest, BatchCreateOccurrencesResponse>(
                 GrpcClient.BatchCreateOccurrencesAsync, GrpcClient.BatchCreateOccurrences, effectiveSettings.BatchCreateOccurrencesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateOccurrence = clientHelper.BuildApiCall<UpdateOccurrenceRequest, Occurrence>(
                 GrpcClient.UpdateOccurrenceAsync, GrpcClient.UpdateOccurrence, effectiveSettings.UpdateOccurrenceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetOccurrenceNote = clientHelper.BuildApiCall<GetOccurrenceNoteRequest, Note>(
                 GrpcClient.GetOccurrenceNoteAsync, GrpcClient.GetOccurrenceNote, effectiveSettings.GetOccurrenceNoteSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetNote = clientHelper.BuildApiCall<GetNoteRequest, Note>(
                 GrpcClient.GetNoteAsync, GrpcClient.GetNote, effectiveSettings.GetNoteSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListNotes = clientHelper.BuildApiCall<ListNotesRequest, ListNotesResponse>(
                 GrpcClient.ListNotesAsync, GrpcClient.ListNotes, effectiveSettings.ListNotesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteNote = clientHelper.BuildApiCall<DeleteNoteRequest, pbwkt::Empty>(
                 GrpcClient.DeleteNoteAsync, GrpcClient.DeleteNote, effectiveSettings.DeleteNoteSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateNote = clientHelper.BuildApiCall<CreateNoteRequest, Note>(
                 GrpcClient.CreateNoteAsync, GrpcClient.CreateNote, effectiveSettings.CreateNoteSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callBatchCreateNotes = clientHelper.BuildApiCall<BatchCreateNotesRequest, BatchCreateNotesResponse>(
                 GrpcClient.BatchCreateNotesAsync, GrpcClient.BatchCreateNotes, effectiveSettings.BatchCreateNotesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateNote = clientHelper.BuildApiCall<UpdateNoteRequest, Note>(
                 GrpcClient.UpdateNoteAsync, GrpcClient.UpdateNote, effectiveSettings.UpdateNoteSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListNoteOccurrences = clientHelper.BuildApiCall<ListNoteOccurrencesRequest, ListNoteOccurrencesResponse>(
                 GrpcClient.ListNoteOccurrencesAsync, GrpcClient.ListNoteOccurrences, effectiveSettings.ListNoteOccurrencesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOccurrence);
             Modify_GetOccurrenceApiCall(ref _callGetOccurrence);
             Modify_ApiCall(ref _callListOccurrences);

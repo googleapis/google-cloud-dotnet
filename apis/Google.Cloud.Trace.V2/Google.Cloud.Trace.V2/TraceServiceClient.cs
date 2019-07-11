@@ -677,10 +677,10 @@ namespace Google.Cloud.Trace.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callBatchWriteSpans = clientHelper.BuildApiCall<BatchWriteSpansRequest, pbwkt::Empty>(
                 GrpcClient.BatchWriteSpansAsync, GrpcClient.BatchWriteSpans, effectiveSettings.BatchWriteSpansSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateSpan = clientHelper.BuildApiCall<Span, Span>(
                 GrpcClient.CreateSpanAsync, GrpcClient.CreateSpan, effectiveSettings.CreateSpanSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callBatchWriteSpans);
             Modify_BatchWriteSpansApiCall(ref _callBatchWriteSpans);
             Modify_ApiCall(ref _callCreateSpan);

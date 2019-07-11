@@ -2186,28 +2186,28 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>(
                 GrpcClient.CreateTableAsync, GrpcClient.CreateTable, effectiveSettings.CreateTableSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callListTables = clientHelper.BuildApiCall<ListTablesRequest, ListTablesResponse>(
                 GrpcClient.ListTablesAsync, GrpcClient.ListTables, effectiveSettings.ListTablesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>(
                 GrpcClient.GetTableAsync, GrpcClient.GetTable, effectiveSettings.GetTableSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTableAsync, GrpcClient.DeleteTable, effectiveSettings.DeleteTableSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callModifyColumnFamilies = clientHelper.BuildApiCall<ModifyColumnFamiliesRequest, Table>(
                 GrpcClient.ModifyColumnFamiliesAsync, GrpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDropRowRange = clientHelper.BuildApiCall<DropRowRangeRequest, pbwkt::Empty>(
                 GrpcClient.DropRowRangeAsync, GrpcClient.DropRowRange, effectiveSettings.DropRowRangeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGenerateConsistencyToken = clientHelper.BuildApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse>(
                 GrpcClient.GenerateConsistencyTokenAsync, GrpcClient.GenerateConsistencyToken, effectiveSettings.GenerateConsistencyTokenSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCheckConsistency = clientHelper.BuildApiCall<CheckConsistencyRequest, CheckConsistencyResponse>(
                 GrpcClient.CheckConsistencyAsync, GrpcClient.CheckConsistency, effectiveSettings.CheckConsistencySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateTable);
             Modify_CreateTableApiCall(ref _callCreateTable);
             Modify_ApiCall(ref _callListTables);

@@ -2441,34 +2441,34 @@ namespace Google.Cloud.PubSub.V1
             iam::IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>(
                 GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic, effectiveSettings.CreateTopicSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateTopic = clientHelper.BuildApiCall<UpdateTopicRequest, Topic>(
                 GrpcClient.UpdateTopicAsync, GrpcClient.UpdateTopic, effectiveSettings.UpdateTopicSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic.name={request.Topic?.Name}"));
+                .WithGoogleRequestParam("topic.name", request => request.Topic?.Name);
             _callPublish = clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
                 GrpcClient.PublishAsync, GrpcClient.Publish, effectiveSettings.PublishSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic={request.Topic}"));
+                .WithGoogleRequestParam("topic", request => request.Topic);
             _callGetTopic = clientHelper.BuildApiCall<GetTopicRequest, Topic>(
                 GrpcClient.GetTopicAsync, GrpcClient.GetTopic, effectiveSettings.GetTopicSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic={request.Topic}"));
+                .WithGoogleRequestParam("topic", request => request.Topic);
             _callListTopics = clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(
                 GrpcClient.ListTopicsAsync, GrpcClient.ListTopics, effectiveSettings.ListTopicsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project={request.Project}"));
+                .WithGoogleRequestParam("project", request => request.Project);
             _callListTopicSubscriptions = clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(
                 GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions, effectiveSettings.ListTopicSubscriptionsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic={request.Topic}"));
+                .WithGoogleRequestParam("topic", request => request.Topic);
             _callDeleteTopic = clientHelper.BuildApiCall<DeleteTopicRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic={request.Topic}"));
+                .WithGoogleRequestParam("topic", request => request.Topic);
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
                 grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
                 grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
                 grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callCreateTopic);
             Modify_CreateTopicApiCall(ref _callCreateTopic);
             Modify_ApiCall(ref _callUpdateTopic);

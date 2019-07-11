@@ -4847,57 +4847,57 @@ namespace Google.Cloud.PubSub.V1
             iam::IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>(
                 GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetSubscription = clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(
                 GrpcClient.GetSubscriptionAsync, GrpcClient.GetSubscription, effectiveSettings.GetSubscriptionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription={request.Subscription}"));
+                .WithGoogleRequestParam("subscription", request => request.Subscription);
             _callUpdateSubscription = clientHelper.BuildApiCall<UpdateSubscriptionRequest, Subscription>(
                 GrpcClient.UpdateSubscriptionAsync, GrpcClient.UpdateSubscription, effectiveSettings.UpdateSubscriptionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription.name={request.Subscription?.Name}"));
+                .WithGoogleRequestParam("subscription.name", request => request.Subscription?.Name);
             _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(
                 GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project={request.Project}"));
+                .WithGoogleRequestParam("project", request => request.Project);
             _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription={request.Subscription}"));
+                .WithGoogleRequestParam("subscription", request => request.Subscription);
             _callModifyAckDeadline = clientHelper.BuildApiCall<ModifyAckDeadlineRequest, pbwkt::Empty>(
                 GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline, effectiveSettings.ModifyAckDeadlineSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription={request.Subscription}"));
+                .WithGoogleRequestParam("subscription", request => request.Subscription);
             _callAcknowledge = clientHelper.BuildApiCall<AcknowledgeRequest, pbwkt::Empty>(
                 GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge, effectiveSettings.AcknowledgeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription={request.Subscription}"));
+                .WithGoogleRequestParam("subscription", request => request.Subscription);
             _callPull = clientHelper.BuildApiCall<PullRequest, PullResponse>(
                 GrpcClient.PullAsync, GrpcClient.Pull, effectiveSettings.PullSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription={request.Subscription}"));
+                .WithGoogleRequestParam("subscription", request => request.Subscription);
             _callStreamingPull = clientHelper.BuildApiCall<StreamingPullRequest, StreamingPullResponse>(
                 GrpcClient.StreamingPull, effectiveSettings.StreamingPullSettings, effectiveSettings.StreamingPullStreamingSettings);
             _callModifyPushConfig = clientHelper.BuildApiCall<ModifyPushConfigRequest, pbwkt::Empty>(
                 GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription={request.Subscription}"));
+                .WithGoogleRequestParam("subscription", request => request.Subscription);
             _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(
                 GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project={request.Project}"));
+                .WithGoogleRequestParam("project", request => request.Project);
             _callCreateSnapshot = clientHelper.BuildApiCall<CreateSnapshotRequest, Snapshot>(
                 GrpcClient.CreateSnapshotAsync, GrpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateSnapshot = clientHelper.BuildApiCall<UpdateSnapshotRequest, Snapshot>(
                 GrpcClient.UpdateSnapshotAsync, GrpcClient.UpdateSnapshot, effectiveSettings.UpdateSnapshotSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"snapshot.name={request.Snapshot?.Name}"));
+                .WithGoogleRequestParam("snapshot.name", request => request.Snapshot?.Name);
             _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"snapshot={request.Snapshot}"));
+                .WithGoogleRequestParam("snapshot", request => request.Snapshot);
             _callSeek = clientHelper.BuildApiCall<SeekRequest, SeekResponse>(
                 GrpcClient.SeekAsync, GrpcClient.Seek, effectiveSettings.SeekSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription={request.Subscription}"));
+                .WithGoogleRequestParam("subscription", request => request.Subscription);
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
                 grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
                 grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
                 grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callCreateSubscription);
             Modify_CreateSubscriptionApiCall(ref _callCreateSubscription);
             Modify_ApiCall(ref _callGetSubscription);

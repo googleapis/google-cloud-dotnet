@@ -5308,52 +5308,52 @@ namespace Google.Cloud.Tasks.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListQueues = clientHelper.BuildApiCall<ListQueuesRequest, ListQueuesResponse>(
                 GrpcClient.ListQueuesAsync, GrpcClient.ListQueues, effectiveSettings.ListQueuesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetQueue = clientHelper.BuildApiCall<GetQueueRequest, Queue>(
                 GrpcClient.GetQueueAsync, GrpcClient.GetQueue, effectiveSettings.GetQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateQueue = clientHelper.BuildApiCall<CreateQueueRequest, Queue>(
                 GrpcClient.CreateQueueAsync, GrpcClient.CreateQueue, effectiveSettings.CreateQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateQueue = clientHelper.BuildApiCall<UpdateQueueRequest, Queue>(
                 GrpcClient.UpdateQueueAsync, GrpcClient.UpdateQueue, effectiveSettings.UpdateQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"queue.name={request.Queue?.Name}"));
+                .WithGoogleRequestParam("queue.name", request => request.Queue?.Name);
             _callDeleteQueue = clientHelper.BuildApiCall<DeleteQueueRequest, pbwkt::Empty>(
                 GrpcClient.DeleteQueueAsync, GrpcClient.DeleteQueue, effectiveSettings.DeleteQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callPurgeQueue = clientHelper.BuildApiCall<PurgeQueueRequest, Queue>(
                 GrpcClient.PurgeQueueAsync, GrpcClient.PurgeQueue, effectiveSettings.PurgeQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callPauseQueue = clientHelper.BuildApiCall<PauseQueueRequest, Queue>(
                 GrpcClient.PauseQueueAsync, GrpcClient.PauseQueue, effectiveSettings.PauseQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callResumeQueue = clientHelper.BuildApiCall<ResumeQueueRequest, Queue>(
                 GrpcClient.ResumeQueueAsync, GrpcClient.ResumeQueue, effectiveSettings.ResumeQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
                 GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
                 GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
                 GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithGoogleRequestParam("resource", request => request.Resource);
             _callListTasks = clientHelper.BuildApiCall<ListTasksRequest, ListTasksResponse>(
                 GrpcClient.ListTasksAsync, GrpcClient.ListTasks, effectiveSettings.ListTasksSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetTask = clientHelper.BuildApiCall<GetTaskRequest, Task>(
                 GrpcClient.GetTaskAsync, GrpcClient.GetTask, effectiveSettings.GetTaskSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateTask = clientHelper.BuildApiCall<CreateTaskRequest, Task>(
                 GrpcClient.CreateTaskAsync, GrpcClient.CreateTask, effectiveSettings.CreateTaskSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteTask = clientHelper.BuildApiCall<DeleteTaskRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTaskAsync, GrpcClient.DeleteTask, effectiveSettings.DeleteTaskSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callRunTask = clientHelper.BuildApiCall<RunTaskRequest, Task>(
                 GrpcClient.RunTaskAsync, GrpcClient.RunTask, effectiveSettings.RunTaskSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListQueues);
             Modify_ListQueuesApiCall(ref _callListQueues);
             Modify_ApiCall(ref _callGetQueue);

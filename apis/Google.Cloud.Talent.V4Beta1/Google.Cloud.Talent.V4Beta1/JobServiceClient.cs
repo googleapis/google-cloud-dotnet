@@ -2582,34 +2582,34 @@ namespace Google.Cloud.Talent.V4Beta1
                 grpcClient.CreateOperationsClient(), effectiveSettings.BatchUpdateJobsOperationsSettings);
             _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>(
                 GrpcClient.CreateJobAsync, GrpcClient.CreateJob, effectiveSettings.CreateJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(
                 GrpcClient.GetJobAsync, GrpcClient.GetJob, effectiveSettings.GetJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>(
                 GrpcClient.UpdateJobAsync, GrpcClient.UpdateJob, effectiveSettings.UpdateJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"job.name={request.Job?.Name}"));
+                .WithGoogleRequestParam("job.name", request => request.Job?.Name);
             _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, pbwkt::Empty>(
                 GrpcClient.DeleteJobAsync, GrpcClient.DeleteJob, effectiveSettings.DeleteJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>(
                 GrpcClient.ListJobsAsync, GrpcClient.ListJobs, effectiveSettings.ListJobsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callBatchDeleteJobs = clientHelper.BuildApiCall<BatchDeleteJobsRequest, pbwkt::Empty>(
                 GrpcClient.BatchDeleteJobsAsync, GrpcClient.BatchDeleteJobs, effectiveSettings.BatchDeleteJobsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callSearchJobs = clientHelper.BuildApiCall<SearchJobsRequest, SearchJobsResponse>(
                 GrpcClient.SearchJobsAsync, GrpcClient.SearchJobs, effectiveSettings.SearchJobsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callSearchJobsForAlert = clientHelper.BuildApiCall<SearchJobsRequest, SearchJobsResponse>(
                 GrpcClient.SearchJobsForAlertAsync, GrpcClient.SearchJobsForAlert, effectiveSettings.SearchJobsForAlertSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callBatchCreateJobs = clientHelper.BuildApiCall<BatchCreateJobsRequest, lro::Operation>(
                 GrpcClient.BatchCreateJobsAsync, GrpcClient.BatchCreateJobs, effectiveSettings.BatchCreateJobsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callBatchUpdateJobs = clientHelper.BuildApiCall<BatchUpdateJobsRequest, lro::Operation>(
                 GrpcClient.BatchUpdateJobsAsync, GrpcClient.BatchUpdateJobs, effectiveSettings.BatchUpdateJobsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateJob);
             Modify_CreateJobApiCall(ref _callCreateJob);
             Modify_ApiCall(ref _callGetJob);

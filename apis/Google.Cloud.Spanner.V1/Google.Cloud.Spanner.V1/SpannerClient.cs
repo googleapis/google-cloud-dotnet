@@ -3292,46 +3292,46 @@ namespace Google.Cloud.Spanner.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>(
                 GrpcClient.CreateSessionAsync, GrpcClient.CreateSession, effectiveSettings.CreateSessionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
+                .WithGoogleRequestParam("database", request => request.Database);
             _callGetSession = clientHelper.BuildApiCall<GetSessionRequest, Session>(
                 GrpcClient.GetSessionAsync, GrpcClient.GetSession, effectiveSettings.GetSessionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListSessions = clientHelper.BuildApiCall<ListSessionsRequest, ListSessionsResponse>(
                 GrpcClient.ListSessionsAsync, GrpcClient.ListSessions, effectiveSettings.ListSessionsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
+                .WithGoogleRequestParam("database", request => request.Database);
             _callDeleteSession = clientHelper.BuildApiCall<DeleteSessionRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSessionAsync, GrpcClient.DeleteSession, effectiveSettings.DeleteSessionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>(
                 GrpcClient.ExecuteSqlAsync, GrpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callExecuteStreamingSql = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>(
                 GrpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteStreamingSqlSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callExecuteBatchDml = clientHelper.BuildApiCall<ExecuteBatchDmlRequest, ExecuteBatchDmlResponse>(
                 GrpcClient.ExecuteBatchDmlAsync, GrpcClient.ExecuteBatchDml, effectiveSettings.ExecuteBatchDmlSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callRead = clientHelper.BuildApiCall<ReadRequest, ResultSet>(
                 GrpcClient.ReadAsync, GrpcClient.Read, effectiveSettings.ReadSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callStreamingRead = clientHelper.BuildApiCall<ReadRequest, PartialResultSet>(
                 GrpcClient.StreamingRead, effectiveSettings.StreamingReadSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, Transaction>(
                 GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
                 GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callRollback = clientHelper.BuildApiCall<RollbackRequest, pbwkt::Empty>(
                 GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionResponse>(
                 GrpcClient.PartitionQueryAsync, GrpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             _callPartitionRead = clientHelper.BuildApiCall<PartitionReadRequest, PartitionResponse>(
                 GrpcClient.PartitionReadAsync, GrpcClient.PartitionRead, effectiveSettings.PartitionReadSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={request.Session}"));
+                .WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callCreateSession);
             Modify_CreateSessionApiCall(ref _callCreateSession);
             Modify_ApiCall(ref _callGetSession);

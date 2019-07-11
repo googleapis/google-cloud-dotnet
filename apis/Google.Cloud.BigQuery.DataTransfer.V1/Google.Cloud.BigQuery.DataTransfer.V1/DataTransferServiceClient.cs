@@ -3340,46 +3340,46 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callGetDataSource = clientHelper.BuildApiCall<GetDataSourceRequest, DataSource>(
                 GrpcClient.GetDataSourceAsync, GrpcClient.GetDataSource, effectiveSettings.GetDataSourceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListDataSources = clientHelper.BuildApiCall<ListDataSourcesRequest, ListDataSourcesResponse>(
                 GrpcClient.ListDataSourcesAsync, GrpcClient.ListDataSources, effectiveSettings.ListDataSourcesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callCreateTransferConfig = clientHelper.BuildApiCall<CreateTransferConfigRequest, TransferConfig>(
                 GrpcClient.CreateTransferConfigAsync, GrpcClient.CreateTransferConfig, effectiveSettings.CreateTransferConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateTransferConfig = clientHelper.BuildApiCall<UpdateTransferConfigRequest, TransferConfig>(
                 GrpcClient.UpdateTransferConfigAsync, GrpcClient.UpdateTransferConfig, effectiveSettings.UpdateTransferConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"transfer_config.name={request.TransferConfig?.Name}"));
+                .WithGoogleRequestParam("transfer_config.name", request => request.TransferConfig?.Name);
             _callDeleteTransferConfig = clientHelper.BuildApiCall<DeleteTransferConfigRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTransferConfigAsync, GrpcClient.DeleteTransferConfig, effectiveSettings.DeleteTransferConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetTransferConfig = clientHelper.BuildApiCall<GetTransferConfigRequest, TransferConfig>(
                 GrpcClient.GetTransferConfigAsync, GrpcClient.GetTransferConfig, effectiveSettings.GetTransferConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListTransferConfigs = clientHelper.BuildApiCall<ListTransferConfigsRequest, ListTransferConfigsResponse>(
                 GrpcClient.ListTransferConfigsAsync, GrpcClient.ListTransferConfigs, effectiveSettings.ListTransferConfigsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callScheduleTransferRuns = clientHelper.BuildApiCall<ScheduleTransferRunsRequest, ScheduleTransferRunsResponse>(
                 GrpcClient.ScheduleTransferRunsAsync, GrpcClient.ScheduleTransferRuns, effectiveSettings.ScheduleTransferRunsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetTransferRun = clientHelper.BuildApiCall<GetTransferRunRequest, TransferRun>(
                 GrpcClient.GetTransferRunAsync, GrpcClient.GetTransferRun, effectiveSettings.GetTransferRunSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDeleteTransferRun = clientHelper.BuildApiCall<DeleteTransferRunRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTransferRunAsync, GrpcClient.DeleteTransferRun, effectiveSettings.DeleteTransferRunSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callListTransferRuns = clientHelper.BuildApiCall<ListTransferRunsRequest, ListTransferRunsResponse>(
                 GrpcClient.ListTransferRunsAsync, GrpcClient.ListTransferRuns, effectiveSettings.ListTransferRunsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callListTransferLogs = clientHelper.BuildApiCall<ListTransferLogsRequest, ListTransferLogsResponse>(
                 GrpcClient.ListTransferLogsAsync, GrpcClient.ListTransferLogs, effectiveSettings.ListTransferLogsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callCheckValidCreds = clientHelper.BuildApiCall<CheckValidCredsRequest, CheckValidCredsResponse>(
                 GrpcClient.CheckValidCredsAsync, GrpcClient.CheckValidCreds, effectiveSettings.CheckValidCredsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callStartManualTransferRuns = clientHelper.BuildApiCall<StartManualTransferRunsRequest, StartManualTransferRunsResponse>(
                 GrpcClient.StartManualTransferRunsAsync, GrpcClient.StartManualTransferRuns, effectiveSettings.StartManualTransferRunsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callGetDataSource);
             Modify_GetDataSourceApiCall(ref _callGetDataSource);
             Modify_ApiCall(ref _callListDataSources);

@@ -1210,14 +1210,14 @@ namespace Google.Cloud.Debugger.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callSetBreakpoint = clientHelper.BuildApiCall<SetBreakpointRequest, SetBreakpointResponse>(
                 GrpcClient.SetBreakpointAsync, GrpcClient.SetBreakpoint, effectiveSettings.SetBreakpointSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={request.DebuggeeId}"));
+                .WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             _callGetBreakpoint = clientHelper.BuildApiCall<GetBreakpointRequest, GetBreakpointResponse>(
                 GrpcClient.GetBreakpointAsync, GrpcClient.GetBreakpoint, effectiveSettings.GetBreakpointSettings);
             _callDeleteBreakpoint = clientHelper.BuildApiCall<DeleteBreakpointRequest, pbwkt::Empty>(
                 GrpcClient.DeleteBreakpointAsync, GrpcClient.DeleteBreakpoint, effectiveSettings.DeleteBreakpointSettings);
             _callListBreakpoints = clientHelper.BuildApiCall<ListBreakpointsRequest, ListBreakpointsResponse>(
                 GrpcClient.ListBreakpointsAsync, GrpcClient.ListBreakpoints, effectiveSettings.ListBreakpointsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={request.DebuggeeId}"));
+                .WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             _callListDebuggees = clientHelper.BuildApiCall<ListDebuggeesRequest, ListDebuggeesResponse>(
                 GrpcClient.ListDebuggeesAsync, GrpcClient.ListDebuggees, effectiveSettings.ListDebuggeesSettings);
             Modify_ApiCall(ref _callSetBreakpoint);

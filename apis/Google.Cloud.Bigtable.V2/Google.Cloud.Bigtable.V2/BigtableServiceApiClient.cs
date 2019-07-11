@@ -1720,22 +1720,22 @@ namespace Google.Cloud.Bigtable.V2
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>(
                 GrpcClient.ReadRows, effectiveSettings.ReadRowsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
+                .WithGoogleRequestParam("table_name", request => request.TableName);
             _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>(
                 GrpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
+                .WithGoogleRequestParam("table_name", request => request.TableName);
             _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>(
                 GrpcClient.MutateRowAsync, GrpcClient.MutateRow, effectiveSettings.MutateRowSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
+                .WithGoogleRequestParam("table_name", request => request.TableName);
             _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>(
                 GrpcClient.MutateRows, effectiveSettings.MutateRowsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
+                .WithGoogleRequestParam("table_name", request => request.TableName);
             _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(
                 GrpcClient.CheckAndMutateRowAsync, GrpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
+                .WithGoogleRequestParam("table_name", request => request.TableName);
             _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(
                 GrpcClient.ReadModifyWriteRowAsync, GrpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
+                .WithGoogleRequestParam("table_name", request => request.TableName);
             Modify_ApiCall(ref _callReadRows);
             Modify_ReadRowsApiCall(ref _callReadRows);
             Modify_ApiCall(ref _callSampleRowKeys);

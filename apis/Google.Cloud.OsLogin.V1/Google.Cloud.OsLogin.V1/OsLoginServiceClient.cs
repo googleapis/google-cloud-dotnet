@@ -2108,22 +2108,22 @@ namespace Google.Cloud.OsLogin.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callDeletePosixAccount = clientHelper.BuildApiCall<DeletePosixAccountRequest, pbwkt::Empty>(
                 GrpcClient.DeletePosixAccountAsync, GrpcClient.DeletePosixAccount, effectiveSettings.DeletePosixAccountSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callDeleteSshPublicKey = clientHelper.BuildApiCall<DeleteSshPublicKeyRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSshPublicKeyAsync, GrpcClient.DeleteSshPublicKey, effectiveSettings.DeleteSshPublicKeySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetLoginProfile = clientHelper.BuildApiCall<GetLoginProfileRequest, LoginProfile>(
                 GrpcClient.GetLoginProfileAsync, GrpcClient.GetLoginProfile, effectiveSettings.GetLoginProfileSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callGetSshPublicKey = clientHelper.BuildApiCall<GetSshPublicKeyRequest, gcoc::SshPublicKey>(
                 GrpcClient.GetSshPublicKeyAsync, GrpcClient.GetSshPublicKey, effectiveSettings.GetSshPublicKeySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callImportSshPublicKey = clientHelper.BuildApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse>(
                 GrpcClient.ImportSshPublicKeyAsync, GrpcClient.ImportSshPublicKey, effectiveSettings.ImportSshPublicKeySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateSshPublicKey = clientHelper.BuildApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey>(
                 GrpcClient.UpdateSshPublicKeyAsync, GrpcClient.UpdateSshPublicKey, effectiveSettings.UpdateSshPublicKeySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePosixAccount);
             Modify_DeletePosixAccountApiCall(ref _callDeletePosixAccount);
             Modify_ApiCall(ref _callDeleteSshPublicKey);

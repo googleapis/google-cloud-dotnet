@@ -833,10 +833,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateAssessment = clientHelper.BuildApiCall<CreateAssessmentRequest, Assessment>(
                 GrpcClient.CreateAssessmentAsync, GrpcClient.CreateAssessment, effectiveSettings.CreateAssessmentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callAnnotateAssessment = clientHelper.BuildApiCall<AnnotateAssessmentRequest, AnnotateAssessmentResponse>(
                 GrpcClient.AnnotateAssessmentAsync, GrpcClient.AnnotateAssessment, effectiveSettings.AnnotateAssessmentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateAssessment);
             Modify_CreateAssessmentApiCall(ref _callCreateAssessment);
             Modify_ApiCall(ref _callAnnotateAssessment);
