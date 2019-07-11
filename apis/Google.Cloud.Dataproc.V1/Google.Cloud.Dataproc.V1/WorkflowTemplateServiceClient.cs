@@ -2541,25 +2541,25 @@ namespace Google.Cloud.Dataproc.V1
                 grpcClient.CreateOperationsClient(), effectiveSettings.InstantiateInlineWorkflowTemplateOperationsSettings);
             _callCreateWorkflowTemplate = clientHelper.BuildApiCall<CreateWorkflowTemplateRequest, WorkflowTemplate>(
                 GrpcClient.CreateWorkflowTemplateAsync, GrpcClient.CreateWorkflowTemplate, effectiveSettings.CreateWorkflowTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetWorkflowTemplate = clientHelper.BuildApiCall<GetWorkflowTemplateRequest, WorkflowTemplate>(
                 GrpcClient.GetWorkflowTemplateAsync, GrpcClient.GetWorkflowTemplate, effectiveSettings.GetWorkflowTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callInstantiateWorkflowTemplate = clientHelper.BuildApiCall<InstantiateWorkflowTemplateRequest, lro::Operation>(
                 GrpcClient.InstantiateWorkflowTemplateAsync, GrpcClient.InstantiateWorkflowTemplate, effectiveSettings.InstantiateWorkflowTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             _callInstantiateInlineWorkflowTemplate = clientHelper.BuildApiCall<InstantiateInlineWorkflowTemplateRequest, lro::Operation>(
                 GrpcClient.InstantiateInlineWorkflowTemplateAsync, GrpcClient.InstantiateInlineWorkflowTemplate, effectiveSettings.InstantiateInlineWorkflowTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callUpdateWorkflowTemplate = clientHelper.BuildApiCall<UpdateWorkflowTemplateRequest, WorkflowTemplate>(
                 GrpcClient.UpdateWorkflowTemplateAsync, GrpcClient.UpdateWorkflowTemplate, effectiveSettings.UpdateWorkflowTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"template.name={request.Template?.Name}"));
+                .WithGoogleRequestParam("template.name", request => request.Template?.Name);
             _callListWorkflowTemplates = clientHelper.BuildApiCall<ListWorkflowTemplatesRequest, ListWorkflowTemplatesResponse>(
                 GrpcClient.ListWorkflowTemplatesAsync, GrpcClient.ListWorkflowTemplates, effectiveSettings.ListWorkflowTemplatesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteWorkflowTemplate = clientHelper.BuildApiCall<DeleteWorkflowTemplateRequest, pbwkt::Empty>(
                 GrpcClient.DeleteWorkflowTemplateAsync, GrpcClient.DeleteWorkflowTemplate, effectiveSettings.DeleteWorkflowTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateWorkflowTemplate);
             Modify_CreateWorkflowTemplateApiCall(ref _callCreateWorkflowTemplate);
             Modify_ApiCall(ref _callGetWorkflowTemplate);
