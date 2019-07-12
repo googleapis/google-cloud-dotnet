@@ -40,23 +40,23 @@ The following libraries are available at a [GA](#versioning) quality level:
   * The [V1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) is also available (beta)
 * [Google Cloud Scheduler](https://cloud.google.com/scheduler/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Scheduler.V1) (GA)
 * [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.SecurityCenter.V1) (GA)
-* [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1/) (GA)
-* [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/) (GA)
-* [Stackdriver Trace v1](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (GA)
-* [Google Cloud Tasks](https://cloud.google.com/tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
-* [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
-* [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
-* [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
-  * Additionally, the following libraries are available for access to beta API functionality:
-    * [Google.Cloud.Vision.V1P1Beta1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P1Beta1/)
-    * [Google.Cloud.Vision.V1P2Beta1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P2Beta1/)
 * [Google Cloud Spanner](https://cloud.google.com/spanner/): four packages are available, all GA:
   * [Google.Cloud.Spanner.Data](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Data/): ADO.NET provider for Google Cloud Spanner (recommended)
   * [Google.Cloud.Spanner.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.V1/): Low-level access to Spanner API
   * [Google.Cloud.Spanner.Admin.Database.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Database.V1/): Database administration API
   * [Google.Cloud.Spanner.Admin.Instance.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Instance.V1/): Instance administration API
-* [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.TextToSpeech.V1/) (GA)
+* [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1/) (GA)
+* [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/) (GA)
+* [Google Cloud Tasks](https://cloud.google.com/tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
+* [Stackdriver Trace v1](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (GA)
 * [Stackdriver Trace v2](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V2/) (GA)
+* [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
+* [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.TextToSpeech.V1/) (GA)
+* [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
+* [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
+  * Additionally, the following libraries are available for access to beta API functionality:
+    * [Google.Cloud.Vision.V1P1Beta1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P1Beta1/)
+    * [Google.Cloud.Vision.V1P2Beta1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P2Beta1/)
 
 The following libraries are available at a [beta](#versioning) quality level:
 
