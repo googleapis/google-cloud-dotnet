@@ -50,7 +50,7 @@ namespace Google.Cloud.Spanner.Common.V1
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="InstanceName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string instanceName, out InstanceName result)
         {
             gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
@@ -66,6 +66,13 @@ namespace Google.Cloud.Spanner.Common.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="InstanceName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="InstanceName"/>.</returns>
+        public static string Format(string projectId, string instanceId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="InstanceName"/> resource name class

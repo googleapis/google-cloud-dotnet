@@ -50,7 +50,7 @@ namespace Google.Cloud.Spanner.Common.V1
         /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="DatabaseName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string databaseName, out DatabaseName result)
         {
             gax::GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
@@ -66,6 +66,14 @@ namespace Google.Cloud.Spanner.Common.V1
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="DatabaseName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The <c>database</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="DatabaseName"/>.</returns>
+        public static string Format(string projectId, string instanceId, string databaseId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="DatabaseName"/> resource name class
