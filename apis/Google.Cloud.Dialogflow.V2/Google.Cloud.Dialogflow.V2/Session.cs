@@ -72,49 +72,50 @@ namespace Google.Cloud.Dialogflow.V2 {
             "dGVjdGlvbl9jb25maWRlbmNlGAwgASgCEjAKD2RpYWdub3N0aWNfaW5mbxgO",
             "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSVgoZc2VudGltZW50X2Fu",
             "YWx5c2lzX3Jlc3VsdBgRIAEoCzIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLlNlbnRpbWVudEFuYWx5c2lzUmVzdWx0IqoCChxTdHJlYW1pbmdEZXRl",
+            "LnYyLlNlbnRpbWVudEFuYWx5c2lzUmVzdWx0Iq4CChxTdHJlYW1pbmdEZXRl",
             "Y3RJbnRlbnRSZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkSQQoMcXVlcnlfcGFy",
             "YW1zGAIgASgLMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlQ",
             "YXJhbWV0ZXJzEjsKC3F1ZXJ5X2lucHV0GAMgASgLMiYuZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuUXVlcnlJbnB1dBIYChBzaW5nbGVfdXR0ZXJhbmNl",
-            "GAQgASgIEkoKE291dHB1dF9hdWRpb19jb25maWcYBSABKAsyLS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0NvbmZpZxITCgtpbnB1",
-            "dF9hdWRpbxgGIAEoDCLVAgodU3RyZWFtaW5nRGV0ZWN0SW50ZW50UmVzcG9u",
-            "c2USEwoLcmVzcG9uc2VfaWQYASABKAkSUgoScmVjb2duaXRpb25fcmVzdWx0",
-            "GAIgASgLMjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3RyZWFtaW5n",
-            "UmVjb2duaXRpb25SZXN1bHQSPQoMcXVlcnlfcmVzdWx0GAMgASgLMicuZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlSZXN1bHQSKgoOd2ViaG9v",
-            "a19zdGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0YXR1cxIUCgxvdXRwdXRf",
-            "YXVkaW8YBSABKAwSSgoTb3V0cHV0X2F1ZGlvX2NvbmZpZxgGIAEoCzItLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk91dHB1dEF1ZGlvQ29uZmlnIooC",
-            "ChpTdHJlYW1pbmdSZWNvZ25pdGlvblJlc3VsdBJYCgxtZXNzYWdlX3R5cGUY",
-            "ASABKA4yQi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TdHJlYW1pbmdS",
-            "ZWNvZ25pdGlvblJlc3VsdC5NZXNzYWdlVHlwZRISCgp0cmFuc2NyaXB0GAIg",
-            "ASgJEhAKCGlzX2ZpbmFsGAMgASgIEhIKCmNvbmZpZGVuY2UYBCABKAIiWAoL",
-            "TWVzc2FnZVR5cGUSHAoYTUVTU0FHRV9UWVBFX1VOU1BFQ0lGSUVEEAASDgoK",
-            "VFJBTlNDUklQVBABEhsKF0VORF9PRl9TSU5HTEVfVVRURVJBTkNFEAIiMAoJ",
-            "VGV4dElucHV0EgwKBHRleHQYASABKAkSFQoNbGFuZ3VhZ2VfY29kZRgCIAEo",
-            "CSJeCgpFdmVudElucHV0EgwKBG5hbWUYASABKAkSKwoKcGFyYW1ldGVycxgC",
-            "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSFQoNbGFuZ3VhZ2VfY29k",
-            "ZRgDIAEoCSJGCh5TZW50aW1lbnRBbmFseXNpc1JlcXVlc3RDb25maWcSJAoc",
-            "YW5hbHl6ZV9xdWVyeV90ZXh0X3NlbnRpbWVudBgBIAEoCCJeChdTZW50aW1l",
-            "bnRBbmFseXNpc1Jlc3VsdBJDChRxdWVyeV90ZXh0X3NlbnRpbWVudBgBIAEo",
-            "CzIlLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNlbnRpbWVudCItCglT",
-            "ZW50aW1lbnQSDQoFc2NvcmUYASABKAISEQoJbWFnbml0dWRlGAIgASgCMtAD",
-            "CghTZXNzaW9ucxK0AQoMRGV0ZWN0SW50ZW50Ei8uZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuRGV0ZWN0SW50ZW50UmVxdWVzdBowLmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LnYyLkRldGVjdEludGVudFJlc3BvbnNlIkGC0+STAjsi",
-            "Ni92Mi97c2Vzc2lvbj1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25zLyp9OmRl",
-            "dGVjdEludGVudDoBKhKSAQoVU3RyZWFtaW5nRGV0ZWN0SW50ZW50EjguZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3RyZWFtaW5nRGV0ZWN0SW50ZW50",
-            "UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0cmVhbWlu",
-            "Z0RldGVjdEludGVudFJlc3BvbnNlIgAoATABGnjKQRlkaWFsb2dmbG93Lmdv",
-            "b2dsZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2RpYWxvZ2Zsb3dCmwEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52MkIMU2Vzc2lvblByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93",
-            "+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "LmRpYWxvZ2Zsb3cudjIuUXVlcnlJbnB1dBIcChBzaW5nbGVfdXR0ZXJhbmNl",
+            "GAQgASgIQgIYARJKChNvdXRwdXRfYXVkaW9fY29uZmlnGAUgASgLMi0uZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuT3V0cHV0QXVkaW9Db25maWcSEwoL",
+            "aW5wdXRfYXVkaW8YBiABKAwi1QIKHVN0cmVhbWluZ0RldGVjdEludGVudFJl",
+            "c3BvbnNlEhMKC3Jlc3BvbnNlX2lkGAEgASgJElIKEnJlY29nbml0aW9uX3Jl",
+            "c3VsdBgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0cmVh",
+            "bWluZ1JlY29nbml0aW9uUmVzdWx0Ej0KDHF1ZXJ5X3Jlc3VsdBgDIAEoCzIn",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlF1ZXJ5UmVzdWx0EioKDndl",
+            "Ymhvb2tfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSFAoMb3V0",
+            "cHV0X2F1ZGlvGAUgASgMEkoKE291dHB1dF9hdWRpb19jb25maWcYBiABKAsy",
+            "LS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0NvbmZp",
+            "ZyKKAgoaU3RyZWFtaW5nUmVjb2duaXRpb25SZXN1bHQSWAoMbWVzc2FnZV90",
+            "eXBlGAEgASgOMkIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3RyZWFt",
+            "aW5nUmVjb2duaXRpb25SZXN1bHQuTWVzc2FnZVR5cGUSEgoKdHJhbnNjcmlw",
+            "dBgCIAEoCRIQCghpc19maW5hbBgDIAEoCBISCgpjb25maWRlbmNlGAQgASgC",
+            "IlgKC01lc3NhZ2VUeXBlEhwKGE1FU1NBR0VfVFlQRV9VTlNQRUNJRklFRBAA",
+            "Eg4KClRSQU5TQ1JJUFQQARIbChdFTkRfT0ZfU0lOR0xFX1VUVEVSQU5DRRAC",
+            "IjAKCVRleHRJbnB1dBIMCgR0ZXh0GAEgASgJEhUKDWxhbmd1YWdlX2NvZGUY",
+            "AiABKAkiXgoKRXZlbnRJbnB1dBIMCgRuYW1lGAEgASgJEisKCnBhcmFtZXRl",
+            "cnMYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EhUKDWxhbmd1YWdl",
+            "X2NvZGUYAyABKAkiRgoeU2VudGltZW50QW5hbHlzaXNSZXF1ZXN0Q29uZmln",
+            "EiQKHGFuYWx5emVfcXVlcnlfdGV4dF9zZW50aW1lbnQYASABKAgiXgoXU2Vu",
+            "dGltZW50QW5hbHlzaXNSZXN1bHQSQwoUcXVlcnlfdGV4dF9zZW50aW1lbnQY",
+            "ASABKAsyJS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TZW50aW1lbnQi",
+            "LQoJU2VudGltZW50Eg0KBXNjb3JlGAEgASgCEhEKCW1hZ25pdHVkZRgCIAEo",
+            "AjLQAwoIU2Vzc2lvbnMStAEKDERldGVjdEludGVudBIvLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLkRldGVjdEludGVudFJlcXVlc3QaMC5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5EZXRlY3RJbnRlbnRSZXNwb25zZSJBgtPk",
+            "kwI7IjYvdjIve3Nlc3Npb249cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8q",
+            "fTpkZXRlY3RJbnRlbnQ6ASoSkgEKFVN0cmVhbWluZ0RldGVjdEludGVudBI4",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0cmVhbWluZ0RldGVjdElu",
+            "dGVudFJlcXVlc3QaOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TdHJl",
+            "YW1pbmdEZXRlY3RJbnRlbnRSZXNwb25zZSIAKAEwARp4ykEZZGlhbG9nZmxv",
+            "dy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9kaWFsb2dmbG93QpsBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cudjJCDFNlc3Npb25Qcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9n",
+            "Zmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -1562,6 +1563,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The intent detection confidence. Values range from 0.0
     /// (completely uncertain) to 1.0 (completely certain).
+    /// This value is for informational purpose only and is only used to
+    /// help match the best intent within the classification threshold.
+    /// This value may change for the same end-user expression at any time due to a
+    /// model retraining or change in implementation.
     /// If there are `multiple knowledge_answers` messages, this value is set to
     /// the greatest `knowledgeAnswers.match_confidence` value in the list.
     /// </summary>
@@ -1935,7 +1940,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Multiple request messages should be sent in order:
   ///
   /// 1.  The first message must contain `session`, `query_input` plus optionally
-  ///     `query_params` and/or `single_utterance`. The message must not contain `input_audio`.
+  ///     `query_params`. The message must not contain `input_audio`.
   ///
   /// 2.  If `query_input` was set to a streaming input audio config,
   ///     all subsequent messages must contain only `input_audio`.
@@ -2038,15 +2043,16 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int SingleUtteranceFieldNumber = 4;
     private bool singleUtterance_;
     /// <summary>
-    /// Optional. If `false` (default), recognition does not cease until the
-    /// client closes the stream.
-    /// If `true`, the recognizer will detect a single spoken utterance in input
-    /// audio. Recognition ceases when it detects the audio's voice has
-    /// stopped or paused. In this case, once a detected intent is received, the
-    /// client should close the stream and start a new request with a new stream as
-    /// needed.
+    /// DEPRECATED. Please use [InputAudioConfig.single_utterance][google.cloud.dialogflow.v2.InputAudioConfig.single_utterance] instead.
+    /// Optional. If `false` (default), recognition does not cease until
+    /// the client closes the stream. If `true`, the recognizer will detect a
+    /// single spoken utterance in input audio. Recognition ceases when it detects
+    /// the audio's voice has stopped or paused. In this case, once a detected
+    /// intent is received, the client should close the stream and start a new
+    /// request with a new stream as needed.
     /// This setting is ignored when `query_input` is a piece of text or an event.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SingleUtterance {
       get { return singleUtterance_; }
@@ -2620,7 +2626,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// 6.  transcript: " that is"
   ///
-  /// 7.  message_type: `MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE`
+  /// 7.  message_type: `END_OF_SINGLE_UTTERANCE`
   ///
   /// 8.  transcript: " that is the question"
   ///     is_final: true
@@ -2631,9 +2637,9 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// In each response we populate:
   ///
-  /// *  for `MESSAGE_TYPE_TRANSCRIPT`: `transcript` and possibly `is_final`.
+  /// *  for `TRANSCRIPT`: `transcript` and possibly `is_final`.
   ///
-  /// *  for `MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE`: only `message_type`.
+  /// *  for `END_OF_SINGLE_UTTERANCE`: only `message_type`.
   /// </summary>
   public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult> {
     private static readonly pb::MessageParser<StreamingRecognitionResult> _parser = new pb::MessageParser<StreamingRecognitionResult>(() => new StreamingRecognitionResult());
@@ -2691,7 +2697,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string transcript_ = "";
     /// <summary>
     /// Transcript text representing the words that the user spoke.
-    /// Populated if and only if `message_type` = `MESSAGE_TYPE_TRANSCRIPT`.
+    /// Populated if and only if `message_type` = `TRANSCRIPT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Transcript {
@@ -2708,7 +2714,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// If `false`, the `StreamingRecognitionResult` represents an
     /// interim result that may change. If `true`, the recognizer will not return
     /// any further hypotheses about this piece of the audio. May only be populated
-    /// for `message_type` = `MESSAGE_TYPE_TRANSCRIPT`.
+    /// for `message_type` = `TRANSCRIPT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsFinal {
