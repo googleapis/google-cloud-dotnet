@@ -50,7 +50,7 @@ namespace Google.Cloud.Bigtable.Common.V2
         /// <param name="tableName">The table resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="TableName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string tableName, out TableName result)
         {
             gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
@@ -66,6 +66,14 @@ namespace Google.Cloud.Bigtable.Common.V2
                 return false;
             }
         }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="TableName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The <c>instance</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="tableId">The <c>table</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="TableName"/>.</returns>
+        public static string Format(string projectId, string instanceId, string tableId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNull(tableId, nameof(tableId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="TableName"/> resource name class
