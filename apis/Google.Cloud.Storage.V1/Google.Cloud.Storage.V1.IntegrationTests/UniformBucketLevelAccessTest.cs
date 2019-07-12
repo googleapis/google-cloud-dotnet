@@ -15,18 +15,17 @@
 using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
 using System;
-using System.IO;
 using System.Net;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    public class BucketPolicyOnlyTest
+    public class UniformBucketLevelAccessTest
     {
         private readonly StorageFixture _fixture;
 
-        public BucketPolicyOnlyTest(StorageFixture fixture) => _fixture = fixture;
+        public UniformBucketLevelAccessTest(StorageFixture fixture) => _fixture = fixture;
 
         [Fact]
         public void EnableDisableOnExistingBucket()
@@ -34,35 +33,35 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             string bucketName = _fixture.GenerateBucketName();
             var client = _fixture.Client;
             CreateBucket();
-            EnableBpo();
-            DisableBpo();
+            EnableUbla();
+            DisableUbla();
 
             // Individual steps of the test as local methods
 
             void CreateBucket()
             {
                 Bucket bucket = _fixture.CreateBucket(bucketName, false);
-                Assert.False(bucket.IamConfiguration.BucketPolicyOnly.Enabled);
+                Assert.False(bucket.IamConfiguration.UniformBucketLevelAccess.Enabled);
             }
 
-            void EnableBpo()
+            void EnableUbla()
             {
                 client.PatchBucket(CreateBucketRepresentation(bucketName, true));
 
                 var fetched = client.GetBucket(bucketName);
-                Assert.True(fetched.IamConfiguration.BucketPolicyOnly.Enabled);
-                var lockedTime = fetched.IamConfiguration.BucketPolicyOnly.LockedTime;
+                Assert.True(fetched.IamConfiguration.UniformBucketLevelAccess.Enabled);
+                var lockedTime = fetched.IamConfiguration.UniformBucketLevelAccess.LockedTime;
                 Assert.NotNull(lockedTime);
 
                 var expectedLockedTime = DateTime.UtcNow.AddDays(90);
                 Assert.InRange(lockedTime.Value.ToUniversalTime(), expectedLockedTime.AddMinutes(-10), expectedLockedTime.AddMinutes(10));
             }
 
-            void DisableBpo()
+            void DisableUbla()
             {
                 client.PatchBucket(CreateBucketRepresentation(bucketName, false));
                 var fetched = client.GetBucket(bucketName);
-                Assert.False(fetched.IamConfiguration.BucketPolicyOnly.Enabled);
+                Assert.False(fetched.IamConfiguration.UniformBucketLevelAccess.Enabled);
             }
         }        
 
@@ -83,7 +82,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 Bucket created = client.CreateBucket(_fixture.ProjectId, CreateBucketRepresentation(bucketName, true));
                 _fixture.RegisterBucketToDelete(bucketName);
                 StorageFixture.SleepAfterBucketCreateDelete();
-                Assert.True(created.IamConfiguration.BucketPolicyOnly.Enabled);
+                Assert.True(created.IamConfiguration.UniformBucketLevelAccess.Enabled);
             }
 
             void UploadDownloadObject()
@@ -110,7 +109,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 Name = bucketName,
                 IamConfiguration = new Bucket.IamConfigurationData
                 {
-                    BucketPolicyOnly = new Bucket.IamConfigurationData.BucketPolicyOnlyData
+                    UniformBucketLevelAccess = new Bucket.IamConfigurationData.UniformBucketLevelAccessData
                     {
                         Enabled = enabled
                     }
