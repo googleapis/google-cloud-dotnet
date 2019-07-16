@@ -31,6 +31,9 @@ GA:
     Please update to Google.Cloud.Dlp.V2.
 - [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
 - [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
+- Google Cloud Firestore:
+  - [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html): High-level client library for Google Cloud Firestore (recommended)
+  - [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html): Low-level access to Firestore API
 - [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html)
 - [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
@@ -65,9 +68,6 @@ Beta:
 - [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
 - [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
-- Google Cloud Firestore:
-  - [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html): High-level client library for Google Cloud Firestore (recommended)
-  - [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html): Low-level access to Firestore API
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Grafeas.V1](Grafeas.V1/index.html)
 
