@@ -28,6 +28,9 @@ The following libraries are available at a [GA](#versioning) quality level:
   * [V2 API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2/) (GA)
   * The Google.Cloud.Dlp.V2Beta1 package has now been deprecated, and is unlisted on nuget.org.
     Please update to Google.Cloud.Dlp.V2.
+* [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both GA:
+  * [Google.Cloud.Firestore](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
+  * [Google.Cloud.Firestore.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1/): Low-level access to Firestore API
 * [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Kms.V1/) (GA)
 * [Google Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/) (GA)
   * Integration with Log4Net is provided via [Google.Cloud.Logging.Log4Net](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.Log4Net/) (GA)
@@ -63,19 +66,12 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google Cloud Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.DevTools.ContainerAnalysis.V1) (beta)
   * This is an implementaiton of the [Grafeas](https://grafeas.io) API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Grafeas.V1) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
-* [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both beta:
-  * [Google.Cloud.Firestore](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
-  * [Google.Cloud.Firestore.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1/): Low-level access to Firestore API
-
 The following libraries are available at an [alpha](#versioning) quality level:
 
 * Google Cloud Metadata - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
 
 See the [API documentation](http://googleapis.github.io/google-cloud-dotnet/docs/) for details of the status
 of each library.
-
-> Note: This client is a work-in-progress, and may occasionally
-> make backwards-incompatible changes.
 
 If you need support for other Google APIs, check out the
 [Google .NET API Client library](https://github.com/google/google-api-dotnet-client)
