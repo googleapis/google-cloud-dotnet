@@ -485,6 +485,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// [EmploymentRecord.is_current][google.cloud.talent.v4beta1.EmploymentRecord.is_current]
     /// for the current employment if possible. If not, it's inferred from user
     /// inputs.
+    ///
+    /// The limitation for max number of employment records is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentRecord> EmploymentRecords {
@@ -509,6 +511,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// [EducationRecord.is_current][google.cloud.talent.v4beta1.EducationRecord.is_current]
     /// for the current education if possible. If not, it's inferred from user
     /// inputs.
+    ///
+    /// The limitation for max number of education records is 10.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EducationRecord> EducationRecords {
@@ -523,6 +527,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional. The skill set of the candidate. It's highly recommended to
     /// provide as much information as possible to help improve the search quality.
+    ///
+    /// The limitation for max number of skills is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill> Skills {
@@ -539,6 +545,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// has participated in, for example, open-source projects, class assignments
     /// that aren't listed in
     /// [employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
+    ///
+    /// The limitation for max number of activities is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Activity> Activities {
@@ -552,6 +560,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Publication> publications_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Publication>();
     /// <summary>
     /// Optional. The publications published by the candidate.
+    ///
+    /// The limitation for max number of publications is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Publication> Publications {
@@ -4358,6 +4368,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional. A list of team members involved in this activity.
     ///
     /// Number of characters allowed is 100.
+    ///
+    /// The limitation for max number of team members is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> TeamMembers {
@@ -4371,6 +4383,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill> skillsUsed_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill>();
     /// <summary>
     /// Optional. A list of skills used in this activity.
+    ///
+    /// The limitation for max number of skills used is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill> SkillsUsed {

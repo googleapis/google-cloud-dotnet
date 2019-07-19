@@ -131,7 +131,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The display name of the company, for example, "Google, LLC".
+    /// Required. The display name of the company, for example, "Google LLC".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {

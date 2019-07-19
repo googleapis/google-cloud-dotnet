@@ -461,13 +461,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [pbr::OriginalName("FAILED")] Failed = 4,
         /// <summary>
         /// The batch operation is in the process of cancelling after
-        /// [google.longrunning.Operation.CancelOperation] is called.
+        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation]
+        /// is called.
         /// </summary>
         [pbr::OriginalName("CANCELLING")] Cancelling = 5,
         /// <summary>
         /// The batch operation is done after
-        /// [google.longrunning.Operation.CancelOperation] is called. Any items
-        /// processed before cancelling are returned in the response.
+        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation]
+        /// is called. Any items processed before cancelling are returned in the
+        /// response.
         /// </summary>
         [pbr::OriginalName("CANCELLED")] Cancelled = 6,
       }
@@ -480,8 +482,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Output only.
   ///
-  /// The result of [BatchCreateJobs][] or [BatchUpdateJobs][] APIs. It's used to
-  /// replace
+  /// The result of
+  /// [JobService.BatchCreateJobs][google.cloud.talent.v4beta1.JobService.BatchCreateJobs]
+  /// or
+  /// [JobService.BatchUpdateJobs][google.cloud.talent.v4beta1.JobService.BatchUpdateJobs]
+  /// APIs. It's used to replace
   /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
   /// in case of success.
   /// </summary>

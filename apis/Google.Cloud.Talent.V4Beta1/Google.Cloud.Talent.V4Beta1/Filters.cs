@@ -47,7 +47,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5FbXBsb3ltZW50VHlwZRIW",
             "Cg5sYW5ndWFnZV9jb2RlcxgLIAMoCRJHChJwdWJsaXNoX3RpbWVfcmFuZ2UY",
             "DCABKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGltZXN0YW1w",
-            "UmFuZ2USFQoNZXhjbHVkZWRfam9icxgNIAMoCSLWBwoMUHJvZmlsZVF1ZXJ5",
+            "UmFuZ2USFQoNZXhjbHVkZWRfam9icxgNIAMoCSKiCAoMUHJvZmlsZVF1ZXJ5",
             "Eg0KBXF1ZXJ5GAEgASgJEkUKEGxvY2F0aW9uX2ZpbHRlcnMYAiADKAsyKy5n",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTG9jYXRpb25GaWx0ZXISRgoR",
             "am9iX3RpdGxlX2ZpbHRlcnMYAyADKAsyKy5nb29nbGUuY2xvdWQudGFsZW50",
@@ -69,70 +69,73 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "djRiZXRhMS5BcHBsaWNhdGlvbkpvYkZpbHRlchIfChdjdXN0b21fYXR0cmli",
             "dXRlX2ZpbHRlchgPIAEoCRJfCh1jYW5kaWRhdGVfYXZhaWxhYmlsaXR5X2Zp",
             "bHRlchgQIAEoCzI4Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DYW5k",
-            "aWRhdGVBdmFpbGFiaWxpdHlGaWx0ZXIi3wIKDkxvY2F0aW9uRmlsdGVyEg8K",
-            "B2FkZHJlc3MYASABKAkSEwoLcmVnaW9uX2NvZGUYAiABKAkSJAoHbGF0X2xu",
-            "ZxgDIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxIZChFkaXN0YW5jZV9pbl9t",
-            "aWxlcxgEIAEoARJhChZ0ZWxlY29tbXV0ZV9wcmVmZXJlbmNlGAUgASgOMkEu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uRmlsdGVyLlRl",
-            "bGVjb21tdXRlUHJlZmVyZW5jZRIPCgduZWdhdGVkGAYgASgIInIKFVRlbGVj",
-            "b21tdXRlUHJlZmVyZW5jZRImCiJURUxFQ09NTVVURV9QUkVGRVJFTkNFX1VO",
-            "U1BFQ0lGSUVEEAASGAoUVEVMRUNPTU1VVEVfRVhDTFVERUQQARIXChNURUxF",
-            "Q09NTVVURV9BTExPV0VEEAIiwAMKEkNvbXBlbnNhdGlvbkZpbHRlchJICgR0",
-            "eXBlGAEgASgOMjouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBl",
-            "bnNhdGlvbkZpbHRlci5GaWx0ZXJUeXBlEk0KBXVuaXRzGAIgAygOMj4uZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBlbnNhdGlvbkluZm8uQ29t",
-            "cGVuc2F0aW9uVW5pdBJOCgVyYW5nZRgDIAEoCzI/Lmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5Db21wZW5zYXRpb25JbmZvLkNvbXBlbnNhdGlvblJh",
-            "bmdlEjgKMGluY2x1ZGVfam9ic193aXRoX3Vuc3BlY2lmaWVkX2NvbXBlbnNh",
-            "dGlvbl9yYW5nZRgEIAEoCCKGAQoKRmlsdGVyVHlwZRIbChdGSUxURVJfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEg0KCVVOSVRfT05MWRABEhMKD1VOSVRfQU5EX0FN",
-            "T1VOVBACEhoKFkFOTlVBTElaRURfQkFTRV9BTU9VTlQQAxIbChdBTk5VQUxJ",
-            "WkVEX1RPVEFMX0FNT1VOVBAEIrwDCg1Db21tdXRlRmlsdGVyEkIKDmNvbW11",
-            "dGVfbWV0aG9kGAEgASgOMiouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LkNvbW11dGVNZXRob2QSLgoRc3RhcnRfY29vcmRpbmF0ZXMYAiABKAsyEy5n",
-            "b29nbGUudHlwZS5MYXRMbmcSMgoPdHJhdmVsX2R1cmF0aW9uGAMgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiEKGWFsbG93X2ltcHJlY2lzZV9h",
-            "ZGRyZXNzZXMYBCABKAgSTgoMcm9hZF90cmFmZmljGAUgASgOMjYuZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExLkNvbW11dGVGaWx0ZXIuUm9hZFRyYWZm",
-            "aWNIABIwCg5kZXBhcnR1cmVfdGltZRgGIAEoCzIWLmdvb2dsZS50eXBlLlRp",
-            "bWVPZkRheUgAIkwKC1JvYWRUcmFmZmljEhwKGFJPQURfVFJBRkZJQ19VTlNQ",
-            "RUNJRklFRBAAEhAKDFRSQUZGSUNfRlJFRRABEg0KCUJVU1lfSE9VUhACQhAK",
-            "DnRyYWZmaWNfb3B0aW9uIjQKDkpvYlRpdGxlRmlsdGVyEhEKCWpvYl90aXRs",
-            "ZRgBIAEoCRIPCgduZWdhdGVkGAIgASgIIi0KC1NraWxsRmlsdGVyEg0KBXNr",
-            "aWxsGAEgASgJEg8KB25lZ2F0ZWQYAiABKAgioQIKDkVtcGxveWVyRmlsdGVy",
-            "EhAKCGVtcGxveWVyGAEgASgJEkwKBG1vZGUYAiABKA4yPi5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuRW1wbG95ZXJGaWx0ZXIuRW1wbG95ZXJGaWx0",
-            "ZXJNb2RlEg8KB25lZ2F0ZWQYAyABKAginQEKEkVtcGxveWVyRmlsdGVyTW9k",
-            "ZRIkCiBFTVBMT1lFUl9GSUxURVJfTU9ERV9VTlNQRUNJRklFRBAAEhoKFkFM",
-            "TF9FTVBMT1lNRU5UX1JFQ09SRFMQARIjCh9DVVJSRU5UX0VNUExPWU1FTlRf",
-            "UkVDT1JEU19PTkxZEAISIAocUEFTVF9FTVBMT1lNRU5UX1JFQ09SRFNfT05M",
-            "WRADIogBCg9FZHVjYXRpb25GaWx0ZXISDgoGc2Nob29sGAEgASgJEhYKDmZp",
-            "ZWxkX29mX3N0dWR5GAIgASgJEjwKC2RlZ3JlZV90eXBlGAMgASgOMicuZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlZ3JlZVR5cGUSDwoHbmVnYXRl",
-            "ZBgGIAEoCCJ8ChRXb3JrRXhwZXJpZW5jZUZpbHRlchIxCg5taW5fZXhwZXJp",
-            "ZW5jZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5tYXhf",
-            "ZXhwZXJpZW5jZRgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJj",
-            "ChVBcHBsaWNhdGlvbkRhdGVGaWx0ZXISJQoKc3RhcnRfZGF0ZRgBIAEoCzIR",
-            "Lmdvb2dsZS50eXBlLkRhdGUSIwoIZW5kX2RhdGUYAiABKAsyES5nb29nbGUu",
-            "dHlwZS5EYXRlIkcKHUFwcGxpY2F0aW9uT3V0Y29tZU5vdGVzRmlsdGVyEhUK",
-            "DW91dGNvbWVfbm90ZXMYASABKAkSDwoHbmVnYXRlZBgCIAEoCCJWChRBcHBs",
-            "aWNhdGlvbkpvYkZpbHRlchIaChJqb2JfcmVxdWlzaXRpb25faWQYAiABKAkS",
-            "EQoJam9iX3RpdGxlGAMgASgJEg8KB25lZ2F0ZWQYBCABKAgi/AEKClRpbWVG",
-            "aWx0ZXISLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEkUKCnRpbWVfZmllbGQYAyABKA4yMS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuVGltZUZpbHRlci5UaW1lRmllbGQiSQoJVGltZUZp",
-            "ZWxkEhoKFlRJTUVfRklFTERfVU5TUEVDSUZJRUQQABIPCgtDUkVBVEVfVElN",
-            "RRABEg8KC1VQREFURV9USU1FEAIiLgobQ2FuZGlkYXRlQXZhaWxhYmlsaXR5",
-            "RmlsdGVyEg8KB25lZ2F0ZWQYASABKAhCegofY29tLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMUIMRmlsdGVyc1Byb3RvUAFaQWdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7",
-            "dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "aWRhdGVBdmFpbGFiaWxpdHlGaWx0ZXISSgoTcGVyc29uX25hbWVfZmlsdGVy",
+            "cxgRIAMoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5QZXJzb25O",
+            "YW1lRmlsdGVyIt8CCg5Mb2NhdGlvbkZpbHRlchIPCgdhZGRyZXNzGAEgASgJ",
+            "EhMKC3JlZ2lvbl9jb2RlGAIgASgJEiQKB2xhdF9sbmcYAyABKAsyEy5nb29n",
+            "bGUudHlwZS5MYXRMbmcSGQoRZGlzdGFuY2VfaW5fbWlsZXMYBCABKAESYQoW",
+            "dGVsZWNvbW11dGVfcHJlZmVyZW5jZRgFIAEoDjJBLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Mb2NhdGlvbkZpbHRlci5UZWxlY29tbXV0ZVByZWZl",
+            "cmVuY2USDwoHbmVnYXRlZBgGIAEoCCJyChVUZWxlY29tbXV0ZVByZWZlcmVu",
+            "Y2USJgoiVEVMRUNPTU1VVEVfUFJFRkVSRU5DRV9VTlNQRUNJRklFRBAAEhgK",
+            "FFRFTEVDT01NVVRFX0VYQ0xVREVEEAESFwoTVEVMRUNPTU1VVEVfQUxMT1dF",
+            "RBACIsADChJDb21wZW5zYXRpb25GaWx0ZXISSAoEdHlwZRgBIAEoDjI6Lmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wZW5zYXRpb25GaWx0ZXIu",
+            "RmlsdGVyVHlwZRJNCgV1bml0cxgCIAMoDjI+Lmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5Db21wZW5zYXRpb25JbmZvLkNvbXBlbnNhdGlvblVuaXQS",
+            "TgoFcmFuZ2UYAyABKAsyPy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "Q29tcGVuc2F0aW9uSW5mby5Db21wZW5zYXRpb25SYW5nZRI4CjBpbmNsdWRl",
+            "X2pvYnNfd2l0aF91bnNwZWNpZmllZF9jb21wZW5zYXRpb25fcmFuZ2UYBCAB",
+            "KAgihgEKCkZpbHRlclR5cGUSGwoXRklMVEVSX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABINCglVTklUX09OTFkQARITCg9VTklUX0FORF9BTU9VTlQQAhIaChZBTk5V",
+            "QUxJWkVEX0JBU0VfQU1PVU5UEAMSGwoXQU5OVUFMSVpFRF9UT1RBTF9BTU9V",
+            "TlQQBCK8AwoNQ29tbXV0ZUZpbHRlchJCCg5jb21tdXRlX21ldGhvZBgBIAEo",
+            "DjIqLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21tdXRlTWV0aG9k",
+            "Ei4KEXN0YXJ0X2Nvb3JkaW5hdGVzGAIgASgLMhMuZ29vZ2xlLnR5cGUuTGF0",
+            "TG5nEjIKD3RyYXZlbF9kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhIhChlhbGxvd19pbXByZWNpc2VfYWRkcmVzc2VzGAQgASgI",
+            "Ek4KDHJvYWRfdHJhZmZpYxgFIAEoDjI2Lmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRiZXRhMS5Db21tdXRlRmlsdGVyLlJvYWRUcmFmZmljSAASMAoOZGVwYXJ0",
+            "dXJlX3RpbWUYBiABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlIACJMCgtS",
+            "b2FkVHJhZmZpYxIcChhST0FEX1RSQUZGSUNfVU5TUEVDSUZJRUQQABIQCgxU",
+            "UkFGRklDX0ZSRUUQARINCglCVVNZX0hPVVIQAkIQCg50cmFmZmljX29wdGlv",
+            "biI0Cg5Kb2JUaXRsZUZpbHRlchIRCglqb2JfdGl0bGUYASABKAkSDwoHbmVn",
+            "YXRlZBgCIAEoCCItCgtTa2lsbEZpbHRlchINCgVza2lsbBgBIAEoCRIPCgdu",
+            "ZWdhdGVkGAIgASgIIqECCg5FbXBsb3llckZpbHRlchIQCghlbXBsb3llchgB",
+            "IAEoCRJMCgRtb2RlGAIgASgOMj4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLkVtcGxveWVyRmlsdGVyLkVtcGxveWVyRmlsdGVyTW9kZRIPCgduZWdh",
+            "dGVkGAMgASgIIp0BChJFbXBsb3llckZpbHRlck1vZGUSJAogRU1QTE9ZRVJf",
+            "RklMVEVSX01PREVfVU5TUEVDSUZJRUQQABIaChZBTExfRU1QTE9ZTUVOVF9S",
+            "RUNPUkRTEAESIwofQ1VSUkVOVF9FTVBMT1lNRU5UX1JFQ09SRFNfT05MWRAC",
+            "EiAKHFBBU1RfRU1QTE9ZTUVOVF9SRUNPUkRTX09OTFkQAyKIAQoPRWR1Y2F0",
+            "aW9uRmlsdGVyEg4KBnNjaG9vbBgBIAEoCRIWCg5maWVsZF9vZl9zdHVkeRgC",
+            "IAEoCRI8CgtkZWdyZWVfdHlwZRgDIAEoDjInLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5EZWdyZWVUeXBlEg8KB25lZ2F0ZWQYBiABKAgifAoUV29y",
+            "a0V4cGVyaWVuY2VGaWx0ZXISMQoObWluX2V4cGVyaWVuY2UYASABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoObWF4X2V4cGVyaWVuY2UYAiAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iYwoVQXBwbGljYXRpb25E",
+            "YXRlRmlsdGVyEiUKCnN0YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5E",
+            "YXRlEiMKCGVuZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZSJHCh1B",
+            "cHBsaWNhdGlvbk91dGNvbWVOb3Rlc0ZpbHRlchIVCg1vdXRjb21lX25vdGVz",
+            "GAEgASgJEg8KB25lZ2F0ZWQYAiABKAgiVgoUQXBwbGljYXRpb25Kb2JGaWx0",
+            "ZXISGgoSam9iX3JlcXVpc2l0aW9uX2lkGAIgASgJEhEKCWpvYl90aXRsZRgD",
+            "IAEoCRIPCgduZWdhdGVkGAQgASgIIvwBCgpUaW1lRmlsdGVyEi4KCnN0YXJ0",
+            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVu",
+            "ZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJFCgp0",
+            "aW1lX2ZpZWxkGAMgASgOMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LlRpbWVGaWx0ZXIuVGltZUZpZWxkIkkKCVRpbWVGaWVsZBIaChZUSU1FX0ZJ",
+            "RUxEX1VOU1BFQ0lGSUVEEAASDwoLQ1JFQVRFX1RJTUUQARIPCgtVUERBVEVf",
+            "VElNRRACIi4KG0NhbmRpZGF0ZUF2YWlsYWJpbGl0eUZpbHRlchIPCgduZWdh",
+            "dGVkGAEgASgIIicKEFBlcnNvbk5hbWVGaWx0ZXISEwoLcGVyc29uX25hbWUY",
+            "ASABKAlCegofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIMRmls",
+            "dGVyc1Byb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ApplicationReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobQuery), global::Google.Cloud.Talent.V4Beta1.JobQuery.Parser, new[]{ "Query", "Companies", "LocationFilters", "JobCategories", "CommuteFilter", "CompanyDisplayNames", "CompensationFilter", "CustomAttributeFilter", "DisableSpellCheck", "EmploymentTypes", "LanguageCodes", "PublishTimeRange", "ExcludedJobs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter", "PersonNameFilters" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter), global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser, new[]{ "Address", "RegionCode", "LatLng", "DistanceInMiles", "TelecommutePreference", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter), global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Parser, new[]{ "Type", "Units", "Range", "IncludeJobsWithUnspecifiedCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter), global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Parser, new[]{ "CommuteMethod", "StartCoordinates", "TravelDuration", "AllowImpreciseAddresses", "RoadTraffic", "DepartureTime" }, new[]{ "TrafficOption" }, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) }, null),
@@ -145,7 +148,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter.Parser, new[]{ "OutcomeNotes", "Negated" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter.Parser, new[]{ "JobRequisitionId", "JobTitle", "Negated" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter), global::Google.Cloud.Talent.V4Beta1.TimeFilter.Parser, new[]{ "StartTime", "EndTime", "TimeField" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter.Parser, new[]{ "Negated" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter.Parser, new[]{ "Negated" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonNameFilter), global::Google.Cloud.Talent.V4Beta1.PersonNameFilter.Parser, new[]{ "PersonName" }, null, null, null)
           }));
     }
     #endregion
@@ -380,7 +384,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Boolean expressions (AND/OR/NOT) are supported up to 3 levels of
     /// nesting (for example, "((A AND B AND C) OR NOT D) AND E"), a maximum of 100
     /// comparisons or functions are allowed in the expression. The expression
-    /// must be &lt; 3000 bytes in length.
+    /// must be &lt; 6000 bytes in length.
     ///
     /// Sample Query:
     /// `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
@@ -776,6 +780,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       applicationJobFilters_ = other.applicationJobFilters_.Clone();
       customAttributeFilter_ = other.customAttributeFilter_;
       candidateAvailabilityFilter_ = other.candidateAvailabilityFilter_ != null ? other.candidateAvailabilityFilter_.Clone() : null;
+      personNameFilters_ = other.personNameFilters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1086,6 +1091,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+    /// <summary>Field number for the "person_name_filters" field.</summary>
+    public const int PersonNameFiltersFieldNumber = 17;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4Beta1.PersonNameFilter> _repeated_personNameFilters_codec
+        = pb::FieldCodec.ForMessage(138, global::Google.Cloud.Talent.V4Beta1.PersonNameFilter.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonNameFilter> personNameFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonNameFilter>();
+    /// <summary>
+    /// Optional. Person name filter specifies person name of profiles to match on.
+    ///
+    /// If multiple person name filters are specified, profiles that match any
+    /// person name filters are retrieved.
+    ///
+    /// For example, search for profiles of candidates with name "John Smith".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonNameFilter> PersonNameFilters {
+      get { return personNameFilters_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProfileQuery);
@@ -1113,6 +1136,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if(!applicationJobFilters_.Equals(other.applicationJobFilters_)) return false;
       if (CustomAttributeFilter != other.CustomAttributeFilter) return false;
       if (!object.Equals(CandidateAvailabilityFilter, other.CandidateAvailabilityFilter)) return false;
+      if(!personNameFilters_.Equals(other.personNameFilters_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1133,6 +1157,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= applicationJobFilters_.GetHashCode();
       if (CustomAttributeFilter.Length != 0) hash ^= CustomAttributeFilter.GetHashCode();
       if (candidateAvailabilityFilter_ != null) hash ^= CandidateAvailabilityFilter.GetHashCode();
+      hash ^= personNameFilters_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1171,6 +1196,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(CandidateAvailabilityFilter);
       }
+      personNameFilters_.WriteTo(output, _repeated_personNameFilters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1201,6 +1227,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (candidateAvailabilityFilter_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CandidateAvailabilityFilter);
       }
+      size += personNameFilters_.CalculateSize(_repeated_personNameFilters_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1239,6 +1266,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         CandidateAvailabilityFilter.MergeFrom(other.CandidateAvailabilityFilter);
       }
+      personNameFilters_.Add(other.personNameFilters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1310,6 +1338,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
               CandidateAvailabilityFilter = new global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter();
             }
             input.ReadMessage(CandidateAvailabilityFilter);
+            break;
+          }
+          case 138: {
+            personNameFilters_.AddEntriesFrom(input, _repeated_personNameFilters_codec);
             break;
           }
         }
@@ -4290,6 +4322,148 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           case 8: {
             Negated = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Input only.
+  ///
+  /// Filter on person name.
+  /// </summary>
+  public sealed partial class PersonNameFilter : pb::IMessage<PersonNameFilter> {
+    private static readonly pb::MessageParser<PersonNameFilter> _parser = new pb::MessageParser<PersonNameFilter>(() => new PersonNameFilter());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PersonNameFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonNameFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonNameFilter(PersonNameFilter other) : this() {
+      personName_ = other.personName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonNameFilter Clone() {
+      return new PersonNameFilter(this);
+    }
+
+    /// <summary>Field number for the "person_name" field.</summary>
+    public const int PersonNameFieldNumber = 1;
+    private string personName_ = "";
+    /// <summary>
+    /// Required. The person name. For example, "John Smith".
+    ///
+    /// Can be any combination of [PersonName.structured_name.given_name][],
+    /// [PersonName.structured_name.middle_initial][],
+    /// [PersonName.structured_name.family_name][], and
+    /// [PersonName.formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PersonName {
+      get { return personName_; }
+      set {
+        personName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PersonNameFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PersonNameFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PersonName != other.PersonName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PersonName.Length != 0) hash ^= PersonName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (PersonName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PersonName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PersonName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PersonName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PersonNameFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PersonName.Length != 0) {
+        PersonName = other.PersonName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PersonName = input.ReadString();
             break;
           }
         }

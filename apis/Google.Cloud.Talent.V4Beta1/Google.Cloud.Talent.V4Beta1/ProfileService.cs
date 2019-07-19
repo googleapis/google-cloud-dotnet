@@ -43,7 +43,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "BG5hbWUYASABKAkifgoUVXBkYXRlUHJvZmlsZVJlcXVlc3QSNQoHcHJvZmls",
             "ZRgBIAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxl",
             "Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
-            "TWFzayIkChREZWxldGVQcm9maWxlUmVxdWVzdBIMCgRuYW1lGAEgASgJIpMD",
+            "TWFzayIkChREZWxldGVQcm9maWxlUmVxdWVzdBIMCgRuYW1lGAEgASgJIrMD",
             "ChVTZWFyY2hQcm9maWxlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEkYKEHJl",
             "cXVlc3RfbWV0YWRhdGEYAiABKAsyLC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
             "YmV0YTEuUmVxdWVzdE1ldGFkYXRhEkAKDXByb2ZpbGVfcXVlcnkYAyABKAsy",
@@ -52,48 +52,48 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "dBgGIAEoBRIbChNkaXNhYmxlX3NwZWxsX2NoZWNrGAcgASgIEhAKCG9yZGVy",
             "X2J5GAggASgJEhsKE2Nhc2Vfc2Vuc2l0aXZlX3NvcnQYCSABKAgSRgoRaGlz",
             "dG9ncmFtX3F1ZXJpZXMYCiADKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuSGlzdG9ncmFtUXVlcnkSFQoNcmVzdWx0X3NldF9pZBgMIAEoCSKT",
-            "AwoWU2VhcmNoUHJvZmlsZXNSZXNwb25zZRIcChRlc3RpbWF0ZWRfdG90YWxf",
-            "c2l6ZRgBIAEoAxJJChBzcGVsbF9jb3JyZWN0aW9uGAIgASgLMi8uZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExLlNwZWxsaW5nQ29ycmVjdGlvbhI/Cght",
-            "ZXRhZGF0YRgDIAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5S",
-            "ZXNwb25zZU1ldGFkYXRhEhcKD25leHRfcGFnZV90b2tlbhgEIAEoCRJSChdo",
-            "aXN0b2dyYW1fcXVlcnlfcmVzdWx0cxgFIAMoCzIxLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5IaXN0b2dyYW1RdWVyeVJlc3VsdBJLChNzdW1tYXJp",
-            "emVkX3Byb2ZpbGVzGAYgAygLMi4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLlN1bW1hcml6ZWRQcm9maWxlEhUKDXJlc3VsdF9zZXRfaWQYByABKAki",
-            "ggEKEVN1bW1hcml6ZWRQcm9maWxlEjYKCHByb2ZpbGVzGAEgAygLMiQuZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUSNQoHc3VtbWFyeRgC",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlMu0I",
-            "Cg5Qcm9maWxlU2VydmljZRKsAQoMTGlzdFByb2ZpbGVzEjAuZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLkxpc3RQcm9maWxlc1JlcXVlc3QaMS5nb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdFByb2ZpbGVzUmVzcG9uc2Ui",
-            "N4LT5JMCMRIvL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMv",
-            "Kn0vcHJvZmlsZXMSpAEKDUNyZWF0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuQ3JlYXRlUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZSI6gtPkkwI0Ii8vdjRiZXRh",
-            "MS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9wcm9maWxlczoBKhKb",
-            "AQoKR2V0UHJvZmlsZRIuLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5H",
-            "ZXRQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5Qcm9maWxlIjeC0+STAjESLy92NGJldGExL3tuYW1lPXByb2plY3RzLyov",
-            "dGVuYW50cy8qL3Byb2ZpbGVzLyp9EqwBCg1VcGRhdGVQcm9maWxlEjEuZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlVwZGF0ZVByb2ZpbGVSZXF1ZXN0",
-            "GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiQoLT5JMC",
-            "PDI3L3Y0YmV0YTEve3Byb2ZpbGUubmFtZT1wcm9qZWN0cy8qL3RlbmFudHMv",
-            "Ki9wcm9maWxlcy8qfToBKhKTAQoNRGVsZXRlUHJvZmlsZRIxLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5EZWxldGVQcm9maWxlUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSI3gtPkkwIxKi8vdjRiZXRhMS97bmFtZT1w",
-            "cm9qZWN0cy8qL3RlbmFudHMvKi9wcm9maWxlcy8qfRKzAQoOU2VhcmNoUHJv",
-            "ZmlsZXMSMi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoUHJv",
-            "ZmlsZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNl",
-            "YXJjaFByb2ZpbGVzUmVzcG9uc2UiOILT5JMCMiItL3Y0YmV0YTEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL3RlbmFudHMvKn06c2VhcmNoOgEqGmzKQRNqb2JzLmdv",
-            "b2dsZWFwaXMuY29t0kFTaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2pvYnNCgQEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFC",
-            "E1Byb2ZpbGVTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSi",
-            "AgNDVFNiBnByb3RvMw=="));
+            "YmV0YTEuSGlzdG9ncmFtUXVlcnkSFQoNcmVzdWx0X3NldF9pZBgMIAEoCRIe",
+            "ChZzdHJpY3Rfa2V5d29yZHNfc2VhcmNoGA0gASgIIpMDChZTZWFyY2hQcm9m",
+            "aWxlc1Jlc3BvbnNlEhwKFGVzdGltYXRlZF90b3RhbF9zaXplGAEgASgDEkkK",
+            "EHNwZWxsX2NvcnJlY3Rpb24YAiABKAsyLy5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuU3BlbGxpbmdDb3JyZWN0aW9uEj8KCG1ldGFkYXRhGAMgASgL",
+            "Mi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlJlc3BvbnNlTWV0YWRh",
+            "dGESFwoPbmV4dF9wYWdlX3Rva2VuGAQgASgJElIKF2hpc3RvZ3JhbV9xdWVy",
+            "eV9yZXN1bHRzGAUgAygLMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "Lkhpc3RvZ3JhbVF1ZXJ5UmVzdWx0EksKE3N1bW1hcml6ZWRfcHJvZmlsZXMY",
+            "BiADKAsyLi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU3VtbWFyaXpl",
+            "ZFByb2ZpbGUSFQoNcmVzdWx0X3NldF9pZBgHIAEoCSKCAQoRU3VtbWFyaXpl",
+            "ZFByb2ZpbGUSNgoIcHJvZmlsZXMYASADKAsyJC5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTEuUHJvZmlsZRI1CgdzdW1tYXJ5GAIgASgLMiQuZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUy7QgKDlByb2ZpbGVTZXJ2",
+            "aWNlEqwBCgxMaXN0UHJvZmlsZXMSMC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuTGlzdFByb2ZpbGVzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5MaXN0UHJvZmlsZXNSZXNwb25zZSI3gtPkkwIxEi8vdjRi",
+            "ZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9wcm9maWxlcxKk",
+            "AQoNQ3JlYXRlUHJvZmlsZRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5DcmVhdGVQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRiZXRhMS5Qcm9maWxlIjqC0+STAjQiLy92NGJldGExL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi90ZW5hbnRzLyp9L3Byb2ZpbGVzOgEqEpsBCgpHZXRQcm9maWxl",
+            "Ei4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkdldFByb2ZpbGVSZXF1",
+            "ZXN0GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiN4LT",
+            "5JMCMRIvL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovcHJv",
+            "ZmlsZXMvKn0SrAEKDVVwZGF0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTEuVXBkYXRlUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZSJCgtPkkwI8MjcvdjRiZXRhMS97",
+            "cHJvZmlsZS5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL3Byb2ZpbGVzLyp9",
+            "OgEqEpMBCg1EZWxldGVQcm9maWxlEjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExLkRlbGV0ZVByb2ZpbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5IjeC0+STAjEqLy92NGJldGExL3tuYW1lPXByb2plY3RzLyovdGVu",
+            "YW50cy8qL3Byb2ZpbGVzLyp9ErMBCg5TZWFyY2hQcm9maWxlcxIyLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hQcm9maWxlc1JlcXVlc3Qa",
+            "My5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoUHJvZmlsZXNS",
+            "ZXNwb25zZSI4gtPkkwIyIi0vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyov",
+            "dGVuYW50cy8qfTpzZWFyY2g6ASoabMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23S",
+            "QVNodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvam9ic0KBAQof",
+            "Y29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUITUHJvZmlsZVNlcnZp",
+            "Y2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -103,7 +103,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetProfileRequest), global::Google.Cloud.Talent.V4Beta1.GetProfileRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest), global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest.Parser, new[]{ "Profile", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest), global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest), global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest.Parser, new[]{ "Parent", "RequestMetadata", "ProfileQuery", "PageSize", "PageToken", "Offset", "DisableSpellCheck", "OrderBy", "CaseSensitiveSort", "HistogramQueries", "ResultSetId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest), global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest.Parser, new[]{ "Parent", "RequestMetadata", "ProfileQuery", "PageSize", "PageToken", "Offset", "DisableSpellCheck", "OrderBy", "CaseSensitiveSort", "HistogramQueries", "ResultSetId", "StrictKeywordsSearch" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse), global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse.Parser, new[]{ "EstimatedTotalSize", "SpellCorrection", "Metadata", "NextPageToken", "HistogramQueryResults", "SummarizedProfiles", "ResultSetId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SummarizedProfile), global::Google.Cloud.Talent.V4Beta1.SummarizedProfile.Parser, new[]{ "Profiles", "Summary" }, null, null, null)
           }));
@@ -1219,6 +1219,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       caseSensitiveSort_ = other.caseSensitiveSort_;
       histogramQueries_ = other.histogramQueries_.Clone();
       resultSetId_ = other.resultSetId_;
+      strictKeywordsSearch_ = other.strictKeywordsSearch_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1509,9 +1510,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string resultSetId_ = "";
     /// <summary>
     /// Optional. An id that uniquely identifies the result set of a
-    /// [SearchProfiles][] call.  The id should be retrieved from the
+    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles]
+    /// call. The id should be retrieved from the
     /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse]
-    /// message returned from a previous invocation of [SearchProfiles][].
+    /// message returned from a previous invocation of
+    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles].
     ///
     /// A result set is an ordered list of search results.
     ///
@@ -1524,8 +1527,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If this field is set, the service will ignore the resource and
     /// [profile_query][google.cloud.talent.v4beta1.SearchProfilesRequest.profile_query]
     /// values, and simply retrieve a page of results from the corresponding result
-    /// set.  In this case, one and only one of [page_token] or [offset] must be
-    /// set.
+    /// set.  In this case, one and only one of
+    /// [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token]
+    /// or [offset][google.cloud.talent.v4beta1.SearchProfilesRequest.offset] must
+    /// be set.
     ///
     /// A typical use case is to invoke
     /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
@@ -1540,6 +1545,32 @@ namespace Google.Cloud.Talent.V4Beta1 {
       get { return resultSetId_; }
       set {
         resultSetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "strict_keywords_search" field.</summary>
+    public const int StrictKeywordsSearchFieldNumber = 13;
+    private bool strictKeywordsSearch_;
+    /// <summary>
+    /// Optional. This flag is used to indicate whether the service will attempt to
+    /// understand synonyms and terms related to the search query or treat the
+    /// query "as is" when it generates a set of results. By default this flag is
+    /// set to false, thus allowing expanded results to also be returned. For
+    /// example a search for "software engineer" might also return candidates who
+    /// have experience in jobs similar to software engineer positions. By setting
+    /// this flag to true, the service will only attempt to deliver candidates has
+    /// software engineer in his/her global fields by treating "software engineer"
+    /// as a keyword.
+    ///
+    /// It is recommended to provide a feature in the UI (such as a checkbox) to
+    /// allow recruiters to set this flag to true if they intend to search for
+    /// longer boolean strings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool StrictKeywordsSearch {
+      get { return strictKeywordsSearch_; }
+      set {
+        strictKeywordsSearch_ = value;
       }
     }
 
@@ -1567,6 +1598,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (CaseSensitiveSort != other.CaseSensitiveSort) return false;
       if(!histogramQueries_.Equals(other.histogramQueries_)) return false;
       if (ResultSetId != other.ResultSetId) return false;
+      if (StrictKeywordsSearch != other.StrictKeywordsSearch) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1584,6 +1616,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (CaseSensitiveSort != false) hash ^= CaseSensitiveSort.GetHashCode();
       hash ^= histogramQueries_.GetHashCode();
       if (ResultSetId.Length != 0) hash ^= ResultSetId.GetHashCode();
+      if (StrictKeywordsSearch != false) hash ^= StrictKeywordsSearch.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1638,6 +1671,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(98);
         output.WriteString(ResultSetId);
       }
+      if (StrictKeywordsSearch != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(StrictKeywordsSearch);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1676,6 +1713,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       size += histogramQueries_.CalculateSize(_repeated_histogramQueries_codec);
       if (ResultSetId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ResultSetId);
+      }
+      if (StrictKeywordsSearch != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1724,6 +1764,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       histogramQueries_.Add(other.histogramQueries_);
       if (other.ResultSetId.Length != 0) {
         ResultSetId = other.ResultSetId;
+      }
+      if (other.StrictKeywordsSearch != false) {
+        StrictKeywordsSearch = other.StrictKeywordsSearch;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1784,6 +1827,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 98: {
             ResultSetId = input.ReadString();
+            break;
+          }
+          case 104: {
+            StrictKeywordsSearch = input.ReadBool();
             break;
           }
         }
