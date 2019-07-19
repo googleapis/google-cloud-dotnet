@@ -976,8 +976,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
     ///
     /// The following field and operator combinations are supported:
     /// name | '='
-    /// update_time | '>', '&lt;', '>=', '&lt;=', '='
-    /// create_time | '>', '&lt;', '>=', '&lt;=', '='
+    /// update_time | '=', '>', '&lt;', '>=', '&lt;='
+    ///
+    ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
+    ///   Examples:
+    ///     "update_time = \"2019-06-10T16:07:18-07:00\""
+    ///     "update_time = 1560208038000"
+    ///
+    /// create_time |  '=', '>', '&lt;', '>=', '&lt;='
+    ///
+    ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
+    ///   Examples:
+    ///     "create_time = \"2019-06-10T16:07:18-07:00\""
+    ///     "create_time = 1560208038000"
+    ///
     /// iam_policy.policy_blob | '=', ':'
     /// resource_properties | '=', ':', '>', '&lt;', '>=', '&lt;='
     /// security_marks | '=', ':'
@@ -1628,7 +1640,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// state | '=', ':'
     /// category | '=', ':'
     /// external_uri | '=', ':'
-    /// event_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// event_time | `=`, `>`, `&lt;`, `>=`, `&lt;=`
+    ///
+    ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
+    ///   Examples:
+    ///     "event_time = \"2019-06-10T16:07:18-07:00\""
+    ///     "event_time = 1560208038000"
+    ///
     /// security_marks | '=', ':'
     /// source_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
     ///
@@ -2786,7 +2804,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
     ///
     /// The following are the allowed field and operator combinations:
     /// name | `=`
-    /// update_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// update_time | `=`, `>`, `&lt;`, `>=`, `&lt;=`
+    ///
+    ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
+    ///   Examples:
+    ///     "update_time = \"2019-06-10T16:07:18-07:00\""
+    ///     "update_time = 1560208038000"
+    ///
+    /// create_time | `=`, `>`, `&lt;`, `>=`, `&lt;=`
+    ///
+    ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
+    ///   Examples:
+    ///     "create_time = \"2019-06-10T16:07:18-07:00\""
+    ///     "create_time = 1560208038000"
+    ///
     /// iam_policy.policy_blob | '=', ':'
     /// resource_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
     /// security_marks | '=', ':'
@@ -3690,7 +3721,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// state | '=', ':'
     /// category | '=', ':'
     /// external_uri | '=', ':'
-    /// event_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// event_time | `=`, `>`, `&lt;`, `>=`, `&lt;=`
+    ///
+    ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
+    ///   Examples:
+    ///     "event_time = \"2019-06-10T16:07:18-07:00\""
+    ///     "event_time = 1560208038000"
+    ///
     /// security_marks | '=', ':'
     /// source_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
     ///
