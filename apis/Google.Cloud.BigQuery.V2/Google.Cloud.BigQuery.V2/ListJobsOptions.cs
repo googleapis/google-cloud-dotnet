@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System;
 using static Google.Apis.Bigquery.v2.JobsResource;
 using static Google.Apis.Bigquery.v2.JobsResource.ListRequest;
 
@@ -23,6 +24,8 @@ namespace Google.Cloud.BigQuery.V2
     /// </summary>
     public sealed class ListJobsOptions
     {
+        private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
+
         /// <summary>
         /// If set, only return jobs in the specified state.
         /// </summary>
@@ -52,6 +55,16 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string PageToken { get; set; }
 
+        /// <summary>
+        /// Min value for job creation time. If set, only jobs created after or at this timestamp are returned.
+        /// </summary>
+        public DateTimeOffset? MinCreationTime { get; set; }
+
+        /// <summary>
+        /// Max value for job creation time. If set, only jobs created before or at this timestamp are returned.
+        /// </summary>
+        public DateTimeOffset? MaxCreationTime { get; set; }
+
         internal void ModifyRequest(ListRequest request)
         {
             if (StateFilter != null)
@@ -78,6 +91,28 @@ namespace Google.Cloud.BigQuery.V2
             {
                 request.PageToken = PageToken;
             }
+
+            if (MinCreationTime != null)
+            {
+                request.MinCreationTime = ConvertDateTimeOffset(MinCreationTime.Value, nameof(MinCreationTime));
+            }
+            if (MaxCreationTime != null)
+            {
+                request.MaxCreationTime = ConvertDateTimeOffset(MaxCreationTime.Value, nameof(MaxCreationTime));
+            }
+            if (MinCreationTime > MaxCreationTime)
+            {
+                throw new ArgumentException($"{nameof(MinCreationTime)} cannot be later than {nameof(MaxCreationTime)}", "value");
+            }
+        }
+
+        private ulong ConvertDateTimeOffset(DateTimeOffset value, string name)
+        {
+            if (value < UnixEpoch)
+            {
+                throw new ArgumentOutOfRangeException("value", $"{name} property cannot be earlier than 1970.");
+            }
+            return (ulong) (value - UnixEpoch).TotalMilliseconds;
         }
     }
 }
