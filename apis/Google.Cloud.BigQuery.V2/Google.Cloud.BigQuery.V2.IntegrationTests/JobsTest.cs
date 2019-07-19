@@ -43,11 +43,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture = fixture;
         }
 
-        // TODO: Put this somewhere in the API code for convenience.
-        // We'd need an assertion that it's a UTC DateTime.
-        private long ToMillisecondsSinceEpoch(DateTime dateTime) =>
-            (long) (dateTime - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
-
         /// <summary>
         /// There's an equivalent snippet for this integration test but, where the snippet
         /// tests for ListJobs listing some jobs, this test tests for ListJobs listing an
@@ -61,14 +56,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.HighScoreTableId);
             var jobToFind = client.CreateQueryJob($"SELECT * FROM {table}", parameters: null);
 
-            var oneMinuteAgo = ToMillisecondsSinceEpoch(DateTime.UtcNow.AddMinutes(-1));
-
             // Find all jobs started in the last minute.
-            // Using TakeWhile because, as documented:
-            // The job list is sorted in reverse chronological order, by job creation time.
+            var options = new ListJobsOptions { MinCreationTime = DateTimeOffset.UtcNow.AddMinutes(-1) };
             var foundJob = client
-                .ListJobs()
-                .TakeWhile(job => job.Statistics.CreationTime >= oneMinuteAgo)
+                .ListJobs(options)
                 .FirstOrDefault(job => job.Reference.JobId == jobToFind.Reference.JobId);
 
             Assert.NotNull(foundJob);
