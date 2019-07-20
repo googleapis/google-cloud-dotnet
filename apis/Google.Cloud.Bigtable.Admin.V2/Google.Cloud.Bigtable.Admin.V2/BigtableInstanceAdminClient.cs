@@ -99,51 +99,128 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for "NonIdempotent" <see cref="BigtableInstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable);
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
-        /// "Default" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// "IdempotentParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// The "IdempotentParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
+        /// The "IdempotentParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 5 milliseconds</description></item>
+        /// <item><description>Initial delay: 1000 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 2.0</description></item>
         /// </list>
         /// </remarks>
-        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(5),
+        public static gaxgrpc::BackoffSettings GetIdempotentParamsRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(1000),
             maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 2.0
         );
 
         /// <summary>
-        /// "Default" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// "IdempotentParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// The "IdempotentParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
+        /// The "IdempotentParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+        public static gaxgrpc::BackoffSettings GetIdempotentParamsTimeoutBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(60000),
             maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
+        /// "NonIdempotentParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "NonIdempotentParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "NonIdempotentParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 0 milliseconds</description></item>
+        /// <item><description>Maximum delay: 0 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.0</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetNonIdempotentParamsRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(0),
+            maxDelay: sys::TimeSpan.FromMilliseconds(0),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
+        /// "NonIdempotentParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "NonIdempotentParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "NonIdempotentParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetNonIdempotentParamsTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(60000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
+        /// "NonIdempotentHeavyParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "NonIdempotentHeavyParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "NonIdempotentHeavyParams" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 0 milliseconds</description></item>
+        /// <item><description>Maximum delay: 0 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.0</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetNonIdempotentHeavyParamsRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(0),
+            maxDelay: sys::TimeSpan.FromMilliseconds(0),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
+        /// "NonIdempotentHeavyParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "NonIdempotentHeavyParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "NonIdempotentHeavyParams" timeout backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 300000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetNonIdempotentHeavyParamsTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(300000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(300000),
             delayMultiplier: 1.0
         );
 
@@ -155,24 +232,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.CreateInstance</c> and
         /// <c>BigtableInstanceAdminClient.CreateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
+        /// <item><description>Initial timeout: 300000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 300000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 300000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetNonIdempotentHeavyParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentHeavyParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -185,13 +262,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
         /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Total timeout: 600000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000L)),
                 sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
                 sys::TimeSpan.FromMilliseconds(5000L))
@@ -205,7 +282,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.GetInstance</c> and
         /// <c>BigtableInstanceAdminClient.GetInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -221,8 +298,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -235,7 +312,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.ListInstances</c> and
         /// <c>BigtableInstanceAdminClient.ListInstancesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -251,8 +328,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings ListInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -265,7 +342,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.PartialUpdateInstance</c> and
         /// <c>BigtableInstanceAdminClient.PartialUpdateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -281,8 +358,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings PartialUpdateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -296,13 +373,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
         /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Total timeout: 600000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PartialUpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000L)),
                 sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
                 sys::TimeSpan.FromMilliseconds(5000L))
@@ -316,24 +393,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.DeleteInstance</c> and
         /// <c>BigtableInstanceAdminClient.DeleteInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 60000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -345,24 +422,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.CreateCluster</c> and
         /// <c>BigtableInstanceAdminClient.CreateClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 60000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -372,19 +449,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Initial delay: 5000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Total timeout: 21600000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(21600000L)),
+                sys::TimeSpan.FromMilliseconds(5000L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(60000L))
         };
 
         /// <summary>
@@ -395,7 +472,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.GetCluster</c> and
         /// <c>BigtableInstanceAdminClient.GetClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -411,8 +488,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings GetClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -425,7 +502,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.ListClusters</c> and
         /// <c>BigtableInstanceAdminClient.ListClustersAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -441,8 +518,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings ListClustersSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -455,7 +532,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.UpdateCluster</c> and
         /// <c>BigtableInstanceAdminClient.UpdateClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -471,8 +548,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings UpdateClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -486,13 +563,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
         /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Total timeout: 600000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000L)),
                 sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
                 sys::TimeSpan.FromMilliseconds(5000L))
@@ -506,24 +583,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.DeleteCluster</c> and
         /// <c>BigtableInstanceAdminClient.DeleteClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 60000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -535,24 +612,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.CreateAppProfile</c> and
         /// <c>BigtableInstanceAdminClient.CreateAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 60000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -564,7 +641,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.GetAppProfile</c> and
         /// <c>BigtableInstanceAdminClient.GetAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -580,8 +657,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings GetAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -594,7 +671,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.ListAppProfiles</c> and
         /// <c>BigtableInstanceAdminClient.ListAppProfilesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -610,8 +687,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings ListAppProfilesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -624,7 +701,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.UpdateAppProfile</c> and
         /// <c>BigtableInstanceAdminClient.UpdateAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -640,8 +717,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings UpdateAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -652,17 +729,17 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 5 milliseconds</description></item>
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
         /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Total timeout: 600000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateAppProfileOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(5L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
                 sys::TimeSpan.FromMilliseconds(5000L))
         };
@@ -675,24 +752,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.DeleteAppProfile</c> and
         /// <c>BigtableInstanceAdminClient.DeleteAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 60000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -704,7 +781,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.GetIamPolicy</c> and
         /// <c>BigtableInstanceAdminClient.GetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -720,8 +797,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
@@ -734,24 +811,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.SetIamPolicy</c> and
         /// <c>BigtableInstanceAdminClient.SetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 60000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -763,7 +840,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The default <c>BigtableInstanceAdminClient.TestIamPermissions</c> and
         /// <c>BigtableInstanceAdminClient.TestIamPermissionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -779,8 +856,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
