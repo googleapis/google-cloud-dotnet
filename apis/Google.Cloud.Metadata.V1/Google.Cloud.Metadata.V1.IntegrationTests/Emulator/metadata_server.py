@@ -1,3 +1,4 @@
+from __future__ import print_function
 # Copyright 2016 Google Inc. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -1047,11 +1048,11 @@ FLAGS
   try:
     opts, args = getopt.getopt(argv, 'htdc:i:n:p:', ['help', 'test', "default_credentials", 'credentials=', 'id=', 'num_id=', 'port='])
   except getopt.GetoptError:
-    print usage
+    print(usage)
     sys.exit(2)
   for opt, arg in opts:
     if opt in ('-h', '--help'):
-      print usage
+      print(usage)
       sys.exit()
     elif opt in ('-d', '--default_credentials'):
       use_default_credentials = True
@@ -1085,24 +1086,24 @@ FLAGS
 
   emulator_host = 'localhost:' + unicode(port)
 
-  print "---------------------------------"
-  print "Running Metadata Server Emulator with"
-  print "  Project ID: %s" %  state.project_id
-  print "  Numeric Project ID: %s" %  state.numeric_project_id
-  print "---------------------------------"
-  print "Use this environment variable to connect to the emulator"
-  print "  %s %s=%s" % ("set" if os.name == 'nt' else "export", common.host_environment_variable, emulator_host)
-  print "---------------------------------"
-  print "To update or delete data in the emulator, send a POST or DELETE request, respectively, to"
-  print "  http://%s/emulator/v1/update/<path>" % emulator_host
-  print "For POSTs, the content should be the URL-encoded new value (specified in JSON for directory paths)"
-  print ""
-  print "For example, the following command will change the CPU platform"
-  print '  curl -d "Intel+Ivy+Bridge" -H "Metadata-Flavor: Google" http://%s/emulator/v1/update/instance/cpu-platform"' % emulator_host
-  print ""
-  print "And this command will remove the 2nd license"
-  print '  curl -X DELETE -H "Metadata-Flavor: Google" http://%s/emulator/v1/update/instance/licenses/1"' % emulator_host
-  print "---------------------------------"
+  print("---------------------------------")
+  print("Running Metadata Server Emulator with")
+  print("  Project ID: %s" %  state.project_id)
+  print("  Numeric Project ID: %s" %  state.numeric_project_id)
+  print("---------------------------------")
+  print("Use this environment variable to connect to the emulator")
+  print("  %s %s=%s" % ("set" if os.name == 'nt' else "export", common.host_environment_variable, emulator_host))
+  print("---------------------------------")
+  print("To update or delete data in the emulator, send a POST or DELETE request, respectively, to")
+  print("  http://%s/emulator/v1/update/<path>" % emulator_host)
+  print("For POSTs, the content should be the URL-encoded new value (specified in JSON for directory paths)")
+  print("")
+  print("For example, the following command will change the CPU platform")
+  print('  curl -d "Intel+Ivy+Bridge" -H "Metadata-Flavor: Google" http://%s/emulator/v1/update/instance/cpu-platform"' % emulator_host)
+  print("")
+  print("And this command will remove the 2nd license")
+  print('  curl -X DELETE -H "Metadata-Flavor: Google" http://%s/emulator/v1/update/instance/licenses/1"' % emulator_host)
+  print("---------------------------------")
 
   # If the process is killed while standard output is getting redirected, the output above
   # may not make it to the consumer, so flush the output before running the server.
