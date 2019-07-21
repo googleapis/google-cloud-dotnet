@@ -15,6 +15,11 @@
 from collections import OrderedDict
 import common, datetime, json, os, threading, time, urllib, urllib2
 
+try:
+  unicode
+except NameError:
+  unicode = str
+
 # These tests can be run with pytest: http://doc.pytest.org/en/latest/index.html
 
 try:
@@ -44,7 +49,7 @@ def expect_content_absolute(url, expected, expected_content_type, expect_metadat
 
   check_header(headers, common.server, common.server_value)
   check_header(headers, common.content_type, expected_content_type)
-  
+
   contents = response.read()
   assert expected == contents
 
@@ -98,7 +103,7 @@ def expect_error_updating_content(path, new_data, expected_code):
                             data,
                             headers={common.metadata_flavor: common.metadata_flavor_google,
                                      common.content_type: common.content_type_text})
-  
+
   try:
     response = urllib2.urlopen(request)
     # This will always fail but I'm asserting so the response appears in the test results
@@ -117,12 +122,12 @@ def check_path(path, expected, default='text'):
     expected_text = ''.join(s + '\n' for s in expected)
   else:
     expected_text = unicode(expected)
-    
+
   etag1 = expect_content(path,
                          expected_text if default == 'text' else expected_json,
                          common.content_type_text if default == 'text' else common.content_type_json)
   etag2 = expect_content(path + "?alt=text", expected_text, common.content_type_text)
-  etag3 = expect_content(path + "?alt=json", expected_json, common.content_type_json) 
+  etag3 = expect_content(path + "?alt=json", expected_json, common.content_type_json)
   assert len(etag1) == 16
   assert etag1 == etag2
   assert etag1 == etag3
@@ -176,7 +181,7 @@ def check_dir_recursive(path, expected, test_trailing_slash=True, use_recursive_
     etag4 = expect_content(path + '/' + query, expected_text, common.content_type_text, expect_metadata_header)
   else:
     etag4 = etag3
-  
+
   query = '?recursive=true&alt=json' if use_recursive_field else '?alt=json'
   etag5 = expect_content(path + query, expected, common.content_type_json, expect_metadata_header)
   if test_trailing_slash:
@@ -209,7 +214,7 @@ def update_content(path, new_data):
                             data,
                             headers={common.metadata_flavor: common.metadata_flavor_google,
                                      common.content_type: common.content_type_text})
-  
+
   try:
     urllib2.urlopen(request)
   except urllib2.URLError as e:
