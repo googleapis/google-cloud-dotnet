@@ -8,6 +8,14 @@ mono: none
 dotnet: 2.2.104
 dist: xenial
 
+matrix:
+  include:
+    - name: "Lint for Python syntax errors and undefined names"
+      language: python
+      addons: true  # override
+      install: pip install flake8
+      script: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
 # Install the .NET Core 1.0 runtime as that's what we test against
 addons:
   apt:
