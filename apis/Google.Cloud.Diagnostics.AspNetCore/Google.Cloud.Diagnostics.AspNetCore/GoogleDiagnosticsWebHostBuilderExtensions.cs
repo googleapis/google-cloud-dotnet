@@ -42,9 +42,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// A string that represents the version of the service or the source code used for exception logging.
         /// If unspecified and running on GAE the service version will be detected from the platform.
         /// </param>
+        /// <param name="loggerOptions">The options for logging. May be null, in which case default options will be used.</param>
+        /// <param name="traceOptions">The options for tracing. May be null, in which case default options will be used.</param>
+        /// <param name="errorReportingOptions">The options for error reporting. May be null, in which case default options will be used.</param>
         /// <returns>The <see cref="IWebHostBuilder"/> instance.</returns>
-        public static IWebHostBuilder UseGoogleDiagnostics(this IWebHostBuilder builder, string projectId = null, string serviceName = null, string serviceVersion = null)
-            => UseGoogleDiagnostics(builder, projectId, serviceName, serviceVersion, monitoredResource: null);
+        public static IWebHostBuilder UseGoogleDiagnostics(
+            this IWebHostBuilder builder,
+            string projectId = null,
+            string serviceName = null,
+            string serviceVersion = null,
+            LoggerOptions loggerOptions = null,
+            TraceOptions traceOptions = null,
+            ErrorReportingOptions errorReportingOptions = null) =>
+            builder.ConfigureServices(services =>
+                ConfigureGoogleDiagnosticsServices(services, projectId, serviceName, serviceVersion, loggerOptions, traceOptions, errorReportingOptions));
 
         // On .NET Standard 2.0 or higher the IWebHostBuilder.ConfigureServices has a new overload that takes both
         // an IServiceCollection and a WebHostBuilderContext. We can use the context for retrieving information from the
@@ -69,45 +80,62 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Cannot be null but can return a null value for the service version, in such a case
         /// and if running on GAE the service version will be detected from the platform.
         /// </param>
+        /// <param name="loggerOptionsGetter">
+        /// A function that takes a <see cref="WebHostBuilderContext"/> and retrieves the options to use for logging.
+        /// May be null or return a null value for the options; in either of these cases the default options will be used.
+        /// </param>
+        /// <param name="traceOptionsGetter">
+        /// A function that takes a <see cref="WebHostBuilderContext"/> and retrieves the options to use for tracing.
+        /// May be null or return a null value for the options; in either of these cases the default options will be used.
+        /// </param>
+        /// <param name="errorReportingOptionsGetter">
+        /// A function that takes a <see cref="WebHostBuilderContext"/> and retrieves the options to use for errorReporting.
+        /// May be null or return a null value for the options; in either of these cases the default options will be used.
+        /// </param>
         /// <returns>The <see cref="IWebHostBuilder"/> instance.</returns>
-        public static IWebHostBuilder UseGoogleDiagnostics(this IWebHostBuilder builder, Func<WebHostBuilderContext, string> projectIdGetter, Func<WebHostBuilderContext, string> serviceNameGetter, Func<WebHostBuilderContext, string> serviceVersionGetter)
+        public static IWebHostBuilder UseGoogleDiagnostics(
+            this IWebHostBuilder builder,
+            Func<WebHostBuilderContext, string> projectIdGetter,
+            Func<WebHostBuilderContext, string> serviceNameGetter,
+            Func<WebHostBuilderContext, string> serviceVersionGetter,
+            Func<WebHostBuilderContext, LoggerOptions> loggerOptionsGetter = null,
+            Func<WebHostBuilderContext, TraceOptions> traceOptionsGetter = null,
+            Func<WebHostBuilderContext, ErrorReportingOptions> errorReportingOptionsGetter = null)
         {
             GaxPreconditions.CheckNotNull(projectIdGetter, nameof(projectIdGetter));
             GaxPreconditions.CheckNotNull(serviceNameGetter, nameof(serviceNameGetter));
             GaxPreconditions.CheckNotNull(serviceVersionGetter, nameof(serviceVersionGetter));
 
-            builder.ConfigureServices((context, services) =>
-            {
-                ConfigureGoogleDiagnosticsServices(services, projectIdGetter(context), serviceNameGetter(context), serviceVersionGetter(context), null);
-            });
-
-            return builder;
+            return builder.ConfigureServices((context, services) =>
+                ConfigureGoogleDiagnosticsServices(services, projectIdGetter(context), serviceNameGetter(context), serviceVersionGetter(context),
+                    loggerOptionsGetter?.Invoke(context), traceOptionsGetter?.Invoke(context), errorReportingOptionsGetter?.Invoke(null)));
         }
 
-        // Overload which allows passing in a MonitoredResource instance
-        // Internal for testing
-        internal static IWebHostBuilder UseGoogleDiagnostics(this IWebHostBuilder builder, string projectId = null, string serviceName = null, string serviceVersion = null, MonitoredResource monitoredResource = null)
-        {
-            builder.ConfigureServices(services =>
-            {
-                ConfigureGoogleDiagnosticsServices(services, projectId, serviceName, serviceVersion, monitoredResource);
-            });
 
-            return builder;
-        }
-
-        private static void ConfigureGoogleDiagnosticsServices(IServiceCollection services, string projectId, string serviceName, string serviceVersion, MonitoredResource monitoredResource)
+        private static void ConfigureGoogleDiagnosticsServices(
+            IServiceCollection services,
+            string projectId,
+            string serviceName,
+            string serviceVersion,
+            LoggerOptions loggerOptions,
+            TraceOptions traceOptions,
+            ErrorReportingOptions errorReportingOptions)
         {
-            projectId = Project.GetAndCheckProjectId(projectId, monitoredResource);
+            projectId = Project.GetAndCheckProjectId(projectId, null);
 
             services.AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>();
-            services.AddSingleton<IStartupFilter>(new GoogleDiagnosticsStartupFilter(projectId, monitoredResource));
-            services.AddGoogleTrace(options => options.ProjectId = projectId);
+            services.AddSingleton<IStartupFilter>(new GoogleDiagnosticsStartupFilter(projectId, loggerOptions));
+            services.AddGoogleTrace(options =>
+            {
+                options.ProjectId = projectId;
+                options.Options = traceOptions;
+            });
             services.AddGoogleExceptionLogging(options =>
             {
                 options.ProjectId = projectId;
-                options.ServiceName = Project.GetAndCheckServiceName(serviceName, monitoredResource);
-                options.Version = Project.GetAndCheckServiceVersion(serviceVersion, monitoredResource);
+                options.ServiceName = Project.GetAndCheckServiceName(serviceName, null);
+                options.Version = Project.GetAndCheckServiceVersion(serviceVersion, null);
+                options.Options = errorReportingOptions;
             });
         }
     }

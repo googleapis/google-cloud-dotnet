@@ -14,6 +14,7 @@
 
 using System;
 using Google.Api;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
@@ -26,7 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     internal class GoogleDiagnosticsStartupFilter : IStartupFilter
     {
         private readonly string _projectId;
-        private readonly MonitoredResource _monitoredResource;
+        private readonly LoggerOptions _loggerOptions;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleDiagnosticsStartupFilter"/> class to configure Google Diagnostics services.
@@ -35,14 +36,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// The Google Cloud Platform project ID. If unspecified and running on GAE or GCE
         /// the project ID will be detected from the platform.
         /// </param>
-        /// <param name="monitoredResource">
-        /// Optional, the monitored resource.  The monitored resource will be automatically detected
-        /// if it is not set and will default to the global resource if the detection fails.
-        /// </param>
-        public GoogleDiagnosticsStartupFilter(string projectId, MonitoredResource monitoredResource = null)
+        /// <param name="loggerOptions">The logger options. May be null.</param>
+        public GoogleDiagnosticsStartupFilter(string projectId, LoggerOptions loggerOptions)
         {
             _projectId = projectId;
-            _monitoredResource = monitoredResource;
+            _loggerOptions = loggerOptions;
         }
 
         /// <summary>
@@ -55,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             return app =>
             {
                 var loggerFactory = app.ApplicationServices.GetServiceCheckNotNull<ILoggerFactory>();
-                loggerFactory.AddGoogle(app.ApplicationServices, _projectId, LoggerOptions.Create(monitoredResource: _monitoredResource));
+                loggerFactory.AddGoogle(app.ApplicationServices, _projectId, _loggerOptions);
                 app.UseGoogleExceptionLogging();
                 app.UseGoogleTrace();
 
