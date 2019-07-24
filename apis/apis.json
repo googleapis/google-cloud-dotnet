@@ -260,7 +260,11 @@
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-      "Google.Api.Gax.Testing": "default"
+      "Google.Api.Gax.Testing": "default",
+      "Microsoft.AspNetCore.Mvc": "2.0.0",
+      "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.0",
+      "Microsoft.AspNetCore.TestHost": "2.0.0",
+      "Microsoft.Extensions.Http": "2.1.1",
     },
     "additionalAnalyzerTestDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
