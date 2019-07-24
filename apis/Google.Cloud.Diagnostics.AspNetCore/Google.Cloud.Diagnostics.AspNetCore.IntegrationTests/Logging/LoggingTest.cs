@@ -27,6 +27,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -200,7 +201,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string traceId = "105445aa7843bc8bf206b12000100f00";
             string testId = IdGenerator.FromGuid();
-            DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (var server = new TestServer(builder))
@@ -239,6 +239,30 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal("Hello, World!", entry.Labels["Foo"]);
                 Assert.NotEmpty(entry.Labels["trace_identifier"]);
             });
+        }
+
+        [Fact]
+        public async Task Logging_DiagnosticsOutput()
+        {
+            var writer = new StringWriter();
+            // This is an odd way to pass in a value, but it works...
+            var builder = new WebHostBuilder()
+                .ConfigureServices(service => service.AddSingleton<TextWriter>(writer))
+                .UseStartup<DiagnosticsOutputLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Warning/{IdGenerator.FromGuid()}");
+                await client.GetAsync($"/Main/Warning/{IdGenerator.FromGuid()}");
+                await client.GetAsync($"/Main/Warning/{IdGenerator.FromGuid()}");
+            }
+
+            // Despite multiple log entries (several per call), we should only have one diagnostic log.
+            var diagnostics = writer.ToString();
+            var lines = diagnostics.Split('\n');
+            Assert.Equal(2, lines.Length);
+            Assert.Contains("GoogleLogger will write logs", lines[0]);
+            Assert.Empty(lines[1]);
         }
     }
 
@@ -337,6 +361,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, labels, null, BufferOptions.NoBuffer());
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+        }
+    }
+
+    public class DiagnosticsOutputLoggerTestApplication : LoggerTestApplication
+    {
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            SetupRoutes(app);
+            var writer = app.ApplicationServices.GetRequiredService<TextWriter>();
+            LoggerOptions loggerOptions = LoggerOptions.Create(loggerDiagnosticsOutput: writer);
             loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
         }
     }
