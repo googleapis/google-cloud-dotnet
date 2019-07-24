@@ -255,7 +255,12 @@
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
       "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0-beta02",
-      "Grpc.Core": "default"
+      "Grpc.Core": "default",
+      "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.3",
+      "Microsoft.AspNetCore.Http": "2.0.3",
+      "Microsoft.AspNetCore.Http.Extensions": "2.0.3",
+      "Microsoft.Extensions.Logging": "2.1.1",
+      "Microsoft.Extensions.Logging.Debug": "2.0.2"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
