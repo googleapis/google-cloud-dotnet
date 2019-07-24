@@ -22,8 +22,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Internal;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.IO;
 using System.Linq;
+using static System.FormattableString;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -89,8 +90,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
             _serviceProvider = serviceProvider;
             _clock = clock ?? SystemClock.Instance;
-
-            WriteCreationDiagnostics();
         }
 
         /// <inheritdoc />
@@ -303,14 +302,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }.Uri;
         }
 
-        private void WriteCreationDiagnostics()
+        internal void WriteDiagnostics(TextWriter writer)
         {
             // Explicitly not catching exceptions.
             // This should only be activated for diagnostics purposes so in that case
-            // we shouldn't throw exceptions.
+            // we shouldn't try to handle exceptions.
 
-            _loggerOptions.LoggerDiagnosticsOutput?.WriteLine(string.Format(CultureInfo.InvariantCulture, "{0:yyyy-MM-dd'T'HH:mm:ss} - GoogleLogger created. Logs written to: {1}", DateTime.UtcNow, GetGcpConsoleLogsUrl()));
-            _loggerOptions.LoggerDiagnosticsOutput?.Flush();
+            writer.WriteLine(Invariant($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss} - GoogleLogger will write logs to: {GetGcpConsoleLogsUrl()}"));
+            writer.Flush();
         }
     }
 }

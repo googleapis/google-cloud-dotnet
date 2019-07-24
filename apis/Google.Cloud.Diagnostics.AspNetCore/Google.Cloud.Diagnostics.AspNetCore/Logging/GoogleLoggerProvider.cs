@@ -50,6 +50,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
             _serviceProvider = serviceProvider;
+
+            var writer = loggerOptions.LoggerDiagnosticsOutput;
+            if (writer != null)
+            {
+                // The log name is the ASP.NET Core log name, not the "/projects/xyz/logs/abc" log name in the resource.
+                // We don't currently use this in the diagnostics, but if we ever start to do so, SampleLogName seems
+                // like a reasonably clear example.
+                ((GoogleLogger) CreateLogger("SampleLogName")).WriteDiagnostics(writer);
+            }
         }
 
         /// <summary>
