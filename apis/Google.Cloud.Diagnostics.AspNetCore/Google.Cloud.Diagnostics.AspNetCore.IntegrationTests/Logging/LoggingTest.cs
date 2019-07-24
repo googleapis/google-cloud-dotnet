@@ -264,6 +264,36 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Contains("GoogleLogger will write logs", lines[0]);
             Assert.Empty(lines[1]);
         }
+
+        [Fact]
+        public async Task Logging_NoServiceProvider()
+        {
+            string testId = IdGenerator.FromDateTime();
+
+            var builder = new WebHostBuilder()
+                .ConfigureLogging(loggingBuilder =>
+                {
+                    var projectId = TestEnvironment.GetTestProjectId();
+                    var provider = GoogleLoggerProvider.Create(serviceProvider: null, projectId, LoggerOptions.Create(LogLevel.Warning));
+                    loggingBuilder.AddProvider(provider);                    
+                })
+                .UseStartup<VanillaApplication>();
+            using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Warning/{testId}");
+                await client.GetAsync($"/Main/Error/{testId}");
+                await client.GetAsync($"/Main/Critical/{testId}");
+
+            }
+            _fixture.AddValidator(testId, results =>
+            {
+                Assert.Equal(3, results.Count());
+                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
+                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
+                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
+            });
+        }
     }
 
     /// <summary>
@@ -284,8 +314,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             services.AddGoogleTrace(options =>
             {
                 options.ProjectId = ProjectId;
-            // Don't actually trace anything.
-            options.Options = TraceOptions.Create(qpsSampleRate: 0.00000001);
+                // Don't actually trace anything.
+                options.Options = TraceOptions.Create(qpsSampleRate: 0.00000001);
             });
             services.AddMvc();
         }
@@ -374,6 +404,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             LoggerOptions loggerOptions = LoggerOptions.Create(loggerDiagnosticsOutput: writer);
             loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
         }
+    }
+
+    /// <summary>
+    /// Application that doesn't perform any diagnostic configuration itself.
+    /// </summary>
+    public class VanillaApplication
+    {
+        public virtual void ConfigureServices(IServiceCollection services) =>
+            services.AddMvc();
+
+        public void Configure(IApplicationBuilder app) =>
+            app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Main}/{action=Index}/{id}"));
     }
 
     /// <summary>
