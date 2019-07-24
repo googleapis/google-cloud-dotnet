@@ -84,11 +84,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     { "build_id", "some-build-id" }
                 }
             };
-
+            // We won't be able to detect the right monitored resource, so specify it explicitly.
+            var loggerOptions = LoggerOptions.Create(monitoredResource: resource);
             var webHostBuilder = new WebHostBuilder()
                 .ConfigureServices(services => services.AddMvcCore())
                 .Configure(app => app.UseMvcWithDefaultRoute())
-                .UseGoogleDiagnostics(monitoredResource: resource);
+                .UseGoogleDiagnostics(TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version, loggerOptions);
 
             using (var server = new TestServer(webHostBuilder))
             using (var client = server.CreateClient())
