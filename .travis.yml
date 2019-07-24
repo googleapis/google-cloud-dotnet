@@ -26,6 +26,7 @@ addons:
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
 script:
+  - python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
   - touch build_timing_log.txt
   - ./build.sh --diff --regex $API_REGEX
   - ./processbuildtiminglog.sh
