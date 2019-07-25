@@ -167,7 +167,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         public void ConfigureServices(IServiceCollection services)
         {
             // The line below is needed for trace ids to be added to logs.
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
 
             // Replace ProjectId with your Google Cloud Project ID.
             services.AddGoogleTrace(options =>
@@ -203,7 +203,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         public void ConfigureServices(IServiceCollection services)
         {
             // The line below is needed for trace ids to be added to logs.
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
 
             // Replace ProjectId with your Google Cloud Project ID.
             services.AddGoogleTrace(options =>

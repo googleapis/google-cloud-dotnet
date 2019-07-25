@@ -114,13 +114,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var tracerFactory = ManagedTracer.CreateTracerFactory(projectId, consumer, options);
 
             services.AddScoped(CreateTraceHeaderContext);
-
             services.AddSingleton(tracerFactory);
-
-            // Only add the HttpContextAccessor if it's not already added.
-            // This is needed to get the `TraceHeaderContext`. See `CreateTraceHeaderContext`.
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+            services.AddHttpContextAccessor();
             services.AddSingleton(ManagedTracer.CreateDelegatingTracer(ContextTracerManager.GetCurrentTracer));
 
             // On .Net Standard 2.0 or higher, we can use the System.Net.Http.IHttpClientFactory defined in Microsoft.Extensions.Http,

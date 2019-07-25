@@ -14,7 +14,7 @@
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Moq" Version="4.12.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -24,12 +24,4 @@
     <Reference Condition="'$(TargetFramework)' == 'net452'" Include="Microsoft.CSharp" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
-    <Reference Include="System.Web" />
-  </ItemGroup>
-  <PropertyGroup>
-    <!-- Make sure we get suitable stack traces for tests -->
-    <DebugType>pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp2.0'">portable</DebugType>
-  </PropertyGroup>
 </Project>
