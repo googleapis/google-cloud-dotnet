@@ -13,203 +13,112 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using Google.Api;
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class ProjectTest
     {
-        [Fact]
-        public void GetAndCheckProjectId()
-        {
-            var projectId = "pid";
-            var resourceProjectId = "resource-pid";
-            var monitoredResource = new MonitoredResource
+        private static readonly Dictionary<string, MonitoredResource> s_resources =
+            new Dictionary<string, MonitoredResource>
             {
-                Type = "some-type",
-                Labels =
-                {
-                    { "project_id", resourceProjectId }
-                }
+                // Note: keyed by string so we'll be able to cope with GKE having multiple
+                // representations.
+                { "gae_app", MonitoredResourceBuilder.FromPlatform(new Platform(
+                    new GaePlatformDetails("project-id", "instance", "service", "version"))) },
+                { "gce_instance", MonitoredResourceBuilder.FromPlatform(new Platform(
+                    new GcePlatformDetails("json", "project-id", "instance", "projects/12345/zones/zone"))) },
+                { "container", MonitoredResourceBuilder.FromPlatform(new Platform(
+                    new GkePlatformDetails("json", "project-id", "cluster", "location", "host", "instance", "zone", "namespace", "pod", "container"))) },
+                { "cloud_run_revision", MonitoredResourceBuilder.FromPlatform(new Platform(
+                    new CloudRunPlatformDetails("json", "project-id", "location", "service", "revision", "configuration"))) },
+                { "unknown", new MonitoredResource { Type = "unknown", Labels = { { "project_id", "project-id" } } } }
             };
 
-            // The string project id is not null and the MonitoredResource contains a project id
-            // so the string project id is returned.  We do this as the explicitly set project id should be
-            // defaulted to.
-            Assert.Equal(projectId, Project.GetAndCheckProjectId(projectId, monitoredResource));
+        [Theory]
+        [InlineData("gae_app", "project-id")]
+        [InlineData("gce_instance", "project-id")]
+        [InlineData("container", "project-id")]
+        [InlineData("cloud_run_revision", "project-id")]
+        [InlineData("unknown", null)]
+        public void GetProjectId(string type, string expectedProjectId)
+        {
+            var resource = s_resources[type];
+            Assert.Equal("explicit", Project.GetProjectId("explicit", resource));
+            Assert.Equal("explicit", Project.GetAndCheckProjectId("explicit", resource));
 
-            // The string project id is not null and the MonitoredResource does not contain a project id
-            // so the string project id is returned.
-            Assert.Equal(projectId, Project.GetAndCheckProjectId(projectId, new MonitoredResource()));
-
-            // The string project id is null and the MonitoredResource does contains a project id
-            // so the project id from the MonitoredResource is returned.
-            Assert.Equal(resourceProjectId, Project.GetAndCheckProjectId(null, monitoredResource));
-
-            // The string project id is null and the MonitoredResource does not contain a project id
-            // so we throw an InvalidOperationException.
-            var ex = Assert.Throws<InvalidOperationException>(() => Project.GetAndCheckProjectId(null, new MonitoredResource()));
-            Assert.Equal("No Google Cloud project ID was passed in or detected.", ex.Message);
+            Assert.Equal(expectedProjectId, Project.GetProjectId(null, resource));
+            if (expectedProjectId is null)
+            {
+                Assert.Throws<InvalidOperationException>(() => Project.GetAndCheckProjectId(null, resource));
+            }
+            else
+            {
+                Assert.Equal(expectedProjectId, Project.GetAndCheckProjectId(null, resource));
+            }
         }
 
-        [Fact]
-        public void GetAndCheckServiceName()
+        [Theory]
+        [InlineData("gae_app", "service")]
+        [InlineData("gce_instance", null)]
+        [InlineData("container", "container")]
+        [InlineData("cloud_run_revision", "service")]
+        [InlineData("unknown", null)]
+        public void GetServiceName(string type, string expectedServiceName)
         {
-            var serviceName = "my-app";
-            var resourceServiceName = "resource-my-app";
-            var monitoredResource = new MonitoredResource
+            var resource = s_resources[type];
+            Assert.Equal("explicit", Project.GetServiceName("explicit", resource));
+            Assert.Equal("explicit", Project.GetAndCheckServiceName("explicit", resource));
+
+            Assert.Equal(expectedServiceName, Project.GetServiceName(null, resource));
+            if (expectedServiceName is null)
             {
-                Type = "some-type",
-                Labels =
-                {
-                    { "module_id", resourceServiceName }
-                }
-            };
-
-            // The string service name is not null and the MonitoredResource contains a service name
-            // so the string service name is returned.  We do this as the explicitly set service name should be
-            // defaulted to.
-            Assert.Equal(serviceName, Project.GetAndCheckServiceName(serviceName, monitoredResource));
-
-            // The string service name is not null and the MonitoredResource does not contain a service name
-            // so the string service name is returned.
-            Assert.Equal(serviceName, Project.GetAndCheckServiceName(serviceName, new MonitoredResource()));
-
-            // The string service name is null and the MonitoredResource does contains a service name
-            // so the service name from the MonitoredResource is returned.
-            Assert.Equal(resourceServiceName, Project.GetAndCheckServiceName(null, monitoredResource));
-
-            // The string service name is null and the MonitoredResource does not contain a service name
-            // so we throw an InvalidOperationException.
-            var ex = Assert.Throws<InvalidOperationException>(() => Project.GetAndCheckServiceName(null, new MonitoredResource()));
-            Assert.Equal("No Google App Engine service name was passed in or detected.", ex.Message);
+                Assert.Throws<InvalidOperationException>(() => Project.GetAndCheckServiceName(null, resource));
+            }
+            else
+            {
+                Assert.Equal(expectedServiceName, Project.GetAndCheckServiceName(null, resource));
+            }
         }
 
-        [Fact]
-        public void GetServiceName()
+
+        [Theory]
+        [InlineData("gae_app", "version")]
+        [InlineData("gce_instance", null)]
+        [InlineData("container", null)]
+        [InlineData("cloud_run_revision", "revision")]
+        [InlineData("unknown", null)]
+        public void GetServiceVersion(string type, string expectedServiceVersion)
         {
-            var serviceName = "my-app";
-            var resourceServiceName = "resource-my-app";
-            var monitoredResource = new MonitoredResource
+            var resource = s_resources[type];
+            Assert.Equal("explicit", Project.GetServiceVersion("explicit", resource));
+            Assert.Equal("explicit", Project.GetAndCheckServiceVersion("explicit", resource));
+
+            Assert.Equal(expectedServiceVersion, Project.GetServiceVersion(null, resource));
+            if (expectedServiceVersion is null)
             {
-                Type = "some-type",
-                Labels =
-                {
-                    { "module_id", resourceServiceName }
-                }
-            };
-
-            // The string service name is not null and the MonitoredResource contains a service name
-            // so the string service name is returned.  We do this as the explicitly set service name should be
-            // defaulted to.
-            Assert.Equal(serviceName, Project.GetServiceName(serviceName, monitoredResource));
-
-            // The string service name is not null and the MonitoredResource does not contain a service name
-            // so the string service name is returned.
-            Assert.Equal(serviceName, Project.GetServiceName(serviceName, new MonitoredResource()));
-
-            // The string service name is null and the MonitoredResource does contains a service name
-            // so the service name from the MonitoredResource is returned.
-            Assert.Equal(resourceServiceName, Project.GetServiceName(null, monitoredResource));
-
-            // The string service name is null and the MonitoredResource does not contain a service name
-            // so the service name is null.
-            Assert.Null(Project.GetServiceVersion(null, new MonitoredResource()));
-        }
-
-        [Fact]
-        public void GetAndCheckServiceVersion()
-        {
-            var serviceVersion = "1.0.0";
-            var resourceServiceVersion = "resource-1.0.0";
-            var monitoredResource = new MonitoredResource
+                Assert.Throws<InvalidOperationException>(() => Project.GetAndCheckServiceVersion(null, resource));
+            }
+            else
             {
-                Type = "some-type",
-                Labels =
-                {
-                    { "version_id", resourceServiceVersion }
-                }
-            };
-
-            // The string service version is not null and the MonitoredResource contains a service version
-            // so the string service version is returned.  We do this as the explicitly set service version should be
-            // defaulted to.
-            Assert.Equal(serviceVersion, Project.GetAndCheckServiceVersion(serviceVersion, monitoredResource));
-
-            // The string service version is not null and the MonitoredResource does not contain a service version
-            // so the string service version is returned.
-            Assert.Equal(serviceVersion, Project.GetAndCheckServiceVersion(serviceVersion, new MonitoredResource()));
-
-            // The string service version is null and the MonitoredResource does contains a service version
-            // so the service version from the MonitoredResource is returned.
-            Assert.Equal(resourceServiceVersion, Project.GetAndCheckServiceVersion(null, monitoredResource));
-
-            // The string service version is null and the MonitoredResource does not contain a service version
-            // so we throw an InvalidOperationException.
-            var ex = Assert.Throws<InvalidOperationException>(() => Project.GetAndCheckServiceVersion(null, new MonitoredResource()));
-            Assert.Equal("No Google App Engine service version was passed in or detected.", ex.Message);
-        }
-
-        [Fact]
-        public void GetServiceVersion()
-        {
-            var serviceVersion = "1.0.0";
-            var resourceServiceVersion = "resource-1.0.0";
-            var monitoredResource = new MonitoredResource
-            {
-                Type = "some-type",
-                Labels =
-                {
-                    { "version_id", resourceServiceVersion }
-                }
-            };
-
-            // The string service version is not null and the MonitoredResource contains a service version
-            // so the string service version is returned.  We do this as the explicitly set service version should be
-            // defaulted to.
-            Assert.Equal(serviceVersion, Project.GetServiceVersion(serviceVersion, monitoredResource));
-
-            // The string service version is not null and the MonitoredResource does not contain a service version
-            // so the string service version is returned.
-            Assert.Equal(serviceVersion, Project.GetServiceVersion(serviceVersion, new MonitoredResource()));
-
-            // The string service version is null and the MonitoredResource does contains a service version
-            // so the service version from the MonitoredResource is returned.
-            Assert.Equal(resourceServiceVersion, Project.GetServiceVersion(null, monitoredResource));
-
-            // The string service version is null and the MonitoredResource does not contain a service version
-            // so the service version is null.
-            Assert.Null(Project.GetServiceVersion(null, new MonitoredResource()));
+                Assert.Equal(expectedServiceVersion, Project.GetAndCheckServiceVersion(null, resource));
+            }
         }
 
         [Fact]
         public void DoesNotCacheSpecifiedMonitoredResourceInstance()
         {
-            var resourceProjectId1 = "resource-pid-1";
-            var monitoredResource1 = new MonitoredResource
-            {
-                Type = "some-type",
-                Labels =
-                {
-                    { "project_id", resourceProjectId1 }
-                }
-            };
-            Assert.Equal(resourceProjectId1, Project.GetAndCheckProjectId(null, monitoredResource1));
+            var monitoredResource1 = s_resources["gae_app"];
+            Assert.Equal("version", Project.GetServiceVersion(null, monitoredResource1));
 
-            // Create a second MonitoredResource instance and pass it to GetAndCheckProjectId.
-            // Assert that the first MonitoredResource instance is not cached by checking if the project ID is correct.
+            // Assert that the first MonitoredResource instance is not cached by checking if the version is correct.
             // Only auto-detected MonitoredResource instances should be cached.
-            var resourceProjectId2 = "resource-pid-2";
-            var monitoredResource2 = new MonitoredResource
-            {
-                Type = "some-type",
-                Labels =
-                {
-                    { "project_id", resourceProjectId2 }
-                }
-            };
-            Assert.Equal(resourceProjectId2, Project.GetAndCheckProjectId(null, monitoredResource2));
+            var monitoredResource2 = s_resources["cloud_run_revision"];
+            Assert.Equal("revision", Project.GetServiceVersion(null, monitoredResource2));
         }
     }
 }
