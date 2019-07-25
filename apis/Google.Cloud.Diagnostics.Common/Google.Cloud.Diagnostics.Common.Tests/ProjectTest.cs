@@ -87,6 +87,38 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void GetServiceName()
+        {
+            var serviceName = "my-app";
+            var resourceServiceName = "my-app";
+            var monitoredResource = new MonitoredResource
+            {
+                Type = "some-type",
+                Labels =
+                {
+                    { "module_id", resourceServiceName }
+                }
+            };
+
+            // The string service name is not null and the MonitoredResource contains a service name
+            // so the string service name is returned.  We do this as the explicitly set service name should be
+            // defaulted to.
+            Assert.Equal(serviceName, Project.GetServiceName(serviceName, monitoredResource));
+
+            // The string service name is not null and the MonitoredResource does not contain a service name
+            // so the string service name is returned.
+            Assert.Equal(serviceName, Project.GetServiceName(serviceName, new MonitoredResource()));
+
+            // The string service name is null and the MonitoredResource does contains a service name
+            // so the service name from the MonitoredResource is returned.
+            Assert.Equal(resourceServiceName, Project.GetServiceName(null, monitoredResource));
+
+            // The string service name is null and the MonitoredResource does not contain a service name
+            // so the service name is null.
+            Assert.Null(Project.GetServiceVersion(null, new MonitoredResource()));
+        }
+
+        [Fact]
         public void GetAndCheckServiceVersion()
         {
             var serviceVersion = "1.0.0";
@@ -117,6 +149,38 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             // so we throw an InvalidOperationException.
             var ex = Assert.Throws<InvalidOperationException>(() => Project.GetAndCheckServiceVersion(null, new MonitoredResource()));
             Assert.Equal("No Google App Engine service version was passed in or detected.", ex.Message);
+        }
+
+        [Fact]
+        public void GetServiceVersion()
+        {
+            var serviceVersion = "1.0.0";
+            var resourceServiceVersion = "1.0.0";
+            var monitoredResource = new MonitoredResource
+            {
+                Type = "some-type",
+                Labels =
+                {
+                    { "version_id", resourceServiceVersion }
+                }
+            };
+
+            // The string service version is not null and the MonitoredResource contains a service version
+            // so the string service version is returned.  We do this as the explicitly set service version should be
+            // defaulted to.
+            Assert.Equal(serviceVersion, Project.GetServiceVersion(serviceVersion, monitoredResource));
+
+            // The string service version is not null and the MonitoredResource does not contain a service version
+            // so the string service version is returned.
+            Assert.Equal(serviceVersion, Project.GetServiceVersion(serviceVersion, new MonitoredResource()));
+
+            // The string service version is null and the MonitoredResource does contains a service version
+            // so the service version from the MonitoredResource is returned.
+            Assert.Equal(resourceServiceVersion, Project.GetServiceVersion(null, monitoredResource));
+
+            // The string service version is null and the MonitoredResource does not contain a service version
+            // so the service version is null.
+            Assert.Null(Project.GetServiceVersion(null, new MonitoredResource()));
         }
 
         [Fact]

@@ -47,31 +47,27 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckState(eventTarget.Kind == EventTargetKind.Logging, $"Invalid {nameof(EventTarget)}");
             _logName = GaxPreconditions.CheckNotNull(eventTarget.LogTarget, nameof(eventTarget.LogTarget)).GetFullLogName(eventTarget.LogName);
 
-            _serviceContext = new Struct
+            _serviceContext = new Struct();
+            if (serviceName != null)
             {
-                Fields =
-                {
-                    { "service", Value.ForString(GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName))) },
-                    { "version", Value.ForString(GaxPreconditions.CheckNotNull(version, nameof(version))) }
-                }
-            };
+                _serviceContext.Fields["service"] = Value.ForString(serviceName);
+            }
+            if (version != null)
+            {
+                _serviceContext.Fields["version"] = Value.ForString(version);
+            }
         }
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingContextExceptionLogger"/>
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. Can be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
-        ///     Must not be null.</param>
-        /// <param name="version">Represents the source code version that the developer provided. 
-        ///     Must not be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. May be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job. May be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. May be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
         internal static IContextExceptionLogger Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
-            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
-
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = options.CreateConsumer();
             return new ErrorReportingContextExceptionLogger(consumer, serviceName, version, options);

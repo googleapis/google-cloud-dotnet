@@ -57,8 +57,16 @@ namespace Google.Cloud.Diagnostics.Common
             => GetAndCheckLabel(serviceName, "module_id", "Google App Engine service name", monitoredResource);
 
         /// <summary>
-        /// Determines the correct service version from a string <paramref name="serviceVersion"/> and a <see cref="MonitoredResource"/>.
+        /// Determines the correct service version from a string <paramref name="serviceName"/> and a <see cref="MonitoredResource"/>.
         /// If the specified service name is not null, it is returned. Otherwise, if the service name of
+        /// the MonitoredResource is not null, it is returned. It both are null, null is resturned.
+        /// </summary>
+        public static string GetServiceName(string serviceName, MonitoredResource monitoredResource = null)
+            => GetLabel(serviceName, "module_id", monitoredResource);
+
+        /// <summary>
+        /// Determines the correct service version from a string <paramref name="serviceVersion"/> and a <see cref="MonitoredResource"/>.
+        /// If the specified service version is not null, it is returned. Otherwise, if the service version of
         /// the MonitoredResource is not null, it is returned. It both are null,
         /// an <see cref="InvalidOperationException"/> is thrown.
         /// </summary>
@@ -68,6 +76,14 @@ namespace Google.Cloud.Diagnostics.Common
         /// <returns>The Google App Engine service version.</returns>
         public static string GetAndCheckServiceVersion(string serviceVersion, MonitoredResource monitoredResource = null)
             => GetAndCheckLabel(serviceVersion, "version_id", "Google App Engine service version", monitoredResource);
+
+        /// <summary>
+        /// Determines the correct service version from a string <paramref name="serviceVersion"/> and a <see cref="MonitoredResource"/>.
+        /// If the specified service version is not null, it is returned. Otherwise, if the service version of
+        /// the MonitoredResource is not null, it is returned. It both are null, null is resturned.
+        /// </summary>
+        public static string GetServiceVersion(string serviceVersion, MonitoredResource monitoredResource = null)
+            => GetLabel(serviceVersion, "version_id", monitoredResource);
 
         /// <summary>
         /// Returns <paramref name="specifiedLabel"/> if specified, otherwise attempts to resolve the <paramref name="labelKey"/>
@@ -92,6 +108,27 @@ namespace Google.Cloud.Diagnostics.Common
             }
 
             throw new InvalidOperationException($"No {labelName} was passed in or detected.");
+        }
+
+        /// <summary>
+        /// Returns <paramref name="specifiedLabel"/> if specified, otherwise attempts to resolve the <paramref name="labelKey"/>
+        /// from the given, detected or cached <see cref="MonitoredResource"/> instance. If no value can be found, a null
+        /// reference is returned.
+        /// </summary>
+        /// <param name="specifiedLabel">The label value specified by the caller.</param>
+        /// <param name="labelKey">The key of the label.</param>
+        /// <param name="monitoredResource">Optional, the <see cref="MonitoredResource"/> instance.</param>
+        /// <returns>The resolved value of the label.</returns>
+        private static string GetLabel(string specifiedLabel, string labelKey, MonitoredResource monitoredResource = null)
+        {
+            if (specifiedLabel != null)
+            {
+                return specifiedLabel;
+            }
+
+            monitoredResource = monitoredResource ?? _detectedMonitoredResource ?? (_detectedMonitoredResource = MonitoredResourceBuilder.FromPlatform());
+            monitoredResource.Labels.TryGetValue(labelKey, out var resourceLabel);
+            return resourceLabel;
         }
     }
 }
