@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             request.Host = new HostString("google.com");
             request.Method = "PUT";
 
-            var labels = Labels.FromDefaultHttpRequest(request);
+            var labels = Labels.FromHttpRequest(request);
             Assert.Equal(4, labels.Count);
             Assert.Equal("123", labels[LabelsCommon.HttpRequestSize]);
             Assert.Equal("google.com", labels[LabelsCommon.HttpHost]);
@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var response = new DefaultHttpResponse(new DefaultHttpContext());
             response.StatusCode = 404;
 
-            var labels = Labels.FromDefaultHttpResponse(response);
+            var labels = Labels.FromHttpResponse(response);
             Assert.Equal(1, labels.Count);
             Assert.Equal("404", labels[LabelsCommon.HttpStatusCode]);
         }

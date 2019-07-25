@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -42,12 +41,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal static Dictionary<string, string> FromHttpContext(HttpContext httpContext)
         {
             GaxPreconditions.CheckNotNull(httpContext, nameof(httpContext));
-            var requestHeaders = FromDefaultHttpRequest(new DefaultHttpRequest(httpContext));
-            var responseHeader = FromDefaultHttpResponse(new DefaultHttpResponse(httpContext));
+            var requestHeaders = FromHttpRequest(httpContext.Request);
+            var responseHeader = FromHttpResponse(httpContext.Response);
             return requestHeaders.Union(responseHeader).ToDictionary(k => k.Key, v => v.Value);
         }
 
-        internal static Dictionary<string, string> FromDefaultHttpRequest(DefaultHttpRequest request)
+        internal static Dictionary<string, string> FromHttpRequest(HttpRequest request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             var labels = new Dictionary<string, string>
@@ -65,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             return labels;
         }
 
-        internal static Dictionary<string, string> FromDefaultHttpResponse(DefaultHttpResponse response)
+        internal static Dictionary<string, string> FromHttpResponse(HttpResponse response)
         {
             GaxPreconditions.CheckNotNull(response, nameof(response));
             return new Dictionary<string, string>
