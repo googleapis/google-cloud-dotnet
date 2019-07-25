@@ -40,8 +40,20 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
         ///     be auto detected.</param>
         /// <returns>The Google Cloud project ID.</returns>
-        public static string GetAndCheckProjectId(string projectId, MonitoredResource monitoredResource = null)
-            => GetAndCheckLabel(projectId, "project_id", "Google Cloud project ID", monitoredResource);
+        public static string GetAndCheckProjectId(string projectId, MonitoredResource monitoredResource = null) =>
+            GetProjectId(projectId, monitoredResource) ?? throw new InvalidOperationException("Project ID was not provided and could not be autodetected");
+
+        /// <summary>
+        /// Determines the correct project ID from a string <paramref name="projectId"/> and a <see cref="MonitoredResource"/>.
+        /// If the specified project ID is not null, it is returned. Otherwise, if the project ID of
+        /// the MonitoredResource is not null, it is returned. It both are null, null is returned.
+        /// </summary>
+        /// <param name="projectId">The project ID. Can be null.</param>
+        /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
+        ///     be auto detected.</param>
+        /// <returns>The Google Cloud project ID.</returns>
+        public static string GetProjectId(string projectId, MonitoredResource monitoredResource = null) =>
+            projectId ?? GetProjectIdFromResource(GetMonitoredResource(monitoredResource));
 
         /// <summary>
         /// Determines the correct service name from a string <paramref name="serviceName"/> and a <see cref="MonitoredResource"/>.
@@ -49,85 +61,92 @@ namespace Google.Cloud.Diagnostics.Common
         /// the MonitoredResource is not null, it is returned. It both are null,
         /// an <see cref="InvalidOperationException"/> is thrown.
         /// </summary>
-        /// <param name="serviceName">The Google App Engine service name. Can be null.</param>
+        /// <param name="serviceName">The service name. Can be null.</param>
         /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
         ///     be auto detected.</param>
-        /// <returns>The Google App Engine service name.</returns>
-        public static string GetAndCheckServiceName(string serviceName, MonitoredResource monitoredResource = null)
-            => GetAndCheckLabel(serviceName, "module_id", "Google App Engine service name", monitoredResource);
+        /// <returns>The service name that was passed in or detected.</returns>
+        public static string GetAndCheckServiceName(string serviceName, MonitoredResource monitoredResource = null) =>
+            GetServiceName(serviceName, monitoredResource) ?? throw new InvalidOperationException("Service name was not provided and could not be autodetected");
 
         /// <summary>
-        /// Determines the correct service version from a string <paramref name="serviceName"/> and a <see cref="MonitoredResource"/>.
+        /// Determines the correct service name from a string <paramref name="serviceName"/> and a <see cref="MonitoredResource"/>.
         /// If the specified service name is not null, it is returned. Otherwise, if the service name of
-        /// the MonitoredResource is not null, it is returned. It both are null, null is resturned.
+        /// the MonitoredResource is not null, it is returned. It both are null, null is returned.
         /// </summary>
-        public static string GetServiceName(string serviceName, MonitoredResource monitoredResource = null)
-            => GetLabel(serviceName, "module_id", monitoredResource);
+        /// <param name="serviceName">The service name. Can be null.</param>
+        /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
+        ///     be auto detected.</param>
+        /// <returns>The service name that was passed in or detected.</returns>
+        public static string GetServiceName(string serviceName, MonitoredResource monitoredResource = null) =>
+            serviceName ?? GetServiceNameFromResource(GetMonitoredResource(monitoredResource));
 
         /// <summary>
         /// Determines the correct service version from a string <paramref name="serviceVersion"/> and a <see cref="MonitoredResource"/>.
         /// If the specified service version is not null, it is returned. Otherwise, if the service version of
-        /// the MonitoredResource is not null, it is returned. It both are null,
+        /// the MonitoredResource provided or detected is not null, it is returned. It both are null,
         /// an <see cref="InvalidOperationException"/> is thrown.
         /// </summary>
-        /// <param name="serviceVersion">The Google App Engine service version. Can be null.</param>
+        /// <param name="serviceVersion">The service version. Can be null.</param>
         /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
         ///     be auto detected.</param>
         /// <returns>The Google App Engine service version.</returns>
-        public static string GetAndCheckServiceVersion(string serviceVersion, MonitoredResource monitoredResource = null)
-            => GetAndCheckLabel(serviceVersion, "version_id", "Google App Engine service version", monitoredResource);
+        public static string GetAndCheckServiceVersion(string serviceVersion, MonitoredResource monitoredResource = null) =>
+            GetServiceVersion(serviceVersion, monitoredResource) ?? throw new InvalidOperationException("Service version was not provided and could not be autodetected");
 
         /// <summary>
         /// Determines the correct service version from a string <paramref name="serviceVersion"/> and a <see cref="MonitoredResource"/>.
         /// If the specified service version is not null, it is returned. Otherwise, if the service version of
-        /// the MonitoredResource is not null, it is returned. It both are null, null is resturned.
+        /// the MonitoredResource provided or detected is not null, it is returned. It both are null, null is resturned.
         /// </summary>
-        public static string GetServiceVersion(string serviceVersion, MonitoredResource monitoredResource = null)
-            => GetLabel(serviceVersion, "version_id", monitoredResource);
+        /// <param name="serviceVersion">The service version. Can be null.</param>
+        /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
+        ///     be auto detected.</param>
+        /// <returns>The service version that was passed in or detected.</returns>
+        public static string GetServiceVersion(string serviceVersion, MonitoredResource monitoredResource = null) =>
+            serviceVersion ?? GetServiceVersionFromResource(GetMonitoredResource(monitoredResource));
 
-        /// <summary>
-        /// Returns <paramref name="specifiedLabel"/> if specified, otherwise attempts to resolve the <paramref name="labelKey"/>
-        /// from the given, detected or cached <see cref="MonitoredResource"/> instance.
-        /// </summary>
-        /// <param name="specifiedLabel">The label value specified by the caller.</param>
-        /// <param name="labelKey">The key of the label.</param>
-        /// <param name="labelName">The friendly name of the value. Used in the exception message.</param>
-        /// <param name="monitoredResource">Optional, the <see cref="MonitoredResource"/> instance.</param>
-        /// <returns>The resolved value of the label.</returns>
-        private static string GetAndCheckLabel(string specifiedLabel, string labelKey, string labelName, MonitoredResource monitoredResource = null)
+        private static MonitoredResource GetMonitoredResource(MonitoredResource monitoredResource) =>
+            monitoredResource ?? _detectedMonitoredResource ?? (_detectedMonitoredResource = MonitoredResourceBuilder.FromPlatform());
+
+        private static string GetProjectIdFromResource(MonitoredResource resource)
         {
-            if (specifiedLabel != null)
+            switch (resource?.Type)
             {
-                return specifiedLabel;
+                case "gce_instance":
+                case "gae_app":
+                case "container":
+                case "cloud_run_revision":
+                    return GetLabel(resource, "project_id");
+                default: return null;
             }
 
-            monitoredResource = monitoredResource ?? _detectedMonitoredResource ?? (_detectedMonitoredResource = MonitoredResourceBuilder.FromPlatform());
-            if (monitoredResource.Labels.TryGetValue(labelKey, out var resourceLabel))
-            {
-                return resourceLabel;
-            }
-
-            throw new InvalidOperationException($"No {labelName} was passed in or detected.");
         }
 
-        /// <summary>
-        /// Returns <paramref name="specifiedLabel"/> if specified, otherwise attempts to resolve the <paramref name="labelKey"/>
-        /// from the given, detected or cached <see cref="MonitoredResource"/> instance. If no value can be found, a null
-        /// reference is returned.
-        /// </summary>
-        /// <param name="specifiedLabel">The label value specified by the caller.</param>
-        /// <param name="labelKey">The key of the label.</param>
-        /// <param name="monitoredResource">Optional, the <see cref="MonitoredResource"/> instance.</param>
-        /// <returns>The resolved value of the label.</returns>
-        private static string GetLabel(string specifiedLabel, string labelKey, MonitoredResource monitoredResource = null)
+        private static string GetServiceNameFromResource(MonitoredResource resource)
         {
-            if (specifiedLabel != null)
+            switch (resource?.Type)
             {
-                return specifiedLabel;
+                case "gae_app": return GetLabel(resource, "module_id");
+                case "container": return GetLabel(resource, "container_name");
+                case "cloud_run_revision": return GetLabel(resource, "service_name");
+                default: return null;
             }
+        }
 
-            monitoredResource = monitoredResource ?? _detectedMonitoredResource ?? (_detectedMonitoredResource = MonitoredResourceBuilder.FromPlatform());
-            monitoredResource.Labels.TryGetValue(labelKey, out var resourceLabel);
+        private static string GetServiceVersionFromResource(MonitoredResource resource)
+        {
+            resource = resource ?? _detectedMonitoredResource ?? (_detectedMonitoredResource = MonitoredResourceBuilder.FromPlatform());
+            switch (resource?.Type)
+            {
+                case "gae_app": return GetLabel(resource, "version_id");
+                case "cloud_run_revision": return GetLabel(resource, "revision_name");
+                default: return null;
+            }
+        }
+
+        private static string GetLabel(MonitoredResource resource, string labelKey)
+        {
+            resource.Labels.TryGetValue(labelKey, out var resourceLabel);
             return resourceLabel;
         }
     }
