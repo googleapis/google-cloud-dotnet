@@ -148,6 +148,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             }
         }
 
+        private void Troubleshooting()
+        {
+            // Not a test - just a sample.
+            
+            // Sample: Troubleshooting
+            // Explicitly create trace options that will propagate any exceptions thrown during tracing.
+            RetryOptions retryOptions = RetryOptions.NoRetry(ExceptionHandling.Propagate);
+            // Also set the no buffer option so that tracing is attempted immediately.
+            BufferOptions bufferOptions = BufferOptions.NoBuffer();
+            TraceOptions traceOptions = TraceOptions.Create(bufferOptions: bufferOptions, retryOptions: retryOptions);
+            // End sample
+        }
+
         public void Dispose()
         {
             _client.Dispose();
