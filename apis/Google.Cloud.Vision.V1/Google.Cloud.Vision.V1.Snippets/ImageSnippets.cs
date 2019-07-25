@@ -27,7 +27,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             Image image1 = Image.FromFile("Pictures/LocalImage.jpg");
             // Fetched locally by the client, then uploaded to the server
             Image image2 = Image.FetchFromUri("https://cloud.google.com/images/devtools-icon-64x64.png");
-            // Fetched by the Google Cloud Vision server
+            // Fetched by the Google Cloud Vision server.
+            // This should normally not be used in production - see usage notes for details.
             Image image3 = Image.FromUri("https://cloud.google.com/images/devtools-icon-64x64.png");
             // Google Cloud Storage URI
             Image image4 = Image.FromUri("gs://my-bucket/my-file");

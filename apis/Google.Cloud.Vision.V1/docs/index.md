@@ -32,6 +32,17 @@ instances to be constructed from files, streams, byte arrays and URIs.
 
 All IO-related methods have async equivalents.
 
+Note that it is *not* recommended that you use `Image.FromUri` with
+HTTP/HTTPS URIs in production applications. From the 
+[product documentation](https://cloud.google.com/vision/docs/reference/rest/v1/AnnotateImageRequest#ImageSource):
+
+> When fetching images from HTTP/HTTPS URLs, Google cannot guarantee
+> that the request will be completed. Your request may fail if the
+> specified host denies the request (e.g. due to request throttling or
+> DOS prevention), or if Google throttles requests to the site for
+> abuse prevention. You should not depend on externally-hosted images
+> for production applications.
+
 ## Detect faces in a single image
 
 {{sample:ImageAnnotatorClient.DetectFaces}}

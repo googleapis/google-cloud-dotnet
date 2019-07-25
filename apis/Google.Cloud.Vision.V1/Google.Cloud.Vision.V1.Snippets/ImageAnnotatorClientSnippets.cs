@@ -378,10 +378,10 @@ namespace Google.Cloud.Vision.V1.Snippets
         // See [DetectWebInformation](ref) for a synchronous example.
         // End see-also
 
-        [Fact(Skip = "Flaky; see https://github.com/googleapis/google-cloud-dotnet/issues/3174")]
+        [Fact]
         public void DetectLocalizedObjects()
         {
-            Image image = Image.FromUri("https://cloud.google.com/vision/docs/images/bicycle_example.png");
+            Image image = LoadResourceImage("bicycle_example.png");
             // Snippet: DetectLocalizedObjects
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
             IReadOnlyList<LocalizedObjectAnnotation> annotations = client.DetectLocalizedObjects(image);

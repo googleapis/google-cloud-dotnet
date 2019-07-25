@@ -30,6 +30,10 @@ namespace Google.Cloud.Vision.V1
         /// which may either be a Google Cloud Storage URI or a publicly accessible HTTP or HTTPS URI. The
         /// image is fetched from the URI by the Google Cloud Vision server.
         /// </summary>
+        /// <remarks>
+        /// Note that the use of HTTP/HTTPS URIs is discouraged for production use, as it can fail due
+        /// to server failures, pre-emptive DOS protection by Google, and similar reasons.
+        /// </remarks>
         /// <param name="uri">The URI of the image, which may either be a Google Cloud Storage URI of the form <c>gs://bucket-name/file-name</c>
         /// or a publicly accessibly HTTP or HTTPS URI. Must not be null.</param>
         /// <returns>The newly created image.</returns>
@@ -43,6 +47,8 @@ namespace Google.Cloud.Vision.V1
         /// Constructs an <see cref="Image"/> with a <see cref="Image.Source"/> property referring to a URI,
         /// which may either be a Google Cloud Storage URI or a publicly accessible HTTP or HTTPS URI. The
         /// image is fetched from the URI by the Google Cloud Vision server.
+        /// Note that the use of HTTP/HTTPS URIs is discouraged for production use, as it can fail due
+        /// to server failures, pre-emptive DOS protection by Google, and similar reasons.
         /// </summary>
         /// <param name="uri">The URI of the image, which may either be a Google Cloud Storage URI of the form <c>gs://bucket-name/file-name</c>
         /// or a publicly accessibly HTTP or HTTPS URI. Must not be null.</param>

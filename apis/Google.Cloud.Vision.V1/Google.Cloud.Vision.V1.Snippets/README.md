@@ -20,3 +20,8 @@ Source: https://commons.wikimedia.org/wiki/File:Avenir_Next_regular_and_condense
 Chrome.png
 Attribution: Public domain (see Wikimedia page for details)
 Source: https://commons.wikimedia.org/wiki/File:Google_Chrome_icon_(2011).svg
+
+bicycle_example.png
+Attribution: Bogdan Dada
+Source: https://cloud.google.com/vision/docs/images/bicycle_example.png
+Originally: https://unsplash.com/photos/J9cBJjlpYKU
