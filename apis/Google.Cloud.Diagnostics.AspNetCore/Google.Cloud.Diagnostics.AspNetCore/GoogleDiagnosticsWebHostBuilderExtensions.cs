@@ -133,8 +133,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddGoogleExceptionLogging(options =>
             {
                 options.ProjectId = projectId;
-                options.ServiceName = Project.GetAndCheckServiceName(serviceName, null);
-                options.Version = Project.GetAndCheckServiceVersion(serviceVersion, null);
+                options.ServiceName = Project.GetServiceName(serviceName, null);
+                options.Version = Project.GetServiceVersion(serviceVersion, null);
                 options.Options = errorReportingOptions;
             });
         }
