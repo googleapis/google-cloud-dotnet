@@ -24,7 +24,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetAndCheckProjectId()
         {
             var projectId = "pid";
-            var resourceProjectId = "pid";
+            var resourceProjectId = "resource-pid";
             var monitoredResource = new MonitoredResource
             {
                 Type = "some-type",
@@ -57,7 +57,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetAndCheckServiceName()
         {
             var serviceName = "my-app";
-            var resourceServiceName = "my-app";
+            var resourceServiceName = "resource-my-app";
             var monitoredResource = new MonitoredResource
             {
                 Type = "some-type",
@@ -90,7 +90,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetServiceName()
         {
             var serviceName = "my-app";
-            var resourceServiceName = "my-app";
+            var resourceServiceName = "resource-my-app";
             var monitoredResource = new MonitoredResource
             {
                 Type = "some-type",
@@ -122,7 +122,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetAndCheckServiceVersion()
         {
             var serviceVersion = "1.0.0";
-            var resourceServiceVersion = "1.0.0";
+            var resourceServiceVersion = "resource-1.0.0";
             var monitoredResource = new MonitoredResource
             {
                 Type = "some-type",
@@ -155,7 +155,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetServiceVersion()
         {
             var serviceVersion = "1.0.0";
-            var resourceServiceVersion = "1.0.0";
+            var resourceServiceVersion = "resource-1.0.0";
             var monitoredResource = new MonitoredResource
             {
                 Type = "some-type",
@@ -186,8 +186,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void DoesNotCacheSpecifiedMonitoredResourceInstance()
         {
-            var projectId1 = "pid-1";
-            var resourceProjectId1 = "pid-1";
+            var resourceProjectId1 = "resource-pid-1";
             var monitoredResource1 = new MonitoredResource
             {
                 Type = "some-type",
@@ -196,13 +195,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     { "project_id", resourceProjectId1 }
                 }
             };
-            Assert.Equal(projectId1, Project.GetAndCheckProjectId(null, monitoredResource1));
+            Assert.Equal(resourceProjectId1, Project.GetAndCheckProjectId(null, monitoredResource1));
 
             // Create a second MonitoredResource instance and pass it to GetAndCheckProjectId.
             // Assert that the first MonitoredResource instance is not cached by checking if the project ID is correct.
             // Only auto-detected MonitoredResource instances should be cached.
-            var projectId2 = "pid-2";
-            var resourceProjectId2 = "pid-2";
+            var resourceProjectId2 = "resource-pid-2";
             var monitoredResource2 = new MonitoredResource
             {
                 Type = "some-type",
@@ -211,7 +209,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     { "project_id", resourceProjectId2 }
                 }
             };
-            Assert.Equal(projectId2, Project.GetAndCheckProjectId(null, monitoredResource2));
+            Assert.Equal(resourceProjectId2, Project.GetAndCheckProjectId(null, monitoredResource2));
         }
     }
 }
