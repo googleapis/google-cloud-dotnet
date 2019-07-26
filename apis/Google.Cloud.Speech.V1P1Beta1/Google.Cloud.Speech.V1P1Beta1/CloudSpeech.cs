@@ -1822,6 +1822,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
   }
 
+  /// <summary>
+  /// *Optional* Config to enable speaker diarization.
+  /// </summary>
   public sealed partial class SpeakerDiarizationConfig : pb::IMessage<SpeakerDiarizationConfig> {
     private static readonly pb::MessageParser<SpeakerDiarizationConfig> _parser = new pb::MessageParser<SpeakerDiarizationConfig>(() => new SpeakerDiarizationConfig());
     private pb::UnknownFieldSet _unknownFields;
