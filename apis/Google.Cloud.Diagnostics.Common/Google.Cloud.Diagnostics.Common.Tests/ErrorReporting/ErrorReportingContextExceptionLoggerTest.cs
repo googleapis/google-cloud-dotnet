@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -64,6 +65,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             ValidateSingleEntry(consumer, "", "", "", options);
         }
 
+
         [Fact]
         public async Task LogAsync()
         {
@@ -81,45 +83,38 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private void ValidateSingleEntry(FakeConsumer consumer, string method, string uri, string userAgent, ErrorReportingOptions options)
         {
             var entries = consumer.Entries.ToList();
-            if (entries.Count == 1 && Matches(entries[0], method, uri, userAgent, options))
+            if (entries.Count != 1)
             {
-                return;
+                Assert.True(false, $"Expected single matching entry. Received:\n{string.Join("\n", entries)}");
             }
-            Assert.True(false, $"Expected single matching entry. Received:\n{string.Join("\n", entries)}");
-        }
-
-        private bool Matches(LogEntry entry, string method, string uri, string userAgent, ErrorReportingOptions options)
-        {
+            var entry = entries[0];
             var json = entry.JsonPayload?.Fields;
             var eventTarget = options.EventTarget;
-            
-            var message = json["message"].StringValue;
+
+            Assert.Equal(eventTarget.LogTarget.GetFullLogName(eventTarget.LogName), entry.LogName);
+            var currentSeconds = Timestamp.FromDateTime(DateTime.UtcNow).Seconds;
+            Assert.InRange(entry.Timestamp.Seconds, currentSeconds - 10, currentSeconds);
+            Assert.Equal(eventTarget.MonitoredResource, entry.Resource);
+            Assert.Equal(LogSeverity.Error, entry.Severity);
+            Assert.Contains(_exceptionMessage, json["message"].StringValue);
+
             var context = json["context"]?.StructValue?.Fields;
             var httpRequest = context["httpRequest"]?.StructValue?.Fields;
-            var methodVal = httpRequest["method"].StringValue;
-            var urlVal = httpRequest["url"].StringValue;
-            var userAgentVal = httpRequest["userAgent"].StringValue;
-            var reportLocation = context["reportLocation"]?.StructValue?.Fields;
-            var filePathVal = reportLocation["filePath"].StringValue;
-            var lineNumberVal = reportLocation["lineNumber"].NumberValue;
-            var functionNameVal = reportLocation["functionName"].StringValue;
-            var serviceContext = json["serviceContext"]?.StructValue?.Fields;
-            var serviceVal = serviceContext["service"].StringValue;
-            var versionVal = serviceContext["version"].StringValue;
+            Assert.Equal(method, httpRequest["method"].StringValue);
+            Assert.Equal(uri, httpRequest["url"].StringValue);
+            Assert.Equal(userAgent, httpRequest["userAgent"].StringValue);
 
-            return entry.LogName == eventTarget.LogTarget.GetFullLogName(eventTarget.LogName) &&
-                entry.Timestamp.Seconds <= Timestamp.FromDateTime(DateTime.UtcNow).Seconds &&
-                entry.Resource == eventTarget.MonitoredResource &&
-                entry.Severity == Logging.Type.LogSeverity.Error &&
-                message.Contains(_exceptionMessage) &&
-                method.Equals(methodVal) &&
-                uri.Equals(urlVal) &&
-                userAgent.Equals(userAgentVal) &&
-                (!_isWindows || lineNumberVal > 0) &&
-                (!_isWindows || !string.IsNullOrEmpty(filePathVal)) &&
-                nameof(CreateException).Equals(functionNameVal) &&
-                _service.Equals(serviceVal) &&
-                _version.Equals(versionVal);
+            var reportLocation = context["reportLocation"]?.StructValue?.Fields;
+            if (_isWindows)
+            {
+                Assert.InRange(reportLocation["lineNumber"].NumberValue, 1, 5000); // Longer than this file should ever be...
+                Assert.NotEqual("", reportLocation["filePath"].StringValue);
+            }
+            Assert.Equal(nameof(CreateException), reportLocation["functionName"].StringValue);
+
+            var serviceContext = json["serviceContext"]?.StructValue?.Fields;
+            Assert.Equal(_service, serviceContext["service"].StringValue);
+            Assert.Equal(_version, serviceContext["version"].StringValue);
         }
 
         /// <summary>Create a thrown exception with message.</summary>
