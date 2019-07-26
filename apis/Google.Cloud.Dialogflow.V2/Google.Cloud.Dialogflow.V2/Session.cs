@@ -1547,7 +1547,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The intent that matched the conversational query. Some, not
     /// all fields are filled in this message, including but not limited to:
-    /// `name`, `display_name` and `webhook_state`.
+    /// `name`, `display_name`, `end_interaction` and `is_fallback`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.Intent Intent {
