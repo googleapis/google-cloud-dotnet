@@ -17,13 +17,12 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -171,7 +170,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public async Task Logging_ScopeFormatParameter()
         {
             string testId = IdGenerator.FromGuid();
-            DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (var server = new TestServer(builder))
@@ -188,11 +186,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 var parentScopes = json["parent_scopes"]?.ListValue?.Values;
                 Assert.NotNull(parentScopes);
-                Assert.Single(parentScopes);
-
-                var scope0 = parentScopes[0].StructValue.Fields;
-                Assert.Equal(testId, scope0["id"].StringValue);
-                Assert.Equal(nameof(MainController.ScopeFormatParameters) + " - {id}", scope0["{OriginalFormat}"].StringValue);
+                var expectedScope = Value.ForStruct(new Struct
+                {
+                    Fields =
+                    {
+                        { "id", Value.ForString(testId) },
+                        { "{OriginalFormat}", Value.ForString(nameof(MainController.ScopeFormatParameters) + " - {id}") }
+                    }
+                });
+                Assert.Single(parentScopes, expectedScope);
             });
         }
 
