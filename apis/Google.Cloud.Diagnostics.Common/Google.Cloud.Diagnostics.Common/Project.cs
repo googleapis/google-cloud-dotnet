@@ -135,7 +135,6 @@ namespace Google.Cloud.Diagnostics.Common
 
         private static string GetServiceVersionFromResource(MonitoredResource resource)
         {
-            resource = resource ?? _detectedMonitoredResource ?? (_detectedMonitoredResource = MonitoredResourceBuilder.FromPlatform());
             switch (resource?.Type)
             {
                 case "gae_app": return GetLabel(resource, "version_id");
