@@ -93,10 +93,10 @@ namespace Google.Cloud.Firestore
             return null;
         }
 
-        internal static SentinelValue ForArrayValue(SentinelKind sentinelKind, object[] values)
+        internal static SentinelValue ForArrayValue(SerializationContext context, SentinelKind sentinelKind, object[] values)
         {
             GaxPreconditions.CheckNotNull(values, nameof(values));
-            ArrayValue array = ValueSerializer.Serialize(values).ArrayValue;
+            ArrayValue array = ValueSerializer.Serialize(context, values).ArrayValue;
             // This is just checking that the simple approach we've taken in the previous line
             // really did what we expect.
             GaxPreconditions.CheckState(array != null, "Input wasn't serialized as an array");

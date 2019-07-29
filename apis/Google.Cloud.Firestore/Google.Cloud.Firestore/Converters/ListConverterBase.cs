@@ -30,13 +30,13 @@ namespace Google.Cloud.Firestore.Converters
         {
         }
 
-        public override Value Serialize(object value)
+        public override Value Serialize(SerializationContext context, object value)
         {
             var proto = new Value { ArrayValue = new ArrayValue() };
             var repeatedField = proto.ArrayValue.Values;
             foreach (object element in (IEnumerable) value)
             {
-                var serializedElement = ValueSerializer.Serialize(element);
+                var serializedElement = ValueSerializer.Serialize(context, element);
                 if (serializedElement.ArrayValue != null)
                 {
                     throw new ArgumentException("Array values cannot directly contain other array values");

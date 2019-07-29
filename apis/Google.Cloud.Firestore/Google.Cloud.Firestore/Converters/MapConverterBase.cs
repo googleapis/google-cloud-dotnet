@@ -21,8 +21,8 @@ namespace Google.Cloud.Firestore.Converters
     /// <summary>
     /// Base class for types that always serialize to a map value.
     /// Derived classes need to implement deserialization as well as overriding
-    /// <see cref="ConverterBase.SerializeMap(object, System.Collections.Generic.IDictionary{string, Value})"/>,
-    /// which is called by this class's implementation of <see cref="Serialize(object)"/>.
+    /// <see cref="ConverterBase.SerializeMap(SerializationContext, object, System.Collections.Generic.IDictionary{string, Value})"/>,
+    /// which is called by this class's implementation of <see cref="Serialize(SerializationContext, object)"/>.
     /// </summary>
     internal abstract class MapConverterBase : ConverterBase
     {
@@ -30,10 +30,10 @@ namespace Google.Cloud.Firestore.Converters
         {
         }
 
-        public override Value Serialize(object value)
+        public override Value Serialize(SerializationContext context, object value)
         {
             var proto = new Value { MapValue = new MapValue() };
-            SerializeMap(value, proto.MapValue.Fields);
+            SerializeMap(context, value, proto.MapValue.Fields);
             return proto;
         }
     }

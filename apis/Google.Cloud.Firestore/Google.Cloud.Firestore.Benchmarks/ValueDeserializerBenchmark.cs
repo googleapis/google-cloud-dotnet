@@ -56,7 +56,7 @@ namespace Google.Cloud.Firestore.Benchmarks
                 CreateTime = new Timestamp(1, 10).ToProto(),
                 UpdateTime = new Timestamp(2, 20).ToProto(),
                 Name = $"projects/proj/databases/db/documents/col1/{docId}",
-                Fields = { ValueSerializer.SerializeMap(new { Name = docId }) }
+                Fields = { ValueSerializer.SerializeMap(db.SerializationContext, new { Name = docId }) }
             };
             return DocumentSnapshot.ForDocument(db, proto, readTime);
         }

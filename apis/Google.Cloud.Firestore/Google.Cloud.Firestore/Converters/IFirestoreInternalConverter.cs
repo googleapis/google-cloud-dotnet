@@ -41,9 +41,10 @@ namespace Google.Cloud.Firestore.Converters
         /// <summary>
         /// Serializes a single POCO to a Firestore representation.
         /// </summary>
+        /// <param name="context"></param>
         /// <param name="value">The value to serialize. Never null.</param>
         /// <returns>The serialized value. Should never be null.</returns>
-        Value Serialize(object value);
+        Value Serialize(SerializationContext context, object value);
 
         /// <summary>
         /// Populates a map based on the serialized form of a POCO.
@@ -51,8 +52,9 @@ namespace Google.Cloud.Firestore.Converters
         /// <remarks>
         /// Logically this could return a dictionary instead, but it's more efficient to populate an existing map.
         /// </remarks>
+        /// <param name="context"></param>
         /// <param name="value">The value to serialize. Never null.</param>
         /// <param name="map">The map to populate. Never null.</param>
-        void SerializeMap(object value, IDictionary<string, Value> map);
+        void SerializeMap(SerializationContext context, object value, IDictionary<string, Value> map);
     }
 }

@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Firestore.Converters;
+using BclType = System.Type;
 
 namespace Google.Cloud.Firestore
 {
@@ -44,5 +46,8 @@ namespace Google.Cloud.Firestore
         {
             Snapshot = GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot));
         }
+
+        internal IFirestoreInternalConverter GetConverter(BclType targetType) =>
+            Database.SerializationContext.GetConverter(targetType);
     }
 }

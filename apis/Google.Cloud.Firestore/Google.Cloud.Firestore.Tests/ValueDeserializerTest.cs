@@ -192,7 +192,7 @@ namespace Google.Cloud.Firestore.Tests
         [Fact]
         public void DeserializeArrayToObjectUsesList()
         {
-            var value = ValueSerializer.Serialize(new[] { 1, 2 });
+            var value = ValueSerializer.Serialize(SerializationContext.Default, new[] { 1, 2 });
             var deserialized = DeserializeDefault(value, typeof(object));
             Assert.IsType<List<object>>(deserialized);
             Assert.Equal(new List<object> { 1L, 2L }, deserialized);
@@ -298,7 +298,7 @@ namespace Google.Cloud.Firestore.Tests
                 InternalProperty = "x",
                 PublicAccessToPrivateProperty = "y"
             };
-            var value = ValueSerializer.Serialize(poco);
+            var value = ValueSerializer.Serialize(SerializationContext.Default, poco);
             // Just verify that we're not using the public property directly...
             Assert.True(value.MapValue.Fields.ContainsKey("PrivateProperty"));
             Assert.False(value.MapValue.Fields.ContainsKey("PublicAccessToPrivateProperty"));
@@ -311,7 +311,7 @@ namespace Google.Cloud.Firestore.Tests
         public void DeserializePrivateConstructor()
         {
             var original = PrivateConstructor.Create("test", 15);
-            var value = ValueSerializer.Serialize(original);
+            var value = ValueSerializer.Serialize(SerializationContext.Default, original);
             Assert.Equal("test", value.MapValue.Fields["Name"].StringValue);
             Assert.Equal(15L, value.MapValue.Fields["Value"].IntegerValue);
 
@@ -323,7 +323,7 @@ namespace Google.Cloud.Firestore.Tests
         [Fact]
         public void DeserializeInt64AndDoubleToEachOther()
         {
-            var value = ValueSerializer.Serialize(new { Name = "Test", DoubleValue = 100L, LongValue = 10.9 });
+            var value = ValueSerializer.Serialize(SerializationContext.Default, new { Name = "Test", DoubleValue = 100L, LongValue = 10.9 });
             Assert.Equal(Value.ValueTypeOneofCase.IntegerValue, value.MapValue.Fields["DoubleValue"].ValueTypeCase);
             Assert.Equal(Value.ValueTypeOneofCase.DoubleValue, value.MapValue.Fields["LongValue"].ValueTypeCase);
             var deserialized = (ModelWithDoubleAndLong) DeserializeDefault(value, typeof(ModelWithDoubleAndLong));
@@ -377,7 +377,7 @@ namespace Google.Cloud.Firestore.Tests
 
         private string DeserializeAndReturnWarnings<T>(object valueToSerialize)
         {
-            var value = ValueSerializer.Serialize(valueToSerialize);
+            var value = ValueSerializer.Serialize(SerializationContext.Default, valueToSerialize);
             string warning = null;
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient()).WithWarningLogger(Log);
             var snapshot = GetSampleSnapshot(db, "doc1");

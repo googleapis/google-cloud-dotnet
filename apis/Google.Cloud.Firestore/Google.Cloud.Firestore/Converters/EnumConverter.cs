@@ -38,7 +38,7 @@ namespace Google.Cloud.Firestore.Converters
 
         protected override object DeserializeInteger(DeserializationContext context, long value) => _converter.Int64ToEnum(value);
 
-        public override Value Serialize(object value) => new Value { IntegerValue = _converter.EnumToInt64(value) };
+        public override Value Serialize(SerializationContext context, object value) => new Value { IntegerValue = _converter.EnumToInt64(value) };
 
         // This is really ugly in terms of repetition, but reasonably simple. I've failed to come up with anything cleaner :(
         private abstract class PrimitiveConverter

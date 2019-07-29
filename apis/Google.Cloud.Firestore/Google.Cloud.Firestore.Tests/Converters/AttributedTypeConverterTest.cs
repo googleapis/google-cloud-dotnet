@@ -124,7 +124,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
         {
             var converter = AttributedTypeConverter.ForType(typeof(Model));
             var sample = new Model { ReadWrite = 50, SeparatedBackingProperty = 100, Created = Timestamp.FromDateTime(DateTime.UtcNow) };
-            var result = converter.Serialize(sample).MapValue.Fields;
+            var result = converter.Serialize(SerializationContext.Default, sample).MapValue.Fields;
 
             Assert.Equal(new Value { IntegerValue = 20 }, result["ReadOnly"]);
             Assert.Equal(new Value { IntegerValue = 50 }, result["ReadWrite"]);
@@ -187,7 +187,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             };
 
             var converter = AttributedTypeConverter.ForType(typeof(ModelDerived));
-            var result = converter.Serialize(sample).MapValue.Fields;
+            var result = converter.Serialize(SerializationContext.Default, sample).MapValue.Fields;
             Assert.Equal(new Value { IntegerValue = 1 }, result["Abstract"]);
             Assert.Equal(new Value { IntegerValue = 2 }, result["BaseOnly"]);
             Assert.Equal(new Value { IntegerValue = 3 }, result["DerivedOnly"]);

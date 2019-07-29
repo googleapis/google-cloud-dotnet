@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Google.Api.Gax;
-using Google.Cloud.Firestore.Converters;
 using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections.Generic;
@@ -67,7 +66,7 @@ namespace Google.Cloud.Firestore
             // We deserialize to T and Nullable<T> the same way for all non-null values. Use the converter
             // associated with the non-nullable version of the target type.
             BclType nonNullableTargetType = underlyingType ?? targetType;
-            return ConverterCache.GetConverter(nonNullableTargetType).DeserializeValue(context, value);
+            return context.GetConverter(nonNullableTargetType).DeserializeValue(context, value);
         }
 
         internal static object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values, BclType targetType)
@@ -76,7 +75,7 @@ namespace Google.Cloud.Firestore
             {
                 targetType = typeof(Dictionary<string, object>);
             }
-            return ConverterCache.GetConverter(targetType).DeserializeMap(context, values);
+            return context.GetConverter(targetType).DeserializeMap(context, values);
         }
 
         private static BclType GetTargetType(Value value)

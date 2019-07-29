@@ -59,12 +59,12 @@ namespace Google.Cloud.Firestore.Converters
             return ret;
         }
 
-        public override void SerializeMap(object value, IDictionary<string, Value> map)
+        public override void SerializeMap(SerializationContext context, object value, IDictionary<string, Value> map)
         {
             var dictionary = (IDictionary<string, TValue>) value;
             foreach (var pair in dictionary)
             {
-                map[pair.Key] = ValueSerializer.Serialize(pair.Value);
+                map[pair.Key] = ValueSerializer.Serialize(context, pair.Value);
             }
         }
     }

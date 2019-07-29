@@ -37,15 +37,16 @@ namespace Google.Cloud.Firestore
         /// relevant when the input is already a proto. That allows the caller to then mutate the result
         /// where appropriate.
         /// </remarks>
+        /// <param name="context"></param>
         /// <param name="value">The value to serialize.</param>
         /// <returns>A Firestore Value proto.</returns>
-        internal static Value Serialize(object value)
+        internal static Value Serialize(SerializationContext context, object value)
         {
             if (value == null)
             {
                 return new Value { NullValue = wkt::NullValue.NullValue };
             }
-            return ConverterCache.GetConverter(value.GetType()).Serialize(value);
+            return context.GetConverter(value.GetType()).Serialize(context, value);
         }
 
         /// <summary>
@@ -53,11 +54,11 @@ namespace Google.Cloud.Firestore
         /// This is effectively the map-only part of <see cref="Serialize"/>, but without wrapping the
         /// result in a Value.
         /// </summary>
-        internal static Dictionary<string, Value> SerializeMap(object value)
+        internal static Dictionary<string, Value> SerializeMap(SerializationContext context, object value)
         {
             GaxPreconditions.CheckNotNull(value, nameof(value));
             var map = new Dictionary<string, Value>();
-            ConverterCache.GetConverter(value.GetType()).SerializeMap(value, map);
+            context.GetConverter(value.GetType()).SerializeMap(context, value, map);
             return map;
         }
     }
