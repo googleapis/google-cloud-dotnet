@@ -298,7 +298,7 @@
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0-beta01",
+      "Google.Api.Gax.Grpc": "2.10.0-beta02",
       "Google.Cloud.Logging.V2": "2.1.0",
       "Google.Cloud.Trace.V1": "1.0.0",
       "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
