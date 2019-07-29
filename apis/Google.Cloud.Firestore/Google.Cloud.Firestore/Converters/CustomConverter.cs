@@ -78,19 +78,19 @@ namespace Google.Cloud.Firestore.Converters
             return converted;
         }
 
-        public Value Serialize(object value)
+        public Value Serialize(SerializationContext context, object value)
         {
             var poco = _wrappedConverter.ToFirestore((T) value);
             GaxPreconditions.CheckState(poco != null, "Converter serialized to null value");
-            return ValueSerializer.Serialize(poco);
+            return ValueSerializer.Serialize(context, poco);
         }
 
-        public void SerializeMap(object value, IDictionary<string, Value> map)
+        public void SerializeMap(SerializationContext context, object value, IDictionary<string, Value> map)
         {
             var poco = _wrappedConverter.ToFirestore((T) value);
             GaxPreconditions.CheckState(poco != null, "Converter serialized to null value");
             // TODO: Change ValueSerializer.SerializeMap to accept a map rather than return it? Then we can just pass it through.
-            var resultMap = ValueSerializer.SerializeMap(poco);
+            var resultMap = ValueSerializer.SerializeMap(context, poco);
             foreach (var entry in resultMap)
             {
                 map.Add(entry);

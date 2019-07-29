@@ -31,8 +31,8 @@ namespace Google.Cloud.Firestore.Benchmarks
         };
 
         internal static ExpandoObject Expando { get; } = CreateExpando();
-        internal static Value Serialized { get; } = ValueSerializer.Serialize(Attributed);
-        internal static Dictionary<string, Value> SerializedMap { get; } = ValueSerializer.SerializeMap(Attributed);
+        internal static Value Serialized { get; } = ValueSerializer.Serialize(SerializationContext.Default, Attributed);
+        internal static Dictionary<string, Value> SerializedMap { get; } = ValueSerializer.SerializeMap(SerializationContext.Default, Attributed);
 
         // Expandos don't work well with object initializers :(
         private static ExpandoObject CreateExpando()

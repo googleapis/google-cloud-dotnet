@@ -34,11 +34,11 @@ namespace Google.Cloud.Firestore.Converters
             _properties = targetType.GetTypeInfo().DeclaredProperties.ToList();
         }
 
-        public override void SerializeMap(object value, IDictionary<string, Value> map)
+        public override void SerializeMap(SerializationContext context, object value, IDictionary<string, Value> map)
         {
             foreach (var property in _properties)
             {
-                map[property.Name] = ValueSerializer.Serialize(property.GetValue(value));
+                map[property.Name] = ValueSerializer.Serialize(context, property.GetValue(value));
             }
         }
     }

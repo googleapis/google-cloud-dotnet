@@ -97,7 +97,7 @@ namespace Google.Cloud.Firestore.Tests
         [MemberData(nameof(SerializeOnlyData))]
         public void Serialize(object input, Value expectedOutput)
         {
-            var actual = ValueSerializer.Serialize(input);
+            var actual = ValueSerializer.Serialize(SerializationContext.Default, input);
             Assert.Equal(expectedOutput, actual);
         }
 
@@ -106,7 +106,7 @@ namespace Google.Cloud.Firestore.Tests
         public void ValueIsCloned(IMessage proto, Func<Value, IMessage> selector)
         {
             // Protos should be accepted, but cloned (as they're mutable, and we mutate things too)
-            var value = ValueSerializer.Serialize(proto);
+            var value = ValueSerializer.Serialize(SerializationContext.Default, proto);
             var actual = selector(value);
             Assert.NotSame(proto, actual);
             Assert.Equal(proto, actual);
@@ -116,14 +116,14 @@ namespace Google.Cloud.Firestore.Tests
         public void Serialize_Invalid()
         {
             // It's unlikely that we'll ever support serializing System.Type...
-            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(typeof(ValueSerializer)));
+            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(SerializationContext.Default, typeof(ValueSerializer)));
         }
 
         [Theory]
         [MemberData(nameof(SerializeMapTestData))]
         public void SerializeMap(object input, Dictionary<string, Value> expectedOutput)
         {
-            var actual = ValueSerializer.SerializeMap(input);
+            var actual = ValueSerializer.SerializeMap(SerializationContext.Default, input);
             Assert.Equal(expectedOutput, actual);
         }
 
@@ -131,7 +131,7 @@ namespace Google.Cloud.Firestore.Tests
         [MemberData(nameof(SerializeMapTestData))]
         public void SerializeValue_SameAsMap(object input, Dictionary<string, Value> expectedMap)
         {
-            var actual = ValueSerializer.Serialize(input);
+            var actual = ValueSerializer.Serialize(SerializationContext.Default, input);
             var expectedValue = new Value { MapValue = new MapValue { Fields = { expectedMap } } };
             Assert.Equal(expectedValue, actual);
         }
@@ -140,7 +140,7 @@ namespace Google.Cloud.Firestore.Tests
         public void SerializeMap_Invalid()
         {
             // It's unlikely that we'll ever support serializing System.Type...
-            Assert.Throws<ArgumentException>(() => ValueSerializer.SerializeMap(typeof(ValueSerializer)));
+            Assert.Throws<ArgumentException>(() => ValueSerializer.SerializeMap(SerializationContext.Default, typeof(ValueSerializer)));
         }
 
         [Fact]
@@ -148,7 +148,7 @@ namespace Google.Cloud.Firestore.Tests
         {
             ulong value = long.MaxValue;
             value++;
-            Assert.Throws<OverflowException>(() => ValueSerializer.Serialize(value));
+            Assert.Throws<OverflowException>(() => ValueSerializer.Serialize(SerializationContext.Default, value));
         }
 
         [Theory]
@@ -157,14 +157,14 @@ namespace Google.Cloud.Firestore.Tests
         public void BadDateTimeKind(DateTimeKind kind)
         {
             var date = new DateTime(2017, 10, 6, 1, 2, 3, kind);
-            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(date));
+            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(SerializationContext.Default, date));
         }
 
         [Fact]
         public void ArrayInArray()
         {
             var badArray = new[] { new int[10] };
-            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(badArray));
+            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(SerializationContext.Default, badArray));
         }
 
         [FirestoreData]

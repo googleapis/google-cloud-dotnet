@@ -28,7 +28,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         /// </summary>
         internal static void AssertSerialized(DocumentSnapshot snapshot, object expectedValue)
         {
-            var serialized = ValueSerializer.SerializeMap(expectedValue);
+            var serialized = ValueSerializer.SerializeMap(snapshot.Database.SerializationContext, expectedValue);
             Assert.Equal(serialized, snapshot.Document.Fields);
         }
     }

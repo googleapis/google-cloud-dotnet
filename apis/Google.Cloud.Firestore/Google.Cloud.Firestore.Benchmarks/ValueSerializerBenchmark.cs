@@ -20,36 +20,38 @@ namespace Google.Cloud.Firestore.Benchmarks
 {
     public class ValueSerializerBenchmark
     {
+        private static readonly SerializationContext _serializationContext = new SerializationContext(null);
+
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Attributed() =>
-            ValueSerializer.SerializeMap(SampleData.Attributed);
+            ValueSerializer.SerializeMap(_serializationContext, SampleData.Attributed);
 
         [Benchmark]
         public Value Serialize_Attributed() =>
-            ValueSerializer.Serialize(SampleData.Attributed);
+            ValueSerializer.Serialize(_serializationContext, SampleData.Attributed);
 
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Anonymous() =>
-            ValueSerializer.SerializeMap(SampleData.Anonymous);
+            ValueSerializer.SerializeMap(_serializationContext, SampleData.Anonymous);
 
         [Benchmark]
         public Value Serialize_Anonymous() =>
-            ValueSerializer.Serialize(SampleData.Anonymous);
+            ValueSerializer.Serialize(_serializationContext, SampleData.Anonymous);
 
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Dictionary() =>
-            ValueSerializer.SerializeMap(SampleData.Dictionary);
+            ValueSerializer.SerializeMap(_serializationContext, SampleData.Dictionary);
 
         [Benchmark]
         public Value Serialize_Dictionary() =>
-            ValueSerializer.Serialize(SampleData.Dictionary);
+            ValueSerializer.Serialize(_serializationContext, SampleData.Dictionary);
 
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Expando() =>
-        ValueSerializer.SerializeMap(SampleData.Expando);
+        ValueSerializer.SerializeMap(_serializationContext, SampleData.Expando);
 
         [Benchmark]
         public Value Serialize_Expando() =>
-            ValueSerializer.Serialize(SampleData.Expando);
+            ValueSerializer.Serialize(_serializationContext, SampleData.Expando);
     }
 }

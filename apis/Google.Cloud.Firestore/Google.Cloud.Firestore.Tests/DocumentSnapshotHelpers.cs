@@ -31,7 +31,7 @@ namespace Google.Cloud.Firestore.Tests
                 CreateTime = CreateProtoTimestamp(1, 10),
                 UpdateTime = CreateProtoTimestamp(2, 20),
                 Name = db.Document($"col1/{docId}").Path,
-                Fields = { ValueSerializer.SerializeMap(new { Name = docId }) }
+                Fields = { ValueSerializer.SerializeMap(db.SerializationContext, new { Name = docId }) }
             };
             return DocumentSnapshot.ForDocument(db, proto, readTime);
         }

@@ -182,7 +182,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
                     new Document
                     {
                         Name = docRef.Path,
-                        Fields = { ValueSerializer.SerializeMap(DeserializeJson(cursor.DocSnapshot.JsonData)) },
+                        Fields = { ValueSerializer.SerializeMap(SerializationContext.Default, DeserializeJson(cursor.DocSnapshot.JsonData)) },
                         CreateTime = wkt::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
                         UpdateTime = wkt::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
                     },

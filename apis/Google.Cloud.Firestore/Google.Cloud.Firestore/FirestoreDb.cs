@@ -61,6 +61,8 @@ namespace Google.Cloud.Firestore
         internal string DocumentsPath { get; }
 
         private Action<string> WarningLogger { get; }
+        
+        internal SerializationContext SerializationContext { get; }
 
         private readonly CallSettings _batchGetCallSettings;
 
@@ -80,6 +82,7 @@ namespace Google.Cloud.Firestore
                 timeoutBackoff: new BackoffSettings(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(3), 2.0),
                 Expiration.FromTimeout(TimeSpan.FromMinutes(10)),
                 RetrySettings.FilterForStatusCodes(StatusCode.Unavailable))));
+            SerializationContext = new SerializationContext(this);
         }
 
         // Internally, we support non-default databases. The public Create and CreateAsync methods only support the default database,

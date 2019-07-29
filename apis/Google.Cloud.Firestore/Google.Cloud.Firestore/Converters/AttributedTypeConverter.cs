@@ -149,11 +149,11 @@ namespace Google.Cloud.Firestore.Converters
             return ret;
         }
 
-        public override void SerializeMap(object value, IDictionary<string, Value> map)
+        public override void SerializeMap(SerializationContext context, object value, IDictionary<string, Value> map)
         {
             foreach (var property in _readableProperties)
             {
-                map[property.FirestoreName] = property.GetProtoValue(value);
+                map[property.FirestoreName] = property.GetProtoValue(context, value);
             }
         }
 
@@ -199,16 +199,16 @@ namespace Google.Cloud.Firestore.Converters
 
             // TODO: Consider creating delegates for the property get/set methods.
             // Note: these methods have to handle null values when there's a custom converter involved, just like ValueSerializer/ValueDeserializer do.
-            internal Value GetProtoValue(object obj)
+            internal Value GetProtoValue(SerializationContext context, object obj)
             {
                 if (_sentinelValue != null)
                 {
                     return _sentinelValue.ToProtoValue();
                 }
                 object propertyValue = _propertyInfo.GetValue(obj);
-                return _converter == null ? ValueSerializer.Serialize(propertyValue)
+                return _converter == null ? ValueSerializer.Serialize(context, propertyValue)
                     : propertyValue == null ? new Value { NullValue = wkt::NullValue.NullValue }
-                    : _converter.Serialize(propertyValue);
+                    : _converter.Serialize(context, propertyValue);
             }
 
             internal void SetValue(DeserializationContext context, Value value, object target)

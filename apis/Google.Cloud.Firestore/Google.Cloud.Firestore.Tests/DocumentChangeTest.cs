@@ -12,14 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Document = Google.Cloud.Firestore.V1.Document;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 
 namespace Google.Cloud.Firestore.Tests
 {
     using Google.Cloud.ClientTesting;
-    using static ProtoHelpers;
 
     public class DocumentChangeTest
     {

@@ -56,7 +56,7 @@ namespace Google.Cloud.Firestore
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(documentData, nameof(documentData));
-            var fields = ValueSerializer.SerializeMap(documentData);
+            var fields = ValueSerializer.SerializeMap(documentReference.Database.SerializationContext, documentData);
             var sentinels = FindSentinels(fields);
             GaxPreconditions.CheckArgument(!sentinels.Any(sf => sf.IsDelete), nameof(documentData), "Delete sentinels cannot appear in Create calls");
             RemoveSentinels(fields, sentinels);
@@ -125,7 +125,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckArgument(updates.Count != 0, nameof(updates), "Empty set of updates specified");
             GaxPreconditions.CheckArgument(precondition?.Exists != true, nameof(precondition), "Cannot specify a must-exist precondition for update");
 
-            var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(pair.Value));
+            var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(documentReference.Database.SerializationContext, pair.Value));
             var expanded = ExpandObject(serializedUpdates);
 
 
@@ -153,7 +153,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(documentData, nameof(documentData));
 
-            var fields = ValueSerializer.SerializeMap(documentData);
+            var fields = ValueSerializer.SerializeMap(documentReference.Database.SerializationContext, documentData);
             options = options ?? SetOptions.Overwrite;
             var sentinels = FindSentinels(fields);
             var deletes = sentinels.Where(sf => sf.IsDelete).ToList();
