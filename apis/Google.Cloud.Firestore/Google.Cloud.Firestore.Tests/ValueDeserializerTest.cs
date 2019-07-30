@@ -119,6 +119,32 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void DeserializeCustomPropertyConversion_ConverterRegistry()
+        {
+            Guid guid1 = Guid.NewGuid();
+            Guid guid2 = Guid.NewGuid();
+            var value = new Value
+            {
+                MapValue = new MapValue
+                {
+                    Fields =
+                    {
+                        { "Name", new Value { StringValue = "test" } },
+                        { "Guid", new Value { StringValue = guid1.ToString("N") } },
+                        { "GuidOrNull", new Value { StringValue = guid2.ToString("N") } },
+                    }
+                }
+            };
+            var registry = new ConverterRegistry() { new SerializationTestData.GuidConverter() };
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient(), converterRegistry: registry);
+            var context = new DeserializationContext(db.Document("a/b"));                
+            var pair = (SerializationTestData.GuidPair2) ValueDeserializer.Deserialize(context, value, typeof(SerializationTestData.GuidPair2));
+            Assert.Equal("test", pair.Name);
+            Assert.Equal(guid1, pair.Guid);
+            Assert.Equal(guid2, pair.GuidOrNull);
+        }
+
+        [Fact]
         public void DeserializeCustomPropertyConversion_WithNull()
         {
             Guid guid = Guid.NewGuid();

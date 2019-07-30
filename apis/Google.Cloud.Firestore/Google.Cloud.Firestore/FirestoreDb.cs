@@ -65,7 +65,7 @@ namespace Google.Cloud.Firestore
 
         private readonly CallSettings _batchGetCallSettings;
 
-        private FirestoreDb(string projectId, string databaseId, FirestoreClient client, Action<string> warningLogger)
+        private FirestoreDb(string projectId, string databaseId, FirestoreClient client, Action<string> warningLogger, SerializationContext serializationContext)
         {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
@@ -81,7 +81,7 @@ namespace Google.Cloud.Firestore
                 timeoutBackoff: new BackoffSettings(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(3), 2.0),
                 Expiration.FromTimeout(TimeSpan.FromMinutes(10)),
                 RetrySettings.FilterForStatusCodes(StatusCode.Unavailable))));
-            SerializationContext = new SerializationContext(this);
+            SerializationContext = GaxPreconditions.CheckNotNull(serializationContext, nameof(serializationContext));
         }
 
         // Internally, we support non-default databases. The public Create and CreateAsync methods only support the default database,
@@ -125,14 +125,21 @@ namespace Google.Cloud.Firestore
         /// <param name="databaseId">The ID of the database within the project. May be null, in which case the default database will be used.</param>
         /// <param name="client">The client to use for RPC operations. Must not be null.</param>
         /// <param name="warningLogger">The warning logger to use, if any. May be null.</param>
+        /// <param name="converterRegistry">A registry of custom converters. May be null.</param>
         /// <returns>A new instance.</returns>
-        internal static FirestoreDb Create(string projectId, string databaseId, FirestoreClient client, Action<string> warningLogger = null) =>
+        internal static FirestoreDb Create(
+            // Required parameters
+            string projectId, string databaseId, FirestoreClient client,
+            // Optional parameters
+            Action<string> warningLogger = null,
+            ConverterRegistry converterRegistry = null) =>
             // Validation is performed in the constructor.
             new FirestoreDb(
                 projectId,
                 databaseId ?? DefaultDatabaseId,
                 client,
-                warningLogger);
+                warningLogger,
+                new SerializationContext(converterRegistry));
 
         /// <summary>
         /// Returns a new <see cref="FirestoreDb"/> with the same project, database and client as this one,
@@ -141,7 +148,7 @@ namespace Google.Cloud.Firestore
         /// <param name="warningLogger">The logger for warnings. May be null.</param>
         /// <returns>A new <see cref="FirestoreDb"/> based on this one, with the given warning logger.</returns>
         public FirestoreDb WithWarningLogger(Action<string> warningLogger) =>
-            new FirestoreDb(ProjectId, DatabaseId, Client, warningLogger);
+            new FirestoreDb(ProjectId, DatabaseId, Client, warningLogger, SerializationContext);
 
         internal void LogWarning(string message) => WarningLogger?.Invoke(message);
 

@@ -18,7 +18,6 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using Xunit;
-using static Google.Cloud.Firestore.Tests.SerializationTestData;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
@@ -165,6 +164,24 @@ namespace Google.Cloud.Firestore.Tests
         {
             var badArray = new[] { new int[10] };
             Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(SerializationContext.Default, badArray));
+        }
+
+        [Fact]
+        public void CustomConverterViaRegistry()
+        {
+            var input = new SerializationTestData.GuidPair2 { Name = "test1", Guid = Guid.Parse("a7dc91a0-ef9b-4fc7-9f03-1763d9688dfa"), GuidOrNull = Guid.Parse("5e124acc-c53e-4d47-bec8-a6618cf0b2d9") };
+            var expectedMap = new Dictionary<string, Value>
+            {
+                { "Name", new Value { StringValue = "test1" } },
+                { "Guid", new Value { StringValue = "a7dc91a0ef9b4fc79f031763d9688dfa" } },
+                { "GuidOrNull", new Value { StringValue = "5e124accc53e4d47bec8a6618cf0b2d9" } }
+            };
+            var expectedValue = new Value { MapValue = new MapValue { Fields = { expectedMap } } };
+
+            var registry = new ConverterRegistry { new SerializationTestData.GuidConverter() };
+            var context = new SerializationContext(registry);
+            var actualValue = ValueSerializer.Serialize(context, input);
+            Assert.Equal(expectedValue, actualValue);
         }
 
         [FirestoreData]

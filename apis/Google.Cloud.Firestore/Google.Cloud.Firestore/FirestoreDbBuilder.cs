@@ -50,6 +50,11 @@ namespace Google.Cloud.Firestore
         /// </summary>
         public Action<string> WarningLogger { get; set; }
 
+        /// <summary>
+        /// A registry for custom converters. May be null.
+        /// </summary>
+        public ConverterRegistry ConverterRegistry { get; set; }
+
         /// <inheritdoc />
         public override FirestoreDb Build()
         {
@@ -84,6 +89,6 @@ namespace Google.Cloud.Firestore
             throw new InvalidOperationException($"This method should never execute in {nameof(FirestoreDbBuilder)}");
 
         private FirestoreDb BuildFromClient(string projectId, FirestoreClient client) =>
-            FirestoreDb.Create(projectId, DatabaseId, client, WarningLogger);
+            FirestoreDb.Create(projectId, DatabaseId, client, WarningLogger, ConverterRegistry);
     }
 }

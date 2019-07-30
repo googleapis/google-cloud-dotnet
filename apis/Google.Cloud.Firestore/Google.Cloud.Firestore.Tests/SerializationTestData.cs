@@ -387,6 +387,21 @@ namespace Google.Cloud.Firestore.Tests
             public Guid? GuidOrNull { get; set; }
         }
 
+        // Like GuidPair, but without the converter specified - it has to come
+        // from a converter registry instead.
+        [FirestoreData]
+        public class GuidPair2
+        {
+            [FirestoreProperty]
+            public string Name { get; set; }
+
+            [FirestoreProperty]
+            public Guid Guid { get; set; }
+
+            [FirestoreProperty]
+            public Guid? GuidOrNull { get; set; }
+        }
+
         public class GuidConverter : IFirestoreConverter<Guid>
         {
             public Guid FromFirestore(object value)
