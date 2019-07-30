@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Testing;
+using Google.Cloud.Firestore.Converters;
 using Google.Cloud.Firestore.V1;
 using Grpc.Core;
 using System;
@@ -32,7 +33,8 @@ namespace Google.Cloud.Firestore.Tests
                 DatabaseId = "db",
                 CallInvoker = new FakeCallInvoker(),
                 WarningLogger = text => warning = text,
-                Settings = new FirestoreSettings { Clock = new FakeClock() }
+                Settings = new FirestoreSettings { Clock = new FakeClock() },
+                ConverterRegistry = new ConverterRegistry { new SerializationTestData.GuidConverter() }
             };
             var db = builder.Build();
             Assert.Equal("proj", db.ProjectId);
@@ -40,6 +42,7 @@ namespace Google.Cloud.Firestore.Tests
             db.LogWarning("Test warning");
             Assert.Equal("Test warning", warning);
             Assert.IsType<FakeClock>(db.Client.Settings.Clock);
+            Assert.IsType<CustomConverter<Guid>>(db.SerializationContext.GetConverter(typeof(Guid)));
         }
 
         private class FakeCallInvoker : CallInvoker

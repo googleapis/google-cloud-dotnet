@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.Converters;
+using System.Collections.Generic;
 using BclType = System.Type;
 
 namespace Google.Cloud.Firestore
@@ -24,11 +25,22 @@ namespace Google.Cloud.Firestore
     /// </summary>
     internal sealed class SerializationContext
     {
+        // Important note: if this ever contains more state than just the converters,
+        // e.g. a reference to the Database, then WithWarningLogger will need to be adjusted accordingly.
+        
+        private readonly IReadOnlyDictionary<BclType, IFirestoreInternalConverter> _customConverters;
         internal static SerializationContext Default { get; } = new SerializationContext(null);
 
-        internal SerializationContext(FirestoreDb db) { }
+        internal SerializationContext(ConverterRegistry converterRegistry)
+        {
+            _customConverters = converterRegistry?.ToConverterDictionary();
+        }
 
-        internal IFirestoreInternalConverter GetConverter(BclType targetType) =>
-            ConverterCache.GetConverter(targetType);
+        internal IFirestoreInternalConverter GetConverter(BclType targetType)
+        {
+            IFirestoreInternalConverter customConverter = null;
+            _customConverters?.TryGetValue(targetType, out customConverter);
+            return customConverter ?? ConverterCache.GetConverter(targetType);
+        }
     }
 }
