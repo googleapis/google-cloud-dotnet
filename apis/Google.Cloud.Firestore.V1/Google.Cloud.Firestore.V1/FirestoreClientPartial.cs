@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
 
@@ -139,6 +140,33 @@ namespace Google.Cloud.Firestore.V1
             return endOfDatabaseId == -1 ? resource : resource.Substring(0, endOfDatabaseId);
 
             void ThrowInvalidResource() => throw new ArgumentException($"{resource} is not a valid Firestore resource name", nameof(resource));
+        }
+    }
+
+    // Support for FirestoreDbBuilder.
+    public sealed partial class FirestoreClientBuilder : ClientBuilderBase<FirestoreClient>
+    {
+        /// <summary>
+        /// Creates a new instance with no settings.
+        /// </summary>
+        public FirestoreClientBuilder()
+        {
+        }
+        
+        /// <summary>
+        /// Creates a <see cref="FirestoreClientBuilder"/> by copying common settings from another builder.
+        /// This method is intended for use in Google.Cloud.Firestore with FirestoreDbBuilder. It will
+        /// work in other scenarios, but is usually not necessary.
+        /// </summary>
+        /// <typeparam name="T">The client type of the builder.</typeparam>
+        /// <param name="builder">The builder to copy settings from. Must not be null.</param>
+        /// <returns>A FirestoreClientBuilder with common settings from <paramref name="builder"/>.</returns>
+        public static FirestoreClientBuilder FromOtherBuilder<T>(ClientBuilderBase<T> builder)
+        {
+            GaxPreconditions.CheckNotNull(builder, nameof(builder));
+            var ret = new FirestoreClientBuilder();
+            ret.CopyCommonSettings(builder);
+            return ret;
         }
     }
 }
