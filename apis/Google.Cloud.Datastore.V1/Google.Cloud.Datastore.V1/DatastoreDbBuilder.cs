@@ -16,14 +16,13 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Datastore.V1
 {
     /// <summary>
-    /// Builder class for <see cref="DatastoreClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// Builder class for <see cref="DatastoreDb"/> to provide simple configuration of credentials, endpoint etc.
     /// </summary>
     public sealed partial class DatastoreDbBuilder : ClientBuilderBase<DatastoreDb>
     {
@@ -60,6 +59,7 @@ namespace Google.Cloud.Datastore.V1
         private ConfiguredBuilder PrepareBuilder()
         {
             var clientBuilder = new DatastoreClientBuilder(this);
+            clientBuilder.Settings = Settings;
             string projectId = ProjectId;
 
             if (EmulatorDetection != EmulatorDetection.None)
