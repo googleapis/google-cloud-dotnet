@@ -20,6 +20,12 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 # - Java 9
 
 OUTDIR=tmp
+if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
+then
+  declare -r GOOGLEAPIS="$SYNTHTOOL_GOOGLEAPIS"
+else
+  declare -r GOOGLEAPIS=googleapis
+fi
 
 fetch_github_repos() {
   if [ -d "gapic-generator" ]
@@ -40,13 +46,16 @@ fetch_github_repos() {
     git clone --recursive https://github.com/googleapis/gapic-generator-csharp
   fi
 
-  if [ -d "googleapis" ]
+  if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" ]]
   then
-    git -C googleapis pull -q
-  else
-    # Auto-detect whether we're cloning the public or private googleapis repo.
-    git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
-    git clone --recursive https://github.com/googleapis/${repo} googleapis
+    if [ -d "googleapis" ]
+    then
+      git -C googleapis pull -q
+    else
+      # Auto-detect whether we're cloning the public or private googleapis repo.
+      git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
+      git clone --recursive https://github.com/googleapis/${repo} googleapis
+    fi
   fi
 }
 
@@ -54,7 +63,7 @@ generate_microgenerator() {
   API_TMP_DIR=$OUTDIR/$1
   PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$1
   API_OUT_DIR=apis
-  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   
   mkdir -p $PRODUCTION_PACKAGE_DIR
   
@@ -64,7 +73,7 @@ generate_microgenerator() {
     --csharp_out=$PRODUCTION_PACKAGE_DIR \
     --grpc_out=$PRODUCTION_PACKAGE_DIR \
     --gapic_out=$API_TMP_DIR \
-    -I googleapis \
+    -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
@@ -87,7 +96,7 @@ generate_microgenerator() {
 generate_gapicgenerator() {
   API_TMP_DIR=$OUTDIR/$1
   API_OUT_DIR=apis
-  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   API_YAML=$API_SRC_DIR/../$($PYTHON3 tools/getapifield.py apis/apis.json $1 serviceYaml)
 
   if [[ ! -f $API_YAML ]]
@@ -108,14 +117,14 @@ generate_gapicgenerator() {
   # include IAM so that gRPC rerouting works; it doesn't have any negative
   # impact for non-IAM APIs. (Ditto Grafeas.)
   $PROTOC \
-    -I googleapis \
+    -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     --include_source_info \
     --include_imports \
     -o $API_TMP_DIR/protos.desc \
     $API_SRC_DIR/*.proto \
-    googleapis/google/iam/v1/*.proto \
-    googleapis/grafeas/v1/*.proto \
+    $GOOGLEAPIS/google/iam/v1/*.proto \
+    $GOOGLEAPIS/grafeas/v1/*.proto \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
 
@@ -141,7 +150,7 @@ generate_gapicgenerator() {
   $PROTOC \
     --csharp_out=$API_OUT_DIR/$1/$1 \
     --grpc_out=$API_OUT_DIR/$1/$1 \
-    -I googleapis \
+    -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     $API_SRC_DIR/*.proto \
@@ -149,20 +158,20 @@ generate_gapicgenerator() {
 }
 
 generate_proto() {
-  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   $PROTOC \
     --csharp_out=apis/$1/$1 \
-    -I googleapis \
+    -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $API_SRC_DIR/*.proto
 }
 
 generate_protogrpc() {
-  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   $PROTOC \
     --csharp_out=apis/$1/$1 \
     --grpc_out=apis/$1/$1 \
-    -I googleapis \
+    -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     $API_SRC_DIR/*.proto
