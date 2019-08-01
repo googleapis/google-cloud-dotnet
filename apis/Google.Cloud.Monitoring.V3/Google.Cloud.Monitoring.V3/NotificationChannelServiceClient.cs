@@ -56,6 +56,9 @@ namespace Google.Cloud.Monitoring.V3
             CreateNotificationChannelSettings = existing.CreateNotificationChannelSettings;
             UpdateNotificationChannelSettings = existing.UpdateNotificationChannelSettings;
             DeleteNotificationChannelSettings = existing.DeleteNotificationChannelSettings;
+            SendNotificationChannelVerificationCodeSettings = existing.SendNotificationChannelVerificationCodeSettings;
+            GetNotificationChannelVerificationCodeSettings = existing.GetNotificationChannelVerificationCodeSettings;
+            VerifyNotificationChannelSettings = existing.VerifyNotificationChannelSettings;
             OnCopy(existing);
         }
 
@@ -326,6 +329,95 @@ namespace Google.Cloud.Monitoring.V3
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotificationChannelServiceClient.SendNotificationChannelVerificationCode</c> and <c>NotificationChannelServiceClient.SendNotificationChannelVerificationCodeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>NotificationChannelServiceClient.SendNotificationChannelVerificationCode</c> and
+        /// <c>NotificationChannelServiceClient.SendNotificationChannelVerificationCodeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings SendNotificationChannelVerificationCodeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotificationChannelServiceClient.GetNotificationChannelVerificationCode</c> and <c>NotificationChannelServiceClient.GetNotificationChannelVerificationCodeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>NotificationChannelServiceClient.GetNotificationChannelVerificationCode</c> and
+        /// <c>NotificationChannelServiceClient.GetNotificationChannelVerificationCodeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNotificationChannelVerificationCodeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotificationChannelServiceClient.VerifyNotificationChannel</c> and <c>NotificationChannelServiceClient.VerifyNotificationChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>NotificationChannelServiceClient.VerifyNotificationChannel</c> and
+        /// <c>NotificationChannelServiceClient.VerifyNotificationChannelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings VerifyNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -1973,6 +2065,810 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to which to send a verification code.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task SendNotificationChannelVerificationCodeAsync(
+            NotificationChannelName name,
+            gaxgrpc::CallSettings callSettings = null) => SendNotificationChannelVerificationCodeAsync(
+                new SendNotificationChannelVerificationCodeRequest
+                {
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to which to send a verification code.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task SendNotificationChannelVerificationCodeAsync(
+            NotificationChannelName name,
+            st::CancellationToken cancellationToken) => SendNotificationChannelVerificationCodeAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to which to send a verification code.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void SendNotificationChannelVerificationCode(
+            NotificationChannelName name,
+            gaxgrpc::CallSettings callSettings = null) => SendNotificationChannelVerificationCode(
+                new SendNotificationChannelVerificationCodeRequest
+                {
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to which to send a verification code.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task SendNotificationChannelVerificationCodeAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => SendNotificationChannelVerificationCodeAsync(
+                new SendNotificationChannelVerificationCodeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to which to send a verification code.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task SendNotificationChannelVerificationCodeAsync(
+            string name,
+            st::CancellationToken cancellationToken) => SendNotificationChannelVerificationCodeAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to which to send a verification code.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void SendNotificationChannelVerificationCode(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => SendNotificationChannelVerificationCode(
+                new SendNotificationChannelVerificationCodeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task SendNotificationChannelVerificationCodeAsync(
+            SendNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task SendNotificationChannelVerificationCodeAsync(
+            SendNotificationChannelVerificationCodeRequest request,
+            st::CancellationToken cancellationToken) => SendNotificationChannelVerificationCodeAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void SendNotificationChannelVerificationCode(
+            SendNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel for which a verification code is to be generated
+        /// and retrieved. This must name a channel that is already verified; if
+        /// the specified channel is not verified, the request will fail.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(
+            NotificationChannelName name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelVerificationCodeAsync(
+                new GetNotificationChannelVerificationCodeRequest
+                {
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel for which a verification code is to be generated
+        /// and retrieved. This must name a channel that is already verified; if
+        /// the specified channel is not verified, the request will fail.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(
+            NotificationChannelName name,
+            st::CancellationToken cancellationToken) => GetNotificationChannelVerificationCodeAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel for which a verification code is to be generated
+        /// and retrieved. This must name a channel that is already verified; if
+        /// the specified channel is not verified, the request will fail.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(
+            NotificationChannelName name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelVerificationCode(
+                new GetNotificationChannelVerificationCodeRequest
+                {
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel for which a verification code is to be generated
+        /// and retrieved. This must name a channel that is already verified; if
+        /// the specified channel is not verified, the request will fail.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelVerificationCodeAsync(
+                new GetNotificationChannelVerificationCodeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel for which a verification code is to be generated
+        /// and retrieved. This must name a channel that is already verified; if
+        /// the specified channel is not verified, the request will fail.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetNotificationChannelVerificationCodeAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel for which a verification code is to be generated
+        /// and retrieved. This must name a channel that is already verified; if
+        /// the specified channel is not verified, the request will fail.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelVerificationCode(
+                new GetNotificationChannelVerificationCodeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(
+            GetNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(
+            GetNotificationChannelVerificationCodeRequest request,
+            st::CancellationToken cancellationToken) => GetNotificationChannelVerificationCodeAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(
+            GetNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to verify.
+        /// </param>
+        /// <param name="code">
+        /// The verification code that was delivered to the channel as
+        /// a result of invoking the `SendNotificationChannelVerificationCode` API
+        /// method or that was retrieved from a verified channel via
+        /// `GetNotificationChannelVerificationCode`. For example, one might have
+        /// "G-123456" or "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only
+        /// guaranteed that the code is valid UTF-8; one should not
+        /// make any assumptions regarding the structure or format of the code).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> VerifyNotificationChannelAsync(
+            NotificationChannelName name,
+            string code,
+            gaxgrpc::CallSettings callSettings = null) => VerifyNotificationChannelAsync(
+                new VerifyNotificationChannelRequest
+                {
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Code = gax::GaxPreconditions.CheckNotNullOrEmpty(code, nameof(code)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to verify.
+        /// </param>
+        /// <param name="code">
+        /// The verification code that was delivered to the channel as
+        /// a result of invoking the `SendNotificationChannelVerificationCode` API
+        /// method or that was retrieved from a verified channel via
+        /// `GetNotificationChannelVerificationCode`. For example, one might have
+        /// "G-123456" or "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only
+        /// guaranteed that the code is valid UTF-8; one should not
+        /// make any assumptions regarding the structure or format of the code).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> VerifyNotificationChannelAsync(
+            NotificationChannelName name,
+            string code,
+            st::CancellationToken cancellationToken) => VerifyNotificationChannelAsync(
+                name,
+                code,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to verify.
+        /// </param>
+        /// <param name="code">
+        /// The verification code that was delivered to the channel as
+        /// a result of invoking the `SendNotificationChannelVerificationCode` API
+        /// method or that was retrieved from a verified channel via
+        /// `GetNotificationChannelVerificationCode`. For example, one might have
+        /// "G-123456" or "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only
+        /// guaranteed that the code is valid UTF-8; one should not
+        /// make any assumptions regarding the structure or format of the code).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual NotificationChannel VerifyNotificationChannel(
+            NotificationChannelName name,
+            string code,
+            gaxgrpc::CallSettings callSettings = null) => VerifyNotificationChannel(
+                new VerifyNotificationChannelRequest
+                {
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Code = gax::GaxPreconditions.CheckNotNullOrEmpty(code, nameof(code)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to verify.
+        /// </param>
+        /// <param name="code">
+        /// The verification code that was delivered to the channel as
+        /// a result of invoking the `SendNotificationChannelVerificationCode` API
+        /// method or that was retrieved from a verified channel via
+        /// `GetNotificationChannelVerificationCode`. For example, one might have
+        /// "G-123456" or "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only
+        /// guaranteed that the code is valid UTF-8; one should not
+        /// make any assumptions regarding the structure or format of the code).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> VerifyNotificationChannelAsync(
+            string name,
+            string code,
+            gaxgrpc::CallSettings callSettings = null) => VerifyNotificationChannelAsync(
+                new VerifyNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Code = gax::GaxPreconditions.CheckNotNullOrEmpty(code, nameof(code)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to verify.
+        /// </param>
+        /// <param name="code">
+        /// The verification code that was delivered to the channel as
+        /// a result of invoking the `SendNotificationChannelVerificationCode` API
+        /// method or that was retrieved from a verified channel via
+        /// `GetNotificationChannelVerificationCode`. For example, one might have
+        /// "G-123456" or "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only
+        /// guaranteed that the code is valid UTF-8; one should not
+        /// make any assumptions regarding the structure or format of the code).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> VerifyNotificationChannelAsync(
+            string name,
+            string code,
+            st::CancellationToken cancellationToken) => VerifyNotificationChannelAsync(
+                name,
+                code,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="name">
+        /// The notification channel to verify.
+        /// </param>
+        /// <param name="code">
+        /// The verification code that was delivered to the channel as
+        /// a result of invoking the `SendNotificationChannelVerificationCode` API
+        /// method or that was retrieved from a verified channel via
+        /// `GetNotificationChannelVerificationCode`. For example, one might have
+        /// "G-123456" or "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only
+        /// guaranteed that the code is valid UTF-8; one should not
+        /// make any assumptions regarding the structure or format of the code).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual NotificationChannel VerifyNotificationChannel(
+            string name,
+            string code,
+            gaxgrpc::CallSettings callSettings = null) => VerifyNotificationChannel(
+                new VerifyNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Code = gax::GaxPreconditions.CheckNotNullOrEmpty(code, nameof(code)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> VerifyNotificationChannelAsync(
+            VerifyNotificationChannelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> VerifyNotificationChannelAsync(
+            VerifyNotificationChannelRequest request,
+            st::CancellationToken cancellationToken) => VerifyNotificationChannelAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual NotificationChannel VerifyNotificationChannel(
+            VerifyNotificationChannelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -1987,6 +2883,9 @@ namespace Google.Cloud.Monitoring.V3
         private readonly gaxgrpc::ApiCall<CreateNotificationChannelRequest, NotificationChannel> _callCreateNotificationChannel;
         private readonly gaxgrpc::ApiCall<UpdateNotificationChannelRequest, NotificationChannel> _callUpdateNotificationChannel;
         private readonly gaxgrpc::ApiCall<DeleteNotificationChannelRequest, pbwkt::Empty> _callDeleteNotificationChannel;
+        private readonly gaxgrpc::ApiCall<SendNotificationChannelVerificationCodeRequest, pbwkt::Empty> _callSendNotificationChannelVerificationCode;
+        private readonly gaxgrpc::ApiCall<GetNotificationChannelVerificationCodeRequest, GetNotificationChannelVerificationCodeResponse> _callGetNotificationChannelVerificationCode;
+        private readonly gaxgrpc::ApiCall<VerifyNotificationChannelRequest, NotificationChannel> _callVerifyNotificationChannel;
 
         /// <summary>
         /// Constructs a client wrapper for the NotificationChannelService service, with the specified gRPC client and settings.
@@ -2019,6 +2918,15 @@ namespace Google.Cloud.Monitoring.V3
             _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, pbwkt::Empty>(
                 GrpcClient.DeleteNotificationChannelAsync, GrpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
+            _callSendNotificationChannelVerificationCode = clientHelper.BuildApiCall<SendNotificationChannelVerificationCodeRequest, pbwkt::Empty>(
+                GrpcClient.SendNotificationChannelVerificationCodeAsync, GrpcClient.SendNotificationChannelVerificationCode, effectiveSettings.SendNotificationChannelVerificationCodeSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
+            _callGetNotificationChannelVerificationCode = clientHelper.BuildApiCall<GetNotificationChannelVerificationCodeRequest, GetNotificationChannelVerificationCodeResponse>(
+                GrpcClient.GetNotificationChannelVerificationCodeAsync, GrpcClient.GetNotificationChannelVerificationCode, effectiveSettings.GetNotificationChannelVerificationCodeSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
+            _callVerifyNotificationChannel = clientHelper.BuildApiCall<VerifyNotificationChannelRequest, NotificationChannel>(
+                GrpcClient.VerifyNotificationChannelAsync, GrpcClient.VerifyNotificationChannel, effectiveSettings.VerifyNotificationChannelSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListNotificationChannelDescriptors);
             Modify_ListNotificationChannelDescriptorsApiCall(ref _callListNotificationChannelDescriptors);
             Modify_ApiCall(ref _callGetNotificationChannelDescriptor);
@@ -2033,6 +2941,12 @@ namespace Google.Cloud.Monitoring.V3
             Modify_UpdateNotificationChannelApiCall(ref _callUpdateNotificationChannel);
             Modify_ApiCall(ref _callDeleteNotificationChannel);
             Modify_DeleteNotificationChannelApiCall(ref _callDeleteNotificationChannel);
+            Modify_ApiCall(ref _callSendNotificationChannelVerificationCode);
+            Modify_SendNotificationChannelVerificationCodeApiCall(ref _callSendNotificationChannelVerificationCode);
+            Modify_ApiCall(ref _callGetNotificationChannelVerificationCode);
+            Modify_GetNotificationChannelVerificationCodeApiCall(ref _callGetNotificationChannelVerificationCode);
+            Modify_ApiCall(ref _callVerifyNotificationChannel);
+            Modify_VerifyNotificationChannelApiCall(ref _callVerifyNotificationChannel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2053,6 +2967,9 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_CreateNotificationChannelApiCall(ref gaxgrpc::ApiCall<CreateNotificationChannelRequest, NotificationChannel> call);
         partial void Modify_UpdateNotificationChannelApiCall(ref gaxgrpc::ApiCall<UpdateNotificationChannelRequest, NotificationChannel> call);
         partial void Modify_DeleteNotificationChannelApiCall(ref gaxgrpc::ApiCall<DeleteNotificationChannelRequest, pbwkt::Empty> call);
+        partial void Modify_SendNotificationChannelVerificationCodeApiCall(ref gaxgrpc::ApiCall<SendNotificationChannelVerificationCodeRequest, pbwkt::Empty> call);
+        partial void Modify_GetNotificationChannelVerificationCodeApiCall(ref gaxgrpc::ApiCall<GetNotificationChannelVerificationCodeRequest, GetNotificationChannelVerificationCodeResponse> call);
+        partial void Modify_VerifyNotificationChannelApiCall(ref gaxgrpc::ApiCall<VerifyNotificationChannelRequest, NotificationChannel> call);
         partial void OnConstruction(NotificationChannelService.NotificationChannelServiceClient grpcClient, NotificationChannelServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -2070,6 +2987,9 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_CreateNotificationChannelRequest(ref CreateNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateNotificationChannelRequest(ref UpdateNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteNotificationChannelRequest(ref DeleteNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SendNotificationChannelVerificationCodeRequest(ref SendNotificationChannelVerificationCodeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetNotificationChannelVerificationCodeRequest(ref GetNotificationChannelVerificationCodeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_VerifyNotificationChannelRequest(ref VerifyNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -2362,6 +3282,169 @@ namespace Google.Cloud.Monitoring.V3
         {
             Modify_DeleteNotificationChannelRequest(ref request, ref callSettings);
             _callDeleteNotificationChannel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task SendNotificationChannelVerificationCodeAsync(
+            SendNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SendNotificationChannelVerificationCodeRequest(ref request, ref callSettings);
+            return _callSendNotificationChannelVerificationCode.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Causes a verification code to be delivered to the channel. The code
+        /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void SendNotificationChannelVerificationCode(
+            SendNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SendNotificationChannelVerificationCodeRequest(ref request, ref callSettings);
+            _callSendNotificationChannelVerificationCode.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(
+            GetNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNotificationChannelVerificationCodeRequest(ref request, ref callSettings);
+            return _callGetNotificationChannelVerificationCode.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Requests a verification code for an already verified channel that can then
+        /// be used in a call to VerifyNotificationChannel() on a different channel
+        /// with an equivalent identity in the same or in a different project. This
+        /// makes it possible to copy a channel between projects without requiring
+        /// manual reverification of the channel. If the channel is not in the
+        /// verified state, this method will fail (in other words, this may only be
+        /// used if the SendNotificationChannelVerificationCode and
+        /// VerifyNotificationChannel paths have already been used to put the given
+        /// channel into the verified state).
+        ///
+        /// There is no guarantee that the verification codes returned by this method
+        /// will be of a similar structure or form as the ones that are delivered
+        /// to the channel via SendNotificationChannelVerificationCode; while
+        /// VerifyNotificationChannel() will recognize both the codes delivered via
+        /// SendNotificationChannelVerificationCode() and returned from
+        /// GetNotificationChannelVerificationCode(), it is typically the case that
+        /// the verification codes delivered via
+        /// SendNotificationChannelVerificationCode() will be shorter and also
+        /// have a shorter expiration (e.g. codes such as "G-123456") whereas
+        /// GetVerificationCode() will typically return a much longer, websafe base
+        /// 64 encoded string that has a longer expiration time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(
+            GetNotificationChannelVerificationCodeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNotificationChannelVerificationCodeRequest(ref request, ref callSettings);
+            return _callGetNotificationChannelVerificationCode.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<NotificationChannel> VerifyNotificationChannelAsync(
+            VerifyNotificationChannelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyNotificationChannelRequest(ref request, ref callSettings);
+            return _callVerifyNotificationChannel.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies a `NotificationChannel` by proving receipt of the code
+        /// delivered to the channel as a result of calling
+        /// `SendNotificationChannelVerificationCode`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override NotificationChannel VerifyNotificationChannel(
+            VerifyNotificationChannelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyNotificationChannelRequest(ref request, ref callSettings);
+            return _callVerifyNotificationChannel.Sync(request, callSettings);
         }
 
     }

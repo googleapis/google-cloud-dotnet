@@ -705,5 +705,189 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SendNotificationChannelVerificationCodeAsync</summary>
+        public async Task SendNotificationChannelVerificationCodeAsync()
+        {
+            // Snippet: SendNotificationChannelVerificationCodeAsync(NotificationChannelName,CallSettings)
+            // Additional: SendNotificationChannelVerificationCodeAsync(NotificationChannelName,CancellationToken)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
+            // Make the request
+            await notificationChannelServiceClient.SendNotificationChannelVerificationCodeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SendNotificationChannelVerificationCode</summary>
+        public void SendNotificationChannelVerificationCode()
+        {
+            // Snippet: SendNotificationChannelVerificationCode(NotificationChannelName,CallSettings)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.Create();
+            // Initialize request argument(s)
+            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
+            // Make the request
+            notificationChannelServiceClient.SendNotificationChannelVerificationCode(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SendNotificationChannelVerificationCodeAsync</summary>
+        public async Task SendNotificationChannelVerificationCodeAsync_RequestObject()
+        {
+            // Snippet: SendNotificationChannelVerificationCodeAsync(SendNotificationChannelVerificationCodeRequest,CallSettings)
+            // Additional: SendNotificationChannelVerificationCodeAsync(SendNotificationChannelVerificationCodeRequest,CancellationToken)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            // Make the request
+            await notificationChannelServiceClient.SendNotificationChannelVerificationCodeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SendNotificationChannelVerificationCode</summary>
+        public void SendNotificationChannelVerificationCode_RequestObject()
+        {
+            // Snippet: SendNotificationChannelVerificationCode(SendNotificationChannelVerificationCodeRequest,CallSettings)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.Create();
+            // Initialize request argument(s)
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            // Make the request
+            notificationChannelServiceClient.SendNotificationChannelVerificationCode(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationChannelVerificationCodeAsync</summary>
+        public async Task GetNotificationChannelVerificationCodeAsync()
+        {
+            // Snippet: GetNotificationChannelVerificationCodeAsync(NotificationChannelName,CallSettings)
+            // Additional: GetNotificationChannelVerificationCodeAsync(NotificationChannelName,CancellationToken)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
+            // Make the request
+            GetNotificationChannelVerificationCodeResponse response = await notificationChannelServiceClient.GetNotificationChannelVerificationCodeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationChannelVerificationCode</summary>
+        public void GetNotificationChannelVerificationCode()
+        {
+            // Snippet: GetNotificationChannelVerificationCode(NotificationChannelName,CallSettings)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.Create();
+            // Initialize request argument(s)
+            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
+            // Make the request
+            GetNotificationChannelVerificationCodeResponse response = notificationChannelServiceClient.GetNotificationChannelVerificationCode(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationChannelVerificationCodeAsync</summary>
+        public async Task GetNotificationChannelVerificationCodeAsync_RequestObject()
+        {
+            // Snippet: GetNotificationChannelVerificationCodeAsync(GetNotificationChannelVerificationCodeRequest,CallSettings)
+            // Additional: GetNotificationChannelVerificationCodeAsync(GetNotificationChannelVerificationCodeRequest,CancellationToken)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            // Make the request
+            GetNotificationChannelVerificationCodeResponse response = await notificationChannelServiceClient.GetNotificationChannelVerificationCodeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationChannelVerificationCode</summary>
+        public void GetNotificationChannelVerificationCode_RequestObject()
+        {
+            // Snippet: GetNotificationChannelVerificationCode(GetNotificationChannelVerificationCodeRequest,CallSettings)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.Create();
+            // Initialize request argument(s)
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            // Make the request
+            GetNotificationChannelVerificationCodeResponse response = notificationChannelServiceClient.GetNotificationChannelVerificationCode(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyNotificationChannelAsync</summary>
+        public async Task VerifyNotificationChannelAsync()
+        {
+            // Snippet: VerifyNotificationChannelAsync(NotificationChannelName,string,CallSettings)
+            // Additional: VerifyNotificationChannelAsync(NotificationChannelName,string,CancellationToken)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
+            string code = "";
+            // Make the request
+            NotificationChannel response = await notificationChannelServiceClient.VerifyNotificationChannelAsync(name, code);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyNotificationChannel</summary>
+        public void VerifyNotificationChannel()
+        {
+            // Snippet: VerifyNotificationChannel(NotificationChannelName,string,CallSettings)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.Create();
+            // Initialize request argument(s)
+            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
+            string code = "";
+            // Make the request
+            NotificationChannel response = notificationChannelServiceClient.VerifyNotificationChannel(name, code);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyNotificationChannelAsync</summary>
+        public async Task VerifyNotificationChannelAsync_RequestObject()
+        {
+            // Snippet: VerifyNotificationChannelAsync(VerifyNotificationChannelRequest,CallSettings)
+            // Additional: VerifyNotificationChannelAsync(VerifyNotificationChannelRequest,CancellationToken)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "",
+            };
+            // Make the request
+            NotificationChannel response = await notificationChannelServiceClient.VerifyNotificationChannelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyNotificationChannel</summary>
+        public void VerifyNotificationChannel_RequestObject()
+        {
+            // Snippet: VerifyNotificationChannel(VerifyNotificationChannelRequest,CallSettings)
+            // Create client
+            NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.Create();
+            // Initialize request argument(s)
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "",
+            };
+            // Make the request
+            NotificationChannel response = notificationChannelServiceClient.VerifyNotificationChannel(request);
+            // End snippet
+        }
+
     }
 }
