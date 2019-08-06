@@ -90,6 +90,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { SourceLinkPackage, "2.8.3" }
         };
 
+        private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
+        {
+            {"CommandLineParser", "2.6.0"}
+        };
+
         private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
@@ -125,7 +130,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 }
                 foreach (var api in apis)
                 {
-                    // GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
+                    GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
                 }
                 foreach (var api in apis)
                 {
@@ -169,6 +174,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             // - .Snippets: snippets (manual and generated)
             // - .Tests: unit tests
             // - .IntegrationTests: integration tests
+            // - .Samples: generated standalone samples
 
             // Anything else will be ignored for now...
             var projectDirectories = Directory.GetDirectories(apiRoot)
@@ -190,6 +196,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     case ".Tests":
                         GenerateTestProject(api, dir, apiNames, isForAnalyzers: api.Type == ApiType.Analyzers);
                         GenerateCoverageFile(api, dir);
+                        break;
+                    case ".Samples":
+                        GenerateSampleProject(api, dir, apiNames);
                         break;
                 }
             }
@@ -442,6 +451,27 @@ shell.run(
             var dependenciesElement =
                 new XElement("ItemGroup",
                     CreateDependencyElement(Path.GetFileName(directory), api.Id, ProjectVersionValue, stableRelease: false, testProject: true, apiNames));
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
+        }
+
+        private static void GenerateSampleProject(ApiMetadata api, string directory, HashSet<string> apiNames)
+        {
+            // Don't generate a project file if we've got a placeholder directory
+            if (Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories).Length == 0)
+            {
+                return;
+            }
+            var dependencies = new SortedList<string, string>(CommonSampleDependencies);
+            dependencies.Add(api.Id, "project");
+            var propertyGroup =
+                new XElement("PropertyGroup",
+                    new XElement("TargetFramework", "netcoreapp2.1"),
+                    new XElement("OutputType", "Exe"),
+                    new XElement("LangVersion", "latest"),
+                    new XElement("IsPackable", false));
+
+            string project = Path.GetFileName(directory);
+            var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
             WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
