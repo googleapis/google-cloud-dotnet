@@ -125,7 +125,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 }
                 foreach (var api in apis)
                 {
-                    GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
+                    // GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
                 }
                 foreach (var api in apis)
                 {
