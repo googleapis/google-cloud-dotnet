@@ -1459,7 +1459,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.Word.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Word> words_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Word>();
     /// <summary>
-    /// List of words in this paragraph.
+    /// List of all words in this paragraph.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Word> Words {
@@ -1936,7 +1936,7 @@ namespace Google.Cloud.Vision.V1 {
     ///      2----3
     ///      |    |
     ///      1----0
-    ///   and the vertice order will still be (0, 1, 2, 3).
+    ///   and the vertex order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
