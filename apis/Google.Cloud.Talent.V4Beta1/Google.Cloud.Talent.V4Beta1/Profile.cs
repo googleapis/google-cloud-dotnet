@@ -251,7 +251,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExternalIdFieldNumber = 2;
     private string externalId_ = "";
     /// <summary>
-    /// Optional. Profile's id in client system if available.
+    /// Optional. Profile's id in client system if available. This value is not
+    /// required to be unique to each profile. However, providing unique values
+    /// makes it easier to specify individual profiles when filing support tickets.
     ///
     /// The maximum number of bytes allowed is 100.
     /// </summary>
