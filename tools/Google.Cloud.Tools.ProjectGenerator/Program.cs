@@ -222,11 +222,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 string projectFile = Path.Combine(dir, $"{projectName}.csproj");
                 if (File.Exists(projectFile))
                 {
-                    projects.Add($"{projectName}\\{projectName}.csproj");
+                    projects.Add($"{projectName}/{projectName}.csproj");
                     XDocument doc = XDocument.Load(projectFile);
                     var projectReferences = doc.Descendants("ProjectReference")
-                        .Select(x => x.Attribute("Include").Value.Replace("/", "\\"))
-                        .Select(x => x.StartsWith("..\\") ? x.Substring(3) : x);
+                        .Select(x => x.Attribute("Include").Value.Replace("\\", "/"))
+                        .Select(x => x.StartsWith("../") ? x.Substring(3) : x);
                     foreach (var reference in projectReferences)
                     {
                         projects.Add(reference);
