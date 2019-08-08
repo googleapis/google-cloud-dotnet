@@ -117,7 +117,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // The TimeSpan specifies for how long to attempt to publish locally queued messages.
             await publisher.ShutdownAsync(TimeSpan.FromSeconds(15));
 
-            // Pull messages from the subscription using SimpleSubscriber.
+            // Pull messages from the subscription using SubscriberClient.
             SubscriberClient subscriber = await SubscriberClient.CreateAsync(subscriptionName);
             List<PubsubMessage> receivedMessages = new List<PubsubMessage>();
             // Start the subscriber listening for messages.
