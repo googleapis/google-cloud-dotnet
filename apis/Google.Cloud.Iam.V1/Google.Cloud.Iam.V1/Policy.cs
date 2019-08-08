@@ -181,7 +181,7 @@ namespace Google.Cloud.Iam.V1 {
     /// ensure that their change will be applied to the same version of the policy.
     ///
     /// If no `etag` is provided in the call to `setIamPolicy`, then the existing
-    /// policy is overwritten blindly.
+    /// policy is overwritten.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Etag {
@@ -370,7 +370,7 @@ namespace Google.Cloud.Iam.V1 {
     ///    who is authenticated with a Google account or a service account.
     ///
     /// * `user:{emailid}`: An email address that represents a specific Google
-    ///    account. For example, `alice@gmail.com` .
+    ///    account. For example, `alice@example.com` .
     ///
     /// * `serviceAccount:{emailid}`: An email address that represents a service
     ///    account. For example, `my-other-app@appspot.gserviceaccount.com`.
@@ -760,8 +760,8 @@ namespace Google.Cloud.Iam.V1 {
     public const int ConditionFieldNumber = 4;
     private global::Google.Type.Expr condition_;
     /// <summary>
-    /// Unimplemented. The condition that is associated with this binding.
-    /// This field is logged only for Cloud Audit Logging.
+    /// The condition that is associated with this binding. This field is logged
+    /// only for Cloud Audit Logging.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Expr Condition {
