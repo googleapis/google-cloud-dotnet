@@ -92,7 +92,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
         {
-            {"CommandLineParser", "2.6.0"}
+            { "CommandLineParser", "2.6.0" }
         };
 
         private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
