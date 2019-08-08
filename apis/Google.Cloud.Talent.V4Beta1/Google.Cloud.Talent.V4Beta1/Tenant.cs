@@ -26,18 +26,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21t",
-            "b24ucHJvdG8i+AEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFs",
-            "X2lkGAIgASgJEkUKCnVzYWdlX3R5cGUYAyABKA4yMS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUSNAosa2V5d29y",
-            "ZF9zZWFyY2hhYmxlX3Byb2ZpbGVfY3VzdG9tX2F0dHJpYnV0ZXMYBCADKAki",
-            "TgoNRGF0YVVzYWdlVHlwZRIfChtEQVRBX1VTQUdFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIOCgpBR0dSRUdBVEVEEAESDAoISVNPTEFURUQQAkKBAQofY29tLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUITVGVuYW50UmVzb3VyY2VQcm90",
-            "b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "dGlvbnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8a",
+            "Hmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byL4AQoGVGVuYW50EgwK",
+            "BG5hbWUYASABKAkSEwoLZXh0ZXJuYWxfaWQYAiABKAkSRQoKdXNhZ2VfdHlw",
+            "ZRgDIAEoDjIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5UZW5hbnQu",
+            "RGF0YVVzYWdlVHlwZRI0CixrZXl3b3JkX3NlYXJjaGFibGVfcHJvZmlsZV9j",
+            "dXN0b21fYXR0cmlidXRlcxgEIAMoCSJOCg1EYXRhVXNhZ2VUeXBlEh8KG0RB",
+            "VEFfVVNBR0VfVFlQRV9VTlNQRUNJRklFRBAAEg4KCkFHR1JFR0FURUQQARIM",
+            "CghJU09MQVRFRBACQoEBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExQhNUZW5hbnRSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFs",
+            "ZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
           }));
