@@ -73,6 +73,7 @@ namespace Google.Cloud.Vision.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> __Marshaller_google_cloud_vision_v1_ListProductsInProductSetResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ImportProductSetsRequest> __Marshaller_google_cloud_vision_v1_ImportProductSetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.ImportProductSetsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.PurgeProductsRequest> __Marshaller_google_cloud_vision_v1_PurgeProductsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.PurgeProductsRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet> __Method_CreateProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(
         grpc::MethodType.Unary,
@@ -198,6 +199,13 @@ namespace Google.Cloud.Vision.V1 {
         __ServiceName,
         "ImportProductSets",
         __Marshaller_google_cloud_vision_v1_ImportProductSetsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Vision.V1.PurgeProductsRequest, global::Google.LongRunning.Operation> __Method_PurgeProducts = new grpc::Method<global::Google.Cloud.Vision.V1.PurgeProductsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PurgeProducts",
+        __Marshaller_google_cloud_vision_v1_PurgeProductsRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -518,6 +526,40 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportProductSets(global::Google.Cloud.Vision.V1.ImportProductSetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Asynchronous API to delete all Products in a ProductSet or all Products
+      /// that are in no ProductSet.
+      ///
+      /// If a Product is a member of the specified ProductSet in addition to other
+      /// ProductSets, the Product will still be deleted.
+      ///
+      /// It is recommended to not delete the specified ProductSet until after this
+      /// operation has completed. It is also recommended to not add any of the
+      /// Products involved in the batch delete to a new ProductSet while this
+      /// operation is running because those Products may still end up deleted.
+      ///
+      /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+      /// recommended to keep the csv files used in ImportProductSets (if that was
+      /// how you originally built the Product Set) before starting PurgeProducts, in
+      /// case you need to re-import the data after deletion.
+      ///
+      /// If the plan is to purge all of the Products from a ProductSet and then
+      /// re-use the empty ProductSet to re-import new Products into the empty
+      /// ProductSet, you must wait until the PurgeProducts operation has finished
+      /// for that ProductSet.
+      ///
+      /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+      /// used to keep track of the progress and results of the request.
+      /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PurgeProducts(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1795,6 +1837,142 @@ namespace Google.Cloud.Vision.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportProductSets, null, options, request);
       }
+      /// <summary>
+      /// Asynchronous API to delete all Products in a ProductSet or all Products
+      /// that are in no ProductSet.
+      ///
+      /// If a Product is a member of the specified ProductSet in addition to other
+      /// ProductSets, the Product will still be deleted.
+      ///
+      /// It is recommended to not delete the specified ProductSet until after this
+      /// operation has completed. It is also recommended to not add any of the
+      /// Products involved in the batch delete to a new ProductSet while this
+      /// operation is running because those Products may still end up deleted.
+      ///
+      /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+      /// recommended to keep the csv files used in ImportProductSets (if that was
+      /// how you originally built the Product Set) before starting PurgeProducts, in
+      /// case you need to re-import the data after deletion.
+      ///
+      /// If the plan is to purge all of the Products from a ProductSet and then
+      /// re-use the empty ProductSet to re-import new Products into the empty
+      /// ProductSet, you must wait until the PurgeProducts operation has finished
+      /// for that ProductSet.
+      ///
+      /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+      /// used to keep track of the progress and results of the request.
+      /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation PurgeProducts(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeProducts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Asynchronous API to delete all Products in a ProductSet or all Products
+      /// that are in no ProductSet.
+      ///
+      /// If a Product is a member of the specified ProductSet in addition to other
+      /// ProductSets, the Product will still be deleted.
+      ///
+      /// It is recommended to not delete the specified ProductSet until after this
+      /// operation has completed. It is also recommended to not add any of the
+      /// Products involved in the batch delete to a new ProductSet while this
+      /// operation is running because those Products may still end up deleted.
+      ///
+      /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+      /// recommended to keep the csv files used in ImportProductSets (if that was
+      /// how you originally built the Product Set) before starting PurgeProducts, in
+      /// case you need to re-import the data after deletion.
+      ///
+      /// If the plan is to purge all of the Products from a ProductSet and then
+      /// re-use the empty ProductSet to re-import new Products into the empty
+      /// ProductSet, you must wait until the PurgeProducts operation has finished
+      /// for that ProductSet.
+      ///
+      /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+      /// used to keep track of the progress and results of the request.
+      /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation PurgeProducts(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PurgeProducts, null, options, request);
+      }
+      /// <summary>
+      /// Asynchronous API to delete all Products in a ProductSet or all Products
+      /// that are in no ProductSet.
+      ///
+      /// If a Product is a member of the specified ProductSet in addition to other
+      /// ProductSets, the Product will still be deleted.
+      ///
+      /// It is recommended to not delete the specified ProductSet until after this
+      /// operation has completed. It is also recommended to not add any of the
+      /// Products involved in the batch delete to a new ProductSet while this
+      /// operation is running because those Products may still end up deleted.
+      ///
+      /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+      /// recommended to keep the csv files used in ImportProductSets (if that was
+      /// how you originally built the Product Set) before starting PurgeProducts, in
+      /// case you need to re-import the data after deletion.
+      ///
+      /// If the plan is to purge all of the Products from a ProductSet and then
+      /// re-use the empty ProductSet to re-import new Products into the empty
+      /// ProductSet, you must wait until the PurgeProducts operation has finished
+      /// for that ProductSet.
+      ///
+      /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+      /// used to keep track of the progress and results of the request.
+      /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeProductsAsync(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeProductsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Asynchronous API to delete all Products in a ProductSet or all Products
+      /// that are in no ProductSet.
+      ///
+      /// If a Product is a member of the specified ProductSet in addition to other
+      /// ProductSets, the Product will still be deleted.
+      ///
+      /// It is recommended to not delete the specified ProductSet until after this
+      /// operation has completed. It is also recommended to not add any of the
+      /// Products involved in the batch delete to a new ProductSet while this
+      /// operation is running because those Products may still end up deleted.
+      ///
+      /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+      /// recommended to keep the csv files used in ImportProductSets (if that was
+      /// how you originally built the Product Set) before starting PurgeProducts, in
+      /// case you need to re-import the data after deletion.
+      ///
+      /// If the plan is to purge all of the Products from a ProductSet and then
+      /// re-use the empty ProductSet to re-import new Products into the empty
+      /// ProductSet, you must wait until the PurgeProducts operation has finished
+      /// for that ProductSet.
+      ///
+      /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+      /// used to keep track of the progress and results of the request.
+      /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeProductsAsync(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PurgeProducts, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override ProductSearchClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -1824,7 +2002,8 @@ namespace Google.Cloud.Vision.V1 {
           .AddMethod(__Method_AddProductToProductSet, serviceImpl.AddProductToProductSet)
           .AddMethod(__Method_RemoveProductFromProductSet, serviceImpl.RemoveProductFromProductSet)
           .AddMethod(__Method_ListProductsInProductSet, serviceImpl.ListProductsInProductSet)
-          .AddMethod(__Method_ImportProductSets, serviceImpl.ImportProductSets).Build();
+          .AddMethod(__Method_ImportProductSets, serviceImpl.ImportProductSets)
+          .AddMethod(__Method_PurgeProducts, serviceImpl.PurgeProducts).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1851,6 +2030,7 @@ namespace Google.Cloud.Vision.V1 {
       serviceBinder.AddMethod(__Method_RemoveProductFromProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RemoveProductFromProductSet));
       serviceBinder.AddMethod(__Method_ListProductsInProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest, global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse>(serviceImpl.ListProductsInProductSet));
       serviceBinder.AddMethod(__Method_ImportProductSets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.ImportProductSetsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportProductSets));
+      serviceBinder.AddMethod(__Method_PurgeProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.PurgeProductsRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeProducts));
     }
 
   }

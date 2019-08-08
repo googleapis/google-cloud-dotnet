@@ -69,6 +69,8 @@ namespace Google.Cloud.Vision.V1
             ListProductsInProductSetSettings = existing.ListProductsInProductSetSettings;
             ImportProductSetsSettings = existing.ImportProductSetsSettings;
             ImportProductSetsOperationsSettings = existing.ImportProductSetsOperationsSettings?.Clone();
+            PurgeProductsSettings = existing.PurgeProductsSettings;
+            PurgeProductsOperationsSettings = existing.PurgeProductsOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -687,6 +689,56 @@ namespace Google.Cloud.Vision.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ImportProductSetsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(45000L))
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.PurgeProducts</c> and <c>ProductSearchClient.PurgeProductsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.PurgeProducts</c> and
+        /// <c>ProductSearchClient.PurgeProductsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings PurgeProductsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ProductSearchClient.PurgeProducts</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PurgeProductsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
                 gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
@@ -5461,6 +5513,394 @@ namespace Google.Cloud.Vision.V1
                 ImportProductSetsOperationsClient,
                 callSettings);
 
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="parent">
+        /// The project and location in which the Products should be deleted.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, BatchOperationMetadata>> PurgeProductsAsync(
+            LocationName parent,
+            gaxgrpc::CallSettings callSettings = null) => PurgeProductsAsync(
+                new PurgeProductsRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="parent">
+        /// The project and location in which the Products should be deleted.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, BatchOperationMetadata>> PurgeProductsAsync(
+            LocationName parent,
+            st::CancellationToken cancellationToken) => PurgeProductsAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="parent">
+        /// The project and location in which the Products should be deleted.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, BatchOperationMetadata> PurgeProducts(
+            LocationName parent,
+            gaxgrpc::CallSettings callSettings = null) => PurgeProducts(
+                new PurgeProductsRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="parent">
+        /// The project and location in which the Products should be deleted.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, BatchOperationMetadata>> PurgeProductsAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => PurgeProductsAsync(
+                new PurgeProductsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="parent">
+        /// The project and location in which the Products should be deleted.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, BatchOperationMetadata>> PurgeProductsAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => PurgeProductsAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="parent">
+        /// The project and location in which the Products should be deleted.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, BatchOperationMetadata> PurgeProducts(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => PurgeProducts(
+                new PurgeProductsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, BatchOperationMetadata>> PurgeProductsAsync(
+            PurgeProductsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PurgeProductsAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, BatchOperationMetadata>> PollOncePurgeProductsAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, BatchOperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                PurgeProductsOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, BatchOperationMetadata> PurgeProducts(
+            PurgeProductsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>PurgeProducts</c>.
+        /// </summary>
+        public virtual lro::OperationsClient PurgeProductsOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PurgeProducts</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<pbwkt::Empty, BatchOperationMetadata> PollOncePurgeProducts(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, BatchOperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                PurgeProductsOperationsClient,
+                callSettings);
+
     }
 
     /// <summary>
@@ -5486,6 +5926,7 @@ namespace Google.Cloud.Vision.V1
         private readonly gaxgrpc::ApiCall<RemoveProductFromProductSetRequest, pbwkt::Empty> _callRemoveProductFromProductSet;
         private readonly gaxgrpc::ApiCall<ListProductsInProductSetRequest, ListProductsInProductSetResponse> _callListProductsInProductSet;
         private readonly gaxgrpc::ApiCall<ImportProductSetsRequest, lro::Operation> _callImportProductSets;
+        private readonly gaxgrpc::ApiCall<PurgeProductsRequest, lro::Operation> _callPurgeProducts;
 
         /// <summary>
         /// Constructs a client wrapper for the ProductSearch service, with the specified gRPC client and settings.
@@ -5499,6 +5940,8 @@ namespace Google.Cloud.Vision.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             ImportProductSetsOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductSetsOperationsSettings);
+            PurgeProductsOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.PurgeProductsOperationsSettings);
             _callCreateProductSet = clientHelper.BuildApiCall<CreateProductSetRequest, ProductSet>(
                 GrpcClient.CreateProductSetAsync, GrpcClient.CreateProductSet, effectiveSettings.CreateProductSetSettings)
                 .WithGoogleRequestParam("parent", request => request.Parent);
@@ -5553,6 +5996,9 @@ namespace Google.Cloud.Vision.V1
             _callImportProductSets = clientHelper.BuildApiCall<ImportProductSetsRequest, lro::Operation>(
                 GrpcClient.ImportProductSetsAsync, GrpcClient.ImportProductSets, effectiveSettings.ImportProductSetsSettings)
                 .WithGoogleRequestParam("parent", request => request.Parent);
+            _callPurgeProducts = clientHelper.BuildApiCall<PurgeProductsRequest, lro::Operation>(
+                GrpcClient.PurgeProductsAsync, GrpcClient.PurgeProducts, effectiveSettings.PurgeProductsSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProductSet);
             Modify_CreateProductSetApiCall(ref _callCreateProductSet);
             Modify_ApiCall(ref _callListProductSets);
@@ -5589,6 +6035,8 @@ namespace Google.Cloud.Vision.V1
             Modify_ListProductsInProductSetApiCall(ref _callListProductsInProductSet);
             Modify_ApiCall(ref _callImportProductSets);
             Modify_ImportProductSetsApiCall(ref _callImportProductSets);
+            Modify_ApiCall(ref _callPurgeProducts);
+            Modify_PurgeProductsApiCall(ref _callPurgeProducts);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5620,6 +6068,7 @@ namespace Google.Cloud.Vision.V1
         partial void Modify_RemoveProductFromProductSetApiCall(ref gaxgrpc::ApiCall<RemoveProductFromProductSetRequest, pbwkt::Empty> call);
         partial void Modify_ListProductsInProductSetApiCall(ref gaxgrpc::ApiCall<ListProductsInProductSetRequest, ListProductsInProductSetResponse> call);
         partial void Modify_ImportProductSetsApiCall(ref gaxgrpc::ApiCall<ImportProductSetsRequest, lro::Operation> call);
+        partial void Modify_PurgeProductsApiCall(ref gaxgrpc::ApiCall<PurgeProductsRequest, lro::Operation> call);
         partial void OnConstruction(ProductSearch.ProductSearchClient grpcClient, ProductSearchSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -5648,6 +6097,7 @@ namespace Google.Cloud.Vision.V1
         partial void Modify_RemoveProductFromProductSetRequest(ref RemoveProductFromProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListProductsInProductSetRequest(ref ListProductsInProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ImportProductSetsRequest(ref ImportProductSetsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_PurgeProductsRequest(ref PurgeProductsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates and returns a new ProductSet resource.
@@ -6588,6 +7038,99 @@ namespace Google.Cloud.Vision.V1
         /// The long-running operations client for <c>ImportProductSets</c>.
         /// </summary>
         public override lro::OperationsClient ImportProductSetsOperationsClient { get; }
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<pbwkt::Empty, BatchOperationMetadata>> PurgeProductsAsync(
+            PurgeProductsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeProductsRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, BatchOperationMetadata>(
+                await _callPurgeProducts.Async(request, callSettings).ConfigureAwait(false), PurgeProductsOperationsClient);
+        }
+
+        /// <summary>
+        /// Asynchronous API to delete all Products in a ProductSet or all Products
+        /// that are in no ProductSet.
+        ///
+        /// If a Product is a member of the specified ProductSet in addition to other
+        /// ProductSets, the Product will still be deleted.
+        ///
+        /// It is recommended to not delete the specified ProductSet until after this
+        /// operation has completed. It is also recommended to not add any of the
+        /// Products involved in the batch delete to a new ProductSet while this
+        /// operation is running because those Products may still end up deleted.
+        ///
+        /// It's not possible to undo the PurgeProducts operation. Therefore, it is
+        /// recommended to keep the csv files used in ImportProductSets (if that was
+        /// how you originally built the Product Set) before starting PurgeProducts, in
+        /// case you need to re-import the data after deletion.
+        ///
+        /// If the plan is to purge all of the Products from a ProductSet and then
+        /// re-use the empty ProductSet to re-import new Products into the empty
+        /// ProductSet, you must wait until the PurgeProducts operation has finished
+        /// for that ProductSet.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<pbwkt::Empty, BatchOperationMetadata> PurgeProducts(
+            PurgeProductsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeProductsRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, BatchOperationMetadata>(
+                _callPurgeProducts.Sync(request, callSettings), PurgeProductsOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>PurgeProducts</c>.
+        /// </summary>
+        public override lro::OperationsClient PurgeProductsOperationsClient { get; }
 
     }
 

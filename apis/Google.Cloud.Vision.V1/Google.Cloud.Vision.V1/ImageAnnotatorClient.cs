@@ -1130,13 +1130,17 @@ namespace Google.Cloud.Vision.V1
             AsyncBatchAnnotateFilesOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateFilesOperationsSettings);
             _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(
-                GrpcClient.BatchAnnotateImagesAsync, GrpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
+                GrpcClient.BatchAnnotateImagesAsync, GrpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callBatchAnnotateFiles = clientHelper.BuildApiCall<BatchAnnotateFilesRequest, BatchAnnotateFilesResponse>(
-                GrpcClient.BatchAnnotateFilesAsync, GrpcClient.BatchAnnotateFiles, effectiveSettings.BatchAnnotateFilesSettings);
+                GrpcClient.BatchAnnotateFilesAsync, GrpcClient.BatchAnnotateFiles, effectiveSettings.BatchAnnotateFilesSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callAsyncBatchAnnotateImages = clientHelper.BuildApiCall<AsyncBatchAnnotateImagesRequest, lro::Operation>(
-                GrpcClient.AsyncBatchAnnotateImagesAsync, GrpcClient.AsyncBatchAnnotateImages, effectiveSettings.AsyncBatchAnnotateImagesSettings);
+                GrpcClient.AsyncBatchAnnotateImagesAsync, GrpcClient.AsyncBatchAnnotateImages, effectiveSettings.AsyncBatchAnnotateImagesSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
             _callAsyncBatchAnnotateFiles = clientHelper.BuildApiCall<AsyncBatchAnnotateFilesRequest, lro::Operation>(
-                GrpcClient.AsyncBatchAnnotateFilesAsync, GrpcClient.AsyncBatchAnnotateFiles, effectiveSettings.AsyncBatchAnnotateFilesSettings);
+                GrpcClient.AsyncBatchAnnotateFilesAsync, GrpcClient.AsyncBatchAnnotateFiles, effectiveSettings.AsyncBatchAnnotateFilesSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchAnnotateImages);
             Modify_BatchAnnotateImagesApiCall(ref _callBatchAnnotateImages);
             Modify_ApiCall(ref _callBatchAnnotateFiles);

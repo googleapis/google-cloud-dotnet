@@ -692,6 +692,19 @@ namespace Google.Cloud.Vision.V1
 
     }
 
+    public partial class PurgeProductsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class ReferenceImage
     {
         /// <summary>

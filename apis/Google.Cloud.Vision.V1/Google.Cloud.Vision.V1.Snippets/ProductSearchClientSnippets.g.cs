@@ -1711,5 +1711,132 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PurgeProductsAsync</summary>
+        public async Task PurgeProductsAsync()
+        {
+            // Snippet: PurgeProductsAsync(LocationName,CallSettings)
+            // Additional: PurgeProductsAsync(LocationName,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<Empty, BatchOperationMetadata> response =
+                await productSearchClient.PurgeProductsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, BatchOperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, BatchOperationMetadata> retrievedResponse =
+                await productSearchClient.PollOncePurgeProductsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeProducts</summary>
+        public void PurgeProducts()
+        {
+            // Snippet: PurgeProducts(LocationName,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<Empty, BatchOperationMetadata> response =
+                productSearchClient.PurgeProducts(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, BatchOperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, BatchOperationMetadata> retrievedResponse =
+                productSearchClient.PollOncePurgeProducts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeProductsAsync</summary>
+        public async Task PurgeProductsAsync_RequestObject()
+        {
+            // Snippet: PurgeProductsAsync(PurgeProductsRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            PurgeProductsRequest request = new PurgeProductsRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Operation<Empty, BatchOperationMetadata> response =
+                await productSearchClient.PurgeProductsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, BatchOperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, BatchOperationMetadata> retrievedResponse =
+                await productSearchClient.PollOncePurgeProductsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeProducts</summary>
+        public void PurgeProducts_RequestObject()
+        {
+            // Snippet: PurgeProducts(PurgeProductsRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            PurgeProductsRequest request = new PurgeProductsRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Operation<Empty, BatchOperationMetadata> response =
+                productSearchClient.PurgeProducts(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, BatchOperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, BatchOperationMetadata> retrievedResponse =
+                productSearchClient.PollOncePurgeProducts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
     }
 }

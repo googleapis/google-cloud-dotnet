@@ -32,26 +32,31 @@ namespace Google.Cloud.Vision.V1 {
             "kwEKE1Byb2R1Y3RTZWFyY2hQYXJhbXMSOwoNYm91bmRpbmdfcG9seRgJIAEo",
             "CzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQm91bmRpbmdQb2x5EhMKC3By",
             "b2R1Y3Rfc2V0GAYgASgJEhoKEnByb2R1Y3RfY2F0ZWdvcmllcxgHIAMoCRIO",
-            "CgZmaWx0ZXIYCCABKAki2AMKFFByb2R1Y3RTZWFyY2hSZXN1bHRzEi4KCmlu",
+            "CgZmaWx0ZXIYCCABKAkiiAUKFFByb2R1Y3RTZWFyY2hSZXN1bHRzEi4KCmlu",
             "ZGV4X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkQK",
             "B3Jlc3VsdHMYBSADKAsyMy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlByb2R1",
             "Y3RTZWFyY2hSZXN1bHRzLlJlc3VsdBJbChdwcm9kdWN0X2dyb3VwZWRfcmVz",
             "dWx0cxgGIAMoCzI6Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuUHJvZHVjdFNl",
             "YXJjaFJlc3VsdHMuR3JvdXBlZFJlc3VsdBpYCgZSZXN1bHQSMAoHcHJvZHVj",
             "dBgBIAEoCzIfLmdvb2dsZS5jbG91ZC52aXNpb24udjEuUHJvZHVjdBINCgVz",
-            "Y29yZRgCIAEoAhINCgVpbWFnZRgDIAEoCRqSAQoNR3JvdXBlZFJlc3VsdBI7",
-            "Cg1ib3VuZGluZ19wb2x5GAEgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5Cb3VuZGluZ1BvbHkSRAoHcmVzdWx0cxgCIAMoCzIzLmdvb2dsZS5jbG91",
-            "ZC52aXNpb24udjEuUHJvZHVjdFNlYXJjaFJlc3VsdHMuUmVzdWx0QnoKGmNv",
-            "bS5nb29nbGUuY2xvdWQudmlzaW9uLnYxQhJQcm9kdWN0U2VhcmNoUHJvdG9Q",
-            "AVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC92aXNpb24vdjE7dmlzaW9u+AEBogIER0NWTmIGcHJvdG8z"));
+            "Y29yZRgCIAEoAhINCgVpbWFnZRgDIAEoCRpTChBPYmplY3RBbm5vdGF0aW9u",
+            "EgsKA21pZBgBIAEoCRIVCg1sYW5ndWFnZV9jb2RlGAIgASgJEgwKBG5hbWUY",
+            "AyABKAkSDQoFc2NvcmUYBCABKAIa7QEKDUdyb3VwZWRSZXN1bHQSOwoNYm91",
+            "bmRpbmdfcG9seRgBIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQm91",
+            "bmRpbmdQb2x5EkQKB3Jlc3VsdHMYAiADKAsyMy5nb29nbGUuY2xvdWQudmlz",
+            "aW9uLnYxLlByb2R1Y3RTZWFyY2hSZXN1bHRzLlJlc3VsdBJZChJvYmplY3Rf",
+            "YW5ub3RhdGlvbnMYAyADKAsyPS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlBy",
+            "b2R1Y3RTZWFyY2hSZXN1bHRzLk9iamVjdEFubm90YXRpb25CegoaY29tLmdv",
+            "b2dsZS5jbG91ZC52aXNpb24udjFCElByb2R1Y3RTZWFyY2hQcm90b1ABWjxn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Zp",
+            "c2lvbi92MTt2aXNpb274AQGiAgRHQ1ZOYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchParams), global::Google.Cloud.Vision.V1.ProductSearchParams.Parser, new[]{ "BoundingPoly", "ProductSet", "ProductCategories", "Filter" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults), global::Google.Cloud.Vision.V1.ProductSearchResults.Parser, new[]{ "IndexTime", "Results", "ProductGroupedResults" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result.Parser, new[]{ "Product", "Score", "Image" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult.Parser, new[]{ "BoundingPoly", "Results" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation.Parser, new[]{ "Mid", "LanguageCode", "Name", "Score" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult.Parser, new[]{ "BoundingPoly", "Results", "ObjectAnnotations" }, null, null, null)})
           }));
     }
     #endregion
@@ -702,6 +707,236 @@ namespace Google.Cloud.Vision.V1 {
       }
 
       /// <summary>
+      /// Prediction for what the object in the bounding box is.
+      /// </summary>
+      public sealed partial class ObjectAnnotation : pb::IMessage<ObjectAnnotation> {
+        private static readonly pb::MessageParser<ObjectAnnotation> _parser = new pb::MessageParser<ObjectAnnotation>(() => new ObjectAnnotation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ObjectAnnotation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Vision.V1.ProductSearchResults.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ObjectAnnotation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ObjectAnnotation(ObjectAnnotation other) : this() {
+          mid_ = other.mid_;
+          languageCode_ = other.languageCode_;
+          name_ = other.name_;
+          score_ = other.score_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ObjectAnnotation Clone() {
+          return new ObjectAnnotation(this);
+        }
+
+        /// <summary>Field number for the "mid" field.</summary>
+        public const int MidFieldNumber = 1;
+        private string mid_ = "";
+        /// <summary>
+        /// Object ID that should align with EntityAnnotation mid.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Mid {
+          get { return mid_; }
+          set {
+            mid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "language_code" field.</summary>
+        public const int LanguageCodeFieldNumber = 2;
+        private string languageCode_ = "";
+        /// <summary>
+        /// The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+        /// information, see
+        /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string LanguageCode {
+          get { return languageCode_; }
+          set {
+            languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 3;
+        private string name_ = "";
+        /// <summary>
+        /// Object name, expressed in its `language_code` language.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "score" field.</summary>
+        public const int ScoreFieldNumber = 4;
+        private float score_;
+        /// <summary>
+        /// Score of the result. Range [0, 1].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Score {
+          get { return score_; }
+          set {
+            score_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ObjectAnnotation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ObjectAnnotation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Mid != other.Mid) return false;
+          if (LanguageCode != other.LanguageCode) return false;
+          if (Name != other.Name) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Score, other.Score)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Mid.Length != 0) hash ^= Mid.GetHashCode();
+          if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Score != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Score);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Mid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Mid);
+          }
+          if (LanguageCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(LanguageCode);
+          }
+          if (Name.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Name);
+          }
+          if (Score != 0F) {
+            output.WriteRawTag(37);
+            output.WriteFloat(Score);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Mid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Mid);
+          }
+          if (LanguageCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+          }
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Score != 0F) {
+            size += 1 + 4;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ObjectAnnotation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Mid.Length != 0) {
+            Mid = other.Mid;
+          }
+          if (other.LanguageCode.Length != 0) {
+            LanguageCode = other.LanguageCode;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.Score != 0F) {
+            Score = other.Score;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Mid = input.ReadString();
+                break;
+              }
+              case 18: {
+                LanguageCode = input.ReadString();
+                break;
+              }
+              case 26: {
+                Name = input.ReadString();
+                break;
+              }
+              case 37: {
+                Score = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
       /// Information about the products similar to a single product in a query
       /// image.
       /// </summary>
@@ -713,7 +948,7 @@ namespace Google.Cloud.Vision.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Vision.V1.ProductSearchResults.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.Vision.V1.ProductSearchResults.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -732,6 +967,7 @@ namespace Google.Cloud.Vision.V1 {
         public GroupedResult(GroupedResult other) : this() {
           boundingPoly_ = other.boundingPoly_ != null ? other.boundingPoly_.Clone() : null;
           results_ = other.results_.Clone();
+          objectAnnotations_ = other.objectAnnotations_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -767,6 +1003,19 @@ namespace Google.Cloud.Vision.V1 {
           get { return results_; }
         }
 
+        /// <summary>Field number for the "object_annotations" field.</summary>
+        public const int ObjectAnnotationsFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation> _repeated_objectAnnotations_codec
+            = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation> objectAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation>();
+        /// <summary>
+        /// List of generic predictions for the object in the bounding box.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation> ObjectAnnotations {
+          get { return objectAnnotations_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as GroupedResult);
@@ -782,6 +1031,7 @@ namespace Google.Cloud.Vision.V1 {
           }
           if (!object.Equals(BoundingPoly, other.BoundingPoly)) return false;
           if(!results_.Equals(other.results_)) return false;
+          if(!objectAnnotations_.Equals(other.objectAnnotations_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -790,6 +1040,7 @@ namespace Google.Cloud.Vision.V1 {
           int hash = 1;
           if (boundingPoly_ != null) hash ^= BoundingPoly.GetHashCode();
           hash ^= results_.GetHashCode();
+          hash ^= objectAnnotations_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -808,6 +1059,7 @@ namespace Google.Cloud.Vision.V1 {
             output.WriteMessage(BoundingPoly);
           }
           results_.WriteTo(output, _repeated_results_codec);
+          objectAnnotations_.WriteTo(output, _repeated_objectAnnotations_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -820,6 +1072,7 @@ namespace Google.Cloud.Vision.V1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingPoly);
           }
           size += results_.CalculateSize(_repeated_results_codec);
+          size += objectAnnotations_.CalculateSize(_repeated_objectAnnotations_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -838,6 +1091,7 @@ namespace Google.Cloud.Vision.V1 {
             BoundingPoly.MergeFrom(other.BoundingPoly);
           }
           results_.Add(other.results_);
+          objectAnnotations_.Add(other.objectAnnotations_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -858,6 +1112,10 @@ namespace Google.Cloud.Vision.V1 {
               }
               case 18: {
                 results_.AddEntriesFrom(input, _repeated_results_codec);
+                break;
+              }
+              case 26: {
+                objectAnnotations_.AddEntriesFrom(input, _repeated_objectAnnotations_codec);
                 break;
               }
             }
