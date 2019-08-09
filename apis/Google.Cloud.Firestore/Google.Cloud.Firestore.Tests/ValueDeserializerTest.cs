@@ -20,6 +20,7 @@ using System.IO;
 using Xunit;
 using BclType = System.Type;
 using wkt = Google.Protobuf.WellKnownTypes;
+using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -379,7 +380,8 @@ namespace Google.Cloud.Firestore.Tests
             var value = ValueSerializer.Serialize(valueToSerialize);
             string warning = null;
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient()).WithWarningLogger(Log);
-            var context = new DeserializationContext(db.Document("a/b"));
+            var snapshot = GetSampleSnapshot(db, "doc1");
+            var context = new DeserializationContext(snapshot);
             ValueDeserializer.Deserialize(context, value, typeof(T));
             return warning;
 

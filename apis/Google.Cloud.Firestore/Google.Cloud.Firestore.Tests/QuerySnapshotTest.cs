@@ -17,6 +17,7 @@ using Google.Cloud.Firestore.V1;
 using System;
 using System.Linq;
 using Xunit;
+using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Tests
@@ -60,15 +61,15 @@ namespace Google.Cloud.Firestore.Tests
         {
             var query = s_db.Collection("col1");
             var readTime = new Timestamp(10, 2);
-            var doc1 = GetSampleSnapshot("doc1");
-            var doc2 = GetSampleSnapshot("doc2");
-            var doc3 = GetSampleSnapshot("doc3");
+            var doc1 = GetSampleSnapshot(s_db, "doc1");
+            var doc2 = GetSampleSnapshot(s_db, "doc2");
+            var doc3 = GetSampleSnapshot(s_db, "doc3");
 
             var docs = new[] { doc1, doc2 };
             var control = QuerySnapshot.ForDocuments(query, docs, readTime);
             EqualityTester.AssertEqual(control,
                 // Distinct but equal values for query and snapshots, but a different timestamp
-                equal: new[] { QuerySnapshot.ForDocuments(s_db.Collection("col1"), new[] { GetSampleSnapshot("doc1"), doc2 }, new Timestamp(12, 13)) },
+                equal: new[] { QuerySnapshot.ForDocuments(s_db.Collection("col1"), new[] { GetSampleSnapshot(s_db, "doc1"), doc2 }, new Timestamp(12, 13)) },
                 unequal: new[] {
                     // Unequal query
                     QuerySnapshot.ForDocuments(query.Offset(0), docs, readTime),
@@ -88,8 +89,8 @@ namespace Google.Cloud.Firestore.Tests
         {
             var query = s_db.Collection("col1");
             var readTime = new Timestamp(10, 2);
-            var doc1 = GetSampleSnapshot("doc1");
-            var doc2 = GetSampleSnapshot("doc2");
+            var doc1 = GetSampleSnapshot(s_db, "doc1");
+            var doc2 = GetSampleSnapshot(s_db, "doc2");
             var snapshot = QuerySnapshot.ForDocuments(query, new[] { doc1, doc2 }, readTime);
 
             Assert.Equal(new DocumentChange(doc1, DocumentChange.Type.Added, null, 0), snapshot.Changes[0]);
@@ -101,8 +102,8 @@ namespace Google.Cloud.Firestore.Tests
         {
             var query = s_db.Collection("col1");
             var readTime = new Timestamp(10, 2);
-            var doc1 = GetSampleSnapshot("doc1");
-            var doc2 = GetSampleSnapshot("doc2");
+            var doc1 = GetSampleSnapshot(s_db, "doc1");
+            var doc2 = GetSampleSnapshot(s_db, "doc2");
             var documentSet = DocumentSet.Empty(query.CreateDocumentSnapshotComparer())
                 .WithDocumentAdded(doc1)
                 .WithDocumentAdded(doc2);
@@ -115,19 +116,6 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(changes, snapshot.Changes);
             Assert.Equal(new[] { doc1, doc2 }, snapshot.Documents);
             Assert.Equal(new[] { doc1, doc2 }, snapshot.ToList());
-        }
-
-        private static DocumentSnapshot GetSampleSnapshot(string docId)
-        {
-            var readTime = new Timestamp(10, 2);
-            var proto = new Document
-            {
-                CreateTime = CreateProtoTimestamp(1, 10),
-                UpdateTime = CreateProtoTimestamp(2, 20),
-                Name = $"projects/proj/databases/db/documents/col1/{docId}",
-                Fields = { ValueSerializer.SerializeMap(new { Name = docId }) }
-            };
-            return DocumentSnapshot.ForDocument(s_db, proto, readTime);
         }
     }
 }

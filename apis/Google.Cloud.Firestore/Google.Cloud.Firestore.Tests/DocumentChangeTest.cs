@@ -14,6 +14,7 @@
 
 using Document = Google.Cloud.Firestore.V1.Document;
 using Xunit;
+using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -27,15 +28,15 @@ namespace Google.Cloud.Firestore.Tests
         [Fact]
         public void Equality()
         {
-            var snapshot = GetSampleSnapshot("doc1");
+            var snapshot = GetSampleSnapshot(s_db, "doc1");
 
             var control = new DocumentChange(snapshot, DocumentChange.Type.Modified, 3, 2);
             EqualityTester.AssertEqual(control,
                 // Distinct but equal document snapshots
-                equal: new[] { new DocumentChange(GetSampleSnapshot("doc1"), DocumentChange.Type.Modified, 3, 2) },
+                equal: new[] { new DocumentChange(GetSampleSnapshot(s_db, "doc1"), DocumentChange.Type.Modified, 3, 2) },
                 unequal: new[] {
                     // Different document
-                    new DocumentChange(GetSampleSnapshot("doc2"), DocumentChange.Type.Modified, 3, 2),
+                    new DocumentChange(GetSampleSnapshot(s_db, "doc2"), DocumentChange.Type.Modified, 3, 2),
                     // These indexes don't actually make sense for added, but it's simplest to change things independently
                     new DocumentChange(snapshot, DocumentChange.Type.Added, 3, 2),
                     new DocumentChange(snapshot, DocumentChange.Type.Modified, 4, 2),
@@ -51,19 +52,6 @@ namespace Google.Cloud.Firestore.Tests
             EqualityTester.AssertEqual(new DocumentChange(snapshot, DocumentChange.Type.Removed, 1, null),
                 equal: new[] { new DocumentChange(snapshot, DocumentChange.Type.Removed, 1, null) },
                 unequal: new[] { new DocumentChange(snapshot, DocumentChange.Type.Removed, 1, 1) });
-        }
-
-        private static DocumentSnapshot GetSampleSnapshot(string docId)
-        {
-            var readTime = new Timestamp(10, 2);
-            var proto = new Document
-            {
-                CreateTime = CreateProtoTimestamp(1, 10),
-                UpdateTime = CreateProtoTimestamp(2, 20),
-                Name = $"projects/proj/databases/db/documents/col1/{docId}",
-                Fields = { ValueSerializer.SerializeMap(new { Name = docId }) }
-            };
-            return DocumentSnapshot.ForDocument(s_db, proto, readTime);
         }
     }
 }

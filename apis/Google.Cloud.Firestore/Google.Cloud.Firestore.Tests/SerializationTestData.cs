@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using Xunit;
+using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using wkt = Google.Protobuf.WellKnownTypes;
 
@@ -30,7 +31,7 @@ namespace Google.Cloud.Firestore.Tests
     internal static class SerializationTestData
     {
         internal static FirestoreDb Database { get; } = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-        internal static DeserializationContext Context => new DeserializationContext(Database.Document("a/b"));
+        internal static DeserializationContext Context => new DeserializationContext(GetSampleSnapshot(Database, "doc1"));
 
         public static IEnumerable<object[]> BclAndValues { get; } = new List<object[]>
         {

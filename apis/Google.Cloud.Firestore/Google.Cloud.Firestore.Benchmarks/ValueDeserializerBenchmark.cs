@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using BenchmarkDotNet.Attributes;
+using Google.Cloud.Firestore.V1;
 using System.Collections.Generic;
 using System.Dynamic;
 
@@ -20,10 +21,7 @@ namespace Google.Cloud.Firestore.Benchmarks
 {
     public class ValueDeserializerBenchmark
     {
-        public static FirestoreDb FakeDb { get; } =
-            FirestoreDb.Create("project", "database", new FakeFirestoreClient());
-
-        private static DeserializationContext Context => new DeserializationContext(FakeDb.Document("a/b"));
+        private static DeserializationContext Context { get; } = new DeserializationContext(GetSampleSnapshot("doc1"));
 
         [Benchmark]
         public object DeserializeMap_Attributed() =>
@@ -48,5 +46,19 @@ namespace Google.Cloud.Firestore.Benchmarks
         [Benchmark]
         public object Deserialize_Expando() =>
             ValueDeserializer.Deserialize(Context, SampleData.Serialized, typeof(ExpandoObject));
+
+        private static DocumentSnapshot GetSampleSnapshot(string docId)
+        {
+            var db = FirestoreDb.Create("project", "database", new FakeFirestoreClient());
+            var readTime = new Timestamp(10, 2);
+            var proto = new Document
+            {
+                CreateTime = new Timestamp(1, 10).ToProto(),
+                UpdateTime = new Timestamp(2, 20).ToProto(),
+                Name = $"projects/proj/databases/db/documents/col1/{docId}",
+                Fields = { ValueSerializer.SerializeMap(new { Name = docId }) }
+            };
+            return DocumentSnapshot.ForDocument(db, proto, readTime);
+        }
     }
 }
