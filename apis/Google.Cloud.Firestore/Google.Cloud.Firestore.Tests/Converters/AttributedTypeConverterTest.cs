@@ -16,9 +16,9 @@ using Google.Cloud.Firestore.Converters;
 using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 using BclType = System.Type;
+using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 
 namespace Google.Cloud.Firestore.Tests.Converters
 {
@@ -146,7 +146,8 @@ namespace Google.Cloud.Firestore.Tests.Converters
                 { "WriteOnly", new Value { IntegerValue = 200 } },
             };
             var db = FirestoreDb.Create("project", "database", new FakeFirestoreClient());
-            var context = new DeserializationContext(db.Document("a/b"));
+            var snapshot = GetSampleSnapshot(db, "doc1");
+            var context = new DeserializationContext(snapshot);
             Model model = (Model) converter.DeserializeMap(context, map);
             Assert.Equal(now, model.Created);
             Assert.Equal(50, model.ReadWrite);
