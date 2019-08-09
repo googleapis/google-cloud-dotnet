@@ -142,22 +142,40 @@ one by default if no other constructors are specified.) The properties in the ma
 and the type of the property must be suitable for the value in the map. If the attributed class doesn't have a suitable property for an element of the map,
 an exception is thrown.
 
-An additional attribute, [FirestoreDocumentId](obj/api/Google.Cloud.Firestore.FirestoreDocumentIdAttribute.yml), is also available for attributed classes.
-This must be placed on a property of type `string` or `DocumentReference`. The property plays no part in serializing data when writing to Firestore, but is automatically
-populated when deserializing a document. If the property is of type `string`, it is populated with the document ID. If the property is of type `DocumentReference`, it
-is populated with the complete reference to the document.
+Four additional attributes are also available for attributed
+classes. The attributed properties play no part in serializing data
+when writing to Firestore, but are automatically populated when
+deserializing a document snapshot.
+
+- [FirestoreDocumentId](obj/api/Google.Cloud.Firestore.FirestoreDocumentIdAttribute.yml)
+- [FirestoreDocumentCreateTimestamp](obj/api/Google.Cloud.Firestore.FirestoreDocumentCreateTimestampAttribute.yml)
+- [FirestoreDocumentUpdateTimestamp](obj/api/Google.Cloud.Firestore.FirestoreDocumentUpdateTimestampAttribute.yml)
+- [FirestoreDocumentReadTimestamp](obj/api/Google.Cloud.Firestore.FirestoreDocumentReadTimestampAttribute.yml)
+
+`FirestoreDocumentId` must be placed on a property of type `string`
+or `DocumentReference`. If the property is of type `string`, it is
+populated with the document ID. If the property is of type
+`DocumentReference`, it is populated with the complete reference to
+the document.
+
+Each timestamp attribute must be placed on a `DateTime`,
+`DateTimeOffset`, `Google.Cloud.Firestore.Timestamp` or
+`Google.Protobuf.WellKnownTypes.Timestamp` property. (Properties of
+nullable types are also permitted.)
 
 For example, consider the following data model:
 
-{{sample:DataModel.DocumentId}}
+{{sample:DataModel.SnapshotAttributes}}
 
 The following code creates a document for a chat room, then later fetches it.
 
-{{sample:DataModel.DocumentIdUsage}}
+{{sample:DataModel.SnapshotAttributesUsage}}
 
-Without the `FirestoreDocumentId` attribute, the document reference would still be available to the code that deserializes the snapshot, but other code using the
-`ChatRoom` object later wouldn't have access to it without extra code to populate it. The `FirestoreDocumentId` attribute just allows you to get at the document ID
-or reference without any additional code.
+Without the attributes, the document reference and timestamps would
+still be available to the code that deserializes the snapshot, but
+other code using the `ChatRoom` object later wouldn't have access to
+them without extra code to populate it. The attributes just allows
+you to populate this information in your model without any additional code.
 
 **Note**: The `FirestoreData` attribute can be applied to a struct
 as well, but this only makes sense for mutable structs - which are

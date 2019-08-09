@@ -273,12 +273,21 @@ namespace Google.Cloud.Firestore.Snippets
         }
         // End sample
 
-        // Sample: DocumentId
+        // Sample: SnapshotAttributes
         [FirestoreData]
         public class ChatRoom
         {
             [FirestoreDocumentId]
             public DocumentReference Reference { get; set; }
+            
+            [FirestoreDocumentCreateTimestamp]
+            public Timestamp CreateTime { get; set; }
+
+            [FirestoreDocumentUpdateTimestamp]
+            public Timestamp UpdateTime { get; set; }
+
+            [FirestoreDocumentReadTimestamp]
+            public Timestamp ReadTime { get; set; }
 
             [FirestoreProperty]
             public string Name { get; set; }
@@ -289,9 +298,9 @@ namespace Google.Cloud.Firestore.Snippets
         // End sample
 
         [Fact]
-        public async Task DocumentId()
+        public async Task SnapshotAttributes()
         {
-            // Sample: DocumentIdUsage
+            // Sample: SnapshotAttributesUsage
             string projectId = _fixture.ProjectId;
             FirestoreDb db = FirestoreDb.Create(projectId);
 
@@ -302,9 +311,15 @@ namespace Google.Cloud.Firestore.Snippets
             // Later in code, fetch a snapshot (potentially using a query; we're fetching directly for simplicity)
             DocumentSnapshot snapshot = await document.GetSnapshotAsync();
             ChatRoom room = snapshot.ConvertTo<ChatRoom>();
-            // room.Reference is now populated with the document reference
+            // room.Reference is now populated with the document reference,
+            // room.CreateTime is populated with the time the document was created,
+            // room.UpdateTime is populated with the time the document was updated,
+            // room.ReadTime is populated with the time the document snapshot was read.
             // End sample
             Assert.Equal(document, room.Reference);
+            Assert.Equal(snapshot.CreateTime, room.CreateTime);
+            Assert.Equal(snapshot.UpdateTime, room.UpdateTime);
+            Assert.Equal(snapshot.ReadTime, room.ReadTime);
         }
     }
 }
