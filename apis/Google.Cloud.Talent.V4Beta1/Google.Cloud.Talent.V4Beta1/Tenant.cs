@@ -25,18 +25,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEi+AEKBlRlbmFudBIMCgRuYW1l",
-            "GAEgASgJEhMKC2V4dGVybmFsX2lkGAIgASgJEkUKCnVzYWdlX3R5cGUYAyAB",
-            "KA4yMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGVuYW50LkRhdGFV",
-            "c2FnZVR5cGUSNAosa2V5d29yZF9zZWFyY2hhYmxlX3Byb2ZpbGVfY3VzdG9t",
-            "X2F0dHJpYnV0ZXMYBCADKAkiTgoNRGF0YVVzYWdlVHlwZRIfChtEQVRBX1VT",
-            "QUdFX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpBR0dSRUdBVEVEEAESDAoISVNP",
-            "TEFURUQQAkKBAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIT",
-            "VGVuYW50UmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKIC",
-            "A0NUU2IGcHJvdG8z"));
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
+            "dGlvbnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
+            "+AEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFsX2lkGAIgASgJ",
+            "EkUKCnVzYWdlX3R5cGUYAyABKA4yMS5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUSNAosa2V5d29yZF9zZWFyY2hh",
+            "YmxlX3Byb2ZpbGVfY3VzdG9tX2F0dHJpYnV0ZXMYBCADKAkiTgoNRGF0YVVz",
+            "YWdlVHlwZRIfChtEQVRBX1VTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpB",
+            "R0dSRUdBVEVEEAESDAoISVNPTEFURUQQAkKBAQofY29tLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMUITVGVuYW50UmVzb3VyY2VQcm90b1ABWkFnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
+            "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
           }));
