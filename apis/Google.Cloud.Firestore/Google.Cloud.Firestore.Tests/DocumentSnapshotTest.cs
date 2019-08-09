@@ -20,7 +20,6 @@ using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
 using wkt = Google.Protobuf.WellKnownTypes;
-using BclType = System.Type;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -338,6 +337,16 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("doc2", converted.Nested.DocumentId);
         }
 
+        [Fact]
+        public void ConvertTo_WithTimestamps()
+        {
+            var snapshot = GetSampleSnapshot();
+            var sample = snapshot.ConvertTo<SampleDataWithTimestamps>();
+            Assert.Equal(snapshot.CreateTime, sample.CreateTimestamp);
+            Assert.Equal(snapshot.UpdateTime, sample.UpdateTimestamp);
+            Assert.Equal(snapshot.ReadTime, sample.ReadTimestamp);
+        }
+
         private static DocumentSnapshot GetSampleSnapshot()
         {
             var poco = new SampleData
@@ -398,6 +407,25 @@ namespace Google.Cloud.Firestore.Tests
 
             [FirestoreProperty]
             public string OuterName { get; set; }
+        }
+
+        [FirestoreData]
+        private class SampleDataWithTimestamps
+        {
+            [FirestoreProperty]
+            public string Name { get; set; }
+
+            [FirestoreProperty]
+            public NestedData Nested { get; set; }
+            
+            [FirestoreDocumentCreateTimestamp]
+            public Timestamp CreateTimestamp { get; set; }
+
+            [FirestoreDocumentUpdateTimestamp]
+            public Timestamp UpdateTimestamp { get; set; }
+
+            [FirestoreDocumentReadTimestamp]
+            public Timestamp ReadTimestamp { get; set; }
         }
     }
 }
