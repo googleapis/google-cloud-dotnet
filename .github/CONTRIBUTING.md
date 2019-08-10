@@ -98,7 +98,7 @@ See the source code (and examples in the snippets) for more details.
 Generating documentation
 ---
 
-See [docs/README.md](docs/README.md).
+See [docs/README.md](../docs/README.md).
 
 Code Style
 ==========
