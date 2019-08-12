@@ -39,7 +39,6 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var request = Service.Projects.GetServiceAccount(projectReference.ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
             return request;
