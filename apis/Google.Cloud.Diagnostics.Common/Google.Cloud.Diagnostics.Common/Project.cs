@@ -115,6 +115,8 @@ namespace Google.Cloud.Diagnostics.Common
                 case "gce_instance":
                 case "gae_app":
                 case "container":
+                case "k8s_container":
+                case "gke_container":
                 case "cloud_run_revision":
                     return GetLabel(resource, "project_id");
                 default: return null;
@@ -127,7 +129,10 @@ namespace Google.Cloud.Diagnostics.Common
             switch (resource?.Type)
             {
                 case "gae_app": return GetLabel(resource, "module_id");
-                case "container": return GetLabel(resource, "container_name");
+                case "container":
+                case "gke_container":
+                case "k8s_container":
+                    return GetLabel(resource, "container_name");
                 case "cloud_run_revision": return GetLabel(resource, "service_name");
                 default: return null;
             }

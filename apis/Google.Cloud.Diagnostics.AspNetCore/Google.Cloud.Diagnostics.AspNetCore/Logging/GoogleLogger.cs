@@ -287,9 +287,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 _logTarget.Kind == LogTargetKind.Organization ? $"organizationId={_logTarget.OrganizationId}" :
                 throw new InvalidOperationException($"Unrecognized LogTargetKind: {_logTarget.Kind}");
 
+            string resourceType = _loggerOptions.MonitoredResource.Type;
+            // Log ingestion converts "gke_container" into "container", but we really do need to search for "container",
+            // as the UI doesn't support "gke_container". (Whereas the Monitoring API *only* supports "gke_container".)
+            if (resourceType == "gke_container")
+            {
+                resourceType = "container";
+            }
             IList<string> parameters = new List<string>
             {
-                $"resource={_loggerOptions.MonitoredResource.Type}",
+                $"resource={resourceType}",
                 $"minLogLevel={(int)_loggerOptions.LogLevel.ToLogSeverity()}",
                 $"logName={_fullLogName}",
                 target
