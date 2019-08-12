@@ -43,7 +43,6 @@ namespace Google.Cloud.Storage.V1
             List<string> permissionsList = permissions.ToList();
             GaxPreconditions.CheckArgument(permissionsList.Count != 0, nameof(permissions), "List of permissions to test must not be empty");
             var request = Service.Buckets.TestIamPermissions(bucket, new Repeatable<string>(permissionsList));
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

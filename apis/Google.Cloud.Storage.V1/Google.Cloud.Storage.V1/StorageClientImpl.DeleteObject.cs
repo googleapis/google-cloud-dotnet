@@ -63,7 +63,6 @@ namespace Google.Cloud.Storage.V1
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(name, nameof(name));
             var request = Service.Objects.Delete(bucket, name);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

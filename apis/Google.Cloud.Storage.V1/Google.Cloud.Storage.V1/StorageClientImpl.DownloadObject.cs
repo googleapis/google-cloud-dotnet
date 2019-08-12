@@ -149,7 +149,6 @@ namespace Google.Cloud.Storage.V1
 
             MediaDownloader downloader = mode == DownloadValidationMode.Never
                 ? new MediaDownloader(Service) : new HashValidatingDownloader(Service);
-            downloader.ModifyRequest += _versionHeaderAction;
             options?.ModifyDownloader(downloader);
             ApplyEncryptionKey(options?.EncryptionKey, downloader);
             return downloader;

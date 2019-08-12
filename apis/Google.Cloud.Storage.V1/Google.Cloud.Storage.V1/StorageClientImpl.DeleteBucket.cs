@@ -98,7 +98,6 @@ namespace Google.Cloud.Storage.V1
         private BucketsResource.DeleteRequest CreateDeleteBucketRequest(string bucket, DeleteBucketOptions options)
         {
             var request = Service.Buckets.Delete(bucket);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

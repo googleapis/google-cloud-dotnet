@@ -35,7 +35,6 @@ namespace Google.Cloud.Storage.V1
             ValidateBucketName(bucket);
             var bucketEntity = new Bucket { Name = bucket };
             var request = Service.Buckets.Get(bucket);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

@@ -14,12 +14,9 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
-using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1
@@ -58,7 +55,6 @@ namespace Google.Cloud.Storage.V1
         private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, string prefix, ListObjectsOptions options)
         {
             var request = Service.Objects.List(bucket);
-            request.ModifyRequest += _versionHeaderAction;
             request.Prefix = prefix;
             options?.ModifyRequest(request);
             return request;
