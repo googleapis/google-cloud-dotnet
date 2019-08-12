@@ -109,16 +109,12 @@ namespace Google.Cloud.Storage.V1
             return CreateImpl(null, null);
         }
 
-        private static StorageClient CreateImpl(GoogleCredential scopedCredentials, EncryptionKey encryptionKey)
-        {
-            var service = new StorageService(new BaseClientService.Initializer
+        private static StorageClient CreateImpl(GoogleCredential scopedCredentials, EncryptionKey encryptionKey) =>
+            new StorageClientBuilder
             {
-                HttpClientInitializer = scopedCredentials,
-                ApplicationName = StorageClientImpl.ApplicationName,
-            });
-
-            return new StorageClientImpl(service, encryptionKey);
-        }
+                Credential = scopedCredentials,
+                EncryptionKey = encryptionKey
+            }.Build();
 
         /// <summary>
         /// Dispose of this instance. See the <see cref="StorageClient"/> remarks on when this should be called.
