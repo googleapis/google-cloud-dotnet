@@ -47,7 +47,6 @@ namespace Google.Cloud.Translation.V2
 
         private static readonly object _applicationNameLock = new object();
         private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(AdvancedTranslationClient));
-        private static Action<HttpRequestMessage> _versionHeaderAction = UserAgentHelper.CreateRequestModifier(typeof(AdvancedTranslationClient));
 
         /// <summary>
         /// The default application name used when creating a <see cref="TranslateService"/>.
@@ -120,7 +119,6 @@ namespace Google.Cloud.Translation.V2
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             var request = Service.Detections.List(new Repeatable<string>(items));
-            request.ModifyRequest += _versionHeaderAction;
             return UnpackDetectResponse(items, request.Execute());
         }
 
@@ -128,7 +126,6 @@ namespace Google.Cloud.Translation.V2
         public override IList<Language> ListLanguages(string target = null, string model = null)
         {
             var request = Service.Languages.List();
-            request.ModifyRequest += _versionHeaderAction;
             request.Target = target;
             request.Model = GetEffectiveModelName(model);
             return request.Execute().Languages.Select(Language.FromResource).ToList();
@@ -165,7 +162,6 @@ namespace Google.Cloud.Translation.V2
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             var request = Service.Detections.List(new Repeatable<string>(items));
-            request.ModifyRequest += _versionHeaderAction;
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return UnpackDetectResponse(items, response);
         }
@@ -174,7 +170,6 @@ namespace Google.Cloud.Translation.V2
         public override async Task<IList<Language>> ListLanguagesAsync(string target = null, string model = null, CancellationToken cancellationToken = default)
         {
             var request = Service.Languages.List();
-            request.ModifyRequest += _versionHeaderAction;
             request.Target = target;
             request.Model = GetEffectiveModelName(model);
             return (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Languages.Select(Language.FromResource).ToList();
@@ -218,7 +213,6 @@ namespace Google.Cloud.Translation.V2
 
         private void ModifyRequest(TranslateRequest request, TranslateTextRequest body, string sourceLanguage, string format, string model)
         {
-            request.ModifyRequest += _versionHeaderAction;
             body.Source = sourceLanguage;
             body.Format = format;
             body.Model = GetEffectiveModelName(model);

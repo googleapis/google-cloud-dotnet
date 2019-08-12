@@ -357,17 +357,8 @@ namespace Google.Cloud.Translation.V2
             return CreateImpl(scopedCredentials, null, model);
         }
 
-        private static AdvancedTranslationClient CreateImpl(GoogleCredential scopedCredentials, string apiKey, string model)
-        {
-            var service = new TranslateService(new BaseClientService.Initializer
-            {
-                HttpClientInitializer = scopedCredentials,
-                ApplicationName = AdvancedTranslationClientImpl.ApplicationName,
-                ApiKey = apiKey
-            });
-
-            return new AdvancedTranslationClientImpl(service, model);
-        }
+        private static AdvancedTranslationClient CreateImpl(GoogleCredential scopedCredentials, string apiKey, string model) =>
+            new AdvancedTranslationClientBuilder { Credential = scopedCredentials, ApiKey = apiKey }.Build();
 
         /// <summary>
         /// Dispose of this instance. See the <see cref="AdvancedTranslationClient"/> remarks on when this should be called.
