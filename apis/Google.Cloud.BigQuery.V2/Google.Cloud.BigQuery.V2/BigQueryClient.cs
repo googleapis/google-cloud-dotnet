@@ -116,17 +116,8 @@ namespace Google.Cloud.BigQuery.V2
             return CreateImpl(projectId, scopedCredentials);
         }
 
-        private static BigQueryClient CreateImpl(string projectId, GoogleCredential scopedCredentials)
-        {
-            var service = new BigqueryService(new BaseClientService.Initializer
-            {
-                HttpClientInitializer = scopedCredentials,
-                ApplicationName = BigQueryClientImpl.ApplicationName,
-                Serializer = new NewtonsoftJsonSerializer(CreateJsonSerializersSettings())
-            });
-
-            return new BigQueryClientImpl(projectId, service);
-        }
+        private static BigQueryClient CreateImpl(string projectId, GoogleCredential scopedCredentials) =>
+            new BigQueryClientBuilder { ProjectId = projectId, Credential = scopedCredentials }.Build();
 
         /// <summary>
         /// Creates a new client which uses the specified location by default for all operations where locations
