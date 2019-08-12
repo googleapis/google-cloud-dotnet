@@ -44,7 +44,6 @@ namespace Google.Cloud.Storage.V1
             string bucket, long metageneration, LockBucketRetentionPolicyOptions options)
         {
             var request = Service.Buckets.LockRetentionPolicy(bucket, metageneration);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

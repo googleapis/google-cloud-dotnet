@@ -36,7 +36,6 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(policy, nameof(policy));
             var bucketEntity = new Bucket { Name = bucket };
             var request = Service.Buckets.SetIamPolicy(policy, bucket);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

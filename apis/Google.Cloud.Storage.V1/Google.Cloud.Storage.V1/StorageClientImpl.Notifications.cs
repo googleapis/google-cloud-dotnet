@@ -85,7 +85,6 @@ namespace Google.Cloud.Storage.V1
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             var request = Service.Projects.ServiceAccount.Get(projectId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -95,7 +94,6 @@ namespace Google.Cloud.Storage.V1
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(notification, nameof(notification));
             var request = Service.Notifications.Insert(notification, bucket);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -105,7 +103,6 @@ namespace Google.Cloud.Storage.V1
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(notificationId, nameof(notificationId));
             var request = Service.Notifications.Get(bucket, notificationId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -115,7 +112,6 @@ namespace Google.Cloud.Storage.V1
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(notificationId, nameof(notificationId));
             var request = Service.Notifications.Delete(bucket, notificationId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -123,7 +119,6 @@ namespace Google.Cloud.Storage.V1
         private NotificationsResource.ListRequest CreateListNotificationsRequest(string bucket, ListNotificationsOptions options)
         {
             var request = Service.Notifications.List(bucket);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

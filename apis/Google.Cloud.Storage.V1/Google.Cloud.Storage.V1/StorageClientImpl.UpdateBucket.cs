@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System.Threading;
@@ -39,7 +38,6 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateBucket(bucket, nameof(bucket));
             var request = Service.Buckets.Update(bucket, bucket.Name);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request, bucket);
             return request;
         }

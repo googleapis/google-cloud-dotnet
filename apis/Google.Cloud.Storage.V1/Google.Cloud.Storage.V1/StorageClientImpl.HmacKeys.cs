@@ -86,7 +86,6 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNull(serviceAccountEmail, nameof(serviceAccountEmail));
             var request = Service.Projects.HmacKeys.Create(projectId, serviceAccountEmail);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -96,7 +95,6 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNull(accessId, nameof(accessId));
             var request = Service.Projects.HmacKeys.Get(projectId, accessId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -107,7 +105,6 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckArgument(key.ProjectId != null, nameof(key), "Key must contain a project ID");
             GaxPreconditions.CheckArgument(key.AccessId != null, nameof(key), "Key must contain an access ID");
             var request = Service.Projects.HmacKeys.Update(key, key.ProjectId, key.AccessId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -117,7 +114,6 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNull(accessId, nameof(accessId));
             var request = Service.Projects.HmacKeys.Delete(projectId, accessId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -126,7 +122,6 @@ namespace Google.Cloud.Storage.V1
         {
             var request = Service.Projects.HmacKeys.List(projectId);
             request.ServiceAccountEmail = serviceAccountEmail; // Note: may be null
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

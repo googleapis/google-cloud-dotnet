@@ -39,7 +39,6 @@ namespace Google.Cloud.Storage.V1
     {
         private static readonly object _applicationNameLock = new object();
         private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(StorageClient));
-        private static readonly Action<HttpRequestMessage> _versionHeaderAction = UserAgentHelper.CreateRequestModifier(typeof(StorageClient));
 
         /// <summary>
         /// The default application name used when creating a <see cref="StorageService"/>.
