@@ -127,7 +127,6 @@ namespace Google.Cloud.BigQuery.V2
         {
             var job = CreateJob(new JobConfiguration { Load = loadConfiguration }, options);
             var mediaUpload = new CustomMediaUpload(Service, job, job.JobReference.ProjectId, input, contentType);
-            mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
             var finalProgress = mediaUpload.Upload();
             if (finalProgress.Exception != null)
             {
@@ -272,7 +271,6 @@ namespace Google.Cloud.BigQuery.V2
         {
             var job = CreateJob(new JobConfiguration { Load = loadConfiguration }, options);
             var mediaUpload = new CustomMediaUpload(Service, job, job.JobReference.ProjectId, input, contentType);
-            mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
             var finalProgress = await mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
             if (finalProgress.Exception != null)
             {
@@ -335,7 +333,6 @@ namespace Google.Cloud.BigQuery.V2
             hasRows = body.Rows.Any();
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            request.ModifyRequest += _versionHeaderAction;
             // We ensure that every row has an insert ID, so we can always retry.
             RetryHandler.MarkAsRetriable(request);
             return request;

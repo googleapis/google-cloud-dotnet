@@ -196,7 +196,6 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
             return request;
@@ -206,7 +205,6 @@ namespace Google.Cloud.BigQuery.V2
         private ListRequest CreateListTablesRequest(DatasetReference datasetReference, ListTablesOptions options)
         {
             var request = Service.Tables.List(datasetReference.ProjectId, datasetReference.DatasetId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
             return request;
@@ -218,7 +216,6 @@ namespace Google.Cloud.BigQuery.V2
 
             var table = new Table { TableReference = tableReference, Schema = schema };
             var request = Service.Tables.Insert(table, tableReference.ProjectId, tableReference.DatasetId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(table, request);
             return request;
         }
@@ -227,7 +224,6 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -237,7 +233,6 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));
             var request = Service.Tables.Update(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
             return request;
@@ -248,7 +243,6 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));
             var request = Service.Tables.Patch(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
             return request;
