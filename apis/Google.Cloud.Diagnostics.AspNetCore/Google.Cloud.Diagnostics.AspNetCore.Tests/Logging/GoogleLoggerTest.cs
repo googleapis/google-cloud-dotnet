@@ -102,12 +102,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void GetGcpConsoleLogsUrl_MonitoredResourceFromPlatform()
+        public void GetGcpConsoleLogsUrl_Gae()
         {
-            GoogleLogger logger = GetLogger(monitoredResource: MonitoredResourceBuilder.FromPlatform());
+            GoogleLogger logger = GetLogger(monitoredResource: MonitoredResourceBuilder.FromPlatform(new Platform(
+                    new GaePlatformDetails("project-id", "instance", "service", "version"))));
             string query = logger.GetGcpConsoleLogsUrl().Query;
 
-            Assert.Contains($"resource={MonitoredResourceBuilder.FromPlatform().Type}", query);
+            Assert.Contains($"resource=gae_app", query);
+        }
+
+        /// <summary>
+        /// See comment in production code for the purpose of this test.
+        /// </summary>
+        [Fact]
+        public void GetGcpConsoleLogsUrl_GkeContainerToContainer()
+        {
+            var resource = new MonitoredResource
+            {
+                Type = "gke_container"
+            };
+            GoogleLogger logger = GetLogger(monitoredResource: resource);
+            string query = logger.GetGcpConsoleLogsUrl().Query;
+
+            Assert.Contains($"resource=container", query);
         }
 
         [Fact]

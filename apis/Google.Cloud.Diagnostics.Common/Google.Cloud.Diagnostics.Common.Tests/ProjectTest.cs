@@ -32,17 +32,30 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     new GaePlatformDetails("project-id", "instance", "service", "version"))) },
                 { "gce_instance", MonitoredResourceBuilder.FromPlatform(new Platform(
                     new GcePlatformDetails("json", "project-id", "instance", "projects/12345/zones/zone"))) },
-                { "container", MonitoredResourceBuilder.FromPlatform(new Platform(
-                    new GkePlatformDetails("json", "project-id", "cluster", "location", "host", "instance", "zone", "namespace", "pod", "container"))) },
+                { "container", CreateGkeResource("container") },
+                { "gke_container", CreateGkeResource("gke_container") },
+                { "k8s_container", CreateGkeResource("k8s_container") },
                 { "cloud_run_revision", MonitoredResourceBuilder.FromPlatform(new Platform(
                     new CloudRunPlatformDetails("json", "project-id", "location", "service", "revision", "configuration"))) },
                 { "unknown", new MonitoredResource { Type = "unknown", Labels = { { "project_id", "project-id" } } } }
             };
 
+        // There are three different potential resource representations for GKE. We handle them all
+        // the same way, but we need to test that.
+        private static MonitoredResource CreateGkeResource(string resourceType)
+        {
+            var resource = MonitoredResourceBuilder.FromPlatform(new Platform(
+                new GkePlatformDetails("json", "project-id", "cluster", "location", "host", "instance", "zone", "namespace", "pod", "container")));
+            resource.Type = resourceType;
+            return resource;
+        }
+        
         [Theory]
         [InlineData("gae_app", "project-id")]
         [InlineData("gce_instance", "project-id")]
         [InlineData("container", "project-id")]
+        [InlineData("gke_container", "project-id")]
+        [InlineData("k8s_container", "project-id")]
         [InlineData("cloud_run_revision", "project-id")]
         [InlineData("unknown", null)]
         public void GetProjectId(string type, string expectedProjectId)
@@ -66,6 +79,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [InlineData("gae_app", "service")]
         [InlineData("gce_instance", null)]
         [InlineData("container", "container")]
+        [InlineData("gke_container", "container")]
+        [InlineData("k8s_container", "container")]
         [InlineData("cloud_run_revision", "service")]
         [InlineData("unknown", null)]
         public void GetServiceName(string type, string expectedServiceName)
@@ -90,6 +105,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [InlineData("gae_app", "version")]
         [InlineData("gce_instance", null)]
         [InlineData("container", null)]
+        [InlineData("gke_container", null)]
+        [InlineData("k8s_container", null)]
         [InlineData("cloud_run_revision", "revision")]
         [InlineData("unknown", null)]
         public void GetServiceVersion(string type, string expectedServiceVersion)
