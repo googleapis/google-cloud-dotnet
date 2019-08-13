@@ -1027,7 +1027,7 @@
     "serviceYaml": "videointelligence_v1.yaml",
     "productName": "Google Cloud Video Intelligence",
     "productUrl": "https://cloud.google.com/video-intelligence",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
