@@ -1013,7 +1013,7 @@
     "productUrl": "https://cloud.google.com/translate/",
     "version": "1.2.0-beta02",
     "type": "rest",
-    "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
+    "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
     "dependencies": {
       "Google.Apis.Translate.v2": "1.40.2.875"
     },
