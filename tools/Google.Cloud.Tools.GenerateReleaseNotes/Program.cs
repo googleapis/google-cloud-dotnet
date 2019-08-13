@@ -94,13 +94,8 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
                     }
                     if (CommitContainsApi(diff, commit, pathFilter))
                     {
-                        var message = commit.MessageShort;
-                        if (message.Length > 75)
-                        {
-                            message = message.Substring(0, 72) + "...";
-                        }
-                        Console.WriteLine(message);
                         Console.WriteLine($"https://github.com/googleapis/google-cloud-dotnet/commit/{commit.Sha.Substring(0, 7)}");
+                        Console.WriteLine(commit.Message);
                         Console.WriteLine();
                     }
                 }
