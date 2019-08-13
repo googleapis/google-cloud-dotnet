@@ -1017,6 +1017,9 @@
     "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.",
+    "dependencies": {
+      "Google.LongRunning": "1.1.0"
+    },
     "tags": [ "Translate", "Translation" ]
   },
 
