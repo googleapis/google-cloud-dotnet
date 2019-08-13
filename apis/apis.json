@@ -980,7 +980,7 @@
     "serviceYaml": "cloudtrace_v1.yaml",
     "productName": "Stackdriver Trace",
     "productUrl": "https://cloud.google.com/trace/",
-    "version": "1.1.0",
+    "version": "1.2.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Trace API, which sends and retrieves trace data from Google Cloud Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Cloud Trace for display, reporting, and analysis.",
     "dependencies": {
