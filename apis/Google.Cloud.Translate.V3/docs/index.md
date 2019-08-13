@@ -13,3 +13,7 @@
 {{client-classes}}
 
 {{client-construction}}
+
+# Sample code
+
+{{sample:TranslationServiceClient.GettingStarted}}
