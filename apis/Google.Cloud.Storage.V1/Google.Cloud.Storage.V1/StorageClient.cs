@@ -46,8 +46,10 @@ namespace Google.Cloud.Storage.V1
     /// </remarks>
     public abstract partial class StorageClient : IDisposable
     {
+        private static readonly string[] s_scopes = new[] { StorageService.Scope.DevstorageFullControl };
+
         internal static ScopedCredentialProvider ScopedCredentialProvider { get; } =
-            new ScopedCredentialProvider(new[] { StorageService.Scope.DevstorageFullControl });
+            new ScopedCredentialProvider(s_scopes);
 
         /// <summary>
         /// The underlying storage service object used by this client.
@@ -77,11 +79,12 @@ namespace Google.Cloud.Storage.V1
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all relevant object-based operations by default. May be null.</param>
         /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
-        public static async Task<StorageClient> CreateAsync(GoogleCredential credential = null, EncryptionKey encryptionKey = null)
-        {
-            var scopedCredentials = await ScopedCredentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
-            return CreateImpl(scopedCredentials, encryptionKey);
-        }
+        public static Task<StorageClient> CreateAsync(GoogleCredential credential = null, EncryptionKey encryptionKey = null) =>
+            new StorageClientBuilder
+            {
+                Credential = credential?.CreateScoped(s_scopes),
+                EncryptionKey = encryptionKey
+            }.BuildAsync();
 
         /// <summary>
         /// Synchronously creates a <see cref="StorageClient"/>, using application default credentials if
@@ -93,28 +96,20 @@ namespace Google.Cloud.Storage.V1
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all relevant object-based operations by default. May be null.</param>
         /// <returns>The created <see cref="StorageClient"/>.</returns>
-        public static StorageClient Create(GoogleCredential credential = null, EncryptionKey encryptionKey = null)
-        {
-            var scopedCredentials = ScopedCredentialProvider.GetCredentials(credential);
-            return CreateImpl(scopedCredentials, encryptionKey);
-        }
+        public static StorageClient Create(GoogleCredential credential = null, EncryptionKey encryptionKey = null) =>
+            new StorageClientBuilder
+            {
+                Credential = credential?.CreateScoped(s_scopes),
+                EncryptionKey = encryptionKey
+            }.Build();
 
         /// <summary>
         /// Creates a <see cref="StorageClient"/> with no credentials. This can only be used in limited
         /// situations (where authentication isn't required), primarily downloading public data.
         /// </summary>
         /// <returns>The created <see cref="StorageClient"/>.</returns>
-        public static StorageClient CreateUnauthenticated()
-        {
-            return CreateImpl(null, null);
-        }
-
-        private static StorageClient CreateImpl(GoogleCredential scopedCredentials, EncryptionKey encryptionKey) =>
-            new StorageClientBuilder
-            {
-                Credential = scopedCredentials,
-                EncryptionKey = encryptionKey
-            }.Build();
+        public static StorageClient CreateUnauthenticated() =>
+            new StorageClientBuilder { UnauthenticatedAccess = true }.Build();
 
         /// <summary>
         /// Dispose of this instance. See the <see cref="StorageClient"/> remarks on when this should be called.
