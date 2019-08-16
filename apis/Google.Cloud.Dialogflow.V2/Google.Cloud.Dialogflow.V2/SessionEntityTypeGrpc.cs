@@ -35,6 +35,10 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// favorites, preferences, playlists, and so on. You can redefine a session
   /// entity type at the session level.
   ///
+  /// Session entity methods do not work with Google Assistant integration.
+  /// Contact Dialogflow support if you need to use session entities
+  /// with Google Assistant integration.
+  ///
   /// For more information about entity types, see the
   /// [Dialogflow
   /// documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
@@ -99,6 +103,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     {
       /// <summary>
       /// Returns the list of all session entity types in the specified session.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -110,6 +118,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Retrieves the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -124,6 +136,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// If the specified session entity type already exists, overrides the session
       /// entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -135,6 +151,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Updates the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -146,6 +166,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Deletes the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -182,6 +206,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Returns the list of all session entity types in the specified session.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -194,6 +222,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Returns the list of all session entity types in the specified session.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -204,6 +236,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Returns the list of all session entity types in the specified session.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -216,6 +252,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Returns the list of all session entity types in the specified session.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -226,6 +266,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Retrieves the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -238,6 +282,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Retrieves the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -248,6 +296,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Retrieves the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -260,6 +312,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Retrieves the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -273,6 +329,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// If the specified session entity type already exists, overrides the session
       /// entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -288,6 +348,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// If the specified session entity type already exists, overrides the session
       /// entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -301,6 +365,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// If the specified session entity type already exists, overrides the session
       /// entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -316,6 +384,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// If the specified session entity type already exists, overrides the session
       /// entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -326,6 +398,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -338,6 +414,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -348,6 +428,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -360,6 +444,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -370,6 +458,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -382,6 +474,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -392,6 +488,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -404,6 +504,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified session entity type.
+      ///
+      /// This method doesn't work with Google Assistant integration.
+      /// Contact Dialogflow support if you need to use session entities
+      /// with Google Assistant integration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

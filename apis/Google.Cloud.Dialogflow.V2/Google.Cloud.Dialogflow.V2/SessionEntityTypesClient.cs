@@ -474,6 +474,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
@@ -508,6 +512,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
@@ -542,6 +550,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
@@ -576,6 +588,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
@@ -610,6 +626,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -629,6 +649,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -648,6 +672,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
@@ -671,6 +699,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
@@ -691,6 +723,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
@@ -714,6 +750,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
@@ -737,6 +777,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
@@ -757,6 +801,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the session entity type. Format:
@@ -780,6 +828,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -799,6 +851,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -817,6 +873,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -839,6 +899,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -869,6 +933,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -896,6 +964,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -926,6 +998,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -956,6 +1032,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -983,6 +1063,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -1013,6 +1097,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1035,6 +1123,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1056,6 +1148,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1075,6 +1171,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="sessionEntityType">
         /// Required. The entity type to update. Format:
@@ -1098,6 +1198,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="sessionEntityType">
         /// Required. The entity type to update. Format:
@@ -1118,6 +1222,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="sessionEntityType">
         /// Required. The entity type to update. Format:
@@ -1141,6 +1249,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1160,6 +1272,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1178,6 +1294,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1197,6 +1317,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
@@ -1220,6 +1344,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
@@ -1240,6 +1368,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
@@ -1260,6 +1392,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
@@ -1283,6 +1419,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
@@ -1303,6 +1443,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
@@ -1323,6 +1467,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1342,6 +1490,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1360,6 +1512,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1458,6 +1614,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1478,6 +1638,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1498,6 +1662,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1518,6 +1686,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Retrieves the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1541,6 +1713,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1564,6 +1740,10 @@ namespace Google.Cloud.Dialogflow.V2
         ///
         /// If the specified session entity type already exists, overrides the session
         /// entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1584,6 +1764,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1604,6 +1788,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Updates the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1624,6 +1812,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1644,6 +1836,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Deletes the specified session entity type.
+        ///
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
