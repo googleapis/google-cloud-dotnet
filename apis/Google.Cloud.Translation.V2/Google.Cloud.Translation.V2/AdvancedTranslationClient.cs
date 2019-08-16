@@ -319,11 +319,12 @@ namespace Google.Cloud.Translation.V2
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <param name="model">The default translation model to use. Defaults to null, indicating that by default no model is specified in requests.</param>
         /// <returns>The task representing the created <see cref="AdvancedTranslationClient"/>.</returns>
-        public static async Task<AdvancedTranslationClient> CreateAsync(GoogleCredential credential = null, string model = null)
-        {
-            var scopedCredentials = await TranslationClient.ScopedCredentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
-            return CreateImpl(scopedCredentials, null, model);
-        }
+        public static Task<AdvancedTranslationClient> CreateAsync(GoogleCredential credential = null, string model = null) =>
+            new AdvancedTranslationClientBuilder
+            {
+                Credential = credential?.CreateScoped(TranslationClient.Scopes),
+                Model = model
+            }.BuildAsync();
 
         /// <summary>
         /// Creates a <see cref="AdvancedTranslationClient"/> from an API key instead of using OAuth2 credentials.
@@ -335,11 +336,12 @@ namespace Google.Cloud.Translation.V2
         /// <param name="apiKey">API key to use. Must not be null.</param>
         /// <param name="model">The default translation model to use. Defaults to null, indicating that by default no model is specified in requests.</param>
         /// <returns>The created <see cref="AdvancedTranslationClient"/>.</returns>
-        public static AdvancedTranslationClient CreateFromApiKey(string apiKey, string model = null)
-        {
-            GaxPreconditions.CheckNotNull(apiKey, nameof(apiKey));
-            return CreateImpl(null, apiKey, model);
-        }
+        public static AdvancedTranslationClient CreateFromApiKey(string apiKey, string model = null) =>
+            new AdvancedTranslationClientBuilder
+            {
+                ApiKey = GaxPreconditions.CheckNotNull(apiKey, nameof(apiKey)),
+                Model = model
+            }.Build();
 
         /// <summary>
         /// Synchronously creates a <see cref="AdvancedTranslationClient"/>, using application default credentials if
@@ -351,14 +353,12 @@ namespace Google.Cloud.Translation.V2
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <param name="model">The default translation model to use. Defaults to null, indicating that by default no model is specified in requests.</param>
         /// <returns>The created <see cref="AdvancedTranslationClient"/>.</returns>
-        public static AdvancedTranslationClient Create(GoogleCredential credential = null, string model = null)
-        {
-            var scopedCredentials = TranslationClient.ScopedCredentialProvider.GetCredentials(credential);
-            return CreateImpl(scopedCredentials, null, model);
-        }
-
-        private static AdvancedTranslationClient CreateImpl(GoogleCredential scopedCredentials, string apiKey, string model) =>
-            new AdvancedTranslationClientBuilder { Credential = scopedCredentials, ApiKey = apiKey, Model = model }.Build();
+        public static AdvancedTranslationClient Create(GoogleCredential credential = null, string model = null) =>
+            new AdvancedTranslationClientBuilder
+            {
+                Credential = credential?.CreateScoped(TranslationClient.Scopes),
+                Model = model
+            }.Build();
 
         /// <summary>
         /// Dispose of this instance. See the <see cref="AdvancedTranslationClient"/> remarks on when this should be called.
