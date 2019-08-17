@@ -136,25 +136,25 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "U19BTkRfUkVDUkVBVElPThAdEiAKHFRSQU5TUE9SVEFUSU9OX0FORF9MT0dJ",
             "U1RJQ1MQHiplCg1Qb3N0aW5nUmVnaW9uEh4KGlBPU1RJTkdfUkVHSU9OX1VO",
             "U1BFQ0lGSUVEEAASFwoTQURNSU5JU1RSQVRJVkVfQVJFQRABEgoKBk5BVElP",
-            "ThACEg8KC1RFTEVDT01NVVRFEAMqagoKVmlzaWJpbGl0eRIaChZWSVNJQklM",
+            "ThACEg8KC1RFTEVDT01NVVRFEAMqbgoKVmlzaWJpbGl0eRIaChZWSVNJQklM",
             "SVRZX1VOU1BFQ0lGSUVEEAASEAoMQUNDT1VOVF9PTkxZEAESFgoSU0hBUkVE",
-            "X1dJVEhfR09PR0xFEAISFgoSU0hBUkVEX1dJVEhfUFVCTElDEAMqWgoQQ29u",
-            "dGFjdEluZm9Vc2FnZRIiCh5DT05UQUNUX0lORk9fVVNBR0VfVU5TUEVDSUZJ",
-            "RUQQABIMCghQRVJTT05BTBABEggKBFdPUksQAhIKCgZTQ0hPT0wQAypxChBI",
-            "dG1sU2FuaXRpemF0aW9uEiEKHUhUTUxfU0FOSVRJWkFUSU9OX1VOU1BFQ0lG",
-            "SUVEEAASHgoaSFRNTF9TQU5JVElaQVRJT05fRElTQUJMRUQQARIaChZTSU1Q",
-            "TEVfRk9STUFUVElOR19PTkxZEAIqYwoNQ29tbXV0ZU1ldGhvZBIeChpDT01N",
-            "VVRFX01FVEhPRF9VTlNQRUNJRklFRBAAEgsKB0RSSVZJTkcQARILCgdUUkFO",
-            "U0lUEAISCwoHV0FMS0lORxADEgsKB0NZQ0xJTkcQBCqiAQoVU2tpbGxQcm9m",
-            "aWNpZW5jeUxldmVsEicKI1NLSUxMX1BST0ZJQ0lFTkNZX0xFVkVMX1VOU1BF",
-            "Q0lGSUVEEAASDQoJVU5TS0lMTEVEEAYSGQoVRlVOREFNRU5UQUxfQVdBUkVO",
-            "RVNTEAESCgoGTk9WSUNFEAISEAoMSU5URVJNRURJQVRFEAMSDAoIQURWQU5D",
-            "RUQQBBIKCgZFWFBFUlQQBSpmCgdPdXRjb21lEhcKE09VVENPTUVfVU5TUEVD",
-            "SUZJRUQQABIMCghQT1NJVElWRRABEgsKB05FVVRSQUwQAhIMCghORUdBVElW",
-            "RRADEhkKFU9VVENPTUVfTk9UX0FWQUlMQUJMRRAEQnkKH2NvbS5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTFCC0NvbW1vblByb3RvUAFaQWdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0",
-            "YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "X1dJVEhfR09PR0xFEAISFgoSU0hBUkVEX1dJVEhfUFVCTElDEAMaAhgBKloK",
+            "EENvbnRhY3RJbmZvVXNhZ2USIgoeQ09OVEFDVF9JTkZPX1VTQUdFX1VOU1BF",
+            "Q0lGSUVEEAASDAoIUEVSU09OQUwQARIICgRXT1JLEAISCgoGU0NIT09MEAMq",
+            "cQoQSHRtbFNhbml0aXphdGlvbhIhCh1IVE1MX1NBTklUSVpBVElPTl9VTlNQ",
+            "RUNJRklFRBAAEh4KGkhUTUxfU0FOSVRJWkFUSU9OX0RJU0FCTEVEEAESGgoW",
+            "U0lNUExFX0ZPUk1BVFRJTkdfT05MWRACKmMKDUNvbW11dGVNZXRob2QSHgoa",
+            "Q09NTVVURV9NRVRIT0RfVU5TUEVDSUZJRUQQABILCgdEUklWSU5HEAESCwoH",
+            "VFJBTlNJVBACEgsKB1dBTEtJTkcQAxILCgdDWUNMSU5HEAQqogEKFVNraWxs",
+            "UHJvZmljaWVuY3lMZXZlbBInCiNTS0lMTF9QUk9GSUNJRU5DWV9MRVZFTF9V",
+            "TlNQRUNJRklFRBAAEg0KCVVOU0tJTExFRBAGEhkKFUZVTkRBTUVOVEFMX0FX",
+            "QVJFTkVTUxABEgoKBk5PVklDRRACEhAKDElOVEVSTUVESUFURRADEgwKCEFE",
+            "VkFOQ0VEEAQSCgoGRVhQRVJUEAUqZgoHT3V0Y29tZRIXChNPVVRDT01FX1VO",
+            "U1BFQ0lGSUVEEAASDAoIUE9TSVRJVkUQARILCgdORVVUUkFMEAISDAoITkVH",
+            "QVRJVkUQAxIZChVPVVRDT01FX05PVF9BVkFJTEFCTEUQBEJ5Ch9jb20uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExQgtDb21tb25Qcm90b1ABWkFnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
+            "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), }, new pbr::GeneratedClrTypeInfo[] {
@@ -613,6 +613,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
+  /// Deprecated. All resources are only visible to the owner.
+  ///
   /// An enum that represents who has view access to the resource.
   /// </summary>
   public enum Visibility {
