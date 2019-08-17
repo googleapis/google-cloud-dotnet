@@ -28,7 +28,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
             "bnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24u",
             "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aIGdvb2ds",
-            "ZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvIqcOCgNKb2ISDAoEbmFtZRgB",
+            "ZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvIqsOCgNKb2ISDAoEbmFtZRgB",
             "IAEoCRIPCgdjb21wYW55GAIgASgJEhYKDnJlcXVpc2l0aW9uX2lkGAMgASgJ",
             "Eg0KBXRpdGxlGAQgASgJEhMKC2Rlc2NyaXB0aW9uGAUgASgJEhEKCWFkZHJl",
             "c3NlcxgGIAMoCRJKChBhcHBsaWNhdGlvbl9pbmZvGAcgASgLMjAuZ29vZ2xl",
@@ -46,33 +46,33 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "bGVudC52NGJldGExLkpvYkxldmVsEhcKD3Byb21vdGlvbl92YWx1ZRgRIAEo",
             "BRIWCg5xdWFsaWZpY2F0aW9ucxgSIAEoCRIYChByZXNwb25zaWJpbGl0aWVz",
             "GBMgASgJEkIKDnBvc3RpbmdfcmVnaW9uGBQgASgOMiouZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLlBvc3RpbmdSZWdpb24SOwoKdmlzaWJpbGl0eRgV",
+            "LnRhbGVudC52NGJldGExLlBvc3RpbmdSZWdpb24SPwoKdmlzaWJpbGl0eRgV",
             "IAEoDjInLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5WaXNpYmlsaXR5",
-            "EjIKDmpvYl9zdGFydF90aW1lGBYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIwCgxqb2JfZW5kX3RpbWUYFyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEjgKFHBvc3RpbmdfcHVibGlzaF90aW1lGBggASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3ChNwb3N0aW5nX2V4cGlyZV90",
-            "aW1lGBkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3ChNwb3N0",
-            "aW5nX2NyZWF0ZV90aW1lGBogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBI3ChNwb3N0aW5nX3VwZGF0ZV90aW1lGBsgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcBIcChRjb21wYW55X2Rpc3BsYXlfbmFtZRgcIAEo",
-            "CRJCCgxkZXJpdmVkX2luZm8YHSABKAsyLC5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuSm9iLkRlcml2ZWRJbmZvEk4KEnByb2Nlc3Npbmdfb3B0aW9u",
-            "cxgeIAEoCzIyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2IuUHJv",
-            "Y2Vzc2luZ09wdGlvbnMaRAoPQXBwbGljYXRpb25JbmZvEg4KBmVtYWlscxgB",
-            "IAMoCRITCgtpbnN0cnVjdGlvbhgCIAEoCRIMCgR1cmlzGAMgAygJGokBCgtE",
-            "ZXJpdmVkSW5mbxI4Cglsb2NhdGlvbnMYASADKAsyJS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuTG9jYXRpb24SQAoOam9iX2NhdGVnb3JpZXMYAyAD",
-            "KA4yKC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iQ2F0ZWdvcnka",
-            "iAEKEVByb2Nlc3NpbmdPcHRpb25zEikKIWRpc2FibGVfc3RyZWV0X2FkZHJl",
-            "c3NfcmVzb2x1dGlvbhgBIAEoCBJIChFodG1sX3Nhbml0aXphdGlvbhgCIAEo",
-            "DjItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5IdG1sU2FuaXRpemF0",
-            "aW9uGmUKFUN1c3RvbUF0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSOwoF",
-            "dmFsdWUYAiABKAsyLC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ3Vz",
-            "dG9tQXR0cmlidXRlOgI4AUJ+Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExQhBKb2JSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFs",
-            "ZW50ogIDQ1RTYgZwcm90bzM="));
+            "QgIYARIyCg5qb2Jfc3RhcnRfdGltZRgWIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASMAoMam9iX2VuZF90aW1lGBcgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBI4ChRwb3N0aW5nX3B1Ymxpc2hfdGltZRgYIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoTcG9zdGluZ19leHBp",
+            "cmVfdGltZRgZIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoT",
+            "cG9zdGluZ19jcmVhdGVfdGltZRgaIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASNwoTcG9zdGluZ191cGRhdGVfdGltZRgbIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASHAoUY29tcGFueV9kaXNwbGF5X25hbWUY",
+            "HCABKAkSQgoMZGVyaXZlZF9pbmZvGB0gASgLMiwuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkpvYi5EZXJpdmVkSW5mbxJOChJwcm9jZXNzaW5nX29w",
+            "dGlvbnMYHiABKAsyMi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9i",
+            "LlByb2Nlc3NpbmdPcHRpb25zGkQKD0FwcGxpY2F0aW9uSW5mbxIOCgZlbWFp",
+            "bHMYASADKAkSEwoLaW5zdHJ1Y3Rpb24YAiABKAkSDAoEdXJpcxgDIAMoCRqJ",
+            "AQoLRGVyaXZlZEluZm8SOAoJbG9jYXRpb25zGAEgAygLMiUuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uEkAKDmpvYl9jYXRlZ29yaWVz",
+            "GAMgAygOMiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYkNhdGVn",
+            "b3J5GogBChFQcm9jZXNzaW5nT3B0aW9ucxIpCiFkaXNhYmxlX3N0cmVldF9h",
+            "ZGRyZXNzX3Jlc29sdXRpb24YASABKAgSSAoRaHRtbF9zYW5pdGl6YXRpb24Y",
+            "AiABKA4yLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSHRtbFNhbml0",
+            "aXphdGlvbhplChVDdXN0b21BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJ",
+            "EjsKBXZhbHVlGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkN1c3RvbUF0dHJpYnV0ZToCOAFCfgofY29tLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMUIQSm9iUmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGEx",
+            "O3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -559,12 +559,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int VisibilityFieldNumber = 21;
     private global::Google.Cloud.Talent.V4Beta1.Visibility visibility_ = 0;
     /// <summary>
-    /// Optional. The visibility of the job.
+    /// Deprecated. The job is only visible to the owner.
+    ///
+    /// The visibility of the job.
     ///
     /// Defaults to
     /// [Visibility.ACCOUNT_ONLY][google.cloud.talent.v4beta1.Visibility.ACCOUNT_ONLY]
     /// if not specified.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Visibility Visibility {
       get { return visibility_; }
