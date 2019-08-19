@@ -85,12 +85,6 @@ generate_microgenerator() {
   
   # Copy the rest into the right place
   cp -r $API_TMP_DIR $API_OUT_DIR
-
-  if [[ -f $API_OUT_DIR/$1/postgeneration.sh ]]
-  then
-    echo "Running post-generation script for $1"
-    (cd $API_OUT_DIR/$1; ./postgeneration.sh)
-  fi
 }
 
 generate_gapicgenerator() {
@@ -182,8 +176,7 @@ generate_api() {
   PACKAGE_DIR=apis/$1
   echo "Generating $PACKAGE"
   GENERATOR=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE generator)
-
-  if [[ -f $API_OUT_DIR/$1/pregeneration.sh ]]
+  if [[ -f $PACKAGE_DIR/pregeneration.sh ]]
   then
     echo "Running pre-generation script for $PACKAGE"
     (cd $PACKAGE_DIR; ./pregeneration.sh)
@@ -212,7 +205,7 @@ generate_api() {
     (cd $PACKAGE_DIR; git apply postgeneration.patch)
   fi
 
-  if [[ -f $API_OUT_DIR/$1/postgeneration.sh ]]
+  if [[ -f $PACKAGE_DIR/$1/postgeneration.sh ]]
   then
     echo "Running post-generation script for $PACKAGE"
     (cd $PACKAGE_DIR; ./postgeneration.sh)
