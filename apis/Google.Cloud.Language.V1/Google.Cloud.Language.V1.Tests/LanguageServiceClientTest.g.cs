@@ -208,6 +208,48 @@ namespace Google.Cloud.Language.V1.Tests
         }
 
         [Fact]
+        public void AnalyzeEntities2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnalyzeEntitiesRequest expectedRequest = new AnalyzeEntitiesRequest
+            {
+                Document = new Document(),
+            };
+            AnalyzeEntitiesResponse expectedResponse = new AnalyzeEntitiesResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeEntities(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnalyzeEntitiesResponse response = client.AnalyzeEntities(document);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AnalyzeEntitiesAsync2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnalyzeEntitiesRequest expectedRequest = new AnalyzeEntitiesRequest
+            {
+                Document = new Document(),
+            };
+            AnalyzeEntitiesResponse expectedResponse = new AnalyzeEntitiesResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeEntitiesAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AnalyzeEntitiesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnalyzeEntitiesResponse response = await client.AnalyzeEntitiesAsync(document);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void AnalyzeEntities3()
         {
             Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
@@ -294,6 +336,48 @@ namespace Google.Cloud.Language.V1.Tests
         }
 
         [Fact]
+        public void AnalyzeEntitySentiment2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnalyzeEntitySentimentRequest expectedRequest = new AnalyzeEntitySentimentRequest
+            {
+                Document = new Document(),
+            };
+            AnalyzeEntitySentimentResponse expectedResponse = new AnalyzeEntitySentimentResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeEntitySentiment(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnalyzeEntitySentimentResponse response = client.AnalyzeEntitySentiment(document);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AnalyzeEntitySentimentAsync2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnalyzeEntitySentimentRequest expectedRequest = new AnalyzeEntitySentimentRequest
+            {
+                Document = new Document(),
+            };
+            AnalyzeEntitySentimentResponse expectedResponse = new AnalyzeEntitySentimentResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeEntitySentimentAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AnalyzeEntitySentimentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnalyzeEntitySentimentResponse response = await client.AnalyzeEntitySentimentAsync(document);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void AnalyzeEntitySentiment3()
         {
             Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
@@ -375,6 +459,48 @@ namespace Google.Cloud.Language.V1.Tests
             Document document = new Document();
             EncodingType encodingType = EncodingType.None;
             AnalyzeSyntaxResponse response = await client.AnalyzeSyntaxAsync(document, encodingType);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void AnalyzeSyntax2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnalyzeSyntaxRequest expectedRequest = new AnalyzeSyntaxRequest
+            {
+                Document = new Document(),
+            };
+            AnalyzeSyntaxResponse expectedResponse = new AnalyzeSyntaxResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeSyntax(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnalyzeSyntaxResponse response = client.AnalyzeSyntax(document);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AnalyzeSyntaxAsync2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnalyzeSyntaxRequest expectedRequest = new AnalyzeSyntaxRequest
+            {
+                Document = new Document(),
+            };
+            AnalyzeSyntaxResponse expectedResponse = new AnalyzeSyntaxResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeSyntaxAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AnalyzeSyntaxResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnalyzeSyntaxResponse response = await client.AnalyzeSyntaxAsync(document);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -535,6 +661,52 @@ namespace Google.Cloud.Language.V1.Tests
             AnnotateTextRequest.Types.Features features = new AnnotateTextRequest.Types.Features();
             EncodingType encodingType = EncodingType.None;
             AnnotateTextResponse response = await client.AnnotateTextAsync(document, features, encodingType);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void AnnotateText2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnnotateTextRequest expectedRequest = new AnnotateTextRequest
+            {
+                Document = new Document(),
+                Features = new AnnotateTextRequest.Types.Features(),
+            };
+            AnnotateTextResponse expectedResponse = new AnnotateTextResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnnotateText(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnnotateTextRequest.Types.Features features = new AnnotateTextRequest.Types.Features();
+            AnnotateTextResponse response = client.AnnotateText(document, features);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AnnotateTextAsync2()
+        {
+            Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new Mock<LanguageService.LanguageServiceClient>(MockBehavior.Strict);
+            AnnotateTextRequest expectedRequest = new AnnotateTextRequest
+            {
+                Document = new Document(),
+                Features = new AnnotateTextRequest.Types.Features(),
+            };
+            AnnotateTextResponse expectedResponse = new AnnotateTextResponse
+            {
+                Language = "language-1613589672",
+            };
+            mockGrpcClient.Setup(x => x.AnnotateTextAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AnnotateTextResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            AnnotateTextRequest.Types.Features features = new AnnotateTextRequest.Types.Features();
+            AnnotateTextResponse response = await client.AnnotateTextAsync(document, features);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
