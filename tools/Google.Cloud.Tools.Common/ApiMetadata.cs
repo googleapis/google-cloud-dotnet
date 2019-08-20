@@ -67,6 +67,8 @@ namespace Google.Cloud.Tools.Common
 
         public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
 
+        public StructuredVersion StructuredVersion => new StructuredVersion(Version);
+
         // TODO: Optimize to do this lazily if it's ever an issue
         public bool CanHaveGaRelease
         {

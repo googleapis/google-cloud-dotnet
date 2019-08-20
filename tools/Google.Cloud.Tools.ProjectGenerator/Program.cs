@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -131,6 +132,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     GenerateSolutionFiles(path, api);
                     GenerateDocumentationStub(path, api);
                     GenerateSynthConfiguration(path, api);
+                    GenerateMetadataFile(path, api);
                 }
                 return 0;
             }
@@ -273,7 +275,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             Console.WriteLine($"Generated documentation stub for {api.Id}");
         }
 
-        static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
+        private static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
         {
             if (api.Generator == GeneratorType.None)
             {
@@ -306,6 +308,33 @@ shell.run(
   hide_output = False)
 ";
             File.WriteAllText(synthFile, content);
+        }
+
+        /// <summary>
+        /// Generates a metadata file (currently .repo-metadata.json; may change name later) with
+        /// all the information that language-agnostic tools require.
+        /// </summary>
+        private static void GenerateMetadataFile(string apiRoot, ApiMetadata api)
+        {
+            var version = api.StructuredVersion;
+            // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
+            // TODO: Check that this is actually appropriate.
+            if ((version.Prerelease ?? "").EndsWith("00") && version.Major == 1 && version.Minor == 0)
+            {
+                return;
+            }
+            string releaseLevel =
+                // If it's not a prerelease now, or it's ever got to 1.0, it's generally "ga"
+                version.Major > 1 || version.Minor > 0 || version.Prerelease == null ? "ga"
+                : version.Prerelease.StartsWith("beta") ? "beta" : "alpha";
+            var metadata = new
+            {
+                distribution_name = api.Id,
+                release_level = releaseLevel
+            };
+            Console.WriteLine($"{api.Version} => {api.StructuredVersion} => {releaseLevel}");
+            string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
+            File.WriteAllText(Path.Combine(apiRoot, ".repo-metadata.json"), json);
         }
 
         private static void GenerateMainProject(ApiMetadata api, string directory, HashSet<string> apiNames)
