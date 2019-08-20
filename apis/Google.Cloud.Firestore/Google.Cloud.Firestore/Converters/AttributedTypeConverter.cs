@@ -195,6 +195,8 @@ namespace Google.Cloud.Firestore.Converters
                 GaxPreconditions.CheckState(setMethod == null || !setMethod.IsStatic,
                     "{0}.{1} is static, and should not be decorated with {2}.",
                     typeName, property.Name, nameof(FirestorePropertyAttribute));
+
+                _converter = _converter ?? ValueTupleConverter.MaybeCreateConverter(property);
             }
 
             // TODO: Consider creating delegates for the property get/set methods.

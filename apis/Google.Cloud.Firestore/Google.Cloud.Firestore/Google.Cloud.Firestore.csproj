@@ -32,5 +32,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Collections.Immutable" Version="1.4.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="'$(TargetFramework)'=='net45'" />
   </ItemGroup>
 </Project>
