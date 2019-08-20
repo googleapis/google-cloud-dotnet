@@ -554,10 +554,147 @@ namespace Grafeas.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="GrafeasClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class GrafeasClientBuilder : gaxgrpc::ClientBuilderBase<GrafeasClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public GrafeasSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override GrafeasClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return GrafeasClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<GrafeasClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return GrafeasClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => GrafeasClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GrafeasClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => GrafeasClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Grafeas client wrapper, for convenient use.
     /// </summary>
     public abstract partial class GrafeasClient
     {
+        /// <summary>
+        /// The default endpoint for the Grafeas service, which is a host of "containeranalysis.googleapis.com" and a port of 443.
+        /// </summary>
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("containeranalysis.googleapis.com", 443);
+
+        /// <summary>
+        /// The default Grafeas scopes.
+        /// </summary>
+        /// <remarks>
+        /// The default Grafeas scopes are:
+        /// <list type="bullet">
+        /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
+            "https://www.googleapis.com/auth/cloud-platform",
+        });
+
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
+
+        /// <summary>
+        /// Asynchronously creates a <see cref="GrafeasClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary. See the example for how to use custom credentials.
+        /// </summary>
+        /// <example>
+        /// This sample shows how to create a client using default credentials:
+        /// <code>
+        /// using Grafeas.V1;
+        /// ...
+        /// // When running on Google Cloud Platform this will use the project Compute Credential.
+        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
+        /// // credential file to use that credential.
+        /// GrafeasClient client = await GrafeasClient.CreateAsync();
+        /// </code>
+        /// This sample shows how to create a client using credentials loaded from a JSON file:
+        /// <code>
+        /// using Grafeas.V1;
+        /// using Google.Apis.Auth.OAuth2;
+        /// using Grpc.Auth;
+        /// using Grpc.Core;
+        /// ...
+        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
+        /// Channel channel = new Channel(
+        ///     GrafeasClient.DefaultEndpoint.Host, GrafeasClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
+        /// GrafeasClient client = GrafeasClient.Create(channel);
+        /// ...
+        /// // Shutdown the channel when it is no longer required.
+        /// await channel.ShutdownAsync();
+        /// </code>
+        /// </example>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="GrafeasSettings"/>.</param>
+        /// <returns>The task representing the created <see cref="GrafeasClient"/>.</returns>
+        public static async stt::Task<GrafeasClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, GrafeasSettings settings = null)
+        {
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="GrafeasClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary. See the example for how to use custom credentials.
+        /// </summary>
+        /// <example>
+        /// This sample shows how to create a client using default credentials:
+        /// <code>
+        /// using Grafeas.V1;
+        /// ...
+        /// // When running on Google Cloud Platform this will use the project Compute Credential.
+        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
+        /// // credential file to use that credential.
+        /// GrafeasClient client = GrafeasClient.Create();
+        /// </code>
+        /// This sample shows how to create a client using credentials loaded from a JSON file:
+        /// <code>
+        /// using Grafeas.V1;
+        /// using Google.Apis.Auth.OAuth2;
+        /// using Grpc.Auth;
+        /// using Grpc.Core;
+        /// ...
+        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
+        /// Channel channel = new Channel(
+        ///     GrafeasClient.DefaultEndpoint.Host, GrafeasClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
+        /// GrafeasClient client = GrafeasClient.Create(channel);
+        /// ...
+        /// // Shutdown the channel when it is no longer required.
+        /// channel.ShutdownAsync().Wait();
+        /// </code>
+        /// </example>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="GrafeasSettings"/>.</param>
+        /// <returns>The created <see cref="GrafeasClient"/>.</returns>
+        public static GrafeasClient Create(gaxgrpc::ServiceEndpoint endpoint = null, GrafeasSettings settings = null)
+        {
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
+        }
 
         /// <summary>
         /// Creates a <see cref="GrafeasClient"/> which uses the specified channel for remote operations.
@@ -588,6 +725,17 @@ namespace Grafeas.V1
             Grafeas.GrafeasClient grpcClient = new Grafeas.GrafeasClient(callInvoker);
             return new GrafeasClientImpl(grpcClient, settings);
         }
+
+        /// <summary>
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, GrafeasSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, GrafeasSettings)"/>. Channels which weren't automatically
+        /// created are not affected.
+        /// </summary>
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, GrafeasSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, GrafeasSettings)"/> will create new channels, which could
+        /// in turn be shut down by another call to this method.</remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Grafeas client.
