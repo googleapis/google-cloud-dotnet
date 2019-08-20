@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpcgcp = Google.Api.Gax.Grpc.Gcp;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -400,6 +399,9 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc />
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableServiceApiClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => BigtableServiceApiClient.ChannelPool;
     }
 
     /// <summary>
@@ -435,7 +437,9 @@ namespace Google.Cloud.Bigtable.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        private static readonly gaxgrpcgcp::GcpCallInvokerPool s_callInvokerPool = new gaxgrpcgcp::GcpCallInvokerPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified settings,
@@ -473,8 +477,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The task representing the created <see cref="BigtableServiceApiClient"/>.</returns>
         public static async stt::Task<BigtableServiceApiClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
-            grpccore::CallInvoker callInvoker = await s_callInvokerPool.GetCallInvokerAsync(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions()).ConfigureAwait(false);
-            return Create(callInvoker, settings);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
         }
 
         /// <summary>
@@ -513,8 +517,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
         public static BigtableServiceApiClient Create(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
-            grpccore::CallInvoker callInvoker = s_callInvokerPool.GetCallInvoker(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions());
-            return Create(callInvoker, settings);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
         }
 
         /// <summary>
@@ -556,7 +560,7 @@ namespace Google.Cloud.Bigtable.V2
         /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, BigtableServiceApiSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static stt::Task ShutdownDefaultChannelsAsync() => s_callInvokerPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Bigtable client.
