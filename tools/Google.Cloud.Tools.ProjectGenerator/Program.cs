@@ -126,19 +126,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
                 foreach (var api in apis)
                 {
-                    GenerateProjects(Path.Combine(root, "apis", api.Id), api, apiNames);
-                }
-                foreach (var api in apis)
-                {
-                    GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
-                }
-                foreach (var api in apis)
-                {
-                    GenerateDocumentationStub(Path.Combine(root, "apis", api.Id), api);
-                }
-                foreach (var api in apis)
-                {
-                    GenerateSynthConfiguration(Path.Combine(root, "apis", api.Id), api);
+                    var path = Path.Combine(root, "apis", api.Id);
+                    GenerateProjects(path, api, apiNames);
+                    GenerateSolutionFiles(path, api);
+                    GenerateDocumentationStub(path, api);
+                    GenerateSynthConfiguration(path, api);
                 }
                 return 0;
             }
