@@ -184,23 +184,62 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 return null;
             }
-            using (var stream = File.OpenRead(file))
-            {
-                var credential = GoogleCredential.FromStream(stream);
-                return StorageClient.Create(credential);
-            }
+            var credential = GoogleCredential.FromFile(file);
+            return StorageClient.Create(credential);
         }
 
         private string CreateRequesterPaysBucket()
         {
             string name = IdGenerator.FromDateTime(prefix: "dotnet-requesterpays-");
-            RequesterPaysClient.CreateBucket(RequesterPaysProjectId, new Bucket { Name = name, Billing = new Bucket.BillingData { RequesterPays = true } },
-                new CreateBucketOptions { PredefinedAcl = PredefinedBucketAcl.PublicReadWrite, PredefinedDefaultObjectAcl = PredefinedObjectAcl.PublicRead });
-            SleepAfterBucketCreateDelete();
-            // TODO: We shouldn't need the project ID here.
-            RequesterPaysClient.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent),
-                new UploadObjectOptions { UserProject = RequesterPaysProjectId });
+            CreateBucket();
+            AddServiceAccountBinding();
+            CreateObject();
             return name;
+
+            // Adds the service account associated with the application default credentials as a writer for the bucket.
+            // Note: this assumes the default credentials *are* a service account. If we've got a compute credential,
+            // this will cause a problem - but in reality, our tests always run with a service account.
+            void AddServiceAccountBinding()
+            {
+                var credential = (ServiceAccountCredential) GoogleCredential.GetApplicationDefault().UnderlyingCredential;
+                string serviceAccountEmail = credential.Id;
+
+                var policy = RequesterPaysClient.GetBucketIamPolicy(name,
+                    new GetBucketIamPolicyOptions { UserProject = RequesterPaysProjectId });
+                // Note: we assume there are no conditions in the policy, as we've only just created the bucket.
+                var writerRole = "roles/storage.objectCreator";
+                Policy.BindingsData writerBinding = null;
+                foreach (var binding in policy.Bindings)
+                {
+                    if (binding.Role == writerRole)
+                    {
+                        writerBinding = binding;
+                        break;
+                    }
+                }
+                if (writerBinding == null)
+                {
+                    writerBinding = new Policy.BindingsData { Role = writerRole, Members = new List<string>() };
+                    policy.Bindings.Add(writerBinding);
+                }
+                writerBinding.Members.Add($"serviceAccount:{serviceAccountEmail}");
+                RequesterPaysClient.SetBucketIamPolicy(name, policy,
+                    new SetBucketIamPolicyOptions { UserProject = RequesterPaysProjectId });
+            }
+
+            void CreateBucket()
+            {
+                RequesterPaysClient.CreateBucket(RequesterPaysProjectId,
+                    new Bucket { Name = name, Billing = new Bucket.BillingData { RequesterPays = true } });
+                SleepAfterBucketCreateDelete();
+            }
+
+            void CreateObject()
+            {
+                RequesterPaysClient.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent),
+                    new UploadObjectOptions { UserProject = RequesterPaysProjectId });
+            }
+            
         }
 
         internal Bucket CreateBucket(string name, bool multiVersion)
