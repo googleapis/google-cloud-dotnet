@@ -184,6 +184,13 @@ namespace Google.Cloud.Firestore.Tests
             // Document references
             { Database.Document("a/b"),
                 new Value { ReferenceValue = "projects/proj/databases/db/documents/a/b" } },
+
+            // Tuple support
+            { new TupleModel { PlayerName = ("F", "M", "L"), HighScore = (500, 10) },
+                new Value { MapValue = new MapValue { Fields = {
+                        { "PlayerName", new Value { MapValue = new MapValue { Fields = { { "first", new Value { StringValue = "F" } }, { "middle", new Value { StringValue = "M" } }, { "last", new Value { StringValue = "L" } } } } } },
+                        { "HighScore", new Value { MapValue = new MapValue { Fields = { { "score", new Value { IntegerValue = 500 } }, { "level", new Value { IntegerValue = 10 } } } } } }
+            } } } }
         };
 
         public static TheoryData<IMessage, Func<Value, IMessage>> ProtoValues { get; } = new TheoryData<IMessage, Func<Value, IMessage>>
@@ -500,5 +507,23 @@ namespace Google.Cloud.Firestore.Tests
 
             public override string ToString() => $"{nameof(StructModel)}: { new { Name, Value } }";
         }
+
+        [FirestoreData]
+        private class TupleModel : IEquatable<TupleModel>
+        {
+            [FirestoreProperty]
+            public (int score, int level) HighScore { get; set; }
+
+            [FirestoreProperty]
+            public (string first, string middle, string last) PlayerName { get; set; }
+
+            public override bool Equals(object obj) => Equals(obj as TupleModel);
+
+            public override int GetHashCode() => HighScore.GetHashCode() ^ PlayerName.GetHashCode();
+
+            public bool Equals(TupleModel other) =>
+                HighScore == other.HighScore && PlayerName == other.PlayerName;
+        }
+
     }
 }
