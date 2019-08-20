@@ -81,3 +81,8 @@ the request and want to put work into it.
 
 - Issue: [#2738](https://github.com/googleapis/google-cloud-dotnet/issues/2738)
 - Status: The original requester never confirmed whether our approach solved their use case or not.
+
+# Firestore: Expose sufficient state to manually restart a Listen operation
+
+- Issue: [#2513](https://github.com/googleapis/google-cloud-dotnet/issues/2513)
+- Status: Waiting for more user to request this, so we can gather suitable requirements.
