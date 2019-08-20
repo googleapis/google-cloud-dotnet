@@ -205,7 +205,7 @@ generate_api() {
     (cd $PACKAGE_DIR; git apply postgeneration.patch)
   fi
 
-  if [[ -f $PACKAGE_DIR/$1/postgeneration.sh ]]
+  if [[ -f $PACKAGE_DIR/postgeneration.sh ]]
   then
     echo "Running post-generation script for $PACKAGE"
     (cd $PACKAGE_DIR; ./postgeneration.sh)
