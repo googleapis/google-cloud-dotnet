@@ -25,10 +25,10 @@ namespace Google.Cloud.Tasks.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvY2xvdWQvdGFza3MvdjIvcXVldWUucHJvdG8SFWdvb2dsZS5j",
-            "bG91ZC50YXNrcy52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoZ",
-            "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoiZ29vZ2xlL2Nsb3VkL3Rhc2tz",
-            "L3YyL3RhcmdldC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIv8CCgVRdWV1",
+            "bG91ZC50YXNrcy52MhoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoiZ29v",
+            "Z2xlL2Nsb3VkL3Rhc2tzL3YyL3RhcmdldC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
+            "YnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
+            "LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIt0DCgVRdWV1",
             "ZRIMCgRuYW1lGAEgASgJEkwKG2FwcF9lbmdpbmVfcm91dGluZ19vdmVycmlk",
             "ZRgCIAEoCzInLmdvb2dsZS5jbG91ZC50YXNrcy52Mi5BcHBFbmdpbmVSb3V0",
             "aW5nEjYKC3JhdGVfbGltaXRzGAMgASgLMiEuZ29vZ2xlLmNsb3VkLnRhc2tz",
@@ -37,18 +37,21 @@ namespace Google.Cloud.Tasks.V2 {
             "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyLlF1ZXVlLlN0YXRlEi4KCnB1cmdlX3Rp",
             "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIkUKBVN0YXRl",
             "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEgoKBlBBVVNF",
-            "RBACEgwKCERJU0FCTEVEEAMiagoKUmF0ZUxpbWl0cxIhChltYXhfZGlzcGF0",
-            "Y2hlc19wZXJfc2Vjb25kGAEgASgBEhYKDm1heF9idXJzdF9zaXplGAIgASgF",
-            "EiEKGW1heF9jb25jdXJyZW50X2Rpc3BhdGNoZXMYAyABKAUi0QEKC1JldHJ5",
-            "Q29uZmlnEhQKDG1heF9hdHRlbXB0cxgBIAEoBRI1ChJtYXhfcmV0cnlfZHVy",
-            "YXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoLbWlu",
-            "X2JhY2tvZmYYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoL",
-            "bWF4X2JhY2tvZmYYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "FQoNbWF4X2RvdWJsaW5ncxgFIAEoBUJlChljb20uZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyQgpRdWV1ZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFza3MvdjI7dGFza3NiBnByb3RvMw=="));
+            "RBACEgwKCERJU0FCTEVEEAM6XOpBWQofY2xvdWR0YXNrcy5nb29nbGVhcGlz",
+            "LmNvbS9RdWV1ZRI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3F1ZXVlcy97cXVldWV9ImoKClJhdGVMaW1pdHMSIQoZbWF4X2Rp",
+            "c3BhdGNoZXNfcGVyX3NlY29uZBgBIAEoARIWCg5tYXhfYnVyc3Rfc2l6ZRgC",
+            "IAEoBRIhChltYXhfY29uY3VycmVudF9kaXNwYXRjaGVzGAMgASgFItEBCgtS",
+            "ZXRyeUNvbmZpZxIUCgxtYXhfYXR0ZW1wdHMYASABKAUSNQoSbWF4X3JldHJ5",
+            "X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEi4K",
+            "C21pbl9iYWNrb2ZmGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "Ei4KC21heF9iYWNrb2ZmGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uEhUKDW1heF9kb3VibGluZ3MYBSABKAVCZQoZY29tLmdvb2dsZS5jbG91",
+            "ZC50YXNrcy52MkIKUXVldWVQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Rhc2tzL3YyO3Rhc2tzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Queue), global::Google.Cloud.Tasks.V2.Queue.Parser, new[]{ "Name", "AppEngineRoutingOverride", "RateLimits", "RetryConfig", "State", "PurgeTime" }, null, new[]{ typeof(global::Google.Cloud.Tasks.V2.Queue.Types.State) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.RateLimits), global::Google.Cloud.Tasks.V2.RateLimits.Parser, new[]{ "MaxDispatchesPerSecond", "MaxBurstSize", "MaxConcurrentDispatches" }, null, null, null),
@@ -554,8 +557,7 @@ namespace Google.Cloud.Tasks.V2 {
     /// If unspecified when the queue is created, Cloud Tasks will pick the
     /// default.
     ///
-    /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum allowed value
-    ///   is 500.
+    /// * The maximum allowed value is 500.
     ///
     /// This field has the same meaning as
     /// [rate in
@@ -594,7 +596,7 @@ namespace Google.Cloud.Tasks.V2 {
     /// value of
     /// [max_dispatches_per_second][google.cloud.tasks.v2.RateLimits.max_dispatches_per_second].
     ///
-    /// For App Engine queues that were created or updated using
+    /// For queues that were created or updated using
     /// `queue.yaml/xml`, `max_burst_size` is equal to
     /// [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
     /// Since `max_burst_size` is output only, if
