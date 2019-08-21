@@ -25,11 +25,11 @@ namespace Google.Cloud.Tasks.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvY2xvdWQvdGFza3MvdjIvdGFzay5wcm90bxIVZ29vZ2xlLmNs",
-            "b3VkLnRhc2tzLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiJnb29nbGUvY2xvdWQvdGFza3Mv",
-            "djIvdGFyZ2V0LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9y",
-            "cGMvc3RhdHVzLnByb3RvIo4ECgRUYXNrEgwKBG5hbWUYASABKAkSTgoXYXBw",
+            "b3VkLnRhc2tzLnYyGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiJnb29n",
+            "bGUvY2xvdWQvdGFza3MvdjIvdGFyZ2V0LnByb3RvGh5nb29nbGUvcHJvdG9i",
+            "dWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
+            "cHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhxnb29nbGUvYXBpL2Fu",
+            "bm90YXRpb25zLnByb3RvIvgECgRUYXNrEgwKBG5hbWUYASABKAkSTgoXYXBw",
             "X2VuZ2luZV9odHRwX3JlcXVlc3QYAiABKAsyKy5nb29nbGUuY2xvdWQudGFz",
             "a3MudjIuQXBwRW5naW5lSHR0cFJlcXVlc3RIABIxCg1zY2hlZHVsZV90aW1l",
             "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtjcmVhdGVf",
@@ -40,17 +40,19 @@ namespace Google.Cloud.Tasks.V2 {
             "YXNrcy52Mi5BdHRlbXB0EjQKDGxhc3RfYXR0ZW1wdBgKIAEoCzIeLmdvb2ds",
             "ZS5jbG91ZC50YXNrcy52Mi5BdHRlbXB0Ei4KBHZpZXcYCyABKA4yIC5nb29n",
             "bGUuY2xvdWQudGFza3MudjIuVGFzay5WaWV3IjEKBFZpZXcSFAoQVklFV19V",
-            "TlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVMTBACQg4KDG1lc3NhZ2Vf",
-            "dHlwZSLPAQoHQXR0ZW1wdBIxCg1zY2hlZHVsZV90aW1lGAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1kaXNwYXRjaF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1yZXNwb25zZV90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCg9yZXNwb25z",
-            "ZV9zdGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0YXR1c0JkChljb20uZ29v",
-            "Z2xlLmNsb3VkLnRhc2tzLnYyQglUYXNrUHJvdG9QAVo6Z29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YXNrcy92Mjt0YXNr",
-            "c2IGcHJvdG8z"));
+            "TlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVMTBACOmjqQWUKHmNsb3Vk",
+            "dGFza3MuZ29vZ2xlYXBpcy5jb20vVGFzaxJDcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3F1ZXVlcy97cXVldWV9L3Rhc2tzL3t0",
+            "YXNrfUIOCgxtZXNzYWdlX3R5cGUizwEKB0F0dGVtcHQSMQoNc2NoZWR1bGVf",
+            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNZGlz",
+            "cGF0Y2hfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "MQoNcmVzcG9uc2VfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASKwoPcmVzcG9uc2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5T",
+            "dGF0dXNCZAoZY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MkIJVGFza1Byb3Rv",
+            "UAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvdGFza3MvdjI7dGFza3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Task), global::Google.Cloud.Tasks.V2.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "MessageType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2.Task.Types.View) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Attempt), global::Google.Cloud.Tasks.V2.Attempt.Parser, new[]{ "ScheduleTime", "DispatchTime", "ResponseTime", "ResponseStatus" }, null, null, null)
@@ -164,9 +166,7 @@ namespace Google.Cloud.Tasks.V2 {
     public const int ScheduleTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp scheduleTime_;
     /// <summary>
-    /// The time when the task is scheduled to be attempted.
-    ///
-    /// For App Engine queues, this is when the task will be attempted or retried.
+    /// The time when the task is scheduled to be attempted or retried.
     ///
     /// `schedule_time` will be truncated to the nearest microsecond.
     /// </summary>

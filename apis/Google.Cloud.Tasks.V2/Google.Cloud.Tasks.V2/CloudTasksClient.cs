@@ -812,9 +812,7 @@ namespace Google.Cloud.Tasks.V2
         /// Queues are returned in lexicographical order.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name.
+        /// Required. The location name.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="pageToken">
@@ -850,9 +848,7 @@ namespace Google.Cloud.Tasks.V2
         /// Queues are returned in lexicographical order.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name.
+        /// Required. The location name.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="pageToken">
@@ -888,9 +884,7 @@ namespace Google.Cloud.Tasks.V2
         /// Queues are returned in lexicographical order.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name.
+        /// Required. The location name.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="pageToken">
@@ -926,9 +920,7 @@ namespace Google.Cloud.Tasks.V2
         /// Queues are returned in lexicographical order.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name.
+        /// Required. The location name.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="pageToken">
@@ -1004,9 +996,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a queue.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the queue. For example:
+        /// Required. The resource name of the queue. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -1028,9 +1018,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a queue.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the queue. For example:
+        /// Required. The resource name of the queue. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -1049,9 +1037,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a queue.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the queue. For example:
+        /// Required. The resource name of the queue. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -1073,9 +1059,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a queue.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the queue. For example:
+        /// Required. The resource name of the queue. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -1097,9 +1081,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a queue.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the queue. For example:
+        /// Required. The resource name of the queue. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -1118,9 +1100,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a queue.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the queue. For example:
+        /// Required. The resource name of the queue. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -1209,9 +1189,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name in which the queue will be created.
+        /// Required. The location name in which the queue will be created.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         ///
         /// The list of allowed locations can be obtained by calling Cloud
@@ -1219,9 +1197,7 @@ namespace Google.Cloud.Tasks.V2
         /// [ListLocations][google.cloud.location.Locations.ListLocations].
         /// </param>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create.
+        /// Required. The queue to create.
         ///
         /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
         /// </param>
@@ -1257,9 +1233,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name in which the queue will be created.
+        /// Required. The location name in which the queue will be created.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         ///
         /// The list of allowed locations can be obtained by calling Cloud
@@ -1267,9 +1241,7 @@ namespace Google.Cloud.Tasks.V2
         /// [ListLocations][google.cloud.location.Locations.ListLocations].
         /// </param>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create.
+        /// Required. The queue to create.
         ///
         /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
         /// </param>
@@ -1302,9 +1274,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name in which the queue will be created.
+        /// Required. The location name in which the queue will be created.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         ///
         /// The list of allowed locations can be obtained by calling Cloud
@@ -1312,9 +1282,7 @@ namespace Google.Cloud.Tasks.V2
         /// [ListLocations][google.cloud.location.Locations.ListLocations].
         /// </param>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create.
+        /// Required. The queue to create.
         ///
         /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
         /// </param>
@@ -1350,9 +1318,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name in which the queue will be created.
+        /// Required. The location name in which the queue will be created.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         ///
         /// The list of allowed locations can be obtained by calling Cloud
@@ -1360,9 +1326,7 @@ namespace Google.Cloud.Tasks.V2
         /// [ListLocations][google.cloud.location.Locations.ListLocations].
         /// </param>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create.
+        /// Required. The queue to create.
         ///
         /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
         /// </param>
@@ -1398,9 +1362,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name in which the queue will be created.
+        /// Required. The location name in which the queue will be created.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         ///
         /// The list of allowed locations can be obtained by calling Cloud
@@ -1408,9 +1370,7 @@ namespace Google.Cloud.Tasks.V2
         /// [ListLocations][google.cloud.location.Locations.ListLocations].
         /// </param>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create.
+        /// Required. The queue to create.
         ///
         /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
         /// </param>
@@ -1443,9 +1403,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name in which the queue will be created.
+        /// Required. The location name in which the queue will be created.
         /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
         ///
         /// The list of allowed locations can be obtained by calling Cloud
@@ -1453,9 +1411,7 @@ namespace Google.Cloud.Tasks.V2
         /// [ListLocations][google.cloud.location.Locations.ListLocations].
         /// </param>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create.
+        /// Required. The queue to create.
         ///
         /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
         /// </param>
@@ -1583,9 +1539,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create or update.
+        /// Required. The queue to create or update.
         ///
         /// The queue's [name][google.cloud.tasks.v2.Queue.name] must be specified.
         ///
@@ -1633,9 +1587,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create or update.
+        /// Required. The queue to create or update.
         ///
         /// The queue's [name][google.cloud.tasks.v2.Queue.name] must be specified.
         ///
@@ -1680,9 +1632,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="queue">
-        /// Required.
-        ///
-        /// The queue to create or update.
+        /// Required. The queue to create or update.
         ///
         /// The queue's [name][google.cloud.tasks.v2.Queue.name] must be specified.
         ///
@@ -1826,9 +1776,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -1862,9 +1810,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -1895,9 +1841,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -1928,9 +1872,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -1964,9 +1906,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -1997,9 +1937,7 @@ namespace Google.Cloud.Tasks.V2
         /// this method.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2112,9 +2050,7 @@ namespace Google.Cloud.Tasks.V2
         /// might be dispatched before the purge takes effect. A purge is irreversible.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2141,9 +2077,7 @@ namespace Google.Cloud.Tasks.V2
         /// might be dispatched before the purge takes effect. A purge is irreversible.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -2167,9 +2101,7 @@ namespace Google.Cloud.Tasks.V2
         /// might be dispatched before the purge takes effect. A purge is irreversible.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2196,9 +2128,7 @@ namespace Google.Cloud.Tasks.V2
         /// might be dispatched before the purge takes effect. A purge is irreversible.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2225,9 +2155,7 @@ namespace Google.Cloud.Tasks.V2
         /// might be dispatched before the purge takes effect. A purge is irreversible.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -2251,9 +2179,7 @@ namespace Google.Cloud.Tasks.V2
         /// might be dispatched before the purge takes effect. A purge is irreversible.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2352,9 +2278,7 @@ namespace Google.Cloud.Tasks.V2
         /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2382,9 +2306,7 @@ namespace Google.Cloud.Tasks.V2
         /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -2409,9 +2331,7 @@ namespace Google.Cloud.Tasks.V2
         /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2439,9 +2359,7 @@ namespace Google.Cloud.Tasks.V2
         /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2469,9 +2387,7 @@ namespace Google.Cloud.Tasks.V2
         /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -2496,9 +2412,7 @@ namespace Google.Cloud.Tasks.V2
         /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2606,9 +2520,7 @@ namespace Google.Cloud.Tasks.V2
         /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2642,9 +2554,7 @@ namespace Google.Cloud.Tasks.V2
         /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -2675,9 +2585,7 @@ namespace Google.Cloud.Tasks.V2
         /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2711,9 +2619,7 @@ namespace Google.Cloud.Tasks.V2
         /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -2747,9 +2653,7 @@ namespace Google.Cloud.Tasks.V2
         /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -2780,9 +2684,7 @@ namespace Google.Cloud.Tasks.V2
         /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="callSettings">
@@ -3762,9 +3664,7 @@ namespace Google.Cloud.Tasks.V2
         /// time.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="pageToken">
@@ -3806,9 +3706,7 @@ namespace Google.Cloud.Tasks.V2
         /// time.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="pageToken">
@@ -3850,9 +3748,7 @@ namespace Google.Cloud.Tasks.V2
         /// time.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="pageToken">
@@ -3894,9 +3790,7 @@ namespace Google.Cloud.Tasks.V2
         /// time.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         /// </param>
         /// <param name="pageToken">
@@ -3984,9 +3878,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a task.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4008,9 +3900,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a task.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -4029,9 +3919,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a task.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4053,9 +3941,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a task.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4077,9 +3963,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a task.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -4098,9 +3982,7 @@ namespace Google.Cloud.Tasks.V2
         /// Gets a task.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4182,17 +4064,13 @@ namespace Google.Cloud.Tasks.V2
         /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         ///
         /// The queue must already exist.
         /// </param>
         /// <param name="task">
-        /// Required.
-        ///
-        /// The task to add.
+        /// Required. The task to add.
         ///
         /// Task names have the following format:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
@@ -4251,17 +4129,13 @@ namespace Google.Cloud.Tasks.V2
         /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         ///
         /// The queue must already exist.
         /// </param>
         /// <param name="task">
-        /// Required.
-        ///
-        /// The task to add.
+        /// Required. The task to add.
         ///
         /// Task names have the following format:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
@@ -4317,17 +4191,13 @@ namespace Google.Cloud.Tasks.V2
         /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         ///
         /// The queue must already exist.
         /// </param>
         /// <param name="task">
-        /// Required.
-        ///
-        /// The task to add.
+        /// Required. The task to add.
         ///
         /// Task names have the following format:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
@@ -4386,17 +4256,13 @@ namespace Google.Cloud.Tasks.V2
         /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         ///
         /// The queue must already exist.
         /// </param>
         /// <param name="task">
-        /// Required.
-        ///
-        /// The task to add.
+        /// Required. The task to add.
         ///
         /// Task names have the following format:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
@@ -4455,17 +4321,13 @@ namespace Google.Cloud.Tasks.V2
         /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         ///
         /// The queue must already exist.
         /// </param>
         /// <param name="task">
-        /// Required.
-        ///
-        /// The task to add.
+        /// Required. The task to add.
         ///
         /// Task names have the following format:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
@@ -4521,17 +4383,13 @@ namespace Google.Cloud.Tasks.V2
         /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The queue name. For example:
+        /// Required. The queue name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
         ///
         /// The queue must already exist.
         /// </param>
         /// <param name="task">
-        /// Required.
-        ///
-        /// The task to add.
+        /// Required. The task to add.
         ///
         /// Task names have the following format:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
@@ -4658,9 +4516,7 @@ namespace Google.Cloud.Tasks.V2
         /// failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4686,9 +4542,7 @@ namespace Google.Cloud.Tasks.V2
         /// failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -4711,9 +4565,7 @@ namespace Google.Cloud.Tasks.V2
         /// failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4736,9 +4588,7 @@ namespace Google.Cloud.Tasks.V2
         /// failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4764,9 +4614,7 @@ namespace Google.Cloud.Tasks.V2
         /// failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -4789,9 +4637,7 @@ namespace Google.Cloud.Tasks.V2
         /// failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4898,9 +4744,7 @@ namespace Google.Cloud.Tasks.V2
         /// task that has already succeeded or permanently failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -4945,9 +4789,7 @@ namespace Google.Cloud.Tasks.V2
         /// task that has already succeeded or permanently failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -4989,9 +4831,7 @@ namespace Google.Cloud.Tasks.V2
         /// task that has already succeeded or permanently failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -5036,9 +4876,7 @@ namespace Google.Cloud.Tasks.V2
         /// task that has already succeeded or permanently failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">
@@ -5083,9 +4921,7 @@ namespace Google.Cloud.Tasks.V2
         /// task that has already succeeded or permanently failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="cancellationToken">
@@ -5127,9 +4963,7 @@ namespace Google.Cloud.Tasks.V2
         /// task that has already succeeded or permanently failed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The task name. For example:
+        /// Required. The task name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
         /// </param>
         /// <param name="callSettings">

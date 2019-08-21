@@ -121,11 +121,10 @@ namespace Google.Cloud.Tasks.V2 {
   /// The [AppEngineRouting][google.cloud.tasks.v2.AppEngineRouting] used to construct the URL that the task is
   /// delivered to can be set at the queue-level or task-level:
   ///
-  /// * If set,
-  ///    [app_engine_routing_override][google.cloud.tasks.v2.AppEngineHttpQueue.app_engine_routing_override]
-  ///    is used for all tasks in the queue, no matter what the setting
-  ///    is for the
-  ///    [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+  /// * If [app_engine_routing_override is set on the
+  ///    queue][Queue.app_engine_routing_override], this value is used for all
+  ///    tasks in the queue, no matter what the setting is for the [task-level
+  ///    app_engine_routing][AppEngineHttpRequest.app_engine_routing].
   ///
   /// The `url` that the task will be sent to is:
   ///
@@ -147,7 +146,7 @@ namespace Google.Cloud.Tasks.V2 {
   /// the app's handler returns a non-2xx response code or Cloud Tasks does
   /// not receive response before the [deadline][google.cloud.tasks.v2.Task.dispatch_deadline]. Failed
   /// tasks will be retried according to the
-  /// [retry configuration][Queue.RetryConfig]. `503` (Service Unavailable) is
+  /// [retry configuration][google.cloud.tasks.v2.Queue.retry_config]. `503` (Service Unavailable) is
   /// considered an App Engine system error instead of an application error and
   /// will cause Cloud Tasks' traffic congestion control to temporarily throttle
   /// the queue's dispatches. Unlike other types of task targets, a `429` (Too Many
@@ -222,10 +221,10 @@ namespace Google.Cloud.Tasks.V2 {
     /// <summary>
     /// Task-level setting for App Engine routing.
     ///
-    /// If set,
-    /// [app_engine_routing_override][google.cloud.tasks.v2.AppEngineHttpQueue.app_engine_routing_override]
-    /// is used for all tasks in the queue, no matter what the setting is for the
-    /// [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+    /// * If [app_engine_routing_override is set on the
+    ///    queue][Queue.app_engine_routing_override], this value is used for all
+    ///    tasks in the queue, no matter what the setting is for the [task-level
+    ///    app_engine_routing][AppEngineHttpRequest.app_engine_routing].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2.AppEngineRouting AppEngineRouting {
@@ -487,6 +486,13 @@ namespace Google.Cloud.Tasks.V2 {
   /// routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed),
   /// and [App Engine Flex request
   /// routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
+  ///
+  /// Using [AppEngineRouting][google.cloud.tasks.v2.AppEngineRouting] requires
+  /// [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control)
+  /// Google IAM permission for the project
+  /// and the following scope:
+  ///
+  /// `https://www.googleapis.com/auth/cloud-platform`
   /// </summary>
   public sealed partial class AppEngineRouting : pb::IMessage<AppEngineRouting> {
     private static readonly pb::MessageParser<AppEngineRouting> _parser = new pb::MessageParser<AppEngineRouting>(() => new AppEngineRouting());
