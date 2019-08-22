@@ -1935,16 +1935,32 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   /// <summary>
   /// The top-level message sent by the client to the
-  /// `StreamingDetectIntent` method.
+  /// [StreamingDetectIntent][] method.
   ///
   /// Multiple request messages should be sent in order:
   ///
-  /// 1.  The first message must contain `session`, `query_input` plus optionally
-  ///     `query_params`. The message must not contain `input_audio`.
+  /// 1.  The first message must contain [StreamingDetectIntentRequest.session][google.cloud.dialogflow.v2.StreamingDetectIntentRequest.session],
+  ///     [StreamingDetectIntentRequest.query_input] plus optionally
+  ///     [StreamingDetectIntentRequest.query_params]. If the client wants to
+  ///     receive an audio response, it should also contain
+  ///     [StreamingDetectIntentRequest.output_audio_config][google.cloud.dialogflow.v2.StreamingDetectIntentRequest.output_audio_config]. The message
+  ///     must not contain [StreamingDetectIntentRequest.input_audio][google.cloud.dialogflow.v2.StreamingDetectIntentRequest.input_audio].
+  /// 2.  If [StreamingDetectIntentRequest.query_input][google.cloud.dialogflow.v2.StreamingDetectIntentRequest.query_input] was set to
+  ///     [StreamingDetectIntentRequest.query_input.audio_config][], all subsequent
+  ///     messages must contain [StreamingDetectIntentRequest.input_audio] to
+  ///     continue with Speech recognition.
+  ///     If you decide to rather detect an intent from text input after you
+  ///     already started Speech recognition, please send a message with
+  ///     [StreamingDetectIntentRequest.query_input.text][].
   ///
-  /// 2.  If `query_input` was set to a streaming input audio config,
-  ///     all subsequent messages must contain only `input_audio`.
-  ///     Otherwise, finish the request stream.
+  ///     However, note that:
+  ///
+  ///     * Dialogflow will bill you for the audio duration so far.
+  ///     * Dialogflow discards all Speech recognition results in favor of the
+  ///       input text.
+  ///     * Dialogflow will use the language code from the first message.
+  ///
+  /// After you sent all input, you must half-close or abort the request stream.
   /// </summary>
   public sealed partial class StreamingDetectIntentRequest : pb::IMessage<StreamingDetectIntentRequest> {
     private static readonly pb::MessageParser<StreamingDetectIntentRequest> _parser = new pb::MessageParser<StreamingDetectIntentRequest>(() => new StreamingDetectIntentRequest());
