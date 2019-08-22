@@ -207,7 +207,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 var policy = RequesterPaysClient.GetBucketIamPolicy(name,
                     new GetBucketIamPolicyOptions { UserProject = RequesterPaysProjectId });
                 // Note: we assume there are no conditions in the policy, as we've only just created the bucket.
-                var writerRole = "roles/storage.objectCreator";
+                var writerRole = "roles/storage.objectAdmin";
                 Policy.BindingsData writerBinding = null;
                 foreach (var binding in policy.Bindings)
                 {
