@@ -2722,8 +2722,9 @@ namespace Google.Cloud.PubSub.V1
         /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// The maximum number of messages to return for this request. Must be a
+        /// positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2760,8 +2761,9 @@ namespace Google.Cloud.PubSub.V1
         /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// The maximum number of messages to return for this request. Must be a
+        /// positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2795,8 +2797,9 @@ namespace Google.Cloud.PubSub.V1
         /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// The maximum number of messages to return for this request. Must be a
+        /// positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2833,8 +2836,9 @@ namespace Google.Cloud.PubSub.V1
         /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// The maximum number of messages to return for this request. Must be a
+        /// positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2871,8 +2875,9 @@ namespace Google.Cloud.PubSub.V1
         /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// The maximum number of messages to return for this request. Must be a
+        /// positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2906,8 +2911,9 @@ namespace Google.Cloud.PubSub.V1
         /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// The maximum number of messages to return for this request. Must be a
+        /// positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
