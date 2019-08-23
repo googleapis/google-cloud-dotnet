@@ -27,11 +27,23 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// The version of IAM policies to request. If a policy with a condition is requested
+        /// without setting this, the server will return an error. This must be set to a value of 3
+        /// to retrieve IAM policies containing conditions. This is to prevent client code that
+        /// isn't aware of IAM conditions from interpreting and modifying policies incorrectly.
+        /// </summary>
+        public int? RequestedPolicyVersion { get; set; }
+
         internal void ModifyRequest(GetIamPolicyRequest request)
         {
             if (UserProject != null)
             {
                 request.UserProject = UserProject;
+            }
+            if (RequestedPolicyVersion != null)
+            {
+                request.OptionsRequestedPolicyVersion = RequestedPolicyVersion.Value;
             }
         }
     }
