@@ -51,6 +51,7 @@ namespace Google.Cloud.Spanner.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateSessionSettings = existing.CreateSessionSettings;
+            BatchCreateSessionsSettings = existing.BatchCreateSessionsSettings;
             GetSessionSettings = existing.GetSessionSettings;
             ListSessionsSettings = existing.ListSessionsSettings;
             DeleteSessionSettings = existing.DeleteSessionSettings;
@@ -247,6 +248,35 @@ namespace Google.Cloud.Spanner.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateSessionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpannerClient.BatchCreateSessions</c> and <c>SpannerClient.BatchCreateSessionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>SpannerClient.BatchCreateSessions</c> and
+        /// <c>SpannerClient.BatchCreateSessionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateSessionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -1131,6 +1161,209 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
+            gcscv::DatabaseName database,
+            gaxgrpc::CallSettings callSettings = null) => BatchCreateSessionsAsync(
+                new BatchCreateSessionsRequest
+                {
+                    DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
+            gcscv::DatabaseName database,
+            st::CancellationToken cancellationToken) => BatchCreateSessionsAsync(
+                database,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual BatchCreateSessionsResponse BatchCreateSessions(
+            gcscv::DatabaseName database,
+            gaxgrpc::CallSettings callSettings = null) => BatchCreateSessions(
+                new BatchCreateSessionsRequest
+                {
+                    DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => BatchCreateSessionsAsync(
+                new BatchCreateSessionsRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
+            string database,
+            st::CancellationToken cancellationToken) => BatchCreateSessionsAsync(
+                database,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual BatchCreateSessionsResponse BatchCreateSessions(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => BatchCreateSessions(
+                new BatchCreateSessionsRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
+            BatchCreateSessionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
+            BatchCreateSessionsRequest request,
+            st::CancellationToken cancellationToken) => BatchCreateSessionsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual BatchCreateSessionsResponse BatchCreateSessions(
+            BatchCreateSessionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
         /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
         /// This is mainly useful for determining whether a session is still
         /// alive.
@@ -1742,8 +1975,9 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Statements are executed in order, sequentially.
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-        /// statement fails, its error status will be returned as part of the
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+        /// successfully executed. If a statement fails, its error status will be
+        /// returned as part of the
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
         /// stop at the first failed statement; the remaining statements will not run.
         ///
@@ -1779,8 +2013,9 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Statements are executed in order, sequentially.
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-        /// statement fails, its error status will be returned as part of the
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+        /// successfully executed. If a statement fails, its error status will be
+        /// returned as part of the
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
         /// stop at the first failed statement; the remaining statements will not run.
         ///
@@ -1815,8 +2050,9 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Statements are executed in order, sequentially.
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-        /// statement fails, its error status will be returned as part of the
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+        /// successfully executed. If a statement fails, its error status will be
+        /// returned as part of the
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
         /// stop at the first failed statement; the remaining statements will not run.
         ///
@@ -3266,6 +3502,7 @@ namespace Google.Cloud.Spanner.V1
     public sealed partial class SpannerClientImpl : SpannerClient
     {
         private readonly gaxgrpc::ApiCall<CreateSessionRequest, Session> _callCreateSession;
+        private readonly gaxgrpc::ApiCall<BatchCreateSessionsRequest, BatchCreateSessionsResponse> _callBatchCreateSessions;
         private readonly gaxgrpc::ApiCall<GetSessionRequest, Session> _callGetSession;
         private readonly gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> _callListSessions;
         private readonly gaxgrpc::ApiCall<DeleteSessionRequest, pbwkt::Empty> _callDeleteSession;
@@ -3292,6 +3529,9 @@ namespace Google.Cloud.Spanner.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>(
                 GrpcClient.CreateSessionAsync, GrpcClient.CreateSession, effectiveSettings.CreateSessionSettings)
+                .WithGoogleRequestParam("database", request => request.Database);
+            _callBatchCreateSessions = clientHelper.BuildApiCall<BatchCreateSessionsRequest, BatchCreateSessionsResponse>(
+                GrpcClient.BatchCreateSessionsAsync, GrpcClient.BatchCreateSessions, effectiveSettings.BatchCreateSessionsSettings)
                 .WithGoogleRequestParam("database", request => request.Database);
             _callGetSession = clientHelper.BuildApiCall<GetSessionRequest, Session>(
                 GrpcClient.GetSessionAsync, GrpcClient.GetSession, effectiveSettings.GetSessionSettings)
@@ -3334,6 +3574,8 @@ namespace Google.Cloud.Spanner.V1
                 .WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callCreateSession);
             Modify_CreateSessionApiCall(ref _callCreateSession);
+            Modify_ApiCall(ref _callBatchCreateSessions);
+            Modify_BatchCreateSessionsApiCall(ref _callBatchCreateSessions);
             Modify_ApiCall(ref _callGetSession);
             Modify_GetSessionApiCall(ref _callGetSession);
             Modify_ApiCall(ref _callListSessions);
@@ -3377,6 +3619,7 @@ namespace Google.Cloud.Spanner.V1
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
         partial void Modify_CreateSessionApiCall(ref gaxgrpc::ApiCall<CreateSessionRequest, Session> call);
+        partial void Modify_BatchCreateSessionsApiCall(ref gaxgrpc::ApiCall<BatchCreateSessionsRequest, BatchCreateSessionsResponse> call);
         partial void Modify_GetSessionApiCall(ref gaxgrpc::ApiCall<GetSessionRequest, Session> call);
         partial void Modify_ListSessionsApiCall(ref gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> call);
         partial void Modify_DeleteSessionApiCall(ref gaxgrpc::ApiCall<DeleteSessionRequest, pbwkt::Empty> call);
@@ -3401,6 +3644,7 @@ namespace Google.Cloud.Spanner.V1
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
         partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BatchCreateSessionsRequest(ref BatchCreateSessionsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref gaxgrpc::CallSettings settings);
@@ -3487,6 +3731,52 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_CreateSessionRequest(ref request, ref callSettings);
             return _callCreateSession.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
+            BatchCreateSessionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateSessionsRequest(ref request, ref callSettings);
+            return _callBatchCreateSessions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates multiple new sessions.
+        ///
+        /// This API can be used to initialize a session cache on the clients.
+        /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override BatchCreateSessionsResponse BatchCreateSessions(
+            BatchCreateSessionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateSessionsRequest(ref request, ref callSettings);
+            return _callBatchCreateSessions.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -3727,8 +4017,9 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Statements are executed in order, sequentially.
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-        /// statement fails, its error status will be returned as part of the
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+        /// successfully executed. If a statement fails, its error status will be
+        /// returned as part of the
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
         /// stop at the first failed statement; the remaining statements will not run.
         ///
@@ -3765,8 +4056,9 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Statements are executed in order, sequentially.
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-        /// statement fails, its error status will be returned as part of the
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+        /// successfully executed. If a statement fails, its error status will be
+        /// returned as part of the
         /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
         /// stop at the first failed statement; the remaining statements will not run.
         ///

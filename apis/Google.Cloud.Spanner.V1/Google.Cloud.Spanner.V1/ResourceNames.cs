@@ -137,6 +137,19 @@ namespace Google.Cloud.Spanner.V1
     }
 
 
+    public partial class BatchCreateSessionsRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName DatabaseAsDatabaseName
+        {
+            get { return string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database); }
+            set { Database = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class BeginTransactionRequest
     {
         /// <summary>

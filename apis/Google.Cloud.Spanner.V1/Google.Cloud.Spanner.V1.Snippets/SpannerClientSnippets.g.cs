@@ -94,6 +94,66 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchCreateSessionsAsync</summary>
+        public async Task BatchCreateSessionsAsync()
+        {
+            // Snippet: BatchCreateSessionsAsync(DatabaseName,CallSettings)
+            // Additional: BatchCreateSessionsAsync(DatabaseName,CancellationToken)
+            // Create client
+            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            // Make the request
+            BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(database);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateSessions</summary>
+        public void BatchCreateSessions()
+        {
+            // Snippet: BatchCreateSessions(DatabaseName,CallSettings)
+            // Create client
+            SpannerClient spannerClient = SpannerClient.Create();
+            // Initialize request argument(s)
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            // Make the request
+            BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(database);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateSessionsAsync</summary>
+        public async Task BatchCreateSessionsAsync_RequestObject()
+        {
+            // Snippet: BatchCreateSessionsAsync(BatchCreateSessionsRequest,CallSettings)
+            // Additional: BatchCreateSessionsAsync(BatchCreateSessionsRequest,CancellationToken)
+            // Create client
+            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            // Make the request
+            BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateSessions</summary>
+        public void BatchCreateSessions_RequestObject()
+        {
+            // Snippet: BatchCreateSessions(BatchCreateSessionsRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = SpannerClient.Create();
+            // Initialize request argument(s)
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            // Make the request
+            BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetSessionAsync</summary>
         public async Task GetSessionAsync()
         {
