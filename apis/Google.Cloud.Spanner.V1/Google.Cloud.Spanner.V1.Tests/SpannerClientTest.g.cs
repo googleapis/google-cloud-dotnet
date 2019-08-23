@@ -118,6 +118,76 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact]
+        public void BatchCreateSessions()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BatchCreateSessionsRequest expectedRequest = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
+            mockGrpcClient.Setup(x => x.BatchCreateSessions(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            BatchCreateSessionsResponse response = client.BatchCreateSessions(database);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BatchCreateSessionsAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BatchCreateSessionsRequest expectedRequest = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
+            mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<BatchCreateSessionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            BatchCreateSessionsResponse response = await client.BatchCreateSessionsAsync(database);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void BatchCreateSessions2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
+            mockGrpcClient.Setup(x => x.BatchCreateSessions(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            BatchCreateSessionsResponse response = client.BatchCreateSessions(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BatchCreateSessionsAsync2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
+            mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<BatchCreateSessionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            BatchCreateSessionsResponse response = await client.BatchCreateSessionsAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void GetSession()
         {
             Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);

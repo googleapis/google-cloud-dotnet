@@ -3,7 +3,7 @@
 //     source: google/spanner/v1/spanner.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -36,6 +36,8 @@ namespace Google.Cloud.Spanner.V1 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CreateSessionRequest> __Marshaller_google_spanner_v1_CreateSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Session> __Marshaller_google_spanner_v1_Session = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.Session.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest> __Marshaller_google_spanner_v1_BatchCreateSessionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> __Marshaller_google_spanner_v1_BatchCreateSessionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.GetSessionRequest> __Marshaller_google_spanner_v1_GetSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.GetSessionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsRequest> __Marshaller_google_spanner_v1_ListSessionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ListSessionsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsResponse> __Marshaller_google_spanner_v1_ListSessionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser.ParseFrom);
@@ -62,6 +64,13 @@ namespace Google.Cloud.Spanner.V1 {
         "CreateSession",
         __Marshaller_google_spanner_v1_CreateSessionRequest,
         __Marshaller_google_spanner_v1_Session);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest, global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> __Method_BatchCreateSessions = new grpc::Method<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest, global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateSessions",
+        __Marshaller_google_spanner_v1_BatchCreateSessionsRequest,
+        __Marshaller_google_spanner_v1_BatchCreateSessionsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.GetSessionRequest, global::Google.Cloud.Spanner.V1.Session> __Method_GetSession = new grpc::Method<global::Google.Cloud.Spanner.V1.GetSessionRequest, global::Google.Cloud.Spanner.V1.Session>(
         grpc::MethodType.Unary,
@@ -194,6 +203,20 @@ namespace Google.Cloud.Spanner.V1 {
       }
 
       /// <summary>
+      /// Creates multiple new sessions.
+      ///
+      /// This API can be used to initialize a session cache on the clients.
+      /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> BatchCreateSessions(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
       /// This is mainly useful for determining whether a session is still
       /// alive.
@@ -276,8 +299,9 @@ namespace Google.Cloud.Spanner.V1 {
       ///
       /// Statements are executed in order, sequentially.
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-      /// statement fails, its error status will be returned as part of the
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+      /// successfully executed. If a statement fails, its error status will be
+      /// returned as part of the
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
       /// stop at the first failed statement; the remaining statements will not run.
       ///
@@ -578,6 +602,62 @@ namespace Google.Cloud.Spanner.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSession, null, options, request);
       }
       /// <summary>
+      /// Creates multiple new sessions.
+      ///
+      /// This API can be used to initialize a session cache on the clients.
+      /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse BatchCreateSessions(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates multiple new sessions.
+      ///
+      /// This API can be used to initialize a session cache on the clients.
+      /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse BatchCreateSessions(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateSessions, null, options, request);
+      }
+      /// <summary>
+      /// Creates multiple new sessions.
+      ///
+      /// This API can be used to initialize a session cache on the clients.
+      /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> BatchCreateSessionsAsync(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates multiple new sessions.
+      ///
+      /// This API can be used to initialize a session cache on the clients.
+      /// See https://goo.gl/TgSFN2 for best practices on session cache management.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> BatchCreateSessionsAsync(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateSessions, null, options, request);
+      }
+      /// <summary>
       /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
       /// This is mainly useful for determining whether a session is still
       /// alive.
@@ -854,8 +934,9 @@ namespace Google.Cloud.Spanner.V1 {
       ///
       /// Statements are executed in order, sequentially.
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-      /// statement fails, its error status will be returned as part of the
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+      /// successfully executed. If a statement fails, its error status will be
+      /// returned as part of the
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
       /// stop at the first failed statement; the remaining statements will not run.
       ///
@@ -884,8 +965,9 @@ namespace Google.Cloud.Spanner.V1 {
       ///
       /// Statements are executed in order, sequentially.
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-      /// statement fails, its error status will be returned as part of the
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+      /// successfully executed. If a statement fails, its error status will be
+      /// returned as part of the
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
       /// stop at the first failed statement; the remaining statements will not run.
       ///
@@ -912,8 +994,9 @@ namespace Google.Cloud.Spanner.V1 {
       ///
       /// Statements are executed in order, sequentially.
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-      /// statement fails, its error status will be returned as part of the
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+      /// successfully executed. If a statement fails, its error status will be
+      /// returned as part of the
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
       /// stop at the first failed statement; the remaining statements will not run.
       ///
@@ -942,8 +1025,9 @@ namespace Google.Cloud.Spanner.V1 {
       ///
       /// Statements are executed in order, sequentially.
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
-      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
-      /// statement fails, its error status will be returned as part of the
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has
+      /// successfully executed. If a statement fails, its error status will be
+      /// returned as part of the
       /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
       /// stop at the first failed statement; the remaining statements will not run.
       ///
@@ -1494,6 +1578,7 @@ namespace Google.Cloud.Spanner.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateSession, serviceImpl.CreateSession)
+          .AddMethod(__Method_BatchCreateSessions, serviceImpl.BatchCreateSessions)
           .AddMethod(__Method_GetSession, serviceImpl.GetSession)
           .AddMethod(__Method_ListSessions, serviceImpl.ListSessions)
           .AddMethod(__Method_DeleteSession, serviceImpl.DeleteSession)
@@ -1516,6 +1601,7 @@ namespace Google.Cloud.Spanner.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SpannerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session>(serviceImpl.CreateSession));
+      serviceBinder.AddMethod(__Method_BatchCreateSessions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest, global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse>(serviceImpl.BatchCreateSessions));
       serviceBinder.AddMethod(__Method_GetSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.GetSessionRequest, global::Google.Cloud.Spanner.V1.Session>(serviceImpl.GetSession));
       serviceBinder.AddMethod(__Method_ListSessions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.ListSessionsRequest, global::Google.Cloud.Spanner.V1.ListSessionsResponse>(serviceImpl.ListSessions));
       serviceBinder.AddMethod(__Method_DeleteSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSession));
