@@ -26,6 +26,7 @@ namespace Google.Cloud.Storage.V1.Tests
             var options = new GetBucketIamPolicyOptions();
             options.ModifyRequest(request);
             Assert.Null(request.UserProject);
+            Assert.Null(request.OptionsRequestedPolicyVersion);
         }
 
         [Fact]
@@ -34,10 +35,12 @@ namespace Google.Cloud.Storage.V1.Tests
             var request = new GetIamPolicyRequest(null, "bucket");
             var options = new GetBucketIamPolicyOptions
             {
-                UserProject = "proj"
+                UserProject = "proj",
+                RequestedPolicyVersion = 3
             };
             options.ModifyRequest(request);
             Assert.Equal("proj", request.UserProject);
+            Assert.Equal(3, request.OptionsRequestedPolicyVersion);
         }
     }
 }
