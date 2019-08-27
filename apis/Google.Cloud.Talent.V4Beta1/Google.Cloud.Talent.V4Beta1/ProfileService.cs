@@ -896,6 +896,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// A full update is performed if it is unset.
     ///
     /// Valid values are:
+    ///
     /// * external_id
     /// * source
     /// * uri
