@@ -137,7 +137,8 @@ namespace Google.Cloud.Firestore.Tests
             };
             var registry = new ConverterRegistry() { new SerializationTestData.GuidConverter() };
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient(), converterRegistry: registry);
-            var context = new DeserializationContext(db.Document("a/b"));                
+            var snapshot = GetSampleSnapshot(db, "doc1");
+            var context = new DeserializationContext(snapshot);
             var pair = (SerializationTestData.GuidPair2) ValueDeserializer.Deserialize(context, value, typeof(SerializationTestData.GuidPair2));
             Assert.Equal("test", pair.Name);
             Assert.Equal(guid1, pair.Guid);
