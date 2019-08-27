@@ -94,67 +94,77 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "dWQudGFsZW50LnY0YmV0YTEuUmF0aW5nEjUKB291dGNvbWUYByABKA4yJC5n",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuT3V0Y29tZSJFCgZSYXRpbmcS",
             "DwoHb3ZlcmFsbBgBIAEoARILCgNtaW4YAiABKAESCwoDbWF4GAMgASgBEhAK",
-            "CGludGVydmFsGAQgASgBKnkKC0NvbXBhbnlTaXplEhwKGENPTVBBTllfU0la",
-            "RV9VTlNQRUNJRklFRBAAEggKBE1JTkkQARIJCgVTTUFMTBACEgsKB1NNRURJ",
-            "VU0QAxIKCgZNRURJVU0QBBIHCgNCSUcQBRIKCgZCSUdHRVIQBhIJCgVHSUFO",
-            "VBAHKuIBCgpKb2JCZW5lZml0EhsKF0pPQl9CRU5FRklUX1VOU1BFQ0lGSUVE",
-            "EAASDgoKQ0hJTERfQ0FSRRABEgoKBkRFTlRBTBACEhQKEERPTUVTVElDX1BB",
-            "UlRORVIQAxISCg5GTEVYSUJMRV9IT1VSUxAEEgsKB01FRElDQUwQBRISCg5M",
-            "SUZFX0lOU1VSQU5DRRAGEhIKDlBBUkVOVEFMX0xFQVZFEAcSEwoPUkVUSVJF",
-            "TUVOVF9QTEFOEAgSDQoJU0lDS19EQVlTEAkSDAoIVkFDQVRJT04QChIKCgZW",
-            "SVNJT04QCyqOAgoKRGVncmVlVHlwZRIbChdERUdSRUVfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEhUKEVBSSU1BUllfRURVQ0FUSU9OEAESHQoZTE9XRVJfU0VDT05E",
-            "QVJZX0VEVUNBVElPThACEh0KGVVQUEVSX1NFQ09OREFSWV9FRFVDQVRJT04Q",
-            "AxIcChhBRFVMVF9SRU1FRElBTF9FRFVDQVRJT04QBBIcChhBU1NPQ0lBVEVT",
-            "X09SX0VRVUlWQUxFTlQQBRIbChdCQUNIRUxPUlNfT1JfRVFVSVZBTEVOVBAG",
-            "EhkKFU1BU1RFUlNfT1JfRVFVSVZBTEVOVBAHEhoKFkRPQ1RPUkFMX09SX0VR",
-            "VUlWQUxFTlQQCCrcAQoORW1wbG95bWVudFR5cGUSHwobRU1QTE9ZTUVOVF9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASDQoJRlVMTF9USU1FEAESDQoJUEFSVF9USU1F",
-            "EAISDgoKQ09OVFJBQ1RPUhADEhQKEENPTlRSQUNUX1RPX0hJUkUQBBINCglU",
-            "RU1QT1JBUlkQBRIKCgZJTlRFUk4QBhINCglWT0xVTlRFRVIQBxIMCghQRVJf",
-            "RElFTRAIEhIKDkZMWV9JTl9GTFlfT1VUEAkSGQoVT1RIRVJfRU1QTE9ZTUVO",
-            "VF9UWVBFEAoqcQoISm9iTGV2ZWwSGQoVSk9CX0xFVkVMX1VOU1BFQ0lGSUVE",
-            "EAASDwoLRU5UUllfTEVWRUwQARIPCgtFWFBFUklFTkNFRBACEgsKB01BTkFH",
-            "RVIQAxIMCghESVJFQ1RPUhAEEg0KCUVYRUNVVElWRRAFKroGCgtKb2JDYXRl",
-            "Z29yeRIcChhKT0JfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIaChZBQ0NPVU5U",
-            "SU5HX0FORF9GSU5BTkNFEAESHQoZQURNSU5JU1RSQVRJVkVfQU5EX09GRklD",
-            "RRACEh0KGUFEVkVSVElTSU5HX0FORF9NQVJLRVRJTkcQAxIPCgtBTklNQUxf",
-            "Q0FSRRAEEhoKFkFSVF9GQVNISU9OX0FORF9ERVNJR04QBRIXChNCVVNJTkVT",
-            "U19PUEVSQVRJT05TEAYSGwoXQ0xFQU5JTkdfQU5EX0ZBQ0lMSVRJRVMQBxIT",
-            "Cg9DT01QVVRFUl9BTkRfSVQQCBIQCgxDT05TVFJVQ1RJT04QCRIUChBDVVNU",
-            "T01FUl9TRVJWSUNFEAoSDQoJRURVQ0FUSU9OEAsSHAoYRU5URVJUQUlOTUVO",
-            "VF9BTkRfVFJBVkVMEAwSGAoURkFSTUlOR19BTkRfT1VURE9PUlMQDRIOCgpI",
-            "RUFMVEhDQVJFEA4SEwoPSFVNQU5fUkVTT1VSQ0VTEA8SJwojSU5TVEFMTEFU",
-            "SU9OX01BSU5URU5BTkNFX0FORF9SRVBBSVIQEBIJCgVMRUdBTBAREg4KCk1B",
-            "TkFHRU1FTlQQEhIfChtNQU5VRkFDVFVSSU5HX0FORF9XQVJFSE9VU0UQExIk",
-            "CiBNRURJQV9DT01NVU5JQ0FUSU9OU19BTkRfV1JJVElORxAUEhYKEk9JTF9H",
-            "QVNfQU5EX01JTklORxAVEh4KGlBFUlNPTkFMX0NBUkVfQU5EX1NFUlZJQ0VT",
-            "EBYSFwoTUFJPVEVDVElWRV9TRVJWSUNFUxAXEg8KC1JFQUxfRVNUQVRFEBgS",
-            "HgoaUkVTVEFVUkFOVF9BTkRfSE9TUElUQUxJVFkQGRIUChBTQUxFU19BTkRf",
-            "UkVUQUlMEBoSGwoXU0NJRU5DRV9BTkRfRU5HSU5FRVJJTkcQGxIiCh5TT0NJ",
-            "QUxfU0VSVklDRVNfQU5EX05PTl9QUk9GSVQQHBIhCh1TUE9SVFNfRklUTkVT",
-            "U19BTkRfUkVDUkVBVElPThAdEiAKHFRSQU5TUE9SVEFUSU9OX0FORF9MT0dJ",
-            "U1RJQ1MQHiplCg1Qb3N0aW5nUmVnaW9uEh4KGlBPU1RJTkdfUkVHSU9OX1VO",
-            "U1BFQ0lGSUVEEAASFwoTQURNSU5JU1RSQVRJVkVfQVJFQRABEgoKBk5BVElP",
-            "ThACEg8KC1RFTEVDT01NVVRFEAMqbgoKVmlzaWJpbGl0eRIaChZWSVNJQklM",
-            "SVRZX1VOU1BFQ0lGSUVEEAASEAoMQUNDT1VOVF9PTkxZEAESFgoSU0hBUkVE",
-            "X1dJVEhfR09PR0xFEAISFgoSU0hBUkVEX1dJVEhfUFVCTElDEAMaAhgBKloK",
-            "EENvbnRhY3RJbmZvVXNhZ2USIgoeQ09OVEFDVF9JTkZPX1VTQUdFX1VOU1BF",
-            "Q0lGSUVEEAASDAoIUEVSU09OQUwQARIICgRXT1JLEAISCgoGU0NIT09MEAMq",
-            "cQoQSHRtbFNhbml0aXphdGlvbhIhCh1IVE1MX1NBTklUSVpBVElPTl9VTlNQ",
-            "RUNJRklFRBAAEh4KGkhUTUxfU0FOSVRJWkFUSU9OX0RJU0FCTEVEEAESGgoW",
-            "U0lNUExFX0ZPUk1BVFRJTkdfT05MWRACKmMKDUNvbW11dGVNZXRob2QSHgoa",
-            "Q09NTVVURV9NRVRIT0RfVU5TUEVDSUZJRUQQABILCgdEUklWSU5HEAESCwoH",
-            "VFJBTlNJVBACEgsKB1dBTEtJTkcQAxILCgdDWUNMSU5HEAQqogEKFVNraWxs",
-            "UHJvZmljaWVuY3lMZXZlbBInCiNTS0lMTF9QUk9GSUNJRU5DWV9MRVZFTF9V",
-            "TlNQRUNJRklFRBAAEg0KCVVOU0tJTExFRBAGEhkKFUZVTkRBTUVOVEFMX0FX",
-            "QVJFTkVTUxABEgoKBk5PVklDRRACEhAKDElOVEVSTUVESUFURRADEgwKCEFE",
-            "VkFOQ0VEEAQSCgoGRVhQRVJUEAUqZgoHT3V0Y29tZRIXChNPVVRDT01FX1VO",
-            "U1BFQ0lGSUVEEAASDAoIUE9TSVRJVkUQARILCgdORVVUUkFMEAISDAoITkVH",
-            "QVRJVkUQAxIZChVPVVRDT01FX05PVF9BVkFJTEFCTEUQBEJ5Ch9jb20uZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExQgtDb21tb25Qcm90b1ABWkFnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
-            "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "CGludGVydmFsGAQgASgBIswDChZCYXRjaE9wZXJhdGlvbk1ldGFkYXRhEkgK",
+            "BXN0YXRlGAEgASgOMjkuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkJh",
+            "dGNoT3BlcmF0aW9uTWV0YWRhdGEuU3RhdGUSGQoRc3RhdGVfZGVzY3JpcHRp",
+            "b24YAiABKAkSFQoNc3VjY2Vzc19jb3VudBgDIAEoBRIVCg1mYWlsdXJlX2Nv",
+            "dW50GAQgASgFEhMKC3RvdGFsX2NvdW50GAUgASgFEi8KC2NyZWF0ZV90aW1l",
+            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVf",
+            "dGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5k",
+            "X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wInoKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoMSU5JVElBTElaSU5HEAES",
+            "DgoKUFJPQ0VTU0lORxACEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxFRBAEEg4K",
+            "CkNBTkNFTExJTkcQBRINCglDQU5DRUxMRUQQBip5CgtDb21wYW55U2l6ZRIc",
+            "ChhDT01QQU5ZX1NJWkVfVU5TUEVDSUZJRUQQABIICgRNSU5JEAESCQoFU01B",
+            "TEwQAhILCgdTTUVESVVNEAMSCgoGTUVESVVNEAQSBwoDQklHEAUSCgoGQklH",
+            "R0VSEAYSCQoFR0lBTlQQByriAQoKSm9iQmVuZWZpdBIbChdKT0JfQkVORUZJ",
+            "VF9VTlNQRUNJRklFRBAAEg4KCkNISUxEX0NBUkUQARIKCgZERU5UQUwQAhIU",
+            "ChBET01FU1RJQ19QQVJUTkVSEAMSEgoORkxFWElCTEVfSE9VUlMQBBILCgdN",
+            "RURJQ0FMEAUSEgoOTElGRV9JTlNVUkFOQ0UQBhISCg5QQVJFTlRBTF9MRUFW",
+            "RRAHEhMKD1JFVElSRU1FTlRfUExBThAIEg0KCVNJQ0tfREFZUxAJEgwKCFZB",
+            "Q0FUSU9OEAoSCgoGVklTSU9OEAsqjgIKCkRlZ3JlZVR5cGUSGwoXREVHUkVF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIVChFQUklNQVJZX0VEVUNBVElPThABEh0K",
+            "GUxPV0VSX1NFQ09OREFSWV9FRFVDQVRJT04QAhIdChlVUFBFUl9TRUNPTkRB",
+            "UllfRURVQ0FUSU9OEAMSHAoYQURVTFRfUkVNRURJQUxfRURVQ0FUSU9OEAQS",
+            "HAoYQVNTT0NJQVRFU19PUl9FUVVJVkFMRU5UEAUSGwoXQkFDSEVMT1JTX09S",
+            "X0VRVUlWQUxFTlQQBhIZChVNQVNURVJTX09SX0VRVUlWQUxFTlQQBxIaChZE",
+            "T0NUT1JBTF9PUl9FUVVJVkFMRU5UEAgq3AEKDkVtcGxveW1lbnRUeXBlEh8K",
+            "G0VNUExPWU1FTlRfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUZVTExfVElNRRAB",
+            "Eg0KCVBBUlRfVElNRRACEg4KCkNPTlRSQUNUT1IQAxIUChBDT05UUkFDVF9U",
+            "T19ISVJFEAQSDQoJVEVNUE9SQVJZEAUSCgoGSU5URVJOEAYSDQoJVk9MVU5U",
+            "RUVSEAcSDAoIUEVSX0RJRU0QCBISCg5GTFlfSU5fRkxZX09VVBAJEhkKFU9U",
+            "SEVSX0VNUExPWU1FTlRfVFlQRRAKKnEKCEpvYkxldmVsEhkKFUpPQl9MRVZF",
+            "TF9VTlNQRUNJRklFRBAAEg8KC0VOVFJZX0xFVkVMEAESDwoLRVhQRVJJRU5D",
+            "RUQQAhILCgdNQU5BR0VSEAMSDAoIRElSRUNUT1IQBBINCglFWEVDVVRJVkUQ",
+            "BSq6BgoLSm9iQ2F0ZWdvcnkSHAoYSk9CX0NBVEVHT1JZX1VOU1BFQ0lGSUVE",
+            "EAASGgoWQUNDT1VOVElOR19BTkRfRklOQU5DRRABEh0KGUFETUlOSVNUUkFU",
+            "SVZFX0FORF9PRkZJQ0UQAhIdChlBRFZFUlRJU0lOR19BTkRfTUFSS0VUSU5H",
+            "EAMSDwoLQU5JTUFMX0NBUkUQBBIaChZBUlRfRkFTSElPTl9BTkRfREVTSUdO",
+            "EAUSFwoTQlVTSU5FU1NfT1BFUkFUSU9OUxAGEhsKF0NMRUFOSU5HX0FORF9G",
+            "QUNJTElUSUVTEAcSEwoPQ09NUFVURVJfQU5EX0lUEAgSEAoMQ09OU1RSVUNU",
+            "SU9OEAkSFAoQQ1VTVE9NRVJfU0VSVklDRRAKEg0KCUVEVUNBVElPThALEhwK",
+            "GEVOVEVSVEFJTk1FTlRfQU5EX1RSQVZFTBAMEhgKFEZBUk1JTkdfQU5EX09V",
+            "VERPT1JTEA0SDgoKSEVBTFRIQ0FSRRAOEhMKD0hVTUFOX1JFU09VUkNFUxAP",
+            "EicKI0lOU1RBTExBVElPTl9NQUlOVEVOQU5DRV9BTkRfUkVQQUlSEBASCQoF",
+            "TEVHQUwQERIOCgpNQU5BR0VNRU5UEBISHwobTUFOVUZBQ1RVUklOR19BTkRf",
+            "V0FSRUhPVVNFEBMSJAogTUVESUFfQ09NTVVOSUNBVElPTlNfQU5EX1dSSVRJ",
+            "TkcQFBIWChJPSUxfR0FTX0FORF9NSU5JTkcQFRIeChpQRVJTT05BTF9DQVJF",
+            "X0FORF9TRVJWSUNFUxAWEhcKE1BST1RFQ1RJVkVfU0VSVklDRVMQFxIPCgtS",
+            "RUFMX0VTVEFURRAYEh4KGlJFU1RBVVJBTlRfQU5EX0hPU1BJVEFMSVRZEBkS",
+            "FAoQU0FMRVNfQU5EX1JFVEFJTBAaEhsKF1NDSUVOQ0VfQU5EX0VOR0lORUVS",
+            "SU5HEBsSIgoeU09DSUFMX1NFUlZJQ0VTX0FORF9OT05fUFJPRklUEBwSIQod",
+            "U1BPUlRTX0ZJVE5FU1NfQU5EX1JFQ1JFQVRJT04QHRIgChxUUkFOU1BPUlRB",
+            "VElPTl9BTkRfTE9HSVNUSUNTEB4qZQoNUG9zdGluZ1JlZ2lvbhIeChpQT1NU",
+            "SU5HX1JFR0lPTl9VTlNQRUNJRklFRBAAEhcKE0FETUlOSVNUUkFUSVZFX0FS",
+            "RUEQARIKCgZOQVRJT04QAhIPCgtURUxFQ09NTVVURRADKm4KClZpc2liaWxp",
+            "dHkSGgoWVklTSUJJTElUWV9VTlNQRUNJRklFRBAAEhAKDEFDQ09VTlRfT05M",
+            "WRABEhYKElNIQVJFRF9XSVRIX0dPT0dMRRACEhYKElNIQVJFRF9XSVRIX1BV",
+            "QkxJQxADGgIYASpaChBDb250YWN0SW5mb1VzYWdlEiIKHkNPTlRBQ1RfSU5G",
+            "T19VU0FHRV9VTlNQRUNJRklFRBAAEgwKCFBFUlNPTkFMEAESCAoEV09SSxAC",
+            "EgoKBlNDSE9PTBADKnEKEEh0bWxTYW5pdGl6YXRpb24SIQodSFRNTF9TQU5J",
+            "VElaQVRJT05fVU5TUEVDSUZJRUQQABIeChpIVE1MX1NBTklUSVpBVElPTl9E",
+            "SVNBQkxFRBABEhoKFlNJTVBMRV9GT1JNQVRUSU5HX09OTFkQAipjCg1Db21t",
+            "dXRlTWV0aG9kEh4KGkNPTU1VVEVfTUVUSE9EX1VOU1BFQ0lGSUVEEAASCwoH",
+            "RFJJVklORxABEgsKB1RSQU5TSVQQAhILCgdXQUxLSU5HEAMSCwoHQ1lDTElO",
+            "RxAEKqIBChVTa2lsbFByb2ZpY2llbmN5TGV2ZWwSJwojU0tJTExfUFJPRklD",
+            "SUVOQ1lfTEVWRUxfVU5TUEVDSUZJRUQQABINCglVTlNLSUxMRUQQBhIZChVG",
+            "VU5EQU1FTlRBTF9BV0FSRU5FU1MQARIKCgZOT1ZJQ0UQAhIQCgxJTlRFUk1F",
+            "RElBVEUQAxIMCghBRFZBTkNFRBAEEgoKBkVYUEVSVBAFKmYKB091dGNvbWUS",
+            "FwoTT1VUQ09NRV9VTlNQRUNJRklFRBAAEgwKCFBPU0lUSVZFEAESCwoHTkVV",
+            "VFJBTBACEgwKCE5FR0FUSVZFEAMSGQoVT1VUQ09NRV9OT1RfQVZBSUxBQkxF",
+            "EARCeQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUILQ29tbW9u",
+            "UHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), }, new pbr::GeneratedClrTypeInfo[] {
@@ -170,7 +180,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Certification), global::Google.Cloud.Talent.V4Beta1.Certification.Parser, new[]{ "DisplayName", "AcquireDate", "ExpireDate", "Authority", "Description" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Skill), global::Google.Cloud.Talent.V4Beta1.Skill.Parser, new[]{ "DisplayName", "LastUsedDate", "Level", "Context", "SkillNameSnippet" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Interview), global::Google.Cloud.Talent.V4Beta1.Interview.Parser, new[]{ "Rating", "Outcome" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Rating), global::Google.Cloud.Talent.V4Beta1.Rating.Parser, new[]{ "Overall", "Min", "Max", "Interval" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Rating), global::Google.Cloud.Talent.V4Beta1.Rating.Parser, new[]{ "Overall", "Min", "Max", "Interval" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata), global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Parser, new[]{ "State", "StateDescription", "SuccessCount", "FailureCount", "TotalCount", "CreateTime", "UpdateTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State) }, null)
           }));
     }
     #endregion
@@ -4201,6 +4212,428 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
       }
     }
+
+  }
+
+  /// <summary>
+  /// Output only.
+  ///
+  /// Metadata used for long running operations returned by CTS batch APIs.
+  /// It's used to replace
+  /// [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata].
+  /// </summary>
+  public sealed partial class BatchOperationMetadata : pb::IMessage<BatchOperationMetadata> {
+    private static readonly pb::MessageParser<BatchOperationMetadata> _parser = new pb::MessageParser<BatchOperationMetadata>(() => new BatchOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchOperationMetadata(BatchOperationMetadata other) : this() {
+      state_ = other.state_;
+      stateDescription_ = other.stateDescription_;
+      successCount_ = other.successCount_;
+      failureCount_ = other.failureCount_;
+      totalCount_ = other.totalCount_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchOperationMetadata Clone() {
+      return new BatchOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State state_ = 0;
+    /// <summary>
+    /// The state of a long running operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state_description" field.</summary>
+    public const int StateDescriptionFieldNumber = 2;
+    private string stateDescription_ = "";
+    /// <summary>
+    /// More detailed information about operation state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string StateDescription {
+      get { return stateDescription_; }
+      set {
+        stateDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "success_count" field.</summary>
+    public const int SuccessCountFieldNumber = 3;
+    private int successCount_;
+    /// <summary>
+    /// Count of successful item(s) inside an operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SuccessCount {
+      get { return successCount_; }
+      set {
+        successCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "failure_count" field.</summary>
+    public const int FailureCountFieldNumber = 4;
+    private int failureCount_;
+    /// <summary>
+    /// Count of failed item(s) inside an operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int FailureCount {
+      get { return failureCount_; }
+      set {
+        failureCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_count" field.</summary>
+    public const int TotalCountFieldNumber = 5;
+    private int totalCount_;
+    /// <summary>
+    /// Count of total item(s) inside an operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TotalCount {
+      get { return totalCount_; }
+      set {
+        totalCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The time when the batch operation is created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// The time when the batch operation status is updated. The metadata and the
+    /// [update_time][google.cloud.talent.v4beta1.BatchOperationMetadata.update_time]
+    /// is refreshed every minute otherwise cached data is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time when the batch operation is finished and
+    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is
+    /// set to `true`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (State != other.State) return false;
+      if (StateDescription != other.StateDescription) return false;
+      if (SuccessCount != other.SuccessCount) return false;
+      if (FailureCount != other.FailureCount) return false;
+      if (TotalCount != other.TotalCount) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (State != 0) hash ^= State.GetHashCode();
+      if (StateDescription.Length != 0) hash ^= StateDescription.GetHashCode();
+      if (SuccessCount != 0) hash ^= SuccessCount.GetHashCode();
+      if (FailureCount != 0) hash ^= FailureCount.GetHashCode();
+      if (TotalCount != 0) hash ^= TotalCount.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (State != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (StateDescription.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StateDescription);
+      }
+      if (SuccessCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(SuccessCount);
+      }
+      if (FailureCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(FailureCount);
+      }
+      if (TotalCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(TotalCount);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(UpdateTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (State != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (StateDescription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StateDescription);
+      }
+      if (SuccessCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SuccessCount);
+      }
+      if (FailureCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FailureCount);
+      }
+      if (TotalCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCount);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.State != 0) {
+        State = other.State;
+      }
+      if (other.StateDescription.Length != 0) {
+        StateDescription = other.StateDescription;
+      }
+      if (other.SuccessCount != 0) {
+        SuccessCount = other.SuccessCount;
+      }
+      if (other.FailureCount != 0) {
+        FailureCount = other.FailureCount;
+      }
+      if (other.TotalCount != 0) {
+        TotalCount = other.TotalCount;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            StateDescription = input.ReadString();
+            break;
+          }
+          case 24: {
+            SuccessCount = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            FailureCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            TotalCount = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 58: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 66: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BatchOperationMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum State {
+        /// <summary>
+        /// Default value.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The batch operation is being prepared for processing.
+        /// </summary>
+        [pbr::OriginalName("INITIALIZING")] Initializing = 1,
+        /// <summary>
+        /// The batch operation is actively being processed.
+        /// </summary>
+        [pbr::OriginalName("PROCESSING")] Processing = 2,
+        /// <summary>
+        /// The batch operation is processed, and at least one item has been
+        /// successfully processed.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED")] Succeeded = 3,
+        /// <summary>
+        /// The batch operation is done and no item has been successfully processed.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 4,
+        /// <summary>
+        /// The batch operation is in the process of cancelling after
+        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation]
+        /// is called.
+        /// </summary>
+        [pbr::OriginalName("CANCELLING")] Cancelling = 5,
+        /// <summary>
+        /// The batch operation is done after
+        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation]
+        /// is called. Any items processed before cancelling are returned in the
+        /// response.
+        /// </summary>
+        [pbr::OriginalName("CANCELLED")] Cancelled = 6,
+      }
+
+    }
+    #endregion
 
   }
 
