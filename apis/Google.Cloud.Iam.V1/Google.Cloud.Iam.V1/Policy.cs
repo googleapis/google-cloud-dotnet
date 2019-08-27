@@ -144,7 +144,14 @@ namespace Google.Cloud.Iam.V1 {
     public const int VersionFieldNumber = 1;
     private int version_;
     /// <summary>
-    /// Deprecated.
+    /// Specifies the format of the policy.
+    ///
+    /// Valid values are 0, 1, and 3. Requests specifying an invalid value will be
+    /// rejected.
+    ///
+    /// Policies with any conditional bindings must specify version 3. Policies
+    /// without any conditional bindings may specify any valid value or leave the
+    /// field unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Version {
