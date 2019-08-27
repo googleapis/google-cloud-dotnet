@@ -25,11 +25,12 @@ namespace Google.Cloud.Firestore
     /// </summary>
     internal sealed class SerializationContext
     {
-        // Important note: if this ever contains more state than just the converters,
+        // Important note: if this class ever contains more state than just the converters,
         // e.g. a reference to the Database, then WithWarningLogger will need to be adjusted accordingly.
-        
-        private readonly IReadOnlyDictionary<BclType, IFirestoreInternalConverter> _customConverters;
+
         internal static SerializationContext Default { get; } = new SerializationContext(null);
+
+        private readonly IReadOnlyDictionary<BclType, IFirestoreInternalConverter> _customConverters;
 
         internal SerializationContext(ConverterRegistry converterRegistry)
         {
