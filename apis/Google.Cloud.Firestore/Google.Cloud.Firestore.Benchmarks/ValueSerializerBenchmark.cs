@@ -20,38 +20,38 @@ namespace Google.Cloud.Firestore.Benchmarks
 {
     public class ValueSerializerBenchmark
     {
-        private static readonly SerializationContext _serializationContext = new SerializationContext(null);
+        private static readonly SerializationContext s_serializationContext = SerializationContext.Default;
 
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Attributed() =>
-            ValueSerializer.SerializeMap(_serializationContext, SampleData.Attributed);
+            ValueSerializer.SerializeMap(s_serializationContext, SampleData.Attributed);
 
         [Benchmark]
         public Value Serialize_Attributed() =>
-            ValueSerializer.Serialize(_serializationContext, SampleData.Attributed);
+            ValueSerializer.Serialize(s_serializationContext, SampleData.Attributed);
 
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Anonymous() =>
-            ValueSerializer.SerializeMap(_serializationContext, SampleData.Anonymous);
+            ValueSerializer.SerializeMap(s_serializationContext, SampleData.Anonymous);
 
         [Benchmark]
         public Value Serialize_Anonymous() =>
-            ValueSerializer.Serialize(_serializationContext, SampleData.Anonymous);
+            ValueSerializer.Serialize(s_serializationContext, SampleData.Anonymous);
 
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Dictionary() =>
-            ValueSerializer.SerializeMap(_serializationContext, SampleData.Dictionary);
+            ValueSerializer.SerializeMap(s_serializationContext, SampleData.Dictionary);
 
         [Benchmark]
         public Value Serialize_Dictionary() =>
-            ValueSerializer.Serialize(_serializationContext, SampleData.Dictionary);
+            ValueSerializer.Serialize(s_serializationContext, SampleData.Dictionary);
 
         [Benchmark]
         public Dictionary<string, Value> SerializeMap_Expando() =>
-        ValueSerializer.SerializeMap(_serializationContext, SampleData.Expando);
+        ValueSerializer.SerializeMap(s_serializationContext, SampleData.Expando);
 
         [Benchmark]
         public Value Serialize_Expando() =>
-            ValueSerializer.Serialize(_serializationContext, SampleData.Expando);
+            ValueSerializer.Serialize(s_serializationContext, SampleData.Expando);
     }
 }
