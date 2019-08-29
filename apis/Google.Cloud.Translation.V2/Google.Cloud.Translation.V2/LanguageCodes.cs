@@ -24,7 +24,7 @@ namespace Google.Cloud.Translation.V2
     /// </summary>
     public static class LanguageCodes
     {
-        // Generated 2018-07-18; 104 entries.
+        // Generated 2019-08-29; 104 entries.
 
         /// <summary>Language code for Afrikaans</summary>
         public const string Afrikaans = "af";
