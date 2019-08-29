@@ -36,6 +36,22 @@
   },
 
   {
+    "id": "Google.Cloud.Automl.V1",
+    "generator": "gapic",
+    "protoPath": "google/cloud/automl/v1",
+    "serviceYaml": "automl_v1.yaml",
+    "productName": "Google Cloud AutoML",
+    "productUrl": "https://cloud.google.com/automl/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud AutoML API.",
+    "dependencies": {
+      "Google.LongRunning": "1.1.0"
+    },
+    "tags": [ "automl", "ml", "machine learning" ]
+  },
+
+  {
     "id": "Google.Cloud.BigQuery.DataTransfer.V1",
     "generator": "gapic",
     "protoPath": "google/cloud/bigquery/datatransfer/v1",
