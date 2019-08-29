@@ -29,7 +29,7 @@ namespace Google.Cloud.Speech.V1
         // (to just before the closing brace of this class) with the generated text in
         // language-codes.tmp.txt.
 
-        // Generated 2018-07-18; 119 entries.
+        // Generated 2019-08-29; 120 entries.
 
         /// <summary>Language codes for Afrikaans.</summary>
         public static class Afrikaans
@@ -160,13 +160,13 @@ namespace Google.Cloud.Speech.V1
         public static class ChineseMandarin
         {
             /// <summary>Language code for Chinese, Mandarin (Simplified, China)</summary>
-            public const string SimplifiedChina = "cmn-Hans-CN";
+            public const string SimplifiedChina = "zh";
 
             /// <summary>Language code for Chinese, Mandarin (Simplified, Hong Kong)</summary>
-            public const string SimplifiedHongKong = "cmn-Hans-HK";
+            public const string SimplifiedHongKong = "zh-HK";
 
             /// <summary>Language code for Chinese, Mandarin (Traditional, Taiwan)</summary>
-            public const string TraditionalTaiwan = "cmn-Hant-TW";
+            public const string TraditionalTaiwan = "zh-TW";
 
         }
 
@@ -231,6 +231,9 @@ namespace Google.Cloud.Speech.V1
 
             /// <summary>Language code for English (Philippines)</summary>
             public const string Philippines = "en-PH";
+
+            /// <summary>Language code for English (Singapore)</summary>
+            public const string Singapore = "en-SG";
 
             /// <summary>Language code for English (South Africa)</summary>
             public const string SouthAfrica = "en-ZA";
