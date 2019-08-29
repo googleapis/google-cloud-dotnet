@@ -332,7 +332,6 @@ shell.run(
                 distribution_name = api.Id,
                 release_level = releaseLevel
             };
-            Console.WriteLine($"{api.Version} => {api.StructuredVersion} => {releaseLevel}");
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
             File.WriteAllText(Path.Combine(apiRoot, ".repo-metadata.json"), json);
         }
