@@ -222,3 +222,37 @@ Or an indexer in an object initializer:
 Or modify it after other initialization steps:
 
 [!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#ProtoMap3)]
+
+## Why is System.EntryPointNotFoundException being thrown?
+
+While there are various *potential* causes for this, the most likely
+(as of summer 2019) is that you have a dependency on Grpc.Core 2.x,
+but our libraries still depend on Grpc.Core 1.x.
+
+In August 2019, Grpc.Core 2.23.0 was released. The previous version
+of Grpc.Core was 1.22.0, which is what the Google Cloud client
+libraries depend on. As SemVer would suggest, versions 1.x and 2.x
+of Grpc.Core are not compatible with each other. The incompatibility
+is around how streaming operations are consumed, and is a side-effect
+of C# 8 gaining the ability to iterate over asynchronous sequences.
+Obviously a breaking change is never pleasant, but this was thoroughly
+discussed, and this was the result.
+
+While the Google Cloud client libraries depend on Grpc.Core 1.x, if
+your project takes a dependency on Grpc.Core 2.x, you will see this
+exception if you use streaming operations. (If you don't use any
+streaming operations you *may* not see a problem, but we still
+strongly discourage you from trying.)
+
+Our plan to mitigate this issue is:
+
+- Use version ranges for Grpc.Core so that the break is at build time
+  rather than execution time, until the next steps are ready.
+- Migrate to depend on Grpc.Core 2.x within the Google Cloud client
+  libraries.
+- Rerelease all libraries with a major version bump, as taking a major
+  dependency version bump is a transitive breaking change.
+- Update this FAQ entry to explain why the major bump occurred.
+
+We're collecting a few breaking changes to make, all at the same
+time, so that we can get away with a single major version bump.
