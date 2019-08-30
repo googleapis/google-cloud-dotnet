@@ -1014,7 +1014,7 @@
     "generator": "gapic",
     "protoPath": "google/cloud/translate/v3",
     "serviceYaml": "translate_v3.yaml",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.",
     "dependencies": {
