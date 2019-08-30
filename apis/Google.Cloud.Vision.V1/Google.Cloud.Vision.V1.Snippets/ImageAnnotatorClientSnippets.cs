@@ -164,7 +164,7 @@ namespace Google.Cloud.Vision.V1.Snippets
 
             Assert.Equal(2, result.Count);
             var descriptions = result.Select(r => r.Description).OrderBy(d => d).ToList();
-            Assert.Equal(new[] { "Sydney Harbour Bridge", "Sydney Opera House" }, descriptions);
+            Assert.Equal(new[] { "Royal Botanic Gardens", "Sydney Opera House" }, descriptions);
         }
 
         // See-also: DetectLandmarks(*, *, *, *)
