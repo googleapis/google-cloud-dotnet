@@ -127,6 +127,13 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public SchemaUpdateOption? DestinationSchemaUpdateOptions { get; set; }
 
+        /// <summary>
+        /// For Avro sources, this indicates whether to enable interpreting logical types
+        /// into their corresponding types (ie. TIMESTAMP), instead of only using their raw types
+        /// (ie. INTEGER). If unset, the server default will be used.
+        /// </summary>
+        public bool? UseAvroLogicalTypes { get; set; }
+
         internal void ModifyRequest(JobConfigurationLoad load)
         {
             if (SkipLeadingRows != null)
@@ -192,6 +199,10 @@ namespace Google.Cloud.BigQuery.V2
             if (DestinationSchemaUpdateOptions != null)
             {
                 load.SchemaUpdateOptions = new List<string>(EnumMap.ToApiValues(DestinationSchemaUpdateOptions.Value));
+            }
+            if (UseAvroLogicalTypes != null)
+            {
+                load.UseAvroLogicalTypes = UseAvroLogicalTypes;
             }
         }
     }
