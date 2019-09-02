@@ -30,7 +30,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 WriteDisposition = WriteDisposition.WriteAppend,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
-                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation
+                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
+                UseAvroLogicalTypes = true
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -45,6 +46,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(2, config.SchemaUpdateOptions.Count);
             Assert.Contains("ALLOW_FIELD_ADDITION", config.SchemaUpdateOptions);
             Assert.Contains("ALLOW_FIELD_RELAXATION", config.SchemaUpdateOptions);
+            Assert.True(config.UseAvroLogicalTypes);
         }
     }
 }

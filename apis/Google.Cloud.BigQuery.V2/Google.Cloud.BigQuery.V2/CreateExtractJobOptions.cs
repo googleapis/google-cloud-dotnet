@@ -46,6 +46,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? PrintHeader { get; set; }
 
+        /// <summary>
+        /// Whether to use logical types when extracting to AVRO format.
+        /// If unset, the server default will be used.
+        /// </summary>
+        public bool? UseAvroLogicalTypes { get; set; }
+
         internal void ModifyRequest(JobConfigurationExtract extract)
         {
             if (DestinationFormat != null)
@@ -67,6 +73,10 @@ namespace Google.Cloud.BigQuery.V2
             if (PrintHeader != null)
             {
                 extract.PrintHeader = PrintHeader;
+            }
+            if (UseAvroLogicalTypes != null)
+            {
+                extract.UseAvroLogicalTypes = UseAvroLogicalTypes;
             }
         }
     }

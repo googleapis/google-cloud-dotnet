@@ -29,7 +29,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 PrintHeader = false,
                 DestinationFormat = FileFormat.NewlineDelimitedJson,
                 // May not make any sense for JSON, but we don't validate...
-                FieldDelimiter = "gronkle"
+                FieldDelimiter = "gronkle",
+                // Again, doesn't make sense for JSON, but we don't validate.
+                UseAvroLogicalTypes = true
             };
             JobConfigurationExtract extract = new JobConfigurationExtract();
             options.ModifyRequest(extract);
@@ -37,6 +39,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(false, extract.PrintHeader);
             Assert.Equal("NEWLINE_DELIMITED_JSON", extract.DestinationFormat);
             Assert.Equal("gronkle", extract.FieldDelimiter);
+            Assert.True(extract.UseAvroLogicalTypes);
         }
 
         [Fact]
