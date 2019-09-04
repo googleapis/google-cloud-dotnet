@@ -74,7 +74,7 @@ namespace Google.Cloud.Language.V1.Samples
                 // the metadata is a Wikipedia URL (wikipedia_url) and Knowledge Graph MID (mid).
                 // Some entity types may have additional metadata, e.g. ADDRESS entities
                 // may have metadata for the address street_name, postal_code, et al.
-                foreach (KeyValuePair<string, string> entry in entity.Metadata.entrySet()) {
+                foreach (KeyValuePair<string, string> entry in entity.Metadata) {
                     string metadataName = entry.Key;
                     string metadataValue = entry.Value;
                     Console.WriteLine($"{metadataName} = {metadataValue}");
