@@ -20,6 +20,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.Bigtable.Admin.V2;
     using Google.Cloud.Bigtable.Common.V2;
+    using Google.Cloud.Iam.V1;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
     using Moq;
@@ -562,6 +564,260 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<CheckConsistencyResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
             CheckConsistencyResponse response = await client.CheckConsistencyAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetIamPolicy()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            Policy response = client.GetIamPolicy(formattedResource);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetIamPolicyAsync()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            Policy response = await client.GetIamPolicyAsync(formattedResource);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetIamPolicy2()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = client.GetIamPolicy(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetIamPolicyAsync2()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = await client.GetIamPolicyAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetIamPolicy()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Policy = new Policy(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            Policy policy = new Policy();
+            Policy response = client.SetIamPolicy(formattedResource, policy);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetIamPolicyAsync()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Policy = new Policy(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            Policy policy = new Policy();
+            Policy response = await client.SetIamPolicyAsync(formattedResource, policy);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetIamPolicy2()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Policy = new Policy(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = client.SetIamPolicy(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetIamPolicyAsync2()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Policy = new Policy(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("etag3123477"),
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = await client.SetIamPolicyAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void TestIamPermissions()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Permissions = { },
+            };
+            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
+            mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            IEnumerable<string> permissions = new List<string>();
+            TestIamPermissionsResponse response = client.TestIamPermissions(formattedResource, permissions);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task TestIamPermissionsAsync()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Permissions = { },
+            };
+            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            IEnumerable<string> permissions = new List<string>();
+            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(formattedResource, permissions);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void TestIamPermissions2()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Permissions = { },
+            };
+            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            TestIamPermissionsResponse response = client.TestIamPermissions(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task TestIamPermissionsAsync2()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Permissions = { },
+            };
+            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
