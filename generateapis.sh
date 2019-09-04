@@ -132,6 +132,16 @@ generate_gapicgenerator() {
   args+=(--output=$API_TMP_DIR)
   args+=(--language=csharp)
 
+  sample_yamls=($API_SRC_DIR/samples/*.yaml)
+  if [[ -d $API_SRC_DIR/samples ]]
+  then
+    args+=(--dev_samples)
+    for sample_yaml in $API_SRC_DIR/samples/*.yaml
+    do
+      args+=(--sample_yamls=$sample_yaml)
+    done
+  fi
+
   # Suppress protobuf warnings in Java 9/10. By the time they
   # become a problem, we won't be using Java...
   java $JAVA9OPTS ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]} \
