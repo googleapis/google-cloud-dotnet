@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
+using iam = Google.Cloud.Iam.V1;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -58,6 +59,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DropRowRangeSettings = existing.DropRowRangeSettings;
             GenerateConsistencyTokenSettings = existing.GenerateConsistencyTokenSettings;
             CheckConsistencySettings = existing.CheckConsistencySettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
 
@@ -476,6 +480,95 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CheckConsistencySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.GetIamPolicy</c> and <c>BigtableTableAdminClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.GetIamPolicy</c> and
+        /// <c>BigtableTableAdminClient.GetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.SetIamPolicy</c> and <c>BigtableTableAdminClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.SetIamPolicy</c> and
+        /// <c>BigtableTableAdminClient.SetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 0 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.0</description></item>
+        /// <item><description>Retry maximum delay: 0 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 60000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
+                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.TestIamPermissions</c> and <c>BigtableTableAdminClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.TestIamPermissions</c> and
+        /// <c>BigtableTableAdminClient.TestIamPermissionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetIdempotentParamsRetryBackoff(),
                 timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
@@ -2278,6 +2371,423 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            string resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
+                new iam::GetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            string resource,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy GetIamPolicy(
+            string resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
+                new iam::GetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy GetIamPolicy(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            string resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
+                new iam::SetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            string resource,
+            iam::Policy policy,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy SetIamPolicy(
+            string resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
+                new iam::SetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy SetIamPolicy(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new iam::TestIamPermissionsRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
+                new iam::TestIamPermissionsRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -2293,6 +2803,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private readonly gaxgrpc::ApiCall<DropRowRangeRequest, pbwkt::Empty> _callDropRowRange;
         private readonly gaxgrpc::ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> _callGenerateConsistencyToken;
         private readonly gaxgrpc::ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> _callCheckConsistency;
+        private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
+        private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
+        private readonly gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableTableAdmin service, with the specified gRPC client and settings.
@@ -2328,6 +2841,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callCheckConsistency = clientHelper.BuildApiCall<CheckConsistencyRequest, CheckConsistencyResponse>(
                 GrpcClient.CheckConsistencyAsync, GrpcClient.CheckConsistency, effectiveSettings.CheckConsistencySettings)
                 .WithGoogleRequestParam("name", request => request.Name);
+            _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
+                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
+                .WithGoogleRequestParam("resource", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
+                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
+                .WithGoogleRequestParam("resource", request => request.Resource);
+            _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
+                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
+                .WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callCreateTable);
             Modify_CreateTableApiCall(ref _callCreateTable);
             Modify_ApiCall(ref _callListTables);
@@ -2344,6 +2866,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
             Modify_GenerateConsistencyTokenApiCall(ref _callGenerateConsistencyToken);
             Modify_ApiCall(ref _callCheckConsistency);
             Modify_CheckConsistencyApiCall(ref _callCheckConsistency);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2365,6 +2893,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_DropRowRangeApiCall(ref gaxgrpc::ApiCall<DropRowRangeRequest, pbwkt::Empty> call);
         partial void Modify_GenerateConsistencyTokenApiCall(ref gaxgrpc::ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> call);
         partial void Modify_CheckConsistencyApiCall(ref gaxgrpc::ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> call);
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> call);
         partial void OnConstruction(BigtableTableAdmin.BigtableTableAdminClient grpcClient, BigtableTableAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -2383,6 +2914,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_DropRowRangeRequest(ref DropRowRangeRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GenerateConsistencyTokenRequest(ref GenerateConsistencyTokenRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CheckConsistencyRequest(ref CheckConsistencyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetIamPolicyRequest(ref iam::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetIamPolicyRequest(ref iam::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_TestIamPermissionsRequest(ref iam::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new table in the specified instance.
@@ -2720,6 +3254,130 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_CheckConsistencyRequest(ref request, ref callSettings);
             return _callCheckConsistency.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an table exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override iam::Policy GetIamPolicy(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on a table resource. Replaces any existing
+        /// policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override iam::Policy SetIamPolicy(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified table resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override iam::TestIamPermissionsResponse TestIamPermissions(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
         }
 
     }

@@ -20,6 +20,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.Bigtable.Admin.V2;
     using Google.Cloud.Bigtable.Common.V2;
+    using Google.Cloud.Iam.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -622,6 +623,194 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             };
             // Make the request
             CheckConsistencyResponse response = bigtableTableAdminClient.CheckConsistency(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string,CallSettings)
+            // Additional: GetIamPolicyAsync(string,CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            // Make the request
+            Policy response = await bigtableTableAdminClient.GetIamPolicyAsync(formattedResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string,CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            // Make the request
+            Policy response = bigtableTableAdminClient.GetIamPolicy(formattedResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            // Make the request
+            Policy response = await bigtableTableAdminClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy_RequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            // Make the request
+            Policy response = bigtableTableAdminClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
+            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await bigtableTableAdminClient.SetIamPolicyAsync(formattedResource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string,Policy,CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = bigtableTableAdminClient.SetIamPolicy(formattedResource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = await bigtableTableAdminClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy_RequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = bigtableTableAdminClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
+            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = await bigtableTableAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = bigtableTableAdminClient.TestIamPermissions(formattedResource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync_RequestObject()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await bigtableTableAdminClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions_RequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new Google.Cloud.Bigtable.Common.V2.TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = bigtableTableAdminClient.TestIamPermissions(request);
             // End snippet
         }
 
