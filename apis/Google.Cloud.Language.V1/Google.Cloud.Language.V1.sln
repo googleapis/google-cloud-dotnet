@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SourceMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{25C260EE-03D2-4F61-9F2B-0EB71D60E059}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Language.V1.Samples", "Google.Cloud.Language.V1.Samples\Google.Cloud.Language.V1.Samples.csproj", "{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +126,18 @@ Global
 		{25C260EE-03D2-4F61-9F2B-0EB71D60E059}.Release|x64.Build.0 = Release|Any CPU
 		{25C260EE-03D2-4F61-9F2B-0EB71D60E059}.Release|x86.ActiveCfg = Release|Any CPU
 		{25C260EE-03D2-4F61-9F2B-0EB71D60E059}.Release|x86.Build.0 = Release|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Debug|x64.Build.0 = Debug|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Debug|x86.Build.0 = Debug|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Release|x64.ActiveCfg = Release|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Release|x64.Build.0 = Release|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Release|x86.ActiveCfg = Release|Any CPU
+		{0FCB1528-AB3C-4027-9C98-020BFAA23AA1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
@@ -11,6 +11,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{9A63657F-FA9D-4011-8166-FFFC72F48D52}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Speech.V1P1Beta1.Tests", "Google.Cloud.Speech.V1P1Beta1.Tests\Google.Cloud.Speech.V1P1Beta1.Tests.csproj", "{584205B4-9A28-44D0-B24F-88187D78DA4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Speech.V1P1Beta1.Samples", "Google.Cloud.Speech.V1P1Beta1.Samples\Google.Cloud.Speech.V1P1Beta1.Samples.csproj", "{FE94CF86-C1B2-43BB-9A74-5A6836454817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +84,18 @@ Global
 		{584205B4-9A28-44D0-B24F-88187D78DA4A}.Release|x64.Build.0 = Release|Any CPU
 		{584205B4-9A28-44D0-B24F-88187D78DA4A}.Release|x86.ActiveCfg = Release|Any CPU
 		{584205B4-9A28-44D0-B24F-88187D78DA4A}.Release|x86.Build.0 = Release|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Debug|x64.Build.0 = Debug|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Debug|x86.Build.0 = Debug|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Release|x64.ActiveCfg = Release|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Release|x64.Build.0 = Release|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Release|x86.ActiveCfg = Release|Any CPU
+		{FE94CF86-C1B2-43BB-9A74-5A6836454817}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

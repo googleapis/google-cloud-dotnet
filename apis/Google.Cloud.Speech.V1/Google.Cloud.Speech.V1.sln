@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -15,6 +15,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{F66410CF-A4A3-4618-B8D7-9FDA7C04DBCC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Speech.V1.SmokeTests", "Google.Cloud.Speech.V1.SmokeTests\Google.Cloud.Speech.V1.SmokeTests.csproj", "{F555C581-6FF2-4555-8E30-31B62CA3DE4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Speech.V1.Samples", "Google.Cloud.Speech.V1.Samples\Google.Cloud.Speech.V1.Samples.csproj", "{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +112,18 @@ Global
 		{F555C581-6FF2-4555-8E30-31B62CA3DE4A}.Release|x64.Build.0 = Release|Any CPU
 		{F555C581-6FF2-4555-8E30-31B62CA3DE4A}.Release|x86.ActiveCfg = Release|Any CPU
 		{F555C581-6FF2-4555-8E30-31B62CA3DE4A}.Release|x86.Build.0 = Release|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Debug|x64.Build.0 = Debug|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Debug|x86.Build.0 = Debug|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Release|x64.ActiveCfg = Release|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Release|x64.Build.0 = Release|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Release|x86.ActiveCfg = Release|Any CPU
+		{B6BF3C76-57E3-41AB-9DD9-491B05D64DE4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
