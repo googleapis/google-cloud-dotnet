@@ -94,7 +94,8 @@ type that a value will be deserialized as, when no other information is availabl
       <td>Map</td>
       <td>Any <code>IDictionary&lt;string, TValue&gt;</code>, anonymous type or attributed-class (see later)</td>
       <td><code>Dictionary&lt;string, object&gt;</code></td>
-      <td>Represents an object embedded within a document. When indexed, you can query on subfields. If you exclude this value from indexing, then all subfields are also excluded from indexing.</td>
+      <td>Represents an object embedded within a document. When indexed, you can query on subfields. If you exclude this value from indexing, then all subfields are also excluded from indexing.
+      C# 7 value tuples are also supported in a limited set of contexts. See <a href="#value-tuples">the section below</a> for more details.</td>
   	</tr>
   	<tr>
       <td>Null</td>
@@ -263,6 +264,21 @@ using the following sample code.
 
 {{sample:DataModel.CustomConverterProperty}}
 
+### Converter registries
+
+In some cases, you may wish to apply custom conversions without any
+ability to add attributes to types or properties. In this situation,
+you can build a `FirestoreDb` with a converter registry to specify
+which custom converters you want to be applied by default. This
+can be done via `FirestoreDbBuilder`, which has a `ConverterRegistry`
+property.
+
+For example, instead of specifying the converter on the
+`PlayerWithGuidId.Id` property in the sample above, the converter could
+be registered in the `FirestoreDb` instead:
+
+{{sample:DataModel.ConverterRegistry}}
+
 ### Document converters
 
 If you wish a .NET type to be stored as a complete document after
@@ -291,21 +307,60 @@ for a non-nullable value type, the converter will automatically be
 used for the corresponding nullable value type too, with null values
 being handled transparently.
 
+## Enum conversions
+
+By default, C# enum values are converted to their underlying integer
+values. The Google.Cloud.Firestore package includes a custom converter
+that can be specified in the same way as any other custom converter, in
+order to convert between enum values and their names instead.
+
+The example below applies the converter on the enum itself, effectively
+changing the default serialization model for that enum. The converter
+could equally be applied on a property or registered in the converter
+registry for the `FirestoreDb` used to create and retrieve documents.
+
+{{sample:DataModel.EnumSerializeByName}}
+
+# Value tuples
+
+C# 7 introduced a feature around the `System.ValueTuple` generic structs which are part of
+the framework. When using [attributed properties](#mapping-with-attributed-classes), the built-in
+converters will serialize tuples as if they were a dictionary from the tuple element names to their values.
+
+Consider the following class:
+
+{{sample:DataModel.ValueTuple}}
+
+A document representing a `Company` will be serialized as a top-level map with `Name` and `Location` fields;
+the `Location` field will itself be a map with `city`, `state` and `country` fields.
+
+There are some limitations on this feature:
+
+- The feature only applies to attributed properties, not types in dictionaries,
+  anonymous types etc.
+- All tuple elements must be named. A tuple type of `(string name, int)` would be invalid, for example.
+- The property type must be either the tuple type or the nullable equivalent. For example, a property
+  with a type of `List<(string name, int value)>` would not be valid.
+- Only tuples with up to 7 elements are supported.
+
+These restrictions primarily exist for simplicity of the implementation, and the feature may be expanded
+later to lift some of them.
+
 # Sentinel values
 
-So far all the values we've looked at have been known by the C# code. There are two *sentinel values* available which behave slightly differently.
+So far all the values we've looked at have been known by the C# code. There are additional *sentinel values* available which behave slightly differently.
 
 ## Server-side timestamp
 
 When you update a document using the server-side timestamp sentinel value, the actual timestamp that's recorded is the commit time
 according to the Firestore server.
 
-For attributed classes, you can specify `SentinelValue = SentinelValue.ServerTimestamp` in the attribute declaration. Usually
+For attributed classes, you can specify `ServerTimestamp` in the attribute declaration for the property. Usually
 this will be on a property of type `Timestamp` (or `DateTime` or `DateTimeOffset`) so that you can retrieve the timestamp later.
 
 {{sample:DataModel.SentinelAttribute}}
 
-For dictionaries and anonymous types, you can use `SentinelValue.ServerTimestamp` as the value itself. For example,
+For dictionaries and anonymous types, you can use `FieldValue.ServerTimestamp` as the value itself. For example,
 to update just the `Score` and `Timestamp` fields of a `HighScore` document, you could use an anonymous type instead of
 the attributed model
 
@@ -320,8 +375,22 @@ It can be useful to indicate that a field needs to be deleted from a document, p
 to delete a single field in a document, you can use:
 
 ```csharp
-await doc.Set(new { Score = SentinelValue.Delete }, SetOptions.MergeAll);
+await doc.Set(new { Score = FieldValue.Delete }, SetOptions.MergeAll);
 ```
 
 You *can* specify `SentinelValue = SentinelValue.Delete` in a property attribute, but this would be highly unusual. It could be useful
 as part of a schema migration strategy, for example. It's mostly supported for the sake of consistency.
+
+## Array union and removal
+
+When updating a document that contains array fields, it can sometimes be inconvenient to update the whole field if you
+simply want to either ensure that a specific value is present in the array, or remove it.
+
+The `FieldValue.ArrayUnion` and `FieldValue.ArrayRemove` methods allow values to be created (usually as part of anonymous types
+for `UpdateAsync` operations) which express these requirements simply and without a complete "read-modify-write" cycle.
+
+## Numeric increment
+
+It's common to need to modify an existing document numeric value by incrementing it by a given amount. While this can be done
+with a "read-modify-write" cycle in a transaction, the `FieldValue.Increment` methods allow values to be created which
+perform this increment operation server-side, removing the need for a transaction.

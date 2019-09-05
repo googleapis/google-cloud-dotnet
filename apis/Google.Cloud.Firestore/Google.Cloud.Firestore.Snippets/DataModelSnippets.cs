@@ -321,5 +321,83 @@ namespace Google.Cloud.Firestore.Snippets
             Assert.Equal(snapshot.UpdateTime, room.UpdateTime);
             Assert.Equal(snapshot.ReadTime, room.ReadTime);
         }
+
+        [Fact]
+        public async Task ConverterRegistry()
+        {
+            string projectId = _fixture.ProjectId;
+            // Sample: ConverterRegistry
+            FirestoreDb db = new FirestoreDbBuilder
+            {
+                ProjectId = projectId,
+                ConverterRegistry = new ConverterRegistry
+                {
+                    new GuidConverter()
+                }
+            }.Build();
+            // Documents serialized and deserialized via db will now use the
+            // custom Guid converter.
+            // End sample
+
+            CollectionReference collection = db.Collection("guids");
+            Guid guid = Guid.NewGuid();
+            DocumentReference document = await collection.AddAsync(new { Value = guid });
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
+            Guid fetchedGuid = snapshot.GetValue<Guid>("Value");
+            Assert.Equal(fetchedGuid, guid);
+        }
+
+        [Fact]
+        public async Task EnumSerializationByName()
+        {
+            string projectId = _fixture.ProjectId;
+            FirestoreDb db = FirestoreDb.Create(projectId);
+            CollectionReference collection = db.Collection("enums");
+            DocumentReference document = await collection.AddAsync(new { Value = SerializedByName.FirstValue });
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
+            Assert.Equal(SerializedByName.FirstValue, snapshot.GetValue<SerializedByName>("Value"));
+            // If the value were serialized as an integer, this wouldn't work.
+            Assert.Equal(nameof(SerializedByName.FirstValue), snapshot.GetValue<string>("Value"));
+        }
+
+        // Sample: EnumSerializeByName
+        [FirestoreData(ConverterType = typeof(FirestoreEnumNameConverter<SerializedByName>))]
+        public enum SerializedByName
+        {
+            None,
+            FirstValue,
+            SecondValue
+        }
+        // End sample
+
+        [Fact]
+        public async Task ValueTuples()
+        {
+            string projectId = _fixture.ProjectId;
+            FirestoreDb db = FirestoreDb.Create(projectId);
+            CollectionReference collection = db.Collection("snippet-users");
+            Company company = new Company
+            {
+                Name = "Google",
+                Location = (city: "Mountain View", state: "California", country: "US")
+            };
+            DocumentReference document = await collection.AddAsync(company);
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
+            Company fetched = snapshot.ConvertTo<Company>();
+            Assert.Equal(company.Name, fetched.Name);
+            Assert.Equal(company.Location, fetched.Location);
+        }
+
+        // Sample: ValueTuple
+        [FirestoreData]
+        public class Company
+        {
+            [FirestoreProperty]
+            public string Name { get; set; }
+
+            [FirestoreProperty]
+            public (string city, string state, string country) Location { get; set; }
+        }
+        // End sample
     }
 }
