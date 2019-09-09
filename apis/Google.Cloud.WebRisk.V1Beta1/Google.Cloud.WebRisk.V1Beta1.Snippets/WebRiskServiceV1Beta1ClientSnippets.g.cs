@@ -200,7 +200,10 @@ namespace Google.Cloud.WebRisk.V1Beta1.Snippets
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            SearchHashesRequest request = new SearchHashesRequest();
+            SearchHashesRequest request = new SearchHashesRequest
+            {
+                ThreatTypes = { },
+            };
             // Make the request
             SearchHashesResponse response = await webRiskServiceV1Beta1Client.SearchHashesAsync(request);
             // End snippet
@@ -213,7 +216,10 @@ namespace Google.Cloud.WebRisk.V1Beta1.Snippets
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            SearchHashesRequest request = new SearchHashesRequest();
+            SearchHashesRequest request = new SearchHashesRequest
+            {
+                ThreatTypes = { },
+            };
             // Make the request
             SearchHashesResponse response = webRiskServiceV1Beta1Client.SearchHashes(request);
             // End snippet
