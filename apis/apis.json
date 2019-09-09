@@ -60,7 +60,8 @@
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
-      "Google.Apis.Bigquery.v2": "1.40.3.1697"
+      "Google.Api.Gax.Rest": "2.10.0-beta03",
+      "Google.Apis.Bigquery.v2": "1.41.0.1697"
     },
     "testDependencies": {
       "Google.Cloud.Storage.V1": "project"
@@ -298,7 +299,7 @@
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0-beta02",
+      "Google.Api.Gax.Grpc": "2.10.0-beta03",
       "Google.Cloud.Logging.V2": "2.1.0",
       "Google.Cloud.Trace.V1": "1.0.0",
       "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
@@ -585,7 +586,7 @@
     "description": "Google Compute Engine Metadata v1 client library",
     "tags": [ "Metadata" ],
     "dependencies": {
-      "Google.Apis.Compute.v1": "1.40.2.1629"
+      "Google.Apis.Compute.v1": "1.41.0.1687"
     }
   },
 
@@ -898,13 +899,14 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
-      "Google.Apis.Storage.v1": "1.40.3.1635"
+      "Google.Api.Gax.Rest": "2.10.0-beta03",
+      "Google.Apis.Storage.v1": "1.41.0.1684"
     },
     "testDependencies": {
       "Google.Cloud.Iam.V1": "1.2.0",
       "Google.Cloud.PubSub.V1": "project",
       "Google.Api.Gax.Testing": "default",
-      "Google.Apis.Iam.v1": "1.40.2.1610"
+      "Google.Apis.Iam.v1": "1.41.0.1698"
     },
     "tags": [ "Storage" ]
   },
@@ -1032,7 +1034,8 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
     "dependencies": {
-      "Google.Apis.Translate.v2": "1.40.2.875"
+      "Google.Api.Gax.Rest": "2.10.0-beta03",
+      "Google.Apis.Translate.v2": "1.41.0.875"
     },
     "tags": [ "Translate", "Translation" ]
   },
