@@ -23,7 +23,6 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -718,7 +717,7 @@ namespace Google.Cloud.WebRisk.V1Beta1
                 new SearchHashesRequest
                 {
                     HashPrefix = hashPrefix ?? pb::ByteString.Empty, // Optional
-                    ThreatTypes = { threatTypes ?? linq::Enumerable.Empty<ThreatType>() }, // Optional
+                    ThreatTypes = { gax::GaxPreconditions.CheckNotNull(threatTypes, nameof(threatTypes)) },
                 },
                 callSettings);
 
@@ -777,7 +776,7 @@ namespace Google.Cloud.WebRisk.V1Beta1
                 new SearchHashesRequest
                 {
                     HashPrefix = hashPrefix ?? pb::ByteString.Empty, // Optional
-                    ThreatTypes = { threatTypes ?? linq::Enumerable.Empty<ThreatType>() }, // Optional
+                    ThreatTypes = { gax::GaxPreconditions.CheckNotNull(threatTypes, nameof(threatTypes)) },
                 },
                 callSettings);
 

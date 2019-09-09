@@ -246,7 +246,10 @@ namespace Google.Cloud.WebRisk.V1Beta1.Tests
         public void SearchHashes2()
         {
             Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            SearchHashesRequest request = new SearchHashesRequest();
+            SearchHashesRequest request = new SearchHashesRequest
+            {
+                ThreatTypes = { },
+            };
             SearchHashesResponse expectedResponse = new SearchHashesResponse();
             mockGrpcClient.Setup(x => x.SearchHashes(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -260,7 +263,10 @@ namespace Google.Cloud.WebRisk.V1Beta1.Tests
         public async Task SearchHashesAsync2()
         {
             Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            SearchHashesRequest request = new SearchHashesRequest();
+            SearchHashesRequest request = new SearchHashesRequest
+            {
+                ThreatTypes = { },
+            };
             SearchHashesResponse expectedResponse = new SearchHashesResponse();
             mockGrpcClient.Setup(x => x.SearchHashesAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SearchHashesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
