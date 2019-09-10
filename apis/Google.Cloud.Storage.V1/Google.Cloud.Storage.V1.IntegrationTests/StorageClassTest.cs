@@ -38,7 +38,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void CreateBucketAndObjects()
         {
             // Note: this test may fail if the project location prevents multi-regional storage.
-            string initialBucketStorageClass = StorageClasses.MultiRegional;
+            string initialBucketStorageClass = StorageClasses.Standard;
             string updatedObjectStorageClass = StorageClasses.Coldline;
             string updatedBucketStorageClass = StorageClasses.Nearline;
 
