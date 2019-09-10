@@ -17,18 +17,18 @@ using Google.Apis.Storage.v1.Data;
 namespace Google.Cloud.Storage.V1
 {
     /// <summary>
-    /// String constants for the names of the storage classes, as used in <see cref="Bucket.StorageClass"/>
+    /// String constants for the names of the storage classes and location types, as used in <see cref="Bucket.StorageClass"/>
     /// and <see cref="Object.StorageClass"/>. See https://cloud.google.com/storage/docs/storage-classes for details.
     /// </summary>
     public static class StorageClasses
     {
         /// <summary>
-        /// Name for the Multi-Regional storage class.
+        /// Name for the Multi-Regional location type.
         /// </summary>
         public const string MultiRegional = "MULTI_REGIONAL";
 
         /// <summary>
-        /// Name for the Regional storage class.
+        /// Name for the Regional location type.
         /// </summary>
         public const string Regional = "REGIONAL";
 
@@ -49,7 +49,7 @@ namespace Google.Cloud.Storage.V1
         public const string Standard = "STANDARD";
 
         /// <summary>
-        /// Name of the Durable Reduced Availability (DRA) storage class.
+        /// Name of the Durable Reduced Availability (DRA) location type.
         /// Use of this storage class is not recommended; Regional storage has
         /// lower pricing for some operations but otherwise the same pricing structure,
         /// and better performance/availability.
