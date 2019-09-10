@@ -90,7 +90,8 @@ generate_microgenerator() {
 generate_gapicgenerator() {
   API_TMP_DIR=$OUTDIR/$1
   API_OUT_DIR=apis
-  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  PROTO_PATH=$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$PROTO_PATH
   API_YAML=$API_SRC_DIR/../$($PYTHON3 tools/getapifield.py apis/apis.json $1 serviceYaml)
 
   if [[ ! -f $API_YAML ]]
@@ -131,6 +132,7 @@ generate_gapicgenerator() {
   args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
   args+=(--output=$API_TMP_DIR)
   args+=(--language=csharp)
+  args+=(--package=$(echo $PROTO_PATH | sed 's/\//./g'))
 
   # Suppress protobuf warnings in Java 9/10. By the time they
   # become a problem, we won't be using Java...
