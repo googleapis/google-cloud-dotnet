@@ -26,45 +26,51 @@ namespace Google.Cloud.TextToSpeech.V1 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvdGV4dHRvc3BlZWNoL3YxL2Nsb3VkX3R0cy5wcm90",
             "bxIcZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MRocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90byIqChFMaXN0Vm9pY2VzUmVxdWVzdBIVCg1sYW5n",
-            "dWFnZV9jb2RlGAEgASgJIkkKEkxpc3RWb2ljZXNSZXNwb25zZRIzCgZ2b2lj",
-            "ZXMYASADKAsyIy5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNl",
-            "IpQBCgVWb2ljZRIWCg5sYW5ndWFnZV9jb2RlcxgBIAMoCRIMCgRuYW1lGAIg",
-            "ASgJEkIKC3NzbWxfZ2VuZGVyGAMgASgOMi0uZ29vZ2xlLmNsb3VkLnRleHR0",
-            "b3NwZWVjaC52MS5Tc21sVm9pY2VHZW5kZXISIQoZbmF0dXJhbF9zYW1wbGVf",
-            "cmF0ZV9oZXJ0ehgEIAEoBSLaAQoXU3ludGhlc2l6ZVNwZWVjaFJlcXVlc3QS",
-            "OwoFaW5wdXQYASABKAsyLC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
-            "LlN5bnRoZXNpc0lucHV0EkEKBXZvaWNlGAIgASgLMjIuZ29vZ2xlLmNsb3Vk",
-            "LnRleHR0b3NwZWVjaC52MS5Wb2ljZVNlbGVjdGlvblBhcmFtcxI/CgxhdWRp",
-            "b19jb25maWcYAyABKAsyKS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
-            "LkF1ZGlvQ29uZmlnIkAKDlN5bnRoZXNpc0lucHV0Eg4KBHRleHQYASABKAlI",
-            "ABIOCgRzc21sGAIgASgJSABCDgoMaW5wdXRfc291cmNlIn8KFFZvaWNlU2Vs",
-            "ZWN0aW9uUGFyYW1zEhUKDWxhbmd1YWdlX2NvZGUYASABKAkSDAoEbmFtZRgC",
-            "IAEoCRJCCgtzc21sX2dlbmRlchgDIAEoDjItLmdvb2dsZS5jbG91ZC50ZXh0",
-            "dG9zcGVlY2gudjEuU3NtbFZvaWNlR2VuZGVyIscBCgtBdWRpb0NvbmZpZxJD",
-            "Cg5hdWRpb19lbmNvZGluZxgBIAEoDjIrLmdvb2dsZS5jbG91ZC50ZXh0dG9z",
-            "cGVlY2gudjEuQXVkaW9FbmNvZGluZxIVCg1zcGVha2luZ19yYXRlGAIgASgB",
-            "Eg0KBXBpdGNoGAMgASgBEhYKDnZvbHVtZV9nYWluX2RiGAQgASgBEhkKEXNh",
-            "bXBsZV9yYXRlX2hlcnR6GAUgASgFEhoKEmVmZmVjdHNfcHJvZmlsZV9pZBgG",
-            "IAMoCSIxChhTeW50aGVzaXplU3BlZWNoUmVzcG9uc2USFQoNYXVkaW9fY29u",
-            "dGVudBgBIAEoDCpXCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9H",
-            "RU5ERVJfVU5TUEVDSUZJRUQQABIICgRNQUxFEAESCgoGRkVNQUxFEAISCwoH",
-            "TkVVVFJBTBADKlQKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdf",
-            "VU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhABEgcKA01QMxACEgwKCE9HR19P",
-            "UFVTEAMyuAIKDFRleHRUb1NwZWVjaBKDAQoKTGlzdFZvaWNlcxIvLmdvb2ds",
-            "ZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuTGlzdFZvaWNlc1JlcXVlc3QaMC5n",
-            "b29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXNwb25z",
-            "ZSISgtPkkwIMEgovdjEvdm9pY2VzEqEBChBTeW50aGVzaXplU3BlZWNoEjUu",
-            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5TeW50aGVzaXplU3BlZWNo",
-            "UmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhl",
-            "c2l6ZVNwZWVjaFJlc3BvbnNlIh6C0+STAhgiEy92MS90ZXh0OnN5bnRoZXNp",
-            "emU6ASpCwgEKIGNvbS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxQhFU",
-            "ZXh0VG9TcGVlY2hQcm90b1ABWkhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3RleHR0b3NwZWVjaC92MTt0ZXh0dG9zcGVl",
-            "Y2j4AQGqAhxHb29nbGUuQ2xvdWQuVGV4dFRvU3BlZWNoLlYxygIcR29vZ2xl",
-            "XENsb3VkXFRleHRUb1NwZWVjaFxWMWIGcHJvdG8z"));
+            "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iLwoRTGlzdFZvaWNlc1Jl",
+            "cXVlc3QSGgoNbGFuZ3VhZ2VfY29kZRgBIAEoCUID4EEBIkkKEkxpc3RWb2lj",
+            "ZXNSZXNwb25zZRIzCgZ2b2ljZXMYASADKAsyIy5nb29nbGUuY2xvdWQudGV4",
+            "dHRvc3BlZWNoLnYxLlZvaWNlIpQBCgVWb2ljZRIWCg5sYW5ndWFnZV9jb2Rl",
+            "cxgBIAMoCRIMCgRuYW1lGAIgASgJEkIKC3NzbWxfZ2VuZGVyGAMgASgOMi0u",
+            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5Tc21sVm9pY2VHZW5kZXIS",
+            "IQoZbmF0dXJhbF9zYW1wbGVfcmF0ZV9oZXJ0ehgEIAEoBSLpAQoXU3ludGhl",
+            "c2l6ZVNwZWVjaFJlcXVlc3QSQAoFaW5wdXQYASABKAsyLC5nb29nbGUuY2xv",
+            "dWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNpc0lucHV0QgPgQQISRgoFdm9p",
+            "Y2UYAiABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNl",
+            "U2VsZWN0aW9uUGFyYW1zQgPgQQISRAoMYXVkaW9fY29uZmlnGAMgASgLMiku",
+            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5BdWRpb0NvbmZpZ0ID4EEC",
+            "IkAKDlN5bnRoZXNpc0lucHV0Eg4KBHRleHQYASABKAlIABIOCgRzc21sGAIg",
+            "ASgJSABCDgoMaW5wdXRfc291cmNlIoQBChRWb2ljZVNlbGVjdGlvblBhcmFt",
+            "cxIaCg1sYW5ndWFnZV9jb2RlGAEgASgJQgPgQQISDAoEbmFtZRgCIAEoCRJC",
+            "Cgtzc21sX2dlbmRlchgDIAEoDjItLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVl",
+            "Y2gudjEuU3NtbFZvaWNlR2VuZGVyIvEBCgtBdWRpb0NvbmZpZxJICg5hdWRp",
+            "b19lbmNvZGluZxgBIAEoDjIrLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
+            "djEuQXVkaW9FbmNvZGluZ0ID4EECEh0KDXNwZWFraW5nX3JhdGUYAiABKAFC",
+            "BuBBBOBBARIVCgVwaXRjaBgDIAEoAUIG4EEE4EEBEh4KDnZvbHVtZV9nYWlu",
+            "X2RiGAQgASgBQgbgQQTgQQESHgoRc2FtcGxlX3JhdGVfaGVydHoYBSABKAVC",
+            "A+BBARIiChJlZmZlY3RzX3Byb2ZpbGVfaWQYBiADKAlCBuBBBOBBASIxChhT",
+            "eW50aGVzaXplU3BlZWNoUmVzcG9uc2USFQoNYXVkaW9fY29udGVudBgBIAEo",
+            "DCpXCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5T",
+            "UEVDSUZJRUQQABIICgRNQUxFEAESCgoGRkVNQUxFEAISCwoHTkVVVFJBTBAD",
+            "KlQKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJ",
+            "RUQQABIMCghMSU5FQVIxNhABEgcKA01QMxACEgwKCE9HR19PUFVTEAMytAMK",
+            "DFRleHRUb1NwZWVjaBKTAQoKTGlzdFZvaWNlcxIvLmdvb2dsZS5jbG91ZC50",
+            "ZXh0dG9zcGVlY2gudjEuTGlzdFZvaWNlc1JlcXVlc3QaMC5nb29nbGUuY2xv",
+            "dWQudGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXNwb25zZSIigtPkkwIM",
+            "EgovdjEvdm9pY2Vz2kENbGFuZ3VhZ2VfY29kZRK8AQoQU3ludGhlc2l6ZVNw",
+            "ZWVjaBI1Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhlc2l6",
+            "ZVNwZWVjaFJlcXVlc3QaNi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
+            "LlN5bnRoZXNpemVTcGVlY2hSZXNwb25zZSI5gtPkkwIYIhMvdjEvdGV4dDpz",
+            "eW50aGVzaXplOgEq2kEYaW5wdXQsdm9pY2UsYXVkaW9fY29uZmlnGk/KQRt0",
+            "ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBCiBjb20uZ29vZ2xl",
+            "LmNsb3VkLnRleHR0b3NwZWVjaC52MUIRVGV4dFRvU3BlZWNoUHJvdG9QAVpI",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90",
+            "ZXh0dG9zcGVlY2gvdjE7dGV4dHRvc3BlZWNo+AEBqgIcR29vZ2xlLkNsb3Vk",
+            "LlRleHRUb1NwZWVjaC5WMcoCHEdvb2dsZVxDbG91ZFxUZXh0VG9TcGVlY2hc",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest), global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest.Parser, new[]{ "LanguageCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse), global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse.Parser, new[]{ "Voices" }, null, null, null),
@@ -122,7 +128,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// </summary>
     [pbr::OriginalName("LINEAR16")] Linear16 = 1,
     /// <summary>
-    /// MP3 audio.
+    /// MP3 audio at 32kbps.
     /// </summary>
     [pbr::OriginalName("MP3")] Mp3 = 2,
     /// <summary>
@@ -178,7 +184,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int LanguageCodeFieldNumber = 1;
     private string languageCode_ = "";
     /// <summary>
-    /// Optional (but recommended)
+    /// Optional. Recommended.
     /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
     /// specified, the ListVoices call will only return voices that can be used to
     /// synthesize this language_code. E.g. when specifying "en-NZ", you will get
@@ -1089,9 +1095,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int LanguageCodeFieldNumber = 1;
     private string languageCode_ = "";
     /// <summary>
-    /// The language (and optionally also the region) of the voice expressed as a
+    /// Required. The language (and potentially also the region) of the voice expressed as a
     /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag, e.g.
-    /// "en-US". Required. This should not include a script tag (e.g. use
+    /// "en-US". This should not include a script tag (e.g. use
     /// "cmn-cn" rather than "cmn-Hant-cn"), because the script will be inferred
     /// from the input provided in the SynthesisInput.  The TTS service
     /// will use this parameter to help choose an appropriate voice.  Note that
@@ -1113,7 +1119,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// The name of the voice. Optional; if not set, the service will choose a
+    /// The name of the voice. If not set, the service will choose a
     /// voice based on the other parameters such as language_code and gender.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1128,7 +1134,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int SsmlGenderFieldNumber = 3;
     private global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender ssmlGender_ = 0;
     /// <summary>
-    /// The preferred gender of the voice. Optional; if not set, the service will
+    /// The preferred gender of the voice. If not set, the service will
     /// choose a voice based on the other parameters such as language_code and
     /// name. Note that this is only a preference, not requirement; if a
     /// voice of the appropriate gender is not available, the synthesizer should
@@ -1304,7 +1310,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int AudioEncodingFieldNumber = 1;
     private global::Google.Cloud.TextToSpeech.V1.AudioEncoding audioEncoding_ = 0;
     /// <summary>
-    /// Required. The format of the requested audio byte stream.
+    /// Required. The format of the audio byte stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.TextToSpeech.V1.AudioEncoding AudioEncoding {
@@ -1318,10 +1324,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int SpeakingRateFieldNumber = 2;
     private double speakingRate_;
     /// <summary>
-    /// Optional speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal
-    /// native speed supported by the specific voice. 2.0 is twice as fast, and
-    /// 0.5 is half as fast. If unset(0.0), defaults to the native 1.0 speed. Any
-    /// other values &lt; 0.25 or > 4.0 will return an error.
+    /// Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is
+    /// the normal native speed supported by the specific voice. 2.0 is twice as
+    /// fast, and 0.5 is half as fast. If unset(0.0), defaults to the native 1.0
+    /// speed. Any other values &lt; 0.25 or > 4.0 will return an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double SpeakingRate {
@@ -1335,9 +1341,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int PitchFieldNumber = 3;
     private double pitch_;
     /// <summary>
-    /// Optional speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
-    /// semitones from the original pitch. -20 means decrease 20 semitones from the
-    /// original pitch.
+    /// Optional. Input only. Speaking pitch, in the range [-20.0, 20.0]. 20 means
+    /// increase 20 semitones from the original pitch. -20 means decrease 20
+    /// semitones from the original pitch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double Pitch {
@@ -1351,14 +1357,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int VolumeGainDbFieldNumber = 4;
     private double volumeGainDb_;
     /// <summary>
-    /// Optional volume gain (in dB) of the normal native volume supported by the
-    /// specific voice, in the range [-96.0, 16.0]. If unset, or set to a value of
-    /// 0.0 (dB), will play at normal native signal amplitude. A value of -6.0 (dB)
-    /// will play at approximately half the amplitude of the normal native signal
-    /// amplitude. A value of +6.0 (dB) will play at approximately twice the
-    /// amplitude of the normal native signal amplitude. Strongly recommend not to
-    /// exceed +10 (dB) as there's usually no effective increase in loudness for
-    /// any value greater than that.
+    /// Optional. Input only. Volume gain (in dB) of the normal native volume
+    /// supported by the specific voice, in the range [-96.0, 16.0]. If unset, or
+    /// set to a value of 0.0 (dB), will play at normal native signal amplitude. A
+    /// value of -6.0 (dB) will play at approximately half the amplitude of the
+    /// normal native signal amplitude. A value of +6.0 (dB) will play at
+    /// approximately twice the amplitude of the normal native signal amplitude.
+    /// Strongly recommend not to exceed +10 (dB) as there's usually no effective
+    /// increase in loudness for any value greater than that.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double VolumeGainDb {
@@ -1372,12 +1378,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int SampleRateHertzFieldNumber = 5;
     private int sampleRateHertz_;
     /// <summary>
-    /// The synthesis sample rate (in hertz) for this audio. Optional.  If this is
-    /// different from the voice's natural sample rate, then the synthesizer will
-    /// honor this request by converting to the desired sample rate (which might
-    /// result in worse audio quality), unless the specified sample rate is not
-    /// supported for the encoding chosen, in which case it will fail the request
-    /// and return [google.rpc.Code.INVALID_ARGUMENT][].
+    /// Optional. The synthesis sample rate (in hertz) for this audio. When this is
+    /// specified in SynthesizeSpeechRequest, if this is different from the voice's
+    /// natural sample rate, then the synthesizer will honor this request by
+    /// converting to the desired sample rate (which might result in worse audio
+    /// quality), unless the specified sample rate is not supported for the
+    /// encoding chosen, in which case it will fail the request and return
+    /// [google.rpc.Code.INVALID_ARGUMENT][].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SampleRateHertz {
@@ -1393,14 +1400,12 @@ namespace Google.Cloud.TextToSpeech.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> effectsProfileId_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// An identifier which selects 'audio effects' profiles that are applied on
-    /// (post synthesized) text to speech.
-    /// Effects are applied on top of each other in the order they are given.
-    /// See
-    ///
-    /// [audio-profiles](https:
-    /// //cloud.google.com/text-to-speech/docs/audio-profiles)
-    /// for current supported profile ids.
+    /// Optional. Input only. An identifier which selects 'audio effects' profiles
+    /// that are applied on (post synthesized) text to speech. Effects are applied
+    /// on top of each other in the order they are given. See
+    /// [audio
+    /// profiles](https://cloud.google.com/text-to-speech/docs/audio-profiles) for
+    /// current supported profile ids.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> EffectsProfileId {
@@ -1606,7 +1611,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private pb::ByteString audioContent_ = pb::ByteString.Empty;
     /// <summary>
     /// The audio data bytes encoded as specified in the request, including the
-    /// header (For LINEAR16 audio, we include the WAV header). Note: as
+    /// header for encodings that are wrapped in containers (e.g. MP3, OGG_OPUS).
+    /// For LINEAR16 audio, we include the WAV header. Note: as
     /// with all bytes fields, protobuffers use a pure binary representation,
     /// whereas JSON representations use base64.
     /// </summary>
