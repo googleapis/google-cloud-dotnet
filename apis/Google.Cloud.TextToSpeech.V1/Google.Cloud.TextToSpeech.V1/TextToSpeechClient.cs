@@ -167,8 +167,7 @@ namespace Google.Cloud.TextToSpeech.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -177,7 +176,7 @@ namespace Google.Cloud.TextToSpeech.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -383,7 +382,7 @@ namespace Google.Cloud.TextToSpeech.V1
         /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="languageCode">
-        /// Optional (but recommended)
+        /// Optional. Recommended.
         /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
         /// specified, the ListVoices call will only return voices that can be used to
         /// synthesize this language_code. E.g. when specifying "en-NZ", you will get
@@ -411,7 +410,7 @@ namespace Google.Cloud.TextToSpeech.V1
         /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="languageCode">
-        /// Optional (but recommended)
+        /// Optional. Recommended.
         /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
         /// specified, the ListVoices call will only return voices that can be used to
         /// synthesize this language_code. E.g. when specifying "en-NZ", you will get
@@ -436,7 +435,7 @@ namespace Google.Cloud.TextToSpeech.V1
         /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="languageCode">
-        /// Optional (but recommended)
+        /// Optional. Recommended.
         /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
         /// specified, the ListVoices call will only return voices that can be used to
         /// synthesize this language_code. E.g. when specifying "en-NZ", you will get
