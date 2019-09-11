@@ -223,7 +223,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
-            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]");
+            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]");
             // Make the request
             NotificationChannelDescriptor response = await notificationChannelServiceClient.GetNotificationChannelDescriptorAsync(name);
             // End snippet
@@ -236,7 +236,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.Create();
             // Initialize request argument(s)
-            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]");
+            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]");
             // Make the request
             NotificationChannelDescriptor response = notificationChannelServiceClient.GetNotificationChannelDescriptor(name);
             // End snippet
@@ -252,7 +252,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]"),
             };
             // Make the request
             NotificationChannelDescriptor response = await notificationChannelServiceClient.GetNotificationChannelDescriptorAsync(request);
@@ -268,7 +268,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]"),
             };
             // Make the request
             NotificationChannelDescriptor response = notificationChannelServiceClient.GetNotificationChannelDescriptor(request);

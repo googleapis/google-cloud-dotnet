@@ -29,56 +29,61 @@ namespace Google.Cloud.Monitoring.V3 {
             "cm90bxojZ29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aIWdv",
             "b2dsZS9tb25pdG9yaW5nL3YzL2NvbW1vbi5wcm90bxogZ29vZ2xlL21vbml0",
             "b3JpbmcvdjMvZ3JvdXAucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5w",
-            "cm90byKtAQoRTGlzdEdyb3Vwc1JlcXVlc3QSDAoEbmFtZRgHIAEoCRIbChFj",
-            "aGlsZHJlbl9vZl9ncm91cBgCIAEoCUgAEhwKEmFuY2VzdG9yc19vZl9ncm91",
-            "cBgDIAEoCUgAEh4KFGRlc2NlbmRhbnRzX29mX2dyb3VwGAQgASgJSAASEQoJ",
-            "cGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiABKAlCCAoGZmlsdGVy",
-            "IlkKEkxpc3RHcm91cHNSZXNwb25zZRIqCgVncm91cBgBIAMoCzIbLmdvb2ds",
-            "ZS5tb25pdG9yaW5nLnYzLkdyb3VwEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSIfCg9HZXRHcm91cFJlcXVlc3QSDAoEbmFtZRgDIAEoCSJlChJDcmVhdGVH",
-            "cm91cFJlcXVlc3QSDAoEbmFtZRgEIAEoCRIqCgVncm91cBgCIAEoCzIbLmdv",
-            "b2dsZS5tb25pdG9yaW5nLnYzLkdyb3VwEhUKDXZhbGlkYXRlX29ubHkYAyAB",
-            "KAgiVwoSVXBkYXRlR3JvdXBSZXF1ZXN0EioKBWdyb3VwGAIgASgLMhsuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuR3JvdXASFQoNdmFsaWRhdGVfb25seRgDIAEo",
-            "CCIiChJEZWxldGVHcm91cFJlcXVlc3QSDAoEbmFtZRgDIAEoCSKUAQoXTGlz",
-            "dEdyb3VwTWVtYmVyc1JlcXVlc3QSDAoEbmFtZRgHIAEoCRIRCglwYWdlX3Np",
-            "emUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCRIOCgZmaWx0ZXIYBSABKAkS",
-            "NAoIaW50ZXJ2YWwYBiABKAsyIi5nb29nbGUubW9uaXRvcmluZy52My5UaW1l",
-            "SW50ZXJ2YWwidwoYTGlzdEdyb3VwTWVtYmVyc1Jlc3BvbnNlEi4KB21lbWJl",
-            "cnMYASADKAsyHS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFMrsGCgxH",
-            "cm91cFNlcnZpY2UShQEKCkxpc3RHcm91cHMSJy5nb29nbGUubW9uaXRvcmlu",
-            "Zy52My5MaXN0R3JvdXBzUmVxdWVzdBooLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "Lkxpc3RHcm91cHNSZXNwb25zZSIkgtPkkwIeEhwvdjMve25hbWU9cHJvamVj",
-            "dHMvKn0vZ3JvdXBzEnYKCEdldEdyb3VwEiUuZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djMuR2V0R3JvdXBSZXF1ZXN0GhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3Jv",
-            "dXAiJoLT5JMCIBIeL3YzL3tuYW1lPXByb2plY3RzLyovZ3JvdXBzLyp9EoEB",
-            "CgtDcmVhdGVHcm91cBIoLmdvb2dsZS5tb25pdG9yaW5nLnYzLkNyZWF0ZUdy",
-            "b3VwUmVxdWVzdBobLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdyb3VwIiuC0+ST",
-            "AiUiHC92My97bmFtZT1wcm9qZWN0cy8qfS9ncm91cHM6BWdyb3VwEokBCgtV",
-            "cGRhdGVHcm91cBIoLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwZGF0ZUdyb3Vw",
-            "UmVxdWVzdBobLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdyb3VwIjOC0+STAi0a",
-            "JC92My97Z3JvdXAubmFtZT1wcm9qZWN0cy8qL2dyb3Vwcy8qfToFZ3JvdXAS",
-            "dwoLRGVsZXRlR3JvdXASKC5nb29nbGUubW9uaXRvcmluZy52My5EZWxldGVH",
-            "cm91cFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJoLT5JMCICoe",
-            "L3YzL3tuYW1lPXByb2plY3RzLyovZ3JvdXBzLyp9EqEBChBMaXN0R3JvdXBN",
-            "ZW1iZXJzEi0uZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdEdyb3VwTWVtYmVy",
-            "c1JlcXVlc3QaLi5nb29nbGUubW9uaXRvcmluZy52My5MaXN0R3JvdXBNZW1i",
-            "ZXJzUmVzcG9uc2UiLoLT5JMCKBImL3YzL3tuYW1lPXByb2plY3RzLyovZ3Jv",
-            "dXBzLyp9L21lbWJlcnNCqQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IR",
-            "R3JvdXBTZXJ2aWNlUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29n",
-            "bGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9y",
-            "aW5nXFYzYgZwcm90bzM="));
+            "cm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8irQEKEUxpc3RHcm91cHNS",
+            "ZXF1ZXN0EgwKBG5hbWUYByABKAkSGwoRY2hpbGRyZW5fb2ZfZ3JvdXAYAiAB",
+            "KAlIABIcChJhbmNlc3RvcnNfb2ZfZ3JvdXAYAyABKAlIABIeChRkZXNjZW5k",
+            "YW50c19vZl9ncm91cBgEIAEoCUgAEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpw",
+            "YWdlX3Rva2VuGAYgASgJQggKBmZpbHRlciJZChJMaXN0R3JvdXBzUmVzcG9u",
+            "c2USKgoFZ3JvdXAYASADKAsyGy5nb29nbGUubW9uaXRvcmluZy52My5Hcm91",
+            "cBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiHwoPR2V0R3JvdXBSZXF1ZXN0",
+            "EgwKBG5hbWUYAyABKAkiZQoSQ3JlYXRlR3JvdXBSZXF1ZXN0EgwKBG5hbWUY",
+            "BCABKAkSKgoFZ3JvdXAYAiABKAsyGy5nb29nbGUubW9uaXRvcmluZy52My5H",
+            "cm91cBIVCg12YWxpZGF0ZV9vbmx5GAMgASgIIlcKElVwZGF0ZUdyb3VwUmVx",
+            "dWVzdBIqCgVncm91cBgCIAEoCzIbLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdy",
+            "b3VwEhUKDXZhbGlkYXRlX29ubHkYAyABKAgiNQoSRGVsZXRlR3JvdXBSZXF1",
+            "ZXN0EgwKBG5hbWUYAyABKAkSEQoJcmVjdXJzaXZlGAQgASgIIpQBChdMaXN0",
+            "R3JvdXBNZW1iZXJzUmVxdWVzdBIMCgRuYW1lGAcgASgJEhEKCXBhZ2Vfc2l6",
+            "ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJEg4KBmZpbHRlchgFIAEoCRI0",
+            "CghpbnRlcnZhbBgGIAEoCzIiLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVJ",
+            "bnRlcnZhbCJ3ChhMaXN0R3JvdXBNZW1iZXJzUmVzcG9uc2USLgoHbWVtYmVy",
+            "cxgBIAMoCzIdLmdvb2dsZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2USFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUy5wcKDEdy",
+            "b3VwU2VydmljZRKFAQoKTGlzdEdyb3VwcxInLmdvb2dsZS5tb25pdG9yaW5n",
+            "LnYzLkxpc3RHcm91cHNSZXF1ZXN0GiguZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "TGlzdEdyb3Vwc1Jlc3BvbnNlIiSC0+STAh4SHC92My97bmFtZT1wcm9qZWN0",
+            "cy8qfS9ncm91cHMSdgoIR2V0R3JvdXASJS5nb29nbGUubW9uaXRvcmluZy52",
+            "My5HZXRHcm91cFJlcXVlc3QaGy5nb29nbGUubW9uaXRvcmluZy52My5Hcm91",
+            "cCImgtPkkwIgEh4vdjMve25hbWU9cHJvamVjdHMvKi9ncm91cHMvKn0SgQEK",
+            "C0NyZWF0ZUdyb3VwEiguZ29vZ2xlLm1vbml0b3JpbmcudjMuQ3JlYXRlR3Jv",
+            "dXBSZXF1ZXN0GhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3JvdXAiK4LT5JMC",
+            "JSIcL3YzL3tuYW1lPXByb2plY3RzLyp9L2dyb3VwczoFZ3JvdXASiQEKC1Vw",
+            "ZGF0ZUdyb3VwEiguZ29vZ2xlLm1vbml0b3JpbmcudjMuVXBkYXRlR3JvdXBS",
+            "ZXF1ZXN0GhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3JvdXAiM4LT5JMCLRok",
+            "L3YzL3tncm91cC5uYW1lPXByb2plY3RzLyovZ3JvdXBzLyp9OgVncm91cBJ3",
+            "CgtEZWxldGVHcm91cBIoLmdvb2dsZS5tb25pdG9yaW5nLnYzLkRlbGV0ZUdy",
+            "b3VwUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSImgtPkkwIgKh4v",
+            "djMve25hbWU9cHJvamVjdHMvKi9ncm91cHMvKn0SoQEKEExpc3RHcm91cE1l",
+            "bWJlcnMSLS5nb29nbGUubW9uaXRvcmluZy52My5MaXN0R3JvdXBNZW1iZXJz",
+            "UmVxdWVzdBouLmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3RHcm91cE1lbWJl",
+            "cnNSZXNwb25zZSIugtPkkwIoEiYvdjMve25hbWU9cHJvamVjdHMvKi9ncm91",
+            "cHMvKn0vbWVtYmVycxqpAcpBGW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb23S",
+            "QYkBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL21vbml0b3Jp",
+            "bmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9tb25pdG9yaW5n",
+            "LnJlYWRCqQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IRR3JvdXBTZXJ2",
+            "aWNlUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQu",
+            "TW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYzYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.GroupReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.GroupReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupsRequest), global::Google.Cloud.Monitoring.V3.ListGroupsRequest.Parser, new[]{ "Name", "ChildrenOfGroup", "AncestorsOfGroup", "DescendantsOfGroup", "PageSize", "PageToken" }, new[]{ "Filter" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupsResponse), global::Google.Cloud.Monitoring.V3.ListGroupsResponse.Parser, new[]{ "Group", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetGroupRequest), global::Google.Cloud.Monitoring.V3.GetGroupRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateGroupRequest), global::Google.Cloud.Monitoring.V3.CreateGroupRequest.Parser, new[]{ "Name", "Group", "ValidateOnly" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest), global::Google.Cloud.Monitoring.V3.UpdateGroupRequest.Parser, new[]{ "Group", "ValidateOnly" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest), global::Google.Cloud.Monitoring.V3.DeleteGroupRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest), global::Google.Cloud.Monitoring.V3.DeleteGroupRequest.Parser, new[]{ "Name", "Recursive" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest), global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Parser, new[]{ "Name", "PageSize", "PageToken", "Filter", "Interval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse), global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse.Parser, new[]{ "Members", "NextPageToken", "TotalSize" }, null, null, null)
           }));
@@ -1098,7 +1103,8 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// The `DeleteGroup` request. You can only delete a group if it has no children.
+  /// The `DeleteGroup` request. The default behavior is to be able to delete a
+  /// single group without any descendants.
   /// </summary>
   public sealed partial class DeleteGroupRequest : pb::IMessage<DeleteGroupRequest> {
     private static readonly pb::MessageParser<DeleteGroupRequest> _parser = new pb::MessageParser<DeleteGroupRequest>(() => new DeleteGroupRequest());
@@ -1126,6 +1132,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteGroupRequest(DeleteGroupRequest other) : this() {
       name_ = other.name_;
+      recursive_ = other.recursive_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1149,6 +1156,22 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+    /// <summary>Field number for the "recursive" field.</summary>
+    public const int RecursiveFieldNumber = 4;
+    private bool recursive_;
+    /// <summary>
+    /// If this field is true, then the request means to delete a group with all
+    /// its descendants. Otherwise, the request means to delete a group only when
+    /// it has no descendants. The default value is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Recursive {
+      get { return recursive_; }
+      set {
+        recursive_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteGroupRequest);
@@ -1163,6 +1186,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Recursive != other.Recursive) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1170,6 +1194,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Recursive != false) hash ^= Recursive.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1187,6 +1212,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(26);
         output.WriteString(Name);
       }
+      if (Recursive != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Recursive);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1197,6 +1226,9 @@ namespace Google.Cloud.Monitoring.V3 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Recursive != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1212,6 +1244,9 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      if (other.Recursive != false) {
+        Recursive = other.Recursive;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1225,6 +1260,10 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 26: {
             Name = input.ReadString();
+            break;
+          }
+          case 32: {
+            Recursive = input.ReadBool();
             break;
           }
         }

@@ -627,7 +627,7 @@ namespace Google.Cloud.Monitoring.V3
     /// </summary>
     public sealed partial class NotificationChannelDescriptorName : gax::IResourceName, sys::IEquatable<NotificationChannelDescriptorName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/notificationChannelDescriptors/{channel_descriptor}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/notificationChannelDescriptors/{notification_channel_descriptor}");
 
         /// <summary>
         /// Parses the given notification_channel_descriptor resource name in string form into a new
@@ -672,21 +672,21 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>Formats the IDs into the string representation of the <see cref="NotificationChannelDescriptorName"/>.</summary>
         /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="channelDescriptorId">The <c>channelDescriptor</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="notificationChannelDescriptorId">The <c>notificationChannelDescriptor</c> ID. Must not be <c>null</c>.</param>
         /// <returns>The string representation of the <see cref="NotificationChannelDescriptorName"/>.</returns>
-        public static string Format(string projectId, string channelDescriptorId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(channelDescriptorId, nameof(channelDescriptorId)));
+        public static string Format(string projectId, string notificationChannelDescriptorId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(notificationChannelDescriptorId, nameof(notificationChannelDescriptorId)));
 
         /// <summary>
         /// Constructs a new instance of the <see cref="NotificationChannelDescriptorName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="channelDescriptorId">The channelDescriptor ID. Must not be <c>null</c>.</param>
-        public NotificationChannelDescriptorName(string projectId, string channelDescriptorId)
+        /// <param name="notificationChannelDescriptorId">The notificationChannelDescriptor ID. Must not be <c>null</c>.</param>
+        public NotificationChannelDescriptorName(string projectId, string notificationChannelDescriptorId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            ChannelDescriptorId = gax::GaxPreconditions.CheckNotNull(channelDescriptorId, nameof(channelDescriptorId));
+            NotificationChannelDescriptorId = gax::GaxPreconditions.CheckNotNull(notificationChannelDescriptorId, nameof(notificationChannelDescriptorId));
         }
 
         /// <summary>
@@ -695,15 +695,15 @@ namespace Google.Cloud.Monitoring.V3
         public string ProjectId { get; }
 
         /// <summary>
-        /// The channelDescriptor ID. Never <c>null</c>.
+        /// The notificationChannelDescriptor ID. Never <c>null</c>.
         /// </summary>
-        public string ChannelDescriptorId { get; }
+        public string NotificationChannelDescriptorId { get; }
 
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, ChannelDescriptorId);
+        public override string ToString() => s_template.Expand(ProjectId, NotificationChannelDescriptorId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();

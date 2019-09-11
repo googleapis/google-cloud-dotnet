@@ -39,7 +39,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
             GetNotificationChannelDescriptorRequest expectedRequest = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]"),
             };
             NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {
@@ -51,7 +51,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]");
+            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]");
             NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -63,7 +63,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
             GetNotificationChannelDescriptorRequest expectedRequest = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]"),
             };
             NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {
@@ -75,7 +75,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannelDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]");
+            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]");
             NotificationChannelDescriptor response = await client.GetNotificationChannelDescriptorAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -87,7 +87,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
             GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]"),
             };
             NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {
@@ -110,7 +110,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
             GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[NOTIFICATION_CHANNEL_DESCRIPTOR]"),
             };
             NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {

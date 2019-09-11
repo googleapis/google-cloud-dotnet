@@ -512,6 +512,142 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
+        /// <param name="name">
+        /// The project whose groups are to be listed. The format is
+        /// `"projects/{project_id_or_number}"`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(
+            ProjectName name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListGroupsAsync(
+                new ListGroupsRequest
+                {
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
+        /// <param name="name">
+        /// The project whose groups are to be listed. The format is
+        /// `"projects/{project_id_or_number}"`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(
+            ProjectName name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListGroups(
+                new ListGroupsRequest
+                {
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
+        /// <param name="name">
+        /// The project whose groups are to be listed. The format is
+        /// `"projects/{project_id_or_number}"`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListGroupsAsync(
+                new ListGroupsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
+        /// <param name="name">
+        /// The project whose groups are to be listed. The format is
+        /// `"projects/{project_id_or_number}"`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListGroups(
+                new ListGroupsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
