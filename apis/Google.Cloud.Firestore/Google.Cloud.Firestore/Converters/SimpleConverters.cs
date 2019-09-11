@@ -182,7 +182,7 @@ namespace Google.Cloud.Firestore.Converters
 
     internal sealed class TimestampProtoConverter : ConverterBase
     {
-        internal TimestampProtoConverter() : base(typeof(DateTime)) { }
+        internal TimestampProtoConverter() : base(typeof(wkt::Timestamp)) { }
         public override Value Serialize(SerializationContext context, object value) => new Value { TimestampValue = ((wkt::Timestamp) value).Clone() };
         protected override object DeserializeTimestamp(DeserializationContext context, wkt::Timestamp value) => value.Clone();
     }
