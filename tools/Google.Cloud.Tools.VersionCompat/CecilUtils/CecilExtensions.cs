@@ -34,7 +34,7 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
         public static IEnumerable<TypeDefinition> WithNested(this IEnumerable<TypeDefinition> types) =>
             types.SelectMany(x => x.NestedTypes.WithNested().Prepend(x));
 
-        public static IEnumerable<MethodDefinition> Ctors(this TypeDefinition type) =>
+        public static IEnumerable<MethodDefinition> InstanceCtors(this TypeDefinition type) =>
             type.Methods.Where(x => x.IsConstructor && !x.IsStatic);
 
         public static bool IsStatic(this TypeDefinition type) => type.IsAbstract && type.IsSealed;
