@@ -45,8 +45,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
 
         private IEnumerable<Diff> SealedAbstractStatic()
         {
-            var oInstantiable = _o.Ctors().Any(ctor => ctor.IsPublic);
-            var oDerivable = _o.Ctors().Any(ctor => ctor.IsExported());
+            var oInstantiable = _o.InstanceCtors().Any(ctor => ctor.IsPublic);
+            var oDerivable = _o.InstanceCtors().Any(ctor => ctor.IsExported());
             var toStatic = !_o.IsStatic() && _n.IsStatic();
             var toAbstract = !_o.IsAbstractOnly() && oInstantiable && _n.IsAbstractOnly();
             var toSealed = !_o.IsSealedOnly() && oDerivable && _n.IsSealedOnly();
@@ -54,8 +54,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             {
                 yield return Diff.Major(Cause.ClassModifierChanged, $"Class '{_o.Show()}' modifiers changed from '{_o.ShowSas()}' to '{_n.ShowSas()}'");
             }
-            var nInstantiable = _n.Ctors().Any(ctor => ctor.IsPublic);
-            var _nDerivable = _n.Ctors().Any(ctor => ctor.IsExported());
+            var nInstantiable = _n.InstanceCtors().Any(ctor => ctor.IsPublic);
+            var _nDerivable = _n.InstanceCtors().Any(ctor => ctor.IsExported());
             var fromStatic = _o.IsStatic() && !_n.IsStatic() && _nDerivable;
             var fromAbstract = _o.IsAbstractOnly() && !_n.IsAbstractOnly() && nInstantiable;
             var fromSealed = _o.IsSealedOnly() && !_n.IsSealedOnly() && _nDerivable;
