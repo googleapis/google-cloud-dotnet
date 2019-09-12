@@ -25,32 +25,44 @@ namespace Google.Cloud.Asset.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXNzZXQvdjEvYXNzZXRzLnByb3RvEhVnb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "Gmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGhlnb29nbGUvcHJvdG9idWYv",
-            "YW55LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoABCg1UZW1wb3JhbEFzc2V0",
-            "EjEKBndpbmRvdxgBIAEoCzIhLmdvb2dsZS5jbG91ZC5hc3NldC52MS5UaW1l",
-            "V2luZG93Eg8KB2RlbGV0ZWQYAiABKAgSKwoFYXNzZXQYAyABKAsyHC5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjEuQXNzZXQiagoKVGltZVdpbmRvdxIuCgpzdGFy",
-            "dF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghl",
-            "bmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAihwEK",
-            "BUFzc2V0EgwKBG5hbWUYASABKAkSEgoKYXNzZXRfdHlwZRgCIAEoCRIxCghy",
-            "ZXNvdXJjZRgDIAEoCzIfLmdvb2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJj",
-            "ZRIpCgppYW1fcG9saWN5GAQgASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3ki",
-            "oAEKCFJlc291cmNlEg8KB3ZlcnNpb24YASABKAkSHgoWZGlzY292ZXJ5X2Rv",
-            "Y3VtZW50X3VyaRgCIAEoCRIWCg5kaXNjb3ZlcnlfbmFtZRgDIAEoCRIUCgxy",
-            "ZXNvdXJjZV91cmwYBCABKAkSDgoGcGFyZW50GAUgASgJEiUKBGRhdGEYBiAB",
-            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QpUBChljb20uZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxQgpBc3NldFByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXNzZXQvdjE7YXNzZXSqAhVH",
-            "b29nbGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFi",
-            "BnByb3RvMw=="));
+            "Y2xvdWQuYXNzZXQudjEaKWdvb2dsZS9jbG91ZC9vcmdwb2xpY3kvdjEvb3Jn",
+            "cG9saWN5LnByb3RvGhpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxo6Z29v",
+            "Z2xlL2lkZW50aXR5L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3YxL2FjY2Vzc19s",
+            "ZXZlbC5wcm90bxo7Z29vZ2xlL2lkZW50aXR5L2FjY2Vzc2NvbnRleHRtYW5h",
+            "Z2VyL3YxL2FjY2Vzc19wb2xpY3kucHJvdG8aP2dvb2dsZS9pZGVudGl0eS9h",
+            "Y2Nlc3Njb250ZXh0bWFuYWdlci92MS9zZXJ2aWNlX3BlcmltZXRlci5wcm90",
+            "bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90bxocZ29vZ2xlL3Byb3RvYnVm",
+            "L3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
+            "bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKAAQoNVGVtcG9yYWxB",
+            "c3NldBIxCgZ3aW5kb3cYASABKAsyIS5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "VGltZVdpbmRvdxIPCgdkZWxldGVkGAIgASgIEisKBWFzc2V0GAMgASgLMhwu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFzc2V0ImoKClRpbWVXaW5kb3cSLgoK",
+            "c3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "Is0DCgVBc3NldBIMCgRuYW1lGAEgASgJEhIKCmFzc2V0X3R5cGUYAiABKAkS",
+            "MQoIcmVzb3VyY2UYAyABKAsyHy5nb29nbGUuY2xvdWQuYXNzZXQudjEuUmVz",
+            "b3VyY2USKQoKaWFtX3BvbGljeRgEIAEoCzIVLmdvb2dsZS5pYW0udjEuUG9s",
+            "aWN5EjUKCm9yZ19wb2xpY3kYBiADKAsyIS5nb29nbGUuY2xvdWQub3JncG9s",
+            "aWN5LnYxLlBvbGljeRJOCg1hY2Nlc3NfcG9saWN5GAcgASgLMjUuZ29vZ2xl",
+            "LmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLkFjY2Vzc1BvbGlj",
+            "eUgAEkwKDGFjY2Vzc19sZXZlbBgIIAEoCzI0Lmdvb2dsZS5pZGVudGl0eS5h",
+            "Y2Nlc3Njb250ZXh0bWFuYWdlci52MS5BY2Nlc3NMZXZlbEgAElYKEXNlcnZp",
+            "Y2VfcGVyaW1ldGVyGAkgASgLMjkuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2Nv",
+            "bnRleHRtYW5hZ2VyLnYxLlNlcnZpY2VQZXJpbWV0ZXJIAEIXChVhY2Nlc3Nf",
+            "Y29udGV4dF9wb2xpY3kioAEKCFJlc291cmNlEg8KB3ZlcnNpb24YASABKAkS",
+            "HgoWZGlzY292ZXJ5X2RvY3VtZW50X3VyaRgCIAEoCRIWCg5kaXNjb3Zlcnlf",
+            "bmFtZRgDIAEoCRIUCgxyZXNvdXJjZV91cmwYBCABKAkSDgoGcGFyZW50GAUg",
+            "ASgJEiUKBGRhdGEYBiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QpgB",
+            "Chljb20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxQgpBc3NldFByb3RvUAFaOmdv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXNz",
+            "ZXQvdjE7YXNzZXT4AQGqAhVHb29nbGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29n",
+            "bGVcQ2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Orgpolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TemporalAsset), global::Google.Cloud.Asset.V1.TemporalAsset.Parser, new[]{ "Window", "Deleted", "Asset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TimeWindow), global::Google.Cloud.Asset.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "Name", "AssetType", "Resource", "IamPolicy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "Name", "AssetType", "Resource", "IamPolicy", "OrgPolicy", "AccessPolicy", "AccessLevel", "ServicePerimeter" }, new[]{ "AccessContextPolicy" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Resource), global::Google.Cloud.Asset.V1.Resource.Parser, new[]{ "Version", "DiscoveryDocumentUri", "DiscoveryName", "ResourceUrl", "Parent", "Data" }, null, null, null)
           }));
     }
@@ -480,6 +492,19 @@ namespace Google.Cloud.Asset.V1 {
       assetType_ = other.assetType_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       iamPolicy_ = other.iamPolicy_ != null ? other.iamPolicy_.Clone() : null;
+      orgPolicy_ = other.orgPolicy_.Clone();
+      switch (other.AccessContextPolicyCase) {
+        case AccessContextPolicyOneofCase.AccessPolicy:
+          AccessPolicy = other.AccessPolicy.Clone();
+          break;
+        case AccessContextPolicyOneofCase.AccessLevel:
+          AccessLevel = other.AccessLevel.Clone();
+          break;
+        case AccessContextPolicyOneofCase.ServicePerimeter:
+          ServicePerimeter = other.ServicePerimeter.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -549,6 +574,74 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "org_policy" field.</summary>
+    public const int OrgPolicyFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Orgpolicy.V1.Policy> _repeated_orgPolicy_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Orgpolicy.V1.Policy.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Orgpolicy.V1.Policy> orgPolicy_ = new pbc::RepeatedField<global::Google.Cloud.Orgpolicy.V1.Policy>();
+    /// <summary>
+    /// Representation of the Cloud Organization Policy set on an asset. For each
+    /// asset, there could be multiple Organization policies with different
+    /// constraints.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Orgpolicy.V1.Policy> OrgPolicy {
+      get { return orgPolicy_; }
+    }
+
+    /// <summary>Field number for the "access_policy" field.</summary>
+    public const int AccessPolicyFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Identity.AccessContextManager.V1.AccessPolicy AccessPolicy {
+      get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy ? (global::Google.Identity.AccessContextManager.V1.AccessPolicy) accessContextPolicy_ : null; }
+      set {
+        accessContextPolicy_ = value;
+        accessContextPolicyCase_ = value == null ? AccessContextPolicyOneofCase.None : AccessContextPolicyOneofCase.AccessPolicy;
+      }
+    }
+
+    /// <summary>Field number for the "access_level" field.</summary>
+    public const int AccessLevelFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Identity.AccessContextManager.V1.AccessLevel AccessLevel {
+      get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel ? (global::Google.Identity.AccessContextManager.V1.AccessLevel) accessContextPolicy_ : null; }
+      set {
+        accessContextPolicy_ = value;
+        accessContextPolicyCase_ = value == null ? AccessContextPolicyOneofCase.None : AccessContextPolicyOneofCase.AccessLevel;
+      }
+    }
+
+    /// <summary>Field number for the "service_perimeter" field.</summary>
+    public const int ServicePerimeterFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Identity.AccessContextManager.V1.ServicePerimeter ServicePerimeter {
+      get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter ? (global::Google.Identity.AccessContextManager.V1.ServicePerimeter) accessContextPolicy_ : null; }
+      set {
+        accessContextPolicy_ = value;
+        accessContextPolicyCase_ = value == null ? AccessContextPolicyOneofCase.None : AccessContextPolicyOneofCase.ServicePerimeter;
+      }
+    }
+
+    private object accessContextPolicy_;
+    /// <summary>Enum of possible cases for the "access_context_policy" oneof.</summary>
+    public enum AccessContextPolicyOneofCase {
+      None = 0,
+      AccessPolicy = 7,
+      AccessLevel = 8,
+      ServicePerimeter = 9,
+    }
+    private AccessContextPolicyOneofCase accessContextPolicyCase_ = AccessContextPolicyOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AccessContextPolicyOneofCase AccessContextPolicyCase {
+      get { return accessContextPolicyCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearAccessContextPolicy() {
+      accessContextPolicyCase_ = AccessContextPolicyOneofCase.None;
+      accessContextPolicy_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Asset);
@@ -566,6 +659,11 @@ namespace Google.Cloud.Asset.V1 {
       if (AssetType != other.AssetType) return false;
       if (!object.Equals(Resource, other.Resource)) return false;
       if (!object.Equals(IamPolicy, other.IamPolicy)) return false;
+      if(!orgPolicy_.Equals(other.orgPolicy_)) return false;
+      if (!object.Equals(AccessPolicy, other.AccessPolicy)) return false;
+      if (!object.Equals(AccessLevel, other.AccessLevel)) return false;
+      if (!object.Equals(ServicePerimeter, other.ServicePerimeter)) return false;
+      if (AccessContextPolicyCase != other.AccessContextPolicyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -576,6 +674,11 @@ namespace Google.Cloud.Asset.V1 {
       if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (iamPolicy_ != null) hash ^= IamPolicy.GetHashCode();
+      hash ^= orgPolicy_.GetHashCode();
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) hash ^= AccessPolicy.GetHashCode();
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) hash ^= AccessLevel.GetHashCode();
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) hash ^= ServicePerimeter.GetHashCode();
+      hash ^= (int) accessContextPolicyCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -605,6 +708,19 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(IamPolicy);
       }
+      orgPolicy_.WriteTo(output, _repeated_orgPolicy_codec);
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AccessPolicy);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) {
+        output.WriteRawTag(66);
+        output.WriteMessage(AccessLevel);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ServicePerimeter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -624,6 +740,16 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (iamPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IamPolicy);
+      }
+      size += orgPolicy_.CalculateSize(_repeated_orgPolicy_codec);
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPolicy);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessLevel);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServicePerimeter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -654,6 +780,28 @@ namespace Google.Cloud.Asset.V1 {
         }
         IamPolicy.MergeFrom(other.IamPolicy);
       }
+      orgPolicy_.Add(other.orgPolicy_);
+      switch (other.AccessContextPolicyCase) {
+        case AccessContextPolicyOneofCase.AccessPolicy:
+          if (AccessPolicy == null) {
+            AccessPolicy = new global::Google.Identity.AccessContextManager.V1.AccessPolicy();
+          }
+          AccessPolicy.MergeFrom(other.AccessPolicy);
+          break;
+        case AccessContextPolicyOneofCase.AccessLevel:
+          if (AccessLevel == null) {
+            AccessLevel = new global::Google.Identity.AccessContextManager.V1.AccessLevel();
+          }
+          AccessLevel.MergeFrom(other.AccessLevel);
+          break;
+        case AccessContextPolicyOneofCase.ServicePerimeter:
+          if (ServicePerimeter == null) {
+            ServicePerimeter = new global::Google.Identity.AccessContextManager.V1.ServicePerimeter();
+          }
+          ServicePerimeter.MergeFrom(other.ServicePerimeter);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -685,6 +833,37 @@ namespace Google.Cloud.Asset.V1 {
               IamPolicy = new global::Google.Cloud.Iam.V1.Policy();
             }
             input.ReadMessage(IamPolicy);
+            break;
+          }
+          case 50: {
+            orgPolicy_.AddEntriesFrom(input, _repeated_orgPolicy_codec);
+            break;
+          }
+          case 58: {
+            global::Google.Identity.AccessContextManager.V1.AccessPolicy subBuilder = new global::Google.Identity.AccessContextManager.V1.AccessPolicy();
+            if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) {
+              subBuilder.MergeFrom(AccessPolicy);
+            }
+            input.ReadMessage(subBuilder);
+            AccessPolicy = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Identity.AccessContextManager.V1.AccessLevel subBuilder = new global::Google.Identity.AccessContextManager.V1.AccessLevel();
+            if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) {
+              subBuilder.MergeFrom(AccessLevel);
+            }
+            input.ReadMessage(subBuilder);
+            AccessLevel = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Identity.AccessContextManager.V1.ServicePerimeter subBuilder = new global::Google.Identity.AccessContextManager.V1.ServicePerimeter();
+            if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) {
+              subBuilder.MergeFrom(ServicePerimeter);
+            }
+            input.ReadMessage(subBuilder);
+            ServicePerimeter = subBuilder;
             break;
           }
         }

@@ -18,7 +18,6 @@ namespace Google.Cloud.Asset.V1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Asset.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
@@ -43,7 +42,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Parent = "parent-995424086",
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
             };
@@ -64,7 +63,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Parent = "parent-995424086",
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
             };

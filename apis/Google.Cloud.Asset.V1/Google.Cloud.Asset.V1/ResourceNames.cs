@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using gaxres = Google.Api.Gax.ResourceNames;
 using sys = System;
 using linq = System.Linq;
 
@@ -23,30 +22,5 @@ namespace Google.Cloud.Asset.V1
 {
 
 
-    public partial class BatchGetAssetsHistoryRequest
-    {
-        /// <summary>
-        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gaxres::ProjectName ParentAsProjectName
-        {
-            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
-            set { Parent = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
-    public partial class ExportAssetsRequest
-    {
-        /// <summary>
-        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gaxres::ProjectName ParentAsProjectName
-        {
-            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
-            set { Parent = value != null ? value.ToString() : ""; }
-        }
-
-    }
 
 }
