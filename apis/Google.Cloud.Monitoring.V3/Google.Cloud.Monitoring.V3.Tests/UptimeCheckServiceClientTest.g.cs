@@ -45,7 +45,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -68,7 +67,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -91,7 +89,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -113,7 +110,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -136,7 +132,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -161,7 +156,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -186,7 +180,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -209,7 +202,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -231,7 +223,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -254,7 +245,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -277,7 +267,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -299,7 +288,6 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
-                IsInternal = true,
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
