@@ -31,7 +31,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
             "Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5w",
             "cm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90bxogZ29vZ2xlL3R5cGUvcG9z",
-            "dGFsX2FkZHJlc3MucHJvdG8iwQsKB1Byb2ZpbGUSDAoEbmFtZRgBIAEoCRIT",
+            "dGFsX2FkZHJlc3MucHJvdG8ioAsKB1Byb2ZpbGUSDAoEbmFtZRgBIAEoCRIT",
             "CgtleHRlcm5hbF9pZBgCIAEoCRIOCgZzb3VyY2UYAyABKAkSCwoDdXJpGAQg",
             "ASgJEhAKCGdyb3VwX2lkGAUgASgJEi4KCmlzX2hpcmFibGUYBiABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuQm9vbFZhbHVlEi8KC2NyZWF0ZV90aW1lGAcgASgL",
@@ -56,93 +56,93 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "LmNsb3VkLnRhbGVudC52NGJldGExLlB1YmxpY2F0aW9uEjQKB3BhdGVudHMY",
             "FiADKAsyIy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUGF0ZW50EkIK",
             "DmNlcnRpZmljYXRpb25zGBcgAygLMiouZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLkNlcnRpZmljYXRpb24SFAoMYXBwbGljYXRpb25zGC8gAygJEhMK",
-            "C2Fzc2lnbm1lbnRzGDAgAygJElUKEWN1c3RvbV9hdHRyaWJ1dGVzGBogAygL",
-            "MjouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUuQ3VzdG9t",
-            "QXR0cmlidXRlc0VudHJ5EhEKCXByb2Nlc3NlZBgbIAEoCBIXCg9rZXl3b3Jk",
-            "X3NuaXBwZXQYHCABKAkSRQoRZGVyaXZlZF9hZGRyZXNzZXMYQCADKAsyJS5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTG9jYXRpb25CA+BBAxplChVD",
-            "dXN0b21BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjsKBXZhbHVlGAIg",
-            "ASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkN1c3RvbUF0dHJp",
-            "YnV0ZToCOAEitQEKBlJlc3VtZRIZChFzdHJ1Y3R1cmVkX3Jlc3VtZRgBIAEo",
-            "CRJDCgtyZXN1bWVfdHlwZRgCIAEoDjIuLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5SZXN1bWUuUmVzdW1lVHlwZSJLCgpSZXN1bWVUeXBlEhsKF1JF",
-            "U1VNRV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFSFJYTUwQARIVChFPVEhFUl9S",
-            "RVNVTUVfVFlQRRACIrwCCgpQZXJzb25OYW1lEhgKDmZvcm1hdHRlZF9uYW1l",
-            "GAEgASgJSAASVwoPc3RydWN0dXJlZF9uYW1lGAIgASgLMjwuZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLlBlcnNvbk5hbWUuUGVyc29uU3RydWN0dXJl",
-            "ZE5hbWVIABIWCg5wcmVmZXJyZWRfbmFtZRgDIAEoCRqTAQoUUGVyc29uU3Ry",
-            "dWN0dXJlZE5hbWUSEgoKZ2l2ZW5fbmFtZRgBIAEoCRIWCg5wcmVmZXJyZWRf",
-            "bmFtZRgGIAEoCRIWCg5taWRkbGVfaW5pdGlhbBgCIAEoCRITCgtmYW1pbHlf",
-            "bmFtZRgDIAEoCRIQCghzdWZmaXhlcxgEIAMoCRIQCghwcmVmaXhlcxgFIAMo",
-            "CUINCgtwZXJzb25fbmFtZSLZAQoHQWRkcmVzcxI8CgV1c2FnZRgBIAEoDjIt",
-            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db250YWN0SW5mb1VzYWdl",
-            "Eh4KFHVuc3RydWN0dXJlZF9hZGRyZXNzGAIgASgJSAASOAoSc3RydWN0dXJl",
-            "ZF9hZGRyZXNzGAMgASgLMhouZ29vZ2xlLnR5cGUuUG9zdGFsQWRkcmVzc0gA",
-            "EisKB2N1cnJlbnQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVl",
-            "QgkKB2FkZHJlc3MiXAoFRW1haWwSPAoFdXNhZ2UYASABKA4yLS5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQ29udGFjdEluZm9Vc2FnZRIVCg1lbWFp",
-            "bF9hZGRyZXNzGAIgASgJIs8CCgVQaG9uZRI8CgV1c2FnZRgBIAEoDjItLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db250YWN0SW5mb1VzYWdlEjoK",
-            "BHR5cGUYAiABKA4yLC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUGhv",
-            "bmUuUGhvbmVUeXBlEg4KBm51bWJlchgDIAEoCRIWCg53aGVuX2F2YWlsYWJs",
-            "ZRgEIAEoCSKjAQoJUGhvbmVUeXBlEhoKFlBIT05FX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIMCghMQU5ETElORRABEgoKBk1PQklMRRACEgcKA0ZBWBADEgkKBVBB",
-            "R0VSEAQSDgoKVFRZX09SX1RERBAFEg0KCVZPSUNFTUFJTBAGEgsKB1ZJUlRV",
-            "QUwQBxIICgRWT0lQEAgSFgoSTU9CSUxFX09SX0xBTkRMSU5FEAkiGgoLUGVy",
-            "c29uYWxVcmkSCwoDdXJpGAEgASgJIncKFUFkZGl0aW9uYWxDb250YWN0SW5m",
-            "bxI8CgV1c2FnZRgBIAEoDjItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5Db250YWN0SW5mb1VzYWdlEgwKBG5hbWUYAiABKAkSEgoKY29udGFjdF9p",
-            "ZBgDIAEoCSLjAwoQRW1wbG95bWVudFJlY29yZBIlCgpzdGFydF9kYXRlGAEg",
-            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIjCghlbmRfZGF0ZRgCIAEoCzIRLmdv",
-            "b2dsZS50eXBlLkRhdGUSFQoNZW1wbG95ZXJfbmFtZRgDIAEoCRIVCg1kaXZp",
-            "c2lvbl9uYW1lGAQgASgJEjUKB2FkZHJlc3MYBSABKAsyJC5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuQWRkcmVzcxIRCglqb2JfdGl0bGUYBiABKAkS",
-            "FwoPam9iX2Rlc2NyaXB0aW9uGAcgASgJEjEKDWlzX3N1cGVydmlzb3IYCCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEjQKEGlzX3NlbGZfZW1w",
-            "bG95ZWQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEi4KCmlz",
-            "X2N1cnJlbnQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEhkK",
-            "EWpvYl90aXRsZV9zbmlwcGV0GAsgASgJEh8KF2pvYl9kZXNjcmlwdGlvbl9z",
-            "bmlwcGV0GAwgASgJEh0KFWVtcGxveWVyX25hbWVfc25pcHBldBgNIAEoCSLC",
-            "AwoPRWR1Y2F0aW9uUmVjb3JkEiUKCnN0YXJ0X2RhdGUYASABKAsyES5nb29n",
-            "bGUudHlwZS5EYXRlEiMKCGVuZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUu",
-            "RGF0ZRIzChhleHBlY3RlZF9ncmFkdWF0aW9uX2RhdGUYAyABKAsyES5nb29n",
-            "bGUudHlwZS5EYXRlEhMKC3NjaG9vbF9uYW1lGAQgASgJEjUKB2FkZHJlc3MY",
-            "BSABKAsyJC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQWRkcmVzcxIc",
-            "ChJkZWdyZWVfZGVzY3JpcHRpb24YBiABKAlIABJAChFzdHJ1Y3R1cmVkX2Rl",
-            "Z3JlZRgHIAEoCzIjLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5EZWdy",
-            "ZWVIABITCgtkZXNjcmlwdGlvbhgIIAEoCRIuCgppc19jdXJyZW50GAkgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZRIbChNzY2hvb2xfbmFtZV9z",
-            "bmlwcGV0GAogASgJEhYKDmRlZ3JlZV9zbmlwcGV0GAsgASgJQggKBmRlZ3Jl",
-            "ZSJ0CgZEZWdyZWUSPAoLZGVncmVlX3R5cGUYASABKA4yJy5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuRGVncmVlVHlwZRITCgtkZWdyZWVfbmFtZRgC",
-            "IAEoCRIXCg9maWVsZHNfb2Zfc3R1ZHkYAyADKAkiwwIKCEFjdGl2aXR5EhQK",
-            "DGRpc3BsYXlfbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRILCgN1",
-            "cmkYAyABKAkSJgoLY3JlYXRlX2RhdGUYBCABKAsyES5nb29nbGUudHlwZS5E",
-            "YXRlEiYKC3VwZGF0ZV9kYXRlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIU",
-            "Cgx0ZWFtX21lbWJlcnMYBiADKAkSNwoLc2tpbGxzX3VzZWQYByADKAsyIi5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2tpbGwSHQoVYWN0aXZpdHlf",
-            "bmFtZV9zbmlwcGV0GAggASgJEiQKHGFjdGl2aXR5X2Rlc2NyaXB0aW9uX3Nu",
-            "aXBwZXQYCSABKAkSGwoTc2tpbGxzX3VzZWRfc25pcHBldBgKIAMoCSLLAQoL",
-            "UHVibGljYXRpb24SDwoHYXV0aG9ycxgBIAMoCRINCgV0aXRsZRgCIAEoCRIT",
-            "CgtkZXNjcmlwdGlvbhgDIAEoCRIPCgdqb3VybmFsGAQgASgJEg4KBnZvbHVt",
-            "ZRgFIAEoCRIRCglwdWJsaXNoZXIYBiABKAkSKwoQcHVibGljYXRpb25fZGF0",
-            "ZRgHIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSGAoQcHVibGljYXRpb25fdHlw",
-            "ZRgIIAEoCRIMCgRpc2JuGAkgASgJIqkCCgZQYXRlbnQSFAoMZGlzcGxheV9u",
-            "YW1lGAEgASgJEhEKCWludmVudG9ycxgCIAMoCRIVCg1wYXRlbnRfc3RhdHVz",
-            "GAMgASgJEi0KEnBhdGVudF9zdGF0dXNfZGF0ZRgEIAEoCzIRLmdvb2dsZS50",
-            "eXBlLkRhdGUSLQoScGF0ZW50X2ZpbGluZ19kYXRlGAUgASgLMhEuZ29vZ2xl",
-            "LnR5cGUuRGF0ZRIVCg1wYXRlbnRfb2ZmaWNlGAYgASgJEhUKDXBhdGVudF9u",
-            "dW1iZXIYByABKAkSGgoScGF0ZW50X2Rlc2NyaXB0aW9uGAggASgJEjcKC3Nr",
-            "aWxsc191c2VkGAkgAygLMiIuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LlNraWxsQoIBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhRQ",
-            "cm9maWxlUmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKIC",
-            "A0NUU2IGcHJvdG8z"));
+            "NGJldGExLkNlcnRpZmljYXRpb24SVQoRY3VzdG9tX2F0dHJpYnV0ZXMYGiAD",
+            "KAsyOi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZS5DdXN0",
+            "b21BdHRyaWJ1dGVzRW50cnkSFgoJcHJvY2Vzc2VkGBsgASgIQgPgQQMSHAoP",
+            "a2V5d29yZF9zbmlwcGV0GBwgASgJQgPgQQMSRQoRZGVyaXZlZF9hZGRyZXNz",
+            "ZXMYQCADKAsyJS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTG9jYXRp",
+            "b25CA+BBAxplChVDdXN0b21BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJ",
+            "EjsKBXZhbHVlGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkN1c3RvbUF0dHJpYnV0ZToCOAEitQEKBlJlc3VtZRIZChFzdHJ1Y3R1cmVk",
+            "X3Jlc3VtZRgBIAEoCRJDCgtyZXN1bWVfdHlwZRgCIAEoDjIuLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5SZXN1bWUuUmVzdW1lVHlwZSJLCgpSZXN1",
+            "bWVUeXBlEhsKF1JFU1VNRV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFSFJYTUwQ",
+            "ARIVChFPVEhFUl9SRVNVTUVfVFlQRRACIrwCCgpQZXJzb25OYW1lEhgKDmZv",
+            "cm1hdHRlZF9uYW1lGAEgASgJSAASVwoPc3RydWN0dXJlZF9uYW1lGAIgASgL",
+            "MjwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBlcnNvbk5hbWUuUGVy",
+            "c29uU3RydWN0dXJlZE5hbWVIABIWCg5wcmVmZXJyZWRfbmFtZRgDIAEoCRqT",
+            "AQoUUGVyc29uU3RydWN0dXJlZE5hbWUSEgoKZ2l2ZW5fbmFtZRgBIAEoCRIW",
+            "Cg5wcmVmZXJyZWRfbmFtZRgGIAEoCRIWCg5taWRkbGVfaW5pdGlhbBgCIAEo",
+            "CRITCgtmYW1pbHlfbmFtZRgDIAEoCRIQCghzdWZmaXhlcxgEIAMoCRIQCghw",
+            "cmVmaXhlcxgFIAMoCUINCgtwZXJzb25fbmFtZSLZAQoHQWRkcmVzcxI8CgV1",
+            "c2FnZRgBIAEoDjItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db250",
+            "YWN0SW5mb1VzYWdlEh4KFHVuc3RydWN0dXJlZF9hZGRyZXNzGAIgASgJSAAS",
+            "OAoSc3RydWN0dXJlZF9hZGRyZXNzGAMgASgLMhouZ29vZ2xlLnR5cGUuUG9z",
+            "dGFsQWRkcmVzc0gAEisKB2N1cnJlbnQYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuQm9vbFZhbHVlQgkKB2FkZHJlc3MiXAoFRW1haWwSPAoFdXNhZ2UYASAB",
+            "KA4yLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29udGFjdEluZm9V",
+            "c2FnZRIVCg1lbWFpbF9hZGRyZXNzGAIgASgJIs8CCgVQaG9uZRI8CgV1c2Fn",
+            "ZRgBIAEoDjItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db250YWN0",
+            "SW5mb1VzYWdlEjoKBHR5cGUYAiABKA4yLC5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuUGhvbmUuUGhvbmVUeXBlEg4KBm51bWJlchgDIAEoCRIWCg53",
+            "aGVuX2F2YWlsYWJsZRgEIAEoCSKjAQoJUGhvbmVUeXBlEhoKFlBIT05FX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABIMCghMQU5ETElORRABEgoKBk1PQklMRRACEgcK",
+            "A0ZBWBADEgkKBVBBR0VSEAQSDgoKVFRZX09SX1RERBAFEg0KCVZPSUNFTUFJ",
+            "TBAGEgsKB1ZJUlRVQUwQBxIICgRWT0lQEAgSFgoSTU9CSUxFX09SX0xBTkRM",
+            "SU5FEAkiGgoLUGVyc29uYWxVcmkSCwoDdXJpGAEgASgJIncKFUFkZGl0aW9u",
+            "YWxDb250YWN0SW5mbxI8CgV1c2FnZRgBIAEoDjItLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Db250YWN0SW5mb1VzYWdlEgwKBG5hbWUYAiABKAkS",
+            "EgoKY29udGFjdF9pZBgDIAEoCSLyAwoQRW1wbG95bWVudFJlY29yZBIlCgpz",
+            "dGFydF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIjCghlbmRfZGF0",
+            "ZRgCIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSFQoNZW1wbG95ZXJfbmFtZRgD",
+            "IAEoCRIVCg1kaXZpc2lvbl9uYW1lGAQgASgJEjUKB2FkZHJlc3MYBSABKAsy",
+            "JC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQWRkcmVzcxIRCglqb2Jf",
+            "dGl0bGUYBiABKAkSFwoPam9iX2Rlc2NyaXB0aW9uGAcgASgJEjEKDWlzX3N1",
+            "cGVydmlzb3IYCCABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEjQK",
+            "EGlzX3NlbGZfZW1wbG95ZWQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuQm9v",
+            "bFZhbHVlEi4KCmlzX2N1cnJlbnQYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "Qm9vbFZhbHVlEh4KEWpvYl90aXRsZV9zbmlwcGV0GAsgASgJQgPgQQMSJAoX",
+            "am9iX2Rlc2NyaXB0aW9uX3NuaXBwZXQYDCABKAlCA+BBAxIiChVlbXBsb3ll",
+            "cl9uYW1lX3NuaXBwZXQYDSABKAlCA+BBAyLMAwoPRWR1Y2F0aW9uUmVjb3Jk",
+            "EiUKCnN0YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlEiMKCGVu",
+            "ZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIzChhleHBlY3RlZF9n",
+            "cmFkdWF0aW9uX2RhdGUYAyABKAsyES5nb29nbGUudHlwZS5EYXRlEhMKC3Nj",
+            "aG9vbF9uYW1lGAQgASgJEjUKB2FkZHJlc3MYBSABKAsyJC5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuQWRkcmVzcxIcChJkZWdyZWVfZGVzY3JpcHRp",
+            "b24YBiABKAlIABJAChFzdHJ1Y3R1cmVkX2RlZ3JlZRgHIAEoCzIjLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5EZWdyZWVIABITCgtkZXNjcmlwdGlv",
+            "bhgIIAEoCRIuCgppc19jdXJyZW50GAkgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LkJvb2xWYWx1ZRIgChNzY2hvb2xfbmFtZV9zbmlwcGV0GAogASgJQgPgQQMS",
+            "GwoOZGVncmVlX3NuaXBwZXQYCyABKAlCA+BBA0IICgZkZWdyZWUidAoGRGVn",
+            "cmVlEjwKC2RlZ3JlZV90eXBlGAEgASgOMicuZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLkRlZ3JlZVR5cGUSEwoLZGVncmVlX25hbWUYAiABKAkSFwoP",
+            "ZmllbGRzX29mX3N0dWR5GAMgAygJItICCghBY3Rpdml0eRIUCgxkaXNwbGF5",
+            "X25hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSCwoDdXJpGAMgASgJ",
+            "EiYKC2NyZWF0ZV9kYXRlGAQgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRImCgt1",
+            "cGRhdGVfZGF0ZRgFIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSFAoMdGVhbV9t",
+            "ZW1iZXJzGAYgAygJEjcKC3NraWxsc191c2VkGAcgAygLMiIuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLlNraWxsEiIKFWFjdGl2aXR5X25hbWVfc25p",
+            "cHBldBgIIAEoCUID4EEDEikKHGFjdGl2aXR5X2Rlc2NyaXB0aW9uX3NuaXBw",
+            "ZXQYCSABKAlCA+BBAxIgChNza2lsbHNfdXNlZF9zbmlwcGV0GAogAygJQgPg",
+            "QQMiywEKC1B1YmxpY2F0aW9uEg8KB2F1dGhvcnMYASADKAkSDQoFdGl0bGUY",
+            "AiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDwoHam91cm5hbBgEIAEoCRIO",
+            "CgZ2b2x1bWUYBSABKAkSEQoJcHVibGlzaGVyGAYgASgJEisKEHB1YmxpY2F0",
+            "aW9uX2RhdGUYByABKAsyES5nb29nbGUudHlwZS5EYXRlEhgKEHB1YmxpY2F0",
+            "aW9uX3R5cGUYCCABKAkSDAoEaXNibhgJIAEoCSKpAgoGUGF0ZW50EhQKDGRp",
+            "c3BsYXlfbmFtZRgBIAEoCRIRCglpbnZlbnRvcnMYAiADKAkSFQoNcGF0ZW50",
+            "X3N0YXR1cxgDIAEoCRItChJwYXRlbnRfc3RhdHVzX2RhdGUYBCABKAsyES5n",
+            "b29nbGUudHlwZS5EYXRlEi0KEnBhdGVudF9maWxpbmdfZGF0ZRgFIAEoCzIR",
+            "Lmdvb2dsZS50eXBlLkRhdGUSFQoNcGF0ZW50X29mZmljZRgGIAEoCRIVCg1w",
+            "YXRlbnRfbnVtYmVyGAcgASgJEhoKEnBhdGVudF9kZXNjcmlwdGlvbhgIIAEo",
+            "CRI3Cgtza2lsbHNfdXNlZBgJIAMoCzIiLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRiZXRhMS5Ta2lsbEKCAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMUIUUHJvZmlsZVJlc291cmNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0",
+            "YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "Resume", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "Applications", "Assignments", "CustomAttributes", "Processed", "KeywordSnippet", "DerivedAddresses" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "Resume", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "CustomAttributes", "Processed", "KeywordSnippet", "DerivedAddresses" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Resume), global::Google.Cloud.Talent.V4Beta1.Resume.Parser, new[]{ "StructuredResume", "ResumeType" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName), global::Google.Cloud.Talent.V4Beta1.PersonName.Parser, new[]{ "FormattedName", "StructuredName", "PreferredName" }, new[]{ "PersonName" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName), global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName.Parser, new[]{ "GivenName", "PreferredName", "MiddleInitial", "FamilyName", "Suffixes", "Prefixes" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Address), global::Google.Cloud.Talent.V4Beta1.Address.Parser, new[]{ "Usage", "UnstructuredAddress", "StructuredAddress", "Current" }, new[]{ "Address" }, null, null),
@@ -213,8 +213,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       publications_ = other.publications_.Clone();
       patents_ = other.patents_.Clone();
       certifications_ = other.certifications_.Clone();
-      applications_ = other.applications_.Clone();
-      assignments_ = other.assignments_.Clone();
       customAttributes_ = other.customAttributes_.Clone();
       processed_ = other.processed_;
       keywordSnippet_ = other.keywordSnippet_;
@@ -237,7 +235,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
-    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+    /// for example, "projects/foo/tenants/bar/profiles/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -251,9 +249,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExternalIdFieldNumber = 2;
     private string externalId_ = "";
     /// <summary>
-    /// Optional. Profile's id in client system if available. This value is not
-    /// required to be unique to each profile. However, providing unique values
-    /// makes it easier to specify individual profiles when filing support tickets.
+    /// Profile's id in client system, if available. This value is unique for each
+    /// profile inside a tenant. An error is thrown if another profile with the
+    /// same external_id is created.
     ///
     /// The maximum number of bytes allowed is 100.
     /// </summary>
@@ -269,7 +267,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SourceFieldNumber = 3;
     private string source_ = "";
     /// <summary>
-    /// Optional. The source description indicating where the profile is acquired.
+    /// The source description indicating where the profile is acquired.
     ///
     /// For example, if a candidate profile is acquired from a resume, the user can
     /// input "resume" here to indicate the source.
@@ -288,8 +286,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UriFieldNumber = 4;
     private string uri_ = "";
     /// <summary>
-    /// Optional. The URI set by clients that links to this profile's client-side
-    /// copy.
+    /// The URI set by clients that links to this profile's client-side copy.
     ///
     /// The maximum number of bytes allowed is 4000.
     /// </summary>
@@ -305,8 +302,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int GroupIdFieldNumber = 5;
     private string groupId_ = "";
     /// <summary>
-    /// Optional. The cluster id of the profile to associate with other profile(s)
-    /// for the same candidate.
+    /// The cluster id of the profile to associate with other profile(s) for the
+    /// same candidate.
     ///
     /// This field should be generated by the customer. If a value is not provided,
     /// a random UUID is assigned to this field of the profile.
@@ -332,7 +329,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_isHirable_codec = pb::FieldCodec.ForStructWrapper<bool>(50);
     private bool? isHirable_;
     /// <summary>
-    /// Optional. Indicates the hirable status of the candidate.
+    /// Indicates the hirable status of the candidate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? IsHirable {
@@ -347,7 +344,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Optional. The timestamp when the profile was first created at this source.
+    /// The timestamp when the profile was first created at this source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -361,7 +358,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UpdateTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Optional. The timestamp when the profile was last updated at this source.
+    /// The timestamp when the profile was last updated at this source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -375,7 +372,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ResumeFieldNumber = 53;
     private global::Google.Cloud.Talent.V4Beta1.Resume resume_;
     /// <summary>
-    /// Optional. The resume representing this profile.
+    /// The resume representing this profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Resume Resume {
@@ -391,7 +388,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Talent.V4Beta1.PersonName.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonName> personNames_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonName>();
     /// <summary>
-    /// Optional. The names of the candidate this profile references.
+    /// The names of the candidate this profile references.
     ///
     /// Currently only one person name is supported.
     /// </summary>
@@ -406,7 +403,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(98, global::Google.Cloud.Talent.V4Beta1.Address.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Address> addresses_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Address>();
     /// <summary>
-    /// Optional. The candidate's postal addresses. It's highly recommended to
+    /// The candidate's postal addresses. It's highly recommended to
     /// input this information as accurately as possible to help improve search
     /// quality. Here are some recommendations:
     ///
@@ -446,7 +443,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(106, global::Google.Cloud.Talent.V4Beta1.Email.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Email> emailAddresses_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Email>();
     /// <summary>
-    /// Optional. The candidate's email addresses.
+    /// The candidate's email addresses.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Email> EmailAddresses {
@@ -459,7 +456,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Cloud.Talent.V4Beta1.Phone.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Phone> phoneNumbers_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Phone>();
     /// <summary>
-    /// Optional. The candidate's phone number(s).
+    /// The candidate's phone number(s).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Phone> PhoneNumbers {
@@ -472,7 +469,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(122, global::Google.Cloud.Talent.V4Beta1.PersonalUri.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonalUri> personalUris_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonalUri>();
     /// <summary>
-    /// Optional. The candidate's personal URIs.
+    /// The candidate's personal URIs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.PersonalUri> PersonalUris {
@@ -485,7 +482,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(130, global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo> additionalContactInfo_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo>();
     /// <summary>
-    /// Optional. Available contact information besides
+    /// Available contact information besides
     /// [addresses][google.cloud.talent.v4beta1.Profile.addresses],
     /// [email_addresses][google.cloud.talent.v4beta1.Profile.email_addresses],
     /// [phone_numbers][google.cloud.talent.v4beta1.Profile.phone_numbers] and
@@ -503,9 +500,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(138, global::Google.Cloud.Talent.V4Beta1.EmploymentRecord.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentRecord> employmentRecords_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentRecord>();
     /// <summary>
-    /// Optional. The employment history records of the candidate. It's highly
-    /// recommended to input this information as accurately as possible to help
-    /// improve search quality. Here are some recommendations:
+    /// The employment history records of the candidate. It's highly recommended
+    /// to input this information as accurately as possible to help improve search
+    /// quality. Here are some recommendations:
     ///
     /// * Specify the start and end dates of the employment records.
     /// * List different employment types separately, no matter how minor the
@@ -530,9 +527,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(146, global::Google.Cloud.Talent.V4Beta1.EducationRecord.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EducationRecord> educationRecords_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EducationRecord>();
     /// <summary>
-    /// Optional. The education history record of the candidate. It's highly
-    /// recommended to input this information as accurately as possible to help
-    /// improve search quality. Here are some recommendations:
+    /// The education history record of the candidate. It's highly recommended to
+    /// input this information as accurately as possible to help improve search
+    /// quality. Here are some recommendations:
     ///
     /// * Specify the start and end dates of the education records.
     /// * List each education type separately, no matter how minor the change is.
@@ -556,8 +553,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(154, global::Google.Cloud.Talent.V4Beta1.Skill.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill> skills_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill>();
     /// <summary>
-    /// Optional. The skill set of the candidate. It's highly recommended to
-    /// provide as much information as possible to help improve the search quality.
+    /// The skill set of the candidate. It's highly recommended to provide as
+    /// much information as possible to help improve the search quality.
     ///
     /// The limitation for max number of skills is 500.
     /// </summary>
@@ -572,9 +569,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(162, global::Google.Cloud.Talent.V4Beta1.Activity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Activity> activities_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Activity>();
     /// <summary>
-    /// Optional. The individual or collaborative activities which the candidate
-    /// has participated in, for example, open-source projects, class assignments
-    /// that aren't listed in
+    /// The individual or collaborative activities which the candidate has
+    /// participated in, for example, open-source projects, class assignments that
+    /// aren't listed in
     /// [employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
     ///
     /// The limitation for max number of activities is 50.
@@ -590,7 +587,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(170, global::Google.Cloud.Talent.V4Beta1.Publication.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Publication> publications_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Publication>();
     /// <summary>
-    /// Optional. The publications published by the candidate.
+    /// The publications published by the candidate.
     ///
     /// The limitation for max number of publications is 50.
     /// </summary>
@@ -605,7 +602,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(178, global::Google.Cloud.Talent.V4Beta1.Patent.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Patent> patents_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Patent>();
     /// <summary>
-    /// Optional. The patents acquired by the candidate.
+    /// The patents acquired by the candidate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Patent> Patents {
@@ -618,37 +615,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(186, global::Google.Cloud.Talent.V4Beta1.Certification.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Certification> certifications_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Certification>();
     /// <summary>
-    /// Optional. The certifications acquired by the candidate.
+    /// The certifications acquired by the candidate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Certification> Certifications {
       get { return certifications_; }
-    }
-
-    /// <summary>Field number for the "applications" field.</summary>
-    public const int ApplicationsFieldNumber = 47;
-    private static readonly pb::FieldCodec<string> _repeated_applications_codec
-        = pb::FieldCodec.ForString(378);
-    private readonly pbc::RepeatedField<string> applications_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Output only. The resource names of the candidate's applications.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Applications {
-      get { return applications_; }
-    }
-
-    /// <summary>Field number for the "assignments" field.</summary>
-    public const int AssignmentsFieldNumber = 48;
-    private static readonly pb::FieldCodec<string> _repeated_assignments_codec
-        = pb::FieldCodec.ForString(386);
-    private readonly pbc::RepeatedField<string> assignments_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Output only. The resource names of the candidate's assignments.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Assignments {
-      get { return assignments_; }
     }
 
     /// <summary>Field number for the "custom_attributes" field.</summary>
@@ -657,9 +628,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser), 210);
     private readonly pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute> customAttributes_ = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>();
     /// <summary>
-    /// Optional. A map of fields to hold both filterable and non-filterable custom
-    /// profile attributes that aren't covered by the provided structured fields.
-    /// See [CustomAttribute][google.cloud.talent.v4beta1.CustomAttribute] for more
+    /// A map of fields to hold both filterable and non-filterable custom profile
+    /// attributes that aren't covered by the provided structured fields. See
+    /// [CustomAttribute][google.cloud.talent.v4beta1.CustomAttribute] for more
     /// details.
     ///
     /// At most 100 filterable and at most 100 unfilterable keys are supported. If
@@ -768,8 +739,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if(!publications_.Equals(other.publications_)) return false;
       if(!patents_.Equals(other.patents_)) return false;
       if(!certifications_.Equals(other.certifications_)) return false;
-      if(!applications_.Equals(other.applications_)) return false;
-      if(!assignments_.Equals(other.assignments_)) return false;
       if (!CustomAttributes.Equals(other.CustomAttributes)) return false;
       if (Processed != other.Processed) return false;
       if (KeywordSnippet != other.KeywordSnippet) return false;
@@ -802,8 +771,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= publications_.GetHashCode();
       hash ^= patents_.GetHashCode();
       hash ^= certifications_.GetHashCode();
-      hash ^= applications_.GetHashCode();
-      hash ^= assignments_.GetHashCode();
       hash ^= CustomAttributes.GetHashCode();
       if (Processed != false) hash ^= Processed.GetHashCode();
       if (KeywordSnippet.Length != 0) hash ^= KeywordSnippet.GetHashCode();
@@ -874,8 +841,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(226, 1);
         output.WriteString(KeywordSnippet);
       }
-      applications_.WriteTo(output, _repeated_applications_codec);
-      assignments_.WriteTo(output, _repeated_assignments_codec);
       if (resume_ != null) {
         output.WriteRawTag(170, 3);
         output.WriteMessage(Resume);
@@ -929,8 +894,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       size += publications_.CalculateSize(_repeated_publications_codec);
       size += patents_.CalculateSize(_repeated_patents_codec);
       size += certifications_.CalculateSize(_repeated_certifications_codec);
-      size += applications_.CalculateSize(_repeated_applications_codec);
-      size += assignments_.CalculateSize(_repeated_assignments_codec);
       size += customAttributes_.CalculateSize(_map_customAttributes_codec);
       if (Processed != false) {
         size += 2 + 1;
@@ -1001,8 +964,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       publications_.Add(other.publications_);
       patents_.Add(other.patents_);
       certifications_.Add(other.certifications_);
-      applications_.Add(other.applications_);
-      assignments_.Add(other.assignments_);
       customAttributes_.Add(other.customAttributes_);
       if (other.Processed != false) {
         Processed = other.Processed;
@@ -1127,14 +1088,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
             KeywordSnippet = input.ReadString();
             break;
           }
-          case 378: {
-            applications_.AddEntriesFrom(input, _repeated_applications_codec);
-            break;
-          }
-          case 386: {
-            assignments_.AddEntriesFrom(input, _repeated_assignments_codec);
-            break;
-          }
           case 426: {
             if (resume_ == null) {
               Resume = new global::Google.Cloud.Talent.V4Beta1.Resume();
@@ -1194,7 +1147,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StructuredResumeFieldNumber = 1;
     private string structuredResume_ = "";
     /// <summary>
-    /// Optional. Users can create a profile with only this field field, if
+    /// Users can create a profile with only this field field, if
     /// [resume_type][google.cloud.talent.v4beta1.Resume.resume_type] is
     /// [HRXML][google.cloud.talent.v4beta1.Resume.ResumeType.HRXML]. For example,
     /// the API parses this field and creates a profile with all structured fields
@@ -1219,7 +1172,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ResumeTypeFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType resumeType_ = 0;
     /// <summary>
-    /// Optional. The format of
+    /// The format of
     /// [structured_resume][google.cloud.talent.v4beta1.Resume.structured_resume].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1406,8 +1359,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "formatted_name" field.</summary>
     public const int FormattedNameFieldNumber = 1;
     /// <summary>
-    /// Optional. A string represents a person's full name. For example, "Dr.
-    /// John Smith".
+    /// A string represents a person's full name. For example, "Dr. John Smith".
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -1423,8 +1375,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "structured_name" field.</summary>
     public const int StructuredNameFieldNumber = 2;
     /// <summary>
-    /// Optional. A person's name in a structured way (last name, first name,
-    /// suffix, and so on.)
+    /// A person's name in a structured way (last name, first name, suffix, and
+    /// so on.)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName StructuredName {
@@ -1439,7 +1391,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PreferredNameFieldNumber = 3;
     private string preferredName_ = "";
     /// <summary>
-    /// Optional. Preferred name for the person. This field is ignored if
+    /// Preferred name for the person. This field is ignored if
     /// [structured_name][google.cloud.talent.v4beta1.PersonName.structured_name]
     /// is provided.
     ///
@@ -1649,7 +1601,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int GivenNameFieldNumber = 1;
         private string givenName_ = "";
         /// <summary>
-        /// Optional. Given/first name.
+        /// Given/first name.
         ///
         /// It's derived from
         /// [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name]
@@ -1669,7 +1621,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int PreferredNameFieldNumber = 6;
         private string preferredName_ = "";
         /// <summary>
-        /// Optional. Preferred given/first name or nickname.
+        /// Preferred given/first name or nickname.
         ///
         /// Number of characters allowed is 100.
         /// </summary>
@@ -1685,7 +1637,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int MiddleInitialFieldNumber = 2;
         private string middleInitial_ = "";
         /// <summary>
-        /// Optional. Middle initial.
+        /// Middle initial.
         ///
         /// It's derived from
         /// [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name]
@@ -1705,7 +1657,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int FamilyNameFieldNumber = 3;
         private string familyName_ = "";
         /// <summary>
-        /// Optional. Family/last name.
+        /// Family/last name.
         ///
         /// It's derived from
         /// [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name]
@@ -1727,7 +1679,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForString(34);
         private readonly pbc::RepeatedField<string> suffixes_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. Suffixes.
+        /// Suffixes.
         ///
         /// Number of characters allowed is 20.
         /// </summary>
@@ -1742,7 +1694,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForString(42);
         private readonly pbc::RepeatedField<string> prefixes_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. Prefixes.
+        /// Prefixes.
         ///
         /// Number of characters allowed is 20.
         /// </summary>
@@ -1957,7 +1909,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UsageFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
     /// <summary>
-    /// Optional. The usage of the address. For example, SCHOOL, WORK, PERSONAL.
+    /// The usage of the address. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage Usage {
@@ -1970,7 +1922,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "unstructured_address" field.</summary>
     public const int UnstructuredAddressFieldNumber = 2;
     /// <summary>
-    /// Optional. Unstructured address.
+    /// Unstructured address.
     ///
     /// For example, "1600 Amphitheatre Pkwy, Mountain View, CA 94043",
     /// "Sunnyvale, California".
@@ -1989,8 +1941,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "structured_address" field.</summary>
     public const int StructuredAddressFieldNumber = 3;
     /// <summary>
-    /// Optional. Structured address that contains street address, city, state,
-    /// country, and so on.
+    /// Structured address that contains street address, city, state, country,
+    /// and so on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.PostalAddress StructuredAddress {
@@ -2006,7 +1958,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_current_codec = pb::FieldCodec.ForStructWrapper<bool>(34);
     private bool? current_;
     /// <summary>
-    /// Optional. Indicates if it's the person's current address.
+    /// Indicates if it's the person's current address.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? Current {
@@ -2227,8 +2179,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UsageFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
     /// <summary>
-    /// Optional. The usage of the email address. For example, SCHOOL, WORK,
-    /// PERSONAL.
+    /// The usage of the email address. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage Usage {
@@ -2242,7 +2193,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EmailAddressFieldNumber = 2;
     private string emailAddress_ = "";
     /// <summary>
-    /// Optional. Email address.
+    /// Email address.
     ///
     /// Number of characters allowed is 4,000.
     /// </summary>
@@ -2398,7 +2349,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UsageFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
     /// <summary>
-    /// Optional. The usage of the phone. For example, SCHOOL, WORK, PERSONAL.
+    /// The usage of the phone. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage Usage {
@@ -2412,7 +2363,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TypeFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType type_ = 0;
     /// <summary>
-    /// Optional. The phone type. For example, LANDLINE, MOBILE, FAX.
+    /// The phone type. For example, LANDLINE, MOBILE, FAX.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType Type {
@@ -2426,7 +2377,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NumberFieldNumber = 3;
     private string number_ = "";
     /// <summary>
-    /// Optional. Phone number.
+    /// Phone number.
     ///
     /// Any phone formats are supported and only exact matches are performed on
     /// searches. For example, if a phone number in profile is provided in the
@@ -2447,8 +2398,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int WhenAvailableFieldNumber = 4;
     private string whenAvailable_ = "";
     /// <summary>
-    /// Optional. When this number is available. Any descriptive string is
-    /// expected.
+    /// When this number is available. Any descriptive string is expected.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -2693,7 +2643,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Optional. The personal URI.
+    /// The personal URI.
     ///
     /// Number of characters allowed is 4,000.
     /// </summary>
@@ -2833,8 +2783,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UsageFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
     /// <summary>
-    /// Optional. The usage of this contact method. For example, SCHOOL, WORK,
-    /// PERSONAL.
+    /// The usage of this contact method. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage Usage {
@@ -2848,7 +2797,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// Optional. The name of the contact method.
+    /// The name of the contact method.
     ///
     /// For example, "hangout", "skype".
     ///
@@ -2866,7 +2815,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ContactIdFieldNumber = 3;
     private string contactId_ = "";
     /// <summary>
-    /// Optional. The contact id.
+    /// The contact id.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -3047,7 +2996,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StartDateFieldNumber = 1;
     private global::Google.Type.Date startDate_;
     /// <summary>
-    /// Optional. Start date of the employment.
+    /// Start date of the employment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date StartDate {
@@ -3061,7 +3010,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EndDateFieldNumber = 2;
     private global::Google.Type.Date endDate_;
     /// <summary>
-    /// Optional. End date of the employment.
+    /// End date of the employment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date EndDate {
@@ -3075,7 +3024,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EmployerNameFieldNumber = 3;
     private string employerName_ = "";
     /// <summary>
-    /// Optional. The name of the employer company/organization.
+    /// The name of the employer company/organization.
     ///
     /// For example, "Google", "Alphabet", and so on.
     ///
@@ -3093,7 +3042,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DivisionNameFieldNumber = 4;
     private string divisionName_ = "";
     /// <summary>
-    /// Optional. The division name of the employment.
+    /// The division name of the employment.
     ///
     /// For example, division, department, client, and so on.
     ///
@@ -3111,7 +3060,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AddressFieldNumber = 5;
     private global::Google.Cloud.Talent.V4Beta1.Address address_;
     /// <summary>
-    /// Optional. The physical address of the employer.
+    /// The physical address of the employer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Address Address {
@@ -3125,7 +3074,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobTitleFieldNumber = 6;
     private string jobTitle_ = "";
     /// <summary>
-    /// Optional. The job title of the employment.
+    /// The job title of the employment.
     ///
     /// For example, "Software Engineer", "Data Scientist", and so on.
     ///
@@ -3143,7 +3092,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobDescriptionFieldNumber = 7;
     private string jobDescription_ = "";
     /// <summary>
-    /// Optional. The description of job content.
+    /// The description of job content.
     ///
     /// Number of characters allowed is 100,000.
     /// </summary>
@@ -3160,7 +3109,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_isSupervisor_codec = pb::FieldCodec.ForStructWrapper<bool>(66);
     private bool? isSupervisor_;
     /// <summary>
-    /// Optional. If the jobs is a supervisor position.
+    /// If the jobs is a supervisor position.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? IsSupervisor {
@@ -3176,7 +3125,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_isSelfEmployed_codec = pb::FieldCodec.ForStructWrapper<bool>(74);
     private bool? isSelfEmployed_;
     /// <summary>
-    /// Optional. If this employment is self-employed.
+    /// If this employment is self-employed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? IsSelfEmployed {
@@ -3192,7 +3141,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_isCurrent_codec = pb::FieldCodec.ForStructWrapper<bool>(82);
     private bool? isCurrent_;
     /// <summary>
-    /// Optional. If this employment is current.
+    /// If this employment is current.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? IsCurrent {
@@ -3621,7 +3570,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StartDateFieldNumber = 1;
     private global::Google.Type.Date startDate_;
     /// <summary>
-    /// Optional. The start date of the education.
+    /// The start date of the education.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date StartDate {
@@ -3635,7 +3584,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EndDateFieldNumber = 2;
     private global::Google.Type.Date endDate_;
     /// <summary>
-    /// Optional. The end date of the education.
+    /// The end date of the education.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date EndDate {
@@ -3649,7 +3598,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExpectedGraduationDateFieldNumber = 3;
     private global::Google.Type.Date expectedGraduationDate_;
     /// <summary>
-    /// Optional. The expected graduation date if currently pursuing a degree.
+    /// The expected graduation date if currently pursuing a degree.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date ExpectedGraduationDate {
@@ -3663,7 +3612,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SchoolNameFieldNumber = 4;
     private string schoolName_ = "";
     /// <summary>
-    /// Optional. The name of the school or institution.
+    /// The name of the school or institution.
     ///
     /// For example, "Stanford University", "UC Berkeley", and so on.
     ///
@@ -3681,7 +3630,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AddressFieldNumber = 5;
     private global::Google.Cloud.Talent.V4Beta1.Address address_;
     /// <summary>
-    /// Optional. The physical address of the education institution.
+    /// The physical address of the education institution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Address Address {
@@ -3694,7 +3643,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "degree_description" field.</summary>
     public const int DegreeDescriptionFieldNumber = 6;
     /// <summary>
-    /// Optional. The full description of the degree.
+    /// The full description of the degree.
     ///
     /// For example, "Master of Science in Computer Science", "B.S in Math".
     ///
@@ -3712,7 +3661,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "structured_degree" field.</summary>
     public const int StructuredDegreeFieldNumber = 7;
     /// <summary>
-    /// Optional. The structured notation of the degree.
+    /// The structured notation of the degree.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Degree StructuredDegree {
@@ -3727,7 +3676,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DescriptionFieldNumber = 8;
     private string description_ = "";
     /// <summary>
-    /// Optional. The description of the education.
+    /// The description of the education.
     ///
     /// Number of characters allowed is 100,000.
     /// </summary>
@@ -3744,7 +3693,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_isCurrent_codec = pb::FieldCodec.ForStructWrapper<bool>(74);
     private bool? isCurrent_;
     /// <summary>
-    /// Optional. If this education is current.
+    /// If this education is current.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? IsCurrent {
@@ -4138,7 +4087,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DegreeTypeFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.DegreeType degreeType_ = 0;
     /// <summary>
-    /// Optional. ISCED degree type.
+    /// ISCED degree type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.DegreeType DegreeType {
@@ -4152,7 +4101,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DegreeNameFieldNumber = 2;
     private string degreeName_ = "";
     /// <summary>
-    /// Optional. Full Degree name.
+    /// Full Degree name.
     ///
     /// For example, "B.S.", "Master of Arts", and so on.
     ///
@@ -4172,7 +4121,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> fieldsOfStudy_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Fields of study for the degree.
+    /// Fields of study for the degree.
     ///
     /// For example, "Computer science", "engineering".
     ///
@@ -4344,7 +4293,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. Activity display name.
+    /// Activity display name.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4360,7 +4309,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// Optional. Activity description.
+    /// Activity description.
     ///
     /// Number of characters allowed is 100,000.
     /// </summary>
@@ -4376,7 +4325,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UriFieldNumber = 3;
     private string uri_ = "";
     /// <summary>
-    /// Optional. Activity URI.
+    /// Activity URI.
     ///
     /// Number of characters allowed is 4,000.
     /// </summary>
@@ -4392,7 +4341,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CreateDateFieldNumber = 4;
     private global::Google.Type.Date createDate_;
     /// <summary>
-    /// Optional. The first creation date of the activity.
+    /// The first creation date of the activity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date CreateDate {
@@ -4406,7 +4355,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UpdateDateFieldNumber = 5;
     private global::Google.Type.Date updateDate_;
     /// <summary>
-    /// Optional. The last update date of the activity.
+    /// The last update date of the activity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date UpdateDate {
@@ -4422,7 +4371,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> teamMembers_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of team members involved in this activity.
+    /// A list of team members involved in this activity.
     ///
     /// Number of characters allowed is 100.
     ///
@@ -4439,7 +4388,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Talent.V4Beta1.Skill.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill> skillsUsed_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill>();
     /// <summary>
-    /// Optional. A list of skills used in this activity.
+    /// A list of skills used in this activity.
     ///
     /// The limitation for max number of skills used is 50.
     /// </summary>
@@ -4771,7 +4720,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> authors_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of author names.
+    /// A list of author names.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4784,7 +4733,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TitleFieldNumber = 2;
     private string title_ = "";
     /// <summary>
-    /// Optional. The title of the publication.
+    /// The title of the publication.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4800,7 +4749,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Optional. The description of the publication.
+    /// The description of the publication.
     ///
     /// Number of characters allowed is 100,000.
     /// </summary>
@@ -4816,7 +4765,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JournalFieldNumber = 4;
     private string journal_ = "";
     /// <summary>
-    /// Optional. The journal name of the publication.
+    /// The journal name of the publication.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4832,7 +4781,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int VolumeFieldNumber = 5;
     private string volume_ = "";
     /// <summary>
-    /// Optional. Volume number.
+    /// Volume number.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4848,7 +4797,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PublisherFieldNumber = 6;
     private string publisher_ = "";
     /// <summary>
-    /// Optional. The publisher of the journal.
+    /// The publisher of the journal.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4864,7 +4813,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PublicationDateFieldNumber = 7;
     private global::Google.Type.Date publicationDate_;
     /// <summary>
-    /// Optional. The publication date.
+    /// The publication date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date PublicationDate {
@@ -4878,7 +4827,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PublicationTypeFieldNumber = 8;
     private string publicationType_ = "";
     /// <summary>
-    /// Optional. The publication type.
+    /// The publication type.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4894,7 +4843,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int IsbnFieldNumber = 9;
     private string isbn_ = "";
     /// <summary>
-    /// Optional. ISBN number.
+    /// ISBN number.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -5166,7 +5115,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. Name of the patent.
+    /// Name of the patent.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -5184,7 +5133,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> inventors_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of inventors' names.
+    /// A list of inventors' names.
     ///
     /// Number of characters allowed for each is 100.
     /// </summary>
@@ -5197,7 +5146,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PatentStatusFieldNumber = 3;
     private string patentStatus_ = "";
     /// <summary>
-    /// Optional. The status of the patent.
+    /// The status of the patent.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -5213,7 +5162,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PatentStatusDateFieldNumber = 4;
     private global::Google.Type.Date patentStatusDate_;
     /// <summary>
-    /// Optional. The date the last time the status of the patent was checked.
+    /// The date the last time the status of the patent was checked.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date PatentStatusDate {
@@ -5227,7 +5176,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PatentFilingDateFieldNumber = 5;
     private global::Google.Type.Date patentFilingDate_;
     /// <summary>
-    /// Optional. The date that the patent was filed.
+    /// The date that the patent was filed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date PatentFilingDate {
@@ -5241,7 +5190,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PatentOfficeFieldNumber = 6;
     private string patentOffice_ = "";
     /// <summary>
-    /// Optional. The name of the patent office.
+    /// The name of the patent office.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -5257,7 +5206,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PatentNumberFieldNumber = 7;
     private string patentNumber_ = "";
     /// <summary>
-    /// Optional. The number of the patent.
+    /// The number of the patent.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -5273,7 +5222,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PatentDescriptionFieldNumber = 8;
     private string patentDescription_ = "";
     /// <summary>
-    /// Optional. The description of the patent.
+    /// The description of the patent.
     ///
     /// Number of characters allowed is 100,000.
     /// </summary>
@@ -5291,7 +5240,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Talent.V4Beta1.Skill.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill> skillsUsed_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill>();
     /// <summary>
-    /// Optional. The skills used in this patent.
+    /// The skills used in this patent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Skill> SkillsUsed {

@@ -26,24 +26,25 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGFueS5wcm90bxIb",
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29t",
-            "bW9uLnByb3RvIuQDCgdDb21wYW55EgwKBG5hbWUYASABKAkSFAoMZGlzcGxh",
-            "eV9uYW1lGAIgASgJEhMKC2V4dGVybmFsX2lkGAMgASgJEjYKBHNpemUYBCAB",
-            "KA4yKC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGFueVNpemUS",
-            "HAoUaGVhZHF1YXJ0ZXJzX2FkZHJlc3MYBSABKAkSFQoNaGlyaW5nX2FnZW5j",
-            "eRgGIAEoCBIQCghlZW9fdGV4dBgHIAEoCRITCgt3ZWJzaXRlX3VyaRgIIAEo",
-            "CRIXCg9jYXJlZXJfc2l0ZV91cmkYCSABKAkSEQoJaW1hZ2VfdXJpGAogASgJ",
-            "EjAKKGtleXdvcmRfc2VhcmNoYWJsZV9qb2JfY3VzdG9tX2F0dHJpYnV0ZXMY",
-            "CyADKAkSRgoMZGVyaXZlZF9pbmZvGAwgASgLMjAuZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NGJldGExLkNvbXBhbnkuRGVyaXZlZEluZm8SEQoJc3VzcGVuZGVk",
-            "GA0gASgIGlMKC0Rlcml2ZWRJbmZvEkQKFWhlYWRxdWFydGVyc19sb2NhdGlv",
-            "bhgBIAEoCzIlLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Mb2NhdGlv",
-            "bkKCAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIUQ29tcGFu",
-            "eVJlc291cmNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNi",
-            "BnByb3RvMw=="));
+            "YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Gihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvIvgD",
+            "CgdDb21wYW55EgwKBG5hbWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJ",
+            "QgPgQQISGAoLZXh0ZXJuYWxfaWQYAyABKAlCA+BBAhI2CgRzaXplGAQgASgO",
+            "MiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBhbnlTaXplEhwK",
+            "FGhlYWRxdWFydGVyc19hZGRyZXNzGAUgASgJEhUKDWhpcmluZ19hZ2VuY3kY",
+            "BiABKAgSEAoIZWVvX3RleHQYByABKAkSEwoLd2Vic2l0ZV91cmkYCCABKAkS",
+            "FwoPY2FyZWVyX3NpdGVfdXJpGAkgASgJEhEKCWltYWdlX3VyaRgKIAEoCRIw",
+            "CihrZXl3b3JkX3NlYXJjaGFibGVfam9iX2N1c3RvbV9hdHRyaWJ1dGVzGAsg",
+            "AygJEksKDGRlcml2ZWRfaW5mbxgMIAEoCzIwLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5Db21wYW55LkRlcml2ZWRJbmZvQgPgQQMSFgoJc3VzcGVu",
+            "ZGVkGA0gASgIQgPgQQMaUwoLRGVyaXZlZEluZm8SRAoVaGVhZHF1YXJ0ZXJz",
+            "X2xvY2F0aW9uGAEgASgLMiUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkxvY2F0aW9uQoIBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "QhRDb21wYW55UmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVu",
+            "dKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company), global::Google.Cloud.Talent.V4Beta1.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null)})
           }));
@@ -114,10 +115,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
-    /// example, "projects/api-test-project/tenants/foo/companies/bar".
+    /// example, "projects/foo/tenants/bar/companies/baz".
     ///
-    /// Tenant id is optional and the default tenant is used if unspecified, for
-    /// example, "projects/api-test-project/companies/bar".
+    /// If tenant id is unspecified, the default tenant is used. For
+    /// example, "projects/foo/companies/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -162,7 +163,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SizeFieldNumber = 4;
     private global::Google.Cloud.Talent.V4Beta1.CompanySize size_ = 0;
     /// <summary>
-    /// Optional. The employer's company size.
+    /// The employer's company size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompanySize Size {
@@ -176,10 +177,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int HeadquartersAddressFieldNumber = 5;
     private string headquartersAddress_ = "";
     /// <summary>
-    /// Optional. The street address of the company's main headquarters, which may
-    /// be different from the job location. The service attempts to geolocate the
-    /// provided address, and populates a more specific location wherever possible
-    /// in
+    /// The street address of the company's main headquarters, which may be
+    /// different from the job location. The service attempts
+    /// to geolocate the provided address, and populates a more specific
+    /// location wherever possible in
     /// [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -194,7 +195,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int HiringAgencyFieldNumber = 6;
     private bool hiringAgency_;
     /// <summary>
-    /// Optional. Set to true if it is the hiring agency that post jobs for other
+    /// Set to true if it is the hiring agency that post jobs for other
     /// employers.
     ///
     /// Defaults to false if not provided.
@@ -211,7 +212,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EeoTextFieldNumber = 7;
     private string eeoText_ = "";
     /// <summary>
-    /// Optional. Equal Employment Opportunity legal disclaimer text to be
+    /// Equal Employment Opportunity legal disclaimer text to be
     /// associated with all jobs, and typically to be displayed in all
     /// roles.
     ///
@@ -229,7 +230,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int WebsiteUriFieldNumber = 8;
     private string websiteUri_ = "";
     /// <summary>
-    /// Optional. The URI representing the company's primary web site or home page,
+    /// The URI representing the company's primary web site or home page,
     /// for example, "https://www.google.com".
     ///
     /// The maximum number of allowed characters is 255.
@@ -246,8 +247,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CareerSiteUriFieldNumber = 9;
     private string careerSiteUri_ = "";
     /// <summary>
-    /// Optional. The URI to employer's career site or careers page on the
-    /// employer's web site, for example, "https://careers.google.com".
+    /// The URI to employer's career site or careers page on the employer's web
+    /// site, for example, "https://careers.google.com".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CareerSiteUri {
@@ -261,7 +262,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ImageUriFieldNumber = 10;
     private string imageUri_ = "";
     /// <summary>
-    /// Optional. A URI that hosts the employer's company logo.
+    /// A URI that hosts the employer's company logo.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ImageUri {
@@ -277,7 +278,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> keywordSearchableJobCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of keys of filterable
+    /// A list of keys of filterable
     /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes],
     /// whose corresponding `string_values` are used in keyword searches. Jobs with
     /// `string_values` under these specified field keys are returned if any

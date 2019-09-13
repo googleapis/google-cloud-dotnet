@@ -480,7 +480,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="tenant">
         /// Required. The tenant to be created.
@@ -509,7 +509,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="tenant">
         /// Required. The tenant to be created.
@@ -535,7 +535,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="tenant">
         /// Required. The tenant to be created.
@@ -564,7 +564,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="tenant">
         /// Required. The tenant to be created.
@@ -593,7 +593,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="tenant">
         /// Required. The tenant to be created.
@@ -619,7 +619,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="tenant">
         /// Required. The tenant to be created.
@@ -704,7 +704,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be retrieved.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -728,7 +728,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be retrieved.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -749,7 +749,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be retrieved.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -773,7 +773,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be retrieved.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -797,7 +797,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be retrieved.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -818,7 +818,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be retrieved.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be deleted.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be deleted.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be deleted.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1083,7 +1083,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be deleted.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be deleted.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1128,7 +1128,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the tenant to be deleted.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenants/foo".
+        /// "projects/foo/tenants/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1202,7 +1202,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1238,7 +1238,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1274,7 +1274,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1310,7 +1310,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the project under which the tenant is created.
         ///
         /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.

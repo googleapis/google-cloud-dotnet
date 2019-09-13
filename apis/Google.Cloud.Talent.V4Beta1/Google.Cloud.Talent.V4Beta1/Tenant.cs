@@ -26,18 +26,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "+AEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFsX2lkGAIgASgJ",
-            "EkUKCnVzYWdlX3R5cGUYAyABKA4yMS5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUSNAosa2V5d29yZF9zZWFyY2hh",
-            "YmxlX3Byb2ZpbGVfY3VzdG9tX2F0dHJpYnV0ZXMYBCADKAkiTgoNRGF0YVVz",
-            "YWdlVHlwZRIfChtEQVRBX1VTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpB",
-            "R0dSRUdBVEVEEAESDAoISVNPTEFURUQQAkKBAQofY29tLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMUITVGVuYW50UmVzb3VyY2VQcm90b1ABWkFnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
-            "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "dGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/QEKBlRlbmFudBIM",
+            "CgRuYW1lGAEgASgJEhgKC2V4dGVybmFsX2lkGAIgASgJQgPgQQISRQoKdXNh",
+            "Z2VfdHlwZRgDIAEoDjIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5U",
+            "ZW5hbnQuRGF0YVVzYWdlVHlwZRI0CixrZXl3b3JkX3NlYXJjaGFibGVfcHJv",
+            "ZmlsZV9jdXN0b21fYXR0cmlidXRlcxgEIAMoCSJOCg1EYXRhVXNhZ2VUeXBl",
+            "Eh8KG0RBVEFfVVNBR0VfVFlQRV9VTlNQRUNJRklFRBAAEg4KCkFHR1JFR0FU",
+            "RUQQARIMCghJU09MQVRFRBACQoEBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExQhNUZW5hbnRSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0",
+            "YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
           }));
@@ -99,7 +100,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// tenant is created.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-    /// "projects/api-test-project/tenants/foo".
+    /// "projects/foo/tenants/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -130,8 +131,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UsageTypeFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType usageType_ = 0;
     /// <summary>
-    /// Optional. Indicates whether data owned by this tenant may be used to
-    /// provide product improvements across other tenants.
+    /// Indicates whether data owned by this tenant may be used to provide product
+    /// improvements across other tenants.
     ///
     /// Defaults behavior is
     /// [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED]
@@ -151,7 +152,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> keywordSearchableProfileCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of keys of filterable
+    /// A list of keys of filterable
     /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes],
     /// whose corresponding `string_values` are used in keyword searches. Profiles
     /// with `string_values` under these specified field keys are returned if any

@@ -47,8 +47,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
   #region Messages
   /// <summary>
-  /// Input Only.
-  ///
   /// The histogram request.
   /// </summary>
   public sealed partial class HistogramQuery : pb::IMessage<HistogramQuery> {
@@ -191,8 +189,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// Output only.
-  ///
   /// Histogram result that matches
   /// [HistogramQuery][google.cloud.talent.v4beta1.HistogramQuery] specified in
   /// searches.
