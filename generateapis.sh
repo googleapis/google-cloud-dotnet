@@ -108,9 +108,13 @@ generate_gapicgenerator() {
     cp $i $API_TMP_DIR/gapic.yaml
   done
   
-  # Generate the descriptor set for this API. We always explicitly
-  # include IAM so that gRPC rerouting works; it doesn't have any negative
-  # impact for non-IAM APIs. (Ditto Grafeas.)
+  # Include extra protos, when they're present, even if they're not needed.
+  extra_protos=()
+  if [[ -d $GOOGLEAPIS/google/iam/v1 ]]; then extra_protos+=($GOOGLEAPIS/google/iam/v1/*.proto); fi
+  if [[ -d $GOOGLEAPIS/grafeas/v1 ]]; then extra_protos+=($GOOGLEAPIS/grafeas/v1/*.proto); fi
+  if [[ -f $GOOGLEAPIS/google/cloud/common_resources.proto ]]; then extra_protos+=($GOOGLEAPIS/google/cloud/common_resources.proto); fi
+  
+  # Generate the descriptor set for this API.
   $PROTOC \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
@@ -118,8 +122,7 @@ generate_gapicgenerator() {
     --include_imports \
     -o $API_TMP_DIR/protos.desc \
     $API_SRC_DIR/*.proto \
-    $GOOGLEAPIS/google/iam/v1/*.proto \
-    $GOOGLEAPIS/grafeas/v1/*.proto \
+    ${extra_protos[*]} \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
 
