@@ -26,11 +26,13 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         [InlineData(null, null, null)]
         [InlineData(3, 1, 1)]
         [InlineData(3, null, 3)]
+        // Including an options but with a version of 0 is treated as equivalent to not setting it.
+        [InlineData(3, 0, 3)]
         [InlineData(1, 3, 3)]
         [InlineData(1, null, 1)]
+        [InlineData(1, 0, 1)]
         public void GetIamPolicyWithVersions(int? settingsVersion, int? callerRequestVersion, int? expectedRpcVersion)
         {
-            var settings = new BigtableInstanceAdminSettings { SupportedIamPolicyVersion = settingsVersion };
             var callInvoker = new FakeCallInvoker();
             
             var client = new BigtableInstanceAdminClientBuilder
@@ -39,25 +41,61 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 CallInvoker = callInvoker
             }.Build();
 
-            var callerRequest = new GetIamPolicyRequest
+            var callerRequest = new GetIamPolicyRequest();
+            if (callerRequestVersion != null)
             {
-                // TODO: Specify the caller request version
-            };
+                callerRequest.Options = new GetPolicyOptions { RequestedPolicyVersion = callerRequestVersion.Value };
+            }
 
             client.GetIamPolicy(callerRequest);
-            var lastRequest = callInvoker.LastRequest;
+            var lastRequest = callInvoker.LastGetRequest;
 
-            // TODO: Assertions around the version in lastRequest            
             if (callerRequestVersion != expectedRpcVersion)
             {
                 Assert.NotSame(callerRequest, lastRequest);
             }
+            Assert.Equal(expectedRpcVersion, lastRequest.Options?.RequestedPolicyVersion);
+        }
+
+        [Theory]
+        [InlineData(null, 0, 0)]
+        [InlineData(null, 1, 1)]
+        [InlineData(null, 3, 3)]
+        [InlineData(3, 0, 3)]
+        [InlineData(3, 1, 3)]
+        [InlineData(3, 3, 3)]
+        [InlineData(1, 0, 1)]
+        [InlineData(1, 1, 1)]
+        [InlineData(1, 3, 1)]
+        public void SetIamPolicyWithVersions(int? settingsVersion, int callerRequestVersion, int expectedRpcVersion)
+        {
+            var callInvoker = new FakeCallInvoker();
+
+            var client = new BigtableInstanceAdminClientBuilder
+            {
+                Settings = new BigtableInstanceAdminSettings { SupportedIamPolicyVersion = settingsVersion },
+                CallInvoker = callInvoker
+            }.Build();
+
+            var callerRequest = new SetIamPolicyRequest
+            {
+                Policy = new Policy { Version = callerRequestVersion }
+            };
+
+            client.SetIamPolicy(callerRequest);
+            var lastRequest = callInvoker.LastSetRequest;
+            if (callerRequestVersion != expectedRpcVersion)
+            {
+                Assert.NotSame(callerRequest, lastRequest);
+            }
+            Assert.Equal(expectedRpcVersion, lastRequest.Policy.Version);
         }
 
         private class FakeCallInvoker : CallInvoker
         {
-            public GetIamPolicyRequest LastRequest { get; set; }
-            
+            public GetIamPolicyRequest LastGetRequest { get; set; }
+            public SetIamPolicyRequest LastSetRequest { get; set; }
+
             public override AsyncClientStreamingCall<TRequest, TResponse> AsyncClientStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options) =>
                 throw new NotImplementedException();
 
@@ -74,7 +112,12 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             {
                 if (typeof(TRequest) == typeof(GetIamPolicyRequest))
                 {
-                    LastRequest = (GetIamPolicyRequest) (object) request;
+                    LastGetRequest = (GetIamPolicyRequest) (object) request;
+                    return (TResponse) Activator.CreateInstance(typeof(TResponse));
+                }
+                if (typeof(TRequest) == typeof(SetIamPolicyRequest))
+                {
+                    LastSetRequest = (SetIamPolicyRequest) (object) request;
                     return (TResponse) Activator.CreateInstance(typeof(TResponse));
                 }
                 throw new NotImplementedException();
