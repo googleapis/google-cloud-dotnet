@@ -492,7 +492,7 @@ namespace Google.Cloud.Vision.V1
         /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// Required. Individual image annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -513,7 +513,7 @@ namespace Google.Cloud.Vision.V1
         /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// Required. Individual image annotation requests for this batch.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -531,7 +531,7 @@ namespace Google.Cloud.Vision.V1
         /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// Required. Individual image annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -614,7 +614,7 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// The list of file annotation requests. Right now we support only one
+        /// Required. The list of file annotation requests. Right now we support only one
         /// AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="callSettings">
@@ -642,7 +642,7 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// The list of file annotation requests. Right now we support only one
+        /// Required. The list of file annotation requests. Right now we support only one
         /// AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="cancellationToken">
@@ -667,7 +667,7 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// The list of file annotation requests. Right now we support only one
+        /// Required. The list of file annotation requests. Right now we support only one
         /// AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="callSettings">
@@ -771,7 +771,7 @@ namespace Google.Cloud.Vision.V1
         /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
         /// </summary>
         /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// Required. Individual image annotation requests for this batch.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and metadata (e.g. format).
@@ -805,7 +805,7 @@ namespace Google.Cloud.Vision.V1
         /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
         /// </summary>
         /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// Required. Individual image annotation requests for this batch.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and metadata (e.g. format).
@@ -836,7 +836,7 @@ namespace Google.Cloud.Vision.V1
         /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
         /// </summary>
         /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// Required. Individual image annotation requests for this batch.
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and metadata (e.g. format).
@@ -955,7 +955,7 @@ namespace Google.Cloud.Vision.V1
         /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
         /// </summary>
         /// <param name="requests">
-        /// Individual async file annotation requests for this batch.
+        /// Required. Individual async file annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -981,7 +981,7 @@ namespace Google.Cloud.Vision.V1
         /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
         /// </summary>
         /// <param name="requests">
-        /// Individual async file annotation requests for this batch.
+        /// Required. Individual async file annotation requests for this batch.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Vision.V1
         /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
         /// </summary>
         /// <param name="requests">
-        /// Individual async file annotation requests for this batch.
+        /// Required. Individual async file annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
