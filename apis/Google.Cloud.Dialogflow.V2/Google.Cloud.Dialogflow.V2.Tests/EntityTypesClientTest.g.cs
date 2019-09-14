@@ -48,6 +48,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -72,6 +73,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -97,6 +99,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -123,6 +126,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -148,6 +152,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -171,6 +176,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -195,6 +201,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -221,6 +228,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -248,6 +256,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -276,6 +285,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -303,6 +313,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -327,6 +338,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -350,6 +362,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -374,6 +387,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -399,6 +413,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -425,6 +440,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -450,6 +466,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -473,6 +490,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
                 DisplayName = "displayName1615086568",
+                EnableFuzzyExtraction = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));

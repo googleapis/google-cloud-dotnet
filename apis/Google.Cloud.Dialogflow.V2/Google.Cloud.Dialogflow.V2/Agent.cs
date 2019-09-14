@@ -26,75 +26,94 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9hZ2VudC5wcm90bxIaZ29v",
             "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3Rv",
-            "Ghtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1",
-            "Zi9maWVsZF9tYXNrLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90byLE",
-            "BQoFQWdlbnQSDgoGcGFyZW50GAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEo",
-            "CRIdChVkZWZhdWx0X2xhbmd1YWdlX2NvZGUYAyABKAkSIAoYc3VwcG9ydGVk",
-            "X2xhbmd1YWdlX2NvZGVzGAQgAygJEhEKCXRpbWVfem9uZRgFIAEoCRITCgtk",
-            "ZXNjcmlwdGlvbhgGIAEoCRISCgphdmF0YXJfdXJpGAcgASgJEhYKDmVuYWJs",
-            "ZV9sb2dnaW5nGAggASgIEj8KCm1hdGNoX21vZGUYCSABKA4yKy5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5BZ2VudC5NYXRjaE1vZGUSIAoYY2xhc3Np",
-            "ZmljYXRpb25fdGhyZXNob2xkGAogASgCEkEKC2FwaV92ZXJzaW9uGA4gASgO",
-            "MiwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQWdlbnQuQXBpVmVyc2lv",
-            "bhI0CgR0aWVyGA8gASgOMiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "QWdlbnQuVGllciJWCglNYXRjaE1vZGUSGgoWTUFUQ0hfTU9ERV9VTlNQRUNJ",
-            "RklFRBAAEhUKEU1BVENIX01PREVfSFlCUklEEAESFgoSTUFUQ0hfTU9ERV9N",
-            "TF9PTkxZEAIibAoKQXBpVmVyc2lvbhIbChdBUElfVkVSU0lPTl9VTlNQRUNJ",
-            "RklFRBAAEhIKDkFQSV9WRVJTSU9OX1YxEAESEgoOQVBJX1ZFUlNJT05fVjIQ",
-            "AhIZChVBUElfVkVSU0lPTl9WMl9CRVRBXzEQAyJeCgRUaWVyEhQKEFRJRVJf",
-            "VU5TUEVDSUZJRUQQABIRCg1USUVSX1NUQU5EQVJEEAESEwoPVElFUl9FTlRF",
-            "UlBSSVNFEAISGAoUVElFUl9FTlRFUlBSSVNFX1BMVVMQAyIhCg9HZXRBZ2Vu",
-            "dFJlcXVlc3QSDgoGcGFyZW50GAEgASgJInQKD1NldEFnZW50UmVxdWVzdBIw",
-            "CgVhZ2VudBgBIAEoCzIhLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFn",
-            "ZW50Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFzayIkChJEZWxldGVBZ2VudFJlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
-            "IkwKE1NlYXJjaEFnZW50c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBh",
-            "Z2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImIKFFNlYXJjaEFn",
-            "ZW50c1Jlc3BvbnNlEjEKBmFnZW50cxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLkFnZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIj",
-            "ChFUcmFpbkFnZW50UmVxdWVzdBIOCgZwYXJlbnQYASABKAkiNwoSRXhwb3J0",
-            "QWdlbnRSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglhZ2VudF91cmkYAiAB",
-            "KAkiTAoTRXhwb3J0QWdlbnRSZXNwb25zZRITCglhZ2VudF91cmkYASABKAlI",
-            "ABIXCg1hZ2VudF9jb250ZW50GAIgASgMSABCBwoFYWdlbnQiWwoSSW1wb3J0",
-            "QWdlbnRSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRITCglhZ2VudF91cmkYAiAB",
-            "KAlIABIXCg1hZ2VudF9jb250ZW50GAMgASgMSABCBwoFYWdlbnQiXAoTUmVz",
-            "dG9yZUFnZW50UmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEwoJYWdlbnRfdXJp",
-            "GAIgASgJSAASFwoNYWdlbnRfY29udGVudBgDIAEoDEgAQgcKBWFnZW50MvcJ",
-            "CgZBZ2VudHMSgQEKCEdldEFnZW50EisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuR2V0QWdlbnRSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuQWdlbnQiJYLT5JMCHxIdL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0v",
-            "YWdlbnQSjgEKCFNldEFnZW50EisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuU2V0QWdlbnRSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuQWdlbnQiMoLT5JMCLCIjL3YyL3thZ2VudC5wYXJlbnQ9cHJvamVjdHMv",
-            "Kn0vYWdlbnQ6BWFnZW50EnwKC0RlbGV0ZUFnZW50Ei4uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuRGVsZXRlQWdlbnRSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IiWC0+STAh8qHS92Mi97cGFyZW50PXByb2plY3RzLyp9",
-            "L2FnZW50Ep8BCgxTZWFyY2hBZ2VudHMSLy5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy52Mi5TZWFyY2hBZ2VudHNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuU2VhcmNoQWdlbnRzUmVzcG9uc2UiLILT5JMCJhIkL3Yy",
-            "L3twYXJlbnQ9cHJvamVjdHMvKn0vYWdlbnQ6c2VhcmNoEooBCgpUcmFpbkFn",
-            "ZW50Ei0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuVHJhaW5BZ2VudFJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIi6C0+STAigi",
-            "Iy92Mi97cGFyZW50PXByb2plY3RzLyp9L2FnZW50OnRyYWluOgEqEo0BCgtF",
-            "eHBvcnRBZ2VudBIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkV4cG9y",
-            "dEFnZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "L4LT5JMCKSIkL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vYWdlbnQ6ZXhwb3J0",
-            "OgEqEo0BCgtJbXBvcnRBZ2VudBIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkltcG9ydEFnZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iL4LT5JMCKSIkL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vYWdl",
-            "bnQ6aW1wb3J0OgEqEpABCgxSZXN0b3JlQWdlbnQSLy5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5SZXN0b3JlQWdlbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiIwgtPkkwIqIiUvdjIve3BhcmVudD1wcm9q",
-            "ZWN0cy8qfS9hZ2VudDpyZXN0b3JlOgEqGnjKQRlkaWFsb2dmbG93Lmdvb2ds",
-            "ZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2RpYWxvZ2Zsb3dCmQEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "MkIKQWdlbnRQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaIC",
-            "AkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
+            "bnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBp",
+            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
+            "b3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29v",
+            "Z2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmll",
+            "bGRfbWFzay5wcm90byKwBgoFQWdlbnQSQwoGcGFyZW50GAEgASgJQjPgQQL6",
+            "QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2pl",
+            "Y3QSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISIgoVZGVmYXVsdF9sYW5n",
+            "dWFnZV9jb2RlGAMgASgJQgPgQQISJQoYc3VwcG9ydGVkX2xhbmd1YWdlX2Nv",
+            "ZGVzGAQgAygJQgPgQQESFgoJdGltZV96b25lGAUgASgJQgPgQQISGAoLZGVz",
+            "Y3JpcHRpb24YBiABKAlCA+BBARIXCgphdmF0YXJfdXJpGAcgASgJQgPgQQES",
+            "GwoOZW5hYmxlX2xvZ2dpbmcYCCABKAhCA+BBARJECgptYXRjaF9tb2RlGAkg",
+            "ASgOMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQWdlbnQuTWF0Y2hN",
+            "b2RlQgPgQQESJQoYY2xhc3NpZmljYXRpb25fdGhyZXNob2xkGAogASgCQgPg",
+            "QQESRgoLYXBpX3ZlcnNpb24YDiABKA4yLC5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52Mi5BZ2VudC5BcGlWZXJzaW9uQgPgQQESOQoEdGllchgPIAEoDjIm",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFnZW50LlRpZXJCA+BBASJW",
+            "CglNYXRjaE1vZGUSGgoWTUFUQ0hfTU9ERV9VTlNQRUNJRklFRBAAEhUKEU1B",
+            "VENIX01PREVfSFlCUklEEAESFgoSTUFUQ0hfTU9ERV9NTF9PTkxZEAIibAoK",
+            "QXBpVmVyc2lvbhIbChdBUElfVkVSU0lPTl9VTlNQRUNJRklFRBAAEhIKDkFQ",
+            "SV9WRVJTSU9OX1YxEAESEgoOQVBJX1ZFUlNJT05fVjIQAhIZChVBUElfVkVS",
+            "U0lPTl9WMl9CRVRBXzEQAyJeCgRUaWVyEhQKEFRJRVJfVU5TUEVDSUZJRUQQ",
+            "ABIRCg1USUVSX1NUQU5EQVJEEAESEwoPVElFUl9FTlRFUlBSSVNFEAISGAoU",
+            "VElFUl9FTlRFUlBSSVNFX1BMVVMQAyJWCg9HZXRBZ2VudFJlcXVlc3QSQwoG",
+            "cGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL1Byb2plY3QifgoPU2V0QWdlbnRSZXF1ZXN0EjUKBWFn",
+            "ZW50GAEgASgLMiEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQWdlbnRC",
+            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
+            "aWVsZE1hc2tCA+BBASJZChJEZWxldGVBZ2VudFJlcXVlc3QSQwoGcGFyZW50",
+            "GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFw",
+            "aXMuY29tL1Byb2plY3QihgEKE1NlYXJjaEFnZW50c1JlcXVlc3QSQwoGcGFy",
+            "ZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL1Byb2plY3QSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESEgoK",
+            "cGFnZV90b2tlbhgDIAEoCSJiChRTZWFyY2hBZ2VudHNSZXNwb25zZRIxCgZh",
+            "Z2VudHMYASADKAsyIS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5BZ2Vu",
+            "dBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiWAoRVHJhaW5BZ2VudFJlcXVl",
+            "c3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QicQoSRXhwb3J0QWdlbnRSZXF1",
+            "ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhYKCWFnZW50X3VyaRgCIAEo",
+            "CUID4EECIkwKE0V4cG9ydEFnZW50UmVzcG9uc2USEwoJYWdlbnRfdXJpGAEg",
+            "ASgJSAASFwoNYWdlbnRfY29udGVudBgCIAEoDEgAQgcKBWFnZW50IpABChJJ",
+            "bXBvcnRBZ2VudFJlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Ns",
+            "b3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEwoJ",
+            "YWdlbnRfdXJpGAIgASgJSAASFwoNYWdlbnRfY29udGVudBgDIAEoDEgAQgcK",
+            "BWFnZW50IpEBChNSZXN0b3JlQWdlbnRSZXF1ZXN0EkMKBnBhcmVudBgBIAEo",
+            "CUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNv",
+            "bS9Qcm9qZWN0EhMKCWFnZW50X3VyaRgCIAEoCUgAEhcKDWFnZW50X2NvbnRl",
+            "bnQYAyABKAxIAEIHCgVhZ2VudDKPDAoGQWdlbnRzEooBCghHZXRBZ2VudBIr",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdldEFnZW50UmVxdWVzdBoh",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFnZW50Ii6C0+STAh8SHS92",
+            "Mi97cGFyZW50PXByb2plY3RzLyp9L2FnZW502kEGcGFyZW50EpYBCghTZXRB",
+            "Z2VudBIrLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNldEFnZW50UmVx",
+            "dWVzdBohLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFnZW50IjqC0+ST",
+            "AiwiIy92Mi97YWdlbnQucGFyZW50PXByb2plY3RzLyp9L2FnZW50OgVhZ2Vu",
+            "dNpBBWFnZW50EoUBCgtEZWxldGVBZ2VudBIuLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLkRlbGV0ZUFnZW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eSIugtPkkwIfKh0vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2Vu",
+            "dNpBBnBhcmVudBKoAQoMU2VhcmNoQWdlbnRzEi8uZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjIuU2VhcmNoQWdlbnRzUmVxdWVzdBowLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLlNlYXJjaEFnZW50c1Jlc3BvbnNlIjWC0+STAiYS",
+            "JC92Mi97cGFyZW50PXByb2plY3RzLyp9L2FnZW50OnNlYXJjaNpBBnBhcmVu",
+            "dBLFAQoKVHJhaW5BZ2VudBItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "LlRyYWluQWdlbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiJpgtPkkwIoIiMvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2VudDp0",
+            "cmFpbjoBKtpBBnBhcmVudMpBLwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhZn",
+            "b29nbGUucHJvdG9idWYuU3RydWN0EuIBCgtFeHBvcnRBZ2VudBIuLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLkV4cG9ydEFnZW50UmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24igwGC0+STAikiJC92Mi97cGFy",
+            "ZW50PXByb2plY3RzLyp9L2FnZW50OmV4cG9ydDoBKtpBBnBhcmVudMpBSAou",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRXhwb3J0QWdlbnRSZXNwb25z",
+            "ZRIWZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBK/AQoLSW1wb3J0QWdlbnQSLi5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbXBvcnRBZ2VudFJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImGC0+STAikiJC92Mi97",
+            "cGFyZW50PXByb2plY3RzLyp9L2FnZW50OmltcG9ydDoBKspBLwoVZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN0EsIBCgxS",
+            "ZXN0b3JlQWdlbnQSLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5SZXN0",
+            "b3JlQWdlbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biJigtPkkwIqIiUvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2VudDpyZXN0",
+            "b3JlOgEqykEvChVnb29nbGUucHJvdG9idWYuRW1wdHkSFmdvb2dsZS5wcm90",
+            "b2J1Zi5TdHJ1Y3QaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
+            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0KZ",
+            "AQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQgpBZ2VudFByb3Rv",
+            "UAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUu",
+            "Q2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Agent), global::Google.Cloud.Dialogflow.V2.Agent.Parser, new[]{ "Parent", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "EnableLogging", "MatchMode", "ClassificationThreshold", "ApiVersion", "Tier" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode), typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion), typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetAgentRequest), global::Google.Cloud.Dialogflow.V2.GetAgentRequest.Parser, new[]{ "Parent" }, null, null, null),
@@ -1197,7 +1216,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous list request.
+    /// The next_page_token value returned from a previous list request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1676,8 +1695,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int AgentUriFieldNumber = 2;
     private string agentUri_ = "";
     /// <summary>
-    /// Optional. The
-    /// [Google Cloud Storage](https://cloud.google.com/storage/docs/)
+    /// Required. The [Google Cloud Storage](https://cloud.google.com/storage/docs/)
     /// URI to export the agent to.
     /// The format of this URI must be `gs://&lt;bucket-name>/&lt;object-name>`.
     /// If left unspecified, the serialized agent is returned inline.
@@ -1857,16 +1875,14 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///
     /// Example for how to export an agent to a zip file via a command line:
     /// &lt;pre>curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_name&amp;gt;/agent:export'\
+    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_id&amp;gt;/agent:export'\
     ///   -X POST \
-    ///   -H 'Authorization: Bearer '$(gcloud auth application-default
-    ///   print-access-token) \
-    ///   -H 'Accept: application/json' \
-    ///   -H 'Content-Type: application/json' \
+    ///   -H 'Authorization: Bearer' \
+    ///   $(gcloud auth application-default print-access-token) \
+    ///   -H 'Accept: application/json'
     ///   --compressed \
-    ///   --data-binary '{}' \
-    /// | grep agentContent | sed -e 's/.*"agentContent": "\([^"]*\)".*/\1/' \
-    /// | base64 --decode > &amp;lt;agent zip file&amp;gt;&lt;/pre>
+    ///   | grep agentContent | sed -e 's/.*"agentContent": "\([^"]*\)".*/\1/' \
+    ///   | base64 --decode > &amp;lt;agent zip file&amp;gt;&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AgentContent {
@@ -2084,13 +2100,12 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///
     /// Example for how to import an agent via the command line:
     /// &lt;pre>curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_name&amp;gt;/agent:import\
+    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_id&amp;gt;/agent:import'\
     ///    -X POST \
-    ///    -H 'Authorization: Bearer '$(gcloud auth application-default
-    ///    print-access-token) \
+    ///    -H 'Authorization: Bearer'\
+    ///    $(gcloud auth application-default print-access-token) \
     ///    -H 'Accept: application/json' \
     ///    -H 'Content-Type: application/json' \
-    ///    --compressed \
     ///    --data-binary "{
     ///       'agentContent': '$(cat &amp;lt;agent zip file&amp;gt; | base64 -w 0)'
     ///    }"&lt;/pre>
@@ -2327,13 +2342,12 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///
     /// Example for how to restore an agent via the command line:
     /// &lt;pre>curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_name&amp;gt;/agent:restore\
+    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_id&amp;gt;/agent:restore'\
     ///    -X POST \
-    ///    -H 'Authorization: Bearer '$(gcloud auth application-default
-    ///    print-access-token) \
+    ///    -H 'Authorization: Bearer' \
+    ///    $(gcloud auth application-default print-access-token) \
     ///    -H 'Accept: application/json' \
     ///    -H 'Content-Type: application/json' \
-    ///    --compressed \
     ///    --data-binary "{
     ///        'agentContent': '$(cat &amp;lt;agent zip file&amp;gt; | base64 -w 0)'
     ///    }"&lt;/pre>
