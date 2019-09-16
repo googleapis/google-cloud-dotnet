@@ -64,6 +64,8 @@ generate_microgenerator() {
   PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$1
   API_OUT_DIR=apis
   API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  # We currently assume there's exactly one service config per API
+  GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*.json)
   
   mkdir -p $PRODUCTION_PACKAGE_DIR
   
@@ -73,6 +75,7 @@ generate_microgenerator() {
     --csharp_out=$PRODUCTION_PACKAGE_DIR \
     --grpc_out=$PRODUCTION_PACKAGE_DIR \
     --gapic_out=$API_TMP_DIR \
+    --gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
@@ -244,9 +247,8 @@ GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 (cd gapic-generator; ./gradlew shadowJar --warning-mode=none)
 
 # Build the microgenerator
-# This is disabled for now as we're not using it. We'll need to make it cross-platform, too.
-# (cd gapic-generator-csharp; dotnet publish -c Release --self-contained --runtime=win-x64 Google.Api.Generator)
-# declare -r GAPIC_PLUGIN=gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/win-x64/publish/Google.Api.Generator.exe
+(cd gapic-generator-csharp; dotnet publish -c Release --self-contained --runtime=win-x64 Google.Api.Generator)
+declare -r GAPIC_PLUGIN=gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/win-x64/publish/Google.Api.Generator.exe
 
 OUTDIR=tmp
 rm -rf $OUTDIR
