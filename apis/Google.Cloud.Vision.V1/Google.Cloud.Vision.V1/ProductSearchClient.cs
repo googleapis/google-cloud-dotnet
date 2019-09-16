@@ -957,12 +957,12 @@ namespace Google.Cloud.Vision.V1
         ///   4096 characters.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSet should be created.
+        /// Required. The project in which the ProductSet should be created.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="productSet">
-        /// The ProductSet to create.
+        /// Required. The ProductSet to create.
         /// </param>
         /// <param name="productSetId">
         /// A user-supplied resource id for this ProductSet. If set, the server will
@@ -998,12 +998,12 @@ namespace Google.Cloud.Vision.V1
         ///   4096 characters.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSet should be created.
+        /// Required. The project in which the ProductSet should be created.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="productSet">
-        /// The ProductSet to create.
+        /// Required. The ProductSet to create.
         /// </param>
         /// <param name="productSetId">
         /// A user-supplied resource id for this ProductSet. If set, the server will
@@ -1036,12 +1036,12 @@ namespace Google.Cloud.Vision.V1
         ///   4096 characters.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSet should be created.
+        /// Required. The project in which the ProductSet should be created.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="productSet">
-        /// The ProductSet to create.
+        /// Required. The ProductSet to create.
         /// </param>
         /// <param name="productSetId">
         /// A user-supplied resource id for this ProductSet. If set, the server will
@@ -1077,12 +1077,12 @@ namespace Google.Cloud.Vision.V1
         ///   4096 characters.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSet should be created.
+        /// Required. The project in which the ProductSet should be created.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="productSet">
-        /// The ProductSet to create.
+        /// Required. The ProductSet to create.
         /// </param>
         /// <param name="productSetId">
         /// A user-supplied resource id for this ProductSet. If set, the server will
@@ -1118,12 +1118,12 @@ namespace Google.Cloud.Vision.V1
         ///   4096 characters.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSet should be created.
+        /// Required. The project in which the ProductSet should be created.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="productSet">
-        /// The ProductSet to create.
+        /// Required. The ProductSet to create.
         /// </param>
         /// <param name="productSetId">
         /// A user-supplied resource id for this ProductSet. If set, the server will
@@ -1156,12 +1156,12 @@ namespace Google.Cloud.Vision.V1
         ///   4096 characters.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSet should be created.
+        /// Required. The project in which the ProductSet should be created.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="productSet">
-        /// The ProductSet to create.
+        /// Required. The ProductSet to create.
         /// </param>
         /// <param name="productSetId">
         /// A user-supplied resource id for this ProductSet. If set, the server will
@@ -1268,7 +1268,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project from which ProductSets should be listed.
+        /// Required. The project from which ProductSets should be listed.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -1308,7 +1308,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project from which ProductSets should be listed.
+        /// Required. The project from which ProductSets should be listed.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -1348,7 +1348,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project from which ProductSets should be listed.
+        /// Required. The project from which ProductSets should be listed.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -1388,7 +1388,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project from which ProductSets should be listed.
+        /// Required. The project from which ProductSets should be listed.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -1475,7 +1475,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the ProductSet does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to get.
+        /// Required. Resource name of the ProductSet to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
@@ -1503,7 +1503,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the ProductSet does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to get.
+        /// Required. Resource name of the ProductSet to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the ProductSet does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to get.
+        /// Required. Resource name of the ProductSet to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
@@ -1556,7 +1556,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the ProductSet does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to get.
+        /// Required. Resource name of the ProductSet to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
@@ -1584,7 +1584,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the ProductSet does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to get.
+        /// Required. Resource name of the ProductSet to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
@@ -1609,7 +1609,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the ProductSet does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to get.
+        /// Required. Resource name of the ProductSet to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
@@ -1708,7 +1708,7 @@ namespace Google.Cloud.Vision.V1
         ///   missing from the request or longer than 4096 characters.
         /// </summary>
         /// <param name="productSet">
-        /// The ProductSet resource which replaces the one on the server.
+        /// Required. The ProductSet resource which replaces the one on the server.
         /// </param>
         /// <param name="updateMask">
         /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
@@ -1744,7 +1744,7 @@ namespace Google.Cloud.Vision.V1
         ///   missing from the request or longer than 4096 characters.
         /// </summary>
         /// <param name="productSet">
-        /// The ProductSet resource which replaces the one on the server.
+        /// Required. The ProductSet resource which replaces the one on the server.
         /// </param>
         /// <param name="updateMask">
         /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
@@ -1777,7 +1777,7 @@ namespace Google.Cloud.Vision.V1
         ///   missing from the request or longer than 4096 characters.
         /// </summary>
         /// <param name="productSet">
-        /// The ProductSet resource which replaces the one on the server.
+        /// Required. The ProductSet resource which replaces the one on the server.
         /// </param>
         /// <param name="updateMask">
         /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
@@ -1886,7 +1886,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to delete.
+        /// Required. Resource name of the ProductSet to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -1913,7 +1913,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to delete.
+        /// Required. Resource name of the ProductSet to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -1937,7 +1937,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to delete.
+        /// Required. Resource name of the ProductSet to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -1961,7 +1961,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to delete.
+        /// Required. Resource name of the ProductSet to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -1988,7 +1988,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to delete.
+        /// Required. Resource name of the ProductSet to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -2012,7 +2012,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the ProductSet to delete.
+        /// Required. Resource name of the ProductSet to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -2102,13 +2102,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the Product should be created.
+        /// Required. The project in which the Product should be created.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="product">
-        /// The product to create.
+        /// Required. The product to create.
         /// </param>
         /// <param name="productId">
         /// A user-supplied resource id for this Product. If set, the server will
@@ -2146,13 +2146,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the Product should be created.
+        /// Required. The project in which the Product should be created.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="product">
-        /// The product to create.
+        /// Required. The product to create.
         /// </param>
         /// <param name="productId">
         /// A user-supplied resource id for this Product. If set, the server will
@@ -2187,13 +2187,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the Product should be created.
+        /// Required. The project in which the Product should be created.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="product">
-        /// The product to create.
+        /// Required. The product to create.
         /// </param>
         /// <param name="productId">
         /// A user-supplied resource id for this Product. If set, the server will
@@ -2231,13 +2231,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the Product should be created.
+        /// Required. The project in which the Product should be created.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="product">
-        /// The product to create.
+        /// Required. The product to create.
         /// </param>
         /// <param name="productId">
         /// A user-supplied resource id for this Product. If set, the server will
@@ -2275,13 +2275,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the Product should be created.
+        /// Required. The project in which the Product should be created.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="product">
-        /// The product to create.
+        /// Required. The product to create.
         /// </param>
         /// <param name="productId">
         /// A user-supplied resource id for this Product. If set, the server will
@@ -2316,13 +2316,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
         /// </summary>
         /// <param name="parent">
-        /// The project in which the Product should be created.
+        /// Required. The project in which the Product should be created.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="product">
-        /// The product to create.
+        /// Required. The product to create.
         /// </param>
         /// <param name="productId">
         /// A user-supplied resource id for this Product. If set, the server will
@@ -2434,7 +2434,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project OR ProductSet from which Products should be listed.
+        /// Required. The project OR ProductSet from which Products should be listed.
         ///
         /// Format:
         /// `projects/PROJECT_ID/locations/LOC_ID`
@@ -2474,7 +2474,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project OR ProductSet from which Products should be listed.
+        /// Required. The project OR ProductSet from which Products should be listed.
         ///
         /// Format:
         /// `projects/PROJECT_ID/locations/LOC_ID`
@@ -2514,7 +2514,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project OR ProductSet from which Products should be listed.
+        /// Required. The project OR ProductSet from which Products should be listed.
         ///
         /// Format:
         /// `projects/PROJECT_ID/locations/LOC_ID`
@@ -2554,7 +2554,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="parent">
-        /// The project OR ProductSet from which Products should be listed.
+        /// Required. The project OR ProductSet from which Products should be listed.
         ///
         /// Format:
         /// `projects/PROJECT_ID/locations/LOC_ID`
@@ -2640,7 +2640,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Product to get.
+        /// Required. Resource name of the Product to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -2668,7 +2668,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Product to get.
+        /// Required. Resource name of the Product to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -2693,7 +2693,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Product to get.
+        /// Required. Resource name of the Product to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -2721,7 +2721,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Product to get.
+        /// Required. Resource name of the Product to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -2749,7 +2749,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Product to get.
+        /// Required. Resource name of the Product to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -2774,7 +2774,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product does not exist.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Product to get.
+        /// Required. Resource name of the Product to get.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -2880,7 +2880,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is present in update_mask.
         /// </summary>
         /// <param name="product">
-        /// The Product resource which replaces the one on the server.
+        /// Required. The Product resource which replaces the one on the server.
         /// product.name is immutable.
         /// </param>
         /// <param name="updateMask">
@@ -2925,7 +2925,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is present in update_mask.
         /// </summary>
         /// <param name="product">
-        /// The Product resource which replaces the one on the server.
+        /// Required. The Product resource which replaces the one on the server.
         /// product.name is immutable.
         /// </param>
         /// <param name="updateMask">
@@ -2967,7 +2967,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if product_category is present in update_mask.
         /// </summary>
         /// <param name="product">
-        /// The Product resource which replaces the one on the server.
+        /// Required. The Product resource which replaces the one on the server.
         /// product.name is immutable.
         /// </param>
         /// <param name="updateMask">
@@ -3100,7 +3100,7 @@ namespace Google.Cloud.Vision.V1
         /// until all related caches are refreshed.
         /// </summary>
         /// <param name="name">
-        /// Resource name of product to delete.
+        /// Required. Resource name of product to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3128,7 +3128,7 @@ namespace Google.Cloud.Vision.V1
         /// until all related caches are refreshed.
         /// </summary>
         /// <param name="name">
-        /// Resource name of product to delete.
+        /// Required. Resource name of product to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3153,7 +3153,7 @@ namespace Google.Cloud.Vision.V1
         /// until all related caches are refreshed.
         /// </summary>
         /// <param name="name">
-        /// Resource name of product to delete.
+        /// Required. Resource name of product to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3178,7 +3178,7 @@ namespace Google.Cloud.Vision.V1
         /// until all related caches are refreshed.
         /// </summary>
         /// <param name="name">
-        /// Resource name of product to delete.
+        /// Required. Resource name of product to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3206,7 +3206,7 @@ namespace Google.Cloud.Vision.V1
         /// until all related caches are refreshed.
         /// </summary>
         /// <param name="name">
-        /// Resource name of product to delete.
+        /// Required. Resource name of product to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3231,7 +3231,7 @@ namespace Google.Cloud.Vision.V1
         /// until all related caches are refreshed.
         /// </summary>
         /// <param name="name">
-        /// Resource name of product to delete.
+        /// Required. Resource name of product to delete.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3335,13 +3335,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference image.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
         /// </param>
         /// <param name="referenceImage">
-        /// The reference image to create.
+        /// Required. The reference image to create.
         /// If an image ID is specified, it is ignored.
         /// </param>
         /// <param name="referenceImageId">
@@ -3391,13 +3391,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference image.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
         /// </param>
         /// <param name="referenceImage">
-        /// The reference image to create.
+        /// Required. The reference image to create.
         /// If an image ID is specified, it is ignored.
         /// </param>
         /// <param name="referenceImageId">
@@ -3444,13 +3444,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference image.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
         /// </param>
         /// <param name="referenceImage">
-        /// The reference image to create.
+        /// Required. The reference image to create.
         /// If an image ID is specified, it is ignored.
         /// </param>
         /// <param name="referenceImageId">
@@ -3500,13 +3500,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference image.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
         /// </param>
         /// <param name="referenceImage">
-        /// The reference image to create.
+        /// Required. The reference image to create.
         /// If an image ID is specified, it is ignored.
         /// </param>
         /// <param name="referenceImageId">
@@ -3556,13 +3556,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference image.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
         /// </param>
         /// <param name="referenceImage">
-        /// The reference image to create.
+        /// Required. The reference image to create.
         /// If an image ID is specified, it is ignored.
         /// </param>
         /// <param name="referenceImageId">
@@ -3609,13 +3609,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference image.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
         /// </param>
         /// <param name="referenceImage">
-        /// The reference image to create.
+        /// Required. The reference image to create.
         /// If an image ID is specified, it is ignored.
         /// </param>
         /// <param name="referenceImageId">
@@ -3763,7 +3763,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the reference image to delete.
+        /// Required. The resource name of the reference image to delete.
         ///
         /// Format is:
         ///
@@ -3794,7 +3794,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the reference image to delete.
+        /// Required. The resource name of the reference image to delete.
         ///
         /// Format is:
         ///
@@ -3822,7 +3822,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the reference image to delete.
+        /// Required. The resource name of the reference image to delete.
         ///
         /// Format is:
         ///
@@ -3850,7 +3850,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the reference image to delete.
+        /// Required. The resource name of the reference image to delete.
         ///
         /// Format is:
         ///
@@ -3881,7 +3881,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the reference image to delete.
+        /// Required. The resource name of the reference image to delete.
         ///
         /// Format is:
         ///
@@ -3909,7 +3909,7 @@ namespace Google.Cloud.Vision.V1
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the reference image to delete.
+        /// Required. The resource name of the reference image to delete.
         ///
         /// Format is:
         ///
@@ -4008,7 +4008,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product containing the reference images.
+        /// Required. Resource name of the product containing the reference images.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -4050,7 +4050,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product containing the reference images.
+        /// Required. Resource name of the product containing the reference images.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -4092,7 +4092,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product containing the reference images.
+        /// Required. Resource name of the product containing the reference images.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -4134,7 +4134,7 @@ namespace Google.Cloud.Vision.V1
         ///   than 1.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the product containing the reference images.
+        /// Required. Resource name of the product containing the reference images.
         ///
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -4224,7 +4224,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the specified image does not exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the ReferenceImage to get.
+        /// Required. The resource name of the ReferenceImage to get.
         ///
         /// Format is:
         ///
@@ -4253,7 +4253,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the specified image does not exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the ReferenceImage to get.
+        /// Required. The resource name of the ReferenceImage to get.
         ///
         /// Format is:
         ///
@@ -4279,7 +4279,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the specified image does not exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the ReferenceImage to get.
+        /// Required. The resource name of the ReferenceImage to get.
         ///
         /// Format is:
         ///
@@ -4308,7 +4308,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the specified image does not exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the ReferenceImage to get.
+        /// Required. The resource name of the ReferenceImage to get.
         ///
         /// Format is:
         ///
@@ -4337,7 +4337,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the specified image does not exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the ReferenceImage to get.
+        /// Required. The resource name of the ReferenceImage to get.
         ///
         /// Format is:
         ///
@@ -4363,7 +4363,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the specified image does not exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the ReferenceImage to get.
+        /// Required. The resource name of the ReferenceImage to get.
         ///
         /// Format is:
         ///
@@ -4463,13 +4463,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be added to this ProductSet.
+        /// Required. The resource name for the Product to be added to this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4502,13 +4502,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be added to this ProductSet.
+        /// Required. The resource name for the Product to be added to this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4538,13 +4538,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be added to this ProductSet.
+        /// Required. The resource name for the Product to be added to this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4574,13 +4574,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be added to this ProductSet.
+        /// Required. The resource name for the Product to be added to this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4613,13 +4613,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be added to this ProductSet.
+        /// Required. The resource name for the Product to be added to this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4649,13 +4649,13 @@ namespace Google.Cloud.Vision.V1
         /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be added to this ProductSet.
+        /// Required. The resource name for the Product to be added to this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4752,13 +4752,13 @@ namespace Google.Cloud.Vision.V1
         /// Removes a Product from the specified ProductSet.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4784,13 +4784,13 @@ namespace Google.Cloud.Vision.V1
         /// Removes a Product from the specified ProductSet.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4813,13 +4813,13 @@ namespace Google.Cloud.Vision.V1
         /// Removes a Product from the specified ProductSet.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4842,13 +4842,13 @@ namespace Google.Cloud.Vision.V1
         /// Removes a Product from the specified ProductSet.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4874,13 +4874,13 @@ namespace Google.Cloud.Vision.V1
         /// Removes a Product from the specified ProductSet.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4903,13 +4903,13 @@ namespace Google.Cloud.Vision.V1
         /// Removes a Product from the specified ProductSet.
         /// </summary>
         /// <param name="name">
-        /// The resource name for the ProductSet to modify.
+        /// Required. The resource name for the ProductSet to modify.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this ProductSet.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -4991,7 +4991,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="name">
-        /// The ProductSet resource for which to retrieve Products.
+        /// Required. The ProductSet resource for which to retrieve Products.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -5033,7 +5033,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="name">
-        /// The ProductSet resource for which to retrieve Products.
+        /// Required. The ProductSet resource for which to retrieve Products.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -5075,7 +5075,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="name">
-        /// The ProductSet resource for which to retrieve Products.
+        /// Required. The ProductSet resource for which to retrieve Products.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -5117,7 +5117,7 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
         /// <param name="name">
-        /// The ProductSet resource for which to retrieve Products.
+        /// Required. The ProductSet resource for which to retrieve Products.
         ///
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
@@ -5203,8 +5203,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5213,12 +5213,12 @@ namespace Google.Cloud.Vision.V1
         /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSets should be imported.
+        /// Required. The project in which the ProductSets should be imported.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="inputConfig">
-        /// The input content for the list of requests.
+        /// Required. The input content for the list of requests.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -5241,8 +5241,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5251,12 +5251,12 @@ namespace Google.Cloud.Vision.V1
         /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSets should be imported.
+        /// Required. The project in which the ProductSets should be imported.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="inputConfig">
-        /// The input content for the list of requests.
+        /// Required. The input content for the list of requests.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -5276,8 +5276,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5286,12 +5286,12 @@ namespace Google.Cloud.Vision.V1
         /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSets should be imported.
+        /// Required. The project in which the ProductSets should be imported.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="inputConfig">
-        /// The input content for the list of requests.
+        /// Required. The input content for the list of requests.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -5314,8 +5314,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5324,12 +5324,12 @@ namespace Google.Cloud.Vision.V1
         /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSets should be imported.
+        /// Required. The project in which the ProductSets should be imported.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="inputConfig">
-        /// The input content for the list of requests.
+        /// Required. The input content for the list of requests.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -5352,8 +5352,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5362,12 +5362,12 @@ namespace Google.Cloud.Vision.V1
         /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSets should be imported.
+        /// Required. The project in which the ProductSets should be imported.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="inputConfig">
-        /// The input content for the list of requests.
+        /// Required. The input content for the list of requests.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -5387,8 +5387,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5397,12 +5397,12 @@ namespace Google.Cloud.Vision.V1
         /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
         /// </summary>
         /// <param name="parent">
-        /// The project in which the ProductSets should be imported.
+        /// Required. The project in which the ProductSets should be imported.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
         /// <param name="inputConfig">
-        /// The input content for the list of requests.
+        /// Required. The input content for the list of requests.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -5425,8 +5425,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5467,8 +5467,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -5535,12 +5535,12 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
-        /// The project and location in which the Products should be deleted.
+        /// Required. The project and location in which the Products should be deleted.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -5581,12 +5581,12 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
-        /// The project and location in which the Products should be deleted.
+        /// Required. The project and location in which the Products should be deleted.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -5624,12 +5624,12 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
-        /// The project and location in which the Products should be deleted.
+        /// Required. The project and location in which the Products should be deleted.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -5670,12 +5670,12 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
-        /// The project and location in which the Products should be deleted.
+        /// Required. The project and location in which the Products should be deleted.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -5716,12 +5716,12 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
-        /// The project and location in which the Products should be deleted.
+        /// Required. The project and location in which the Products should be deleted.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -5759,12 +5759,12 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
-        /// The project and location in which the Products should be deleted.
+        /// Required. The project and location in which the Products should be deleted.
         ///
         /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
         /// </param>
@@ -5805,8 +5805,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">
@@ -5860,8 +5860,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">
@@ -6976,8 +6976,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -7007,8 +7007,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         ///
@@ -7061,8 +7061,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">
@@ -7105,8 +7105,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         ///
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
-        /// used to keep track of the progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
+        /// progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">

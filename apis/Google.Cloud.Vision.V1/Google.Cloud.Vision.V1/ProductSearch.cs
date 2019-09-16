@@ -25,10 +25,10 @@ namespace Google.Cloud.Vision.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3Byb2R1Y3Rfc2VhcmNoLnByb3Rv",
-            "EhZnb29nbGUuY2xvdWQudmlzaW9uLnYxGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvGiVnb29nbGUvY2xvdWQvdmlzaW9uL3YxL2dlb21ldHJ5LnBy",
-            "b3RvGjNnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3Byb2R1Y3Rfc2VhcmNoX3Nl",
-            "cnZpY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
+            "EhZnb29nbGUuY2xvdWQudmlzaW9uLnYxGiVnb29nbGUvY2xvdWQvdmlzaW9u",
+            "L3YxL2dlb21ldHJ5LnByb3RvGjNnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3By",
+            "b2R1Y3Rfc2VhcmNoX3NlcnZpY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
             "kwEKE1Byb2R1Y3RTZWFyY2hQYXJhbXMSOwoNYm91bmRpbmdfcG9seRgJIAEo",
             "CzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQm91bmRpbmdQb2x5EhMKC3By",
             "b2R1Y3Rfc2V0GAYgASgJEhoKEnByb2R1Y3RfY2F0ZWdvcmllcxgHIAMoCRIO",
@@ -51,7 +51,7 @@ namespace Google.Cloud.Vision.V1 {
             "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Zp",
             "c2lvbi92MTt2aXNpb274AQGiAgRHQ1ZOYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchParams), global::Google.Cloud.Vision.V1.ProductSearchParams.Parser, new[]{ "BoundingPoly", "ProductSet", "ProductCategories", "Filter" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults), global::Google.Cloud.Vision.V1.ProductSearchResults.Parser, new[]{ "IndexTime", "Results", "ProductGroupedResults" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result.Parser, new[]{ "Product", "Score", "Image" }, null, null, null),
@@ -122,8 +122,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ProductSetFieldNumber = 6;
     private string productSet_ = "";
     /// <summary>
-    /// The resource name of a [ProductSet][google.cloud.vision.v1.ProductSet] to
-    /// be searched for similar images.
+    /// The resource name of a [ProductSet][google.cloud.vision.v1.ProductSet] to be searched for similar images.
     ///
     /// Format is:
     /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.

@@ -25,8 +25,8 @@ namespace Google.Cloud.Vision.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3RleHRfYW5ub3RhdGlvbi5wcm90",
-            "bxIWZ29vZ2xlLmNsb3VkLnZpc2lvbi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90bxolZ29vZ2xlL2Nsb3VkL3Zpc2lvbi92MS9nZW9tZXRyeS5w",
+            "bxIWZ29vZ2xlLmNsb3VkLnZpc2lvbi52MRolZ29vZ2xlL2Nsb3VkL3Zpc2lv",
+            "bi92MS9nZW9tZXRyeS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
             "cm90byKWBAoOVGV4dEFubm90YXRpb24SKwoFcGFnZXMYASADKAsyHC5nb29n",
             "bGUuY2xvdWQudmlzaW9uLnYxLlBhZ2USDAoEdGV4dBgCIAEoCRo9ChBEZXRl",
             "Y3RlZExhbmd1YWdlEhUKDWxhbmd1YWdlX2NvZGUYASABKAkSEgoKY29uZmlk",
@@ -69,7 +69,7 @@ namespace Google.Cloud.Vision.V1 {
             "by9nb29nbGVhcGlzL2Nsb3VkL3Zpc2lvbi92MTt2aXNpb274AQGiAgRHQ1ZO",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation), global::Google.Cloud.Vision.V1.TextAnnotation.Parser, new[]{ "Pages", "Text" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Parser, new[]{ "Type", "IsPrefix" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType) }, null),
@@ -91,9 +91,8 @@ namespace Google.Cloud.Vision.V1 {
   ///     TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
   /// Each structural component, starting from Page, may further have their own
   /// properties. Properties describe detected languages, breaks etc.. Please refer
-  /// to the
-  /// [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
-  /// message definition below for more detail.
+  /// to the [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty] message definition below for more
+  /// detail.
   /// </summary>
   public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation> {
     private static readonly pb::MessageParser<TextAnnotation> _parser = new pb::MessageParser<TextAnnotation>(() => new TextAnnotation());
