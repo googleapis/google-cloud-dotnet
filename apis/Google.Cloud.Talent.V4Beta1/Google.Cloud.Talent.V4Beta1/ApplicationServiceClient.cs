@@ -480,8 +480,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// created.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="application">
         /// Required. The application to be created.
@@ -511,8 +511,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// created.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="application">
         /// Required. The application to be created.
@@ -539,8 +539,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// created.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="application">
         /// Required. The application to be created.
@@ -570,8 +570,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// created.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="application">
         /// Required. The application to be created.
@@ -601,8 +601,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// created.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="application">
         /// Required. The application to be created.
@@ -629,8 +629,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// created.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="application">
         /// Required. The application to be created.
@@ -715,9 +715,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be retrieved.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -741,9 +740,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be retrieved.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -764,9 +762,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be retrieved.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -790,9 +787,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be retrieved.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -816,9 +812,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be retrieved.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -839,9 +834,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be retrieved.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1040,9 +1034,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1066,9 +1059,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1089,9 +1081,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1112,9 +1103,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1138,9 +1128,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1161,9 +1150,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the application to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-        /// for example,
-        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+        /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1239,7 +1227,7 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1277,7 +1265,7 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1315,7 +1303,7 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1353,7 +1341,7 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
-        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// example, "projects/foo/tenants/bar/profiles/baz".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.

@@ -26,34 +26,35 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZXZlbnQucHJvdG8SG2dv",
             "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKC",
-            "AgoLQ2xpZW50RXZlbnQSEgoKcmVxdWVzdF9pZBgBIAEoCRIQCghldmVudF9p",
-            "ZBgCIAEoCRIvCgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASOgoJam9iX2V2ZW50GAUgASgLMiUuZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLkpvYkV2ZW50SAASQgoNcHJvZmlsZV9ldmVudBgG",
-            "IAEoCzIpLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlRXZl",
-            "bnRIABITCgtldmVudF9ub3RlcxgJIAEoCUIHCgVldmVudCLsAwoISm9iRXZl",
-            "bnQSQAoEdHlwZRgBIAEoDjIyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5Kb2JFdmVudC5Kb2JFdmVudFR5cGUSDAoEam9icxgCIAMoCRIPCgdwcm9m",
-            "aWxlGAMgASgJIv4CCgxKb2JFdmVudFR5cGUSHgoaSk9CX0VWRU5UX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIOCgpJTVBSRVNTSU9OEAESCAoEVklFVxACEhEKDVZJ",
-            "RVdfUkVESVJFQ1QQAxIVChFBUFBMSUNBVElPTl9TVEFSVBAEEhYKEkFQUExJ",
-            "Q0FUSU9OX0ZJTklTSBAFEiAKHEFQUExJQ0FUSU9OX1FVSUNLX1NVQk1JU1NJ",
-            "T04QBhIYChRBUFBMSUNBVElPTl9SRURJUkVDVBAHEiEKHUFQUExJQ0FUSU9O",
-            "X1NUQVJUX0ZST01fU0VBUkNIEAgSJAogQVBQTElDQVRJT05fUkVESVJFQ1Rf",
-            "RlJPTV9TRUFSQ0gQCRIeChpBUFBMSUNBVElPTl9DT01QQU5ZX1NVQk1JVBAK",
-            "EgwKCEJPT0tNQVJLEAsSEAoMTk9USUZJQ0FUSU9OEAwSCQoFSElSRUQQDRIL",
-            "CgdTRU5UX0NWEA4SFQoRSU5URVJWSUVXX0dSQU5URUQQDyLYAQoMUHJvZmls",
-            "ZUV2ZW50EkgKBHR5cGUYASABKA4yOi5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuUHJvZmlsZUV2ZW50LlByb2ZpbGVFdmVudFR5cGUSEAoIcHJvZmls",
-            "ZXMYAiADKAkSDAoEam9icxgGIAMoCSJeChBQcm9maWxlRXZlbnRUeXBlEiIK",
-            "HlBST0ZJTEVfRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEg4KCklNUFJFU1NJ",
-            "T04QARIICgRWSUVXEAISDAoIQk9PS01BUksQA0J4Ch9jb20uZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExQgpFdmVudFByb3RvUAFaQWdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0",
-            "YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKMAgoLQ2xpZW50RXZl",
+            "bnQSEgoKcmVxdWVzdF9pZBgBIAEoCRIVCghldmVudF9pZBgCIAEoCUID4EEC",
+            "EjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EECEjoKCWpvYl9ldmVudBgFIAEoCzIlLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Kb2JFdmVudEgAEkIKDXByb2ZpbGVfZXZlbnQYBiAB",
+            "KAsyKS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZUV2ZW50",
+            "SAASEwoLZXZlbnRfbm90ZXMYCSABKAlCBwoFZXZlbnQi9gMKCEpvYkV2ZW50",
+            "EkUKBHR5cGUYASABKA4yMi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "Sm9iRXZlbnQuSm9iRXZlbnRUeXBlQgPgQQISEQoEam9icxgCIAMoCUID4EEC",
+            "Eg8KB3Byb2ZpbGUYAyABKAki/gIKDEpvYkV2ZW50VHlwZRIeChpKT0JfRVZF",
+            "TlRfVFlQRV9VTlNQRUNJRklFRBAAEg4KCklNUFJFU1NJT04QARIICgRWSUVX",
+            "EAISEQoNVklFV19SRURJUkVDVBADEhUKEUFQUExJQ0FUSU9OX1NUQVJUEAQS",
+            "FgoSQVBQTElDQVRJT05fRklOSVNIEAUSIAocQVBQTElDQVRJT05fUVVJQ0tf",
+            "U1VCTUlTU0lPThAGEhgKFEFQUExJQ0FUSU9OX1JFRElSRUNUEAcSIQodQVBQ",
+            "TElDQVRJT05fU1RBUlRfRlJPTV9TRUFSQ0gQCBIkCiBBUFBMSUNBVElPTl9S",
+            "RURJUkVDVF9GUk9NX1NFQVJDSBAJEh4KGkFQUExJQ0FUSU9OX0NPTVBBTllf",
+            "U1VCTUlUEAoSDAoIQk9PS01BUksQCxIQCgxOT1RJRklDQVRJT04QDBIJCgVI",
+            "SVJFRBANEgsKB1NFTlRfQ1YQDhIVChFJTlRFUlZJRVdfR1JBTlRFRBAPIuIB",
+            "CgxQcm9maWxlRXZlbnQSTQoEdHlwZRgBIAEoDjI6Lmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Qcm9maWxlRXZlbnQuUHJvZmlsZUV2ZW50VHlwZUID",
+            "4EECEhUKCHByb2ZpbGVzGAIgAygJQgPgQQISDAoEam9icxgGIAMoCSJeChBQ",
+            "cm9maWxlRXZlbnRUeXBlEiIKHlBST0ZJTEVfRVZFTlRfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEg4KCklNUFJFU1NJT04QARIICgRWSUVXEAISDAoIQk9PS01BUksQ",
+            "A0J4Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQgpFdmVudFBy",
+            "b3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "Y2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "ProfileEvent", "EventNotes" }, new[]{ "Event" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs", "Profile" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null),
@@ -121,7 +122,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequestIdFieldNumber = 1;
     private string requestId_ = "";
     /// <summary>
-    /// Optional but highly recommended.
+    /// Strongly recommended for the best service experience.
     ///
     /// A unique ID generated in the API responses. It can be found in
     /// [ResponseMetadata.request_id][google.cloud.talent.v4beta1.ResponseMetadata.request_id].
@@ -196,8 +197,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EventNotesFieldNumber = 9;
     private string eventNotes_ = "";
     /// <summary>
-    /// Optional. Notes about the event provided by recruiters or other users, for
-    /// example, feedback on why a profile was bookmarked.
+    /// Notes about the event provided by recruiters or other users, for example,
+    /// feedback on why a profile was bookmarked.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string EventNotes {
@@ -488,7 +489,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-    /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+    /// example, "projects/foo/tenants/bar/jobs/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Jobs {
@@ -499,12 +500,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ProfileFieldNumber = 3;
     private string profile_ = "";
     /// <summary>
-    /// Optional. The [profile name][google.cloud.talent.v4beta1.Profile.name]
-    /// associated with this client event.
+    /// The [profile name][google.cloud.talent.v4beta1.Profile.name] associated
+    /// with this client event.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
-    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+    /// for example, "projects/foo/tenants/bar/profiles/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Profile {
@@ -814,7 +815,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
-    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+    /// for example, "projects/foo/tenants/bar/profiles/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Profiles {
@@ -827,13 +828,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> jobs_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The [job name(s)][google.cloud.talent.v4beta1.Job.name]
-    /// associated with this client event. Leave it empty if the event isn't
-    /// associated with a job.
+    /// The [job name(s)][google.cloud.talent.v4beta1.Job.name] associated with
+    /// this client event. Leave it empty if the event isn't associated with a job.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-    /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+    /// example, "projects/foo/tenants/bar/jobs/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Jobs {

@@ -676,11 +676,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="job">
         /// Required. The Job to be created.
@@ -711,11 +709,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="job">
         /// Required. The Job to be created.
@@ -743,11 +739,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="job">
         /// Required. The Job to be created.
@@ -778,11 +772,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="job">
         /// Required. The Job to be created.
@@ -813,11 +805,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="job">
         /// Required. The Job to be created.
@@ -845,11 +835,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="job">
         /// Required. The Job to be created.
@@ -944,11 +932,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to retrieve.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -973,11 +961,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to retrieve.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -999,11 +987,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to retrieve.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1028,11 +1016,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to retrieve.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1057,11 +1045,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to retrieve.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1083,11 +1071,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to retrieve.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1307,11 +1295,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1338,11 +1326,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1366,11 +1354,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1394,11 +1382,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1425,11 +1413,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1453,11 +1441,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. The resource name of the job to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
-        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For
+        /// example, "projects/foo/tenants/bar/jobs/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/jobs/1234".
+        /// If tenant id is unspecified, the default tenant is used. For
+        /// example, "projects/foo/jobs/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1539,11 +1527,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be enumerated.
@@ -1553,16 +1539,16 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The fields eligible for filtering are:
         ///
         /// * `companyName` (Required)
-        /// * `requisitionId` (Optional)
-        /// * `status` (Optional) Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
         ///
         /// Sample Query:
         ///
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// requisitionId = "req-1"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
@@ -1600,11 +1586,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be enumerated.
@@ -1614,16 +1598,16 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The fields eligible for filtering are:
         ///
         /// * `companyName` (Required)
-        /// * `requisitionId` (Optional)
-        /// * `status` (Optional) Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
         ///
         /// Sample Query:
         ///
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// requisitionId = "req-1"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
@@ -1661,11 +1645,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be enumerated.
@@ -1675,16 +1657,16 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The fields eligible for filtering are:
         ///
         /// * `companyName` (Required)
-        /// * `requisitionId` (Optional)
-        /// * `status` (Optional) Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
         ///
         /// Sample Query:
         ///
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// requisitionId = "req-1"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
@@ -1722,11 +1704,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be enumerated.
@@ -1736,16 +1716,16 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The fields eligible for filtering are:
         ///
         /// * `companyName` (Required)
-        /// * `requisitionId` (Optional)
-        /// * `status` (Optional) Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
         ///
         /// Sample Query:
         ///
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// requisitionId = "req-1"
-        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
@@ -1821,11 +1801,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be deleted.
@@ -1837,7 +1815,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// * `companyName` (Required)
         /// * `requisitionId` (Required)
         ///
-        /// Sample Query: companyName = "projects/api-test-project/companies/123" AND
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
         /// requisitionId = "req-1"
         /// </param>
         /// <param name="callSettings">
@@ -1863,11 +1841,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be deleted.
@@ -1879,7 +1855,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// * `companyName` (Required)
         /// * `requisitionId` (Required)
         ///
-        /// Sample Query: companyName = "projects/api-test-project/companies/123" AND
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
         /// requisitionId = "req-1"
         /// </param>
         /// <param name="cancellationToken">
@@ -1902,11 +1878,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be deleted.
@@ -1918,7 +1892,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// * `companyName` (Required)
         /// * `requisitionId` (Required)
         ///
-        /// Sample Query: companyName = "projects/api-test-project/companies/123" AND
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
         /// requisitionId = "req-1"
         /// </param>
         /// <param name="callSettings">
@@ -1941,11 +1915,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be deleted.
@@ -1957,7 +1929,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// * `companyName` (Required)
         /// * `requisitionId` (Required)
         ///
-        /// Sample Query: companyName = "projects/api-test-project/companies/123" AND
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
         /// requisitionId = "req-1"
         /// </param>
         /// <param name="callSettings">
@@ -1983,11 +1955,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be deleted.
@@ -1999,7 +1969,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// * `companyName` (Required)
         /// * `requisitionId` (Required)
         ///
-        /// Sample Query: companyName = "projects/api-test-project/companies/123" AND
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
         /// requisitionId = "req-1"
         /// </param>
         /// <param name="cancellationToken">
@@ -2022,11 +1992,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="filter">
         /// Required. The filter string specifies the jobs to be deleted.
@@ -2038,7 +2006,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// * `companyName` (Required)
         /// * `requisitionId` (Required)
         ///
-        /// Sample Query: companyName = "projects/api-test-project/companies/123" AND
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
         /// requisitionId = "req-1"
         /// </param>
         /// <param name="callSettings">
@@ -2224,11 +2192,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
         /// Required. The jobs to be created.
@@ -2256,11 +2222,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
         /// Required. The jobs to be created.
@@ -2285,11 +2249,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
         /// Required. The jobs to be created.
@@ -2389,14 +2351,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
-        /// Required. The jobs to be updated.
+        /// The jobs to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2421,14 +2381,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
-        /// Required. The jobs to be updated.
+        /// The jobs to be updated.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2450,14 +2408,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required. The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
-        /// Required. The jobs to be updated.
+        /// The jobs to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
