@@ -14,43 +14,44 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.TextToSpeech.V1.Snippets
+namespace Google.Cloud.TextToSpeech.V1
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.TextToSpeech.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedTextToSpeechClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedTextToSpeechSnippets
     {
-        /// <summary>Snippet for ListVoicesAsync</summary>
-        public async Task ListVoicesAsync()
+        /// <summary>Snippet for ListVoices</summary>
+        public void ListVoices_RequestObject()
         {
-            // Snippet: ListVoicesAsync(string,CallSettings)
-            // Additional: ListVoicesAsync(string,CancellationToken)
+            // Snippet: ListVoices(ListVoicesRequest, CallSettings)
+            // Create client
+            TextToSpeechClient textToSpeechClient = TextToSpeechClient.Create();
+            // Initialize request argument(s)
+            ListVoicesRequest request = new ListVoicesRequest { LanguageCode = "", };
+            // Make the request
+            ListVoicesResponse response = textToSpeechClient.ListVoices(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVoicesAsync</summary>
+        public async Task ListVoicesAsync_RequestObject()
+        {
+            // Snippet: ListVoicesAsync(ListVoicesRequest, CallSettings)
+            // Additional: ListVoicesAsync(ListVoicesRequest, CancellationToken)
             // Create client
             TextToSpeechClient textToSpeechClient = await TextToSpeechClient.CreateAsync();
             // Initialize request argument(s)
-            string languageCode = "";
+            ListVoicesRequest request = new ListVoicesRequest { LanguageCode = "", };
             // Make the request
-            ListVoicesResponse response = await textToSpeechClient.ListVoicesAsync(languageCode);
+            ListVoicesResponse response = await textToSpeechClient.ListVoicesAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListVoices</summary>
         public void ListVoices()
         {
-            // Snippet: ListVoices(string,CallSettings)
+            // Snippet: ListVoices(String, CallSettings)
             // Create client
             TextToSpeechClient textToSpeechClient = TextToSpeechClient.Create();
             // Initialize request argument(s)
@@ -61,68 +62,42 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
         }
 
         /// <summary>Snippet for ListVoicesAsync</summary>
-        public async Task ListVoicesAsync_RequestObject()
+        public async Task ListVoicesAsync()
         {
-            // Snippet: ListVoicesAsync(ListVoicesRequest,CallSettings)
-            // Additional: ListVoicesAsync(ListVoicesRequest,CancellationToken)
+            // Snippet: ListVoicesAsync(String, CallSettings)
+            // Additional: ListVoicesAsync(String, CancellationToken)
             // Create client
             TextToSpeechClient textToSpeechClient = await TextToSpeechClient.CreateAsync();
             // Initialize request argument(s)
-            ListVoicesRequest request = new ListVoicesRequest();
+            string languageCode = "";
             // Make the request
-            ListVoicesResponse response = await textToSpeechClient.ListVoicesAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListVoices</summary>
-        public void ListVoices_RequestObject()
-        {
-            // Snippet: ListVoices(ListVoicesRequest,CallSettings)
-            // Create client
-            TextToSpeechClient textToSpeechClient = TextToSpeechClient.Create();
-            // Initialize request argument(s)
-            ListVoicesRequest request = new ListVoicesRequest();
-            // Make the request
-            ListVoicesResponse response = textToSpeechClient.ListVoices(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SynthesizeSpeechAsync</summary>
-        public async Task SynthesizeSpeechAsync()
-        {
-            // Snippet: SynthesizeSpeechAsync(SynthesisInput,VoiceSelectionParams,AudioConfig,CallSettings)
-            // Additional: SynthesizeSpeechAsync(SynthesisInput,VoiceSelectionParams,AudioConfig,CancellationToken)
-            // Create client
-            TextToSpeechClient textToSpeechClient = await TextToSpeechClient.CreateAsync();
-            // Initialize request argument(s)
-            SynthesisInput input = new SynthesisInput();
-            VoiceSelectionParams voice = new VoiceSelectionParams();
-            AudioConfig audioConfig = new AudioConfig();
-            // Make the request
-            SynthesizeSpeechResponse response = await textToSpeechClient.SynthesizeSpeechAsync(input, voice, audioConfig);
+            ListVoicesResponse response = await textToSpeechClient.ListVoicesAsync(languageCode);
             // End snippet
         }
 
         /// <summary>Snippet for SynthesizeSpeech</summary>
-        public void SynthesizeSpeech()
+        public void SynthesizeSpeech_RequestObject()
         {
-            // Snippet: SynthesizeSpeech(SynthesisInput,VoiceSelectionParams,AudioConfig,CallSettings)
+            // Snippet: SynthesizeSpeech(SynthesizeSpeechRequest, CallSettings)
             // Create client
             TextToSpeechClient textToSpeechClient = TextToSpeechClient.Create();
             // Initialize request argument(s)
-            SynthesisInput input = new SynthesisInput();
-            VoiceSelectionParams voice = new VoiceSelectionParams();
-            AudioConfig audioConfig = new AudioConfig();
+            SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
+            {
+                Input = new SynthesisInput(),
+                Voice = new VoiceSelectionParams(),
+                AudioConfig = new AudioConfig(),
+            };
             // Make the request
-            SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(input, voice, audioConfig);
+            SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(request);
             // End snippet
         }
 
         /// <summary>Snippet for SynthesizeSpeechAsync</summary>
         public async Task SynthesizeSpeechAsync_RequestObject()
         {
-            // Snippet: SynthesizeSpeechAsync(SynthesizeSpeechRequest,CallSettings)
-            // Additional: SynthesizeSpeechAsync(SynthesizeSpeechRequest,CancellationToken)
+            // Snippet: SynthesizeSpeechAsync(SynthesizeSpeechRequest, CallSettings)
+            // Additional: SynthesizeSpeechAsync(SynthesizeSpeechRequest, CancellationToken)
             // Create client
             TextToSpeechClient textToSpeechClient = await TextToSpeechClient.CreateAsync();
             // Initialize request argument(s)
@@ -138,22 +113,34 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
         }
 
         /// <summary>Snippet for SynthesizeSpeech</summary>
-        public void SynthesizeSpeech_RequestObject()
+        public void SynthesizeSpeech()
         {
-            // Snippet: SynthesizeSpeech(SynthesizeSpeechRequest,CallSettings)
+            // Snippet: SynthesizeSpeech(SynthesisInput, VoiceSelectionParams, AudioConfig, CallSettings)
             // Create client
             TextToSpeechClient textToSpeechClient = TextToSpeechClient.Create();
             // Initialize request argument(s)
-            SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
-            {
-                Input = new SynthesisInput(),
-                Voice = new VoiceSelectionParams(),
-                AudioConfig = new AudioConfig(),
-            };
+            SynthesisInput input = new SynthesisInput();
+            VoiceSelectionParams voice = new VoiceSelectionParams();
+            AudioConfig audioConfig = new AudioConfig();
             // Make the request
-            SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(request);
+            SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(input, voice, audioConfig);
             // End snippet
         }
 
+        /// <summary>Snippet for SynthesizeSpeechAsync</summary>
+        public async Task SynthesizeSpeechAsync()
+        {
+            // Snippet: SynthesizeSpeechAsync(SynthesisInput, VoiceSelectionParams, AudioConfig, CallSettings)
+            // Additional: SynthesizeSpeechAsync(SynthesisInput, VoiceSelectionParams, AudioConfig, CancellationToken)
+            // Create client
+            TextToSpeechClient textToSpeechClient = await TextToSpeechClient.CreateAsync();
+            // Initialize request argument(s)
+            SynthesisInput input = new SynthesisInput();
+            VoiceSelectionParams voice = new VoiceSelectionParams();
+            AudioConfig audioConfig = new AudioConfig();
+            // Make the request
+            SynthesizeSpeechResponse response = await textToSpeechClient.SynthesizeSpeechAsync(input, voice, audioConfig);
+            // End snippet
+        }
     }
 }

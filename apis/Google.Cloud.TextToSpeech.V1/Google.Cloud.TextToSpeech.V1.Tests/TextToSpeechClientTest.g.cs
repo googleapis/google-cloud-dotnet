@@ -14,144 +14,103 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.TextToSpeech.V1.Tests
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
+namespace Google.Cloud.TextToSpeech.V1
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.TextToSpeech.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedTextToSpeechClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedTextToSpeechTest
     {
-        [Fact]
-        public void ListVoices()
+        [xunit::FactAttribute]
+        public void ListVoicesRequestObject()
         {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
-            ListVoicesRequest expectedRequest = new ListVoicesRequest
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
+            ListVoicesRequest request = new ListVoicesRequest
             {
-                LanguageCode = "languageCode-412800396",
+                LanguageCode = "language_code2f6c7160",
             };
-            ListVoicesResponse expectedResponse = new ListVoicesResponse();
-            mockGrpcClient.Setup(x => x.ListVoices(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
-            string languageCode = "languageCode-412800396";
-            ListVoicesResponse response = client.ListVoices(languageCode);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ListVoicesAsync()
-        {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
-            ListVoicesRequest expectedRequest = new ListVoicesRequest
+            ListVoicesResponse expectedResponse = new ListVoicesResponse
             {
-                LanguageCode = "languageCode-412800396",
+                Voices = { new Voice(), },
             };
-            ListVoicesResponse expectedResponse = new ListVoicesResponse();
-            mockGrpcClient.Setup(x => x.ListVoicesAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListVoicesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
-            string languageCode = "languageCode-412800396";
-            ListVoicesResponse response = await client.ListVoicesAsync(languageCode);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void ListVoices2()
-        {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
-            ListVoicesRequest request = new ListVoicesRequest();
-            ListVoicesResponse expectedResponse = new ListVoicesResponse();
-            mockGrpcClient.Setup(x => x.ListVoices(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ListVoices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
             ListVoicesResponse response = client.ListVoices(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListVoicesAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ListVoicesRequestObjectAsync()
         {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
-            ListVoicesRequest request = new ListVoicesRequest();
-            ListVoicesResponse expectedResponse = new ListVoicesResponse();
-            mockGrpcClient.Setup(x => x.ListVoicesAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListVoicesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
+            ListVoicesRequest request = new ListVoicesRequest
+            {
+                LanguageCode = "language_code2f6c7160",
+            };
+            ListVoicesResponse expectedResponse = new ListVoicesResponse
+            {
+                Voices = { new Voice(), },
+            };
+            mockGrpcClient.Setup(x => x.ListVoicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListVoicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
-            ListVoicesResponse response = await client.ListVoicesAsync(request);
-            Assert.Same(expectedResponse, response);
+            ListVoicesResponse responseCallSettings = await client.ListVoicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListVoicesResponse responseCancellationToken = await client.ListVoicesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SynthesizeSpeech()
+        [xunit::FactAttribute]
+        public void ListVoices()
         {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
-            SynthesizeSpeechRequest expectedRequest = new SynthesizeSpeechRequest
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
+            ListVoicesRequest request = new ListVoicesRequest
             {
-                Input = new SynthesisInput(),
-                Voice = new VoiceSelectionParams(),
-                AudioConfig = new AudioConfig(),
+                LanguageCode = "language_code2f6c7160",
             };
-            SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
+            ListVoicesResponse expectedResponse = new ListVoicesResponse
             {
-                AudioContent = ByteString.CopyFromUtf8("16"),
+                Voices = { new Voice(), },
             };
-            mockGrpcClient.Setup(x => x.SynthesizeSpeech(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ListVoices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
-            SynthesisInput input = new SynthesisInput();
-            VoiceSelectionParams voice = new VoiceSelectionParams();
-            AudioConfig audioConfig = new AudioConfig();
-            SynthesizeSpeechResponse response = client.SynthesizeSpeech(input, voice, audioConfig);
-            Assert.Same(expectedResponse, response);
+            ListVoicesResponse response = client.ListVoices(request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SynthesizeSpeechAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ListVoicesAsync()
         {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
-            SynthesizeSpeechRequest expectedRequest = new SynthesizeSpeechRequest
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
+            ListVoicesRequest request = new ListVoicesRequest
             {
-                Input = new SynthesisInput(),
-                Voice = new VoiceSelectionParams(),
-                AudioConfig = new AudioConfig(),
+                LanguageCode = "language_code2f6c7160",
             };
-            SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
+            ListVoicesResponse expectedResponse = new ListVoicesResponse
             {
-                AudioContent = ByteString.CopyFromUtf8("16"),
+                Voices = { new Voice(), },
             };
-            mockGrpcClient.Setup(x => x.SynthesizeSpeechAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SynthesizeSpeechResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ListVoicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListVoicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
-            SynthesisInput input = new SynthesisInput();
-            VoiceSelectionParams voice = new VoiceSelectionParams();
-            AudioConfig audioConfig = new AudioConfig();
-            SynthesizeSpeechResponse response = await client.SynthesizeSpeechAsync(input, voice, audioConfig);
-            Assert.Same(expectedResponse, response);
+            ListVoicesResponse responseCallSettings = await client.ListVoicesAsync(request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListVoicesResponse responseCancellationToken = await client.ListVoicesAsync(request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SynthesizeSpeech2()
+        [xunit::FactAttribute]
+        public void SynthesizeSpeechRequestObject()
         {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
             SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
             {
                 Input = new SynthesisInput(),
@@ -160,20 +119,19 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             };
             SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
             {
-                AudioContent = ByteString.CopyFromUtf8("16"),
+                AudioContent = proto::ByteString.CopyFromUtf8("audio_content20992f23"),
             };
-            mockGrpcClient.Setup(x => x.SynthesizeSpeech(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SynthesizeSpeech(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
             SynthesizeSpeechResponse response = client.SynthesizeSpeech(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SynthesizeSpeechAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SynthesizeSpeechRequestObjectAsync()
         {
-            Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new Mock<TextToSpeech.TextToSpeechClient>(MockBehavior.Strict);
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
             SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
             {
                 Input = new SynthesisInput(),
@@ -182,15 +140,59 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             };
             SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
             {
-                AudioContent = ByteString.CopyFromUtf8("16"),
+                AudioContent = proto::ByteString.CopyFromUtf8("audio_content20992f23"),
             };
-            mockGrpcClient.Setup(x => x.SynthesizeSpeechAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SynthesizeSpeechResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SynthesizeSpeechAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SynthesizeSpeechResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
-            SynthesizeSpeechResponse response = await client.SynthesizeSpeechAsync(request);
-            Assert.Same(expectedResponse, response);
+            SynthesizeSpeechResponse responseCallSettings = await client.SynthesizeSpeechAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SynthesizeSpeechResponse responseCancellationToken = await client.SynthesizeSpeechAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void SynthesizeSpeech()
+        {
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
+            SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
+            {
+                Input = new SynthesisInput(),
+                Voice = new VoiceSelectionParams(),
+                AudioConfig = new AudioConfig(),
+            };
+            SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
+            {
+                AudioContent = proto::ByteString.CopyFromUtf8("audio_content20992f23"),
+            };
+            mockGrpcClient.Setup(x => x.SynthesizeSpeech(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            SynthesizeSpeechResponse response = client.SynthesizeSpeech(request.Input, request.Voice, request.AudioConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SynthesizeSpeechAsync()
+        {
+            moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
+            SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
+            {
+                Input = new SynthesisInput(),
+                Voice = new VoiceSelectionParams(),
+                AudioConfig = new AudioConfig(),
+            };
+            SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
+            {
+                AudioContent = proto::ByteString.CopyFromUtf8("audio_content20992f23"),
+            };
+            mockGrpcClient.Setup(x => x.SynthesizeSpeechAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SynthesizeSpeechResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
+            SynthesizeSpeechResponse responseCallSettings = await client.SynthesizeSpeechAsync(request.Input, request.Voice, request.AudioConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SynthesizeSpeechResponse responseCancellationToken = await client.SynthesizeSpeechAsync(request.Input, request.Voice, request.AudioConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
