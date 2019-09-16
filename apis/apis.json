@@ -961,9 +961,8 @@
 
   {
     "id": "Google.Cloud.TextToSpeech.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/texttospeech/v1",
-    "serviceYaml": "tts_v1.yaml",
     "productName": "Google Cloud Text-to-Speech",
     "productUrl": "https://cloud.google.com/text-to-speech",
     "version": "1.0.0",
