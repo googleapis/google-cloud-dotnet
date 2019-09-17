@@ -215,6 +215,18 @@ generate_api() {
     echo "Running post-generation script for $PACKAGE"
     (cd $PACKAGE_DIR; ./postgeneration.sh)
   fi
+  
+  if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -Ev "namespace ${1}[[:space:]{]*\$") ]]
+  then
+    echo "API $1 has broken namespace declarations"
+    # Monitoring currently has an exemption as we know it's broken.
+    # We plan to remove that exemption (and the breakage) when we do a major version bump.
+    # For anything else, fail the build.
+    if [[ $1 != "Google.Cloud.Monitoring.V3" ]]
+    then
+      exit 1
+    fi
+  fi
 }
 
 
