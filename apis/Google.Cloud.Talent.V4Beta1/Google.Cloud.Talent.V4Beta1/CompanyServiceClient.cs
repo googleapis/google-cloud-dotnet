@@ -479,10 +479,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="company">
         /// Required. The company to be created.
@@ -511,10 +509,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="company">
         /// Required. The company to be created.
@@ -540,10 +536,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="company">
         /// Required. The company to be created.
@@ -572,10 +566,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="company">
         /// Required. The company to be created.
@@ -604,10 +596,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="company">
         /// Required. The company to be created.
@@ -633,10 +623,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
-        ///
-        /// Tenant id is optional and a default tenant is created if unspecified, for
-        /// example, "projects/api-test-project".
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="company">
         /// Required. The company to be created.
@@ -724,7 +712,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
         /// example, "projects/api-test-project/tenants/foo/companies/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// If tenant id is unspecified, the default tenant is used, for
         /// example, "projects/api-test-project/companies/bar".
         /// </param>
         /// <param name="callSettings">
@@ -752,7 +740,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
         /// example, "projects/api-test-project/tenants/foo/companies/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// If tenant id is unspecified, the default tenant is used, for
         /// example, "projects/api-test-project/companies/bar".
         /// </param>
         /// <param name="cancellationToken">
@@ -777,7 +765,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
         /// example, "projects/api-test-project/tenants/foo/companies/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// If tenant id is unspecified, the default tenant is used, for
         /// example, "projects/api-test-project/companies/bar".
         /// </param>
         /// <param name="callSettings">
@@ -805,7 +793,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
         /// example, "projects/api-test-project/tenants/foo/companies/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// If tenant id is unspecified, the default tenant is used, for
         /// example, "projects/api-test-project/companies/bar".
         /// </param>
         /// <param name="callSettings">
@@ -833,7 +821,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
         /// example, "projects/api-test-project/tenants/foo/companies/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// If tenant id is unspecified, the default tenant is used, for
         /// example, "projects/api-test-project/companies/bar".
         /// </param>
         /// <param name="cancellationToken">
@@ -858,7 +846,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
         /// example, "projects/api-test-project/tenants/foo/companies/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// If tenant id is unspecified, the default tenant is used, for
         /// example, "projects/api-test-project/companies/bar".
         /// </param>
         /// <param name="callSettings">
@@ -1060,10 +1048,10 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
-        /// example, "projects/api-test-project/tenants/foo/companies/bar".
+        /// example, "projects/foo/tenants/bar/companies/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/companies/bar".
+        /// If tenant id is unspecified, the default tenant is used, for
+        /// example, "projects/foo/companies/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1089,10 +1077,10 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
-        /// example, "projects/api-test-project/tenants/foo/companies/bar".
+        /// example, "projects/foo/tenants/bar/companies/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/companies/bar".
+        /// If tenant id is unspecified, the default tenant is used, for
+        /// example, "projects/foo/companies/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1115,10 +1103,10 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
-        /// example, "projects/api-test-project/tenants/foo/companies/bar".
+        /// example, "projects/foo/tenants/bar/companies/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/companies/bar".
+        /// If tenant id is unspecified, the default tenant is used, for
+        /// example, "projects/foo/companies/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1141,10 +1129,10 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
-        /// example, "projects/api-test-project/tenants/foo/companies/bar".
+        /// example, "projects/foo/tenants/bar/companies/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/companies/bar".
+        /// If tenant id is unspecified, the default tenant is used, for
+        /// example, "projects/foo/companies/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1170,10 +1158,10 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
-        /// example, "projects/api-test-project/tenants/foo/companies/bar".
+        /// example, "projects/foo/tenants/bar/companies/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/companies/bar".
+        /// If tenant id is unspecified, the default tenant is used, for
+        /// example, "projects/foo/companies/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1196,10 +1184,10 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
-        /// example, "projects/api-test-project/tenants/foo/companies/bar".
+        /// example, "projects/foo/tenants/bar/companies/baz".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project/companies/bar".
+        /// If tenant id is unspecified, the default tenant is used, for
+        /// example, "projects/foo/companies/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1276,10 +1264,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
+        /// "projects/foo/tenant/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// If tenant id is unspecified, the default tenant will be used, for
+        /// example, "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1315,10 +1303,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
+        /// "projects/foo/tenant/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// If tenant id is unspecified, the default tenant will be used, for
+        /// example, "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1354,10 +1342,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
+        /// "projects/foo/tenant/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// If tenant id is unspecified, the default tenant will be used, for
+        /// example, "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1393,10 +1381,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/api-test-project/tenant/foo".
+        /// "projects/foo/tenant/bar".
         ///
-        /// Tenant id is optional and the default tenant is used if unspecified, for
-        /// example, "projects/api-test-project".
+        /// If tenant id is unspecified, the default tenant will be used, for
+        /// example, "projects/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.

@@ -26,36 +26,38 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvYXBwbGljYXRpb24ucHJv",
             "dG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxooZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGEx",
-            "L2NvbW1vbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhZnb29nbGUvdHlw",
-            "ZS9kYXRlLnByb3RvIsIHCgtBcHBsaWNhdGlvbhIMCgRuYW1lGAEgASgJEhMK",
-            "C2V4dGVybmFsX2lkGB8gASgJEg8KB3Byb2ZpbGUYAiABKAkSCwoDam9iGAQg",
-            "ASgJEg8KB2NvbXBhbnkYBSABKAkSKwoQYXBwbGljYXRpb25fZGF0ZRgHIAEo",
-            "CzIRLmdvb2dsZS50eXBlLkRhdGUSSAoFc3RhZ2UYCyABKA4yOS5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQXBwbGljYXRpb24uQXBwbGljYXRpb25T",
-            "dGFnZRJICgVzdGF0ZRgNIAEoDjI5Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5BcHBsaWNhdGlvbi5BcHBsaWNhdGlvblN0YXRlEjoKCmludGVydmll",
-            "d3MYECADKAsyJi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSW50ZXJ2",
-            "aWV3EiwKCHJlZmVycmFsGBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xW",
-            "YWx1ZRIvCgtjcmVhdGVfdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYFCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEhUKDW91dGNvbWVfbm90ZXMYFSABKAkSNQoHb3V0Y29t",
-            "ZRgWIAEoDjIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5PdXRjb21l",
-            "EiwKCGlzX21hdGNoGBwgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1",
-            "ZRIZChFqb2JfdGl0bGVfc25pcHBldBgdIAEoCSKQAQoQQXBwbGljYXRpb25T",
-            "dGF0ZRIhCh1BUFBMSUNBVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEg8KC0lO",
-            "X1BST0dSRVNTEAESFgoSQ0FORElEQVRFX1dJVEhEUkVXEAISFQoRRU1QTE9Z",
-            "RVJfV0lUSERSRVcQAxINCglDT01QTEVURUQQBBIKCgZDTE9TRUQQBSKpAQoQ",
-            "QXBwbGljYXRpb25TdGFnZRIhCh1BUFBMSUNBVElPTl9TVEFHRV9VTlNQRUNJ",
-            "RklFRBAAEgcKA05FVxABEgoKBlNDUkVFThACEhkKFUhJUklOR19NQU5BR0VS",
-            "X1JFVklFVxADEg0KCUlOVEVSVklFVxAEEhIKDk9GRkVSX0VYVEVOREVEEAUS",
-            "EgoOT0ZGRVJfQUNDRVBURUQQBhILCgdTVEFSVEVEEAdChgEKH2NvbS5nb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTFCGEFwcGxpY2F0aW9uUmVzb3VyY2VQ",
-            "cm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "bm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
+            "cm90bxooZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2NvbW1vbi5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3By",
+            "b3RvYnVmL3dyYXBwZXJzLnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3Rv",
+            "IuAHCgtBcHBsaWNhdGlvbhIMCgRuYW1lGAEgASgJEhgKC2V4dGVybmFsX2lk",
+            "GB8gASgJQgPgQQISFAoHcHJvZmlsZRgCIAEoCUID4EEDEgsKA2pvYhgEIAEo",
+            "CRIPCgdjb21wYW55GAUgASgJEisKEGFwcGxpY2F0aW9uX2RhdGUYByABKAsy",
+            "ES5nb29nbGUudHlwZS5EYXRlEk0KBXN0YWdlGAsgASgOMjkuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLkFwcGxpY2F0aW9uLkFwcGxpY2F0aW9uU3Rh",
+            "Z2VCA+BBAhJICgVzdGF0ZRgNIAEoDjI5Lmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "djRiZXRhMS5BcHBsaWNhdGlvbi5BcHBsaWNhdGlvblN0YXRlEjoKCmludGVy",
+            "dmlld3MYECADKAsyJi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSW50",
+            "ZXJ2aWV3EiwKCHJlZmVycmFsGBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJv",
+            "b2xWYWx1ZRI0CgtjcmVhdGVfdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAhIvCgt1cGRhdGVfdGltZRgUIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASFQoNb3V0Y29tZV9ub3RlcxgVIAEoCRI1",
+            "CgdvdXRjb21lGBYgASgOMiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "Lk91dGNvbWUSMQoIaXNfbWF0Y2gYHCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "Qm9vbFZhbHVlQgPgQQMSHgoRam9iX3RpdGxlX3NuaXBwZXQYHSABKAlCA+BB",
+            "AyKQAQoQQXBwbGljYXRpb25TdGF0ZRIhCh1BUFBMSUNBVElPTl9TVEFURV9V",
+            "TlNQRUNJRklFRBAAEg8KC0lOX1BST0dSRVNTEAESFgoSQ0FORElEQVRFX1dJ",
+            "VEhEUkVXEAISFQoRRU1QTE9ZRVJfV0lUSERSRVcQAxINCglDT01QTEVURUQQ",
+            "BBIKCgZDTE9TRUQQBSKpAQoQQXBwbGljYXRpb25TdGFnZRIhCh1BUFBMSUNB",
+            "VElPTl9TVEFHRV9VTlNQRUNJRklFRBAAEgcKA05FVxABEgoKBlNDUkVFThAC",
+            "EhkKFUhJUklOR19NQU5BR0VSX1JFVklFVxADEg0KCUlOVEVSVklFVxAEEhIK",
+            "Dk9GRkVSX0VYVEVOREVEEAUSEgoOT0ZGRVJfQUNDRVBURUQQBhILCgdTVEFS",
+            "VEVEEAdChgEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCGEFw",
+            "cGxpY2F0aW9uUmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVu",
+            "dKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Application), global::Google.Cloud.Talent.V4Beta1.Application.Parser, new[]{ "Name", "ExternalId", "Profile", "Job", "Company", "ApplicationDate", "Stage", "State", "Interviews", "Referral", "CreateTime", "UpdateTime", "OutcomeNotes", "Outcome", "IsMatch", "JobTitleSnippet" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState), typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) }, null)
           }));
@@ -125,9 +127,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Resource name assigned to an application by the API.
     ///
     /// The format is
-    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
-    /// for example,
-    /// "projects/api-test-project/tenants/foo/profiles/bar/applications/baz".
+    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}".
+    /// For example, "projects/foo/tenants/bar/profiles/baz/applications/qux".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -161,8 +162,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Output only. Resource name of the candidate of this application.
     ///
     /// The format is
-    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
-    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
+    /// For example, "projects/foo/tenants/bar/profiles/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Profile {
@@ -181,8 +182,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Resource name of the job which the candidate applied for.
     ///
     /// The format is
-    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}",
-    /// for example, "projects/api-test-project/tenants/foo/jobs/bar".
+    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For example,
+    /// "projects/foo/tenants/bar/jobs/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Job {
@@ -201,8 +202,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Resource name of the company which the candidate applied for.
     ///
     /// The format is
-    /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}",
-    /// for example, "projects/api-test-project/tenants/foo/companies/bar".
+    /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}".
+    /// For example, "projects/foo/tenants/bar/companies/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Company {
@@ -216,7 +217,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ApplicationDateFieldNumber = 7;
     private global::Google.Type.Date applicationDate_;
     /// <summary>
-    /// Optional. The application date.
+    /// The application date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date ApplicationDate {
@@ -247,7 +248,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StateFieldNumber = 13;
     private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState state_ = 0;
     /// <summary>
-    /// Optional. The application state.
+    /// The application state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState State {
@@ -263,8 +264,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(130, global::Google.Cloud.Talent.V4Beta1.Interview.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Interview> interviews_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Interview>();
     /// <summary>
-    /// Optional. All interviews (screen, onsite, and so on) conducted as part of
-    /// this application (includes details such as user conducting the interview,
+    /// All interviews (screen, onsite, and so on) conducted as part of this
+    /// application (includes details such as user conducting the interview,
     /// timestamp, feedback, and so on).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -277,7 +278,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_referral_codec = pb::FieldCodec.ForStructWrapper<bool>(146);
     private bool? referral_;
     /// <summary>
-    /// Optional. If the candidate is referred by a employee.
+    /// If the candidate is referred by a employee.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? Referral {
@@ -306,7 +307,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UpdateTimeFieldNumber = 20;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Optional. The last update timestamp.
+    /// The last update timestamp.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -320,9 +321,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeNotesFieldNumber = 21;
     private string outcomeNotes_ = "";
     /// <summary>
-    /// Optional. Free text reason behind the recruitement outcome (for example,
-    /// reason for withdraw / reject, reason for an unsuccessful finish, and so
-    /// on).
+    /// Free text reason behind the recruitement outcome (for example, reason for
+    /// withdraw / reject, reason for an unsuccessful finish, and so on).
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -338,7 +338,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeFieldNumber = 22;
     private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = 0;
     /// <summary>
-    /// Optional. Outcome positiveness shows how positive the outcome is.
+    /// Outcome positiveness shows how positive the outcome is.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Outcome Outcome {
