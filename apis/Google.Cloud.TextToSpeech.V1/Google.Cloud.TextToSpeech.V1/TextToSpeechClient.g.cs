@@ -55,16 +55,16 @@ namespace Google.Cloud.TextToSpeech.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 600000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1</description></item>
-        /// <item><description>Retry maximum delay: 600000 milliseconds.</description></item>
-        /// <item><description>Initial timeout: 100 milliseconds.</description></item>
-        /// <item><description>Timeout multiplier: 1.29999995231628</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.29999995231628</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Initial timeout: 600000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 600000 milliseconds.</description></item>
         /// <item><description>Total timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListVoicesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(600000), maxDelay: sys::TimeSpan.FromMilliseconds(600000), delayMultiplier: 1), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(60000), delayMultiplier: 1.2999999523162842), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded))));
+        public gaxgrpc::CallSettings ListVoicesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(60000), delayMultiplier: 1.2999999523162842), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(600000), maxDelay: sys::TimeSpan.FromMilliseconds(600000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -72,20 +72,54 @@ namespace Google.Cloud.TextToSpeech.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 600000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1</description></item>
-        /// <item><description>Retry maximum delay: 600000 milliseconds.</description></item>
-        /// <item><description>Initial timeout: 100 milliseconds.</description></item>
-        /// <item><description>Timeout multiplier: 1.29999995231628</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.29999995231628</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Initial timeout: 600000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 600000 milliseconds.</description></item>
         /// <item><description>Total timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SynthesizeSpeechSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(600000), maxDelay: sys::TimeSpan.FromMilliseconds(600000), delayMultiplier: 1), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(60000), delayMultiplier: 1.2999999523162842), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded))));
+        public gaxgrpc::CallSettings SynthesizeSpeechSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(60000), delayMultiplier: 1.2999999523162842), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(600000), maxDelay: sys::TimeSpan.FromMilliseconds(600000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded))));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TextToSpeechSettings"/> object.</returns>
         public TextToSpeechSettings Clone() => new TextToSpeechSettings(this);
+    }
+
+    /// <summary>
+    /// Builder class for <see cref="TextToSpeechClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class TextToSpeechClientBuilder : gaxgrpc::ClientBuilderBase<TextToSpeechClient>
+    {
+        /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
+        public TextToSpeechSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override TextToSpeechClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return TextToSpeechClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc/>
+        public override async stt::Task<TextToSpeechClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return TextToSpeechClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => TextToSpeechClient.DefaultEndpoint;
+
+        /// <inheritdoc/>
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TextToSpeechClient.DefaultScopes;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::ChannelPool GetChannelPool() => TextToSpeechClient.ChannelPool;
     }
 
     /// <summary>TextToSpeech client wrapper, for convenient use.</summary>
@@ -109,7 +143,7 @@ namespace Google.Cloud.TextToSpeech.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TextToSpeechClient"/>, applying defaults for all unspecified settings, 
@@ -147,7 +181,7 @@ namespace Google.Cloud.TextToSpeech.V1
         /// <returns>The task representing the created <see cref="TextToSpeechClient"/>.</returns>
         public static async stt::Task<TextToSpeechClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, TextToSpeechSettings settings = null)
         {
-            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await ChannelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -187,7 +221,7 @@ namespace Google.Cloud.TextToSpeech.V1
         /// <returns>The created <see cref="TextToSpeechClient"/>.</returns>
         public static TextToSpeechClient Create(gaxgrpc::ServiceEndpoint endpoint = null, TextToSpeechSettings settings = null)
         {
-            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = ChannelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
@@ -235,7 +269,7 @@ namespace Google.Cloud.TextToSpeech.V1
         /// could in turn be shut down by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
 
         /// <summary>The underlying gRPC TextToSpeech client</summary>
         public virtual TextToSpeech.TextToSpeechClient GrpcClient => throw new sys::NotImplementedException();
