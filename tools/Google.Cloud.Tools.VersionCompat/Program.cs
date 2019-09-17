@@ -87,13 +87,19 @@ namespace Google.Cloud.Tools.VersionCompat
             return AssemblyDefinition.ReadAssembly(new MemoryStream(bytes));
         }
 
+        private enum ExitCodeBehavior
+        {
+            None = 0,
+            MajorOnly = 1,
+            MajorAndMinor = 2,
+        }
+
         private class Options
         {
-            [Option("minor-change-exit-code", Required = false, Default = 0, HelpText = "Exit-code when change is semantically minor.")]
-            public int MinorChangeExitCode { get; private set; }
-
-            [Option("major-change-exit-code", Required = false, Default = 0, HelpText = "Exit-code when change is semantically major.")]
-            public int MajorChangeExitCode { get; private set; }
+            [Option("exit-code-behavior", Required = false, Default = ExitCodeBehavior.None,
+                HelpText = "Exit-code behavior: `None` - always return 0; `MajorOnly` - major breakage returns 2; " +
+                "`MajorAndMinor` - major breakage returns 2, minor breakage returns 1")]
+            public ExitCodeBehavior ExitCodeBehavior { get; private set; }
         }
 
         static int Main(string[] args)
@@ -116,6 +122,7 @@ namespace Google.Cloud.Tools.VersionCompat
                     Console.WriteLine("Error: Unexpected command-line parse result.");
                     return 201;
             }
+            // Hack - this will go once everything is done properly with flags.
             args = args.SkipWhile(x => x.StartsWith("-")).ToArray();
 
             if (args.Length != 2)
@@ -131,10 +138,8 @@ namespace Google.Cloud.Tools.VersionCompat
 
             var diffs = Check(assem0, assem1, null);
 
-            int? exitCode = null;
             if (diffs.Major.Any())
             {
-                exitCode = options?.MajorChangeExitCode;
                 Console.WriteLine("Major changes:");
                 foreach (var diff in diffs.Major)
                 {
@@ -144,7 +149,6 @@ namespace Google.Cloud.Tools.VersionCompat
             }
             if (diffs.Minor.Any())
             {
-                exitCode = exitCode ?? options?.MinorChangeExitCode;
                 Console.WriteLine("Minor changes:");
                 foreach (var diff in diffs.Minor)
                 {
@@ -153,10 +157,24 @@ namespace Google.Cloud.Tools.VersionCompat
                 Console.WriteLine();
             }
 
+            int exitCode;
+            switch (options.ExitCodeBehavior)
+            {
+                case ExitCodeBehavior.MajorOnly:
+                    exitCode = diffs.Major.Any() ? 2 : 0;
+                    break;
+                case ExitCodeBehavior.MajorAndMinor:
+                    exitCode = diffs.Major.Any() ? 2 : diffs.Minor.Any() ? 1 : 0;
+                    break;
+                default:
+                    exitCode = 0;
+                    break;
+            }
+
             Console.WriteLine($"Diff level: {diffs.Level}");
             Console.WriteLine();
 
-            return exitCode ?? 0;
+            return exitCode;
         }
     }
 }
