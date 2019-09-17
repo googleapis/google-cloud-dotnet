@@ -14,12 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.TextToSpeech.V1
+namespace Google.Cloud.TextToSpeech.V1.Snippets
 {
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class GeneratedTextToSpeechSnippets
+    public sealed class GeneratedTextToSpeechClientSnippets
     {
         /// <summary>Snippet for ListVoices</summary>
         public void ListVoices_RequestObject()
