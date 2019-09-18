@@ -378,45 +378,6 @@ namespace Google.Cloud.Monitoring.V3
 
         internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
-        /// <summary>
-        /// Asynchronously creates a <see cref="UptimeCheckServiceClient"/>, applying defaults for all unspecified settings,
-        /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
-        /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Monitoring.V3;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// UptimeCheckServiceClient client = await UptimeCheckServiceClient.CreateAsync();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Monitoring.V3;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     UptimeCheckServiceClient.DefaultEndpoint.Host, UptimeCheckServiceClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// UptimeCheckServiceClient client = UptimeCheckServiceClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="UptimeCheckServiceSettings"/>.</param>
-        /// <returns>The task representing the created <see cref="UptimeCheckServiceClient"/>.</returns>
-        public static async stt::Task<UptimeCheckServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, UptimeCheckServiceSettings settings = null)
-        {
-            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
-        }
 
         /// <summary>
         /// Synchronously creates a <see cref="UptimeCheckServiceClient"/>, applying defaults for all unspecified settings,
@@ -489,13 +450,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, UptimeCheckServiceSettings)"/>
-        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, UptimeCheckServiceSettings)"/>. Channels which weren't automatically
-        /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, UptimeCheckServiceSettings)"/>
-        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, UptimeCheckServiceSettings)"/> will create new channels, which could
-        /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
