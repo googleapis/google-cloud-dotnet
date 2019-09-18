@@ -38,14 +38,6 @@ fetch_github_repos() {
       --config core.eol=lf
   fi
           
-  if [ -d "gapic-generator-csharp" ]
-  then
-    git -C gapic-generator-csharp pull -q
-    git -C gapic-generator-csharp submodule update
-  else
-    git clone --recursive https://github.com/googleapis/gapic-generator-csharp
-  fi
-
   if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" ]]
   then
     if [ -d "googleapis" ]
@@ -237,6 +229,7 @@ generate_api() {
 # Entry point
 
 install_protoc
+install_microgenerator
 install_grpc
 fetch_github_repos
 GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
@@ -245,10 +238,6 @@ GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 # once per API. We don't care that we're using deprecated Gradle features: we
 # won't be using Gradle at all by the end of 2018, with any luck...
 (cd gapic-generator; ./gradlew shadowJar --warning-mode=none)
-
-# Build the microgenerator
-(cd gapic-generator-csharp; dotnet publish -c Release --self-contained --runtime=win-x64 Google.Api.Generator)
-declare -r GAPIC_PLUGIN=gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/win-x64/publish/Google.Api.Generator.exe
 
 OUTDIR=tmp
 rm -rf $OUTDIR
