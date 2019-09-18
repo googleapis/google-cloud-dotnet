@@ -73,7 +73,6 @@ namespace Google.Cloud.Tools.VersionCompat
             if (parts.Length == 1 || parts[0] == "file")
             {
                 bytes = File.ReadAllBytes(parts.Last());
-                Console.WriteLine($"File: '{parts.Last()}'. Size:{bytes.Length}");
             }
             else if (parts[0] == "nuget")
             {
