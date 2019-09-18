@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using CommandLine;
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
 using Google.Cloud.Tools.VersionCompat.Detectors;
 using Mono.Cecil;
@@ -86,13 +87,47 @@ namespace Google.Cloud.Tools.VersionCompat
             return AssemblyDefinition.ReadAssembly(new MemoryStream(bytes));
         }
 
+        private enum ExitCodeBehavior
+        {
+            None = 0,
+            MajorOnly = 1,
+            MajorAndMinor = 2,
+        }
+
+        private class Options
+        {
+            [Option("exit-code-behavior", Required = false, Default = ExitCodeBehavior.None,
+                HelpText = "Exit-code behavior: `None` - always return 0; `MajorOnly` - major breakage returns 2; " +
+                "`MajorAndMinor` - major breakage returns 2, minor breakage returns 1")]
+            public ExitCodeBehavior ExitCodeBehavior { get; private set; }
+        }
+
         static int Main(string[] args)
         {
-            // TODO: Incomplete.
+            // TODO: Move completely to flags-based, rather than ad-hoc command-line args.
+            // TODO: Support framework-based and configuration-based dll specification.
+            // TODO: Support fetching from nuget.
+
+            Options options = null;
+            var parsed = Parser.Default.ParseArguments<Options>(args);
+            switch (parsed)
+            {
+                case Parsed<Options> success:
+                    options = success.Value;
+                    break;
+                case NotParsed<Options> failure:
+                    // Errors will have already been shown.
+                    return 200;
+                default:
+                    Console.WriteLine("Error: Unexpected command-line parse result.");
+                    return 201;
+            }
+            // Hack - this will go once everything is done properly with flags.
+            args = args.SkipWhile(x => x.StartsWith("-")).ToArray();
 
             if (args.Length != 2)
             {
-                Console.WriteLine("Must have two args, the old dll and the new dll.");
+                Console.WriteLine("Must have two args after any flags, the old dll and the new dll.");
                 Console.WriteLine("  Each arg is of the form: \"nuget|<package>[|<version>]\" or \"[file|]<filename>\"");
                 Console.WriteLine();
                 return 1;
@@ -122,10 +157,24 @@ namespace Google.Cloud.Tools.VersionCompat
                 Console.WriteLine();
             }
 
+            int exitCode;
+            switch (options.ExitCodeBehavior)
+            {
+                case ExitCodeBehavior.MajorOnly:
+                    exitCode = diffs.Major.Any() ? 2 : 0;
+                    break;
+                case ExitCodeBehavior.MajorAndMinor:
+                    exitCode = diffs.Major.Any() ? 2 : diffs.Minor.Any() ? 1 : 0;
+                    break;
+                default:
+                    exitCode = 0;
+                    break;
+            }
+
             Console.WriteLine($"Diff level: {diffs.Level}");
             Console.WriteLine();
 
-            return 0;
+            return exitCode;
         }
     }
 }
