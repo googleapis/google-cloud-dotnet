@@ -93,12 +93,29 @@ namespace Google.Cloud.Tools.VersionCompat
             MajorAndMinor = 2,
         }
 
+        [Flags]
+        private enum OutputBehavior
+        {
+            None = 0,
+            Major = 1,
+            Minor = 2,
+
+            // To allow all combinations to be set with a single flag value
+            MajorAndMinor = 3,
+        }
+
         private class Options
         {
             [Option("exit-code-behavior", Required = false, Default = ExitCodeBehavior.None,
                 HelpText = "Exit-code behavior: `None` - always return 0; `MajorOnly` - major breakage returns 2; " +
                 "`MajorAndMinor` - major breakage returns 2, minor breakage returns 1")]
             public ExitCodeBehavior ExitCodeBehavior { get; private set; }
+
+            [Option("output-behavior", Required = false, Default = OutputBehavior.MajorAndMinor,
+                HelpText = "Output behavior: `MajorAndMinor` - show all breaking and non-breaking changes; " +
+                "`Major` - only show major breakage; `Minor` - show only minor non-breaking changes; " +
+                "`None` - don't output any details of changes.")]
+            public OutputBehavior OutputBehavior { get; private set; }
         }
 
         static int Main(string[] args)
@@ -122,7 +139,7 @@ namespace Google.Cloud.Tools.VersionCompat
                     return 201;
             }
             // Hack - this will go once everything is done properly with flags.
-            args = args.SkipWhile(x => x.StartsWith("-")).ToArray();
+            args = args.TakeLast(2).Where(x => !x.StartsWith("-")).ToArray();
 
             if (args.Length != 2)
             {
@@ -137,7 +154,7 @@ namespace Google.Cloud.Tools.VersionCompat
 
             var diffs = Check(assem0, assem1, null);
 
-            if (diffs.Major.Any())
+            if ((options.OutputBehavior & OutputBehavior.Major) != 0 && diffs.Major.Any())
             {
                 Console.WriteLine("Major changes:");
                 foreach (var diff in diffs.Major)
@@ -146,7 +163,7 @@ namespace Google.Cloud.Tools.VersionCompat
                 }
                 Console.WriteLine();
             }
-            if (diffs.Minor.Any())
+            if ((options.OutputBehavior & OutputBehavior.Minor) != 0 && diffs.Minor.Any())
             {
                 Console.WriteLine("Minor changes:");
                 foreach (var diff in diffs.Minor)
