@@ -60,20 +60,35 @@ done
 # If no APIs were specified explicitly, build all of them (and tools on Windows)
 if [[ ${#apis[@]} -eq 0 ]]
 then
-  apis=(${tools} $(echo apis/Google.* | sed 's/apis\///g'))
+  apis=(${tools} $(find apis -mindepth 1 -maxdepth 1 -type d | sed 's/apis\///g'))
 fi
 
 # If we were given an API filter regex, apply it now.
 if [[ "$apiregex" != "" ]]
 then
   filteredapis=()
-  for api in ${apis[*]}
-  do
-    if [[ "$api" =~ $apiregex ]]
-    then
-      filteredapis+=($api)
-    fi
-  done
+  # This is a hack to allow ! to negate the regex.
+  # Bash regular expressions don't allow for lookahead, so this is the
+  # simplest way of doing it.
+  if [[ $apiregex == !* ]]
+  then
+    apiregex=$(echo $apiregex | sed s/^!//g)
+    for api in ${apis[*]}
+    do
+      if [[ ! "$api" =~ $apiregex ]]
+      then
+        filteredapis+=($api)
+      fi
+    done
+  else
+    for api in ${apis[*]}
+    do
+      if [[ "$api" =~ $apiregex ]]
+      then
+        filteredapis+=($api)
+      fi
+    done
+  fi
   unset apis
   apis=("${filteredapis[@]}")
   if [[ ${#apis[@]} -eq 0 ]]

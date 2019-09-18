@@ -1,20 +1,23 @@
-env:
-- API_REGEX='Google\.Cloud\.[A-L].*'
-- API_REGEX='Google\.Cloud\.[M-Z].*'
-# List non-Cloud APIs here
-- API_REGEX='Google\.LongRunning'
 language: csharp
 mono: none
 dotnet: 2.2.104
 dist: xenial
 
-matrix:
+jobs:
   include:
     - name: "Lint for Python syntax errors and undefined names"
       language: python
       addons: true  # override
       install: pip install flake8
       script: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    - name: "Change detection"
+      script: ./detect-pr-changes.sh
+    - name: "Cloud APIs A-L"
+      env: API_REGEX='Google\.Cloud\.[A-L].*'
+    - name: "Cloud APIs M-Z"
+      env: API_REGEX='Google\.Cloud\.[M-Z].*'
+    - name: "Non-Cloud APIs"
+      env: API_REGEX='!Google\.Cloud'
 
 # Install the .NET Core 1.0 runtime as that's what we test against
 addons:
