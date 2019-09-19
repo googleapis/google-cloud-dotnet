@@ -15,6 +15,6 @@ if sys.platform == 'win32':
   bash = 'C:\\Program Files\\Git\\bin\\bash.exe'
 
 shell.run(
-  (bash, 'generateapis.sh', package),
+  (bash, 'generateapis.sh', '--check_compatibility', package),
   cwd = root,
   hide_output = False)
