@@ -26,7 +26,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           string.Concat(
             "CiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvEhlnb29n",
             "bGUuZmlyZXN0b3JlLmFkbWluLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
-            "LnByb3RvIpEFCgVJbmRleBIMCgRuYW1lGAEgASgJEkAKC3F1ZXJ5X3Njb3Bl",
+            "LnByb3RvIqcFCgVJbmRleBIMCgRuYW1lGAEgASgJEkAKC3F1ZXJ5X3Njb3Bl",
             "GAIgASgOMisuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5RdWVy",
             "eVNjb3BlEjsKBmZpZWxkcxgDIAMoCzIrLmdvb2dsZS5maXJlc3RvcmUuYWRt",
             "aW4udjEuSW5kZXguSW5kZXhGaWVsZBI1CgVzdGF0ZRgEIAEoDjImLmdvb2ds",
@@ -37,15 +37,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "aW4udjEuSW5kZXguSW5kZXhGaWVsZC5BcnJheUNvbmZpZ0gAIj0KBU9yZGVy",
             "EhUKEU9SREVSX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAESDgoKREVT",
             "Q0VORElORxACIjkKC0FycmF5Q29uZmlnEhwKGEFSUkFZX0NPTkZJR19VTlNQ",
-            "RUNJRklFRBAAEgwKCENPTlRBSU5TEAFCDAoKdmFsdWVfbW9kZSI5CgpRdWVy",
+            "RUNJRklFRBAAEgwKCENPTlRBSU5TEAFCDAoKdmFsdWVfbW9kZSJPCgpRdWVy",
             "eVNjb3BlEhsKF1FVRVJZX1NDT1BFX1VOU1BFQ0lGSUVEEAASDgoKQ09MTEVD",
-            "VElPThABIkkKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JF",
-            "QVRJTkcQARIJCgVSRUFEWRACEhAKDE5FRURTX1JFUEFJUhADQrgBCh1jb20u",
-            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUIKSW5kZXhQcm90b1ABWj5nb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2ZpcmVzdG9yZS9h",
-            "ZG1pbi92MTthZG1pbqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0b3Jl",
-            "LkFkbWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1pblxWMWIG",
-            "cHJvdG8z"));
+            "VElPThABEhQKEENPTExFQ1RJT05fR1JPVVAQAiJJCgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIQCgxO",
+            "RUVEU19SRVBBSVIQA0K4AQodY29tLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4u",
+            "djFCCkluZGV4UHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9maXJlc3RvcmUvYWRtaW4vdjE7YWRtaW6iAgRHQ0ZTqgIf",
+            "R29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91",
+            "ZFxGaXJlc3RvcmVcQWRtaW5cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,8 +101,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only.
-    /// A server defined name for this index.
+    /// Output only. A server defined name for this index.
     /// The form of this name for composite indexes will be:
     /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{composite_index_id}`
     /// For single field indexes, this field will be empty.
@@ -162,8 +161,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public const int StateFieldNumber = 4;
     private global::Google.Cloud.Firestore.Admin.V1.Index.Types.State state_ = 0;
     /// <summary>
-    /// Output only.
-    /// The serving state of the index.
+    /// Output only. The serving state of the index.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Firestore.Admin.V1.Index.Types.State State {
@@ -315,6 +313,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// at query time, and that has the collection id specified by the index.
         /// </summary>
         [pbr::OriginalName("COLLECTION")] Collection = 1,
+        /// <summary>
+        /// Indexes with a collection group query scope specified allow queries
+        /// against all collections that has the collection id specified by the
+        /// index.
+        /// </summary>
+        [pbr::OriginalName("COLLECTION_GROUP")] CollectionGroup = 2,
       }
 
       /// <summary>
