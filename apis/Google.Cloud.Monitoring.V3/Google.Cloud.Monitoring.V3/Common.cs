@@ -25,48 +25,48 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvbW9uaXRvcmluZy92My9jb21tb24ucHJvdG8SFGdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh1n",
-            "b29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
-            "L2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIqoBCgpUeXBlZFZhbHVlEhQKCmJvb2xfdmFsdWUYASABKAhIABIVCgtp",
-            "bnQ2NF92YWx1ZRgCIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEhYK",
-            "DHN0cmluZ192YWx1ZRgEIAEoCUgAEjYKEmRpc3RyaWJ1dGlvbl92YWx1ZRgF",
-            "IAEoCzIYLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9uSABCBwoFdmFsdWUibAoM",
-            "VGltZUludGVydmFsEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcCKtBwoLQWdncmVnYXRpb24SMwoQYWxpZ25tZW50",
-            "X3BlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJFChJw",
-            "ZXJfc2VyaWVzX2FsaWduZXIYAiABKA4yKS5nb29nbGUubW9uaXRvcmluZy52",
-            "My5BZ2dyZWdhdGlvbi5BbGlnbmVyEkcKFGNyb3NzX3Nlcmllc19yZWR1Y2Vy",
-            "GAQgASgOMikuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWdncmVnYXRpb24uUmVk",
-            "dWNlchIXCg9ncm91cF9ieV9maWVsZHMYBSADKAkiiwMKB0FsaWduZXISDgoK",
-            "QUxJR05fTk9ORRAAEg8KC0FMSUdOX0RFTFRBEAESDgoKQUxJR05fUkFURRAC",
-            "EhUKEUFMSUdOX0lOVEVSUE9MQVRFEAMSFAoQQUxJR05fTkVYVF9PTERFUhAE",
-            "Eg0KCUFMSUdOX01JThAKEg0KCUFMSUdOX01BWBALEg4KCkFMSUdOX01FQU4Q",
-            "DBIPCgtBTElHTl9DT1VOVBANEg0KCUFMSUdOX1NVTRAOEhAKDEFMSUdOX1NU",
-            "RERFVhAPEhQKEEFMSUdOX0NPVU5UX1RSVUUQEBIVChFBTElHTl9DT1VOVF9G",
-            "QUxTRRAYEhcKE0FMSUdOX0ZSQUNUSU9OX1RSVUUQERIXChNBTElHTl9QRVJD",
-            "RU5USUxFXzk5EBISFwoTQUxJR05fUEVSQ0VOVElMRV85NRATEhcKE0FMSUdO",
-            "X1BFUkNFTlRJTEVfNTAQFBIXChNBTElHTl9QRVJDRU5USUxFXzA1EBUSGAoU",
-            "QUxJR05fUEVSQ0VOVF9DSEFOR0UQFyKxAgoHUmVkdWNlchIPCgtSRURVQ0Vf",
-            "Tk9ORRAAEg8KC1JFRFVDRV9NRUFOEAESDgoKUkVEVUNFX01JThACEg4KClJF",
-            "RFVDRV9NQVgQAxIOCgpSRURVQ0VfU1VNEAQSEQoNUkVEVUNFX1NURERFVhAF",
-            "EhAKDFJFRFVDRV9DT1VOVBAGEhUKEVJFRFVDRV9DT1VOVF9UUlVFEAcSFgoS",
-            "UkVEVUNFX0NPVU5UX0ZBTFNFEA8SGAoUUkVEVUNFX0ZSQUNUSU9OX1RSVUUQ",
-            "CBIYChRSRURVQ0VfUEVSQ0VOVElMRV85ORAJEhgKFFJFRFVDRV9QRVJDRU5U",
-            "SUxFXzk1EAoSGAoUUkVEVUNFX1BFUkNFTlRJTEVfNTAQCxIYChRSRURVQ0Vf",
-            "UEVSQ0VOVElMRV8wNRAMKp4BCg5Db21wYXJpc29uVHlwZRIaChZDT01QQVJJ",
-            "U09OX1VOU1BFQ0lGSUVEEAASEQoNQ09NUEFSSVNPTl9HVBABEhEKDUNPTVBB",
-            "UklTT05fR0UQAhIRCg1DT01QQVJJU09OX0xUEAMSEQoNQ09NUEFSSVNPTl9M",
-            "RRAEEhEKDUNPTVBBUklTT05fRVEQBRIRCg1DT01QQVJJU09OX05FEAYqYQoL",
-            "U2VydmljZVRpZXISHAoYU0VSVklDRV9USUVSX1VOU1BFQ0lGSUVEEAASFgoS",
-            "U0VSVklDRV9USUVSX0JBU0lDEAESGAoUU0VSVklDRV9USUVSX1BSRU1JVU0Q",
-            "AhoCGAFCowEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ILQ29tbW9uUHJv",
-            "dG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9t",
-            "b25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9uaXRv",
-            "cmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYzYgZwcm90bzM="));
+            "b25pdG9yaW5nLnYzGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxoe",
+            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvIqoBCgpUeXBlZFZhbHVlEhQKCmJvb2xfdmFs",
+            "dWUYASABKAhIABIVCgtpbnQ2NF92YWx1ZRgCIAEoA0gAEhYKDGRvdWJsZV92",
+            "YWx1ZRgDIAEoAUgAEhYKDHN0cmluZ192YWx1ZRgEIAEoCUgAEjYKEmRpc3Ry",
+            "aWJ1dGlvbl92YWx1ZRgFIAEoCzIYLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9u",
+            "SABCBwoFdmFsdWUibAoMVGltZUludGVydmFsEiwKCGVuZF90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpzdGFydF90aW1lGAEg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKtBwoLQWdncmVnYXRp",
+            "b24SMwoQYWxpZ25tZW50X3BlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhJFChJwZXJfc2VyaWVzX2FsaWduZXIYAiABKA4yKS5nb29n",
+            "bGUubW9uaXRvcmluZy52My5BZ2dyZWdhdGlvbi5BbGlnbmVyEkcKFGNyb3Nz",
+            "X3Nlcmllc19yZWR1Y2VyGAQgASgOMikuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "QWdncmVnYXRpb24uUmVkdWNlchIXCg9ncm91cF9ieV9maWVsZHMYBSADKAki",
+            "iwMKB0FsaWduZXISDgoKQUxJR05fTk9ORRAAEg8KC0FMSUdOX0RFTFRBEAES",
+            "DgoKQUxJR05fUkFURRACEhUKEUFMSUdOX0lOVEVSUE9MQVRFEAMSFAoQQUxJ",
+            "R05fTkVYVF9PTERFUhAEEg0KCUFMSUdOX01JThAKEg0KCUFMSUdOX01BWBAL",
+            "Eg4KCkFMSUdOX01FQU4QDBIPCgtBTElHTl9DT1VOVBANEg0KCUFMSUdOX1NV",
+            "TRAOEhAKDEFMSUdOX1NURERFVhAPEhQKEEFMSUdOX0NPVU5UX1RSVUUQEBIV",
+            "ChFBTElHTl9DT1VOVF9GQUxTRRAYEhcKE0FMSUdOX0ZSQUNUSU9OX1RSVUUQ",
+            "ERIXChNBTElHTl9QRVJDRU5USUxFXzk5EBISFwoTQUxJR05fUEVSQ0VOVElM",
+            "RV85NRATEhcKE0FMSUdOX1BFUkNFTlRJTEVfNTAQFBIXChNBTElHTl9QRVJD",
+            "RU5USUxFXzA1EBUSGAoUQUxJR05fUEVSQ0VOVF9DSEFOR0UQFyKxAgoHUmVk",
+            "dWNlchIPCgtSRURVQ0VfTk9ORRAAEg8KC1JFRFVDRV9NRUFOEAESDgoKUkVE",
+            "VUNFX01JThACEg4KClJFRFVDRV9NQVgQAxIOCgpSRURVQ0VfU1VNEAQSEQoN",
+            "UkVEVUNFX1NURERFVhAFEhAKDFJFRFVDRV9DT1VOVBAGEhUKEVJFRFVDRV9D",
+            "T1VOVF9UUlVFEAcSFgoSUkVEVUNFX0NPVU5UX0ZBTFNFEA8SGAoUUkVEVUNF",
+            "X0ZSQUNUSU9OX1RSVUUQCBIYChRSRURVQ0VfUEVSQ0VOVElMRV85ORAJEhgK",
+            "FFJFRFVDRV9QRVJDRU5USUxFXzk1EAoSGAoUUkVEVUNFX1BFUkNFTlRJTEVf",
+            "NTAQCxIYChRSRURVQ0VfUEVSQ0VOVElMRV8wNRAMKp4BCg5Db21wYXJpc29u",
+            "VHlwZRIaChZDT01QQVJJU09OX1VOU1BFQ0lGSUVEEAASEQoNQ09NUEFSSVNP",
+            "Tl9HVBABEhEKDUNPTVBBUklTT05fR0UQAhIRCg1DT01QQVJJU09OX0xUEAMS",
+            "EQoNQ09NUEFSSVNPTl9MRRAEEhEKDUNPTVBBUklTT05fRVEQBRIRCg1DT01Q",
+            "QVJJU09OX05FEAYqYQoLU2VydmljZVRpZXISHAoYU0VSVklDRV9USUVSX1VO",
+            "U1BFQ0lGSUVEEAASFgoSU0VSVklDRV9USUVSX0JBU0lDEAESGAoUU0VSVklD",
+            "RV9USUVSX1BSRU1JVU0QAhoCGAFCowEKGGNvbS5nb29nbGUubW9uaXRvcmlu",
+            "Zy52M0ILQ29tbW9uUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29n",
+            "bGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9y",
+            "aW5nXFYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.ComparisonType), typeof(global::Google.Cloud.Monitoring.V3.ServiceTier), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TypedValue), global::Google.Cloud.Monitoring.V3.TypedValue.Parser, new[]{ "BoolValue", "Int64Value", "DoubleValue", "StringValue", "DistributionValue" }, new[]{ "Value" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeInterval), global::Google.Cloud.Monitoring.V3.TimeInterval.Parser, new[]{ "EndTime", "StartTime" }, null, null, null),
@@ -455,9 +455,23 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// A time interval extending just after a start time through an end time.
-  /// If the start time is the same as the end time, then the interval
-  /// represents a single point in time.
+  /// A closed time interval. It extends from the start time to the end time, and includes both: `[startTime, endTime]`. Valid time intervals depend on the [`MetricKind`](/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors#MetricKind) of the metric value. In no case can the end time be earlier than the start time.
+  ///
+  /// * For a `GAUGE` metric, the `startTime` value is technically optional; if
+  ///   no value is specified, the start time defaults to the value of the
+  ///   end time, and the interval represents a single point in time. Such an
+  ///   interval is valid only for `GAUGE` metrics, which are point-in-time
+  ///   measurements.
+  ///
+  /// * For `DELTA` and `CUMULATIVE` metrics, the start time must be earlier
+  ///   than the end time.
+  ///
+  /// * In all cases, the start time of the next interval must be
+  ///   at least a microsecond after the end time of the previous interval.
+  ///   Because the interval is closed, if the start time of a new interval
+  ///   is the same as the end time of the previous interval, data written
+  ///   at the new start time could overwrite data written at the previous
+  ///   end time.
   /// </summary>
   public sealed partial class TimeInterval : pb::IMessage<TimeInterval> {
     private static readonly pb::MessageParser<TimeInterval> _parser = new pb::MessageParser<TimeInterval>(() => new TimeInterval());
