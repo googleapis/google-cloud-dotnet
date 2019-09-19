@@ -25,6 +25,13 @@ addons:
     packages:
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
+# Autosynth pushes directly to the main fork, rather than a separate fork.
+# We want to build the PR, but not the branch directly, partly as change
+# detection fails, but mostly because we don't really need to.
+branches:
+  only:
+  - master
+
 script:
   - python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
   - touch build_timing_log.txt
