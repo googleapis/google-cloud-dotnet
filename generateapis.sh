@@ -174,6 +174,12 @@ generate_protogrpc() {
 generate_api() {
   PACKAGE=$1
   PACKAGE_DIR=apis/$1
+  if [[ $CHECK_COMPATIBILITY == "true" && -d $PACKAGE_DIR ]]
+  then
+    echo "Building existing version of $PACKAGE for compatibility checking"
+    dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
+    cp $PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll $OUTDIR
+  fi
   echo "Generating $PACKAGE"
   GENERATOR=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE generator)
   if [[ -f $PACKAGE_DIR/pregeneration.sh ]]
@@ -222,6 +228,23 @@ generate_api() {
       exit 1
     fi
   fi
+  
+  if [[ $CHECK_COMPATIBILITY == "true" ]]
+  then
+    if [[ -f $OUTDIR/$PACKAGE.dll ]]
+    then
+      echo "Building new version of $PACKAGE for compatibility checking"
+      dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
+      echo ""
+      echo "Changes in $PACKAGE:"
+      dotnet run --no-build -p tools/Google.Cloud.Tools.VersionCompat -- \
+        $OUTDIR/$PACKAGE.dll \
+        $PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll
+    else
+      echo ""
+      echo "$PACKAGE is a new API."
+    fi
+  fi
 }
 
 
@@ -242,6 +265,14 @@ GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
+CHECK_COMPATIBILITY=false
+if [[ $1 == "--check_compatibility" ]]
+then
+  CHECK_COMPATIBILITY=true
+  # Build the tool once so it doesn't interfere with output later
+  dotnet build tools/Google.Cloud.Tools.VersionCompat
+  shift
+fi
 
 packages=$@
 if [[ -z "$packages" ]]
