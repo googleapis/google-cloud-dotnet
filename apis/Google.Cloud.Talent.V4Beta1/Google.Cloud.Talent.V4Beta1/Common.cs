@@ -163,13 +163,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "DElOVEVSTUVESUFURRADEgwKCEFEVkFOQ0VEEAQSCgoGRVhQRVJUEAUqZgoH",
             "T3V0Y29tZRIXChNPVVRDT01FX1VOU1BFQ0lGSUVEEAASDAoIUE9TSVRJVkUQ",
             "ARILCgdORVVUUkFMEAISDAoITkVHQVRJVkUQAxIZChVPVVRDT01FX05PVF9B",
-            "VkFJTEFCTEUQBEJ5Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "QgtDb21tb25Qcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IG",
-            "cHJvdG8z"));
+            "VkFJTEFCTEUQBCqXAQoWQXZhaWxhYmlsaXR5U2lnbmFsVHlwZRIoCiRBVkFJ",
+            "TEFCSUxJVFlfU0lHTkFMX1RZUEVfVU5TUEVDSUZJRUQQABITCg9KT0JfQVBQ",
+            "TElDQVRJT04QARIRCg1SRVNVTUVfVVBEQVRFEAISFAoQQ0FORElEQVRFX1VQ",
+            "REFURRADEhUKEUNMSUVOVF9TVUJNSVNTSU9OEARCeQofY29tLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMUILQ29tbW9uUHJvdG9QAVpBZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRi",
+            "ZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimestampRange), global::Google.Cloud.Talent.V4Beta1.TimestampRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Location), global::Google.Cloud.Talent.V4Beta1.Location.Parser, new[]{ "LocationType", "PostalAddress", "LatLng", "RadiusMiles" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.RequestMetadata), global::Google.Cloud.Talent.V4Beta1.RequestMetadata.Parser, new[]{ "Domain", "SessionId", "UserId", "AllowMissingIds", "DeviceInfo" }, null, null, null),
@@ -788,6 +791,108 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// candidate did not complete assessment).
     /// </summary>
     [pbr::OriginalName("OUTCOME_NOT_AVAILABLE")] NotAvailable = 4,
+  }
+
+  /// <summary>
+  /// The type of candidate availability signal.
+  /// </summary>
+  public enum AvailabilitySignalType {
+    /// <summary>
+    /// Default value.
+    /// </summary>
+    [pbr::OriginalName("AVAILABILITY_SIGNAL_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Job application signal.
+    ///
+    /// In the context of
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
+    /// this signal is related to the candidate's most recent application.
+    /// [last_update_time][Profile.availability_signals.last_update_time] is
+    /// calculated from
+    /// max([Application.create_time][google.cloud.talent.v4beta1.Application.create_time])
+    /// from all [Application][google.cloud.talent.v4beta1.Application] records
+    /// where [Application.source][google.cloud.talent.v4beta1.Application.source]
+    /// is any of the following:
+    ///  [APPLY_DIRECT_WEB][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_WEB]
+    ///  [APPLY_DIRECT_MOBILE_WEB][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_MOBILE_WEB]
+    ///  [APPLY_DIRECT_MOBILE_APP][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_MOBILE_APP]
+    ///  [APPLY_DIRECT_IN_PERSON][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_IN_PERSON]
+    ///  [APPLY_INDIRECT][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_INDIRECT]
+    ///
+    /// In the context of
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
+    /// filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
+    /// where [type][Profile.availability_signals.type] is JOB_APPLICATION.
+    /// </summary>
+    [pbr::OriginalName("JOB_APPLICATION")] JobApplication = 1,
+    /// <summary>
+    /// Resume update signal.
+    ///
+    /// In the context of
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
+    /// this signal is related to the candidate’s most recent update to their
+    /// resume. For a
+    /// [SummarizedProfile.summary][google.cloud.talent.v4beta1.SummarizedProfile.summary],
+    /// [last_update_time][Profile.availability_signals.last_update_time] is
+    /// calculated from
+    /// max([Profile.resume_update_time][google.cloud.talent.v4beta1.Profile.resume_update_time])
+    /// from all
+    /// [SummarizedProfile.profiles][google.cloud.talent.v4beta1.SummarizedProfile.profiles].
+    ///
+    /// In the context of
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
+    /// filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
+    /// where [type][Profile.availability_signals.type] is RESUME_UPDATE.
+    /// </summary>
+    [pbr::OriginalName("RESUME_UPDATE")] ResumeUpdate = 2,
+    /// <summary>
+    /// Candidate update signal.
+    ///
+    /// In the context of
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
+    /// this signal is related to the candidate’s most recent update to their
+    /// profile. For a
+    /// [SummarizedProfile.summary][google.cloud.talent.v4beta1.SummarizedProfile.summary],
+    /// [last_update_time][Profile.availability_signals.last_update_time] is
+    /// calculated from
+    /// max([Profile.candidate_update_time][google.cloud.talent.v4beta1.Profile.candidate_update_time])
+    /// from all
+    /// [SummarizedProfile.profiles][google.cloud.talent.v4beta1.SummarizedProfile.profiles].
+    ///
+    /// In the context of
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
+    /// filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
+    /// where [type][Profile.availability_signals.type] is CANDIDATE_UPDATE.
+    /// </summary>
+    [pbr::OriginalName("CANDIDATE_UPDATE")] CandidateUpdate = 3,
+    /// <summary>
+    /// Client submission signal.
+    ///
+    /// In the context of
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
+    /// this signal is related to the candidate’s most recent submission.
+    /// [last_update_time][Profile.availability_signals.last_update_time] is
+    /// calculated from
+    /// max([Application.create_time][google.cloud.talent.v4beta1.Application.create_time])
+    /// from all [Application][google.cloud.talent.v4beta1.Application] records
+    /// where [Application.stage][google.cloud.talent.v4beta1.Application.stage] is
+    /// any of the following:
+    ///  [HIRING_MANAGER_REVIEW][google.cloud.talent.v4beta1.Application.ApplicationStage.HIRING_MANAGER_REVIEW]
+    ///  [INTERVIEW][google.cloud.talent.v4beta1.Application.ApplicationStage.INTERVIEW]
+    ///  [OFFER_EXTENDED][google.cloud.talent.v4beta1.Application.ApplicationStage.OFFER_EXTENDED]
+    ///  [OFFER_ACCEPTED][google.cloud.talent.v4beta1.Application.ApplicationStage.OFFER_ACCEPTED]
+    ///  [STARTED][google.cloud.talent.v4beta1.Application.ApplicationStage.STARTED]
+    ///
+    /// In the context of
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
+    /// filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
+    /// where [type][Profile.availability_signals.type] is CLIENT_SUBMISSION.
+    /// </summary>
+    [pbr::OriginalName("CLIENT_SUBMISSION")] ClientSubmission = 4,
   }
 
   #endregion
