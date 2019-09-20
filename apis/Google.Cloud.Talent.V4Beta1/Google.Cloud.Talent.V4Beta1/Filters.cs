@@ -45,7 +45,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5FbXBsb3ltZW50VHlwZRIWCg5sYW5n",
             "dWFnZV9jb2RlcxgLIAMoCRJHChJwdWJsaXNoX3RpbWVfcmFuZ2UYDCABKAsy",
             "Ky5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGltZXN0YW1wUmFuZ2US",
-            "FQoNZXhjbHVkZWRfam9icxgNIAMoCSKiCAoMUHJvZmlsZVF1ZXJ5Eg0KBXF1",
+            "FQoNZXhjbHVkZWRfam9icxgNIAMoCSL1CAoMUHJvZmlsZVF1ZXJ5Eg0KBXF1",
             "ZXJ5GAEgASgJEkUKEGxvY2F0aW9uX2ZpbHRlcnMYAiADKAsyKy5nb29nbGUu",
             "Y2xvdWQudGFsZW50LnY0YmV0YTEuTG9jYXRpb25GaWx0ZXISRgoRam9iX3Rp",
             "dGxlX2ZpbHRlcnMYAyADKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
@@ -65,76 +65,82 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "cHBsaWNhdGlvbk91dGNvbWVOb3Rlc0ZpbHRlchJSChdhcHBsaWNhdGlvbl9q",
             "b2JfZmlsdGVycxgNIAMoCzIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
             "MS5BcHBsaWNhdGlvbkpvYkZpbHRlchIfChdjdXN0b21fYXR0cmlidXRlX2Zp",
-            "bHRlchgPIAEoCRJfCh1jYW5kaWRhdGVfYXZhaWxhYmlsaXR5X2ZpbHRlchgQ",
+            "bHRlchgPIAEoCRJjCh1jYW5kaWRhdGVfYXZhaWxhYmlsaXR5X2ZpbHRlchgQ",
             "IAEoCzI4Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DYW5kaWRhdGVB",
-            "dmFpbGFiaWxpdHlGaWx0ZXISSgoTcGVyc29uX25hbWVfZmlsdGVycxgRIAMo",
-            "CzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5QZXJzb25OYW1lRmls",
-            "dGVyIt8CCg5Mb2NhdGlvbkZpbHRlchIPCgdhZGRyZXNzGAEgASgJEhMKC3Jl",
-            "Z2lvbl9jb2RlGAIgASgJEiQKB2xhdF9sbmcYAyABKAsyEy5nb29nbGUudHlw",
-            "ZS5MYXRMbmcSGQoRZGlzdGFuY2VfaW5fbWlsZXMYBCABKAESYQoWdGVsZWNv",
-            "bW11dGVfcHJlZmVyZW5jZRgFIAEoDjJBLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5Mb2NhdGlvbkZpbHRlci5UZWxlY29tbXV0ZVByZWZlcmVuY2US",
-            "DwoHbmVnYXRlZBgGIAEoCCJyChVUZWxlY29tbXV0ZVByZWZlcmVuY2USJgoi",
-            "VEVMRUNPTU1VVEVfUFJFRkVSRU5DRV9VTlNQRUNJRklFRBAAEhgKFFRFTEVD",
-            "T01NVVRFX0VYQ0xVREVEEAESFwoTVEVMRUNPTU1VVEVfQUxMT1dFRBACIsoD",
-            "ChJDb21wZW5zYXRpb25GaWx0ZXISTQoEdHlwZRgBIAEoDjI6Lmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5Db21wZW5zYXRpb25GaWx0ZXIuRmlsdGVy",
-            "VHlwZUID4EECElIKBXVuaXRzGAIgAygOMj4uZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLkNvbXBlbnNhdGlvbkluZm8uQ29tcGVuc2F0aW9uVW5pdEID",
-            "4EECEk4KBXJhbmdlGAMgASgLMj8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLkNvbXBlbnNhdGlvbkluZm8uQ29tcGVuc2F0aW9uUmFuZ2USOAowaW5j",
-            "bHVkZV9qb2JzX3dpdGhfdW5zcGVjaWZpZWRfY29tcGVuc2F0aW9uX3Jhbmdl",
-            "GAQgASgIIoYBCgpGaWx0ZXJUeXBlEhsKF0ZJTFRFUl9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDQoJVU5JVF9PTkxZEAESEwoPVU5JVF9BTkRfQU1PVU5UEAISGgoW",
-            "QU5OVUFMSVpFRF9CQVNFX0FNT1VOVBADEhsKF0FOTlVBTElaRURfVE9UQUxf",
-            "QU1PVU5UEAQiywMKDUNvbW11dGVGaWx0ZXISRwoOY29tbXV0ZV9tZXRob2QY",
-            "ASABKA4yKi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tbXV0ZU1l",
-            "dGhvZEID4EECEjMKEXN0YXJ0X2Nvb3JkaW5hdGVzGAIgASgLMhMuZ29vZ2xl",
-            "LnR5cGUuTGF0TG5nQgPgQQISNwoPdHJhdmVsX2R1cmF0aW9uGAMgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQISIQoZYWxsb3dfaW1wcmVj",
-            "aXNlX2FkZHJlc3NlcxgEIAEoCBJOCgxyb2FkX3RyYWZmaWMYBSABKA4yNi5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tbXV0ZUZpbHRlci5Sb2Fk",
-            "VHJhZmZpY0gAEjAKDmRlcGFydHVyZV90aW1lGAYgASgLMhYuZ29vZ2xlLnR5",
-            "cGUuVGltZU9mRGF5SAAiTAoLUm9hZFRyYWZmaWMSHAoYUk9BRF9UUkFGRklD",
-            "X1VOU1BFQ0lGSUVEEAASEAoMVFJBRkZJQ19GUkVFEAESDQoJQlVTWV9IT1VS",
-            "EAJCEAoOdHJhZmZpY19vcHRpb24iOQoOSm9iVGl0bGVGaWx0ZXISFgoJam9i",
-            "X3RpdGxlGAEgASgJQgPgQQISDwoHbmVnYXRlZBgCIAEoCCIyCgtTa2lsbEZp",
-            "bHRlchISCgVza2lsbBgBIAEoCUID4EECEg8KB25lZ2F0ZWQYAiABKAgipgIK",
-            "DkVtcGxveWVyRmlsdGVyEhUKCGVtcGxveWVyGAEgASgJQgPgQQISTAoEbW9k",
-            "ZRgCIAEoDjI+Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5FbXBsb3ll",
-            "ckZpbHRlci5FbXBsb3llckZpbHRlck1vZGUSDwoHbmVnYXRlZBgDIAEoCCKd",
-            "AQoSRW1wbG95ZXJGaWx0ZXJNb2RlEiQKIEVNUExPWUVSX0ZJTFRFUl9NT0RF",
-            "X1VOU1BFQ0lGSUVEEAASGgoWQUxMX0VNUExPWU1FTlRfUkVDT1JEUxABEiMK",
-            "H0NVUlJFTlRfRU1QTE9ZTUVOVF9SRUNPUkRTX09OTFkQAhIgChxQQVNUX0VN",
-            "UExPWU1FTlRfUkVDT1JEU19PTkxZEAMiiAEKD0VkdWNhdGlvbkZpbHRlchIO",
-            "CgZzY2hvb2wYASABKAkSFgoOZmllbGRfb2Zfc3R1ZHkYAiABKAkSPAoLZGVn",
-            "cmVlX3R5cGUYAyABKA4yJy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "RGVncmVlVHlwZRIPCgduZWdhdGVkGAYgASgIInwKFFdvcmtFeHBlcmllbmNl",
-            "RmlsdGVyEjEKDm1pbl9leHBlcmllbmNlGAEgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEjEKDm1heF9leHBlcmllbmNlGAIgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uImMKFUFwcGxpY2F0aW9uRGF0ZUZpbHRlchIl",
-            "CgpzdGFydF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIjCghlbmRf",
-            "ZGF0ZRgCIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUiTAodQXBwbGljYXRpb25P",
-            "dXRjb21lTm90ZXNGaWx0ZXISGgoNb3V0Y29tZV9ub3RlcxgBIAEoCUID4EEC",
-            "Eg8KB25lZ2F0ZWQYAiABKAgiVgoUQXBwbGljYXRpb25Kb2JGaWx0ZXISGgoS",
-            "am9iX3JlcXVpc2l0aW9uX2lkGAIgASgJEhEKCWpvYl90aXRsZRgDIAEoCRIP",
-            "CgduZWdhdGVkGAQgASgIIvwBCgpUaW1lRmlsdGVyEi4KCnN0YXJ0X3RpbWUY",
-            "ASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJFCgp0aW1lX2Zp",
-            "ZWxkGAMgASgOMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlRpbWVG",
-            "aWx0ZXIuVGltZUZpZWxkIkkKCVRpbWVGaWVsZBIaChZUSU1FX0ZJRUxEX1VO",
-            "U1BFQ0lGSUVEEAASDwoLQ1JFQVRFX1RJTUUQARIPCgtVUERBVEVfVElNRRAC",
-            "Ii4KG0NhbmRpZGF0ZUF2YWlsYWJpbGl0eUZpbHRlchIPCgduZWdhdGVkGAEg",
-            "ASgIIiwKEFBlcnNvbk5hbWVGaWx0ZXISGAoLcGVyc29uX25hbWUYASABKAlC",
-            "A+BBAkJ6Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQgxGaWx0",
-            "ZXJzUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3Rv",
-            "Mw=="));
+            "dmFpbGFiaWxpdHlGaWx0ZXJCAhgBEk0KFGF2YWlsYWJpbGl0eV9maWx0ZXJz",
+            "GBIgAygLMi8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkF2YWlsYWJp",
+            "bGl0eUZpbHRlchJKChNwZXJzb25fbmFtZV9maWx0ZXJzGBEgAygLMi0uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBlcnNvbk5hbWVGaWx0ZXIi3wIK",
+            "DkxvY2F0aW9uRmlsdGVyEg8KB2FkZHJlc3MYASABKAkSEwoLcmVnaW9uX2Nv",
+            "ZGUYAiABKAkSJAoHbGF0X2xuZxgDIAEoCzITLmdvb2dsZS50eXBlLkxhdExu",
+            "ZxIZChFkaXN0YW5jZV9pbl9taWxlcxgEIAEoARJhChZ0ZWxlY29tbXV0ZV9w",
+            "cmVmZXJlbmNlGAUgASgOMkEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkxvY2F0aW9uRmlsdGVyLlRlbGVjb21tdXRlUHJlZmVyZW5jZRIPCgduZWdh",
+            "dGVkGAYgASgIInIKFVRlbGVjb21tdXRlUHJlZmVyZW5jZRImCiJURUxFQ09N",
+            "TVVURV9QUkVGRVJFTkNFX1VOU1BFQ0lGSUVEEAASGAoUVEVMRUNPTU1VVEVf",
+            "RVhDTFVERUQQARIXChNURUxFQ09NTVVURV9BTExPV0VEEAIiygMKEkNvbXBl",
+            "bnNhdGlvbkZpbHRlchJNCgR0eXBlGAEgASgOMjouZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkNvbXBlbnNhdGlvbkZpbHRlci5GaWx0ZXJUeXBlQgPg",
+            "QQISUgoFdW5pdHMYAiADKA4yPi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
+            "YTEuQ29tcGVuc2F0aW9uSW5mby5Db21wZW5zYXRpb25Vbml0QgPgQQISTgoF",
+            "cmFuZ2UYAyABKAsyPy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29t",
+            "cGVuc2F0aW9uSW5mby5Db21wZW5zYXRpb25SYW5nZRI4CjBpbmNsdWRlX2pv",
+            "YnNfd2l0aF91bnNwZWNpZmllZF9jb21wZW5zYXRpb25fcmFuZ2UYBCABKAgi",
+            "hgEKCkZpbHRlclR5cGUSGwoXRklMVEVSX1RZUEVfVU5TUEVDSUZJRUQQABIN",
+            "CglVTklUX09OTFkQARITCg9VTklUX0FORF9BTU9VTlQQAhIaChZBTk5VQUxJ",
+            "WkVEX0JBU0VfQU1PVU5UEAMSGwoXQU5OVUFMSVpFRF9UT1RBTF9BTU9VTlQQ",
+            "BCLLAwoNQ29tbXV0ZUZpbHRlchJHCg5jb21tdXRlX21ldGhvZBgBIAEoDjIq",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21tdXRlTWV0aG9kQgPg",
+            "QQISMwoRc3RhcnRfY29vcmRpbmF0ZXMYAiABKAsyEy5nb29nbGUudHlwZS5M",
+            "YXRMbmdCA+BBAhI3Cg90cmF2ZWxfZHVyYXRpb24YAyABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25CA+BBAhIhChlhbGxvd19pbXByZWNpc2VfYWRk",
+            "cmVzc2VzGAQgASgIEk4KDHJvYWRfdHJhZmZpYxgFIAEoDjI2Lmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5Db21tdXRlRmlsdGVyLlJvYWRUcmFmZmlj",
+            "SAASMAoOZGVwYXJ0dXJlX3RpbWUYBiABKAsyFi5nb29nbGUudHlwZS5UaW1l",
+            "T2ZEYXlIACJMCgtSb2FkVHJhZmZpYxIcChhST0FEX1RSQUZGSUNfVU5TUEVD",
+            "SUZJRUQQABIQCgxUUkFGRklDX0ZSRUUQARINCglCVVNZX0hPVVIQAkIQCg50",
+            "cmFmZmljX29wdGlvbiI5Cg5Kb2JUaXRsZUZpbHRlchIWCglqb2JfdGl0bGUY",
+            "ASABKAlCA+BBAhIPCgduZWdhdGVkGAIgASgIIjIKC1NraWxsRmlsdGVyEhIK",
+            "BXNraWxsGAEgASgJQgPgQQISDwoHbmVnYXRlZBgCIAEoCCKmAgoORW1wbG95",
+            "ZXJGaWx0ZXISFQoIZW1wbG95ZXIYASABKAlCA+BBAhJMCgRtb2RlGAIgASgO",
+            "Mj4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkVtcGxveWVyRmlsdGVy",
+            "LkVtcGxveWVyRmlsdGVyTW9kZRIPCgduZWdhdGVkGAMgASgIIp0BChJFbXBs",
+            "b3llckZpbHRlck1vZGUSJAogRU1QTE9ZRVJfRklMVEVSX01PREVfVU5TUEVD",
+            "SUZJRUQQABIaChZBTExfRU1QTE9ZTUVOVF9SRUNPUkRTEAESIwofQ1VSUkVO",
+            "VF9FTVBMT1lNRU5UX1JFQ09SRFNfT05MWRACEiAKHFBBU1RfRU1QTE9ZTUVO",
+            "VF9SRUNPUkRTX09OTFkQAyKIAQoPRWR1Y2F0aW9uRmlsdGVyEg4KBnNjaG9v",
+            "bBgBIAEoCRIWCg5maWVsZF9vZl9zdHVkeRgCIAEoCRI8CgtkZWdyZWVfdHlw",
+            "ZRgDIAEoDjInLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5EZWdyZWVU",
+            "eXBlEg8KB25lZ2F0ZWQYBiABKAgifAoUV29ya0V4cGVyaWVuY2VGaWx0ZXIS",
+            "MQoObWluX2V4cGVyaWVuY2UYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb24SMQoObWF4X2V4cGVyaWVuY2UYAiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24iYwoVQXBwbGljYXRpb25EYXRlRmlsdGVyEiUKCnN0YXJ0",
+            "X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlEiMKCGVuZF9kYXRlGAIg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZSJMCh1BcHBsaWNhdGlvbk91dGNvbWVO",
+            "b3Rlc0ZpbHRlchIaCg1vdXRjb21lX25vdGVzGAEgASgJQgPgQQISDwoHbmVn",
+            "YXRlZBgCIAEoCCJWChRBcHBsaWNhdGlvbkpvYkZpbHRlchIaChJqb2JfcmVx",
+            "dWlzaXRpb25faWQYAiABKAkSEQoJam9iX3RpdGxlGAMgASgJEg8KB25lZ2F0",
+            "ZWQYBCABKAgi/AEKClRpbWVGaWx0ZXISLgoKc3RhcnRfdGltZRgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkUKCnRpbWVfZmllbGQYAyAB",
+            "KA4yMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGltZUZpbHRlci5U",
+            "aW1lRmllbGQiSQoJVGltZUZpZWxkEhoKFlRJTUVfRklFTERfVU5TUEVDSUZJ",
+            "RUQQABIPCgtDUkVBVEVfVElNRRABEg8KC1VQREFURV9USU1FEAIiMgobQ2Fu",
+            "ZGlkYXRlQXZhaWxhYmlsaXR5RmlsdGVyEg8KB25lZ2F0ZWQYASABKAg6AhgB",
+            "IrYBChJBdmFpbGFiaWxpdHlGaWx0ZXISTQoLc2lnbmFsX3R5cGUYASABKA4y",
+            "My5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQXZhaWxhYmlsaXR5U2ln",
+            "bmFsVHlwZUID4EECEj8KBXJhbmdlGAIgASgLMisuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLlRpbWVzdGFtcFJhbmdlQgPgQQISEAoIcmVxdWlyZWQY",
+            "AyABKAgiLAoQUGVyc29uTmFtZUZpbHRlchIYCgtwZXJzb25fbmFtZRgBIAEo",
+            "CUID4EECQnoKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCDEZp",
+            "bHRlcnNQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobQuery), global::Google.Cloud.Talent.V4Beta1.JobQuery.Parser, new[]{ "Query", "Companies", "LocationFilters", "JobCategories", "CommuteFilter", "CompanyDisplayNames", "CompensationFilter", "CustomAttributeFilter", "DisableSpellCheck", "EmploymentTypes", "LanguageCodes", "PublishTimeRange", "ExcludedJobs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter", "PersonNameFilters" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter", "AvailabilityFilters", "PersonNameFilters" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter), global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser, new[]{ "Address", "RegionCode", "LatLng", "DistanceInMiles", "TelecommutePreference", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter), global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Parser, new[]{ "Type", "Units", "Range", "IncludeJobsWithUnspecifiedCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter), global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Parser, new[]{ "CommuteMethod", "StartCoordinates", "TravelDuration", "AllowImpreciseAddresses", "RoadTraffic", "DepartureTime" }, new[]{ "TrafficOption" }, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) }, null),
@@ -148,6 +154,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter.Parser, new[]{ "JobRequisitionId", "JobTitle", "Negated" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter), global::Google.Cloud.Talent.V4Beta1.TimeFilter.Parser, new[]{ "StartTime", "EndTime", "TimeField" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter.Parser, new[]{ "Negated" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter.Parser, new[]{ "SignalType", "Range", "Required" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonNameFilter), global::Google.Cloud.Talent.V4Beta1.PersonNameFilter.Parser, new[]{ "PersonName" }, null, null, null)
           }));
     }
@@ -775,6 +782,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       applicationJobFilters_ = other.applicationJobFilters_.Clone();
       customAttributeFilter_ = other.customAttributeFilter_;
       candidateAvailabilityFilter_ = other.candidateAvailabilityFilter_ != null ? other.candidateAvailabilityFilter_.Clone() : null;
+      availabilityFilters_ = other.availabilityFilters_.Clone();
       personNameFilters_ = other.personNameFilters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1146,6 +1154,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CandidateAvailabilityFilterFieldNumber = 16;
     private global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter candidateAvailabilityFilter_;
     /// <summary>
+    /// Deprecated. Use availability_filters instead.
+    ///
     /// The candidate availability filter which filters based on availability
     /// signals.
     ///
@@ -1163,12 +1173,41 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// indicate the candidate's potential qualification / interest / close ability
     /// for a specific job.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter CandidateAvailabilityFilter {
       get { return candidateAvailabilityFilter_; }
       set {
         candidateAvailabilityFilter_ = value;
       }
+    }
+
+    /// <summary>Field number for the "availability_filters" field.</summary>
+    public const int AvailabilityFiltersFieldNumber = 18;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter> _repeated_availabilityFilters_codec
+        = pb::FieldCodec.ForMessage(146, global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter> availabilityFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter>();
+    /// <summary>
+    /// The availability filter which filters based on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals].
+    ///
+    /// The availability filter helps a recruiter understand if a
+    /// specific candidate is likely to be actively seeking new job opportunities
+    /// based on an aggregated set of signals.  Specifically, the intent is NOT to
+    /// indicate the candidate's potential qualification / interest / close ability
+    /// for a specific job.
+    ///
+    /// There can be at most one
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] per
+    /// [signal_type][google.cloud.talent.v4beta1.AvailabilityFilter.signal_type].
+    /// If there are multiple
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] for a
+    /// [signal_type][google.cloud.talent.v4beta1.AvailabilityFilter.signal_type],
+    /// an error is thrown.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter> AvailabilityFilters {
+      get { return availabilityFilters_; }
     }
 
     /// <summary>Field number for the "person_name_filters" field.</summary>
@@ -1216,6 +1255,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if(!applicationJobFilters_.Equals(other.applicationJobFilters_)) return false;
       if (CustomAttributeFilter != other.CustomAttributeFilter) return false;
       if (!object.Equals(CandidateAvailabilityFilter, other.CandidateAvailabilityFilter)) return false;
+      if(!availabilityFilters_.Equals(other.availabilityFilters_)) return false;
       if(!personNameFilters_.Equals(other.personNameFilters_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1237,6 +1277,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= applicationJobFilters_.GetHashCode();
       if (CustomAttributeFilter.Length != 0) hash ^= CustomAttributeFilter.GetHashCode();
       if (candidateAvailabilityFilter_ != null) hash ^= CandidateAvailabilityFilter.GetHashCode();
+      hash ^= availabilityFilters_.GetHashCode();
       hash ^= personNameFilters_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1277,6 +1318,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteMessage(CandidateAvailabilityFilter);
       }
       personNameFilters_.WriteTo(output, _repeated_personNameFilters_codec);
+      availabilityFilters_.WriteTo(output, _repeated_availabilityFilters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1307,6 +1349,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (candidateAvailabilityFilter_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CandidateAvailabilityFilter);
       }
+      size += availabilityFilters_.CalculateSize(_repeated_availabilityFilters_codec);
       size += personNameFilters_.CalculateSize(_repeated_personNameFilters_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1346,6 +1389,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         CandidateAvailabilityFilter.MergeFrom(other.CandidateAvailabilityFilter);
       }
+      availabilityFilters_.Add(other.availabilityFilters_);
       personNameFilters_.Add(other.personNameFilters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1422,6 +1466,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 138: {
             personNameFilters_.AddEntriesFrom(input, _repeated_personNameFilters_codec);
+            break;
+          }
+          case 146: {
+            availabilityFilters_.AddEntriesFrom(input, _repeated_availabilityFilters_codec);
             break;
           }
         }
@@ -4247,8 +4295,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
+  /// Deprecated. Use AvailabilityFilter instead.
+  ///
   /// Filter on availability signals.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class CandidateAvailabilityFilter : pb::IMessage<CandidateAvailabilityFilter> {
     private static readonly pb::MessageParser<CandidateAvailabilityFilter> _parser = new pb::MessageParser<CandidateAvailabilityFilter>(() => new CandidateAvailabilityFilter());
     private pb::UnknownFieldSet _unknownFields;
@@ -4383,6 +4434,215 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
+  /// Filter on availability signals.
+  /// </summary>
+  public sealed partial class AvailabilityFilter : pb::IMessage<AvailabilityFilter> {
+    private static readonly pb::MessageParser<AvailabilityFilter> _parser = new pb::MessageParser<AvailabilityFilter>(() => new AvailabilityFilter());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AvailabilityFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AvailabilityFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AvailabilityFilter(AvailabilityFilter other) : this() {
+      signalType_ = other.signalType_;
+      range_ = other.range_ != null ? other.range_.Clone() : null;
+      required_ = other.required_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AvailabilityFilter Clone() {
+      return new AvailabilityFilter(this);
+    }
+
+    /// <summary>Field number for the "signal_type" field.</summary>
+    public const int SignalTypeFieldNumber = 1;
+    private global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType signalType_ = 0;
+    /// <summary>
+    /// Required. Type of signal to apply filter on.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType SignalType {
+      get { return signalType_; }
+      set {
+        signalType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "range" field.</summary>
+    public const int RangeFieldNumber = 2;
+    private global::Google.Cloud.Talent.V4Beta1.TimestampRange range_;
+    /// <summary>
+    /// Required. Range of times to filter candidate signals by.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.TimestampRange Range {
+      get { return range_; }
+      set {
+        range_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "required" field.</summary>
+    public const int RequiredFieldNumber = 3;
+    private bool required_;
+    /// <summary>
+    /// If multiple
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] are
+    /// provided, the default behavior is to OR all filters, but if this field is
+    /// set to true, this particular
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] will
+    /// be AND'ed against other
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Required {
+      get { return required_; }
+      set {
+        required_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AvailabilityFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AvailabilityFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SignalType != other.SignalType) return false;
+      if (!object.Equals(Range, other.Range)) return false;
+      if (Required != other.Required) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SignalType != 0) hash ^= SignalType.GetHashCode();
+      if (range_ != null) hash ^= Range.GetHashCode();
+      if (Required != false) hash ^= Required.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (SignalType != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SignalType);
+      }
+      if (range_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Range);
+      }
+      if (Required != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Required);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (SignalType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SignalType);
+      }
+      if (range_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Range);
+      }
+      if (Required != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AvailabilityFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SignalType != 0) {
+        SignalType = other.SignalType;
+      }
+      if (other.range_ != null) {
+        if (range_ == null) {
+          Range = new global::Google.Cloud.Talent.V4Beta1.TimestampRange();
+        }
+        Range.MergeFrom(other.Range);
+      }
+      if (other.Required != false) {
+        Required = other.Required;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SignalType = (global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (range_ == null) {
+              Range = new global::Google.Cloud.Talent.V4Beta1.TimestampRange();
+            }
+            input.ReadMessage(Range);
+            break;
+          }
+          case 24: {
+            Required = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Filter on person name.
   /// </summary>
   public sealed partial class PersonNameFilter : pb::IMessage<PersonNameFilter> {
@@ -4393,7 +4653,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
