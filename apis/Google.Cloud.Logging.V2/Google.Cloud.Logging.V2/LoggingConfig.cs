@@ -25,128 +25,141 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX2NvbmZpZy5wcm90bxIRZ29v",
-            "Z2xlLmxvZ2dpbmcudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
-            "L2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8i4wIKB0xvZ1NpbmsSDAoEbmFtZRgBIAEoCRITCgtkZXN0aW5hdGlv",
-            "bhgDIAEoCRIOCgZmaWx0ZXIYBSABKAkSSwoVb3V0cHV0X3ZlcnNpb25fZm9y",
-            "bWF0GAYgASgOMiguZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luay5WZXJzaW9u",
-            "Rm9ybWF0QgIYARIXCg93cml0ZXJfaWRlbnRpdHkYCCABKAkSGAoQaW5jbHVk",
-            "ZV9jaGlsZHJlbhgJIAEoCBIyCgpzdGFydF90aW1lGAogASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEICGAESMAoIZW5kX3RpbWUYCyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgIYASI/Cg1WZXJzaW9uRm9ybWF0",
-            "Eh4KGlZFUlNJT05fRk9STUFUX1VOU1BFQ0lGSUVEEAASBgoCVjIQARIGCgJW",
-            "MRACIkkKEExpc3RTaW5rc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhIKCnBh",
-            "Z2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXplGAMgASgFIlcKEUxpc3RTaW5r",
-            "c1Jlc3BvbnNlEikKBXNpbmtzGAEgAygLMhouZ29vZ2xlLmxvZ2dpbmcudjIu",
-            "TG9nU2luaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiIwoOR2V0U2lua1Jl",
-            "cXVlc3QSEQoJc2lua19uYW1lGAEgASgJIm0KEUNyZWF0ZVNpbmtSZXF1ZXN0",
-            "Eg4KBnBhcmVudBgBIAEoCRIoCgRzaW5rGAIgASgLMhouZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuTG9nU2luaxIeChZ1bmlxdWVfd3JpdGVyX2lkZW50aXR5GAMgASgI",
-            "IqEBChFVcGRhdGVTaW5rUmVxdWVzdBIRCglzaW5rX25hbWUYASABKAkSKAoE",
-            "c2luaxgCIAEoCzIaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1NpbmsSHgoWdW5p",
-            "cXVlX3dyaXRlcl9pZGVudGl0eRgDIAEoCBIvCgt1cGRhdGVfbWFzaxgEIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siJgoRRGVsZXRlU2lua1Jl",
-            "cXVlc3QSEQoJc2lua19uYW1lGAEgASgJIlMKDExvZ0V4Y2x1c2lvbhIMCgRu",
+            "Z2xlLmxvZ2dpbmcudjIaHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
+            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
+            "dWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
+            "cC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xl",
+            "L2FwaS9jbGllbnQucHJvdG8iqgMKB0xvZ1NpbmsSDAoEbmFtZRgBIAEoCRIT",
+            "CgtkZXN0aW5hdGlvbhgDIAEoCRIOCgZmaWx0ZXIYBSABKAkSSwoVb3V0cHV0",
+            "X3ZlcnNpb25fZm9ybWF0GAYgASgOMiguZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
+            "U2luay5WZXJzaW9uRm9ybWF0QgIYARIXCg93cml0ZXJfaWRlbnRpdHkYCCAB",
+            "KAkSGAoQaW5jbHVkZV9jaGlsZHJlbhgJIAEoCBI+ChBiaWdxdWVyeV9vcHRp",
+            "b25zGAwgASgLMiIuZ29vZ2xlLmxvZ2dpbmcudjIuQmlnUXVlcnlPcHRpb25z",
+            "SAASLwoLY3JlYXRlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcCI/Cg1WZXJzaW9uRm9ybWF0Eh4KGlZFUlNJT05fRk9STUFU",
+            "X1VOU1BFQ0lGSUVEEAASBgoCVjIQARIGCgJWMRACQgkKB29wdGlvbnMiMQoP",
+            "QmlnUXVlcnlPcHRpb25zEh4KFnVzZV9wYXJ0aXRpb25lZF90YWJsZXMYASAB",
+            "KAgiSQoQTGlzdFNpbmtzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFn",
+            "ZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiVwoRTGlzdFNpbmtz",
+            "UmVzcG9uc2USKQoFc2lua3MYASADKAsyGi5nb29nbGUubG9nZ2luZy52Mi5M",
+            "b2dTaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIjCg5HZXRTaW5rUmVx",
+            "dWVzdBIRCglzaW5rX25hbWUYASABKAkibQoRQ3JlYXRlU2lua1JlcXVlc3QS",
+            "DgoGcGFyZW50GAEgASgJEigKBHNpbmsYAiABKAsyGi5nb29nbGUubG9nZ2lu",
+            "Zy52Mi5Mb2dTaW5rEh4KFnVuaXF1ZV93cml0ZXJfaWRlbnRpdHkYAyABKAgi",
+            "oQEKEVVwZGF0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCRIoCgRz",
+            "aW5rGAIgASgLMhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luaxIeChZ1bmlx",
+            "dWVfd3JpdGVyX2lkZW50aXR5GAMgASgIEi8KC3VwZGF0ZV9tYXNrGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayImChFEZWxldGVTaW5rUmVx",
+            "dWVzdBIRCglzaW5rX25hbWUYASABKAkitQEKDExvZ0V4Y2x1c2lvbhIMCgRu",
             "YW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEg4KBmZpbHRlchgDIAEo",
-            "CRIQCghkaXNhYmxlZBgEIAEoCCJOChVMaXN0RXhjbHVzaW9uc1JlcXVlc3QS",
-            "DgoGcGFyZW50GAEgASgJEhIKCnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9z",
-            "aXplGAMgASgFImYKFkxpc3RFeGNsdXNpb25zUmVzcG9uc2USMwoKZXhjbHVz",
-            "aW9ucxgBIAMoCzIfLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0V4Y2x1c2lvbhIX",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiIwoTR2V0RXhjbHVzaW9uUmVxdWVz",
-            "dBIMCgRuYW1lGAEgASgJIlwKFkNyZWF0ZUV4Y2x1c2lvblJlcXVlc3QSDgoG",
-            "cGFyZW50GAEgASgJEjIKCWV4Y2x1c2lvbhgCIAEoCzIfLmdvb2dsZS5sb2dn",
-            "aW5nLnYyLkxvZ0V4Y2x1c2lvbiKLAQoWVXBkYXRlRXhjbHVzaW9uUmVxdWVz",
-            "dBIMCgRuYW1lGAEgASgJEjIKCWV4Y2x1c2lvbhgCIAEoCzIfLmdvb2dsZS5s",
-            "b2dnaW5nLnYyLkxvZ0V4Y2x1c2lvbhIvCgt1cGRhdGVfbWFzaxgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siJgoWRGVsZXRlRXhjbHVzaW9u",
-            "UmVxdWVzdBIMCgRuYW1lGAEgASgJMpQZCg9Db25maWdTZXJ2aWNlVjIShwIK",
-            "CUxpc3RTaW5rcxIjLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RTaW5rc1JlcXVl",
-            "c3QaJC5nb29nbGUubG9nZ2luZy52Mi5MaXN0U2lua3NSZXNwb25zZSKuAYLT",
-            "5JMCpwESFi92Mi97cGFyZW50PSovKn0vc2lua3NaHxIdL3YyL3twYXJlbnQ9",
-            "cHJvamVjdHMvKn0vc2lua3NaJBIiL3YyL3twYXJlbnQ9b3JnYW5pemF0aW9u",
-            "cy8qfS9zaW5rc1oeEhwvdjIve3BhcmVudD1mb2xkZXJzLyp9L3NpbmtzWiYS",
-            "JC92Mi97cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9zaW5rcxKSAgoHR2V0",
-            "U2luaxIhLmdvb2dsZS5sb2dnaW5nLnYyLkdldFNpbmtSZXF1ZXN0GhouZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuTG9nU2luayLHAYLT5JMCwAESGy92Mi97c2lua19u",
-            "YW1lPSovKi9zaW5rcy8qfVokEiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8q",
-            "L3NpbmtzLyp9WikSJy92Mi97c2lua19uYW1lPW9yZ2FuaXphdGlvbnMvKi9z",
-            "aW5rcy8qfVojEiEvdjIve3NpbmtfbmFtZT1mb2xkZXJzLyovc2lua3MvKn1a",
-            "KxIpL3YyL3tzaW5rX25hbWU9YmlsbGluZ0FjY291bnRzLyovc2lua3MvKn0S",
-            "nQIKCkNyZWF0ZVNpbmsSJC5nb29nbGUubG9nZ2luZy52Mi5DcmVhdGVTaW5r",
-            "UmVxdWVzdBoaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1NpbmsizAGC0+STAsUB",
-            "IhYvdjIve3BhcmVudD0qLyp9L3NpbmtzOgRzaW5rWiUiHS92Mi97cGFyZW50",
-            "PXByb2plY3RzLyp9L3NpbmtzOgRzaW5rWioiIi92Mi97cGFyZW50PW9yZ2Fu",
-            "aXphdGlvbnMvKn0vc2lua3M6BHNpbmtaJCIcL3YyL3twYXJlbnQ9Zm9sZGVy",
-            "cy8qfS9zaW5rczoEc2lua1osIiQvdjIve3BhcmVudD1iaWxsaW5nQWNjb3Vu",
-            "dHMvKn0vc2lua3M6BHNpbmsS8QMKClVwZGF0ZVNpbmsSJC5nb29nbGUubG9n",
-            "Z2luZy52Mi5VcGRhdGVTaW5rUmVxdWVzdBoaLmdvb2dsZS5sb2dnaW5nLnYy",
-            "LkxvZ1NpbmsioAOC0+STApkDGhsvdjIve3NpbmtfbmFtZT0qLyovc2lua3Mv",
-            "Kn06BHNpbmtaKhoiL3YyL3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8q",
-            "fToEc2lua1ovGicvdjIve3NpbmtfbmFtZT1vcmdhbml6YXRpb25zLyovc2lu",
-            "a3MvKn06BHNpbmtaKRohL3YyL3tzaW5rX25hbWU9Zm9sZGVycy8qL3Npbmtz",
-            "Lyp9OgRzaW5rWjEaKS92Mi97c2lua19uYW1lPWJpbGxpbmdBY2NvdW50cy8q",
-            "L3NpbmtzLyp9OgRzaW5rWioyIi92Mi97c2lua19uYW1lPXByb2plY3RzLyov",
-            "c2lua3MvKn06BHNpbmtaLzInL3YyL3tzaW5rX25hbWU9b3JnYW5pemF0aW9u",
-            "cy8qL3NpbmtzLyp9OgRzaW5rWikyIS92Mi97c2lua19uYW1lPWZvbGRlcnMv",
-            "Ki9zaW5rcy8qfToEc2lua1oxMikvdjIve3NpbmtfbmFtZT1iaWxsaW5nQWNj",
-            "b3VudHMvKi9zaW5rcy8qfToEc2luaxKUAgoKRGVsZXRlU2luaxIkLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyLkRlbGV0ZVNpbmtSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IscBgtPkkwLAASobL3YyL3tzaW5rX25hbWU9Ki8qL3Npbmtz",
-            "Lyp9WiQqIi92Mi97c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn1aKSon",
-            "L3YyL3tzaW5rX25hbWU9b3JnYW5pemF0aW9ucy8qL3NpbmtzLyp9WiMqIS92",
-            "Mi97c2lua19uYW1lPWZvbGRlcnMvKi9zaW5rcy8qfVorKikvdjIve3Npbmtf",
-            "bmFtZT1iaWxsaW5nQWNjb3VudHMvKi9zaW5rcy8qfRKvAgoOTGlzdEV4Y2x1",
-            "c2lvbnMSKC5nb29nbGUubG9nZ2luZy52Mi5MaXN0RXhjbHVzaW9uc1JlcXVl",
-            "c3QaKS5nb29nbGUubG9nZ2luZy52Mi5MaXN0RXhjbHVzaW9uc1Jlc3BvbnNl",
-            "IscBgtPkkwLAARIbL3YyL3twYXJlbnQ9Ki8qfS9leGNsdXNpb25zWiQSIi92",
-            "Mi97cGFyZW50PXByb2plY3RzLyp9L2V4Y2x1c2lvbnNaKRInL3YyL3twYXJl",
-            "bnQ9b3JnYW5pemF0aW9ucy8qfS9leGNsdXNpb25zWiMSIS92Mi97cGFyZW50",
-            "PWZvbGRlcnMvKn0vZXhjbHVzaW9uc1orEikvdjIve3BhcmVudD1iaWxsaW5n",
-            "QWNjb3VudHMvKn0vZXhjbHVzaW9ucxKhAgoMR2V0RXhjbHVzaW9uEiYuZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuR2V0RXhjbHVzaW9uUmVxdWVzdBofLmdvb2dsZS5s",
-            "b2dnaW5nLnYyLkxvZ0V4Y2x1c2lvbiLHAYLT5JMCwAESGy92Mi97bmFtZT0q",
-            "LyovZXhjbHVzaW9ucy8qfVokEiIvdjIve25hbWU9cHJvamVjdHMvKi9leGNs",
-            "dXNpb25zLyp9WikSJy92Mi97bmFtZT1vcmdhbml6YXRpb25zLyovZXhjbHVz",
-            "aW9ucy8qfVojEiEvdjIve25hbWU9Zm9sZGVycy8qL2V4Y2x1c2lvbnMvKn1a",
-            "KxIpL3YyL3tuYW1lPWJpbGxpbmdBY2NvdW50cy8qL2V4Y2x1c2lvbnMvKn0S",
-            "3gIKD0NyZWF0ZUV4Y2x1c2lvbhIpLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0",
-            "ZUV4Y2x1c2lvblJlcXVlc3QaHy5nb29nbGUubG9nZ2luZy52Mi5Mb2dFeGNs",
-            "dXNpb24i/gGC0+STAvcBIhsvdjIve3BhcmVudD0qLyp9L2V4Y2x1c2lvbnM6",
-            "CWV4Y2x1c2lvblovIiIvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9leGNsdXNp",
-            "b25zOglleGNsdXNpb25aNCInL3YyL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8q",
-            "fS9leGNsdXNpb25zOglleGNsdXNpb25aLiIhL3YyL3twYXJlbnQ9Zm9sZGVy",
-            "cy8qfS9leGNsdXNpb25zOglleGNsdXNpb25aNiIpL3YyL3twYXJlbnQ9Ymls",
-            "bGluZ0FjY291bnRzLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvbhLeAgoPVXBk",
-            "YXRlRXhjbHVzaW9uEikuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRlRXhjbHVz",
-            "aW9uUmVxdWVzdBofLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0V4Y2x1c2lvbiL+",
-            "AYLT5JMC9wEyGy92Mi97bmFtZT0qLyovZXhjbHVzaW9ucy8qfToJZXhjbHVz",
-            "aW9uWi8yIi92Mi97bmFtZT1wcm9qZWN0cy8qL2V4Y2x1c2lvbnMvKn06CWV4",
-            "Y2x1c2lvblo0MicvdjIve25hbWU9b3JnYW5pemF0aW9ucy8qL2V4Y2x1c2lv",
-            "bnMvKn06CWV4Y2x1c2lvblouMiEvdjIve25hbWU9Zm9sZGVycy8qL2V4Y2x1",
-            "c2lvbnMvKn06CWV4Y2x1c2lvblo2MikvdjIve25hbWU9YmlsbGluZ0FjY291",
-            "bnRzLyovZXhjbHVzaW9ucy8qfToJZXhjbHVzaW9uEp4CCg9EZWxldGVFeGNs",
-            "dXNpb24SKS5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVFeGNsdXNpb25SZXF1",
-            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IscBgtPkkwLAASobL3YyL3tu",
-            "YW1lPSovKi9leGNsdXNpb25zLyp9WiQqIi92Mi97bmFtZT1wcm9qZWN0cy8q",
-            "L2V4Y2x1c2lvbnMvKn1aKSonL3YyL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9l",
-            "eGNsdXNpb25zLyp9WiMqIS92Mi97bmFtZT1mb2xkZXJzLyovZXhjbHVzaW9u",
-            "cy8qfVorKikvdjIve25hbWU9YmlsbGluZ0FjY291bnRzLyovZXhjbHVzaW9u",
-            "cy8qfUKeAQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQhJMb2dnaW5nQ29uZmln",
-            "UHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2lu",
-            "Zy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
+            "CRIQCghkaXNhYmxlZBgEIAEoCBIvCgtjcmVhdGVfdGltZRgFIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYBiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIk4KFUxpc3RFeGNsdXNpb25z",
+            "UmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFnZV90b2tlbhgCIAEoCRIR",
+            "CglwYWdlX3NpemUYAyABKAUiZgoWTGlzdEV4Y2x1c2lvbnNSZXNwb25zZRIz",
+            "CgpleGNsdXNpb25zGAEgAygLMh8uZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhj",
+            "bHVzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIjChNHZXRFeGNsdXNp",
+            "b25SZXF1ZXN0EgwKBG5hbWUYASABKAkiXAoWQ3JlYXRlRXhjbHVzaW9uUmVx",
+            "dWVzdBIOCgZwYXJlbnQYASABKAkSMgoJZXhjbHVzaW9uGAIgASgLMh8uZ29v",
+            "Z2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uIosBChZVcGRhdGVFeGNsdXNp",
+            "b25SZXF1ZXN0EgwKBG5hbWUYASABKAkSMgoJZXhjbHVzaW9uGAIgASgLMh8u",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uEi8KC3VwZGF0ZV9tYXNr",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayImChZEZWxldGVF",
+            "eGNsdXNpb25SZXF1ZXN0EgwKBG5hbWUYASABKAky9hoKD0NvbmZpZ1NlcnZp",
+            "Y2VWMhKHAgoJTGlzdFNpbmtzEiMuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdFNp",
+            "bmtzUmVxdWVzdBokLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RTaW5rc1Jlc3Bv",
+            "bnNlIq4BgtPkkwKnARIWL3YyL3twYXJlbnQ9Ki8qfS9zaW5rc1ofEh0vdjIv",
+            "e3BhcmVudD1wcm9qZWN0cy8qfS9zaW5rc1okEiIvdjIve3BhcmVudD1vcmdh",
+            "bml6YXRpb25zLyp9L3NpbmtzWh4SHC92Mi97cGFyZW50PWZvbGRlcnMvKn0v",
+            "c2lua3NaJhIkL3YyL3twYXJlbnQ9YmlsbGluZ0FjY291bnRzLyp9L3Npbmtz",
+            "EpICCgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0U2lua1JlcXVl",
+            "c3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIscBgtPkkwLAARIbL3Yy",
+            "L3tzaW5rX25hbWU9Ki8qL3NpbmtzLyp9WiQSIi92Mi97c2lua19uYW1lPXBy",
+            "b2plY3RzLyovc2lua3MvKn1aKRInL3YyL3tzaW5rX25hbWU9b3JnYW5pemF0",
+            "aW9ucy8qL3NpbmtzLyp9WiMSIS92Mi97c2lua19uYW1lPWZvbGRlcnMvKi9z",
+            "aW5rcy8qfVorEikvdjIve3NpbmtfbmFtZT1iaWxsaW5nQWNjb3VudHMvKi9z",
+            "aW5rcy8qfRKdAgoKQ3JlYXRlU2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLkNy",
+            "ZWF0ZVNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luayLM",
+            "AYLT5JMCxQEiFi92Mi97cGFyZW50PSovKn0vc2lua3M6BHNpbmtaJSIdL3Yy",
+            "L3twYXJlbnQ9cHJvamVjdHMvKn0vc2lua3M6BHNpbmtaKiIiL3YyL3twYXJl",
+            "bnQ9b3JnYW5pemF0aW9ucy8qfS9zaW5rczoEc2lua1okIhwvdjIve3BhcmVu",
+            "dD1mb2xkZXJzLyp9L3NpbmtzOgRzaW5rWiwiJC92Mi97cGFyZW50PWJpbGxp",
+            "bmdBY2NvdW50cy8qfS9zaW5rczoEc2luaxLxAwoKVXBkYXRlU2luaxIkLmdv",
+            "b2dsZS5sb2dnaW5nLnYyLlVwZGF0ZVNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxv",
+            "Z2dpbmcudjIuTG9nU2luayKgA4LT5JMCmQMaGy92Mi97c2lua19uYW1lPSov",
+            "Ki9zaW5rcy8qfToEc2lua1oqGiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8q",
+            "L3NpbmtzLyp9OgRzaW5rWi8aJy92Mi97c2lua19uYW1lPW9yZ2FuaXphdGlv",
+            "bnMvKi9zaW5rcy8qfToEc2lua1opGiEvdjIve3NpbmtfbmFtZT1mb2xkZXJz",
+            "Lyovc2lua3MvKn06BHNpbmtaMRopL3YyL3tzaW5rX25hbWU9YmlsbGluZ0Fj",
+            "Y291bnRzLyovc2lua3MvKn06BHNpbmtaKjIiL3YyL3tzaW5rX25hbWU9cHJv",
+            "amVjdHMvKi9zaW5rcy8qfToEc2lua1ovMicvdjIve3NpbmtfbmFtZT1vcmdh",
+            "bml6YXRpb25zLyovc2lua3MvKn06BHNpbmtaKTIhL3YyL3tzaW5rX25hbWU9",
+            "Zm9sZGVycy8qL3NpbmtzLyp9OgRzaW5rWjEyKS92Mi97c2lua19uYW1lPWJp",
+            "bGxpbmdBY2NvdW50cy8qL3NpbmtzLyp9OgRzaW5rEpQCCgpEZWxldGVTaW5r",
+            "EiQuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlU2lua1JlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkixwGC0+STAsABKhsvdjIve3NpbmtfbmFtZT0q",
+            "Lyovc2lua3MvKn1aJCoiL3YyL3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5r",
+            "cy8qfVopKicvdjIve3NpbmtfbmFtZT1vcmdhbml6YXRpb25zLyovc2lua3Mv",
+            "Kn1aIyohL3YyL3tzaW5rX25hbWU9Zm9sZGVycy8qL3NpbmtzLyp9WisqKS92",
+            "Mi97c2lua19uYW1lPWJpbGxpbmdBY2NvdW50cy8qL3NpbmtzLyp9Eq8CCg5M",
+            "aXN0RXhjbHVzaW9ucxIoLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RFeGNsdXNp",
+            "b25zUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RFeGNsdXNpb25z",
+            "UmVzcG9uc2UixwGC0+STAsABEhsvdjIve3BhcmVudD0qLyp9L2V4Y2x1c2lv",
+            "bnNaJBIiL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vZXhjbHVzaW9uc1opEicv",
+            "djIve3BhcmVudD1vcmdhbml6YXRpb25zLyp9L2V4Y2x1c2lvbnNaIxIhL3Yy",
+            "L3twYXJlbnQ9Zm9sZGVycy8qfS9leGNsdXNpb25zWisSKS92Mi97cGFyZW50",
+            "PWJpbGxpbmdBY2NvdW50cy8qfS9leGNsdXNpb25zEqECCgxHZXRFeGNsdXNp",
+            "b24SJi5nb29nbGUubG9nZ2luZy52Mi5HZXRFeGNsdXNpb25SZXF1ZXN0Gh8u",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uIscBgtPkkwLAARIbL3Yy",
+            "L3tuYW1lPSovKi9leGNsdXNpb25zLyp9WiQSIi92Mi97bmFtZT1wcm9qZWN0",
+            "cy8qL2V4Y2x1c2lvbnMvKn1aKRInL3YyL3tuYW1lPW9yZ2FuaXphdGlvbnMv",
+            "Ki9leGNsdXNpb25zLyp9WiMSIS92Mi97bmFtZT1mb2xkZXJzLyovZXhjbHVz",
+            "aW9ucy8qfVorEikvdjIve25hbWU9YmlsbGluZ0FjY291bnRzLyovZXhjbHVz",
+            "aW9ucy8qfRLeAgoPQ3JlYXRlRXhjbHVzaW9uEikuZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuQ3JlYXRlRXhjbHVzaW9uUmVxdWVzdBofLmdvb2dsZS5sb2dnaW5nLnYy",
+            "LkxvZ0V4Y2x1c2lvbiL+AYLT5JMC9wEiGy92Mi97cGFyZW50PSovKn0vZXhj",
+            "bHVzaW9uczoJZXhjbHVzaW9uWi8iIi92Mi97cGFyZW50PXByb2plY3RzLyp9",
+            "L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvblo0IicvdjIve3BhcmVudD1vcmdhbml6",
+            "YXRpb25zLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvblouIiEvdjIve3BhcmVu",
+            "dD1mb2xkZXJzLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvblo2IikvdjIve3Bh",
+            "cmVudD1iaWxsaW5nQWNjb3VudHMvKn0vZXhjbHVzaW9uczoJZXhjbHVzaW9u",
+            "Et4CCg9VcGRhdGVFeGNsdXNpb24SKS5nb29nbGUubG9nZ2luZy52Mi5VcGRh",
+            "dGVFeGNsdXNpb25SZXF1ZXN0Gh8uZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhj",
+            "bHVzaW9uIv4BgtPkkwL3ATIbL3YyL3tuYW1lPSovKi9leGNsdXNpb25zLyp9",
+            "OglleGNsdXNpb25aLzIiL3YyL3tuYW1lPXByb2plY3RzLyovZXhjbHVzaW9u",
+            "cy8qfToJZXhjbHVzaW9uWjQyJy92Mi97bmFtZT1vcmdhbml6YXRpb25zLyov",
+            "ZXhjbHVzaW9ucy8qfToJZXhjbHVzaW9uWi4yIS92Mi97bmFtZT1mb2xkZXJz",
+            "LyovZXhjbHVzaW9ucy8qfToJZXhjbHVzaW9uWjYyKS92Mi97bmFtZT1iaWxs",
+            "aW5nQWNjb3VudHMvKi9leGNsdXNpb25zLyp9OglleGNsdXNpb24SngIKD0Rl",
+            "bGV0ZUV4Y2x1c2lvbhIpLmdvb2dsZS5sb2dnaW5nLnYyLkRlbGV0ZUV4Y2x1",
+            "c2lvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkixwGC0+STAsAB",
+            "KhsvdjIve25hbWU9Ki8qL2V4Y2x1c2lvbnMvKn1aJCoiL3YyL3tuYW1lPXBy",
+            "b2plY3RzLyovZXhjbHVzaW9ucy8qfVopKicvdjIve25hbWU9b3JnYW5pemF0",
+            "aW9ucy8qL2V4Y2x1c2lvbnMvKn1aIyohL3YyL3tuYW1lPWZvbGRlcnMvKi9l",
+            "eGNsdXNpb25zLyp9WisqKS92Mi97bmFtZT1iaWxsaW5nQWNjb3VudHMvKi9l",
+            "eGNsdXNpb25zLyp9Gt8BykEWbG9nZ2luZy5nb29nbGVhcGlzLmNvbdJBwgFo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
+            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm0ucmVhZC1vbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "bG9nZ2luZy5hZG1pbixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2xvZ2dpbmcucmVhZEKeAQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQhJMb2dn",
+            "aW5nQ29uZmlnUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xv",
+            "dWQuTG9nZ2luZy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "BigqueryOptions", "CreateTime", "UpdateTime" }, new[]{ "Options" }, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.BigQueryOptions), global::Google.Cloud.Logging.V2.BigQueryOptions.Parser, new[]{ "UsePartitionedTables" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksRequest), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksResponse), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetSinkRequest), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateSinkRequest), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink", "UniqueWriterIdentity" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateSinkRequest), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink", "UniqueWriterIdentity", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteSinkRequest), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogExclusion), global::Google.Cloud.Logging.V2.LogExclusion.Parser, new[]{ "Name", "Description", "Filter", "Disabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogExclusion), global::Google.Cloud.Logging.V2.LogExclusion.Parser, new[]{ "Name", "Description", "Filter", "Disabled", "CreateTime", "UpdateTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsRequest), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsResponse), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser, new[]{ "Exclusions", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetExclusionRequest), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser, new[]{ "Name" }, null, null, null),
@@ -162,9 +175,9 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// Describes a sink used to export log entries to one of the following
   /// destinations in any project: a Cloud Storage bucket, a BigQuery dataset, or a
-  /// Cloud Pub/Sub topic.  A logs filter controls which log entries are
-  /// exported. The sink must be created within a project, organization, billing
-  /// account, or folder.
+  /// Cloud Pub/Sub topic. A logs filter controls which log entries are exported.
+  /// The sink must be created within a project, organization, billing account, or
+  /// folder.
   /// </summary>
   public sealed partial class LogSink : pb::IMessage<LogSink> {
     private static readonly pb::MessageParser<LogSink> _parser = new pb::MessageParser<LogSink>(() => new LogSink());
@@ -197,8 +210,14 @@ namespace Google.Cloud.Logging.V2 {
       outputVersionFormat_ = other.outputVersionFormat_;
       writerIdentity_ = other.writerIdentity_;
       includeChildren_ = other.includeChildren_;
-      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
-      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      switch (other.OptionsCase) {
+        case OptionsOneofCase.BigqueryOptions:
+          BigqueryOptions = other.BigqueryOptions.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -212,7 +231,7 @@ namespace Google.Cloud.Logging.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The client-assigned sink identifier, unique within the
-    /// project. Example: `"my-syslog-errors-to-pubsub"`.  Sink identifiers are
+    /// project. Example: `"my-syslog-errors-to-pubsub"`. Sink identifiers are
     /// limited to 100 characters and can include only the following characters:
     /// upper and lower-case alphanumeric characters, underscores, hyphens, and
     /// periods.
@@ -237,8 +256,8 @@ namespace Google.Cloud.Logging.V2 {
     ///
     /// The sink's `writer_identity`, set when the sink is created, must
     /// have permission to write to the destination or else the log
-    /// entries are not exported.  For more information, see
-    /// [Exporting Logs With Sinks](/logging/docs/api/tasks/exporting-logs).
+    /// entries are not exported. For more information, see
+    /// [Exporting Logs with Sinks](/logging/docs/api/tasks/exporting-logs).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Destination {
@@ -252,10 +271,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// Optional.
-    /// An [advanced logs filter](/logging/docs/view/advanced_filters).  The only
+    /// Optional. An [advanced logs filter](/logging/docs/view/advanced-queries). The only
     /// exported log entries are those that are in the resource owning the sink and
-    /// that match the filter.  For example:
+    /// that match the filter. For example:
     ///
     ///     logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
     /// </summary>
@@ -272,7 +290,7 @@ namespace Google.Cloud.Logging.V2 {
     private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
     /// <summary>
     /// Deprecated. The log entry format to use for this sink's exported log
-    /// entries.  The v2 format is used by default and cannot be changed.
+    /// entries. The v2 format is used by default and cannot be changed.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -288,17 +306,17 @@ namespace Google.Cloud.Logging.V2 {
     private string writerIdentity_ = "";
     /// <summary>
     /// Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;under
-    /// which Logging writes the exported log entries to the sink's
-    /// destination.  This field is set by
-    /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create)
+    /// which Logging writes the exported log entries to the sink's destination.
+    /// This field is set by
+    /// [sinks.create][google.logging.v2.ConfigServiceV2.CreateSink]
     /// and
-    /// [sinks.update](/logging/docs/api/reference/rest/v2/projects.sinks/update),
-    /// based on the setting of `unique_writer_identity` in those methods.
+    /// [sinks.update][google.logging.v2.ConfigServiceV2.UpdateSink]
+    /// based on the value of `unique_writer_identity` in those methods.
     ///
     /// Until you grant this identity write-access to the destination, log entry
     /// exports from this sink will fail. For more information,
-    /// see [Granting access for a
-    /// resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource).
+    /// see [Granting Access for a
+    /// Resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource).
     /// Consult the destination service's documentation to determine the
     /// appropriate IAM roles to assign to the identity.
     /// </summary>
@@ -336,34 +354,68 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
-    /// <summary>Field number for the "start_time" field.</summary>
-    public const int StartTimeFieldNumber = 10;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>Field number for the "bigquery_options" field.</summary>
+    public const int BigqueryOptionsFieldNumber = 12;
     /// <summary>
-    /// Deprecated. This field is ignored when creating or updating sinks.
+    /// Optional. Options that affect sinks exporting data to BigQuery.
     /// </summary>
-    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
-      get { return startTime_; }
+    public global::Google.Cloud.Logging.V2.BigQueryOptions BigqueryOptions {
+      get { return optionsCase_ == OptionsOneofCase.BigqueryOptions ? (global::Google.Cloud.Logging.V2.BigQueryOptions) options_ : null; }
       set {
-        startTime_ = value;
+        options_ = value;
+        optionsCase_ = value == null ? OptionsOneofCase.None : OptionsOneofCase.BigqueryOptions;
       }
     }
 
-    /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 11;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Deprecated. This field is ignored when creating or updating sinks.
+    /// Output only. The creation timestamp of the sink.
+    ///
+    /// This field may not be present for older sinks.
     /// </summary>
-    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
-      get { return endTime_; }
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
       set {
-        endTime_ = value;
+        createTime_ = value;
       }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 14;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The last update timestamp of the sink.
+    ///
+    /// This field may not be present for older sinks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    private object options_;
+    /// <summary>Enum of possible cases for the "options" oneof.</summary>
+    public enum OptionsOneofCase {
+      None = 0,
+      BigqueryOptions = 12,
+    }
+    private OptionsOneofCase optionsCase_ = OptionsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OptionsOneofCase OptionsCase {
+      get { return optionsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearOptions() {
+      optionsCase_ = OptionsOneofCase.None;
+      options_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -385,8 +437,10 @@ namespace Google.Cloud.Logging.V2 {
       if (OutputVersionFormat != other.OutputVersionFormat) return false;
       if (WriterIdentity != other.WriterIdentity) return false;
       if (IncludeChildren != other.IncludeChildren) return false;
-      if (!object.Equals(StartTime, other.StartTime)) return false;
-      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (!object.Equals(BigqueryOptions, other.BigqueryOptions)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (OptionsCase != other.OptionsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -399,8 +453,10 @@ namespace Google.Cloud.Logging.V2 {
       if (OutputVersionFormat != 0) hash ^= OutputVersionFormat.GetHashCode();
       if (WriterIdentity.Length != 0) hash ^= WriterIdentity.GetHashCode();
       if (IncludeChildren != false) hash ^= IncludeChildren.GetHashCode();
-      if (startTime_ != null) hash ^= StartTime.GetHashCode();
-      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (optionsCase_ == OptionsOneofCase.BigqueryOptions) hash ^= BigqueryOptions.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= (int) optionsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -438,13 +494,17 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(72);
         output.WriteBool(IncludeChildren);
       }
-      if (startTime_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(StartTime);
+      if (optionsCase_ == OptionsOneofCase.BigqueryOptions) {
+        output.WriteRawTag(98);
+        output.WriteMessage(BigqueryOptions);
       }
-      if (endTime_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(EndTime);
+      if (createTime_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(UpdateTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -472,11 +532,14 @@ namespace Google.Cloud.Logging.V2 {
       if (IncludeChildren != false) {
         size += 1 + 1;
       }
-      if (startTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      if (optionsCase_ == OptionsOneofCase.BigqueryOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryOptions);
       }
-      if (endTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -507,18 +570,27 @@ namespace Google.Cloud.Logging.V2 {
       if (other.IncludeChildren != false) {
         IncludeChildren = other.IncludeChildren;
       }
-      if (other.startTime_ != null) {
-        if (startTime_ == null) {
-          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
-        StartTime.MergeFrom(other.StartTime);
+        CreateTime.MergeFrom(other.CreateTime);
       }
-      if (other.endTime_ != null) {
-        if (endTime_ == null) {
-          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
-        EndTime.MergeFrom(other.EndTime);
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
+      switch (other.OptionsCase) {
+        case OptionsOneofCase.BigqueryOptions:
+          if (BigqueryOptions == null) {
+            BigqueryOptions = new global::Google.Cloud.Logging.V2.BigQueryOptions();
+          }
+          BigqueryOptions.MergeFrom(other.BigqueryOptions);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -554,18 +626,27 @@ namespace Google.Cloud.Logging.V2 {
             IncludeChildren = input.ReadBool();
             break;
           }
-          case 82: {
-            if (startTime_ == null) {
-              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          case 98: {
+            global::Google.Cloud.Logging.V2.BigQueryOptions subBuilder = new global::Google.Cloud.Logging.V2.BigQueryOptions();
+            if (optionsCase_ == OptionsOneofCase.BigqueryOptions) {
+              subBuilder.MergeFrom(BigqueryOptions);
             }
-            input.ReadMessage(StartTime);
+            input.ReadMessage(subBuilder);
+            BigqueryOptions = subBuilder;
             break;
           }
-          case 90: {
-            if (endTime_ == null) {
-              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          case 106: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(EndTime);
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 114: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
             break;
           }
         }
@@ -602,6 +683,147 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
+  /// Options that change functionality of a sink exporting data to BigQuery.
+  /// </summary>
+  public sealed partial class BigQueryOptions : pb::IMessage<BigQueryOptions> {
+    private static readonly pb::MessageParser<BigQueryOptions> _parser = new pb::MessageParser<BigQueryOptions>(() => new BigQueryOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BigQueryOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryOptions(BigQueryOptions other) : this() {
+      usePartitionedTables_ = other.usePartitionedTables_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryOptions Clone() {
+      return new BigQueryOptions(this);
+    }
+
+    /// <summary>Field number for the "use_partitioned_tables" field.</summary>
+    public const int UsePartitionedTablesFieldNumber = 1;
+    private bool usePartitionedTables_;
+    /// <summary>
+    /// Optional. Whether to use [BigQuery's partition
+    /// tables](/bigquery/docs/partitioned-tables). By default, Logging
+    /// creates dated tables based on the log entries' timestamps, e.g.
+    /// syslog_20170523. With partitioned tables the date suffix is no longer
+    /// present and [special query
+    /// syntax](/bigquery/docs/querying-partitioned-tables) has to be used instead.
+    /// In both cases, tables are sharded based on UTC timezone.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool UsePartitionedTables {
+      get { return usePartitionedTables_; }
+      set {
+        usePartitionedTables_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BigQueryOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BigQueryOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UsePartitionedTables != other.UsePartitionedTables) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UsePartitionedTables != false) hash ^= UsePartitionedTables.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (UsePartitionedTables != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(UsePartitionedTables);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (UsePartitionedTables != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BigQueryOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UsePartitionedTables != false) {
+        UsePartitionedTables = other.UsePartitionedTables;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UsePartitionedTables = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// The parameters to `ListSinks`.
   /// </summary>
   public sealed partial class ListSinksRequest : pb::IMessage<ListSinksRequest> {
@@ -612,7 +834,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -664,8 +886,8 @@ namespace Google.Cloud.Logging.V2 {
     private string pageToken_ = "";
     /// <summary>
     /// Optional. If present, then retrieve the next batch of results from the
-    /// preceding call to this method.  `pageToken` must be the value of
-    /// `nextPageToken` from the previous response.  The values of other method
+    /// preceding call to this method. `pageToken` must be the value of
+    /// `nextPageToken` from the previous response. The values of other method
     /// parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -681,7 +903,7 @@ namespace Google.Cloud.Logging.V2 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of results to return from this request.
-    /// Non-positive values are ignored.  The presence of `nextPageToken` in the
+    /// Non-positive values are ignored. The presence of `nextPageToken` in the
     /// response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -819,7 +1041,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -864,7 +1086,7 @@ namespace Google.Cloud.Logging.V2 {
     private string nextPageToken_ = "";
     /// <summary>
     /// If there might be more results than appear in this response, then
-    /// `nextPageToken` is included.  To get the next set of results, call the same
+    /// `nextPageToken` is included. To get the next set of results, call the same
     /// method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -979,7 +1201,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1121,7 +1343,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1190,17 +1412,16 @@ namespace Google.Cloud.Logging.V2 {
     private bool uniqueWriterIdentity_;
     /// <summary>
     /// Optional. Determines the kind of IAM identity returned as `writer_identity`
-    /// in the new sink.  If this value is omitted or set to false, and if the
+    /// in the new sink. If this value is omitted or set to false, and if the
     /// sink's parent is a project, then the value returned as `writer_identity` is
-    /// the same group or service account used by Logging before the
-    /// addition of writer identities to this API. The sink's destination must be
-    /// in the same project as the sink itself.
+    /// the same group or service account used by Logging before the addition of
+    /// writer identities to this API. The sink's destination must be in the same
+    /// project as the sink itself.
     ///
     /// If this field is set to true, or if the sink is owned by a non-project
     /// resource such as an organization, then the value of `writer_identity` will
-    /// be a unique service account used only for exports from the new sink.  For
-    /// more information, see `writer_identity` in
-    /// [LogSink][google.logging.v2.LogSink].
+    /// be a unique service account used only for exports from the new sink. For
+    /// more information, see `writer_identity` in [LogSink][google.logging.v2.LogSink].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool UniqueWriterIdentity {
@@ -1343,7 +1564,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1413,9 +1634,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int UniqueWriterIdentityFieldNumber = 3;
     private bool uniqueWriterIdentity_;
     /// <summary>
-    /// Optional. See
-    /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create)
-    /// for a description of this field.  When updating a sink, the effect of this
+    /// Optional. See [sinks.create][google.logging.v2.ConfigServiceV2.CreateSink]
+    /// for a description of this field. When updating a sink, the effect of this
     /// field on the value of `writer_identity` in the updated sink depends on both
     /// the old and new values of this field:
     ///
@@ -1440,7 +1660,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>
     /// Optional. Field mask that specifies the fields in `sink` that need
     /// an update. A sink field will be overwritten if, and only if, it is
-    /// in the update mask.  `name` and output only fields cannot be updated.
+    /// in the update mask. `name` and output only fields cannot be updated.
     ///
     /// An empty updateMask is temporarily treated as using the following mask
     /// for backwards compatibility purposes:
@@ -1616,7 +1836,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1750,11 +1970,11 @@ namespace Google.Cloud.Logging.V2 {
 
   /// <summary>
   /// Specifies a set of log entries that are not to be stored in
-  /// Logging. If your project receives a large volume of logs, you might be able
-  /// to use exclusions to reduce your chargeable logs. Exclusions are processed
-  /// after log sinks, so you can export log entries before they are excluded.
-  /// Audit log entries and log entries from Amazon Web Services are never
-  /// excluded.
+  /// Logging. If your GCP resource receives a large volume of logs, you can
+  /// use exclusions to reduce your chargeable logs. Exclusions are
+  /// processed after log sinks, so you can export log entries before they are
+  /// excluded. Note that organization-level and folder-level exclusions don't
+  /// apply to child resources, and that you can't exclude audit log entries.
   /// </summary>
   public sealed partial class LogExclusion : pb::IMessage<LogExclusion> {
     private static readonly pb::MessageParser<LogExclusion> _parser = new pb::MessageParser<LogExclusion>(() => new LogExclusion());
@@ -1764,7 +1984,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1785,6 +2005,8 @@ namespace Google.Cloud.Logging.V2 {
       description_ = other.description_;
       filter_ = other.filter_;
       disabled_ = other.disabled_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1827,15 +2049,14 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    /// Required.
-    /// An [advanced logs filter](/logging/docs/view/advanced_filters)
+    /// Required. An [advanced logs filter](/logging/docs/view/advanced-queries)
     /// that matches the log entries to be excluded. By using the
-    /// [sample function](/logging/docs/view/advanced_filters#sample),
+    /// [sample function](/logging/docs/view/advanced-queries#sample),
     /// you can exclude less than 100% of the matching log entries.
-    /// For example, the following filter matches 99% of low-severity log
-    /// entries from load balancers:
+    /// For example, the following query matches 99% of low-severity log
+    /// entries from Google Cloud Storage buckets:
     ///
-    /// `"resource.type=http_load_balancer severity&lt;ERROR sample(insertId, 0.99)"`
+    /// `"resource.type=gcs_bucket severity&lt;ERROR sample(insertId, 0.99)"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -1850,15 +2071,47 @@ namespace Google.Cloud.Logging.V2 {
     private bool disabled_;
     /// <summary>
     /// Optional. If set to True, then this exclusion is disabled and it does not
-    /// exclude any log entries. You can use
-    /// [exclusions.patch](/logging/docs/reference/v2/rest/v2/projects.exclusions/patch)
-    /// to change the value of this field.
+    /// exclude any log entries. You can [update an
+    /// exclusion][google.logging.v2.ConfigServiceV2.UpdateExclusion] to change the
+    /// value of this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Disabled {
       get { return disabled_; }
       set {
         disabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The creation timestamp of the exclusion.
+    ///
+    /// This field may not be present for older exclusions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The last update timestamp of the exclusion.
+    ///
+    /// This field may not be present for older exclusions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
       }
     }
 
@@ -1879,6 +2132,8 @@ namespace Google.Cloud.Logging.V2 {
       if (Description != other.Description) return false;
       if (Filter != other.Filter) return false;
       if (Disabled != other.Disabled) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1889,6 +2144,8 @@ namespace Google.Cloud.Logging.V2 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (Disabled != false) hash ^= Disabled.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1918,6 +2175,14 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(32);
         output.WriteBool(Disabled);
       }
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1937,6 +2202,12 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (Disabled != false) {
         size += 1 + 1;
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1960,6 +2231,18 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.Disabled != false) {
         Disabled = other.Disabled;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1988,6 +2271,20 @@ namespace Google.Cloud.Logging.V2 {
             Disabled = input.ReadBool();
             break;
           }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
         }
       }
     }
@@ -2005,7 +2302,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2057,8 +2354,8 @@ namespace Google.Cloud.Logging.V2 {
     private string pageToken_ = "";
     /// <summary>
     /// Optional. If present, then retrieve the next batch of results from the
-    /// preceding call to this method.  `pageToken` must be the value of
-    /// `nextPageToken` from the previous response.  The values of other method
+    /// preceding call to this method. `pageToken` must be the value of
+    /// `nextPageToken` from the previous response. The values of other method
     /// parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2074,7 +2371,7 @@ namespace Google.Cloud.Logging.V2 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of results to return from this request.
-    /// Non-positive values are ignored.  The presence of `nextPageToken` in the
+    /// Non-positive values are ignored. The presence of `nextPageToken` in the
     /// response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2212,7 +2509,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2257,7 +2554,7 @@ namespace Google.Cloud.Logging.V2 {
     private string nextPageToken_ = "";
     /// <summary>
     /// If there might be more results than appear in this response, then
-    /// `nextPageToken` is included.  To get the next set of results, call the same
+    /// `nextPageToken` is included. To get the next set of results, call the same
     /// method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2372,7 +2669,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2514,7 +2811,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2694,7 +2991,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2762,11 +3059,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int UpdateMaskFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. A nonempty list of fields to change in the existing exclusion.
+    /// Required. A non-empty list of fields to change in the existing exclusion.
     /// New values for the fields are taken from the corresponding fields in the
-    /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
-    /// Fields not mentioned in `update_mask` are not changed and are ignored in
-    /// the request.
+    /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+    /// `update_mask` are not changed and are ignored in the request.
     ///
     /// For example, to change the filter and description of an exclusion,
     /// specify an `update_mask` of `"filter,description"`.
@@ -2918,7 +3214,7 @@ namespace Google.Cloud.Logging.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

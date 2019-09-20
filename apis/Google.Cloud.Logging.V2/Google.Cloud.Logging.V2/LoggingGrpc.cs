@@ -3,7 +3,7 @@
 //     source: google/logging/v2/logging.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -119,9 +119,9 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Lists log entries.  Use this method to retrieve log entries from
-      /// Logging.  For ways to export log entries, see
-      /// [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries that originated
+      /// from a project/folder/organization/billing account.  For ways to export log
+      /// entries, see [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -304,9 +304,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_WriteLogEntries, null, options, request);
       }
       /// <summary>
-      /// Lists log entries.  Use this method to retrieve log entries from
-      /// Logging.  For ways to export log entries, see
-      /// [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries that originated
+      /// from a project/folder/organization/billing account.  For ways to export log
+      /// entries, see [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -318,9 +318,9 @@ namespace Google.Cloud.Logging.V2 {
         return ListLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists log entries.  Use this method to retrieve log entries from
-      /// Logging.  For ways to export log entries, see
-      /// [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries that originated
+      /// from a project/folder/organization/billing account.  For ways to export log
+      /// entries, see [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -330,9 +330,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListLogEntries, null, options, request);
       }
       /// <summary>
-      /// Lists log entries.  Use this method to retrieve log entries from
-      /// Logging.  For ways to export log entries, see
-      /// [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries that originated
+      /// from a project/folder/organization/billing account.  For ways to export log
+      /// entries, see [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -344,9 +344,9 @@ namespace Google.Cloud.Logging.V2 {
         return ListLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists log entries.  Use this method to retrieve log entries from
-      /// Logging.  For ways to export log entries, see
-      /// [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries that originated
+      /// from a project/folder/organization/billing account.  For ways to export log
+      /// entries, see [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

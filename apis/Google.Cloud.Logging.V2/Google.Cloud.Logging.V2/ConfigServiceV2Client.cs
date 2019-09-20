@@ -1089,9 +1089,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
@@ -1126,9 +1126,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
@@ -1160,9 +1160,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
@@ -1197,9 +1197,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
@@ -1234,9 +1234,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
@@ -1268,9 +1268,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
@@ -1305,9 +1305,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
@@ -1327,9 +1327,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
@@ -1348,9 +1348,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
@@ -1370,8 +1370,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1393,7 +1394,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
         /// an update. A sink field will be overwritten if, and only if, it is
-        /// in the update mask.  `name` and output only fields cannot be updated.
+        /// in the update mask. `name` and output only fields cannot be updated.
         ///
         /// An empty updateMask is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
@@ -1426,8 +1427,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1449,7 +1451,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
         /// an update. A sink field will be overwritten if, and only if, it is
-        /// in the update mask.  `name` and output only fields cannot be updated.
+        /// in the update mask. `name` and output only fields cannot be updated.
         ///
         /// An empty updateMask is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
@@ -1479,8 +1481,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1502,7 +1505,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
         /// an update. A sink field will be overwritten if, and only if, it is
-        /// in the update mask.  `name` and output only fields cannot be updated.
+        /// in the update mask. `name` and output only fields cannot be updated.
         ///
         /// An empty updateMask is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
@@ -1535,8 +1538,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1558,7 +1562,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
         /// an update. A sink field will be overwritten if, and only if, it is
-        /// in the update mask.  `name` and output only fields cannot be updated.
+        /// in the update mask. `name` and output only fields cannot be updated.
         ///
         /// An empty updateMask is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
@@ -1591,8 +1595,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1614,7 +1619,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
         /// an update. A sink field will be overwritten if, and only if, it is
-        /// in the update mask.  `name` and output only fields cannot be updated.
+        /// in the update mask. `name` and output only fields cannot be updated.
         ///
         /// An empty updateMask is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
@@ -1644,8 +1649,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1667,7 +1673,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
         /// an update. A sink field will be overwritten if, and only if, it is
-        /// in the update mask.  `name` and output only fields cannot be updated.
+        /// in the update mask. `name` and output only fields cannot be updated.
         ///
         /// An empty updateMask is temporarily treated as using the following mask
         /// for backwards compatibility purposes:
@@ -1700,8 +1706,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1738,8 +1745,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1773,8 +1781,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1811,8 +1820,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1849,8 +1859,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1884,8 +1895,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1922,8 +1934,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1944,8 +1957,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -1965,8 +1979,9 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -2908,11 +2923,10 @@ namespace Google.Cloud.Logging.V2
         /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
         /// New values for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
-        /// Fields not mentioned in `update_mask` are not changed and are ignored in
-        /// the request.
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
         ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -2954,11 +2968,10 @@ namespace Google.Cloud.Logging.V2
         /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
         /// New values for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
-        /// Fields not mentioned in `update_mask` are not changed and are ignored in
-        /// the request.
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
         ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -2997,11 +3010,10 @@ namespace Google.Cloud.Logging.V2
         /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
         /// New values for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
-        /// Fields not mentioned in `update_mask` are not changed and are ignored in
-        /// the request.
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
         ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -3043,11 +3055,10 @@ namespace Google.Cloud.Logging.V2
         /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
         /// New values for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
-        /// Fields not mentioned in `update_mask` are not changed and are ignored in
-        /// the request.
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
         ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -3089,11 +3100,10 @@ namespace Google.Cloud.Logging.V2
         /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
         /// New values for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
-        /// Fields not mentioned in `update_mask` are not changed and are ignored in
-        /// the request.
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
         ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -3132,11 +3142,10 @@ namespace Google.Cloud.Logging.V2
         /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
         /// New values for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
-        /// Fields not mentioned in `update_mask` are not changed and are ignored in
-        /// the request.
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
         ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -3628,9 +3637,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
@@ -3651,9 +3660,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink that exports specified log entries to a destination.  The
+        /// Creates a sink that exports specified log entries to a destination. The
         /// export of newly-ingested log entries begins immediately, unless the sink's
-        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// `writer_identity` is not permitted to write to the destination. A sink can
         /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
@@ -3674,8 +3683,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
@@ -3697,8 +3707,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink.  This method replaces the following fields in the existing
+        /// Updates a sink. This method replaces the following fields in the existing
         /// sink with values from the new sink: `destination`, and `filter`.
+        ///
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
