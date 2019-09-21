@@ -34,248 +34,6 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
     /// <summary>Generated snippets</summary>
     public class GeneratedCloudRedisClientSnippets
     {
-        /// <summary>Snippet for ListInstancesAsync</summary>
-        public async Task ListInstancesAsync()
-        {
-            // Snippet: ListInstancesAsync(LocationName,string,int?,CallSettings)
-            // Create client
-            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
-                cloudRedisClient.ListInstancesAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListInstances</summary>
-        public void ListInstances()
-        {
-            // Snippet: ListInstances(LocationName,string,int?,CallSettings)
-            // Create client
-            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response =
-                cloudRedisClient.ListInstances(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (Instance item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListInstancesResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Instance> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListInstancesAsync</summary>
-        public async Task ListInstancesAsync_RequestObject()
-        {
-            // Snippet: ListInstancesAsync(ListInstancesRequest,CallSettings)
-            // Create client
-            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
-            // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
-                cloudRedisClient.ListInstancesAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListInstances</summary>
-        public void ListInstances_RequestObject()
-        {
-            // Snippet: ListInstances(ListInstancesRequest,CallSettings)
-            // Create client
-            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
-            // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-            };
-            // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response =
-                cloudRedisClient.ListInstances(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (Instance item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListInstancesResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Instance> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetInstanceAsync</summary>
-        public async Task GetInstanceAsync()
-        {
-            // Snippet: GetInstanceAsync(InstanceName,CallSettings)
-            // Additional: GetInstanceAsync(InstanceName,CancellationToken)
-            // Create client
-            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
-            // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
-            // Make the request
-            Instance response = await cloudRedisClient.GetInstanceAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance()
-        {
-            // Snippet: GetInstance(InstanceName,CallSettings)
-            // Create client
-            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
-            // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
-            // Make the request
-            Instance response = cloudRedisClient.GetInstance(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetInstanceAsync</summary>
-        public async Task GetInstanceAsync_RequestObject()
-        {
-            // Snippet: GetInstanceAsync(GetInstanceRequest,CallSettings)
-            // Additional: GetInstanceAsync(GetInstanceRequest,CancellationToken)
-            // Create client
-            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
-            // Initialize request argument(s)
-            GetInstanceRequest request = new GetInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-            };
-            // Make the request
-            Instance response = await cloudRedisClient.GetInstanceAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance_RequestObject()
-        {
-            // Snippet: GetInstance(GetInstanceRequest,CallSettings)
-            // Create client
-            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
-            // Initialize request argument(s)
-            GetInstanceRequest request = new GetInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-            };
-            // Make the request
-            Instance response = cloudRedisClient.GetInstance(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync()
         {
@@ -616,6 +374,248 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstancesAsync</summary>
+        public async Task ListInstancesAsync()
+        {
+            // Snippet: ListInstancesAsync(LocationName,string,int?,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
+                cloudRedisClient.ListInstancesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Instance item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Instance item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Instance item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstances</summary>
+        public void ListInstances()
+        {
+            // Snippet: ListInstances(LocationName,string,int?,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListInstancesResponse, Instance> response =
+                cloudRedisClient.ListInstances(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Instance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Instance item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Instance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Instance item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancesAsync</summary>
+        public async Task ListInstancesAsync_RequestObject()
+        {
+            // Snippet: ListInstancesAsync(ListInstancesRequest,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            ListInstancesRequest request = new ListInstancesRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
+                cloudRedisClient.ListInstancesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Instance item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Instance item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Instance item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstances</summary>
+        public void ListInstances_RequestObject()
+        {
+            // Snippet: ListInstances(ListInstancesRequest,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            ListInstancesRequest request = new ListInstancesRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListInstancesResponse, Instance> response =
+                cloudRedisClient.ListInstances(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Instance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Instance item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Instance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Instance item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceAsync</summary>
+        public async Task GetInstanceAsync()
+        {
+            // Snippet: GetInstanceAsync(InstanceName,CallSettings)
+            // Additional: GetInstanceAsync(InstanceName,CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Instance response = await cloudRedisClient.GetInstanceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstance</summary>
+        public void GetInstance()
+        {
+            // Snippet: GetInstance(InstanceName,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Instance response = cloudRedisClient.GetInstance(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceAsync</summary>
+        public async Task GetInstanceAsync_RequestObject()
+        {
+            // Snippet: GetInstanceAsync(GetInstanceRequest,CallSettings)
+            // Additional: GetInstanceAsync(GetInstanceRequest,CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Instance response = await cloudRedisClient.GetInstanceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstance</summary>
+        public void GetInstance_RequestObject()
+        {
+            // Snippet: GetInstance(GetInstanceRequest,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Instance response = cloudRedisClient.GetInstance(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ImportInstanceAsync</summary>
         public async Task ImportInstanceAsync()
         {
@@ -624,11 +624,11 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            string name = "";
             InputConfig inputConfig = new InputConfig();
             // Make the request
             Operation<Instance, Any> response =
-                await cloudRedisClient.ImportInstanceAsync(formattedName, inputConfig);
+                await cloudRedisClient.ImportInstanceAsync(name, inputConfig);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, Any> completedResponse =
@@ -657,11 +657,11 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            string name = "";
             InputConfig inputConfig = new InputConfig();
             // Make the request
             Operation<Instance, Any> response =
-                cloudRedisClient.ImportInstance(formattedName, inputConfig);
+                cloudRedisClient.ImportInstance(name, inputConfig);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, Any> completedResponse =
@@ -692,7 +692,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             ImportInstanceRequest request = new ImportInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                Name = "",
                 InputConfig = new InputConfig(),
             };
             // Make the request
@@ -728,7 +728,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             ImportInstanceRequest request = new ImportInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                Name = "",
                 InputConfig = new InputConfig(),
             };
             // Make the request
@@ -763,11 +763,11 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            string name = "";
             OutputConfig outputConfig = new OutputConfig();
             // Make the request
             Operation<Instance, Any> response =
-                await cloudRedisClient.ExportInstanceAsync(formattedName, outputConfig);
+                await cloudRedisClient.ExportInstanceAsync(name, outputConfig);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, Any> completedResponse =
@@ -796,11 +796,11 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            string name = "";
             OutputConfig outputConfig = new OutputConfig();
             // Make the request
             Operation<Instance, Any> response =
-                cloudRedisClient.ExportInstance(formattedName, outputConfig);
+                cloudRedisClient.ExportInstance(name, outputConfig);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, Any> completedResponse =
@@ -831,7 +831,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             ExportInstanceRequest request = new ExportInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                Name = "",
                 OutputConfig = new OutputConfig(),
             };
             // Make the request
@@ -867,7 +867,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             ExportInstanceRequest request = new ExportInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                Name = "",
                 OutputConfig = new OutputConfig(),
             };
             // Make the request
@@ -897,16 +897,16 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for FailoverInstanceAsync</summary>
         public async Task FailoverInstanceAsync()
         {
-            // Snippet: FailoverInstanceAsync(string,FailoverInstanceRequest.Types.DataProtectionMode,CallSettings)
-            // Additional: FailoverInstanceAsync(string,FailoverInstanceRequest.Types.DataProtectionMode,CancellationToken)
+            // Snippet: FailoverInstanceAsync(InstanceName,FailoverInstanceRequest.Types.DataProtectionMode?,CallSettings)
+            // Additional: FailoverInstanceAsync(InstanceName,FailoverInstanceRequest.Types.DataProtectionMode?,CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified;
             // Make the request
             Operation<Instance, Any> response =
-                await cloudRedisClient.FailoverInstanceAsync(formattedName, dataProtectionMode);
+                await cloudRedisClient.FailoverInstanceAsync(name, dataProtectionMode);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, Any> completedResponse =
@@ -931,15 +931,15 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for FailoverInstance</summary>
         public void FailoverInstance()
         {
-            // Snippet: FailoverInstance(string,FailoverInstanceRequest.Types.DataProtectionMode,CallSettings)
+            // Snippet: FailoverInstance(InstanceName,FailoverInstanceRequest.Types.DataProtectionMode?,CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified;
             // Make the request
             Operation<Instance, Any> response =
-                cloudRedisClient.FailoverInstance(formattedName, dataProtectionMode);
+                cloudRedisClient.FailoverInstance(name, dataProtectionMode);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, Any> completedResponse =
@@ -970,8 +970,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             FailoverInstanceRequest request = new FailoverInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
-                DataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified,
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             Operation<Instance, Any> response =
@@ -1006,8 +1005,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             FailoverInstanceRequest request = new FailoverInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
-                DataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified,
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             Operation<Instance, Any> response =
