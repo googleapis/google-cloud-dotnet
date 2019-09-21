@@ -46,7 +46,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Name = "name2-1052831874",
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "displayName1615086568",
                 LocationId = "locationId552319461",
                 AlternativeLocationId = "alternativeLocationId-718920621",
@@ -81,7 +81,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Name = "name2-1052831874",
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "displayName1615086568",
                 LocationId = "locationId552319461",
                 AlternativeLocationId = "alternativeLocationId-718920621",
@@ -116,7 +116,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Name = "name2-1052831874",
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "displayName1615086568",
                 LocationId = "locationId552319461",
                 AlternativeLocationId = "alternativeLocationId-718920621",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Name = "name2-1052831874",
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "displayName1615086568",
                 LocationId = "locationId552319461",
                 AlternativeLocationId = "alternativeLocationId-718920621",
