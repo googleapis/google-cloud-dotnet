@@ -96,12 +96,12 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void GetField_ProtoValue()
+        public void GetValue_ProtoValue()
         {
             var doc = GetSampleSnapshot();
-            var sample = doc.ConvertTo<SampleData>();
-            Assert.Equal("Test", sample.Name);
-            Assert.Equal(20, sample.Nested.Score);
+            var expected = new Value { StringValue = "Test" };
+            var actual = doc.GetValue<Value>("Name");
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
