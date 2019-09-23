@@ -316,7 +316,7 @@
     "id": "Google.Cloud.Dialogflow.V2",
     "generator": "gapic",
     "protoPath": "google/cloud/dialogflow/v2",
-    "serviceYaml": "dialogflow_v2.yaml",
+    "serviceYaml": "v2/dialogflow_v2.yaml",
     "productName": "Google Cloud Dialogflow",
     "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
     "version": "1.0.0",
