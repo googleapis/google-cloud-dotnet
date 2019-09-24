@@ -44,7 +44,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Contents = { },
                 TargetLanguageCode = "targetLanguageCode1323228230",
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse();
             mockGrpcClient.Setup(x => x.TranslateText(request, It.IsAny<CallOptions>()))
@@ -65,7 +65,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Contents = { },
                 TargetLanguageCode = "targetLanguageCode1323228230",
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse();
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, It.IsAny<CallOptions>()))
@@ -84,7 +84,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DetectLanguageRequest expectedRequest = new DetectLanguageRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Model = "model104069929",
                 MimeType = "mimeType-196041627",
                 Labels = { },
@@ -93,11 +93,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.DetectLanguage(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             string model = "model104069929";
             string mimeType = "mimeType-196041627";
             IDictionary<string, string> labels = new Dictionary<string, string>();
-            DetectLanguageResponse response = client.DetectLanguage(formattedParent, model, mimeType, labels);
+            DetectLanguageResponse response = client.DetectLanguage(parent, model, mimeType, labels);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -110,7 +110,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DetectLanguageRequest expectedRequest = new DetectLanguageRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Model = "model104069929",
                 MimeType = "mimeType-196041627",
                 Labels = { },
@@ -119,11 +119,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<DetectLanguageResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             string model = "model104069929";
             string mimeType = "mimeType-196041627";
             IDictionary<string, string> labels = new Dictionary<string, string>();
-            DetectLanguageResponse response = await client.DetectLanguageAsync(formattedParent, model, mimeType, labels);
+            DetectLanguageResponse response = await client.DetectLanguageAsync(parent, model, mimeType, labels);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -136,7 +136,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DetectLanguageRequest request = new DetectLanguageRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             DetectLanguageResponse expectedResponse = new DetectLanguageResponse();
             mockGrpcClient.Setup(x => x.DetectLanguage(request, It.IsAny<CallOptions>()))
@@ -155,7 +155,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DetectLanguageRequest request = new DetectLanguageRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             DetectLanguageResponse expectedResponse = new DetectLanguageResponse();
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(request, It.IsAny<CallOptions>()))
@@ -174,7 +174,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetSupportedLanguagesRequest expectedRequest = new GetSupportedLanguagesRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 DisplayLanguageCode = "displayLanguageCode30710199",
                 Model = "model104069929",
             };
@@ -182,10 +182,10 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             string displayLanguageCode = "displayLanguageCode30710199";
             string model = "model104069929";
-            SupportedLanguages response = client.GetSupportedLanguages(formattedParent, displayLanguageCode, model);
+            SupportedLanguages response = client.GetSupportedLanguages(parent, displayLanguageCode, model);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -198,7 +198,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetSupportedLanguagesRequest expectedRequest = new GetSupportedLanguagesRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 DisplayLanguageCode = "displayLanguageCode30710199",
                 Model = "model104069929",
             };
@@ -206,10 +206,10 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SupportedLanguages>(Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             string displayLanguageCode = "displayLanguageCode30710199";
             string model = "model104069929";
-            SupportedLanguages response = await client.GetSupportedLanguagesAsync(formattedParent, displayLanguageCode, model);
+            SupportedLanguages response = await client.GetSupportedLanguagesAsync(parent, displayLanguageCode, model);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -222,7 +222,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetSupportedLanguagesRequest request = new GetSupportedLanguagesRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages();
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(request, It.IsAny<CallOptions>()))
@@ -241,7 +241,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetSupportedLanguagesRequest request = new GetSupportedLanguagesRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages();
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(request, It.IsAny<CallOptions>()))
@@ -260,18 +260,18 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetGlossaryRequest expectedRequest = new GetGlossaryRequest
             {
-                Name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]").ToString(),
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                Name = "name2-1052831874",
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 EntryCount = 811131134,
             };
             mockGrpcClient.Setup(x => x.GetGlossary(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]").ToString();
-            Glossary response = client.GetGlossary(formattedName);
+            GlossaryName name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            Glossary response = client.GetGlossary(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -284,18 +284,18 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetGlossaryRequest expectedRequest = new GetGlossaryRequest
             {
-                Name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]").ToString(),
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                Name = "name2-1052831874",
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 EntryCount = 811131134,
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Glossary>(Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]").ToString();
-            Glossary response = await client.GetGlossaryAsync(formattedName);
+            GlossaryName name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            Glossary response = await client.GetGlossaryAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -308,11 +308,11 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                Name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]").ToString(),
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                Name = "name2-1052831874",
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 EntryCount = 811131134,
             };
             mockGrpcClient.Setup(x => x.GetGlossary(request, It.IsAny<CallOptions>()))
@@ -331,11 +331,11 @@ namespace Google.Cloud.Translate.V3.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                Name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]").ToString(),
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                Name = "name2-1052831874",
+                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 EntryCount = 811131134,
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(request, It.IsAny<CallOptions>()))

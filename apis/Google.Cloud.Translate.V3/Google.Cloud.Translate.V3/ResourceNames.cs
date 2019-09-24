@@ -227,5 +227,121 @@ namespace Google.Cloud.Translate.V3
     }
 
 
+    public partial class BatchTranslateTextRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Translate.V3.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateGlossaryRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Translate.V3.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteGlossaryRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.GlossaryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.GlossaryName GlossaryName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Translate.V3.GlossaryName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DetectLanguageRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Translate.V3.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetGlossaryRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.GlossaryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.GlossaryName GlossaryName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Translate.V3.GlossaryName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetSupportedLanguagesRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Translate.V3.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Glossary
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.GlossaryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.GlossaryName GlossaryName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Translate.V3.GlossaryName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListGlossariesRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Translate.V3.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class TranslateTextRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Translate.V3.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Translate.V3.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Translate.V3.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }
