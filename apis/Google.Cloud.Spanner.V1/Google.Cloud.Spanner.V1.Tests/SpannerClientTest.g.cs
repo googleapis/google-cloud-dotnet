@@ -124,13 +124,15 @@ namespace Google.Cloud.Spanner.V1.Tests
             BatchCreateSessionsRequest expectedRequest = new BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 185691686,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
             mockGrpcClient.Setup(x => x.BatchCreateSessions(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
-            BatchCreateSessionsResponse response = client.BatchCreateSessions(database);
+            int sessionCount = 185691686;
+            BatchCreateSessionsResponse response = client.BatchCreateSessions(database, sessionCount);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -142,13 +144,15 @@ namespace Google.Cloud.Spanner.V1.Tests
             BatchCreateSessionsRequest expectedRequest = new BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 185691686,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
             mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<BatchCreateSessionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
-            BatchCreateSessionsResponse response = await client.BatchCreateSessionsAsync(database);
+            int sessionCount = 185691686;
+            BatchCreateSessionsResponse response = await client.BatchCreateSessionsAsync(database, sessionCount);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -160,6 +164,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 185691686,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
             mockGrpcClient.Setup(x => x.BatchCreateSessions(request, It.IsAny<CallOptions>()))
@@ -177,6 +182,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 185691686,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
             mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, It.IsAny<CallOptions>()))
