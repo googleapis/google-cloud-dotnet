@@ -113,14 +113,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="SpeechClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 1000000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 1000000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(1000000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(1000000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -135,23 +135,22 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 1000000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 1000000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 5000000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings RecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000)),
-                retryFilter: IdempotentRetryFilter
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -165,21 +164,21 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 1000000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 1000000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 5000000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings LongRunningRecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -189,29 +188,29 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
-        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings LongRunningRecognizeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
-                sys::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>SpeechClient.StreamingRecognize</c>.
         /// </summary>
         /// <remarks>
-        /// Default RPC expiration is 5000000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings StreamingRecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
@@ -427,11 +426,11 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        /// *Required* Provides information to the recognizer that specifies how to
+        /// Required. Provides information to the recognizer that specifies how to
         /// process the request.
         /// </param>
         /// <param name="audio">
-        /// *Required* The audio data to be recognized.
+        /// Required. The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -455,11 +454,11 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        /// *Required* Provides information to the recognizer that specifies how to
+        /// Required. Provides information to the recognizer that specifies how to
         /// process the request.
         /// </param>
         /// <param name="audio">
-        /// *Required* The audio data to be recognized.
+        /// Required. The audio data to be recognized.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -480,11 +479,11 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        /// *Required* Provides information to the recognizer that specifies how to
+        /// Required. Provides information to the recognizer that specifies how to
         /// process the request.
         /// </param>
         /// <param name="audio">
-        /// *Required* The audio data to be recognized.
+        /// Required. The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -567,13 +566,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// google.longrunning.Operations interface. Returns either an
         /// `Operation.error` or an `Operation.response` which contains
         /// a `LongRunningRecognizeResponse` message.
+        /// For more information on asynchronous speech recognition, see the
+        /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
         /// </summary>
         /// <param name="config">
-        /// *Required* Provides information to the recognizer that specifies how to
+        /// Required. Provides information to the recognizer that specifies how to
         /// process the request.
         /// </param>
         /// <param name="audio">
-        /// *Required* The audio data to be recognized.
+        /// Required. The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -597,13 +598,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// google.longrunning.Operations interface. Returns either an
         /// `Operation.error` or an `Operation.response` which contains
         /// a `LongRunningRecognizeResponse` message.
+        /// For more information on asynchronous speech recognition, see the
+        /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
         /// </summary>
         /// <param name="config">
-        /// *Required* Provides information to the recognizer that specifies how to
+        /// Required. Provides information to the recognizer that specifies how to
         /// process the request.
         /// </param>
         /// <param name="audio">
-        /// *Required* The audio data to be recognized.
+        /// Required. The audio data to be recognized.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -624,13 +627,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// google.longrunning.Operations interface. Returns either an
         /// `Operation.error` or an `Operation.response` which contains
         /// a `LongRunningRecognizeResponse` message.
+        /// For more information on asynchronous speech recognition, see the
+        /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
         /// </summary>
         /// <param name="config">
-        /// *Required* Provides information to the recognizer that specifies how to
+        /// Required. Provides information to the recognizer that specifies how to
         /// process the request.
         /// </param>
         /// <param name="audio">
-        /// *Required* The audio data to be recognized.
+        /// Required. The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -654,6 +659,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// google.longrunning.Operations interface. Returns either an
         /// `Operation.error` or an `Operation.response` which contains
         /// a `LongRunningRecognizeResponse` message.
+        /// For more information on asynchronous speech recognition, see the
+        /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -689,6 +696,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// google.longrunning.Operations interface. Returns either an
         /// `Operation.error` or an `Operation.response` which contains
         /// a `LongRunningRecognizeResponse` message.
+        /// For more information on asynchronous speech recognition, see the
+        /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -870,6 +879,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// google.longrunning.Operations interface. Returns either an
         /// `Operation.error` or an `Operation.response` which contains
         /// a `LongRunningRecognizeResponse` message.
+        /// For more information on asynchronous speech recognition, see the
+        /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -894,6 +905,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// google.longrunning.Operations interface. Returns either an
         /// `Operation.error` or an `Operation.response` which contains
         /// a `LongRunningRecognizeResponse` message.
+        /// For more information on asynchronous speech recognition, see the
+        /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
