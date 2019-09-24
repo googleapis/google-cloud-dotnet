@@ -1169,6 +1169,14 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="database">
         /// Required. The database in which the new sessions are created.
         /// </param>
+        /// <param name="sessionCount">
+        /// Required. The number of sessions to be created in this batch call.
+        /// The API may return fewer than the requested number of sessions. If a
+        /// specific number of sessions are desired, the client can make additional
+        /// calls to BatchCreateSessions (adjusting
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1177,10 +1185,12 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
             gcscv::DatabaseName database,
+            int sessionCount,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateSessionsAsync(
                 new BatchCreateSessionsRequest
                 {
                     DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                    SessionCount = sessionCount,
                 },
                 callSettings);
 
@@ -1193,6 +1203,14 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="database">
         /// Required. The database in which the new sessions are created.
         /// </param>
+        /// <param name="sessionCount">
+        /// Required. The number of sessions to be created in this batch call.
+        /// The API may return fewer than the requested number of sessions. If a
+        /// specific number of sessions are desired, the client can make additional
+        /// calls to BatchCreateSessions (adjusting
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
+        /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
@@ -1201,8 +1219,10 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
             gcscv::DatabaseName database,
+            int sessionCount,
             st::CancellationToken cancellationToken) => BatchCreateSessionsAsync(
                 database,
+                sessionCount,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1214,6 +1234,14 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="database">
         /// Required. The database in which the new sessions are created.
         /// </param>
+        /// <param name="sessionCount">
+        /// Required. The number of sessions to be created in this batch call.
+        /// The API may return fewer than the requested number of sessions. If a
+        /// specific number of sessions are desired, the client can make additional
+        /// calls to BatchCreateSessions (adjusting
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1222,10 +1250,12 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual BatchCreateSessionsResponse BatchCreateSessions(
             gcscv::DatabaseName database,
+            int sessionCount,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateSessions(
                 new BatchCreateSessionsRequest
                 {
                     DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                    SessionCount = sessionCount,
                 },
                 callSettings);
 
@@ -1237,6 +1267,14 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="sessionCount">
+        /// Required. The number of sessions to be created in this batch call.
+        /// The API may return fewer than the requested number of sessions. If a
+        /// specific number of sessions are desired, the client can make additional
+        /// calls to BatchCreateSessions (adjusting
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1246,10 +1284,12 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
             string database,
+            int sessionCount,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateSessionsAsync(
                 new BatchCreateSessionsRequest
                 {
                     Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    SessionCount = sessionCount,
                 },
                 callSettings);
 
@@ -1261,6 +1301,14 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database in which the new sessions are created.
+        /// </param>
+        /// <param name="sessionCount">
+        /// Required. The number of sessions to be created in this batch call.
+        /// The API may return fewer than the requested number of sessions. If a
+        /// specific number of sessions are desired, the client can make additional
+        /// calls to BatchCreateSessions (adjusting
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1270,8 +1318,10 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual stt::Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(
             string database,
+            int sessionCount,
             st::CancellationToken cancellationToken) => BatchCreateSessionsAsync(
                 database,
+                sessionCount,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1283,6 +1333,14 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="database">
         /// Required. The database in which the new sessions are created.
         /// </param>
+        /// <param name="sessionCount">
+        /// Required. The number of sessions to be created in this batch call.
+        /// The API may return fewer than the requested number of sessions. If a
+        /// specific number of sessions are desired, the client can make additional
+        /// calls to BatchCreateSessions (adjusting
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1291,10 +1349,12 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual BatchCreateSessionsResponse BatchCreateSessions(
             string database,
+            int sessionCount,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateSessions(
                 new BatchCreateSessionsRequest
                 {
                     Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    SessionCount = sessionCount,
                 },
                 callSettings);
 

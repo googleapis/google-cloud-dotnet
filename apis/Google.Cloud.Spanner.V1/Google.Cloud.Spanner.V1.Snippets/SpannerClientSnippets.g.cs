@@ -97,27 +97,29 @@ namespace Google.Cloud.Spanner.V1.Snippets
         /// <summary>Snippet for BatchCreateSessionsAsync</summary>
         public async Task BatchCreateSessionsAsync()
         {
-            // Snippet: BatchCreateSessionsAsync(DatabaseName,CallSettings)
-            // Additional: BatchCreateSessionsAsync(DatabaseName,CancellationToken)
+            // Snippet: BatchCreateSessionsAsync(DatabaseName,int,CallSettings)
+            // Additional: BatchCreateSessionsAsync(DatabaseName,int,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            int sessionCount = 0;
             // Make the request
-            BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(database);
+            BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(database, sessionCount);
             // End snippet
         }
 
         /// <summary>Snippet for BatchCreateSessions</summary>
         public void BatchCreateSessions()
         {
-            // Snippet: BatchCreateSessions(DatabaseName,CallSettings)
+            // Snippet: BatchCreateSessions(DatabaseName,int,CallSettings)
             // Create client
             SpannerClient spannerClient = SpannerClient.Create();
             // Initialize request argument(s)
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            int sessionCount = 0;
             // Make the request
-            BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(database);
+            BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(database, sessionCount);
             // End snippet
         }
 
@@ -132,6 +134,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 0,
             };
             // Make the request
             BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(request);
@@ -148,6 +151,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 0,
             };
             // Make the request
             BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(request);
