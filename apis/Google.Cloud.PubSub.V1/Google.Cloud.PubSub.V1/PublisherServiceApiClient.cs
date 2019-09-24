@@ -192,15 +192,15 @@ namespace Google.Cloud.PubSub.V1
         /// <remarks>
         /// The "Messaging" timeout backoff for <see cref="PublisherServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 25000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 5000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.3</description></item>
+        /// <item><description>Maximum timeout: 600000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetMessagingTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(25000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(30000),
-            delayMultiplier: 1.0
+            delay: sys::TimeSpan.FromMilliseconds(5000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(600000),
+            delayMultiplier: 1.3
         );
 
         /// <summary>
@@ -272,9 +272,9 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 25000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 5000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.3</description></item>
+        /// <item><description>Timeout maximum delay: 600000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
