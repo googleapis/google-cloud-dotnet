@@ -1015,6 +1015,7 @@
     "productUrl": "https://cloud.google.com/translate/",
     "generator": "gapic",
     "protoPath": "google/cloud/translate/v3",
+    "protoPackage": "google.cloud.translation.v3",
     "serviceYaml": "translate_v3.yaml",
     "version": "1.0.0-beta00",
     "type": "grpc",

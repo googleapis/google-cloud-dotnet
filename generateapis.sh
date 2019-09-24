@@ -88,6 +88,9 @@ generate_gapicgenerator() {
   PROTO_PATH=$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   API_SRC_DIR=$GOOGLEAPIS/$PROTO_PATH
   SERVICE_YAML=$($PYTHON3 tools/getapifield.py apis/apis.json $1 serviceYaml)
+  # This is a hacky way of allowing a proto package to be explicitly specified,
+  # or inferred from the proto path. We might want to add an option to getapifield.py for default values.
+  PROTO_PACKAGE=$(python tools/getapifield.py apis/apis.json $1 protoPackage 2> /dev/null || echo $PROTO_PATH | sed 's/\//./g')
 
   # Look the versioned directory and its parent for the service YAML.
   # (Currently the location is in flux; we should be able to use just the
@@ -138,7 +141,7 @@ generate_gapicgenerator() {
   args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
   args+=(--output=$API_TMP_DIR)
   args+=(--language=csharp)
-  args+=(--package=$(echo $PROTO_PATH | sed 's/\//./g'))
+  args+=(--package=$PROTO_PACKAGE)
 
   # Suppress protobuf warnings in Java 9/10. By the time they
   # become a problem, we won't be using Java...
