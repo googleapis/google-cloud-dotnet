@@ -691,7 +691,7 @@
     "id": "Google.Cloud.RecaptchaEnterprise.V1Beta1",
     "generator": "gapic",
     "protoPath": "google/cloud/recaptchaenterprise/v1beta1",
-    "serviceYaml": "recaptchaenterprise_v1beta1.yaml",
+    "serviceYaml": "v1beta1/recaptchaenterprise_v1beta1.yaml",
     "productName": "Google Cloud reCAPTCHA Enterprise",
     "productUrl": "https://cloud.google.com/recaptcha-enterprise/",
     "version": "1.0.0-beta00",
