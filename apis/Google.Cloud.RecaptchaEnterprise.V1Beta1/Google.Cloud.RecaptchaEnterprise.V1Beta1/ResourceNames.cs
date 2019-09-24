@@ -134,6 +134,19 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
 
     }
 
+    public partial class Assessment
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.RecaptchaEnterprise.V1Beta1.AssessmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.RecaptchaEnterprise.V1Beta1.AssessmentName AssessmentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.RecaptchaEnterprise.V1Beta1.AssessmentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class CreateAssessmentRequest
     {
         /// <summary>
