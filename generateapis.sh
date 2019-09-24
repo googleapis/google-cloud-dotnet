@@ -87,11 +87,19 @@ generate_gapicgenerator() {
   API_OUT_DIR=apis
   PROTO_PATH=$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   API_SRC_DIR=$GOOGLEAPIS/$PROTO_PATH
-  API_YAML=$API_SRC_DIR/../$($PYTHON3 tools/getapifield.py apis/apis.json $1 serviceYaml)
+  SERVICE_YAML=$($PYTHON3 tools/getapifield.py apis/apis.json $1 serviceYaml)
 
-  if [[ ! -f $API_YAML ]]
+  # Look the versioned directory and its parent for the service YAML.
+  # (Currently the location is in flux; we should be able to use just the
+  # versioned directory eventually.)
+  if [[ -f $API_SRC_DIR/$SERVICE_YAML ]]
   then
-    echo "$API_YAML doesn't exist. Please check inputs."
+    API_YAML=$API_SRC_DIR/$SERVICE_YAML
+  elif [[ -f $API_SRC_DIR/../$SERVICE_YAML ]]
+  then
+    API_YAML=$API_SRC_DIR/../$SERVICE_YAML
+  else
+    echo "$SERVICE_YAML doesn't exist. Please check inputs."
     exit 1
   fi
 
