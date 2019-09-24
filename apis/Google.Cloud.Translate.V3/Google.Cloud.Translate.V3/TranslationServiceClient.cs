@@ -395,8 +395,7 @@ namespace Google.Cloud.Translate.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -405,7 +404,7 @@ namespace Google.Cloud.Translate.V3
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -725,7 +724,190 @@ namespace Google.Cloud.Translate.V3
         /// characters, underscores and dashes. International characters are allowed.
         /// Label values are optional. Label keys must start with a letter.
         ///
-        /// See https://goo.gl/xmQnxf for more information on and examples of labels.
+        /// See https://cloud.google.com/translate/docs/labels for more information.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<DetectLanguageResponse> DetectLanguageAsync(
+            LocationName parent,
+            string model,
+            string mimeType,
+            scg::IDictionary<string, string> labels,
+            gaxgrpc::CallSettings callSettings = null) => DetectLanguageAsync(
+                new DetectLanguageRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Model = model ?? "", // Optional
+                    MimeType = mimeType ?? "", // Optional
+                    Labels = { labels ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Detects the language of text within a request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or location to make a call. Must refer to a caller's
+        /// project.
+        ///
+        /// Format: `projects/{project-id}/locations/{location-id}` or
+        /// `projects/{project-id}`.
+        ///
+        /// For global calls, use `projects/{project-id}/locations/global` or
+        /// `projects/{project-id}`.
+        ///
+        /// Only models within the same region (has same location-id) can be used.
+        /// Otherwise an INVALID_ARGUMENT (400) error is returned.
+        /// </param>
+        /// <param name="model">
+        /// Optional. The language detection model to be used.
+        ///
+        /// Format:
+        /// `projects/{project-id}/locations/{location-id}/models/language-detection/{model-id}`
+        ///
+        /// Only one language detection model is currently supported:
+        /// `projects/{project-id}/locations/{location-id}/models/language-detection/default`.
+        ///
+        /// If not specified, the default model is used.
+        /// </param>
+        /// <param name="mimeType">
+        /// Optional. The format of the source text, for example, "text/html",
+        /// "text/plain". If left blank, the MIME type defaults to "text/html".
+        /// </param>
+        /// <param name="labels">
+        /// Optional. The labels with user-defined metadata for the request.
+        ///
+        /// Label keys and values can be no longer than 63 characters
+        /// (Unicode codepoints), can only contain lowercase letters, numeric
+        /// characters, underscores and dashes. International characters are allowed.
+        /// Label values are optional. Label keys must start with a letter.
+        ///
+        /// See https://cloud.google.com/translate/docs/labels for more information.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<DetectLanguageResponse> DetectLanguageAsync(
+            LocationName parent,
+            string model,
+            string mimeType,
+            scg::IDictionary<string, string> labels,
+            st::CancellationToken cancellationToken) => DetectLanguageAsync(
+                parent,
+                model,
+                mimeType,
+                labels,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Detects the language of text within a request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or location to make a call. Must refer to a caller's
+        /// project.
+        ///
+        /// Format: `projects/{project-id}/locations/{location-id}` or
+        /// `projects/{project-id}`.
+        ///
+        /// For global calls, use `projects/{project-id}/locations/global` or
+        /// `projects/{project-id}`.
+        ///
+        /// Only models within the same region (has same location-id) can be used.
+        /// Otherwise an INVALID_ARGUMENT (400) error is returned.
+        /// </param>
+        /// <param name="model">
+        /// Optional. The language detection model to be used.
+        ///
+        /// Format:
+        /// `projects/{project-id}/locations/{location-id}/models/language-detection/{model-id}`
+        ///
+        /// Only one language detection model is currently supported:
+        /// `projects/{project-id}/locations/{location-id}/models/language-detection/default`.
+        ///
+        /// If not specified, the default model is used.
+        /// </param>
+        /// <param name="mimeType">
+        /// Optional. The format of the source text, for example, "text/html",
+        /// "text/plain". If left blank, the MIME type defaults to "text/html".
+        /// </param>
+        /// <param name="labels">
+        /// Optional. The labels with user-defined metadata for the request.
+        ///
+        /// Label keys and values can be no longer than 63 characters
+        /// (Unicode codepoints), can only contain lowercase letters, numeric
+        /// characters, underscores and dashes. International characters are allowed.
+        /// Label values are optional. Label keys must start with a letter.
+        ///
+        /// See https://cloud.google.com/translate/docs/labels for more information.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual DetectLanguageResponse DetectLanguage(
+            LocationName parent,
+            string model,
+            string mimeType,
+            scg::IDictionary<string, string> labels,
+            gaxgrpc::CallSettings callSettings = null) => DetectLanguage(
+                new DetectLanguageRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Model = model ?? "", // Optional
+                    MimeType = mimeType ?? "", // Optional
+                    Labels = { labels ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Detects the language of text within a request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or location to make a call. Must refer to a caller's
+        /// project.
+        ///
+        /// Format: `projects/{project-id}/locations/{location-id}` or
+        /// `projects/{project-id}`.
+        ///
+        /// For global calls, use `projects/{project-id}/locations/global` or
+        /// `projects/{project-id}`.
+        ///
+        /// Only models within the same region (has same location-id) can be used.
+        /// Otherwise an INVALID_ARGUMENT (400) error is returned.
+        /// </param>
+        /// <param name="model">
+        /// Optional. The language detection model to be used.
+        ///
+        /// Format:
+        /// `projects/{project-id}/locations/{location-id}/models/language-detection/{model-id}`
+        ///
+        /// Only one language detection model is currently supported:
+        /// `projects/{project-id}/locations/{location-id}/models/language-detection/default`.
+        ///
+        /// If not specified, the default model is used.
+        /// </param>
+        /// <param name="mimeType">
+        /// Optional. The format of the source text, for example, "text/html",
+        /// "text/plain". If left blank, the MIME type defaults to "text/html".
+        /// </param>
+        /// <param name="labels">
+        /// Optional. The labels with user-defined metadata for the request.
+        ///
+        /// Label keys and values can be no longer than 63 characters
+        /// (Unicode codepoints), can only contain lowercase letters, numeric
+        /// characters, underscores and dashes. International characters are allowed.
+        /// Label values are optional. Label keys must start with a letter.
+        ///
+        /// See https://cloud.google.com/translate/docs/labels for more information.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -787,7 +969,7 @@ namespace Google.Cloud.Translate.V3
         /// characters, underscores and dashes. International characters are allowed.
         /// Label values are optional. Label keys must start with a letter.
         ///
-        /// See https://goo.gl/xmQnxf for more information on and examples of labels.
+        /// See https://cloud.google.com/translate/docs/labels for more information.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -846,7 +1028,7 @@ namespace Google.Cloud.Translate.V3
         /// characters, underscores and dashes. International characters are allowed.
         /// Label values are optional. Label keys must start with a letter.
         ///
-        /// See https://goo.gl/xmQnxf for more information on and examples of labels.
+        /// See https://cloud.google.com/translate/docs/labels for more information.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -924,6 +1106,177 @@ namespace Google.Cloud.Translate.V3
         {
             throw new sys::NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns a list of supported languages for translation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or location to make a call. Must refer to a caller's
+        /// project.
+        ///
+        /// Format: `projects/{project-id}` or
+        /// `projects/{project-id}/locations/{location-id}`.
+        ///
+        /// For global calls, use `projects/{project-id}/locations/global` or
+        /// `projects/{project-id}`.
+        ///
+        /// Non-global location is required for AutoML models.
+        ///
+        /// Only models within the same region (have same location-id) can be used,
+        /// otherwise an INVALID_ARGUMENT (400) error is returned.
+        /// </param>
+        /// <param name="displayLanguageCode">
+        /// Optional. The language to use to return localized, human readable names
+        /// of supported languages. If missing, then display names are not returned
+        /// in a response.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Get supported languages of this model.
+        ///
+        /// The format depends on model type:
+        ///
+        /// - AutoML Translation models:
+        ///   `projects/{project-id}/locations/{location-id}/models/{model-id}`
+        ///
+        /// - General (built-in) models:
+        ///   `projects/{project-id}/locations/{location-id}/models/general/nmt`,
+        ///   `projects/{project-id}/locations/{location-id}/models/general/base`
+        ///
+        ///
+        /// Returns languages supported by the specified model.
+        /// If missing, we get supported languages of Google general base (PBMT) model.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SupportedLanguages> GetSupportedLanguagesAsync(
+            LocationName parent,
+            string displayLanguageCode,
+            string model,
+            gaxgrpc::CallSettings callSettings = null) => GetSupportedLanguagesAsync(
+                new GetSupportedLanguagesRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    DisplayLanguageCode = displayLanguageCode ?? "", // Optional
+                    Model = model ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns a list of supported languages for translation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or location to make a call. Must refer to a caller's
+        /// project.
+        ///
+        /// Format: `projects/{project-id}` or
+        /// `projects/{project-id}/locations/{location-id}`.
+        ///
+        /// For global calls, use `projects/{project-id}/locations/global` or
+        /// `projects/{project-id}`.
+        ///
+        /// Non-global location is required for AutoML models.
+        ///
+        /// Only models within the same region (have same location-id) can be used,
+        /// otherwise an INVALID_ARGUMENT (400) error is returned.
+        /// </param>
+        /// <param name="displayLanguageCode">
+        /// Optional. The language to use to return localized, human readable names
+        /// of supported languages. If missing, then display names are not returned
+        /// in a response.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Get supported languages of this model.
+        ///
+        /// The format depends on model type:
+        ///
+        /// - AutoML Translation models:
+        ///   `projects/{project-id}/locations/{location-id}/models/{model-id}`
+        ///
+        /// - General (built-in) models:
+        ///   `projects/{project-id}/locations/{location-id}/models/general/nmt`,
+        ///   `projects/{project-id}/locations/{location-id}/models/general/base`
+        ///
+        ///
+        /// Returns languages supported by the specified model.
+        /// If missing, we get supported languages of Google general base (PBMT) model.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SupportedLanguages> GetSupportedLanguagesAsync(
+            LocationName parent,
+            string displayLanguageCode,
+            string model,
+            st::CancellationToken cancellationToken) => GetSupportedLanguagesAsync(
+                parent,
+                displayLanguageCode,
+                model,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of supported languages for translation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or location to make a call. Must refer to a caller's
+        /// project.
+        ///
+        /// Format: `projects/{project-id}` or
+        /// `projects/{project-id}/locations/{location-id}`.
+        ///
+        /// For global calls, use `projects/{project-id}/locations/global` or
+        /// `projects/{project-id}`.
+        ///
+        /// Non-global location is required for AutoML models.
+        ///
+        /// Only models within the same region (have same location-id) can be used,
+        /// otherwise an INVALID_ARGUMENT (400) error is returned.
+        /// </param>
+        /// <param name="displayLanguageCode">
+        /// Optional. The language to use to return localized, human readable names
+        /// of supported languages. If missing, then display names are not returned
+        /// in a response.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Get supported languages of this model.
+        ///
+        /// The format depends on model type:
+        ///
+        /// - AutoML Translation models:
+        ///   `projects/{project-id}/locations/{location-id}/models/{model-id}`
+        ///
+        /// - General (built-in) models:
+        ///   `projects/{project-id}/locations/{location-id}/models/general/nmt`,
+        ///   `projects/{project-id}/locations/{location-id}/models/general/base`
+        ///
+        ///
+        /// Returns languages supported by the specified model.
+        /// If missing, we get supported languages of Google general base (PBMT) model.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SupportedLanguages GetSupportedLanguages(
+            LocationName parent,
+            string displayLanguageCode,
+            string model,
+            gaxgrpc::CallSettings callSettings = null) => GetSupportedLanguages(
+                new GetSupportedLanguagesRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    DisplayLanguageCode = displayLanguageCode ?? "", // Optional
+                    Model = model ?? "", // Optional
+                },
+                callSettings);
 
         /// <summary>
         /// Returns a list of supported languages for translation.
@@ -1253,6 +1606,84 @@ namespace Google.Cloud.Translate.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Glossary, CreateGlossaryMetadata>> CreateGlossaryAsync(
+            LocationName parent,
+            Glossary glossary,
+            gaxgrpc::CallSettings callSettings = null) => CreateGlossaryAsync(
+                new CreateGlossaryRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Glossary = gax::GaxPreconditions.CheckNotNull(glossary, nameof(glossary)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a glossary and returns the long-running operation. Returns
+        /// NOT_FOUND, if the project doesn't exist.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project name.
+        /// </param>
+        /// <param name="glossary">
+        /// Required. The glossary to create.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Glossary, CreateGlossaryMetadata>> CreateGlossaryAsync(
+            LocationName parent,
+            Glossary glossary,
+            st::CancellationToken cancellationToken) => CreateGlossaryAsync(
+                parent,
+                glossary,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a glossary and returns the long-running operation. Returns
+        /// NOT_FOUND, if the project doesn't exist.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project name.
+        /// </param>
+        /// <param name="glossary">
+        /// Required. The glossary to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Glossary, CreateGlossaryMetadata> CreateGlossary(
+            LocationName parent,
+            Glossary glossary,
+            gaxgrpc::CallSettings callSettings = null) => CreateGlossary(
+                new CreateGlossaryRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Glossary = gax::GaxPreconditions.CheckNotNull(glossary, nameof(glossary)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a glossary and returns the long-running operation. Returns
+        /// NOT_FOUND, if the project doesn't exist.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project name.
+        /// </param>
+        /// <param name="glossary">
+        /// Required. The glossary to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Glossary, CreateGlossaryMetadata>> CreateGlossaryAsync(
             string parent,
             Glossary glossary,
             gaxgrpc::CallSettings callSettings = null) => CreateGlossaryAsync(
@@ -1415,6 +1846,88 @@ namespace Google.Cloud.Translate.V3
         /// A pageable asynchronous sequence of <see cref="Glossary"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListGlossariesResponse, Glossary> ListGlossariesAsync(
+            LocationName parent,
+            string filter,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListGlossariesAsync(
+                new ListGlossariesRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Filter = filter ?? "", // Optional
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
+        /// exist.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project from which to list all of the glossaries.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. Filter specifying constraints of a list operation.
+        /// Filtering is not supported yet, and the parameter currently has no effect.
+        /// If missing, no filtering is performed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Glossary"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListGlossariesResponse, Glossary> ListGlossaries(
+            LocationName parent,
+            string filter,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListGlossaries(
+                new ListGlossariesRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Filter = filter ?? "", // Optional
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
+        /// exist.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project from which to list all of the glossaries.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. Filter specifying constraints of a list operation.
+        /// Filtering is not supported yet, and the parameter currently has no effect.
+        /// If missing, no filtering is performed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Glossary"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGlossariesResponse, Glossary> ListGlossariesAsync(
             string parent,
             string filter,
             string pageToken = null,
@@ -1509,6 +2022,69 @@ namespace Google.Cloud.Translate.V3
         {
             throw new sys::NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
+        /// exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the glossary to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Glossary> GetGlossaryAsync(
+            GlossaryName name,
+            gaxgrpc::CallSettings callSettings = null) => GetGlossaryAsync(
+                new GetGlossaryRequest
+                {
+                    GlossaryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
+        /// exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the glossary to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Glossary> GetGlossaryAsync(
+            GlossaryName name,
+            st::CancellationToken cancellationToken) => GetGlossaryAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
+        /// exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the glossary to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Glossary GetGlossary(
+            GlossaryName name,
+            gaxgrpc::CallSettings callSettings = null) => GetGlossary(
+                new GetGlossaryRequest
+                {
+                    GlossaryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
@@ -1631,6 +2207,72 @@ namespace Google.Cloud.Translate.V3
         {
             throw new sys::NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a glossary, or cancels glossary construction
+        /// if the glossary isn't created yet.
+        /// Returns NOT_FOUND, if the glossary doesn't exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the glossary to delete.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata>> DeleteGlossaryAsync(
+            GlossaryName name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteGlossaryAsync(
+                new DeleteGlossaryRequest
+                {
+                    GlossaryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a glossary, or cancels glossary construction
+        /// if the glossary isn't created yet.
+        /// Returns NOT_FOUND, if the glossary doesn't exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the glossary to delete.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata>> DeleteGlossaryAsync(
+            GlossaryName name,
+            st::CancellationToken cancellationToken) => DeleteGlossaryAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a glossary, or cancels glossary construction
+        /// if the glossary isn't created yet.
+        /// Returns NOT_FOUND, if the glossary doesn't exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the glossary to delete.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata> DeleteGlossary(
+            GlossaryName name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteGlossary(
+                new DeleteGlossaryRequest
+                {
+                    GlossaryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a glossary, or cancels glossary construction
