@@ -3,7 +3,7 @@
 //     source: google/cloud/speech/v1/cloud_speech.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -86,6 +86,8 @@ namespace Google.Cloud.Speech.V1 {
       /// google.longrunning.Operations interface. Returns either an
       /// `Operation.error` or an `Operation.response` which contains
       /// a `LongRunningRecognizeResponse` message.
+      /// For more information on asynchronous speech recognition, see the
+      /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -186,6 +188,8 @@ namespace Google.Cloud.Speech.V1 {
       /// google.longrunning.Operations interface. Returns either an
       /// `Operation.error` or an `Operation.response` which contains
       /// a `LongRunningRecognizeResponse` message.
+      /// For more information on asynchronous speech recognition, see the
+      /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -201,6 +205,8 @@ namespace Google.Cloud.Speech.V1 {
       /// google.longrunning.Operations interface. Returns either an
       /// `Operation.error` or an `Operation.response` which contains
       /// a `LongRunningRecognizeResponse` message.
+      /// For more information on asynchronous speech recognition, see the
+      /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -214,6 +220,8 @@ namespace Google.Cloud.Speech.V1 {
       /// google.longrunning.Operations interface. Returns either an
       /// `Operation.error` or an `Operation.response` which contains
       /// a `LongRunningRecognizeResponse` message.
+      /// For more information on asynchronous speech recognition, see the
+      /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -229,6 +237,8 @@ namespace Google.Cloud.Speech.V1 {
       /// google.longrunning.Operations interface. Returns either an
       /// `Operation.error` or an `Operation.response` which contains
       /// a `LongRunningRecognizeResponse` message.
+      /// For more information on asynchronous speech recognition, see the
+      /// [how-to](https://cloud.google.com/speech-to-text/docs/async-recognize).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
