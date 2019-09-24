@@ -1871,18 +1871,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>Field number for the "agent_content" field.</summary>
     public const int AgentContentFieldNumber = 2;
     /// <summary>
-    /// The exported agent.
-    ///
-    /// Example for how to export an agent to a zip file via a command line:
-    /// &lt;pre>curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_id&amp;gt;/agent:export'\
-    ///   -X POST \
-    ///   -H 'Authorization: Bearer' \
-    ///   $(gcloud auth application-default print-access-token) \
-    ///   -H 'Accept: application/json'
-    ///   --compressed \
-    ///   | grep agentContent | sed -e 's/.*"agentContent": "\([^"]*\)".*/\1/' \
-    ///   | base64 --decode > &amp;lt;agent zip file&amp;gt;&lt;/pre>
+    /// Zip compressed raw byte content for agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AgentContent {
@@ -2096,19 +2085,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>Field number for the "agent_content" field.</summary>
     public const int AgentContentFieldNumber = 3;
     /// <summary>
-    /// The agent to import.
-    ///
-    /// Example for how to import an agent via the command line:
-    /// &lt;pre>curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_id&amp;gt;/agent:import'\
-    ///    -X POST \
-    ///    -H 'Authorization: Bearer'\
-    ///    $(gcloud auth application-default print-access-token) \
-    ///    -H 'Accept: application/json' \
-    ///    -H 'Content-Type: application/json' \
-    ///    --data-binary "{
-    ///       'agentContent': '$(cat &amp;lt;agent zip file&amp;gt; | base64 -w 0)'
-    ///    }"&lt;/pre>
+    /// Zip compressed raw byte content for agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AgentContent {
@@ -2338,19 +2315,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>Field number for the "agent_content" field.</summary>
     public const int AgentContentFieldNumber = 3;
     /// <summary>
-    /// The agent to restore.
-    ///
-    /// Example for how to restore an agent via the command line:
-    /// &lt;pre>curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_id&amp;gt;/agent:restore'\
-    ///    -X POST \
-    ///    -H 'Authorization: Bearer' \
-    ///    $(gcloud auth application-default print-access-token) \
-    ///    -H 'Accept: application/json' \
-    ///    -H 'Content-Type: application/json' \
-    ///    --data-binary "{
-    ///        'agentContent': '$(cat &amp;lt;agent zip file&amp;gt; | base64 -w 0)'
-    ///    }"&lt;/pre>
+    /// Zip compressed raw byte content for agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AgentContent {

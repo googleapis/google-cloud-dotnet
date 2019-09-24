@@ -35,25 +35,27 @@ namespace Google.Cloud.Dialogflow.V2 {
             "GAEgASgJEj0KDHF1ZXJ5X3Jlc3VsdBgCIAEoCzInLmdvb2dsZS5jbG91ZC5k",
             "aWFsb2dmbG93LnYyLlF1ZXJ5UmVzdWx0El8KHm9yaWdpbmFsX2RldGVjdF9p",
             "bnRlbnRfcmVxdWVzdBgDIAEoCzI3Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLk9yaWdpbmFsRGV0ZWN0SW50ZW50UmVxdWVzdCKzAgoPV2ViaG9va1Jl",
+            "LnYyLk9yaWdpbmFsRGV0ZWN0SW50ZW50UmVxdWVzdCKAAwoPV2ViaG9va1Jl",
             "c3BvbnNlEhgKEGZ1bGZpbGxtZW50X3RleHQYASABKAkSSAoUZnVsZmlsbG1l",
             "bnRfbWVzc2FnZXMYAiADKAsyKi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
             "Mi5JbnRlbnQuTWVzc2FnZRIOCgZzb3VyY2UYAyABKAkSKAoHcGF5bG9hZBgE",
             "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSPAoPb3V0cHV0X2NvbnRl",
             "eHRzGAUgAygLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udGV4",
             "dBJEChRmb2xsb3d1cF9ldmVudF9pbnB1dBgGIAEoCzImLmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LnYyLkV2ZW50SW5wdXQiaAobT3JpZ2luYWxEZXRlY3RJ",
-            "bnRlbnRSZXF1ZXN0Eg4KBnNvdXJjZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgJ",
-            "EigKB3BheWxvYWQYAyABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QpsB",
-            "Ch5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCDFdlYmhvb2tQcm90",
-            "b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xl",
-            "LkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
+            "ZC5kaWFsb2dmbG93LnYyLkV2ZW50SW5wdXQSSwoUc2Vzc2lvbl9lbnRpdHlf",
+            "dHlwZXMYCiADKAsyLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TZXNz",
+            "aW9uRW50aXR5VHlwZSJoChtPcmlnaW5hbERldGVjdEludGVudFJlcXVlc3QS",
+            "DgoGc291cmNlGAEgASgJEg8KB3ZlcnNpb24YAiABKAkSKAoHcGF5bG9hZBgD",
+            "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCmwEKHmNvbS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52MkIMV2ViaG9va1Byb3RvUAFaRGdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxv",
+            "dy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9n",
+            "Zmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookRequest), global::Google.Cloud.Dialogflow.V2.WebhookRequest.Parser, new[]{ "Session", "ResponseId", "QueryResult", "OriginalDetectIntentRequest" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookResponse), global::Google.Cloud.Dialogflow.V2.WebhookResponse.Parser, new[]{ "FulfillmentText", "FulfillmentMessages", "Source", "Payload", "OutputContexts", "FollowupEventInput" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookResponse), global::Google.Cloud.Dialogflow.V2.WebhookResponse.Parser, new[]{ "FulfillmentText", "FulfillmentMessages", "Source", "Payload", "OutputContexts", "FollowupEventInput", "SessionEntityTypes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest), global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest.Parser, new[]{ "Source", "Version", "Payload" }, null, null, null)
           }));
     }
@@ -342,6 +344,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       payload_ = other.payload_ != null ? other.payload_.Clone() : null;
       outputContexts_ = other.outputContexts_.Clone();
       followupEventInput_ = other.followupEventInput_ != null ? other.followupEventInput_.Clone() : null;
+      sessionEntityTypes_ = other.sessionEntityTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -460,6 +463,23 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "session_entity_types" field.</summary>
+    public const int SessionEntityTypesFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dialogflow.V2.SessionEntityType> _repeated_sessionEntityTypes_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Dialogflow.V2.SessionEntityType.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SessionEntityType> sessionEntityTypes_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SessionEntityType>();
+    /// <summary>
+    /// Optional. Additional session entity types to replace or extend developer
+    /// entity types with. The entity synonyms apply to all languages and persist
+    /// for the session of this query. Setting the session entity types inside
+    /// webhook overwrites the session entity types that have been set through
+    /// `DetectIntentRequest.query_params.session_entity_types`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SessionEntityType> SessionEntityTypes {
+      get { return sessionEntityTypes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as WebhookResponse);
@@ -479,6 +499,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (!object.Equals(Payload, other.Payload)) return false;
       if(!outputContexts_.Equals(other.outputContexts_)) return false;
       if (!object.Equals(FollowupEventInput, other.FollowupEventInput)) return false;
+      if(!sessionEntityTypes_.Equals(other.sessionEntityTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -491,6 +512,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (payload_ != null) hash ^= Payload.GetHashCode();
       hash ^= outputContexts_.GetHashCode();
       if (followupEventInput_ != null) hash ^= FollowupEventInput.GetHashCode();
+      hash ^= sessionEntityTypes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -522,6 +544,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(FollowupEventInput);
       }
+      sessionEntityTypes_.WriteTo(output, _repeated_sessionEntityTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -544,6 +567,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (followupEventInput_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FollowupEventInput);
       }
+      size += sessionEntityTypes_.CalculateSize(_repeated_sessionEntityTypes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -575,6 +599,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
         FollowupEventInput.MergeFrom(other.FollowupEventInput);
       }
+      sessionEntityTypes_.Add(other.sessionEntityTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -614,6 +639,10 @@ namespace Google.Cloud.Dialogflow.V2 {
               FollowupEventInput = new global::Google.Cloud.Dialogflow.V2.EventInput();
             }
             input.ReadMessage(FollowupEventInput);
+            break;
+          }
+          case 82: {
+            sessionEntityTypes_.AddEntriesFrom(input, _repeated_sessionEntityTypes_codec);
             break;
           }
         }
