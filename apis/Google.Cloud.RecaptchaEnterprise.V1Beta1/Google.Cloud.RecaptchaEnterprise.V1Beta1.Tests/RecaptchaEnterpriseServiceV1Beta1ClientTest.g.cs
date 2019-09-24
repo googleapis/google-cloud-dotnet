@@ -18,7 +18,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.RecaptchaEnterprise.V1Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -45,7 +44,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             };
             Assessment expectedResponse = new Assessment
             {
-                Name = "name3373707",
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(expectedRequest, It.IsAny<CallOptions>()))
@@ -69,7 +68,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             };
             Assessment expectedResponse = new Assessment
             {
-                Name = "name3373707",
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(expectedRequest, It.IsAny<CallOptions>()))
@@ -93,7 +92,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             };
             Assessment expectedResponse = new Assessment
             {
-                Name = "name3373707",
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, It.IsAny<CallOptions>()))
@@ -115,7 +114,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             };
             Assessment expectedResponse = new Assessment
             {
-                Name = "name3373707",
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, It.IsAny<CallOptions>()))

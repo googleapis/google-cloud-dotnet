@@ -27,53 +27,63 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             "CkJnb29nbGUvY2xvdWQvcmVjYXB0Y2hhZW50ZXJwcmlzZS92MWJldGExL3Jl",
             "Y2FwdGNoYWVudGVycHJpc2UucHJvdG8SKGdvb2dsZS5jbG91ZC5yZWNhcHRj",
             "aGFlbnRlcnByaXNlLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8icwoXQ3Jl",
-            "YXRlQXNzZXNzbWVudFJlcXVlc3QSDgoGcGFyZW50GAEgASgJEkgKCmFzc2Vz",
-            "c21lbnQYAiABKAsyNC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlz",
-            "ZS52MWJldGExLkFzc2Vzc21lbnQi1wEKGUFubm90YXRlQXNzZXNzbWVudFJl",
-            "cXVlc3QSDAoEbmFtZRgBIAEoCRJiCgphbm5vdGF0aW9uGAIgASgOMk4uZ29v",
-            "Z2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bbm5vdGF0",
-            "ZUFzc2Vzc21lbnRSZXF1ZXN0LkFubm90YXRpb24iSAoKQW5ub3RhdGlvbhIa",
-            "ChZBTk5PVEFUSU9OX1VOU1BFQ0lGSUVEEAASDgoKTEVHSVRJTUFURRABEg4K",
-            "CkZSQVVEVUxFTlQQAiIcChpBbm5vdGF0ZUFzc2Vzc21lbnRSZXNwb25zZSLE",
-            "AwoKQXNzZXNzbWVudBIMCgRuYW1lGAEgASgJEj4KBWV2ZW50GAIgASgLMi8u",
-            "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5FdmVu",
-            "dBINCgVzY29yZRgDIAEoAhJTChB0b2tlbl9wcm9wZXJ0aWVzGAQgASgLMjku",
-            "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Ub2tl",
-            "blByb3BlcnRpZXMSWgoHcmVhc29ucxgFIAMoDjJJLmdvb2dsZS5jbG91ZC5y",
-            "ZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQXNzZXNzbWVudC5DbGFzc2lm",
-            "aWNhdGlvblJlYXNvbiKnAQoUQ2xhc3NpZmljYXRpb25SZWFzb24SJQohQ0xB",
-            "U1NJRklDQVRJT05fUkVBU09OX1VOU1BFQ0lGSUVEEAASDgoKQVVUT01BVElP",
-            "ThABEhoKFlVORVhQRUNURURfRU5WSVJPTk1FTlQQAhIdChlVTkVYUEVDVEVE",
-            "X1VTQUdFX1BBVFRFUk5TEAQSHQoZUFJPVklTSU9OQUxfUklTS19BTkFMWVNJ",
-            "UxAFIigKBUV2ZW50Eg0KBXRva2VuGAEgASgJEhAKCHNpdGVfa2V5GAIgASgJ",
-            "IugCCg9Ub2tlblByb3BlcnRpZXMSDQoFdmFsaWQYASABKAgSXwoOaW52YWxp",
-            "ZF9yZWFzb24YAiABKA4yRy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJw",
-            "cmlzZS52MWJldGExLlRva2VuUHJvcGVydGllcy5JbnZhbGlkUmVhc29uEi8K",
-            "C2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBIQCghob3N0bmFtZRgEIAEoCRIOCgZhY3Rpb24YBSABKAkikQEKDUludmFs",
-            "aWRSZWFzb24SHgoaSU5WQUxJRF9SRUFTT05fVU5TUEVDSUZJRUQQABIaChZV",
-            "TktOT1dOX0lOVkFMSURfUkVBU09OEAESDQoJTUFMRk9STUVEEAISCwoHRVhQ",
-            "SVJFRBADEggKBERVUEUQBBIRCg1TSVRFX01JU01BVENIEAUSCwoHTUlTU0lO",
-            "RxAGMs8DCiFSZWNhcHRjaGFFbnRlcnByaXNlU2VydmljZVYxQmV0YTESyQEK",
-            "EENyZWF0ZUFzc2Vzc21lbnQSQS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50",
-            "ZXJwcmlzZS52MWJldGExLkNyZWF0ZUFzc2Vzc21lbnRSZXF1ZXN0GjQuZ29v",
-            "Z2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bc3Nlc3Nt",
-            "ZW50IjyC0+STAjYiKC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXNz",
-            "ZXNzbWVudHM6CmFzc2Vzc21lbnQS3QEKEkFubm90YXRlQXNzZXNzbWVudBJD",
-            "Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQW5u",
-            "b3RhdGVBc3Nlc3NtZW50UmVxdWVzdBpELmdvb2dsZS5jbG91ZC5yZWNhcHRj",
-            "aGFlbnRlcnByaXNlLnYxYmV0YTEuQW5ub3RhdGVBc3Nlc3NtZW50UmVzcG9u",
-            "c2UiPILT5JMCNiIxL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9hc3Nlc3Nt",
-            "ZW50cy8qfTphbm5vdGF0ZToBKkL+AQomY29tLmdvb2dsZS5yZWNhcHRjaGFl",
-            "bnRlcnByaXNlLnYxYmV0YTFCGFJlY2FwdGNoYUVudGVycHJpc2VQcm90b1AB",
-            "Wltnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3JlY2FwdGNoYWVudGVycHJpc2UvdjFiZXRhMTtyZWNhcHRjaGFlbnRlcnBy",
-            "aXNlogIER0NSRaoCKEdvb2dsZS5DbG91ZC5SZWNhcHRjaGFFbnRlcnByaXNl",
-            "LlYxQmV0YTHKAihHb29nbGVcQ2xvdWRcUmVjYXB0Y2hhRW50ZXJwcmlzZVxW",
-            "MWJldGExYgZwcm90bzM="));
+            "cHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2Zp",
+            "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIq0BChdDcmVhdGVB",
+            "c3Nlc3NtZW50UmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xv",
+            "dWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBJNCgph",
+            "c3Nlc3NtZW50GAIgASgLMjQuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVy",
+            "cHJpc2UudjFiZXRhMS5Bc3Nlc3NtZW50QgPgQQIikwIKGUFubm90YXRlQXNz",
+            "ZXNzbWVudFJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEvCi1yZWNhcHRj",
+            "aGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29tL0Fzc2Vzc21lbnQSZwoKYW5u",
+            "b3RhdGlvbhgCIAEoDjJOLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnBy",
+            "aXNlLnYxYmV0YTEuQW5ub3RhdGVBc3Nlc3NtZW50UmVxdWVzdC5Bbm5vdGF0",
+            "aW9uQgPgQQIiSAoKQW5ub3RhdGlvbhIaChZBTk5PVEFUSU9OX1VOU1BFQ0lG",
+            "SUVEEAASDgoKTEVHSVRJTUFURRABEg4KCkZSQVVEVUxFTlQQAiIcChpBbm5v",
+            "dGF0ZUFzc2Vzc21lbnRSZXNwb25zZSLKBAoKQXNzZXNzbWVudBIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSPgoFZXZlbnQYAiABKAsyLy5nb29nbGUuY2xvdWQucmVj",
+            "YXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkV2ZW50EhIKBXNjb3JlGAMgASgC",
+            "QgPgQQMSWAoQdG9rZW5fcHJvcGVydGllcxgEIAEoCzI5Lmdvb2dsZS5jbG91",
+            "ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuVG9rZW5Qcm9wZXJ0aWVz",
+            "QgPgQQMSXwoHcmVhc29ucxgFIAMoDjJJLmdvb2dsZS5jbG91ZC5yZWNhcHRj",
+            "aGFlbnRlcnByaXNlLnYxYmV0YTEuQXNzZXNzbWVudC5DbGFzc2lmaWNhdGlv",
+            "blJlYXNvbkID4EEDIrgBChRDbGFzc2lmaWNhdGlvblJlYXNvbhIlCiFDTEFT",
+            "U0lGSUNBVElPTl9SRUFTT05fVU5TUEVDSUZJRUQQABIOCgpBVVRPTUFUSU9O",
+            "EAESGgoWVU5FWFBFQ1RFRF9FTlZJUk9OTUVOVBACEhQKEFRPT19NVUNIX1RS",
+            "QUZGSUMQAxIdChlVTkVYUEVDVEVEX1VTQUdFX1BBVFRFUk5TEAQSGAoUTE9X",
+            "X0NPTkZJREVOQ0VfU0NPUkUQBTpf6kFcCi1yZWNhcHRjaGFlbnRlcnByaXNl",
+            "Lmdvb2dsZWFwaXMuY29tL0Fzc2Vzc21lbnQSK3Byb2plY3RzL3twcm9qZWN0",
+            "fS9hc3Nlc3NtZW50cy97YXNzZXNzbWVudH0iMgoFRXZlbnQSEgoFdG9rZW4Y",
+            "ASABKAlCA+BBAhIVCghzaXRlX2tleRgCIAEoCUID4EECIugCCg9Ub2tlblBy",
+            "b3BlcnRpZXMSDQoFdmFsaWQYASABKAgSXwoOaW52YWxpZF9yZWFzb24YAiAB",
+            "KA4yRy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGEx",
+            "LlRva2VuUHJvcGVydGllcy5JbnZhbGlkUmVhc29uEi8KC2NyZWF0ZV90aW1l",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghob3N0bmFt",
+            "ZRgEIAEoCRIOCgZhY3Rpb24YBSABKAkikQEKDUludmFsaWRSZWFzb24SHgoa",
+            "SU5WQUxJRF9SRUFTT05fVU5TUEVDSUZJRUQQABIaChZVTktOT1dOX0lOVkFM",
+            "SURfUkVBU09OEAESDQoJTUFMRk9STUVEEAISCwoHRVhQSVJFRBADEggKBERV",
+            "UEUQBBIRCg1TSVRFX01JU01BVENIEAUSCwoHTUlTU0lORxAGMs0ECiFSZWNh",
+            "cHRjaGFFbnRlcnByaXNlU2VydmljZVYxQmV0YTES3QEKEENyZWF0ZUFzc2Vz",
+            "c21lbnQSQS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJl",
+            "dGExLkNyZWF0ZUFzc2Vzc21lbnRSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLnJl",
+            "Y2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bc3Nlc3NtZW50IlCC0+STAjYi",
+            "KC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXNzZXNzbWVudHM6CmFz",
+            "c2Vzc21lbnTaQRFwYXJlbnQsYXNzZXNzbWVudBLvAQoSQW5ub3RhdGVBc3Nl",
+            "c3NtZW50EkMuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFi",
+            "ZXRhMS5Bbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0GkQuZ29vZ2xlLmNsb3Vk",
+            "LnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bbm5vdGF0ZUFzc2Vzc21l",
+            "bnRSZXNwb25zZSJOgtPkkwI2IjEvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8q",
+            "L2Fzc2Vzc21lbnRzLyp9OmFubm90YXRlOgEq2kEPbmFtZSxhbm5vdGF0aW9u",
+            "GlbKQSJyZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29t0kEuaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL+",
+            "AQomY29tLmdvb2dsZS5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTFCGFJl",
+            "Y2FwdGNoYUVudGVycHJpc2VQcm90b1ABWltnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JlY2FwdGNoYWVudGVycHJpc2Uv",
+            "djFiZXRhMTtyZWNhcHRjaGFlbnRlcnByaXNlogIER0NSRaoCKEdvb2dsZS5D",
+            "bG91ZC5SZWNhcHRjaGFFbnRlcnByaXNlLlYxQmV0YTHKAihHb29nbGVcQ2xv",
+            "dWRcUmVjYXB0Y2hhRW50ZXJwcmlzZVxWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser, new[]{ "Parent", "Assessment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser, new[]{ "Name", "Annotation" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation) }, null),
@@ -144,7 +154,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int AssessmentFieldNumber = 2;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment assessment_;
     /// <summary>
-    /// The asessment details.
+    /// Required. The assessment details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment Assessment {
@@ -317,7 +327,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int AnnotationFieldNumber = 2;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation annotation_ = 0;
     /// <summary>
-    /// The annotation that will be assigned to the Event.
+    /// Required. The annotation that will be assigned to the Event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation Annotation {
@@ -835,23 +845,27 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("CLASSIFICATION_REASON_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The event appeared to be automated.
+        /// Interactions matched the behavior of an automated agent.
         /// </summary>
         [pbr::OriginalName("AUTOMATION")] Automation = 1,
         /// <summary>
-        /// The event was not made from the proper context on the real site.
+        /// The event originated from an illegitimate environment.
         /// </summary>
         [pbr::OriginalName("UNEXPECTED_ENVIRONMENT")] UnexpectedEnvironment = 2,
         /// <summary>
-        /// Browsing behavior leading up to the event was generated was out of the
-        /// ordinary.
+        /// Traffic volume from the event source is higher than normal.
+        /// </summary>
+        [pbr::OriginalName("TOO_MUCH_TRAFFIC")] TooMuchTraffic = 3,
+        /// <summary>
+        /// Interactions with the site were significantly different than expected
+        /// patterns.
         /// </summary>
         [pbr::OriginalName("UNEXPECTED_USAGE_PATTERNS")] UnexpectedUsagePatterns = 4,
         /// <summary>
         /// Too little traffic has been received from this site thus far to generate
         /// quality risk analysis.
         /// </summary>
-        [pbr::OriginalName("PROVISIONAL_RISK_ANALYSIS")] ProvisionalRiskAnalysis = 5,
+        [pbr::OriginalName("LOW_CONFIDENCE_SCORE")] LowConfidenceScore = 5,
       }
 
     }
@@ -898,7 +912,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int TokenFieldNumber = 1;
     private string token_ = "";
     /// <summary>
-    /// The user response token provided by the reCAPTCHA client-side integration
+    /// Required. The user response token provided by the reCAPTCHA client-side integration
     /// on your site.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -913,7 +927,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int SiteKeyFieldNumber = 2;
     private string siteKey_ = "";
     /// <summary>
-    /// The site key that was used to invoke reCAPTCHA on your site and generate
+    /// Required. The site key that was used to invoke reCAPTCHA on your site and generate
     /// the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1066,7 +1080,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int ValidFieldNumber = 1;
     private bool valid_;
     /// <summary>
-    /// Output only. Whether the provided user response token is valid.
+    /// Whether the provided user response token is valid.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Valid {
@@ -1080,7 +1094,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int InvalidReasonFieldNumber = 2;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason invalidReason_ = 0;
     /// <summary>
-    /// Output only. Reason associated with the response when valid = false.
+    /// Reason associated with the response when valid = false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason InvalidReason {
@@ -1094,7 +1108,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int CreateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The timestamp corresponding to the generation of the token.
+    /// The timestamp corresponding to the generation of the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -1108,7 +1122,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int HostnameFieldNumber = 4;
     private string hostname_ = "";
     /// <summary>
-    /// Output only. The hostname of the page on which the token was generated.
+    /// The hostname of the page on which the token was generated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Hostname {
@@ -1122,7 +1136,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int ActionFieldNumber = 5;
     private string action_ = "";
     /// <summary>
-    /// Output only. Action name provided at token generation.
+    /// Action name provided at token generation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Action {
@@ -1289,6 +1303,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
+      /// LINT.IfChange
       /// Enum that represents the types of invalid token reasons.
       /// </summary>
       public enum InvalidReason {
@@ -1313,7 +1328,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("DUPE")] Dupe = 4,
         /// <summary>
-        /// The user verification token did not match the provided site secret.
+        /// The user verification token did not match the provided site key.
         /// This may be a configuration error (e.g. development keys used in
         /// production) or end users trying to use verification tokens from other
         /// sites.
