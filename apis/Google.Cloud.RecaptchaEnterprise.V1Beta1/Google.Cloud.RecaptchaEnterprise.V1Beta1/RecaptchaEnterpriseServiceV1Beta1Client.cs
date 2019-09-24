@@ -386,7 +386,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// in the format "projects/{project_number}".
         /// </param>
         /// <param name="assessment">
-        /// The asessment details.
+        /// Required. The assessment details.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -413,7 +413,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// in the format "projects/{project_number}".
         /// </param>
         /// <param name="assessment">
-        /// The asessment details.
+        /// Required. The assessment details.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -437,7 +437,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// in the format "projects/{project_number}".
         /// </param>
         /// <param name="assessment">
-        /// The asessment details.
+        /// Required. The assessment details.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -464,7 +464,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// in the format "projects/{project_number}".
         /// </param>
         /// <param name="assessment">
-        /// The asessment details.
+        /// Required. The assessment details.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -491,7 +491,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// in the format "projects/{project_number}".
         /// </param>
         /// <param name="assessment">
-        /// The asessment details.
+        /// Required. The assessment details.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -515,7 +515,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// in the format "projects/{project_number}".
         /// </param>
         /// <param name="assessment">
-        /// The asessment details.
+        /// Required. The assessment details.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -599,7 +599,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// The annotation that will be assigned to the Event.
+        /// Required. The annotation that will be assigned to the Event.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -627,7 +627,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// The annotation that will be assigned to the Event.
+        /// Required. The annotation that will be assigned to the Event.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -652,7 +652,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// The annotation that will be assigned to the Event.
+        /// Required. The annotation that will be assigned to the Event.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -680,7 +680,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// The annotation that will be assigned to the Event.
+        /// Required. The annotation that will be assigned to the Event.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -708,7 +708,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// The annotation that will be assigned to the Event.
+        /// Required. The annotation that will be assigned to the Event.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -733,7 +733,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// The annotation that will be assigned to the Event.
+        /// Required. The annotation that will be assigned to the Event.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
