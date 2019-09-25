@@ -354,9 +354,9 @@ namespace Google.Cloud.Vision.V1 {
     private string productCategory_ = "";
     /// <summary>
     /// Immutable. The category for the product identified by the reference image. This should
-    /// be either "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1", or
-    /// "general-v1" The legacy categories "homegoods", "apparel", and "toys" are
-    /// still supported, but these should not be used for new products.
+    /// be either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories
+    /// "homegoods", "apparel", and "toys" are still supported, but these should
+    /// not be used for new products.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProductCategory {
