@@ -677,7 +677,7 @@
     "id": "Google.Cloud.PhishingProtection.V1Beta1",
     "generator": "gapic",
     "protoPath": "google/cloud/phishingprotection/v1beta1",
-    "serviceYaml": "phishingprotection.yaml",
+    "serviceYaml": "phishingprotection_v1beta1.yaml",
     "productName": "Cloud Phishing Protection",
     "productUrl": "https://cloud.google.com/phishing-protection/",
     "version": "1.0.0-beta00",
