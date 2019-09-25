@@ -76,7 +76,7 @@ namespace Google.Cloud.Iam.V1 {
   ///     {
   ///       "bindings": [
   ///         {
-  ///           "role": "role/resourcemanager.organizationAdmin",
+  ///           "role": "roles/resourcemanager.organizationAdmin",
   ///           "members": [
   ///             "user:mike@example.com",
   ///             "group:admins@example.com",
@@ -788,8 +788,7 @@ namespace Google.Cloud.Iam.V1 {
     public const int ConditionFieldNumber = 4;
     private global::Google.Type.Expr condition_;
     /// <summary>
-    /// The condition that is associated with this binding. This field is logged
-    /// only for Cloud Audit Logging.
+    /// The condition that is associated with this binding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Expr Condition {
