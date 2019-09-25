@@ -35,6 +35,74 @@ namespace Google.Cloud.Translate.V3.Snippets
     public class GeneratedTranslationServiceClientSnippets
     {
         /// <summary>Snippet for TranslateTextAsync</summary>
+        public async Task TranslateTextAsync1()
+        {
+            // Snippet: TranslateTextAsync(LocationName,string,IEnumerable<string>,CallSettings)
+            // Additional: TranslateTextAsync(LocationName,string,IEnumerable<string>,CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            string targetLanguageCode = "";
+            IEnumerable<string> contents = new List<string>();
+            // Make the request
+            TranslateTextResponse response = await translationServiceClient.TranslateTextAsync(parent, targetLanguageCode, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TranslateText</summary>
+        public void TranslateText1()
+        {
+            // Snippet: TranslateText(LocationName,string,IEnumerable<string>,CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            string targetLanguageCode = "";
+            IEnumerable<string> contents = new List<string>();
+            // Make the request
+            TranslateTextResponse response = translationServiceClient.TranslateText(parent, targetLanguageCode, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TranslateTextAsync</summary>
+        public async Task TranslateTextAsync2()
+        {
+            // Snippet: TranslateTextAsync(LocationName,string,string,string,string,IEnumerable<string>,CallSettings)
+            // Additional: TranslateTextAsync(LocationName,string,string,string,string,IEnumerable<string>,CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            string model = "";
+            string mimeType = "";
+            string sourceLanguageCode = "";
+            string targetLanguageCode = "";
+            IEnumerable<string> contents = new List<string>();
+            // Make the request
+            TranslateTextResponse response = await translationServiceClient.TranslateTextAsync(parent, model, mimeType, sourceLanguageCode, targetLanguageCode, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TranslateText</summary>
+        public void TranslateText2()
+        {
+            // Snippet: TranslateText(LocationName,string,string,string,string,IEnumerable<string>,CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            string model = "";
+            string mimeType = "";
+            string sourceLanguageCode = "";
+            string targetLanguageCode = "";
+            IEnumerable<string> contents = new List<string>();
+            // Make the request
+            TranslateTextResponse response = translationServiceClient.TranslateText(parent, model, mimeType, sourceLanguageCode, targetLanguageCode, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TranslateTextAsync</summary>
         public async Task TranslateTextAsync_RequestObject()
         {
             // Snippet: TranslateTextAsync(TranslateTextRequest,CallSettings)
@@ -74,33 +142,33 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for DetectLanguageAsync</summary>
         public async Task DetectLanguageAsync()
         {
-            // Snippet: DetectLanguageAsync(LocationName,string,string,IDictionary<string, string>,CallSettings)
-            // Additional: DetectLanguageAsync(LocationName,string,string,IDictionary<string, string>,CancellationToken)
+            // Snippet: DetectLanguageAsync(LocationName,string,string,string,CallSettings)
+            // Additional: DetectLanguageAsync(LocationName,string,string,string,CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             string model = "";
             string mimeType = "";
-            IDictionary<string, string> labels = new Dictionary<string, string>();
+            string content = "";
             // Make the request
-            DetectLanguageResponse response = await translationServiceClient.DetectLanguageAsync(parent, model, mimeType, labels);
+            DetectLanguageResponse response = await translationServiceClient.DetectLanguageAsync(parent, model, mimeType, content);
             // End snippet
         }
 
         /// <summary>Snippet for DetectLanguage</summary>
         public void DetectLanguage()
         {
-            // Snippet: DetectLanguage(LocationName,string,string,IDictionary<string, string>,CallSettings)
+            // Snippet: DetectLanguage(LocationName,string,string,string,CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             string model = "";
             string mimeType = "";
-            IDictionary<string, string> labels = new Dictionary<string, string>();
+            string content = "";
             // Make the request
-            DetectLanguageResponse response = translationServiceClient.DetectLanguage(parent, model, mimeType, labels);
+            DetectLanguageResponse response = translationServiceClient.DetectLanguage(parent, model, mimeType, content);
             // End snippet
         }
 
@@ -146,10 +214,10 @@ namespace Google.Cloud.Translate.V3.Snippets
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            string displayLanguageCode = "";
             string model = "";
+            string displayLanguageCode = "";
             // Make the request
-            SupportedLanguages response = await translationServiceClient.GetSupportedLanguagesAsync(parent, displayLanguageCode, model);
+            SupportedLanguages response = await translationServiceClient.GetSupportedLanguagesAsync(parent, model, displayLanguageCode);
             // End snippet
         }
 
@@ -161,10 +229,10 @@ namespace Google.Cloud.Translate.V3.Snippets
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            string displayLanguageCode = "";
             string model = "";
+            string displayLanguageCode = "";
             // Make the request
-            SupportedLanguages response = translationServiceClient.GetSupportedLanguages(parent, displayLanguageCode, model);
+            SupportedLanguages response = translationServiceClient.GetSupportedLanguages(parent, model, displayLanguageCode);
             // End snippet
         }
 
@@ -421,15 +489,14 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for ListGlossariesAsync</summary>
         public async Task ListGlossariesAsync()
         {
-            // Snippet: ListGlossariesAsync(LocationName,string,string,int?,CallSettings)
+            // Snippet: ListGlossariesAsync(LocationName,string,int?,CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            string filter = "";
             // Make the request
             PagedAsyncEnumerable<ListGlossariesResponse, Glossary> response =
-                translationServiceClient.ListGlossariesAsync(parent, filter);
+                translationServiceClient.ListGlossariesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Glossary item) =>
@@ -466,15 +533,14 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for ListGlossaries</summary>
         public void ListGlossaries()
         {
-            // Snippet: ListGlossaries(LocationName,string,string,int?,CallSettings)
+            // Snippet: ListGlossaries(LocationName,string,int?,CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            string filter = "";
             // Make the request
             PagedEnumerable<ListGlossariesResponse, Glossary> response =
-                translationServiceClient.ListGlossaries(parent, filter);
+                translationServiceClient.ListGlossaries(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Glossary item in response)
