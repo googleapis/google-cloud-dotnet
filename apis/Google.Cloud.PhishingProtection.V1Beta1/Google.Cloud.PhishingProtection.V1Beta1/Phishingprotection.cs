@@ -27,21 +27,27 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
             "CkBnb29nbGUvY2xvdWQvcGhpc2hpbmdwcm90ZWN0aW9uL3YxYmV0YTEvcGhp",
             "c2hpbmdwcm90ZWN0aW9uLnByb3RvEidnb29nbGUuY2xvdWQucGhpc2hpbmdw",
             "cm90ZWN0aW9uLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
-            "dG8iNAoVUmVwb3J0UGhpc2hpbmdSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIL",
-            "CgN1cmkYAiABKAkiGAoWUmVwb3J0UGhpc2hpbmdSZXNwb25zZTLvAQogUGhp",
-            "c2hpbmdQcm90ZWN0aW9uU2VydmljZVYxQmV0YTESygEKDlJlcG9ydFBoaXNo",
-            "aW5nEj4uZ29vZ2xlLmNsb3VkLnBoaXNoaW5ncHJvdGVjdGlvbi52MWJldGEx",
-            "LlJlcG9ydFBoaXNoaW5nUmVxdWVzdBo/Lmdvb2dsZS5jbG91ZC5waGlzaGlu",
-            "Z3Byb3RlY3Rpb24udjFiZXRhMS5SZXBvcnRQaGlzaGluZ1Jlc3BvbnNlIjeC",
-            "0+STAjEiLC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vcGhpc2hpbmc6",
-            "cmVwb3J0OgEqQvgBCiVjb20uZ29vZ2xlLnBoaXNoaW5ncHJvdGVjdGlvbi52",
-            "MWJldGExQhdQaGlzaGluZ1Byb3RlY3Rpb25Qcm90b1ABWllnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3BoaXNoaW5ncHJv",
-            "dGVjdGlvbi92MWJldGExO3BoaXNoaW5ncHJvdGVjdGlvbqICBEdDUFCqAidH",
-            "b29nbGUuQ2xvdWQuUGhpc2hpbmdQcm90ZWN0aW9uLlYxQmV0YTHKAidHb29n",
-            "bGVcQ2xvdWRcUGhpc2hpbmdQcm90ZWN0aW9uXFYxYmV0YTFiBnByb3RvMw=="));
+            "dG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIm4K",
+            "FVJlcG9ydFBoaXNoaW5nUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpB",
+            "LQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVj",
+            "dBIQCgN1cmkYAiABKAlCA+BBAiIYChZSZXBvcnRQaGlzaGluZ1Jlc3BvbnNl",
+            "MtMCCiBQaGlzaGluZ1Byb3RlY3Rpb25TZXJ2aWNlVjFCZXRhMRLXAQoOUmVw",
+            "b3J0UGhpc2hpbmcSPi5nb29nbGUuY2xvdWQucGhpc2hpbmdwcm90ZWN0aW9u",
+            "LnYxYmV0YTEuUmVwb3J0UGhpc2hpbmdSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3Vk",
+            "LnBoaXNoaW5ncHJvdGVjdGlvbi52MWJldGExLlJlcG9ydFBoaXNoaW5nUmVz",
+            "cG9uc2UiRILT5JMCMSIsL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9w",
+            "aGlzaGluZzpyZXBvcnQ6ASraQQpwYXJlbnQsdXJpGlXKQSFwaGlzaGluZ3By",
+            "b3RlY3Rpb24uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQvgBCiVjb20uZ29vZ2xlLnBo",
+            "aXNoaW5ncHJvdGVjdGlvbi52MWJldGExQhdQaGlzaGluZ1Byb3RlY3Rpb25Q",
+            "cm90b1ABWllnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL3BoaXNoaW5ncHJvdGVjdGlvbi92MWJldGExO3BoaXNoaW5ncHJv",
+            "dGVjdGlvbqICBEdDUFCqAidHb29nbGUuQ2xvdWQuUGhpc2hpbmdQcm90ZWN0",
+            "aW9uLlYxQmV0YTHKAidHb29nbGVcQ2xvdWRcUGhpc2hpbmdQcm90ZWN0aW9u",
+            "XFYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest.Parser, new[]{ "Parent", "Uri" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse.Parser, null, null, null, null)
@@ -108,7 +114,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// The URI that is being reported for phishing content to be analyzed.
+    /// Required. The URI that is being reported for phishing content to be analyzed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
