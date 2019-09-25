@@ -53,11 +53,12 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
     {
       /// <summary>
       /// Reports a URI suspected of containing phishing content to be reviewed. Once
-      /// the report review is completed, if its result verifies the existince of
-      /// malicious phishing content, the site will be added the to [Google's Social
-      /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
-      /// in order to protect users that could get exposed to this threat in
-      /// the future.
+      /// the report review is complete, its result can be found in the Cloud
+      /// Security Command Center findings dashboard for Phishing Protection. If the
+      /// result verifies the existence of malicious phishing content, the site will
+      /// be added the to [Google's Social Engineering
+      /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -94,11 +95,12 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
 
       /// <summary>
       /// Reports a URI suspected of containing phishing content to be reviewed. Once
-      /// the report review is completed, if its result verifies the existince of
-      /// malicious phishing content, the site will be added the to [Google's Social
-      /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
-      /// in order to protect users that could get exposed to this threat in
-      /// the future.
+      /// the report review is complete, its result can be found in the Cloud
+      /// Security Command Center findings dashboard for Phishing Protection. If the
+      /// result verifies the existence of malicious phishing content, the site will
+      /// be added the to [Google's Social Engineering
+      /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -111,11 +113,12 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
       }
       /// <summary>
       /// Reports a URI suspected of containing phishing content to be reviewed. Once
-      /// the report review is completed, if its result verifies the existince of
-      /// malicious phishing content, the site will be added the to [Google's Social
-      /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
-      /// in order to protect users that could get exposed to this threat in
-      /// the future.
+      /// the report review is complete, its result can be found in the Cloud
+      /// Security Command Center findings dashboard for Phishing Protection. If the
+      /// result verifies the existence of malicious phishing content, the site will
+      /// be added the to [Google's Social Engineering
+      /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -126,11 +129,12 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
       }
       /// <summary>
       /// Reports a URI suspected of containing phishing content to be reviewed. Once
-      /// the report review is completed, if its result verifies the existince of
-      /// malicious phishing content, the site will be added the to [Google's Social
-      /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
-      /// in order to protect users that could get exposed to this threat in
-      /// the future.
+      /// the report review is complete, its result can be found in the Cloud
+      /// Security Command Center findings dashboard for Phishing Protection. If the
+      /// result verifies the existence of malicious phishing content, the site will
+      /// be added the to [Google's Social Engineering
+      /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -143,11 +147,12 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
       }
       /// <summary>
       /// Reports a URI suspected of containing phishing content to be reviewed. Once
-      /// the report review is completed, if its result verifies the existince of
-      /// malicious phishing content, the site will be added the to [Google's Social
-      /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
-      /// in order to protect users that could get exposed to this threat in
-      /// the future.
+      /// the report review is complete, its result can be found in the Cloud
+      /// Security Command Center findings dashboard for Phishing Protection. If the
+      /// result verifies the existence of malicious phishing content, the site will
+      /// be added the to [Google's Social Engineering
+      /// lists](https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
