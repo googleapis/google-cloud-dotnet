@@ -26,57 +26,65 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvYmlncXVlcnkvZGF0YXRyYW5zZmVyL3YxL3RyYW5z",
             "ZmVyLnByb3RvEiVnb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXRyYW5zZmVy",
-            "LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhxnb29nbGUvcHJv",
-            "dG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKQAQoPU2NoZWR1bGVP",
-            "cHRpb25zEh8KF2Rpc2FibGVfYXV0b19zY2hlZHVsaW5nGAMgASgIEi4KCnN0",
-            "YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwK",
-            "CGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCL/",
-            "AwoOVHJhbnNmZXJDb25maWcSDAoEbmFtZRgBIAEoCRIeChZkZXN0aW5hdGlv",
-            "bl9kYXRhc2V0X2lkGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIWCg5k",
-            "YXRhX3NvdXJjZV9pZBgFIAEoCRInCgZwYXJhbXMYCSABKAsyFy5nb29nbGUu",
-            "cHJvdG9idWYuU3RydWN0EhAKCHNjaGVkdWxlGAcgASgJElAKEHNjaGVkdWxl",
-            "X29wdGlvbnMYGCABKAsyNi5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXRy",
-            "YW5zZmVyLnYxLlNjaGVkdWxlT3B0aW9ucxIgChhkYXRhX3JlZnJlc2hfd2lu",
-            "ZG93X2RheXMYDCABKAUSEAoIZGlzYWJsZWQYDSABKAgSLwoLdXBkYXRlX3Rp",
-            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKDW5leHRf",
-            "cnVuX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkMK",
-            "BXN0YXRlGAogASgOMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFu",
-            "c2Zlci52MS5UcmFuc2ZlclN0YXRlEg8KB3VzZXJfaWQYCyABKAMSFgoOZGF0",
-            "YXNldF9yZWdpb24YDiABKAki/gMKC1RyYW5zZmVyUnVuEgwKBG5hbWUYASAB",
-            "KAkSMQoNc2NoZWR1bGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASLAoIcnVuX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEigKDGVycm9yX3N0YXR1cxgVIAEoCzISLmdvb2dsZS5ycGMu",
-            "U3RhdHVzEi4KCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEiwKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXASJwoGcGFyYW1zGAkgASgLMhcuZ29vZ2xlLnByb3Rv",
-            "YnVmLlN0cnVjdBIeChZkZXN0aW5hdGlvbl9kYXRhc2V0X2lkGAIgASgJEhYK",
-            "DmRhdGFfc291cmNlX2lkGAcgASgJEkMKBXN0YXRlGAggASgOMjQuZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFuc2ZlclN0YXRl",
-            "Eg8KB3VzZXJfaWQYCyABKAMSEAoIc2NoZWR1bGUYDCABKAkiigIKD1RyYW5z",
-            "ZmVyTWVzc2FnZRIwCgxtZXNzYWdlX3RpbWUYASABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wElgKCHNldmVyaXR5GAIgASgOMkYuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFuc2Zlck1lc3NhZ2Uu",
-            "TWVzc2FnZVNldmVyaXR5EhQKDG1lc3NhZ2VfdGV4dBgDIAEoCSJVCg9NZXNz",
-            "YWdlU2V2ZXJpdHkSIAocTUVTU0FHRV9TRVZFUklUWV9VTlNQRUNJRklFRBAA",
-            "EggKBElORk8QARILCgdXQVJOSU5HEAISCQoFRVJST1IQAypLCgxUcmFuc2Zl",
-            "clR5cGUSHQoZVFJBTlNGRVJfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUJBVENI",
-            "EAESDQoJU1RSRUFNSU5HEAIaAhgBKnMKDVRyYW5zZmVyU3RhdGUSHgoaVFJB",
-            "TlNGRVJfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAISCwoHUlVO",
-            "TklORxADEg0KCVNVQ0NFRURFRBAEEgoKBkZBSUxFRBAFEg0KCUNBTkNFTExF",
-            "RBAGQucBCiljb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zl",
-            "ci52MUINVHJhbnNmZXJQcm90b1ABWlFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L2RhdGF0cmFuc2Zlci92",
-            "MTtkYXRhdHJhbnNmZXKiAgVHQ0JEVKoCJUdvb2dsZS5DbG91ZC5CaWdRdWVy",
-            "eS5EYXRhVHJhbnNmZXIuVjHKAiVHb29nbGVcQ2xvdWRcQmlnUXVlcnlcRGF0",
-            "YVRyYW5zZmVyXFYxYgZwcm90bzM="));
+            "LnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
+            "YXBpL3Jlc291cmNlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnBy",
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUv",
+            "cnBjL3N0YXR1cy5wcm90byKQAQoPU2NoZWR1bGVPcHRpb25zEh8KF2Rpc2Fi",
+            "bGVfYXV0b19zY2hlZHVsaW5nGAMgASgIEi4KCnN0YXJ0X3RpbWUYASABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKTBQoOVHJhbnNmZXJDb25m",
+            "aWcSDAoEbmFtZRgBIAEoCRIgChZkZXN0aW5hdGlvbl9kYXRhc2V0X2lkGAIg",
+            "ASgJSAASFAoMZGlzcGxheV9uYW1lGAMgASgJEhYKDmRhdGFfc291cmNlX2lk",
+            "GAUgASgJEicKBnBhcmFtcxgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
+            "Y3QSEAoIc2NoZWR1bGUYByABKAkSUAoQc2NoZWR1bGVfb3B0aW9ucxgYIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIudjEuU2No",
+            "ZWR1bGVPcHRpb25zEiAKGGRhdGFfcmVmcmVzaF93aW5kb3dfZGF5cxgMIAEo",
+            "BRIQCghkaXNhYmxlZBgNIAEoCBI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI2Cg1uZXh0X3J1bl90aW1l",
+            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKBXN0",
+            "YXRlGAogASgOMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zl",
+            "ci52MS5UcmFuc2ZlclN0YXRlQgPgQQMSDwoHdXNlcl9pZBgLIAEoAxIbCg5k",
+            "YXRhc2V0X3JlZ2lvbhgOIAEoCUID4EEDOm3qQWoKMmJpZ3F1ZXJ5ZGF0YXRy",
+            "YW5zZmVyLmdvb2dsZWFwaXMuY29tL1RyYW5zZmVyQ29uZmlnEjRwcm9qZWN0",
+            "cy97cHJvamVjdH0vdHJhbnNmZXJDb25maWdzL3t0cmFuc2Zlcl9jb25maWd9",
+            "Qg0KC2Rlc3RpbmF0aW9uIsAFCgtUcmFuc2ZlclJ1bhIMCgRuYW1lGAEgASgJ",
+            "EjEKDXNjaGVkdWxlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEiwKCHJ1bl90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBIoCgxlcnJvcl9zdGF0dXMYFSABKAsyEi5nb29nbGUucnBjLlN0",
+            "YXR1cxIzCgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAYgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiwKBnBhcmFtcxgJIAEoCzIX",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAxIlChZkZXN0aW5hdGlvbl9k",
+            "YXRhc2V0X2lkGAIgASgJQgPgQQNIABIbCg5kYXRhX3NvdXJjZV9pZBgHIAEo",
+            "CUID4EEDEkMKBXN0YXRlGAggASgOMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LmRhdGF0cmFuc2Zlci52MS5UcmFuc2ZlclN0YXRlEg8KB3VzZXJfaWQYCyAB",
+            "KAMSFQoIc2NoZWR1bGUYDCABKAlCA+BBAzqLAepBhwEKL2JpZ3F1ZXJ5ZGF0",
+            "YXRyYW5zZmVyLmdvb2dsZWFwaXMuY29tL1RyYW5zZmVyUnVuElRwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdHJhbnNmZXJDb25m",
+            "aWdzL3t0cmFuc2Zlcl9jb25maWd9L3J1bnMve3J1bn1CDQoLZGVzdGluYXRp",
+            "b24iigIKD1RyYW5zZmVyTWVzc2FnZRIwCgxtZXNzYWdlX3RpbWUYASABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElgKCHNldmVyaXR5GAIgASgO",
+            "MkYuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFu",
+            "c2Zlck1lc3NhZ2UuTWVzc2FnZVNldmVyaXR5EhQKDG1lc3NhZ2VfdGV4dBgD",
+            "IAEoCSJVCg9NZXNzYWdlU2V2ZXJpdHkSIAocTUVTU0FHRV9TRVZFUklUWV9V",
+            "TlNQRUNJRklFRBAAEggKBElORk8QARILCgdXQVJOSU5HEAISCQoFRVJST1IQ",
+            "AypLCgxUcmFuc2ZlclR5cGUSHQoZVFJBTlNGRVJfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgkKBUJBVENIEAESDQoJU1RSRUFNSU5HEAIaAhgBKnMKDVRyYW5zZmVy",
+            "U3RhdGUSHgoaVFJBTlNGRVJfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5E",
+            "SU5HEAISCwoHUlVOTklORxADEg0KCVNVQ0NFRURFRBAEEgoKBkZBSUxFRBAF",
+            "Eg0KCUNBTkNFTExFRBAGQucBCiljb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LmRhdGF0cmFuc2Zlci52MUINVHJhbnNmZXJQcm90b1ABWlFnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L2Rh",
+            "dGF0cmFuc2Zlci92MTtkYXRhdHJhbnNmZXKiAgVHQ0JEVKoCJUdvb2dsZS5D",
+            "bG91ZC5CaWdRdWVyeS5EYXRhVHJhbnNmZXIuVjHKAiVHb29nbGVcQ2xvdWRc",
+            "QmlnUXVlcnlcRGF0YVRyYW5zZmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions.Parser, new[]{ "DisableAutoScheduling", "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule" }, new[]{ "Destination" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Parser, new[]{ "MessageTime", "Severity", "MessageText" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) }, null)
           }));
     }
@@ -390,7 +398,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransferConfig(TransferConfig other) : this() {
       name_ = other.name_;
-      destinationDatasetId_ = other.destinationDatasetId_;
       displayName_ = other.displayName_;
       dataSourceId_ = other.dataSourceId_;
       params_ = other.params_ != null ? other.params_.Clone() : null;
@@ -403,6 +410,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       state_ = other.state_;
       userId_ = other.userId_;
       datasetRegion_ = other.datasetRegion_;
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.DestinationDatasetId:
+          DestinationDatasetId = other.DestinationDatasetId;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -433,15 +446,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "destination_dataset_id" field.</summary>
     public const int DestinationDatasetIdFieldNumber = 2;
-    private string destinationDatasetId_ = "";
     /// <summary>
     /// The BigQuery target dataset id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DestinationDatasetId {
-      get { return destinationDatasetId_; }
+      get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId ? (string) destination_ : ""; }
       set {
-        destinationDatasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        destinationCase_ = DestinationOneofCase.DestinationDatasetId;
       }
     }
 
@@ -630,6 +643,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      DestinationDatasetId = 2,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TransferConfig);
@@ -657,6 +688,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != other.State) return false;
       if (UserId != other.UserId) return false;
       if (DatasetRegion != other.DatasetRegion) return false;
+      if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -664,7 +696,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (DestinationDatasetId.Length != 0) hash ^= DestinationDatasetId.GetHashCode();
+      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) hash ^= DestinationDatasetId.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (DataSourceId.Length != 0) hash ^= DataSourceId.GetHashCode();
       if (params_ != null) hash ^= Params.GetHashCode();
@@ -677,6 +709,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != 0) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (DatasetRegion.Length != 0) hash ^= DatasetRegion.GetHashCode();
+      hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -694,7 +727,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DestinationDatasetId.Length != 0) {
+      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
         output.WriteRawTag(18);
         output.WriteString(DestinationDatasetId);
       }
@@ -757,7 +790,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (DestinationDatasetId.Length != 0) {
+      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationDatasetId);
       }
       if (DisplayName.Length != 0) {
@@ -810,9 +843,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.DestinationDatasetId.Length != 0) {
-        DestinationDatasetId = other.DestinationDatasetId;
-      }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -861,6 +891,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.DatasetRegion.Length != 0) {
         DatasetRegion = other.DatasetRegion;
       }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.DestinationDatasetId:
+          DestinationDatasetId = other.DestinationDatasetId;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -982,11 +1018,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       params_ = other.params_ != null ? other.params_.Clone() : null;
-      destinationDatasetId_ = other.destinationDatasetId_;
       dataSourceId_ = other.dataSourceId_;
       state_ = other.state_;
       userId_ = other.userId_;
       schedule_ = other.schedule_;
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.DestinationDatasetId:
+          DestinationDatasetId = other.DestinationDatasetId;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1115,15 +1156,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "destination_dataset_id" field.</summary>
     public const int DestinationDatasetIdFieldNumber = 2;
-    private string destinationDatasetId_ = "";
     /// <summary>
     /// Output only. The BigQuery target dataset id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DestinationDatasetId {
-      get { return destinationDatasetId_; }
+      get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId ? (string) destination_ : ""; }
       set {
-        destinationDatasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        destinationCase_ = DestinationOneofCase.DestinationDatasetId;
       }
     }
 
@@ -1187,6 +1228,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      DestinationDatasetId = 2,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TransferRun);
@@ -1213,6 +1272,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != other.State) return false;
       if (UserId != other.UserId) return false;
       if (Schedule != other.Schedule) return false;
+      if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1227,11 +1287,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (params_ != null) hash ^= Params.GetHashCode();
-      if (DestinationDatasetId.Length != 0) hash ^= DestinationDatasetId.GetHashCode();
+      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) hash ^= DestinationDatasetId.GetHashCode();
       if (DataSourceId.Length != 0) hash ^= DataSourceId.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
+      hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1249,7 +1310,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DestinationDatasetId.Length != 0) {
+      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
         output.WriteRawTag(18);
         output.WriteString(DestinationDatasetId);
       }
@@ -1329,7 +1390,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (params_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Params);
       }
-      if (DestinationDatasetId.Length != 0) {
+      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationDatasetId);
       }
       if (DataSourceId.Length != 0) {
@@ -1400,9 +1461,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         }
         Params.MergeFrom(other.Params);
       }
-      if (other.DestinationDatasetId.Length != 0) {
-        DestinationDatasetId = other.DestinationDatasetId;
-      }
       if (other.DataSourceId.Length != 0) {
         DataSourceId = other.DataSourceId;
       }
@@ -1415,6 +1473,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.Schedule.Length != 0) {
         Schedule = other.Schedule;
       }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.DestinationDatasetId:
+          DestinationDatasetId = other.DestinationDatasetId;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

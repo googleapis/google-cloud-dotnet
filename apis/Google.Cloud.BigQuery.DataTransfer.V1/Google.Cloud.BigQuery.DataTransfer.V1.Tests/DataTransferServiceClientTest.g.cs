@@ -22,7 +22,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.BigQuery.DataTransfer.V1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -44,11 +43,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetDataSourceRequest expectedRequest = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             DataSource expectedResponse = new DataSource
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
                 DataSourceId = "dataSourceId-1015796374",
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
@@ -64,7 +63,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.GetDataSource(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
             DataSource response = client.GetDataSource(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -76,11 +75,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetDataSourceRequest expectedRequest = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             DataSource expectedResponse = new DataSource
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
                 DataSourceId = "dataSourceId-1015796374",
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
@@ -96,7 +95,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.GetDataSourceAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<DataSource>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
             DataSource response = await client.GetDataSourceAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -108,11 +107,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetDataSourceRequest request = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             DataSource expectedResponse = new DataSource
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
                 DataSourceId = "dataSourceId-1015796374",
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
@@ -139,11 +138,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetDataSourceRequest request = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             DataSource expectedResponse = new DataSource
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
                 DataSourceId = "dataSourceId-1015796374",
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
@@ -170,12 +169,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             CreateTransferConfigRequest expectedRequest = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -188,7 +187,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.CreateTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             TransferConfig transferConfig = new TransferConfig();
             TransferConfig response = client.CreateTransferConfig(parent, transferConfig);
             Assert.Same(expectedResponse, response);
@@ -201,12 +200,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             CreateTransferConfigRequest expectedRequest = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -219,7 +218,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             TransferConfig transferConfig = new TransferConfig();
             TransferConfig response = await client.CreateTransferConfigAsync(parent, transferConfig);
             Assert.Same(expectedResponse, response);
@@ -232,12 +231,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -261,12 +260,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -295,7 +294,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -326,7 +325,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -357,7 +356,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -386,7 +385,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -410,13 +409,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             DeleteTransferConfigRequest expectedRequest = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             client.DeleteTransferConfig(name);
             mockGrpcClient.VerifyAll();
         }
@@ -427,13 +426,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             DeleteTransferConfigRequest expectedRequest = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             await client.DeleteTransferConfigAsync(name);
             mockGrpcClient.VerifyAll();
         }
@@ -444,7 +443,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTransferConfig(request, It.IsAny<CallOptions>()))
@@ -460,7 +459,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTransferConfigAsync(request, It.IsAny<CallOptions>()))
@@ -476,11 +475,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetTransferConfigRequest expectedRequest = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -493,7 +492,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.GetTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             TransferConfig response = client.GetTransferConfig(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -505,11 +504,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetTransferConfigRequest expectedRequest = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -522,7 +521,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             TransferConfig response = await client.GetTransferConfigAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -534,11 +533,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -562,11 +561,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 DestinationDatasetId = "destinationDatasetId1541564179",
                 DisplayName = "displayName1615086568",
                 DataSourceId = "dataSourceId-1015796374",
@@ -590,7 +589,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             ScheduleTransferRunsRequest expectedRequest = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
@@ -598,7 +597,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.ScheduleTransferRuns(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName parent = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(parent, startTime, endTime);
@@ -612,7 +611,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             ScheduleTransferRunsRequest expectedRequest = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
@@ -620,7 +619,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ScheduleTransferRunsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName parent = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             ScheduleTransferRunsResponse response = await client.ScheduleTransferRunsAsync(parent, startTime, endTime);
@@ -634,7 +633,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
@@ -653,7 +652,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
@@ -662,252 +661,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<ScheduleTransferRunsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             ScheduleTransferRunsResponse response = await client.ScheduleTransferRunsAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetTransferRun()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferRunRequest expectedRequest = new GetTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            TransferRun expectedResponse = new TransferRun
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-            };
-            mockGrpcClient.Setup(x => x.GetTransferRun(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            TransferRun response = client.GetTransferRun(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetTransferRunAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferRunRequest expectedRequest = new GetTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            TransferRun expectedResponse = new TransferRun
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-            };
-            mockGrpcClient.Setup(x => x.GetTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            TransferRun response = await client.GetTransferRunAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetTransferRun2()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferRunRequest request = new GetTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            TransferRun expectedResponse = new TransferRun
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-            };
-            mockGrpcClient.Setup(x => x.GetTransferRun(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferRun response = client.GetTransferRun(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetTransferRunAsync2()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferRunRequest request = new GetTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            TransferRun expectedResponse = new TransferRun
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-            };
-            mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferRun response = await client.GetTransferRunAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteTransferRun()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferRunRequest expectedRequest = new DeleteTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRun(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            client.DeleteTransferRun(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteTransferRunAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferRunRequest expectedRequest = new DeleteTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            await client.DeleteTransferRunAsync(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteTransferRun2()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferRunRequest request = new DeleteTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRun(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            client.DeleteTransferRun(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteTransferRunAsync2()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferRunRequest request = new DeleteTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteTransferRunAsync(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CheckValidCreds()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CheckValidCredsRequest expectedRequest = new CheckValidCredsRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
-            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
-            {
-                HasValidCreds = false,
-            };
-            mockGrpcClient.Setup(x => x.CheckValidCreds(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
-            CheckValidCredsResponse response = client.CheckValidCreds(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CheckValidCredsAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CheckValidCredsRequest expectedRequest = new CheckValidCredsRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
-            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
-            {
-                HasValidCreds = false,
-            };
-            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CheckValidCredsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
-            CheckValidCredsResponse response = await client.CheckValidCredsAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CheckValidCreds2()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CheckValidCredsRequest request = new CheckValidCredsRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
-            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
-            {
-                HasValidCreds = false,
-            };
-            mockGrpcClient.Setup(x => x.CheckValidCreds(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            CheckValidCredsResponse response = client.CheckValidCreds(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CheckValidCredsAsync2()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CheckValidCredsRequest request = new CheckValidCredsRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
-            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
-            {
-                HasValidCreds = false,
-            };
-            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CheckValidCredsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            CheckValidCredsResponse response = await client.CheckValidCredsAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -936,6 +689,252 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<StartManualTransferRunsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             StartManualTransferRunsResponse response = await client.StartManualTransferRunsAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetTransferRun()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            GetTransferRunRequest expectedRequest = new GetTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            TransferRun expectedResponse = new TransferRun
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destinationDatasetId1541564179",
+                DataSourceId = "dataSourceId-1015796374",
+                UserId = 147132913L,
+                Schedule = "schedule-697920873",
+            };
+            mockGrpcClient.Setup(x => x.GetTransferRun(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
+            TransferRun response = client.GetTransferRun(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetTransferRunAsync()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            GetTransferRunRequest expectedRequest = new GetTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            TransferRun expectedResponse = new TransferRun
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destinationDatasetId1541564179",
+                DataSourceId = "dataSourceId-1015796374",
+                UserId = 147132913L,
+                Schedule = "schedule-697920873",
+            };
+            mockGrpcClient.Setup(x => x.GetTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
+            TransferRun response = await client.GetTransferRunAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetTransferRun2()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            GetTransferRunRequest request = new GetTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            TransferRun expectedResponse = new TransferRun
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destinationDatasetId1541564179",
+                DataSourceId = "dataSourceId-1015796374",
+                UserId = 147132913L,
+                Schedule = "schedule-697920873",
+            };
+            mockGrpcClient.Setup(x => x.GetTransferRun(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRun response = client.GetTransferRun(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetTransferRunAsync2()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            GetTransferRunRequest request = new GetTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            TransferRun expectedResponse = new TransferRun
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destinationDatasetId1541564179",
+                DataSourceId = "dataSourceId-1015796374",
+                UserId = 147132913L,
+                Schedule = "schedule-697920873",
+            };
+            mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRun response = await client.GetTransferRunAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteTransferRun()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            DeleteTransferRunRequest expectedRequest = new DeleteTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteTransferRun(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
+            client.DeleteTransferRun(name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteTransferRunAsync()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            DeleteTransferRunRequest expectedRequest = new DeleteTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
+            await client.DeleteTransferRunAsync(name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteTransferRun2()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            DeleteTransferRunRequest request = new DeleteTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteTransferRun(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTransferRun(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteTransferRunAsync2()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            DeleteTransferRunRequest request = new DeleteTransferRunRequest
+            {
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTransferRunAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CheckValidCreds()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            CheckValidCredsRequest expectedRequest = new CheckValidCredsRequest
+            {
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = false,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCreds(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
+            CheckValidCredsResponse response = client.CheckValidCreds(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CheckValidCredsAsync()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            CheckValidCredsRequest expectedRequest = new CheckValidCredsRequest
+            {
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = false,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CheckValidCredsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
+            CheckValidCredsResponse response = await client.CheckValidCredsAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CheckValidCreds2()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            CheckValidCredsRequest request = new CheckValidCredsRequest
+            {
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = false,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCreds(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            CheckValidCredsResponse response = client.CheckValidCreds(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CheckValidCredsAsync2()
+        {
+            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            CheckValidCredsRequest request = new CheckValidCredsRequest
+            {
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = false,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CheckValidCredsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            CheckValidCredsResponse response = await client.CheckValidCredsAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }

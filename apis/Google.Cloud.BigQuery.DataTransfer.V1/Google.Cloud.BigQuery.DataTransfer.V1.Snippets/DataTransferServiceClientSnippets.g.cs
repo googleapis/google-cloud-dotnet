@@ -37,12 +37,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for GetDataSourceAsync</summary>
         public async Task GetDataSourceAsync()
         {
-            // Snippet: GetDataSourceAsync(DataSourceNameOneof,CallSettings)
-            // Additional: GetDataSourceAsync(DataSourceNameOneof,CancellationToken)
+            // Snippet: GetDataSourceAsync(DataSourceName,CallSettings)
+            // Additional: GetDataSourceAsync(DataSourceName,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
             // Make the request
             DataSource response = await dataTransferServiceClient.GetDataSourceAsync(name);
             // End snippet
@@ -51,11 +51,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for GetDataSource</summary>
         public void GetDataSource()
         {
-            // Snippet: GetDataSource(DataSourceNameOneof,CallSettings)
+            // Snippet: GetDataSource(DataSourceName,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
             // Make the request
             DataSource response = dataTransferServiceClient.GetDataSource(name);
             // End snippet
@@ -71,7 +71,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             GetDataSourceRequest request = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             // Make the request
             DataSource response = await dataTransferServiceClient.GetDataSourceAsync(request);
@@ -87,7 +87,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             GetDataSourceRequest request = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             // Make the request
             DataSource response = dataTransferServiceClient.GetDataSource(request);
@@ -97,11 +97,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListDataSourcesAsync</summary>
         public async Task ListDataSourcesAsync()
         {
-            // Snippet: ListDataSourcesAsync(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: ListDataSourcesAsync(ProjectName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response =
                 dataTransferServiceClient.ListDataSourcesAsync(parent);
@@ -141,11 +141,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListDataSources</summary>
         public void ListDataSources()
         {
-            // Snippet: ListDataSources(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: ListDataSources(ProjectName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedEnumerable<ListDataSourcesResponse, DataSource> response =
                 dataTransferServiceClient.ListDataSources(parent);
@@ -191,7 +191,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListDataSourcesRequest request = new ListDataSourcesRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response =
@@ -238,7 +238,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListDataSourcesRequest request = new ListDataSourcesRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListDataSourcesResponse, DataSource> response =
@@ -279,12 +279,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for CreateTransferConfigAsync</summary>
         public async Task CreateTransferConfigAsync()
         {
-            // Snippet: CreateTransferConfigAsync(ParentNameOneof,TransferConfig,CallSettings)
-            // Additional: CreateTransferConfigAsync(ParentNameOneof,TransferConfig,CancellationToken)
+            // Snippet: CreateTransferConfigAsync(LocationName,TransferConfig,CallSettings)
+            // Additional: CreateTransferConfigAsync(LocationName,TransferConfig,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             TransferConfig transferConfig = new TransferConfig();
             // Make the request
             TransferConfig response = await dataTransferServiceClient.CreateTransferConfigAsync(parent, transferConfig);
@@ -294,11 +294,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for CreateTransferConfig</summary>
         public void CreateTransferConfig()
         {
-            // Snippet: CreateTransferConfig(ParentNameOneof,TransferConfig,CallSettings)
+            // Snippet: CreateTransferConfig(LocationName,TransferConfig,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             TransferConfig transferConfig = new TransferConfig();
             // Make the request
             TransferConfig response = dataTransferServiceClient.CreateTransferConfig(parent, transferConfig);
@@ -315,7 +315,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 TransferConfig = new TransferConfig(),
             };
             // Make the request
@@ -332,7 +332,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 TransferConfig = new TransferConfig(),
             };
             // Make the request
@@ -407,12 +407,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for DeleteTransferConfigAsync</summary>
         public async Task DeleteTransferConfigAsync()
         {
-            // Snippet: DeleteTransferConfigAsync(TransferConfigNameOneof,CallSettings)
-            // Additional: DeleteTransferConfigAsync(TransferConfigNameOneof,CancellationToken)
+            // Snippet: DeleteTransferConfigAsync(TransferConfigName,CallSettings)
+            // Additional: DeleteTransferConfigAsync(TransferConfigName,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
             await dataTransferServiceClient.DeleteTransferConfigAsync(name);
             // End snippet
@@ -421,11 +421,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for DeleteTransferConfig</summary>
         public void DeleteTransferConfig()
         {
-            // Snippet: DeleteTransferConfig(TransferConfigNameOneof,CallSettings)
+            // Snippet: DeleteTransferConfig(TransferConfigName,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
             dataTransferServiceClient.DeleteTransferConfig(name);
             // End snippet
@@ -441,7 +441,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             await dataTransferServiceClient.DeleteTransferConfigAsync(request);
@@ -457,7 +457,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             dataTransferServiceClient.DeleteTransferConfig(request);
@@ -467,12 +467,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for GetTransferConfigAsync</summary>
         public async Task GetTransferConfigAsync()
         {
-            // Snippet: GetTransferConfigAsync(TransferConfigNameOneof,CallSettings)
-            // Additional: GetTransferConfigAsync(TransferConfigNameOneof,CancellationToken)
+            // Snippet: GetTransferConfigAsync(TransferConfigName,CallSettings)
+            // Additional: GetTransferConfigAsync(TransferConfigName,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
             TransferConfig response = await dataTransferServiceClient.GetTransferConfigAsync(name);
             // End snippet
@@ -481,11 +481,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for GetTransferConfig</summary>
         public void GetTransferConfig()
         {
-            // Snippet: GetTransferConfig(TransferConfigNameOneof,CallSettings)
+            // Snippet: GetTransferConfig(TransferConfigName,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName name = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
             TransferConfig response = dataTransferServiceClient.GetTransferConfig(name);
             // End snippet
@@ -501,7 +501,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             TransferConfig response = await dataTransferServiceClient.GetTransferConfigAsync(request);
@@ -517,7 +517,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             TransferConfig response = dataTransferServiceClient.GetTransferConfig(request);
@@ -527,11 +527,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferConfigsAsync</summary>
         public async Task ListTransferConfigsAsync()
         {
-            // Snippet: ListTransferConfigsAsync(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferConfigsAsync(ProjectName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response =
                 dataTransferServiceClient.ListTransferConfigsAsync(parent);
@@ -571,11 +571,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferConfigs</summary>
         public void ListTransferConfigs()
         {
-            // Snippet: ListTransferConfigs(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferConfigs(ProjectName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response =
                 dataTransferServiceClient.ListTransferConfigs(parent);
@@ -621,7 +621,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response =
@@ -668,7 +668,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response =
@@ -709,12 +709,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ScheduleTransferRunsAsync</summary>
         public async Task ScheduleTransferRunsAsync()
         {
-            // Snippet: ScheduleTransferRunsAsync(TransferConfigNameOneof,Timestamp,Timestamp,CallSettings)
-            // Additional: ScheduleTransferRunsAsync(TransferConfigNameOneof,Timestamp,Timestamp,CancellationToken)
+            // Snippet: ScheduleTransferRunsAsync(TransferConfigName,Timestamp,Timestamp,CallSettings)
+            // Additional: ScheduleTransferRunsAsync(TransferConfigName,Timestamp,Timestamp,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName parent = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             // Make the request
@@ -725,11 +725,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ScheduleTransferRuns</summary>
         public void ScheduleTransferRuns()
         {
-            // Snippet: ScheduleTransferRuns(TransferConfigNameOneof,Timestamp,Timestamp,CallSettings)
+            // Snippet: ScheduleTransferRuns(TransferConfigName,Timestamp,Timestamp,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName parent = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             // Make the request
@@ -747,7 +747,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
@@ -765,7 +765,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
@@ -774,15 +774,42 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetTransferRunAsync</summary>
-        public async Task GetTransferRunAsync()
+        /// <summary>Snippet for StartManualTransferRunsAsync</summary>
+        public async Task StartManualTransferRunsAsync_RequestObject()
         {
-            // Snippet: GetTransferRunAsync(RunNameOneof,CallSettings)
-            // Additional: GetTransferRunAsync(RunNameOneof,CancellationToken)
+            // Snippet: StartManualTransferRunsAsync(StartManualTransferRunsRequest,CallSettings)
+            // Additional: StartManualTransferRunsAsync(StartManualTransferRunsRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
+            // Make the request
+            StartManualTransferRunsResponse response = await dataTransferServiceClient.StartManualTransferRunsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartManualTransferRuns</summary>
+        public void StartManualTransferRuns_RequestObject()
+        {
+            // Snippet: StartManualTransferRuns(StartManualTransferRunsRequest,CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
+            // Make the request
+            StartManualTransferRunsResponse response = dataTransferServiceClient.StartManualTransferRuns(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTransferRunAsync</summary>
+        public async Task GetTransferRunAsync()
+        {
+            // Snippet: GetTransferRunAsync(TransferRunName,CallSettings)
+            // Additional: GetTransferRunAsync(TransferRunName,CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
             // Make the request
             TransferRun response = await dataTransferServiceClient.GetTransferRunAsync(name);
             // End snippet
@@ -791,11 +818,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for GetTransferRun</summary>
         public void GetTransferRun()
         {
-            // Snippet: GetTransferRun(RunNameOneof,CallSettings)
+            // Snippet: GetTransferRun(TransferRunName,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
             // Make the request
             TransferRun response = dataTransferServiceClient.GetTransferRun(name);
             // End snippet
@@ -811,7 +838,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             GetTransferRunRequest request = new GetTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             TransferRun response = await dataTransferServiceClient.GetTransferRunAsync(request);
@@ -827,7 +854,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             GetTransferRunRequest request = new GetTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             TransferRun response = dataTransferServiceClient.GetTransferRun(request);
@@ -837,12 +864,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for DeleteTransferRunAsync</summary>
         public async Task DeleteTransferRunAsync()
         {
-            // Snippet: DeleteTransferRunAsync(RunNameOneof,CallSettings)
-            // Additional: DeleteTransferRunAsync(RunNameOneof,CancellationToken)
+            // Snippet: DeleteTransferRunAsync(TransferRunName,CallSettings)
+            // Additional: DeleteTransferRunAsync(TransferRunName,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
             // Make the request
             await dataTransferServiceClient.DeleteTransferRunAsync(name);
             // End snippet
@@ -851,11 +878,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for DeleteTransferRun</summary>
         public void DeleteTransferRun()
         {
-            // Snippet: DeleteTransferRun(RunNameOneof,CallSettings)
+            // Snippet: DeleteTransferRun(TransferRunName,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            TransferRunName name = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
             // Make the request
             dataTransferServiceClient.DeleteTransferRun(name);
             // End snippet
@@ -871,7 +898,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             DeleteTransferRunRequest request = new DeleteTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             await dataTransferServiceClient.DeleteTransferRunAsync(request);
@@ -887,7 +914,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             DeleteTransferRunRequest request = new DeleteTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                TransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             dataTransferServiceClient.DeleteTransferRun(request);
@@ -897,11 +924,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferRunsAsync</summary>
         public async Task ListTransferRunsAsync()
         {
-            // Snippet: ListTransferRunsAsync(TransferConfigNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferRunsAsync(TransferConfigName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName parent = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
             PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> response =
                 dataTransferServiceClient.ListTransferRunsAsync(parent);
@@ -941,11 +968,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferRuns</summary>
         public void ListTransferRuns()
         {
-            // Snippet: ListTransferRuns(TransferConfigNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferRuns(TransferConfigName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            TransferConfigName parent = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
             PagedEnumerable<ListTransferRunsResponse, TransferRun> response =
                 dataTransferServiceClient.ListTransferRuns(parent);
@@ -991,7 +1018,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferRunsRequest request = new ListTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> response =
@@ -1038,7 +1065,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferRunsRequest request = new ListTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = new TransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             PagedEnumerable<ListTransferRunsResponse, TransferRun> response =
@@ -1079,11 +1106,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferLogsAsync</summary>
         public async Task ListTransferLogsAsync()
         {
-            // Snippet: ListTransferLogsAsync(RunNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferLogsAsync(TransferRunName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunNameOneof parent = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            TransferRunName parent = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
             // Make the request
             PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> response =
                 dataTransferServiceClient.ListTransferLogsAsync(parent);
@@ -1123,11 +1150,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferLogs</summary>
         public void ListTransferLogs()
         {
-            // Snippet: ListTransferLogs(RunNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferLogs(TransferRunName,string,int?,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            RunNameOneof parent = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            TransferRunName parent = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]");
             // Make the request
             PagedEnumerable<ListTransferLogsResponse, TransferMessage> response =
                 dataTransferServiceClient.ListTransferLogs(parent);
@@ -1173,7 +1200,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferLogsRequest request = new ListTransferLogsRequest
             {
-                ParentAsRunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                ParentAsTransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> response =
@@ -1220,7 +1247,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferLogsRequest request = new ListTransferLogsRequest
             {
-                ParentAsRunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                ParentAsTransferRunName = new TransferRunName("[PROJECT]", "[LOCATION]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             PagedEnumerable<ListTransferLogsResponse, TransferMessage> response =
@@ -1261,12 +1288,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for CheckValidCredsAsync</summary>
         public async Task CheckValidCredsAsync()
         {
-            // Snippet: CheckValidCredsAsync(DataSourceNameOneof,CallSettings)
-            // Additional: CheckValidCredsAsync(DataSourceNameOneof,CancellationToken)
+            // Snippet: CheckValidCredsAsync(DataSourceName,CallSettings)
+            // Additional: CheckValidCredsAsync(DataSourceName,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
             // Make the request
             CheckValidCredsResponse response = await dataTransferServiceClient.CheckValidCredsAsync(name);
             // End snippet
@@ -1275,11 +1302,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for CheckValidCreds</summary>
         public void CheckValidCreds()
         {
-            // Snippet: CheckValidCreds(DataSourceNameOneof,CallSettings)
+            // Snippet: CheckValidCreds(DataSourceName,CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            DataSourceName name = new DataSourceName("[PROJECT]", "[DATA_SOURCE]");
             // Make the request
             CheckValidCredsResponse response = dataTransferServiceClient.CheckValidCreds(name);
             // End snippet
@@ -1295,7 +1322,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             CheckValidCredsRequest request = new CheckValidCredsRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             // Make the request
             CheckValidCredsResponse response = await dataTransferServiceClient.CheckValidCredsAsync(request);
@@ -1311,37 +1338,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             CheckValidCredsRequest request = new CheckValidCredsRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = new DataSourceName("[PROJECT]", "[DATA_SOURCE]"),
             };
             // Make the request
             CheckValidCredsResponse response = dataTransferServiceClient.CheckValidCreds(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for StartManualTransferRunsAsync</summary>
-        public async Task StartManualTransferRunsAsync_RequestObject()
-        {
-            // Snippet: StartManualTransferRunsAsync(StartManualTransferRunsRequest,CallSettings)
-            // Additional: StartManualTransferRunsAsync(StartManualTransferRunsRequest,CancellationToken)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
-            // Make the request
-            StartManualTransferRunsResponse response = await dataTransferServiceClient.StartManualTransferRunsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for StartManualTransferRuns</summary>
-        public void StartManualTransferRuns_RequestObject()
-        {
-            // Snippet: StartManualTransferRuns(StartManualTransferRunsRequest,CallSettings)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
-            // Initialize request argument(s)
-            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
-            // Make the request
-            StartManualTransferRunsResponse response = dataTransferServiceClient.StartManualTransferRuns(request);
             // End snippet
         }
 
