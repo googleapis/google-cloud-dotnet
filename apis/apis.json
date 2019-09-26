@@ -57,7 +57,7 @@
     "id": "Google.Cloud.BigQuery.DataTransfer.V1",
     "generator": "gapic",
     "protoPath": "google/cloud/bigquery/datatransfer/v1",
-    "serviceYaml": "datatransfer.yaml",
+    "serviceYaml": "bigquerydatatransfer_v1.yaml",
     "productName": "Google BigQuery Data Transfer",
     "productUrl": "https://cloud.google.com/bigquery/transfer/",
     "version": "1.0.0",
