@@ -848,8 +848,8 @@ namespace Google.Cloud.Logging.V2
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be exported with
-        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
+        /// However, those log entries can still be
+        /// [exported with LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -938,8 +938,8 @@ namespace Google.Cloud.Logging.V2
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be exported with
-        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
+        /// However, those log entries can still be
+        /// [exported with LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -1025,8 +1025,8 @@ namespace Google.Cloud.Logging.V2
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be exported with
-        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
+        /// However, those log entries can still be
+        /// [exported with LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -1115,8 +1115,8 @@ namespace Google.Cloud.Logging.V2
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be exported with
-        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
+        /// However, those log entries can still be
+        /// [exported with LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -1205,8 +1205,8 @@ namespace Google.Cloud.Logging.V2
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be exported with
-        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
+        /// However, those log entries can still be
+        /// [exported with LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -1292,8 +1292,8 @@ namespace Google.Cloud.Logging.V2
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be exported with
-        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
+        /// However, those log entries can still be
+        /// [exported with LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -1396,9 +1396,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1408,6 +1408,7 @@ namespace Google.Cloud.Logging.V2
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
+        ///
         ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1460,9 +1461,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1472,6 +1473,7 @@ namespace Google.Cloud.Logging.V2
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
+        ///
         ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1524,9 +1526,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1536,6 +1538,7 @@ namespace Google.Cloud.Logging.V2
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
+        ///
         ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1588,9 +1591,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1600,6 +1603,7 @@ namespace Google.Cloud.Logging.V2
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
+        ///
         ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1652,9 +1656,9 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1673,9 +1677,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2102,9 +2106,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2124,9 +2128,9 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from
-        /// Logging.  For ways to export log entries, see
-        /// [Exporting Logs](/logging/docs/export).
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
