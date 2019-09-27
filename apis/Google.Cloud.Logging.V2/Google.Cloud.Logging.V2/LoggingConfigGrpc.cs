@@ -3,7 +3,7 @@
 //     source: google/logging/v2/logging_config.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,8 +25,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Logging.V2 {
   /// <summary>
-  /// Service for configuring sinks used to export log entries out of
-  /// Logging.
+  /// Service for configuring sinks used to route log entries.
   /// </summary>
   public static partial class ConfigServiceV2
   {
@@ -151,9 +150,9 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Creates a sink that exports specified log entries to a destination.  The
+      /// Creates a sink that exports specified log entries to a destination. The
       /// export of newly-ingested log entries begins immediately, unless the sink's
-      /// `writer_identity` is not permitted to write to the destination.  A sink can
+      /// `writer_identity` is not permitted to write to the destination. A sink can
       /// export log entries only from the resource owning the sink.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -165,8 +164,9 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Updates a sink.  This method replaces the following fields in the existing
+      /// Updates a sink. This method replaces the following fields in the existing
       /// sink with values from the new sink: `destination`, and `filter`.
+      ///
       /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
@@ -361,9 +361,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSink, null, options, request);
       }
       /// <summary>
-      /// Creates a sink that exports specified log entries to a destination.  The
+      /// Creates a sink that exports specified log entries to a destination. The
       /// export of newly-ingested log entries begins immediately, unless the sink's
-      /// `writer_identity` is not permitted to write to the destination.  A sink can
+      /// `writer_identity` is not permitted to write to the destination. A sink can
       /// export log entries only from the resource owning the sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -376,9 +376,9 @@ namespace Google.Cloud.Logging.V2 {
         return CreateSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a sink that exports specified log entries to a destination.  The
+      /// Creates a sink that exports specified log entries to a destination. The
       /// export of newly-ingested log entries begins immediately, unless the sink's
-      /// `writer_identity` is not permitted to write to the destination.  A sink can
+      /// `writer_identity` is not permitted to write to the destination. A sink can
       /// export log entries only from the resource owning the sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -389,9 +389,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSink, null, options, request);
       }
       /// <summary>
-      /// Creates a sink that exports specified log entries to a destination.  The
+      /// Creates a sink that exports specified log entries to a destination. The
       /// export of newly-ingested log entries begins immediately, unless the sink's
-      /// `writer_identity` is not permitted to write to the destination.  A sink can
+      /// `writer_identity` is not permitted to write to the destination. A sink can
       /// export log entries only from the resource owning the sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -404,9 +404,9 @@ namespace Google.Cloud.Logging.V2 {
         return CreateSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a sink that exports specified log entries to a destination.  The
+      /// Creates a sink that exports specified log entries to a destination. The
       /// export of newly-ingested log entries begins immediately, unless the sink's
-      /// `writer_identity` is not permitted to write to the destination.  A sink can
+      /// `writer_identity` is not permitted to write to the destination. A sink can
       /// export log entries only from the resource owning the sink.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -417,8 +417,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSink, null, options, request);
       }
       /// <summary>
-      /// Updates a sink.  This method replaces the following fields in the existing
+      /// Updates a sink. This method replaces the following fields in the existing
       /// sink with values from the new sink: `destination`, and `filter`.
+      ///
       /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
@@ -432,8 +433,9 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a sink.  This method replaces the following fields in the existing
+      /// Updates a sink. This method replaces the following fields in the existing
       /// sink with values from the new sink: `destination`, and `filter`.
+      ///
       /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
@@ -445,8 +447,9 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSink, null, options, request);
       }
       /// <summary>
-      /// Updates a sink.  This method replaces the following fields in the existing
+      /// Updates a sink. This method replaces the following fields in the existing
       /// sink with values from the new sink: `destination`, and `filter`.
+      ///
       /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
@@ -460,8 +463,9 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a sink.  This method replaces the following fields in the existing
+      /// Updates a sink. This method replaces the following fields in the existing
       /// sink with values from the new sink: `destination`, and `filter`.
+      ///
       /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>

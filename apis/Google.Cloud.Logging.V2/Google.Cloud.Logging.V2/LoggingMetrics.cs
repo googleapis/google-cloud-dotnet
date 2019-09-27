@@ -25,54 +25,63 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX21ldHJpY3MucHJvdG8SEWdv",
-            "b2dsZS5sb2dnaW5nLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
-            "Gh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxoXZ29vZ2xlL2FwaS9t",
-            "ZXRyaWMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29v",
-            "Z2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8isQMKCUxvZ01ldHJpYxIMCgRuYW1lGAEgASgJ",
-            "EhMKC2Rlc2NyaXB0aW9uGAIgASgJEg4KBmZpbHRlchgDIAEoCRI3ChFtZXRy",
-            "aWNfZGVzY3JpcHRvchgFIAEoCzIcLmdvb2dsZS5hcGkuTWV0cmljRGVzY3Jp",
-            "cHRvchIXCg92YWx1ZV9leHRyYWN0b3IYBiABKAkSSwoQbGFiZWxfZXh0cmFj",
-            "dG9ycxgHIAMoCzIxLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5MYWJl",
-            "bEV4dHJhY3RvcnNFbnRyeRI+Cg5idWNrZXRfb3B0aW9ucxgIIAEoCzImLmdv",
-            "b2dsZS5hcGkuRGlzdHJpYnV0aW9uLkJ1Y2tldE9wdGlvbnMSPAoHdmVyc2lv",
-            "bhgEIAEoDjInLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5BcGlWZXJz",
-            "aW9uQgIYARo2ChRMYWJlbEV4dHJhY3RvcnNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIhwKCkFwaVZlcnNpb24SBgoCVjIQABIGCgJW",
-            "MRABIk4KFUxpc3RMb2dNZXRyaWNzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
-            "EgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlz",
-            "dExvZ01ldHJpY3NSZXNwb25zZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xl",
-            "LmxvZ2dpbmcudjIuTG9nTWV0cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSIqChNHZXRMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJ",
-            "IlYKFkNyZWF0ZUxvZ01ldHJpY1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEiwK",
-            "Bm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyJb",
-            "ChZVcGRhdGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJ",
-            "EiwKBm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJp",
-            "YyItChZEZWxldGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEg",
-            "ASgJMtQFChBNZXRyaWNzU2VydmljZVYyEo4BCg5MaXN0TG9nTWV0cmljcxIo",
-            "Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVxdWVzdBopLmdv",
-            "b2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVzcG9uc2UiJ4LT5JMC",
-            "IRIfL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vbWV0cmljcxKEAQoMR2V0TG9n",
-            "TWV0cmljEiYuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0TG9nTWV0cmljUmVxdWVz",
-            "dBocLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyIugtPkkwIoEiYvdjIv",
-            "e21ldHJpY19uYW1lPXByb2plY3RzLyovbWV0cmljcy8qfRKLAQoPQ3JlYXRl",
-            "TG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dpbmcudjIuQ3JlYXRlTG9nTWV0cmlj",
-            "UmVxdWVzdBocLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyIvgtPkkwIp",
-            "Ih8vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9tZXRyaWNzOgZtZXRyaWMSkgEK",
-            "D1VwZGF0ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZUxv",
-            "Z01ldHJpY1JlcXVlc3QaHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRyaWMi",
-            "NoLT5JMCMBomL3YyL3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3Mv",
-            "Kn06Bm1ldHJpYxKEAQoPRGVsZXRlTG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuRGVsZXRlTG9nTWV0cmljUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIugtPkkwIoKiYvdjIve21ldHJpY19uYW1lPXByb2plY3RzLyov",
-            "bWV0cmljcy8qfUKfAQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQhNMb2dnaW5n",
-            "TWV0cmljc1Byb3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvbG9nZ2luZy92Mjtsb2dnaW5n+AEBqgIXR29vZ2xlLkNsb3Vk",
-            "LkxvZ2dpbmcuVjLKAhdHb29nbGVcQ2xvdWRcTG9nZ2luZ1xWMmIGcHJvdG8z"));
+            "b2dsZS5sb2dnaW5nLnYyGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90",
+            "bxoXZ29vZ2xlL2FwaS9tZXRyaWMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9l",
+            "bXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvIpME",
+            "CglMb2dNZXRyaWMSDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEo",
+            "CRIOCgZmaWx0ZXIYAyABKAkSNwoRbWV0cmljX2Rlc2NyaXB0b3IYBSABKAsy",
+            "HC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3ISFwoPdmFsdWVfZXh0cmFj",
+            "dG9yGAYgASgJEksKEGxhYmVsX2V4dHJhY3RvcnMYByADKAsyMS5nb29nbGUu",
+            "bG9nZ2luZy52Mi5Mb2dNZXRyaWMuTGFiZWxFeHRyYWN0b3JzRW50cnkSPgoO",
+            "YnVja2V0X29wdGlvbnMYCCABKAsyJi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlv",
+            "bi5CdWNrZXRPcHRpb25zEi8KC2NyZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgKIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPAoHdmVyc2lvbhgEIAEoDjInLmdv",
+            "b2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5BcGlWZXJzaW9uQgIYARo2ChRM",
+            "YWJlbEV4dHJhY3RvcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIhwKCkFwaVZlcnNpb24SBgoCVjIQABIGCgJWMRABIk4KFUxpc3RM",
+            "b2dNZXRyaWNzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFnZV90b2tl",
+            "bhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlzdExvZ01ldHJpY3NS",
+            "ZXNwb25zZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xlLmxvZ2dpbmcudjIu",
+            "TG9nTWV0cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIqChNHZXRMb2dN",
+            "ZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJIlYKFkNyZWF0ZUxv",
+            "Z01ldHJpY1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEiwKBm1ldHJpYxgCIAEo",
+            "CzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyJbChZVcGRhdGVMb2dN",
+            "ZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJEiwKBm1ldHJpYxgC",
+            "IAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyItChZEZWxldGVM",
+            "b2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJMuQHChBNZXRy",
+            "aWNzU2VydmljZVYyEo4BCg5MaXN0TG9nTWV0cmljcxIoLmdvb2dsZS5sb2dn",
+            "aW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5n",
+            "LnYyLkxpc3RMb2dNZXRyaWNzUmVzcG9uc2UiJ4LT5JMCIRIfL3YyL3twYXJl",
+            "bnQ9cHJvamVjdHMvKn0vbWV0cmljcxKEAQoMR2V0TG9nTWV0cmljEiYuZ29v",
+            "Z2xlLmxvZ2dpbmcudjIuR2V0TG9nTWV0cmljUmVxdWVzdBocLmdvb2dsZS5s",
+            "b2dnaW5nLnYyLkxvZ01ldHJpYyIugtPkkwIoEiYvdjIve21ldHJpY19uYW1l",
+            "PXByb2plY3RzLyovbWV0cmljcy8qfRKLAQoPQ3JlYXRlTG9nTWV0cmljEiku",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuQ3JlYXRlTG9nTWV0cmljUmVxdWVzdBocLmdv",
+            "b2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyIvgtPkkwIpIh8vdjIve3BhcmVu",
+            "dD1wcm9qZWN0cy8qfS9tZXRyaWNzOgZtZXRyaWMSkgEKD1VwZGF0ZUxvZ01l",
+            "dHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZUxvZ01ldHJpY1JlcXVl",
+            "c3QaHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRyaWMiNoLT5JMCMBomL3Yy",
+            "L3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn06Bm1ldHJpYxKE",
+            "AQoPRGVsZXRlTG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRl",
+            "TG9nTWV0cmljUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIugtPk",
+            "kwIoKiYvdjIve21ldHJpY19uYW1lPXByb2plY3RzLyovbWV0cmljcy8qfRqN",
+            "AspBFmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb23SQfABaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seSxo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2xvZ2dpbmcuYWRtaW4s",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLnJlYWQs",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLndyaXRl",
+            "Qp8BChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJCE0xvZ2dpbmdNZXRyaWNzUHJv",
+            "dG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9s",
+            "b2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5W",
+            "MsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogMetric), global::Google.Cloud.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "MetricDescriptor", "ValueExtractor", "LabelExtractors", "BucketOptions", "Version" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogMetric), global::Google.Cloud.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "MetricDescriptor", "ValueExtractor", "LabelExtractors", "BucketOptions", "CreateTime", "UpdateTime", "Version" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) }, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsRequest), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsResponse), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetLogMetricRequest), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null),
@@ -86,8 +95,8 @@ namespace Google.Cloud.Logging.V2 {
   }
   #region Messages
   /// <summary>
-  /// Describes a logs-based metric.  The value of the metric is the
-  /// number of log entries that match a logs filter in a given time interval.
+  /// Describes a logs-based metric. The value of the metric is the number of log
+  /// entries that match a logs filter in a given time interval.
   ///
   /// Logs-based metric can also be used to extract values from logs and create a
   /// a distribution of the values. The distribution records the statistics of the
@@ -126,6 +135,8 @@ namespace Google.Cloud.Logging.V2 {
       valueExtractor_ = other.valueExtractor_;
       labelExtractors_ = other.labelExtractors_.Clone();
       bucketOptions_ = other.bucketOptions_ != null ? other.bucketOptions_.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -142,18 +153,16 @@ namespace Google.Cloud.Logging.V2 {
     /// Required. The client-assigned metric identifier.
     /// Examples: `"error_count"`, `"nginx/requests"`.
     ///
-    /// Metric identifiers are limited to 100 characters and can include
-    /// only the following characters: `A-Z`, `a-z`, `0-9`, and the
-    /// special characters `_-.,+!*',()%/`.  The forward-slash character
-    /// (`/`) denotes a hierarchy of name pieces, and it cannot be the
-    /// first character of the name.
+    /// Metric identifiers are limited to 100 characters and can include only the
+    /// following characters: `A-Z`, `a-z`, `0-9`, and the special characters
+    /// `_-.,+!*',()%/`. The forward-slash character (`/`) denotes a hierarchy of
+    /// name pieces, and it cannot be the first character of the name.
     ///
     /// The metric identifier in this field must not be
     /// [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding).
-    /// However, when the metric identifier appears as the `[METRIC_ID]`
-    /// part of a `metric_name` API parameter, then the metric identifier
-    /// must be URL-encoded. Example:
-    /// `"projects/my-project/metrics/nginx%2Frequests"`.
+    /// However, when the metric identifier appears as the `[METRIC_ID]` part of a
+    /// `metric_name` API parameter, then the metric identifier must be
+    /// URL-encoded. Example: `"projects/my-project/metrics/nginx%2Frequests"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -168,6 +177,7 @@ namespace Google.Cloud.Logging.V2 {
     private string description_ = "";
     /// <summary>
     /// Optional. A description of this metric, which is used in documentation.
+    /// The maximum length of the description is 8000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -305,6 +315,38 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The creation timestamp of the metric.
+    ///
+    /// This field may not be present for older metrics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The last update timestamp of the metric.
+    ///
+    /// This field may not be present for older metrics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 4;
     private global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion version_ = 0;
@@ -341,6 +383,8 @@ namespace Google.Cloud.Logging.V2 {
       if (ValueExtractor != other.ValueExtractor) return false;
       if (!LabelExtractors.Equals(other.LabelExtractors)) return false;
       if (!object.Equals(BucketOptions, other.BucketOptions)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -355,6 +399,8 @@ namespace Google.Cloud.Logging.V2 {
       if (ValueExtractor.Length != 0) hash ^= ValueExtractor.GetHashCode();
       hash ^= LabelExtractors.GetHashCode();
       if (bucketOptions_ != null) hash ^= BucketOptions.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Version != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -398,6 +444,14 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(66);
         output.WriteMessage(BucketOptions);
       }
+      if (createTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -424,6 +478,12 @@ namespace Google.Cloud.Logging.V2 {
       size += labelExtractors_.CalculateSize(_map_labelExtractors_codec);
       if (bucketOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BucketOptions);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (Version != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Version);
@@ -463,6 +523,18 @@ namespace Google.Cloud.Logging.V2 {
           BucketOptions = new global::Google.Api.Distribution.Types.BucketOptions();
         }
         BucketOptions.MergeFrom(other.BucketOptions);
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.Version != 0) {
         Version = other.Version;
@@ -514,6 +586,20 @@ namespace Google.Cloud.Logging.V2 {
               BucketOptions = new global::Google.Api.Distribution.Types.BucketOptions();
             }
             input.ReadMessage(BucketOptions);
+            break;
+          }
+          case 74: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 82: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
             break;
           }
         }
@@ -603,8 +689,8 @@ namespace Google.Cloud.Logging.V2 {
     private string pageToken_ = "";
     /// <summary>
     /// Optional. If present, then retrieve the next batch of results from the
-    /// preceding call to this method.  `pageToken` must be the value of
-    /// `nextPageToken` from the previous response.  The values of other method
+    /// preceding call to this method. `pageToken` must be the value of
+    /// `nextPageToken` from the previous response. The values of other method
     /// parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -620,7 +706,7 @@ namespace Google.Cloud.Logging.V2 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of results to return from this request.
-    /// Non-positive values are ignored.  The presence of `nextPageToken` in the
+    /// Non-positive values are ignored. The presence of `nextPageToken` in the
     /// response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -803,7 +889,7 @@ namespace Google.Cloud.Logging.V2 {
     private string nextPageToken_ = "";
     /// <summary>
     /// If there might be more results than appear in this response, then
-    /// `nextPageToken` is included.  To get the next set of results, call this
+    /// `nextPageToken` is included. To get the next set of results, call this
     /// method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
