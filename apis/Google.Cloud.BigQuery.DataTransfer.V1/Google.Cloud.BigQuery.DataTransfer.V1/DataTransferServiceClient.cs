@@ -752,7 +752,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
@@ -775,7 +775,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -795,7 +795,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
@@ -818,7 +818,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
@@ -841,7 +841,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -861,7 +861,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
@@ -943,7 +943,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources should be returned.
+        /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}`
         /// </param>
         /// <param name="pageToken">
@@ -978,7 +978,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources should be returned.
+        /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}`
         /// </param>
         /// <param name="pageToken">
@@ -1013,7 +1013,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources should be returned.
+        /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}`
         /// </param>
         /// <param name="pageToken">
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// which can be used for UI rendering.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources should be returned.
+        /// Required. The BigQuery project id for which data sources should be returned.
         /// Must be in the form: `projects/{project_id}`
         /// </param>
         /// <param name="pageToken">
@@ -1122,13 +1122,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Creates a new data transfer configuration.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id where the transfer configuration should be created.
+        /// Required. The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1151,13 +1151,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Creates a new data transfer configuration.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id where the transfer configuration should be created.
+        /// Required. The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1177,13 +1177,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Creates a new data transfer configuration.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id where the transfer configuration should be created.
+        /// Required. The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1206,13 +1206,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Creates a new data transfer configuration.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id where the transfer configuration should be created.
+        /// Required. The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1235,13 +1235,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Creates a new data transfer configuration.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id where the transfer configuration should be created.
+        /// Required. The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1261,13 +1261,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Creates a new data transfer configuration.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id where the transfer configuration should be created.
+        /// Required. The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1347,10 +1347,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// All fields must be set, even if they are not updated.
         /// </summary>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="updateMask">
-        /// Required list of fields to be updated in this request.
+        /// Required. Required list of fields to be updated in this request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1374,10 +1374,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// All fields must be set, even if they are not updated.
         /// </summary>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="updateMask">
-        /// Required list of fields to be updated in this request.
+        /// Required. Required list of fields to be updated in this request.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1398,10 +1398,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// All fields must be set, even if they are not updated.
         /// </summary>
         /// <param name="transferConfig">
-        /// Data transfer configuration to create.
+        /// Required. Data transfer configuration to create.
         /// </param>
         /// <param name="updateMask">
-        /// Required list of fields to be updated in this request.
+        /// Required. Required list of fields to be updated in this request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1484,7 +1484,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// including any associated transfer runs and logs.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1507,7 +1507,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// including any associated transfer runs and logs.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1527,7 +1527,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// including any associated transfer runs and logs.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1547,7 +1547,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// including any associated transfer runs and logs.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1570,7 +1570,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// including any associated transfer runs and logs.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1590,7 +1590,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// including any associated transfer runs and logs.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1665,7 +1665,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about a data transfer config.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1687,7 +1687,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about a data transfer config.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1706,7 +1706,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about a data transfer config.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1728,7 +1728,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about a data transfer config.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1750,7 +1750,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about a data transfer config.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1769,7 +1769,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about a data transfer config.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1847,7 +1847,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about all data transfers in the project.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which data sources
         /// should be returned: `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1881,7 +1881,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about all data transfers in the project.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which data sources
         /// should be returned: `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1915,7 +1915,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about all data transfers in the project.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which data sources
         /// should be returned: `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1949,7 +1949,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about all data transfers in the project.
         /// </summary>
         /// <param name="parent">
-        /// The BigQuery project id for which data sources
+        /// Required. The BigQuery project id for which data sources
         /// should be returned: `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2025,15 +2025,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
-        /// Transfer configuration name in the form:
+        /// Required. Transfer configuration name in the form:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
-        /// Start time of the range of transfer runs. For example,
+        /// Required. Start time of the range of transfer runs. For example,
         /// `"2017-05-25T00:00:00+00:00"`.
         /// </param>
         /// <param name="endTime">
-        /// End time of the range of transfer runs. For example,
+        /// Required. End time of the range of transfer runs. For example,
         /// `"2017-05-30T00:00:00+00:00"`.
         /// </param>
         /// <param name="callSettings">
@@ -2063,15 +2063,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
-        /// Transfer configuration name in the form:
+        /// Required. Transfer configuration name in the form:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
-        /// Start time of the range of transfer runs. For example,
+        /// Required. Start time of the range of transfer runs. For example,
         /// `"2017-05-25T00:00:00+00:00"`.
         /// </param>
         /// <param name="endTime">
-        /// End time of the range of transfer runs. For example,
+        /// Required. End time of the range of transfer runs. For example,
         /// `"2017-05-30T00:00:00+00:00"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -2098,15 +2098,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
-        /// Transfer configuration name in the form:
+        /// Required. Transfer configuration name in the form:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
-        /// Start time of the range of transfer runs. For example,
+        /// Required. Start time of the range of transfer runs. For example,
         /// `"2017-05-25T00:00:00+00:00"`.
         /// </param>
         /// <param name="endTime">
-        /// End time of the range of transfer runs. For example,
+        /// Required. End time of the range of transfer runs. For example,
         /// `"2017-05-30T00:00:00+00:00"`.
         /// </param>
         /// <param name="callSettings">
@@ -2136,15 +2136,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
-        /// Transfer configuration name in the form:
+        /// Required. Transfer configuration name in the form:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
-        /// Start time of the range of transfer runs. For example,
+        /// Required. Start time of the range of transfer runs. For example,
         /// `"2017-05-25T00:00:00+00:00"`.
         /// </param>
         /// <param name="endTime">
-        /// End time of the range of transfer runs. For example,
+        /// Required. End time of the range of transfer runs. For example,
         /// `"2017-05-30T00:00:00+00:00"`.
         /// </param>
         /// <param name="callSettings">
@@ -2174,15 +2174,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
-        /// Transfer configuration name in the form:
+        /// Required. Transfer configuration name in the form:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
-        /// Start time of the range of transfer runs. For example,
+        /// Required. Start time of the range of transfer runs. For example,
         /// `"2017-05-25T00:00:00+00:00"`.
         /// </param>
         /// <param name="endTime">
-        /// End time of the range of transfer runs. For example,
+        /// Required. End time of the range of transfer runs. For example,
         /// `"2017-05-30T00:00:00+00:00"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -2209,15 +2209,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
-        /// Transfer configuration name in the form:
+        /// Required. Transfer configuration name in the form:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
-        /// Start time of the range of transfer runs. For example,
+        /// Required. Start time of the range of transfer runs. For example,
         /// `"2017-05-25T00:00:00+00:00"`.
         /// </param>
         /// <param name="endTime">
-        /// End time of the range of transfer runs. For example,
+        /// Required. End time of the range of transfer runs. For example,
         /// `"2017-05-30T00:00:00+00:00"`.
         /// </param>
         /// <param name="callSettings">
@@ -2311,7 +2311,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about the particular transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2333,7 +2333,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about the particular transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -2352,7 +2352,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about the particular transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2374,7 +2374,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about the particular transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2396,7 +2396,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about the particular transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -2415,7 +2415,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about the particular transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2493,7 +2493,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Deletes the specified transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2515,7 +2515,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Deletes the specified transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -2534,7 +2534,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Deletes the specified transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2553,7 +2553,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Deletes the specified transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2575,7 +2575,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Deletes the specified transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -2594,7 +2594,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Deletes the specified transfer run.
         /// </summary>
         /// <param name="name">
-        /// The field will contain name of the resource requested, for example:
+        /// Required. The field will contain name of the resource requested, for example:
         /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2666,7 +2666,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about running and completed jobs.
         /// </summary>
         /// <param name="parent">
-        /// Name of transfer configuration for which transfer runs should be retrieved.
+        /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
@@ -2701,7 +2701,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about running and completed jobs.
         /// </summary>
         /// <param name="parent">
-        /// Name of transfer configuration for which transfer runs should be retrieved.
+        /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
@@ -2736,7 +2736,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about running and completed jobs.
         /// </summary>
         /// <param name="parent">
-        /// Name of transfer configuration for which transfer runs should be retrieved.
+        /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
@@ -2771,7 +2771,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns information about running and completed jobs.
         /// </summary>
         /// <param name="parent">
-        /// Name of transfer configuration for which transfer runs should be retrieved.
+        /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
         /// `projects/{project_id}/transferConfigs/{config_id}`.
         /// </param>
@@ -2844,7 +2844,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns user facing log messages for the data transfer run.
         /// </summary>
         /// <param name="parent">
-        /// Transfer run name in the form:
+        /// Required. Transfer run name in the form:
         /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2878,7 +2878,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns user facing log messages for the data transfer run.
         /// </summary>
         /// <param name="parent">
-        /// Transfer run name in the form:
+        /// Required. Transfer run name in the form:
         /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2912,7 +2912,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns user facing log messages for the data transfer run.
         /// </summary>
         /// <param name="parent">
-        /// Transfer run name in the form:
+        /// Required. Transfer run name in the form:
         /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2946,7 +2946,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Returns user facing log messages for the data transfer run.
         /// </summary>
         /// <param name="parent">
-        /// Transfer run name in the form:
+        /// Required. Transfer run name in the form:
         /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -3023,7 +3023,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// create a transfer config.
         /// </summary>
         /// <param name="name">
-        /// The data source in the form:
+        /// Required. The data source in the form:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
@@ -3050,7 +3050,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// create a transfer config.
         /// </summary>
         /// <param name="name">
-        /// The data source in the form:
+        /// Required. The data source in the form:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -3074,7 +3074,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// create a transfer config.
         /// </summary>
         /// <param name="name">
-        /// The data source in the form:
+        /// Required. The data source in the form:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
@@ -3101,7 +3101,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// create a transfer config.
         /// </summary>
         /// <param name="name">
-        /// The data source in the form:
+        /// Required. The data source in the form:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
@@ -3128,7 +3128,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// create a transfer config.
         /// </summary>
         /// <param name="name">
-        /// The data source in the form:
+        /// Required. The data source in the form:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -3152,7 +3152,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// create a transfer config.
         /// </summary>
         /// <param name="name">
-        /// The data source in the form:
+        /// Required. The data source in the form:
         /// `projects/{project_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
