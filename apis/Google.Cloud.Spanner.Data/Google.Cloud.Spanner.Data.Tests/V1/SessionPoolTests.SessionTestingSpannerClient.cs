@@ -35,6 +35,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             public TimeSpan BeginTransactionDelay { get; set; } = TimeSpan.FromSeconds(1);
             public TimeSpan ExecuteSqlDelay { get; set; } = TimeSpan.FromSeconds(1);
             public TimeSpan DeleteSessionDelay { get; set; } = TimeSpan.FromSeconds(1);
+            public TimeSpan FailAllRpcsDelay { get; set; } = TimeSpan.Zero;
             // We do quite a bit of work in our continuations, so allow a bit longer than the default of 10ms.
             // Ditto allow a bit longer than normal for any test assertions to complete; this is particularly
             // relevant in tests that generate a lot of logs.
@@ -64,7 +65,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             public override async Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)
             {
-                CheckFailAllRpcs();
+                await CheckFailAllRpcs();
                 await Scheduler.Delay(BeginTransactionDelay);
                 int count = Interlocked.Increment(ref _transactionCounter);
                 return new Transaction
@@ -74,34 +75,45 @@ namespace Google.Cloud.Spanner.V1.Tests
                 };
             }
 
-            public override async Task<Session> CreateSessionAsync(CreateSessionRequest request, CallSettings callSettings = null)
+            public override async Task<BatchCreateSessionsResponse> BatchCreateSessionsAsync(BatchCreateSessionsRequest request, CallSettings callSettings = null)
             {
-                CheckFailAllRpcs();
+                await CheckFailAllRpcs();
                 await Scheduler.Delay(CreateSessionDelay);
-                int count = Interlocked.Increment(ref _sessionCounter);
                 var database = request.DatabaseAsDatabaseName;
-                return new Session { SessionName = new SessionName(database.ProjectId, database.InstanceId, database.DatabaseId, $"session-{count}") };
+                BatchCreateSessionsResponse response = new BatchCreateSessionsResponse();
+                int count;
+                for (int i = 0; i < request.SessionCount; i++)
+                {
+                    count = Interlocked.Increment(ref _sessionCounter);
+                    response.Session.Add(new Session { SessionName = new SessionName(database.ProjectId, database.InstanceId, database.DatabaseId, $"session-{count}") });
+                }
+
+                return response;
             }
 
             public override async Task DeleteSessionAsync(DeleteSessionRequest request, CallSettings callSettings = null)
             {
-                CheckFailAllRpcs();
+                await CheckFailAllRpcs();
                 await Scheduler.Delay(DeleteSessionDelay);
                 int count = Interlocked.Increment(ref _deletionCounter);
             }
 
             public override async Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings = null)
             {
-                CheckFailAllRpcs();
+                await CheckFailAllRpcs();
                 ExecuteSqlRequests.Enqueue(request.Clone());
                 await Scheduler.Delay(ExecuteSqlDelay);
                 return new ResultSet();
             }
 
-            private void CheckFailAllRpcs()
+            private async Task CheckFailAllRpcs()
             {
                 if (FailAllRpcs)
                 {
+                    if (!FailAllRpcsDelay.Equals(TimeSpan.Zero))
+                    {
+                        await Scheduler.Delay(FailAllRpcsDelay);
+                    }
                     throw new RpcException(new Status(StatusCode.Internal, "Bang"));
                 }
             }

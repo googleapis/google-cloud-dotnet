@@ -53,6 +53,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             private static TargetedSessionPool CreatePool(bool acquireSessionsImmediately)
             {
                 var client = new SessionTestingSpannerClient();
+                client.Scheduler.RealTimeTimeout = TimeSpan.FromSeconds(15);
                 // Fixed session pool options so we can hard-code values without worrying about the defaults changing
                 var options = new SessionPoolOptions
                 {
@@ -63,6 +64,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                      SessionRefreshJitter = RetrySettings.NoJitter,
                      MaximumActiveSessions = 100,
                      MaximumConcurrentSessionCreates = 20,
+                     CreateSessionMaximumBatchSize = 5,
                      MinimumPooledSessions = 10,
                      Timeout = TimeSpan.FromSeconds(60),
                      WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Block,
@@ -295,6 +297,223 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                     Assert.Equal(pool.Options.MaximumActiveSessions, pool.ActiveSessionCount);
                 });
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task AcquireAsync_BecomesUnhealthy()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                client.FailAllRpcs = true;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
+                    var stats = pool.GetStatisticsSnapshot();
+                    Assert.False(stats.Healthy);
+                    Assert.Equal(0, stats.ActiveSessionCount);
+                    Assert.Equal(0, stats.PendingAcquisitionCount);
+                    Assert.Equal(0, stats.ReadPoolCount);
+                    Assert.Equal(0, stats.ReadWritePoolCount);
+                });
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task AcquireAsync_BecomesUnhealthy_NotifiesWaitingCallers()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                var options = pool.Options;
+
+                // Give the pool time to create the minimum amount of sessions.
+                await client.Scheduler.RunAsync(TimeSpan.FromSeconds(15));
+
+                var stats = pool.GetStatisticsSnapshot();
+                Assert.True(stats.Healthy);
+                Assert.Equal(0, stats.ActiveSessionCount);
+                Assert.Equal(0, stats.PendingAcquisitionCount);
+                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.InFlightCreationCount);
+
+                client.FailAllRpcs = true;
+                client.FailAllRpcsDelay = TimeSpan.FromSeconds(1);
+
+                // The sessions previously created can be acquired inmediately.
+                // The extra ones should be pending waiting on create session tasks.
+                var acquisitionTasks = Enumerable
+                    .Range(0, 13)
+                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
+                    .ToList();
+                // Wait a little in real time to make sure that session creation tasks have started.
+                // Session creation is done in a (controlled) fire and forget way, that's why
+                // we need to wait a little in real time.
+                await Task.Delay(250);
+                stats = pool.GetStatisticsSnapshot();
+                Assert.True(stats.Healthy);
+                Assert.Equal(13, stats.ActiveSessionCount);
+                Assert.Equal(3, stats.PendingAcquisitionCount);
+                Assert.Equal(0, stats.ReadPoolCount);
+                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(13, stats.InFlightCreationCount);
+
+                // Make the create session tasks fail and notify the waiting callers.
+                await client.Scheduler.RunAsync(TimeSpan.FromSeconds(5));
+
+                int successfulAcquisitions = 0;
+                int failedAcquisitions = 0;
+                while(acquisitionTasks.Count > 0)
+                {
+                    var acquisitionTask = await Task.WhenAny(acquisitionTasks);
+                    acquisitionTasks.Remove(acquisitionTask);
+
+                    // It can either be one that got a previously created session
+                    // or one that failed.
+                    try
+                    {
+                        await acquisitionTask;
+                        successfulAcquisitions++;
+                    }
+                    catch
+                    {
+                        failedAcquisitions++;
+                    }
+                }
+                Assert.Equal(10, successfulAcquisitions);
+                Assert.Equal(3, failedAcquisitions);
+                stats = pool.GetStatisticsSnapshot();
+                Assert.False(stats.Healthy);
+                Assert.Equal(10, stats.ActiveSessionCount);
+                Assert.Equal(0, stats.PendingAcquisitionCount);
+                Assert.Equal(0, stats.ReadPoolCount);
+                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.InFlightCreationCount);
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task AcquireAsync_NursesBackToHealth()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                var options = pool.Options;
+
+                client.FailAllRpcs = true;
+                client.FailAllRpcsDelay = TimeSpan.FromSeconds(1);
+
+                // In total MinimumSizePool + 1 sessions will be created (or tried to in our case)
+                // in batches of CreateSessionMaximumBatchSize or less. The pool is still healthy
+                // but no sessions have been created so the pool will try to create as many as necessary
+                // to satisfy this caller and the MinimumSizePool.
+                var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+
+                // Give the pool time to go unhealthy
+                await client.Scheduler.RunAsync(TimeSpan.FromSeconds(5));
+
+                var exception = await Assert.ThrowsAsync<RpcException>(() => acquisitionTask);
+                var stats = pool.GetStatisticsSnapshot();
+                Assert.False(stats.Healthy);
+                Assert.Equal(0, stats.ActiveSessionCount);
+                Assert.Equal(0, stats.PendingAcquisitionCount);
+                Assert.Equal(0, stats.ReadPoolCount);
+                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.InFlightCreationCount);
+
+                client.FailAllRpcs = false;
+                client.FailAllRpcsDelay = TimeSpan.Zero;
+
+                // Acquire some sessions. This will start to try and nurse the pool back to health
+                var acquisitionTasks = Enumerable
+                    .Range(0, 3)
+                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
+                    .ToList();
+                // Wait a little in real time to make sure that nursing has started.
+                // Nursing is done in a (controlled) fire and forget way, that's why
+                // we need to wait a little in real time.
+                await Task.Delay(250);
+                stats = pool.GetStatisticsSnapshot();
+                Assert.False(stats.Healthy);
+                Assert.Equal(3, stats.ActiveSessionCount);
+                // This one is 0 because the pool is unhealthy. The callers are waiting for the
+                // pool to become healthy first.
+                Assert.Equal(0, stats.PendingAcquisitionCount);
+                Assert.Equal(0, stats.ReadPoolCount);
+                Assert.Equal(0, stats.ReadWritePoolCount);
+                // Nursing back to health attempts to create the last failed batch.
+                // That will be either a batch of maximum size or a smaller batch with the remainder
+                // whichever failed last.
+                Assert.True(stats.InFlightCreationCount == 5 || stats.InFlightCreationCount == 1);
+
+                // Run enough to have the pool become healthy and all the requested sessions acquired.
+                await client.Scheduler.RunAsync(TimeSpan.FromSeconds(15));
+
+                var pooledSessions = await Task.WhenAll(acquisitionTasks);
+                Assert.Equal(3, pooledSessions.Length);
+                stats = pool.GetStatisticsSnapshot();
+                Assert.True(stats.Healthy);
+                Assert.Equal(3, stats.ActiveSessionCount);
+                Assert.Equal(0, stats.PendingAcquisitionCount);
+                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.InFlightCreationCount);
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task AcquireAsync_NursesBackToHealth_OriginalCallerCancelled()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                var options = pool.Options;
+
+                client.FailAllRpcs = true;
+                client.FailAllRpcsDelay = TimeSpan.FromSeconds(1);
+
+                // In total MinimumSizePool + 1 sessions will be created (or tried to in our case)
+                // in batches of CreateSessionMaximumBatchSize or less.
+                var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+
+                // Give the pool time to go unhealthy.
+                await client.Scheduler.RunAsync(TimeSpan.FromSeconds(5));
+
+                var exception = await Assert.ThrowsAsync<RpcException>(() => acquisitionTask);
+                var stats = pool.GetStatisticsSnapshot();
+                Assert.False(stats.Healthy);
+                // Rest of stats for this same scenario are checked elsewhere.
+
+                client.FailAllRpcs = false;
+                client.FailAllRpcsDelay = TimeSpan.Zero;
+
+                // This caller will start the nursing, the rest will just wait for the nursing to be done.
+                var cancellationTokenSource = new CancellationTokenSource();
+                var nursingAcquisition = pool.AcquireSessionAsync(new TransactionOptions(), cancellationTokenSource.Token);
+                // Wait a little in real time to make sure that nursing has started.
+                // Nursing is done in a (controlled) fire and forget way, that's why
+                // we need to wait a little in real time.
+                await Task.Delay(250);
+
+                // Acquire some other sessions. These won't start a new nursing task, will just wait for
+                // the one already started to be done.
+                var acquisitionTasks = Enumerable
+                    .Range(0, 3)
+                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
+                    .ToList();
+
+                stats = pool.GetStatisticsSnapshot();
+                Assert.False(stats.Healthy);
+                Assert.Equal(4, stats.ActiveSessionCount);
+
+                // Cancel the original call, nursing should keep running.
+                cancellationTokenSource.Cancel();
+                var canceledException = await Assert.ThrowsAsync<TaskCanceledException>(() => nursingAcquisition);
+
+                // Run enough to have the pool become healthy and all the requested sessions acquiered.
+                await client.Scheduler.RunAsync(TimeSpan.FromSeconds(20));
+
+                var pooledSessions = await Task.WhenAll(acquisitionTasks);
+                Assert.Equal(3, pooledSessions.Length);
+                stats = pool.GetStatisticsSnapshot();
+                Assert.True(stats.Healthy);
+                Assert.Equal(3, stats.ActiveSessionCount);
+                Assert.Equal(0, stats.PendingAcquisitionCount);
+                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.InFlightCreationCount);
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
