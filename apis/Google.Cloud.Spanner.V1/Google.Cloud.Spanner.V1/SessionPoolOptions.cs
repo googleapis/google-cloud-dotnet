@@ -27,15 +27,16 @@ namespace Google.Cloud.Spanner.V1
     {
         // Note: if any of these defaults are changed, update the XML documentation comments on the properties accordingly.
         // Also adjust docs/configuration.md
-        private int _maximumActiveSessions = 100;
-        private int _minimumPooledSessions = 10;
+        private int _maximumActiveSessions = 400;
+        private int _minimumPooledSessions = 100;
         private TimeSpan _idleSessionRefreshDelay = TimeSpan.FromMinutes(15);
         private TimeSpan _poolEvictionDelay = TimeSpan.FromDays(7);
         private ResourcesExhaustedBehavior _waitOnResourcesExhausted = ResourcesExhaustedBehavior.Block;
         private double _writeSessionsFraction = 0.2;
         private TimeSpan _timeout = TimeSpan.FromSeconds(60);
         private TimeSpan _maintenanceLoopDelay = TimeSpan.FromSeconds(30);
-        private int _maximumConcurrentSessionCreates = 10;
+        private int _createSessionMaximumBatchSize = 5;
+        private int _maximumConcurrentSessionCreates = 50;
         private RetrySettings.IJitter _sessionRefreshJitter = new ProportionalRandomJitter(0.1);
         private RetrySettings.IJitter _sessionEvictionJitter = new ProportionalRandomJitter(0.1);
 
@@ -51,7 +52,7 @@ namespace Google.Cloud.Spanner.V1
         /// acquired but not yet released back to the pool.
         /// </summary>
         /// <remarks>
-        /// This property has a minimum value of 1, and a default value of 100.
+        /// This property has a minimum value of 1, and a default value of 400.
         /// </remarks>
         public int MaximumActiveSessions
         {
@@ -64,7 +65,7 @@ namespace Google.Cloud.Spanner.V1
         /// If the number of pooled sessions falls below this number, more sessions are added automatically.
         /// </summary>
         /// <remarks>
-        /// This property has a minimum value of 0, and a default value of 10.
+        /// This property has a minimum value of 0, and a default value of 100.
         /// </remarks>
         public int MinimumPooledSessions
         {
@@ -163,12 +164,31 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// The maximum number of session create operations allowed to occur simultaneously per session pool.
+        /// The maximum number of sessions that will be created in a batch.
+        /// Sessions created are associated to the gRPC channel they are created on, so
+        /// all sessions created in a batch are associated to the same gRPC channel.
+        /// Batch size should be limited so as not to overload a given channel.
+        /// If the sessions needing to be created at any given time are more than this value
+        /// then multiple batches of this size or less will be created.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This value must be positive. The default value is 5.
+        /// </para>
+        /// </remarks>
+        public int CreateSessionMaximumBatchSize
+        {
+            get => _createSessionMaximumBatchSize;
+            set => _createSessionMaximumBatchSize = GaxPreconditions.CheckArgumentRange(value, nameof(value), 1, int.MaxValue);
+        }
+
+        /// <summary>
+        /// The maximum number of sessions that will be created concurrently per session pool.
         /// Spanner has limits on the number of sessions that can be created concurrently without affecting performance.
         /// This value is not typically changed.
         /// </summary>
         /// <para>
-        /// This value must be positive. The default value is 10.
+        /// This value must be positive. The default value is 50.
         /// </para>
         public int MaximumConcurrentSessionCreates
         {
