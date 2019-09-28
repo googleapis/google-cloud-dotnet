@@ -238,6 +238,13 @@ namespace Google.Cloud.Spanner.Data
                 Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bind }
             },
 
+            // Batch creating sessions isn't bound to a channel, but binds the resulting sessions to that channel
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/BatchCreateSessions" },
+                Affinity = new AffinityConfig { AffinityKey = "session.name", Command = Command.Bind }
+            },
+
             // Most methods are bound by the session within the request
             new MethodConfig
             {
