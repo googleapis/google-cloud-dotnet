@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.V1.Tests
     [FileLoggerBeforeAfterTest]
     public partial class SessionPoolTests
     {
-        private const int TestTimeoutMilliseconds = 15000;
+        private const int TestTimeoutMilliseconds = 20000;
 
         private static readonly DatabaseName s_sampleDatabaseName = new DatabaseName("project", "instance", "database");
         private static readonly DatabaseName s_sampleDatabaseName2 = new DatabaseName("project", "instance", "database2");
