@@ -26,7 +26,7 @@ appropriately.
 
 **MaximumActiveSessions**
 
-Default value: 100
+Default value: 400
 
 The maximum number of sessions that can be active per database. An
 active session is one that has been acquired but not yet released
@@ -39,7 +39,7 @@ levels of concurrency.
 
 **MinimumPooledSessions**
 
-Default value: 10
+Default value: 100
 
 The minimum number of sessions to maintain in the pool of available
 sessions, on a per-database basis. If the number of pooled sessions
@@ -142,15 +142,27 @@ server, including retries. This setting is applied to calls to
 create, refresh and delete sessions, as well as beginning
 transactions.
 
-Applications rarely need to change this setting
+Applications rarely need to change this setting.
+
+**CreateSessionMaximumBatchSize**
+
+Default value: 5
+
+Sessions created are associated to the gRPC channel they are created on, so
+all sessions created in a batch are associated to the same gRPC channel.
+Batch size should be limited so as not to overload a given channel.
+If the sessions needing to be created at any given time are more than this value
+then multiple batches of this size or less will be created.
+
+Applications rarely need to change this setting.
 
 **MaximumConcurrentSessionCreates**
 
-Default value: 10
+Default value: 50
 
 Spanner has limits on the number of sessions that can be created
 concurrently without affecting performance. The session pool uses
-this setting to throttle the number of concurrent session creation
+this setting to throttle the number of concurrent sessions batch creation
 operations, across all databases.
 
 Applications rarely need to change this setting.
