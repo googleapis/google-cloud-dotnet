@@ -36,7 +36,9 @@ namespace Google.Cloud.Spanner.V1
             // Read-only state
             private readonly object _lock = new object();
             private readonly DatabaseName _databaseName;
-            private readonly CreateSessionRequest _createSessionRequest;
+            // Clone before use, this will hold the amount of sessions to create in each batch
+            // so it can't be shared amongst requests.
+            private readonly BatchCreateSessionsRequest _batchCreateSessionRequestTemplate;
 
             // Mutable state, which should be accessed within the lock
 
@@ -48,14 +50,21 @@ namespace Google.Cloud.Spanner.V1
             // Tasks waiting for the pool to reach its minimum size or become unhealthy.
             private readonly LinkedList<TaskCompletionSource<int>> _minimumSizeWaiters = new LinkedList<TaskCompletionSource<int>>();
 
+            // The size of the last unhealthy batch.
+            // If 0, the pool is healthy.
             // Assume the pool is healthy to start with.
-            private int _healthy = 1;
-            private bool Healthy => Interlocked.CompareExchange(ref _healthy, 0, 0) == 1;
+            private int _lastUnhealthyBatchSize;
+            private bool Healthy => Interlocked.CompareExchange(ref _lastUnhealthyBatchSize, 0, 0) == 0;
+            private int LastUnhealthyBatchSize => Interlocked.CompareExchange(ref _lastUnhealthyBatchSize, -1, -1);
 
             // The task (completion source) associated with shutting down the session pool, if any.
             // Note that this task has no cancellation token associated with it, even if the original call did.
             private TaskCompletionSource<int> _shutdownTask = null;
             private bool Shutdown => Interlocked.CompareExchange(ref _shutdownTask, null, null) != null;
+
+            // The task (completion source) associated with nursing the pool back to health, if any.
+            // The pool can only be being nursed back to health by at most one task at any given moment.
+            private TaskCompletionSource<int> _nurseBackToHealthTask = null;
 
             /// <summary>
             /// The difference between "acquire" and "release" calls, including pending "acquire" calls. Not guarded by the lock,
@@ -94,17 +103,18 @@ namespace Google.Cloud.Spanner.V1
             internal TargetedSessionPool(SessionPool parent, DatabaseName databaseName, bool acquireSessionsImmediately) : base(parent)
             {
                 _databaseName = GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-                _createSessionRequest = new CreateSessionRequest
+                _batchCreateSessionRequestTemplate = new BatchCreateSessionsRequest
                 {
                     DatabaseAsDatabaseName = databaseName,
-                    Session = new Session
+                    SessionTemplate = new Session
                     {
                         Labels = { parent.Options.SessionLabels }
                     }
                 };
+
                 if (acquireSessionsImmediately)
                 {
-                    StartAcquisitionTasksIfNecessary();
+                    StartSessionCreationTasksIfNecessary();
                 }
             }
 
@@ -150,7 +160,7 @@ namespace Google.Cloud.Spanner.V1
                 // We've either fetched a task from the pool, or registered that a caller is waiting for one.
                 // We may want to start creation tasks, either to replenish the pool or (if there were no pool entries)
                 // to make sure that there's something creating a session for us.
-                StartAcquisitionTasksIfNecessary();
+                StartSessionCreationTasksIfNecessary();
 
                 var session = await sessionAcquisitionTask.ConfigureAwait(false);
 
@@ -241,11 +251,27 @@ namespace Google.Cloud.Spanner.V1
                     }
                     else
                     {
-                        // Otherwise, drop out of the lock to create a session from scratch "inline" (still asynchronously, but not via an in-flight request).
+                        // Otherwise, drop out of the lock to create sessions from scratch "inline" (still asynchronously, but not via an in-flight request).
+                        // This means basically to try and nurse the pool back to health.
                     }
                 }
                 // Effectively the "else" block above, but outside the lock
-                return CreatePooledSessionAsync(cancellationToken);
+                return NurseAndRetryAsync();
+
+                // Just to hide the "await" here so we don't have to make this method (GetSessionAcquisitionTask) async.
+                // Because we cannot await inside the lock, the only way to make GetSessionAcquisitionTask
+                // async is to have it return Task<Task<PooledSession>> which is weird.
+                async Task<PooledSession> NurseAndRetryAsync()
+                {
+                    await GetNursePoolBackToHealthTask(cancellationToken).ConfigureAwait(false);
+
+                    // If we reached this point the nursing task succeeded and the pool is healthy.
+                    var acquisitionTask = GetSessionAcquisitionTask(transactionMode, cancellationToken);
+                    // Although the pool is back to being healthy, it might be depleted, since for making it healthy
+                    // we only created the last failed batch worth of sessions. Let's try and make it ready again.
+                    StartSessionCreationTasksIfNecessary();
+                    return await acquisitionTask.ConfigureAwait(false);
+                }
             }
 
             private void EvictSession(PooledSession session)
@@ -439,7 +465,7 @@ namespace Google.Cloud.Spanner.V1
                     return;
                 }
                 EvictAndRefreshSessions();
-                StartAcquisitionTasksIfNecessary();
+                StartSessionCreationTasksIfNecessary();
                 Parent._logger.Debug(() => $"After maintenance: {GetStatisticsSnapshot()}");
             }
 
@@ -511,67 +537,59 @@ namespace Google.Cloud.Spanner.V1
             /// if an active request calls this at exactly the same time as the maintenance task, but that's not too
             /// bad.
             /// </summary>
-            private void StartAcquisitionTasksIfNecessary()
+            private void StartSessionCreationTasksIfNecessary()
             {
                 if (!Healthy || Shutdown)
                 {
                     return;
                 }
-
-                // Take snapshots of all values to be consistent.
-                int minPoolSize;
-                int maxActiveSessions;
-                int poolSize;
-                int pendingAcquisitionCount;
-                int inFlightRequests;
-                int liveOrRequestedSessionCount;
+                // TODO: Refactor code so that _liveOrRequestedSessionCount and _inFlightSessionCreationCount are
+                // updated inside the lock without having all the calls to async methods.
                 lock (_lock)
                 {
-                    poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
-                    inFlightRequests = InFlightSessionCreationCount;
-                    pendingAcquisitionCount = _pendingAcquisitions.Count;
-                    minPoolSize = Options.MinimumPooledSessions;
-                    maxActiveSessions = Options.MaximumActiveSessions;
-                    liveOrRequestedSessionCount = Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
+                    int poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
+                    int liveOrRequestedSessionCount = Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
+
+                    // Determine how many more sessions to create.
+                    // We want to make sure that if all existing and new requests for session creation succeed:
+                    // - All queuing callers will have a session
+                    // - The pool will have at least as many entries as the options specify
+                    // However, we don't want to end up with more than the maximum number of active sessions
+                    // in the options.
+
+                    // In reality, the current pool size should be 0 if pendingAcquisitionCount is non-zero, and
+                    // vice versa. However, we don't strictly enforce this, and the maths works out more simply if
+                    // we don't worry about it.
+
+                    // How many more sessions do we need to create in order to get the pool to the minimum size, after satisfying
+                    // pending callers, assuming that all the in-flight session requests succeed, and there are no more requests?
+                    int newSessionsToSatisfyPool = (_pendingAcquisitions.Count + Options.MinimumPooledSessions) - (poolSize + InFlightSessionCreationCount);
+                    // How many more sessions *can* we create without going over the maximum number of active sessions?
+                    int maxPossibleNewSessions = Options.MaximumActiveSessions - liveOrRequestedSessionCount;
+
+                    int remainingNewSessions = Math.Min(newSessionsToSatisfyPool, maxPossibleNewSessions);
+                    while (remainingNewSessions > 0)
+                    {
+                        int batchSize = Math.Min(remainingNewSessions, Options.CreateSessionMaximumBatchSize);
+                        Parent.ConsumeBackgroundTask(PrepareNewSessionsAsync(batchSize), "session creation");
+                        remainingNewSessions -= batchSize;
+                    }
                 }
 
-                // Determine how many more requests to start.
-                // We want to make sure that if all existing and new requests succeed:
-                // - All queuing callers will have a session
-                // - The pool will have at least as many entries the options specify
-                // However, we don't want to end up with more than the maximum number of active sessions
-                // in the options.
-
-                // In reality, the current pool size should be 0 if pendingAcquisitionCount is non-zero, and
-                // vice versa. However, we don't strictly enforce this, and the maths works out more simply if
-                // we don't worry about it.
-
-                // How many more requests do we need to make in order to get the pool to the minimum size, after satisfying
-                // pending callers, assuming that all the in-flight requests succeed, and there are no more requests?
-                int newRequestsToSatisfyPool = (pendingAcquisitionCount + minPoolSize) - (poolSize + inFlightRequests);
-                // How many more requests *can* we make without going over the maximum number of active sessions?
-                int maxAvailableRequests = maxActiveSessions - liveOrRequestedSessionCount;
-
-                int actualNewRequests = Math.Min(newRequestsToSatisfyPool, maxAvailableRequests);
-
-                for (int i = 0; i < actualNewRequests; i++)
-                {
-                    Parent.ConsumeBackgroundTask(PrepareNewSessionAsync(), "session creation");
-                }
-
-                async Task PrepareNewSessionAsync()
+                async Task PrepareNewSessionsAsync(int batchSize)
                 {
                     try
                     {
-                        var session = await CreatePooledSessionAsync(CancellationToken.None).ConfigureAwait(false);
-                        ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
+                        var sessions = await CreatePooledSessionsAsync(batchSize, CancellationToken.None).ConfigureAwait(false);
+                        foreach (var session in sessions)
+                        {
+                            ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
+                        }
                     }
                     // Note: we expect this to always actually be an RpcException, but we don't want to end up unhealthy
-                    // with a lot of 
+                    // with a lot of waiting callers.
                     catch (Exception e)
                     {
-                        Parent._logger.Warn(() => $"Failed to create session for {_databaseName}", e);
-
                         // CreatePooledSessionAsync will have caused the session pool to become unhealthy already, so we shouldn't get
                         // any new waiting callers at this point. 
                         // Propagate this exception to all waiting callers.
@@ -591,29 +609,121 @@ namespace Google.Cloud.Spanner.V1
                         minimumSizeWaiters.ForEach(tcs => tcs.TrySetException(e));
                     }
                 }
+            } 
+
+            private Task GetNursePoolBackToHealthTask(CancellationToken cancellationToken)
+            {
+                if (Healthy || Shutdown)
+                {
+                    return Task.FromResult(1);
+                }
+                // If already being nursed back to health, wait for that to be done.
+                var newTcs = new TaskCompletionSource<int>();
+                var previousTcs = Interlocked.CompareExchange(ref _nurseBackToHealthTask, newTcs, null);
+                if (previousTcs != null)
+                {
+                    return WithCancellationToken(previousTcs, cancellationToken);
+                }
+
+                // We want to try and nurse the pool back to health even if the (first) caller cancels the call.
+                // That is if the caller cancels the call, we want to stop waiting for the nursing but we actually
+                // want the nursing to continue.
+                Parent.ConsumeBackgroundTask(Task.Run(async () =>
+                {
+                    try
+                    {
+                        // Not using the cancellation token here so this can go on even if the caller cancels the call.
+                        var sessions = await CreatePooledSessionsAsync(LastUnhealthyBatchSize, CancellationToken.None).ConfigureAwait(false);
+                        foreach (var session in sessions)
+                        {
+                            ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
+                        }
+
+                        // We have succesfully nursed the pool back to health.
+                        newTcs.TrySetResult(1);
+                    }
+                    // Note: we expect this to always actually be an RpcException, but we don't want to end up unhealthy
+                    // with a lot of waiting callers.
+                    catch (Exception e)
+                    {
+                        // We couldn't nurse the pool back to health.
+                        // Notify all callers waiting for the pool to be healthy again.
+                        // This includes the caller that initiated the nursing, that one is also waiting on
+                        // newTcs and not on this task, we are executing this task as a fire and forget task.
+                        newTcs.TrySetException(e);
+
+                        // In contrast with StartSessionCreationTasksIfNecessary.PrepareNewSessionsAsync here
+                        // we don't need to notify callers waiting for new sessions to become available that the
+                        // pool is now unhealthy, this method is only called when the pool is already unhealthy
+                        // so callers waiting for sessions had already been notified by 
+                        // StartSessionCreationTasksIfNecessary.PrepareNewSessionsAsync, which is the method that
+                        // first "discovers" that the pool has become unhealthy.
+                    }
+                    finally
+                    {
+                        // Whatever happened we are done nursing the pool back to health.
+                        Interlocked.CompareExchange(ref _nurseBackToHealthTask, null, newTcs);
+                    }
+                }), "nurse pool back to health" );
+
+                // Use the cancellation token now, if the caller cancels, the task they are waiting on will be canceled,
+                // but not the nursing.
+                return WithCancellationToken(newTcs, cancellationToken);
+
+                Task WithCancellationToken(TaskCompletionSource<int> source, CancellationToken token)
+                {
+                    TaskCompletionSource<int> cancellable = new TaskCompletionSource<int>();
+                    token.Register(() => cancellable.TrySetCanceled());
+                    Parent.ConsumeBackgroundTask(Task.Run(async () => 
+                    {
+                        try
+                        {
+                            int dummyResult = await source.Task.ConfigureAwait(false);
+                            cancellable.TrySetResult(dummyResult);
+                        }
+                        catch (Exception e)
+                        {
+                            cancellable.TrySetException(e);
+                        }
+                    }), "don't propagate cancellation to underlying task");
+
+                    return cancellable.Task;
+                }
             }
 
-            private async Task<PooledSession> CreatePooledSessionAsync(CancellationToken cancellationToken)
+            private async Task<IList<PooledSession>> CreatePooledSessionsAsync(int batchSize, CancellationToken cancellationToken)
             {
                 bool success = false;
                 bool canceled = false;
-                Interlocked.Increment(ref _inFlightSessionCreationCount);
-                Interlocked.Increment(ref _liveOrRequestedSessionCount);
+                int actualCreatedSessions = 0;
+                Interlocked.Add(ref _inFlightSessionCreationCount, batchSize);
+                Interlocked.Add(ref _liveOrRequestedSessionCount, batchSize);
                 try
                 {
-                    var callSettings = Client.Settings.CreateSessionSettings
+                    var callSettings = Client.Settings.BatchCreateSessionsSettings
                         .WithExpiration(Expiration.FromTimeout(Options.Timeout))
                         .WithCancellationToken(cancellationToken);
-                    Session sessionProto;
+
+                    BatchCreateSessionsRequest batchCreateSessionRequest = _batchCreateSessionRequestTemplate.Clone();
+                    batchCreateSessionRequest.SessionCount = batchSize;
+
+                    BatchCreateSessionsResponse batchSessionCreateResponse;
+                    IList<PooledSession> pooledSessions = new List<PooledSession>(batchSize);
 
                     bool acquiredSemaphore = false;
                     try
                     {
-                        await Parent._sessionAcquisitionSemaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
+                        await Parent._batchSessionCreateSemaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
                         acquiredSemaphore = true;
-                        sessionProto = await Client.CreateSessionAsync(_createSessionRequest, callSettings).ConfigureAwait(false);
+                        batchSessionCreateResponse = await Client.BatchCreateSessionsAsync(batchCreateSessionRequest, callSettings).ConfigureAwait(false);
                         success = true;
-                        return PooledSession.FromSessionName(this, sessionProto.SessionName);
+                        actualCreatedSessions = batchSessionCreateResponse.Session.Count;
+
+                        foreach(var sessionProto in batchSessionCreateResponse.Session)
+                        {
+                            pooledSessions.Add(PooledSession.FromSessionName(this, sessionProto.SessionName));
+                        }
+                        return pooledSessions;
                     }
                     catch (OperationCanceledException)
                     {
@@ -624,29 +734,34 @@ namespace Google.Cloud.Spanner.V1
                     {
                         if (acquiredSemaphore)
                         {
-                            Parent._sessionAcquisitionSemaphore.Release();
+                            Parent._batchSessionCreateSemaphore.Release();
                         }
                     }
                 }
+                catch(Exception e)
+                {
+                    Parent._logger.Warn(() => $"Failed to batch create sessions for {_databaseName}", e);
+                    throw;
+                }
                 finally
                 {
-                    // Atomically set _healthy and determine whether we were previously healthy, but only if either we've succeeded,
+                    // Atomically set _lastUnhealthyBatchSize and determine whether we were previously healthy, but only if either we've succeeded,
                     // or we failed for a reason other than cancellation. We don't want to go unhealthy just because a caller cancelled
                     // a cancellation token before we had chance to create the session.
                     if (success || !canceled)
                     {
-                        bool wasHealthy = Interlocked.Exchange(ref _healthy, success ? 1 : 0) == 1;
+                        bool wasHealthy = Interlocked.Exchange(ref _lastUnhealthyBatchSize, success ? 0 : batchSize) == 0;
                         if (wasHealthy != success)
                         {
                             Parent._logger.Info(() => $"Session pool for {_databaseName} is now {(success ? "healthy" : "unhealthy")}.");
                         }
                     }
-                    // If this call failed, we can make another attempt.
-                    if (!success)
-                    {
-                        Interlocked.Decrement(ref _liveOrRequestedSessionCount);
-                    }
-                    Interlocked.Decrement(ref _inFlightSessionCreationCount);
+
+                    // We requested batchSize sessions to be created, but in reality actualCreatedSession were created, which are now live.
+                    // Note that actualCreatedSessions might be 0 either because the call failed or because no sessions were created.
+                    Interlocked.Add(ref _liveOrRequestedSessionCount, -batchSize + actualCreatedSessions);
+
+                    Interlocked.Add(ref _inFlightSessionCreationCount, -batchSize);
                 }
             }
 
@@ -749,6 +864,9 @@ namespace Google.Cloud.Spanner.V1
                         }
 
                         Parent._logger.Debug(() => $"Pending shutdown: {GetStatisticsSnapshot()}");
+
+                        var nursingTask = Interlocked.Exchange(ref _nurseBackToHealthTask, null);
+                        nursingTask?.TrySetCanceled();
 
                         var sessionsToDelete = new List<PooledSession>();
                         List<TaskCompletionSource<int>> minSizeWaitersToCancel;

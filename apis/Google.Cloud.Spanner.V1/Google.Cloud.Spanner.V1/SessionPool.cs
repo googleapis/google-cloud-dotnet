@@ -40,7 +40,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
 
-        private readonly SemaphoreSlim _sessionAcquisitionSemaphore;
+        private readonly SemaphoreSlim _batchSessionCreateSemaphore;
 
         /// <summary>
         /// The options governing this session pool.
@@ -68,7 +68,8 @@ namespace Google.Cloud.Spanner.V1
             Options = GaxPreconditions.CheckNotNull(options, nameof(options));
             _logger = client.Settings.Logger; // Just to avoid fetching it all the time
             _detachedSessionPool = new DetachedSessionPool(this);
-            _sessionAcquisitionSemaphore = new SemaphoreSlim(Options.MaximumConcurrentSessionCreates);
+            _batchSessionCreateSemaphore = new SemaphoreSlim( (int) Math.Ceiling(
+                Options.MaximumConcurrentSessionCreates / (double) Options.CreateSessionMaximumBatchSize));
             if (Options.MaintenanceLoopDelay != TimeSpan.Zero)
             {
                 Task.Run(() => PoolMaintenanceLoop(this));
