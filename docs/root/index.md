@@ -69,6 +69,7 @@ Beta:
 - [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
+- [Google.Cloud.Translate.V3](Google.Cloud.Translate.V3/index.html)
 - [Grafeas.V1](Grafeas.V1/index.html)
 
 Alpha:

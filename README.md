@@ -67,6 +67,8 @@ The following libraries are available at a [beta](#versioning) quality level:
   * This is an implementaiton of the [Grafeas](https://grafeas.io) API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Grafeas.V1) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
 The following libraries are available at an [alpha](#versioning) quality level:
+* [Google Cloud Translate](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translate.V3/) (beta)
+  * This uses the gRPC transport for access to the Translate V3 API, whereas Google.Cloud.Translation.V2 uses the HTTP/JSON transport for access to the Translate V2 API.
 
 * Google Cloud Metadata - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
 
