@@ -162,9 +162,10 @@ namespace Google.Cloud.Vision.V1.Snippets
             }
             // End snippet
 
-            Assert.Equal(2, result.Count);
-            var descriptions = result.Select(r => r.Description).OrderBy(d => d).ToList();
-            Assert.Equal(new[] { "Royal Botanic Gardens", "Sydney Opera House" }, descriptions);
+            Assert.InRange(result.Count, 2, 3);
+            var descriptions = result.Select(r => r.Description).ToList();
+            Assert.Contains("Royal Botanic Gardens", descriptions);
+            Assert.Contains("Sydney Opera House", descriptions);
         }
 
         // See-also: DetectLandmarks(*, *, *, *)
