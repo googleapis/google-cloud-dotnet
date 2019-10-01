@@ -10,6 +10,7 @@
     <PackageReference Include="CommandLineParser" Version="2.6.0" />
     <PackageReference Include="Mono.Cecil" Version="0.10.3" />
     <PackageReference Include="NuGet.Client" Version="4.2.0" />
+    <PackageReference Include="SharpCompress" Version="0.24.0" />
   </ItemGroup>
 
 </Project>

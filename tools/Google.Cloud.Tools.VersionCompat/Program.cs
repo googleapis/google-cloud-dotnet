@@ -16,11 +16,15 @@ using CommandLine;
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
 using Google.Cloud.Tools.VersionCompat.Detectors;
 using Mono.Cecil;
+using SharpCompress.Archives.Zip;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat
 {
@@ -66,24 +70,78 @@ namespace Google.Cloud.Tools.VersionCompat
             }
         }
 
-        static AssemblyDefinition Load(string name)
+        /// <summary>
+        /// Loads a package from NuGet and extracts an assembly definition.
+        /// </summary>
+        /// <param name="package">The name of the package to load. Must not be null.</param>
+        /// <param name="version">The version of the package to load. May be null, in which case the latest stable version is downloaded.</param>
+        /// <param name="tfm">The target framework to find within the package. May be null, in which case "netstandard2.0" is assumed.</param>
+        /// <param name="assemblyName">The name of the assembly to find within the package. May be null, in which case it's assumed to be the same as the package.</param>
+        /// <returns></returns>
+        public async static Task<AssemblyDefinition> LoadPackageAsync(string package, string version, string tfm, string assemblyName)
+        {
+            var client = new HttpClient();
+            // Handily, this automatically loads the latest stable release if version is null.
+            var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
+            var response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            var bytes = await response.Content.ReadAsByteArrayAsync();
+
+            string expectedPath = $"lib/{tfm}/{assemblyName}.dll";
+
+            using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
+            {
+                foreach (var entry in zip.Entries)
+                {
+                    if (entry.Key == expectedPath)
+                    {
+                        var path = entry.Key.Substring(4);
+                        string targetFramework = Path.GetDirectoryName(path);
+                        using (var stream = entry.OpenEntryStream())
+                        {
+                            // Mono.Cecil requires the stream to be seekable. It's simplest
+                            // just to copy the whole DLL to a MemoryStream and pass that to Cecil.
+                            var ms = new MemoryStream();
+                            stream.CopyTo(ms);
+                            ms.Position = 0;
+                            return AssemblyDefinition.ReadAssembly(ms);
+                        }
+                    }
+                }
+            }
+            throw new InvalidOperationException($"Unable to find entry '{expectedPath}' in package");
+        }
+
+        public static AssemblyDefinition LoadFile(string file)
+        {
+            var bytes = File.ReadAllBytes(file);
+            return AssemblyDefinition.ReadAssembly(new MemoryStream(bytes));
+        }
+
+        private static AssemblyDefinition Load(string name)
         {
             var parts = name.Split('|');
-            byte[] bytes;
             if (parts.Length == 1 || parts[0] == "file")
             {
-                bytes = File.ReadAllBytes(parts.Last());
+                return LoadFile(parts.Last());
             }
             else if (parts[0] == "nuget")
             {
-                // TODO: Read latest version from nuget.org
-                throw new NotImplementedException();
+                if (parts.Length < 2 || parts.Length > 4)
+                {
+                    throw new InvalidOperationException($"Invalid arg: '{name}'");
+                }
+                string package = parts[1];
+                string version = parts.Length > 2 ? parts[2] : null;
+                string tfm = parts.Length > 3 ? parts[3] : null;
+                // We assume that this method is only called in a console app, so we don't need to worry about deadlock.
+                // (Both Main and Load are private, so we shouldn't be called from other contexts.)
+                return LoadPackageAsync(package, version, tfm, package).Result;
             }
             else
             {
                 throw new InvalidOperationException($"Invalid arg: '{name}'");
             }
-            return AssemblyDefinition.ReadAssembly(new MemoryStream(bytes));
         }
 
         private enum ExitCodeBehavior
@@ -118,11 +176,10 @@ namespace Google.Cloud.Tools.VersionCompat
             public OutputBehavior OutputBehavior { get; private set; }
         }
 
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             // TODO: Move completely to flags-based, rather than ad-hoc command-line args.
             // TODO: Support framework-based and configuration-based dll specification.
-            // TODO: Support fetching from nuget.
 
             Options options = null;
             var parsed = Parser.Default.ParseArguments<Options>(args);
@@ -144,7 +201,7 @@ namespace Google.Cloud.Tools.VersionCompat
             if (args.Length != 2)
             {
                 Console.WriteLine("Must have two args after any flags, the old dll and the new dll.");
-                Console.WriteLine("  Each arg is of the form: \"nuget|<package>[|<version>]\" or \"[file|]<filename>\"");
+                Console.WriteLine("  Each arg is of the form: \"nuget|<package>[|<version>[|<tfm>]]\" or \"[file|]<filename>\"");
                 Console.WriteLine();
                 return 1;
             }
