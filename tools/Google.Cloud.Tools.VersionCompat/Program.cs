@@ -77,13 +77,15 @@ namespace Google.Cloud.Tools.VersionCompat
         /// <param name="version">The version of the package to load. May be null, in which case the latest stable version is downloaded.</param>
         /// <param name="tfm">The target framework to find within the package. May be null, in which case "netstandard2.0" is assumed.</param>
         /// <param name="assemblyName">The name of the assembly to find within the package. May be null, in which case it's assumed to be the same as the package.</param>
-        /// <returns></returns>
+        /// <returns>The assembly definition loaded from the given package.</returns>
         public async static Task<AssemblyDefinition> LoadPackageAsync(string package, string version, string tfm, string assemblyName)
         {
+            tfm = tfm ?? "netstandard2.0";
+            assemblyName = assemblyName ?? package;
             var client = new HttpClient();
             // Handily, this automatically loads the latest stable release if version is null.
             var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
-            var response = await client.GetAsync(url);
+            var response = await client.GetAsync(url).ConfigureAwait(false);
             response.EnsureSuccessStatusCode();
             var bytes = await response.Content.ReadAsByteArrayAsync();
 
@@ -102,7 +104,7 @@ namespace Google.Cloud.Tools.VersionCompat
                             // Mono.Cecil requires the stream to be seekable. It's simplest
                             // just to copy the whole DLL to a MemoryStream and pass that to Cecil.
                             var ms = new MemoryStream();
-                            stream.CopyTo(ms);
+                            await stream.CopyToAsync(ms).ConfigureAwait(false);
                             ms.Position = 0;
                             return AssemblyDefinition.ReadAssembly(ms);
                         }
