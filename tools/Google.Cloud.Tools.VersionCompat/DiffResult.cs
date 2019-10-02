@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,5 +25,20 @@ namespace Google.Cloud.Tools.VersionCompat
         public IEnumerable<Diff> Major => All.Where(x => x.Level == Level.Major);
         public IEnumerable<Diff> Minor => All.Where(x => x.Level == Level.Minor);
         public Level Level => Major.Any() ? Level.Major : Minor.Any() ? Level.Minor : Level.Identical;
+
+        public void PrintDifferences(Level level)
+        {
+            var diffs = All.Where(x => x.Level == level);
+            if (!diffs.Any())
+            {
+                return;
+            }
+            Console.WriteLine($"{level} changes:");
+            foreach (var diff in All.Where(x => x.Level == level))
+            {
+                Console.WriteLine(diff);
+            }
+            Console.WriteLine();
+        }
     }
 }

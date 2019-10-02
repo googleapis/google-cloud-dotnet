@@ -11,6 +11,7 @@ mkdir tmpgit/new
 
 # First build everything, so we can get straight to the good stuff at the end of the log.
 dotnet build tools/Google.Cloud.Tools.VersionCompat
+dotnet build tools/Google.Cloud.Tools.CheckVersionCompatibility
 
 for api in $apis
 do
@@ -59,3 +60,13 @@ do
   fi
   echo "---------------------"
 done  
+
+echo ""
+echo "============================================="
+echo "Checking compatibility with previous releases"
+echo "============================================="
+echo ""
+
+# Make sure all the tags are available for checking compatibility
+git fetch --tags -q
+dotnet run --no-build -p tools/Google.Cloud.Tools.CheckVersionCompatibility
