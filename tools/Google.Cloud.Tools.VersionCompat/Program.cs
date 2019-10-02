@@ -213,23 +213,13 @@ namespace Google.Cloud.Tools.VersionCompat
 
             var diffs = Check(assem0, assem1, null);
 
-            if ((options.OutputBehavior & OutputBehavior.Major) != 0 && diffs.Major.Any())
+            if ((options.OutputBehavior & OutputBehavior.Major) != 0)
             {
-                Console.WriteLine("Major changes:");
-                foreach (var diff in diffs.Major)
-                {
-                    Console.WriteLine(diff);
-                }
-                Console.WriteLine();
+                diffs.PrintDifferences(Level.Major);
             }
-            if ((options.OutputBehavior & OutputBehavior.Minor) != 0 && diffs.Minor.Any())
+            if ((options.OutputBehavior & OutputBehavior.Minor) != 0)
             {
-                Console.WriteLine("Minor changes:");
-                foreach (var diff in diffs.Minor)
-                {
-                    Console.WriteLine(diff);
-                }
-                Console.WriteLine();
+                diffs.PrintDifferences(Level.Minor);
             }
 
             int exitCode;

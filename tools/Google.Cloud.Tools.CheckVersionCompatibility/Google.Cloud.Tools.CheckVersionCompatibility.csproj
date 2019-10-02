@@ -2,18 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <IsPackable>false</IsPackable>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="LibGit2Sharp" Version="0.26.1" />
-    <PackageReference Include="Octokit" Version="0.32.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
+    <ProjectReference Include="..\Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj" />
   </ItemGroup>
 
 </Project>
