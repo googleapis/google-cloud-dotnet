@@ -19,16 +19,16 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.Detectors
 {
-    internal class Interface
+    internal class Struct
     {
         public static IEnumerable<Diff> Diffs(TypeDefinition o, TypeDefinition n)
         {
             var classAndInterface = new ClassStructInterface(o, n);
+            // TODO: Check (instance) constructors
             return Enumerable.Empty<Diff>()
                 .Concat(classAndInterface.ImplementedInterfaces())
-                .Concat(classAndInterface.GenericConstraints())
-                .Concat(classAndInterface.Methods(TypeType.Interface))
-                .Concat(classAndInterface.Properties(TypeType.Interface));
+                .Concat(classAndInterface.GenericConstraints());
+            // TODO: Methods, properties
         }
     }
 }

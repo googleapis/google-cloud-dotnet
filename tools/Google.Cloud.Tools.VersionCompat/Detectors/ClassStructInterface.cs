@@ -22,9 +22,9 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.Detectors
 {
-    internal class ClassAndInterface
+    internal class ClassStructInterface
     {
-        public ClassAndInterface(TypeDefinition o, TypeDefinition n) => (_o, _n) = (o, n);
+        public ClassStructInterface(TypeDefinition o, TypeDefinition n) => (_o, _n) = (o, n);
 
         // _o is the original definition; _n is the new definition.
         private readonly TypeDefinition _o;
@@ -60,6 +60,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 (Cause.MethodGenericConstraintChanged, Cause.MethodGenericVarianceChanged);
             foreach (var (o, n) in oGenericParameters.Zip(nGenericParameters))
             {
+                // TODO: Check `unmanaged` constaint.
                 if ((!o.HasReferenceTypeConstraint && n.HasReferenceTypeConstraint) ||
                     (!o.HasNotNullableValueTypeConstraint && n.HasNotNullableValueTypeConstraint) ||
                     (!o.HasDefaultConstructorConstraint && n.HasDefaultConstructorConstraint) ||
@@ -128,7 +129,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; method '{o.Show()}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
-                    if (typeType == TypeType.Class)
+                    if (typeType == TypeType.Class || typeType == TypeType.Struct)
                     {
                         // Method present and exported in both types.
                         if (o.IsStatic && !n.IsStatic)
@@ -182,7 +183,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     }
                     else if (inN && n.IsExported())
                     {
-                        var diff = typeType == TypeType.Class ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(Cause.MethodMadeExported, $"{prefix} made public.") :
                             diff(Cause.MethodAdded, $"{prefix} added.");
