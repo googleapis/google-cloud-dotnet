@@ -60,6 +60,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 (Cause.MethodGenericConstraintChanged, Cause.MethodGenericVarianceChanged);
             foreach (var (o, n) in oGenericParameters.Zip(nGenericParameters))
             {
+                // TODO: Check `unmanaged` constaint.
                 if ((!o.HasReferenceTypeConstraint && n.HasReferenceTypeConstraint) ||
                     (!o.HasNotNullableValueTypeConstraint && n.HasNotNullableValueTypeConstraint) ||
                     (!o.HasDefaultConstructorConstraint && n.HasDefaultConstructorConstraint) ||

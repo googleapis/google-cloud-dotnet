@@ -48,7 +48,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         switch (oType)
                         {
                             case TypeType.Class: typeDiffs = Class.Diffs(o, n); break;
-                            case TypeType.Struct: typeDiffs = Struct.Diffs(o, n);break;
+                            case TypeType.Struct: typeDiffs = Struct.Diffs(o, n); break;
                             case TypeType.Interface: typeDiffs = Interface.Diffs(o, n); break;
                             case TypeType.Enum: typeDiffs = Enum.Diffs(o, n); break;
                             case TypeType.Delegate:
