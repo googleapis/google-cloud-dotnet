@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         public static IEnumerable<Diff> Diffs(TypeDefinition o, TypeDefinition n)
         {
             var cls = new Class(o, n);
-            var classAndInterface = new ClassAndInterface(o, n);
+            var classAndInterface = new ClassStructInterface(o, n);
             // TODO: Check (instance) constructors
             return Enumerable.Empty<Diff>()
                 .Concat(cls.SealedAbstractStatic())
