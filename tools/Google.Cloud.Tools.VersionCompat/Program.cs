@@ -82,36 +82,38 @@ namespace Google.Cloud.Tools.VersionCompat
         {
             tfm = tfm ?? "netstandard2.0";
             assemblyName = assemblyName ?? package;
-            var client = new HttpClient();
-            // Handily, this automatically loads the latest stable release if version is null.
-            var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
-            var response = await client.GetAsync(url).ConfigureAwait(false);
-            response.EnsureSuccessStatusCode();
-            var bytes = await response.Content.ReadAsByteArrayAsync();
-
-            string expectedPath = $"lib/{tfm}/{assemblyName}.dll";
-
-            using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
+            using (var client = new HttpClient())
             {
-                foreach (var entry in zip.Entries)
+                // Handily, this automatically loads the latest stable release if version is null.
+                var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
+                var response = await client.GetAsync(url).ConfigureAwait(false);
+                response.EnsureSuccessStatusCode();
+                var bytes = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+
+                string expectedPath = $"lib/{tfm}/{assemblyName}.dll";
+
+                using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
                 {
-                    if (entry.Key == expectedPath)
+                    foreach (var entry in zip.Entries)
                     {
-                        var path = entry.Key.Substring(4);
-                        string targetFramework = Path.GetDirectoryName(path);
-                        using (var stream = entry.OpenEntryStream())
+                        if (entry.Key == expectedPath)
                         {
-                            // Mono.Cecil requires the stream to be seekable. It's simplest
-                            // just to copy the whole DLL to a MemoryStream and pass that to Cecil.
-                            var ms = new MemoryStream();
-                            await stream.CopyToAsync(ms).ConfigureAwait(false);
-                            ms.Position = 0;
-                            return AssemblyDefinition.ReadAssembly(ms);
+                            var path = entry.Key.Substring(4);
+                            string targetFramework = Path.GetDirectoryName(path);
+                            using (var stream = entry.OpenEntryStream())
+                            {
+                                // Mono.Cecil requires the stream to be seekable. It's simplest
+                                // just to copy the whole DLL to a MemoryStream and pass that to Cecil.
+                                var ms = new MemoryStream();
+                                await stream.CopyToAsync(ms).ConfigureAwait(false);
+                                ms.Position = 0;
+                                return AssemblyDefinition.ReadAssembly(ms);
+                            }
                         }
                     }
                 }
+                throw new InvalidOperationException($"Unable to find entry '{expectedPath}' in package");
             }
-            throw new InvalidOperationException($"Unable to find entry '{expectedPath}' in package");
         }
 
         public static AssemblyDefinition LoadFile(string file)
