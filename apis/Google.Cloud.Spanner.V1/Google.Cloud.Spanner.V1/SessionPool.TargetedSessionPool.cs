@@ -40,8 +40,8 @@ namespace Google.Cloud.Spanner.V1
 
             // Mutable state, which should be accessed within the lock
 
-            private readonly ConcurrentQueue<PooledSession> _readOnlySessions = new ConcurrentQueue<PooledSession>();
-            private readonly ConcurrentQueue<PooledSession> _readWriteSessions = new ConcurrentQueue<PooledSession>();
+            private readonly ConcurrentStack<PooledSession> _readOnlySessions = new ConcurrentStack<PooledSession>();
+            private readonly ConcurrentStack<PooledSession> _readWriteSessions = new ConcurrentStack<PooledSession>();
             private readonly ConcurrentQueue<TaskCompletionSource<PooledSession>> _pendingAcquisitions =
                 new ConcurrentQueue<TaskCompletionSource<PooledSession>>();
 
@@ -215,17 +215,17 @@ namespace Google.Cloud.Spanner.V1
                 // - Other options (a non-single-use read-only bound, or PDML): take a read-only session, but fetch a transaction with it before returning it.
                 // If there's no session of the appropriate type, take the other kind instead - at the cost of either wasting an existing read/write
                 // transaction, or having to acquire a read/write transaction.
-                ConcurrentQueue<PooledSession> preferredQueue = _readOnlySessions;
-                ConcurrentQueue<PooledSession> alternateQueue = _readWriteSessions;
+                ConcurrentStack<PooledSession> preferredStack = _readOnlySessions;
+                ConcurrentStack<PooledSession> alternateStack = _readWriteSessions;
                 if (transactionMode == ModeOneofCase.ReadWrite)
                 {
-                    preferredQueue = _readWriteSessions;
-                    alternateQueue = _readOnlySessions;
+                    preferredStack = _readWriteSessions;
+                    alternateStack = _readOnlySessions;
                 }
                 lock (_lock)
                 {
                     // First try the pool.
-                    if (preferredQueue.TryDequeue(out var session) || alternateQueue.TryDequeue(out session))
+                    if (preferredStack.TryPop(out var session) || alternateStack.TryPop(out session))
                     {
                         // Slight inefficiency wrapping this in a task, but it makes the implementation simpler.
                         return Task.FromResult(session);
@@ -257,7 +257,7 @@ namespace Google.Cloud.Spanner.V1
             /// <summary>
             /// Release a session back to the pool (or refresh) but don't change the number of active sessions.
             /// </summary>
-            /// <param name="session">The session to queue. Should be "active" (i.e. not disposed)</param>
+            /// <param name="session">The session to stack. Should be "active" (i.e. not disposed)</param>
             /// <param name="maybeCreateReadWriteTransaction">Whether to allow the session to go through a cycle of acquiring a read/write transaction.
             /// This is true unless we've just come from attempting to create a read/write transaction, in which case either we succeeded (no need
             /// to create a new one) or failed (in which case we should just keep it read-only).
@@ -284,7 +284,7 @@ namespace Google.Cloud.Spanner.V1
                 Action outsideLockAction = null;
 
                 // We need to atomically (within the lock) decide between:
-                // - Adding the session to a pool queue (adding performed within the lock)
+                // - Adding the session to a pool stack (adding performed within the lock)
                 // - Providing the session to a waiting caller (setting the result peformed outside the lock)
                 // - If it's currently not got a transaction but we need more read/write transactions, starting a transaction
                 // In the last case, we will come back to this code to make another decision later.
@@ -293,19 +293,19 @@ namespace Google.Cloud.Spanner.V1
                     TaskCompletionSource<PooledSession> pendingAquisition;
                     lock (_lock)
                     {
-                        // Only add a session to a queue if there are no pending acquisitions.
+                        // Only add a session to a stack if there are no pending acquisitions.
                         if (!_pendingAcquisitions.TryDequeue(out pendingAquisition))
                         {
                             // Options:
                             // - Decide to create a new read/write transaction (will get back here later)
-                            // - Enqueue the current session as read-only or read/write depending on its mode
-                            ConcurrentQueue<PooledSession> queue;
+                            // - Push the current session as read-only or read/write depending on its mode
+                            ConcurrentStack<PooledSession> stack;
 
                             // If the session already has a read/write transaction, add it to the read/write pool immediately.
                             // Otherwise, work out whether we *want* it to be read/write.
                             if (session.TransactionMode == ModeOneofCase.ReadWrite)
                             {
-                                queue = _readWriteSessions;
+                                stack = _readWriteSessions;
                             }
                             else
                             {
@@ -324,12 +324,12 @@ namespace Google.Cloud.Spanner.V1
                                 {
                                     // At this point we didn't already have a r/w transaction, and we don't want to
                                     // create one, so add it to the pool of read-only sessions.
-                                    queue = _readOnlySessions;
+                                    stack = _readOnlySessions;
                                 }
                             }
-                            // We definitely have a queue now, so add the session to it, and
+                            // We definitely have a stack now, so add the session to it, and
                             // potentially release tasks waiting for the pool to reach minimum size.
-                            queue.Enqueue(session);
+                            stack.Push(session);
 
                             int poolSize = _readOnlySessions.Count + _readWriteSessions.Count;
                             if (poolSize >= Options.MinimumPooledSessions && _minimumSizeWaiters.Count > 0)
@@ -449,8 +449,8 @@ namespace Google.Cloud.Spanner.V1
                 LinkedList<PooledSession> staleSessions = new LinkedList<PooledSession>();
                 lock (_lock)
                 {
-                    RemoveStaleOrExpiredItemsFromQueue(_readOnlySessions);
-                    RemoveStaleOrExpiredItemsFromQueue(_readWriteSessions);
+                    RemoveStaleOrExpiredItemsFromStack(_readOnlySessions);
+                    RemoveStaleOrExpiredItemsFromStack(_readWriteSessions);
                 }
 
                 foreach (var session in sessionsToEvict)
@@ -462,29 +462,44 @@ namespace Google.Cloud.Spanner.V1
                     Parent.ConsumeBackgroundTask(RefreshAsync(session), "session refresh");
                 }
 
-                void RemoveStaleOrExpiredItemsFromQueue(ConcurrentQueue<PooledSession> queue)
+                void RemoveStaleOrExpiredItemsFromStack(ConcurrentStack<PooledSession> stack)
                 {
-                    int count = queue.Count;
-                    for (int i = 0; i < count; i++)
+                    // TryPopRange will fail when receiving a zero sized array even if the stack is empty.
+                    // So we always create the array one element bigger than the stack size.
+                    PooledSession[] sessions = new PooledSession[stack.Count + 1];
+                    // Use the actual count of elements popped to check for evicted sessions.
+                    // It doesn't matter that the array might be bigger or smaller than the stack
+                    // current size. TryPopRange will try to pop as many elements as sessions.Length
+                    // but will return the actual number of elements popped.
+                    // Also, because right now this code is executed inside the lock, the stack won't
+                    // probably change from when we created the array to this point, but by using the 
+                    // actual number of elements popped we are making it more robust for any future changes.
+                    int count;
+                    if ((count = stack.TryPopRange(sessions)) > 0)
                     {
-                        // This shouldn't happen, as nothing else should touch the queue while we're in a
-                        // lock, but we don't want to throw an exception
-                        if (!queue.TryDequeue(out var session))
+                        // TryPopRange will store elements in the array in the same order
+                        // they would have been popped individually starting at index 0.
+                        // That is, the element at index 0 would have been the first to pop,
+                        // the element at index 1 would have popped after that, etc.
+                        // For sessions that are not stale, we want to maintain the same order
+                        // on the stack, so we need to check the popped sessions from last to first
+                        // before adding them back on to the stack.
+                        for (int i = count - 1; i >= 0; i--)
                         {
-                            break;
-                        }
-                        if (session.ShouldBeEvicted)
-                        {
-                            sessionsToEvict.AddLast(session);
-                        }
-                        else if (session.RequiresRefresh)
-                        {
-                            staleSessions.AddLast(session);
-                        }
-                        else
-                        {
-                            // The session is fine - put it back on the queue.
-                            queue.Enqueue(session);
+                            PooledSession session = sessions[i];
+                            if (session.ShouldBeEvicted)
+                            {
+                                sessionsToEvict.AddLast(session);
+                            }
+                            else if (session.RequiresRefresh)
+                            {
+                                staleSessions.AddLast(session);
+                            }
+                            else
+                            {
+                                // The session is fine - put it back on the stack.
+                                stack.Push(session);
+                            }
                         }
                     }
                 }
@@ -740,11 +755,11 @@ namespace Google.Cloud.Spanner.V1
                         List<TaskCompletionSource<PooledSession>> pendingAcquisitionsToCancel = new List<TaskCompletionSource<PooledSession>>();
                         lock (_lock)
                         {
-                            while (_readOnlySessions.TryDequeue(out var session))
+                            while (_readOnlySessions.TryPop(out var session))
                             {
                                 sessionsToDelete.Add(session);
                             }
-                            while (_readWriteSessions.TryDequeue(out var session))
+                            while (_readWriteSessions.TryPop(out var session))
                             {
                                 sessionsToDelete.Add(session);
                             }
