@@ -91,6 +91,58 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact(Timeout = TestTimeoutMilliseconds)]
+        public async Task ScheduledMaintenanceEvictsSessions_DifferentEvictionTimes()
+        {
+            var client = new SessionTestingSpannerClient();
+            var options = new SessionPoolOptions
+            {
+                // We'll never actually hit a refresh, as the eviction delay is shorter.
+                IdleSessionRefreshDelay = TimeSpan.FromMinutes(30),
+                PoolEvictionDelay = TimeSpan.FromMinutes(3),
+                MaintenanceLoopDelay = TimeSpan.FromMinutes(1),
+                SessionEvictionJitter = RetrySettings.NoJitter,
+                MinimumPooledSessions = 10,
+                MaximumConcurrentSessionCreates = 20,
+                WriteSessionsFraction = 0
+            };
+            var sessionPool = new SessionPool(client, options);
+            var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
+
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
+
+            // Our session should be ready, the pool should be up to size, and we should
+            // have created 11 sessions in total.
+            var session = await acquisitionTask;
+            var stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(11, client.SessionsCreated);
+            Assert.Equal(0, client.SessionsDeleted);
+
+            // Force the creation of a newer session by acquiring one.
+            // The new one will be created to satisfy the minimum size of the pool
+            // and will sit on top of the stack.
+            // First move the pool to T=2, so that the new session will be created in T=3
+            // so that its eviction time will be T=6 so as to make sure that it's not
+            // being evicted when we check at T=5.
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
+            acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
+            session = await acquisitionTask;
+            stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(12, client.SessionsCreated);
+            Assert.Equal(0, client.SessionsDeleted);
+
+            // If we allow the maintenance pool to run until T=5 minutes, we should have evicted
+            // all the old 9 sessions in the pool and replaced them with 9 new ones.
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(2));
+            stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(21, client.SessionsCreated);
+            Assert.Equal(9, client.SessionsDeleted);
+        }
+
+        [Fact(Timeout = TestTimeoutMilliseconds)]
         public async Task ShutdownPoolAsync()
         {
             var client = new SessionTestingSpannerClient();
