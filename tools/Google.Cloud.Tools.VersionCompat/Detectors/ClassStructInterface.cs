@@ -203,7 +203,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; property '{o.Show()}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
-                    if (typeType == TypeType.Class)
+                    if (typeType == TypeType.Class || typeType == TypeType.Struct)
                     {
                         // Property present and exported in both types.
                         if (o.IsStatic() && !n.IsStatic())
@@ -242,7 +242,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     }
                     else if (inN && n.IsExported())
                     {
-                        var diff = typeType == TypeType.Class ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(Cause.PropertyMadeExported, $"{prefix} made public.") :
                             diff(Cause.PropertyAdded, $"{prefix} added.");
