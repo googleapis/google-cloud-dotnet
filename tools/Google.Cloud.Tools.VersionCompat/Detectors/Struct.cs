@@ -23,12 +23,13 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
     {
         public static IEnumerable<Diff> Diffs(TypeDefinition o, TypeDefinition n)
         {
-            var classAndInterface = new ClassStructInterface(o, n);
+            var classStructInterface = new ClassStructInterface(o, n);
             // TODO: Check (instance) constructors
             return Enumerable.Empty<Diff>()
-                .Concat(classAndInterface.ImplementedInterfaces())
-                .Concat(classAndInterface.GenericConstraints());
-            // TODO: Methods, properties
+                .Concat(classStructInterface.ImplementedInterfaces())
+                .Concat(classStructInterface.GenericConstraints())
+                .Concat(classStructInterface.Methods(TypeType.Struct))
+                .Concat(classStructInterface.Properties(TypeType.Struct));
         }
     }
 }

@@ -26,15 +26,15 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         public static IEnumerable<Diff> Diffs(TypeDefinition o, TypeDefinition n)
         {
             var cls = new Class(o, n);
-            var classAndInterface = new ClassStructInterface(o, n);
+            var classStructInterface = new ClassStructInterface(o, n);
             // TODO: Check (instance) constructors
             return Enumerable.Empty<Diff>()
                 .Concat(cls.SealedAbstractStatic())
                 .Concat(cls.BaseType())
-                .Concat(classAndInterface.ImplementedInterfaces())
-                .Concat(classAndInterface.GenericConstraints())
-                .Concat(classAndInterface.Methods(TypeType.Class))
-                .Concat(classAndInterface.Properties(TypeType.Class));
+                .Concat(classStructInterface.ImplementedInterfaces())
+                .Concat(classStructInterface.GenericConstraints())
+                .Concat(classStructInterface.Methods(TypeType.Class))
+                .Concat(classStructInterface.Properties(TypeType.Class));
         }
 
         private Class(TypeDefinition o, TypeDefinition n) => (_o, _n) = (o, n);
