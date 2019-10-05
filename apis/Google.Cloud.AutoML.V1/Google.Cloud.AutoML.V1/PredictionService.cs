@@ -26,32 +26,33 @@ namespace Google.Cloud.AutoML.V1 {
           string.Concat(
             "Ci9nb29nbGUvY2xvdWQvYXV0b21sL3YxL3ByZWRpY3Rpb25fc2VydmljZS5w",
             "cm90bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRocZ29vZ2xlL2FwaS9hbm5v",
-            "dGF0aW9ucy5wcm90bxovZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9hbm5vdGF0",
-            "aW9uX3BheWxvYWQucHJvdG8aJ2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvZGF0",
-            "YV9pdGVtcy5wcm90bxofZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9pby5wcm90",
-            "bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aF2dvb2ds",
-            "ZS9hcGkvY2xpZW50LnByb3RvIsoBCg5QcmVkaWN0UmVxdWVzdBIMCgRuYW1l",
-            "GAEgASgJEjcKB3BheWxvYWQYAiABKAsyJi5nb29nbGUuY2xvdWQuYXV0b21s",
-            "LnYxLkV4YW1wbGVQYXlsb2FkEkIKBnBhcmFtcxgDIAMoCzIyLmdvb2dsZS5j",
-            "bG91ZC5hdXRvbWwudjEuUHJlZGljdFJlcXVlc3QuUGFyYW1zRW50cnkaLQoL",
-            "UGFyYW1zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLH",
-            "AQoPUHJlZGljdFJlc3BvbnNlEjoKB3BheWxvYWQYASADKAsyKS5nb29nbGUu",
-            "Y2xvdWQuYXV0b21sLnYxLkFubm90YXRpb25QYXlsb2FkEkcKCG1ldGFkYXRh",
-            "GAIgAygLMjUuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5QcmVkaWN0UmVzcG9u",
-            "c2UuTWV0YWRhdGFFbnRyeRovCg1NZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEy+gEKEVByZWRpY3Rpb25TZXJ2aWNlEpkB",
-            "CgdQcmVkaWN0EiYuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5QcmVkaWN0UmVx",
-            "dWVzdBonLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuUHJlZGljdFJlc3BvbnNl",
-            "Ij2C0+STAjciMi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21v",
-            "ZGVscy8qfTpwcmVkaWN0OgEqGknKQRVhdXRvbWwuZ29vZ2xlYXBpcy5jb23S",
-            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtQsIBChpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MUIWUHJlZGljdGlv",
-            "blNlcnZpY2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL2F1dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xv",
-            "dWQuQXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9NTFxWMeoCGUdvb2ds",
-            "ZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
+            "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aL2dvb2ds",
+            "ZS9jbG91ZC9hdXRvbWwvdjEvYW5ub3RhdGlvbl9wYXlsb2FkLnByb3RvGidn",
+            "b29nbGUvY2xvdWQvYXV0b21sL3YxL2RhdGFfaXRlbXMucHJvdG8aH2dvb2ds",
+            "ZS9jbG91ZC9hdXRvbWwvdjEvaW8ucHJvdG8aJ2dvb2dsZS9jbG91ZC9hdXRv",
+            "bWwvdjEvb3BlcmF0aW9ucy5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29w",
+            "ZXJhdGlvbnMucHJvdG8iygEKDlByZWRpY3RSZXF1ZXN0EgwKBG5hbWUYASAB",
+            "KAkSNwoHcGF5bG9hZBgCIAEoCzImLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEu",
+            "RXhhbXBsZVBheWxvYWQSQgoGcGFyYW1zGAMgAygLMjIuZ29vZ2xlLmNsb3Vk",
+            "LmF1dG9tbC52MS5QcmVkaWN0UmVxdWVzdC5QYXJhbXNFbnRyeRotCgtQYXJh",
+            "bXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIscBCg9Q",
+            "cmVkaWN0UmVzcG9uc2USOgoHcGF5bG9hZBgBIAMoCzIpLmdvb2dsZS5jbG91",
+            "ZC5hdXRvbWwudjEuQW5ub3RhdGlvblBheWxvYWQSRwoIbWV0YWRhdGEYAiAD",
+            "KAsyNS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlByZWRpY3RSZXNwb25zZS5N",
+            "ZXRhZGF0YUVudHJ5Gi8KDU1ldGFkYXRhRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ATL6AQoRUHJlZGljdGlvblNlcnZpY2USmQEKB1By",
+            "ZWRpY3QSJi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlByZWRpY3RSZXF1ZXN0",
+            "GicuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5QcmVkaWN0UmVzcG9uc2UiPYLT",
+            "5JMCNyIyL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxz",
+            "Lyp9OnByZWRpY3Q6ASoaScpBFWF1dG9tbC5nb29nbGVhcGlzLmNvbdJBLmh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
+            "wgEKGmNvbS5nb29nbGUuY2xvdWQuYXV0b21sLnYxQhZQcmVkaWN0aW9uU2Vy",
+            "dmljZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvYXV0b21sL3YxO2F1dG9tbKoCFkdvb2dsZS5DbG91ZC5B",
+            "dXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01MXFYx6gIZR29vZ2xlOjpD",
+            "bG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictRequest), global::Google.Cloud.AutoML.V1.PredictRequest.Parser, new[]{ "Name", "Payload", "Params" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictResponse), global::Google.Cloud.AutoML.V1.PredictResponse.Parser, new[]{ "Payload", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
@@ -62,7 +63,8 @@ namespace Google.Cloud.AutoML.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
+  /// Request message for
+  /// [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
   /// </summary>
   public sealed partial class PredictRequest : pb::IMessage<PredictRequest> {
     private static readonly pb::MessageParser<PredictRequest> _parser = new pb::MessageParser<PredictRequest>(() => new PredictRequest());
@@ -259,7 +261,8 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Response message for [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
+  /// Response message for
+  /// [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
   /// </summary>
   public sealed partial class PredictResponse : pb::IMessage<PredictResponse> {
     private static readonly pb::MessageParser<PredictResponse> _parser = new pb::MessageParser<PredictResponse>(() => new PredictResponse());
