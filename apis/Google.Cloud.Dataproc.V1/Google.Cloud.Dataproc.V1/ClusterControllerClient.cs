@@ -595,7 +595,9 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Creates a cluster in a project.
+        /// Creates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -627,7 +629,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a cluster in a project.
+        /// Creates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -656,7 +660,9 @@ namespace Google.Cloud.Dataproc.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a cluster in a project.
+        /// Creates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -688,7 +694,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a cluster in a project.
+        /// Creates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -720,7 +728,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a cluster in a project.
+        /// Creates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -760,7 +770,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Updates a cluster in a project.
+        /// Updates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project the
@@ -820,6 +832,10 @@ namespace Google.Cloud.Dataproc.V1
         ///  &lt;tr&gt;
         ///  &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.secondary_worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
         ///  &lt;td&gt;Resize secondary worker group&lt;/td&gt;
+        ///  &lt;/tr&gt;
+        ///  &lt;tr&gt;
+        ///  &lt;td&gt;config.autoscaling_config.policy_uri&lt;/td&gt;&lt;td&gt;Use, stop using, or
+        ///  change autoscaling policies&lt;/td&gt;
         ///  &lt;/tr&gt;
         ///  &lt;/tbody&gt;
         ///  &lt;/table&gt;
@@ -848,7 +864,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Updates a cluster in a project.
+        /// Updates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project the
@@ -908,6 +926,10 @@ namespace Google.Cloud.Dataproc.V1
         ///  &lt;tr&gt;
         ///  &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.secondary_worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
         ///  &lt;td&gt;Resize secondary worker group&lt;/td&gt;
+        ///  &lt;/tr&gt;
+        ///  &lt;tr&gt;
+        ///  &lt;td&gt;config.autoscaling_config.policy_uri&lt;/td&gt;&lt;td&gt;Use, stop using, or
+        ///  change autoscaling policies&lt;/td&gt;
         ///  &lt;/tr&gt;
         ///  &lt;/tbody&gt;
         ///  &lt;/table&gt;
@@ -933,7 +955,9 @@ namespace Google.Cloud.Dataproc.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a cluster in a project.
+        /// Updates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project the
@@ -993,6 +1017,10 @@ namespace Google.Cloud.Dataproc.V1
         ///  &lt;tr&gt;
         ///  &lt;td&gt;&lt;strong&gt;&lt;em&gt;config.secondary_worker_config.num_instances&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
         ///  &lt;td&gt;Resize secondary worker group&lt;/td&gt;
+        ///  &lt;/tr&gt;
+        ///  &lt;tr&gt;
+        ///  &lt;td&gt;config.autoscaling_config.policy_uri&lt;/td&gt;&lt;td&gt;Use, stop using, or
+        ///  change autoscaling policies&lt;/td&gt;
         ///  &lt;/tr&gt;
         ///  &lt;/tbody&gt;
         ///  &lt;/table&gt;
@@ -1021,7 +1049,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Updates a cluster in a project.
+        /// Updates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1053,7 +1083,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Updates a cluster in a project.
+        /// Updates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1093,7 +1125,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes a cluster in a project.
+        /// Deletes a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1125,7 +1159,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes a cluster in a project.
+        /// Deletes a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1154,7 +1190,9 @@ namespace Google.Cloud.Dataproc.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a cluster in a project.
+        /// Deletes a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1186,7 +1224,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes a cluster in a project.
+        /// Deletes a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1218,7 +1258,9 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes a cluster in a project.
+        /// Deletes a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1647,9 +1689,13 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Gets cluster diagnostic information.
-        /// After the operation completes, the Operation.response field
-        /// contains `DiagnoseClusterOutputLocation`.
+        /// Gets cluster diagnostic information. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+        /// After the operation completes,
+        /// [Operation.response][google.longrunning.Operation.response]
+        /// contains
+        /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1681,9 +1727,13 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Gets cluster diagnostic information.
-        /// After the operation completes, the Operation.response field
-        /// contains `DiagnoseClusterOutputLocation`.
+        /// Gets cluster diagnostic information. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+        /// After the operation completes,
+        /// [Operation.response][google.longrunning.Operation.response]
+        /// contains
+        /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1712,9 +1762,13 @@ namespace Google.Cloud.Dataproc.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets cluster diagnostic information.
-        /// After the operation completes, the Operation.response field
-        /// contains `DiagnoseClusterOutputLocation`.
+        /// Gets cluster diagnostic information. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+        /// After the operation completes,
+        /// [Operation.response][google.longrunning.Operation.response]
+        /// contains
+        /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1746,9 +1800,13 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Gets cluster diagnostic information.
-        /// After the operation completes, the Operation.response field
-        /// contains `DiagnoseClusterOutputLocation`.
+        /// Gets cluster diagnostic information. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+        /// After the operation completes,
+        /// [Operation.response][google.longrunning.Operation.response]
+        /// contains
+        /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1780,9 +1838,13 @@ namespace Google.Cloud.Dataproc.V1
                 callSettings);
 
         /// <summary>
-        /// Gets cluster diagnostic information.
-        /// After the operation completes, the Operation.response field
-        /// contains `DiagnoseClusterOutputLocation`.
+        /// Gets cluster diagnostic information. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+        /// After the operation completes,
+        /// [Operation.response][google.longrunning.Operation.response]
+        /// contains
+        /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1914,7 +1976,9 @@ namespace Google.Cloud.Dataproc.V1
         partial void Modify_DiagnoseClusterRequest(ref DiagnoseClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates a cluster in a project.
+        /// Creates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1935,7 +1999,9 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Creates a cluster in a project.
+        /// Creates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1961,7 +2027,9 @@ namespace Google.Cloud.Dataproc.V1
         public override lro::OperationsClient CreateClusterOperationsClient { get; }
 
         /// <summary>
-        /// Updates a cluster in a project.
+        /// Updates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1982,7 +2050,9 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Updates a cluster in a project.
+        /// Updates a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2008,7 +2078,9 @@ namespace Google.Cloud.Dataproc.V1
         public override lro::OperationsClient UpdateClusterOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a cluster in a project.
+        /// Deletes a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2029,7 +2101,9 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Deletes a cluster in a project.
+        /// Deletes a cluster in a project. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2135,9 +2209,13 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Gets cluster diagnostic information.
-        /// After the operation completes, the Operation.response field
-        /// contains `DiagnoseClusterOutputLocation`.
+        /// Gets cluster diagnostic information. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+        /// After the operation completes,
+        /// [Operation.response][google.longrunning.Operation.response]
+        /// contains
+        /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2158,9 +2236,13 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Gets cluster diagnostic information.
-        /// After the operation completes, the Operation.response field
-        /// contains `DiagnoseClusterOutputLocation`.
+        /// Gets cluster diagnostic information. The returned
+        /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+        /// After the operation completes,
+        /// [Operation.response][google.longrunning.Operation.response]
+        /// contains
+        /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
