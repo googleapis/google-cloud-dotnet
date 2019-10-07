@@ -26,137 +26,179 @@ namespace Google.Cloud.Dataproc.V1 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvZGF0YXByb2MvdjEvY2x1c3RlcnMucHJvdG8SGGdv",
             "b2dsZS5jbG91ZC5kYXRhcHJvYy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxopZ29vZ2xlL2Nsb3VkL2RhdGFwcm9jL3YxL29wZXJhdGlvbnMu",
-            "cHJvdG8aJWdvb2dsZS9jbG91ZC9kYXRhcHJvYy92MS9zaGFyZWQucHJvdG8a",
-            "I2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
-            "ZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IqUDCgdDbHVzdGVyEhIKCnByb2plY3RfaWQYASABKAkSFAoMY2x1c3Rlcl9u",
-            "YW1lGAIgASgJEjcKBmNvbmZpZxgDIAEoCzInLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cHJvYy52MS5DbHVzdGVyQ29uZmlnEj0KBmxhYmVscxgIIAMoCzItLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyLkxhYmVsc0VudHJ5EjcKBnN0",
-            "YXR1cxgEIAEoCzInLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVy",
-            "U3RhdHVzEj8KDnN0YXR1c19oaXN0b3J5GAcgAygLMicuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwcm9jLnYxLkNsdXN0ZXJTdGF0dXMSFAoMY2x1c3Rlcl91dWlkGAYg",
-            "ASgJEjkKB21ldHJpY3MYCSABKAsyKC5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
-            "djEuQ2x1c3Rlck1ldHJpY3MaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASKoBAoNQ2x1c3RlckNvbmZpZxIVCg1jb25m",
-            "aWdfYnVja2V0GAEgASgJEkYKEmdjZV9jbHVzdGVyX2NvbmZpZxgIIAEoCzIq",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5HY2VDbHVzdGVyQ29uZmlnEkQK",
+            "cy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkv",
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8aJWdvb2dsZS9jbG91ZC9kYXRhcHJvYy92",
+            "MS9zaGFyZWQucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
+            "LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2ds",
+            "ZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
+            "dGltZXN0YW1wLnByb3RvIrkDCgdDbHVzdGVyEhIKCnByb2plY3RfaWQYASAB",
+            "KAkSFAoMY2x1c3Rlcl9uYW1lGAIgASgJEjcKBmNvbmZpZxgDIAEoCzInLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyQ29uZmlnEkIKBmxhYmVs",
+            "cxgIIAMoCzItLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyLkxh",
+            "YmVsc0VudHJ5QgPgQQESPAoGc3RhdHVzGAQgASgLMicuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwcm9jLnYxLkNsdXN0ZXJTdGF0dXNCA+BBAxJECg5zdGF0dXNfaGlz",
+            "dG9yeRgHIAMoCzInLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVy",
+            "U3RhdHVzQgPgQQMSGQoMY2x1c3Rlcl91dWlkGAYgASgJQgPgQQMSOQoHbWV0",
+            "cmljcxgJIAEoCzIoLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVy",
+            "TWV0cmljcxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIuYFCg1DbHVzdGVyQ29uZmlnEhoKDWNvbmZpZ19idWNrZXQY",
+            "ASABKAlCA+BBARJLChJnY2VfY2x1c3Rlcl9jb25maWcYCCABKAsyKi5nb29n",
+            "bGUuY2xvdWQuZGF0YXByb2MudjEuR2NlQ2x1c3RlckNvbmZpZ0ID4EEBEkkK",
             "DW1hc3Rlcl9jb25maWcYCSABKAsyLS5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
-            "djEuSW5zdGFuY2VHcm91cENvbmZpZxJECg13b3JrZXJfY29uZmlnGAogASgL",
+            "djEuSW5zdGFuY2VHcm91cENvbmZpZ0ID4EEBEkkKDXdvcmtlcl9jb25maWcY",
+            "CiABKAsyLS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSW5zdGFuY2VHcm91",
+            "cENvbmZpZ0ID4EEBElMKF3NlY29uZGFyeV93b3JrZXJfY29uZmlnGAwgASgL",
             "Mi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkluc3RhbmNlR3JvdXBDb25m",
-            "aWcSTgoXc2Vjb25kYXJ5X3dvcmtlcl9jb25maWcYDCABKAsyLS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXByb2MudjEuSW5zdGFuY2VHcm91cENvbmZpZxJBCg9zb2Z0",
-            "d2FyZV9jb25maWcYDSABKAsyKC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "U29mdHdhcmVDb25maWcSUgoWaW5pdGlhbGl6YXRpb25fYWN0aW9ucxgLIAMo",
-            "CzIyLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ob2RlSW5pdGlhbGl6YXRp",
-            "b25BY3Rpb24SRQoRZW5jcnlwdGlvbl9jb25maWcYDyABKAsyKi5nb29nbGUu",
-            "Y2xvdWQuZGF0YXByb2MudjEuRW5jcnlwdGlvbkNvbmZpZyIvChBFbmNyeXB0",
-            "aW9uQ29uZmlnEhsKE2djZV9wZF9rbXNfa2V5X25hbWUYASABKAkirwIKEEdj",
-            "ZUNsdXN0ZXJDb25maWcSEAoIem9uZV91cmkYASABKAkSEwoLbmV0d29ya191",
-            "cmkYAiABKAkSFgoOc3VibmV0d29ya191cmkYBiABKAkSGAoQaW50ZXJuYWxf",
-            "aXBfb25seRgHIAEoCBIXCg9zZXJ2aWNlX2FjY291bnQYCCABKAkSHgoWc2Vy",
-            "dmljZV9hY2NvdW50X3Njb3BlcxgDIAMoCRIMCgR0YWdzGAQgAygJEkoKCG1l",
-            "dGFkYXRhGAUgAygLMjguZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdjZUNs",
-            "dXN0ZXJDb25maWcuTWV0YWRhdGFFbnRyeRovCg1NZXRhZGF0YUVudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi0wIKE0luc3RhbmNlR3Jv",
-            "dXBDb25maWcSFQoNbnVtX2luc3RhbmNlcxgBIAEoBRIWCg5pbnN0YW5jZV9u",
-            "YW1lcxgCIAMoCRIRCglpbWFnZV91cmkYAyABKAkSGAoQbWFjaGluZV90eXBl",
-            "X3VyaRgEIAEoCRI5CgtkaXNrX2NvbmZpZxgFIAEoCzIkLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5EaXNrQ29uZmlnEhYKDmlzX3ByZWVtcHRpYmxlGAYg",
-            "ASgIEkoKFG1hbmFnZWRfZ3JvdXBfY29uZmlnGAcgASgLMiwuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwcm9jLnYxLk1hbmFnZWRHcm91cENvbmZpZxJBCgxhY2NlbGVy",
-            "YXRvcnMYCCADKAsyKy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQWNjZWxl",
-            "cmF0b3JDb25maWciWQoSTWFuYWdlZEdyb3VwQ29uZmlnEh4KFmluc3RhbmNl",
-            "X3RlbXBsYXRlX25hbWUYASABKAkSIwobaW5zdGFuY2VfZ3JvdXBfbWFuYWdl",
-            "cl9uYW1lGAIgASgJIkwKEUFjY2VsZXJhdG9yQ29uZmlnEhwKFGFjY2VsZXJh",
-            "dG9yX3R5cGVfdXJpGAEgASgJEhkKEWFjY2VsZXJhdG9yX2NvdW50GAIgASgF",
-            "IlcKCkRpc2tDb25maWcSFgoOYm9vdF9kaXNrX3R5cGUYAyABKAkSGQoRYm9v",
-            "dF9kaXNrX3NpemVfZ2IYASABKAUSFgoObnVtX2xvY2FsX3NzZHMYAiABKAUi",
-            "aQoYTm9kZUluaXRpYWxpemF0aW9uQWN0aW9uEhcKD2V4ZWN1dGFibGVfZmls",
-            "ZRgBIAEoCRI0ChFleGVjdXRpb25fdGltZW91dBgCIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbiLtAgoNQ2x1c3RlclN0YXR1cxI8CgVzdGF0ZRgB",
-            "IAEoDjItLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyU3RhdHVz",
-            "LlN0YXRlEg4KBmRldGFpbBgCIAEoCRI0ChBzdGF0ZV9zdGFydF90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJCCghzdWJzdGF0ZRgE",
-            "IAEoDjIwLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyU3RhdHVz",
-            "LlN1YnN0YXRlIlYKBVN0YXRlEgsKB1VOS05PV04QABIMCghDUkVBVElORxAB",
-            "EgsKB1JVTk5JTkcQAhIJCgVFUlJPUhADEgwKCERFTEVUSU5HEAQSDAoIVVBE",
-            "QVRJTkcQBSI8CghTdWJzdGF0ZRIPCgtVTlNQRUNJRklFRBAAEg0KCVVOSEVB",
-            "TFRIWRABEhAKDFNUQUxFX1NUQVRVUxACIuoBCg5Tb2Z0d2FyZUNvbmZpZxIV",
-            "Cg1pbWFnZV92ZXJzaW9uGAEgASgJEkwKCnByb3BlcnRpZXMYAiADKAsyOC5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuU29mdHdhcmVDb25maWcuUHJvcGVy",
-            "dGllc0VudHJ5EkAKE29wdGlvbmFsX2NvbXBvbmVudHMYAyADKA4yIy5nb29n",
-            "bGUuY2xvdWQuZGF0YXByb2MudjEuQ29tcG9uZW50GjEKD1Byb3BlcnRpZXNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpoCCg5DbHVz",
-            "dGVyTWV0cmljcxJPCgxoZGZzX21ldHJpY3MYASADKAsyOS5nb29nbGUuY2xv",
-            "dWQuZGF0YXByb2MudjEuQ2x1c3Rlck1ldHJpY3MuSGRmc01ldHJpY3NFbnRy",
-            "eRJPCgx5YXJuX21ldHJpY3MYAiADKAsyOS5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuQ2x1c3Rlck1ldHJpY3MuWWFybk1ldHJpY3NFbnRyeRoyChBIZGZz",
-            "TWV0cmljc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEa",
-            "MgoQWWFybk1ldHJpY3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAM6AjgBIoIBChRDcmVhdGVDbHVzdGVyUmVxdWVzdBISCgpwcm9qZWN0X2lk",
-            "GAEgASgJEg4KBnJlZ2lvbhgDIAEoCRIyCgdjbHVzdGVyGAIgASgLMiEuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXISEgoKcmVxdWVzdF9pZBgE",
-            "IAEoCSKLAgoUVXBkYXRlQ2x1c3RlclJlcXVlc3QSEgoKcHJvamVjdF9pZBgB",
-            "IAEoCRIOCgZyZWdpb24YBSABKAkSFAoMY2x1c3Rlcl9uYW1lGAIgASgJEjIK",
-            "B2NsdXN0ZXIYAyABKAsyIS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1",
-            "c3RlchJACh1ncmFjZWZ1bF9kZWNvbW1pc3Npb25fdGltZW91dBgGIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIvCgt1cGRhdGVfbWFzaxgEIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSEgoKcmVxdWVzdF9pZBgH",
-            "IAEoCSJ6ChREZWxldGVDbHVzdGVyUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEg",
-            "ASgJEg4KBnJlZ2lvbhgDIAEoCRIUCgxjbHVzdGVyX25hbWUYAiABKAkSFAoM",
-            "Y2x1c3Rlcl91dWlkGAQgASgJEhIKCnJlcXVlc3RfaWQYBSABKAkiTQoRR2V0",
-            "Q2x1c3RlclJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIOCgZyZWdpb24Y",
-            "AyABKAkSFAoMY2x1c3Rlcl9uYW1lGAIgASgJInAKE0xpc3RDbHVzdGVyc1Jl",
-            "cXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIOCgZyZWdpb24YBCABKAkSDgoG",
-            "ZmlsdGVyGAUgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2Vu",
-            "GAMgASgJImQKFExpc3RDbHVzdGVyc1Jlc3BvbnNlEjMKCGNsdXN0ZXJzGAEg",
-            "AygLMiEuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXISFwoPbmV4",
-            "dF9wYWdlX3Rva2VuGAIgASgJIlIKFkRpYWdub3NlQ2x1c3RlclJlcXVlc3QS",
-            "EgoKcHJvamVjdF9pZBgBIAEoCRIOCgZyZWdpb24YAyABKAkSFAoMY2x1c3Rl",
-            "cl9uYW1lGAIgASgJIiwKFkRpYWdub3NlQ2x1c3RlclJlc3VsdHMSEgoKb3V0",
-            "cHV0X3VyaRgBIAEoCTKyCAoRQ2x1c3RlckNvbnRyb2xsZXISpAEKDUNyZWF0",
-            "ZUNsdXN0ZXISLi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ3JlYXRlQ2x1",
-            "c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIkSC",
-            "0+STAj4iMy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVn",
-            "aW9ufS9jbHVzdGVyczoHY2x1c3RlchKzAQoNVXBkYXRlQ2x1c3RlchIuLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcHJvYy52MS5VcGRhdGVDbHVzdGVyUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iU4LT5JMCTTJCL3YxL3By",
-            "b2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJz",
-            "L3tjbHVzdGVyX25hbWV9OgdjbHVzdGVyEqoBCg1EZWxldGVDbHVzdGVyEi4u",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRlbGV0ZUNsdXN0ZXJSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJKgtPkkwJEKkIvdjEv",
-            "cHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3Rl",
-            "cnMve2NsdXN0ZXJfbmFtZX0SqAEKCkdldENsdXN0ZXISKy5nb29nbGUuY2xv",
+            "aWdCA+BBARJGCg9zb2Z0d2FyZV9jb25maWcYDSABKAsyKC5nb29nbGUuY2xv",
+            "dWQuZGF0YXByb2MudjEuU29mdHdhcmVDb25maWdCA+BBARJXChZpbml0aWFs",
+            "aXphdGlvbl9hY3Rpb25zGAsgAygLMjIuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLk5vZGVJbml0aWFsaXphdGlvbkFjdGlvbkID4EEBEkoKEWVuY3J5cHRp",
+            "b25fY29uZmlnGA8gASgLMiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkVu",
+            "Y3J5cHRpb25Db25maWdCA+BBARJMChJhdXRvc2NhbGluZ19jb25maWcYEiAB",
+            "KAsyKy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3NjYWxpbmdDb25m",
+            "aWdCA+BBARJGCg9zZWN1cml0eV9jb25maWcYECABKAsyKC5nb29nbGUuY2xv",
+            "dWQuZGF0YXByb2MudjEuU2VjdXJpdHlDb25maWdCA+BBASIsChFBdXRvc2Nh",
+            "bGluZ0NvbmZpZxIXCgpwb2xpY3lfdXJpGAEgASgJQgPgQQEiNAoQRW5jcnlw",
+            "dGlvbkNvbmZpZxIgChNnY2VfcGRfa21zX2tleV9uYW1lGAEgASgJQgPgQQEi",
+            "zQIKEEdjZUNsdXN0ZXJDb25maWcSFQoIem9uZV91cmkYASABKAlCA+BBARIY",
+            "CgtuZXR3b3JrX3VyaRgCIAEoCUID4EEBEhsKDnN1Ym5ldHdvcmtfdXJpGAYg",
+            "ASgJQgPgQQESHQoQaW50ZXJuYWxfaXBfb25seRgHIAEoCEID4EEBEhwKD3Nl",
+            "cnZpY2VfYWNjb3VudBgIIAEoCUID4EEBEiMKFnNlcnZpY2VfYWNjb3VudF9z",
+            "Y29wZXMYAyADKAlCA+BBARIMCgR0YWdzGAQgAygJEkoKCG1ldGFkYXRhGAUg",
+            "AygLMjguZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdjZUNsdXN0ZXJDb25m",
+            "aWcuTWV0YWRhdGFFbnRyeRovCg1NZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEimgMKE0luc3RhbmNlR3JvdXBDb25maWcS",
+            "GgoNbnVtX2luc3RhbmNlcxgBIAEoBUID4EEBEhsKDmluc3RhbmNlX25hbWVz",
+            "GAIgAygJQgPgQQMSFgoJaW1hZ2VfdXJpGAMgASgJQgPgQQESHQoQbWFjaGlu",
+            "ZV90eXBlX3VyaRgEIAEoCUID4EEBEj4KC2Rpc2tfY29uZmlnGAUgASgLMiQu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRpc2tDb25maWdCA+BBARIbCg5p",
+            "c19wcmVlbXB0aWJsZRgGIAEoCEID4EEBEk8KFG1hbmFnZWRfZ3JvdXBfY29u",
+            "ZmlnGAcgASgLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLk1hbmFnZWRH",
+            "cm91cENvbmZpZ0ID4EEDEkYKDGFjY2VsZXJhdG9ycxgIIAMoCzIrLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcHJvYy52MS5BY2NlbGVyYXRvckNvbmZpZ0ID4EEBEh0K",
+            "EG1pbl9jcHVfcGxhdGZvcm0YCSABKAlCA+BBASJjChJNYW5hZ2VkR3JvdXBD",
+            "b25maWcSIwoWaW5zdGFuY2VfdGVtcGxhdGVfbmFtZRgBIAEoCUID4EEDEigK",
+            "G2luc3RhbmNlX2dyb3VwX21hbmFnZXJfbmFtZRgCIAEoCUID4EEDIkwKEUFj",
+            "Y2VsZXJhdG9yQ29uZmlnEhwKFGFjY2VsZXJhdG9yX3R5cGVfdXJpGAEgASgJ",
+            "EhkKEWFjY2VsZXJhdG9yX2NvdW50GAIgASgFImYKCkRpc2tDb25maWcSGwoO",
+            "Ym9vdF9kaXNrX3R5cGUYAyABKAlCA+BBARIeChFib290X2Rpc2tfc2l6ZV9n",
+            "YhgBIAEoBUID4EEBEhsKDm51bV9sb2NhbF9zc2RzGAIgASgFQgPgQQEicwoY",
+            "Tm9kZUluaXRpYWxpemF0aW9uQWN0aW9uEhwKD2V4ZWN1dGFibGVfZmlsZRgB",
+            "IAEoCUID4EECEjkKEWV4ZWN1dGlvbl90aW1lb3V0GAIgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uQgPgQQEihAMKDUNsdXN0ZXJTdGF0dXMSQQoF",
+            "c3RhdGUYASABKA4yLS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rl",
+            "clN0YXR1cy5TdGF0ZUID4EEDEhYKBmRldGFpbBgCIAEoCUIG4EED4EEBEjkK",
+            "EHN0YXRlX3N0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSRwoIc3Vic3RhdGUYBCABKA4yMC5nb29nbGUuY2xvdWQu",
+            "ZGF0YXByb2MudjEuQ2x1c3RlclN0YXR1cy5TdWJzdGF0ZUID4EEDIlYKBVN0",
+            "YXRlEgsKB1VOS05PV04QABIMCghDUkVBVElORxABEgsKB1JVTk5JTkcQAhIJ",
+            "CgVFUlJPUhADEgwKCERFTEVUSU5HEAQSDAoIVVBEQVRJTkcQBSI8CghTdWJz",
+            "dGF0ZRIPCgtVTlNQRUNJRklFRBAAEg0KCVVOSEVBTFRIWRABEhAKDFNUQUxF",
+            "X1NUQVRVUxACIlMKDlNlY3VyaXR5Q29uZmlnEkEKD2tlcmJlcm9zX2NvbmZp",
+            "ZxgBIAEoCzIoLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5LZXJiZXJvc0Nv",
+            "bmZpZyKQBAoOS2VyYmVyb3NDb25maWcSHAoPZW5hYmxlX2tlcmJlcm9zGAEg",
+            "ASgIQgPgQQESKAobcm9vdF9wcmluY2lwYWxfcGFzc3dvcmRfdXJpGAIgASgJ",
+            "QgPgQQISGAoLa21zX2tleV91cmkYAyABKAlCA+BBAhIZCgxrZXlzdG9yZV91",
+            "cmkYBCABKAlCA+BBARIbCg50cnVzdHN0b3JlX3VyaRgFIAEoCUID4EEBEiIK",
+            "FWtleXN0b3JlX3Bhc3N3b3JkX3VyaRgGIAEoCUID4EEBEh0KEGtleV9wYXNz",
+            "d29yZF91cmkYByABKAlCA+BBARIkChd0cnVzdHN0b3JlX3Bhc3N3b3JkX3Vy",
+            "aRgIIAEoCUID4EEBEiQKF2Nyb3NzX3JlYWxtX3RydXN0X3JlYWxtGAkgASgJ",
+            "QgPgQQESIgoVY3Jvc3NfcmVhbG1fdHJ1c3Rfa2RjGAogASgJQgPgQQESKwoe",
+            "Y3Jvc3NfcmVhbG1fdHJ1c3RfYWRtaW5fc2VydmVyGAsgASgJQgPgQQESMgol",
+            "Y3Jvc3NfcmVhbG1fdHJ1c3Rfc2hhcmVkX3Bhc3N3b3JkX3VyaRgMIAEoCUID",
+            "4EEBEhsKDmtkY19kYl9rZXlfdXJpGA0gASgJQgPgQQESHwoSdGd0X2xpZmV0",
+            "aW1lX2hvdXJzGA4gASgFQgPgQQESEgoFcmVhbG0YDyABKAlCA+BBASL5AQoO",
+            "U29mdHdhcmVDb25maWcSGgoNaW1hZ2VfdmVyc2lvbhgBIAEoCUID4EEBElEK",
+            "CnByb3BlcnRpZXMYAiADKAsyOC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
+            "U29mdHdhcmVDb25maWcuUHJvcGVydGllc0VudHJ5QgPgQQESRQoTb3B0aW9u",
+            "YWxfY29tcG9uZW50cxgDIAMoDjIjLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5Db21wb25lbnRCA+BBARoxCg9Qcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASKaAgoOQ2x1c3Rlck1ldHJpY3MSTwoM",
+            "aGRmc19tZXRyaWNzGAEgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
+            "LkNsdXN0ZXJNZXRyaWNzLkhkZnNNZXRyaWNzRW50cnkSTwoMeWFybl9tZXRy",
+            "aWNzGAIgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJN",
+            "ZXRyaWNzLllhcm5NZXRyaWNzRW50cnkaMgoQSGRmc01ldHJpY3NFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgBGjIKEFlhcm5NZXRyaWNz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgDOgI4ASKWAQoUQ3Jl",
+            "YXRlQ2x1c3RlclJlcXVlc3QSFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhMK",
+            "BnJlZ2lvbhgDIAEoCUID4EECEjcKB2NsdXN0ZXIYAiABKAsyIS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXByb2MudjEuQ2x1c3RlckID4EECEhcKCnJlcXVlc3RfaWQY",
+            "BCABKAlCA+BBASKuAgoUVXBkYXRlQ2x1c3RlclJlcXVlc3QSFwoKcHJvamVj",
+            "dF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgFIAEoCUID4EECEhkKDGNsdXN0",
+            "ZXJfbmFtZRgCIAEoCUID4EECEjcKB2NsdXN0ZXIYAyABKAsyIS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXByb2MudjEuQ2x1c3RlckID4EECEkUKHWdyYWNlZnVsX2Rl",
+            "Y29tbWlzc2lvbl90aW1lb3V0GAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uQgPgQQESNAoLdXBkYXRlX21hc2sYBCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgPgQQISFwoKcmVxdWVzdF9pZBgHIAEoCUID4EEB",
+            "IpMBChREZWxldGVDbHVzdGVyUmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEgASgJ",
+            "QgPgQQISEwoGcmVnaW9uGAMgASgJQgPgQQISGQoMY2x1c3Rlcl9uYW1lGAIg",
+            "ASgJQgPgQQISGQoMY2x1c3Rlcl91dWlkGAQgASgJQgPgQQESFwoKcmVxdWVz",
+            "dF9pZBgFIAEoCUID4EEBIlwKEUdldENsdXN0ZXJSZXF1ZXN0EhcKCnByb2pl",
+            "Y3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyABKAlCA+BBAhIZCgxjbHVz",
+            "dGVyX25hbWUYAiABKAlCA+BBAiKJAQoTTGlzdENsdXN0ZXJzUmVxdWVzdBIX",
+            "Cgpwcm9qZWN0X2lkGAEgASgJQgPgQQISEwoGcmVnaW9uGAQgASgJQgPgQQIS",
+            "EwoGZmlsdGVyGAUgASgJQgPgQQESFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
+            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIm4KFExpc3RDbHVzdGVyc1Jlc3Bv",
+            "bnNlEjgKCGNsdXN0ZXJzGAEgAygLMiEuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLkNsdXN0ZXJCA+BBAxIcCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlCA+BB",
+            "AyJhChZEaWFnbm9zZUNsdXN0ZXJSZXF1ZXN0EhcKCnByb2plY3RfaWQYASAB",
+            "KAlCA+BBAhITCgZyZWdpb24YAyABKAlCA+BBAhIZCgxjbHVzdGVyX25hbWUY",
+            "AiABKAlCA+BBAiIxChZEaWFnbm9zZUNsdXN0ZXJSZXN1bHRzEhcKCm91dHB1",
+            "dF91cmkYASABKAlCA+BBAzKuDAoRQ2x1c3RlckNvbnRyb2xsZXISgAIKDUNy",
+            "ZWF0ZUNsdXN0ZXISLi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ3JlYXRl",
+            "Q2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "Ip8BgtPkkwI+IjMvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMv",
+            "e3JlZ2lvbn0vY2x1c3RlcnM6B2NsdXN0ZXLaQRlwcm9qZWN0X2lkLHJlZ2lv",
+            "bixjbHVzdGVyykE8CgdDbHVzdGVyEjFnb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRhEvMBCg1VcGRhdGVDbHVzdGVy",
+            "Ei4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlVwZGF0ZUNsdXN0ZXJSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKSAYLT5JMCTTJC",
+            "L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2Ns",
+            "dXN0ZXJzL3tjbHVzdGVyX25hbWV9OgdjbHVzdGVyykE8CgdDbHVzdGVyEjFn",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFk",
+            "YXRhEpkCCg1EZWxldGVDbHVzdGVyEi4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLkRlbGV0ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiK4AYLT5JMCRCpCL3YxL3Byb2plY3RzL3twcm9qZWN0X2lk",
+            "fS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJzL3tjbHVzdGVyX25hbWV92kEe",
+            "cHJvamVjdF9pZCxyZWdpb24sY2x1c3Rlcl9uYW1lykFKChVnb29nbGUucHJv",
+            "dG9idWYuRW1wdHkSMWdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVy",
+            "T3BlcmF0aW9uTWV0YWRhdGESyQEKCkdldENsdXN0ZXISKy5nb29nbGUuY2xv",
             "dWQuZGF0YXByb2MudjEuR2V0Q2x1c3RlclJlcXVlc3QaIS5nb29nbGUuY2xv",
-            "dWQuZGF0YXByb2MudjEuQ2x1c3RlciJKgtPkkwJEEkIvdjEvcHJvamVjdHMv",
+            "dWQuZGF0YXByb2MudjEuQ2x1c3RlciJrgtPkkwJEEkIvdjEvcHJvamVjdHMv",
             "e3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0",
-            "ZXJfbmFtZX0SqgEKDExpc3RDbHVzdGVycxItLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cHJvYy52MS5MaXN0Q2x1c3RlcnNSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwcm9jLnYxLkxpc3RDbHVzdGVyc1Jlc3BvbnNlIjuC0+STAjUSMy92MS9w",
-            "cm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVy",
-            "cxK6AQoPRGlhZ25vc2VDbHVzdGVyEjAuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
-            "LnYxLkRpYWdub3NlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIlaC0+STAlAiSy92MS9wcm9qZWN0cy97cHJvamVjdF9p",
-            "ZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfTpk",
-            "aWFnbm9zZToBKkJxChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQg1D",
-            "bHVzdGVyc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvZGF0YXByb2MvdjE7ZGF0YXByb2NiBnByb3RvMw=="));
+            "ZXJfbmFtZX3aQR5wcm9qZWN0X2lkLHJlZ2lvbixjbHVzdGVyX25hbWUS2QEK",
+            "DExpc3RDbHVzdGVycxItLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0",
+            "Q2x1c3RlcnNSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxp",
+            "c3RDbHVzdGVyc1Jlc3BvbnNlImqC0+STAjUSMy92MS9wcm9qZWN0cy97cHJv",
+            "amVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVyc9pBEXByb2plY3Rf",
+            "aWQscmVnaW9u2kEYcHJvamVjdF9pZCxyZWdpb24sZmlsdGVyEo4CCg9EaWFn",
+            "bm9zZUNsdXN0ZXISMC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuRGlhZ25v",
+            "c2VDbHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24iqQGC0+STAlAiSy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9u",
+            "cy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfTpkaWFnbm9zZToB",
+            "KtpBHnByb2plY3RfaWQscmVnaW9uLGNsdXN0ZXJfbmFtZcpBLwoVZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5EhZEaWFnbm9zZUNsdXN0ZXJSZXN1bHRzGkvKQRdk",
+            "YXRhcHJvYy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CcQocY29tLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcHJvYy52MUINQ2x1c3RlcnNQcm90b1ABWkBnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFwcm9jL3YxO2Rh",
+            "dGFwcm9jYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Cluster), global::Google.Cloud.Dataproc.V1.Cluster.Parser, new[]{ "ProjectId", "ClusterName", "Config", "Labels", "Status", "StatusHistory", "ClusterUuid", "Metrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterConfig), global::Google.Cloud.Dataproc.V1.ClusterConfig.Parser, new[]{ "ConfigBucket", "GceClusterConfig", "MasterConfig", "WorkerConfig", "SecondaryWorkerConfig", "SoftwareConfig", "InitializationActions", "EncryptionConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterConfig), global::Google.Cloud.Dataproc.V1.ClusterConfig.Parser, new[]{ "ConfigBucket", "GceClusterConfig", "MasterConfig", "WorkerConfig", "SecondaryWorkerConfig", "SoftwareConfig", "InitializationActions", "EncryptionConfig", "AutoscalingConfig", "SecurityConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.AutoscalingConfig), global::Google.Cloud.Dataproc.V1.AutoscalingConfig.Parser, new[]{ "PolicyUri" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.EncryptionConfig), global::Google.Cloud.Dataproc.V1.EncryptionConfig.Parser, new[]{ "GcePdKmsKeyName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GceClusterConfig), global::Google.Cloud.Dataproc.V1.GceClusterConfig.Parser, new[]{ "ZoneUri", "NetworkUri", "SubnetworkUri", "InternalIpOnly", "ServiceAccount", "ServiceAccountScopes", "Tags", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstanceGroupConfig), global::Google.Cloud.Dataproc.V1.InstanceGroupConfig.Parser, new[]{ "NumInstances", "InstanceNames", "ImageUri", "MachineTypeUri", "DiskConfig", "IsPreemptible", "ManagedGroupConfig", "Accelerators" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstanceGroupConfig), global::Google.Cloud.Dataproc.V1.InstanceGroupConfig.Parser, new[]{ "NumInstances", "InstanceNames", "ImageUri", "MachineTypeUri", "DiskConfig", "IsPreemptible", "ManagedGroupConfig", "Accelerators", "MinCpuPlatform" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ManagedGroupConfig), global::Google.Cloud.Dataproc.V1.ManagedGroupConfig.Parser, new[]{ "InstanceTemplateName", "InstanceGroupManagerName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.AcceleratorConfig), global::Google.Cloud.Dataproc.V1.AcceleratorConfig.Parser, new[]{ "AcceleratorTypeUri", "AcceleratorCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DiskConfig), global::Google.Cloud.Dataproc.V1.DiskConfig.Parser, new[]{ "BootDiskType", "BootDiskSizeGb", "NumLocalSsds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.NodeInitializationAction), global::Google.Cloud.Dataproc.V1.NodeInitializationAction.Parser, new[]{ "ExecutableFile", "ExecutionTimeout" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterStatus), global::Google.Cloud.Dataproc.V1.ClusterStatus.Parser, new[]{ "State", "Detail", "StateStartTime", "Substate" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.State), typeof(global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.Substate) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SecurityConfig), global::Google.Cloud.Dataproc.V1.SecurityConfig.Parser, new[]{ "KerberosConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.KerberosConfig), global::Google.Cloud.Dataproc.V1.KerberosConfig.Parser, new[]{ "EnableKerberos", "RootPrincipalPasswordUri", "KmsKeyUri", "KeystoreUri", "TruststoreUri", "KeystorePasswordUri", "KeyPasswordUri", "TruststorePasswordUri", "CrossRealmTrustRealm", "CrossRealmTrustKdc", "CrossRealmTrustAdminServer", "CrossRealmTrustSharedPasswordUri", "KdcDbKeyUri", "TgtLifetimeHours", "Realm" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SoftwareConfig), global::Google.Cloud.Dataproc.V1.SoftwareConfig.Parser, new[]{ "ImageVersion", "Properties", "OptionalComponents" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterMetrics), global::Google.Cloud.Dataproc.V1.ClusterMetrics.Parser, new[]{ "HdfsMetrics", "YarnMetrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CreateClusterRequest), global::Google.Cloud.Dataproc.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Region", "Cluster", "RequestId" }, null, null, null),
@@ -576,6 +618,8 @@ namespace Google.Cloud.Dataproc.V1 {
       softwareConfig_ = other.softwareConfig_ != null ? other.softwareConfig_.Clone() : null;
       initializationActions_ = other.initializationActions_.Clone();
       encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
+      autoscalingConfig_ = other.autoscalingConfig_ != null ? other.autoscalingConfig_.Clone() : null;
+      securityConfig_ = other.securityConfig_ != null ? other.securityConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -719,6 +763,35 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "autoscaling_config" field.</summary>
+    public const int AutoscalingConfigFieldNumber = 18;
+    private global::Google.Cloud.Dataproc.V1.AutoscalingConfig autoscalingConfig_;
+    /// <summary>
+    /// Optional. Autoscaling config for the policy associated with the cluster.
+    /// Cluster does not autoscale if this field is unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dataproc.V1.AutoscalingConfig AutoscalingConfig {
+      get { return autoscalingConfig_; }
+      set {
+        autoscalingConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "security_config" field.</summary>
+    public const int SecurityConfigFieldNumber = 16;
+    private global::Google.Cloud.Dataproc.V1.SecurityConfig securityConfig_;
+    /// <summary>
+    /// Optional. Security settings for the cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dataproc.V1.SecurityConfig SecurityConfig {
+      get { return securityConfig_; }
+      set {
+        securityConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ClusterConfig);
@@ -740,6 +813,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (!object.Equals(SoftwareConfig, other.SoftwareConfig)) return false;
       if(!initializationActions_.Equals(other.initializationActions_)) return false;
       if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
+      if (!object.Equals(AutoscalingConfig, other.AutoscalingConfig)) return false;
+      if (!object.Equals(SecurityConfig, other.SecurityConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -754,6 +829,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (softwareConfig_ != null) hash ^= SoftwareConfig.GetHashCode();
       hash ^= initializationActions_.GetHashCode();
       if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
+      if (autoscalingConfig_ != null) hash ^= AutoscalingConfig.GetHashCode();
+      if (securityConfig_ != null) hash ^= SecurityConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -796,6 +873,14 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(EncryptionConfig);
       }
+      if (securityConfig_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(SecurityConfig);
+      }
+      if (autoscalingConfig_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(AutoscalingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -825,6 +910,12 @@ namespace Google.Cloud.Dataproc.V1 {
       size += initializationActions_.CalculateSize(_repeated_initializationActions_codec);
       if (encryptionConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionConfig);
+      }
+      if (autoscalingConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingConfig);
+      }
+      if (securityConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SecurityConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -876,6 +967,18 @@ namespace Google.Cloud.Dataproc.V1 {
           EncryptionConfig = new global::Google.Cloud.Dataproc.V1.EncryptionConfig();
         }
         EncryptionConfig.MergeFrom(other.EncryptionConfig);
+      }
+      if (other.autoscalingConfig_ != null) {
+        if (autoscalingConfig_ == null) {
+          AutoscalingConfig = new global::Google.Cloud.Dataproc.V1.AutoscalingConfig();
+        }
+        AutoscalingConfig.MergeFrom(other.AutoscalingConfig);
+      }
+      if (other.securityConfig_ != null) {
+        if (securityConfig_ == null) {
+          SecurityConfig = new global::Google.Cloud.Dataproc.V1.SecurityConfig();
+        }
+        SecurityConfig.MergeFrom(other.SecurityConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -938,6 +1041,163 @@ namespace Google.Cloud.Dataproc.V1 {
             input.ReadMessage(EncryptionConfig);
             break;
           }
+          case 130: {
+            if (securityConfig_ == null) {
+              SecurityConfig = new global::Google.Cloud.Dataproc.V1.SecurityConfig();
+            }
+            input.ReadMessage(SecurityConfig);
+            break;
+          }
+          case 146: {
+            if (autoscalingConfig_ == null) {
+              AutoscalingConfig = new global::Google.Cloud.Dataproc.V1.AutoscalingConfig();
+            }
+            input.ReadMessage(AutoscalingConfig);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Autoscaling Policy config associated with the cluster.
+  /// </summary>
+  public sealed partial class AutoscalingConfig : pb::IMessage<AutoscalingConfig> {
+    private static readonly pb::MessageParser<AutoscalingConfig> _parser = new pb::MessageParser<AutoscalingConfig>(() => new AutoscalingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AutoscalingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AutoscalingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AutoscalingConfig(AutoscalingConfig other) : this() {
+      policyUri_ = other.policyUri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AutoscalingConfig Clone() {
+      return new AutoscalingConfig(this);
+    }
+
+    /// <summary>Field number for the "policy_uri" field.</summary>
+    public const int PolicyUriFieldNumber = 1;
+    private string policyUri_ = "";
+    /// <summary>
+    /// Optional. The autoscaling policy used by the cluster.
+    ///
+    /// Only resource names including projectid and location (region) are valid.
+    /// Examples:
+    ///
+    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]`
+    /// * `projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]`
+    ///
+    /// Note that the policy must be in the same project and Cloud Dataproc region.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PolicyUri {
+      get { return policyUri_; }
+      set {
+        policyUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AutoscalingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AutoscalingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PolicyUri != other.PolicyUri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PolicyUri.Length != 0) hash ^= PolicyUri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (PolicyUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PolicyUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PolicyUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PolicyUri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AutoscalingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PolicyUri.Length != 0) {
+        PolicyUri = other.PolicyUri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PolicyUri = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -955,7 +1215,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1092,7 +1352,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1479,7 +1739,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1504,6 +1764,7 @@ namespace Google.Cloud.Dataproc.V1 {
       isPreemptible_ = other.isPreemptible_;
       managedGroupConfig_ = other.managedGroupConfig_ != null ? other.managedGroupConfig_.Clone() : null;
       accelerators_ = other.accelerators_.Clone();
+      minCpuPlatform_ = other.minCpuPlatform_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1636,13 +1897,26 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. The Compute Engine accelerator configuration for these
     /// instances.
-    ///
-    /// **Beta Feature**: This feature is still under development. It may be
-    /// changed before final release.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.AcceleratorConfig> Accelerators {
       get { return accelerators_; }
+    }
+
+    /// <summary>Field number for the "min_cpu_platform" field.</summary>
+    public const int MinCpuPlatformFieldNumber = 9;
+    private string minCpuPlatform_ = "";
+    /// <summary>
+    /// Optional. Specifies the minimum cpu platform for the Instance Group.
+    /// See [Cloud Dataproc&amp;rarr;Minimum CPU Platform]
+    /// (/dataproc/docs/concepts/compute/dataproc-min-cpu).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MinCpuPlatform {
+      get { return minCpuPlatform_; }
+      set {
+        minCpuPlatform_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1666,6 +1940,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (IsPreemptible != other.IsPreemptible) return false;
       if (!object.Equals(ManagedGroupConfig, other.ManagedGroupConfig)) return false;
       if(!accelerators_.Equals(other.accelerators_)) return false;
+      if (MinCpuPlatform != other.MinCpuPlatform) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1680,6 +1955,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (IsPreemptible != false) hash ^= IsPreemptible.GetHashCode();
       if (managedGroupConfig_ != null) hash ^= ManagedGroupConfig.GetHashCode();
       hash ^= accelerators_.GetHashCode();
+      if (MinCpuPlatform.Length != 0) hash ^= MinCpuPlatform.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1719,6 +1995,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteMessage(ManagedGroupConfig);
       }
       accelerators_.WriteTo(output, _repeated_accelerators_codec);
+      if (MinCpuPlatform.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(MinCpuPlatform);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1747,6 +2027,9 @@ namespace Google.Cloud.Dataproc.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManagedGroupConfig);
       }
       size += accelerators_.CalculateSize(_repeated_accelerators_codec);
+      if (MinCpuPlatform.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MinCpuPlatform);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1784,6 +2067,9 @@ namespace Google.Cloud.Dataproc.V1 {
         ManagedGroupConfig.MergeFrom(other.ManagedGroupConfig);
       }
       accelerators_.Add(other.accelerators_);
+      if (other.MinCpuPlatform.Length != 0) {
+        MinCpuPlatform = other.MinCpuPlatform;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1833,6 +2119,10 @@ namespace Google.Cloud.Dataproc.V1 {
             accelerators_.AddEntriesFrom(input, _repeated_accelerators_codec);
             break;
           }
+          case 74: {
+            MinCpuPlatform = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1850,7 +2140,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2018,7 +2308,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2199,7 +2489,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2404,7 +2694,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2579,7 +2869,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2626,7 +2916,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DetailFieldNumber = 2;
     private string detail_ = "";
     /// <summary>
-    /// Output only. Optional details of cluster's state.
+    /// Optional. Output only. Details of cluster's state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Detail {
@@ -2866,6 +3156,737 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
+  /// Security related configuration, including Kerberos.
+  /// </summary>
+  public sealed partial class SecurityConfig : pb::IMessage<SecurityConfig> {
+    private static readonly pb::MessageParser<SecurityConfig> _parser = new pb::MessageParser<SecurityConfig>(() => new SecurityConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SecurityConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SecurityConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SecurityConfig(SecurityConfig other) : this() {
+      kerberosConfig_ = other.kerberosConfig_ != null ? other.kerberosConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SecurityConfig Clone() {
+      return new SecurityConfig(this);
+    }
+
+    /// <summary>Field number for the "kerberos_config" field.</summary>
+    public const int KerberosConfigFieldNumber = 1;
+    private global::Google.Cloud.Dataproc.V1.KerberosConfig kerberosConfig_;
+    /// <summary>
+    /// Kerberos related configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dataproc.V1.KerberosConfig KerberosConfig {
+      get { return kerberosConfig_; }
+      set {
+        kerberosConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SecurityConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SecurityConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(KerberosConfig, other.KerberosConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (kerberosConfig_ != null) hash ^= KerberosConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (kerberosConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(KerberosConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (kerberosConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KerberosConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SecurityConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.kerberosConfig_ != null) {
+        if (kerberosConfig_ == null) {
+          KerberosConfig = new global::Google.Cloud.Dataproc.V1.KerberosConfig();
+        }
+        KerberosConfig.MergeFrom(other.KerberosConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (kerberosConfig_ == null) {
+              KerberosConfig = new global::Google.Cloud.Dataproc.V1.KerberosConfig();
+            }
+            input.ReadMessage(KerberosConfig);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Specifies Kerberos related configuration.
+  /// </summary>
+  public sealed partial class KerberosConfig : pb::IMessage<KerberosConfig> {
+    private static readonly pb::MessageParser<KerberosConfig> _parser = new pb::MessageParser<KerberosConfig>(() => new KerberosConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<KerberosConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KerberosConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KerberosConfig(KerberosConfig other) : this() {
+      enableKerberos_ = other.enableKerberos_;
+      rootPrincipalPasswordUri_ = other.rootPrincipalPasswordUri_;
+      kmsKeyUri_ = other.kmsKeyUri_;
+      keystoreUri_ = other.keystoreUri_;
+      truststoreUri_ = other.truststoreUri_;
+      keystorePasswordUri_ = other.keystorePasswordUri_;
+      keyPasswordUri_ = other.keyPasswordUri_;
+      truststorePasswordUri_ = other.truststorePasswordUri_;
+      crossRealmTrustRealm_ = other.crossRealmTrustRealm_;
+      crossRealmTrustKdc_ = other.crossRealmTrustKdc_;
+      crossRealmTrustAdminServer_ = other.crossRealmTrustAdminServer_;
+      crossRealmTrustSharedPasswordUri_ = other.crossRealmTrustSharedPasswordUri_;
+      kdcDbKeyUri_ = other.kdcDbKeyUri_;
+      tgtLifetimeHours_ = other.tgtLifetimeHours_;
+      realm_ = other.realm_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KerberosConfig Clone() {
+      return new KerberosConfig(this);
+    }
+
+    /// <summary>Field number for the "enable_kerberos" field.</summary>
+    public const int EnableKerberosFieldNumber = 1;
+    private bool enableKerberos_;
+    /// <summary>
+    /// Optional. Flag to indicate whether to Kerberize the cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableKerberos {
+      get { return enableKerberos_; }
+      set {
+        enableKerberos_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "root_principal_password_uri" field.</summary>
+    public const int RootPrincipalPasswordUriFieldNumber = 2;
+    private string rootPrincipalPasswordUri_ = "";
+    /// <summary>
+    /// Required. The Cloud Storage URI of a KMS encrypted file containing the root
+    /// principal password.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RootPrincipalPasswordUri {
+      get { return rootPrincipalPasswordUri_; }
+      set {
+        rootPrincipalPasswordUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kms_key_uri" field.</summary>
+    public const int KmsKeyUriFieldNumber = 3;
+    private string kmsKeyUri_ = "";
+    /// <summary>
+    /// Required. The uri of the KMS key used to encrypt various sensitive
+    /// files.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KmsKeyUri {
+      get { return kmsKeyUri_; }
+      set {
+        kmsKeyUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "keystore_uri" field.</summary>
+    public const int KeystoreUriFieldNumber = 4;
+    private string keystoreUri_ = "";
+    /// <summary>
+    /// Optional. The Cloud Storage URI of the keystore file used for SSL
+    /// encryption. If not provided, Dataproc will provide a self-signed
+    /// certificate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KeystoreUri {
+      get { return keystoreUri_; }
+      set {
+        keystoreUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "truststore_uri" field.</summary>
+    public const int TruststoreUriFieldNumber = 5;
+    private string truststoreUri_ = "";
+    /// <summary>
+    /// Optional. The Cloud Storage URI of the truststore file used for SSL
+    /// encryption. If not provided, Dataproc will provide a self-signed
+    /// certificate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TruststoreUri {
+      get { return truststoreUri_; }
+      set {
+        truststoreUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "keystore_password_uri" field.</summary>
+    public const int KeystorePasswordUriFieldNumber = 6;
+    private string keystorePasswordUri_ = "";
+    /// <summary>
+    /// Optional. The Cloud Storage URI of a KMS encrypted file containing the
+    /// password to the user provided keystore. For the self-signed certificate,
+    /// this password is generated by Dataproc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KeystorePasswordUri {
+      get { return keystorePasswordUri_; }
+      set {
+        keystorePasswordUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "key_password_uri" field.</summary>
+    public const int KeyPasswordUriFieldNumber = 7;
+    private string keyPasswordUri_ = "";
+    /// <summary>
+    /// Optional. The Cloud Storage URI of a KMS encrypted file containing the
+    /// password to the user provided key. For the self-signed certificate, this
+    /// password is generated by Dataproc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KeyPasswordUri {
+      get { return keyPasswordUri_; }
+      set {
+        keyPasswordUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "truststore_password_uri" field.</summary>
+    public const int TruststorePasswordUriFieldNumber = 8;
+    private string truststorePasswordUri_ = "";
+    /// <summary>
+    /// Optional. The Cloud Storage URI of a KMS encrypted file containing the
+    /// password to the user provided truststore. For the self-signed certificate,
+    /// this password is generated by Dataproc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TruststorePasswordUri {
+      get { return truststorePasswordUri_; }
+      set {
+        truststorePasswordUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cross_realm_trust_realm" field.</summary>
+    public const int CrossRealmTrustRealmFieldNumber = 9;
+    private string crossRealmTrustRealm_ = "";
+    /// <summary>
+    /// Optional. The remote realm the Dataproc on-cluster KDC will trust, should
+    /// the user enable cross realm trust.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CrossRealmTrustRealm {
+      get { return crossRealmTrustRealm_; }
+      set {
+        crossRealmTrustRealm_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cross_realm_trust_kdc" field.</summary>
+    public const int CrossRealmTrustKdcFieldNumber = 10;
+    private string crossRealmTrustKdc_ = "";
+    /// <summary>
+    /// Optional. The KDC (IP or hostname) for the remote trusted realm in a cross
+    /// realm trust relationship.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CrossRealmTrustKdc {
+      get { return crossRealmTrustKdc_; }
+      set {
+        crossRealmTrustKdc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cross_realm_trust_admin_server" field.</summary>
+    public const int CrossRealmTrustAdminServerFieldNumber = 11;
+    private string crossRealmTrustAdminServer_ = "";
+    /// <summary>
+    /// Optional. The admin server (IP or hostname) for the remote trusted realm in
+    /// a cross realm trust relationship.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CrossRealmTrustAdminServer {
+      get { return crossRealmTrustAdminServer_; }
+      set {
+        crossRealmTrustAdminServer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cross_realm_trust_shared_password_uri" field.</summary>
+    public const int CrossRealmTrustSharedPasswordUriFieldNumber = 12;
+    private string crossRealmTrustSharedPasswordUri_ = "";
+    /// <summary>
+    /// Optional. The Cloud Storage URI of a KMS encrypted file containing the
+    /// shared password between the on-cluster Kerberos realm and the remote
+    /// trusted realm, in a cross realm trust relationship.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CrossRealmTrustSharedPasswordUri {
+      get { return crossRealmTrustSharedPasswordUri_; }
+      set {
+        crossRealmTrustSharedPasswordUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kdc_db_key_uri" field.</summary>
+    public const int KdcDbKeyUriFieldNumber = 13;
+    private string kdcDbKeyUri_ = "";
+    /// <summary>
+    /// Optional. The Cloud Storage URI of a KMS encrypted file containing the
+    /// master key of the KDC database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KdcDbKeyUri {
+      get { return kdcDbKeyUri_; }
+      set {
+        kdcDbKeyUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tgt_lifetime_hours" field.</summary>
+    public const int TgtLifetimeHoursFieldNumber = 14;
+    private int tgtLifetimeHours_;
+    /// <summary>
+    /// Optional. The lifetime of the ticket granting ticket, in hours.
+    /// If not specified, or user specifies 0, then default value 10
+    /// will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TgtLifetimeHours {
+      get { return tgtLifetimeHours_; }
+      set {
+        tgtLifetimeHours_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "realm" field.</summary>
+    public const int RealmFieldNumber = 15;
+    private string realm_ = "";
+    /// <summary>
+    /// Optional. The name of the on-cluster Kerberos realm.
+    /// If not specified, the uppercased domain of hostnames will be the realm.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Realm {
+      get { return realm_; }
+      set {
+        realm_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as KerberosConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(KerberosConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnableKerberos != other.EnableKerberos) return false;
+      if (RootPrincipalPasswordUri != other.RootPrincipalPasswordUri) return false;
+      if (KmsKeyUri != other.KmsKeyUri) return false;
+      if (KeystoreUri != other.KeystoreUri) return false;
+      if (TruststoreUri != other.TruststoreUri) return false;
+      if (KeystorePasswordUri != other.KeystorePasswordUri) return false;
+      if (KeyPasswordUri != other.KeyPasswordUri) return false;
+      if (TruststorePasswordUri != other.TruststorePasswordUri) return false;
+      if (CrossRealmTrustRealm != other.CrossRealmTrustRealm) return false;
+      if (CrossRealmTrustKdc != other.CrossRealmTrustKdc) return false;
+      if (CrossRealmTrustAdminServer != other.CrossRealmTrustAdminServer) return false;
+      if (CrossRealmTrustSharedPasswordUri != other.CrossRealmTrustSharedPasswordUri) return false;
+      if (KdcDbKeyUri != other.KdcDbKeyUri) return false;
+      if (TgtLifetimeHours != other.TgtLifetimeHours) return false;
+      if (Realm != other.Realm) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnableKerberos != false) hash ^= EnableKerberos.GetHashCode();
+      if (RootPrincipalPasswordUri.Length != 0) hash ^= RootPrincipalPasswordUri.GetHashCode();
+      if (KmsKeyUri.Length != 0) hash ^= KmsKeyUri.GetHashCode();
+      if (KeystoreUri.Length != 0) hash ^= KeystoreUri.GetHashCode();
+      if (TruststoreUri.Length != 0) hash ^= TruststoreUri.GetHashCode();
+      if (KeystorePasswordUri.Length != 0) hash ^= KeystorePasswordUri.GetHashCode();
+      if (KeyPasswordUri.Length != 0) hash ^= KeyPasswordUri.GetHashCode();
+      if (TruststorePasswordUri.Length != 0) hash ^= TruststorePasswordUri.GetHashCode();
+      if (CrossRealmTrustRealm.Length != 0) hash ^= CrossRealmTrustRealm.GetHashCode();
+      if (CrossRealmTrustKdc.Length != 0) hash ^= CrossRealmTrustKdc.GetHashCode();
+      if (CrossRealmTrustAdminServer.Length != 0) hash ^= CrossRealmTrustAdminServer.GetHashCode();
+      if (CrossRealmTrustSharedPasswordUri.Length != 0) hash ^= CrossRealmTrustSharedPasswordUri.GetHashCode();
+      if (KdcDbKeyUri.Length != 0) hash ^= KdcDbKeyUri.GetHashCode();
+      if (TgtLifetimeHours != 0) hash ^= TgtLifetimeHours.GetHashCode();
+      if (Realm.Length != 0) hash ^= Realm.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (EnableKerberos != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableKerberos);
+      }
+      if (RootPrincipalPasswordUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RootPrincipalPasswordUri);
+      }
+      if (KmsKeyUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(KmsKeyUri);
+      }
+      if (KeystoreUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(KeystoreUri);
+      }
+      if (TruststoreUri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(TruststoreUri);
+      }
+      if (KeystorePasswordUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(KeystorePasswordUri);
+      }
+      if (KeyPasswordUri.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KeyPasswordUri);
+      }
+      if (TruststorePasswordUri.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(TruststorePasswordUri);
+      }
+      if (CrossRealmTrustRealm.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(CrossRealmTrustRealm);
+      }
+      if (CrossRealmTrustKdc.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CrossRealmTrustKdc);
+      }
+      if (CrossRealmTrustAdminServer.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CrossRealmTrustAdminServer);
+      }
+      if (CrossRealmTrustSharedPasswordUri.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CrossRealmTrustSharedPasswordUri);
+      }
+      if (KdcDbKeyUri.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(KdcDbKeyUri);
+      }
+      if (TgtLifetimeHours != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(TgtLifetimeHours);
+      }
+      if (Realm.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Realm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnableKerberos != false) {
+        size += 1 + 1;
+      }
+      if (RootPrincipalPasswordUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RootPrincipalPasswordUri);
+      }
+      if (KmsKeyUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyUri);
+      }
+      if (KeystoreUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KeystoreUri);
+      }
+      if (TruststoreUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TruststoreUri);
+      }
+      if (KeystorePasswordUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KeystorePasswordUri);
+      }
+      if (KeyPasswordUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyPasswordUri);
+      }
+      if (TruststorePasswordUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TruststorePasswordUri);
+      }
+      if (CrossRealmTrustRealm.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CrossRealmTrustRealm);
+      }
+      if (CrossRealmTrustKdc.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CrossRealmTrustKdc);
+      }
+      if (CrossRealmTrustAdminServer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CrossRealmTrustAdminServer);
+      }
+      if (CrossRealmTrustSharedPasswordUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CrossRealmTrustSharedPasswordUri);
+      }
+      if (KdcDbKeyUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KdcDbKeyUri);
+      }
+      if (TgtLifetimeHours != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TgtLifetimeHours);
+      }
+      if (Realm.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Realm);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(KerberosConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnableKerberos != false) {
+        EnableKerberos = other.EnableKerberos;
+      }
+      if (other.RootPrincipalPasswordUri.Length != 0) {
+        RootPrincipalPasswordUri = other.RootPrincipalPasswordUri;
+      }
+      if (other.KmsKeyUri.Length != 0) {
+        KmsKeyUri = other.KmsKeyUri;
+      }
+      if (other.KeystoreUri.Length != 0) {
+        KeystoreUri = other.KeystoreUri;
+      }
+      if (other.TruststoreUri.Length != 0) {
+        TruststoreUri = other.TruststoreUri;
+      }
+      if (other.KeystorePasswordUri.Length != 0) {
+        KeystorePasswordUri = other.KeystorePasswordUri;
+      }
+      if (other.KeyPasswordUri.Length != 0) {
+        KeyPasswordUri = other.KeyPasswordUri;
+      }
+      if (other.TruststorePasswordUri.Length != 0) {
+        TruststorePasswordUri = other.TruststorePasswordUri;
+      }
+      if (other.CrossRealmTrustRealm.Length != 0) {
+        CrossRealmTrustRealm = other.CrossRealmTrustRealm;
+      }
+      if (other.CrossRealmTrustKdc.Length != 0) {
+        CrossRealmTrustKdc = other.CrossRealmTrustKdc;
+      }
+      if (other.CrossRealmTrustAdminServer.Length != 0) {
+        CrossRealmTrustAdminServer = other.CrossRealmTrustAdminServer;
+      }
+      if (other.CrossRealmTrustSharedPasswordUri.Length != 0) {
+        CrossRealmTrustSharedPasswordUri = other.CrossRealmTrustSharedPasswordUri;
+      }
+      if (other.KdcDbKeyUri.Length != 0) {
+        KdcDbKeyUri = other.KdcDbKeyUri;
+      }
+      if (other.TgtLifetimeHours != 0) {
+        TgtLifetimeHours = other.TgtLifetimeHours;
+      }
+      if (other.Realm.Length != 0) {
+        Realm = other.Realm;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EnableKerberos = input.ReadBool();
+            break;
+          }
+          case 18: {
+            RootPrincipalPasswordUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            KmsKeyUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            KeystoreUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            TruststoreUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            KeystorePasswordUri = input.ReadString();
+            break;
+          }
+          case 58: {
+            KeyPasswordUri = input.ReadString();
+            break;
+          }
+          case 66: {
+            TruststorePasswordUri = input.ReadString();
+            break;
+          }
+          case 74: {
+            CrossRealmTrustRealm = input.ReadString();
+            break;
+          }
+          case 82: {
+            CrossRealmTrustKdc = input.ReadString();
+            break;
+          }
+          case 90: {
+            CrossRealmTrustAdminServer = input.ReadString();
+            break;
+          }
+          case 98: {
+            CrossRealmTrustSharedPasswordUri = input.ReadString();
+            break;
+          }
+          case 106: {
+            KdcDbKeyUri = input.ReadString();
+            break;
+          }
+          case 112: {
+            TgtLifetimeHours = input.ReadInt32();
+            break;
+          }
+          case 122: {
+            Realm = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Specifies the selection and config of software inside the cluster.
   /// </summary>
   public sealed partial class SoftwareConfig : pb::IMessage<SoftwareConfig> {
@@ -2876,7 +3897,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2960,7 +3981,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.Dataproc.V1.Component) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Component> optionalComponents_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Component>();
     /// <summary>
-    /// The set of optional components to activate on the cluster.
+    /// Optional. The set of components to activate on the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Component> OptionalComponents {
@@ -3084,7 +4105,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3234,7 +4255,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3479,7 +4500,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3637,6 +4658,10 @@ namespace Google.Cloud.Dataproc.V1 {
     ///  &lt;tr>
     ///  &lt;td>&lt;strong>&lt;em>config.secondary_worker_config.num_instances&lt;/em>&lt;/strong>&lt;/td>
     ///  &lt;td>Resize secondary worker group&lt;/td>
+    ///  &lt;/tr>
+    ///  &lt;tr>
+    ///  &lt;td>config.autoscaling_config.policy_uri&lt;/td>&lt;td>Use, stop using, or
+    ///  change autoscaling policies&lt;/td>
     ///  &lt;/tr>
     ///  &lt;/tbody>
     ///  &lt;/table>
@@ -3882,7 +4907,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4153,7 +5178,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4351,7 +5376,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4629,7 +5654,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4789,7 +5814,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4987,7 +6012,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

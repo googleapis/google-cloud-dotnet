@@ -95,7 +95,9 @@ namespace Google.Cloud.Dataproc.V1 {
     public abstract partial class ClusterControllerBase
     {
       /// <summary>
-      /// Creates a cluster in a project.
+      /// Creates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -106,7 +108,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
 
       /// <summary>
-      /// Updates a cluster in a project.
+      /// Updates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -117,7 +121,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
 
       /// <summary>
-      /// Deletes a cluster in a project.
+      /// Deletes a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -150,9 +156,13 @@ namespace Google.Cloud.Dataproc.V1 {
       }
 
       /// <summary>
-      /// Gets cluster diagnostic information.
-      /// After the operation completes, the Operation.response field
-      /// contains `DiagnoseClusterOutputLocation`.
+      /// Gets cluster diagnostic information. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+      /// After the operation completes,
+      /// [Operation.response][google.longrunning.Operation.response]
+      /// contains
+      /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -188,7 +198,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
 
       /// <summary>
-      /// Creates a cluster in a project.
+      /// Creates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -200,7 +212,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return CreateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a cluster in a project.
+      /// Creates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -210,7 +224,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCluster, null, options, request);
       }
       /// <summary>
-      /// Creates a cluster in a project.
+      /// Creates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -222,7 +238,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return CreateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a cluster in a project.
+      /// Creates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -232,7 +250,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCluster, null, options, request);
       }
       /// <summary>
-      /// Updates a cluster in a project.
+      /// Updates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -244,7 +264,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return UpdateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a cluster in a project.
+      /// Updates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -254,7 +276,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCluster, null, options, request);
       }
       /// <summary>
-      /// Updates a cluster in a project.
+      /// Updates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -266,7 +290,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return UpdateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a cluster in a project.
+      /// Updates a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -276,7 +302,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCluster, null, options, request);
       }
       /// <summary>
-      /// Deletes a cluster in a project.
+      /// Deletes a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -288,7 +316,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return DeleteCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a cluster in a project.
+      /// Deletes a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -298,7 +328,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCluster, null, options, request);
       }
       /// <summary>
-      /// Deletes a cluster in a project.
+      /// Deletes a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -310,7 +342,9 @@ namespace Google.Cloud.Dataproc.V1 {
         return DeleteClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a cluster in a project.
+      /// Deletes a cluster in a project. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -408,9 +442,13 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListClusters, null, options, request);
       }
       /// <summary>
-      /// Gets cluster diagnostic information.
-      /// After the operation completes, the Operation.response field
-      /// contains `DiagnoseClusterOutputLocation`.
+      /// Gets cluster diagnostic information. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+      /// After the operation completes,
+      /// [Operation.response][google.longrunning.Operation.response]
+      /// contains
+      /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -422,9 +460,13 @@ namespace Google.Cloud.Dataproc.V1 {
         return DiagnoseCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets cluster diagnostic information.
-      /// After the operation completes, the Operation.response field
-      /// contains `DiagnoseClusterOutputLocation`.
+      /// Gets cluster diagnostic information. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+      /// After the operation completes,
+      /// [Operation.response][google.longrunning.Operation.response]
+      /// contains
+      /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -434,9 +476,13 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DiagnoseCluster, null, options, request);
       }
       /// <summary>
-      /// Gets cluster diagnostic information.
-      /// After the operation completes, the Operation.response field
-      /// contains `DiagnoseClusterOutputLocation`.
+      /// Gets cluster diagnostic information. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+      /// After the operation completes,
+      /// [Operation.response][google.longrunning.Operation.response]
+      /// contains
+      /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -448,9 +494,13 @@ namespace Google.Cloud.Dataproc.V1 {
         return DiagnoseClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets cluster diagnostic information.
-      /// After the operation completes, the Operation.response field
-      /// contains `DiagnoseClusterOutputLocation`.
+      /// Gets cluster diagnostic information. The returned
+      /// [Operation.metadata][google.longrunning.Operation.metadata] will be
+      /// [ClusterOperationMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
+      /// After the operation completes,
+      /// [Operation.response][google.longrunning.Operation.response]
+      /// contains
+      /// [DiagnoseClusterResults](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
