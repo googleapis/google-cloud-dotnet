@@ -19,7 +19,7 @@ do
   # The analyzer uses netstandard1.3 instead of netstandard2.0 and it's not worth parameterizing that
   if [[ $api == "Google.Cloud.Diagnostics.AspNet" || $api == "Google.Cloud.Diagnostics.AspNetCore.Analyzers" ]]
   then
-    break
+    continue
   fi
   
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
