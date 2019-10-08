@@ -45,7 +45,26 @@ namespace Google.Cloud.AutoML.V1.Snippets
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Dataset dataset = new Dataset();
             // Make the request
-            Operation response = await autoMlClient.CreateDatasetAsync(parent, dataset);
+            Operation<Dataset, OperationMetadata> response =
+                await autoMlClient.CreateDatasetAsync(parent, dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, OperationMetadata> retrievedResponse =
+                await autoMlClient.PollOnceCreateDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +78,26 @@ namespace Google.Cloud.AutoML.V1.Snippets
             LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Dataset dataset = new Dataset();
             // Make the request
-            Operation response = autoMlClient.CreateDataset(parent, dataset);
+            Operation<Dataset, OperationMetadata> response =
+                autoMlClient.CreateDataset(parent, dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, OperationMetadata> retrievedResponse =
+                autoMlClient.PollOnceCreateDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -67,7 +105,6 @@ namespace Google.Cloud.AutoML.V1.Snippets
         public async Task CreateDatasetAsync_RequestObject()
         {
             // Snippet: CreateDatasetAsync(CreateDatasetRequest,CallSettings)
-            // Additional: CreateDatasetAsync(CreateDatasetRequest,CancellationToken)
             // Create client
             AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
             // Initialize request argument(s)
@@ -77,7 +114,26 @@ namespace Google.Cloud.AutoML.V1.Snippets
                 Dataset = new Dataset(),
             };
             // Make the request
-            Operation response = await autoMlClient.CreateDatasetAsync(request);
+            Operation<Dataset, OperationMetadata> response =
+                await autoMlClient.CreateDatasetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, OperationMetadata> retrievedResponse =
+                await autoMlClient.PollOnceCreateDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -94,7 +150,26 @@ namespace Google.Cloud.AutoML.V1.Snippets
                 Dataset = new Dataset(),
             };
             // Make the request
-            Operation response = autoMlClient.CreateDataset(request);
+            Operation<Dataset, OperationMetadata> response =
+                autoMlClient.CreateDataset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, OperationMetadata> retrievedResponse =
+                autoMlClient.PollOnceCreateDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
