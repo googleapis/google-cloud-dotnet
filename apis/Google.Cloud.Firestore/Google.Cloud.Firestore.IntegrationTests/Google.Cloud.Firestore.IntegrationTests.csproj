@@ -11,10 +11,10 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Testing" Version="2.9.0" />
+    <PackageReference Include="Google.Api.Gax.Testing" Version="2.10.0" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
-    <PackageReference Include="Grpc.Core.Testing" Version="1.22.0" />
+    <PackageReference Include="Grpc.Core.Testing" Version="1.22.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Moq" Version="4.12.0" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
