@@ -50,12 +50,12 @@ namespace Google.Cloud.Redis.V1Beta1
         private CloudRedisSettings(CloudRedisSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ListInstancesSettings = existing.ListInstancesSettings;
+            GetInstanceSettings = existing.GetInstanceSettings;
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings?.Clone();
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
             UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings?.Clone();
-            ListInstancesSettings = existing.ListInstancesSettings;
-            GetInstanceSettings = existing.GetInstanceSettings;
             ImportInstanceSettings = existing.ImportInstanceSettings;
             ImportInstanceOperationsSettings = existing.ImportInstanceOperationsSettings?.Clone();
             ExportInstanceSettings = existing.ExportInstanceSettings;
@@ -135,6 +135,64 @@ namespace Google.Cloud.Redis.V1Beta1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClient.ListInstances</c> and <c>CloudRedisClient.ListInstancesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>CloudRedisClient.ListInstances</c> and
+        /// <c>CloudRedisClient.ListInstancesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClient.GetInstance</c> and <c>CloudRedisClient.GetInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>CloudRedisClient.GetInstance</c> and
+        /// <c>CloudRedisClient.GetInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudRedisClient.CreateInstance</c> and <c>CloudRedisClient.CreateInstanceAsync</c>.
         /// </summary>
         /// <remarks>
@@ -168,19 +226,19 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Initial delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 360000 milliseconds</description></item>
+        /// <item><description>Total timeout: 1200000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000L)),
+                sys::TimeSpan.FromMilliseconds(60000L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(360000L))
         };
 
         /// <summary>
@@ -218,80 +276,20 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Initial delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 360000 milliseconds</description></item>
+        /// <item><description>Total timeout: 7200000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(7200000L)),
+                sys::TimeSpan.FromMilliseconds(60000L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(360000L))
         };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>CloudRedisClient.ListInstances</c> and <c>CloudRedisClient.ListInstancesAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>CloudRedisClient.ListInstances</c> and
-        /// <c>CloudRedisClient.ListInstancesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings ListInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>CloudRedisClient.GetInstance</c> and <c>CloudRedisClient.GetInstanceAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>CloudRedisClient.GetInstance</c> and
-        /// <c>CloudRedisClient.GetInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -328,19 +326,19 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Initial delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 360000 milliseconds</description></item>
+        /// <item><description>Total timeout: 18000000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ImportInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(18000000L)),
+                sys::TimeSpan.FromMilliseconds(60000L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(360000L))
         };
 
         /// <summary>
@@ -378,19 +376,19 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Initial delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 360000 milliseconds</description></item>
+        /// <item><description>Total timeout: 18000000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ExportInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(18000000L)),
+                sys::TimeSpan.FromMilliseconds(60000L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(360000L))
         };
 
         /// <summary>
@@ -428,19 +426,19 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Initial delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 360000 milliseconds</description></item>
+        /// <item><description>Total timeout: 1200000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings FailoverInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000L)),
+                sys::TimeSpan.FromMilliseconds(60000L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(360000L))
         };
 
         /// <summary>
@@ -478,19 +476,19 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Initial delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
-        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 360000 milliseconds</description></item>
+        /// <item><description>Total timeout: 1200000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
-                sys::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000L)),
+                sys::TimeSpan.FromMilliseconds(60000L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(360000L))
         };
 
         /// <summary>
@@ -690,6 +688,414 @@ namespace Google.Cloud.Redis.V1Beta1
         public virtual CloudRedis.CloudRedisClient GrpcClient
         {
             get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+            LocationName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
+                new ListInstancesRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+            LocationName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstances(
+                new ListInstancesRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstances(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+            ListInstancesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+            ListInstancesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            InstanceName name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
+                new GetInstanceRequest
+                {
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            InstanceName name,
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Instance GetInstance(
+            InstanceName name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstance(
+                new GetInstanceRequest
+                {
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Instance GetInstance(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstance(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            GetInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            GetInstanceRequest request,
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Instance GetInstance(
+            GetInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1276,414 +1682,6 @@ namespace Google.Cloud.Redis.V1Beta1
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateInstanceOperationsClient,
                 callSettings);
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the instance location using the form:
-        ///     `projects/{project_id}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            LocationName parent,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
-                new ListInstancesRequest
-                {
-                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the instance location using the form:
-        ///     `projects/{project_id}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            LocationName parent,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListInstances(
-                new ListInstancesRequest
-                {
-                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the instance location using the form:
-        ///     `projects/{project_id}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            string parent,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
-                new ListInstancesRequest
-                {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the instance location using the form:
-        ///     `projects/{project_id}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            string parent,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListInstances(
-                new ListInstancesRequest
-                {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            ListInstancesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            ListInstancesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Redis instance resource name using the form:
-        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(
-            InstanceName name,
-            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
-                new GetInstanceRequest
-                {
-                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Redis instance resource name using the form:
-        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(
-            InstanceName name,
-            st::CancellationToken cancellationToken) => GetInstanceAsync(
-                name,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Redis instance resource name using the form:
-        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Instance GetInstance(
-            InstanceName name,
-            gaxgrpc::CallSettings callSettings = null) => GetInstance(
-                new GetInstanceRequest
-                {
-                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Redis instance resource name using the form:
-        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(
-            string name,
-            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
-                new GetInstanceRequest
-                {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Redis instance resource name using the form:
-        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(
-            string name,
-            st::CancellationToken cancellationToken) => GetInstanceAsync(
-                name,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Redis instance resource name using the form:
-        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        /// where `location_id` refers to a GCP region.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Instance GetInstance(
-            string name,
-            gaxgrpc::CallSettings callSettings = null) => GetInstance(
-                new GetInstanceRequest
-                {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(
-            GetInstanceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Instance> GetInstanceAsync(
-            GetInstanceRequest request,
-            st::CancellationToken cancellationToken) => GetInstanceAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Instance GetInstance(
-            GetInstanceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
 
         /// <summary>
         /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
@@ -2518,10 +2516,10 @@ namespace Google.Cloud.Redis.V1Beta1
     /// </summary>
     public sealed partial class CloudRedisClientImpl : CloudRedisClient
     {
-        private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
-        private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
         private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
+        private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
+        private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
         private readonly gaxgrpc::ApiCall<ImportInstanceRequest, lro::Operation> _callImportInstance;
         private readonly gaxgrpc::ApiCall<ExportInstanceRequest, lro::Operation> _callExportInstance;
         private readonly gaxgrpc::ApiCall<FailoverInstanceRequest, lro::Operation> _callFailoverInstance;
@@ -2549,18 +2547,18 @@ namespace Google.Cloud.Redis.V1Beta1
                 grpcClient.CreateOperationsClient(), effectiveSettings.FailoverInstanceOperationsSettings);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings);
-            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(
-                GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings)
-                .WithGoogleRequestParam("parent", request => request.Parent);
-            _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>(
-                GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings)
-                .WithGoogleRequestParam("instance.name", request => request.Instance?.Name);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(
                 GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings)
                 .WithGoogleRequestParam("parent", request => request.Parent);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(
                 GrpcClient.GetInstanceAsync, GrpcClient.GetInstance, effectiveSettings.GetInstanceSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
+            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(
+                GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
+            _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>(
+                GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings)
+                .WithGoogleRequestParam("instance.name", request => request.Instance?.Name);
             _callImportInstance = clientHelper.BuildApiCall<ImportInstanceRequest, lro::Operation>(
                 GrpcClient.ImportInstanceAsync, GrpcClient.ImportInstance, effectiveSettings.ImportInstanceSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
@@ -2573,14 +2571,14 @@ namespace Google.Cloud.Redis.V1Beta1
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callCreateInstance);
-            Modify_CreateInstanceApiCall(ref _callCreateInstance);
-            Modify_ApiCall(ref _callUpdateInstance);
-            Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
+            Modify_ApiCall(ref _callCreateInstance);
+            Modify_CreateInstanceApiCall(ref _callCreateInstance);
+            Modify_ApiCall(ref _callUpdateInstance);
+            Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
             Modify_ApiCall(ref _callImportInstance);
             Modify_ImportInstanceApiCall(ref _callImportInstance);
             Modify_ApiCall(ref _callExportInstance);
@@ -2602,10 +2600,10 @@ namespace Google.Cloud.Redis.V1Beta1
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
-        partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
         partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
+        partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
+        partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
         partial void Modify_ImportInstanceApiCall(ref gaxgrpc::ApiCall<ImportInstanceRequest, lro::Operation> call);
         partial void Modify_ExportInstanceApiCall(ref gaxgrpc::ApiCall<ExportInstanceRequest, lro::Operation> call);
         partial void Modify_FailoverInstanceApiCall(ref gaxgrpc::ApiCall<FailoverInstanceRequest, lro::Operation> call);
@@ -2620,14 +2618,108 @@ namespace Google.Cloud.Redis.V1Beta1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ImportInstanceRequest(ref ImportInstanceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ExportInstanceRequest(ref ExportInstanceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_FailoverInstanceRequest(ref FailoverInstanceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+            ListInstancesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+            ListInstancesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Instance> GetInstanceAsync(
+            GetInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstanceRequest(ref request, ref callSettings);
+            return _callGetInstance.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Instance GetInstance(
+            GetInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstanceRequest(ref request, ref callSettings);
+            return _callGetInstance.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
@@ -2752,100 +2844,6 @@ namespace Google.Cloud.Redis.V1Beta1
         /// The long-running operations client for <c>UpdateInstance</c>.
         /// </summary>
         public override lro::OperationsClient UpdateInstanceOperationsClient { get; }
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public override gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            ListInstancesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListInstancesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists all Redis instances owned by a project in either the specified
-        /// location (region) or all locations.
-        ///
-        /// The location should have the following format:
-        /// * `projects/{project_id}/locations/{location_id}`
-        ///
-        /// If `location_id` is specified as `-` (wildcard), then all regions
-        /// available to the project are queried, and the results are aggregated.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Instance"/> resources.
-        /// </returns>
-        public override gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            ListInstancesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListInstancesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<Instance> GetInstanceAsync(
-            GetInstanceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetInstanceRequest(ref request, ref callSettings);
-            return _callGetInstance.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets the details of a specific Redis instance.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Instance GetInstance(
-            GetInstanceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetInstanceRequest(ref request, ref callSettings);
-            return _callGetInstance.Sync(request, callSettings);
-        }
 
         /// <summary>
         /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
