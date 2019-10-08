@@ -51,6 +51,7 @@ namespace Google.Cloud.AutoML.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateDatasetSettings = existing.CreateDatasetSettings;
+            CreateDatasetOperationsSettings = existing.CreateDatasetOperationsSettings?.Clone();
             UpdateDatasetSettings = existing.UpdateDatasetSettings;
             GetDatasetSettings = existing.GetDatasetSettings;
             ListDatasetsSettings = existing.ListDatasetsSettings;
@@ -166,6 +167,27 @@ namespace Google.Cloud.AutoML.V1
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AutoMlClient.CreateDataset</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDatasetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(5000L))
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -871,7 +893,7 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation> CreateDatasetAsync(
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(
             LocationName parent,
             Dataset dataset,
             gaxgrpc::CallSettings callSettings = null) => CreateDatasetAsync(
@@ -897,7 +919,7 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation> CreateDatasetAsync(
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(
             LocationName parent,
             Dataset dataset,
             st::CancellationToken cancellationToken) => CreateDatasetAsync(
@@ -920,7 +942,7 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation CreateDataset(
+        public virtual lro::Operation<Dataset, OperationMetadata> CreateDataset(
             LocationName parent,
             Dataset dataset,
             gaxgrpc::CallSettings callSettings = null) => CreateDataset(
@@ -946,7 +968,7 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation> CreateDatasetAsync(
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(
             string parent,
             Dataset dataset,
             gaxgrpc::CallSettings callSettings = null) => CreateDatasetAsync(
@@ -972,7 +994,7 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation> CreateDatasetAsync(
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(
             string parent,
             Dataset dataset,
             st::CancellationToken cancellationToken) => CreateDatasetAsync(
@@ -995,7 +1017,7 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation CreateDataset(
+        public virtual lro::Operation<Dataset, OperationMetadata> CreateDataset(
             string parent,
             Dataset dataset,
             gaxgrpc::CallSettings callSettings = null) => CreateDataset(
@@ -1018,7 +1040,7 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation> CreateDatasetAsync(
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(
             CreateDatasetRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1026,22 +1048,17 @@ namespace Google.Cloud.AutoML.V1
         }
 
         /// <summary>
-        /// Creates a dataset.
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDatasetAsync</c>.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<lro::Operation> CreateDatasetAsync(
-            CreateDatasetRequest request,
-            st::CancellationToken cancellationToken) => CreateDatasetAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> PollOnceCreateDatasetAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Dataset, OperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                CreateDatasetOperationsClient,
+                callSettings);
 
         /// <summary>
         /// Creates a dataset.
@@ -1055,12 +1072,33 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation CreateDataset(
+        public virtual lro::Operation<Dataset, OperationMetadata> CreateDataset(
             CreateDatasetRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>CreateDataset</c>.
+        /// </summary>
+        public virtual lro::OperationsClient CreateDatasetOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDataset</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Dataset, OperationMetadata> PollOnceCreateDataset(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Dataset, OperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                CreateDatasetOperationsClient,
+                callSettings);
 
         /// <summary>
         /// Updates a dataset.
@@ -3636,6 +3674,8 @@ namespace Google.Cloud.AutoML.V1
             GrpcClient = grpcClient;
             AutoMlSettings effectiveSettings = settings ?? AutoMlSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            CreateDatasetOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatasetOperationsSettings);
             DeleteDatasetOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetOperationsSettings);
             ImportDataOperationsClient = new lro::OperationsClientImpl(
@@ -3780,12 +3820,13 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override stt::Task<lro::Operation> CreateDatasetAsync(
+        public override async stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(
             CreateDatasetRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDatasetRequest(ref request, ref callSettings);
-            return _callCreateDataset.Async(request, callSettings);
+            return new lro::Operation<Dataset, OperationMetadata>(
+                await _callCreateDataset.Async(request, callSettings).ConfigureAwait(false), CreateDatasetOperationsClient);
         }
 
         /// <summary>
@@ -3800,13 +3841,19 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override lro::Operation CreateDataset(
+        public override lro::Operation<Dataset, OperationMetadata> CreateDataset(
             CreateDatasetRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDatasetRequest(ref request, ref callSettings);
-            return _callCreateDataset.Sync(request, callSettings);
+            return new lro::Operation<Dataset, OperationMetadata>(
+                _callCreateDataset.Sync(request, callSettings), CreateDatasetOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>CreateDataset</c>.
+        /// </summary>
+        public override lro::OperationsClient CreateDatasetOperationsClient { get; }
 
         /// <summary>
         /// Updates a dataset.
