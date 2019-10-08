@@ -46,7 +46,7 @@ do
   # See above
   if [[ $api == "Google.Cloud.Diagnostics.AspNet" || $api == "Google.Cloud.Diagnostics.AspNetCore.Analyzers" ]]
   then
-    break
+    continue
   fi
   
   if [[ ! -d tmpgit/apis/$api/$api ]]
