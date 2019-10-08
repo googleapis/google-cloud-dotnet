@@ -177,7 +177,6 @@ namespace Google.Cloud.OsLogin.V1.Tests
             LoginProfile expectedResponse = new LoginProfile
             {
                 Name = "name2-1052831874",
-                Suspended = false,
             };
             mockGrpcClient.Setup(x => x.GetLoginProfile(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -199,7 +198,6 @@ namespace Google.Cloud.OsLogin.V1.Tests
             LoginProfile expectedResponse = new LoginProfile
             {
                 Name = "name2-1052831874",
-                Suspended = false,
             };
             mockGrpcClient.Setup(x => x.GetLoginProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<LoginProfile>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -221,7 +219,6 @@ namespace Google.Cloud.OsLogin.V1.Tests
             LoginProfile expectedResponse = new LoginProfile
             {
                 Name = "name2-1052831874",
-                Suspended = false,
             };
             mockGrpcClient.Setup(x => x.GetLoginProfile(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -242,7 +239,6 @@ namespace Google.Cloud.OsLogin.V1.Tests
             LoginProfile expectedResponse = new LoginProfile
             {
                 Name = "name2-1052831874",
-                Suspended = false,
             };
             mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<LoginProfile>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -265,6 +261,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -288,6 +285,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -311,6 +309,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -333,6 +332,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -476,6 +476,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -501,6 +502,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -527,6 +529,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -554,6 +557,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -580,6 +584,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -603,6 +608,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
+                Name = "name2-1052831874",
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
