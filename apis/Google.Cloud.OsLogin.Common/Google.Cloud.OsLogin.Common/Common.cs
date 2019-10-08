@@ -25,27 +25,58 @@ namespace Google.Cloud.OsLogin.Common {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvb3Nsb2dpbi9jb21tb24vY29tbW9uLnByb3RvEhtn",
-            "b29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24aHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8iqAEKDFBvc2l4QWNjb3VudBIPCgdwcmltYXJ5GAEgASgI",
-            "EhAKCHVzZXJuYW1lGAIgASgJEgsKA3VpZBgDIAEoAxILCgNnaWQYBCABKAMS",
-            "FgoOaG9tZV9kaXJlY3RvcnkYBSABKAkSDQoFc2hlbGwYBiABKAkSDQoFZ2Vj",
-            "b3MYByABKAkSEQoJc3lzdGVtX2lkGAggASgJEhIKCmFjY291bnRfaWQYCSAB",
-            "KAkiTgoMU3NoUHVibGljS2V5EgsKA2tleRgBIAEoCRIcChRleHBpcmF0aW9u",
-            "X3RpbWVfdXNlYxgCIAEoAxITCgtmaW5nZXJwcmludBgDIAEoCUKuAQofY29t",
+            "b29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24aH2dvb2dsZS9hcGkvZmllbGRf",
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i3AIK",
+            "DFBvc2l4QWNjb3VudBIPCgdwcmltYXJ5GAEgASgIEhAKCHVzZXJuYW1lGAIg",
+            "ASgJEgsKA3VpZBgDIAEoAxILCgNnaWQYBCABKAMSFgoOaG9tZV9kaXJlY3Rv",
+            "cnkYBSABKAkSDQoFc2hlbGwYBiABKAkSDQoFZ2Vjb3MYByABKAkSEQoJc3lz",
+            "dGVtX2lkGAggASgJEhcKCmFjY291bnRfaWQYCSABKAlCA+BBAxJPChVvcGVy",
+            "YXRpbmdfc3lzdGVtX3R5cGUYCiABKA4yMC5nb29nbGUuY2xvdWQub3Nsb2dp",
+            "bi5jb21tb24uT3BlcmF0aW5nU3lzdGVtVHlwZRIRCgRuYW1lGAsgASgJQgPg",
+            "QQM6SepBRgojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Qb3NpeEFjY291bnQS",
+            "H3VzZXJzL3t1c2VyfS9wcm9qZWN0cy97cHJvamVjdH0iugEKDFNzaFB1Ymxp",
+            "Y0tleRILCgNrZXkYASABKAkSHAoUZXhwaXJhdGlvbl90aW1lX3VzZWMYAiAB",
+            "KAMSGAoLZmluZ2VycHJpbnQYAyABKAlCA+BBAxIRCgRuYW1lGAQgASgJQgPg",
+            "QQM6UupBTwojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Tc2hQdWJsaWNLZXkS",
+            "KHVzZXJzL3t1c2VyfS9zc2hQdWJsaWNLZXlzL3tmaW5nZXJwcmludH0qVAoT",
+            "T3BlcmF0aW5nU3lzdGVtVHlwZRIlCiFPUEVSQVRJTkdfU1lTVEVNX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABIJCgVMSU5VWBABEgsKB1dJTkRPV1MQAkKuAQofY29t",
             "Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbkIMT3NMb2dpblByb3RvWkFn",
             "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL29z",
             "bG9naW4vY29tbW9uO2NvbW1vbqoCG0dvb2dsZS5DbG91ZC5Pc0xvZ2luLkNv",
             "bW1vbsoCG0dvb2dsZVxDbG91ZFxPc0xvZ2luXENvbW1vbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.PosixAccount), global::Google.Cloud.OsLogin.Common.PosixAccount.Parser, new[]{ "Primary", "Username", "Uid", "Gid", "HomeDirectory", "Shell", "Gecos", "SystemId", "AccountId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.SshPublicKey), global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser, new[]{ "Key", "ExpirationTimeUsec", "Fingerprint" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsLogin.Common.OperatingSystemType), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.PosixAccount), global::Google.Cloud.OsLogin.Common.PosixAccount.Parser, new[]{ "Primary", "Username", "Uid", "Gid", "HomeDirectory", "Shell", "Gecos", "SystemId", "AccountId", "OperatingSystemType", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.SshPublicKey), global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser, new[]{ "Key", "ExpirationTimeUsec", "Fingerprint", "Name" }, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The operating system options for account entries.
+  /// </summary>
+  public enum OperatingSystemType {
+    /// <summary>
+    /// The operating system type associated with the user account information is
+    /// unspecified.
+    /// </summary>
+    [pbr::OriginalName("OPERATING_SYSTEM_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Linux user account information.
+    /// </summary>
+    [pbr::OriginalName("LINUX")] Linux = 1,
+    /// <summary>
+    /// Windows user account information.
+    /// </summary>
+    [pbr::OriginalName("WINDOWS")] Windows = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// The POSIX account information associated with a Google account.
@@ -84,6 +115,8 @@ namespace Google.Cloud.OsLogin.Common {
       gecos_ = other.gecos_;
       systemId_ = other.systemId_;
       accountId_ = other.accountId_;
+      operatingSystemType_ = other.operatingSystemType_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -219,6 +252,34 @@ namespace Google.Cloud.OsLogin.Common {
       }
     }
 
+    /// <summary>Field number for the "operating_system_type" field.</summary>
+    public const int OperatingSystemTypeFieldNumber = 10;
+    private global::Google.Cloud.OsLogin.Common.OperatingSystemType operatingSystemType_ = 0;
+    /// <summary>
+    /// The operating system type where this account applies.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsLogin.Common.OperatingSystemType OperatingSystemType {
+      get { return operatingSystemType_; }
+      set {
+        operatingSystemType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 11;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The canonical resource name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PosixAccount);
@@ -241,6 +302,8 @@ namespace Google.Cloud.OsLogin.Common {
       if (Gecos != other.Gecos) return false;
       if (SystemId != other.SystemId) return false;
       if (AccountId != other.AccountId) return false;
+      if (OperatingSystemType != other.OperatingSystemType) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -256,6 +319,8 @@ namespace Google.Cloud.OsLogin.Common {
       if (Gecos.Length != 0) hash ^= Gecos.GetHashCode();
       if (SystemId.Length != 0) hash ^= SystemId.GetHashCode();
       if (AccountId.Length != 0) hash ^= AccountId.GetHashCode();
+      if (OperatingSystemType != 0) hash ^= OperatingSystemType.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -305,6 +370,14 @@ namespace Google.Cloud.OsLogin.Common {
         output.WriteRawTag(74);
         output.WriteString(AccountId);
       }
+      if (OperatingSystemType != 0) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) OperatingSystemType);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -339,6 +412,12 @@ namespace Google.Cloud.OsLogin.Common {
       }
       if (AccountId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountId);
+      }
+      if (OperatingSystemType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperatingSystemType);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -377,6 +456,12 @@ namespace Google.Cloud.OsLogin.Common {
       }
       if (other.AccountId.Length != 0) {
         AccountId = other.AccountId;
+      }
+      if (other.OperatingSystemType != 0) {
+        OperatingSystemType = other.OperatingSystemType;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -425,6 +510,14 @@ namespace Google.Cloud.OsLogin.Common {
             AccountId = input.ReadString();
             break;
           }
+          case 80: {
+            OperatingSystemType = (global::Google.Cloud.OsLogin.Common.OperatingSystemType) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -462,6 +555,7 @@ namespace Google.Cloud.OsLogin.Common {
       key_ = other.key_;
       expirationTimeUsec_ = other.expirationTimeUsec_;
       fingerprint_ = other.fingerprint_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -514,6 +608,20 @@ namespace Google.Cloud.OsLogin.Common {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 4;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The canonical resource name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SshPublicKey);
@@ -530,6 +638,7 @@ namespace Google.Cloud.OsLogin.Common {
       if (Key != other.Key) return false;
       if (ExpirationTimeUsec != other.ExpirationTimeUsec) return false;
       if (Fingerprint != other.Fingerprint) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -539,6 +648,7 @@ namespace Google.Cloud.OsLogin.Common {
       if (Key.Length != 0) hash ^= Key.GetHashCode();
       if (ExpirationTimeUsec != 0L) hash ^= ExpirationTimeUsec.GetHashCode();
       if (Fingerprint.Length != 0) hash ^= Fingerprint.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -564,6 +674,10 @@ namespace Google.Cloud.OsLogin.Common {
         output.WriteRawTag(26);
         output.WriteString(Fingerprint);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -580,6 +694,9 @@ namespace Google.Cloud.OsLogin.Common {
       }
       if (Fingerprint.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Fingerprint);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -600,6 +717,9 @@ namespace Google.Cloud.OsLogin.Common {
       }
       if (other.Fingerprint.Length != 0) {
         Fingerprint = other.Fingerprint;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -622,6 +742,10 @@ namespace Google.Cloud.OsLogin.Common {
           }
           case 26: {
             Fingerprint = input.ReadString();
+            break;
+          }
+          case 34: {
+            Name = input.ReadString();
             break;
           }
         }

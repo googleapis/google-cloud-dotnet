@@ -26,60 +26,74 @@ namespace Google.Cloud.OsLogin.V1 {
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvb3Nsb2dpbi92MS9vc2xvZ2luLnByb3RvEhdnb29n",
             "bGUuY2xvdWQub3Nsb2dpbi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
-            "cm90bxooZ29vZ2xlL2Nsb3VkL29zbG9naW4vY29tbW9uL2NvbW1vbi5wcm90",
-            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
-            "dWYvZmllbGRfbWFzay5wcm90byKmAgoMTG9naW5Qcm9maWxlEgwKBG5hbWUY",
-            "ASABKAkSQQoOcG9zaXhfYWNjb3VudHMYAiADKAsyKS5nb29nbGUuY2xvdWQu",
+            "cm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmll",
+            "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
+            "KGdvb2dsZS9jbG91ZC9vc2xvZ2luL2NvbW1vbi9jb21tb24ucHJvdG8aG2dv",
+            "b2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2Zp",
+            "ZWxkX21hc2sucHJvdG8iqwIKDExvZ2luUHJvZmlsZRIRCgRuYW1lGAEgASgJ",
+            "QgPgQQISQQoOcG9zaXhfYWNjb3VudHMYAiADKAsyKS5nb29nbGUuY2xvdWQu",
             "b3Nsb2dpbi5jb21tb24uUG9zaXhBY2NvdW50ElEKD3NzaF9wdWJsaWNfa2V5",
             "cxgDIAMoCzI4Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkxvZ2luUHJvZmls",
             "ZS5Tc2hQdWJsaWNLZXlzRW50cnkSEQoJc3VzcGVuZGVkGAQgASgIGl8KElNz",
             "aFB1YmxpY0tleXNFbnRyeRILCgNrZXkYASABKAkSOAoFdmFsdWUYAiABKAsy",
             "KS5nb29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5OgI4",
-            "ASIpChlEZWxldGVQb3NpeEFjY291bnRSZXF1ZXN0EgwKBG5hbWUYASABKAki",
-            "KQoZRGVsZXRlU3NoUHVibGljS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJIiYK",
-            "FkdldExvZ2luUHJvZmlsZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSImChZHZXRT",
-            "c2hQdWJsaWNLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkiggEKGUltcG9ydFNz",
-            "aFB1YmxpY0tleVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEkEKDnNzaF9wdWJs",
-            "aWNfa2V5GAIgASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNz",
-            "aFB1YmxpY0tleRISCgpwcm9qZWN0X2lkGAMgASgJIloKGkltcG9ydFNzaFB1",
-            "YmxpY0tleVJlc3BvbnNlEjwKDWxvZ2luX3Byb2ZpbGUYASABKAsyJS5nb29n",
-            "bGUuY2xvdWQub3Nsb2dpbi52MS5Mb2dpblByb2ZpbGUinQEKGVVwZGF0ZVNz",
-            "aFB1YmxpY0tleVJlcXVlc3QSDAoEbmFtZRgBIAEoCRJBCg5zc2hfcHVibGlj",
-            "X2tleRgCIAEoCzIpLmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQ",
-            "dWJsaWNLZXkSLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuRmllbGRNYXNrMs0HCg5Pc0xvZ2luU2VydmljZRKHAQoSRGVsZXRlUG9z",
-            "aXhBY2NvdW50EjIuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjEuRGVsZXRlUG9z",
-            "aXhBY2NvdW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIlgtPk",
-            "kwIfKh0vdjEve25hbWU9dXNlcnMvKi9wcm9qZWN0cy8qfRKMAQoSRGVsZXRl",
-            "U3NoUHVibGljS2V5EjIuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjEuRGVsZXRl",
-            "U3NoUHVibGljS2V5UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIq",
-            "gtPkkwIkKiIvdjEve25hbWU9dXNlcnMvKi9zc2hQdWJsaWNLZXlzLyp9EpIB",
-            "Cg9HZXRMb2dpblByb2ZpbGUSLy5nb29nbGUuY2xvdWQub3Nsb2dpbi52MS5H",
-            "ZXRMb2dpblByb2ZpbGVSZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLm9zbG9naW4u",
-            "djEuTG9naW5Qcm9maWxlIieC0+STAiESHy92MS97bmFtZT11c2Vycy8qfS9s",
-            "b2dpblByb2ZpbGUSmQEKD0dldFNzaFB1YmxpY0tleRIvLmdvb2dsZS5jbG91",
-            "ZC5vc2xvZ2luLnYxLkdldFNzaFB1YmxpY0tleVJlcXVlc3QaKS5nb29nbGUu",
-            "Y2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5IiqC0+STAiQSIi92",
-            "MS97bmFtZT11c2Vycy8qL3NzaFB1YmxpY0tleXMvKn0SvgEKEkltcG9ydFNz",
-            "aFB1YmxpY0tleRIyLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkltcG9ydFNz",
-            "aFB1YmxpY0tleVJlcXVlc3QaMy5nb29nbGUuY2xvdWQub3Nsb2dpbi52MS5J",
-            "bXBvcnRTc2hQdWJsaWNLZXlSZXNwb25zZSI/gtPkkwI5IicvdjEve3BhcmVu",
-            "dD11c2Vycy8qfTppbXBvcnRTc2hQdWJsaWNLZXk6DnNzaF9wdWJsaWNfa2V5",
-            "Eq8BChJVcGRhdGVTc2hQdWJsaWNLZXkSMi5nb29nbGUuY2xvdWQub3Nsb2dp",
-            "bi52MS5VcGRhdGVTc2hQdWJsaWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3Vk",
-            "Lm9zbG9naW4uY29tbW9uLlNzaFB1YmxpY0tleSI6gtPkkwI0MiIvdjEve25h",
-            "bWU9dXNlcnMvKi9zc2hQdWJsaWNLZXlzLyp9Og5zc2hfcHVibGljX2tleUKh",
-            "AQobY29tLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxQgxPc0xvZ2luUHJvdG9Q",
-            "AVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9vc2xvZ2luL3YxO29zbG9naW6qAhdHb29nbGUuQ2xvdWQuT3NMb2dpbi5W",
-            "McoCF0dvb2dsZVxDbG91ZFxPc0xvZ2luXFYxYgZwcm90bzM="));
+            "ASJWChlEZWxldGVQb3NpeEFjY291bnRSZXF1ZXN0EjkKBG5hbWUYASABKAlC",
+            "K+BBAvpBJQojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Qb3NpeEFjY291bnQi",
+            "VgoZRGVsZXRlU3NoUHVibGljS2V5UmVxdWVzdBI5CgRuYW1lGAEgASgJQivg",
+            "QQL6QSUKI29zbG9naW4uZ29vZ2xlYXBpcy5jb20vU3NoUHVibGljS2V5InoK",
+            "FkdldExvZ2luUHJvZmlsZVJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kEl",
+            "EiNvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1Bvc2l4QWNjb3VudBISCgpwcm9q",
+            "ZWN0X2lkGAIgASgJEhEKCXN5c3RlbV9pZBgDIAEoCSImChZHZXRTc2hQdWJs",
+            "aWNLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkitAEKGUltcG9ydFNzaFB1Ymxp",
+            "Y0tleVJlcXVlc3QSOwoGcGFyZW50GAEgASgJQivgQQL6QSUSI29zbG9naW4u",
+            "Z29vZ2xlYXBpcy5jb20vU3NoUHVibGljS2V5EkYKDnNzaF9wdWJsaWNfa2V5",
+            "GAIgASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNzaFB1Ymxp",
+            "Y0tleUID4EEBEhIKCnByb2plY3RfaWQYAyABKAkiWgoaSW1wb3J0U3NoUHVi",
+            "bGljS2V5UmVzcG9uc2USPAoNbG9naW5fcHJvZmlsZRgBIAEoCzIlLmdvb2ds",
+            "ZS5jbG91ZC5vc2xvZ2luLnYxLkxvZ2luUHJvZmlsZSLPAQoZVXBkYXRlU3No",
+            "UHVibGljS2V5UmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI29zbG9n",
+            "aW4uZ29vZ2xlYXBpcy5jb20vU3NoUHVibGljS2V5EkYKDnNzaF9wdWJsaWNf",
+            "a2V5GAIgASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNzaFB1",
+            "YmxpY0tleUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzazLQCQoOT3NMb2dpblNlcnZpY2USjgEKEkRlbGV0",
+            "ZVBvc2l4QWNjb3VudBIyLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkRlbGV0",
+            "ZVBvc2l4QWNjb3VudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "LILT5JMCHyodL3YxL3tuYW1lPXVzZXJzLyovcHJvamVjdHMvKn3aQQRuYW1l",
+            "EpMBChJEZWxldGVTc2hQdWJsaWNLZXkSMi5nb29nbGUuY2xvdWQub3Nsb2dp",
+            "bi52MS5EZWxldGVTc2hQdWJsaWNLZXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5IjGC0+STAiQqIi92MS97bmFtZT11c2Vycy8qL3NzaFB1Ymxp",
+            "Y0tleXMvKn3aQQRuYW1lEpkBCg9HZXRMb2dpblByb2ZpbGUSLy5nb29nbGUu",
+            "Y2xvdWQub3Nsb2dpbi52MS5HZXRMb2dpblByb2ZpbGVSZXF1ZXN0GiUuZ29v",
+            "Z2xlLmNsb3VkLm9zbG9naW4udjEuTG9naW5Qcm9maWxlIi6C0+STAiESHy92",
+            "MS97bmFtZT11c2Vycy8qfS9sb2dpblByb2ZpbGXaQQRuYW1lEqABCg9HZXRT",
+            "c2hQdWJsaWNLZXkSLy5nb29nbGUuY2xvdWQub3Nsb2dpbi52MS5HZXRTc2hQ",
+            "dWJsaWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9u",
+            "LlNzaFB1YmxpY0tleSIxgtPkkwIkEiIvdjEve25hbWU9dXNlcnMvKi9zc2hQ",
+            "dWJsaWNLZXlzLyp92kEEbmFtZRL5AQoSSW1wb3J0U3NoUHVibGljS2V5EjIu",
+            "Z29vZ2xlLmNsb3VkLm9zbG9naW4udjEuSW1wb3J0U3NoUHVibGljS2V5UmVx",
+            "dWVzdBozLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkltcG9ydFNzaFB1Ymxp",
+            "Y0tleVJlc3BvbnNlInqC0+STAjkiJy92MS97cGFyZW50PXVzZXJzLyp9Omlt",
+            "cG9ydFNzaFB1YmxpY0tleToOc3NoX3B1YmxpY19rZXnaQRVwYXJlbnQsc3No",
+            "X3B1YmxpY19rZXnaQSBwYXJlbnQsc3NoX3B1YmxpY19rZXkscHJvamVjdF9p",
+            "ZBLnAQoSVXBkYXRlU3NoUHVibGljS2V5EjIuZ29vZ2xlLmNsb3VkLm9zbG9n",
+            "aW4udjEuVXBkYXRlU3NoUHVibGljS2V5UmVxdWVzdBopLmdvb2dsZS5jbG91",
+            "ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJsaWNLZXkicoLT5JMCNDIiL3YxL3tu",
+            "YW1lPXVzZXJzLyovc3NoUHVibGljS2V5cy8qfToOc3NoX3B1YmxpY19rZXna",
+            "QRNuYW1lLHNzaF9wdWJsaWNfa2V52kEfbmFtZSxzc2hfcHVibGljX2tleSx1",
+            "cGRhdGVfbWFzaxpyykEWb3Nsb2dpbi5nb29nbGVhcGlzLmNvbdJBVmh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlQqEBChtjb20u",
+            "Z29vZ2xlLmNsb3VkLm9zbG9naW4udjFCDE9zTG9naW5Qcm90b1ABWj5nb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL29zbG9n",
+            "aW4vdjE7b3Nsb2dpbqoCF0dvb2dsZS5DbG91ZC5Pc0xvZ2luLlYxygIXR29v",
+            "Z2xlXENsb3VkXE9zTG9naW5cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.LoginProfile), global::Google.Cloud.OsLogin.V1.LoginProfile.Parser, new[]{ "Name", "PosixAccounts", "SshPublicKeys", "Suspended" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest), global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest), global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest), global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest.Parser, new[]{ "Name", "ProjectId", "SystemId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey", "ProjectId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse.Parser, new[]{ "LoginProfile" }, null, null, null),
@@ -135,7 +149,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The primary email address that uniquely identifies the user.
+    /// Required. A unique user ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -345,7 +359,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// A reference to the POSIX account to update. POSIX accounts are identified
+    /// Required. A reference to the POSIX account to update. POSIX accounts are identified
     /// by the project ID they are associated with. A reference to the POSIX
     /// account is in format `users/{user}/projects/{project}`.
     /// </summary>
@@ -482,7 +496,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The fingerprint of the public key to update. Public keys are identified by
+    /// Required. The fingerprint of the public key to update. Public keys are identified by
     /// their SHA-256 fingerprint. The fingerprint of the public key is in format
     /// `users/{user}/sshPublicKeys/{fingerprint}`.
     /// </summary>
@@ -607,6 +621,8 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetLoginProfileRequest(GetLoginProfileRequest other) : this() {
       name_ = other.name_;
+      projectId_ = other.projectId_;
+      systemId_ = other.systemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -619,13 +635,41 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The unique ID for the user in format `users/{user}`.
+    /// Required. The unique ID for the user in format `users/{user}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 2;
+    private string projectId_ = "";
+    /// <summary>
+    /// The project ID of the Google Cloud Platform project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "system_id" field.</summary>
+    public const int SystemIdFieldNumber = 3;
+    private string systemId_ = "";
+    /// <summary>
+    /// A system ID for filtering the results of the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SystemId {
+      get { return systemId_; }
+      set {
+        systemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -643,6 +687,8 @@ namespace Google.Cloud.OsLogin.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (ProjectId != other.ProjectId) return false;
+      if (SystemId != other.SystemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -650,6 +696,8 @@ namespace Google.Cloud.OsLogin.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (SystemId.Length != 0) hash ^= SystemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -667,6 +715,14 @@ namespace Google.Cloud.OsLogin.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ProjectId);
+      }
+      if (SystemId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SystemId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -677,6 +733,12 @@ namespace Google.Cloud.OsLogin.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (SystemId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SystemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -692,6 +754,12 @@ namespace Google.Cloud.OsLogin.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
+      }
+      if (other.SystemId.Length != 0) {
+        SystemId = other.SystemId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -705,6 +773,14 @@ namespace Google.Cloud.OsLogin.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            SystemId = input.ReadString();
             break;
           }
         }
@@ -893,7 +969,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The unique ID for the user in format `users/{user}`.
+    /// Required. The unique ID for the user in format `users/{user}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -907,7 +983,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int SshPublicKeyFieldNumber = 2;
     private global::Google.Cloud.OsLogin.Common.SshPublicKey sshPublicKey_;
     /// <summary>
-    /// The SSH public key and expiration time.
+    /// Optional. The SSH public key and expiration time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.OsLogin.Common.SshPublicKey SshPublicKey {
@@ -1237,7 +1313,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The fingerprint of the public key to update. Public keys are identified by
+    /// Required. The fingerprint of the public key to update. Public keys are identified by
     /// their SHA-256 fingerprint. The fingerprint of the public key is in format
     /// `users/{user}/sshPublicKeys/{fingerprint}`.
     /// </summary>
@@ -1253,7 +1329,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int SshPublicKeyFieldNumber = 2;
     private global::Google.Cloud.OsLogin.Common.SshPublicKey sshPublicKey_;
     /// <summary>
-    /// The SSH public key and expiration time.
+    /// Required. The SSH public key and expiration time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.OsLogin.Common.SshPublicKey SshPublicKey {
