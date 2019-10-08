@@ -308,7 +308,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             Cluster expectedResponse = new Cluster
             {
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
+                LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 1288838783,
             };
             mockGrpcClient.Setup(x => x.GetCluster(expectedRequest, It.IsAny<CallOptions>()))
@@ -333,7 +333,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             Cluster expectedResponse = new Cluster
             {
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
+                LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 1288838783,
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
@@ -358,7 +358,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             Cluster expectedResponse = new Cluster
             {
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
+                LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 1288838783,
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, It.IsAny<CallOptions>()))
@@ -382,7 +382,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             Cluster expectedResponse = new Cluster
             {
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
+                LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 1288838783,
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, It.IsAny<CallOptions>()))
