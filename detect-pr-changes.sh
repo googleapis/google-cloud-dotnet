@@ -24,6 +24,7 @@ do
   
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
   then
+    echo "Building $api"
     apidir=apis/$api/$api
     dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false tmpgit/$apidir 
     dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false $apidir
