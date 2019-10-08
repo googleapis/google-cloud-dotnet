@@ -414,14 +414,14 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// Gets the most recent threat list diffs.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The ThreatList to update.
+        /// The ThreatList to update.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
         /// client version that was received from the last successful diff).
         /// </param>
         /// <param name="constraints">
-        /// The constraints associated with this request.
+        /// Required. The constraints associated with this request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -446,14 +446,14 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// Gets the most recent threat list diffs.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The ThreatList to update.
+        /// The ThreatList to update.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
         /// client version that was received from the last successful diff).
         /// </param>
         /// <param name="constraints">
-        /// The constraints associated with this request.
+        /// Required. The constraints associated with this request.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -475,14 +475,14 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// Gets the most recent threat list diffs.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The ThreatList to update.
+        /// The ThreatList to update.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
         /// client version that was received from the last successful diff).
         /// </param>
         /// <param name="constraints">
-        /// The constraints associated with this request.
+        /// Required. The constraints associated with this request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -563,7 +563,7 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// This method is used to check whether a URI is on a given threatList.
         /// </summary>
         /// <param name="uri">
-        /// The URI to be checked for matches.
+        /// Required. The URI to be checked for matches.
         /// </param>
         /// <param name="threatTypes">
         /// Required. The ThreatLists to search in.
@@ -589,7 +589,7 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// This method is used to check whether a URI is on a given threatList.
         /// </summary>
         /// <param name="uri">
-        /// The URI to be checked for matches.
+        /// Required. The URI to be checked for matches.
         /// </param>
         /// <param name="threatTypes">
         /// Required. The ThreatLists to search in.
@@ -612,7 +612,7 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// This method is used to check whether a URI is on a given threatList.
         /// </summary>
         /// <param name="uri">
-        /// The URI to be checked for matches.
+        /// Required. The URI to be checked for matches.
         /// </param>
         /// <param name="threatTypes">
         /// Required. The ThreatLists to search in.
