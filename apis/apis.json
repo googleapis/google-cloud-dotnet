@@ -318,8 +318,8 @@
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "2.10.0",
-      "Google.Cloud.Logging.V2": "2.1.0",
-      "Google.Cloud.Trace.V1": "1.0.0",
+      "Google.Cloud.Logging.V2": "2.2.0",
+      "Google.Cloud.Trace.V1": "1.1.0",
       "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
       "Microsoft.Extensions.Http": "2.1.1",
       "System.Diagnostics.StackTrace": "4.3.0"
@@ -488,7 +488,7 @@
     "description": "gRPC services for the Stackdriver Incident Response & Management API.",
     "tags": [ "IRM", "Incident Response", "Incident Management", "Stackdriver" ],
     "dependencies": {
-      "Google.Cloud.Monitoring.V3": "1.0.0"
+      "Google.Cloud.Monitoring.V3": "1.1.0"
     }
   },
 

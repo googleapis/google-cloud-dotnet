@@ -23,8 +23,8 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.10.0" />
-    <PackageReference Include="Google.Cloud.Logging.V2" Version="2.1.0" />
-    <PackageReference Include="Google.Cloud.Trace.V1" Version="1.0.0" />
+    <PackageReference Include="Google.Cloud.Logging.V2" Version="2.2.0" />
+    <PackageReference Include="Google.Cloud.Trace.V1" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="2.1.1" />
