@@ -383,15 +383,15 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// [Google Cloud Storage](https://cloud.google.com/storage/) URIs are
         /// supported, which must be specified in the following format:
         /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
-        /// more information, see [Request URIs](/storage/docs/reference-uris). A video
-        /// URI may include wildcards in `object-id`, and thus identify multiple
-        /// videos. Supported wildcards: '*' to match 0 or more characters;
+        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
+        /// [Request URIs](/storage/docs/reference-uris).
+        /// A video URI may include wildcards in `object-id`, and thus identify
+        /// multiple videos. Supported wildcards: '*' to match 0 or more characters;
         /// '?' to match 1 character. If unset, the input video should be embedded
         /// in the request as `input_content`. If set, `input_content` should be unset.
         /// </param>
         /// <param name="features">
-        /// Requested video annotation features.
+        /// Required. Requested video annotation features.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -421,15 +421,15 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// [Google Cloud Storage](https://cloud.google.com/storage/) URIs are
         /// supported, which must be specified in the following format:
         /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
-        /// more information, see [Request URIs](/storage/docs/reference-uris). A video
-        /// URI may include wildcards in `object-id`, and thus identify multiple
-        /// videos. Supported wildcards: '*' to match 0 or more characters;
+        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
+        /// [Request URIs](/storage/docs/reference-uris).
+        /// A video URI may include wildcards in `object-id`, and thus identify
+        /// multiple videos. Supported wildcards: '*' to match 0 or more characters;
         /// '?' to match 1 character. If unset, the input video should be embedded
         /// in the request as `input_content`. If set, `input_content` should be unset.
         /// </param>
         /// <param name="features">
-        /// Requested video annotation features.
+        /// Required. Requested video annotation features.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -456,15 +456,15 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// [Google Cloud Storage](https://cloud.google.com/storage/) URIs are
         /// supported, which must be specified in the following format:
         /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
-        /// more information, see [Request URIs](/storage/docs/reference-uris). A video
-        /// URI may include wildcards in `object-id`, and thus identify multiple
-        /// videos. Supported wildcards: '*' to match 0 or more characters;
+        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
+        /// [Request URIs](/storage/docs/reference-uris).
+        /// A video URI may include wildcards in `object-id`, and thus identify
+        /// multiple videos. Supported wildcards: '*' to match 0 or more characters;
         /// '?' to match 1 character. If unset, the input video should be embedded
         /// in the request as `input_content`. If set, `input_content` should be unset.
         /// </param>
         /// <param name="features">
-        /// Requested video annotation features.
+        /// Required. Requested video annotation features.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
