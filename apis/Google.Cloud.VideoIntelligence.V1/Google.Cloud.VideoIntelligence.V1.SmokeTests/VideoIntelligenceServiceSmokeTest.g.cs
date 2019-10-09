@@ -25,7 +25,6 @@ namespace Google.Cloud.VideoIntelligence.V1.SmokeTests
     using System.Collections;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
 
