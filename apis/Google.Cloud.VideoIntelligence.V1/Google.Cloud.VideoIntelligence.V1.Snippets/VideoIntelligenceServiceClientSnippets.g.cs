@@ -116,11 +116,11 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Initialize request argument(s)
             AnnotateVideoRequest request = new AnnotateVideoRequest
             {
-                InputUri = "gs://cloud-samples-data/video/cat.mp4",
                 Features =
                 {
                     Feature.LabelDetection,
                 },
+                InputUri = "gs://cloud-samples-data/video/cat.mp4",
             };
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
@@ -155,11 +155,11 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Initialize request argument(s)
             AnnotateVideoRequest request = new AnnotateVideoRequest
             {
-                InputUri = "gs://cloud-samples-data/video/cat.mp4",
                 Features =
                 {
                     Feature.LabelDetection,
                 },
+                InputUri = "gs://cloud-samples-data/video/cat.mp4",
             };
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
