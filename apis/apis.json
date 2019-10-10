@@ -93,7 +93,7 @@
     "tags": [ "Bigtable" ],
     "dependencies": {
       "Google.LongRunning": "1.1.0",
-      "Google.Cloud.Iam.V1": "1.2.0",
+      "Google.Cloud.Iam.V1": "project",
       "Google.Cloud.Bigtable.Common.V2": "project"
     },
     "testDependencies": {
