@@ -169,5 +169,28 @@ namespace Google.Cloud.Iam.V1.Tests
             var policy = new Policy { Version = 2 };
             Assert.Throws<InvalidOperationException>(() => policy.RemoveRoleMember("role", "member"));
         }
+
+        [Fact]
+        public void AddRoleMember_ContainsBinding()
+        {
+            var policy = new Policy
+            {
+                Bindings = { new Binding { Role = "role", Members = { "member" }, Condition = new Type.Expr { Description = "condition" } } }
+            };
+            Assert.Throws<InvalidOperationException>(() => policy.AddRoleMember("role", "member2"));
+            Assert.Throws<InvalidOperationException>(() => policy.AddRoleMember("role2", "member2"));
+        }
+
+        [Fact]
+        public void RemoveRoleMember_ContainsBinding()
+        {
+            var policy = new Policy
+            {
+                Bindings = { new Binding { Role = "role", Members = { "member" }, Condition = new Type.Expr { Description = "condition" } } }
+            };
+            Assert.Throws<InvalidOperationException>(() => policy.RemoveRoleMember("role", "member"));
+            Assert.Throws<InvalidOperationException>(() => policy.RemoveRoleMember("role", "member2"));
+            Assert.Throws<InvalidOperationException>(() => policy.RemoveRoleMember("role2", "member"));
+        }
     }
 }

@@ -91,6 +91,7 @@ namespace Google.Cloud.Iam.V1
         private Binding FindRole(string role) => Bindings.FirstOrDefault(binding => binding.Role == role);
 
         private void ValidatePolicyVersion() =>
-            GaxPreconditions.CheckState(Version <= 1, "Helper methods cannot be invoked on policies with version {0}. For more information, see FIXME.", Version);
+            GaxPreconditions.CheckState(Version <= 1 && Bindings.All(b => b.Condition == null),
+                "Helper methods cannot be invoked on policies with version {0} or with conditional bindings. For more information, see FIXME.", Version);
     }
 }
