@@ -564,9 +564,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Lists jobs.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="pageToken">
@@ -600,9 +598,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Lists jobs.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="pageToken">
@@ -636,9 +632,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Lists jobs.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="pageToken">
@@ -672,9 +666,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Lists jobs.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="pageToken">
@@ -746,9 +738,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Gets a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -770,9 +760,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Gets a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -791,9 +779,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Gets a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -815,9 +801,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Gets a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -839,9 +823,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Gets a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -860,9 +842,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Gets a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -940,15 +920,11 @@ namespace Google.Cloud.Scheduler.V1
         /// Creates a job.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The job to add. The user can optionally specify a name for the
+        /// Required. The job to add. The user can optionally specify a name for the
         /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
@@ -975,15 +951,11 @@ namespace Google.Cloud.Scheduler.V1
         /// Creates a job.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The job to add. The user can optionally specify a name for the
+        /// Required. The job to add. The user can optionally specify a name for the
         /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
@@ -1007,15 +979,11 @@ namespace Google.Cloud.Scheduler.V1
         /// Creates a job.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The job to add. The user can optionally specify a name for the
+        /// Required. The job to add. The user can optionally specify a name for the
         /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
@@ -1042,15 +1010,11 @@ namespace Google.Cloud.Scheduler.V1
         /// Creates a job.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The job to add. The user can optionally specify a name for the
+        /// Required. The job to add. The user can optionally specify a name for the
         /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
@@ -1077,15 +1041,11 @@ namespace Google.Cloud.Scheduler.V1
         /// Creates a job.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The job to add. The user can optionally specify a name for the
+        /// Required. The job to add. The user can optionally specify a name for the
         /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
@@ -1109,15 +1069,11 @@ namespace Google.Cloud.Scheduler.V1
         /// Creates a job.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The location name. For example:
+        /// Required. The location name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID`.
         /// </param>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The job to add. The user can optionally specify a name for the
+        /// Required. The job to add. The user can optionally specify a name for the
         /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
@@ -1208,9 +1164,7 @@ namespace Google.Cloud.Scheduler.V1
         /// until a successful response is received.
         /// </summary>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
+        /// Required. The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
         ///
         /// Output only fields cannot be modified using UpdateJob.
         /// Any value specified for an output only field will be ignored.
@@ -1247,9 +1201,7 @@ namespace Google.Cloud.Scheduler.V1
         /// until a successful response is received.
         /// </summary>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
+        /// Required. The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
         ///
         /// Output only fields cannot be modified using UpdateJob.
         /// Any value specified for an output only field will be ignored.
@@ -1283,9 +1235,7 @@ namespace Google.Cloud.Scheduler.V1
         /// until a successful response is received.
         /// </summary>
         /// <param name="job">
-        /// Required.
-        ///
-        /// The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
+        /// Required. The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
         ///
         /// Output only fields cannot be modified using UpdateJob.
         /// Any value specified for an output only field will be ignored.
@@ -1394,9 +1344,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Deletes a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1418,9 +1366,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Deletes a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1439,9 +1385,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Deletes a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1460,9 +1404,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Deletes a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1484,9 +1426,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Deletes a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1505,9 +1445,7 @@ namespace Google.Cloud.Scheduler.V1
         /// Deletes a job.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1585,9 +1523,7 @@ namespace Google.Cloud.Scheduler.V1
         /// to be paused.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1615,9 +1551,7 @@ namespace Google.Cloud.Scheduler.V1
         /// to be paused.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1642,9 +1576,7 @@ namespace Google.Cloud.Scheduler.V1
         /// to be paused.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1672,9 +1604,7 @@ namespace Google.Cloud.Scheduler.V1
         /// to be paused.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1702,9 +1632,7 @@ namespace Google.Cloud.Scheduler.V1
         /// to be paused.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1729,9 +1657,7 @@ namespace Google.Cloud.Scheduler.V1
         /// to be paused.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1832,9 +1758,7 @@ namespace Google.Cloud.Scheduler.V1
         /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1861,9 +1785,7 @@ namespace Google.Cloud.Scheduler.V1
         /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1887,9 +1809,7 @@ namespace Google.Cloud.Scheduler.V1
         /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1916,9 +1836,7 @@ namespace Google.Cloud.Scheduler.V1
         /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -1945,9 +1863,7 @@ namespace Google.Cloud.Scheduler.V1
         /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1971,9 +1887,7 @@ namespace Google.Cloud.Scheduler.V1
         /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -2069,9 +1983,7 @@ namespace Google.Cloud.Scheduler.V1
         /// if the job is already running.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -2096,9 +2008,7 @@ namespace Google.Cloud.Scheduler.V1
         /// if the job is already running.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -2120,9 +2030,7 @@ namespace Google.Cloud.Scheduler.V1
         /// if the job is already running.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -2147,9 +2055,7 @@ namespace Google.Cloud.Scheduler.V1
         /// if the job is already running.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">
@@ -2174,9 +2080,7 @@ namespace Google.Cloud.Scheduler.V1
         /// if the job is already running.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="cancellationToken">
@@ -2198,9 +2102,7 @@ namespace Google.Cloud.Scheduler.V1
         /// if the job is already running.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The job name. For example:
+        /// Required. The job name. For example:
         /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
         /// </param>
         /// <param name="callSettings">

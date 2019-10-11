@@ -25,8 +25,8 @@ namespace Google.Cloud.Scheduler.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvc2NoZWR1bGVyL3YxL3RhcmdldC5wcm90bxIZZ29v",
-            "Z2xlLmNsb3VkLnNjaGVkdWxlci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90byLqAgoKSHR0cFRh",
+            "Z2xlLmNsb3VkLnNjaGVkdWxlci52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
+            "cm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLqAgoKSHR0cFRh",
             "cmdldBILCgN1cmkYASABKAkSOgoLaHR0cF9tZXRob2QYAiABKA4yJS5nb29n",
             "bGUuY2xvdWQuc2NoZWR1bGVyLnYxLkh0dHBNZXRob2QSQwoHaGVhZGVycxgD",
             "IAMoCzIyLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSHR0cFRhcmdldC5I",
@@ -41,23 +41,26 @@ namespace Google.Cloud.Scheduler.V1 {
             "QXBwRW5naW5lUm91dGluZxIUCgxyZWxhdGl2ZV91cmkYAyABKAkSTAoHaGVh",
             "ZGVycxgEIAMoCzI7Lmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuQXBwRW5n",
             "aW5lSHR0cFRhcmdldC5IZWFkZXJzRW50cnkSDAoEYm9keRgFIAEoDBouCgxI",
-            "ZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKw",
-            "AQoMUHVic3ViVGFyZ2V0EhIKCnRvcGljX25hbWUYASABKAkSDAoEZGF0YRgD",
-            "IAEoDBJLCgphdHRyaWJ1dGVzGAQgAygLMjcuZ29vZ2xlLmNsb3VkLnNjaGVk",
-            "dWxlci52MS5QdWJzdWJUYXJnZXQuQXR0cmlidXRlc0VudHJ5GjEKD0F0dHJp",
-            "YnV0ZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlQK",
-            "EEFwcEVuZ2luZVJvdXRpbmcSDwoHc2VydmljZRgBIAEoCRIPCgd2ZXJzaW9u",
-            "GAIgASgJEhAKCGluc3RhbmNlGAMgASgJEgwKBGhvc3QYBCABKAkiOgoKT0F1",
-            "dGhUb2tlbhIdChVzZXJ2aWNlX2FjY291bnRfZW1haWwYASABKAkSDQoFc2Nv",
-            "cGUYAiABKAkiPAoJT2lkY1Rva2VuEh0KFXNlcnZpY2VfYWNjb3VudF9lbWFp",
-            "bBgBIAEoCRIQCghhdWRpZW5jZRgCIAEoCSpzCgpIdHRwTWV0aG9kEhsKF0hU",
-            "VFBfTUVUSE9EX1VOU1BFQ0lGSUVEEAASCAoEUE9TVBABEgcKA0dFVBACEggK",
-            "BEhFQUQQAxIHCgNQVVQQBBIKCgZERUxFVEUQBRIJCgVQQVRDSBAGEgsKB09Q",
-            "VElPTlMQB0JyCh1jb20uZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MUILVGFy",
-            "Z2V0UHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9zY2hlZHVsZXIvdjE7c2NoZWR1bGVyYgZwcm90bzM="));
+            "ZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLS",
+            "AQoMUHVic3ViVGFyZ2V0EjQKCnRvcGljX25hbWUYASABKAlCIPpBHQobcHVi",
+            "c3ViLmdvb2dsZWFwaXMuY29tL1RvcGljEgwKBGRhdGEYAyABKAwSSwoKYXR0",
+            "cmlidXRlcxgEIAMoCzI3Lmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuUHVi",
+            "c3ViVGFyZ2V0LkF0dHJpYnV0ZXNFbnRyeRoxCg9BdHRyaWJ1dGVzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJUChBBcHBFbmdpbmVS",
+            "b3V0aW5nEg8KB3NlcnZpY2UYASABKAkSDwoHdmVyc2lvbhgCIAEoCRIQCghp",
+            "bnN0YW5jZRgDIAEoCRIMCgRob3N0GAQgASgJIjoKCk9BdXRoVG9rZW4SHQoV",
+            "c2VydmljZV9hY2NvdW50X2VtYWlsGAEgASgJEg0KBXNjb3BlGAIgASgJIjwK",
+            "CU9pZGNUb2tlbhIdChVzZXJ2aWNlX2FjY291bnRfZW1haWwYASABKAkSEAoI",
+            "YXVkaWVuY2UYAiABKAkqcwoKSHR0cE1ldGhvZBIbChdIVFRQX01FVEhPRF9V",
+            "TlNQRUNJRklFRBAAEggKBFBPU1QQARIHCgNHRVQQAhIICgRIRUFEEAMSBwoD",
+            "UFVUEAQSCgoGREVMRVRFEAUSCQoFUEFUQ0gQBhILCgdPUFRJT05TEAdCtQEK",
+            "HWNvbS5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxQgtUYXJnZXRQcm90b1AB",
+            "WkJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L3NjaGVkdWxlci92MTtzY2hlZHVsZXLqQUAKG3B1YnN1Yi5nb29nbGVhcGlz",
+            "LmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9L3RvcGljcy97dG9waWN9",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Scheduler.V1.HttpMethod), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.HttpTarget), global::Google.Cloud.Scheduler.V1.HttpTarget.Parser, new[]{ "Uri", "HttpMethod", "Headers", "Body", "OauthToken", "OidcToken" }, new[]{ "AuthorizationHeader" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget), global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget.Parser, new[]{ "HttpMethod", "AppEngineRouting", "RelativeUri", "Headers", "Body" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -170,9 +173,7 @@ namespace Google.Cloud.Scheduler.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The full URI path that the request will be sent to. This string
+    /// Required. The full URI path that the request will be sent to. This string
     /// must begin with either "http://" or "https://". Some examples of
     /// valid values for [uri][google.cloud.scheduler.v1.HttpTarget.uri] are:
     /// `http://acme.com` and `https://acme.com/sales:8080`. Cloud Scheduler will
@@ -252,8 +253,8 @@ namespace Google.Cloud.Scheduler.V1 {
     /// will be generated and attached as an `Authorization` header in the HTTP
     /// request.
     ///
-    /// This type of authorization should be used when sending requests to a GCP
-    /// endpoint.
+    /// This type of authorization should generally only be used when calling
+    /// Google APIs hosted on *.googleapis.com.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Scheduler.V1.OAuthToken OauthToken {
@@ -272,8 +273,9 @@ namespace Google.Cloud.Scheduler.V1 {
     /// token will be generated and attached as an `Authorization` header in the
     /// HTTP request.
     ///
-    /// This type of authorization should be used when sending requests to third
-    /// party endpoints or Cloud Run.
+    /// This type of authorization can be used for many scenarios, including
+    /// calling Cloud Run, or endpoints where you intend to validate the token
+    /// yourself.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Scheduler.V1.OidcToken OidcToken {
@@ -831,9 +833,7 @@ namespace Google.Cloud.Scheduler.V1 {
     public const int TopicNameFieldNumber = 1;
     private string topicName_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The name of the Cloud Pub/Sub topic to which messages will
+    /// Required. The name of the Cloud Pub/Sub topic to which messages will
     /// be published when a job is delivered. The topic name must be in the
     /// same format as required by PubSub's
     /// [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest),
@@ -1305,8 +1305,8 @@ namespace Google.Cloud.Scheduler.V1 {
   /// <summary>
   /// Contains information needed for generating an
   /// [OAuth token](https://developers.google.com/identity/protocols/OAuth2).
-  /// This type of authorization should be used when sending requests to a GCP
-  /// endpoint.
+  /// This type of authorization should generally only be used when calling Google
+  /// APIs hosted on *.googleapis.com.
   /// </summary>
   public sealed partial class OAuthToken : pb::IMessage<OAuthToken> {
     private static readonly pb::MessageParser<OAuthToken> _parser = new pb::MessageParser<OAuthToken>(() => new OAuthToken());
@@ -1479,9 +1479,10 @@ namespace Google.Cloud.Scheduler.V1 {
   /// <summary>
   /// Contains information needed for generating an
   /// [OpenID Connect
-  /// token](https://developers.google.com/identity/protocols/OpenIDConnect). This
-  /// type of authorization should be used when sending requests to third party
-  /// endpoints or Cloud Run.
+  /// token](https://developers.google.com/identity/protocols/OpenIDConnect).
+  /// This type of authorization can be used for many scenarios, including
+  /// calling Cloud Run, or endpoints where you intend to validate the token
+  /// yourself.
   /// </summary>
   public sealed partial class OidcToken : pb::IMessage<OidcToken> {
     private static readonly pb::MessageParser<OidcToken> _parser = new pb::MessageParser<OidcToken>(() => new OidcToken());
