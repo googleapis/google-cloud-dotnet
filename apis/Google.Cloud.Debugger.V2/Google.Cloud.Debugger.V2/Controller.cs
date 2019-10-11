@@ -26,43 +26,48 @@ namespace Google.Cloud.Debugger.V2 {
           string.Concat(
             "CjFnb29nbGUvZGV2dG9vbHMvY2xvdWRkZWJ1Z2dlci92Mi9jb250cm9sbGVy",
             "LnByb3RvEiBnb29nbGUuZGV2dG9vbHMuY2xvdWRkZWJ1Z2dlci52MhocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxorZ29vZ2xlL2RldnRvb2xzL2Ns",
-            "b3VkZGVidWdnZXIvdjIvZGF0YS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
-            "cHR5LnByb3RvIlcKF1JlZ2lzdGVyRGVidWdnZWVSZXF1ZXN0EjwKCGRlYnVn",
-            "Z2VlGAEgASgLMiouZ29vZ2xlLmRldnRvb2xzLmNsb3VkZGVidWdnZXIudjIu",
-            "RGVidWdnZWUiWAoYUmVnaXN0ZXJEZWJ1Z2dlZVJlc3BvbnNlEjwKCGRlYnVn",
-            "Z2VlGAEgASgLMiouZ29vZ2xlLmRldnRvb2xzLmNsb3VkZGVidWdnZXIudjIu",
-            "RGVidWdnZWUiYwocTGlzdEFjdGl2ZUJyZWFrcG9pbnRzUmVxdWVzdBITCgtk",
-            "ZWJ1Z2dlZV9pZBgBIAEoCRISCgp3YWl0X3Rva2VuGAIgASgJEhoKEnN1Y2Nl",
-            "c3Nfb25fdGltZW91dBgDIAEoCCKRAQodTGlzdEFjdGl2ZUJyZWFrcG9pbnRz",
-            "UmVzcG9uc2USQQoLYnJlYWtwb2ludHMYASADKAsyLC5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRkZWJ1Z2dlci52Mi5CcmVha3BvaW50EhcKD25leHRfd2FpdF90",
-            "b2tlbhgCIAEoCRIUCgx3YWl0X2V4cGlyZWQYAyABKAgidgodVXBkYXRlQWN0",
-            "aXZlQnJlYWtwb2ludFJlcXVlc3QSEwoLZGVidWdnZWVfaWQYASABKAkSQAoK",
-            "YnJlYWtwb2ludBgCIAEoCzIsLmdvb2dsZS5kZXZ0b29scy5jbG91ZGRlYnVn",
-            "Z2VyLnYyLkJyZWFrcG9pbnQiIAoeVXBkYXRlQWN0aXZlQnJlYWtwb2ludFJl",
-            "c3BvbnNlMosFCgtDb250cm9sbGVyMhK3AQoQUmVnaXN0ZXJEZWJ1Z2dlZRI5",
-            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGRlYnVnZ2VyLnYyLlJlZ2lzdGVyRGVi",
-            "dWdnZWVSZXF1ZXN0GjouZ29vZ2xlLmRldnRvb2xzLmNsb3VkZGVidWdnZXIu",
-            "djIuUmVnaXN0ZXJEZWJ1Z2dlZVJlc3BvbnNlIiyC0+STAiYiIS92Mi9jb250",
-            "cm9sbGVyL2RlYnVnZ2Vlcy9yZWdpc3RlcjoBKhLUAQoVTGlzdEFjdGl2ZUJy",
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQu",
+            "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aK2dvb2ds",
+            "ZS9kZXZ0b29scy9jbG91ZGRlYnVnZ2VyL3YyL2RhdGEucHJvdG8aG2dvb2ds",
+            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90byJcChdSZWdpc3RlckRlYnVnZ2VlUmVx",
+            "dWVzdBJBCghkZWJ1Z2dlZRgBIAEoCzIqLmdvb2dsZS5kZXZ0b29scy5jbG91",
+            "ZGRlYnVnZ2VyLnYyLkRlYnVnZ2VlQgPgQQIiWAoYUmVnaXN0ZXJEZWJ1Z2dl",
+            "ZVJlc3BvbnNlEjwKCGRlYnVnZ2VlGAEgASgLMiouZ29vZ2xlLmRldnRvb2xz",
+            "LmNsb3VkZGVidWdnZXIudjIuRGVidWdnZWUiaAocTGlzdEFjdGl2ZUJyZWFr",
+            "cG9pbnRzUmVxdWVzdBIYCgtkZWJ1Z2dlZV9pZBgBIAEoCUID4EECEhIKCndh",
+            "aXRfdG9rZW4YAiABKAkSGgoSc3VjY2Vzc19vbl90aW1lb3V0GAMgASgIIpEB",
+            "Ch1MaXN0QWN0aXZlQnJlYWtwb2ludHNSZXNwb25zZRJBCgticmVha3BvaW50",
+            "cxgBIAMoCzIsLmdvb2dsZS5kZXZ0b29scy5jbG91ZGRlYnVnZ2VyLnYyLkJy",
+            "ZWFrcG9pbnQSFwoPbmV4dF93YWl0X3Rva2VuGAIgASgJEhQKDHdhaXRfZXhw",
+            "aXJlZBgDIAEoCCKAAQodVXBkYXRlQWN0aXZlQnJlYWtwb2ludFJlcXVlc3QS",
+            "GAoLZGVidWdnZWVfaWQYASABKAlCA+BBAhJFCgpicmVha3BvaW50GAIgASgL",
+            "MiwuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZGVidWdnZXIudjIuQnJlYWtwb2lu",
+            "dEID4EECIiAKHlVwZGF0ZUFjdGl2ZUJyZWFrcG9pbnRSZXNwb25zZTK+BgoL",
+            "Q29udHJvbGxlcjISwgEKEFJlZ2lzdGVyRGVidWdnZWUSOS5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRkZWJ1Z2dlci52Mi5SZWdpc3RlckRlYnVnZ2VlUmVxdWVz",
+            "dBo6Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGRlYnVnZ2VyLnYyLlJlZ2lzdGVy",
+            "RGVidWdnZWVSZXNwb25zZSI3gtPkkwImIiEvdjIvY29udHJvbGxlci9kZWJ1",
+            "Z2dlZXMvcmVnaXN0ZXI6ASraQQhkZWJ1Z2dlZRLiAQoVTGlzdEFjdGl2ZUJy",
             "ZWFrcG9pbnRzEj4uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZGVidWdnZXIudjIu",
             "TGlzdEFjdGl2ZUJyZWFrcG9pbnRzUmVxdWVzdBo/Lmdvb2dsZS5kZXZ0b29s",
             "cy5jbG91ZGRlYnVnZ2VyLnYyLkxpc3RBY3RpdmVCcmVha3BvaW50c1Jlc3Bv",
-            "bnNlIjqC0+STAjQSMi92Mi9jb250cm9sbGVyL2RlYnVnZ2Vlcy97ZGVidWdn",
-            "ZWVfaWR9L2JyZWFrcG9pbnRzEuoBChZVcGRhdGVBY3RpdmVCcmVha3BvaW50",
-            "Ej8uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZGVidWdnZXIudjIuVXBkYXRlQWN0",
-            "aXZlQnJlYWtwb2ludFJlcXVlc3QaQC5nb29nbGUuZGV2dG9vbHMuY2xvdWRk",
-            "ZWJ1Z2dlci52Mi5VcGRhdGVBY3RpdmVCcmVha3BvaW50UmVzcG9uc2UiTYLT",
-            "5JMCRxpCL3YyL2NvbnRyb2xsZXIvZGVidWdnZWVzL3tkZWJ1Z2dlZV9pZH0v",
-            "YnJlYWtwb2ludHMve2JyZWFrcG9pbnQuaWR9OgEqQr4BCiRjb20uZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkZGVidWdnZXIudjJCD0NvbnRyb2xsZXJQcm90b1AB",
-            "Wk1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRv",
-            "b2xzL2Nsb3VkZGVidWdnZXIvdjI7Y2xvdWRkZWJ1Z2dlcqoCGEdvb2dsZS5D",
-            "bG91ZC5EZWJ1Z2dlci5WMsoCGEdvb2dsZVxDbG91ZFxEZWJ1Z2dlclxWMmIG",
-            "cHJvdG8z"));
+            "bnNlIkiC0+STAjQSMi92Mi9jb250cm9sbGVyL2RlYnVnZ2Vlcy97ZGVidWdn",
+            "ZWVfaWR9L2JyZWFrcG9pbnRz2kELZGVidWdnZWVfaWQSgwIKFlVwZGF0ZUFj",
+            "dGl2ZUJyZWFrcG9pbnQSPy5nb29nbGUuZGV2dG9vbHMuY2xvdWRkZWJ1Z2dl",
+            "ci52Mi5VcGRhdGVBY3RpdmVCcmVha3BvaW50UmVxdWVzdBpALmdvb2dsZS5k",
+            "ZXZ0b29scy5jbG91ZGRlYnVnZ2VyLnYyLlVwZGF0ZUFjdGl2ZUJyZWFrcG9p",
+            "bnRSZXNwb25zZSJmgtPkkwJHGkIvdjIvY29udHJvbGxlci9kZWJ1Z2dlZXMv",
+            "e2RlYnVnZ2VlX2lkfS9icmVha3BvaW50cy97YnJlYWtwb2ludC5pZH06ASra",
+            "QRZkZWJ1Z2dlZV9pZCxicmVha3BvaW50Gn/KQRxjbG91ZGRlYnVnZ2VyLmdv",
+            "b2dsZWFwaXMuY29t0kFdaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkX2RlYnVnZ2VyQr4BCiRjb20uZ29vZ2xlLmRldnRvb2xzLmNs",
+            "b3VkZGVidWdnZXIudjJCD0NvbnRyb2xsZXJQcm90b1ABWk1nb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRvb2xzL2Nsb3VkZGVi",
+            "dWdnZXIvdjI7Y2xvdWRkZWJ1Z2dlcqoCGEdvb2dsZS5DbG91ZC5EZWJ1Z2dl",
+            "ci5WMsoCGEdvb2dsZVxDbG91ZFxEZWJ1Z2dlclxWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Debugger.V2.DataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Debugger.V2.DataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest), global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.Parser, new[]{ "Debuggee" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse), global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.Parser, new[]{ "Debuggee" }, null, null, null),
@@ -117,7 +122,7 @@ namespace Google.Cloud.Debugger.V2 {
     public const int DebuggeeFieldNumber = 1;
     private global::Google.Cloud.Debugger.V2.Debuggee debuggee_;
     /// <summary>
-    /// Debuggee information to register.
+    /// Required. Debuggee information to register.
     /// The fields `project`, `uniquifier`, `description` and `agent_version`
     /// of the debuggee must be set.
     /// </summary>
@@ -407,7 +412,7 @@ namespace Google.Cloud.Debugger.V2 {
     public const int DebuggeeIdFieldNumber = 1;
     private string debuggeeId_ = "";
     /// <summary>
-    /// Identifies the debuggee.
+    /// Required. Identifies the debuggee.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DebuggeeId {
@@ -804,7 +809,7 @@ namespace Google.Cloud.Debugger.V2 {
     public const int DebuggeeIdFieldNumber = 1;
     private string debuggeeId_ = "";
     /// <summary>
-    /// Identifies the debuggee being debugged.
+    /// Required. Identifies the debuggee being debugged.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DebuggeeId {
@@ -818,7 +823,7 @@ namespace Google.Cloud.Debugger.V2 {
     public const int BreakpointFieldNumber = 2;
     private global::Google.Cloud.Debugger.V2.Breakpoint breakpoint_;
     /// <summary>
-    /// Updated breakpoint information.
+    /// Required. Updated breakpoint information.
     /// The field `id` must be set.
     /// The agent must echo all Breakpoint specification fields in the update.
     /// </summary>

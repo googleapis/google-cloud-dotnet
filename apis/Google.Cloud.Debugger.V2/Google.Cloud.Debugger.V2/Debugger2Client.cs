@@ -112,14 +112,14 @@ namespace Google.Cloud.Debugger.V2
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="Debugger2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(60000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -134,9 +134,9 @@ namespace Google.Cloud.Debugger.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -163,9 +163,9 @@ namespace Google.Cloud.Debugger.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -193,14 +193,13 @@ namespace Google.Cloud.Debugger.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -209,7 +208,7 @@ namespace Google.Cloud.Debugger.V2
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -223,9 +222,9 @@ namespace Google.Cloud.Debugger.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -253,9 +252,9 @@ namespace Google.Cloud.Debugger.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -477,14 +476,14 @@ namespace Google.Cloud.Debugger.V2
         /// Sets the breakpoint to the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee where the breakpoint is to be set.
+        /// Required. ID of the debuggee where the breakpoint is to be set.
         /// </param>
         /// <param name="breakpoint">
-        /// Breakpoint specification to set.
+        /// Required. Breakpoint specification to set.
         /// The field `location` of the breakpoint must be set.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -510,14 +509,14 @@ namespace Google.Cloud.Debugger.V2
         /// Sets the breakpoint to the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee where the breakpoint is to be set.
+        /// Required. ID of the debuggee where the breakpoint is to be set.
         /// </param>
         /// <param name="breakpoint">
-        /// Breakpoint specification to set.
+        /// Required. Breakpoint specification to set.
         /// The field `location` of the breakpoint must be set.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="cancellationToken">
@@ -540,14 +539,14 @@ namespace Google.Cloud.Debugger.V2
         /// Sets the breakpoint to the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee where the breakpoint is to be set.
+        /// Required. ID of the debuggee where the breakpoint is to be set.
         /// </param>
         /// <param name="breakpoint">
-        /// Breakpoint specification to set.
+        /// Required. Breakpoint specification to set.
         /// The field `location` of the breakpoint must be set.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -629,13 +628,13 @@ namespace Google.Cloud.Debugger.V2
         /// Gets breakpoint information.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoint to get.
+        /// Required. ID of the debuggee whose breakpoint to get.
         /// </param>
         /// <param name="breakpointId">
-        /// ID of the breakpoint to get.
+        /// Required. ID of the breakpoint to get.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -661,13 +660,13 @@ namespace Google.Cloud.Debugger.V2
         /// Gets breakpoint information.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoint to get.
+        /// Required. ID of the debuggee whose breakpoint to get.
         /// </param>
         /// <param name="breakpointId">
-        /// ID of the breakpoint to get.
+        /// Required. ID of the breakpoint to get.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="cancellationToken">
@@ -690,13 +689,13 @@ namespace Google.Cloud.Debugger.V2
         /// Gets breakpoint information.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoint to get.
+        /// Required. ID of the debuggee whose breakpoint to get.
         /// </param>
         /// <param name="breakpointId">
-        /// ID of the breakpoint to get.
+        /// Required. ID of the breakpoint to get.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -778,13 +777,13 @@ namespace Google.Cloud.Debugger.V2
         /// Deletes the breakpoint from the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoint to delete.
+        /// Required. ID of the debuggee whose breakpoint to delete.
         /// </param>
         /// <param name="breakpointId">
-        /// ID of the breakpoint to delete.
+        /// Required. ID of the breakpoint to delete.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -810,13 +809,13 @@ namespace Google.Cloud.Debugger.V2
         /// Deletes the breakpoint from the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoint to delete.
+        /// Required. ID of the debuggee whose breakpoint to delete.
         /// </param>
         /// <param name="breakpointId">
-        /// ID of the breakpoint to delete.
+        /// Required. ID of the breakpoint to delete.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="cancellationToken">
@@ -839,13 +838,13 @@ namespace Google.Cloud.Debugger.V2
         /// Deletes the breakpoint from the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoint to delete.
+        /// Required. ID of the debuggee whose breakpoint to delete.
         /// </param>
         /// <param name="breakpointId">
-        /// ID of the breakpoint to delete.
+        /// Required. ID of the breakpoint to delete.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -921,10 +920,10 @@ namespace Google.Cloud.Debugger.V2
         /// Lists all breakpoints for the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoints to list.
+        /// Required. ID of the debuggee whose breakpoints to list.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -948,10 +947,10 @@ namespace Google.Cloud.Debugger.V2
         /// Lists all breakpoints for the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoints to list.
+        /// Required. ID of the debuggee whose breakpoints to list.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="cancellationToken">
@@ -972,10 +971,10 @@ namespace Google.Cloud.Debugger.V2
         /// Lists all breakpoints for the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
-        /// ID of the debuggee whose breakpoints to list.
+        /// Required. ID of the debuggee whose breakpoints to list.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -1055,10 +1054,10 @@ namespace Google.Cloud.Debugger.V2
         /// Lists all the debuggees that the user has access to.
         /// </summary>
         /// <param name="project">
-        /// Project number of a Google Cloud project whose debuggees to list.
+        /// Required. Project number of a Google Cloud project whose debuggees to list.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
@@ -1082,10 +1081,10 @@ namespace Google.Cloud.Debugger.V2
         /// Lists all the debuggees that the user has access to.
         /// </summary>
         /// <param name="project">
-        /// Project number of a Google Cloud project whose debuggees to list.
+        /// Required. Project number of a Google Cloud project whose debuggees to list.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="cancellationToken">
@@ -1106,10 +1105,10 @@ namespace Google.Cloud.Debugger.V2
         /// Lists all the debuggees that the user has access to.
         /// </summary>
         /// <param name="project">
-        /// Project number of a Google Cloud project whose debuggees to list.
+        /// Required. Project number of a Google Cloud project whose debuggees to list.
         /// </param>
         /// <param name="clientVersion">
-        /// The client version making the call.
+        /// Required. The client version making the call.
         /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
         /// </param>
         /// <param name="callSettings">
