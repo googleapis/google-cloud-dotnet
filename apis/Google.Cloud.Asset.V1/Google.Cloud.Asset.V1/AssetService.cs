@@ -26,48 +26,63 @@ namespace Google.Cloud.Asset.V1 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvYXNzZXQvdjEvYXNzZXRfc2VydmljZS5wcm90bxIV",
             "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
-            "LnByb3RvGiJnb29nbGUvY2xvdWQvYXNzZXQvdjEvYXNzZXRzLnByb3RvGiNn",
-            "b29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLfAQoTRXhwb3J0QXNzZXRzUmVxdWVz",
-            "dBIOCgZwYXJlbnQYASABKAkSLQoJcmVhZF90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBITCgthc3NldF90eXBlcxgDIAMoCRI4Cgxj",
-            "b250ZW50X3R5cGUYBCABKA4yIi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQ29u",
-            "dGVudFR5cGUSOgoNb3V0cHV0X2NvbmZpZxgFIAEoCzIjLmdvb2dsZS5jbG91",
-            "ZC5hc3NldC52MS5PdXRwdXRDb25maWcigQEKFEV4cG9ydEFzc2V0c1Jlc3Bv",
-            "bnNlEi0KCXJlYWRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASOgoNb3V0cHV0X2NvbmZpZxgCIAEoCzIjLmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MS5PdXRwdXRDb25maWciugEKHEJhdGNoR2V0QXNzZXRzSGlzdG9y",
-            "eVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhMKC2Fzc2V0X25hbWVzGAIgAygJ",
-            "EjgKDGNvbnRlbnRfdHlwZRgDIAEoDjIiLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MS5Db250ZW50VHlwZRI7ChByZWFkX3RpbWVfd2luZG93GAQgASgLMiEuZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLlRpbWVXaW5kb3ciVQodQmF0Y2hHZXRBc3Nl",
-            "dHNIaXN0b3J5UmVzcG9uc2USNAoGYXNzZXRzGAEgAygLMiQuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLlRlbXBvcmFsQXNzZXQiXwoMT3V0cHV0Q29uZmlnEkAK",
-            "D2djc19kZXN0aW5hdGlvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MS5HY3NEZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0aW9uIi0KDkdjc0Rlc3Rp",
-            "bmF0aW9uEg0KA3VyaRgBIAEoCUgAQgwKCm9iamVjdF91cmkqSQoLQ29udGVu",
-            "dFR5cGUSHAoYQ09OVEVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIUkVTT1VS",
-            "Q0UQARIOCgpJQU1fUE9MSUNZEAIyyQIKDEFzc2V0U2VydmljZRKDAQoMRXhw",
-            "b3J0QXNzZXRzEiouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0",
-            "c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIiiC0+ST",
-            "AiIiHS92MS97cGFyZW50PSovKn06ZXhwb3J0QXNzZXRzOgEqErIBChVCYXRj",
-            "aEdldEFzc2V0c0hpc3RvcnkSMy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmF0",
-            "Y2hHZXRBc3NldHNIaXN0b3J5UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5hc3Nl",
-            "dC52MS5CYXRjaEdldEFzc2V0c0hpc3RvcnlSZXNwb25zZSIugtPkkwIoEiYv",
-            "djEve3BhcmVudD0qLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeUKcAQoZY29t",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVo6",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9h",
-            "c3NldC92MTthc3NldKoCFUdvb2dsZS5DbG91ZC5Bc3NldC5WMcoCFUdvb2ds",
-            "ZVxDbG91ZFxBc3NldFxWMWIGcHJvdG8z"));
+            "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9m",
+            "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
+            "bxoiZ29vZ2xlL2Nsb3VkL2Fzc2V0L3YxL2Fzc2V0cy5wcm90bxojZ29vZ2xl",
+            "L2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1",
+            "Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ijQIKE0V4cG9y",
+            "dEFzc2V0c1JlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSESH2Nsb3Vk",
+            "YXNzZXQuZ29vZ2xlYXBpcy5jb20vQXNzZXQSLQoJcmVhZF90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgthc3NldF90eXBlcxgD",
+            "IAMoCRI4Cgxjb250ZW50X3R5cGUYBCABKA4yIi5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuQ29udGVudFR5cGUSPwoNb3V0cHV0X2NvbmZpZxgFIAEoCzIjLmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MS5PdXRwdXRDb25maWdCA+BBAiKBAQoURXhw",
+            "b3J0QXNzZXRzUmVzcG9uc2USLQoJcmVhZF90aW1lGAEgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBI6Cg1vdXRwdXRfY29uZmlnGAIgASgLMiMu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLk91dHB1dENvbmZpZyLtAQocQmF0Y2hH",
+            "ZXRBc3NldHNIaXN0b3J5UmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpB",
+            "IRIfY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9Bc3NldBITCgthc3NldF9u",
+            "YW1lcxgCIAMoCRI9Cgxjb250ZW50X3R5cGUYAyABKA4yIi5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuQ29udGVudFR5cGVCA+BBARJAChByZWFkX3RpbWVfd2lu",
+            "ZG93GAQgASgLMiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlRpbWVXaW5kb3dC",
+            "A+BBASJVCh1CYXRjaEdldEFzc2V0c0hpc3RvcnlSZXNwb25zZRI0CgZhc3Nl",
+            "dHMYASADKAsyJC5nb29nbGUuY2xvdWQuYXNzZXQudjEuVGVtcG9yYWxBc3Nl",
+            "dCKrAQoMT3V0cHV0Q29uZmlnEkAKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIl",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5HY3NEZXN0aW5hdGlvbkgAEkoKFGJp",
+            "Z3F1ZXJ5X2Rlc3RpbmF0aW9uGAIgASgLMiouZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb25IAEINCgtkZXN0aW5hdGlvbiJDCg5H",
+            "Y3NEZXN0aW5hdGlvbhINCgN1cmkYASABKAlIABIUCgp1cmlfcHJlZml4GAIg",
+            "ASgJSABCDAoKb2JqZWN0X3VyaSJOChNCaWdRdWVyeURlc3RpbmF0aW9uEhQK",
+            "B2RhdGFzZXQYASABKAlCA+BBAhISCgV0YWJsZRgCIAEoCUID4EECEg0KBWZv",
+            "cmNlGAMgASgIKmwKC0NvbnRlbnRUeXBlEhwKGENPTlRFTlRfVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEgwKCFJFU09VUkNFEAESDgoKSUFNX1BPTElDWRACEg4KCk9S",
+            "R19QT0xJQ1kQBBIRCg1BQ0NFU1NfUE9MSUNZEAUy8wMKDEFzc2V0U2Vydmlj",
+            "ZRLeAQoMRXhwb3J0QXNzZXRzEiouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4",
+            "cG9ydEFzc2V0c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uIoIBgtPkkwIiIh0vdjEve3BhcmVudD0qLyp9OmV4cG9ydEFzc2V0czoB",
+            "KspBVwoqZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0c1Jlc3Bv",
+            "bnNlEilnb29nbGUuY2xvdWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVz",
+            "dBKyAQoVQmF0Y2hHZXRBc3NldHNIaXN0b3J5EjMuZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3QaNC5nb29nbGUu",
+            "Y2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVzcG9uc2Ui",
+            "LoLT5JMCKBImL3YxL3twYXJlbnQ9Ki8qfTpiYXRjaEdldEFzc2V0c0hpc3Rv",
+            "cnkaTcpBGWNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpwBChljb20u",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxQhFBc3NldFNlcnZpY2VQcm90b1ABWjpn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Fz",
+            "c2V0L3YxO2Fzc2V0qgIVR29vZ2xlLkNsb3VkLkFzc2V0LlYxygIVR29vZ2xl",
+            "XENsb3VkXEFzc2V0XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsRequest), global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentType", "OutputConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsResponse), global::Google.Cloud.Asset.V1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputConfig), global::Google.Cloud.Asset.V1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsDestination), global::Google.Cloud.Asset.V1.GcsDestination.Parser, new[]{ "Uri" }, new[]{ "ObjectUri" }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputConfig), global::Google.Cloud.Asset.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsDestination), global::Google.Cloud.Asset.V1.GcsDestination.Parser, new[]{ "Uri", "UriPrefix" }, new[]{ "ObjectUri" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null)
           }));
     }
     #endregion
@@ -90,6 +105,14 @@ namespace Google.Cloud.Asset.V1 {
     /// The actual IAM policy set on a resource.
     /// </summary>
     [pbr::OriginalName("IAM_POLICY")] IamPolicy = 2,
+    /// <summary>
+    /// The Cloud Organization Policy set on an asset.
+    /// </summary>
+    [pbr::OriginalName("ORG_POLICY")] OrgPolicy = 4,
+    /// <summary>
+    /// The Cloud Access context mananger Policy set on an asset.
+    /// </summary>
+    [pbr::OriginalName("ACCESS_POLICY")] AccessPolicy = 5,
   }
 
   #endregion
@@ -178,9 +201,9 @@ namespace Google.Cloud.Asset.V1 {
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// A list of asset types of which to take a snapshot for. For example:
-    /// "compute.googleapis.com/Disk". If specified, only matching assets will be returned.
-    /// See [Introduction to Cloud Asset
-    /// Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
+    /// "compute.googleapis.com/Disk". If specified, only matching assets will be
+    /// returned. See [Introduction to Cloud Asset
+    /// Inventory](https://cloud.google.com/asset-inventory/docs/overview)
     /// for all supported asset types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -618,7 +641,8 @@ namespace Google.Cloud.Asset.V1 {
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
     /// See [Resource
     /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-    /// and [Resource Name Format](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/resource-name-format)
+    /// and [Resource Name
+    /// Format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
     /// for more info.
     ///
     /// The request becomes a no-op if the asset name list is empty, and the max
@@ -633,7 +657,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int ContentTypeFieldNumber = 3;
     private global::Google.Cloud.Asset.V1.ContentType contentType_ = 0;
     /// <summary>
-    /// Required. The content type.
+    /// Optional. The content type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1.ContentType ContentType {
@@ -952,6 +976,9 @@ namespace Google.Cloud.Asset.V1 {
         case DestinationOneofCase.GcsDestination:
           GcsDestination = other.GcsDestination.Clone();
           break;
+        case DestinationOneofCase.BigqueryDestination:
+          BigqueryDestination = other.BigqueryDestination.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -976,11 +1003,29 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "bigquery_destination" field.</summary>
+    public const int BigqueryDestinationFieldNumber = 2;
+    /// <summary>
+    /// Destination on BigQuery. The output table stores the fields in asset
+    /// proto as columns in BigQuery. The resource/iam_policy field is converted
+    /// to a record with each field to a column, except metadata to a single JSON
+    /// string.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.BigQueryDestination BigqueryDestination {
+      get { return destinationCase_ == DestinationOneofCase.BigqueryDestination ? (global::Google.Cloud.Asset.V1.BigQueryDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.BigqueryDestination;
+      }
+    }
+
     private object destination_;
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
       None = 0,
       GcsDestination = 1,
+      BigqueryDestination = 2,
     }
     private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1008,6 +1053,7 @@ namespace Google.Cloud.Asset.V1 {
         return true;
       }
       if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
+      if (!object.Equals(BigqueryDestination, other.BigqueryDestination)) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1016,6 +1062,7 @@ namespace Google.Cloud.Asset.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
+      if (destinationCase_ == DestinationOneofCase.BigqueryDestination) hash ^= BigqueryDestination.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1034,6 +1081,10 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(GcsDestination);
       }
+      if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BigqueryDestination);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1044,6 +1095,9 @@ namespace Google.Cloud.Asset.V1 {
       int size = 0;
       if (destinationCase_ == DestinationOneofCase.GcsDestination) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
+      }
+      if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryDestination);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1062,6 +1116,12 @@ namespace Google.Cloud.Asset.V1 {
             GcsDestination = new global::Google.Cloud.Asset.V1.GcsDestination();
           }
           GcsDestination.MergeFrom(other.GcsDestination);
+          break;
+        case DestinationOneofCase.BigqueryDestination:
+          if (BigqueryDestination == null) {
+            BigqueryDestination = new global::Google.Cloud.Asset.V1.BigQueryDestination();
+          }
+          BigqueryDestination.MergeFrom(other.BigqueryDestination);
           break;
       }
 
@@ -1083,6 +1143,15 @@ namespace Google.Cloud.Asset.V1 {
             }
             input.ReadMessage(subBuilder);
             GcsDestination = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Asset.V1.BigQueryDestination subBuilder = new global::Google.Cloud.Asset.V1.BigQueryDestination();
+            if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+              subBuilder.MergeFrom(BigqueryDestination);
+            }
+            input.ReadMessage(subBuilder);
+            BigqueryDestination = subBuilder;
             break;
           }
         }
@@ -1123,6 +1192,9 @@ namespace Google.Cloud.Asset.V1 {
         case ObjectUriOneofCase.Uri:
           Uri = other.Uri;
           break;
+        case ObjectUriOneofCase.UriPrefix:
+          UriPrefix = other.UriPrefix;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1151,11 +1223,34 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "uri_prefix" field.</summary>
+    public const int UriPrefixFieldNumber = 2;
+    /// <summary>
+    /// The uri prefix of all generated Cloud Storage objects. For example:
+    /// "gs://bucket_name/object_name_prefix". Each object uri is in format:
+    /// "gs://bucket_name/object_name_prefix/&lt;asset type>/&lt;shard number> and only
+    /// contains assets for that type. &lt;shard number> starts from 0. For example:
+    /// "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is
+    /// the first shard of output objects containing all
+    /// compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error will be
+    /// returned if file with the same name "gs://bucket_name/object_name_prefix"
+    /// already exists.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UriPrefix {
+      get { return objectUriCase_ == ObjectUriOneofCase.UriPrefix ? (string) objectUri_ : ""; }
+      set {
+        objectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        objectUriCase_ = ObjectUriOneofCase.UriPrefix;
+      }
+    }
+
     private object objectUri_;
     /// <summary>Enum of possible cases for the "object_uri" oneof.</summary>
     public enum ObjectUriOneofCase {
       None = 0,
       Uri = 1,
+      UriPrefix = 2,
     }
     private ObjectUriOneofCase objectUriCase_ = ObjectUriOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1183,6 +1278,7 @@ namespace Google.Cloud.Asset.V1 {
         return true;
       }
       if (Uri != other.Uri) return false;
+      if (UriPrefix != other.UriPrefix) return false;
       if (ObjectUriCase != other.ObjectUriCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1191,6 +1287,7 @@ namespace Google.Cloud.Asset.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (objectUriCase_ == ObjectUriOneofCase.Uri) hash ^= Uri.GetHashCode();
+      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) hash ^= UriPrefix.GetHashCode();
       hash ^= (int) objectUriCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1209,6 +1306,10 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
+      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+        output.WriteRawTag(18);
+        output.WriteString(UriPrefix);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1219,6 +1320,9 @@ namespace Google.Cloud.Asset.V1 {
       int size = 0;
       if (objectUriCase_ == ObjectUriOneofCase.Uri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UriPrefix);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1235,6 +1339,9 @@ namespace Google.Cloud.Asset.V1 {
         case ObjectUriOneofCase.Uri:
           Uri = other.Uri;
           break;
+        case ObjectUriOneofCase.UriPrefix:
+          UriPrefix = other.UriPrefix;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1250,6 +1357,215 @@ namespace Google.Cloud.Asset.V1 {
             break;
           case 10: {
             Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            UriPrefix = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A BigQuery destination.
+  /// </summary>
+  public sealed partial class BigQueryDestination : pb::IMessage<BigQueryDestination> {
+    private static readonly pb::MessageParser<BigQueryDestination> _parser = new pb::MessageParser<BigQueryDestination>(() => new BigQueryDestination());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BigQueryDestination> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryDestination() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryDestination(BigQueryDestination other) : this() {
+      dataset_ = other.dataset_;
+      table_ = other.table_;
+      force_ = other.force_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryDestination Clone() {
+      return new BigQueryDestination(this);
+    }
+
+    /// <summary>Field number for the "dataset" field.</summary>
+    public const int DatasetFieldNumber = 1;
+    private string dataset_ = "";
+    /// <summary>
+    /// Required. The BigQuery dataset in format
+    /// "projects/projectId/datasets/datasetId", to which the snapshot result
+    /// should be exported. If this dataset does not exist, the export call returns
+    /// an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Dataset {
+      get { return dataset_; }
+      set {
+        dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "table" field.</summary>
+    public const int TableFieldNumber = 2;
+    private string table_ = "";
+    /// <summary>
+    /// Required. The BigQuery table to which the snapshot result should be
+    /// written. If this table does not exist, a new table with the given name
+    /// will be created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Table {
+      get { return table_; }
+      set {
+        table_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "force" field.</summary>
+    public const int ForceFieldNumber = 3;
+    private bool force_;
+    /// <summary>
+    /// If the destination table already exists and this flag is `TRUE`, the
+    /// table will be overwritten by the contents of assets snapshot. If the flag
+    /// is not set and the destination table already exists, the export call
+    /// returns an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Force {
+      get { return force_; }
+      set {
+        force_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BigQueryDestination);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BigQueryDestination other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Dataset != other.Dataset) return false;
+      if (Table != other.Table) return false;
+      if (Force != other.Force) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
+      if (Table.Length != 0) hash ^= Table.GetHashCode();
+      if (Force != false) hash ^= Force.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Dataset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Dataset);
+      }
+      if (Table.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Table);
+      }
+      if (Force != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Force);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Dataset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+      }
+      if (Table.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Table);
+      }
+      if (Force != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BigQueryDestination other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Dataset.Length != 0) {
+        Dataset = other.Dataset;
+      }
+      if (other.Table.Length != 0) {
+        Table = other.Table;
+      }
+      if (other.Force != false) {
+        Force = other.Force;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Dataset = input.ReadString();
+            break;
+          }
+          case 18: {
+            Table = input.ReadString();
+            break;
+          }
+          case 24: {
+            Force = input.ReadBool();
             break;
           }
         }
