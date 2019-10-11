@@ -3,7 +3,7 @@
     "id": "Google.Cloud.Asset.V1",
     "generator": "gapic",
     "protoPath": "google/cloud/asset/v1",
-    "serviceYaml": "asset_v1.yaml",
+    "serviceYaml": "cloudasset_v1.yaml",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
     "version": "1.1.0-beta00",
