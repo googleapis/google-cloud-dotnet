@@ -1,0 +1,16 @@
+diff --git a/apis/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Tests/UptimeCheckServiceClientTest.g.cs b/apis/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Tests/UptimeCheckServiceClientTest.g.cs
+index 908754958..a175b0030 100644
+--- a/apis/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Tests/UptimeCheckServiceClientTest.g.cs
++++ b/apis/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Tests/UptimeCheckServiceClientTest.g.cs
+@@ -14,6 +14,9 @@
+ 
+ // Generated code. DO NOT EDIT!
+ 
++// Do not warn when using obsolete members
++#pragma warning disable CS0612
++
+ namespace Google.Cloud.Monitoring.V3.Tests
+ {
+     using Google.Api.Gax;
+diff --git a/apis/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.sln b/apis/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.sln
+index a68a9530d..a3f940a9e 100644
