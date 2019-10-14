@@ -25,26 +25,26 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvbW9uaXRvcmluZy92My9tZXRyaWMucHJvdG8SFGdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhZn",
-            "b29nbGUvYXBpL2xhYmVsLnByb3RvGhdnb29nbGUvYXBpL21ldHJpYy5wcm90",
-            "bxojZ29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aIWdvb2ds",
-            "ZS9tb25pdG9yaW5nL3YzL2NvbW1vbi5wcm90byJuCgVQb2ludBI0CghpbnRl",
-            "cnZhbBgBIAEoCzIiLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZh",
-            "bBIvCgV2YWx1ZRgCIAEoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlR5cGVk",
-            "VmFsdWUiwQIKClRpbWVTZXJpZXMSIgoGbWV0cmljGAEgASgLMhIuZ29vZ2xl",
-            "LmFwaS5NZXRyaWMSLwoIcmVzb3VyY2UYAiABKAsyHS5nb29nbGUuYXBpLk1v",
-            "bml0b3JlZFJlc291cmNlEjcKCG1ldGFkYXRhGAcgASgLMiUuZ29vZ2xlLmFw",
-            "aS5Nb25pdG9yZWRSZXNvdXJjZU1ldGFkYXRhEjwKC21ldHJpY19raW5kGAMg",
-            "ASgOMicuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yLk1ldHJpY0tpbmQS",
-            "OgoKdmFsdWVfdHlwZRgEIAEoDjImLmdvb2dsZS5hcGkuTWV0cmljRGVzY3Jp",
-            "cHRvci5WYWx1ZVR5cGUSKwoGcG9pbnRzGAUgAygLMhsuZ29vZ2xlLm1vbml0",
-            "b3JpbmcudjMuUG9pbnRCowEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IL",
-            "TWV0cmljUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xv",
-            "dWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz",
-            "YgZwcm90bzM="));
+            "b25pdG9yaW5nLnYzGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxoW",
+            "Z29vZ2xlL2FwaS9sYWJlbC5wcm90bxoXZ29vZ2xlL2FwaS9tZXRyaWMucHJv",
+            "dG8aI2dvb2dsZS9hcGkvbW9uaXRvcmVkX3Jlc291cmNlLnByb3RvGiFnb29n",
+            "bGUvbW9uaXRvcmluZy92My9jb21tb24ucHJvdG8ibgoFUG9pbnQSNAoIaW50",
+            "ZXJ2YWwYASABKAsyIi5nb29nbGUubW9uaXRvcmluZy52My5UaW1lSW50ZXJ2",
+            "YWwSLwoFdmFsdWUYAiABKAsyIC5nb29nbGUubW9uaXRvcmluZy52My5UeXBl",
+            "ZFZhbHVlIsECCgpUaW1lU2VyaWVzEiIKBm1ldHJpYxgBIAEoCzISLmdvb2ds",
+            "ZS5hcGkuTWV0cmljEi8KCHJlc291cmNlGAIgASgLMh0uZ29vZ2xlLmFwaS5N",
+            "b25pdG9yZWRSZXNvdXJjZRI3CghtZXRhZGF0YRgHIAEoCzIlLmdvb2dsZS5h",
+            "cGkuTW9uaXRvcmVkUmVzb3VyY2VNZXRhZGF0YRI8CgttZXRyaWNfa2luZBgD",
+            "IAEoDjInLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5NZXRyaWNLaW5k",
+            "EjoKCnZhbHVlX3R5cGUYBCABKA4yJi5nb29nbGUuYXBpLk1ldHJpY0Rlc2Ny",
+            "aXB0b3IuVmFsdWVUeXBlEisKBnBvaW50cxgFIAMoCzIbLmdvb2dsZS5tb25p",
+            "dG9yaW5nLnYzLlBvaW50QqMBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNC",
+            "C01ldHJpY1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNs",
+            "b3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xW",
+            "M2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points" }, null, null, null)
@@ -97,13 +97,14 @@ namespace Google.Cloud.Monitoring.V3 {
     private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
     /// The time interval to which the data point applies.  For `GAUGE` metrics,
-    /// only the end time of the interval is used.  For `DELTA` metrics, the start
-    /// and end time should specify a non-zero interval, with subsequent points
-    /// specifying contiguous and non-overlapping intervals.  For `CUMULATIVE`
-    /// metrics, the start and end time should specify a non-zero interval, with
-    /// subsequent points specifying the same start time and increasing end times,
-    /// until an event resets the cumulative value to zero and sets a new start
-    /// time for the following points.
+    /// the start time is optional, but if it is supplied, it must equal the end
+    /// time.  For `DELTA` metrics, the start and end time should specify a
+    /// non-zero interval, with subsequent points specifying contiguous and
+    /// non-overlapping intervals.  For `CUMULATIVE` metrics, the start and end
+    /// time should specify a non-zero interval, with subsequent points specifying
+    /// the same start time and increasing end times, until an event resets the
+    /// cumulative value to zero and sets a new start time for the following
+    /// points.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {

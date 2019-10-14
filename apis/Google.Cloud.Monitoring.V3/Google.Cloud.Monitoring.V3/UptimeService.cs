@@ -26,57 +26,62 @@ namespace Google.Cloud.Monitoring.V3 {
           string.Concat(
             "Cilnb29nbGUvbW9uaXRvcmluZy92My91cHRpbWVfc2VydmljZS5wcm90bxIU",
             "Z29vZ2xlLm1vbml0b3JpbmcudjMaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8aIWdvb2dsZS9tb25pdG9yaW5nL3YzL3VwdGltZS5wcm90bxobZ29v",
-            "Z2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmll",
-            "bGRfbWFzay5wcm90byJWCh1MaXN0VXB0aW1lQ2hlY2tDb25maWdzUmVxdWVz",
-            "dBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2Vf",
-            "dG9rZW4YBCABKAkilAEKHkxpc3RVcHRpbWVDaGVja0NvbmZpZ3NSZXNwb25z",
-            "ZRJFChR1cHRpbWVfY2hlY2tfY29uZmlncxgBIAMoCzInLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFIisKG0dldFVwdGltZUNoZWNr",
-            "Q29uZmlnUmVxdWVzdBIMCgRuYW1lGAEgASgJInYKHkNyZWF0ZVVwdGltZUNo",
-            "ZWNrQ29uZmlnUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSRAoTdXB0aW1lX2No",
-            "ZWNrX2NvbmZpZxgCIAEoCzInLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGlt",
-            "ZUNoZWNrQ29uZmlnIpcBCh5VcGRhdGVVcHRpbWVDaGVja0NvbmZpZ1JlcXVl",
-            "c3QSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrEkQKE3VwdGltZV9jaGVja19jb25maWcYAyABKAsyJy5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZyIuCh5EZWxldGVVcHRp",
-            "bWVDaGVja0NvbmZpZ1JlcXVlc3QSDAoEbmFtZRgBIAEoCSJCChlMaXN0VXB0",
-            "aW1lQ2hlY2tJcHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
-            "X3Rva2VuGAMgASgJInQKGkxpc3RVcHRpbWVDaGVja0lwc1Jlc3BvbnNlEj0K",
-            "EHVwdGltZV9jaGVja19pcHMYASADKAsyIy5nb29nbGUubW9uaXRvcmluZy52",
-            "My5VcHRpbWVDaGVja0lwEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLHCAoS",
-            "VXB0aW1lQ2hlY2tTZXJ2aWNlErcBChZMaXN0VXB0aW1lQ2hlY2tDb25maWdz",
-            "EjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdFVwdGltZUNoZWNrQ29uZmln",
-            "c1JlcXVlc3QaNC5nb29nbGUubW9uaXRvcmluZy52My5MaXN0VXB0aW1lQ2hl",
-            "Y2tDb25maWdzUmVzcG9uc2UiMoLT5JMCLBIqL3YzL3twYXJlbnQ9cHJvamVj",
-            "dHMvKn0vdXB0aW1lQ2hlY2tDb25maWdzEqYBChRHZXRVcHRpbWVDaGVja0Nv",
-            "bmZpZxIxLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdldFVwdGltZUNoZWNrQ29u",
-            "ZmlnUmVxdWVzdBonLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNr",
-            "Q29uZmlnIjKC0+STAiwSKi92My97bmFtZT1wcm9qZWN0cy8qL3VwdGltZUNo",
-            "ZWNrQ29uZmlncy8qfRLBAQoXQ3JlYXRlVXB0aW1lQ2hlY2tDb25maWcSNC5n",
-            "b29nbGUubW9uaXRvcmluZy52My5DcmVhdGVVcHRpbWVDaGVja0NvbmZpZ1Jl",
-            "cXVlc3QaJy5nb29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZp",
-            "ZyJHgtPkkwJBIiovdjMve3BhcmVudD1wcm9qZWN0cy8qfS91cHRpbWVDaGVj",
-            "a0NvbmZpZ3M6E3VwdGltZV9jaGVja19jb25maWcS1QEKF1VwZGF0ZVVwdGlt",
-            "ZUNoZWNrQ29uZmlnEjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXBkYXRlVXB0",
-            "aW1lQ2hlY2tDb25maWdSZXF1ZXN0GicuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
-            "VXB0aW1lQ2hlY2tDb25maWciW4LT5JMCVTI+L3YzL3t1cHRpbWVfY2hlY2tf",
-            "Y29uZmlnLm5hbWU9cHJvamVjdHMvKi91cHRpbWVDaGVja0NvbmZpZ3MvKn06",
-            "E3VwdGltZV9jaGVja19jb25maWcSmwEKF0RlbGV0ZVVwdGltZUNoZWNrQ29u",
-            "ZmlnEjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuRGVsZXRlVXB0aW1lQ2hlY2tD",
-            "b25maWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjKC0+STAiwq",
-            "Ki92My97bmFtZT1wcm9qZWN0cy8qL3VwdGltZUNoZWNrQ29uZmlncy8qfRKT",
-            "AQoSTGlzdFVwdGltZUNoZWNrSXBzEi8uZ29vZ2xlLm1vbml0b3JpbmcudjMu",
-            "TGlzdFVwdGltZUNoZWNrSXBzUmVxdWVzdBowLmdvb2dsZS5tb25pdG9yaW5n",
-            "LnYzLkxpc3RVcHRpbWVDaGVja0lwc1Jlc3BvbnNlIhqC0+STAhQSEi92My91",
-            "cHRpbWVDaGVja0lwc0KqAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhJV",
-            "cHRpbWVTZXJ2aWNlUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29n",
-            "bGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9y",
-            "aW5nXFYzYgZwcm90bzM="));
+            "cHJvdG8aIWdvb2dsZS9tb25pdG9yaW5nL3YzL3VwdGltZS5wcm90bxoeZ29v",
+            "Z2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhtnb29nbGUvcHJvdG9idWYv",
+            "ZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3Rv",
+            "Ghdnb29nbGUvYXBpL2NsaWVudC5wcm90byJWCh1MaXN0VXB0aW1lQ2hlY2tD",
+            "b25maWdzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAMg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkilAEKHkxpc3RVcHRpbWVDaGVja0Nv",
+            "bmZpZ3NSZXNwb25zZRJFChR1cHRpbWVfY2hlY2tfY29uZmlncxgBIAMoCzIn",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnEhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFIisKG0dl",
+            "dFVwdGltZUNoZWNrQ29uZmlnUmVxdWVzdBIMCgRuYW1lGAEgASgJInYKHkNy",
+            "ZWF0ZVVwdGltZUNoZWNrQ29uZmlnUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
+            "RAoTdXB0aW1lX2NoZWNrX2NvbmZpZxgCIAEoCzInLmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnIpcBCh5VcGRhdGVVcHRpbWVDaGVj",
+            "a0NvbmZpZ1JlcXVlc3QSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuRmllbGRNYXNrEkQKE3VwdGltZV9jaGVja19jb25maWcYAyAB",
+            "KAsyJy5nb29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZyIu",
+            "Ch5EZWxldGVVcHRpbWVDaGVja0NvbmZpZ1JlcXVlc3QSDAoEbmFtZRgBIAEo",
+            "CSJCChlMaXN0VXB0aW1lQ2hlY2tJcHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJInQKGkxpc3RVcHRpbWVDaGVja0lw",
+            "c1Jlc3BvbnNlEj0KEHVwdGltZV9jaGVja19pcHMYASADKAsyIy5nb29nbGUu",
+            "bW9uaXRvcmluZy52My5VcHRpbWVDaGVja0lwEhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCTLzCQoSVXB0aW1lQ2hlY2tTZXJ2aWNlErcBChZMaXN0VXB0aW1l",
+            "Q2hlY2tDb25maWdzEjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdFVwdGlt",
+            "ZUNoZWNrQ29uZmlnc1JlcXVlc3QaNC5nb29nbGUubW9uaXRvcmluZy52My5M",
+            "aXN0VXB0aW1lQ2hlY2tDb25maWdzUmVzcG9uc2UiMoLT5JMCLBIqL3YzL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKn0vdXB0aW1lQ2hlY2tDb25maWdzEqYBChRHZXRV",
+            "cHRpbWVDaGVja0NvbmZpZxIxLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdldFVw",
+            "dGltZUNoZWNrQ29uZmlnUmVxdWVzdBonLmdvb2dsZS5tb25pdG9yaW5nLnYz",
+            "LlVwdGltZUNoZWNrQ29uZmlnIjKC0+STAiwSKi92My97bmFtZT1wcm9qZWN0",
+            "cy8qL3VwdGltZUNoZWNrQ29uZmlncy8qfRLBAQoXQ3JlYXRlVXB0aW1lQ2hl",
+            "Y2tDb25maWcSNC5nb29nbGUubW9uaXRvcmluZy52My5DcmVhdGVVcHRpbWVD",
+            "aGVja0NvbmZpZ1JlcXVlc3QaJy5nb29nbGUubW9uaXRvcmluZy52My5VcHRp",
+            "bWVDaGVja0NvbmZpZyJHgtPkkwJBIiovdjMve3BhcmVudD1wcm9qZWN0cy8q",
+            "fS91cHRpbWVDaGVja0NvbmZpZ3M6E3VwdGltZV9jaGVja19jb25maWcS1QEK",
+            "F1VwZGF0ZVVwdGltZUNoZWNrQ29uZmlnEjQuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuVXBkYXRlVXB0aW1lQ2hlY2tDb25maWdSZXF1ZXN0GicuZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWciW4LT5JMCVTI+L3YzL3t1",
+            "cHRpbWVfY2hlY2tfY29uZmlnLm5hbWU9cHJvamVjdHMvKi91cHRpbWVDaGVj",
+            "a0NvbmZpZ3MvKn06E3VwdGltZV9jaGVja19jb25maWcSmwEKF0RlbGV0ZVVw",
+            "dGltZUNoZWNrQ29uZmlnEjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuRGVsZXRl",
+            "VXB0aW1lQ2hlY2tDb25maWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5IjKC0+STAiwqKi92My97bmFtZT1wcm9qZWN0cy8qL3VwdGltZUNoZWNr",
+            "Q29uZmlncy8qfRKTAQoSTGlzdFVwdGltZUNoZWNrSXBzEi8uZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuTGlzdFVwdGltZUNoZWNrSXBzUmVxdWVzdBowLmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLkxpc3RVcHRpbWVDaGVja0lwc1Jlc3BvbnNlIhqC",
+            "0+STAhQSEi92My91cHRpbWVDaGVja0lwcxqpAcpBGW1vbml0b3JpbmcuZ29v",
+            "Z2xlYXBpcy5jb23SQYkBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL21vbml0b3JpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9tb25pdG9yaW5nLnJlYWRCqgEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52",
+            "M0ISVXB0aW1lU2VydmljZVByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIa",
+            "R29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9u",
+            "aXRvcmluZ1xWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser, new[]{ "UptimeCheckConfigs", "NextPageToken", "TotalSize" }, null, null, null),
@@ -135,7 +140,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The project whose uptime check configurations are listed. The format
+    /// The project whose Uptime check configurations are listed. The format
     ///   is `projects/[PROJECT_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -340,7 +345,7 @@ namespace Google.Cloud.Monitoring.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> uptimeCheckConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>();
     /// <summary>
-    /// The returned uptime check configurations.
+    /// The returned Uptime check configurations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> UptimeCheckConfigs {
@@ -369,7 +374,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of uptime check configurations for the project,
+    /// The total number of Uptime check configurations for the project,
     /// irrespective of any pagination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -530,7 +535,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The uptime check configuration to retrieve. The format
+    /// The Uptime check configuration to retrieve. The format
     ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -667,7 +672,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The project in which to create the uptime check. The format
+    /// The project in which to create the Uptime check. The format
     ///   is `projects/[PROJECT_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -682,7 +687,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int UptimeCheckConfigFieldNumber = 2;
     private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig uptimeCheckConfig_;
     /// <summary>
-    /// The new uptime check configuration.
+    /// The new Uptime check configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig UptimeCheckConfig {
@@ -840,7 +845,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Optional. If present, only the listed fields in the current uptime check
+    /// Optional. If present, only the listed fields in the current Uptime check
     /// configuration are updated with values from the new configuration. If this
     /// field is empty, then the current configuration is completely replaced with
     /// the new configuration.
@@ -857,11 +862,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int UptimeCheckConfigFieldNumber = 3;
     private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig uptimeCheckConfig_;
     /// <summary>
-    /// Required. If an `"updateMask"` has been specified, this field gives
-    /// the values for the set of fields mentioned in the `"updateMask"`. If an
-    /// `"updateMask"` has not been given, this uptime check configuration replaces
-    /// the current configuration. If a field is mentioned in `"updateMask"` but
-    /// the corresonding field is omitted in this partial uptime check
+    /// Required. If an `updateMask` has been specified, this field gives
+    /// the values for the set of fields mentioned in the `updateMask`. If an
+    /// `updateMask` has not been given, this Uptime check configuration replaces
+    /// the current configuration. If a field is mentioned in `updateMask` but
+    /// the corresonding field is omitted in this partial Uptime check
     /// configuration, it has the effect of deleting/clearing the field from the
     /// configuration on the server.
     ///
@@ -1030,7 +1035,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The uptime check configuration to delete. The format
+    /// The Uptime check configuration to delete. The format
     ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
