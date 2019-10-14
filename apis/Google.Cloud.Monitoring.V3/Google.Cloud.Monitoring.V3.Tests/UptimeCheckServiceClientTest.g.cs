@@ -14,6 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
+// Do not warn when using obsolete members
+#pragma warning disable CS0612
+
 namespace Google.Cloud.Monitoring.V3.Tests
 {
     using Google.Api.Gax;
