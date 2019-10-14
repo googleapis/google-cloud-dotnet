@@ -25,33 +25,32 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvbW9uaXRvcmluZy92My9ub3RpZmljYXRpb24ucHJvdG8SFGdv",
-            "b2dsZS5tb25pdG9yaW5nLnYzGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
-            "b3RvGhZnb29nbGUvYXBpL2xhYmVsLnByb3RvGiFnb29nbGUvbW9uaXRvcmlu",
-            "Zy92My9jb21tb24ucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5w",
-            "cm90byLTAQodTm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3ISDAoEbmFt",
-            "ZRgGIAEoCRIMCgR0eXBlGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIT",
-            "CgtkZXNjcmlwdGlvbhgDIAEoCRIrCgZsYWJlbHMYBCADKAsyGy5nb29nbGUu",
-            "YXBpLkxhYmVsRGVzY3JpcHRvchI+Cg9zdXBwb3J0ZWRfdGllcnMYBSADKA4y",
-            "IS5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlVGllckICGAEitgQKE05v",
-            "dGlmaWNhdGlvbkNoYW5uZWwSDAoEdHlwZRgBIAEoCRIMCgRuYW1lGAYgASgJ",
-            "EhQKDGRpc3BsYXlfbmFtZRgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRJF",
-            "CgZsYWJlbHMYBSADKAsyNS5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmlj",
-            "YXRpb25DaGFubmVsLkxhYmVsc0VudHJ5Ek4KC3VzZXJfbGFiZWxzGAggAygL",
-            "MjkuZ29vZ2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hhbm5lbC5V",
-            "c2VyTGFiZWxzRW50cnkSWQoTdmVyaWZpY2F0aW9uX3N0YXR1cxgJIAEoDjI8",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlvbkNoYW5uZWwuVmVy",
-            "aWZpY2F0aW9uU3RhdHVzEisKB2VuYWJsZWQYCyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuQm9vbFZhbHVlGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEaMQoPVXNlckxhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiVwoSVmVyaWZpY2F0aW9uU3RhdHVz",
-            "EiMKH1ZFUklGSUNBVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABIOCgpVTlZF",
-            "UklGSUVEEAESDAoIVkVSSUZJRUQQAkKpAQoYY29tLmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzQhFOb3RpZmljYXRpb25Qcm90b1ABWj5nb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL21vbml0b3JpbmcvdjM7bW9uaXRvcmlu",
-            "Z6oCGkdvb2dsZS5DbG91ZC5Nb25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3Vk",
-            "XE1vbml0b3JpbmdcVjNiBnByb3RvMw=="));
+            "b2dsZS5tb25pdG9yaW5nLnYzGhZnb29nbGUvYXBpL2xhYmVsLnByb3RvGiFn",
+            "b29nbGUvbW9uaXRvcmluZy92My9jb21tb24ucHJvdG8aHmdvb2dsZS9wcm90",
+            "b2J1Zi93cmFwcGVycy5wcm90byLTAQodTm90aWZpY2F0aW9uQ2hhbm5lbERl",
+            "c2NyaXB0b3ISDAoEbmFtZRgGIAEoCRIMCgR0eXBlGAEgASgJEhQKDGRpc3Bs",
+            "YXlfbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIrCgZsYWJlbHMY",
+            "BCADKAsyGy5nb29nbGUuYXBpLkxhYmVsRGVzY3JpcHRvchI+Cg9zdXBwb3J0",
+            "ZWRfdGllcnMYBSADKA4yIS5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNl",
+            "VGllckICGAEitgQKE05vdGlmaWNhdGlvbkNoYW5uZWwSDAoEdHlwZRgBIAEo",
+            "CRIMCgRuYW1lGAYgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRITCgtkZXNj",
+            "cmlwdGlvbhgEIAEoCRJFCgZsYWJlbHMYBSADKAsyNS5nb29nbGUubW9uaXRv",
+            "cmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsLkxhYmVsc0VudHJ5Ek4KC3Vz",
+            "ZXJfbGFiZWxzGAggAygLMjkuZ29vZ2xlLm1vbml0b3JpbmcudjMuTm90aWZp",
+            "Y2F0aW9uQ2hhbm5lbC5Vc2VyTGFiZWxzRW50cnkSWQoTdmVyaWZpY2F0aW9u",
+            "X3N0YXR1cxgJIAEoDjI8Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNh",
+            "dGlvbkNoYW5uZWwuVmVyaWZpY2F0aW9uU3RhdHVzEisKB2VuYWJsZWQYCyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlGi0KC0xhYmVsc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMQoPVXNlckxhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiVwoSVmVy",
+            "aWZpY2F0aW9uU3RhdHVzEiMKH1ZFUklGSUNBVElPTl9TVEFUVVNfVU5TUEVD",
+            "SUZJRUQQABIOCgpVTlZFUklGSUVEEAESDAoIVkVSSUZJRUQQAkKpAQoYY29t",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzQhFOb3RpZmljYXRpb25Qcm90b1ABWj5n",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21vbml0b3Jp",
+            "bmcvdjM7bW9uaXRvcmluZ6oCGkdvb2dsZS5DbG91ZC5Nb25pdG9yaW5nLlYz",
+            "ygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.LabelReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor), global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor.Parser, new[]{ "Name", "Type", "DisplayName", "Description", "Labels", "SupportedTiers" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel), global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser, new[]{ "Type", "Name", "DisplayName", "Description", "Labels", "UserLabels", "VerificationStatus", "Enabled" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus) }, new pbr::GeneratedClrTypeInfo[] { null, null, })
@@ -403,9 +402,7 @@ namespace Google.Cloud.Monitoring.V3 {
     private string type_ = "";
     /// <summary>
     /// The type of the notification channel. This field matches the
-    /// value of the
-    /// [NotificationChannelDescriptor.type][google.monitoring.v3.NotificationChannelDescriptor.type]
-    /// field.
+    /// value of the [NotificationChannelDescriptor.type][google.monitoring.v3.NotificationChannelDescriptor.type] field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Type {
@@ -456,7 +453,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// An optional human-readable description of this notification channel. This
     /// description may provide additional details, beyond the display
-    /// name, for the channel. This may not exceeed 1024 Unicode characters.
+    /// name, for the channel. This may not exceed 1024 Unicode characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -474,8 +471,8 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// Configuration fields that define the channel and its behavior. The
     /// permissible and required labels are specified in the
-    /// [NotificationChannelDescriptor.labels][google.monitoring.v3.NotificationChannelDescriptor.labels]
-    /// of the `NotificationChannelDescriptor` corresponding to the `type` field.
+    /// [NotificationChannelDescriptor.labels][google.monitoring.v3.NotificationChannelDescriptor.labels] of the
+    /// `NotificationChannelDescriptor` corresponding to the `type` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
