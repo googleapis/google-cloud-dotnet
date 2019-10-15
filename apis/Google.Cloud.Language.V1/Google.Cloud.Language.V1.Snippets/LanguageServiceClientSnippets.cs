@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 using Xunit;
-using Google.Cloud.ClientTesting;
 using static Google.Cloud.Language.V1.AnnotateTextRequest.Types;
 using static Google.Cloud.Language.V1.PartOfSpeech.Types;
 
@@ -67,7 +67,7 @@ namespace Google.Cloud.Language.V1.Snippets
             // Additional: AnalyzeSyntax(Document,*)
             LanguageServiceClient client = LanguageServiceClient.Create();
             Document document = Document.FromPlainText(
-                "This is a simple sentence. This sentence, while not very complicated, is still more complicated than the first");
+                "This is a simple sentence. This sentence, while not very complicated, is still more complicated than the first.");
             AnalyzeSyntaxResponse response = client.AnalyzeSyntax(document);
             Console.WriteLine($"Detected language: {response.Language}");
             Console.WriteLine($"Number of sentences: {response.Sentences.Count}");
@@ -75,7 +75,7 @@ namespace Google.Cloud.Language.V1.Snippets
             // End sample
 
             Assert.Equal(2, response.Sentences.Count);
-            Assert.Equal(21, response.Tokens.Count);
+            Assert.Equal(22, response.Tokens.Count);
         }
 
         [Fact]
