@@ -33,6 +33,74 @@ namespace Google.Cloud.Debugger.V2.Snippets
     /// <summary>Generated snippets</summary>
     public class GeneratedDebugger2ClientSnippets
     {
+        /// <summary>Snippet for DeleteBreakpointAsync</summary>
+        public async Task DeleteBreakpointAsync()
+        {
+            // Snippet: DeleteBreakpointAsync(string,string,string,CallSettings)
+            // Additional: DeleteBreakpointAsync(string,string,string,CancellationToken)
+            // Create client
+            Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
+            // Initialize request argument(s)
+            string debuggeeId = "";
+            string breakpointId = "";
+            string clientVersion = "";
+            // Make the request
+            await debugger2Client.DeleteBreakpointAsync(debuggeeId, breakpointId, clientVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBreakpoint</summary>
+        public void DeleteBreakpoint()
+        {
+            // Snippet: DeleteBreakpoint(string,string,string,CallSettings)
+            // Create client
+            Debugger2Client debugger2Client = Debugger2Client.Create();
+            // Initialize request argument(s)
+            string debuggeeId = "";
+            string breakpointId = "";
+            string clientVersion = "";
+            // Make the request
+            debugger2Client.DeleteBreakpoint(debuggeeId, breakpointId, clientVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBreakpointAsync</summary>
+        public async Task DeleteBreakpointAsync_RequestObject()
+        {
+            // Snippet: DeleteBreakpointAsync(DeleteBreakpointRequest,CallSettings)
+            // Additional: DeleteBreakpointAsync(DeleteBreakpointRequest,CancellationToken)
+            // Create client
+            Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBreakpointRequest request = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "",
+                BreakpointId = "",
+                ClientVersion = "",
+            };
+            // Make the request
+            await debugger2Client.DeleteBreakpointAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBreakpoint</summary>
+        public void DeleteBreakpoint_RequestObject()
+        {
+            // Snippet: DeleteBreakpoint(DeleteBreakpointRequest,CallSettings)
+            // Create client
+            Debugger2Client debugger2Client = Debugger2Client.Create();
+            // Initialize request argument(s)
+            DeleteBreakpointRequest request = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "",
+                BreakpointId = "",
+                ClientVersion = "",
+            };
+            // Make the request
+            debugger2Client.DeleteBreakpoint(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetBreakpointAsync</summary>
         public async Task SetBreakpointAsync()
         {
@@ -166,74 +234,6 @@ namespace Google.Cloud.Debugger.V2.Snippets
             };
             // Make the request
             GetBreakpointResponse response = debugger2Client.GetBreakpoint(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteBreakpointAsync</summary>
-        public async Task DeleteBreakpointAsync()
-        {
-            // Snippet: DeleteBreakpointAsync(string,string,string,CallSettings)
-            // Additional: DeleteBreakpointAsync(string,string,string,CancellationToken)
-            // Create client
-            Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
-            // Initialize request argument(s)
-            string debuggeeId = "";
-            string breakpointId = "";
-            string clientVersion = "";
-            // Make the request
-            await debugger2Client.DeleteBreakpointAsync(debuggeeId, breakpointId, clientVersion);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteBreakpoint</summary>
-        public void DeleteBreakpoint()
-        {
-            // Snippet: DeleteBreakpoint(string,string,string,CallSettings)
-            // Create client
-            Debugger2Client debugger2Client = Debugger2Client.Create();
-            // Initialize request argument(s)
-            string debuggeeId = "";
-            string breakpointId = "";
-            string clientVersion = "";
-            // Make the request
-            debugger2Client.DeleteBreakpoint(debuggeeId, breakpointId, clientVersion);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteBreakpointAsync</summary>
-        public async Task DeleteBreakpointAsync_RequestObject()
-        {
-            // Snippet: DeleteBreakpointAsync(DeleteBreakpointRequest,CallSettings)
-            // Additional: DeleteBreakpointAsync(DeleteBreakpointRequest,CancellationToken)
-            // Create client
-            Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
-            // Initialize request argument(s)
-            DeleteBreakpointRequest request = new DeleteBreakpointRequest
-            {
-                DebuggeeId = "",
-                BreakpointId = "",
-                ClientVersion = "",
-            };
-            // Make the request
-            await debugger2Client.DeleteBreakpointAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteBreakpoint</summary>
-        public void DeleteBreakpoint_RequestObject()
-        {
-            // Snippet: DeleteBreakpoint(DeleteBreakpointRequest,CallSettings)
-            // Create client
-            Debugger2Client debugger2Client = Debugger2Client.Create();
-            // Initialize request argument(s)
-            DeleteBreakpointRequest request = new DeleteBreakpointRequest
-            {
-                DebuggeeId = "",
-                BreakpointId = "",
-                ClientVersion = "",
-            };
-            // Make the request
-            debugger2Client.DeleteBreakpoint(request);
             // End snippet
         }
 

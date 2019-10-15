@@ -34,6 +34,82 @@ namespace Google.Cloud.Debugger.V2.Tests
     public class GeneratedController2ClientTest
     {
         [Fact]
+        public void UpdateActiveBreakpoint()
+        {
+            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
+            UpdateActiveBreakpointRequest expectedRequest = new UpdateActiveBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+            };
+            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
+            mockGrpcClient.Setup(x => x.UpdateActiveBreakpoint(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            Breakpoint breakpoint = new Breakpoint();
+            UpdateActiveBreakpointResponse response = client.UpdateActiveBreakpoint(debuggeeId, breakpoint);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateActiveBreakpointAsync()
+        {
+            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
+            UpdateActiveBreakpointRequest expectedRequest = new UpdateActiveBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+            };
+            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
+            mockGrpcClient.Setup(x => x.UpdateActiveBreakpointAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UpdateActiveBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            Breakpoint breakpoint = new Breakpoint();
+            UpdateActiveBreakpointResponse response = await client.UpdateActiveBreakpointAsync(debuggeeId, breakpoint);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateActiveBreakpoint2()
+        {
+            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
+            UpdateActiveBreakpointRequest request = new UpdateActiveBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+            };
+            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
+            mockGrpcClient.Setup(x => x.UpdateActiveBreakpoint(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            UpdateActiveBreakpointResponse response = client.UpdateActiveBreakpoint(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateActiveBreakpointAsync2()
+        {
+            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
+            UpdateActiveBreakpointRequest request = new UpdateActiveBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+            };
+            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
+            mockGrpcClient.Setup(x => x.UpdateActiveBreakpointAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UpdateActiveBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
+            UpdateActiveBreakpointResponse response = await client.UpdateActiveBreakpointAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void RegisterDebuggee()
         {
             Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
@@ -185,82 +261,6 @@ namespace Google.Cloud.Debugger.V2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<ListActiveBreakpointsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
             ListActiveBreakpointsResponse response = await client.ListActiveBreakpointsAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateActiveBreakpoint()
-        {
-            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
-            UpdateActiveBreakpointRequest expectedRequest = new UpdateActiveBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                Breakpoint = new Breakpoint(),
-            };
-            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
-            mockGrpcClient.Setup(x => x.UpdateActiveBreakpoint(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
-            string debuggeeId = "debuggeeId-997255898";
-            Breakpoint breakpoint = new Breakpoint();
-            UpdateActiveBreakpointResponse response = client.UpdateActiveBreakpoint(debuggeeId, breakpoint);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateActiveBreakpointAsync()
-        {
-            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
-            UpdateActiveBreakpointRequest expectedRequest = new UpdateActiveBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                Breakpoint = new Breakpoint(),
-            };
-            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
-            mockGrpcClient.Setup(x => x.UpdateActiveBreakpointAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UpdateActiveBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
-            string debuggeeId = "debuggeeId-997255898";
-            Breakpoint breakpoint = new Breakpoint();
-            UpdateActiveBreakpointResponse response = await client.UpdateActiveBreakpointAsync(debuggeeId, breakpoint);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateActiveBreakpoint2()
-        {
-            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
-            UpdateActiveBreakpointRequest request = new UpdateActiveBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                Breakpoint = new Breakpoint(),
-            };
-            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
-            mockGrpcClient.Setup(x => x.UpdateActiveBreakpoint(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
-            UpdateActiveBreakpointResponse response = client.UpdateActiveBreakpoint(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateActiveBreakpointAsync2()
-        {
-            Mock<Controller2.Controller2Client> mockGrpcClient = new Mock<Controller2.Controller2Client>(MockBehavior.Strict);
-            UpdateActiveBreakpointRequest request = new UpdateActiveBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                Breakpoint = new Breakpoint(),
-            };
-            UpdateActiveBreakpointResponse expectedResponse = new UpdateActiveBreakpointResponse();
-            mockGrpcClient.Setup(x => x.UpdateActiveBreakpointAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UpdateActiveBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            Controller2Client client = new Controller2ClientImpl(mockGrpcClient.Object, null);
-            UpdateActiveBreakpointResponse response = await client.UpdateActiveBreakpointAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
