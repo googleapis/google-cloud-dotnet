@@ -146,55 +146,58 @@ namespace Google.Cloud.Translate.V3 {
             "DQoJQ0FOQ0VMTEVEEAUihQEKFkRlbGV0ZUdsb3NzYXJ5UmVzcG9uc2USDAoE",
             "bmFtZRgBIAEoCRIvCgtzdWJtaXRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
             "b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wMqAPChJUcmFuc2xhdGlvblNlcnZpY2US4AEKDVRy",
+            "dG9idWYuVGltZXN0YW1wMo4QChJUcmFuc2xhdGlvblNlcnZpY2US1AIKDVRy",
             "YW5zbGF0ZVRleHQSMS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJh",
             "bnNsYXRlVGV4dFJlcXVlc3QaMi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24u",
-            "djMuVHJhbnNsYXRlVGV4dFJlc3BvbnNlImiC0+STAmIiMS92My97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9OnRyYW5zbGF0ZVRleHQ6ASpaKiIl",
-            "L3YzL3twYXJlbnQ9cHJvamVjdHMvKn06dHJhbnNsYXRlVGV4dDoBKhKGAgoO",
-            "RGV0ZWN0TGFuZ3VhZ2USMi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
-            "RGV0ZWN0TGFuZ3VhZ2VSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0",
-            "aW9uLnYzLkRldGVjdExhbmd1YWdlUmVzcG9uc2UiigGC0+STAmQiMi92My97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9OmRldGVjdExhbmd1YWdl",
-            "OgEqWisiJi92My97cGFyZW50PXByb2plY3RzLyp9OmRldGVjdExhbmd1YWdl",
-            "OgEq2kEdcGFyZW50LG1vZGVsLG1pbWVfdHlwZSxsYWJlbHMSlwIKFUdldFN1",
-            "cHBvcnRlZExhbmd1YWdlcxI5Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52",
-            "My5HZXRTdXBwb3J0ZWRMYW5ndWFnZXNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3Vk",
-            "LnRyYW5zbGF0aW9uLnYzLlN1cHBvcnRlZExhbmd1YWdlcyKRAYLT5JMCZhI2",
-            "L3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc3VwcG9ydGVk",
-            "TGFuZ3VhZ2VzWiwSKi92My97cGFyZW50PXByb2plY3RzLyp9L3N1cHBvcnRl",
-            "ZExhbmd1YWdlc9pBInBhcmVudCxkaXNwbGF5X2xhbmd1YWdlX2NvZGUsbW9k",
-            "ZWwS4QEKEkJhdGNoVHJhbnNsYXRlVGV4dBI2Lmdvb2dsZS5jbG91ZC50cmFu",
-            "c2xhdGlvbi52My5CYXRjaFRyYW5zbGF0ZVRleHRSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ0gtPkkwI7IjYvdjMve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpiYXRjaFRyYW5zbGF0ZVRleHQ6ASrK",
-            "QTAKFkJhdGNoVHJhbnNsYXRlUmVzcG9uc2USFkJhdGNoVHJhbnNsYXRlTWV0",
-            "YWRhdGES3AEKDkNyZWF0ZUdsb3NzYXJ5EjIuZ29vZ2xlLmNsb3VkLnRyYW5z",
-            "bGF0aW9uLnYzLkNyZWF0ZUdsb3NzYXJ5UmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24id4LT5JMCOiIuL3YzL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vZ2xvc3NhcmllczoIZ2xvc3NhcnnaQQ9wYXJl",
-            "bnQsZ2xvc3NhcnnKQSIKCEdsb3NzYXJ5EhZDcmVhdGVHbG9zc2FyeU1ldGFk",
-            "YXRhEsEBCg5MaXN0R2xvc3NhcmllcxIyLmdvb2dsZS5jbG91ZC50cmFuc2xh",
-            "dGlvbi52My5MaXN0R2xvc3Nhcmllc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQu",
-            "dHJhbnNsYXRpb24udjMuTGlzdEdsb3NzYXJpZXNSZXNwb25zZSJGgtPkkwIw",
-            "Ei4vdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9nbG9zc2Fy",
-            "aWVz2kENcGFyZW50LGZpbHRlchKkAQoLR2V0R2xvc3NhcnkSLy5nb29nbGUu",
-            "Y2xvdWQudHJhbnNsYXRpb24udjMuR2V0R2xvc3NhcnlSZXF1ZXN0GiUuZ29v",
-            "Z2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdsb3NzYXJ5Ij2C0+STAjASLi92",
-            "My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2dsb3NzYXJpZXMvKn3a",
-            "QQRuYW1lEtUBCg5EZWxldGVHbG9zc2FyeRIyLmdvb2dsZS5jbG91ZC50cmFu",
-            "c2xhdGlvbi52My5EZWxldGVHbG9zc2FyeVJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uInCC0+STAjAqLi92My97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2dsb3NzYXJpZXMvKn3aQQRuYW1lykEwChZEZWxl",
-            "dGVHbG9zc2FyeVJlc3BvbnNlEhZEZWxldGVHbG9zc2FyeU1ldGFkYXRhGn7K",
-            "QRh0cmFuc2xhdGUuZ29vZ2xlYXBpcy5jb23SQWBodHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtdHJhbnNsYXRpb25C2AEKHWNvbS5n",
-            "b29nbGUuY2xvdWQudHJhbnNsYXRlLnYzQhdUcmFuc2xhdGlvblNlcnZpY2VQ",
-            "cm90b1ABWkJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL3RyYW5zbGF0ZS92Mzt0cmFuc2xhdGX4AQGqAhlHb29nbGUuQ2xv",
-            "dWQuVHJhbnNsYXRlLlYzygIZR29vZ2xlXENsb3VkXFRyYW5zbGF0ZVxWM+oC",
-            "HEdvb2dsZTo6Q2xvdWQ6OlRyYW5zbGF0ZTo6VjNiBnByb3RvMw=="));
+            "djMuVHJhbnNsYXRlVGV4dFJlc3BvbnNlItsBgtPkkwJiIjEvdjMve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTp0cmFuc2xhdGVUZXh0OgEqWioi",
+            "JS92My97cGFyZW50PXByb2plY3RzLyp9OnRyYW5zbGF0ZVRleHQ6ASraQSRw",
+            "YXJlbnQsdGFyZ2V0X2xhbmd1YWdlX2NvZGUsY29udGVudHPaQUlwYXJlbnQs",
+            "bW9kZWwsbWltZV90eXBlLHNvdXJjZV9sYW5ndWFnZV9jb2RlLHRhcmdldF9s",
+            "YW5ndWFnZV9jb2RlLGNvbnRlbnRzEocCCg5EZXRlY3RMYW5ndWFnZRIyLmdv",
+            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5EZXRlY3RMYW5ndWFnZVJlcXVl",
+            "c3QaMy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuRGV0ZWN0TGFuZ3Vh",
+            "Z2VSZXNwb25zZSKLAYLT5JMCZCIyL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn06ZGV0ZWN0TGFuZ3VhZ2U6ASpaKyImL3YzL3twYXJlbnQ9",
+            "cHJvamVjdHMvKn06ZGV0ZWN0TGFuZ3VhZ2U6ASraQR5wYXJlbnQsbW9kZWws",
+            "bWltZV90eXBlLGNvbnRlbnQSlwIKFUdldFN1cHBvcnRlZExhbmd1YWdlcxI5",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HZXRTdXBwb3J0ZWRMYW5n",
+            "dWFnZXNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlN1",
+            "cHBvcnRlZExhbmd1YWdlcyKRAYLT5JMCZhI2L3YzL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vc3VwcG9ydGVkTGFuZ3VhZ2VzWiwSKi92My97",
+            "cGFyZW50PXByb2plY3RzLyp9L3N1cHBvcnRlZExhbmd1YWdlc9pBInBhcmVu",
+            "dCxtb2RlbCxkaXNwbGF5X2xhbmd1YWdlX2NvZGUS4QEKEkJhdGNoVHJhbnNs",
+            "YXRlVGV4dBI2Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaFRy",
+            "YW5zbGF0ZVRleHRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiJ0gtPkkwI7IjYvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfTpiYXRjaFRyYW5zbGF0ZVRleHQ6ASrKQTAKFkJhdGNoVHJhbnNsYXRl",
+            "UmVzcG9uc2USFkJhdGNoVHJhbnNsYXRlTWV0YWRhdGES3AEKDkNyZWF0ZUds",
+            "b3NzYXJ5EjIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkNyZWF0ZUds",
+            "b3NzYXJ5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "d4LT5JMCOiIuL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "Z2xvc3NhcmllczoIZ2xvc3NhcnnaQQ9wYXJlbnQsZ2xvc3NhcnnKQSIKCEds",
+            "b3NzYXJ5EhZDcmVhdGVHbG9zc2FyeU1ldGFkYXRhEroBCg5MaXN0R2xvc3Nh",
+            "cmllcxIyLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5MaXN0R2xvc3Nh",
+            "cmllc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuTGlz",
+            "dEdsb3NzYXJpZXNSZXNwb25zZSI/gtPkkwIwEi4vdjMve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9nbG9zc2FyaWVz2kEGcGFyZW50EqQBCgtH",
+            "ZXRHbG9zc2FyeRIvLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HZXRH",
+            "bG9zc2FyeVJlcXVlc3QaJS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
+            "R2xvc3NhcnkiPYLT5JMCMBIuL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovZ2xvc3Nhcmllcy8qfdpBBG5hbWUS1QEKDkRlbGV0ZUdsb3NzYXJ5",
+            "EjIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkRlbGV0ZUdsb3NzYXJ5",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icILT5JMC",
+            "MCouL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZ2xvc3Nhcmll",
+            "cy8qfdpBBG5hbWXKQTAKFkRlbGV0ZUdsb3NzYXJ5UmVzcG9uc2USFkRlbGV0",
+            "ZUdsb3NzYXJ5TWV0YWRhdGEafspBGHRyYW5zbGF0ZS5nb29nbGVhcGlzLmNv",
+            "bdJBYGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC10",
+            "cmFuc2xhdGlvbkLYAQodY29tLmdvb2dsZS5jbG91ZC50cmFuc2xhdGUudjNC",
+            "F1RyYW5zbGF0aW9uU2VydmljZVByb3RvUAFaQmdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdHJhbnNsYXRlL3YzO3RyYW5z",
+            "bGF0ZfgBAaoCGUdvb2dsZS5DbG91ZC5UcmFuc2xhdGUuVjPKAhlHb29nbGVc",
+            "Q2xvdWRcVHJhbnNsYXRlXFYz6gIcR29vZ2xlOjpDbG91ZDo6VHJhbnNsYXRl",
+            "OjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -515,11 +518,11 @@ namespace Google.Cloud.Translate.V3 {
     /// Required. Project or location to make a call. Must refer to a caller's
     /// project.
     ///
-    /// Format: `projects/{project-id}` or
-    /// `projects/{project-id}/locations/{location-id}`.
+    /// Format: `projects/{project-number-or-id}` or
+    /// `projects/{project-number-or-id}/locations/{location-id}`.
     ///
-    /// For global calls, use `projects/{project-id}/locations/global` or
-    /// `projects/{project-id}`.
+    /// For global calls, use `projects/{project-number-or-id}/locations/global` or
+    /// `projects/{project-number-or-id}`.
     ///
     /// Non-global location is required for requests using AutoML models or
     /// custom glossaries.
@@ -544,15 +547,15 @@ namespace Google.Cloud.Translate.V3 {
     /// The format depends on model type:
     ///
     /// - AutoML Translation models:
-    ///   `projects/{project-id}/locations/{location-id}/models/{model-id}`
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/{model-id}`
     ///
     /// - General (built-in) models:
-    ///   `projects/{project-id}/locations/{location-id}/models/general/nmt`,
-    ///   `projects/{project-id}/locations/{location-id}/models/general/base`
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
     ///
     /// For global (non-regionalized) requests, use `location-id` `global`.
     /// For example,
-    /// `projects/{project-id}/locations/global/models/general/nmt`.
+    /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
     ///
     /// If missing, the system decides which google base model to use.
     /// </summary>
@@ -846,8 +849,8 @@ namespace Google.Cloud.Translate.V3 {
     /// <summary>
     /// Text translation responses if a glossary is provided in the request.
     /// This can be the same as
-    /// [`translations`][google.cloud.translation.v3.TranslateTextResponse.translations] if no terms apply.
-    /// This field has the same length as
+    /// [`translations`][google.cloud.translation.v3.TranslateTextResponse.translations]
+    /// if no terms apply. This field has the same length as
     /// [`contents`][google.cloud.translation.v3.TranslateTextRequest.contents].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1000,7 +1003,13 @@ namespace Google.Cloud.Translate.V3 {
     private string model_ = "";
     /// <summary>
     /// Only present when `model` is present in the request.
-    /// This is same as `model` provided in the request.
+    /// `model` here is normalized to have project number.
+    ///
+    /// For example:
+    /// If the `model` requested in TranslationTextRequest is
+    /// `projects/{project-id}/locations/{location-id}/models/general/nmt` then
+    /// `model` here would be normalized to
+    /// `projects/{project-number}/locations/{location-id}/models/general/nmt`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Model {
@@ -1232,11 +1241,11 @@ namespace Google.Cloud.Translate.V3 {
     /// Required. Project or location to make a call. Must refer to a caller's
     /// project.
     ///
-    /// Format: `projects/{project-id}/locations/{location-id}` or
-    /// `projects/{project-id}`.
+    /// Format: `projects/{project-number-or-id}/locations/{location-id}` or
+    /// `projects/{project-number-or-id}`.
     ///
-    /// For global calls, use `projects/{project-id}/locations/global` or
-    /// `projects/{project-id}`.
+    /// For global calls, use `projects/{project-number-or-id}/locations/global` or
+    /// `projects/{project-number-or-id}`.
     ///
     /// Only models within the same region (has same location-id) can be used.
     /// Otherwise an INVALID_ARGUMENT (400) error is returned.
@@ -1256,10 +1265,10 @@ namespace Google.Cloud.Translate.V3 {
     /// Optional. The language detection model to be used.
     ///
     /// Format:
-    /// `projects/{project-id}/locations/{location-id}/models/language-detection/{model-id}`
+    /// `projects/{project-number-or-id}/locations/{location-id}/models/language-detection/{model-id}`
     ///
     /// Only one language detection model is currently supported:
-    /// `projects/{project-id}/locations/{location-id}/models/language-detection/default`.
+    /// `projects/{project-number-or-id}/locations/{location-id}/models/language-detection/default`.
     ///
     /// If not specified, the default model is used.
     /// </summary>
@@ -1825,11 +1834,11 @@ namespace Google.Cloud.Translate.V3 {
     /// Required. Project or location to make a call. Must refer to a caller's
     /// project.
     ///
-    /// Format: `projects/{project-id}` or
-    /// `projects/{project-id}/locations/{location-id}`.
+    /// Format: `projects/{project-number-or-id}` or
+    /// `projects/{project-number-or-id}/locations/{location-id}`.
     ///
-    /// For global calls, use `projects/{project-id}/locations/global` or
-    /// `projects/{project-id}`.
+    /// For global calls, use `projects/{project-number-or-id}/locations/global` or
+    /// `projects/{project-number-or-id}`.
     ///
     /// Non-global location is required for AutoML models.
     ///
@@ -1869,11 +1878,11 @@ namespace Google.Cloud.Translate.V3 {
     /// The format depends on model type:
     ///
     /// - AutoML Translation models:
-    ///   `projects/{project-id}/locations/{location-id}/models/{model-id}`
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/{model-id}`
     ///
     /// - General (built-in) models:
-    ///   `projects/{project-id}/locations/{location-id}/models/general/nmt`,
-    ///   `projects/{project-id}/locations/{location-id}/models/general/base`
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
     ///
     /// Returns languages supported by the specified model.
     /// If missing, we get supported languages of Google general base (PBMT) model.
@@ -3143,7 +3152,7 @@ namespace Google.Cloud.Translate.V3 {
     /// <summary>
     /// Required. Location to make a call. Must refer to a caller's project.
     ///
-    /// Format: `projects/{project-id}/locations/{location-id}`.
+    /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
     ///
     /// The `global` location is not supported for batch translation.
     ///
@@ -3199,11 +3208,11 @@ namespace Google.Cloud.Translate.V3 {
     /// The value format depends on model type:
     ///
     /// - AutoML Translation models:
-    ///   `projects/{project-id}/locations/{location-id}/models/{model-id}`
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/{model-id}`
     ///
     /// - General (built-in) models:
-    ///   `projects/{project-id}/locations/{location-id}/models/general/nmt`,
-    ///   `projects/{project-id}/locations/{location-id}/models/general/base`
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
     ///
     /// If the map is empty or a specific model is
     /// not requested for a language pair, then default google model (nmt) is used.
@@ -3756,8 +3765,10 @@ namespace Google.Cloud.Translate.V3 {
   }
 
   /// <summary>
-  /// Stored in the [google.longrunning.Operation.response][google.longrunning.Operation.response] field returned by
-  /// BatchTranslateText if at least one sentence is translated successfully.
+  /// Stored in the
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// field returned by BatchTranslateText if at least one sentence is translated
+  /// successfully.
   /// </summary>
   public sealed partial class BatchTranslateResponse : pb::IMessage<BatchTranslateResponse> {
     private static readonly pb::MessageParser<BatchTranslateResponse> _parser = new pb::MessageParser<BatchTranslateResponse>(() => new BatchTranslateResponse());
@@ -3858,7 +3869,8 @@ namespace Google.Cloud.Translate.V3 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// The time when the operation is finished and
-    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is set to true.
+    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is
+    /// set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -4275,7 +4287,7 @@ namespace Google.Cloud.Translate.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the glossary. Glossary names have the form
-    /// `projects/{project-id}/locations/{location-id}/glossaries/{glossary-id}`.
+    /// `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5749,8 +5761,9 @@ namespace Google.Cloud.Translate.V3 {
   }
 
   /// <summary>
-  /// Stored in the [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata] field returned by
-  /// CreateGlossary.
+  /// Stored in the
+  /// [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata]
+  /// field returned by CreateGlossary.
   /// </summary>
   public sealed partial class CreateGlossaryMetadata : pb::IMessage<CreateGlossaryMetadata> {
     private static readonly pb::MessageParser<CreateGlossaryMetadata> _parser = new pb::MessageParser<CreateGlossaryMetadata>(() => new CreateGlossaryMetadata());
@@ -5991,8 +6004,9 @@ namespace Google.Cloud.Translate.V3 {
   }
 
   /// <summary>
-  /// Stored in the [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata] field returned by
-  /// DeleteGlossary.
+  /// Stored in the
+  /// [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata]
+  /// field returned by DeleteGlossary.
   /// </summary>
   public sealed partial class DeleteGlossaryMetadata : pb::IMessage<DeleteGlossaryMetadata> {
     private static readonly pb::MessageParser<DeleteGlossaryMetadata> _parser = new pb::MessageParser<DeleteGlossaryMetadata>(() => new DeleteGlossaryMetadata());
@@ -6233,8 +6247,9 @@ namespace Google.Cloud.Translate.V3 {
   }
 
   /// <summary>
-  /// Stored in the [google.longrunning.Operation.response][google.longrunning.Operation.response] field returned by
-  /// DeleteGlossary.
+  /// Stored in the
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// field returned by DeleteGlossary.
   /// </summary>
   public sealed partial class DeleteGlossaryResponse : pb::IMessage<DeleteGlossaryResponse> {
     private static readonly pb::MessageParser<DeleteGlossaryResponse> _parser = new pb::MessageParser<DeleteGlossaryResponse>(() => new DeleteGlossaryResponse());
@@ -6305,7 +6320,8 @@ namespace Google.Cloud.Translate.V3 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// The time when the glossary deletion is finished and
-    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is set to true.
+    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is
+    /// set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
