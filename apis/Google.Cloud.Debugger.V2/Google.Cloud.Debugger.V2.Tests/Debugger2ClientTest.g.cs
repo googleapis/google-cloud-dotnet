@@ -34,6 +34,84 @@ namespace Google.Cloud.Debugger.V2.Tests
     public class GeneratedDebugger2ClientTest
     {
         [Fact]
+        public void DeleteBreakpoint()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest expectedRequest = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteBreakpoint(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            string breakpointId = "breakpointId498424873";
+            string clientVersion = "clientVersion-1506231196";
+            client.DeleteBreakpoint(debuggeeId, breakpointId, clientVersion);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteBreakpointAsync()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest expectedRequest = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteBreakpointAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            string breakpointId = "breakpointId498424873";
+            string clientVersion = "clientVersion-1506231196";
+            await client.DeleteBreakpointAsync(debuggeeId, breakpointId, clientVersion);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteBreakpoint2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest request = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteBreakpoint(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBreakpoint(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteBreakpointAsync2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest request = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteBreakpointAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBreakpointAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void SetBreakpoint()
         {
             Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
@@ -194,84 +272,6 @@ namespace Google.Cloud.Debugger.V2.Tests
             Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
             GetBreakpointResponse response = await client.GetBreakpointAsync(request);
             Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteBreakpoint()
-        {
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
-            DeleteBreakpointRequest expectedRequest = new DeleteBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                BreakpointId = "breakpointId498424873",
-                ClientVersion = "clientVersion-1506231196",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteBreakpoint(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
-            string debuggeeId = "debuggeeId-997255898";
-            string breakpointId = "breakpointId498424873";
-            string clientVersion = "clientVersion-1506231196";
-            client.DeleteBreakpoint(debuggeeId, breakpointId, clientVersion);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteBreakpointAsync()
-        {
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
-            DeleteBreakpointRequest expectedRequest = new DeleteBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                BreakpointId = "breakpointId498424873",
-                ClientVersion = "clientVersion-1506231196",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteBreakpointAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
-            string debuggeeId = "debuggeeId-997255898";
-            string breakpointId = "breakpointId498424873";
-            string clientVersion = "clientVersion-1506231196";
-            await client.DeleteBreakpointAsync(debuggeeId, breakpointId, clientVersion);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteBreakpoint2()
-        {
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
-            DeleteBreakpointRequest request = new DeleteBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                BreakpointId = "breakpointId498424873",
-                ClientVersion = "clientVersion-1506231196",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteBreakpoint(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
-            client.DeleteBreakpoint(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteBreakpointAsync2()
-        {
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
-            DeleteBreakpointRequest request = new DeleteBreakpointRequest
-            {
-                DebuggeeId = "debuggeeId-997255898",
-                BreakpointId = "breakpointId498424873",
-                ClientVersion = "clientVersion-1506231196",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteBreakpointAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteBreakpointAsync(request);
             mockGrpcClient.VerifyAll();
         }
 

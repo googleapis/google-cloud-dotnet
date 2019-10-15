@@ -49,9 +49,9 @@ namespace Google.Cloud.Debugger.V2
         private Controller2Settings(Controller2Settings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            UpdateActiveBreakpointSettings = existing.UpdateActiveBreakpointSettings;
             RegisterDebuggeeSettings = existing.RegisterDebuggeeSettings;
             ListActiveBreakpointsSettings = existing.ListActiveBreakpointsSettings;
-            UpdateActiveBreakpointSettings = existing.UpdateActiveBreakpointSettings;
             OnCopy(existing);
         }
 
@@ -123,6 +123,36 @@ namespace Google.Cloud.Debugger.V2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>Controller2Client.UpdateActiveBreakpoint</c> and <c>Controller2Client.UpdateActiveBreakpointAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>Controller2Client.UpdateActiveBreakpoint</c> and
+        /// <c>Controller2Client.UpdateActiveBreakpointAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateActiveBreakpointSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>Controller2Client.RegisterDebuggee</c> and <c>Controller2Client.RegisterDebuggeeAsync</c>.
         /// </summary>
         /// <remarks>
@@ -178,35 +208,6 @@ namespace Google.Cloud.Debugger.V2
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>Controller2Client.UpdateActiveBreakpoint</c> and <c>Controller2Client.UpdateActiveBreakpointAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>Controller2Client.UpdateActiveBreakpoint</c> and
-        /// <c>Controller2Client.UpdateActiveBreakpointAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateActiveBreakpointSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -408,6 +409,185 @@ namespace Google.Cloud.Debugger.V2
         public virtual Controller2.Controller2Client GrpcClient
         {
             get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="debuggeeId">
+        /// Required. Identifies the debuggee being debugged.
+        /// </param>
+        /// <param name="breakpoint">
+        /// Required. Updated breakpoint information.
+        /// The field `id` must be set.
+        /// The agent must echo all Breakpoint specification fields in the update.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
+            string debuggeeId,
+            Breakpoint breakpoint,
+            gaxgrpc::CallSettings callSettings = null) => UpdateActiveBreakpointAsync(
+                new UpdateActiveBreakpointRequest
+                {
+                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
+                    Breakpoint = gax::GaxPreconditions.CheckNotNull(breakpoint, nameof(breakpoint)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="debuggeeId">
+        /// Required. Identifies the debuggee being debugged.
+        /// </param>
+        /// <param name="breakpoint">
+        /// Required. Updated breakpoint information.
+        /// The field `id` must be set.
+        /// The agent must echo all Breakpoint specification fields in the update.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
+            string debuggeeId,
+            Breakpoint breakpoint,
+            st::CancellationToken cancellationToken) => UpdateActiveBreakpointAsync(
+                debuggeeId,
+                breakpoint,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="debuggeeId">
+        /// Required. Identifies the debuggee being debugged.
+        /// </param>
+        /// <param name="breakpoint">
+        /// Required. Updated breakpoint information.
+        /// The field `id` must be set.
+        /// The agent must echo all Breakpoint specification fields in the update.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual UpdateActiveBreakpointResponse UpdateActiveBreakpoint(
+            string debuggeeId,
+            Breakpoint breakpoint,
+            gaxgrpc::CallSettings callSettings = null) => UpdateActiveBreakpoint(
+                new UpdateActiveBreakpointRequest
+                {
+                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
+                    Breakpoint = gax::GaxPreconditions.CheckNotNull(breakpoint, nameof(breakpoint)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
+            UpdateActiveBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
+            UpdateActiveBreakpointRequest request,
+            st::CancellationToken cancellationToken) => UpdateActiveBreakpointAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual UpdateActiveBreakpointResponse UpdateActiveBreakpoint(
+            UpdateActiveBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -774,185 +954,6 @@ namespace Google.Cloud.Debugger.V2
             throw new sys::NotImplementedException();
         }
 
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="debuggeeId">
-        /// Required. Identifies the debuggee being debugged.
-        /// </param>
-        /// <param name="breakpoint">
-        /// Required. Updated breakpoint information.
-        /// The field `id` must be set.
-        /// The agent must echo all Breakpoint specification fields in the update.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
-            string debuggeeId,
-            Breakpoint breakpoint,
-            gaxgrpc::CallSettings callSettings = null) => UpdateActiveBreakpointAsync(
-                new UpdateActiveBreakpointRequest
-                {
-                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
-                    Breakpoint = gax::GaxPreconditions.CheckNotNull(breakpoint, nameof(breakpoint)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="debuggeeId">
-        /// Required. Identifies the debuggee being debugged.
-        /// </param>
-        /// <param name="breakpoint">
-        /// Required. Updated breakpoint information.
-        /// The field `id` must be set.
-        /// The agent must echo all Breakpoint specification fields in the update.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
-            string debuggeeId,
-            Breakpoint breakpoint,
-            st::CancellationToken cancellationToken) => UpdateActiveBreakpointAsync(
-                debuggeeId,
-                breakpoint,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="debuggeeId">
-        /// Required. Identifies the debuggee being debugged.
-        /// </param>
-        /// <param name="breakpoint">
-        /// Required. Updated breakpoint information.
-        /// The field `id` must be set.
-        /// The agent must echo all Breakpoint specification fields in the update.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual UpdateActiveBreakpointResponse UpdateActiveBreakpoint(
-            string debuggeeId,
-            Breakpoint breakpoint,
-            gaxgrpc::CallSettings callSettings = null) => UpdateActiveBreakpoint(
-                new UpdateActiveBreakpointRequest
-                {
-                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
-                    Breakpoint = gax::GaxPreconditions.CheckNotNull(breakpoint, nameof(breakpoint)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
-            UpdateActiveBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
-            UpdateActiveBreakpointRequest request,
-            st::CancellationToken cancellationToken) => UpdateActiveBreakpointAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual UpdateActiveBreakpointResponse UpdateActiveBreakpoint(
-            UpdateActiveBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
     }
 
     /// <summary>
@@ -960,9 +961,9 @@ namespace Google.Cloud.Debugger.V2
     /// </summary>
     public sealed partial class Controller2ClientImpl : Controller2Client
     {
+        private readonly gaxgrpc::ApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse> _callUpdateActiveBreakpoint;
         private readonly gaxgrpc::ApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse> _callRegisterDebuggee;
         private readonly gaxgrpc::ApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse> _callListActiveBreakpoints;
-        private readonly gaxgrpc::ApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse> _callUpdateActiveBreakpoint;
 
         /// <summary>
         /// Constructs a client wrapper for the Controller2 service, with the specified gRPC client and settings.
@@ -974,19 +975,19 @@ namespace Google.Cloud.Debugger.V2
             GrpcClient = grpcClient;
             Controller2Settings effectiveSettings = settings ?? Controller2Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            _callUpdateActiveBreakpoint = clientHelper.BuildApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse>(
+                GrpcClient.UpdateActiveBreakpointAsync, GrpcClient.UpdateActiveBreakpoint, effectiveSettings.UpdateActiveBreakpointSettings);
             _callRegisterDebuggee = clientHelper.BuildApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse>(
                 GrpcClient.RegisterDebuggeeAsync, GrpcClient.RegisterDebuggee, effectiveSettings.RegisterDebuggeeSettings);
             _callListActiveBreakpoints = clientHelper.BuildApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse>(
                 GrpcClient.ListActiveBreakpointsAsync, GrpcClient.ListActiveBreakpoints, effectiveSettings.ListActiveBreakpointsSettings)
                 .WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
-            _callUpdateActiveBreakpoint = clientHelper.BuildApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse>(
-                GrpcClient.UpdateActiveBreakpointAsync, GrpcClient.UpdateActiveBreakpoint, effectiveSettings.UpdateActiveBreakpointSettings);
+            Modify_ApiCall(ref _callUpdateActiveBreakpoint);
+            Modify_UpdateActiveBreakpointApiCall(ref _callUpdateActiveBreakpoint);
             Modify_ApiCall(ref _callRegisterDebuggee);
             Modify_RegisterDebuggeeApiCall(ref _callRegisterDebuggee);
             Modify_ApiCall(ref _callListActiveBreakpoints);
             Modify_ListActiveBreakpointsApiCall(ref _callListActiveBreakpoints);
-            Modify_ApiCall(ref _callUpdateActiveBreakpoint);
-            Modify_UpdateActiveBreakpointApiCall(ref _callUpdateActiveBreakpoint);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1000,9 +1001,9 @@ namespace Google.Cloud.Debugger.V2
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_UpdateActiveBreakpointApiCall(ref gaxgrpc::ApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse> call);
         partial void Modify_RegisterDebuggeeApiCall(ref gaxgrpc::ApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse> call);
         partial void Modify_ListActiveBreakpointsApiCall(ref gaxgrpc::ApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse> call);
-        partial void Modify_UpdateActiveBreakpointApiCall(ref gaxgrpc::ApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse> call);
         partial void OnConstruction(Controller2.Controller2Client grpcClient, Controller2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -1013,9 +1014,63 @@ namespace Google.Cloud.Debugger.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
+        partial void Modify_UpdateActiveBreakpointRequest(ref UpdateActiveBreakpointRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_RegisterDebuggeeRequest(ref RegisterDebuggeeRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListActiveBreakpointsRequest(ref ListActiveBreakpointsRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_UpdateActiveBreakpointRequest(ref UpdateActiveBreakpointRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
+            UpdateActiveBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateActiveBreakpointRequest(ref request, ref callSettings);
+            return _callUpdateActiveBreakpoint.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the breakpoint state or mutable fields.
+        /// The entire Breakpoint message must be sent back to the controller service.
+        ///
+        /// Updates to active breakpoint fields are only allowed if the new value
+        /// does not change the breakpoint specification. Updates to the `location`,
+        /// `condition` and `expressions` fields should not alter the breakpoint
+        /// semantics. These may only make changes such as canonicalizing a value
+        /// or snapping the location to the correct line of code.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override UpdateActiveBreakpointResponse UpdateActiveBreakpoint(
+            UpdateActiveBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateActiveBreakpointRequest(ref request, ref callSettings);
+            return _callUpdateActiveBreakpoint.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Registers the debuggee with the controller service.
@@ -1137,60 +1192,6 @@ namespace Google.Cloud.Debugger.V2
         {
             Modify_ListActiveBreakpointsRequest(ref request, ref callSettings);
             return _callListActiveBreakpoints.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(
-            UpdateActiveBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateActiveBreakpointRequest(ref request, ref callSettings);
-            return _callUpdateActiveBreakpoint.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates the breakpoint state or mutable fields.
-        /// The entire Breakpoint message must be sent back to the controller service.
-        ///
-        /// Updates to active breakpoint fields are only allowed if the new value
-        /// does not change the breakpoint specification. Updates to the `location`,
-        /// `condition` and `expressions` fields should not alter the breakpoint
-        /// semantics. These may only make changes such as canonicalizing a value
-        /// or snapping the location to the correct line of code.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override UpdateActiveBreakpointResponse UpdateActiveBreakpoint(
-            UpdateActiveBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateActiveBreakpointRequest(ref request, ref callSettings);
-            return _callUpdateActiveBreakpoint.Sync(request, callSettings);
         }
 
     }

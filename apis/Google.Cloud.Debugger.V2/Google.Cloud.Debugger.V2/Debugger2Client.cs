@@ -49,9 +49,9 @@ namespace Google.Cloud.Debugger.V2
         private Debugger2Settings(Debugger2Settings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            DeleteBreakpointSettings = existing.DeleteBreakpointSettings;
             SetBreakpointSettings = existing.SetBreakpointSettings;
             GetBreakpointSettings = existing.GetBreakpointSettings;
-            DeleteBreakpointSettings = existing.DeleteBreakpointSettings;
             ListBreakpointsSettings = existing.ListBreakpointsSettings;
             ListDebuggeesSettings = existing.ListDebuggeesSettings;
             OnCopy(existing);
@@ -125,6 +125,36 @@ namespace Google.Cloud.Debugger.V2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>Debugger2Client.DeleteBreakpoint</c> and <c>Debugger2Client.DeleteBreakpointAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>Debugger2Client.DeleteBreakpoint</c> and
+        /// <c>Debugger2Client.DeleteBreakpointAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBreakpointSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>Debugger2Client.SetBreakpoint</c> and <c>Debugger2Client.SetBreakpointAsync</c>.
         /// </summary>
         /// <remarks>
@@ -180,35 +210,6 @@ namespace Google.Cloud.Debugger.V2
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>Debugger2Client.DeleteBreakpoint</c> and <c>Debugger2Client.DeleteBreakpointAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>Debugger2Client.DeleteBreakpoint</c> and
-        /// <c>Debugger2Client.DeleteBreakpointAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteBreakpointSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -470,6 +471,149 @@ namespace Google.Cloud.Debugger.V2
         public virtual Debugger2.Debugger2Client GrpcClient
         {
             get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="debuggeeId">
+        /// Required. ID of the debuggee whose breakpoint to delete.
+        /// </param>
+        /// <param name="breakpointId">
+        /// Required. ID of the breakpoint to delete.
+        /// </param>
+        /// <param name="clientVersion">
+        /// Required. The client version making the call.
+        /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteBreakpointAsync(
+            string debuggeeId,
+            string breakpointId,
+            string clientVersion,
+            gaxgrpc::CallSettings callSettings = null) => DeleteBreakpointAsync(
+                new DeleteBreakpointRequest
+                {
+                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
+                    BreakpointId = gax::GaxPreconditions.CheckNotNullOrEmpty(breakpointId, nameof(breakpointId)),
+                    ClientVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(clientVersion, nameof(clientVersion)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="debuggeeId">
+        /// Required. ID of the debuggee whose breakpoint to delete.
+        /// </param>
+        /// <param name="breakpointId">
+        /// Required. ID of the breakpoint to delete.
+        /// </param>
+        /// <param name="clientVersion">
+        /// Required. The client version making the call.
+        /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteBreakpointAsync(
+            string debuggeeId,
+            string breakpointId,
+            string clientVersion,
+            st::CancellationToken cancellationToken) => DeleteBreakpointAsync(
+                debuggeeId,
+                breakpointId,
+                clientVersion,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="debuggeeId">
+        /// Required. ID of the debuggee whose breakpoint to delete.
+        /// </param>
+        /// <param name="breakpointId">
+        /// Required. ID of the breakpoint to delete.
+        /// </param>
+        /// <param name="clientVersion">
+        /// Required. The client version making the call.
+        /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteBreakpoint(
+            string debuggeeId,
+            string breakpointId,
+            string clientVersion,
+            gaxgrpc::CallSettings callSettings = null) => DeleteBreakpoint(
+                new DeleteBreakpointRequest
+                {
+                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
+                    BreakpointId = gax::GaxPreconditions.CheckNotNullOrEmpty(breakpointId, nameof(breakpointId)),
+                    ClientVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(clientVersion, nameof(clientVersion)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteBreakpointAsync(
+            DeleteBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteBreakpointAsync(
+            DeleteBreakpointRequest request,
+            st::CancellationToken cancellationToken) => DeleteBreakpointAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteBreakpoint(
+            DeleteBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -774,149 +918,6 @@ namespace Google.Cloud.Debugger.V2
         }
 
         /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="debuggeeId">
-        /// Required. ID of the debuggee whose breakpoint to delete.
-        /// </param>
-        /// <param name="breakpointId">
-        /// Required. ID of the breakpoint to delete.
-        /// </param>
-        /// <param name="clientVersion">
-        /// Required. The client version making the call.
-        /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteBreakpointAsync(
-            string debuggeeId,
-            string breakpointId,
-            string clientVersion,
-            gaxgrpc::CallSettings callSettings = null) => DeleteBreakpointAsync(
-                new DeleteBreakpointRequest
-                {
-                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
-                    BreakpointId = gax::GaxPreconditions.CheckNotNullOrEmpty(breakpointId, nameof(breakpointId)),
-                    ClientVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(clientVersion, nameof(clientVersion)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="debuggeeId">
-        /// Required. ID of the debuggee whose breakpoint to delete.
-        /// </param>
-        /// <param name="breakpointId">
-        /// Required. ID of the breakpoint to delete.
-        /// </param>
-        /// <param name="clientVersion">
-        /// Required. The client version making the call.
-        /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteBreakpointAsync(
-            string debuggeeId,
-            string breakpointId,
-            string clientVersion,
-            st::CancellationToken cancellationToken) => DeleteBreakpointAsync(
-                debuggeeId,
-                breakpointId,
-                clientVersion,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="debuggeeId">
-        /// Required. ID of the debuggee whose breakpoint to delete.
-        /// </param>
-        /// <param name="breakpointId">
-        /// Required. ID of the breakpoint to delete.
-        /// </param>
-        /// <param name="clientVersion">
-        /// Required. The client version making the call.
-        /// Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public virtual void DeleteBreakpoint(
-            string debuggeeId,
-            string breakpointId,
-            string clientVersion,
-            gaxgrpc::CallSettings callSettings = null) => DeleteBreakpoint(
-                new DeleteBreakpointRequest
-                {
-                    DebuggeeId = gax::GaxPreconditions.CheckNotNullOrEmpty(debuggeeId, nameof(debuggeeId)),
-                    BreakpointId = gax::GaxPreconditions.CheckNotNullOrEmpty(breakpointId, nameof(breakpointId)),
-                    ClientVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(clientVersion, nameof(clientVersion)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteBreakpointAsync(
-            DeleteBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteBreakpointAsync(
-            DeleteBreakpointRequest request,
-            st::CancellationToken cancellationToken) => DeleteBreakpointAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public virtual void DeleteBreakpoint(
-            DeleteBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
         /// Lists all breakpoints for the debuggee.
         /// </summary>
         /// <param name="debuggeeId">
@@ -1191,9 +1192,9 @@ namespace Google.Cloud.Debugger.V2
     /// </summary>
     public sealed partial class Debugger2ClientImpl : Debugger2Client
     {
+        private readonly gaxgrpc::ApiCall<DeleteBreakpointRequest, pbwkt::Empty> _callDeleteBreakpoint;
         private readonly gaxgrpc::ApiCall<SetBreakpointRequest, SetBreakpointResponse> _callSetBreakpoint;
         private readonly gaxgrpc::ApiCall<GetBreakpointRequest, GetBreakpointResponse> _callGetBreakpoint;
-        private readonly gaxgrpc::ApiCall<DeleteBreakpointRequest, pbwkt::Empty> _callDeleteBreakpoint;
         private readonly gaxgrpc::ApiCall<ListBreakpointsRequest, ListBreakpointsResponse> _callListBreakpoints;
         private readonly gaxgrpc::ApiCall<ListDebuggeesRequest, ListDebuggeesResponse> _callListDebuggees;
 
@@ -1207,24 +1208,24 @@ namespace Google.Cloud.Debugger.V2
             GrpcClient = grpcClient;
             Debugger2Settings effectiveSettings = settings ?? Debugger2Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            _callDeleteBreakpoint = clientHelper.BuildApiCall<DeleteBreakpointRequest, pbwkt::Empty>(
+                GrpcClient.DeleteBreakpointAsync, GrpcClient.DeleteBreakpoint, effectiveSettings.DeleteBreakpointSettings);
             _callSetBreakpoint = clientHelper.BuildApiCall<SetBreakpointRequest, SetBreakpointResponse>(
                 GrpcClient.SetBreakpointAsync, GrpcClient.SetBreakpoint, effectiveSettings.SetBreakpointSettings)
                 .WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             _callGetBreakpoint = clientHelper.BuildApiCall<GetBreakpointRequest, GetBreakpointResponse>(
                 GrpcClient.GetBreakpointAsync, GrpcClient.GetBreakpoint, effectiveSettings.GetBreakpointSettings);
-            _callDeleteBreakpoint = clientHelper.BuildApiCall<DeleteBreakpointRequest, pbwkt::Empty>(
-                GrpcClient.DeleteBreakpointAsync, GrpcClient.DeleteBreakpoint, effectiveSettings.DeleteBreakpointSettings);
             _callListBreakpoints = clientHelper.BuildApiCall<ListBreakpointsRequest, ListBreakpointsResponse>(
                 GrpcClient.ListBreakpointsAsync, GrpcClient.ListBreakpoints, effectiveSettings.ListBreakpointsSettings)
                 .WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             _callListDebuggees = clientHelper.BuildApiCall<ListDebuggeesRequest, ListDebuggeesResponse>(
                 GrpcClient.ListDebuggeesAsync, GrpcClient.ListDebuggees, effectiveSettings.ListDebuggeesSettings);
+            Modify_ApiCall(ref _callDeleteBreakpoint);
+            Modify_DeleteBreakpointApiCall(ref _callDeleteBreakpoint);
             Modify_ApiCall(ref _callSetBreakpoint);
             Modify_SetBreakpointApiCall(ref _callSetBreakpoint);
             Modify_ApiCall(ref _callGetBreakpoint);
             Modify_GetBreakpointApiCall(ref _callGetBreakpoint);
-            Modify_ApiCall(ref _callDeleteBreakpoint);
-            Modify_DeleteBreakpointApiCall(ref _callDeleteBreakpoint);
             Modify_ApiCall(ref _callListBreakpoints);
             Modify_ListBreakpointsApiCall(ref _callListBreakpoints);
             Modify_ApiCall(ref _callListDebuggees);
@@ -1242,9 +1243,9 @@ namespace Google.Cloud.Debugger.V2
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_DeleteBreakpointApiCall(ref gaxgrpc::ApiCall<DeleteBreakpointRequest, pbwkt::Empty> call);
         partial void Modify_SetBreakpointApiCall(ref gaxgrpc::ApiCall<SetBreakpointRequest, SetBreakpointResponse> call);
         partial void Modify_GetBreakpointApiCall(ref gaxgrpc::ApiCall<GetBreakpointRequest, GetBreakpointResponse> call);
-        partial void Modify_DeleteBreakpointApiCall(ref gaxgrpc::ApiCall<DeleteBreakpointRequest, pbwkt::Empty> call);
         partial void Modify_ListBreakpointsApiCall(ref gaxgrpc::ApiCall<ListBreakpointsRequest, ListBreakpointsResponse> call);
         partial void Modify_ListDebuggeesApiCall(ref gaxgrpc::ApiCall<ListDebuggeesRequest, ListDebuggeesResponse> call);
         partial void OnConstruction(Debugger2.Debugger2Client grpcClient, Debugger2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -1257,11 +1258,48 @@ namespace Google.Cloud.Debugger.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
+        partial void Modify_DeleteBreakpointRequest(ref DeleteBreakpointRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SetBreakpointRequest(ref SetBreakpointRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetBreakpointRequest(ref GetBreakpointRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_DeleteBreakpointRequest(ref DeleteBreakpointRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListBreakpointsRequest(ref ListBreakpointsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListDebuggeesRequest(ref ListDebuggeesRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task DeleteBreakpointAsync(
+            DeleteBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBreakpointRequest(ref request, ref callSettings);
+            return _callDeleteBreakpoint.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void DeleteBreakpoint(
+            DeleteBreakpointRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBreakpointRequest(ref request, ref callSettings);
+            _callDeleteBreakpoint.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Sets the breakpoint to the debuggee.
@@ -1341,43 +1379,6 @@ namespace Google.Cloud.Debugger.V2
         {
             Modify_GetBreakpointRequest(ref request, ref callSettings);
             return _callGetBreakpoint.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public override stt::Task DeleteBreakpointAsync(
-            DeleteBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteBreakpointRequest(ref request, ref callSettings);
-            return _callDeleteBreakpoint.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the breakpoint from the debuggee.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public override void DeleteBreakpoint(
-            DeleteBreakpointRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteBreakpointRequest(ref request, ref callSettings);
-            _callDeleteBreakpoint.Sync(request, callSettings);
         }
 
         /// <summary>
