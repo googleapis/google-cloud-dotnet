@@ -12,30 +12,212 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
+using Google.Rpc;
+using Grpc.Core;
 using Moq;
+using Moq.Language;
+using System;
+using System.Threading.Tasks;
+using Status = Grpc.Core.Status;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
     /// <summary>
-    /// Helpers for tests that need SpannerClient instances.
+    /// Helpers for tests that need general SpannerClient instances.
+    /// The mocks generated with these helpers guarantee the basic
+    /// SpannerClient workings. If you need more granularity in what
+    /// SpannerClient methods return you should write specific mocks.
     /// </summary>
     internal static class SpannerClientHelpers
     {
+        internal const string ProjectId = "dummy-project";
+        internal const string Instance = "dummy-instance";
+        internal const string Database = "dummy-database";
+        private static readonly string s_retryInfoMetadataKey = RetryInfo.Descriptor.FullName + "-bin";
+
         /// <summary>
         /// Creates a mock SpannerClient configured with settings that include a fake clock
         /// and a fake scheduler.
         /// </summary>
         internal static Mock<SpannerClient> CreateMockClient(Logger logger, MockBehavior behavior = MockBehavior.Strict)
         {
+            var fakeScheduler = new FakeScheduler();
             var settings = SpannerSettings.GetDefault();
-            settings.Clock = new FakeClock();
-            settings.Scheduler = new FakeScheduler();
+            settings.Scheduler = fakeScheduler;
+            settings.Clock = fakeScheduler.Clock;
             settings.Logger = logger;
             var mock = new Mock<SpannerClient>(behavior);
             mock.SetupProperty(client => client.Settings, settings);
             return mock;
+        }
+
+        internal static Mock<SpannerClient> SetupBatchCreateSessionsAsync(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.BatchCreateSessionsAsync(It.IsNotNull<BatchCreateSessionsRequest>(), It.IsAny<CallSettings>()))
+                .Returns<BatchCreateSessionsRequest, CallSettings>((request, _) =>
+                {
+                    BatchCreateSessionsResponse response = new BatchCreateSessionsResponse();
+
+                    for (int i = 0; i < request.SessionCount; i++)
+                    {
+                        var session = request.SessionTemplate.Clone();
+                        session.CreateTime = session.ApproximateLastUseTime = spannerClientMock.GetNowTimestamp();
+                        session.Expired = false;
+                        session.Name = Guid.NewGuid().ToString();
+                        session.SessionName = new SessionName(ProjectId, Instance, Database, session.Name);
+
+                        response.Session.Add(session);
+                    }
+
+                    return Task.FromResult(response);
+                });
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupBeginTransactionAsync(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.BeginTransactionAsync(It.IsNotNull<BeginTransactionRequest>(), It.IsAny<CallSettings>()))
+                .Returns(Task.FromResult(
+                    new Transaction
+                    {
+                        Id = ByteString.CopyFromUtf8(Guid.NewGuid().ToString())
+                    }));
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupExecuteBatchDmlAsync(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.ExecuteBatchDmlAsync(It.IsNotNull<ExecuteBatchDmlRequest>(), It.IsAny<CallSettings>()))
+                .Returns(Task.FromResult(
+                    new ExecuteBatchDmlResponse
+                    {
+                        Status = new Rpc.Status
+                        {
+                            Code = (int)StatusCode.OK
+                        },
+                        ResultSets =
+                        {
+                            new ResultSet
+                            {
+                                Stats = new ResultSetStats
+                                {
+                                    RowCountExact = 10
+                                }
+                            }
+                        }
+                    }));
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupExecuteBatchDmlAsync_Fails(this Mock<SpannerClient> spannerClientMock, int failures, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
+        {
+            spannerClientMock
+                .SetupSequence(client => client.ExecuteBatchDmlAsync(It.IsNotNull<ExecuteBatchDmlRequest>(), It.IsAny<CallSettings>()))
+                .SetupFailures(failures, statusCode, exceptionMessage, exceptionRetryDelay)
+                .Returns(Task.FromResult(
+                    new ExecuteBatchDmlResponse
+                    {
+                        Status = new Rpc.Status
+                        {
+                            Code = (int)StatusCode.OK
+                        },
+                        ResultSets =
+                        {
+                            new ResultSet
+                            {
+                                Stats = new ResultSetStats
+                                {
+                                    RowCountExact = 10
+                                }
+                            }
+                        }
+                    }));
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupCommitAsync(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.CommitAsync(It.IsNotNull<CommitRequest>(), It.IsAny<CallSettings>()))
+                .Returns(Task.FromResult(
+                    new CommitResponse
+                    {
+                        CommitTimestamp = spannerClientMock.GetNowTimestamp()
+                    }));
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupCommitAsync_Fails(this Mock<SpannerClient> spannerClientMock, int failures, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
+        {
+            spannerClientMock
+                .SetupSequence(client => client.CommitAsync(It.IsNotNull<CommitRequest>(), It.IsAny<CallSettings>()))
+                .SetupFailures(failures, statusCode, exceptionMessage, exceptionRetryDelay)
+                .Returns(Task.FromResult(
+                    new CommitResponse
+                    {
+                        CommitTimestamp = spannerClientMock.GetNowTimestamp()
+                    }));
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupCommitAsync_FailsAlways(this Mock<SpannerClient> spannerClientMock, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
+        {
+            spannerClientMock
+                .Setup(client => client.CommitAsync(It.IsNotNull<CommitRequest>(), It.IsAny<CallSettings>()))
+                .Throws(BuildRpcException(exceptionRetryDelay, statusCode, exceptionMessage));
+
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupRollbackAsync(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.RollbackAsync(It.IsNotNull<RollbackRequest>(), It.IsAny<CallSettings>()))
+                .Returns(Task.FromResult(true));
+            return spannerClientMock;
+        }
+
+        private static ISetupSequentialResult<TResult> SetupFailures<TResult>(this ISetupSequentialResult<TResult> setup, int failures, StatusCode statusCode, string exceptionMessage, TimeSpan? exceptionRetryDelay)
+        {
+            var exception = BuildRpcException(exceptionRetryDelay, statusCode, exceptionMessage);
+            for (int i = 0; i < failures; i++)
+            {
+                setup = setup.Throws(exception);
+            }
+
+            return setup;
+        }
+
+        private static RpcException BuildRpcException(TimeSpan? exceptionRetryDelay, StatusCode exceptionStatus, string exceptionMessage)
+        {
+            var status = new Status(exceptionStatus, exceptionMessage);
+            if (!exceptionRetryDelay.HasValue)
+            {
+                return new RpcException(status);
+            }
+            RetryInfo retry = new RetryInfo
+            {
+                RetryDelay = Duration.FromTimeSpan(exceptionRetryDelay.Value)
+            };
+            Metadata trailers = new Metadata
+            {
+                { s_retryInfoMetadataKey, retry.ToByteArray() }
+            };
+            return new RpcException(status, trailers);
+        }
+
+        private static Timestamp GetNowTimestamp(this Mock<SpannerClient> spannerClientMock)
+        {
+            var clock = spannerClientMock.Object.Settings.Clock;
+            return Timestamp.FromDateTime(clock.GetCurrentDateTimeUtc());
         }
     }
 }
