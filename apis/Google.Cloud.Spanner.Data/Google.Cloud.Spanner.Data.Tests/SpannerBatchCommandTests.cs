@@ -14,10 +14,11 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
@@ -153,6 +154,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             public IClock Clock => SystemClock.Instance;
             public SessionPoolOptions Options { get; } = new SessionPoolOptions();
             public void Release(PooledSession session, bool deleteSession) =>  throw new NotImplementedException();
+
+            public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+                throw new NotImplementedException();
         }
     }
 }

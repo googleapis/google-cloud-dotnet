@@ -427,11 +427,18 @@ namespace Google.Cloud.Spanner.V1
                 ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: false);
             }
 
-            private async Task<PooledSession> BeginTransactionAsync(PooledSession session, TransactionOptions options, CancellationToken cancellationToken)
+            private async Task<PooledSession> BeginTransactionAsync(PooledSession session, TransactionOptions options, CancellationToken cancellationToken, bool isSessionAcquired = false)
             {
                 // While we're creating a transaction, it's as if we're preparing a new session - it's a period of time
                 // where there's already an RPC in flight, and when it completes a session will be available.
-                Interlocked.Increment(ref _inFlightSessionCreationCount);
+                // But if that session is being held by calling code already, and we are here because client code
+                // requested a transaction refresh then we can't count the session as if it were being prepared
+                // because after the transaction is refreshed the session won't be release back to the pool, it will still
+                // be held by calling code.
+                if (!isSessionAcquired)
+                {
+                    Interlocked.Increment(ref _inFlightSessionCreationCount);
+                }
                 var request = new BeginTransactionRequest { Options = options };
                 try
                 {
@@ -443,8 +450,38 @@ namespace Google.Cloud.Spanner.V1
                 }
                 finally
                 {
-                    Interlocked.Decrement(ref _inFlightSessionCreationCount);
+                    if (!isSessionAcquired)
+                    {
+                        Interlocked.Decrement(ref _inFlightSessionCreationCount);
+                    }
                 }
+            }
+
+            public override Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken)
+            {
+                if (session.RequiresRefresh)
+                {
+                    // Let's just release it back to the pool, that will handle the refreshing etc.
+                    session.ReleaseToPool(false);
+                }
+                else
+                {
+                    try
+                    {
+                        // Let's try to begin a new transaction for this same session.
+                        return BeginTransactionAsync(session, transactionOptions, cancellationToken, true);
+                    }
+                    catch(RpcException e)
+                    {
+                        Parent._logger.Warn("Failed to create transaction for acquired session", e);
+                        // Failed to create the transaction for the session.
+                        // Release the session back to the pool.
+                        // We'll try to acquire a new session now.
+                        session.ReleaseToPool(false);
+                    }
+                }
+                // If we are here we need to acquire a new session.
+                return AcquireSessionAsync(transactionOptions, cancellationToken);
             }
 
             /// <summary>

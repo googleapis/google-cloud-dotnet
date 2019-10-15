@@ -13,7 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Spanner.V1.Internal.Logging;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -29,6 +30,7 @@ namespace Google.Cloud.Spanner.V1
             public IClock Clock => Parent._clock;
             public SessionPoolOptions Options => Parent.Options;
             protected SessionPool Parent { get; }
+            public abstract Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken);
             public abstract void Release(PooledSession session, bool deleteSession);
             protected SessionPoolBase(SessionPool parent) => Parent = parent;
         }
