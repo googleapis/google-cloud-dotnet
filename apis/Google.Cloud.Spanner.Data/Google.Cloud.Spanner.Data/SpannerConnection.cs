@@ -23,7 +23,6 @@ using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -49,7 +48,7 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerConnection : DbConnection
     {
         // Read/write transaction options; no additional state, so can be reused.
-        private static readonly TransactionOptions s_readWriteTransactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+        internal static readonly TransactionOptions s_readWriteTransactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
 
         private readonly object _sync = new object();
 
@@ -260,6 +259,103 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A new <see cref="SpannerTransaction" /></returns>
         public Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
             BeginTransactionImplAsync(s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="asyncWork"/>.
+        /// </summary>
+        /// <remarks><paramref name="asyncWork"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="asyncWork"/> won't be retried if any other errors occur.
+        /// <paramref name="asyncWork"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
+        /// each time it is rerun.
+        /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an 
+        /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
+        /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The value returned by <paramref name="asyncWork"/> if the transaction commits successfully.</returns>
+        public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
+            
+            await OpenAsync(cancellationToken).ConfigureAwait(false);
+            RetriableTransaction transaction = new RetriableTransaction(
+                this,
+                Builder.SessionPoolManager.SpannerSettings.Clock ?? SystemClock.Instance,
+                Builder.SessionPoolManager.SpannerSettings.Scheduler ?? SystemScheduler.Instance);
+            return await transaction.RunAsync(asyncWork, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="asyncWork"/>.
+        /// </summary>
+        /// <remarks><paramref name="asyncWork"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="asyncWork"/> won't be retried if any other errors occur.
+        /// <paramref name="asyncWork"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
+        /// each time it is rerun.
+        /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an 
+        /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
+        /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A task that when completed will signal that the work is done.</returns>
+        public async Task RunWithRetriableTransactionAsync(Func<SpannerTransaction, Task> asyncWork, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
+            await RunWithRetriableTransactionAsync(async transaction =>
+            {
+                await asyncWork(transaction).ConfigureAwait(false);
+                return true;
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="work"/>.
+        /// </summary>
+        /// <remarks><paramref name="work"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="work"/> won't be retried if any other errors occur.
+        /// <paramref name="work"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
+        /// each time it is rerun.
+        /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an 
+        /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
+        /// <param name="work">The work to perform in each transaction attempt.</param>
+        /// <returns>The value returned by <paramref name="work"/> if the transaction commits successfully.</returns>
+        public TResult RunWithRetriableTransaction<TResult>(Func<SpannerTransaction, TResult> work)
+        {
+            GaxPreconditions.CheckNotNull(work, nameof(work));
+            return Task.Run(() => RunWithRetriableTransactionAsync(
+                transaction => Task.FromResult(work(transaction)),
+                CancellationToken.None)).ResultWithUnwrappedExceptions();
+        }
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="work"/>.
+        /// </summary>
+        /// <remarks><paramref name="work"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="work"/> won't be retried if any other errors occur.
+        /// <paramref name="work"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
+        /// each time it is rerun.
+        /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an 
+        /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
+        /// <param name="work">The work to perform in each transaction attempt.</param>
+        public void RunWithRetriableTransaction(Action<SpannerTransaction> work)
+        {
+            GaxPreconditions.CheckNotNull(work, nameof(work));
+            Task.Run(() => RunWithRetriableTransactionAsync(transaction =>
+            {
+                work(transaction);
+                return Task.FromResult(true);
+            }, CancellationToken.None)).WaitWithUnwrappedExceptions();
+        }
 
         /// <inheritdoc />
         public override void ChangeDatabase(string newDataSource)
@@ -638,6 +734,9 @@ namespace Google.Cloud.Spanner.Data
             var expiration = timeoutSeconds == 0 && !Builder.AllowImmediateTimeouts ? Expiration.None : Expiration.FromTimeout(TimeSpan.FromSeconds(timeoutSeconds));
             return originalSettings.WithExpiration(expiration).WithCancellationToken(cancellationToken);
         }
+
+        internal async Task<PooledSession> AcquireReadWriteSessionAsync(CancellationToken cancellationToken) =>
+            await AcquireSessionAsync(s_readWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
 
         internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, CancellationToken cancellationToken)
         {

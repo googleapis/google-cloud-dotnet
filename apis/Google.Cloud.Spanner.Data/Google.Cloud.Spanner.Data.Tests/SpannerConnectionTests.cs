@@ -17,7 +17,7 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
-    public class SpannerConnectionTests
+    public partial class SpannerConnectionTests
     {
         [Fact]
         public void OpenWithNoDatabase_InvalidCredentials()

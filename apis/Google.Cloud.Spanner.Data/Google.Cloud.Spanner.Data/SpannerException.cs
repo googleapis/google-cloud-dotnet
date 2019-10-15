@@ -62,6 +62,8 @@ namespace Google.Cloud.Spanner.Data
                 {ErrorCode.Unknown, "An unknown error occurred."}
             };
 
+        private static readonly string s_retryInfoMetadataKey = RetryInfo.Descriptor.FullName + "-bin";
+
         /// <summary>
         /// An error code that indicates the general class of problem.
         /// </summary>
@@ -85,6 +87,22 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// For retryable <see cref="SpannerException"/>, this value represents
+        /// the recommended minimum retry delay. It might or might not
+        /// be present, even if this exception is retryable.
+        /// </summary>
+        public TimeSpan? RecommendedRetryDelay { get; }
+
+        // For retrying aborted commits, we need to diferentiate whether the operation
+        // was aborted due to a session expiry. If the session expired we cannot
+        // retry automatically because we cannot reuse the session.
+        // Note that it is us who are setting the ErrorCode to ErrorCode.Aborted
+        // when the session has expired. I suspect this was done so that IsRetryable would
+        // be true and clients would attempt a retry.
+        // Internal, clients won't have this problem since they can't explicitly reuse sessions.
+        internal bool SessionExpired { get; }
+
+        /// <summary>
         /// Creates a new instance of <see cref="SpannerException"/>.
         /// </summary>
         /// <param name="status">The value from which to create the exception from.</param>
@@ -101,7 +119,21 @@ namespace Google.Cloud.Spanner.Data
             : base(GetMessageFromErrorCode(code), innerException)
         {
             Logger.DefaultLogger.LogPerformanceCounter("SpannerException.Count", x => x + 1);
+
+            SessionExpired = innerException.IsSessionExpiredError();
             ErrorCode = innerException.IsSessionExpiredError() ? ErrorCode.Aborted : code;
+
+            Metadata.Entry retryInfoEntry = innerException.Trailers.FirstOrDefault(
+                entry => s_retryInfoMetadataKey.Equals(entry.Key, StringComparison.InvariantCultureIgnoreCase));
+            if (retryInfoEntry != null)
+            {
+                RetryInfo retryInfo = RetryInfo.Parser.ParseFrom(retryInfoEntry.ValueBytes);
+                TimeSpan recommended = retryInfo.RetryDelay.ToTimeSpan();
+                if (recommended != TimeSpan.Zero)
+                {
+                    RecommendedRetryDelay = recommended;
+                }
+            }
         }
 
         /// <summary>
