@@ -246,10 +246,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var pool = CreatePool(false);
                 var client = (SessionTestingSpannerClient)pool.Client;
                 // Create all the tasks before we let anything else happen
-                var tasks = Enumerable
-                    .Range(0, pool.Options.MaximumActiveSessions)
-                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
-                    .ToList();
+                var tasks = AcquireSessionTasks(pool, pool.Options.MaximumActiveSessions);
                 await client.Scheduler.RunAsync(async () =>
                 {
                     // Now we're running, all the acquisition tasks should be able to start requests
@@ -345,10 +342,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // The sessions previously created can be acquired inmediately.
                 // The extra ones should be pending waiting on create session tasks.
-                var acquisitionTasks = Enumerable
-                    .Range(0, 13)
-                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
-                    .ToList();
+                var acquisitionTasks = AcquireSessionTasks(pool, 13);
                 // Wait a little in real time to make sure that session creation tasks have started.
                 // Session creation is done in a (controlled) fire and forget way, that's why
                 // we need to wait a little in real time.
@@ -426,10 +420,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 client.FailAllRpcsDelay = TimeSpan.Zero;
 
                 // Acquire some sessions. This will start to try and nurse the pool back to health
-                var acquisitionTasks = Enumerable
-                    .Range(0, 3)
-                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
-                    .ToList();
+                var acquisitionTasks = AcquireSessionTasks(pool, 3);
                 // Wait a little in real time to make sure that nursing has started.
                 // Nursing is done in a (controlled) fire and forget way, that's why
                 // we need to wait a little in real time.
@@ -495,10 +486,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Acquire some other sessions. These won't start a new nursing task, will just wait for
                 // the one already started to be done.
-                var acquisitionTasks = Enumerable
-                    .Range(0, 3)
-                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
-                    .ToList();
+                var acquisitionTasks = AcquireSessionTasks(pool, 3);
 
                 stats = pool.GetStatisticsSnapshot();
                 Assert.False(stats.Healthy);
@@ -519,6 +507,79 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.Equal(0, stats.PendingAcquisitionCount);
                 Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
                 Assert.Equal(0, stats.InFlightCreationCount);
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task RefreshTransaction_FailsForDifferentTransactionTypes()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var originalSession = await pool.AcquireSessionAsync(
+                        new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() },
+                        CancellationToken.None);
+
+                    await Assert.ThrowsAsync<ArgumentException>(() => originalSession.WithFreshTransactionOrNewAsync(new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, CancellationToken.None));
+                });
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task RefreshTransaction_WithFreshSession()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                var transactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var originalSession = await pool.AcquireSessionAsync(
+                        transactionOptions,
+                        CancellationToken.None);
+                    var originalSessionName = originalSession.SessionName;
+                    var originalTransactionId = originalSession.TransactionId;
+                    // This session hasn't had time to be stale.
+                    // Refreshing the transaction should return a new instance of PooledSession
+                    // with the same session name and different transaction ID.
+                    var newSession = await originalSession.WithFreshTransactionOrNewAsync(transactionOptions, CancellationToken.None);
+
+                    Assert.NotSame(originalSession, newSession);
+                    Assert.Equal(originalSessionName, newSession.SessionName);
+                    Assert.NotEqual(originalTransactionId, newSession.TransactionId);
+                });
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task RefreshTransaction_WithStaleSession()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                var transactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var originalSession = await pool.AcquireSessionAsync(transactionOptions, CancellationToken.None);
+                    var originalSessionName = originalSession.SessionName;
+                    var originalTransactionId = originalSession.TransactionId;
+
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(20)); // So a refresh is required
+                    // This session is now stale.
+                    // Refreshing the transaction should return a new instance of PooledSession
+                    // with a different session name and different transaction ID.
+                    var newSessionTask = originalSession.WithFreshTransactionOrNewAsync(transactionOptions, CancellationToken.None);
+                    // Let's make sure that our original session was refreshed and returned back to the pool.
+                    // We have one session already so we can only acquire the rest.
+                    var allSessionsTask = AcquireSessionTasks(pool, pool.Options.MaximumActiveSessions - 1);
+
+                    var newSession = await newSessionTask;
+                    Assert.NotSame(originalSession, newSession);
+                    Assert.NotEqual(originalSessionName, newSession.SessionName);
+                    Assert.NotEqual(originalTransactionId, newSession.TransactionId);
+
+                    var allSessions = await Task.WhenAll(allSessionsTask);
+                    Assert.Contains(allSessions, s => originalSessionName.Equals(s.SessionName));
+                    Assert.DoesNotContain(allSessions, s => originalTransactionId.Equals(s.TransactionId));
+                });
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
@@ -822,13 +883,16 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             private async Task<List<PooledSession>> AcquireAllSessionsAsync(TargetedSessionPool pool)
             {
-                var tasks = Enumerable
-                    .Range(0, pool.Options.MaximumActiveSessions)
-                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
-                    .ToList();
+                var tasks = AcquireSessionTasks(pool, pool.Options.MaximumActiveSessions);
                 await Task.WhenAll(tasks);
                 return tasks.Select(t => t.Result).ToList();
             }
+
+            private List<Task<PooledSession>> AcquireSessionTasks(TargetedSessionPool pool, int sessionsToAcquiere) => 
+                Enumerable
+                .Range(0, sessionsToAcquiere)
+                .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
+                .ToList();
         }
     }
 }

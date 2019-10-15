@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 using Google.Api.Gax;
-using Google.Cloud.Spanner.V1.Internal.Logging;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -27,6 +27,7 @@ namespace Google.Cloud.Spanner.V1
         {
             SpannerClient Client { get; }
             IClock Clock { get; }
+            Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken);
             void Release(PooledSession session, bool deleteSession);
             SessionPoolOptions Options { get; }
         }

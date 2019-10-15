@@ -360,6 +360,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 ReleasedSessionDeleted = deleteSession;
             }
+
+            public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+                throw new NotImplementedException();
         }
     }
 }

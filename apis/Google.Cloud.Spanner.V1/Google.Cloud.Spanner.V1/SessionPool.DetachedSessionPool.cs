@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace Google.Cloud.Spanner.V1
 {
     public partial class SessionPool
@@ -35,6 +39,10 @@ namespace Google.Cloud.Spanner.V1
                     Parent.DeleteSessionFireAndForget(session);
                 }
             }
+
+            public override Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+                throw new InvalidOperationException(
+                    $"{nameof(session)} is a detached session. Its transaction can't be refreshed and it can't be substituted by a new session.");
         }
     }
 }

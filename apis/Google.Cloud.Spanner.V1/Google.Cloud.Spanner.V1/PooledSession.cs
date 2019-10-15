@@ -114,10 +114,48 @@ namespace Google.Cloud.Spanner.V1
         /// Returns a PooledSession for the same session as this one, but not disposed, and with no transaction associated with it.
         /// The refresh and eviction times are the same as this instance.
         /// </summary>
-        private PooledSession AfterReset() => new PooledSession(_pool, SessionName, null, ModeOneofCase.None, _evictionTime, RefreshTicks);
+        private PooledSession AfterReset()
+        {
+            MarkAsDisposed();
+            return new PooledSession(_pool, SessionName, null, ModeOneofCase.None, _evictionTime, RefreshTicks);
+        }
 
-        internal PooledSession WithTransaction(ByteString transactionId, ModeOneofCase transactionMode) =>
-            new PooledSession(_pool, SessionName, transactionId, transactionMode, _evictionTime, _refreshTicks);
+        internal PooledSession WithTransaction(ByteString transactionId, ModeOneofCase transactionMode)
+        {
+            MarkAsDisposed();
+            return new PooledSession(_pool, SessionName, transactionId, transactionMode, _evictionTime, _refreshTicks);
+        }
+
+        /// <summary>
+        /// Always returns a new instance of <see cref="PooledSession"/>. The new instance can:
+        /// 1. represent the same session as this one, but will have a fresh transaction of the
+        /// same type as this <see cref="PooledSession"/> did.
+        /// 2. represent an entirely different session with a fresh transaction of the same type
+        /// as this <see cref="PooledSession"/> did.
+        /// This method will always try to get a fresh transaction for this session.
+        /// If the session has expired or it fails to get a fresh transaction, then it will
+        /// acquire a session in the normal way.
+        /// This <see cref="PooledSession"/> instance will be disposed of to ensure that all operations
+        /// with the underlying session are done through the new instance.
+        /// </summary>
+        /// <remarks>
+        /// Use this method when executing operations that are best done using the same
+        /// session. For instance, when retrying aborted commits it is better if the transaction work and commit
+        /// are retried with the same session, because after each abort the sessions' lock priority increments.
+        /// </remarks>
+        /// <returns>A new instance of <see cref="PooledSession"/>.</returns>
+        /// <exception cref="InvalidOperationException">If this <see cref="PooledSession.TransactionMode"/>
+        /// is <see cref="ModeOneofCase.None"/>.</exception>
+        public Task<PooledSession> WithFreshTransactionOrNewAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        {
+            CheckNotDisposed();
+            GaxPreconditions.CheckNotNull(transactionOptions, nameof(transactionOptions));
+            GaxPreconditions.CheckArgument(transactionOptions.ModeCase == TransactionMode, nameof(transactionOptions), $"{nameof(TransactionOptions)} should be of the same type as this session's {nameof(TransactionMode)} which is {TransactionMode}");
+
+            // Calling AfterReset() will mark this instance as disposed.
+            // The pool will take care of releasing back to the pool if needed.
+            return _pool.WithFreshTransactionOrNewAsync(AfterReset(), transactionOptions, cancellationToken);
+        }
 
         /// <summary>
         /// Indicates whether the associated session has expired and should be evicted from the pool.
@@ -144,6 +182,17 @@ namespace Google.Cloud.Spanner.V1
         public void Dispose() => ReleaseToPool(false);
 
         /// <summary>
+        /// Usually disposing of a <see cref="PooledSession"/> instance should release its
+        /// underlying session to the pool. But when we create a new instance of <see cref="PooledSession"/>
+        /// from an existing instance of <see cref="PooledSession"/>, that is, with the same underlying session,
+        /// the original instance shouldn't be allowed to be disposed of normally so that the underlying session
+        /// is not released back to the pool.
+        /// </summary>
+        /// <returns><code>true</code> if the <see cref="PooledSession"/> had not been disposed before.
+        /// <code>false</code> otherwise.</returns>
+        private bool MarkAsDisposed() => Interlocked.Exchange(ref _disposed, 1) != 1;
+
+        /// <summary>
         /// Returns this session to the session pool from which it was acquired, unless
         /// it has become invalid. This method should only be called once per instance; subsequent
         /// calls are ignored. No other methods can be called after this.
@@ -151,10 +200,8 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="forceDelete">true to force the session to be deleted; false to allow the session to be reused.</param>
         public void ReleaseToPool(bool forceDelete)
         {
-            bool wasDisposed = Interlocked.Exchange(ref _disposed, 1) == 1;
-            if (!wasDisposed)
+            if (MarkAsDisposed())
             {
-                GC.SuppressFinalize(this);
                 _pool.Release(AfterReset(), forceDelete || ServerExpired || ShouldBeEvicted);
             }
             else
