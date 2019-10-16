@@ -695,9 +695,8 @@
 
   {
     "id": "Google.Cloud.Redis.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/redis/v1",
-    "serviceYaml": "redis_v1.yaml",
     "productName": "Google Cloud Memorystore for Redis",
     "productUrl": "https://cloud.google.com/memorystore/",
     "version": "1.1.0-beta00",
@@ -711,9 +710,8 @@
 
   {
     "id": "Google.Cloud.Redis.V1Beta1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/redis/v1beta1",
-    "serviceYaml": "redis_v1beta1.yaml",
     "productName": "Google Cloud Memorystore for Redis",
     "productUrl": "https://cloud.google.com/memorystore/",
     "version": "1.0.0-beta03",
