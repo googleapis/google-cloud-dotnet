@@ -14,102 +14,25 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Redis.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Redis.V1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedCloudRedisClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedCloudRedisClientTest
     {
-        [Fact]
-        public void GetInstance()
+        [xunit::FactAttribute]
+        public void GetInstanceRequestObject()
         {
-            Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new Mock<CloudRedis.CloudRedisClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceRequest expectedRequest = new GetInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-            };
-            Instance expectedResponse = new Instance
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
-                LocationId = "locationId552319461",
-                AlternativeLocationId = "alternativeLocationId-718920621",
-                RedisVersion = "redisVersion-685310444",
-                ReservedIpRange = "reservedIpRange-1082940580",
-                Host = "host3208616",
-                Port = 3446913,
-                CurrentLocationId = "currentLocationId1312712735",
-                StatusMessage = "statusMessage-239442758",
-                MemorySizeGb = 34199707,
-                AuthorizedNetwork = "authorizedNetwork-1733809270",
-                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
-            };
-            mockGrpcClient.Setup(x => x.GetInstance(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
-            Instance response = client.GetInstance(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetInstanceAsync()
-        {
-            Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new Mock<CloudRedis.CloudRedisClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceRequest expectedRequest = new GetInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-            };
-            Instance expectedResponse = new Instance
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
-                LocationId = "locationId552319461",
-                AlternativeLocationId = "alternativeLocationId-718920621",
-                RedisVersion = "redisVersion-685310444",
-                ReservedIpRange = "reservedIpRange-1082940580",
-                Host = "host3208616",
-                Port = 3446913,
-                CurrentLocationId = "currentLocationId1312712735",
-                StatusMessage = "statusMessage-239442758",
-                MemorySizeGb = 34199707,
-                AuthorizedNetwork = "authorizedNetwork-1733809270",
-                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
-            };
-            mockGrpcClient.Setup(x => x.GetInstanceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
-            Instance response = await client.GetInstanceAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetInstance2()
-        {
-            Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new Mock<CloudRedis.CloudRedisClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
                 InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
@@ -117,33 +40,48 @@ namespace Google.Cloud.Redis.V1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
-                LocationId = "locationId552319461",
-                AlternativeLocationId = "alternativeLocationId-718920621",
-                RedisVersion = "redisVersion-685310444",
-                ReservedIpRange = "reservedIpRange-1082940580",
-                Host = "host3208616",
-                Port = 3446913,
-                CurrentLocationId = "currentLocationId1312712735",
-                StatusMessage = "statusMessage-239442758",
-                MemorySizeGb = 34199707,
-                AuthorizedNetwork = "authorizedNetwork-1733809270",
-                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
+                DisplayName = "display_name137f65c2",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LocationId = "location_iddaa574e2",
+                AlternativeLocationId = "alternative_location_id9b86fe18",
+                RedisVersion = "redis_version52f1f9d8",
+                ReservedIpRange = "reserved_ip_range779ab299",
+                Host = "hosta8dbb367",
+                Port = -78310000,
+                CurrentLocationId = "current_location_id65ef644c",
+                CreateTime = new wkt::Timestamp(),
+                State = Instance.Types.State.Updating,
+                StatusMessage = "status_message2c618f86",
+                RedisConfigs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Tier = Instance.Types.Tier.Basic,
+                MemorySizeGb = 863378110,
+                AuthorizedNetwork = "authorized_network63563381",
+                PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
             };
-            mockGrpcClient.Setup(x => x.GetInstance(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
             Instance response = client.GetInstance(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetInstanceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceRequestObjectAsync()
         {
-            Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new Mock<CloudRedis.CloudRedisClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
                 InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
@@ -151,26 +89,243 @@ namespace Google.Cloud.Redis.V1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
-                LocationId = "locationId552319461",
-                AlternativeLocationId = "alternativeLocationId-718920621",
-                RedisVersion = "redisVersion-685310444",
-                ReservedIpRange = "reservedIpRange-1082940580",
-                Host = "host3208616",
-                Port = 3446913,
-                CurrentLocationId = "currentLocationId1312712735",
-                StatusMessage = "statusMessage-239442758",
-                MemorySizeGb = 34199707,
-                AuthorizedNetwork = "authorizedNetwork-1733809270",
-                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
+                DisplayName = "display_name137f65c2",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LocationId = "location_iddaa574e2",
+                AlternativeLocationId = "alternative_location_id9b86fe18",
+                RedisVersion = "redis_version52f1f9d8",
+                ReservedIpRange = "reserved_ip_range779ab299",
+                Host = "hosta8dbb367",
+                Port = -78310000,
+                CurrentLocationId = "current_location_id65ef644c",
+                CreateTime = new wkt::Timestamp(),
+                State = Instance.Types.State.Updating,
+                StatusMessage = "status_message2c618f86",
+                RedisConfigs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Tier = Instance.Types.Tier.Basic,
+                MemorySizeGb = 863378110,
+                AuthorizedNetwork = "authorized_network63563381",
+                PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
             };
-            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
-            Instance response = await client.GetInstanceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Instance responseCallSettings = await client.GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void GetInstance()
+        {
+            moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LocationId = "location_iddaa574e2",
+                AlternativeLocationId = "alternative_location_id9b86fe18",
+                RedisVersion = "redis_version52f1f9d8",
+                ReservedIpRange = "reserved_ip_range779ab299",
+                Host = "hosta8dbb367",
+                Port = -78310000,
+                CurrentLocationId = "current_location_id65ef644c",
+                CreateTime = new wkt::Timestamp(),
+                State = Instance.Types.State.Updating,
+                StatusMessage = "status_message2c618f86",
+                RedisConfigs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Tier = Instance.Types.Tier.Basic,
+                MemorySizeGb = 863378110,
+                AuthorizedNetwork = "authorized_network63563381",
+                PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+            };
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            Instance response = client.GetInstance(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceAsync()
+        {
+            moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LocationId = "location_iddaa574e2",
+                AlternativeLocationId = "alternative_location_id9b86fe18",
+                RedisVersion = "redis_version52f1f9d8",
+                ReservedIpRange = "reserved_ip_range779ab299",
+                Host = "hosta8dbb367",
+                Port = -78310000,
+                CurrentLocationId = "current_location_id65ef644c",
+                CreateTime = new wkt::Timestamp(),
+                State = Instance.Types.State.Updating,
+                StatusMessage = "status_message2c618f86",
+                RedisConfigs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Tier = Instance.Types.Tier.Basic,
+                MemorySizeGb = 863378110,
+                AuthorizedNetwork = "authorized_network63563381",
+                PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+            };
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            Instance responseCallSettings = await client.GetInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInstance_ResourceNames()
+        {
+            moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LocationId = "location_iddaa574e2",
+                AlternativeLocationId = "alternative_location_id9b86fe18",
+                RedisVersion = "redis_version52f1f9d8",
+                ReservedIpRange = "reserved_ip_range779ab299",
+                Host = "hosta8dbb367",
+                Port = -78310000,
+                CurrentLocationId = "current_location_id65ef644c",
+                CreateTime = new wkt::Timestamp(),
+                State = Instance.Types.State.Updating,
+                StatusMessage = "status_message2c618f86",
+                RedisConfigs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Tier = Instance.Types.Tier.Basic,
+                MemorySizeGb = 863378110,
+                AuthorizedNetwork = "authorized_network63563381",
+                PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+            };
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            Instance response = client.GetInstance(request.InstanceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceAsync_ResourceNames()
+        {
+            moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LocationId = "location_iddaa574e2",
+                AlternativeLocationId = "alternative_location_id9b86fe18",
+                RedisVersion = "redis_version52f1f9d8",
+                ReservedIpRange = "reserved_ip_range779ab299",
+                Host = "hosta8dbb367",
+                Port = -78310000,
+                CurrentLocationId = "current_location_id65ef644c",
+                CreateTime = new wkt::Timestamp(),
+                State = Instance.Types.State.Updating,
+                StatusMessage = "status_message2c618f86",
+                RedisConfigs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Tier = Instance.Types.Tier.Basic,
+                MemorySizeGb = 863378110,
+                AuthorizedNetwork = "authorized_network63563381",
+                PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+            };
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
+            Instance responseCallSettings = await client.GetInstanceAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request.InstanceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
