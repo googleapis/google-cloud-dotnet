@@ -59,21 +59,42 @@ generate_microgenerator() {
   # We currently assume there's exactly one service config per API
   GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*.json)
   
+  # Defalt to "all resources are common" but allow a per-API config file too.
+  COMMON_RESOURCES_CONFIG=CommonResourcesConfig.json
+  if [[ -f "$API_OUT_DIR/$1/$1/CommonResourcesConfig.json" ]]
+  then
+    COMMON_RESOURCES_CONFIG=$API_OUT_DIR/$1/$1/CommonResourcesConfig.json
+  fi
+  
   mkdir -p $PRODUCTION_PACKAGE_DIR
   
-  echo "Generating $1 (micro-generator)"
-  
+  # Message and service generation. This doesn't need the common resources,
+  # and we don't want to pass in the common resources proto because we don't
+  # want to generate it.
   $PROTOC \
     --csharp_out=$PRODUCTION_PACKAGE_DIR \
     --grpc_out=$PRODUCTION_PACKAGE_DIR \
-    --gapic_out=$API_TMP_DIR \
-    --gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG \
+    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
-    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     $API_SRC_DIR/*.proto \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
+
+  # Client generation. This needs the common resources proto as a reference,
+  # but it won't generate anything for it.
+  $PROTOC \
+    --gapic_out=$API_TMP_DIR \
+    --gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG,common-resources-config=$COMMON_RESOURCES_CONFIG \
+    --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
+    -I $GOOGLEAPIS \
+    -I $CORE_PROTOS_ROOT \
+    $API_SRC_DIR/*.proto \
+    $GOOGLEAPIS/google/cloud/common_resources.proto
+    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
+
+  # The microgenerator currently creates Google.Cloud directories due to being given
+  # the common resources proto. Clean up for now; this is being fixed in the generator.
+  rm -rf $API_TMP_DIR/Google.Cloud{,.Snippets,.Tests}
 
   # We generate our own project files
   rm $(find tmp -name '*.csproj')
