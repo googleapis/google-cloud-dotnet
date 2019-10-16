@@ -1,0 +1,24 @@
+--- a/apis/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2.Snippets/Debugger2ClientSnippets.g.cs
++++ b/apis/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2.Snippets/Debugger2ClientSnippets.g.cs
+@@ -14,6 +14,9 @@
+ 
+ // Generated code. DO NOT EDIT!
+ 
++// Do not warn when using obsolete members
++#pragma warning disable CS0612
++
+ namespace Google.Cloud.Debugger.V2.Snippets
+ {
+     using System.Threading.Tasks;
+--- a/apis/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2.Tests/Debugger2ClientTest.g.cs
++++ b/apis/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2.Tests/Debugger2ClientTest.g.cs
+@@ -14,6 +14,9 @@
+ 
+ // Generated code. DO NOT EDIT!
+ 
++// Do not warn when using obsolete members
++#pragma warning disable CS0612
++
+ using gaxgrpc = Google.Api.Gax.Grpc;
+ using wkt = Google.Protobuf.WellKnownTypes;
+ using grpccore = Grpc.Core;
