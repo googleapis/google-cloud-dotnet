@@ -16,58 +16,34 @@
 
 namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.PhishingProtection.V1Beta1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedPhishingProtectionServiceV1Beta1ClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedPhishingProtectionServiceV1Beta1ClientSnippets
     {
-        /// <summary>Snippet for ReportPhishingAsync</summary>
-        public async Task ReportPhishingAsync()
-        {
-            // Snippet: ReportPhishingAsync(ProjectName,string,CallSettings)
-            // Additional: ReportPhishingAsync(ProjectName,string,CancellationToken)
-            // Create client
-            PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = await PhishingProtectionServiceV1Beta1Client.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
-            string uri = "";
-            // Make the request
-            ReportPhishingResponse response = await phishingProtectionServiceV1Beta1Client.ReportPhishingAsync(parent, uri);
-            // End snippet
-        }
-
         /// <summary>Snippet for ReportPhishing</summary>
-        public void ReportPhishing()
+        public void ReportPhishing_RequestObject()
         {
-            // Snippet: ReportPhishing(ProjectName,string,CallSettings)
+            // Snippet: ReportPhishing(ReportPhishingRequest, CallSettings)
             // Create client
             PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = PhishingProtectionServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
-            string uri = "";
+            ReportPhishingRequest request = new ReportPhishingRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Uri = "",
+            };
             // Make the request
-            ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(parent, uri);
+            ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(request);
             // End snippet
         }
 
         /// <summary>Snippet for ReportPhishingAsync</summary>
         public async Task ReportPhishingAsync_RequestObject()
         {
-            // Snippet: ReportPhishingAsync(ReportPhishingRequest,CallSettings)
-            // Additional: ReportPhishingAsync(ReportPhishingRequest,CancellationToken)
+            // Snippet: ReportPhishingAsync(ReportPhishingRequest, CallSettings)
+            // Additional: ReportPhishingAsync(ReportPhishingRequest, CancellationToken)
             // Create client
             PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = await PhishingProtectionServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
@@ -82,21 +58,61 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportPhishing</summary>
-        public void ReportPhishing_RequestObject()
+        public void ReportPhishing()
         {
-            // Snippet: ReportPhishing(ReportPhishingRequest,CallSettings)
+            // Snippet: ReportPhishing(string, string, CallSettings)
             // Create client
             PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = PhishingProtectionServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            ReportPhishingRequest request = new ReportPhishingRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Uri = "",
-            };
+            string parent = "projects/[PROJECT]";
+            string uri = "";
             // Make the request
-            ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(request);
+            ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(parent, uri);
             // End snippet
         }
 
+        /// <summary>Snippet for ReportPhishingAsync</summary>
+        public async Task ReportPhishingAsync()
+        {
+            // Snippet: ReportPhishingAsync(string, string, CallSettings)
+            // Additional: ReportPhishingAsync(string, string, CancellationToken)
+            // Create client
+            PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = await PhishingProtectionServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string uri = "";
+            // Make the request
+            ReportPhishingResponse response = await phishingProtectionServiceV1Beta1Client.ReportPhishingAsync(parent, uri);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportPhishing</summary>
+        public void ReportPhishing_ResourceNames()
+        {
+            // Snippet: ReportPhishing(ProjectName, string, CallSettings)
+            // Create client
+            PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = PhishingProtectionServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            ProjectName parent = new ProjectName("[PROJECT]");
+            string uri = "";
+            // Make the request
+            ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(parent, uri);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportPhishingAsync</summary>
+        public async Task ReportPhishingAsync_ResourceNames()
+        {
+            // Snippet: ReportPhishingAsync(ProjectName, string, CallSettings)
+            // Additional: ReportPhishingAsync(ProjectName, string, CancellationToken)
+            // Create client
+            PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = await PhishingProtectionServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = new ProjectName("[PROJECT]");
+            string uri = "";
+            // Make the request
+            ReportPhishingResponse response = await phishingProtectionServiceV1Beta1Client.ReportPhishingAsync(parent, uri);
+            // End snippet
+        }
     }
 }
