@@ -999,7 +999,7 @@
     "protoPath": "google/cloud/translate/v3",
     "protoPackage": "google.cloud.translation.v3",
     "serviceYaml": "translate_v3.yaml",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.",
     "dependencies": {
