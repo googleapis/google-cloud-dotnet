@@ -16,58 +16,34 @@
 
 namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.RecaptchaEnterprise.V1Beta1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedRecaptchaEnterpriseServiceV1Beta1ClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedRecaptchaEnterpriseServiceV1Beta1ClientSnippets
     {
-        /// <summary>Snippet for CreateAssessmentAsync</summary>
-        public async Task CreateAssessmentAsync()
-        {
-            // Snippet: CreateAssessmentAsync(ProjectName,Assessment,CallSettings)
-            // Additional: CreateAssessmentAsync(ProjectName,Assessment,CancellationToken)
-            // Create client
-            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Assessment assessment = new Assessment();
-            // Make the request
-            Assessment response = await recaptchaEnterpriseServiceV1Beta1Client.CreateAssessmentAsync(parent, assessment);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateAssessment</summary>
-        public void CreateAssessment()
+        public void CreateAssessment_RequestObject()
         {
-            // Snippet: CreateAssessment(ProjectName,Assessment,CallSettings)
+            // Snippet: CreateAssessment(CreateAssessmentRequest, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Assessment assessment = new Assessment();
+            CreateAssessmentRequest request = new CreateAssessmentRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Assessment = new Assessment(),
+            };
             // Make the request
-            Assessment response = recaptchaEnterpriseServiceV1Beta1Client.CreateAssessment(parent, assessment);
+            Assessment response = recaptchaEnterpriseServiceV1Beta1Client.CreateAssessment(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateAssessmentAsync</summary>
         public async Task CreateAssessmentAsync_RequestObject()
         {
-            // Snippet: CreateAssessmentAsync(CreateAssessmentRequest,CallSettings)
-            // Additional: CreateAssessmentAsync(CreateAssessmentRequest,CancellationToken)
+            // Snippet: CreateAssessmentAsync(CreateAssessmentRequest, CallSettings)
+            // Additional: CreateAssessmentAsync(CreateAssessmentRequest, CancellationToken)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
@@ -82,56 +58,85 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateAssessment</summary>
-        public void CreateAssessment_RequestObject()
+        public void CreateAssessment()
         {
-            // Snippet: CreateAssessment(CreateAssessmentRequest,CallSettings)
+            // Snippet: CreateAssessment(String, Assessment, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            CreateAssessmentRequest request = new CreateAssessmentRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Assessment = new Assessment(),
-            };
+            string parent = "projects/[PROJECT]";
+            Assessment assessment = new Assessment();
             // Make the request
-            Assessment response = recaptchaEnterpriseServiceV1Beta1Client.CreateAssessment(request);
+            Assessment response = recaptchaEnterpriseServiceV1Beta1Client.CreateAssessment(parent, assessment);
             // End snippet
         }
 
-        /// <summary>Snippet for AnnotateAssessmentAsync</summary>
-        public async Task AnnotateAssessmentAsync()
+        /// <summary>Snippet for CreateAssessmentAsync</summary>
+        public async Task CreateAssessmentAsync()
         {
-            // Snippet: AnnotateAssessmentAsync(AssessmentName,AnnotateAssessmentRequest.Types.Annotation,CallSettings)
-            // Additional: AnnotateAssessmentAsync(AssessmentName,AnnotateAssessmentRequest.Types.Annotation,CancellationToken)
+            // Snippet: CreateAssessmentAsync(String, Assessment, CallSettings)
+            // Additional: CreateAssessmentAsync(String, Assessment, CancellationToken)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
-            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
+            string parent = "projects/[PROJECT]";
+            Assessment assessment = new Assessment();
             // Make the request
-            AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessmentAsync(name, annotation);
+            Assessment response = await recaptchaEnterpriseServiceV1Beta1Client.CreateAssessmentAsync(parent, assessment);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAssessment</summary>
+        public void CreateAssessment_ResourceNames()
+        {
+            // Snippet: CreateAssessment(ProjectName, Assessment, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            ProjectName parent = new ProjectName("[PROJECT]");
+            Assessment assessment = new Assessment();
+            // Make the request
+            Assessment response = recaptchaEnterpriseServiceV1Beta1Client.CreateAssessment(parent, assessment);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAssessmentAsync</summary>
+        public async Task CreateAssessmentAsync_ResourceNames()
+        {
+            // Snippet: CreateAssessmentAsync(ProjectName, Assessment, CallSettings)
+            // Additional: CreateAssessmentAsync(ProjectName, Assessment, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = new ProjectName("[PROJECT]");
+            Assessment assessment = new Assessment();
+            // Make the request
+            Assessment response = await recaptchaEnterpriseServiceV1Beta1Client.CreateAssessmentAsync(parent, assessment);
             // End snippet
         }
 
         /// <summary>Snippet for AnnotateAssessment</summary>
-        public void AnnotateAssessment()
+        public void AnnotateAssessment_RequestObject()
         {
-            // Snippet: AnnotateAssessment(AssessmentName,AnnotateAssessmentRequest.Types.Annotation,CallSettings)
+            // Snippet: AnnotateAssessment(AnnotateAssessmentRequest, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
-            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
+            AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
+            {
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+            };
             // Make the request
-            AnnotateAssessmentResponse response = recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessment(name, annotation);
+            AnnotateAssessmentResponse response = recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessment(request);
             // End snippet
         }
 
         /// <summary>Snippet for AnnotateAssessmentAsync</summary>
         public async Task AnnotateAssessmentAsync_RequestObject()
         {
-            // Snippet: AnnotateAssessmentAsync(AnnotateAssessmentRequest,CallSettings)
-            // Additional: AnnotateAssessmentAsync(AnnotateAssessmentRequest,CancellationToken)
+            // Snippet: AnnotateAssessmentAsync(AnnotateAssessmentRequest, CallSettings)
+            // Additional: AnnotateAssessmentAsync(AnnotateAssessmentRequest, CancellationToken)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
@@ -146,21 +151,61 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for AnnotateAssessment</summary>
-        public void AnnotateAssessment_RequestObject()
+        public void AnnotateAssessment()
         {
-            // Snippet: AnnotateAssessment(AnnotateAssessmentRequest,CallSettings)
+            // Snippet: AnnotateAssessment(String, Annotation, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
-            {
-                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
-            };
+            string name = "projects/[PROJECT]/assessments/[ASSESSMENT]";
+            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
             // Make the request
-            AnnotateAssessmentResponse response = recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessment(request);
+            AnnotateAssessmentResponse response = recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessment(name, annotation);
             // End snippet
         }
 
+        /// <summary>Snippet for AnnotateAssessmentAsync</summary>
+        public async Task AnnotateAssessmentAsync()
+        {
+            // Snippet: AnnotateAssessmentAsync(String, Annotation, CallSettings)
+            // Additional: AnnotateAssessmentAsync(String, Annotation, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/assessments/[ASSESSMENT]";
+            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
+            // Make the request
+            AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessmentAsync(name, annotation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnnotateAssessment</summary>
+        public void AnnotateAssessment_ResourceNames()
+        {
+            // Snippet: AnnotateAssessment(AssessmentName, Annotation, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
+            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
+            // Make the request
+            AnnotateAssessmentResponse response = recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessment(name, annotation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnnotateAssessmentAsync</summary>
+        public async Task AnnotateAssessmentAsync_ResourceNames()
+        {
+            // Snippet: AnnotateAssessmentAsync(AssessmentName, Annotation, CallSettings)
+            // Additional: AnnotateAssessmentAsync(AssessmentName, Annotation, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
+            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
+            // Make the request
+            AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessmentAsync(name, annotation);
+            // End snippet
+        }
     }
 }

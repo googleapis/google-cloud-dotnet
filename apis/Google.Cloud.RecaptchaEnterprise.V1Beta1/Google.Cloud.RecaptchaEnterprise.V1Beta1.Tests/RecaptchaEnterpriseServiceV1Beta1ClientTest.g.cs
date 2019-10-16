@@ -14,193 +14,293 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.RecaptchaEnterprise.V1Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedRecaptchaEnterpriseServiceV1Beta1ClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedRecaptchaEnterpriseServiceV1Beta1ClientTest
     {
-        [Fact]
-        public void CreateAssessment()
+        [xunit::FactAttribute]
+        public void CreateAssessmentRequestObject()
         {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
-            CreateAssessmentRequest expectedRequest = new CreateAssessmentRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Assessment = new Assessment(),
-            };
-            Assessment expectedResponse = new Assessment
-            {
-                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Score = 1.0926453E7f,
-            };
-            mockGrpcClient.Setup(x => x.CreateAssessment(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Assessment assessment = new Assessment();
-            Assessment response = client.CreateAssessment(parent, assessment);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateAssessmentAsync()
-        {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
-            CreateAssessmentRequest expectedRequest = new CreateAssessmentRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Assessment = new Assessment(),
-            };
-            Assessment expectedResponse = new Assessment
-            {
-                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Score = 1.0926453E7f,
-            };
-            mockGrpcClient.Setup(x => x.CreateAssessmentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Assessment>(Task.FromResult(expectedResponse), null, null, null, null));
-            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Assessment assessment = new Assessment();
-            Assessment response = await client.CreateAssessmentAsync(parent, assessment);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateAssessment2()
-        {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Score = 1.0926453E7f,
+                Event = new Event(),
+                Score = -5.80354E+17F,
+                TokenProperties = new TokenProperties(),
+                Reasons =
+                {
+                    Assessment.Types.ClassificationReason.LowConfidenceScore,
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateAssessment(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
             Assessment response = client.CreateAssessment(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateAssessmentAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateAssessmentRequestObjectAsync()
         {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Score = 1.0926453E7f,
+                Event = new Event(),
+                Score = -5.80354E+17F,
+                TokenProperties = new TokenProperties(),
+                Reasons =
+                {
+                    Assessment.Types.ClassificationReason.LowConfidenceScore,
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Assessment>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            Assessment response = await client.CreateAssessmentAsync(request);
-            Assert.Same(expectedResponse, response);
+            Assessment responseCallSettings = await client.CreateAssessmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Assessment responseCancellationToken = await client.CreateAssessmentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void AnnotateAssessment()
+        [xunit::FactAttribute]
+        public void CreateAssessment()
         {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
-            AnnotateAssessmentRequest expectedRequest = new AnnotateAssessmentRequest
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            CreateAssessmentRequest request = new CreateAssessmentRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Assessment = new Assessment(),
+            };
+            Assessment expectedResponse = new Assessment
             {
                 AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+                Event = new Event(),
+                Score = -5.80354E+17F,
+                TokenProperties = new TokenProperties(),
+                Reasons =
+                {
+                    Assessment.Types.ClassificationReason.LowConfidenceScore,
+                },
             };
-            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
-            mockGrpcClient.Setup(x => x.AnnotateAssessment(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
-            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
-            AnnotateAssessmentResponse response = client.AnnotateAssessment(name, annotation);
-            Assert.Same(expectedResponse, response);
+            Assessment response = client.CreateAssessment(request.Parent, request.Assessment);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task AnnotateAssessmentAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateAssessmentAsync()
         {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
-            AnnotateAssessmentRequest expectedRequest = new AnnotateAssessmentRequest
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            CreateAssessmentRequest request = new CreateAssessmentRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Assessment = new Assessment(),
+            };
+            Assessment expectedResponse = new Assessment
             {
                 AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+                Event = new Event(),
+                Score = -5.80354E+17F,
+                TokenProperties = new TokenProperties(),
+                Reasons =
+                {
+                    Assessment.Types.ClassificationReason.LowConfidenceScore,
+                },
             };
-            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
-            mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AnnotateAssessmentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
-            AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
-            AnnotateAssessmentResponse response = await client.AnnotateAssessmentAsync(name, annotation);
-            Assert.Same(expectedResponse, response);
+            Assessment responseCallSettings = await client.CreateAssessmentAsync(request.Parent, request.Assessment, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Assessment responseCancellationToken = await client.CreateAssessmentAsync(request.Parent, request.Assessment, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void AnnotateAssessment2()
+        [xunit::FactAttribute]
+        public void CreateAssessment_ResourceNames()
         {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            CreateAssessmentRequest request = new CreateAssessmentRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Assessment = new Assessment(),
+            };
+            Assessment expectedResponse = new Assessment
+            {
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                Event = new Event(),
+                Score = -5.80354E+17F,
+                TokenProperties = new TokenProperties(),
+                Reasons =
+                {
+                    Assessment.Types.ClassificationReason.LowConfidenceScore,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            Assessment response = client.CreateAssessment(request.ParentAsProjectName, request.Assessment);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAssessmentAsync_ResourceNames()
+        {
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            CreateAssessmentRequest request = new CreateAssessmentRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Assessment = new Assessment(),
+            };
+            Assessment expectedResponse = new Assessment
+            {
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                Event = new Event(),
+                Score = -5.80354E+17F,
+                TokenProperties = new TokenProperties(),
+                Reasons =
+                {
+                    Assessment.Types.ClassificationReason.LowConfidenceScore,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            Assessment responseCallSettings = await client.CreateAssessmentAsync(request.ParentAsProjectName, request.Assessment, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Assessment responseCancellationToken = await client.CreateAssessmentAsync(request.ParentAsProjectName, request.Assessment, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AnnotateAssessmentRequestObject()
+        {
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
             {
                 AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+                Annotation = AnnotateAssessmentRequest.Types.Annotation.Legitimate,
             };
-            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
-            mockGrpcClient.Setup(x => x.AnnotateAssessment(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
+            mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
             AnnotateAssessmentResponse response = client.AnnotateAssessment(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task AnnotateAssessmentAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task AnnotateAssessmentRequestObjectAsync()
         {
-            Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
             {
                 AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
-                Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+                Annotation = AnnotateAssessmentRequest.Types.Annotation.Legitimate,
             };
-            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
-            mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AnnotateAssessmentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
+            mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            AnnotateAssessmentResponse response = await client.AnnotateAssessmentAsync(request);
-            Assert.Same(expectedResponse, response);
+            AnnotateAssessmentResponse responseCallSettings = await client.AnnotateAssessmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AnnotateAssessmentResponse responseCancellationToken = await client.AnnotateAssessmentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void AnnotateAssessment()
+        {
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
+            {
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                Annotation = AnnotateAssessmentRequest.Types.Annotation.Legitimate,
+            };
+            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
+            mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            AnnotateAssessmentResponse response = client.AnnotateAssessment(request.Name, request.Annotation);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AnnotateAssessmentAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
+            {
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                Annotation = AnnotateAssessmentRequest.Types.Annotation.Legitimate,
+            };
+            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
+            mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            AnnotateAssessmentResponse responseCallSettings = await client.AnnotateAssessmentAsync(request.Name, request.Annotation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AnnotateAssessmentResponse responseCancellationToken = await client.AnnotateAssessmentAsync(request.Name, request.Annotation, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AnnotateAssessment_ResourceNames()
+        {
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
+            {
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                Annotation = AnnotateAssessmentRequest.Types.Annotation.Legitimate,
+            };
+            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
+            mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            AnnotateAssessmentResponse response = client.AnnotateAssessment(request.AssessmentName, request.Annotation);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AnnotateAssessmentAsync_ResourceNames()
+        {
+            moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
+            {
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                Annotation = AnnotateAssessmentRequest.Types.Annotation.Legitimate,
+            };
+            AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
+            mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            AnnotateAssessmentResponse responseCallSettings = await client.AnnotateAssessmentAsync(request.AssessmentName, request.Annotation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AnnotateAssessmentResponse responseCancellationToken = await client.AnnotateAssessmentAsync(request.AssessmentName, request.Annotation, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
