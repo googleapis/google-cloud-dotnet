@@ -56,15 +56,22 @@ generate_microgenerator() {
   PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$1
   API_OUT_DIR=apis
   API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
-  # We currently assume there's exactly one service config per API
+
+  # If there's exactly one service config file, pass it in. Otherwise, omit it.
   GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*.json)
-  
+  SERVICE_CONFIG_OPTION=
+  if [[ -f "$GRPC_SERVICE_CONFIG" ]]
+  then
+    SERVICE_CONFIG_OPTION=--gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG
+  fi
+
   # Defalt to "all resources are common" but allow a per-API config file too.
   COMMON_RESOURCES_CONFIG=CommonResourcesConfig.json
   if [[ -f "$API_OUT_DIR/$1/$1/CommonResourcesConfig.json" ]]
   then
     COMMON_RESOURCES_CONFIG=$API_OUT_DIR/$1/$1/CommonResourcesConfig.json
   fi
+  COMMON_RESOURCES_OPTION=--gapic_opt=common-resources-config=$COMMON_RESOURCES_CONFIG
   
   mkdir -p $PRODUCTION_PACKAGE_DIR
   
@@ -84,7 +91,8 @@ generate_microgenerator() {
   # but it won't generate anything for it.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
-    --gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG,common-resources-config=$COMMON_RESOURCES_CONFIG \
+    $SERVICE_CONFIG_OPTION \
+    $COMMON_RESOURCES_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
