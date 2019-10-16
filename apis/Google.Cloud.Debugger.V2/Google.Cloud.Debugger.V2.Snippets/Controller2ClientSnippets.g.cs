@@ -16,57 +16,157 @@
 
 namespace Google.Cloud.Debugger.V2.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Debugger.V2;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedController2ClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedController2ClientSnippets
     {
-        /// <summary>Snippet for UpdateActiveBreakpointAsync</summary>
-        public async Task UpdateActiveBreakpointAsync()
+        /// <summary>Snippet for RegisterDebuggee</summary>
+        public void RegisterDebuggee_RequestObject()
         {
-            // Snippet: UpdateActiveBreakpointAsync(string,Breakpoint,CallSettings)
-            // Additional: UpdateActiveBreakpointAsync(string,Breakpoint,CancellationToken)
+            // Snippet: RegisterDebuggee(RegisterDebuggeeRequest, CallSettings)
             // Create client
-            Controller2Client controller2Client = await Controller2Client.CreateAsync();
+            Controller2Client controller2Client = Controller2Client.Create();
             // Initialize request argument(s)
-            string debuggeeId = "";
-            Breakpoint breakpoint = new Breakpoint();
+            RegisterDebuggeeRequest request = new RegisterDebuggeeRequest
+            {
+                Debuggee = new Debuggee(),
+            };
             // Make the request
-            UpdateActiveBreakpointResponse response = await controller2Client.UpdateActiveBreakpointAsync(debuggeeId, breakpoint);
+            RegisterDebuggeeResponse response = controller2Client.RegisterDebuggee(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateActiveBreakpoint</summary>
-        public void UpdateActiveBreakpoint()
+        /// <summary>Snippet for RegisterDebuggeeAsync</summary>
+        public async Task RegisterDebuggeeAsync_RequestObject()
         {
-            // Snippet: UpdateActiveBreakpoint(string,Breakpoint,CallSettings)
+            // Snippet: RegisterDebuggeeAsync(RegisterDebuggeeRequest, CallSettings)
+            // Additional: RegisterDebuggeeAsync(RegisterDebuggeeRequest, CancellationToken)
+            // Create client
+            Controller2Client controller2Client = await Controller2Client.CreateAsync();
+            // Initialize request argument(s)
+            RegisterDebuggeeRequest request = new RegisterDebuggeeRequest
+            {
+                Debuggee = new Debuggee(),
+            };
+            // Make the request
+            RegisterDebuggeeResponse response = await controller2Client.RegisterDebuggeeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RegisterDebuggee</summary>
+        public void RegisterDebuggee()
+        {
+            // Snippet: RegisterDebuggee(Debuggee, CallSettings)
+            // Create client
+            Controller2Client controller2Client = Controller2Client.Create();
+            // Initialize request argument(s)
+            Debuggee debuggee = new Debuggee();
+            // Make the request
+            RegisterDebuggeeResponse response = controller2Client.RegisterDebuggee(debuggee);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RegisterDebuggeeAsync</summary>
+        public async Task RegisterDebuggeeAsync()
+        {
+            // Snippet: RegisterDebuggeeAsync(Debuggee, CallSettings)
+            // Additional: RegisterDebuggeeAsync(Debuggee, CancellationToken)
+            // Create client
+            Controller2Client controller2Client = await Controller2Client.CreateAsync();
+            // Initialize request argument(s)
+            Debuggee debuggee = new Debuggee();
+            // Make the request
+            RegisterDebuggeeResponse response = await controller2Client.RegisterDebuggeeAsync(debuggee);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListActiveBreakpoints</summary>
+        public void ListActiveBreakpoints_RequestObject()
+        {
+            // Snippet: ListActiveBreakpoints(ListActiveBreakpointsRequest, CallSettings)
+            // Create client
+            Controller2Client controller2Client = Controller2Client.Create();
+            // Initialize request argument(s)
+            ListActiveBreakpointsRequest request = new ListActiveBreakpointsRequest
+            {
+                DebuggeeId = "",
+                WaitToken = "",
+                SuccessOnTimeout = false,
+            };
+            // Make the request
+            ListActiveBreakpointsResponse response = controller2Client.ListActiveBreakpoints(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
+        public async Task ListActiveBreakpointsAsync_RequestObject()
+        {
+            // Snippet: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest, CallSettings)
+            // Additional: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest, CancellationToken)
+            // Create client
+            Controller2Client controller2Client = await Controller2Client.CreateAsync();
+            // Initialize request argument(s)
+            ListActiveBreakpointsRequest request = new ListActiveBreakpointsRequest
+            {
+                DebuggeeId = "",
+                WaitToken = "",
+                SuccessOnTimeout = false,
+            };
+            // Make the request
+            ListActiveBreakpointsResponse response = await controller2Client.ListActiveBreakpointsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListActiveBreakpoints</summary>
+        public void ListActiveBreakpoints()
+        {
+            // Snippet: ListActiveBreakpoints(String, CallSettings)
             // Create client
             Controller2Client controller2Client = Controller2Client.Create();
             // Initialize request argument(s)
             string debuggeeId = "";
-            Breakpoint breakpoint = new Breakpoint();
             // Make the request
-            UpdateActiveBreakpointResponse response = controller2Client.UpdateActiveBreakpoint(debuggeeId, breakpoint);
+            ListActiveBreakpointsResponse response = controller2Client.ListActiveBreakpoints(debuggeeId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
+        public async Task ListActiveBreakpointsAsync()
+        {
+            // Snippet: ListActiveBreakpointsAsync(String, CallSettings)
+            // Additional: ListActiveBreakpointsAsync(String, CancellationToken)
+            // Create client
+            Controller2Client controller2Client = await Controller2Client.CreateAsync();
+            // Initialize request argument(s)
+            string debuggeeId = "";
+            // Make the request
+            ListActiveBreakpointsResponse response = await controller2Client.ListActiveBreakpointsAsync(debuggeeId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateActiveBreakpoint</summary>
+        public void UpdateActiveBreakpoint_RequestObject()
+        {
+            // Snippet: UpdateActiveBreakpoint(UpdateActiveBreakpointRequest, CallSettings)
+            // Create client
+            Controller2Client controller2Client = Controller2Client.Create();
+            // Initialize request argument(s)
+            UpdateActiveBreakpointRequest request = new UpdateActiveBreakpointRequest
+            {
+                DebuggeeId = "",
+                Breakpoint = new Breakpoint(),
+            };
+            // Make the request
+            UpdateActiveBreakpointResponse response = controller2Client.UpdateActiveBreakpoint(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateActiveBreakpointAsync</summary>
         public async Task UpdateActiveBreakpointAsync_RequestObject()
         {
-            // Snippet: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest,CallSettings)
-            // Additional: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest,CancellationToken)
+            // Snippet: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest, CallSettings)
+            // Additional: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest, CancellationToken)
             // Create client
             Controller2Client controller2Client = await Controller2Client.CreateAsync();
             // Initialize request argument(s)
@@ -81,141 +181,32 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateActiveBreakpoint</summary>
-        public void UpdateActiveBreakpoint_RequestObject()
+        public void UpdateActiveBreakpoint()
         {
-            // Snippet: UpdateActiveBreakpoint(UpdateActiveBreakpointRequest,CallSettings)
-            // Create client
-            Controller2Client controller2Client = Controller2Client.Create();
-            // Initialize request argument(s)
-            UpdateActiveBreakpointRequest request = new UpdateActiveBreakpointRequest
-            {
-                DebuggeeId = "",
-                Breakpoint = new Breakpoint(),
-            };
-            // Make the request
-            UpdateActiveBreakpointResponse response = controller2Client.UpdateActiveBreakpoint(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RegisterDebuggeeAsync</summary>
-        public async Task RegisterDebuggeeAsync()
-        {
-            // Snippet: RegisterDebuggeeAsync(Debuggee,CallSettings)
-            // Additional: RegisterDebuggeeAsync(Debuggee,CancellationToken)
-            // Create client
-            Controller2Client controller2Client = await Controller2Client.CreateAsync();
-            // Initialize request argument(s)
-            Debuggee debuggee = new Debuggee();
-            // Make the request
-            RegisterDebuggeeResponse response = await controller2Client.RegisterDebuggeeAsync(debuggee);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RegisterDebuggee</summary>
-        public void RegisterDebuggee()
-        {
-            // Snippet: RegisterDebuggee(Debuggee,CallSettings)
-            // Create client
-            Controller2Client controller2Client = Controller2Client.Create();
-            // Initialize request argument(s)
-            Debuggee debuggee = new Debuggee();
-            // Make the request
-            RegisterDebuggeeResponse response = controller2Client.RegisterDebuggee(debuggee);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RegisterDebuggeeAsync</summary>
-        public async Task RegisterDebuggeeAsync_RequestObject()
-        {
-            // Snippet: RegisterDebuggeeAsync(RegisterDebuggeeRequest,CallSettings)
-            // Additional: RegisterDebuggeeAsync(RegisterDebuggeeRequest,CancellationToken)
-            // Create client
-            Controller2Client controller2Client = await Controller2Client.CreateAsync();
-            // Initialize request argument(s)
-            RegisterDebuggeeRequest request = new RegisterDebuggeeRequest
-            {
-                Debuggee = new Debuggee(),
-            };
-            // Make the request
-            RegisterDebuggeeResponse response = await controller2Client.RegisterDebuggeeAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RegisterDebuggee</summary>
-        public void RegisterDebuggee_RequestObject()
-        {
-            // Snippet: RegisterDebuggee(RegisterDebuggeeRequest,CallSettings)
-            // Create client
-            Controller2Client controller2Client = Controller2Client.Create();
-            // Initialize request argument(s)
-            RegisterDebuggeeRequest request = new RegisterDebuggeeRequest
-            {
-                Debuggee = new Debuggee(),
-            };
-            // Make the request
-            RegisterDebuggeeResponse response = controller2Client.RegisterDebuggee(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
-        public async Task ListActiveBreakpointsAsync()
-        {
-            // Snippet: ListActiveBreakpointsAsync(string,CallSettings)
-            // Additional: ListActiveBreakpointsAsync(string,CancellationToken)
-            // Create client
-            Controller2Client controller2Client = await Controller2Client.CreateAsync();
-            // Initialize request argument(s)
-            string debuggeeId = "";
-            // Make the request
-            ListActiveBreakpointsResponse response = await controller2Client.ListActiveBreakpointsAsync(debuggeeId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListActiveBreakpoints</summary>
-        public void ListActiveBreakpoints()
-        {
-            // Snippet: ListActiveBreakpoints(string,CallSettings)
+            // Snippet: UpdateActiveBreakpoint(String, Breakpoint, CallSettings)
             // Create client
             Controller2Client controller2Client = Controller2Client.Create();
             // Initialize request argument(s)
             string debuggeeId = "";
+            Breakpoint breakpoint = new Breakpoint();
             // Make the request
-            ListActiveBreakpointsResponse response = controller2Client.ListActiveBreakpoints(debuggeeId);
+            UpdateActiveBreakpointResponse response = controller2Client.UpdateActiveBreakpoint(debuggeeId, breakpoint);
             // End snippet
         }
 
-        /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
-        public async Task ListActiveBreakpointsAsync_RequestObject()
+        /// <summary>Snippet for UpdateActiveBreakpointAsync</summary>
+        public async Task UpdateActiveBreakpointAsync()
         {
-            // Snippet: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest,CallSettings)
-            // Additional: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest,CancellationToken)
+            // Snippet: UpdateActiveBreakpointAsync(String, Breakpoint, CallSettings)
+            // Additional: UpdateActiveBreakpointAsync(String, Breakpoint, CancellationToken)
             // Create client
             Controller2Client controller2Client = await Controller2Client.CreateAsync();
             // Initialize request argument(s)
-            ListActiveBreakpointsRequest request = new ListActiveBreakpointsRequest
-            {
-                DebuggeeId = "",
-            };
+            string debuggeeId = "";
+            Breakpoint breakpoint = new Breakpoint();
             // Make the request
-            ListActiveBreakpointsResponse response = await controller2Client.ListActiveBreakpointsAsync(request);
+            UpdateActiveBreakpointResponse response = await controller2Client.UpdateActiveBreakpointAsync(debuggeeId, breakpoint);
             // End snippet
         }
-
-        /// <summary>Snippet for ListActiveBreakpoints</summary>
-        public void ListActiveBreakpoints_RequestObject()
-        {
-            // Snippet: ListActiveBreakpoints(ListActiveBreakpointsRequest,CallSettings)
-            // Create client
-            Controller2Client controller2Client = Controller2Client.Create();
-            // Initialize request argument(s)
-            ListActiveBreakpointsRequest request = new ListActiveBreakpointsRequest
-            {
-                DebuggeeId = "",
-            };
-            // Make the request
-            ListActiveBreakpointsResponse response = controller2Client.ListActiveBreakpoints(request);
-            // End snippet
-        }
-
     }
 }
