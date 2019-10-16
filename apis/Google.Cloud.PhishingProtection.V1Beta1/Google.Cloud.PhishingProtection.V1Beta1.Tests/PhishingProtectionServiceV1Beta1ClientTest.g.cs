@@ -14,101 +14,125 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.PhishingProtection.V1Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedPhishingProtectionServiceV1Beta1ClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedPhishingProtectionServiceV1Beta1ClientTest
     {
-        [Fact]
-        public void ReportPhishing()
+        [xunit::FactAttribute]
+        public void ReportPhishingRequestObject()
         {
-            Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
-            ReportPhishingRequest expectedRequest = new ReportPhishingRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Uri = "uri116076",
-            };
-            ReportPhishingResponse expectedResponse = new ReportPhishingResponse();
-            mockGrpcClient.Setup(x => x.ReportPhishing(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            string uri = "uri116076";
-            ReportPhishingResponse response = client.ReportPhishing(parent, uri);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ReportPhishingAsync()
-        {
-            Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
-            ReportPhishingRequest expectedRequest = new ReportPhishingRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Uri = "uri116076",
-            };
-            ReportPhishingResponse expectedResponse = new ReportPhishingResponse();
-            mockGrpcClient.Setup(x => x.ReportPhishingAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReportPhishingResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            string uri = "uri116076";
-            ReportPhishingResponse response = await client.ReportPhishingAsync(parent, uri);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void ReportPhishing2()
-        {
-            Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Uri = "uri116076",
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Uri = "uri3db70593",
             };
-            ReportPhishingResponse expectedResponse = new ReportPhishingResponse();
-            mockGrpcClient.Setup(x => x.ReportPhishing(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
+            mockGrpcClient.Setup(x => x.ReportPhishing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
             ReportPhishingResponse response = client.ReportPhishing(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ReportPhishingAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ReportPhishingRequestObjectAsync()
         {
-            Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Uri = "uri116076",
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Uri = "uri3db70593",
             };
-            ReportPhishingResponse expectedResponse = new ReportPhishingResponse();
-            mockGrpcClient.Setup(x => x.ReportPhishingAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReportPhishingResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
+            mockGrpcClient.Setup(x => x.ReportPhishingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportPhishingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ReportPhishingResponse response = await client.ReportPhishingAsync(request);
-            Assert.Same(expectedResponse, response);
+            ReportPhishingResponse responseCallSettings = await client.ReportPhishingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReportPhishingResponse responseCancellationToken = await client.ReportPhishingAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void ReportPhishing()
+        {
+            moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            ReportPhishingRequest request = new ReportPhishingRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Uri = "uri3db70593",
+            };
+            ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
+            mockGrpcClient.Setup(x => x.ReportPhishing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            ReportPhishingResponse response = client.ReportPhishing(request.Parent, request.Uri);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReportPhishingAsync()
+        {
+            moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            ReportPhishingRequest request = new ReportPhishingRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Uri = "uri3db70593",
+            };
+            ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
+            mockGrpcClient.Setup(x => x.ReportPhishingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportPhishingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            ReportPhishingResponse responseCallSettings = await client.ReportPhishingAsync(request.Parent, request.Uri, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReportPhishingResponse responseCancellationToken = await client.ReportPhishingAsync(request.Parent, request.Uri, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReportPhishing_ResourceNames()
+        {
+            moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            ReportPhishingRequest request = new ReportPhishingRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Uri = "uri3db70593",
+            };
+            ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
+            mockGrpcClient.Setup(x => x.ReportPhishing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            ReportPhishingResponse response = client.ReportPhishing(request.ParentAsProjectName, request.Uri);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReportPhishingAsync_ResourceNames()
+        {
+            moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            ReportPhishingRequest request = new ReportPhishingRequest
+            {
+                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Uri = "uri3db70593",
+            };
+            ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
+            mockGrpcClient.Setup(x => x.ReportPhishingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportPhishingResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            ReportPhishingResponse responseCallSettings = await client.ReportPhishingAsync(request.ParentAsProjectName, request.Uri, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReportPhishingResponse responseCancellationToken = await client.ReportPhishingAsync(request.ParentAsProjectName, request.Uri, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
