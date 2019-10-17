@@ -31,7 +31,7 @@ namespace Google.Cloud.Language.V1.FixGeneratedCode
             // which accept a document and automatically request UTF-16. Currently the generated methods will just omit the
             // encoding, which means no offsets are returned. At some point the service may heuristically determine that it
             // should use UTF-16, at which point we can remove the manual code - but until then, we remove the generated code.
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Language.V1", "LanguageServiceClient.cs"))
+            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Language.V1", "LanguageServiceClient.g.cs"))
                 .RemoveMethod("LanguageServiceClient", "AnalyzeEntitiesAsync", "Document", "CallSettings")
                 .RemoveMethod("LanguageServiceClient", "AnalyzeEntitiesAsync", "Document", "CancellationToken")
                 .RemoveMethod("LanguageServiceClient", "AnalyzeEntities", "Document", "CallSettings")
@@ -49,13 +49,13 @@ namespace Google.Cloud.Language.V1.FixGeneratedCode
             // Remove the generated tests for these methods. This is somewhat brittle, but it's unlikely that any more flattenings will be added.
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Language.V1.Tests", "LanguageServiceClientTest.g.cs"))
                 .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntities2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntitiesAsync2")
+                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntities2Async")
                 .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntitySentiment2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntitySentimentAsync2")
+                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeEntitySentiment2Async")
                 .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeSyntax2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeSyntaxAsync2")
+                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnalyzeSyntax2Async")
                 .RemoveMethod("GeneratedLanguageServiceClientTest", "AnnotateText2")
-                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnnotateTextAsync2")
+                .RemoveMethod("GeneratedLanguageServiceClientTest", "AnnotateText2Async")
                 .Save();
         }
     }
