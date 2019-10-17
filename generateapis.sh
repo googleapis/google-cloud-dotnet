@@ -67,9 +67,9 @@ generate_microgenerator() {
 
   # Defalt to "all resources are common" but allow a per-API config file too.
   COMMON_RESOURCES_CONFIG=CommonResourcesConfig.json
-  if [[ -f "$API_OUT_DIR/$1/$1/CommonResourcesConfig.json" ]]
+  if [[ -f "$API_OUT_DIR/$1/CommonResourcesConfig.json" ]]
   then
-    COMMON_RESOURCES_CONFIG=$API_OUT_DIR/$1/$1/CommonResourcesConfig.json
+    COMMON_RESOURCES_CONFIG=$API_OUT_DIR/$1/CommonResourcesConfig.json
   fi
   COMMON_RESOURCES_OPTION=--gapic_opt=common-resources-config=$COMMON_RESOURCES_CONFIG
   
