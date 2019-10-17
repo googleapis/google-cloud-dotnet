@@ -1015,9 +1015,8 @@
 
   {
     "id": "Google.Cloud.VideoIntelligence.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/videointelligence/v1",
-    "serviceYaml": "videointelligence_v1.yaml",
     "productName": "Google Cloud Video Intelligence",
     "productUrl": "https://cloud.google.com/video-intelligence",
     "version": "1.3.0-beta00",
