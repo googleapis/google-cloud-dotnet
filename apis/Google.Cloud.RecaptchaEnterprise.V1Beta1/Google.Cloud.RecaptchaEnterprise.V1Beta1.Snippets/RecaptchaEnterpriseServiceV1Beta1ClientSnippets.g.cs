@@ -60,7 +60,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         /// <summary>Snippet for CreateAssessment</summary>
         public void CreateAssessment()
         {
-            // Snippet: CreateAssessment(String, Assessment, CallSettings)
+            // Snippet: CreateAssessment(string, Assessment, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
@@ -74,8 +74,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         /// <summary>Snippet for CreateAssessmentAsync</summary>
         public async Task CreateAssessmentAsync()
         {
-            // Snippet: CreateAssessmentAsync(String, Assessment, CallSettings)
-            // Additional: CreateAssessmentAsync(String, Assessment, CancellationToken)
+            // Snippet: CreateAssessmentAsync(string, Assessment, CallSettings)
+            // Additional: CreateAssessmentAsync(string, Assessment, CancellationToken)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
@@ -153,7 +153,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         /// <summary>Snippet for AnnotateAssessment</summary>
         public void AnnotateAssessment()
         {
-            // Snippet: AnnotateAssessment(String, Annotation, CallSettings)
+            // Snippet: AnnotateAssessment(string, AnnotateAssessmentRequest.Types.Annotation, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
@@ -167,8 +167,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         /// <summary>Snippet for AnnotateAssessmentAsync</summary>
         public async Task AnnotateAssessmentAsync()
         {
-            // Snippet: AnnotateAssessmentAsync(String, Annotation, CallSettings)
-            // Additional: AnnotateAssessmentAsync(String, Annotation, CancellationToken)
+            // Snippet: AnnotateAssessmentAsync(string, AnnotateAssessmentRequest.Types.Annotation, CallSettings)
+            // Additional: AnnotateAssessmentAsync(string, AnnotateAssessmentRequest.Types.Annotation, CancellationToken)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
@@ -182,7 +182,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         /// <summary>Snippet for AnnotateAssessment</summary>
         public void AnnotateAssessment_ResourceNames()
         {
-            // Snippet: AnnotateAssessment(AssessmentName, Annotation, CallSettings)
+            // Snippet: AnnotateAssessment(AssessmentName, AnnotateAssessmentRequest.Types.Annotation, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
@@ -196,8 +196,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         /// <summary>Snippet for AnnotateAssessmentAsync</summary>
         public async Task AnnotateAssessmentAsync_ResourceNames()
         {
-            // Snippet: AnnotateAssessmentAsync(AssessmentName, Annotation, CallSettings)
-            // Additional: AnnotateAssessmentAsync(AssessmentName, Annotation, CancellationToken)
+            // Snippet: AnnotateAssessmentAsync(AssessmentName, AnnotateAssessmentRequest.Types.Annotation, CallSettings)
+            // Additional: AnnotateAssessmentAsync(AssessmentName, AnnotateAssessmentRequest.Types.Annotation, CancellationToken)
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)

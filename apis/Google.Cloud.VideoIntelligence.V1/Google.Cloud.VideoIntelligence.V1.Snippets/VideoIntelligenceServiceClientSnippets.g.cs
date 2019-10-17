@@ -108,7 +108,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
         /// <summary>Snippet for AnnotateVideo</summary>
         public void AnnotateVideo()
         {
-            // Snippet: AnnotateVideo(String, IEnumerable, CallSettings)
+            // Snippet: AnnotateVideo(string, IEnumerable<Feature>, CallSettings)
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = VideoIntelligenceServiceClient.Create();
             // Initialize request argument(s)
@@ -141,8 +141,8 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
         /// <summary>Snippet for AnnotateVideoAsync</summary>
         public async Task AnnotateVideoAsync()
         {
-            // Snippet: AnnotateVideoAsync(String, IEnumerable, CallSettings)
-            // Additional: AnnotateVideoAsync(String, IEnumerable, CancellationToken)
+            // Snippet: AnnotateVideoAsync(string, IEnumerable<Feature>, CallSettings)
+            // Additional: AnnotateVideoAsync(string, IEnumerable<Feature>, CancellationToken)
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = await VideoIntelligenceServiceClient.CreateAsync();
             // Initialize request argument(s)

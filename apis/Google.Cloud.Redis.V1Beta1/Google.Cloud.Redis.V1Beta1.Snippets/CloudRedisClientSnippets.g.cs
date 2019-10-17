@@ -126,7 +126,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstances()
         {
-            // Snippet: ListInstances(String, CallSettings)
+            // Snippet: ListInstances(string, string, int?, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -171,7 +171,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ListInstances</summary>
         public async Task ListInstancesAsync()
         {
-            // Snippet: ListInstancesAsync(String, CallSettings)
+            // Snippet: ListInstancesAsync(string, string, int?, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -216,7 +216,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstances_ResourceNames()
         {
-            // Snippet: ListInstances(LocationName, CallSettings)
+            // Snippet: ListInstances(LocationName, string, int?, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -261,7 +261,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ListInstances</summary>
         public async Task ListInstancesAsync_ResourceNames()
         {
-            // Snippet: ListInstancesAsync(LocationName, CallSettings)
+            // Snippet: ListInstancesAsync(LocationName, string, int?, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -339,7 +339,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for GetInstance</summary>
         public void GetInstance()
         {
-            // Snippet: GetInstance(String, CallSettings)
+            // Snippet: GetInstance(string, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -352,8 +352,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for GetInstanceAsync</summary>
         public async Task GetInstanceAsync()
         {
-            // Snippet: GetInstanceAsync(String, CallSettings)
-            // Additional: GetInstanceAsync(String, CancellationToken)
+            // Snippet: GetInstanceAsync(string, CallSettings)
+            // Additional: GetInstanceAsync(string, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -462,7 +462,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstance()
         {
-            // Snippet: CreateInstance(String, String, Instance, CallSettings)
+            // Snippet: CreateInstance(string, string, Instance, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -493,8 +493,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync()
         {
-            // Snippet: CreateInstanceAsync(String, String, Instance, CallSettings)
-            // Additional: CreateInstanceAsync(String, String, Instance, CancellationToken)
+            // Snippet: CreateInstanceAsync(string, string, Instance, CallSettings)
+            // Additional: CreateInstanceAsync(string, string, Instance, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -525,7 +525,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstance_ResourceNames()
         {
-            // Snippet: CreateInstance(LocationName, String, Instance, CallSettings)
+            // Snippet: CreateInstance(LocationName, string, Instance, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -556,8 +556,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync_ResourceNames()
         {
-            // Snippet: CreateInstanceAsync(LocationName, String, Instance, CallSettings)
-            // Additional: CreateInstanceAsync(LocationName, String, Instance, CancellationToken)
+            // Snippet: CreateInstanceAsync(LocationName, string, Instance, CallSettings)
+            // Additional: CreateInstanceAsync(LocationName, string, Instance, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -783,7 +783,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ImportInstance</summary>
         public void ImportInstance()
         {
-            // Snippet: ImportInstance(String, InputConfig, CallSettings)
+            // Snippet: ImportInstance(string, InputConfig, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -813,8 +813,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ImportInstanceAsync</summary>
         public async Task ImportInstanceAsync()
         {
-            // Snippet: ImportInstanceAsync(String, InputConfig, CallSettings)
-            // Additional: ImportInstanceAsync(String, InputConfig, CancellationToken)
+            // Snippet: ImportInstanceAsync(string, InputConfig, CallSettings)
+            // Additional: ImportInstanceAsync(string, InputConfig, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -911,7 +911,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ExportInstance</summary>
         public void ExportInstance()
         {
-            // Snippet: ExportInstance(String, OutputConfig, CallSettings)
+            // Snippet: ExportInstance(string, OutputConfig, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -941,8 +941,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for ExportInstanceAsync</summary>
         public async Task ExportInstanceAsync()
         {
-            // Snippet: ExportInstanceAsync(String, OutputConfig, CallSettings)
-            // Additional: ExportInstanceAsync(String, OutputConfig, CancellationToken)
+            // Snippet: ExportInstanceAsync(string, OutputConfig, CallSettings)
+            // Additional: ExportInstanceAsync(string, OutputConfig, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -1039,7 +1039,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for FailoverInstance</summary>
         public void FailoverInstance()
         {
-            // Snippet: FailoverInstance(String, DataProtectionMode, CallSettings)
+            // Snippet: FailoverInstance(string, FailoverInstanceRequest.Types.DataProtectionMode, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -1069,8 +1069,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for FailoverInstanceAsync</summary>
         public async Task FailoverInstanceAsync()
         {
-            // Snippet: FailoverInstanceAsync(String, DataProtectionMode, CallSettings)
-            // Additional: FailoverInstanceAsync(String, DataProtectionMode, CancellationToken)
+            // Snippet: FailoverInstanceAsync(string, FailoverInstanceRequest.Types.DataProtectionMode, CallSettings)
+            // Additional: FailoverInstanceAsync(string, FailoverInstanceRequest.Types.DataProtectionMode, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for FailoverInstance</summary>
         public void FailoverInstance_ResourceNames()
         {
-            // Snippet: FailoverInstance(InstanceName, DataProtectionMode, CallSettings)
+            // Snippet: FailoverInstance(InstanceName, FailoverInstanceRequest.Types.DataProtectionMode, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -1130,8 +1130,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for FailoverInstanceAsync</summary>
         public async Task FailoverInstanceAsync_ResourceNames()
         {
-            // Snippet: FailoverInstanceAsync(InstanceName, DataProtectionMode, CallSettings)
-            // Additional: FailoverInstanceAsync(InstanceName, DataProtectionMode, CancellationToken)
+            // Snippet: FailoverInstanceAsync(InstanceName, FailoverInstanceRequest.Types.DataProtectionMode, CallSettings)
+            // Additional: FailoverInstanceAsync(InstanceName, FailoverInstanceRequest.Types.DataProtectionMode, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
@@ -1226,7 +1226,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for DeleteInstance</summary>
         public void DeleteInstance()
         {
-            // Snippet: DeleteInstance(String, CallSettings)
+            // Snippet: DeleteInstance(string, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
@@ -1255,8 +1255,8 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         /// <summary>Snippet for DeleteInstanceAsync</summary>
         public async Task DeleteInstanceAsync()
         {
-            // Snippet: DeleteInstanceAsync(String, CallSettings)
-            // Additional: DeleteInstanceAsync(String, CancellationToken)
+            // Snippet: DeleteInstanceAsync(string, CallSettings)
+            // Additional: DeleteInstanceAsync(string, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)

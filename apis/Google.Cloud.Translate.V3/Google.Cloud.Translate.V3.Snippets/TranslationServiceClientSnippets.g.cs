@@ -77,7 +77,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateText</summary>
         public void TranslateText1()
         {
-            // Snippet: TranslateText(String, String, IEnumerable, CallSettings)
+            // Snippet: TranslateText(string, string, IEnumerable<string>, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -92,8 +92,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateTextAsync</summary>
         public async Task TranslateText1Async()
         {
-            // Snippet: TranslateTextAsync(String, String, IEnumerable, CallSettings)
-            // Additional: TranslateTextAsync(String, String, IEnumerable, CancellationToken)
+            // Snippet: TranslateTextAsync(string, string, IEnumerable<string>, CallSettings)
+            // Additional: TranslateTextAsync(string, string, IEnumerable<string>, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -108,7 +108,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateText</summary>
         public void TranslateText1_ResourceNames()
         {
-            // Snippet: TranslateText(LocationName, String, IEnumerable, CallSettings)
+            // Snippet: TranslateText(LocationName, string, IEnumerable<string>, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -123,8 +123,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateTextAsync</summary>
         public async Task TranslateText1Async_ResourceNames()
         {
-            // Snippet: TranslateTextAsync(LocationName, String, IEnumerable, CallSettings)
-            // Additional: TranslateTextAsync(LocationName, String, IEnumerable, CancellationToken)
+            // Snippet: TranslateTextAsync(LocationName, string, IEnumerable<string>, CallSettings)
+            // Additional: TranslateTextAsync(LocationName, string, IEnumerable<string>, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -139,7 +139,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateText</summary>
         public void TranslateText2()
         {
-            // Snippet: TranslateText(String, String, String, String, String, IEnumerable, CallSettings)
+            // Snippet: TranslateText(string, string, string, string, string, IEnumerable<string>, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -157,8 +157,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateTextAsync</summary>
         public async Task TranslateText2Async()
         {
-            // Snippet: TranslateTextAsync(String, String, String, String, String, IEnumerable, CallSettings)
-            // Additional: TranslateTextAsync(String, String, String, String, String, IEnumerable, CancellationToken)
+            // Snippet: TranslateTextAsync(string, string, string, string, string, IEnumerable<string>, CallSettings)
+            // Additional: TranslateTextAsync(string, string, string, string, string, IEnumerable<string>, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -176,7 +176,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateText</summary>
         public void TranslateText2_ResourceNames()
         {
-            // Snippet: TranslateText(LocationName, String, String, String, String, IEnumerable, CallSettings)
+            // Snippet: TranslateText(LocationName, string, string, string, string, IEnumerable<string>, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -194,8 +194,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for TranslateTextAsync</summary>
         public async Task TranslateText2Async_ResourceNames()
         {
-            // Snippet: TranslateTextAsync(LocationName, String, String, String, String, IEnumerable, CallSettings)
-            // Additional: TranslateTextAsync(LocationName, String, String, String, String, IEnumerable, CancellationToken)
+            // Snippet: TranslateTextAsync(LocationName, string, string, string, string, IEnumerable<string>, CallSettings)
+            // Additional: TranslateTextAsync(LocationName, string, string, string, string, IEnumerable<string>, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -254,7 +254,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for DetectLanguage</summary>
         public void DetectLanguage()
         {
-            // Snippet: DetectLanguage(String, String, String, String, CallSettings)
+            // Snippet: DetectLanguage(string, string, string, string, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -270,8 +270,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for DetectLanguageAsync</summary>
         public async Task DetectLanguageAsync()
         {
-            // Snippet: DetectLanguageAsync(String, String, String, String, CallSettings)
-            // Additional: DetectLanguageAsync(String, String, String, String, CancellationToken)
+            // Snippet: DetectLanguageAsync(string, string, string, string, CallSettings)
+            // Additional: DetectLanguageAsync(string, string, string, string, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -287,7 +287,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for DetectLanguage</summary>
         public void DetectLanguage_ResourceNames()
         {
-            // Snippet: DetectLanguage(LocationName, String, String, String, CallSettings)
+            // Snippet: DetectLanguage(LocationName, string, string, string, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -303,8 +303,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for DetectLanguageAsync</summary>
         public async Task DetectLanguageAsync_ResourceNames()
         {
-            // Snippet: DetectLanguageAsync(LocationName, String, String, String, CallSettings)
-            // Additional: DetectLanguageAsync(LocationName, String, String, String, CancellationToken)
+            // Snippet: DetectLanguageAsync(LocationName, string, string, string, CallSettings)
+            // Additional: DetectLanguageAsync(LocationName, string, string, string, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -357,7 +357,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for GetSupportedLanguages</summary>
         public void GetSupportedLanguages()
         {
-            // Snippet: GetSupportedLanguages(String, String, String, CallSettings)
+            // Snippet: GetSupportedLanguages(string, string, string, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -372,8 +372,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for GetSupportedLanguagesAsync</summary>
         public async Task GetSupportedLanguagesAsync()
         {
-            // Snippet: GetSupportedLanguagesAsync(String, String, String, CallSettings)
-            // Additional: GetSupportedLanguagesAsync(String, String, String, CancellationToken)
+            // Snippet: GetSupportedLanguagesAsync(string, string, string, CallSettings)
+            // Additional: GetSupportedLanguagesAsync(string, string, string, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -388,7 +388,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for GetSupportedLanguages</summary>
         public void GetSupportedLanguages_ResourceNames()
         {
-            // Snippet: GetSupportedLanguages(LocationName, String, String, CallSettings)
+            // Snippet: GetSupportedLanguages(LocationName, string, string, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -403,8 +403,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for GetSupportedLanguagesAsync</summary>
         public async Task GetSupportedLanguagesAsync_ResourceNames()
         {
-            // Snippet: GetSupportedLanguagesAsync(LocationName, String, String, CallSettings)
-            // Additional: GetSupportedLanguagesAsync(LocationName, String, String, CancellationToken)
+            // Snippet: GetSupportedLanguagesAsync(LocationName, string, string, CallSettings)
+            // Additional: GetSupportedLanguagesAsync(LocationName, string, string, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -577,7 +577,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for CreateGlossary</summary>
         public void CreateGlossary()
         {
-            // Snippet: CreateGlossary(String, Glossary, CallSettings)
+            // Snippet: CreateGlossary(string, Glossary, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -607,8 +607,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for CreateGlossaryAsync</summary>
         public async Task CreateGlossaryAsync()
         {
-            // Snippet: CreateGlossaryAsync(String, Glossary, CallSettings)
-            // Additional: CreateGlossaryAsync(String, Glossary, CancellationToken)
+            // Snippet: CreateGlossaryAsync(string, Glossary, CallSettings)
+            // Additional: CreateGlossaryAsync(string, Glossary, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -797,7 +797,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for ListGlossaries</summary>
         public void ListGlossaries()
         {
-            // Snippet: ListGlossaries(String, CallSettings)
+            // Snippet: ListGlossaries(string, string, int?, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -842,7 +842,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for ListGlossaries</summary>
         public async Task ListGlossariesAsync()
         {
-            // Snippet: ListGlossariesAsync(String, CallSettings)
+            // Snippet: ListGlossariesAsync(string, string, int?, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -887,7 +887,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for ListGlossaries</summary>
         public void ListGlossaries_ResourceNames()
         {
-            // Snippet: ListGlossaries(LocationName, CallSettings)
+            // Snippet: ListGlossaries(LocationName, string, int?, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -932,7 +932,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for ListGlossaries</summary>
         public async Task ListGlossariesAsync_ResourceNames()
         {
-            // Snippet: ListGlossariesAsync(LocationName, CallSettings)
+            // Snippet: ListGlossariesAsync(LocationName, string, int?, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for GetGlossary</summary>
         public void GetGlossary()
         {
-            // Snippet: GetGlossary(String, CallSettings)
+            // Snippet: GetGlossary(string, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -1023,8 +1023,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for GetGlossaryAsync</summary>
         public async Task GetGlossaryAsync()
         {
-            // Snippet: GetGlossaryAsync(String, CallSettings)
-            // Additional: GetGlossaryAsync(String, CancellationToken)
+            // Snippet: GetGlossaryAsync(string, CallSettings)
+            // Additional: GetGlossaryAsync(string, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for DeleteGlossary</summary>
         public void DeleteGlossary()
         {
-            // Snippet: DeleteGlossary(String, CallSettings)
+            // Snippet: DeleteGlossary(string, CallSettings)
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
@@ -1158,8 +1158,8 @@ namespace Google.Cloud.Translate.V3.Snippets
         /// <summary>Snippet for DeleteGlossaryAsync</summary>
         public async Task DeleteGlossaryAsync()
         {
-            // Snippet: DeleteGlossaryAsync(String, CallSettings)
-            // Additional: DeleteGlossaryAsync(String, CancellationToken)
+            // Snippet: DeleteGlossaryAsync(string, CallSettings)
+            // Additional: DeleteGlossaryAsync(string, CancellationToken)
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
