@@ -14,267 +14,334 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.WebRisk.V1Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.WebRisk.V1Beta1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedWebRiskServiceV1Beta1ClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedWebRiskServiceV1Beta1ClientTest
     {
-        [Fact]
-        public void ComputeThreatListDiff()
+        [xunit::FactAttribute]
+        public void ComputeThreatListDiffRequestObject()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            ComputeThreatListDiffRequest expectedRequest = new ComputeThreatListDiffRequest
-            {
-                ThreatType = ThreatType.Unspecified,
-                VersionToken = ByteString.CopyFromUtf8("-46"),
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
-            };
-            ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
-            {
-                NewVersionToken = ByteString.CopyFromUtf8("115"),
-            };
-            mockGrpcClient.Setup(x => x.ComputeThreatListDiff(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ThreatType threatType = ThreatType.Unspecified;
-            ByteString versionToken = ByteString.CopyFromUtf8("-46");
-            ComputeThreatListDiffRequest.Types.Constraints constraints = new ComputeThreatListDiffRequest.Types.Constraints();
-            ComputeThreatListDiffResponse response = client.ComputeThreatListDiff(threatType, versionToken, constraints);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ComputeThreatListDiffAsync()
-        {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            ComputeThreatListDiffRequest expectedRequest = new ComputeThreatListDiffRequest
-            {
-                ThreatType = ThreatType.Unspecified,
-                VersionToken = ByteString.CopyFromUtf8("-46"),
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
-            };
-            ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
-            {
-                NewVersionToken = ByteString.CopyFromUtf8("115"),
-            };
-            mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ComputeThreatListDiffResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ThreatType threatType = ThreatType.Unspecified;
-            ByteString versionToken = ByteString.CopyFromUtf8("-46");
-            ComputeThreatListDiffRequest.Types.Constraints constraints = new ComputeThreatListDiffRequest.Types.Constraints();
-            ComputeThreatListDiffResponse response = await client.ComputeThreatListDiffAsync(threatType, versionToken, constraints);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void ComputeThreatListDiff2()
-        {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
             {
-                ThreatType = ThreatType.Unspecified,
+                ThreatType = ThreatType.Malware,
+                VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
                 Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
             };
             ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
             {
-                NewVersionToken = ByteString.CopyFromUtf8("115"),
+                RecommendedNextDiff = new wkt::Timestamp(),
+                ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
+                Additions = new ThreatEntryAdditions(),
+                Removals = new ThreatEntryRemovals(),
+                NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
             };
-            mockGrpcClient.Setup(x => x.ComputeThreatListDiff(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ComputeThreatListDiff(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
             ComputeThreatListDiffResponse response = client.ComputeThreatListDiff(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ComputeThreatListDiffAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ComputeThreatListDiffRequestObjectAsync()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
             {
-                ThreatType = ThreatType.Unspecified,
+                ThreatType = ThreatType.Malware,
+                VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
                 Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
             };
             ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
             {
-                NewVersionToken = ByteString.CopyFromUtf8("115"),
+                RecommendedNextDiff = new wkt::Timestamp(),
+                ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
+                Additions = new ThreatEntryAdditions(),
+                Removals = new ThreatEntryRemovals(),
+                NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
             };
-            mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ComputeThreatListDiffResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComputeThreatListDiffResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ComputeThreatListDiffResponse response = await client.ComputeThreatListDiffAsync(request);
-            Assert.Same(expectedResponse, response);
+            ComputeThreatListDiffResponse responseCallSettings = await client.ComputeThreatListDiffAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ComputeThreatListDiffResponse responseCancellationToken = await client.ComputeThreatListDiffAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SearchUris()
+        [xunit::FactAttribute]
+        public void ComputeThreatListDiff()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            SearchUrisRequest expectedRequest = new SearchUrisRequest
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
             {
-                Uri = "uri116076",
-                ThreatTypes = { },
+                ThreatType = ThreatType.Malware,
+                VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
             };
-            SearchUrisResponse expectedResponse = new SearchUrisResponse();
-            mockGrpcClient.Setup(x => x.SearchUris(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string uri = "uri116076";
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
-            SearchUrisResponse response = client.SearchUris(uri, threatTypes);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SearchUrisAsync()
-        {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            SearchUrisRequest expectedRequest = new SearchUrisRequest
+            ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
             {
-                Uri = "uri116076",
-                ThreatTypes = { },
+                RecommendedNextDiff = new wkt::Timestamp(),
+                ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
+                Additions = new ThreatEntryAdditions(),
+                Removals = new ThreatEntryRemovals(),
+                NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
             };
-            SearchUrisResponse expectedResponse = new SearchUrisResponse();
-            mockGrpcClient.Setup(x => x.SearchUrisAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SearchUrisResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ComputeThreatListDiff(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string uri = "uri116076";
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
-            SearchUrisResponse response = await client.SearchUrisAsync(uri, threatTypes);
-            Assert.Same(expectedResponse, response);
+            ComputeThreatListDiffResponse response = client.ComputeThreatListDiff(request.ThreatType, request.VersionToken, request.Constraints);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SearchUris2()
+        [xunit::FactAttribute]
+        public async stt::Task ComputeThreatListDiffAsync()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
+            {
+                ThreatType = ThreatType.Malware,
+                VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
+            };
+            ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
+            {
+                RecommendedNextDiff = new wkt::Timestamp(),
+                ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
+                Additions = new ThreatEntryAdditions(),
+                Removals = new ThreatEntryRemovals(),
+                NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
+            };
+            mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComputeThreatListDiffResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            ComputeThreatListDiffResponse responseCallSettings = await client.ComputeThreatListDiffAsync(request.ThreatType, request.VersionToken, request.Constraints, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ComputeThreatListDiffResponse responseCancellationToken = await client.ComputeThreatListDiffAsync(request.ThreatType, request.VersionToken, request.Constraints, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SearchUrisRequestObject()
+        {
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
             SearchUrisRequest request = new SearchUrisRequest
             {
-                Uri = "uri116076",
-                ThreatTypes = { },
+                Uri = "uri3db70593",
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
             };
-            SearchUrisResponse expectedResponse = new SearchUrisResponse();
-            mockGrpcClient.Setup(x => x.SearchUris(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            SearchUrisResponse expectedResponse = new SearchUrisResponse
+            {
+                Threat = new SearchUrisResponse.Types.ThreatUri(),
+            };
+            mockGrpcClient.Setup(x => x.SearchUris(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
             SearchUrisResponse response = client.SearchUris(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SearchUrisAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SearchUrisRequestObjectAsync()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
             SearchUrisRequest request = new SearchUrisRequest
             {
-                Uri = "uri116076",
-                ThreatTypes = { },
+                Uri = "uri3db70593",
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
             };
-            SearchUrisResponse expectedResponse = new SearchUrisResponse();
-            mockGrpcClient.Setup(x => x.SearchUrisAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SearchUrisResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            SearchUrisResponse response = await client.SearchUrisAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SearchHashes()
-        {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            SearchHashesRequest expectedRequest = new SearchHashesRequest
+            SearchUrisResponse expectedResponse = new SearchUrisResponse
             {
-                HashPrefix = ByteString.CopyFromUtf8("-29"),
-                ThreatTypes = { },
+                Threat = new SearchUrisResponse.Types.ThreatUri(),
             };
-            SearchHashesResponse expectedResponse = new SearchHashesResponse();
-            mockGrpcClient.Setup(x => x.SearchHashes(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SearchUrisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchUrisResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ByteString hashPrefix = ByteString.CopyFromUtf8("-29");
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
-            SearchHashesResponse response = client.SearchHashes(hashPrefix, threatTypes);
-            Assert.Same(expectedResponse, response);
+            SearchUrisResponse responseCallSettings = await client.SearchUrisAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SearchUrisResponse responseCancellationToken = await client.SearchUrisAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SearchHashesAsync()
+        [xunit::FactAttribute]
+        public void SearchUris()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
-            SearchHashesRequest expectedRequest = new SearchHashesRequest
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            SearchUrisRequest request = new SearchUrisRequest
             {
-                HashPrefix = ByteString.CopyFromUtf8("-29"),
-                ThreatTypes = { },
+                Uri = "uri3db70593",
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
             };
-            SearchHashesResponse expectedResponse = new SearchHashesResponse();
-            mockGrpcClient.Setup(x => x.SearchHashesAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SearchHashesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SearchUrisResponse expectedResponse = new SearchUrisResponse
+            {
+                Threat = new SearchUrisResponse.Types.ThreatUri(),
+            };
+            mockGrpcClient.Setup(x => x.SearchUris(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            ByteString hashPrefix = ByteString.CopyFromUtf8("-29");
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
-            SearchHashesResponse response = await client.SearchHashesAsync(hashPrefix, threatTypes);
-            Assert.Same(expectedResponse, response);
+            SearchUrisResponse response = client.SearchUris(request.Uri, request.ThreatTypes);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SearchHashes2()
+        [xunit::FactAttribute]
+        public async stt::Task SearchUrisAsync()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            SearchUrisRequest request = new SearchUrisRequest
+            {
+                Uri = "uri3db70593",
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
+            };
+            SearchUrisResponse expectedResponse = new SearchUrisResponse
+            {
+                Threat = new SearchUrisResponse.Types.ThreatUri(),
+            };
+            mockGrpcClient.Setup(x => x.SearchUrisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchUrisResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            SearchUrisResponse responseCallSettings = await client.SearchUrisAsync(request.Uri, request.ThreatTypes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SearchUrisResponse responseCancellationToken = await client.SearchUrisAsync(request.Uri, request.ThreatTypes, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SearchHashesRequestObject()
+        {
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
             SearchHashesRequest request = new SearchHashesRequest
             {
-                ThreatTypes = { },
+                HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
             };
-            SearchHashesResponse expectedResponse = new SearchHashesResponse();
-            mockGrpcClient.Setup(x => x.SearchHashes(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            SearchHashesResponse expectedResponse = new SearchHashesResponse
+            {
+                Threats =
+                {
+                    new SearchHashesResponse.Types.ThreatHash(),
+                },
+                NegativeExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.SearchHashes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
             SearchHashesResponse response = client.SearchHashes(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SearchHashesAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SearchHashesRequestObjectAsync()
         {
-            Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(MockBehavior.Strict);
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
             SearchHashesRequest request = new SearchHashesRequest
             {
-                ThreatTypes = { },
+                HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
             };
-            SearchHashesResponse expectedResponse = new SearchHashesResponse();
-            mockGrpcClient.Setup(x => x.SearchHashesAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SearchHashesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SearchHashesResponse expectedResponse = new SearchHashesResponse
+            {
+                Threats =
+                {
+                    new SearchHashesResponse.Types.ThreatHash(),
+                },
+                NegativeExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.SearchHashesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchHashesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            SearchHashesResponse response = await client.SearchHashesAsync(request);
-            Assert.Same(expectedResponse, response);
+            SearchHashesResponse responseCallSettings = await client.SearchHashesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SearchHashesResponse responseCancellationToken = await client.SearchHashesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void SearchHashes()
+        {
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            SearchHashesRequest request = new SearchHashesRequest
+            {
+                HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
+            };
+            SearchHashesResponse expectedResponse = new SearchHashesResponse
+            {
+                Threats =
+                {
+                    new SearchHashesResponse.Types.ThreatHash(),
+                },
+                NegativeExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.SearchHashes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            SearchHashesResponse response = client.SearchHashes(request.HashPrefix, request.ThreatTypes);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SearchHashesAsync()
+        {
+            moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client> mockGrpcClient = new moq::Mock<WebRiskServiceV1Beta1.WebRiskServiceV1Beta1Client>(moq::MockBehavior.Strict);
+            SearchHashesRequest request = new SearchHashesRequest
+            {
+                HashPrefix = proto::ByteString.CopyFromUtf8("hash_prefix0c2a6688"),
+                ThreatTypes =
+                {
+                    ThreatType.SocialEngineering,
+                },
+            };
+            SearchHashesResponse expectedResponse = new SearchHashesResponse
+            {
+                Threats =
+                {
+                    new SearchHashesResponse.Types.ThreatHash(),
+                },
+                NegativeExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.SearchHashesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchHashesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WebRiskServiceV1Beta1Client client = new WebRiskServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
+            SearchHashesResponse responseCallSettings = await client.SearchHashesAsync(request.HashPrefix, request.ThreatTypes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SearchHashesResponse responseCancellationToken = await client.SearchHashesAsync(request.HashPrefix, request.ThreatTypes, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
