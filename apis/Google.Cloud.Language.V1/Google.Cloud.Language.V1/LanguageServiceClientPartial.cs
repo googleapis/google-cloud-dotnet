@@ -26,7 +26,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeEntities(Document, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnalyzeEntities(Document, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -44,7 +44,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeEntitiesAsync(Document, EncodingType?, CancellationToken)"/>,
+        /// This method simply calls <see cref="AnalyzeEntitiesAsync(Document, EncodingType, CancellationToken)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -62,7 +62,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeEntitiesAsync(Document, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnalyzeEntitiesAsync(Document, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -80,7 +80,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeSyntax(Document, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnalyzeSyntax(Document, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -98,7 +98,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeSyntaxAsync(Document, EncodingType?, CancellationToken)"/>,
+        /// This method simply calls <see cref="AnalyzeSyntaxAsync(Document, EncodingType, CancellationToken)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -116,7 +116,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeSyntaxAsync(Document, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnalyzeSyntaxAsync(Document, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -134,7 +134,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnnotateText(Document, Features, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnnotateText(Document, Features, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -154,7 +154,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnnotateTextAsync(Document, Features, EncodingType?, CancellationToken)"/>,
+        /// This method simply calls <see cref="AnnotateTextAsync(Document, Features, EncodingType, CancellationToken)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -174,7 +174,7 @@ namespace Google.Cloud.Language.V1
         /// UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnnotateTextAsync(Document, Features, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnnotateTextAsync(Document, Features, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -196,7 +196,7 @@ namespace Google.Cloud.Language.V1
         /// specifying an <see cref="EncodingType"/> of UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeEntitySentiment(Document, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnalyzeEntitySentiment(Document, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -214,7 +214,7 @@ namespace Google.Cloud.Language.V1
         /// specifying an <see cref="EncodingType"/> of UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeEntitySentimentAsync(Document, EncodingType?, CancellationToken)"/>,
+        /// This method simply calls <see cref="AnalyzeEntitySentimentAsync(Document, EncodingType, CancellationToken)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
@@ -232,7 +232,7 @@ namespace Google.Cloud.Language.V1
         /// specifying an <see cref="EncodingType"/> of UTF-16 for offsets.
         /// </summary>
         /// <remarks>
-        /// This method simply calls <see cref="AnalyzeEntitySentimentAsync(Document, EncodingType?, CallSettings)"/>,
+        /// This method simply calls <see cref="AnalyzeEntitySentimentAsync(Document, EncodingType, CallSettings)"/>,
         /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
         /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
         /// such as <see cref="string.Substring(int, int)"/>.
