@@ -490,9 +490,8 @@
 
   {
     "id": "Google.Cloud.Language.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/language/v1",
-    "serviceYaml": "language_v1.yaml",
     "productName": "Google Cloud Natural Language",
     "productUrl": "https://cloud.google.com/natural-language",
     "version": "1.4.0-beta00",
