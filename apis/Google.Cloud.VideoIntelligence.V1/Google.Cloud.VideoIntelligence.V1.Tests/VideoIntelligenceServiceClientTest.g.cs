@@ -16,22 +16,8 @@
 
 namespace Google.Cloud.VideoIntelligence.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedVideoIntelligenceServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedVideoIntelligenceServiceClientTest
     {
     }
 }
