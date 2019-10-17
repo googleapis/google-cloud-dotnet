@@ -1045,9 +1045,8 @@
 
   {
     "id": "Google.Cloud.WebRisk.V1Beta1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/webrisk/v1beta1",
-    "serviceYaml": "webrisk_v1beta1.yaml",
     "productName": "Google Cloud Web Risk",
     "productUrl": "https://cloud.google.com/web-risk/",
     "version": "1.0.0-beta02",
