@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using Google.Api.Gax.ResourceNames;
 
 namespace Google.Cloud.Redis.V1Beta1.SmokeTests
 {
