@@ -14,157 +14,117 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Speech.V1P1Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Speech.V1P1Beta1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedSpeechClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedSpeechClientTest
     {
-        [Fact]
-        public void Recognize()
+        [xunit::FactAttribute]
+        public void RecognizeRequestObject()
         {
-            Mock<Speech.SpeechClient> mockGrpcClient = new Mock<Speech.SpeechClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            RecognizeRequest expectedRequest = new RecognizeRequest
-            {
-                Config = new RecognitionConfig
-                {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
-                },
-            };
-            RecognizeResponse expectedResponse = new RecognizeResponse();
-            mockGrpcClient.Setup(x => x.Recognize(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
-            RecognitionConfig config = new RecognitionConfig
-            {
-                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                SampleRateHertz = 44100,
-                LanguageCode = "en-US",
-            };
-            RecognitionAudio audio = new RecognitionAudio
-            {
-                Uri = "gs://bucket_name/file_name.flac",
-            };
-            RecognizeResponse response = client.Recognize(config, audio);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task RecognizeAsync()
-        {
-            Mock<Speech.SpeechClient> mockGrpcClient = new Mock<Speech.SpeechClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            RecognizeRequest expectedRequest = new RecognizeRequest
-            {
-                Config = new RecognitionConfig
-                {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
-                },
-            };
-            RecognizeResponse expectedResponse = new RecognizeResponse();
-            mockGrpcClient.Setup(x => x.RecognizeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<RecognizeResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
-            RecognitionConfig config = new RecognitionConfig
-            {
-                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                SampleRateHertz = 44100,
-                LanguageCode = "en-US",
-            };
-            RecognitionAudio audio = new RecognitionAudio
-            {
-                Uri = "gs://bucket_name/file_name.flac",
-            };
-            RecognizeResponse response = await client.RecognizeAsync(config, audio);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void Recognize2()
-        {
-            Mock<Speech.SpeechClient> mockGrpcClient = new Mock<Speech.SpeechClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Speech.SpeechClient> mockGrpcClient = new moq::Mock<Speech.SpeechClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             RecognizeRequest request = new RecognizeRequest
             {
-                Config = new RecognitionConfig
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            RecognizeResponse expectedResponse = new RecognizeResponse
+            {
+                Results =
                 {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
+                    new SpeechRecognitionResult(),
                 },
             };
-            RecognizeResponse expectedResponse = new RecognizeResponse();
-            mockGrpcClient.Setup(x => x.Recognize(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Recognize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
             RecognizeResponse response = client.Recognize(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RecognizeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RecognizeRequestObjectAsync()
         {
-            Mock<Speech.SpeechClient> mockGrpcClient = new Mock<Speech.SpeechClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Speech.SpeechClient> mockGrpcClient = new moq::Mock<Speech.SpeechClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             RecognizeRequest request = new RecognizeRequest
             {
-                Config = new RecognitionConfig
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            RecognizeResponse expectedResponse = new RecognizeResponse
+            {
+                Results =
                 {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
+                    new SpeechRecognitionResult(),
                 },
             };
-            RecognizeResponse expectedResponse = new RecognizeResponse();
-            mockGrpcClient.Setup(x => x.RecognizeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<RecognizeResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.RecognizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecognizeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
-            RecognizeResponse response = await client.RecognizeAsync(request);
-            Assert.Same(expectedResponse, response);
+            RecognizeResponse responseCallSettings = await client.RecognizeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RecognizeResponse responseCancellationToken = await client.RecognizeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void Recognize()
+        {
+            moq::Mock<Speech.SpeechClient> mockGrpcClient = new moq::Mock<Speech.SpeechClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RecognizeRequest request = new RecognizeRequest
+            {
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            RecognizeResponse expectedResponse = new RecognizeResponse
+            {
+                Results =
+                {
+                    new SpeechRecognitionResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.Recognize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
+            RecognizeResponse response = client.Recognize(request.Config, request.Audio);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RecognizeAsync()
+        {
+            moq::Mock<Speech.SpeechClient> mockGrpcClient = new moq::Mock<Speech.SpeechClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RecognizeRequest request = new RecognizeRequest
+            {
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            RecognizeResponse expectedResponse = new RecognizeResponse
+            {
+                Results =
+                {
+                    new SpeechRecognitionResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.RecognizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecognizeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
+            RecognizeResponse responseCallSettings = await client.RecognizeAsync(request.Config, request.Audio, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RecognizeResponse responseCancellationToken = await client.RecognizeAsync(request.Config, request.Audio, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

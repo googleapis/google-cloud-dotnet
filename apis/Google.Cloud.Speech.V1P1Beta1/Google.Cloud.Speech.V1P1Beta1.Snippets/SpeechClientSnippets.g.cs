@@ -16,89 +16,43 @@
 
 namespace Google.Cloud.Speech.V1P1Beta1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Speech.V1P1Beta1;
     using Google.LongRunning;
     using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedSpeechClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedSpeechClientSnippets
     {
-        /// <summary>Snippet for RecognizeAsync</summary>
-        public async Task RecognizeAsync()
-        {
-            // Snippet: RecognizeAsync(RecognitionConfig,RecognitionAudio,CallSettings)
-            // Additional: RecognizeAsync(RecognitionConfig,RecognitionAudio,CancellationToken)
-            // Create client
-            SpeechClient speechClient = await SpeechClient.CreateAsync();
-            // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig
-            {
-                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                SampleRateHertz = 44100,
-                LanguageCode = "en-US",
-            };
-            RecognitionAudio audio = new RecognitionAudio
-            {
-                Uri = "gs://bucket_name/file_name.flac",
-            };
-            // Make the request
-            RecognizeResponse response = await speechClient.RecognizeAsync(config, audio);
-            // End snippet
-        }
-
         /// <summary>Snippet for Recognize</summary>
-        public void Recognize()
+        public void Recognize_RequestObject()
         {
-            // Snippet: Recognize(RecognitionConfig,RecognitionAudio,CallSettings)
+            // Snippet: Recognize(RecognizeRequest, CallSettings)
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig
+            RecognizeRequest request = new RecognizeRequest
             {
-                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                SampleRateHertz = 44100,
-                LanguageCode = "en-US",
-            };
-            RecognitionAudio audio = new RecognitionAudio
-            {
-                Uri = "gs://bucket_name/file_name.flac",
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
             };
             // Make the request
-            RecognizeResponse response = speechClient.Recognize(config, audio);
+            RecognizeResponse response = speechClient.Recognize(request);
             // End snippet
         }
 
         /// <summary>Snippet for RecognizeAsync</summary>
         public async Task RecognizeAsync_RequestObject()
         {
-            // Snippet: RecognizeAsync(RecognizeRequest,CallSettings)
-            // Additional: RecognizeAsync(RecognizeRequest,CancellationToken)
+            // Snippet: RecognizeAsync(RecognizeRequest, CallSettings)
+            // Additional: RecognizeAsync(RecognizeRequest, CancellationToken)
             // Create client
             SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
             RecognizeRequest request = new RecognizeRequest
             {
-                Config = new RecognitionConfig
-                {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
-                },
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
             };
             // Make the request
             RecognizeResponse response = await speechClient.RecognizeAsync(request);
@@ -106,104 +60,58 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for Recognize</summary>
-        public void Recognize_RequestObject()
+        public void Recognize()
         {
-            // Snippet: Recognize(RecognizeRequest,CallSettings)
+            // Snippet: Recognize(RecognitionConfig, RecognitionAudio, CallSettings)
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize request argument(s)
-            RecognizeRequest request = new RecognizeRequest
-            {
-                Config = new RecognitionConfig
-                {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
-                },
-            };
+            RecognitionConfig config = new RecognitionConfig();
+            RecognitionAudio audio = new RecognitionAudio();
             // Make the request
-            RecognizeResponse response = speechClient.Recognize(request);
+            RecognizeResponse response = speechClient.Recognize(config, audio);
             // End snippet
         }
 
-        /// <summary>Snippet for LongRunningRecognizeAsync</summary>
-        public async Task LongRunningRecognizeAsync()
+        /// <summary>Snippet for RecognizeAsync</summary>
+        public async Task RecognizeAsync()
         {
-            // Snippet: LongRunningRecognizeAsync(RecognitionConfig,RecognitionAudio,CallSettings)
-            // Additional: LongRunningRecognizeAsync(RecognitionConfig,RecognitionAudio,CancellationToken)
+            // Snippet: RecognizeAsync(RecognitionConfig, RecognitionAudio, CallSettings)
+            // Additional: RecognizeAsync(RecognitionConfig, RecognitionAudio, CancellationToken)
             // Create client
             SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig
-            {
-                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                SampleRateHertz = 44100,
-                LanguageCode = "en-US",
-            };
-            RecognitionAudio audio = new RecognitionAudio
-            {
-                Uri = "gs://bucket_name/file_name.flac",
-            };
+            RecognitionConfig config = new RecognitionConfig();
+            RecognitionAudio audio = new RecognitionAudio();
             // Make the request
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
-                await speechClient.LongRunningRecognizeAsync(config, audio);
-
-            // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            LongRunningRecognizeResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
-                await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
-            }
+            RecognizeResponse response = await speechClient.RecognizeAsync(config, audio);
             // End snippet
         }
 
         /// <summary>Snippet for LongRunningRecognize</summary>
-        public void LongRunningRecognize()
+        public void LongRunningRecognize_RequestObject()
         {
-            // Snippet: LongRunningRecognize(RecognitionConfig,RecognitionAudio,CallSettings)
+            // Snippet: LongRunningRecognize(LongRunningRecognizeRequest, CallSettings)
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig
+            LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
             {
-                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                SampleRateHertz = 44100,
-                LanguageCode = "en-US",
-            };
-            RecognitionAudio audio = new RecognitionAudio
-            {
-                Uri = "gs://bucket_name/file_name.flac",
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
             };
             // Make the request
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
-                speechClient.LongRunningRecognize(config, audio);
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response = speechClient.LongRunningRecognize(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             LongRunningRecognizeResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
-                speechClient.PollOnceLongRunningRecognize(operationName);
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse = speechClient.PollOnceLongRunningRecognize(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -216,38 +124,28 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
         /// <summary>Snippet for LongRunningRecognizeAsync</summary>
         public async Task LongRunningRecognizeAsync_RequestObject()
         {
-            // Snippet: LongRunningRecognizeAsync(LongRunningRecognizeRequest,CallSettings)
+            // Snippet: LongRunningRecognizeAsync(LongRunningRecognizeRequest, CallSettings)
+            // Additional: LongRunningRecognizeAsync(LongRunningRecognizeRequest, CancellationToken)
             // Create client
             SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
             LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
             {
-                Config = new RecognitionConfig
-                {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
-                },
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
             };
             // Make the request
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
-                await speechClient.LongRunningRecognizeAsync(request);
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response = await speechClient.LongRunningRecognizeAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             LongRunningRecognizeResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
-                await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse = await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -258,40 +156,57 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for LongRunningRecognize</summary>
-        public void LongRunningRecognize_RequestObject()
+        public void LongRunningRecognize()
         {
-            // Snippet: LongRunningRecognize(LongRunningRecognizeRequest,CallSettings)
+            // Snippet: LongRunningRecognize(RecognitionConfig, RecognitionAudio, CallSettings)
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize request argument(s)
-            LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
-            {
-                Config = new RecognitionConfig
-                {
-                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                    SampleRateHertz = 44100,
-                    LanguageCode = "en-US",
-                },
-                Audio = new RecognitionAudio
-                {
-                    Uri = "gs://bucket_name/file_name.flac",
-                },
-            };
+            RecognitionConfig config = new RecognitionConfig();
+            RecognitionAudio audio = new RecognitionAudio();
             // Make the request
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
-                speechClient.LongRunningRecognize(request);
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response = speechClient.LongRunningRecognize(config, audio);
 
             // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             LongRunningRecognizeResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
-                speechClient.PollOnceLongRunningRecognize(operationName);
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse = speechClient.PollOnceLongRunningRecognize(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LongRunningRecognizeAsync</summary>
+        public async Task LongRunningRecognizeAsync()
+        {
+            // Snippet: LongRunningRecognizeAsync(RecognitionConfig, RecognitionAudio, CallSettings)
+            // Additional: LongRunningRecognizeAsync(RecognitionConfig, RecognitionAudio, CancellationToken)
+            // Create client
+            SpeechClient speechClient = await SpeechClient.CreateAsync();
+            // Initialize request argument(s)
+            RecognitionConfig config = new RecognitionConfig();
+            RecognitionAudio audio = new RecognitionAudio();
+            // Make the request
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response = await speechClient.LongRunningRecognizeAsync(config, audio);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LongRunningRecognizeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse = await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -304,22 +219,22 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
         /// <summary>Snippet for StreamingRecognize</summary>
         public async Task StreamingRecognize()
         {
-            // Snippet: StreamingRecognize(CallSettings,BidirectionalStreamingSettings)
+            // Snippet: StreamingRecognize(CallSettings, BidirectionalStreamingSettings)
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SpeechClient.StreamingRecognizeStream duplexStream = speechClient.StreamingRecognize();
+            SpeechClient.StreamingRecognizeStream response = speechClient.StreamingRecognize();
 
-            // Sending requests and retrieving responses can be arbitrarily interleaved.
-            // Exact sequence will depend on client/server behavior.
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
 
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<StreamingRecognizeResponse> responseStream = duplexStream.ResponseStream;
+                IAsyncEnumerator<StreamingRecognizeResponse> responseStream = response.ResponseStream;
                 while (await responseStream.MoveNext())
                 {
-                    StreamingRecognizeResponse response = responseStream.Current;
+                    StreamingRecognizeResponse responseItem = responseStream.Current;
                     // Do something with streamed response
                 }
                 // The response stream has completed
@@ -330,19 +245,22 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             while (!done)
             {
                 // Initialize a request
-                StreamingRecognizeRequest request = new StreamingRecognizeRequest();
+                StreamingRecognizeRequest request = new StreamingRecognizeRequest
+                {
+                    StreamingConfig = new StreamingRecognitionConfig(),
+                    AudioContent = ByteString.Empty,
+                };
                 // Stream a request to the server
-                await duplexStream.WriteAsync(request);
-
+                await response.WriteAsync(request);
                 // Set "done" to true when sending requests is complete
             }
+
             // Complete writing requests to the stream
-            await duplexStream.WriteCompleteAsync();
-            // Await the response handler.
-            // This will complete once all server responses have been processed.
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
             await responseHandlerTask;
             // End snippet
         }
-
     }
 }
