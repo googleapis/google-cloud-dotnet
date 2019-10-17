@@ -16,43 +16,54 @@
 
 namespace Google.Cloud.WebRisk.V1Beta1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.WebRisk.V1Beta1;
     using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedWebRiskServiceV1Beta1ClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedWebRiskServiceV1Beta1ClientSnippets
     {
-        /// <summary>Snippet for ComputeThreatListDiffAsync</summary>
-        public async Task ComputeThreatListDiffAsync()
+        /// <summary>Snippet for ComputeThreatListDiff</summary>
+        public void ComputeThreatListDiff_RequestObject()
         {
-            // Snippet: ComputeThreatListDiffAsync(ThreatType,ByteString,ComputeThreatListDiffRequest.Types.Constraints,CallSettings)
-            // Additional: ComputeThreatListDiffAsync(ThreatType,ByteString,ComputeThreatListDiffRequest.Types.Constraints,CancellationToken)
+            // Snippet: ComputeThreatListDiff(ComputeThreatListDiffRequest, CallSettings)
+            // Create client
+            WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
+            {
+                ThreatType = ThreatType.Unspecified,
+                VersionToken = ByteString.Empty,
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
+            };
+            // Make the request
+            ComputeThreatListDiffResponse response = webRiskServiceV1Beta1Client.ComputeThreatListDiff(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ComputeThreatListDiffAsync</summary>
+        public async Task ComputeThreatListDiffAsync_RequestObject()
+        {
+            // Snippet: ComputeThreatListDiffAsync(ComputeThreatListDiffRequest, CallSettings)
+            // Additional: ComputeThreatListDiffAsync(ComputeThreatListDiffRequest, CancellationToken)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            ThreatType threatType = ThreatType.Unspecified;
-            ByteString versionToken = ByteString.Empty;
-            ComputeThreatListDiffRequest.Types.Constraints constraints = new ComputeThreatListDiffRequest.Types.Constraints();
+            ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
+            {
+                ThreatType = ThreatType.Unspecified,
+                VersionToken = ByteString.Empty,
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
+            };
             // Make the request
-            ComputeThreatListDiffResponse response = await webRiskServiceV1Beta1Client.ComputeThreatListDiffAsync(threatType, versionToken, constraints);
+            ComputeThreatListDiffResponse response = await webRiskServiceV1Beta1Client.ComputeThreatListDiffAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ComputeThreatListDiff</summary>
         public void ComputeThreatListDiff()
         {
-            // Snippet: ComputeThreatListDiff(ThreatType,ByteString,ComputeThreatListDiffRequest.Types.Constraints,CallSettings)
+            // Snippet: ComputeThreatListDiff(ThreatType, ByteString, ComputeThreatListDiffRequest.Types.Constraints, CallSettings)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
             // Initialize request argument(s)
@@ -65,81 +76,56 @@ namespace Google.Cloud.WebRisk.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ComputeThreatListDiffAsync</summary>
-        public async Task ComputeThreatListDiffAsync_RequestObject()
+        public async Task ComputeThreatListDiffAsync()
         {
-            // Snippet: ComputeThreatListDiffAsync(ComputeThreatListDiffRequest,CallSettings)
-            // Additional: ComputeThreatListDiffAsync(ComputeThreatListDiffRequest,CancellationToken)
+            // Snippet: ComputeThreatListDiffAsync(ThreatType, ByteString, ComputeThreatListDiffRequest.Types.Constraints, CallSettings)
+            // Additional: ComputeThreatListDiffAsync(ThreatType, ByteString, ComputeThreatListDiffRequest.Types.Constraints, CancellationToken)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
-            {
-                ThreatType = ThreatType.Unspecified,
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
-            };
+            ThreatType threatType = ThreatType.Unspecified;
+            ByteString versionToken = ByteString.Empty;
+            ComputeThreatListDiffRequest.Types.Constraints constraints = new ComputeThreatListDiffRequest.Types.Constraints();
             // Make the request
-            ComputeThreatListDiffResponse response = await webRiskServiceV1Beta1Client.ComputeThreatListDiffAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ComputeThreatListDiff</summary>
-        public void ComputeThreatListDiff_RequestObject()
-        {
-            // Snippet: ComputeThreatListDiff(ComputeThreatListDiffRequest,CallSettings)
-            // Create client
-            WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
-            // Initialize request argument(s)
-            ComputeThreatListDiffRequest request = new ComputeThreatListDiffRequest
-            {
-                ThreatType = ThreatType.Unspecified,
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
-            };
-            // Make the request
-            ComputeThreatListDiffResponse response = webRiskServiceV1Beta1Client.ComputeThreatListDiff(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SearchUrisAsync</summary>
-        public async Task SearchUrisAsync()
-        {
-            // Snippet: SearchUrisAsync(string,IEnumerable<ThreatType>,CallSettings)
-            // Additional: SearchUrisAsync(string,IEnumerable<ThreatType>,CancellationToken)
-            // Create client
-            WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
-            // Initialize request argument(s)
-            string uri = "";
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
-            // Make the request
-            SearchUrisResponse response = await webRiskServiceV1Beta1Client.SearchUrisAsync(uri, threatTypes);
+            ComputeThreatListDiffResponse response = await webRiskServiceV1Beta1Client.ComputeThreatListDiffAsync(threatType, versionToken, constraints);
             // End snippet
         }
 
         /// <summary>Snippet for SearchUris</summary>
-        public void SearchUris()
+        public void SearchUris_RequestObject()
         {
-            // Snippet: SearchUris(string,IEnumerable<ThreatType>,CallSettings)
+            // Snippet: SearchUris(SearchUrisRequest, CallSettings)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            string uri = "";
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
+            SearchUrisRequest request = new SearchUrisRequest
+            {
+                Uri = "",
+                ThreatTypes =
+                {
+                    ThreatType.Unspecified,
+                },
+            };
             // Make the request
-            SearchUrisResponse response = webRiskServiceV1Beta1Client.SearchUris(uri, threatTypes);
+            SearchUrisResponse response = webRiskServiceV1Beta1Client.SearchUris(request);
             // End snippet
         }
 
         /// <summary>Snippet for SearchUrisAsync</summary>
         public async Task SearchUrisAsync_RequestObject()
         {
-            // Snippet: SearchUrisAsync(SearchUrisRequest,CallSettings)
-            // Additional: SearchUrisAsync(SearchUrisRequest,CancellationToken)
+            // Snippet: SearchUrisAsync(SearchUrisRequest, CallSettings)
+            // Additional: SearchUrisAsync(SearchUrisRequest, CancellationToken)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
             SearchUrisRequest request = new SearchUrisRequest
             {
                 Uri = "",
-                ThreatTypes = { },
+                ThreatTypes =
+                {
+                    ThreatType.Unspecified,
+                },
             };
             // Make the request
             SearchUrisResponse response = await webRiskServiceV1Beta1Client.SearchUrisAsync(request);
@@ -147,62 +133,75 @@ namespace Google.Cloud.WebRisk.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for SearchUris</summary>
-        public void SearchUris_RequestObject()
+        public void SearchUris()
         {
-            // Snippet: SearchUris(SearchUrisRequest,CallSettings)
+            // Snippet: SearchUris(string, IEnumerable<ThreatType>, CallSettings)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            SearchUrisRequest request = new SearchUrisRequest
+            string uri = "";
+            IEnumerable<ThreatType> threatTypes = new ThreatType[]
             {
-                Uri = "",
-                ThreatTypes = { },
+                ThreatType.Unspecified,
             };
             // Make the request
-            SearchUrisResponse response = webRiskServiceV1Beta1Client.SearchUris(request);
+            SearchUrisResponse response = webRiskServiceV1Beta1Client.SearchUris(uri, threatTypes);
             // End snippet
         }
 
-        /// <summary>Snippet for SearchHashesAsync</summary>
-        public async Task SearchHashesAsync()
+        /// <summary>Snippet for SearchUrisAsync</summary>
+        public async Task SearchUrisAsync()
         {
-            // Snippet: SearchHashesAsync(ByteString,IEnumerable<ThreatType>,CallSettings)
-            // Additional: SearchHashesAsync(ByteString,IEnumerable<ThreatType>,CancellationToken)
+            // Snippet: SearchUrisAsync(string, IEnumerable<ThreatType>, CallSettings)
+            // Additional: SearchUrisAsync(string, IEnumerable<ThreatType>, CancellationToken)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            ByteString hashPrefix = ByteString.Empty;
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
+            string uri = "";
+            IEnumerable<ThreatType> threatTypes = new ThreatType[]
+            {
+                ThreatType.Unspecified,
+            };
             // Make the request
-            SearchHashesResponse response = await webRiskServiceV1Beta1Client.SearchHashesAsync(hashPrefix, threatTypes);
+            SearchUrisResponse response = await webRiskServiceV1Beta1Client.SearchUrisAsync(uri, threatTypes);
             // End snippet
         }
 
         /// <summary>Snippet for SearchHashes</summary>
-        public void SearchHashes()
+        public void SearchHashes_RequestObject()
         {
-            // Snippet: SearchHashes(ByteString,IEnumerable<ThreatType>,CallSettings)
+            // Snippet: SearchHashes(SearchHashesRequest, CallSettings)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            ByteString hashPrefix = ByteString.Empty;
-            IEnumerable<ThreatType> threatTypes = new List<ThreatType>();
+            SearchHashesRequest request = new SearchHashesRequest
+            {
+                HashPrefix = ByteString.Empty,
+                ThreatTypes =
+                {
+                    ThreatType.Unspecified,
+                },
+            };
             // Make the request
-            SearchHashesResponse response = webRiskServiceV1Beta1Client.SearchHashes(hashPrefix, threatTypes);
+            SearchHashesResponse response = webRiskServiceV1Beta1Client.SearchHashes(request);
             // End snippet
         }
 
         /// <summary>Snippet for SearchHashesAsync</summary>
         public async Task SearchHashesAsync_RequestObject()
         {
-            // Snippet: SearchHashesAsync(SearchHashesRequest,CallSettings)
-            // Additional: SearchHashesAsync(SearchHashesRequest,CancellationToken)
+            // Snippet: SearchHashesAsync(SearchHashesRequest, CallSettings)
+            // Additional: SearchHashesAsync(SearchHashesRequest, CancellationToken)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
             SearchHashesRequest request = new SearchHashesRequest
             {
-                ThreatTypes = { },
+                HashPrefix = ByteString.Empty,
+                ThreatTypes =
+                {
+                    ThreatType.Unspecified,
+                },
             };
             // Make the request
             SearchHashesResponse response = await webRiskServiceV1Beta1Client.SearchHashesAsync(request);
@@ -210,20 +209,38 @@ namespace Google.Cloud.WebRisk.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for SearchHashes</summary>
-        public void SearchHashes_RequestObject()
+        public void SearchHashes()
         {
-            // Snippet: SearchHashes(SearchHashesRequest,CallSettings)
+            // Snippet: SearchHashes(ByteString, IEnumerable<ThreatType>, CallSettings)
             // Create client
             WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = WebRiskServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            SearchHashesRequest request = new SearchHashesRequest
+            ByteString hashPrefix = ByteString.Empty;
+            IEnumerable<ThreatType> threatTypes = new ThreatType[]
             {
-                ThreatTypes = { },
+                ThreatType.Unspecified,
             };
             // Make the request
-            SearchHashesResponse response = webRiskServiceV1Beta1Client.SearchHashes(request);
+            SearchHashesResponse response = webRiskServiceV1Beta1Client.SearchHashes(hashPrefix, threatTypes);
             // End snippet
         }
 
+        /// <summary>Snippet for SearchHashesAsync</summary>
+        public async Task SearchHashesAsync()
+        {
+            // Snippet: SearchHashesAsync(ByteString, IEnumerable<ThreatType>, CallSettings)
+            // Additional: SearchHashesAsync(ByteString, IEnumerable<ThreatType>, CancellationToken)
+            // Create client
+            WebRiskServiceV1Beta1Client webRiskServiceV1Beta1Client = await WebRiskServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            ByteString hashPrefix = ByteString.Empty;
+            IEnumerable<ThreatType> threatTypes = new ThreatType[]
+            {
+                ThreatType.Unspecified,
+            };
+            // Make the request
+            SearchHashesResponse response = await webRiskServiceV1Beta1Client.SearchHashesAsync(hashPrefix, threatTypes);
+            // End snippet
+        }
     }
 }
