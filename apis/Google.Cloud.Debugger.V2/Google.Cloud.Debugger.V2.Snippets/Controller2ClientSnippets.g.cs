@@ -121,7 +121,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for ListActiveBreakpoints</summary>
         public void ListActiveBreakpoints()
         {
-            // Snippet: ListActiveBreakpoints(String, CallSettings)
+            // Snippet: ListActiveBreakpoints(string, CallSettings)
             // Create client
             Controller2Client controller2Client = Controller2Client.Create();
             // Initialize request argument(s)
@@ -134,8 +134,8 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
         public async Task ListActiveBreakpointsAsync()
         {
-            // Snippet: ListActiveBreakpointsAsync(String, CallSettings)
-            // Additional: ListActiveBreakpointsAsync(String, CancellationToken)
+            // Snippet: ListActiveBreakpointsAsync(string, CallSettings)
+            // Additional: ListActiveBreakpointsAsync(string, CancellationToken)
             // Create client
             Controller2Client controller2Client = await Controller2Client.CreateAsync();
             // Initialize request argument(s)
@@ -183,7 +183,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for UpdateActiveBreakpoint</summary>
         public void UpdateActiveBreakpoint()
         {
-            // Snippet: UpdateActiveBreakpoint(String, Breakpoint, CallSettings)
+            // Snippet: UpdateActiveBreakpoint(string, Breakpoint, CallSettings)
             // Create client
             Controller2Client controller2Client = Controller2Client.Create();
             // Initialize request argument(s)
@@ -197,8 +197,8 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for UpdateActiveBreakpointAsync</summary>
         public async Task UpdateActiveBreakpointAsync()
         {
-            // Snippet: UpdateActiveBreakpointAsync(String, Breakpoint, CallSettings)
-            // Additional: UpdateActiveBreakpointAsync(String, Breakpoint, CancellationToken)
+            // Snippet: UpdateActiveBreakpointAsync(string, Breakpoint, CallSettings)
+            // Additional: UpdateActiveBreakpointAsync(string, Breakpoint, CancellationToken)
             // Create client
             Controller2Client controller2Client = await Controller2Client.CreateAsync();
             // Initialize request argument(s)

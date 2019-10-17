@@ -64,7 +64,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for SetBreakpoint</summary>
         public void SetBreakpoint()
         {
-            // Snippet: SetBreakpoint(String, Breakpoint, String, CallSettings)
+            // Snippet: SetBreakpoint(string, Breakpoint, string, CallSettings)
             // Create client
             Debugger2Client debugger2Client = Debugger2Client.Create();
             // Initialize request argument(s)
@@ -79,8 +79,8 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for SetBreakpointAsync</summary>
         public async Task SetBreakpointAsync()
         {
-            // Snippet: SetBreakpointAsync(String, Breakpoint, String, CallSettings)
-            // Additional: SetBreakpointAsync(String, Breakpoint, String, CancellationToken)
+            // Snippet: SetBreakpointAsync(string, Breakpoint, string, CallSettings)
+            // Additional: SetBreakpointAsync(string, Breakpoint, string, CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -132,7 +132,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for GetBreakpoint</summary>
         public void GetBreakpoint()
         {
-            // Snippet: GetBreakpoint(String, String, String, CallSettings)
+            // Snippet: GetBreakpoint(string, string, string, CallSettings)
             // Create client
             Debugger2Client debugger2Client = Debugger2Client.Create();
             // Initialize request argument(s)
@@ -147,8 +147,8 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for GetBreakpointAsync</summary>
         public async Task GetBreakpointAsync()
         {
-            // Snippet: GetBreakpointAsync(String, String, String, CallSettings)
-            // Additional: GetBreakpointAsync(String, String, String, CancellationToken)
+            // Snippet: GetBreakpointAsync(string, string, string, CallSettings)
+            // Additional: GetBreakpointAsync(string, string, string, CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -200,7 +200,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for DeleteBreakpoint</summary>
         public void DeleteBreakpoint()
         {
-            // Snippet: DeleteBreakpoint(String, String, String, CallSettings)
+            // Snippet: DeleteBreakpoint(string, string, string, CallSettings)
             // Create client
             Debugger2Client debugger2Client = Debugger2Client.Create();
             // Initialize request argument(s)
@@ -215,8 +215,8 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for DeleteBreakpointAsync</summary>
         public async Task DeleteBreakpointAsync()
         {
-            // Snippet: DeleteBreakpointAsync(String, String, String, CallSettings)
-            // Additional: DeleteBreakpointAsync(String, String, String, CancellationToken)
+            // Snippet: DeleteBreakpointAsync(string, string, string, CallSettings)
+            // Additional: DeleteBreakpointAsync(string, string, string, CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -276,7 +276,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for ListBreakpoints</summary>
         public void ListBreakpoints()
         {
-            // Snippet: ListBreakpoints(String, String, CallSettings)
+            // Snippet: ListBreakpoints(string, string, CallSettings)
             // Create client
             Debugger2Client debugger2Client = Debugger2Client.Create();
             // Initialize request argument(s)
@@ -290,8 +290,8 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for ListBreakpointsAsync</summary>
         public async Task ListBreakpointsAsync()
         {
-            // Snippet: ListBreakpointsAsync(String, String, CallSettings)
-            // Additional: ListBreakpointsAsync(String, String, CancellationToken)
+            // Snippet: ListBreakpointsAsync(string, string, CallSettings)
+            // Additional: ListBreakpointsAsync(string, string, CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -342,7 +342,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for ListDebuggees</summary>
         public void ListDebuggees()
         {
-            // Snippet: ListDebuggees(String, String, CallSettings)
+            // Snippet: ListDebuggees(string, string, CallSettings)
             // Create client
             Debugger2Client debugger2Client = Debugger2Client.Create();
             // Initialize request argument(s)
@@ -356,8 +356,8 @@ namespace Google.Cloud.Debugger.V2.Snippets
         /// <summary>Snippet for ListDebuggeesAsync</summary>
         public async Task ListDebuggeesAsync()
         {
-            // Snippet: ListDebuggeesAsync(String, String, CallSettings)
-            // Additional: ListDebuggeesAsync(String, String, CancellationToken)
+            // Snippet: ListDebuggeesAsync(string, string, CallSettings)
+            // Additional: ListDebuggeesAsync(string, string, CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)

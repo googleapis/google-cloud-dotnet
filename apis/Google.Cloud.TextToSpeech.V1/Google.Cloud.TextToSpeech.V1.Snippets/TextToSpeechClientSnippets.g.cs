@@ -51,7 +51,7 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
         /// <summary>Snippet for ListVoices</summary>
         public void ListVoices()
         {
-            // Snippet: ListVoices(String, CallSettings)
+            // Snippet: ListVoices(string, CallSettings)
             // Create client
             TextToSpeechClient textToSpeechClient = TextToSpeechClient.Create();
             // Initialize request argument(s)
@@ -64,8 +64,8 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
         /// <summary>Snippet for ListVoicesAsync</summary>
         public async Task ListVoicesAsync()
         {
-            // Snippet: ListVoicesAsync(String, CallSettings)
-            // Additional: ListVoicesAsync(String, CancellationToken)
+            // Snippet: ListVoicesAsync(string, CallSettings)
+            // Additional: ListVoicesAsync(string, CancellationToken)
             // Create client
             TextToSpeechClient textToSpeechClient = await TextToSpeechClient.CreateAsync();
             // Initialize request argument(s)
