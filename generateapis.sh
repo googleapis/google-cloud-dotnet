@@ -100,10 +100,6 @@ generate_microgenerator() {
     $GOOGLEAPIS/google/cloud/common_resources.proto
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
-  # The microgenerator currently creates Google.Cloud directories due to being given
-  # the common resources proto. Clean up for now; this is being fixed in the generator.
-  rm -rf $API_TMP_DIR/Google.Cloud{,.Snippets,.Tests}
-
   # We generate our own project files
   rm $(find tmp -name '*.csproj')
   
