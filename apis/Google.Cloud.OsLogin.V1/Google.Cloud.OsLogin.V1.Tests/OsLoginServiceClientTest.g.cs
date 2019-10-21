@@ -40,13 +40,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeletePosixAccountRequest expectedRequest = new DeletePosixAccountRequest
             {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
+                PosixAccountName = new PosixAccountName("[USER]", "[PROJECT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeletePosixAccount(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[USER]", "[PROJECT]");
+            PosixAccountName name = new PosixAccountName("[USER]", "[PROJECT]");
             client.DeletePosixAccount(name);
             mockGrpcClient.VerifyAll();
         }
@@ -57,13 +57,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeletePosixAccountRequest expectedRequest = new DeletePosixAccountRequest
             {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
+                PosixAccountName = new PosixAccountName("[USER]", "[PROJECT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[USER]", "[PROJECT]");
+            PosixAccountName name = new PosixAccountName("[USER]", "[PROJECT]");
             await client.DeletePosixAccountAsync(name);
             mockGrpcClient.VerifyAll();
         }
@@ -74,7 +74,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
+                PosixAccountName = new PosixAccountName("[USER]", "[PROJECT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeletePosixAccount(request, It.IsAny<CallOptions>()))
@@ -90,7 +90,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
+                PosixAccountName = new PosixAccountName("[USER]", "[PROJECT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, It.IsAny<CallOptions>()))
@@ -106,13 +106,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeleteSshPublicKeyRequest expectedRequest = new DeleteSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKeyName name = new SshPublicKeyName("[USER]", "[FINGERPRINT]");
             client.DeleteSshPublicKey(name);
             mockGrpcClient.VerifyAll();
         }
@@ -123,13 +123,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeleteSshPublicKeyRequest expectedRequest = new DeleteSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKeyName name = new SshPublicKeyName("[USER]", "[FINGERPRINT]");
             await client.DeleteSshPublicKeyAsync(name);
             mockGrpcClient.VerifyAll();
         }
@@ -140,7 +140,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, It.IsAny<CallOptions>()))
@@ -156,7 +156,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
@@ -258,19 +258,19 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             GetSshPublicKeyRequest expectedRequest = new GetSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                Name = "name3373707",
             };
             SshPublicKey expectedResponse = new SshPublicKey
             {
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            string name = "name3373707";
             SshPublicKey response = client.GetSshPublicKey(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -282,19 +282,19 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             GetSshPublicKeyRequest expectedRequest = new GetSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                Name = "name3373707",
             };
             SshPublicKey expectedResponse = new SshPublicKey
             {
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            string name = "name3373707";
             SshPublicKey response = await client.GetSshPublicKeyAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -304,16 +304,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
         public void GetSshPublicKey2()
         {
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
-            {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-            };
+            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest();
             SshPublicKey expectedResponse = new SshPublicKey
             {
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -327,16 +324,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
         public async Task GetSshPublicKeyAsync2()
         {
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
-            {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-            };
+            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest();
             SshPublicKey expectedResponse = new SshPublicKey
             {
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -437,7 +431,6 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, It.IsAny<CallOptions>()))
@@ -455,7 +448,6 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
@@ -472,7 +464,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new SshPublicKey(),
             };
             SshPublicKey expectedResponse = new SshPublicKey
@@ -480,12 +472,12 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKeyName name = new SshPublicKeyName("[USER]", "[FINGERPRINT]");
             SshPublicKey sshPublicKey = new SshPublicKey();
             SshPublicKey response = client.UpdateSshPublicKey(name, sshPublicKey);
             Assert.Same(expectedResponse, response);
@@ -498,7 +490,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new SshPublicKey(),
             };
             SshPublicKey expectedResponse = new SshPublicKey
@@ -506,12 +498,12 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKeyName name = new SshPublicKeyName("[USER]", "[FINGERPRINT]");
             SshPublicKey sshPublicKey = new SshPublicKey();
             SshPublicKey response = await client.UpdateSshPublicKeyAsync(name, sshPublicKey);
             Assert.Same(expectedResponse, response);
@@ -524,7 +516,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new SshPublicKey(),
                 UpdateMask = new FieldMask(),
             };
@@ -533,12 +525,12 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKeyName name = new SshPublicKeyName("[USER]", "[FINGERPRINT]");
             SshPublicKey sshPublicKey = new SshPublicKey();
             FieldMask updateMask = new FieldMask();
             SshPublicKey response = client.UpdateSshPublicKey(name, sshPublicKey, updateMask);
@@ -552,7 +544,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new SshPublicKey(),
                 UpdateMask = new FieldMask(),
             };
@@ -561,12 +553,12 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKeyName name = new SshPublicKeyName("[USER]", "[FINGERPRINT]");
             SshPublicKey sshPublicKey = new SshPublicKey();
             FieldMask updateMask = new FieldMask();
             SshPublicKey response = await client.UpdateSshPublicKeyAsync(name, sshPublicKey, updateMask);
@@ -580,7 +572,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new SshPublicKey(),
             };
             SshPublicKey expectedResponse = new SshPublicKey
@@ -588,7 +580,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -604,7 +596,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new SshPublicKey(),
             };
             SshPublicKey expectedResponse = new SshPublicKey
@@ -612,7 +604,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key106079",
                 ExpirationTimeUsec = 2058878882L,
                 Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                SshPublicKeyName = new SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));

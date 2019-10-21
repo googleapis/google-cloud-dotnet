@@ -21,143 +21,44 @@ using linq = System.Linq;
 namespace Google.Cloud.OsLogin.V1
 {
     /// <summary>
-    /// Resource name for the 'fingerprint' resource.
+    /// Resource name for the 'posix_account' resource.
     /// </summary>
-    public sealed partial class FingerprintName : gax::IResourceName, sys::IEquatable<FingerprintName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
-
-        /// <summary>
-        /// Parses the given fingerprint resource name in string form into a new
-        /// <see cref="FingerprintName"/> instance.
-        /// </summary>
-        /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="FingerprintName"/> if successful.</returns>
-        public static FingerprintName Parse(string fingerprintName)
-        {
-            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(fingerprintName);
-            return new FingerprintName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given fingerprint resource name in string form into a new
-        /// <see cref="FingerprintName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="fingerprintName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="FingerprintName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string fingerprintName, out FingerprintName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(fingerprintName, out resourceName))
-            {
-                result = new FingerprintName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="FingerprintName"/>.</summary>
-        /// <param name="userId">The <c>user</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="fingerprintId">The <c>fingerprint</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="FingerprintName"/>.</returns>
-        public static string Format(string userId, string fingerprintId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(userId, nameof(userId)), gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId)));
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="FingerprintName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="userId">The user ID. Must not be <c>null</c>.</param>
-        /// <param name="fingerprintId">The fingerprint ID. Must not be <c>null</c>.</param>
-        public FingerprintName(string userId, string fingerprintId)
-        {
-            UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
-            FingerprintId = gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId));
-        }
-
-        /// <summary>
-        /// The user ID. Never <c>null</c>.
-        /// </summary>
-        public string UserId { get; }
-
-        /// <summary>
-        /// The fingerprint ID. Never <c>null</c>.
-        /// </summary>
-        public string FingerprintId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(UserId, FingerprintId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as FingerprintName);
-
-        /// <inheritdoc />
-        public bool Equals(FingerprintName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(FingerprintName a, FingerprintName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(FingerprintName a, FingerprintName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'project' resource.
-    /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
+    public sealed partial class PosixAccountName : gax::IResourceName, sys::IEquatable<PosixAccountName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/projects/{project}");
 
         /// <summary>
-        /// Parses the given project resource name in string form into a new
-        /// <see cref="ProjectName"/> instance.
+        /// Parses the given posix_account resource name in string form into a new
+        /// <see cref="PosixAccountName"/> instance.
         /// </summary>
-        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
-        public static ProjectName Parse(string projectName)
+        /// <param name="posixAccountName">The posix_account resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="PosixAccountName"/> if successful.</returns>
+        public static PosixAccountName Parse(string posixAccountName)
         {
-            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
-            return new ProjectName(resourceName[0], resourceName[1]);
+            gax::GaxPreconditions.CheckNotNull(posixAccountName, nameof(posixAccountName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(posixAccountName);
+            return new PosixAccountName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given project resource name in string form into a new
-        /// <see cref="ProjectName"/> instance.
+        /// Tries to parse the given posix_account resource name in string form into a new
+        /// <see cref="PosixAccountName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="posixAccountName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ProjectName"/>,
+        /// <param name="posixAccountName">The posix_account resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="PosixAccountName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string projectName, out ProjectName result)
+        public static bool TryParse(string posixAccountName, out PosixAccountName result)
         {
-            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::GaxPreconditions.CheckNotNull(posixAccountName, nameof(posixAccountName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(projectName, out resourceName))
+            if (s_template.TryParseName(posixAccountName, out resourceName))
             {
-                result = new ProjectName(resourceName[0], resourceName[1]);
+                result = new PosixAccountName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -167,20 +68,20 @@ namespace Google.Cloud.OsLogin.V1
             }
         }
 
-        /// <summary>Formats the IDs into the string representation of the <see cref="ProjectName"/>.</summary>
+        /// <summary>Formats the IDs into the string representation of the <see cref="PosixAccountName"/>.</summary>
         /// <param name="userId">The <c>user</c> ID. Must not be <c>null</c>.</param>
         /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="ProjectName"/>.</returns>
+        /// <returns>The string representation of the <see cref="PosixAccountName"/>.</returns>
         public static string Format(string userId, string projectId) =>
             s_template.Expand(gax::GaxPreconditions.CheckNotNull(userId, nameof(userId)), gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
+        /// Constructs a new instance of the <see cref="PosixAccountName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="userId">The user ID. Must not be <c>null</c>.</param>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        public ProjectName(string userId, string projectId)
+        public PosixAccountName(string userId, string projectId)
         {
             UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
@@ -206,16 +107,115 @@ namespace Google.Cloud.OsLogin.V1
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ProjectName);
+        public override bool Equals(object obj) => Equals(obj as PosixAccountName);
 
         /// <inheritdoc />
-        public bool Equals(ProjectName other) => ToString() == other?.ToString();
+        public bool Equals(PosixAccountName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(ProjectName a, ProjectName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(PosixAccountName a, PosixAccountName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(ProjectName a, ProjectName b) => !(a == b);
+        public static bool operator !=(PosixAccountName a, PosixAccountName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'ssh_public_key' resource.
+    /// </summary>
+    public sealed partial class SshPublicKeyName : gax::IResourceName, sys::IEquatable<SshPublicKeyName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
+
+        /// <summary>
+        /// Parses the given ssh_public_key resource name in string form into a new
+        /// <see cref="SshPublicKeyName"/> instance.
+        /// </summary>
+        /// <param name="sshPublicKeyName">The ssh_public_key resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SshPublicKeyName"/> if successful.</returns>
+        public static SshPublicKeyName Parse(string sshPublicKeyName)
+        {
+            gax::GaxPreconditions.CheckNotNull(sshPublicKeyName, nameof(sshPublicKeyName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(sshPublicKeyName);
+            return new SshPublicKeyName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given ssh_public_key resource name in string form into a new
+        /// <see cref="SshPublicKeyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="sshPublicKeyName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="sshPublicKeyName">The ssh_public_key resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="SshPublicKeyName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sshPublicKeyName, out SshPublicKeyName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(sshPublicKeyName, nameof(sshPublicKeyName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(sshPublicKeyName, out resourceName))
+            {
+                result = new SshPublicKeyName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="SshPublicKeyName"/>.</summary>
+        /// <param name="userId">The <c>user</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="fingerprintId">The <c>fingerprint</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="SshPublicKeyName"/>.</returns>
+        public static string Format(string userId, string fingerprintId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(userId, nameof(userId)), gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId)));
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="SshPublicKeyName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="userId">The user ID. Must not be <c>null</c>.</param>
+        /// <param name="fingerprintId">The fingerprint ID. Must not be <c>null</c>.</param>
+        public SshPublicKeyName(string userId, string fingerprintId)
+        {
+            UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
+            FingerprintId = gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId));
+        }
+
+        /// <summary>
+        /// The user ID. Never <c>null</c>.
+        /// </summary>
+        public string UserId { get; }
+
+        /// <summary>
+        /// The fingerprint ID. Never <c>null</c>.
+        /// </summary>
+        public string FingerprintId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(UserId, FingerprintId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as SshPublicKeyName);
+
+        /// <inheritdoc />
+        public bool Equals(SshPublicKeyName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(SshPublicKeyName a, SshPublicKeyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(SshPublicKeyName a, SshPublicKeyName b) => !(a == b);
     }
 
     /// <summary>
@@ -313,11 +313,11 @@ namespace Google.Cloud.OsLogin.V1
     public partial class DeletePosixAccountRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.OsLogin.V1.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1.PosixAccountName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Google.Cloud.OsLogin.V1.ProjectName ProjectName
+        public Google.Cloud.OsLogin.V1.PosixAccountName PosixAccountName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.ProjectName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.PosixAccountName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -326,11 +326,11 @@ namespace Google.Cloud.OsLogin.V1
     public partial class DeleteSshPublicKeyRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.OsLogin.V1.FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1.SshPublicKeyName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Google.Cloud.OsLogin.V1.FingerprintName FingerprintName
+        public Google.Cloud.OsLogin.V1.SshPublicKeyName SshPublicKeyName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.FingerprintName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.SshPublicKeyName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -344,19 +344,6 @@ namespace Google.Cloud.OsLogin.V1
         public Google.Cloud.OsLogin.V1.UserName UserName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.UserName.Parse(Name); }
-            set { Name = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
-    public partial class GetSshPublicKeyRequest
-    {
-        /// <summary>
-        /// <see cref="Google.Cloud.OsLogin.V1.FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public Google.Cloud.OsLogin.V1.FingerprintName FingerprintName
-        {
-            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.FingerprintName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -378,11 +365,11 @@ namespace Google.Cloud.OsLogin.V1
     public partial class UpdateSshPublicKeyRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.OsLogin.V1.FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1.SshPublicKeyName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Google.Cloud.OsLogin.V1.FingerprintName FingerprintName
+        public Google.Cloud.OsLogin.V1.SshPublicKeyName SshPublicKeyName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.FingerprintName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1.SshPublicKeyName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 

@@ -114,14 +114,14 @@ namespace Google.Cloud.OsLogin.V1
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="OsLoginServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 10000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(10000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(10000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -136,14 +136,13 @@ namespace Google.Cloud.OsLogin.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -152,7 +151,7 @@ namespace Google.Cloud.OsLogin.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -166,14 +165,13 @@ namespace Google.Cloud.OsLogin.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -182,7 +180,7 @@ namespace Google.Cloud.OsLogin.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -196,9 +194,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -226,9 +224,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -256,14 +254,13 @@ namespace Google.Cloud.OsLogin.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -272,7 +269,7 @@ namespace Google.Cloud.OsLogin.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -286,14 +283,13 @@ namespace Google.Cloud.OsLogin.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -302,7 +298,7 @@ namespace Google.Cloud.OsLogin.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -521,11 +517,11 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeletePosixAccountAsync(
-            ProjectName name,
+            PosixAccountName name,
             gaxgrpc::CallSettings callSettings = null) => DeletePosixAccountAsync(
                 new DeletePosixAccountRequest
                 {
-                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    PosixAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -544,7 +540,7 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeletePosixAccountAsync(
-            ProjectName name,
+            PosixAccountName name,
             st::CancellationToken cancellationToken) => DeletePosixAccountAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -561,11 +557,11 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeletePosixAccount(
-            ProjectName name,
+            PosixAccountName name,
             gaxgrpc::CallSettings callSettings = null) => DeletePosixAccount(
                 new DeletePosixAccountRequest
                 {
-                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    PosixAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -700,11 +696,11 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteSshPublicKeyAsync(
-            FingerprintName name,
+            SshPublicKeyName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteSshPublicKeyAsync(
                 new DeleteSshPublicKeyRequest
                 {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -723,7 +719,7 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteSshPublicKeyAsync(
-            FingerprintName name,
+            SshPublicKeyName name,
             st::CancellationToken cancellationToken) => DeleteSshPublicKeyAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -740,11 +736,11 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteSshPublicKey(
-            FingerprintName name,
+            SshPublicKeyName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteSshPublicKey(
                 new DeleteSshPublicKeyRequest
                 {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1064,77 +1060,11 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
-            FingerprintName name,
-            gaxgrpc::CallSettings callSettings = null) => GetSshPublicKeyAsync(
-                new GetSshPublicKeyRequest
-                {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Retrieves an SSH public key.
-        /// </summary>
-        /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
-        /// by their SHA-256 fingerprint. The fingerprint of the public key is in
-        /// format `users/{user}/sshPublicKeys/{fingerprint}`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
-            FingerprintName name,
-            st::CancellationToken cancellationToken) => GetSshPublicKeyAsync(
-                name,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Retrieves an SSH public key.
-        /// </summary>
-        /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
-        /// by their SHA-256 fingerprint. The fingerprint of the public key is in
-        /// format `users/{user}/sshPublicKeys/{fingerprint}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual gcoc::SshPublicKey GetSshPublicKey(
-            FingerprintName name,
-            gaxgrpc::CallSettings callSettings = null) => GetSshPublicKey(
-                new GetSshPublicKeyRequest
-                {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Retrieves an SSH public key.
-        /// </summary>
-        /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
-        /// by their SHA-256 fingerprint. The fingerprint of the public key is in
-        /// format `users/{user}/sshPublicKeys/{fingerprint}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
             string name,
             gaxgrpc::CallSettings callSettings = null) => GetSshPublicKeyAsync(
                 new GetSshPublicKeyRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = name ?? "", // Optional
                 },
                 callSettings);
 
@@ -1177,7 +1107,7 @@ namespace Google.Cloud.OsLogin.V1
             gaxgrpc::CallSettings callSettings = null) => GetSshPublicKey(
                 new GetSshPublicKeyRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = name ?? "", // Optional
                 },
                 callSettings);
 
@@ -1261,7 +1191,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                 },
                 callSettings);
 
@@ -1314,7 +1244,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                 },
                 callSettings);
 
@@ -1342,7 +1272,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                 },
                 callSettings);
 
@@ -1395,7 +1325,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                 },
                 callSettings);
 
@@ -1427,7 +1357,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                     ProjectId = projectId ?? "", // Optional
                 },
                 callSettings);
@@ -1490,7 +1420,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                     ProjectId = projectId ?? "", // Optional
                 },
                 callSettings);
@@ -1523,7 +1453,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                     ProjectId = projectId ?? "", // Optional
                 },
                 callSettings);
@@ -1586,7 +1516,7 @@ namespace Google.Cloud.OsLogin.V1
                 new ImportSshPublicKeyRequest
                 {
                     Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    SshPublicKey = sshPublicKey, // Optional
                     ProjectId = projectId ?? "", // Optional
                 },
                 callSettings);
@@ -1672,12 +1602,12 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
-            FingerprintName name,
+            SshPublicKeyName name,
             gcoc::SshPublicKey sshPublicKey,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKeyAsync(
                 new UpdateSshPublicKeyRequest
                 {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
                 },
                 callSettings);
@@ -1701,7 +1631,7 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
-            FingerprintName name,
+            SshPublicKeyName name,
             gcoc::SshPublicKey sshPublicKey,
             st::CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
                 name,
@@ -1727,12 +1657,12 @@ namespace Google.Cloud.OsLogin.V1
         /// The RPC response.
         /// </returns>
         public virtual gcoc::SshPublicKey UpdateSshPublicKey(
-            FingerprintName name,
+            SshPublicKeyName name,
             gcoc::SshPublicKey sshPublicKey,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKey(
                 new UpdateSshPublicKeyRequest
                 {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
                 },
                 callSettings);
@@ -1843,13 +1773,13 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
-            FingerprintName name,
+            SshPublicKeyName name,
             gcoc::SshPublicKey sshPublicKey,
             pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKeyAsync(
                 new UpdateSshPublicKeyRequest
                 {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
                     UpdateMask = updateMask, // Optional
                 },
@@ -1877,7 +1807,7 @@ namespace Google.Cloud.OsLogin.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
-            FingerprintName name,
+            SshPublicKeyName name,
             gcoc::SshPublicKey sshPublicKey,
             pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
@@ -1908,13 +1838,13 @@ namespace Google.Cloud.OsLogin.V1
         /// The RPC response.
         /// </returns>
         public virtual gcoc::SshPublicKey UpdateSshPublicKey(
-            FingerprintName name,
+            SshPublicKeyName name,
             gcoc::SshPublicKey sshPublicKey,
             pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKey(
                 new UpdateSshPublicKeyRequest
                 {
-                    FingerprintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     SshPublicKey = gax::GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
                     UpdateMask = updateMask, // Optional
                 },
