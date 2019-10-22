@@ -1,0 +1,11 @@
+--- a/apis/Google.Cloud.Scheduler.V1/Google.Cloud.Scheduler.V1/TargetResourceNames.g.cs
++++ b/apis/Google.Cloud.Scheduler.V1/Google.Cloud.Scheduler.V1/TargetResourceNames.g.cs
+@@ -116,7 +116,7 @@ namespace Google.Cloud.Scheduler.V1
+         /// </summary>
+         public TopicName TopicNameAsTopicName
+         {
+-            get => string.IsNullOrEmpty(TopicName) ? null : TopicName.Parse(TopicName);
++            get => string.IsNullOrEmpty(TopicName) ? null : global::Google.Cloud.Scheduler.V1.TopicName.Parse(TopicName);
+             set => TopicName = value?.ToString() ?? "";
+         }
+     }

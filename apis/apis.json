@@ -721,9 +721,8 @@
 
   {
     "id": "Google.Cloud.Scheduler.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/scheduler/v1",
-    "serviceYaml": "cloudscheduler_v1.yaml",
     "productName": "Google Cloud Scheduler",
     "productUrl": "https://cloud.google.com/scheduler/",
     "version": "1.1.0-beta01",
