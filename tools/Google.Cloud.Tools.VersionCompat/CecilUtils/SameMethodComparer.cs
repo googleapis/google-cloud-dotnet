@@ -51,6 +51,10 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             {
                 return false;
             }
+            if (x.Parameters.Count != y.Parameters.Count)
+            {
+                return false;
+            }
             foreach (var (xp, yp) in x.Parameters.Zip(y.Parameters))
             {
                 if (!SameTypeComparer.Instance.Equals(xp.ParameterType, yp.ParameterType))
@@ -58,7 +62,7 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
                     return false;
                 }
             }
-            // Don't compare default values, in/out/ref, etc... as these do not change the method signature.
+            // Don't compare name, default values, in/out/ref, etc... as these do not change the method signature.
             return true;
         }
         public int GetHashCode(MethodDefinition obj) => obj?.Name.GetHashCode() ?? 0;

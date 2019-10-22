@@ -21,14 +21,14 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Class
     namespace NoChange.A { public class C { } }
     namespace NoChange.B { public class C { } }
 
-    namespace ToStatic.A { public class C { } }
+    namespace ToStatic.A { public class C { private C() { } } }
     namespace ToStatic.B { public static class C { } }
 
     namespace ToStaticNoCtor.A { public class C { private C() { } } }
     namespace ToStaticNoCtor.B { public static class C { } }
 
-    namespace ToAbstract.A { public class C { } }
-    namespace ToAbstract.B { public abstract class C { } }
+    namespace ToAbstract.A { public class C { public C() { } } }
+    namespace ToAbstract.B { public abstract class C { public C() { } } }
 
     namespace ToAbstractNoCtor.A { public class C { protected C() { } } }
     namespace ToAbstractNoCtor.B { public abstract class C { protected C() { } } }
@@ -42,8 +42,8 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Class
     namespace FromStaticNoCtor.A { public static class C { } }
     namespace FromStaticNoCtor.B { public class C { private C() { } } }
 
-    namespace FromAbstract.A { public abstract class C { } }
-    namespace FromAbstract.B { public class C { } }
+    namespace FromAbstract.A { public abstract class C { public C() { } } }
+    namespace FromAbstract.B { public class C { public C() { } } }
 
     namespace FromAbstractNoCtor.A { public abstract class C { private C() { } } }
     namespace FromAbstractNoCtor.B { public class C { private C() { } } }
@@ -119,7 +119,8 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Class
         [Fact] public void ToAbstract() => TestMajor(Cause.ClassModifierChanged);
         [Fact] public void ToAbstractNoCtor() => TestNone();
         [Fact] public void ToSealed() => TestMajor(Cause.ClassModifierChanged);
-        [Fact] public void FromStatic() => TestMinor(Cause.ClassModifierChanged);
+        [Fact] public void FromStatic() => Test()
+            ((Level.Minor, Cause.ClassModifierChanged), (Level.Minor, Cause.CtorAdded));
         [Fact] public void FromStaticNoCtor() => TestNone();
         [Fact] public void FromAbstract() => TestMinor(Cause.ClassModifierChanged);
         [Fact] public void FromAbstractNoCtor() => TestNone();
