@@ -71,6 +71,7 @@ Beta:
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Google.Cloud.Translate.V3](Google.Cloud.Translate.V3/index.html)
 - [Grafeas.V1](Grafeas.V1/index.html)
+- [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html)
 
 Alpha:
 
