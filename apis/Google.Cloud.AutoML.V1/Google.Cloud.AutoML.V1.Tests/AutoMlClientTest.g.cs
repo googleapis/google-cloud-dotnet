@@ -253,6 +253,104 @@ namespace Google.Cloud.AutoML.V1.Tests
         }
 
         [Fact]
+        public void GetAnnotationSpec()
+        {
+            Mock<AutoMl.AutoMlClient> mockGrpcClient = new Mock<AutoMl.AutoMlClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetAnnotationSpecRequest expectedRequest = new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
+            };
+            AnnotationSpec expectedResponse = new AnnotationSpec
+            {
+                Name = "name2-1052831874",
+                DisplayName = "displayName1615086568",
+                ExampleCount = 1517063674,
+            };
+            mockGrpcClient.Setup(x => x.GetAnnotationSpec(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            AutoMlClient client = new AutoMlClientImpl(mockGrpcClient.Object, null);
+            AnnotationSpecName name = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]");
+            AnnotationSpec response = client.GetAnnotationSpec(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetAnnotationSpecAsync()
+        {
+            Mock<AutoMl.AutoMlClient> mockGrpcClient = new Mock<AutoMl.AutoMlClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetAnnotationSpecRequest expectedRequest = new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
+            };
+            AnnotationSpec expectedResponse = new AnnotationSpec
+            {
+                Name = "name2-1052831874",
+                DisplayName = "displayName1615086568",
+                ExampleCount = 1517063674,
+            };
+            mockGrpcClient.Setup(x => x.GetAnnotationSpecAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AnnotationSpec>(Task.FromResult(expectedResponse), null, null, null, null));
+            AutoMlClient client = new AutoMlClientImpl(mockGrpcClient.Object, null);
+            AnnotationSpecName name = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]");
+            AnnotationSpec response = await client.GetAnnotationSpecAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetAnnotationSpec2()
+        {
+            Mock<AutoMl.AutoMlClient> mockGrpcClient = new Mock<AutoMl.AutoMlClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
+            };
+            AnnotationSpec expectedResponse = new AnnotationSpec
+            {
+                Name = "name2-1052831874",
+                DisplayName = "displayName1615086568",
+                ExampleCount = 1517063674,
+            };
+            mockGrpcClient.Setup(x => x.GetAnnotationSpec(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            AutoMlClient client = new AutoMlClientImpl(mockGrpcClient.Object, null);
+            AnnotationSpec response = client.GetAnnotationSpec(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetAnnotationSpecAsync2()
+        {
+            Mock<AutoMl.AutoMlClient> mockGrpcClient = new Mock<AutoMl.AutoMlClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
+            };
+            AnnotationSpec expectedResponse = new AnnotationSpec
+            {
+                Name = "name2-1052831874",
+                DisplayName = "displayName1615086568",
+                ExampleCount = 1517063674,
+            };
+            mockGrpcClient.Setup(x => x.GetAnnotationSpecAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AnnotationSpec>(Task.FromResult(expectedResponse), null, null, null, null));
+            AutoMlClient client = new AutoMlClientImpl(mockGrpcClient.Object, null);
+            AnnotationSpec response = await client.GetAnnotationSpecAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void GetModel()
         {
             Mock<AutoMl.AutoMlClient> mockGrpcClient = new Mock<AutoMl.AutoMlClient>(MockBehavior.Strict);
@@ -267,6 +365,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.GetModel(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -292,6 +391,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Model>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -317,6 +417,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.GetModel(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -341,6 +442,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.GetModelAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Model>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -366,6 +468,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.UpdateModel(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -393,6 +496,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Model>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -420,6 +524,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.UpdateModel(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -445,6 +550,7 @@ namespace Google.Cloud.AutoML.V1.Tests
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
                 DatasetId = "datasetId-2115646910",
+                Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.UpdateModelAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Model>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -468,6 +574,7 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Name = "name2-1052831874",
                 AnnotationSpecId = "annotationSpecId60690191",
+                DisplayName = "displayName1615086568",
                 EvaluatedExampleCount = 277565350,
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(expectedRequest, It.IsAny<CallOptions>()))
@@ -493,6 +600,7 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Name = "name2-1052831874",
                 AnnotationSpecId = "annotationSpecId60690191",
+                DisplayName = "displayName1615086568",
                 EvaluatedExampleCount = 277565350,
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(expectedRequest, It.IsAny<CallOptions>()))
@@ -518,6 +626,7 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Name = "name2-1052831874",
                 AnnotationSpecId = "annotationSpecId60690191",
+                DisplayName = "displayName1615086568",
                 EvaluatedExampleCount = 277565350,
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, It.IsAny<CallOptions>()))
@@ -542,6 +651,7 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Name = "name2-1052831874",
                 AnnotationSpecId = "annotationSpecId60690191",
+                DisplayName = "displayName1615086568",
                 EvaluatedExampleCount = 277565350,
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, It.IsAny<CallOptions>()))

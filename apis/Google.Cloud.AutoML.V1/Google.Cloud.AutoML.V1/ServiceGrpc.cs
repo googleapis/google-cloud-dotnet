@@ -54,6 +54,8 @@ namespace Google.Cloud.AutoML.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteDatasetRequest> __Marshaller_google_cloud_automl_v1_DeleteDatasetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.DeleteDatasetRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ImportDataRequest> __Marshaller_google_cloud_automl_v1_ImportDataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ImportDataRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportDataRequest> __Marshaller_google_cloud_automl_v1_ExportDataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ExportDataRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest> __Marshaller_google_cloud_automl_v1_GetAnnotationSpecRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.AnnotationSpec> __Marshaller_google_cloud_automl_v1_AnnotationSpec = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.AnnotationSpec.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.CreateModelRequest> __Marshaller_google_cloud_automl_v1_CreateModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.CreateModelRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelRequest> __Marshaller_google_cloud_automl_v1_GetModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.GetModelRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.Model> __Marshaller_google_cloud_automl_v1_Model = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.Model.Parser.ParseFrom);
@@ -61,6 +63,9 @@ namespace Google.Cloud.AutoML.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelsResponse> __Marshaller_google_cloud_automl_v1_ListModelsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListModelsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteModelRequest> __Marshaller_google_cloud_automl_v1_DeleteModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.DeleteModelRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UpdateModelRequest> __Marshaller_google_cloud_automl_v1_UpdateModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.UpdateModelRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeployModelRequest> __Marshaller_google_cloud_automl_v1_DeployModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.DeployModelRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UndeployModelRequest> __Marshaller_google_cloud_automl_v1_UndeployModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.UndeployModelRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportModelRequest> __Marshaller_google_cloud_automl_v1_ExportModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ExportModelRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest> __Marshaller_google_cloud_automl_v1_GetModelEvaluationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ModelEvaluation> __Marshaller_google_cloud_automl_v1_ModelEvaluation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ModelEvaluation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest> __Marshaller_google_cloud_automl_v1_ListModelEvaluationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest.Parser.ParseFrom);
@@ -115,6 +120,13 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_ExportDataRequest,
         __Marshaller_google_longrunning_Operation);
 
+    static readonly grpc::Method<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest, global::Google.Cloud.AutoML.V1.AnnotationSpec> __Method_GetAnnotationSpec = new grpc::Method<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest, global::Google.Cloud.AutoML.V1.AnnotationSpec>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAnnotationSpec",
+        __Marshaller_google_cloud_automl_v1_GetAnnotationSpecRequest,
+        __Marshaller_google_cloud_automl_v1_AnnotationSpec);
+
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.CreateModelRequest, global::Google.LongRunning.Operation> __Method_CreateModel = new grpc::Method<global::Google.Cloud.AutoML.V1.CreateModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +161,27 @@ namespace Google.Cloud.AutoML.V1 {
         "UpdateModel",
         __Marshaller_google_cloud_automl_v1_UpdateModelRequest,
         __Marshaller_google_cloud_automl_v1_Model);
+
+    static readonly grpc::Method<global::Google.Cloud.AutoML.V1.DeployModelRequest, global::Google.LongRunning.Operation> __Method_DeployModel = new grpc::Method<global::Google.Cloud.AutoML.V1.DeployModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeployModel",
+        __Marshaller_google_cloud_automl_v1_DeployModelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.AutoML.V1.UndeployModelRequest, global::Google.LongRunning.Operation> __Method_UndeployModel = new grpc::Method<global::Google.Cloud.AutoML.V1.UndeployModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UndeployModel",
+        __Marshaller_google_cloud_automl_v1_UndeployModelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.AutoML.V1.ExportModelRequest, global::Google.LongRunning.Operation> __Method_ExportModel = new grpc::Method<global::Google.Cloud.AutoML.V1.ExportModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportModel",
+        __Marshaller_google_cloud_automl_v1_ExportModelRequest,
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest, global::Google.Cloud.AutoML.V1.ModelEvaluation> __Method_GetModelEvaluation = new grpc::Method<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest, global::Google.Cloud.AutoML.V1.ModelEvaluation>(
         grpc::MethodType.Unary,
@@ -258,6 +291,17 @@ namespace Google.Cloud.AutoML.V1 {
       }
 
       /// <summary>
+      /// Gets an annotation spec.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.AnnotationSpec> GetAnnotationSpec(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a model.
       /// Returns a Model in the [response][google.longrunning.Operation.response]
       /// field when it completes.
@@ -316,6 +360,62 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.Model> UpdateModel(global::Google.Cloud.AutoML.V1.UpdateModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deploys a model. If a model is already deployed, deploying it with the
+      /// same parameters has no effect. Deploying with different parametrs
+      /// (as e.g. changing
+      ///
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      ///  will reset the deployment state without pausing the model's availability.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection; all other
+      /// domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeployModel(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Undeploys a model. If the model is not deployed this method has no effect.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection;
+      /// all other domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UndeployModel(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports a trained, "export-able", model to a user specified Google Cloud
+      /// Storage location. A model is considered export-able if and only if it has
+      /// an export format defined for it in
+      /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportModel(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -700,6 +800,50 @@ namespace Google.Cloud.AutoML.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ExportData, null, options, request);
       }
       /// <summary>
+      /// Gets an annotation spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AutoML.V1.AnnotationSpec GetAnnotationSpec(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnnotationSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an annotation spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AutoML.V1.AnnotationSpec GetAnnotationSpec(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAnnotationSpec, null, options, request);
+      }
+      /// <summary>
+      /// Gets an annotation spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.AnnotationSpec> GetAnnotationSpecAsync(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnnotationSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an annotation spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.AnnotationSpec> GetAnnotationSpecAsync(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAnnotationSpec, null, options, request);
+      }
+      /// <summary>
       /// Creates a model.
       /// Returns a Model in the [response][google.longrunning.Operation.response]
       /// field when it completes.
@@ -952,6 +1096,230 @@ namespace Google.Cloud.AutoML.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateModel, null, options, request);
       }
       /// <summary>
+      /// Deploys a model. If a model is already deployed, deploying it with the
+      /// same parameters has no effect. Deploying with different parametrs
+      /// (as e.g. changing
+      ///
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      ///  will reset the deployment state without pausing the model's availability.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection; all other
+      /// domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeployModel(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeployModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deploys a model. If a model is already deployed, deploying it with the
+      /// same parameters has no effect. Deploying with different parametrs
+      /// (as e.g. changing
+      ///
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      ///  will reset the deployment state without pausing the model's availability.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection; all other
+      /// domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeployModel(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeployModel, null, options, request);
+      }
+      /// <summary>
+      /// Deploys a model. If a model is already deployed, deploying it with the
+      /// same parameters has no effect. Deploying with different parametrs
+      /// (as e.g. changing
+      ///
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      ///  will reset the deployment state without pausing the model's availability.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection; all other
+      /// domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeployModelAsync(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeployModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deploys a model. If a model is already deployed, deploying it with the
+      /// same parameters has no effect. Deploying with different parametrs
+      /// (as e.g. changing
+      ///
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      ///  will reset the deployment state without pausing the model's availability.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection; all other
+      /// domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeployModelAsync(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeployModel, null, options, request);
+      }
+      /// <summary>
+      /// Undeploys a model. If the model is not deployed this method has no effect.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection;
+      /// all other domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UndeployModel(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UndeployModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Undeploys a model. If the model is not deployed this method has no effect.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection;
+      /// all other domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UndeployModel(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UndeployModel, null, options, request);
+      }
+      /// <summary>
+      /// Undeploys a model. If the model is not deployed this method has no effect.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection;
+      /// all other domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeployModelAsync(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UndeployModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Undeploys a model. If the model is not deployed this method has no effect.
+      ///
+      /// Only applicable for Text Classification, Image Object Detection;
+      /// all other domains manage deployment automatically.
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeployModelAsync(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UndeployModel, null, options, request);
+      }
+      /// <summary>
+      /// Exports a trained, "export-able", model to a user specified Google Cloud
+      /// Storage location. A model is considered export-able if and only if it has
+      /// an export format defined for it in
+      /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ExportModel(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports a trained, "export-able", model to a user specified Google Cloud
+      /// Storage location. A model is considered export-able if and only if it has
+      /// an export format defined for it in
+      /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ExportModel(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportModel, null, options, request);
+      }
+      /// <summary>
+      /// Exports a trained, "export-able", model to a user specified Google Cloud
+      /// Storage location. A model is considered export-able if and only if it has
+      /// an export format defined for it in
+      /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportModelAsync(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports a trained, "export-able", model to a user specified Google Cloud
+      /// Storage location. A model is considered export-able if and only if it has
+      /// an export format defined for it in
+      /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+      ///
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportModelAsync(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportModel, null, options, request);
+      }
+      /// <summary>
       /// Gets a model evaluation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1058,11 +1426,15 @@ namespace Google.Cloud.AutoML.V1 {
           .AddMethod(__Method_DeleteDataset, serviceImpl.DeleteDataset)
           .AddMethod(__Method_ImportData, serviceImpl.ImportData)
           .AddMethod(__Method_ExportData, serviceImpl.ExportData)
+          .AddMethod(__Method_GetAnnotationSpec, serviceImpl.GetAnnotationSpec)
           .AddMethod(__Method_CreateModel, serviceImpl.CreateModel)
           .AddMethod(__Method_GetModel, serviceImpl.GetModel)
           .AddMethod(__Method_ListModels, serviceImpl.ListModels)
           .AddMethod(__Method_DeleteModel, serviceImpl.DeleteModel)
           .AddMethod(__Method_UpdateModel, serviceImpl.UpdateModel)
+          .AddMethod(__Method_DeployModel, serviceImpl.DeployModel)
+          .AddMethod(__Method_UndeployModel, serviceImpl.UndeployModel)
+          .AddMethod(__Method_ExportModel, serviceImpl.ExportModel)
           .AddMethod(__Method_GetModelEvaluation, serviceImpl.GetModelEvaluation)
           .AddMethod(__Method_ListModelEvaluations, serviceImpl.ListModelEvaluations).Build();
     }
@@ -1080,11 +1452,15 @@ namespace Google.Cloud.AutoML.V1 {
       serviceBinder.AddMethod(__Method_DeleteDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.DeleteDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDataset));
       serviceBinder.AddMethod(__Method_ImportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.ImportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportData));
       serviceBinder.AddMethod(__Method_ExportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.ExportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportData));
+      serviceBinder.AddMethod(__Method_GetAnnotationSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest, global::Google.Cloud.AutoML.V1.AnnotationSpec>(serviceImpl.GetAnnotationSpec));
       serviceBinder.AddMethod(__Method_CreateModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.CreateModelRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateModel));
       serviceBinder.AddMethod(__Method_GetModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.GetModelRequest, global::Google.Cloud.AutoML.V1.Model>(serviceImpl.GetModel));
       serviceBinder.AddMethod(__Method_ListModels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.ListModelsRequest, global::Google.Cloud.AutoML.V1.ListModelsResponse>(serviceImpl.ListModels));
       serviceBinder.AddMethod(__Method_DeleteModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.DeleteModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModel));
       serviceBinder.AddMethod(__Method_UpdateModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.UpdateModelRequest, global::Google.Cloud.AutoML.V1.Model>(serviceImpl.UpdateModel));
+      serviceBinder.AddMethod(__Method_DeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.DeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeployModel));
+      serviceBinder.AddMethod(__Method_UndeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.UndeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeployModel));
+      serviceBinder.AddMethod(__Method_ExportModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.ExportModelRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportModel));
       serviceBinder.AddMethod(__Method_GetModelEvaluation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest, global::Google.Cloud.AutoML.V1.ModelEvaluation>(serviceImpl.GetModelEvaluation));
       serviceBinder.AddMethod(__Method_ListModelEvaluations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest, global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse>(serviceImpl.ListModelEvaluations));
     }

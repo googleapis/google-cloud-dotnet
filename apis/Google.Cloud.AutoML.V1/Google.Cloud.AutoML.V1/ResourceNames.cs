@@ -21,6 +21,121 @@ using linq = System.Linq;
 namespace Google.Cloud.AutoML.V1
 {
     /// <summary>
+    /// Resource name for the 'annotation_spec' resource.
+    /// </summary>
+    public sealed partial class AnnotationSpecName : gax::IResourceName, sys::IEquatable<AnnotationSpecName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/datasets/{dataset}/annotationSpecs/{annotation_spec}");
+
+        /// <summary>
+        /// Parses the given annotation_spec resource name in string form into a new
+        /// <see cref="AnnotationSpecName"/> instance.
+        /// </summary>
+        /// <param name="annotationSpecName">The annotation_spec resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AnnotationSpecName"/> if successful.</returns>
+        public static AnnotationSpecName Parse(string annotationSpecName)
+        {
+            gax::GaxPreconditions.CheckNotNull(annotationSpecName, nameof(annotationSpecName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(annotationSpecName);
+            return new AnnotationSpecName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given annotation_spec resource name in string form into a new
+        /// <see cref="AnnotationSpecName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="annotationSpecName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="annotationSpecName">The annotation_spec resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="AnnotationSpecName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string annotationSpecName, out AnnotationSpecName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(annotationSpecName, nameof(annotationSpecName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(annotationSpecName, out resourceName))
+            {
+                result = new AnnotationSpecName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="AnnotationSpecName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The <c>location</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="datasetId">The <c>dataset</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="annotationSpecId">The <c>annotationSpec</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AnnotationSpecName"/>.</returns>
+        public static string Format(string projectId, string locationId, string datasetId, string annotationSpecId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId)), gax::GaxPreconditions.CheckNotNull(annotationSpecId, nameof(annotationSpecId)));
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="AnnotationSpecName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
+        /// <param name="datasetId">The dataset ID. Must not be <c>null</c>.</param>
+        /// <param name="annotationSpecId">The annotationSpec ID. Must not be <c>null</c>.</param>
+        public AnnotationSpecName(string projectId, string locationId, string datasetId, string annotationSpecId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
+            DatasetId = gax::GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId));
+            AnnotationSpecId = gax::GaxPreconditions.CheckNotNull(annotationSpecId, nameof(annotationSpecId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The location ID. Never <c>null</c>.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The dataset ID. Never <c>null</c>.
+        /// </summary>
+        public string DatasetId { get; }
+
+        /// <summary>
+        /// The annotationSpec ID. Never <c>null</c>.
+        /// </summary>
+        public string AnnotationSpecId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, LocationId, DatasetId, AnnotationSpecId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as AnnotationSpecName);
+
+        /// <inheritdoc />
+        public bool Equals(AnnotationSpecName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(AnnotationSpecName a, AnnotationSpecName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(AnnotationSpecName a, AnnotationSpecName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'dataset' resource.
     /// </summary>
     public sealed partial class DatasetName : gax::IResourceName, sys::IEquatable<DatasetName>
@@ -449,6 +564,19 @@ namespace Google.Cloud.AutoML.V1
     }
 
 
+    public partial class BatchPredictRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.AutoML.V1.ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.AutoML.V1.ModelName ModelName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.AutoML.V1.ModelName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class CreateDatasetRequest
     {
         /// <summary>
@@ -501,6 +629,19 @@ namespace Google.Cloud.AutoML.V1
 
     }
 
+    public partial class DeployModelRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.AutoML.V1.ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.AutoML.V1.ModelName ModelName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.AutoML.V1.ModelName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class ExportDataRequest
     {
         /// <summary>
@@ -509,6 +650,32 @@ namespace Google.Cloud.AutoML.V1
         public Google.Cloud.AutoML.V1.DatasetName DatasetName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.AutoML.V1.DatasetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ExportModelRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.AutoML.V1.ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.AutoML.V1.ModelName ModelName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.AutoML.V1.ModelName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetAnnotationSpecRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.AutoML.V1.AnnotationSpecName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.AutoML.V1.AnnotationSpecName AnnotationSpecName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.AutoML.V1.AnnotationSpecName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -606,6 +773,19 @@ namespace Google.Cloud.AutoML.V1
     }
 
     public partial class PredictRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.AutoML.V1.ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.AutoML.V1.ModelName ModelName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.AutoML.V1.ModelName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class UndeployModelRequest
     {
         /// <summary>
         /// <see cref="Google.Cloud.AutoML.V1.ModelName"/>-typed view over the <see cref="Name"/> resource name property.

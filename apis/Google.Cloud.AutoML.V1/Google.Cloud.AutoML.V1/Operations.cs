@@ -25,32 +25,73 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvYXV0b21sL3YxL29wZXJhdGlvbnMucHJvdG8SFmdv",
-            "b2dsZS5jbG91ZC5hdXRvbWwudjEaH2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
-            "aW8ucHJvdG8aImdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvbW9kZWwucHJvdG8a",
-            "LWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvbW9kZWxfZXZhbHVhdGlvbi5wcm90",
-            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLpAgoRT3BlcmF0aW9uTWV0",
-            "YWRhdGESSQoOZGVsZXRlX2RldGFpbHMYCCABKAsyLy5nb29nbGUuY2xvdWQu",
-            "YXV0b21sLnYxLkRlbGV0ZU9wZXJhdGlvbk1ldGFkYXRhSAASVAoUY3JlYXRl",
-            "X21vZGVsX2RldGFpbHMYCiABKAsyNC5nb29nbGUuY2xvdWQuYXV0b21sLnYx",
-            "LkNyZWF0ZU1vZGVsT3BlcmF0aW9uTWV0YWRhdGFIABIYChBwcm9ncmVzc19w",
-            "ZXJjZW50GA0gASgFEiwKEHBhcnRpYWxfZmFpbHVyZXMYAiADKAsyEi5nb29n",
-            "bGUucnBjLlN0YXR1cxIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgkKB2RldGFpbHMiGQoXRGVsZXRlT3Bl",
-            "cmF0aW9uTWV0YWRhdGEiHgocQ3JlYXRlTW9kZWxPcGVyYXRpb25NZXRhZGF0",
-            "YUKqAQoaY29tLmdvb2dsZS5jbG91ZC5hdXRvbWwudjFQAVo8Z29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hdXRvbWwvdjE7",
-            "YXV0b21sqgIWR29vZ2xlLkNsb3VkLkF1dG9NTC5WMcoCFkdvb2dsZVxDbG91",
-            "ZFxBdXRvTUxcVjHqAhlHb29nbGU6OkNsb3VkOjpBdXRvTUw6OlYxYgZwcm90",
-            "bzM="));
+            "b2dsZS5jbG91ZC5hdXRvbWwudjEaJGdvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
+            "ZGF0YXNldC5wcm90bxofZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9pby5wcm90",
+            "bxoiZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9tb2RlbC5wcm90bxotZ29vZ2xl",
+            "L2Nsb3VkL2F1dG9tbC92MS9tb2RlbF9ldmFsdWF0aW9uLnByb3RvGi9nb29n",
+            "bGUvY2xvdWQvYXV0b21sL3YxL3ByZWRpY3Rpb25fc2VydmljZS5wcm90bxok",
+            "Z29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9zZXJ2aWNlLnByb3RvGhtnb29nbGUv",
+            "cHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhxnb29nbGUvYXBp",
+            "L2Fubm90YXRpb25zLnByb3RvIskHChFPcGVyYXRpb25NZXRhZGF0YRJJCg5k",
+            "ZWxldGVfZGV0YWlscxgIIAEoCzIvLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEu",
+            "RGVsZXRlT3BlcmF0aW9uTWV0YWRhdGFIABJUChRkZXBsb3lfbW9kZWxfZGV0",
+            "YWlscxgYIAEoCzI0Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRGVwbG95TW9k",
+            "ZWxPcGVyYXRpb25NZXRhZGF0YUgAElgKFnVuZGVwbG95X21vZGVsX2RldGFp",
+            "bHMYGSABKAsyNi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlVuZGVwbG95TW9k",
+            "ZWxPcGVyYXRpb25NZXRhZGF0YUgAElQKFGNyZWF0ZV9tb2RlbF9kZXRhaWxz",
+            "GAogASgLMjQuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5DcmVhdGVNb2RlbE9w",
+            "ZXJhdGlvbk1ldGFkYXRhSAASWAoWY3JlYXRlX2RhdGFzZXRfZGV0YWlscxge",
+            "IAEoCzI2Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQ3JlYXRlRGF0YXNldE9w",
+            "ZXJhdGlvbk1ldGFkYXRhSAASUgoTaW1wb3J0X2RhdGFfZGV0YWlscxgPIAEo",
+            "CzIzLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuSW1wb3J0RGF0YU9wZXJhdGlv",
+            "bk1ldGFkYXRhSAASVgoVYmF0Y2hfcHJlZGljdF9kZXRhaWxzGBAgASgLMjUu",
+            "Z29vZ2xlLmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RPcGVyYXRpb25N",
+            "ZXRhZGF0YUgAElIKE2V4cG9ydF9kYXRhX2RldGFpbHMYFSABKAsyMy5nb29n",
+            "bGUuY2xvdWQuYXV0b21sLnYxLkV4cG9ydERhdGFPcGVyYXRpb25NZXRhZGF0",
+            "YUgAElQKFGV4cG9ydF9tb2RlbF9kZXRhaWxzGBYgASgLMjQuZ29vZ2xlLmNs",
+            "b3VkLmF1dG9tbC52MS5FeHBvcnRNb2RlbE9wZXJhdGlvbk1ldGFkYXRhSAAS",
+            "GAoQcHJvZ3Jlc3NfcGVyY2VudBgNIAEoBRIsChBwYXJ0aWFsX2ZhaWx1cmVz",
+            "GAIgAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSLwoLY3JlYXRlX3RpbWUYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1l",
+            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIJCgdkZXRhaWxz",
+            "IhkKF0RlbGV0ZU9wZXJhdGlvbk1ldGFkYXRhIh4KHERlcGxveU1vZGVsT3Bl",
+            "cmF0aW9uTWV0YWRhdGEiIAoeVW5kZXBsb3lNb2RlbE9wZXJhdGlvbk1ldGFk",
+            "YXRhIiAKHkNyZWF0ZURhdGFzZXRPcGVyYXRpb25NZXRhZGF0YSIeChxDcmVh",
+            "dGVNb2RlbE9wZXJhdGlvbk1ldGFkYXRhIh0KG0ltcG9ydERhdGFPcGVyYXRp",
+            "b25NZXRhZGF0YSLHAQobRXhwb3J0RGF0YU9wZXJhdGlvbk1ldGFkYXRhEl0K",
+            "C291dHB1dF9pbmZvGAEgASgLMkguZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5F",
+            "eHBvcnREYXRhT3BlcmF0aW9uTWV0YWRhdGEuRXhwb3J0RGF0YU91dHB1dElu",
+            "Zm8aSQoURXhwb3J0RGF0YU91dHB1dEluZm8SHgoUZ2NzX291dHB1dF9kaXJl",
+            "Y3RvcnkYASABKAlIAEIRCg9vdXRwdXRfbG9jYXRpb24ilgIKHUJhdGNoUHJl",
+            "ZGljdE9wZXJhdGlvbk1ldGFkYXRhEkUKDGlucHV0X2NvbmZpZxgBIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQmF0Y2hQcmVkaWN0SW5wdXRDb25m",
+            "aWcSYQoLb3V0cHV0X2luZm8YAiABKAsyTC5nb29nbGUuY2xvdWQuYXV0b21s",
+            "LnYxLkJhdGNoUHJlZGljdE9wZXJhdGlvbk1ldGFkYXRhLkJhdGNoUHJlZGlj",
+            "dE91dHB1dEluZm8aSwoWQmF0Y2hQcmVkaWN0T3V0cHV0SW5mbxIeChRnY3Nf",
+            "b3V0cHV0X2RpcmVjdG9yeRgBIAEoCUgAQhEKD291dHB1dF9sb2NhdGlvbiK2",
+            "AQocRXhwb3J0TW9kZWxPcGVyYXRpb25NZXRhZGF0YRJfCgtvdXRwdXRfaW5m",
+            "bxgCIAEoCzJKLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRXhwb3J0TW9kZWxP",
+            "cGVyYXRpb25NZXRhZGF0YS5FeHBvcnRNb2RlbE91dHB1dEluZm8aNQoVRXhw",
+            "b3J0TW9kZWxPdXRwdXRJbmZvEhwKFGdjc19vdXRwdXRfZGlyZWN0b3J5GAEg",
+            "ASgJQqoBChpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjxnb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1dG9tbC92",
+            "MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29vZ2xlXENs",
+            "b3VkXEF1dG9NTFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelEvaluationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.DatasetReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelEvaluationReflection.Descriptor, global::Google.Cloud.AutoML.V1.PredictionServiceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.OperationMetadata), global::Google.Cloud.AutoML.V1.OperationMetadata.Parser, new[]{ "DeleteDetails", "CreateModelDetails", "ProgressPercent", "PartialFailures", "CreateTime", "UpdateTime" }, new[]{ "Details" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.OperationMetadata), global::Google.Cloud.AutoML.V1.OperationMetadata.Parser, new[]{ "DeleteDetails", "DeployModelDetails", "UndeployModelDetails", "CreateModelDetails", "CreateDatasetDetails", "ImportDataDetails", "BatchPredictDetails", "ExportDataDetails", "ExportModelDetails", "ProgressPercent", "PartialFailures", "CreateTime", "UpdateTime" }, new[]{ "Details" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DeleteOperationMetadata), global::Google.Cloud.AutoML.V1.DeleteOperationMetadata.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.CreateModelOperationMetadata), global::Google.Cloud.AutoML.V1.CreateModelOperationMetadata.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata), global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata), global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata), global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.CreateModelOperationMetadata), global::Google.Cloud.AutoML.V1.CreateModelOperationMetadata.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata), global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata), global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Parser, new[]{ "OutputInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Types.ExportDataOutputInfo), global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Types.ExportDataOutputInfo.Parser, new[]{ "GcsOutputDirectory" }, new[]{ "OutputLocation" }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata), global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Parser, new[]{ "InputConfig", "OutputInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Types.BatchPredictOutputInfo), global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Types.BatchPredictOutputInfo.Parser, new[]{ "GcsOutputDirectory" }, new[]{ "OutputLocation" }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata), global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Parser, new[]{ "OutputInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Types.ExportModelOutputInfo), global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Types.ExportModelOutputInfo.Parser, new[]{ "GcsOutputDirectory" }, null, null, null)})
           }));
     }
     #endregion
@@ -93,8 +134,29 @@ namespace Google.Cloud.AutoML.V1 {
         case DetailsOneofCase.DeleteDetails:
           DeleteDetails = other.DeleteDetails.Clone();
           break;
+        case DetailsOneofCase.DeployModelDetails:
+          DeployModelDetails = other.DeployModelDetails.Clone();
+          break;
+        case DetailsOneofCase.UndeployModelDetails:
+          UndeployModelDetails = other.UndeployModelDetails.Clone();
+          break;
         case DetailsOneofCase.CreateModelDetails:
           CreateModelDetails = other.CreateModelDetails.Clone();
+          break;
+        case DetailsOneofCase.CreateDatasetDetails:
+          CreateDatasetDetails = other.CreateDatasetDetails.Clone();
+          break;
+        case DetailsOneofCase.ImportDataDetails:
+          ImportDataDetails = other.ImportDataDetails.Clone();
+          break;
+        case DetailsOneofCase.BatchPredictDetails:
+          BatchPredictDetails = other.BatchPredictDetails.Clone();
+          break;
+        case DetailsOneofCase.ExportDataDetails:
+          ExportDataDetails = other.ExportDataDetails.Clone();
+          break;
+        case DetailsOneofCase.ExportModelDetails:
+          ExportModelDetails = other.ExportModelDetails.Clone();
           break;
       }
 
@@ -120,6 +182,34 @@ namespace Google.Cloud.AutoML.V1 {
       }
     }
 
+    /// <summary>Field number for the "deploy_model_details" field.</summary>
+    public const int DeployModelDetailsFieldNumber = 24;
+    /// <summary>
+    /// Details of a DeployModel operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata DeployModelDetails {
+      get { return detailsCase_ == DetailsOneofCase.DeployModelDetails ? (global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.DeployModelDetails;
+      }
+    }
+
+    /// <summary>Field number for the "undeploy_model_details" field.</summary>
+    public const int UndeployModelDetailsFieldNumber = 25;
+    /// <summary>
+    /// Details of an UndeployModel operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata UndeployModelDetails {
+      get { return detailsCase_ == DetailsOneofCase.UndeployModelDetails ? (global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.UndeployModelDetails;
+      }
+    }
+
     /// <summary>Field number for the "create_model_details" field.</summary>
     public const int CreateModelDetailsFieldNumber = 10;
     /// <summary>
@@ -131,6 +221,76 @@ namespace Google.Cloud.AutoML.V1 {
       set {
         details_ = value;
         detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.CreateModelDetails;
+      }
+    }
+
+    /// <summary>Field number for the "create_dataset_details" field.</summary>
+    public const int CreateDatasetDetailsFieldNumber = 30;
+    /// <summary>
+    /// Details of CreateDataset operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata CreateDatasetDetails {
+      get { return detailsCase_ == DetailsOneofCase.CreateDatasetDetails ? (global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.CreateDatasetDetails;
+      }
+    }
+
+    /// <summary>Field number for the "import_data_details" field.</summary>
+    public const int ImportDataDetailsFieldNumber = 15;
+    /// <summary>
+    /// Details of ImportData operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata ImportDataDetails {
+      get { return detailsCase_ == DetailsOneofCase.ImportDataDetails ? (global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ImportDataDetails;
+      }
+    }
+
+    /// <summary>Field number for the "batch_predict_details" field.</summary>
+    public const int BatchPredictDetailsFieldNumber = 16;
+    /// <summary>
+    /// Details of BatchPredict operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata BatchPredictDetails {
+      get { return detailsCase_ == DetailsOneofCase.BatchPredictDetails ? (global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.BatchPredictDetails;
+      }
+    }
+
+    /// <summary>Field number for the "export_data_details" field.</summary>
+    public const int ExportDataDetailsFieldNumber = 21;
+    /// <summary>
+    /// Details of ExportData operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata ExportDataDetails {
+      get { return detailsCase_ == DetailsOneofCase.ExportDataDetails ? (global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ExportDataDetails;
+      }
+    }
+
+    /// <summary>Field number for the "export_model_details" field.</summary>
+    public const int ExportModelDetailsFieldNumber = 22;
+    /// <summary>
+    /// Details of ExportModel operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata ExportModelDetails {
+      get { return detailsCase_ == DetailsOneofCase.ExportModelDetails ? (global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ExportModelDetails;
       }
     }
 
@@ -198,7 +358,14 @@ namespace Google.Cloud.AutoML.V1 {
     public enum DetailsOneofCase {
       None = 0,
       DeleteDetails = 8,
+      DeployModelDetails = 24,
+      UndeployModelDetails = 25,
       CreateModelDetails = 10,
+      CreateDatasetDetails = 30,
+      ImportDataDetails = 15,
+      BatchPredictDetails = 16,
+      ExportDataDetails = 21,
+      ExportModelDetails = 22,
     }
     private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -226,7 +393,14 @@ namespace Google.Cloud.AutoML.V1 {
         return true;
       }
       if (!object.Equals(DeleteDetails, other.DeleteDetails)) return false;
+      if (!object.Equals(DeployModelDetails, other.DeployModelDetails)) return false;
+      if (!object.Equals(UndeployModelDetails, other.UndeployModelDetails)) return false;
       if (!object.Equals(CreateModelDetails, other.CreateModelDetails)) return false;
+      if (!object.Equals(CreateDatasetDetails, other.CreateDatasetDetails)) return false;
+      if (!object.Equals(ImportDataDetails, other.ImportDataDetails)) return false;
+      if (!object.Equals(BatchPredictDetails, other.BatchPredictDetails)) return false;
+      if (!object.Equals(ExportDataDetails, other.ExportDataDetails)) return false;
+      if (!object.Equals(ExportModelDetails, other.ExportModelDetails)) return false;
       if (ProgressPercent != other.ProgressPercent) return false;
       if(!partialFailures_.Equals(other.partialFailures_)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
@@ -239,7 +413,14 @@ namespace Google.Cloud.AutoML.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (detailsCase_ == DetailsOneofCase.DeleteDetails) hash ^= DeleteDetails.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.DeployModelDetails) hash ^= DeployModelDetails.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.UndeployModelDetails) hash ^= UndeployModelDetails.GetHashCode();
       if (detailsCase_ == DetailsOneofCase.CreateModelDetails) hash ^= CreateModelDetails.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.CreateDatasetDetails) hash ^= CreateDatasetDetails.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ImportDataDetails) hash ^= ImportDataDetails.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.BatchPredictDetails) hash ^= BatchPredictDetails.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ExportDataDetails) hash ^= ExportDataDetails.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ExportModelDetails) hash ^= ExportModelDetails.GetHashCode();
       if (ProgressPercent != 0) hash ^= ProgressPercent.GetHashCode();
       hash ^= partialFailures_.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -279,6 +460,34 @@ namespace Google.Cloud.AutoML.V1 {
         output.WriteRawTag(104);
         output.WriteInt32(ProgressPercent);
       }
+      if (detailsCase_ == DetailsOneofCase.ImportDataDetails) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ImportDataDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.BatchPredictDetails) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(BatchPredictDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.ExportDataDetails) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ExportDataDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.ExportModelDetails) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ExportModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.DeployModelDetails) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(DeployModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.UndeployModelDetails) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(UndeployModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.CreateDatasetDetails) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(CreateDatasetDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -290,8 +499,29 @@ namespace Google.Cloud.AutoML.V1 {
       if (detailsCase_ == DetailsOneofCase.DeleteDetails) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteDetails);
       }
+      if (detailsCase_ == DetailsOneofCase.DeployModelDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeployModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.UndeployModelDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UndeployModelDetails);
+      }
       if (detailsCase_ == DetailsOneofCase.CreateModelDetails) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.CreateDatasetDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CreateDatasetDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImportDataDetails) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImportDataDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.BatchPredictDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BatchPredictDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.ExportDataDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExportDataDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.ExportModelDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExportModelDetails);
       }
       if (ProgressPercent != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProgressPercent);
@@ -337,11 +567,53 @@ namespace Google.Cloud.AutoML.V1 {
           }
           DeleteDetails.MergeFrom(other.DeleteDetails);
           break;
+        case DetailsOneofCase.DeployModelDetails:
+          if (DeployModelDetails == null) {
+            DeployModelDetails = new global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata();
+          }
+          DeployModelDetails.MergeFrom(other.DeployModelDetails);
+          break;
+        case DetailsOneofCase.UndeployModelDetails:
+          if (UndeployModelDetails == null) {
+            UndeployModelDetails = new global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata();
+          }
+          UndeployModelDetails.MergeFrom(other.UndeployModelDetails);
+          break;
         case DetailsOneofCase.CreateModelDetails:
           if (CreateModelDetails == null) {
             CreateModelDetails = new global::Google.Cloud.AutoML.V1.CreateModelOperationMetadata();
           }
           CreateModelDetails.MergeFrom(other.CreateModelDetails);
+          break;
+        case DetailsOneofCase.CreateDatasetDetails:
+          if (CreateDatasetDetails == null) {
+            CreateDatasetDetails = new global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata();
+          }
+          CreateDatasetDetails.MergeFrom(other.CreateDatasetDetails);
+          break;
+        case DetailsOneofCase.ImportDataDetails:
+          if (ImportDataDetails == null) {
+            ImportDataDetails = new global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata();
+          }
+          ImportDataDetails.MergeFrom(other.ImportDataDetails);
+          break;
+        case DetailsOneofCase.BatchPredictDetails:
+          if (BatchPredictDetails == null) {
+            BatchPredictDetails = new global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata();
+          }
+          BatchPredictDetails.MergeFrom(other.BatchPredictDetails);
+          break;
+        case DetailsOneofCase.ExportDataDetails:
+          if (ExportDataDetails == null) {
+            ExportDataDetails = new global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata();
+          }
+          ExportDataDetails.MergeFrom(other.ExportDataDetails);
+          break;
+        case DetailsOneofCase.ExportModelDetails:
+          if (ExportModelDetails == null) {
+            ExportModelDetails = new global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata();
+          }
+          ExportModelDetails.MergeFrom(other.ExportModelDetails);
           break;
       }
 
@@ -394,6 +666,69 @@ namespace Google.Cloud.AutoML.V1 {
           }
           case 104: {
             ProgressPercent = input.ReadInt32();
+            break;
+          }
+          case 122: {
+            global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.ImportDataDetails) {
+              subBuilder.MergeFrom(ImportDataDetails);
+            }
+            input.ReadMessage(subBuilder);
+            ImportDataDetails = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.BatchPredictDetails) {
+              subBuilder.MergeFrom(BatchPredictDetails);
+            }
+            input.ReadMessage(subBuilder);
+            BatchPredictDetails = subBuilder;
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.ExportDataDetails) {
+              subBuilder.MergeFrom(ExportDataDetails);
+            }
+            input.ReadMessage(subBuilder);
+            ExportDataDetails = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.ExportModelDetails) {
+              subBuilder.MergeFrom(ExportModelDetails);
+            }
+            input.ReadMessage(subBuilder);
+            ExportModelDetails = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.DeployModelDetails) {
+              subBuilder.MergeFrom(DeployModelDetails);
+            }
+            input.ReadMessage(subBuilder);
+            DeployModelDetails = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.UndeployModelDetails) {
+              subBuilder.MergeFrom(UndeployModelDetails);
+            }
+            input.ReadMessage(subBuilder);
+            UndeployModelDetails = subBuilder;
+            break;
+          }
+          case 242: {
+            global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.CreateDatasetDetails) {
+              subBuilder.MergeFrom(CreateDatasetDetails);
+            }
+            input.ReadMessage(subBuilder);
+            CreateDatasetDetails = subBuilder;
             break;
           }
         }
@@ -507,6 +842,318 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
+  /// Details of DeployModel operation.
+  /// </summary>
+  public sealed partial class DeployModelOperationMetadata : pb::IMessage<DeployModelOperationMetadata> {
+    private static readonly pb::MessageParser<DeployModelOperationMetadata> _parser = new pb::MessageParser<DeployModelOperationMetadata>(() => new DeployModelOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeployModelOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeployModelOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeployModelOperationMetadata(DeployModelOperationMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeployModelOperationMetadata Clone() {
+      return new DeployModelOperationMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeployModelOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeployModelOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeployModelOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Details of UndeployModel operation.
+  /// </summary>
+  public sealed partial class UndeployModelOperationMetadata : pb::IMessage<UndeployModelOperationMetadata> {
+    private static readonly pb::MessageParser<UndeployModelOperationMetadata> _parser = new pb::MessageParser<UndeployModelOperationMetadata>(() => new UndeployModelOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UndeployModelOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UndeployModelOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UndeployModelOperationMetadata(UndeployModelOperationMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UndeployModelOperationMetadata Clone() {
+      return new UndeployModelOperationMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UndeployModelOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UndeployModelOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UndeployModelOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Details of CreateDataset operation.
+  /// </summary>
+  public sealed partial class CreateDatasetOperationMetadata : pb::IMessage<CreateDatasetOperationMetadata> {
+    private static readonly pb::MessageParser<CreateDatasetOperationMetadata> _parser = new pb::MessageParser<CreateDatasetOperationMetadata>(() => new CreateDatasetOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateDatasetOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDatasetOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDatasetOperationMetadata(CreateDatasetOperationMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateDatasetOperationMetadata Clone() {
+      return new CreateDatasetOperationMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateDatasetOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateDatasetOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateDatasetOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Details of CreateModel operation.
   /// </summary>
   public sealed partial class CreateModelOperationMetadata : pb::IMessage<CreateModelOperationMetadata> {
@@ -517,7 +1164,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -607,6 +1254,1064 @@ namespace Google.Cloud.AutoML.V1 {
         }
       }
     }
+
+  }
+
+  /// <summary>
+  /// Details of ImportData operation.
+  /// </summary>
+  public sealed partial class ImportDataOperationMetadata : pb::IMessage<ImportDataOperationMetadata> {
+    private static readonly pb::MessageParser<ImportDataOperationMetadata> _parser = new pb::MessageParser<ImportDataOperationMetadata>(() => new ImportDataOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImportDataOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportDataOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportDataOperationMetadata(ImportDataOperationMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportDataOperationMetadata Clone() {
+      return new ImportDataOperationMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImportDataOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImportDataOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImportDataOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Details of ExportData operation.
+  /// </summary>
+  public sealed partial class ExportDataOperationMetadata : pb::IMessage<ExportDataOperationMetadata> {
+    private static readonly pb::MessageParser<ExportDataOperationMetadata> _parser = new pb::MessageParser<ExportDataOperationMetadata>(() => new ExportDataOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExportDataOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportDataOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportDataOperationMetadata(ExportDataOperationMetadata other) : this() {
+      outputInfo_ = other.outputInfo_ != null ? other.outputInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportDataOperationMetadata Clone() {
+      return new ExportDataOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "output_info" field.</summary>
+    public const int OutputInfoFieldNumber = 1;
+    private global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Types.ExportDataOutputInfo outputInfo_;
+    /// <summary>
+    /// Output only. Information further describing this export data's output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Types.ExportDataOutputInfo OutputInfo {
+      get { return outputInfo_; }
+      set {
+        outputInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExportDataOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExportDataOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OutputInfo, other.OutputInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (outputInfo_ != null) hash ^= OutputInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (outputInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (outputInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExportDataOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.outputInfo_ != null) {
+        if (outputInfo_ == null) {
+          OutputInfo = new global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Types.ExportDataOutputInfo();
+        }
+        OutputInfo.MergeFrom(other.OutputInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (outputInfo_ == null) {
+              OutputInfo = new global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Types.ExportDataOutputInfo();
+            }
+            input.ReadMessage(OutputInfo);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExportDataOperationMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Further describes this export data's output.
+      /// Supplements
+      /// [OutputConfig][google.cloud.automl.v1.OutputConfig].
+      /// </summary>
+      public sealed partial class ExportDataOutputInfo : pb::IMessage<ExportDataOutputInfo> {
+        private static readonly pb::MessageParser<ExportDataOutputInfo> _parser = new pb::MessageParser<ExportDataOutputInfo>(() => new ExportDataOutputInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ExportDataOutputInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExportDataOutputInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExportDataOutputInfo(ExportDataOutputInfo other) : this() {
+          switch (other.OutputLocationCase) {
+            case OutputLocationOneofCase.GcsOutputDirectory:
+              GcsOutputDirectory = other.GcsOutputDirectory;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExportDataOutputInfo Clone() {
+          return new ExportDataOutputInfo(this);
+        }
+
+        /// <summary>Field number for the "gcs_output_directory" field.</summary>
+        public const int GcsOutputDirectoryFieldNumber = 1;
+        /// <summary>
+        /// The full path of the Google Cloud Storage directory created, into which
+        /// the exported data is written.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string GcsOutputDirectory {
+          get { return outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory ? (string) outputLocation_ : ""; }
+          set {
+            outputLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            outputLocationCase_ = OutputLocationOneofCase.GcsOutputDirectory;
+          }
+        }
+
+        private object outputLocation_;
+        /// <summary>Enum of possible cases for the "output_location" oneof.</summary>
+        public enum OutputLocationOneofCase {
+          None = 0,
+          GcsOutputDirectory = 1,
+        }
+        private OutputLocationOneofCase outputLocationCase_ = OutputLocationOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public OutputLocationOneofCase OutputLocationCase {
+          get { return outputLocationCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void ClearOutputLocation() {
+          outputLocationCase_ = OutputLocationOneofCase.None;
+          outputLocation_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ExportDataOutputInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ExportDataOutputInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (GcsOutputDirectory != other.GcsOutputDirectory) return false;
+          if (OutputLocationCase != other.OutputLocationCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
+          hash ^= (int) outputLocationCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ExportDataOutputInfo other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.OutputLocationCase) {
+            case OutputLocationOneofCase.GcsOutputDirectory:
+              GcsOutputDirectory = other.GcsOutputDirectory;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                GcsOutputDirectory = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Details of BatchPredict operation.
+  /// </summary>
+  public sealed partial class BatchPredictOperationMetadata : pb::IMessage<BatchPredictOperationMetadata> {
+    private static readonly pb::MessageParser<BatchPredictOperationMetadata> _parser = new pb::MessageParser<BatchPredictOperationMetadata>(() => new BatchPredictOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchPredictOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictOperationMetadata(BatchPredictOperationMetadata other) : this() {
+      inputConfig_ = other.inputConfig_ != null ? other.inputConfig_.Clone() : null;
+      outputInfo_ = other.outputInfo_ != null ? other.outputInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictOperationMetadata Clone() {
+      return new BatchPredictOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "input_config" field.</summary>
+    public const int InputConfigFieldNumber = 1;
+    private global::Google.Cloud.AutoML.V1.BatchPredictInputConfig inputConfig_;
+    /// <summary>
+    /// Output only. The input config that was given upon starting this
+    /// batch predict operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.BatchPredictInputConfig InputConfig {
+      get { return inputConfig_; }
+      set {
+        inputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "output_info" field.</summary>
+    public const int OutputInfoFieldNumber = 2;
+    private global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Types.BatchPredictOutputInfo outputInfo_;
+    /// <summary>
+    /// Output only. Information further describing this batch predict's output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Types.BatchPredictOutputInfo OutputInfo {
+      get { return outputInfo_; }
+      set {
+        outputInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchPredictOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchPredictOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InputConfig, other.InputConfig)) return false;
+      if (!object.Equals(OutputInfo, other.OutputInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
+      if (outputInfo_ != null) hash ^= OutputInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (inputConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InputConfig);
+      }
+      if (outputInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (inputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputConfig);
+      }
+      if (outputInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchPredictOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.inputConfig_ != null) {
+        if (inputConfig_ == null) {
+          InputConfig = new global::Google.Cloud.AutoML.V1.BatchPredictInputConfig();
+        }
+        InputConfig.MergeFrom(other.InputConfig);
+      }
+      if (other.outputInfo_ != null) {
+        if (outputInfo_ == null) {
+          OutputInfo = new global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Types.BatchPredictOutputInfo();
+        }
+        OutputInfo.MergeFrom(other.OutputInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (inputConfig_ == null) {
+              InputConfig = new global::Google.Cloud.AutoML.V1.BatchPredictInputConfig();
+            }
+            input.ReadMessage(InputConfig);
+            break;
+          }
+          case 18: {
+            if (outputInfo_ == null) {
+              OutputInfo = new global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Types.BatchPredictOutputInfo();
+            }
+            input.ReadMessage(OutputInfo);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BatchPredictOperationMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Further describes this batch predict's output.
+      /// Supplements
+      ///
+      /// [BatchPredictOutputConfig][google.cloud.automl.v1.BatchPredictOutputConfig].
+      /// </summary>
+      public sealed partial class BatchPredictOutputInfo : pb::IMessage<BatchPredictOutputInfo> {
+        private static readonly pb::MessageParser<BatchPredictOutputInfo> _parser = new pb::MessageParser<BatchPredictOutputInfo>(() => new BatchPredictOutputInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<BatchPredictOutputInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public BatchPredictOutputInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public BatchPredictOutputInfo(BatchPredictOutputInfo other) : this() {
+          switch (other.OutputLocationCase) {
+            case OutputLocationOneofCase.GcsOutputDirectory:
+              GcsOutputDirectory = other.GcsOutputDirectory;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public BatchPredictOutputInfo Clone() {
+          return new BatchPredictOutputInfo(this);
+        }
+
+        /// <summary>Field number for the "gcs_output_directory" field.</summary>
+        public const int GcsOutputDirectoryFieldNumber = 1;
+        /// <summary>
+        /// The full path of the Google Cloud Storage directory created, into which
+        /// the prediction output is written.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string GcsOutputDirectory {
+          get { return outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory ? (string) outputLocation_ : ""; }
+          set {
+            outputLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            outputLocationCase_ = OutputLocationOneofCase.GcsOutputDirectory;
+          }
+        }
+
+        private object outputLocation_;
+        /// <summary>Enum of possible cases for the "output_location" oneof.</summary>
+        public enum OutputLocationOneofCase {
+          None = 0,
+          GcsOutputDirectory = 1,
+        }
+        private OutputLocationOneofCase outputLocationCase_ = OutputLocationOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public OutputLocationOneofCase OutputLocationCase {
+          get { return outputLocationCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void ClearOutputLocation() {
+          outputLocationCase_ = OutputLocationOneofCase.None;
+          outputLocation_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as BatchPredictOutputInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(BatchPredictOutputInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (GcsOutputDirectory != other.GcsOutputDirectory) return false;
+          if (OutputLocationCase != other.OutputLocationCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
+          hash ^= (int) outputLocationCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(BatchPredictOutputInfo other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.OutputLocationCase) {
+            case OutputLocationOneofCase.GcsOutputDirectory:
+              GcsOutputDirectory = other.GcsOutputDirectory;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                GcsOutputDirectory = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Details of ExportModel operation.
+  /// </summary>
+  public sealed partial class ExportModelOperationMetadata : pb::IMessage<ExportModelOperationMetadata> {
+    private static readonly pb::MessageParser<ExportModelOperationMetadata> _parser = new pb::MessageParser<ExportModelOperationMetadata>(() => new ExportModelOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExportModelOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportModelOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportModelOperationMetadata(ExportModelOperationMetadata other) : this() {
+      outputInfo_ = other.outputInfo_ != null ? other.outputInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportModelOperationMetadata Clone() {
+      return new ExportModelOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "output_info" field.</summary>
+    public const int OutputInfoFieldNumber = 2;
+    private global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Types.ExportModelOutputInfo outputInfo_;
+    /// <summary>
+    /// Output only. Information further describing the output of this model
+    /// export.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Types.ExportModelOutputInfo OutputInfo {
+      get { return outputInfo_; }
+      set {
+        outputInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExportModelOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExportModelOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OutputInfo, other.OutputInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (outputInfo_ != null) hash ^= OutputInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (outputInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (outputInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExportModelOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.outputInfo_ != null) {
+        if (outputInfo_ == null) {
+          OutputInfo = new global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Types.ExportModelOutputInfo();
+        }
+        OutputInfo.MergeFrom(other.OutputInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            if (outputInfo_ == null) {
+              OutputInfo = new global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Types.ExportModelOutputInfo();
+            }
+            input.ReadMessage(OutputInfo);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExportModelOperationMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Further describes the output of model export.
+      /// Supplements
+      /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+      /// </summary>
+      public sealed partial class ExportModelOutputInfo : pb::IMessage<ExportModelOutputInfo> {
+        private static readonly pb::MessageParser<ExportModelOutputInfo> _parser = new pb::MessageParser<ExportModelOutputInfo>(() => new ExportModelOutputInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ExportModelOutputInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExportModelOutputInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExportModelOutputInfo(ExportModelOutputInfo other) : this() {
+          gcsOutputDirectory_ = other.gcsOutputDirectory_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExportModelOutputInfo Clone() {
+          return new ExportModelOutputInfo(this);
+        }
+
+        /// <summary>Field number for the "gcs_output_directory" field.</summary>
+        public const int GcsOutputDirectoryFieldNumber = 1;
+        private string gcsOutputDirectory_ = "";
+        /// <summary>
+        /// The full path of the Google Cloud Storage directory created, into which
+        /// the model will be exported.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string GcsOutputDirectory {
+          get { return gcsOutputDirectory_; }
+          set {
+            gcsOutputDirectory_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ExportModelOutputInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ExportModelOutputInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (GcsOutputDirectory != other.GcsOutputDirectory) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (GcsOutputDirectory.Length != 0) hash ^= GcsOutputDirectory.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (GcsOutputDirectory.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (GcsOutputDirectory.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ExportModelOutputInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.GcsOutputDirectory.Length != 0) {
+            GcsOutputDirectory = other.GcsOutputDirectory;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                GcsOutputDirectory = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
 
   }
 

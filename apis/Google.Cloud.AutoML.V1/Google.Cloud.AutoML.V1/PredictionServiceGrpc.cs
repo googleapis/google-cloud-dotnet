@@ -36,6 +36,8 @@ namespace Google.Cloud.AutoML.V1 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.PredictRequest> __Marshaller_google_cloud_automl_v1_PredictRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.PredictRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.PredictResponse> __Marshaller_google_cloud_automl_v1_PredictResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.PredictResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.BatchPredictRequest> __Marshaller_google_cloud_automl_v1_BatchPredictRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.BatchPredictRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.PredictRequest, global::Google.Cloud.AutoML.V1.PredictResponse> __Method_Predict = new grpc::Method<global::Google.Cloud.AutoML.V1.PredictRequest, global::Google.Cloud.AutoML.V1.PredictResponse>(
         grpc::MethodType.Unary,
@@ -43,6 +45,13 @@ namespace Google.Cloud.AutoML.V1 {
         "Predict",
         __Marshaller_google_cloud_automl_v1_PredictRequest,
         __Marshaller_google_cloud_automl_v1_PredictResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.AutoML.V1.BatchPredictRequest, global::Google.LongRunning.Operation> __Method_BatchPredict = new grpc::Method<global::Google.Cloud.AutoML.V1.BatchPredictRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchPredict",
+        __Marshaller_google_cloud_automl_v1_BatchPredictRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -58,13 +67,45 @@ namespace Google.Cloud.AutoML.V1 {
       /// Perform an online prediction. The prediction result will be directly
       /// returned in the response.
       /// Available for following ML problems, and their expected request payloads:
+      /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                          up to 30MB.
+      /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                            up to 30MB.
+      /// * Text Classification - TextSnippet, content up to 60,000 characters,
+      ///                         UTF-8 encoded.
+      /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+      ///                     UTF-8 NFC encoded.
       /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
       ///                 encoded.
+      /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+      ///                     encoded.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.PredictResponse> Predict(global::Google.Cloud.AutoML.V1.PredictRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Perform a batch prediction. Unlike the online
+      /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+      /// prediction result won't be immediately available in the response. Instead,
+      /// a long running operation object is returned. User can poll the operation
+      /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+      /// method. Once the operation is done,
+      /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+      /// in the [response][google.longrunning.Operation.response] field. Available
+      /// for following ML problems:
+      /// * Image Classification
+      /// * Image Object Detection
+      /// * Text Extraction
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchPredict(global::Google.Cloud.AutoML.V1.BatchPredictRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -98,8 +139,18 @@ namespace Google.Cloud.AutoML.V1 {
       /// Perform an online prediction. The prediction result will be directly
       /// returned in the response.
       /// Available for following ML problems, and their expected request payloads:
+      /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                          up to 30MB.
+      /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                            up to 30MB.
+      /// * Text Classification - TextSnippet, content up to 60,000 characters,
+      ///                         UTF-8 encoded.
+      /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+      ///                     UTF-8 NFC encoded.
       /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
       ///                 encoded.
+      /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+      ///                     encoded.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -114,8 +165,18 @@ namespace Google.Cloud.AutoML.V1 {
       /// Perform an online prediction. The prediction result will be directly
       /// returned in the response.
       /// Available for following ML problems, and their expected request payloads:
+      /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                          up to 30MB.
+      /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                            up to 30MB.
+      /// * Text Classification - TextSnippet, content up to 60,000 characters,
+      ///                         UTF-8 encoded.
+      /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+      ///                     UTF-8 NFC encoded.
       /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
       ///                 encoded.
+      /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+      ///                     encoded.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -128,8 +189,18 @@ namespace Google.Cloud.AutoML.V1 {
       /// Perform an online prediction. The prediction result will be directly
       /// returned in the response.
       /// Available for following ML problems, and their expected request payloads:
+      /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                          up to 30MB.
+      /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                            up to 30MB.
+      /// * Text Classification - TextSnippet, content up to 60,000 characters,
+      ///                         UTF-8 encoded.
+      /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+      ///                     UTF-8 NFC encoded.
       /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
       ///                 encoded.
+      /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+      ///                     encoded.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -144,8 +215,18 @@ namespace Google.Cloud.AutoML.V1 {
       /// Perform an online prediction. The prediction result will be directly
       /// returned in the response.
       /// Available for following ML problems, and their expected request payloads:
+      /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                          up to 30MB.
+      /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+      ///                            up to 30MB.
+      /// * Text Classification - TextSnippet, content up to 60,000 characters,
+      ///                         UTF-8 encoded.
+      /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+      ///                     UTF-8 NFC encoded.
       /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
       ///                 encoded.
+      /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+      ///                     encoded.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -153,6 +234,94 @@ namespace Google.Cloud.AutoML.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.PredictResponse> PredictAsync(global::Google.Cloud.AutoML.V1.PredictRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Predict, null, options, request);
+      }
+      /// <summary>
+      /// Perform a batch prediction. Unlike the online
+      /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+      /// prediction result won't be immediately available in the response. Instead,
+      /// a long running operation object is returned. User can poll the operation
+      /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+      /// method. Once the operation is done,
+      /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+      /// in the [response][google.longrunning.Operation.response] field. Available
+      /// for following ML problems:
+      /// * Image Classification
+      /// * Image Object Detection
+      /// * Text Extraction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchPredict(global::Google.Cloud.AutoML.V1.BatchPredictRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchPredict(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Perform a batch prediction. Unlike the online
+      /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+      /// prediction result won't be immediately available in the response. Instead,
+      /// a long running operation object is returned. User can poll the operation
+      /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+      /// method. Once the operation is done,
+      /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+      /// in the [response][google.longrunning.Operation.response] field. Available
+      /// for following ML problems:
+      /// * Image Classification
+      /// * Image Object Detection
+      /// * Text Extraction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchPredict(global::Google.Cloud.AutoML.V1.BatchPredictRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchPredict, null, options, request);
+      }
+      /// <summary>
+      /// Perform a batch prediction. Unlike the online
+      /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+      /// prediction result won't be immediately available in the response. Instead,
+      /// a long running operation object is returned. User can poll the operation
+      /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+      /// method. Once the operation is done,
+      /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+      /// in the [response][google.longrunning.Operation.response] field. Available
+      /// for following ML problems:
+      /// * Image Classification
+      /// * Image Object Detection
+      /// * Text Extraction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchPredictAsync(global::Google.Cloud.AutoML.V1.BatchPredictRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchPredictAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Perform a batch prediction. Unlike the online
+      /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+      /// prediction result won't be immediately available in the response. Instead,
+      /// a long running operation object is returned. User can poll the operation
+      /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+      /// method. Once the operation is done,
+      /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+      /// in the [response][google.longrunning.Operation.response] field. Available
+      /// for following ML problems:
+      /// * Image Classification
+      /// * Image Object Detection
+      /// * Text Extraction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchPredictAsync(global::Google.Cloud.AutoML.V1.BatchPredictRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchPredict, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override PredictionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -166,7 +335,8 @@ namespace Google.Cloud.AutoML.V1 {
     public static grpc::ServerServiceDefinition BindService(PredictionServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Predict, serviceImpl.Predict).Build();
+          .AddMethod(__Method_Predict, serviceImpl.Predict)
+          .AddMethod(__Method_BatchPredict, serviceImpl.BatchPredict).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -176,6 +346,7 @@ namespace Google.Cloud.AutoML.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PredictionServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Predict, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.PredictRequest, global::Google.Cloud.AutoML.V1.PredictResponse>(serviceImpl.Predict));
+      serviceBinder.AddMethod(__Method_BatchPredict, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.BatchPredictRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchPredict));
     }
 
   }

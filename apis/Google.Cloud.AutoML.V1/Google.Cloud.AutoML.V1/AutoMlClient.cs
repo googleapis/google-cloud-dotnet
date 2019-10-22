@@ -61,6 +61,7 @@ namespace Google.Cloud.AutoML.V1
             ImportDataOperationsSettings = existing.ImportDataOperationsSettings?.Clone();
             ExportDataSettings = existing.ExportDataSettings;
             ExportDataOperationsSettings = existing.ExportDataOperationsSettings?.Clone();
+            GetAnnotationSpecSettings = existing.GetAnnotationSpecSettings;
             CreateModelSettings = existing.CreateModelSettings;
             CreateModelOperationsSettings = existing.CreateModelOperationsSettings?.Clone();
             GetModelSettings = existing.GetModelSettings;
@@ -68,6 +69,12 @@ namespace Google.Cloud.AutoML.V1
             ListModelsSettings = existing.ListModelsSettings;
             DeleteModelSettings = existing.DeleteModelSettings;
             DeleteModelOperationsSettings = existing.DeleteModelOperationsSettings?.Clone();
+            DeployModelSettings = existing.DeployModelSettings;
+            DeployModelOperationsSettings = existing.DeployModelOperationsSettings?.Clone();
+            UndeployModelSettings = existing.UndeployModelSettings;
+            UndeployModelOperationsSettings = existing.UndeployModelOperationsSettings?.Clone();
+            ExportModelSettings = existing.ExportModelSettings;
+            ExportModelOperationsSettings = existing.ExportModelOperationsSettings?.Clone();
             GetModelEvaluationSettings = existing.GetModelEvaluationSettings;
             ListModelEvaluationsSettings = existing.ListModelEvaluationsSettings;
             OnCopy(existing);
@@ -431,6 +438,36 @@ namespace Google.Cloud.AutoML.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AutoMlClient.GetAnnotationSpec</c> and <c>AutoMlClient.GetAnnotationSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AutoMlClient.GetAnnotationSpec</c> and
+        /// <c>AutoMlClient.GetAnnotationSpecAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAnnotationSpecSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AutoMlClient.CreateModel</c> and <c>AutoMlClient.CreateModelAsync</c>.
         /// </summary>
         /// <remarks>
@@ -611,6 +648,156 @@ namespace Google.Cloud.AutoML.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(5000L))
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AutoMlClient.DeployModel</c> and <c>AutoMlClient.DeployModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AutoMlClient.DeployModel</c> and
+        /// <c>AutoMlClient.DeployModelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings DeployModelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AutoMlClient.DeployModel</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 3600000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeployModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(5000L))
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AutoMlClient.UndeployModel</c> and <c>AutoMlClient.UndeployModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AutoMlClient.UndeployModel</c> and
+        /// <c>AutoMlClient.UndeployModelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UndeployModelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AutoMlClient.UndeployModel</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 3600000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UndeployModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(5000L))
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AutoMlClient.ExportModel</c> and <c>AutoMlClient.ExportModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AutoMlClient.ExportModel</c> and
+        /// <c>AutoMlClient.ExportModelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportModelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AutoMlClient.ExportModel</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportModelOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
                 gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
@@ -2274,6 +2461,182 @@ namespace Google.Cloud.AutoML.V1
                 callSettings);
 
         /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(
+            AnnotationSpecName name,
+            gaxgrpc::CallSettings callSettings = null) => GetAnnotationSpecAsync(
+                new GetAnnotationSpecRequest
+                {
+                    AnnotationSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(
+            AnnotationSpecName name,
+            st::CancellationToken cancellationToken) => GetAnnotationSpecAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnnotationSpec GetAnnotationSpec(
+            AnnotationSpecName name,
+            gaxgrpc::CallSettings callSettings = null) => GetAnnotationSpec(
+                new GetAnnotationSpecRequest
+                {
+                    AnnotationSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetAnnotationSpecAsync(
+                new GetAnnotationSpecRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetAnnotationSpecAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnnotationSpec GetAnnotationSpec(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetAnnotationSpec(
+                new GetAnnotationSpecRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(
+            GetAnnotationSpecRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(
+            GetAnnotationSpecRequest request,
+            st::CancellationToken cancellationToken) => GetAnnotationSpecAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnnotationSpec GetAnnotationSpec(
+            GetAnnotationSpecRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
         /// Creates a model.
         /// Returns a Model in the [response][google.longrunning.Operation.response]
         /// field when it completes.
@@ -3229,6 +3592,610 @@ namespace Google.Cloud.AutoML.V1
                 callSettings);
 
         /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> DeployModelAsync(
+            ModelName name,
+            gaxgrpc::CallSettings callSettings = null) => DeployModelAsync(
+                new DeployModelRequest
+                {
+                    ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to deploy.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> DeployModelAsync(
+            ModelName name,
+            st::CancellationToken cancellationToken) => DeployModelAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> DeployModel(
+            ModelName name,
+            gaxgrpc::CallSettings callSettings = null) => DeployModel(
+                new DeployModelRequest
+                {
+                    ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> DeployModelAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeployModelAsync(
+                new DeployModelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to deploy.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> DeployModelAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeployModelAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> DeployModel(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeployModel(
+                new DeployModelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> DeployModelAsync(
+            DeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeployModelAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> PollOnceDeployModelAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, OperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                DeployModelOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> DeployModel(
+            DeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>DeployModel</c>.
+        /// </summary>
+        public virtual lro::OperationsClient DeployModelOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeployModel</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> PollOnceDeployModel(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, OperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                DeployModelOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> UndeployModelAsync(
+            ModelName name,
+            gaxgrpc::CallSettings callSettings = null) => UndeployModelAsync(
+                new UndeployModelRequest
+                {
+                    ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> UndeployModelAsync(
+            ModelName name,
+            st::CancellationToken cancellationToken) => UndeployModelAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> UndeployModel(
+            ModelName name,
+            gaxgrpc::CallSettings callSettings = null) => UndeployModel(
+                new UndeployModelRequest
+                {
+                    ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> UndeployModelAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => UndeployModelAsync(
+                new UndeployModelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> UndeployModelAsync(
+            string name,
+            st::CancellationToken cancellationToken) => UndeployModelAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> UndeployModel(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => UndeployModel(
+                new UndeployModelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> UndeployModelAsync(
+            UndeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UndeployModelAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> PollOnceUndeployModelAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, OperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                UndeployModelOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> UndeployModel(
+            UndeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>UndeployModel</c>.
+        /// </summary>
+        public virtual lro::OperationsClient UndeployModelOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UndeployModel</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> PollOnceUndeployModel(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, OperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                UndeployModelOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> ExportModelAsync(
+            ExportModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportModelAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> PollOnceExportModelAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, OperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                ExportModelOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> ExportModel(
+            ExportModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>ExportModel</c>.
+        /// </summary>
+        public virtual lro::OperationsClient ExportModelOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportModel</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<pbwkt::Empty, OperationMetadata> PollOnceExportModel(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, OperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                ExportModelOperationsClient,
+                callSettings);
+
+        /// <summary>
         /// Gets a model evaluation.
         /// </summary>
         /// <param name="name">
@@ -3656,11 +4623,15 @@ namespace Google.Cloud.AutoML.V1
         private readonly gaxgrpc::ApiCall<DeleteDatasetRequest, lro::Operation> _callDeleteDataset;
         private readonly gaxgrpc::ApiCall<ImportDataRequest, lro::Operation> _callImportData;
         private readonly gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> _callExportData;
+        private readonly gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> _callGetAnnotationSpec;
         private readonly gaxgrpc::ApiCall<CreateModelRequest, lro::Operation> _callCreateModel;
         private readonly gaxgrpc::ApiCall<GetModelRequest, Model> _callGetModel;
         private readonly gaxgrpc::ApiCall<UpdateModelRequest, Model> _callUpdateModel;
         private readonly gaxgrpc::ApiCall<ListModelsRequest, ListModelsResponse> _callListModels;
         private readonly gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> _callDeleteModel;
+        private readonly gaxgrpc::ApiCall<DeployModelRequest, lro::Operation> _callDeployModel;
+        private readonly gaxgrpc::ApiCall<UndeployModelRequest, lro::Operation> _callUndeployModel;
+        private readonly gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> _callExportModel;
         private readonly gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> _callGetModelEvaluation;
         private readonly gaxgrpc::ApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse> _callListModelEvaluations;
 
@@ -3686,6 +4657,12 @@ namespace Google.Cloud.AutoML.V1
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateModelOperationsSettings);
             DeleteModelOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelOperationsSettings);
+            DeployModelOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.DeployModelOperationsSettings);
+            UndeployModelOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.UndeployModelOperationsSettings);
+            ExportModelOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.ExportModelOperationsSettings);
             _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, lro::Operation>(
                 GrpcClient.CreateDatasetAsync, GrpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings)
                 .WithGoogleRequestParam("parent", request => request.Parent);
@@ -3707,6 +4684,9 @@ namespace Google.Cloud.AutoML.V1
             _callExportData = clientHelper.BuildApiCall<ExportDataRequest, lro::Operation>(
                 GrpcClient.ExportDataAsync, GrpcClient.ExportData, effectiveSettings.ExportDataSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
+            _callGetAnnotationSpec = clientHelper.BuildApiCall<GetAnnotationSpecRequest, AnnotationSpec>(
+                GrpcClient.GetAnnotationSpecAsync, GrpcClient.GetAnnotationSpec, effectiveSettings.GetAnnotationSpecSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
             _callCreateModel = clientHelper.BuildApiCall<CreateModelRequest, lro::Operation>(
                 GrpcClient.CreateModelAsync, GrpcClient.CreateModel, effectiveSettings.CreateModelSettings)
                 .WithGoogleRequestParam("parent", request => request.Parent);
@@ -3721,6 +4701,15 @@ namespace Google.Cloud.AutoML.V1
                 .WithGoogleRequestParam("parent", request => request.Parent);
             _callDeleteModel = clientHelper.BuildApiCall<DeleteModelRequest, lro::Operation>(
                 GrpcClient.DeleteModelAsync, GrpcClient.DeleteModel, effectiveSettings.DeleteModelSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
+            _callDeployModel = clientHelper.BuildApiCall<DeployModelRequest, lro::Operation>(
+                GrpcClient.DeployModelAsync, GrpcClient.DeployModel, effectiveSettings.DeployModelSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
+            _callUndeployModel = clientHelper.BuildApiCall<UndeployModelRequest, lro::Operation>(
+                GrpcClient.UndeployModelAsync, GrpcClient.UndeployModel, effectiveSettings.UndeployModelSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
+            _callExportModel = clientHelper.BuildApiCall<ExportModelRequest, lro::Operation>(
+                GrpcClient.ExportModelAsync, GrpcClient.ExportModel, effectiveSettings.ExportModelSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
             _callGetModelEvaluation = clientHelper.BuildApiCall<GetModelEvaluationRequest, ModelEvaluation>(
                 GrpcClient.GetModelEvaluationAsync, GrpcClient.GetModelEvaluation, effectiveSettings.GetModelEvaluationSettings)
@@ -3742,6 +4731,8 @@ namespace Google.Cloud.AutoML.V1
             Modify_ImportDataApiCall(ref _callImportData);
             Modify_ApiCall(ref _callExportData);
             Modify_ExportDataApiCall(ref _callExportData);
+            Modify_ApiCall(ref _callGetAnnotationSpec);
+            Modify_GetAnnotationSpecApiCall(ref _callGetAnnotationSpec);
             Modify_ApiCall(ref _callCreateModel);
             Modify_CreateModelApiCall(ref _callCreateModel);
             Modify_ApiCall(ref _callGetModel);
@@ -3752,6 +4743,12 @@ namespace Google.Cloud.AutoML.V1
             Modify_ListModelsApiCall(ref _callListModels);
             Modify_ApiCall(ref _callDeleteModel);
             Modify_DeleteModelApiCall(ref _callDeleteModel);
+            Modify_ApiCall(ref _callDeployModel);
+            Modify_DeployModelApiCall(ref _callDeployModel);
+            Modify_ApiCall(ref _callUndeployModel);
+            Modify_UndeployModelApiCall(ref _callUndeployModel);
+            Modify_ApiCall(ref _callExportModel);
+            Modify_ExportModelApiCall(ref _callExportModel);
             Modify_ApiCall(ref _callGetModelEvaluation);
             Modify_GetModelEvaluationApiCall(ref _callGetModelEvaluation);
             Modify_ApiCall(ref _callListModelEvaluations);
@@ -3776,11 +4773,15 @@ namespace Google.Cloud.AutoML.V1
         partial void Modify_DeleteDatasetApiCall(ref gaxgrpc::ApiCall<DeleteDatasetRequest, lro::Operation> call);
         partial void Modify_ImportDataApiCall(ref gaxgrpc::ApiCall<ImportDataRequest, lro::Operation> call);
         partial void Modify_ExportDataApiCall(ref gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> call);
+        partial void Modify_GetAnnotationSpecApiCall(ref gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> call);
         partial void Modify_CreateModelApiCall(ref gaxgrpc::ApiCall<CreateModelRequest, lro::Operation> call);
         partial void Modify_GetModelApiCall(ref gaxgrpc::ApiCall<GetModelRequest, Model> call);
         partial void Modify_UpdateModelApiCall(ref gaxgrpc::ApiCall<UpdateModelRequest, Model> call);
         partial void Modify_ListModelsApiCall(ref gaxgrpc::ApiCall<ListModelsRequest, ListModelsResponse> call);
         partial void Modify_DeleteModelApiCall(ref gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> call);
+        partial void Modify_DeployModelApiCall(ref gaxgrpc::ApiCall<DeployModelRequest, lro::Operation> call);
+        partial void Modify_UndeployModelApiCall(ref gaxgrpc::ApiCall<UndeployModelRequest, lro::Operation> call);
+        partial void Modify_ExportModelApiCall(ref gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> call);
         partial void Modify_GetModelEvaluationApiCall(ref gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> call);
         partial void Modify_ListModelEvaluationsApiCall(ref gaxgrpc::ApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse> call);
         partial void OnConstruction(AutoMl.AutoMlClient grpcClient, AutoMlSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -3800,11 +4801,15 @@ namespace Google.Cloud.AutoML.V1
         partial void Modify_DeleteDatasetRequest(ref DeleteDatasetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ImportDataRequest(ref ImportDataRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetAnnotationSpecRequest(ref GetAnnotationSpecRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateModelRequest(ref CreateModelRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetModelRequest(ref GetModelRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateModelRequest(ref UpdateModelRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListModelsRequest(ref ListModelsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteModelRequest(ref DeleteModelRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeployModelRequest(ref DeployModelRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UndeployModelRequest(ref UndeployModelRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ExportModelRequest(ref ExportModelRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetModelEvaluationRequest(ref GetModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListModelEvaluationsRequest(ref ListModelEvaluationsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4129,6 +5134,46 @@ namespace Google.Cloud.AutoML.V1
         public override lro::OperationsClient ExportDataOperationsClient { get; }
 
         /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<AnnotationSpec> GetAnnotationSpecAsync(
+            GetAnnotationSpecRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAnnotationSpecRequest(ref request, ref callSettings);
+            return _callGetAnnotationSpec.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override AnnotationSpec GetAnnotationSpec(
+            GetAnnotationSpecRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAnnotationSpecRequest(ref request, ref callSettings);
+            return _callGetAnnotationSpec.Sync(request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a model.
         /// Returns a Model in the [response][google.longrunning.Operation.response]
         /// field when it completes.
@@ -4357,6 +5402,193 @@ namespace Google.Cloud.AutoML.V1
         /// The long-running operations client for <c>DeleteModel</c>.
         /// </summary>
         public override lro::OperationsClient DeleteModelOperationsClient { get; }
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> DeployModelAsync(
+            DeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployModelRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, OperationMetadata>(
+                await _callDeployModel.Async(request, callSettings).ConfigureAwait(false), DeployModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        ///
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        ///  will reset the deployment state without pausing the model's availability.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection; all other
+        /// domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<pbwkt::Empty, OperationMetadata> DeployModel(
+            DeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployModelRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, OperationMetadata>(
+                _callDeployModel.Sync(request, callSettings), DeployModelOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>DeployModel</c>.
+        /// </summary>
+        public override lro::OperationsClient DeployModelOperationsClient { get; }
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> UndeployModelAsync(
+            UndeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeployModelRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, OperationMetadata>(
+                await _callUndeployModel.Async(request, callSettings).ConfigureAwait(false), UndeployModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        ///
+        /// Only applicable for Text Classification, Image Object Detection;
+        /// all other domains manage deployment automatically.
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<pbwkt::Empty, OperationMetadata> UndeployModel(
+            UndeployModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeployModelRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, OperationMetadata>(
+                _callUndeployModel.Sync(request, callSettings), UndeployModelOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>UndeployModel</c>.
+        /// </summary>
+        public override lro::OperationsClient UndeployModelOperationsClient { get; }
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<pbwkt::Empty, OperationMetadata>> ExportModelAsync(
+            ExportModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportModelRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, OperationMetadata>(
+                await _callExportModel.Async(request, callSettings).ConfigureAwait(false), ExportModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        ///
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<pbwkt::Empty, OperationMetadata> ExportModel(
+            ExportModelRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportModelRequest(ref request, ref callSettings);
+            return new lro::Operation<pbwkt::Empty, OperationMetadata>(
+                _callExportModel.Sync(request, callSettings), ExportModelOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>ExportModel</c>.
+        /// </summary>
+        public override lro::OperationsClient ExportModelOperationsClient { get; }
 
         /// <summary>
         /// Gets a model evaluation.
