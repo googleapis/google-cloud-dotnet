@@ -92,6 +92,13 @@ nothing else, for clarity. Include both the `apis.json` change and
 the project file changes that occur when the project generator has
 been run, in the same commit.
 
+As a final very rare case, a version number such as
+"1.99.99-alpha00" is used to indicate that a breaking change has
+already been made, and the intention is for the next release to be a
+new major version - but that there are still significant changes
+required before the new major version is considered even for beta
+release.
+
 ### Dependencies
 
 Dependencies in the API catalog are specified as properties where
