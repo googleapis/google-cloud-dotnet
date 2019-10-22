@@ -868,6 +868,66 @@ namespace Google.Cloud.AutoML.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetAnnotationSpecAsync</summary>
+        public async Task GetAnnotationSpecAsync()
+        {
+            // Snippet: GetAnnotationSpecAsync(AnnotationSpecName,CallSettings)
+            // Additional: GetAnnotationSpecAsync(AnnotationSpecName,CancellationToken)
+            // Create client
+            AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
+            // Initialize request argument(s)
+            AnnotationSpecName name = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]");
+            // Make the request
+            AnnotationSpec response = await autoMlClient.GetAnnotationSpecAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnnotationSpec</summary>
+        public void GetAnnotationSpec()
+        {
+            // Snippet: GetAnnotationSpec(AnnotationSpecName,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = AutoMlClient.Create();
+            // Initialize request argument(s)
+            AnnotationSpecName name = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]");
+            // Make the request
+            AnnotationSpec response = autoMlClient.GetAnnotationSpec(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnnotationSpecAsync</summary>
+        public async Task GetAnnotationSpecAsync_RequestObject()
+        {
+            // Snippet: GetAnnotationSpecAsync(GetAnnotationSpecRequest,CallSettings)
+            // Additional: GetAnnotationSpecAsync(GetAnnotationSpecRequest,CancellationToken)
+            // Create client
+            AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
+            };
+            // Make the request
+            AnnotationSpec response = await autoMlClient.GetAnnotationSpecAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnnotationSpec</summary>
+        public void GetAnnotationSpec_RequestObject()
+        {
+            // Snippet: GetAnnotationSpec(GetAnnotationSpecRequest,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = AutoMlClient.Create();
+            // Initialize request argument(s)
+            GetAnnotationSpecRequest request = new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = new AnnotationSpecName("[PROJECT]", "[LOCATION]", "[DATASET]", "[ANNOTATION_SPEC]"),
+            };
+            // Make the request
+            AnnotationSpec response = autoMlClient.GetAnnotationSpec(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateModelAsync</summary>
         public async Task CreateModelAsync()
         {
@@ -1432,6 +1492,328 @@ namespace Google.Cloud.AutoML.V1.Snippets
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<Empty, OperationMetadata> retrievedResponse =
                 autoMlClient.PollOnceDeleteModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployModelAsync</summary>
+        public async Task DeployModelAsync()
+        {
+            // Snippet: DeployModelAsync(ModelName,CallSettings)
+            // Additional: DeployModelAsync(ModelName,CancellationToken)
+            // Create client
+            AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                await autoMlClient.DeployModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                await autoMlClient.PollOnceDeployModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployModel</summary>
+        public void DeployModel()
+        {
+            // Snippet: DeployModel(ModelName,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = AutoMlClient.Create();
+            // Initialize request argument(s)
+            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                autoMlClient.DeployModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                autoMlClient.PollOnceDeployModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployModelAsync</summary>
+        public async Task DeployModelAsync_RequestObject()
+        {
+            // Snippet: DeployModelAsync(DeployModelRequest,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployModelRequest request = new DeployModelRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                await autoMlClient.DeployModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                await autoMlClient.PollOnceDeployModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployModel</summary>
+        public void DeployModel_RequestObject()
+        {
+            // Snippet: DeployModel(DeployModelRequest,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = AutoMlClient.Create();
+            // Initialize request argument(s)
+            DeployModelRequest request = new DeployModelRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                autoMlClient.DeployModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                autoMlClient.PollOnceDeployModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployModelAsync</summary>
+        public async Task UndeployModelAsync()
+        {
+            // Snippet: UndeployModelAsync(ModelName,CallSettings)
+            // Additional: UndeployModelAsync(ModelName,CancellationToken)
+            // Create client
+            AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                await autoMlClient.UndeployModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                await autoMlClient.PollOnceUndeployModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployModel</summary>
+        public void UndeployModel()
+        {
+            // Snippet: UndeployModel(ModelName,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = AutoMlClient.Create();
+            // Initialize request argument(s)
+            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                autoMlClient.UndeployModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                autoMlClient.PollOnceUndeployModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployModelAsync</summary>
+        public async Task UndeployModelAsync_RequestObject()
+        {
+            // Snippet: UndeployModelAsync(UndeployModelRequest,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
+            // Initialize request argument(s)
+            UndeployModelRequest request = new UndeployModelRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                await autoMlClient.UndeployModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                await autoMlClient.PollOnceUndeployModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployModel</summary>
+        public void UndeployModel_RequestObject()
+        {
+            // Snippet: UndeployModel(UndeployModelRequest,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = AutoMlClient.Create();
+            // Initialize request argument(s)
+            UndeployModelRequest request = new UndeployModelRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                autoMlClient.UndeployModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                autoMlClient.PollOnceUndeployModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportModelAsync</summary>
+        public async Task ExportModelAsync_RequestObject()
+        {
+            // Snippet: ExportModelAsync(ExportModelRequest,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = await AutoMlClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportModelRequest request = new ExportModelRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                OutputConfig = new ModelExportOutputConfig(),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                await autoMlClient.ExportModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                await autoMlClient.PollOnceExportModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportModel</summary>
+        public void ExportModel_RequestObject()
+        {
+            // Snippet: ExportModel(ExportModelRequest,CallSettings)
+            // Create client
+            AutoMlClient autoMlClient = AutoMlClient.Create();
+            // Initialize request argument(s)
+            ExportModelRequest request = new ExportModelRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                OutputConfig = new ModelExportOutputConfig(),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                autoMlClient.ExportModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                autoMlClient.PollOnceExportModel(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

@@ -25,25 +25,45 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvY2xvdWQvYXV0b21sL3YxL2lvLnByb3RvEhZnb29nbGUuY2xv",
-            "dWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIsAB",
-            "CgtJbnB1dENvbmZpZxI3CgpnY3Nfc291cmNlGAEgASgLMiEuZ29vZ2xlLmNs",
-            "b3VkLmF1dG9tbC52MS5HY3NTb3VyY2VIABI/CgZwYXJhbXMYAiADKAsyLy5n",
-            "b29nbGUuY2xvdWQuYXV0b21sLnYxLklucHV0Q29uZmlnLlBhcmFtc0VudHJ5",
-            "Gi0KC1BhcmFtc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAFCCAoGc291cmNlImAKDE91dHB1dENvbmZpZxJBCg9nY3NfZGVzdGluYXRp",
-            "b24YASABKAsyJi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkdjc0Rlc3RpbmF0",
-            "aW9uSABCDQoLZGVzdGluYXRpb24iHwoJR2NzU291cmNlEhIKCmlucHV0X3Vy",
-            "aXMYASADKAkiKwoOR2NzRGVzdGluYXRpb24SGQoRb3V0cHV0X3VyaV9wcmVm",
-            "aXgYASABKAlCqgEKGmNvbS5nb29nbGUuY2xvdWQuYXV0b21sLnYxUAFaPGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXV0",
-            "b21sL3YxO2F1dG9tbKoCFkdvb2dsZS5DbG91ZC5BdXRvTUwuVjHKAhZHb29n",
-            "bGVcQ2xvdWRcQXV0b01MXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpW",
-            "MWIGcHJvdG8z"));
+            "dWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9n",
+            "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIsABCgtJbnB1dENvbmZp",
+            "ZxI3CgpnY3Nfc291cmNlGAEgASgLMiEuZ29vZ2xlLmNsb3VkLmF1dG9tbC52",
+            "MS5HY3NTb3VyY2VIABI/CgZwYXJhbXMYAiADKAsyLy5nb29nbGUuY2xvdWQu",
+            "YXV0b21sLnYxLklucHV0Q29uZmlnLlBhcmFtc0VudHJ5Gi0KC1BhcmFtc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCAoGc291cmNl",
+            "ImEKF0JhdGNoUHJlZGljdElucHV0Q29uZmlnEjwKCmdjc19zb3VyY2UYASAB",
+            "KAsyIS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkdjc1NvdXJjZUID4EECSABC",
+            "CAoGc291cmNlIkkKEEltYWdlSW5wdXRDb25maWcSNQoKZ2NzX3NvdXJjZRgB",
+            "IAEoCzIhLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2NzU291cmNlIkwKE0Rv",
+            "Y3VtZW50SW5wdXRDb25maWcSNQoKZ2NzX3NvdXJjZRgBIAEoCzIhLmdvb2ds",
+            "ZS5jbG91ZC5hdXRvbWwudjEuR2NzU291cmNlImUKDE91dHB1dENvbmZpZxJG",
+            "Cg9nY3NfZGVzdGluYXRpb24YASABKAsyJi5nb29nbGUuY2xvdWQuYXV0b21s",
+            "LnYxLkdjc0Rlc3RpbmF0aW9uQgPgQQJIAEINCgtkZXN0aW5hdGlvbiJxChhC",
+            "YXRjaFByZWRpY3RPdXRwdXRDb25maWcSRgoPZ2NzX2Rlc3RpbmF0aW9uGAEg",
+            "ASgLMiYuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5HY3NEZXN0aW5hdGlvbkID",
+            "4EECSABCDQoLZGVzdGluYXRpb24iggIKF01vZGVsRXhwb3J0T3V0cHV0Q29u",
+            "ZmlnEkYKD2djc19kZXN0aW5hdGlvbhgBIAEoCzImLmdvb2dsZS5jbG91ZC5h",
+            "dXRvbWwudjEuR2NzRGVzdGluYXRpb25CA+BBAkgAEhQKDG1vZGVsX2Zvcm1h",
+            "dBgEIAEoCRJLCgZwYXJhbXMYAiADKAsyOy5nb29nbGUuY2xvdWQuYXV0b21s",
+            "LnYxLk1vZGVsRXhwb3J0T3V0cHV0Q29uZmlnLlBhcmFtc0VudHJ5Gi0KC1Bh",
+            "cmFtc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCDQoL",
+            "ZGVzdGluYXRpb24iJAoJR2NzU291cmNlEhcKCmlucHV0X3VyaXMYASADKAlC",
+            "A+BBAiIwCg5HY3NEZXN0aW5hdGlvbhIeChFvdXRwdXRfdXJpX3ByZWZpeBgB",
+            "IAEoCUID4EECQqoBChpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjxn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1",
+            "dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29v",
+            "Z2xlXENsb3VkXEF1dG9NTFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.InputConfig), global::Google.Cloud.AutoML.V1.InputConfig.Parser, new[]{ "GcsSource", "Params" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictInputConfig), global::Google.Cloud.AutoML.V1.BatchPredictInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageInputConfig), global::Google.Cloud.AutoML.V1.ImageInputConfig.Parser, new[]{ "GcsSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentInputConfig), global::Google.Cloud.AutoML.V1.DocumentInputConfig.Parser, new[]{ "GcsSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.OutputConfig), global::Google.Cloud.AutoML.V1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig), global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ModelExportOutputConfig), global::Google.Cloud.AutoML.V1.ModelExportOutputConfig.Parser, new[]{ "GcsDestination", "ModelFormat", "Params" }, new[]{ "Destination" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.GcsSource), global::Google.Cloud.AutoML.V1.GcsSource.Parser, new[]{ "InputUris" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.GcsDestination), global::Google.Cloud.AutoML.V1.GcsDestination.Parser, new[]{ "OutputUriPrefix" }, null, null, null)
           }));
@@ -53,20 +73,431 @@ namespace Google.Cloud.AutoML.V1 {
   }
   #region Messages
   /// <summary>
-  /// Input configuration for ImportData Action.
+  /// Input configuration for
+  /// [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData] action.
   ///
   /// The format of input depends on dataset_metadata the Dataset into which
   /// the import is happening has. As input source the
-  /// [gcs_source][google.cloud.automl.v1beta1.InputConfig.gcs_source]
+  /// [gcs_source][google.cloud.automl.v1.InputConfig.gcs_source]
   /// is expected, unless specified otherwise. Additionally any input .CSV file
   /// by itself must be 100MB or smaller, unless specified otherwise.
   /// If an "example" file (that is, image, video etc.) with identical content
-  /// (even if it had different GCS_FILE_PATH) is mentioned multiple times, then
+  /// (even if it had different `GCS_FILE_PATH`) is mentioned multiple times, then
   /// its label, bounding boxes etc. are appended. The same file should be always
-  /// provided with the same ML_USE and GCS_FILE_PATH, if it is not, then
+  /// provided with the same `ML_USE` and `GCS_FILE_PATH`, if it is not, then
   /// these values are nondeterministically selected from the given ones.
   ///
-  ///  Errors:
+  /// The formats are represented in EBNF with commas being literal and with
+  /// non-terminal symbols defined near the end of this comment. The formats are:
+  ///
+  /// &lt;h4>AutoML Vision&lt;/h4>
+  ///
+  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  ///
+  /// See [Preparing your training
+  /// data](https://cloud.google.com/vision/automl/docs/prepare) for more
+  /// information.
+  ///
+  /// CSV file(s) with each line in format:
+  ///
+  ///     ML_USE,GCS_FILE_PATH,LABEL,LABEL,...
+  ///
+  /// *   `ML_USE` - Identifies the data set that the current row (file) applies
+  /// to.
+  ///     This value can be one of the following:
+  ///     * `TRAIN` - Rows in this file are used to train the model.
+  ///     * `TEST` - Rows in this file are used to test the model during training.
+  ///     * `UNASSIGNED` - Rows in this file are not categorized. They are
+  ///        Automatically divided into train and test data. 80% for training and
+  ///        20% for testing.
+  ///
+  /// *   `GCS_FILE_PATH` - The Google Cloud Storage location of an image of up to
+  ///      30MB in size. Supported extensions: .JPEG, .GIF, .PNG, .WEBP, .BMP,
+  ///      .TIFF, .ICO.
+  ///
+  /// *   `LABEL` - A label that identifies the object in the image.
+  ///
+  /// For the `MULTICLASS` classification type, at most one `LABEL` is allowed
+  /// per image. If an image has not yet been labeled, then it should be
+  /// mentioned just once with no `LABEL`.
+  ///
+  /// Some sample rows:
+  ///
+  ///     TRAIN,gs://folder/image1.jpg,daisy
+  ///     TEST,gs://folder/image2.jpg,dandelion,tulip,rose
+  ///     UNASSIGNED,gs://folder/image3.jpg,daisy
+  ///     UNASSIGNED,gs://folder/image4.jpg
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Object Detection&lt;/h5>
+  /// See [Preparing your training
+  /// data](https://cloud.google.com/vision/automl/object-detection/docs/prepare)
+  /// for more information.
+  ///
+  /// A CSV file(s) with each line in format:
+  ///
+  ///     ML_USE,GCS_FILE_PATH,[LABEL],(BOUNDING_BOX | ,,,,,,,)
+  ///
+  /// *   `ML_USE` - Identifies the data set that the current row (file) applies
+  /// to.
+  ///     This value can be one of the following:
+  ///     * `TRAIN` - Rows in this file are used to train the model.
+  ///     * `TEST` - Rows in this file are used to test the model during training.
+  ///     * `UNASSIGNED` - Rows in this file are not categorized. They are
+  ///        Automatically divided into train and test data. 80% for training and
+  ///        20% for testing.
+  ///
+  /// *  `GCS_FILE_PATH` - The Google Cloud Storage location of an image of up to
+  ///     30MB in size. Supported extensions: .JPEG, .GIF, .PNG. Each image
+  ///     is assumed to be exhaustively labeled.
+  ///
+  /// *  `LABEL` - A label that identifies the object in the image specified by the
+  ///    `BOUNDING_BOX`.
+  ///
+  /// *  `BOUNDING BOX` - The vertices of an object in the example image.
+  ///    The minimum allowed `BOUNDING_BOX` edge length is 0.01, and no more than
+  ///    500 `BOUNDING_BOX` instances per image are allowed (one `BOUNDING_BOX`
+  ///    per line). If an image has no looked for objects then it should be
+  ///    mentioned just once with no LABEL and the ",,,,,,," in place of the
+  ///   `BOUNDING_BOX`.
+  ///
+  /// **Four sample rows:**
+  ///
+  ///     TRAIN,gs://folder/image1.png,car,0.1,0.1,,,0.3,0.3,,
+  ///     TRAIN,gs://folder/image1.png,bike,.7,.6,,,.8,.9,,
+  ///     UNASSIGNED,gs://folder/im2.png,car,0.1,0.1,0.2,0.1,0.2,0.3,0.1,0.3
+  ///     TEST,gs://folder/im3.png,,,,,,,,,
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
+  /// &lt;h4>AutoML Natural Language&lt;/h4>
+  ///
+  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Entity Extraction&lt;/h5>
+  ///
+  /// See [Preparing your training
+  /// data](/natural-language/automl/entity-analysis/docs/prepare) for more
+  /// information.
+  ///
+  /// One or more CSV file(s) with each line in the following format:
+  ///
+  ///     ML_USE,GCS_FILE_PATH
+  ///
+  /// *   `ML_USE` - Identifies the data set that the current row (file) applies
+  /// to.
+  ///     This value can be one of the following:
+  ///     * `TRAIN` - Rows in this file are used to train the model.
+  ///     * `TEST` - Rows in this file are used to test the model during training.
+  ///     * `UNASSIGNED` - Rows in this file are not categorized. They are
+  ///        Automatically divided into train and test data. 80% for training and
+  ///        20% for testing..
+  ///
+  /// *   `GCS_FILE_PATH` - a Identifies JSON Lines (.JSONL) file stored in
+  ///      Google Cloud Storage that contains in-line text in-line as documents
+  ///      for model training.
+  ///
+  /// After the training data set has been determined from the `TRAIN` and
+  /// `UNASSIGNED` CSV files, the training data is divided into train and
+  /// validation data sets. 70% for training and 30% for validation.
+  ///
+  /// For example:
+  ///
+  ///     TRAIN,gs://folder/file1.jsonl
+  ///     VALIDATE,gs://folder/file2.jsonl
+  ///     TEST,gs://folder/file3.jsonl
+  ///
+  /// **In-line JSONL files**
+  ///
+  /// In-line .JSONL files contain, per line, a JSON document that wraps a
+  /// [`text_snippet`][google.cloud.automl.v1.TextSnippet] field followed by
+  /// one or more [`annotations`][google.cloud.automl.v1.AnnotationPayload]
+  /// fields, which have `display_name` and `text_extraction` fields to describe
+  /// the entity from the text snippet. Multiple JSON documents can be separated
+  /// using line breaks (\n).
+  ///
+  /// The supplied text must be annotated exhaustively. For example, if you
+  /// include the text "horse", but do not label it as "animal",
+  /// then "horse" is assumed to not be an "animal".
+  ///
+  /// Any given text snippet content must have 30,000 characters or
+  /// less, and also be UTF-8 NFC encoded. ASCII is accepted as it is
+  /// UTF-8 NFC encoded.
+  ///
+  /// For example:
+  ///
+  ///     {
+  ///       "text_snippet": {
+  ///         "content": "dog car cat"
+  ///       },
+  ///       "annotations": [
+  ///          {
+  ///            "display_name": "animal",
+  ///            "text_extraction": {
+  ///              "text_segment": {"start_offset": 0, "end_offset": 2}
+  ///           }
+  ///          },
+  ///          {
+  ///           "display_name": "vehicle",
+  ///            "text_extraction": {
+  ///              "text_segment": {"start_offset": 4, "end_offset": 6}
+  ///            }
+  ///          },
+  ///          {
+  ///            "display_name": "animal",
+  ///            "text_extraction": {
+  ///              "text_segment": {"start_offset": 8, "end_offset": 10}
+  ///            }
+  ///          }
+  ///      ]
+  ///     }\n
+  ///     {
+  ///        "text_snippet": {
+  ///          "content": "This dog is good."
+  ///        },
+  ///        "annotations": [
+  ///           {
+  ///             "display_name": "animal",
+  ///             "text_extraction": {
+  ///               "text_segment": {"start_offset": 5, "end_offset": 7}
+  ///             }
+  ///           }
+  ///        ]
+  ///     }
+  ///
+  /// **JSONL files that reference documents**
+  ///
+  /// .JSONL files contain, per line, a JSON document that wraps a
+  /// `input_config` that contains the path to a source PDF document.
+  /// Multiple JSON documents can be separated using line breaks (\n).
+  ///
+  /// For example:
+  ///
+  ///     {
+  ///       "document": {
+  ///         "input_config": {
+  ///           "gcs_source": { "input_uris": [ "gs://folder/document1.pdf" ]
+  ///           }
+  ///         }
+  ///       }
+  ///     }\n
+  ///     {
+  ///       "document": {
+  ///         "input_config": {
+  ///           "gcs_source": { "input_uris": [ "gs://folder/document2.pdf" ]
+  ///           }
+  ///         }
+  ///       }
+  ///     }
+  ///
+  /// **In-line JSONL files with PDF layout information**
+  ///
+  /// **Note:** You can only annotate PDF files using the UI. The format described
+  /// below applies to annotated PDF files exported using the UI or `exportData`.
+  ///
+  /// In-line .JSONL files for PDF documents contain, per line, a JSON document
+  /// that wraps a `document` field that provides the textual content of the PDF
+  /// document and the layout information.
+  ///
+  /// For example:
+  ///
+  ///     {
+  ///       "document": {
+  ///               "document_text": {
+  ///                 "content": "dog car cat"
+  ///               }
+  ///               "layout": [
+  ///                 {
+  ///                   "text_segment": {
+  ///                     "start_offset": 0,
+  ///                     "end_offset": 11,
+  ///                    },
+  ///                    "page_number": 1,
+  ///                    "bounding_poly": {
+  ///                       "normalized_vertices": [
+  ///                         {"x": 0.1, "y": 0.1},
+  ///                         {"x": 0.1, "y": 0.3},
+  ///                         {"x": 0.3, "y": 0.3},
+  ///                         {"x": 0.3, "y": 0.1},
+  ///                       ],
+  ///                     },
+  ///                     "text_segment_type": TOKEN,
+  ///                 }
+  ///               ],
+  ///               "document_dimensions": {
+  ///                 "width": 8.27,
+  ///                 "height": 11.69,
+  ///                 "unit": INCH,
+  ///               }
+  ///               "page_count": 3,
+  ///             },
+  ///             "annotations": [
+  ///               {
+  ///                 "display_name": "animal",
+  ///                 "text_extraction": {
+  ///                   "text_segment": {"start_offset": 0, "end_offset": 3}
+  ///                 }
+  ///               },
+  ///               {
+  ///                 "display_name": "vehicle",
+  ///                 "text_extraction": {
+  ///                   "text_segment": {"start_offset": 4, "end_offset": 7}
+  ///                 }
+  ///               },
+  ///               {
+  ///                 "display_name": "animal",
+  ///                 "text_extraction": {
+  ///                   "text_segment": {"start_offset": 8, "end_offset": 11}
+  ///                 }
+  ///               },
+  ///             ],
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Classification&lt;/h5>
+  ///
+  /// See [Preparing your training
+  /// data](https://cloud.google.com/natural-language/automl/docs/prepare) for more
+  /// information.
+  ///
+  /// One or more CSV file(s) with each line in the following format:
+  ///
+  ///     ML_USE,(TEXT_SNIPPET | GCS_FILE_PATH),LABEL,LABEL,...
+  ///
+  /// *   `ML_USE` - Identifies the data set that the current row (file) applies
+  /// to.
+  ///     This value can be one of the following:
+  ///     * `TRAIN` - Rows in this file are used to train the model.
+  ///     * `TEST` - Rows in this file are used to test the model during training.
+  ///     * `UNASSIGNED` - Rows in this file are not categorized. They are
+  ///        Automatically divided into train and test data. 80% for training and
+  ///        20% for testing.
+  ///
+  /// *   `TEXT_SNIPPET` and `GCS_FILE_PATH` are distinguished by a pattern. If
+  ///     the column content is a valid Google Cloud Storage file path, that is,
+  ///     prefixed by "gs://", it is treated as a `GCS_FILE_PATH`. Otherwise, if
+  ///     the content is enclosed in double quotes (""), it is treated as a
+  ///     `TEXT_SNIPPET`. For `GCS_FILE_PATH`, the path must lead to a
+  ///     file with supported extension and UTF-8 encoding, for example,
+  ///     "gs://folder/content.txt" AutoML imports the file content
+  ///     as a text snippet. For `TEXT_SNIPPET`, AutoML imports the column content
+  ///     excluding quotes. In both cases, size of the content must be 10MB or
+  ///     less in size. For zip files, the size of each file inside the zip must be
+  ///     10MB or less in size.
+  ///
+  ///     For the `MULTICLASS` classification type, at most one `LABEL` is allowed.
+  ///     The `ML_USE` and `LABEL` columns are optional.
+  ///     Supported file extensions: .TXT, .PDF, .ZIP
+  ///
+  /// A maximum of 100 unique labels are allowed per CSV row.
+  ///
+  /// Sample rows:
+  ///
+  ///     TRAIN,"They have bad food and very rude",RudeService,BadFood
+  ///     gs://folder/content.txt,SlowService
+  ///     TEST,gs://folder/document.pdf
+  ///     VALIDATE,gs://folder/text_files.zip,BadFood
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Sentiment Analysis&lt;/h5>
+  ///
+  /// See [Preparing your training
+  /// data](https://cloud.google.com/natural-language/automl/docs/prepare) for more
+  /// information.
+  ///
+  /// CSV file(s) with each line in format:
+  ///
+  ///     ML_USE,(TEXT_SNIPPET | GCS_FILE_PATH),SENTIMENT
+  ///
+  /// *   `ML_USE` - Identifies the data set that the current row (file) applies
+  /// to.
+  ///     This value can be one of the following:
+  ///     * `TRAIN` - Rows in this file are used to train the model.
+  ///     * `TEST` - Rows in this file are used to test the model during training.
+  ///     * `UNASSIGNED` - Rows in this file are not categorized. They are
+  ///        Automatically divided into train and test data. 80% for training and
+  ///        20% for testing.
+  ///
+  /// *   `TEXT_SNIPPET` and `GCS_FILE_PATH` are distinguished by a pattern. If
+  ///     the column content is a valid  Google Cloud Storage file path, that is,
+  ///     prefixed by "gs://", it is treated as a `GCS_FILE_PATH`. Otherwise, if
+  ///     the content is enclosed in double quotes (""), it is treated as a
+  ///     `TEXT_SNIPPET`. For `GCS_FILE_PATH`, the path must lead to a
+  ///     file with supported extension and UTF-8 encoding, for example,
+  ///     "gs://folder/content.txt" AutoML imports the file content
+  ///     as a text snippet. For `TEXT_SNIPPET`, AutoML imports the column content
+  ///     excluding quotes. In both cases, size of the content must be 128kB or
+  ///     less in size. For zip files, the size of each file inside the zip must be
+  ///     128kB or less in size.
+  ///
+  ///     The `ML_USE` and `SENTIMENT` columns are optional.
+  ///     Supported file extensions: .TXT, .PDF, .ZIP
+  ///
+  /// *  `SENTIMENT` - An integer between 0 and
+  ///     Dataset.text_sentiment_dataset_metadata.sentiment_max
+  ///     (inclusive). Describes the ordinal of the sentiment - higher
+  ///     value means a more positive sentiment. All the values are
+  ///     completely relative, i.e. neither 0 needs to mean a negative or
+  ///     neutral sentiment nor sentiment_max needs to mean a positive one -
+  ///     it is just required that 0 is the least positive sentiment
+  ///     in the data, and sentiment_max is the  most positive one.
+  ///     The SENTIMENT shouldn't be confused with "score" or "magnitude"
+  ///     from the previous Natural Language Sentiment Analysis API.
+  ///     All SENTIMENT values between 0 and sentiment_max must be
+  ///     represented in the imported data. On prediction the same 0 to
+  ///     sentiment_max range will be used. The difference between
+  ///     neighboring sentiment values needs not to be uniform, e.g. 1 and
+  ///     2 may be similar whereas the difference between 2 and 3 may be
+  ///     large.
+  ///
+  /// Sample rows:
+  ///
+  ///     TRAIN,"@freewrytin this is way too good for your product",2
+  ///     gs://folder/content.txt,3
+  ///     TEST,gs://folder/document.pdf
+  ///     VALIDATE,gs://folder/text_files.zip,2
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
+  /// **Input field definitions:**
+  ///
+  /// `ML_USE`
+  /// : ("TRAIN" | "VALIDATE" | "TEST" | "UNASSIGNED")
+  ///   Describes how the given example (file) should be used for model
+  ///   training. "UNASSIGNED" can be used when user has no preference.
+  ///
+  /// `GCS_FILE_PATH`
+  /// : The path to a file on Google Cloud Storage. For example,
+  ///   "gs://folder/image1.png".
+  ///
+  /// `LABEL`
+  /// : A display name of an object on an image, video etc., e.g. "dog".
+  ///   Must be up to 32 characters long and can consist only of ASCII
+  ///   Latin letters A-Z and a-z, underscores(_), and ASCII digits 0-9.
+  ///   For each label an AnnotationSpec is created which display_name
+  ///   becomes the label; AnnotationSpecs are given back in predictions.
+  ///
+  /// `BOUNDING_BOX`
+  /// : (`VERTEX,VERTEX,VERTEX,VERTEX` | `VERTEX,,,VERTEX,,`)
+  ///   A rectangle parallel to the frame of the example (image,
+  ///   video). If 4 vertices are given they are connected by edges
+  ///   in the order provided, if 2 are given they are recognized
+  ///   as diagonally opposite vertices of the rectangle.
+  ///
+  /// `VERTEX`
+  /// : (`COORDINATE,COORDINATE`)
+  ///   First coordinate is horizontal (x), the second is vertical (y).
+  ///
+  /// `COORDINATE`
+  /// : A float in 0 to 1 range, relative to total length of
+  ///   image or video in given dimension. For fractions the
+  ///   leading non-decimal 0 can be omitted (i.e. 0.3 = .3).
+  ///   Point 0,0 is in top left.
+  ///
+  /// `TEXT_SNIPPET`
+  /// : The content of a text snippet, UTF-8 encoded, enclosed within
+  ///   double quotes ("").
+  ///
+  /// `DOCUMENT`
+  /// : A field that provides the textual content with document and the layout
+  ///   information.
+  ///
+  ///  **Errors:**
+  ///
   ///  If any of the provided CSV files can't be parsed or if more than certain
   ///  percent of CSV rows cannot be processed then the operation fails and
   ///  nothing is imported. Regardless of overall success or failure the per-row
@@ -117,8 +548,9 @@ namespace Google.Cloud.AutoML.V1 {
     public const int GcsSourceFieldNumber = 1;
     /// <summary>
     /// The Google Cloud Storage location for the input content.
-    /// In ImportData, the gcs_source points to a csv with structure described in
-    /// the comment.
+    /// For [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData],
+    /// `gcs_source` points to a CSV file with a structure described in
+    /// [InputConfig][google.cloud.automl.v1.InputConfig].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.GcsSource GcsSource {
@@ -269,21 +701,660 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// *  For Translation:
+  /// Input configuration for BatchPredict Action.
+  ///
+  /// The format of input depends on the ML problem of the model used for
+  /// prediction. As input source the
+  /// [gcs_source][google.cloud.automl.v1.InputConfig.gcs_source]
+  /// is expected, unless specified otherwise.
+  ///
+  /// The formats are represented in EBNF with commas being literal and with
+  /// non-terminal symbols defined near the end of this comment. The formats
+  /// are:
+  ///
+  /// &lt;h4>AutoML Natural Language&lt;/h4>
+  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  ///
+  /// One or more CSV files where each line is a single column:
+  ///
+  ///     GCS_FILE_PATH
+  ///
+  /// `GCS_FILE_PATH` is the Google Cloud Storage location of a text file.
+  /// Supported file extensions: .TXT, .PDF
+  /// Text files can be no larger than 10MB in size.
+  ///
+  /// Sample rows:
+  ///
+  ///     gs://folder/text1.txt
+  ///     gs://folder/text2.pdf
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Sentiment Analysis&lt;/h5>
+  /// One or more CSV files where each line is a single column:
+  ///
+  ///     GCS_FILE_PATH
+  ///
+  /// `GCS_FILE_PATH` is the Google Cloud Storage location of a text file.
+  /// Supported file extensions: .TXT, .PDF
+  /// Text files can be no larger than 128kB in size.
+  ///
+  /// Sample rows:
+  ///
+  ///     gs://folder/text1.txt
+  ///     gs://folder/text2.pdf
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Entity Extraction&lt;/h5>
+  ///
+  /// One or more JSONL (JSON Lines) files that either provide inline text or
+  /// documents. You can only use one format, either inline text or documents,
+  /// for a single call to [AutoMl.BatchPredict].
+  ///
+  /// Each JSONL file contains a per line a proto that
+  /// wraps a temporary user-assigned TextSnippet ID (string up to 2000
+  /// characters long) called "id", a TextSnippet proto (in
+  /// JSON representation) and zero or more TextFeature protos. Any given
+  /// text snippet content must have 30,000 characters or less, and also
+  /// be UTF-8 NFC encoded (ASCII already is). The IDs provided should be
+  /// unique.
+  ///
+  /// Each document JSONL file contains, per line, a proto that wraps a
+  /// Document proto with `input_config` set. Only PDF documents are
+  /// currently supported, and each PDF document cannot exceed 2MB in size.
+  ///
+  /// Each JSONL file must not exceed 100MB in size, and no more than 20
+  /// JSONL files may be passed.
+  ///
+  /// Sample inline JSONL file (Shown with artificial line
+  /// breaks. Actual line breaks are denoted by "\n".):
+  ///
+  ///     {
+  ///        "id": "my_first_id",
+  ///        "text_snippet": { "content": "dog car cat"},
+  ///        "text_features": [
+  ///          {
+  ///            "text_segment": {"start_offset": 4, "end_offset": 6},
+  ///            "structural_type": PARAGRAPH,
+  ///            "bounding_poly": {
+  ///              "normalized_vertices": [
+  ///                {"x": 0.1, "y": 0.1},
+  ///                {"x": 0.1, "y": 0.3},
+  ///                {"x": 0.3, "y": 0.3},
+  ///                {"x": 0.3, "y": 0.1},
+  ///              ]
+  ///            },
+  ///          }
+  ///        ],
+  ///      }\n
+  ///      {
+  ///        "id": "2",
+  ///        "text_snippet": {
+  ///          "content": "Extended sample content",
+  ///          "mime_type": "text/plain"
+  ///        }
+  ///      }
+  ///
+  /// Sample document JSONL file (Shown with artificial line
+  /// breaks. Actual line breaks are denoted by "\n".):
+  ///
+  ///      {
+  ///        "document": {
+  ///          "input_config": {
+  ///            "gcs_source": { "input_uris": [ "gs://folder/document1.pdf" ]
+  ///            }
+  ///          }
+  ///        }
+  ///      }\n
+  ///      {
+  ///        "document": {
+  ///          "input_config": {
+  ///            "gcs_source": { "input_uris": [ "gs://folder/document2.pdf" ]
+  ///            }
+  ///          }
+  ///        }
+  ///      }
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
+  /// **Input field definitions:**
+  ///
+  /// `GCS_FILE_PATH`
+  /// : The path to a file on Google Cloud Storage. For example,
+  ///   "gs://folder/video.avi".
+  ///
+  ///  **Errors:**
+  ///
+  ///  If any of the provided CSV files can't be parsed or if more than certain
+  ///  percent of CSV rows cannot be processed then the operation fails and
+  ///  prediction does not happen. Regardless of overall success or failure the
+  ///  per-row failures, up to a certain count cap, will be listed in
+  ///  Operation.metadata.partial_failures.
+  /// </summary>
+  public sealed partial class BatchPredictInputConfig : pb::IMessage<BatchPredictInputConfig> {
+    private static readonly pb::MessageParser<BatchPredictInputConfig> _parser = new pb::MessageParser<BatchPredictInputConfig>(() => new BatchPredictInputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchPredictInputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictInputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictInputConfig(BatchPredictInputConfig other) : this() {
+      switch (other.SourceCase) {
+        case SourceOneofCase.GcsSource:
+          GcsSource = other.GcsSource.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictInputConfig Clone() {
+      return new BatchPredictInputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_source" field.</summary>
+    public const int GcsSourceFieldNumber = 1;
+    /// <summary>
+    /// Required. The Google Cloud Storage location for the input content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.GcsSource GcsSource {
+      get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.AutoML.V1.GcsSource) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.GcsSource;
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      GcsSource = 1,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchPredictInputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchPredictInputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsSource, other.GcsSource)) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchPredictInputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.GcsSource:
+          if (GcsSource == null) {
+            GcsSource = new global::Google.Cloud.AutoML.V1.GcsSource();
+          }
+          GcsSource.MergeFrom(other.GcsSource);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.AutoML.V1.GcsSource subBuilder = new global::Google.Cloud.AutoML.V1.GcsSource();
+            if (sourceCase_ == SourceOneofCase.GcsSource) {
+              subBuilder.MergeFrom(GcsSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsSource = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Input configuration of an [Document][google.cloud.automl.v1.Image].
+  /// </summary>
+  public sealed partial class ImageInputConfig : pb::IMessage<ImageInputConfig> {
+    private static readonly pb::MessageParser<ImageInputConfig> _parser = new pb::MessageParser<ImageInputConfig>(() => new ImageInputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImageInputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImageInputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImageInputConfig(ImageInputConfig other) : this() {
+      gcsSource_ = other.gcsSource_ != null ? other.gcsSource_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImageInputConfig Clone() {
+      return new ImageInputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_source" field.</summary>
+    public const int GcsSourceFieldNumber = 1;
+    private global::Google.Cloud.AutoML.V1.GcsSource gcsSource_;
+    /// <summary>
+    /// The Google Cloud Storage location of the document file. Only a single path
+    /// should be given.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.GcsSource GcsSource {
+      get { return gcsSource_; }
+      set {
+        gcsSource_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImageInputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImageInputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsSource, other.GcsSource)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (gcsSource_ != null) hash ^= GcsSource.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (gcsSource_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (gcsSource_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImageInputConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.gcsSource_ != null) {
+        if (gcsSource_ == null) {
+          GcsSource = new global::Google.Cloud.AutoML.V1.GcsSource();
+        }
+        GcsSource.MergeFrom(other.GcsSource);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (gcsSource_ == null) {
+              GcsSource = new global::Google.Cloud.AutoML.V1.GcsSource();
+            }
+            input.ReadMessage(GcsSource);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Input configuration of a [Document][google.cloud.automl.v1.Document].
+  /// </summary>
+  public sealed partial class DocumentInputConfig : pb::IMessage<DocumentInputConfig> {
+    private static readonly pb::MessageParser<DocumentInputConfig> _parser = new pb::MessageParser<DocumentInputConfig>(() => new DocumentInputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DocumentInputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentInputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentInputConfig(DocumentInputConfig other) : this() {
+      gcsSource_ = other.gcsSource_ != null ? other.gcsSource_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentInputConfig Clone() {
+      return new DocumentInputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_source" field.</summary>
+    public const int GcsSourceFieldNumber = 1;
+    private global::Google.Cloud.AutoML.V1.GcsSource gcsSource_;
+    /// <summary>
+    /// The Google Cloud Storage location of the document file. Only a single path
+    /// should be given.
+    ///
+    /// Max supported size: 512MB.
+    ///
+    /// Supported extensions: .PDF.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.GcsSource GcsSource {
+      get { return gcsSource_; }
+      set {
+        gcsSource_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DocumentInputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DocumentInputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsSource, other.GcsSource)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (gcsSource_ != null) hash ^= GcsSource.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (gcsSource_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (gcsSource_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DocumentInputConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.gcsSource_ != null) {
+        if (gcsSource_ == null) {
+          GcsSource = new global::Google.Cloud.AutoML.V1.GcsSource();
+        }
+        GcsSource.MergeFrom(other.GcsSource);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (gcsSource_ == null) {
+              GcsSource = new global::Google.Cloud.AutoML.V1.GcsSource();
+            }
+            input.ReadMessage(GcsSource);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Output configuration for ExportData.
+  ///
+  /// As destination the
+  /// [gcs_destination][google.cloud.automl.v1.OutputConfig.gcs_destination]
+  /// must be set unless specified otherwise for a domain. If gcs_destination is
+  /// set then in the given directory a new directory is created. Its name
+  /// will be "export_data-&lt;dataset-display-name>-&lt;timestamp-of-export-call>",
+  /// where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format.
+  /// Only ground truth annotations are exported (not approved annotations are
+  /// not exported).
+  ///
+  /// The outputs correspond to how the data was imported, and may be used as
+  /// input to import data. The output formats are represented as EBNF with literal
+  /// commas and same non-terminal symbols definitions are these in import data's
+  /// [InputConfig][google.cloud.automl.v1.InputConfig]:
+  ///
+  ///  *  For Image Classification:
+  ///         CSV file(s) `image_classification_1.csv`,
+  ///         `image_classification_2.csv`,...,`image_classification_N.csv`with
+  ///         each line in format:
+  ///         ML_USE,GCS_FILE_PATH,LABEL,LABEL,...
+  ///         where GCS_FILE_PATHs point at the original, source locations of the
+  ///         imported images.
+  ///         For MULTICLASS classification type, there can be at most one LABEL
+  ///         per example.
+  ///
+  ///  *  For Image Object Detection:
+  ///         CSV file(s) `image_object_detection_1.csv`,
+  ///         `image_object_detection_2.csv`,...,`image_object_detection_N.csv`
+  ///         with each line in format:
+  ///         ML_USE,GCS_FILE_PATH,[LABEL],(BOUNDING_BOX | ,,,,,,,)
+  ///         where GCS_FILE_PATHs point at the original, source locations of the
+  ///         imported images.
+  ///
+  ///  *  For Text Classification:
+  ///         In the created directory CSV file(s) `text_classification_1.csv`,
+  ///         `text_classification_2.csv`, ...,`text_classification_N.csv` will be
+  ///         created where N depends on the total number of examples exported.
+  ///         Each line in the CSV is of the format:
+  ///         ML_USE,GCS_FILE_PATH,LABEL,LABEL,...
+  ///         where GCS_FILE_PATHs point at the exported .txt files containing
+  ///         the text content of the imported example. For MULTICLASS
+  ///         classification type, there will be at most one LABEL per example.
+  ///
+  ///  *  For Text Sentiment:
+  ///         In the created directory CSV file(s) `text_sentiment_1.csv`,
+  ///         `text_sentiment_2.csv`, ...,`text_sentiment_N.csv` will be
+  ///         created where N depends on the total number of examples exported.
+  ///         Each line in the CSV is of the format:
+  ///         ML_USE,GCS_FILE_PATH,SENTIMENT
+  ///         where GCS_FILE_PATHs point at the exported .txt files containing
+  ///         the text content of the imported example.
+  ///
+  ///  *  For Text Extraction:
+  ///         CSV file `text_extraction.csv`, with each line in format:
+  ///         ML_USE,GCS_FILE_PATH
+  ///         GCS_FILE_PATH leads to a .JSONL (i.e. JSON Lines) file which
+  ///         contains, per line, a proto that wraps a TextSnippet proto (in json
+  ///         representation) followed by AnnotationPayload protos (called
+  ///         annotations). If initially documents had been imported, the JSONL
+  ///         will point at the original, source locations of the imported
+  ///         documents.
+  ///
+  ///  *  For Translation:
   ///         CSV file `translation.csv`, with each line in format:
   ///         ML_USE,GCS_FILE_PATH
   ///         GCS_FILE_PATH leads to a .TSV file which describes examples that have
   ///         given ML_USE, using the following row format per line:
   ///         TEXT_SNIPPET (in source language) \t TEXT_SNIPPET (in target
   ///         language)
-  ///
-  /// `export_data_&lt;automl-dataset-display-name>_&lt;timestamp-of-export-call>`
-  ///           where &lt;automl-dataset-display-name> will be made
-  ///           BigQuery-dataset-name compatible (e.g. most special characters will
-  ///           become underscores), and timestamp will be in
-  ///           YYYY_MM_DDThh_mm_ss_sssZ "based on ISO-8601" format. In that
-  ///           dataset a new table called `primary_table` will be created, and
-  ///           filled with precisely the same data as this obtained on import.
   /// </summary>
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig> {
     private static readonly pb::MessageParser<OutputConfig> _parser = new pb::MessageParser<OutputConfig>(() => new OutputConfig());
@@ -293,7 +1364,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -327,9 +1398,9 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// The Google Cloud Storage location where the output is to be written to.
-    /// For Image Object Detection, Text Extraction, Video Classification and
-    /// Tables, in the given directory a new directory will be created with name:
+    /// Required. The Google Cloud Storage location where the output is to be
+    /// written to. For Image Object Detection, Text Extraction in the given
+    /// directory a new directory will be created with name:
     /// export_data-&lt;dataset-display-name>-&lt;timestamp-of-export-call> where
     /// timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. All export
     /// output will be written into that directory.
@@ -459,6 +1530,530 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
+  /// Output configuration for BatchPredict Action.
+  ///
+  /// As destination the
+  ///
+  /// [gcs_destination][google.cloud.automl.v1.BatchPredictOutputConfig.gcs_destination]
+  /// must be set unless specified otherwise for a domain. If gcs_destination is
+  /// set then in the given directory a new directory is created. Its name
+  /// will be
+  /// "prediction-&lt;model-display-name>-&lt;timestamp-of-prediction-call>",
+  /// where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. The contents
+  /// of it depends on the ML problem the predictions are made for.
+  ///
+  ///  *  For Text Classification:
+  ///         In the created directory files `text_classification_1.jsonl`,
+  ///         `text_classification_2.jsonl`,...,`text_classification_N.jsonl`
+  ///         will be created, where N may be 1, and depends on the
+  ///         total number of inputs and annotations found.
+  ///
+  ///         Each .JSONL file will contain, per line, a JSON representation of a
+  ///         proto that wraps input text (or pdf) file in
+  ///         the text snippet (or document) proto and a list of
+  ///         zero or more AnnotationPayload protos (called annotations), which
+  ///         have classification detail populated. A single text (or pdf) file
+  ///         will be listed only once with all its annotations, and its
+  ///         annotations will never be split across files.
+  ///
+  ///         If prediction for any text (or pdf) file failed (partially or
+  ///         completely), then additional `errors_1.jsonl`, `errors_2.jsonl`,...,
+  ///         `errors_N.jsonl` files will be created (N depends on total number of
+  ///         failed predictions). These files will have a JSON representation of a
+  ///         proto that wraps input text (or pdf) file followed by exactly one
+  ///
+  /// [`google.rpc.Status`](https:
+  /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
+  ///         containing only `code` and `message`.
+  ///
+  ///  *  For Text Sentiment:
+  ///         In the created directory files `text_sentiment_1.jsonl`,
+  ///         `text_sentiment_2.jsonl`,...,`text_sentiment_N.jsonl`
+  ///         will be created, where N may be 1, and depends on the
+  ///         total number of inputs and annotations found.
+  ///
+  ///         Each .JSONL file will contain, per line, a JSON representation of a
+  ///         proto that wraps input text (or pdf) file in
+  ///         the text snippet (or document) proto and a list of
+  ///         zero or more AnnotationPayload protos (called annotations), which
+  ///         have text_sentiment detail populated. A single text (or pdf) file
+  ///         will be listed only once with all its annotations, and its
+  ///         annotations will never be split across files.
+  ///
+  ///         If prediction for any text (or pdf) file failed (partially or
+  ///         completely), then additional `errors_1.jsonl`, `errors_2.jsonl`,...,
+  ///         `errors_N.jsonl` files will be created (N depends on total number of
+  ///         failed predictions). These files will have a JSON representation of a
+  ///         proto that wraps input text (or pdf) file followed by exactly one
+  ///
+  /// [`google.rpc.Status`](https:
+  /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
+  ///         containing only `code` and `message`.
+  ///
+  ///   *  For Text Extraction:
+  ///         In the created directory files `text_extraction_1.jsonl`,
+  ///         `text_extraction_2.jsonl`,...,`text_extraction_N.jsonl`
+  ///         will be created, where N may be 1, and depends on the
+  ///         total number of inputs and annotations found.
+  ///         The contents of these .JSONL file(s) depend on whether the input
+  ///         used inline text, or documents.
+  ///         If input was inline, then each .JSONL file will contain, per line,
+  ///           a JSON representation of a proto that wraps given in request text
+  ///           snippet's "id" (if specified), followed by input text snippet,
+  ///           and a list of zero or more
+  ///           AnnotationPayload protos (called annotations), which have
+  ///           text_extraction detail populated. A single text snippet will be
+  ///           listed only once with all its annotations, and its annotations will
+  ///           never be split across files.
+  ///         If input used documents, then each .JSONL file will contain, per
+  ///           line, a JSON representation of a proto that wraps given in request
+  ///           document proto, followed by its OCR-ed representation in the form
+  ///           of a text snippet, finally followed by a list of zero or more
+  ///           AnnotationPayload protos (called annotations), which have
+  ///           text_extraction detail populated and refer, via their indices, to
+  ///           the OCR-ed text snippet. A single document (and its text snippet)
+  ///           will be listed only once with all its annotations, and its
+  ///           annotations will never be split across files.
+  ///         If prediction for any text snippet failed (partially or completely),
+  ///         then additional `errors_1.jsonl`, `errors_2.jsonl`,...,
+  ///         `errors_N.jsonl` files will be created (N depends on total number of
+  ///         failed predictions). These files will have a JSON representation of a
+  ///         proto that wraps either the "id" : "&lt;id_value>" (in case of inline)
+  ///         or the document proto (in case of document) but here followed by
+  ///         exactly one [`google.rpc.Status`](https:
+  /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
+  ///         containing only `code` and `message`.
+  /// </summary>
+  public sealed partial class BatchPredictOutputConfig : pb::IMessage<BatchPredictOutputConfig> {
+    private static readonly pb::MessageParser<BatchPredictOutputConfig> _parser = new pb::MessageParser<BatchPredictOutputConfig>(() => new BatchPredictOutputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchPredictOutputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictOutputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictOutputConfig(BatchPredictOutputConfig other) : this() {
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          GcsDestination = other.GcsDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchPredictOutputConfig Clone() {
+      return new BatchPredictOutputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_destination" field.</summary>
+    public const int GcsDestinationFieldNumber = 1;
+    /// <summary>
+    /// Required. The Google Cloud Storage location of the directory where the
+    /// output is to be written to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.GcsDestination GcsDestination {
+      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.AutoML.V1.GcsDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.GcsDestination;
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      GcsDestination = 1,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchPredictOutputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchPredictOutputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchPredictOutputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          if (GcsDestination == null) {
+            GcsDestination = new global::Google.Cloud.AutoML.V1.GcsDestination();
+          }
+          GcsDestination.MergeFrom(other.GcsDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.AutoML.V1.GcsDestination subBuilder = new global::Google.Cloud.AutoML.V1.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Output configuration for ModelExport Action.
+  /// </summary>
+  public sealed partial class ModelExportOutputConfig : pb::IMessage<ModelExportOutputConfig> {
+    private static readonly pb::MessageParser<ModelExportOutputConfig> _parser = new pb::MessageParser<ModelExportOutputConfig>(() => new ModelExportOutputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ModelExportOutputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ModelExportOutputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ModelExportOutputConfig(ModelExportOutputConfig other) : this() {
+      modelFormat_ = other.modelFormat_;
+      params_ = other.params_.Clone();
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          GcsDestination = other.GcsDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ModelExportOutputConfig Clone() {
+      return new ModelExportOutputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_destination" field.</summary>
+    public const int GcsDestinationFieldNumber = 1;
+    /// <summary>
+    /// Required. The Google Cloud Storage location where the model is to be
+    /// written to. This location may only be set for the following model
+    /// formats:
+    ///   "tflite", "edgetpu_tflite", "tf_saved_model", "tf_js", "core_ml".
+    ///
+    ///  Under the directory given as the destination a new one with name
+    ///  "model-export-&lt;model-display-name>-&lt;timestamp-of-export-call>",
+    ///  where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format,
+    ///  will be created. Inside the model and any of its supporting files
+    ///  will be written.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.GcsDestination GcsDestination {
+      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.AutoML.V1.GcsDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.GcsDestination;
+      }
+    }
+
+    /// <summary>Field number for the "model_format" field.</summary>
+    public const int ModelFormatFieldNumber = 4;
+    private string modelFormat_ = "";
+    /// <summary>
+    /// The format in which the model must be exported. The available, and default,
+    /// formats depend on the problem and model type (if given problem and type
+    /// combination doesn't have a format listed, it means its models are not
+    /// exportable):
+    ///
+    /// *  For Image Classification mobile-low-latency-1, mobile-versatile-1,
+    ///        mobile-high-accuracy-1:
+    ///      "tflite" (default), "edgetpu_tflite", "tf_saved_model", "tf_js".
+    ///
+    /// *  For Image Classification mobile-core-ml-low-latency-1,
+    ///        mobile-core-ml-versatile-1, mobile-core-ml-high-accuracy-1:
+    ///      "core_ml" (default).
+    ///
+    /// *  For Image Object Detection mobile-low-latency-1, mobile-versatile-1,
+    ///        mobile-high-accuracy-1:
+    ///      "tflite", "tf_saved_model", "tf_js".
+    /// Formats description:
+    ///
+    /// * tflite - Used for Android mobile devices.
+    /// * edgetpu_tflite - Used for [Edge TPU](https://cloud.google.com/edge-tpu/)
+    ///                    devices.
+    /// * tf_saved_model - A tensorflow model in SavedModel format.
+    /// * tf_js - A [TensorFlow.js](https://www.tensorflow.org/js) model that can
+    ///           be used in the browser and in Node.js using JavaScript.x`
+    /// * core_ml - Used for iOS mobile devices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ModelFormat {
+      get { return modelFormat_; }
+      set {
+        modelFormat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "params" field.</summary>
+    public const int ParamsFieldNumber = 2;
+    private static readonly pbc::MapField<string, string>.Codec _map_params_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+    private readonly pbc::MapField<string, string> params_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Additional model-type and format specific parameters describing the
+    /// requirements for the to be exported model files, any string must be up to
+    /// 25000 characters long.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Params {
+      get { return params_; }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      GcsDestination = 1,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ModelExportOutputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ModelExportOutputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
+      if (ModelFormat != other.ModelFormat) return false;
+      if (!Params.Equals(other.Params)) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
+      if (ModelFormat.Length != 0) hash ^= ModelFormat.GetHashCode();
+      hash ^= Params.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      params_.WriteTo(output, _map_params_codec);
+      if (ModelFormat.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ModelFormat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
+      }
+      if (ModelFormat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelFormat);
+      }
+      size += params_.CalculateSize(_map_params_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ModelExportOutputConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ModelFormat.Length != 0) {
+        ModelFormat = other.ModelFormat;
+      }
+      params_.Add(other.params_);
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          if (GcsDestination == null) {
+            GcsDestination = new global::Google.Cloud.AutoML.V1.GcsDestination();
+          }
+          GcsDestination.MergeFrom(other.GcsDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.AutoML.V1.GcsDestination subBuilder = new global::Google.Cloud.AutoML.V1.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+          case 18: {
+            params_.AddEntriesFrom(input, _map_params_codec);
+            break;
+          }
+          case 34: {
+            ModelFormat = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// The Google Cloud Storage location for the input content.
   /// </summary>
   public sealed partial class GcsSource : pb::IMessage<GcsSource> {
@@ -469,7 +2064,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -501,8 +2096,8 @@ namespace Google.Cloud.AutoML.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> inputUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Google Cloud Storage URIs to input files, up to 2000 characters
-    /// long. Accepted forms:
+    /// Required. Google Cloud Storage URIs to input files, up to 2000
+    /// characters long. Accepted forms:
     /// * Full object path, e.g. gs://bucket/directory/object.csv
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -598,7 +2193,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

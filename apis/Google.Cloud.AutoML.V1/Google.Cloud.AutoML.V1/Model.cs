@@ -25,29 +25,45 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXV0b21sL3YxL21vZGVsLnByb3RvEhZnb29nbGUu",
-            "Y2xvdWQuYXV0b21sLnYxGihnb29nbGUvY2xvdWQvYXV0b21sL3YxL3RyYW5z",
-            "bGF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIpEECgVNb2RlbBJWChp0",
-            "cmFuc2xhdGlvbl9tb2RlbF9tZXRhZGF0YRgPIAEoCzIwLmdvb2dsZS5jbG91",
-            "ZC5hdXRvbWwudjEuVHJhbnNsYXRpb25Nb2RlbE1ldGFkYXRhSAASDAoEbmFt",
-            "ZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSEgoKZGF0YXNldF9pZBgD",
-            "IAEoCRIvCgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEkcKEGRlcGxveW1lbnRfc3RhdGUYCCABKA4yLS5nb29n",
-            "bGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsLkRlcGxveW1lbnRTdGF0ZRI5CgZs",
-            "YWJlbHMYIiADKAsyKS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsLkxh",
-            "YmVsc0VudHJ5Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEiUQoPRGVwbG95bWVudFN0YXRlEiAKHERFUExPWU1FTlRf",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABIMCghERVBMT1lFRBABEg4KClVOREVQTE9Z",
-            "RUQQAkIQCg5tb2RlbF9tZXRhZGF0YUKqAQoaY29tLmdvb2dsZS5jbG91ZC5h",
-            "dXRvbWwudjFQAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9hdXRvbWwvdjE7YXV0b21sqgIWR29vZ2xlLkNsb3VkLkF1",
-            "dG9NTC5WMcoCFkdvb2dsZVxDbG91ZFxBdXRvTUxcVjHqAhlHb29nbGU6OkNs",
-            "b3VkOjpBdXRvTUw6OlYxYgZwcm90bzM="));
+            "Y2xvdWQuYXV0b21sLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiJn",
+            "b29nbGUvY2xvdWQvYXV0b21sL3YxL2ltYWdlLnByb3RvGiFnb29nbGUvY2xv",
+            "dWQvYXV0b21sL3YxL3RleHQucHJvdG8aKGdvb2dsZS9jbG91ZC9hdXRvbWwv",
+            "djEvdHJhbnNsYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i+ggKBU1v",
+            "ZGVsElYKGnRyYW5zbGF0aW9uX21vZGVsX21ldGFkYXRhGA8gASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLmF1dG9tbC52MS5UcmFuc2xhdGlvbk1vZGVsTWV0YWRhdGFI",
+            "ABJnCiNpbWFnZV9jbGFzc2lmaWNhdGlvbl9tb2RlbF9tZXRhZGF0YRgNIAEo",
+            "CzI4Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuSW1hZ2VDbGFzc2lmaWNhdGlv",
+            "bk1vZGVsTWV0YWRhdGFIABJlCiJ0ZXh0X2NsYXNzaWZpY2F0aW9uX21vZGVs",
+            "X21ldGFkYXRhGA4gASgLMjcuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5UZXh0",
+            "Q2xhc3NpZmljYXRpb25Nb2RlbE1ldGFkYXRhSAASagolaW1hZ2Vfb2JqZWN0",
+            "X2RldGVjdGlvbl9tb2RlbF9tZXRhZGF0YRgUIAEoCzI5Lmdvb2dsZS5jbG91",
+            "ZC5hdXRvbWwudjEuSW1hZ2VPYmplY3REZXRlY3Rpb25Nb2RlbE1ldGFkYXRh",
+            "SAASXQoedGV4dF9leHRyYWN0aW9uX21vZGVsX21ldGFkYXRhGBMgASgLMjMu",
+            "Z29vZ2xlLmNsb3VkLmF1dG9tbC52MS5UZXh0RXh0cmFjdGlvbk1vZGVsTWV0",
+            "YWRhdGFIABJbCh10ZXh0X3NlbnRpbWVudF9tb2RlbF9tZXRhZGF0YRgWIAEo",
+            "CzIyLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuVGV4dFNlbnRpbWVudE1vZGVs",
+            "TWV0YWRhdGFIABIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEo",
+            "CRISCgpkYXRhc2V0X2lkGAMgASgJEi8KC2NyZWF0ZV90aW1lGAcgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgLIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASRwoQZGVwbG95bWVudF9z",
+            "dGF0ZRgIIAEoDjItLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTW9kZWwuRGVw",
+            "bG95bWVudFN0YXRlEgwKBGV0YWcYCiABKAkSOQoGbGFiZWxzGCIgAygLMiku",
+            "Z29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Nb2RlbC5MYWJlbHNFbnRyeRotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlEK",
+            "D0RlcGxveW1lbnRTdGF0ZRIgChxERVBMT1lNRU5UX1NUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASDAoIREVQTE9ZRUQQARIOCgpVTkRFUExPWUVEEAI6YepBXgobYXV0",
+            "b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEj9wcm9qZWN0cy97cHJvamVjdF9p",
+            "ZH0vbG9jYXRpb25zL3tsb2NhdGlvbl9pZH0vbW9kZWxzL3ttb2RlbF9pZH1C",
+            "EAoObW9kZWxfbWV0YWRhdGFCqgEKGmNvbS5nb29nbGUuY2xvdWQuYXV0b21s",
+            "LnYxUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "Y2xvdWQvYXV0b21sL3YxO2F1dG9tbKoCFkdvb2dsZS5DbG91ZC5BdXRvTUwu",
+            "VjHKAhZHb29nbGVcQ2xvdWRcQXV0b01MXFYx6gIZR29vZ2xlOjpDbG91ZDo6",
+            "QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ImageReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Model), global::Google.Cloud.AutoML.V1.Model.Parser, new[]{ "TranslationModelMetadata", "Name", "DisplayName", "DatasetId", "CreateTime", "UpdateTime", "DeploymentState", "Labels" }, new[]{ "ModelMetadata" }, new[]{ typeof(global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState) }, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Model), global::Google.Cloud.AutoML.V1.Model.Parser, new[]{ "TranslationModelMetadata", "ImageClassificationModelMetadata", "TextClassificationModelMetadata", "ImageObjectDetectionModelMetadata", "TextExtractionModelMetadata", "TextSentimentModelMetadata", "Name", "DisplayName", "DatasetId", "CreateTime", "UpdateTime", "DeploymentState", "Etag", "Labels" }, new[]{ "ModelMetadata" }, new[]{ typeof(global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState) }, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -88,10 +104,26 @@ namespace Google.Cloud.AutoML.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       deploymentState_ = other.deploymentState_;
+      etag_ = other.etag_;
       labels_ = other.labels_.Clone();
       switch (other.ModelMetadataCase) {
         case ModelMetadataOneofCase.TranslationModelMetadata:
           TranslationModelMetadata = other.TranslationModelMetadata.Clone();
+          break;
+        case ModelMetadataOneofCase.ImageClassificationModelMetadata:
+          ImageClassificationModelMetadata = other.ImageClassificationModelMetadata.Clone();
+          break;
+        case ModelMetadataOneofCase.TextClassificationModelMetadata:
+          TextClassificationModelMetadata = other.TextClassificationModelMetadata.Clone();
+          break;
+        case ModelMetadataOneofCase.ImageObjectDetectionModelMetadata:
+          ImageObjectDetectionModelMetadata = other.ImageObjectDetectionModelMetadata.Clone();
+          break;
+        case ModelMetadataOneofCase.TextExtractionModelMetadata:
+          TextExtractionModelMetadata = other.TextExtractionModelMetadata.Clone();
+          break;
+        case ModelMetadataOneofCase.TextSentimentModelMetadata:
+          TextSentimentModelMetadata = other.TextSentimentModelMetadata.Clone();
           break;
       }
 
@@ -114,6 +146,76 @@ namespace Google.Cloud.AutoML.V1 {
       set {
         modelMetadata_ = value;
         modelMetadataCase_ = value == null ? ModelMetadataOneofCase.None : ModelMetadataOneofCase.TranslationModelMetadata;
+      }
+    }
+
+    /// <summary>Field number for the "image_classification_model_metadata" field.</summary>
+    public const int ImageClassificationModelMetadataFieldNumber = 13;
+    /// <summary>
+    /// Metadata for image classification models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata ImageClassificationModelMetadata {
+      get { return modelMetadataCase_ == ModelMetadataOneofCase.ImageClassificationModelMetadata ? (global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata) modelMetadata_ : null; }
+      set {
+        modelMetadata_ = value;
+        modelMetadataCase_ = value == null ? ModelMetadataOneofCase.None : ModelMetadataOneofCase.ImageClassificationModelMetadata;
+      }
+    }
+
+    /// <summary>Field number for the "text_classification_model_metadata" field.</summary>
+    public const int TextClassificationModelMetadataFieldNumber = 14;
+    /// <summary>
+    /// Metadata for text classification models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata TextClassificationModelMetadata {
+      get { return modelMetadataCase_ == ModelMetadataOneofCase.TextClassificationModelMetadata ? (global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata) modelMetadata_ : null; }
+      set {
+        modelMetadata_ = value;
+        modelMetadataCase_ = value == null ? ModelMetadataOneofCase.None : ModelMetadataOneofCase.TextClassificationModelMetadata;
+      }
+    }
+
+    /// <summary>Field number for the "image_object_detection_model_metadata" field.</summary>
+    public const int ImageObjectDetectionModelMetadataFieldNumber = 20;
+    /// <summary>
+    /// Metadata for image object detection models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata ImageObjectDetectionModelMetadata {
+      get { return modelMetadataCase_ == ModelMetadataOneofCase.ImageObjectDetectionModelMetadata ? (global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata) modelMetadata_ : null; }
+      set {
+        modelMetadata_ = value;
+        modelMetadataCase_ = value == null ? ModelMetadataOneofCase.None : ModelMetadataOneofCase.ImageObjectDetectionModelMetadata;
+      }
+    }
+
+    /// <summary>Field number for the "text_extraction_model_metadata" field.</summary>
+    public const int TextExtractionModelMetadataFieldNumber = 19;
+    /// <summary>
+    /// Metadata for text extraction models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata TextExtractionModelMetadata {
+      get { return modelMetadataCase_ == ModelMetadataOneofCase.TextExtractionModelMetadata ? (global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata) modelMetadata_ : null; }
+      set {
+        modelMetadata_ = value;
+        modelMetadataCase_ = value == null ? ModelMetadataOneofCase.None : ModelMetadataOneofCase.TextExtractionModelMetadata;
+      }
+    }
+
+    /// <summary>Field number for the "text_sentiment_model_metadata" field.</summary>
+    public const int TextSentimentModelMetadataFieldNumber = 22;
+    /// <summary>
+    /// Metadata for text sentiment models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata TextSentimentModelMetadata {
+      get { return modelMetadataCase_ == ModelMetadataOneofCase.TextSentimentModelMetadata ? (global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata) modelMetadata_ : null; }
+      set {
+        modelMetadata_ = value;
+        modelMetadataCase_ = value == null ? ModelMetadataOneofCase.None : ModelMetadataOneofCase.TextSentimentModelMetadata;
       }
     }
 
@@ -207,6 +309,21 @@ namespace Google.Cloud.AutoML.V1 {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 10;
+    private string etag_ = "";
+    /// <summary>
+    /// Used to perform a consistent read-modify-write updates. If not set, a blind
+    /// "overwrite" update happens.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 34;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
@@ -232,6 +349,11 @@ namespace Google.Cloud.AutoML.V1 {
     public enum ModelMetadataOneofCase {
       None = 0,
       TranslationModelMetadata = 15,
+      ImageClassificationModelMetadata = 13,
+      TextClassificationModelMetadata = 14,
+      ImageObjectDetectionModelMetadata = 20,
+      TextExtractionModelMetadata = 19,
+      TextSentimentModelMetadata = 22,
     }
     private ModelMetadataOneofCase modelMetadataCase_ = ModelMetadataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -259,12 +381,18 @@ namespace Google.Cloud.AutoML.V1 {
         return true;
       }
       if (!object.Equals(TranslationModelMetadata, other.TranslationModelMetadata)) return false;
+      if (!object.Equals(ImageClassificationModelMetadata, other.ImageClassificationModelMetadata)) return false;
+      if (!object.Equals(TextClassificationModelMetadata, other.TextClassificationModelMetadata)) return false;
+      if (!object.Equals(ImageObjectDetectionModelMetadata, other.ImageObjectDetectionModelMetadata)) return false;
+      if (!object.Equals(TextExtractionModelMetadata, other.TextExtractionModelMetadata)) return false;
+      if (!object.Equals(TextSentimentModelMetadata, other.TextSentimentModelMetadata)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (DatasetId != other.DatasetId) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (DeploymentState != other.DeploymentState) return false;
+      if (Etag != other.Etag) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (ModelMetadataCase != other.ModelMetadataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -274,12 +402,18 @@ namespace Google.Cloud.AutoML.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (modelMetadataCase_ == ModelMetadataOneofCase.TranslationModelMetadata) hash ^= TranslationModelMetadata.GetHashCode();
+      if (modelMetadataCase_ == ModelMetadataOneofCase.ImageClassificationModelMetadata) hash ^= ImageClassificationModelMetadata.GetHashCode();
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextClassificationModelMetadata) hash ^= TextClassificationModelMetadata.GetHashCode();
+      if (modelMetadataCase_ == ModelMetadataOneofCase.ImageObjectDetectionModelMetadata) hash ^= ImageObjectDetectionModelMetadata.GetHashCode();
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextExtractionModelMetadata) hash ^= TextExtractionModelMetadata.GetHashCode();
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextSentimentModelMetadata) hash ^= TextSentimentModelMetadata.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (DeploymentState != 0) hash ^= DeploymentState.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= (int) modelMetadataCase_;
       if (_unknownFields != null) {
@@ -315,13 +449,37 @@ namespace Google.Cloud.AutoML.V1 {
         output.WriteRawTag(64);
         output.WriteEnum((int) DeploymentState);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Etag);
+      }
       if (updateTime_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(UpdateTime);
       }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.ImageClassificationModelMetadata) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ImageClassificationModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextClassificationModelMetadata) {
+        output.WriteRawTag(114);
+        output.WriteMessage(TextClassificationModelMetadata);
+      }
       if (modelMetadataCase_ == ModelMetadataOneofCase.TranslationModelMetadata) {
         output.WriteRawTag(122);
         output.WriteMessage(TranslationModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextExtractionModelMetadata) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(TextExtractionModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.ImageObjectDetectionModelMetadata) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(ImageObjectDetectionModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextSentimentModelMetadata) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(TextSentimentModelMetadata);
       }
       labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
@@ -334,6 +492,21 @@ namespace Google.Cloud.AutoML.V1 {
       int size = 0;
       if (modelMetadataCase_ == ModelMetadataOneofCase.TranslationModelMetadata) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TranslationModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.ImageClassificationModelMetadata) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImageClassificationModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextClassificationModelMetadata) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextClassificationModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.ImageObjectDetectionModelMetadata) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImageObjectDetectionModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextExtractionModelMetadata) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TextExtractionModelMetadata);
+      }
+      if (modelMetadataCase_ == ModelMetadataOneofCase.TextSentimentModelMetadata) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TextSentimentModelMetadata);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -352,6 +525,9 @@ namespace Google.Cloud.AutoML.V1 {
       }
       if (DeploymentState != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeploymentState);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
@@ -389,6 +565,9 @@ namespace Google.Cloud.AutoML.V1 {
       if (other.DeploymentState != 0) {
         DeploymentState = other.DeploymentState;
       }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
       labels_.Add(other.labels_);
       switch (other.ModelMetadataCase) {
         case ModelMetadataOneofCase.TranslationModelMetadata:
@@ -396,6 +575,36 @@ namespace Google.Cloud.AutoML.V1 {
             TranslationModelMetadata = new global::Google.Cloud.AutoML.V1.TranslationModelMetadata();
           }
           TranslationModelMetadata.MergeFrom(other.TranslationModelMetadata);
+          break;
+        case ModelMetadataOneofCase.ImageClassificationModelMetadata:
+          if (ImageClassificationModelMetadata == null) {
+            ImageClassificationModelMetadata = new global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata();
+          }
+          ImageClassificationModelMetadata.MergeFrom(other.ImageClassificationModelMetadata);
+          break;
+        case ModelMetadataOneofCase.TextClassificationModelMetadata:
+          if (TextClassificationModelMetadata == null) {
+            TextClassificationModelMetadata = new global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata();
+          }
+          TextClassificationModelMetadata.MergeFrom(other.TextClassificationModelMetadata);
+          break;
+        case ModelMetadataOneofCase.ImageObjectDetectionModelMetadata:
+          if (ImageObjectDetectionModelMetadata == null) {
+            ImageObjectDetectionModelMetadata = new global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata();
+          }
+          ImageObjectDetectionModelMetadata.MergeFrom(other.ImageObjectDetectionModelMetadata);
+          break;
+        case ModelMetadataOneofCase.TextExtractionModelMetadata:
+          if (TextExtractionModelMetadata == null) {
+            TextExtractionModelMetadata = new global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata();
+          }
+          TextExtractionModelMetadata.MergeFrom(other.TextExtractionModelMetadata);
+          break;
+        case ModelMetadataOneofCase.TextSentimentModelMetadata:
+          if (TextSentimentModelMetadata == null) {
+            TextSentimentModelMetadata = new global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata();
+          }
+          TextSentimentModelMetadata.MergeFrom(other.TextSentimentModelMetadata);
           break;
       }
 
@@ -433,11 +642,33 @@ namespace Google.Cloud.AutoML.V1 {
             DeploymentState = (global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState) input.ReadEnum();
             break;
           }
+          case 82: {
+            Etag = input.ReadString();
+            break;
+          }
           case 90: {
             if (updateTime_ == null) {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata();
+            if (modelMetadataCase_ == ModelMetadataOneofCase.ImageClassificationModelMetadata) {
+              subBuilder.MergeFrom(ImageClassificationModelMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            ImageClassificationModelMetadata = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata subBuilder = new global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata();
+            if (modelMetadataCase_ == ModelMetadataOneofCase.TextClassificationModelMetadata) {
+              subBuilder.MergeFrom(TextClassificationModelMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            TextClassificationModelMetadata = subBuilder;
             break;
           }
           case 122: {
@@ -447,6 +678,33 @@ namespace Google.Cloud.AutoML.V1 {
             }
             input.ReadMessage(subBuilder);
             TranslationModelMetadata = subBuilder;
+            break;
+          }
+          case 154: {
+            global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata subBuilder = new global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata();
+            if (modelMetadataCase_ == ModelMetadataOneofCase.TextExtractionModelMetadata) {
+              subBuilder.MergeFrom(TextExtractionModelMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            TextExtractionModelMetadata = subBuilder;
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata();
+            if (modelMetadataCase_ == ModelMetadataOneofCase.ImageObjectDetectionModelMetadata) {
+              subBuilder.MergeFrom(ImageObjectDetectionModelMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            ImageObjectDetectionModelMetadata = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata subBuilder = new global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata();
+            if (modelMetadataCase_ == ModelMetadataOneofCase.TextSentimentModelMetadata) {
+              subBuilder.MergeFrom(TextSentimentModelMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            TextSentimentModelMetadata = subBuilder;
             break;
           }
           case 274: {

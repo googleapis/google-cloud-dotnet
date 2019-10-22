@@ -19,6 +19,7 @@ namespace Google.Cloud.AutoML.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.AutoML.V1;
+    using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -96,6 +97,151 @@ namespace Google.Cloud.AutoML.V1.Snippets
             };
             // Make the request
             PredictResponse response = predictionServiceClient.Predict(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchPredictAsync</summary>
+        public async Task BatchPredictAsync()
+        {
+            // Snippet: BatchPredictAsync(ModelName,BatchPredictInputConfig,BatchPredictOutputConfig,IDictionary<string, string>,CallSettings)
+            // Additional: BatchPredictAsync(ModelName,BatchPredictInputConfig,BatchPredictOutputConfig,IDictionary<string, string>,CancellationToken)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
+            BatchPredictInputConfig inputConfig = new BatchPredictInputConfig();
+            BatchPredictOutputConfig outputConfig = new BatchPredictOutputConfig();
+            IDictionary<string, string> @params = new Dictionary<string, string>();
+            // Make the request
+            Operation<BatchPredictResult, OperationMetadata> response =
+                await predictionServiceClient.BatchPredictAsync(name, inputConfig, outputConfig, @params);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchPredictResult, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchPredictResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchPredictResult, OperationMetadata> retrievedResponse =
+                await predictionServiceClient.PollOnceBatchPredictAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchPredictResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchPredict</summary>
+        public void BatchPredict()
+        {
+            // Snippet: BatchPredict(ModelName,BatchPredictInputConfig,BatchPredictOutputConfig,IDictionary<string, string>,CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
+            BatchPredictInputConfig inputConfig = new BatchPredictInputConfig();
+            BatchPredictOutputConfig outputConfig = new BatchPredictOutputConfig();
+            IDictionary<string, string> @params = new Dictionary<string, string>();
+            // Make the request
+            Operation<BatchPredictResult, OperationMetadata> response =
+                predictionServiceClient.BatchPredict(name, inputConfig, outputConfig, @params);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchPredictResult, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchPredictResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchPredictResult, OperationMetadata> retrievedResponse =
+                predictionServiceClient.PollOnceBatchPredict(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchPredictResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchPredictAsync</summary>
+        public async Task BatchPredictAsync_RequestObject()
+        {
+            // Snippet: BatchPredictAsync(BatchPredictRequest,CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchPredictRequest request = new BatchPredictRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                InputConfig = new BatchPredictInputConfig(),
+                OutputConfig = new BatchPredictOutputConfig(),
+            };
+            // Make the request
+            Operation<BatchPredictResult, OperationMetadata> response =
+                await predictionServiceClient.BatchPredictAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchPredictResult, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchPredictResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchPredictResult, OperationMetadata> retrievedResponse =
+                await predictionServiceClient.PollOnceBatchPredictAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchPredictResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchPredict</summary>
+        public void BatchPredict_RequestObject()
+        {
+            // Snippet: BatchPredict(BatchPredictRequest,CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            BatchPredictRequest request = new BatchPredictRequest
+            {
+                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                InputConfig = new BatchPredictInputConfig(),
+                OutputConfig = new BatchPredictOutputConfig(),
+            };
+            // Make the request
+            Operation<BatchPredictResult, OperationMetadata> response =
+                predictionServiceClient.BatchPredict(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchPredictResult, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchPredictResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchPredictResult, OperationMetadata> retrievedResponse =
+                predictionServiceClient.PollOnceBatchPredict(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchPredictResult retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

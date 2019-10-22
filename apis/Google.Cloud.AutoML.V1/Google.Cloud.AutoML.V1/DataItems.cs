@@ -25,29 +25,300 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvYXV0b21sL3YxL2RhdGFfaXRlbXMucHJvdG8SFmdv",
-            "b2dsZS5jbG91ZC5hdXRvbWwudjEaH2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
-            "aW8ucHJvdG8aGWdvb2dsZS9wcm90b2J1Zi9hbnkucHJvdG8aHmdvb2dsZS9w",
-            "cm90b2J1Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVj",
-            "dC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byJGCgtUZXh0",
-            "U25pcHBldBIPCgdjb250ZW50GAEgASgJEhEKCW1pbWVfdHlwZRgCIAEoCRIT",
-            "Cgtjb250ZW50X3VyaRgEIAEoCSJYCg5FeGFtcGxlUGF5bG9hZBI7Cgx0ZXh0",
-            "X3NuaXBwZXQYAiABKAsyIy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlRleHRT",
-            "bmlwcGV0SABCCQoHcGF5bG9hZEKqAQoaY29tLmdvb2dsZS5jbG91ZC5hdXRv",
-            "bWwudjFQAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9hdXRvbWwvdjE7YXV0b21sqgIWR29vZ2xlLkNsb3VkLkF1dG9N",
-            "TC5WMcoCFkdvb2dsZVxDbG91ZFxBdXRvTUxcVjHqAhlHb29nbGU6OkNsb3Vk",
-            "OjpBdXRvTUw6OlYxYgZwcm90bzM="));
+            "b2dsZS5jbG91ZC5hdXRvbWwudjEaJWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
+            "Z2VvbWV0cnkucHJvdG8aH2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvaW8ucHJv",
+            "dG8aKWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvdGV4dF9zZWdtZW50LnByb3Rv",
+            "Ghlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGh5nb29nbGUvcHJvdG9idWYv",
+            "ZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
+            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ihQEKBUltYWdlEhUKC2lt",
+            "YWdlX2J5dGVzGAEgASgMSAASRgoSaW1hZ2VfaW5wdXRfY29uZmlnGAcgASgL",
+            "MiguZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5JbWFnZUlucHV0Q29uZmlnSAAS",
+            "FQoNdGh1bWJuYWlsX3VyaRgEIAEoCUIGCgRkYXRhIkYKC1RleHRTbmlwcGV0",
+            "Eg8KB2NvbnRlbnQYASABKAkSEQoJbWltZV90eXBlGAIgASgJEhMKC2NvbnRl",
+            "bnRfdXJpGAQgASgJIuoBChJEb2N1bWVudERpbWVuc2lvbnMSTgoEdW5pdBgB",
+            "IAEoDjJALmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRG9jdW1lbnREaW1lbnNp",
+            "b25zLkRvY3VtZW50RGltZW5zaW9uVW5pdBINCgV3aWR0aBgCIAEoAhIOCgZo",
+            "ZWlnaHQYAyABKAIiZQoVRG9jdW1lbnREaW1lbnNpb25Vbml0EicKI0RPQ1VN",
+            "RU5UX0RJTUVOU0lPTl9VTklUX1VOU1BFQ0lGSUVEEAASCAoESU5DSBABEg4K",
+            "CkNFTlRJTUVURVIQAhIJCgVQT0lOVBADItYFCghEb2N1bWVudBJBCgxpbnB1",
+            "dF9jb25maWcYASABKAsyKy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkRvY3Vt",
+            "ZW50SW5wdXRDb25maWcSOgoNZG9jdW1lbnRfdGV4dBgCIAEoCzIjLmdvb2ds",
+            "ZS5jbG91ZC5hdXRvbWwudjEuVGV4dFNuaXBwZXQSNwoGbGF5b3V0GAMgAygL",
+            "MicuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Eb2N1bWVudC5MYXlvdXQSRwoT",
+            "ZG9jdW1lbnRfZGltZW5zaW9ucxgEIAEoCzIqLmdvb2dsZS5jbG91ZC5hdXRv",
+            "bWwudjEuRG9jdW1lbnREaW1lbnNpb25zEhIKCnBhZ2VfY291bnQYBSABKAUa",
+            "tAMKBkxheW91dBI5Cgx0ZXh0X3NlZ21lbnQYASABKAsyIy5nb29nbGUuY2xv",
+            "dWQuYXV0b21sLnYxLlRleHRTZWdtZW50EhMKC3BhZ2VfbnVtYmVyGAIgASgF",
+            "EjsKDWJvdW5kaW5nX3BvbHkYAyABKAsyJC5nb29nbGUuY2xvdWQuYXV0b21s",
+            "LnYxLkJvdW5kaW5nUG9seRJSChF0ZXh0X3NlZ21lbnRfdHlwZRgEIAEoDjI3",
+            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRG9jdW1lbnQuTGF5b3V0LlRleHRT",
+            "ZWdtZW50VHlwZSLIAQoPVGV4dFNlZ21lbnRUeXBlEiEKHVRFWFRfU0VHTUVO",
+            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFVE9LRU4QARINCglQQVJBR1JBUEgQ",
+            "AhIOCgpGT1JNX0ZJRUxEEAMSEwoPRk9STV9GSUVMRF9OQU1FEAQSFwoTRk9S",
+            "TV9GSUVMRF9DT05URU5UUxAFEgkKBVRBQkxFEAYSEAoMVEFCTEVfSEVBREVS",
+            "EAcSDQoJVEFCTEVfUk9XEAgSDgoKVEFCTEVfQ0VMTBAJIr4BCg5FeGFtcGxl",
+            "UGF5bG9hZBIuCgVpbWFnZRgBIAEoCzIdLmdvb2dsZS5jbG91ZC5hdXRvbWwu",
+            "djEuSW1hZ2VIABI7Cgx0ZXh0X3NuaXBwZXQYAiABKAsyIy5nb29nbGUuY2xv",
+            "dWQuYXV0b21sLnYxLlRleHRTbmlwcGV0SAASNAoIZG9jdW1lbnQYBCABKAsy",
+            "IC5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkRvY3VtZW50SABCCQoHcGF5bG9h",
+            "ZEKqAQoaY29tLmdvb2dsZS5jbG91ZC5hdXRvbWwudjFQAVo8Z29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hdXRvbWwvdjE7",
+            "YXV0b21sqgIWR29vZ2xlLkNsb3VkLkF1dG9NTC5WMcoCFkdvb2dsZVxDbG91",
+            "ZFxBdXRvTUxcVjHqAhlHb29nbGU6OkNsb3VkOjpBdXRvTUw6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.GeometryReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Image), global::Google.Cloud.AutoML.V1.Image.Parser, new[]{ "ImageBytes", "ImageInputConfig", "ThumbnailUri" }, new[]{ "Data" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSnippet), global::Google.Cloud.AutoML.V1.TextSnippet.Parser, new[]{ "Content", "MimeType", "ContentUri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExamplePayload), global::Google.Cloud.AutoML.V1.ExamplePayload.Parser, new[]{ "TextSnippet" }, new[]{ "Payload" }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions), global::Google.Cloud.AutoML.V1.DocumentDimensions.Parser, new[]{ "Unit", "Width", "Height" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document), global::Google.Cloud.AutoML.V1.Document.Parser, new[]{ "InputConfig", "DocumentText", "Layout", "DocumentDimensions", "PageCount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout), global::Google.Cloud.AutoML.V1.Document.Types.Layout.Parser, new[]{ "TextSegment", "PageNumber", "BoundingPoly", "TextSegmentType" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType) }, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExamplePayload), global::Google.Cloud.AutoML.V1.ExamplePayload.Parser, new[]{ "Image", "TextSnippet", "Document" }, new[]{ "Payload" }, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  /// A representation of an image.
+  /// Only images up to 30MB in size are supported.
+  /// </summary>
+  public sealed partial class Image : pb::IMessage<Image> {
+    private static readonly pb::MessageParser<Image> _parser = new pb::MessageParser<Image>(() => new Image());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Image> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Image() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Image(Image other) : this() {
+      thumbnailUri_ = other.thumbnailUri_;
+      switch (other.DataCase) {
+        case DataOneofCase.ImageBytes:
+          ImageBytes = other.ImageBytes;
+          break;
+        case DataOneofCase.ImageInputConfig:
+          ImageInputConfig = other.ImageInputConfig.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Image Clone() {
+      return new Image(this);
+    }
+
+    /// <summary>Field number for the "image_bytes" field.</summary>
+    public const int ImageBytesFieldNumber = 1;
+    /// <summary>
+    /// Image content represented as a stream of bytes.
+    /// Note: As with all `bytes` fields, protobuffers use a pure binary
+    /// representation, whereas JSON representations use base64.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString ImageBytes {
+      get { return dataCase_ == DataOneofCase.ImageBytes ? (pb::ByteString) data_ : pb::ByteString.Empty; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        dataCase_ = DataOneofCase.ImageBytes;
+      }
+    }
+
+    /// <summary>Field number for the "image_input_config" field.</summary>
+    public const int ImageInputConfigFieldNumber = 7;
+    /// <summary>
+    /// An input config specifying the content of the image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.ImageInputConfig ImageInputConfig {
+      get { return dataCase_ == DataOneofCase.ImageInputConfig ? (global::Google.Cloud.AutoML.V1.ImageInputConfig) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ImageInputConfig;
+      }
+    }
+
+    /// <summary>Field number for the "thumbnail_uri" field.</summary>
+    public const int ThumbnailUriFieldNumber = 4;
+    private string thumbnailUri_ = "";
+    /// <summary>
+    /// Output only. HTTP URI to the thumbnail image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ThumbnailUri {
+      get { return thumbnailUri_; }
+      set {
+        thumbnailUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object data_;
+    /// <summary>Enum of possible cases for the "data" oneof.</summary>
+    public enum DataOneofCase {
+      None = 0,
+      ImageBytes = 1,
+      ImageInputConfig = 7,
+    }
+    private DataOneofCase dataCase_ = DataOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataOneofCase DataCase {
+      get { return dataCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearData() {
+      dataCase_ = DataOneofCase.None;
+      data_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Image);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Image other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ImageBytes != other.ImageBytes) return false;
+      if (!object.Equals(ImageInputConfig, other.ImageInputConfig)) return false;
+      if (ThumbnailUri != other.ThumbnailUri) return false;
+      if (DataCase != other.DataCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (dataCase_ == DataOneofCase.ImageBytes) hash ^= ImageBytes.GetHashCode();
+      if (dataCase_ == DataOneofCase.ImageInputConfig) hash ^= ImageInputConfig.GetHashCode();
+      if (ThumbnailUri.Length != 0) hash ^= ThumbnailUri.GetHashCode();
+      hash ^= (int) dataCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (dataCase_ == DataOneofCase.ImageBytes) {
+        output.WriteRawTag(10);
+        output.WriteBytes(ImageBytes);
+      }
+      if (ThumbnailUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ThumbnailUri);
+      }
+      if (dataCase_ == DataOneofCase.ImageInputConfig) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ImageInputConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (dataCase_ == DataOneofCase.ImageBytes) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ImageBytes);
+      }
+      if (dataCase_ == DataOneofCase.ImageInputConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImageInputConfig);
+      }
+      if (ThumbnailUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ThumbnailUri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Image other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ThumbnailUri.Length != 0) {
+        ThumbnailUri = other.ThumbnailUri;
+      }
+      switch (other.DataCase) {
+        case DataOneofCase.ImageBytes:
+          ImageBytes = other.ImageBytes;
+          break;
+        case DataOneofCase.ImageInputConfig:
+          if (ImageInputConfig == null) {
+            ImageInputConfig = new global::Google.Cloud.AutoML.V1.ImageInputConfig();
+          }
+          ImageInputConfig.MergeFrom(other.ImageInputConfig);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ImageBytes = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            ThumbnailUri = input.ReadString();
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.AutoML.V1.ImageInputConfig subBuilder = new global::Google.Cloud.AutoML.V1.ImageInputConfig();
+            if (dataCase_ == DataOneofCase.ImageInputConfig) {
+              subBuilder.MergeFrom(ImageInputConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ImageInputConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   /// A representation of a text snippet.
   /// </summary>
@@ -59,7 +330,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -249,6 +520,822 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
+  /// Message that describes dimension of a document.
+  /// </summary>
+  public sealed partial class DocumentDimensions : pb::IMessage<DocumentDimensions> {
+    private static readonly pb::MessageParser<DocumentDimensions> _parser = new pb::MessageParser<DocumentDimensions>(() => new DocumentDimensions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DocumentDimensions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentDimensions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentDimensions(DocumentDimensions other) : this() {
+      unit_ = other.unit_;
+      width_ = other.width_;
+      height_ = other.height_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentDimensions Clone() {
+      return new DocumentDimensions(this);
+    }
+
+    /// <summary>Field number for the "unit" field.</summary>
+    public const int UnitFieldNumber = 1;
+    private global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit unit_ = 0;
+    /// <summary>
+    /// Unit of the dimension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit Unit {
+      get { return unit_; }
+      set {
+        unit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "width" field.</summary>
+    public const int WidthFieldNumber = 2;
+    private float width_;
+    /// <summary>
+    /// Width value of the document, works together with the unit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Width {
+      get { return width_; }
+      set {
+        width_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "height" field.</summary>
+    public const int HeightFieldNumber = 3;
+    private float height_;
+    /// <summary>
+    /// Height value of the document, works together with the unit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Height {
+      get { return height_; }
+      set {
+        height_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DocumentDimensions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DocumentDimensions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Unit != other.Unit) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Width, other.Width)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Height, other.Height)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Unit != 0) hash ^= Unit.GetHashCode();
+      if (Width != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Width);
+      if (Height != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Height);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Unit != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Unit);
+      }
+      if (Width != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Width);
+      }
+      if (Height != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Height);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Unit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+      }
+      if (Width != 0F) {
+        size += 1 + 4;
+      }
+      if (Height != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DocumentDimensions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Unit != 0) {
+        Unit = other.Unit;
+      }
+      if (other.Width != 0F) {
+        Width = other.Width;
+      }
+      if (other.Height != 0F) {
+        Height = other.Height;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Unit = (global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit) input.ReadEnum();
+            break;
+          }
+          case 21: {
+            Width = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Height = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DocumentDimensions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Unit of the document dimension.
+      /// </summary>
+      public enum DocumentDimensionUnit {
+        /// <summary>
+        /// Should not be used.
+        /// </summary>
+        [pbr::OriginalName("DOCUMENT_DIMENSION_UNIT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Document dimension is measured in inches.
+        /// </summary>
+        [pbr::OriginalName("INCH")] Inch = 1,
+        /// <summary>
+        /// Document dimension is measured in centimeters.
+        /// </summary>
+        [pbr::OriginalName("CENTIMETER")] Centimeter = 2,
+        /// <summary>
+        /// Document dimension is measured in points. 72 points = 1 inch.
+        /// </summary>
+        [pbr::OriginalName("POINT")] Point = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A structured text document e.g. a PDF.
+  /// </summary>
+  public sealed partial class Document : pb::IMessage<Document> {
+    private static readonly pb::MessageParser<Document> _parser = new pb::MessageParser<Document>(() => new Document());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Document> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Document() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Document(Document other) : this() {
+      inputConfig_ = other.inputConfig_ != null ? other.inputConfig_.Clone() : null;
+      documentText_ = other.documentText_ != null ? other.documentText_.Clone() : null;
+      layout_ = other.layout_.Clone();
+      documentDimensions_ = other.documentDimensions_ != null ? other.documentDimensions_.Clone() : null;
+      pageCount_ = other.pageCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Document Clone() {
+      return new Document(this);
+    }
+
+    /// <summary>Field number for the "input_config" field.</summary>
+    public const int InputConfigFieldNumber = 1;
+    private global::Google.Cloud.AutoML.V1.DocumentInputConfig inputConfig_;
+    /// <summary>
+    /// An input config specifying the content of the document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.DocumentInputConfig InputConfig {
+      get { return inputConfig_; }
+      set {
+        inputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "document_text" field.</summary>
+    public const int DocumentTextFieldNumber = 2;
+    private global::Google.Cloud.AutoML.V1.TextSnippet documentText_;
+    /// <summary>
+    /// The plain text version of this document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.TextSnippet DocumentText {
+      get { return documentText_; }
+      set {
+        documentText_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "layout" field.</summary>
+    public const int LayoutFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AutoML.V1.Document.Types.Layout> _repeated_layout_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AutoML.V1.Document.Types.Layout.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AutoML.V1.Document.Types.Layout> layout_ = new pbc::RepeatedField<global::Google.Cloud.AutoML.V1.Document.Types.Layout>();
+    /// <summary>
+    /// Describes the layout of the document.
+    /// Sorted by [page_number][].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.AutoML.V1.Document.Types.Layout> Layout {
+      get { return layout_; }
+    }
+
+    /// <summary>Field number for the "document_dimensions" field.</summary>
+    public const int DocumentDimensionsFieldNumber = 4;
+    private global::Google.Cloud.AutoML.V1.DocumentDimensions documentDimensions_;
+    /// <summary>
+    /// The dimensions of the page in the document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.DocumentDimensions DocumentDimensions {
+      get { return documentDimensions_; }
+      set {
+        documentDimensions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_count" field.</summary>
+    public const int PageCountFieldNumber = 5;
+    private int pageCount_;
+    /// <summary>
+    /// Number of pages in the document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageCount {
+      get { return pageCount_; }
+      set {
+        pageCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Document);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Document other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InputConfig, other.InputConfig)) return false;
+      if (!object.Equals(DocumentText, other.DocumentText)) return false;
+      if(!layout_.Equals(other.layout_)) return false;
+      if (!object.Equals(DocumentDimensions, other.DocumentDimensions)) return false;
+      if (PageCount != other.PageCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
+      if (documentText_ != null) hash ^= DocumentText.GetHashCode();
+      hash ^= layout_.GetHashCode();
+      if (documentDimensions_ != null) hash ^= DocumentDimensions.GetHashCode();
+      if (PageCount != 0) hash ^= PageCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (inputConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InputConfig);
+      }
+      if (documentText_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DocumentText);
+      }
+      layout_.WriteTo(output, _repeated_layout_codec);
+      if (documentDimensions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DocumentDimensions);
+      }
+      if (PageCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PageCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (inputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputConfig);
+      }
+      if (documentText_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentText);
+      }
+      size += layout_.CalculateSize(_repeated_layout_codec);
+      if (documentDimensions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentDimensions);
+      }
+      if (PageCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Document other) {
+      if (other == null) {
+        return;
+      }
+      if (other.inputConfig_ != null) {
+        if (inputConfig_ == null) {
+          InputConfig = new global::Google.Cloud.AutoML.V1.DocumentInputConfig();
+        }
+        InputConfig.MergeFrom(other.InputConfig);
+      }
+      if (other.documentText_ != null) {
+        if (documentText_ == null) {
+          DocumentText = new global::Google.Cloud.AutoML.V1.TextSnippet();
+        }
+        DocumentText.MergeFrom(other.DocumentText);
+      }
+      layout_.Add(other.layout_);
+      if (other.documentDimensions_ != null) {
+        if (documentDimensions_ == null) {
+          DocumentDimensions = new global::Google.Cloud.AutoML.V1.DocumentDimensions();
+        }
+        DocumentDimensions.MergeFrom(other.DocumentDimensions);
+      }
+      if (other.PageCount != 0) {
+        PageCount = other.PageCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (inputConfig_ == null) {
+              InputConfig = new global::Google.Cloud.AutoML.V1.DocumentInputConfig();
+            }
+            input.ReadMessage(InputConfig);
+            break;
+          }
+          case 18: {
+            if (documentText_ == null) {
+              DocumentText = new global::Google.Cloud.AutoML.V1.TextSnippet();
+            }
+            input.ReadMessage(DocumentText);
+            break;
+          }
+          case 26: {
+            layout_.AddEntriesFrom(input, _repeated_layout_codec);
+            break;
+          }
+          case 34: {
+            if (documentDimensions_ == null) {
+              DocumentDimensions = new global::Google.Cloud.AutoML.V1.DocumentDimensions();
+            }
+            input.ReadMessage(DocumentDimensions);
+            break;
+          }
+          case 40: {
+            PageCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Document message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Describes the layout information of a [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the document.
+      /// </summary>
+      public sealed partial class Layout : pb::IMessage<Layout> {
+        private static readonly pb::MessageParser<Layout> _parser = new pb::MessageParser<Layout>(() => new Layout());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Layout> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AutoML.V1.Document.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Layout() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Layout(Layout other) : this() {
+          textSegment_ = other.textSegment_ != null ? other.textSegment_.Clone() : null;
+          pageNumber_ = other.pageNumber_;
+          boundingPoly_ = other.boundingPoly_ != null ? other.boundingPoly_.Clone() : null;
+          textSegmentType_ = other.textSegmentType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Layout Clone() {
+          return new Layout(this);
+        }
+
+        /// <summary>Field number for the "text_segment" field.</summary>
+        public const int TextSegmentFieldNumber = 1;
+        private global::Google.Cloud.AutoML.V1.TextSegment textSegment_;
+        /// <summary>
+        /// Text Segment that represents a segment in
+        /// [document_text][google.cloud.automl.v1p1beta.Document.document_text].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.AutoML.V1.TextSegment TextSegment {
+          get { return textSegment_; }
+          set {
+            textSegment_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "page_number" field.</summary>
+        public const int PageNumberFieldNumber = 2;
+        private int pageNumber_;
+        /// <summary>
+        /// Page number of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the original document, starts
+        /// from 1.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int PageNumber {
+          get { return pageNumber_; }
+          set {
+            pageNumber_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bounding_poly" field.</summary>
+        public const int BoundingPolyFieldNumber = 3;
+        private global::Google.Cloud.AutoML.V1.BoundingPoly boundingPoly_;
+        /// <summary>
+        /// The position of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the page.
+        /// Contains exactly 4
+        ///
+        /// [normalized_vertices][google.cloud.automl.v1p1beta.BoundingPoly.normalized_vertices]
+        /// and they are connected by edges in the order provided, which will
+        /// represent a rectangle parallel to the frame. The
+        /// [NormalizedVertex-s][google.cloud.automl.v1p1beta.NormalizedVertex] are
+        /// relative to the page.
+        /// Coordinates are based on top-left as point (0,0).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.AutoML.V1.BoundingPoly BoundingPoly {
+          get { return boundingPoly_; }
+          set {
+            boundingPoly_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "text_segment_type" field.</summary>
+        public const int TextSegmentTypeFieldNumber = 4;
+        private global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType textSegmentType_ = 0;
+        /// <summary>
+        /// The type of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in document.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType TextSegmentType {
+          get { return textSegmentType_; }
+          set {
+            textSegmentType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Layout);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Layout other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(TextSegment, other.TextSegment)) return false;
+          if (PageNumber != other.PageNumber) return false;
+          if (!object.Equals(BoundingPoly, other.BoundingPoly)) return false;
+          if (TextSegmentType != other.TextSegmentType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (textSegment_ != null) hash ^= TextSegment.GetHashCode();
+          if (PageNumber != 0) hash ^= PageNumber.GetHashCode();
+          if (boundingPoly_ != null) hash ^= BoundingPoly.GetHashCode();
+          if (TextSegmentType != 0) hash ^= TextSegmentType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (textSegment_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(TextSegment);
+          }
+          if (PageNumber != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(PageNumber);
+          }
+          if (boundingPoly_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(BoundingPoly);
+          }
+          if (TextSegmentType != 0) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) TextSegmentType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (textSegment_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextSegment);
+          }
+          if (PageNumber != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageNumber);
+          }
+          if (boundingPoly_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingPoly);
+          }
+          if (TextSegmentType != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TextSegmentType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Layout other) {
+          if (other == null) {
+            return;
+          }
+          if (other.textSegment_ != null) {
+            if (textSegment_ == null) {
+              TextSegment = new global::Google.Cloud.AutoML.V1.TextSegment();
+            }
+            TextSegment.MergeFrom(other.TextSegment);
+          }
+          if (other.PageNumber != 0) {
+            PageNumber = other.PageNumber;
+          }
+          if (other.boundingPoly_ != null) {
+            if (boundingPoly_ == null) {
+              BoundingPoly = new global::Google.Cloud.AutoML.V1.BoundingPoly();
+            }
+            BoundingPoly.MergeFrom(other.BoundingPoly);
+          }
+          if (other.TextSegmentType != 0) {
+            TextSegmentType = other.TextSegmentType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (textSegment_ == null) {
+                  TextSegment = new global::Google.Cloud.AutoML.V1.TextSegment();
+                }
+                input.ReadMessage(TextSegment);
+                break;
+              }
+              case 16: {
+                PageNumber = input.ReadInt32();
+                break;
+              }
+              case 26: {
+                if (boundingPoly_ == null) {
+                  BoundingPoly = new global::Google.Cloud.AutoML.V1.BoundingPoly();
+                }
+                input.ReadMessage(BoundingPoly);
+                break;
+              }
+              case 32: {
+                TextSegmentType = (global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Layout message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// The type of TextSegment in the context of the original document.
+          /// </summary>
+          public enum TextSegmentType {
+            /// <summary>
+            /// Should not be used.
+            /// </summary>
+            [pbr::OriginalName("TEXT_SEGMENT_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The text segment is a token. e.g. word.
+            /// </summary>
+            [pbr::OriginalName("TOKEN")] Token = 1,
+            /// <summary>
+            /// The text segment is a paragraph.
+            /// </summary>
+            [pbr::OriginalName("PARAGRAPH")] Paragraph = 2,
+            /// <summary>
+            /// The text segment is a form field.
+            /// </summary>
+            [pbr::OriginalName("FORM_FIELD")] FormField = 3,
+            /// <summary>
+            /// The text segment is the name part of a form field. It will be treated
+            /// as child of another FORM_FIELD TextSegment if its span is subspan of
+            /// another TextSegment with type FORM_FIELD.
+            /// </summary>
+            [pbr::OriginalName("FORM_FIELD_NAME")] FormFieldName = 4,
+            /// <summary>
+            /// The text segment is the text content part of a form field. It will be
+            /// treated as child of another FORM_FIELD TextSegment if its span is
+            /// subspan of another TextSegment with type FORM_FIELD.
+            /// </summary>
+            [pbr::OriginalName("FORM_FIELD_CONTENTS")] FormFieldContents = 5,
+            /// <summary>
+            /// The text segment is a whole table, including headers, and all rows.
+            /// </summary>
+            [pbr::OriginalName("TABLE")] Table = 6,
+            /// <summary>
+            /// The text segment is a table's headers. It will be treated as child of
+            /// another TABLE TextSegment if its span is subspan of another TextSegment
+            /// with type TABLE.
+            /// </summary>
+            [pbr::OriginalName("TABLE_HEADER")] TableHeader = 7,
+            /// <summary>
+            /// The text segment is a row in table. It will be treated as child of
+            /// another TABLE TextSegment if its span is subspan of another TextSegment
+            /// with type TABLE.
+            /// </summary>
+            [pbr::OriginalName("TABLE_ROW")] TableRow = 8,
+            /// <summary>
+            /// The text segment is a cell in table. It will be treated as child of
+            /// another TABLE_ROW TextSegment if its span is subspan of another
+            /// TextSegment with type TABLE_ROW.
+            /// </summary>
+            [pbr::OriginalName("TABLE_CELL")] TableCell = 9,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Example data used for training or prediction.
   /// </summary>
   public sealed partial class ExamplePayload : pb::IMessage<ExamplePayload> {
@@ -259,7 +1346,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -277,8 +1364,14 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ExamplePayload(ExamplePayload other) : this() {
       switch (other.PayloadCase) {
+        case PayloadOneofCase.Image:
+          Image = other.Image.Clone();
+          break;
         case PayloadOneofCase.TextSnippet:
           TextSnippet = other.TextSnippet.Clone();
+          break;
+        case PayloadOneofCase.Document:
+          Document = other.Document.Clone();
           break;
       }
 
@@ -288,6 +1381,20 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ExamplePayload Clone() {
       return new ExamplePayload(this);
+    }
+
+    /// <summary>Field number for the "image" field.</summary>
+    public const int ImageFieldNumber = 1;
+    /// <summary>
+    /// Example image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.Image Image {
+      get { return payloadCase_ == PayloadOneofCase.Image ? (global::Google.Cloud.AutoML.V1.Image) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.Image;
+      }
     }
 
     /// <summary>Field number for the "text_snippet" field.</summary>
@@ -304,11 +1411,27 @@ namespace Google.Cloud.AutoML.V1 {
       }
     }
 
+    /// <summary>Field number for the "document" field.</summary>
+    public const int DocumentFieldNumber = 4;
+    /// <summary>
+    /// Example document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AutoML.V1.Document Document {
+      get { return payloadCase_ == PayloadOneofCase.Document ? (global::Google.Cloud.AutoML.V1.Document) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.Document;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
+      Image = 1,
       TextSnippet = 2,
+      Document = 4,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -335,7 +1458,9 @@ namespace Google.Cloud.AutoML.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Image, other.Image)) return false;
       if (!object.Equals(TextSnippet, other.TextSnippet)) return false;
+      if (!object.Equals(Document, other.Document)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -343,7 +1468,9 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (payloadCase_ == PayloadOneofCase.Image) hash ^= Image.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.TextSnippet) hash ^= TextSnippet.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.Document) hash ^= Document.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -358,9 +1485,17 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (payloadCase_ == PayloadOneofCase.Image) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Image);
+      }
       if (payloadCase_ == PayloadOneofCase.TextSnippet) {
         output.WriteRawTag(18);
         output.WriteMessage(TextSnippet);
+      }
+      if (payloadCase_ == PayloadOneofCase.Document) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Document);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -370,8 +1505,14 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (payloadCase_ == PayloadOneofCase.Image) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Image);
+      }
       if (payloadCase_ == PayloadOneofCase.TextSnippet) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextSnippet);
+      }
+      if (payloadCase_ == PayloadOneofCase.Document) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -385,11 +1526,23 @@ namespace Google.Cloud.AutoML.V1 {
         return;
       }
       switch (other.PayloadCase) {
+        case PayloadOneofCase.Image:
+          if (Image == null) {
+            Image = new global::Google.Cloud.AutoML.V1.Image();
+          }
+          Image.MergeFrom(other.Image);
+          break;
         case PayloadOneofCase.TextSnippet:
           if (TextSnippet == null) {
             TextSnippet = new global::Google.Cloud.AutoML.V1.TextSnippet();
           }
           TextSnippet.MergeFrom(other.TextSnippet);
+          break;
+        case PayloadOneofCase.Document:
+          if (Document == null) {
+            Document = new global::Google.Cloud.AutoML.V1.Document();
+          }
+          Document.MergeFrom(other.Document);
           break;
       }
 
@@ -404,6 +1557,15 @@ namespace Google.Cloud.AutoML.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            global::Google.Cloud.AutoML.V1.Image subBuilder = new global::Google.Cloud.AutoML.V1.Image();
+            if (payloadCase_ == PayloadOneofCase.Image) {
+              subBuilder.MergeFrom(Image);
+            }
+            input.ReadMessage(subBuilder);
+            Image = subBuilder;
+            break;
+          }
           case 18: {
             global::Google.Cloud.AutoML.V1.TextSnippet subBuilder = new global::Google.Cloud.AutoML.V1.TextSnippet();
             if (payloadCase_ == PayloadOneofCase.TextSnippet) {
@@ -411,6 +1573,15 @@ namespace Google.Cloud.AutoML.V1 {
             }
             input.ReadMessage(subBuilder);
             TextSnippet = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.AutoML.V1.Document subBuilder = new global::Google.Cloud.AutoML.V1.Document();
+            if (payloadCase_ == PayloadOneofCase.Document) {
+              subBuilder.MergeFrom(Document);
+            }
+            input.ReadMessage(subBuilder);
+            Document = subBuilder;
             break;
           }
         }

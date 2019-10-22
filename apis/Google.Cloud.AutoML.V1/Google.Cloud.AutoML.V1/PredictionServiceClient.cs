@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -50,6 +51,8 @@ namespace Google.Cloud.AutoML.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             PredictSettings = existing.PredictSettings;
+            BatchPredictSettings = existing.BatchPredictSettings;
+            BatchPredictOperationsSettings = existing.BatchPredictOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -147,6 +150,56 @@ namespace Google.Cloud.AutoML.V1
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.BatchPredict</c> and <c>PredictionServiceClient.BatchPredictAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PredictionServiceClient.BatchPredict</c> and
+        /// <c>PredictionServiceClient.BatchPredictAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchPredictSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PredictionServiceClient.BatchPredict</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchPredictOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(5000L))
+        };
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -351,8 +404,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="name">
         /// Name of the model requested to serve the prediction.
@@ -364,6 +427,20 @@ namespace Google.Cloud.AutoML.V1
         /// <param name="params">
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///     makes predictions for an image, it will only produce results that have
+        ///     at least this confidence score. The default is 0.5.
+        ///
+        ///  *  For Image Object Detection:
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be returned in the response. Default is 100, the
+        ///        requested value may be limited by server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -388,8 +465,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="name">
         /// Name of the model requested to serve the prediction.
@@ -401,6 +488,20 @@ namespace Google.Cloud.AutoML.V1
         /// <param name="params">
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///     makes predictions for an image, it will only produce results that have
+        ///     at least this confidence score. The default is 0.5.
+        ///
+        ///  *  For Image Object Detection:
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be returned in the response. Default is 100, the
+        ///        requested value may be limited by server.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -422,8 +523,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="name">
         /// Name of the model requested to serve the prediction.
@@ -435,6 +546,20 @@ namespace Google.Cloud.AutoML.V1
         /// <param name="params">
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///     makes predictions for an image, it will only produce results that have
+        ///     at least this confidence score. The default is 0.5.
+        ///
+        ///  *  For Image Object Detection:
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be returned in the response. Default is 100, the
+        ///        requested value may be limited by server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -459,8 +584,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="name">
         /// Name of the model requested to serve the prediction.
@@ -472,6 +607,20 @@ namespace Google.Cloud.AutoML.V1
         /// <param name="params">
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///     makes predictions for an image, it will only produce results that have
+        ///     at least this confidence score. The default is 0.5.
+        ///
+        ///  *  For Image Object Detection:
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be returned in the response. Default is 100, the
+        ///        requested value may be limited by server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -496,8 +645,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="name">
         /// Name of the model requested to serve the prediction.
@@ -509,6 +668,20 @@ namespace Google.Cloud.AutoML.V1
         /// <param name="params">
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///     makes predictions for an image, it will only produce results that have
+        ///     at least this confidence score. The default is 0.5.
+        ///
+        ///  *  For Image Object Detection:
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be returned in the response. Default is 100, the
+        ///        requested value may be limited by server.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -530,8 +703,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="name">
         /// Name of the model requested to serve the prediction.
@@ -543,6 +726,20 @@ namespace Google.Cloud.AutoML.V1
         /// <param name="params">
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///     makes predictions for an image, it will only produce results that have
+        ///     at least this confidence score. The default is 0.5.
+        ///
+        ///  *  For Image Object Detection:
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be returned in the response. Default is 100, the
+        ///        requested value may be limited by server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -567,8 +764,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -590,8 +797,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -612,8 +829,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -631,6 +858,514 @@ namespace Google.Cloud.AutoML.V1
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="name">
+        /// Name of the model requested to serve the batch prediction.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The input configuration for batch prediction.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The Configuration specifying where output predictions should
+        /// be written.
+        /// </param>
+        /// <param name="params">
+        /// Additional domain-specific parameters for the predictions, any string must
+        /// be up to 25000 characters long.
+        ///
+        /// *  For Text Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for a text snippet, it will only produce results
+        ///         that have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for an image, it will only produce results that
+        ///         have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Object Detection:
+        ///
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be produced per image. Default is 100, the
+        ///        requested value may be limited by server.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<BatchPredictResult, OperationMetadata>> BatchPredictAsync(
+            ModelName name,
+            BatchPredictInputConfig inputConfig,
+            BatchPredictOutputConfig outputConfig,
+            scg::IDictionary<string, string> @params,
+            gaxgrpc::CallSettings callSettings = null) => BatchPredictAsync(
+                new BatchPredictRequest
+                {
+                    ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+                    OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+                    Params = { @params ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="name">
+        /// Name of the model requested to serve the batch prediction.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The input configuration for batch prediction.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The Configuration specifying where output predictions should
+        /// be written.
+        /// </param>
+        /// <param name="params">
+        /// Additional domain-specific parameters for the predictions, any string must
+        /// be up to 25000 characters long.
+        ///
+        /// *  For Text Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for a text snippet, it will only produce results
+        ///         that have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for an image, it will only produce results that
+        ///         have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Object Detection:
+        ///
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be produced per image. Default is 100, the
+        ///        requested value may be limited by server.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<BatchPredictResult, OperationMetadata>> BatchPredictAsync(
+            ModelName name,
+            BatchPredictInputConfig inputConfig,
+            BatchPredictOutputConfig outputConfig,
+            scg::IDictionary<string, string> @params,
+            st::CancellationToken cancellationToken) => BatchPredictAsync(
+                name,
+                inputConfig,
+                outputConfig,
+                @params,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="name">
+        /// Name of the model requested to serve the batch prediction.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The input configuration for batch prediction.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The Configuration specifying where output predictions should
+        /// be written.
+        /// </param>
+        /// <param name="params">
+        /// Additional domain-specific parameters for the predictions, any string must
+        /// be up to 25000 characters long.
+        ///
+        /// *  For Text Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for a text snippet, it will only produce results
+        ///         that have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for an image, it will only produce results that
+        ///         have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Object Detection:
+        ///
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be produced per image. Default is 100, the
+        ///        requested value may be limited by server.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<BatchPredictResult, OperationMetadata> BatchPredict(
+            ModelName name,
+            BatchPredictInputConfig inputConfig,
+            BatchPredictOutputConfig outputConfig,
+            scg::IDictionary<string, string> @params,
+            gaxgrpc::CallSettings callSettings = null) => BatchPredict(
+                new BatchPredictRequest
+                {
+                    ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+                    OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+                    Params = { @params ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="name">
+        /// Name of the model requested to serve the batch prediction.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The input configuration for batch prediction.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The Configuration specifying where output predictions should
+        /// be written.
+        /// </param>
+        /// <param name="params">
+        /// Additional domain-specific parameters for the predictions, any string must
+        /// be up to 25000 characters long.
+        ///
+        /// *  For Text Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for a text snippet, it will only produce results
+        ///         that have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for an image, it will only produce results that
+        ///         have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Object Detection:
+        ///
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be produced per image. Default is 100, the
+        ///        requested value may be limited by server.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<BatchPredictResult, OperationMetadata>> BatchPredictAsync(
+            string name,
+            BatchPredictInputConfig inputConfig,
+            BatchPredictOutputConfig outputConfig,
+            scg::IDictionary<string, string> @params,
+            gaxgrpc::CallSettings callSettings = null) => BatchPredictAsync(
+                new BatchPredictRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+                    OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+                    Params = { @params ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="name">
+        /// Name of the model requested to serve the batch prediction.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The input configuration for batch prediction.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The Configuration specifying where output predictions should
+        /// be written.
+        /// </param>
+        /// <param name="params">
+        /// Additional domain-specific parameters for the predictions, any string must
+        /// be up to 25000 characters long.
+        ///
+        /// *  For Text Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for a text snippet, it will only produce results
+        ///         that have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for an image, it will only produce results that
+        ///         have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Object Detection:
+        ///
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be produced per image. Default is 100, the
+        ///        requested value may be limited by server.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<BatchPredictResult, OperationMetadata>> BatchPredictAsync(
+            string name,
+            BatchPredictInputConfig inputConfig,
+            BatchPredictOutputConfig outputConfig,
+            scg::IDictionary<string, string> @params,
+            st::CancellationToken cancellationToken) => BatchPredictAsync(
+                name,
+                inputConfig,
+                outputConfig,
+                @params,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="name">
+        /// Name of the model requested to serve the batch prediction.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The input configuration for batch prediction.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The Configuration specifying where output predictions should
+        /// be written.
+        /// </param>
+        /// <param name="params">
+        /// Additional domain-specific parameters for the predictions, any string must
+        /// be up to 25000 characters long.
+        ///
+        /// *  For Text Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for a text snippet, it will only produce results
+        ///         that have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Classification:
+        ///
+        ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
+        ///         makes predictions for an image, it will only produce results that
+        ///         have at least this confidence score. The default is 0.5.
+        ///
+        /// *  For Image Object Detection:
+        ///
+        ///    `score_threshold` - (float) When Model detects objects on the image,
+        ///        it will only produce bounding boxes which have at least this
+        ///        confidence score. Value in 0 to 1 range, default is 0.5.
+        ///    `max_bounding_box_count` - (int64) No more than this number of bounding
+        ///        boxes will be produced per image. Default is 100, the
+        ///        requested value may be limited by server.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<BatchPredictResult, OperationMetadata> BatchPredict(
+            string name,
+            BatchPredictInputConfig inputConfig,
+            BatchPredictOutputConfig outputConfig,
+            scg::IDictionary<string, string> @params,
+            gaxgrpc::CallSettings callSettings = null) => BatchPredict(
+                new BatchPredictRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+                    OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+                    Params = { @params ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<BatchPredictResult, OperationMetadata>> BatchPredictAsync(
+            BatchPredictRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchPredictAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchPredictResult, OperationMetadata>> PollOnceBatchPredictAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<BatchPredictResult, OperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                BatchPredictOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<BatchPredictResult, OperationMetadata> BatchPredict(
+            BatchPredictRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>BatchPredict</c>.
+        /// </summary>
+        public virtual lro::OperationsClient BatchPredictOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchPredict</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchPredictResult, OperationMetadata> PollOnceBatchPredict(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<BatchPredictResult, OperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                BatchPredictOperationsClient,
+                callSettings);
+
     }
 
     /// <summary>
@@ -639,6 +1374,7 @@ namespace Google.Cloud.AutoML.V1
     public sealed partial class PredictionServiceClientImpl : PredictionServiceClient
     {
         private readonly gaxgrpc::ApiCall<PredictRequest, PredictResponse> _callPredict;
+        private readonly gaxgrpc::ApiCall<BatchPredictRequest, lro::Operation> _callBatchPredict;
 
         /// <summary>
         /// Constructs a client wrapper for the PredictionService service, with the specified gRPC client and settings.
@@ -650,11 +1386,18 @@ namespace Google.Cloud.AutoML.V1
             GrpcClient = grpcClient;
             PredictionServiceSettings effectiveSettings = settings ?? PredictionServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            BatchPredictOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.BatchPredictOperationsSettings);
             _callPredict = clientHelper.BuildApiCall<PredictRequest, PredictResponse>(
                 GrpcClient.PredictAsync, GrpcClient.Predict, effectiveSettings.PredictSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
+            _callBatchPredict = clientHelper.BuildApiCall<BatchPredictRequest, lro::Operation>(
+                GrpcClient.BatchPredictAsync, GrpcClient.BatchPredict, effectiveSettings.BatchPredictSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPredict);
             Modify_PredictApiCall(ref _callPredict);
+            Modify_ApiCall(ref _callBatchPredict);
+            Modify_BatchPredictApiCall(ref _callBatchPredict);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -669,6 +1412,7 @@ namespace Google.Cloud.AutoML.V1
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
         partial void Modify_PredictApiCall(ref gaxgrpc::ApiCall<PredictRequest, PredictResponse> call);
+        partial void Modify_BatchPredictApiCall(ref gaxgrpc::ApiCall<BatchPredictRequest, lro::Operation> call);
         partial void OnConstruction(PredictionService.PredictionServiceClient grpcClient, PredictionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -680,13 +1424,24 @@ namespace Google.Cloud.AutoML.V1
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
         partial void Modify_PredictRequest(ref PredictRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BatchPredictRequest(ref BatchPredictRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -709,8 +1464,18 @@ namespace Google.Cloud.AutoML.V1
         /// Perform an online prediction. The prediction result will be directly
         /// returned in the response.
         /// Available for following ML problems, and their expected request payloads:
+        /// * Image Classification - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                          up to 30MB.
+        /// * Image Object Detection - Image in .JPEG, .GIF or .PNG format, image_bytes
+        ///                            up to 30MB.
+        /// * Text Classification - TextSnippet, content up to 60,000 characters,
+        ///                         UTF-8 encoded.
+        /// * Text Extraction - TextSnippet, content up to 30,000 characters,
+        ///                     UTF-8 NFC encoded.
         /// * Translation - TextSnippet, content up to 25,000 characters, UTF-8
         ///                 encoded.
+        /// * Text Sentiment - TextSnippet, content up 500 characters, UTF-8
+        ///                     encoded.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -729,9 +1494,91 @@ namespace Google.Cloud.AutoML.V1
             return _callPredict.Sync(request, callSettings);
         }
 
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<BatchPredictResult, OperationMetadata>> BatchPredictAsync(
+            BatchPredictRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchPredictRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchPredictResult, OperationMetadata>(
+                await _callBatchPredict.Async(request, callSettings).ConfigureAwait(false), BatchPredictOperationsClient);
+        }
+
+        /// <summary>
+        /// Perform a batch prediction. Unlike the online
+        /// [Predict][google.cloud.automl.v1.PredictionService.Predict], batch
+        /// prediction result won't be immediately available in the response. Instead,
+        /// a long running operation object is returned. User can poll the operation
+        /// result via [GetOperation][google.longrunning.Operations.GetOperation]
+        /// method. Once the operation is done,
+        /// [BatchPredictResult][google.cloud.automl.v1.BatchPredictResult] is returned
+        /// in the [response][google.longrunning.Operation.response] field. Available
+        /// for following ML problems:
+        /// * Image Classification
+        /// * Image Object Detection
+        /// * Text Extraction
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<BatchPredictResult, OperationMetadata> BatchPredict(
+            BatchPredictRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchPredictRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchPredictResult, OperationMetadata>(
+                _callBatchPredict.Sync(request, callSettings), BatchPredictOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>BatchPredict</c>.
+        /// </summary>
+        public override lro::OperationsClient BatchPredictOperationsClient { get; }
+
     }
 
     // Partial classes to enable page-streaming
+
+    // Partial Grpc class to enable LRO client creation
+    public static partial class PredictionService
+    {
+        public partial class PredictionServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() => new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
 
 
 }

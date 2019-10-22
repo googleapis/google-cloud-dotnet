@@ -19,6 +19,7 @@ namespace Google.Cloud.AutoML.V1.Tests
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.AutoML.V1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
     using Moq;
@@ -37,6 +38,8 @@ namespace Google.Cloud.AutoML.V1.Tests
         public void Predict()
         {
             Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             PredictRequest expectedRequest = new PredictRequest
             {
                 ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -59,6 +62,8 @@ namespace Google.Cloud.AutoML.V1.Tests
         public async Task PredictAsync()
         {
             Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             PredictRequest expectedRequest = new PredictRequest
             {
                 ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -81,6 +86,8 @@ namespace Google.Cloud.AutoML.V1.Tests
         public void Predict2()
         {
             Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
@@ -99,6 +106,8 @@ namespace Google.Cloud.AutoML.V1.Tests
         public async Task PredictAsync2()
         {
             Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             PredictRequest request = new PredictRequest
             {
                 ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
