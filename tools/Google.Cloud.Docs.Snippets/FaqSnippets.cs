@@ -23,6 +23,10 @@ using Google.Cloud.Vision.V1;
 using System.Collections.Generic;
 using Google.Cloud.Scheduler.V1;
 
+// Unfortunately Scheduler now has a TopicName class too; this is just an unfortunate combination of APIs
+// to pick snippets from.
+using TopicName = Google.Cloud.PubSub.V1.TopicName;
+
 namespace Google.Cloud.Tools.Snippets
 {
     public class FaqSnippets
