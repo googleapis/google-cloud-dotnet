@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Google.Cloud.Tools.VersionCompat.Tests.ClassStructCtor
 {
-    // All class ctors are explicitly coded for clarity.
+    // All class ctors are explicitly declared for clarity.
 
     namespace ClassCtorAdded.A { public class C { public C() { } } }
     namespace ClassCtorAdded.B { public class C { public C() { } public C(int i) { } } }
@@ -34,7 +34,10 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassStructCtor
     namespace ClassCtorAccessModifierChanged2.A { public class C { protected C() { } } }
     namespace ClassCtorAccessModifierChanged2.B { public class C { public C() { } } }
 
-    // Structs always have a default parameterless ctor, which cannot be coded.
+    namespace ClassCtorAccessModifierChanged3.A { public class C { internal C() { } } }
+    namespace ClassCtorAccessModifierChanged3.B { public class C { private C() { } } }
+
+    // Structs always have a default parameterless ctor, which cannot be explicitly declared.
 
     namespace StructCtorAdded.A { public struct S { } }
     namespace StructCtorAdded.B { public struct S { public S(int i) { } } }
@@ -68,6 +71,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassStructCtor
         [Fact] public void ClassCtorParamInOutChanged2() => TestMajor(Cause.CtorParameterInOutChanged);
         [Fact] public void ClassCtorAccessModifierChanged1() => TestMajor(Cause.CtorAccessModifierChanged);
         [Fact] public void ClassCtorAccessModifierChanged2() => TestMinor(Cause.CtorAccessModifierChanged);
+        [Fact] public void ClassCtorAccessModifierChanged3() => TestNone();
 
         [Fact] public void StructCtorAdded() => TestMinor(Cause.CtorAdded);
         [Fact] public void StructCtorRemoved() => TestMajor(Cause.CtorRemoved);
