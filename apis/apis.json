@@ -633,7 +633,7 @@
 
   {
     "id": "Google.Cloud.OsLogin.V1Beta",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/oslogin/v1beta",
     "serviceYaml": "oslogin_v1beta.yaml",
     "productName": "Google Cloud OS Login API",
