@@ -14,77 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Scheduler.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Scheduler.V1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedCloudSchedulerClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedCloudSchedulerClientTest
     {
-        [Fact]
-        public void GetJob()
+        [xunit::FactAttribute]
+        public void GetJobRequestObject()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            GetJobRequest expectedRequest = new GetJobRequest
-            {
-                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-            };
-            Job expectedResponse = new Job
-            {
-                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
-            };
-            mockGrpcClient.Setup(x => x.GetJob(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = client.GetJob(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetJobAsync()
-        {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            GetJobRequest expectedRequest = new GetJobRequest
-            {
-                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-            };
-            Job expectedResponse = new Job
-            {
-                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
-            };
-            mockGrpcClient.Setup(x => x.GetJobAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = await client.GetJobAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetJob2()
-        {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -92,22 +39,31 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.GetJob(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
             Job response = client.GetJob(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetJobAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetJobRequestObjectAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -115,74 +71,165 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.GetJobAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job response = await client.GetJobAsync(request);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.GetJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.GetJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateJob()
+        [xunit::FactAttribute]
+        public void GetJob()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            CreateJobRequest expectedRequest = new CreateJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            GetJobRequest request = new GetJobRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.CreateJob(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            Job job = new Job();
-            Job response = client.CreateJob(parent, job);
-            Assert.Same(expectedResponse, response);
+            Job response = client.GetJob(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateJobAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetJobAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            CreateJobRequest expectedRequest = new CreateJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            GetJobRequest request = new GetJobRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.CreateJobAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            Job job = new Job();
-            Job response = await client.CreateJobAsync(parent, job);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.GetJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.GetJobAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateJob2()
+        [xunit::FactAttribute]
+        public void GetJob_ResourceNames()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            GetJobRequest request = new GetJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job response = client.GetJob(request.JobName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetJobAsync_ResourceNames()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            GetJobRequest request = new GetJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.GetJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.GetJobAsync(request.JobName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateJobRequestObject()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -191,22 +238,31 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.CreateJob(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
             Job response = client.CreateJob(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateJobAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateJobRequestObjectAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -215,236 +271,398 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.CreateJobAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job response = await client.CreateJobAsync(request);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.CreateJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.CreateJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateJob()
+        [xunit::FactAttribute]
+        public void CreateJob()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            UpdateJobRequest expectedRequest = new UpdateJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            CreateJobRequest request = new CreateJobRequest
             {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
-                UpdateMask = new FieldMask(),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.UpdateJob(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job job = new Job();
-            FieldMask updateMask = new FieldMask();
-            Job response = client.UpdateJob(job, updateMask);
-            Assert.Same(expectedResponse, response);
+            Job response = client.CreateJob(request.Parent, request.Job);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateJobAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateJobAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            UpdateJobRequest expectedRequest = new UpdateJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            CreateJobRequest request = new CreateJobRequest
             {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
-                UpdateMask = new FieldMask(),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.UpdateJobAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job job = new Job();
-            FieldMask updateMask = new FieldMask();
-            Job response = await client.UpdateJobAsync(job, updateMask);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.CreateJobAsync(request.Parent, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.CreateJobAsync(request.Parent, request.Job, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateJob2()
+        [xunit::FactAttribute]
+        public void CreateJob_ResourceNames()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            CreateJobRequest request = new CreateJobRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                Job = new Job(),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job response = client.CreateJob(request.ParentAsLocationName, request.Job);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateJobAsync_ResourceNames()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            CreateJobRequest request = new CreateJobRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                Job = new Job(),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.CreateJobAsync(request.ParentAsLocationName, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.CreateJobAsync(request.ParentAsLocationName, request.Job, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateJobRequestObject()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             UpdateJobRequest request = new UpdateJobRequest
             {
                 Job = new Job(),
-                UpdateMask = new FieldMask(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.UpdateJob(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
             Job response = client.UpdateJob(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateJobAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateJobRequestObjectAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             UpdateJobRequest request = new UpdateJobRequest
             {
                 Job = new Job(),
-                UpdateMask = new FieldMask(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.UpdateJobAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job response = await client.UpdateJobAsync(request);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.UpdateJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.UpdateJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteJob()
+        [xunit::FactAttribute]
+        public void UpdateJob()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            DeleteJobRequest expectedRequest = new DeleteJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            UpdateJobRequest request = new UpdateJobRequest
+            {
+                Job = new Job(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteJob(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            client.DeleteJob(name);
+            Job response = client.UpdateJob(request.Job, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteJobAsync()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateJobAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            DeleteJobRequest expectedRequest = new DeleteJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            UpdateJobRequest request = new UpdateJobRequest
+            {
+                Job = new Job(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteJobAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            await client.DeleteJobAsync(name);
+            Job responseCallSettings = await client.UpdateJobAsync(request.Job, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.UpdateJobAsync(request.Job, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteJob2()
+        [xunit::FactAttribute]
+        public void DeleteJobRequestObject()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteJob(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
             client.DeleteJob(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteJobAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteJobRequestObjectAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteJobAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteJobAsync(request);
+            await client.DeleteJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteJobAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void PauseJob()
+        [xunit::FactAttribute]
+        public void DeleteJob()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            PauseJobRequest expectedRequest = new PauseJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
-            Job expectedResponse = new Job
-            {
-                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
-            };
-            mockGrpcClient.Setup(x => x.PauseJob(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = client.PauseJob(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteJob(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PauseJobAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteJobAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            PauseJobRequest expectedRequest = new PauseJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
-            Job expectedResponse = new Job
-            {
-                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
-            };
-            mockGrpcClient.Setup(x => x.PauseJobAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = await client.PauseJobAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteJobAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void PauseJob2()
+        [xunit::FactAttribute]
+        public void DeleteJob_ResourceNames()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            DeleteJobRequest request = new DeleteJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            client.DeleteJob(request.JobName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteJobAsync_ResourceNames()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            DeleteJobRequest request = new DeleteJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteJobAsync(request.JobName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PauseJobRequestObject()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             PauseJobRequest request = new PauseJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -452,22 +670,31 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.PauseJob(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.PauseJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
             Job response = client.PauseJob(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PauseJobAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task PauseJobRequestObjectAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             PauseJobRequest request = new PauseJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -475,70 +702,165 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.PauseJobAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.PauseJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job response = await client.PauseJobAsync(request);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.PauseJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.PauseJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ResumeJob()
+        [xunit::FactAttribute]
+        public void PauseJob()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            ResumeJobRequest expectedRequest = new ResumeJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            PauseJobRequest request = new PauseJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.ResumeJob(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.PauseJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = client.ResumeJob(name);
-            Assert.Same(expectedResponse, response);
+            Job response = client.PauseJob(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ResumeJobAsync()
+        [xunit::FactAttribute]
+        public async stt::Task PauseJobAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            ResumeJobRequest expectedRequest = new ResumeJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            PauseJobRequest request = new PauseJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.ResumeJobAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.PauseJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = await client.ResumeJobAsync(name);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.PauseJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.PauseJobAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ResumeJob2()
+        [xunit::FactAttribute]
+        public void PauseJob_ResourceNames()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            PauseJobRequest request = new PauseJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.PauseJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job response = client.PauseJob(request.JobName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PauseJobAsync_ResourceNames()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            PauseJobRequest request = new PauseJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.PauseJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.PauseJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.PauseJobAsync(request.JobName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ResumeJobRequestObject()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             ResumeJobRequest request = new ResumeJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -546,22 +868,31 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.ResumeJob(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ResumeJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
             Job response = client.ResumeJob(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ResumeJobAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ResumeJobRequestObjectAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             ResumeJobRequest request = new ResumeJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -569,70 +900,165 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.ResumeJobAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ResumeJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job response = await client.ResumeJobAsync(request);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.ResumeJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.ResumeJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void RunJob()
+        [xunit::FactAttribute]
+        public void ResumeJob()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            RunJobRequest expectedRequest = new RunJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            ResumeJobRequest request = new ResumeJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.RunJob(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ResumeJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = client.RunJob(name);
-            Assert.Same(expectedResponse, response);
+            Job response = client.ResumeJob(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RunJobAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ResumeJobAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
-            RunJobRequest expectedRequest = new RunJobRequest
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            ResumeJobRequest request = new ResumeJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.RunJobAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ResumeJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
-            Job response = await client.RunJobAsync(name);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.ResumeJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.ResumeJobAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void RunJob2()
+        [xunit::FactAttribute]
+        public void ResumeJob_ResourceNames()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            ResumeJobRequest request = new ResumeJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.ResumeJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job response = client.ResumeJob(request.JobName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ResumeJobAsync_ResourceNames()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            ResumeJobRequest request = new ResumeJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.ResumeJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.ResumeJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.ResumeJobAsync(request.JobName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RunJobRequestObject()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             RunJobRequest request = new RunJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -640,22 +1066,31 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.RunJob(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.RunJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
             Job response = client.RunJob(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RunJobAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RunJobRequestObjectAsync()
         {
-            Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             RunJobRequest request = new RunJobRequest
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
@@ -663,17 +1098,159 @@ namespace Google.Cloud.Scheduler.V1.Tests
             Job expectedResponse = new Job
             {
                 JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
-                Description = "description-1724546052",
-                Schedule = "schedule-697920873",
-                TimeZone = "timeZone36848094",
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.RunJobAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.RunJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            Job response = await client.RunJobAsync(request);
-            Assert.Same(expectedResponse, response);
+            Job responseCallSettings = await client.RunJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.RunJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void RunJob()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            RunJobRequest request = new RunJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.RunJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job response = client.RunJob(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunJobAsync()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            RunJobRequest request = new RunJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.RunJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.RunJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.RunJobAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RunJob_ResourceNames()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            RunJobRequest request = new RunJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.RunJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job response = client.RunJob(request.JobName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunJobAsync_ResourceNames()
+        {
+            moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
+            RunJobRequest request = new RunJobRequest
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Description = "description2cf9da67",
+                PubsubTarget = new PubsubTarget(),
+                AppEngineHttpTarget = new AppEngineHttpTarget(),
+                HttpTarget = new HttpTarget(),
+                UserUpdateTime = new wkt::Timestamp(),
+                State = Job.Types.State.Disabled,
+                Status = new gr::Status(),
+                ScheduleTime = new wkt::Timestamp(),
+                LastAttemptTime = new wkt::Timestamp(),
+                RetryConfig = new RetryConfig(),
+                Schedule = "schedule59559879",
+                TimeZone = "time_zone73f23b20",
+                AttemptDeadline = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.RunJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.RunJobAsync(request.JobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.RunJobAsync(request.JobName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
