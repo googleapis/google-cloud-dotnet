@@ -30,67 +30,68 @@ namespace Google.Cloud.OsLogin.V1 {
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
             "KGdvb2dsZS9jbG91ZC9vc2xvZ2luL2NvbW1vbi9jb21tb24ucHJvdG8aG2dv",
             "b2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2Zp",
-            "ZWxkX21hc2sucHJvdG8iqwIKDExvZ2luUHJvZmlsZRIRCgRuYW1lGAEgASgJ",
+            "ZWxkX21hc2sucHJvdG8imAIKDExvZ2luUHJvZmlsZRIRCgRuYW1lGAEgASgJ",
             "QgPgQQISQQoOcG9zaXhfYWNjb3VudHMYAiADKAsyKS5nb29nbGUuY2xvdWQu",
             "b3Nsb2dpbi5jb21tb24uUG9zaXhBY2NvdW50ElEKD3NzaF9wdWJsaWNfa2V5",
             "cxgDIAMoCzI4Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkxvZ2luUHJvZmls",
-            "ZS5Tc2hQdWJsaWNLZXlzRW50cnkSEQoJc3VzcGVuZGVkGAQgASgIGl8KElNz",
-            "aFB1YmxpY0tleXNFbnRyeRILCgNrZXkYASABKAkSOAoFdmFsdWUYAiABKAsy",
-            "KS5nb29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5OgI4",
-            "ASJWChlEZWxldGVQb3NpeEFjY291bnRSZXF1ZXN0EjkKBG5hbWUYASABKAlC",
-            "K+BBAvpBJQojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Qb3NpeEFjY291bnQi",
-            "VgoZRGVsZXRlU3NoUHVibGljS2V5UmVxdWVzdBI5CgRuYW1lGAEgASgJQivg",
-            "QQL6QSUKI29zbG9naW4uZ29vZ2xlYXBpcy5jb20vU3NoUHVibGljS2V5InoK",
-            "FkdldExvZ2luUHJvZmlsZVJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kEl",
-            "EiNvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1Bvc2l4QWNjb3VudBISCgpwcm9q",
-            "ZWN0X2lkGAIgASgJEhEKCXN5c3RlbV9pZBgDIAEoCSImChZHZXRTc2hQdWJs",
-            "aWNLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkitAEKGUltcG9ydFNzaFB1Ymxp",
-            "Y0tleVJlcXVlc3QSOwoGcGFyZW50GAEgASgJQivgQQL6QSUSI29zbG9naW4u",
-            "Z29vZ2xlYXBpcy5jb20vU3NoUHVibGljS2V5EkYKDnNzaF9wdWJsaWNfa2V5",
-            "GAIgASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNzaFB1Ymxp",
-            "Y0tleUID4EEBEhIKCnByb2plY3RfaWQYAyABKAkiWgoaSW1wb3J0U3NoUHVi",
-            "bGljS2V5UmVzcG9uc2USPAoNbG9naW5fcHJvZmlsZRgBIAEoCzIlLmdvb2ds",
-            "ZS5jbG91ZC5vc2xvZ2luLnYxLkxvZ2luUHJvZmlsZSLPAQoZVXBkYXRlU3No",
-            "UHVibGljS2V5UmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI29zbG9n",
-            "aW4uZ29vZ2xlYXBpcy5jb20vU3NoUHVibGljS2V5EkYKDnNzaF9wdWJsaWNf",
-            "a2V5GAIgASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNzaFB1",
-            "YmxpY0tleUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkZpZWxkTWFzazLQCQoOT3NMb2dpblNlcnZpY2USjgEKEkRlbGV0",
-            "ZVBvc2l4QWNjb3VudBIyLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkRlbGV0",
-            "ZVBvc2l4QWNjb3VudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
-            "LILT5JMCHyodL3YxL3tuYW1lPXVzZXJzLyovcHJvamVjdHMvKn3aQQRuYW1l",
-            "EpMBChJEZWxldGVTc2hQdWJsaWNLZXkSMi5nb29nbGUuY2xvdWQub3Nsb2dp",
-            "bi52MS5EZWxldGVTc2hQdWJsaWNLZXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IjGC0+STAiQqIi92MS97bmFtZT11c2Vycy8qL3NzaFB1Ymxp",
-            "Y0tleXMvKn3aQQRuYW1lEpkBCg9HZXRMb2dpblByb2ZpbGUSLy5nb29nbGUu",
-            "Y2xvdWQub3Nsb2dpbi52MS5HZXRMb2dpblByb2ZpbGVSZXF1ZXN0GiUuZ29v",
-            "Z2xlLmNsb3VkLm9zbG9naW4udjEuTG9naW5Qcm9maWxlIi6C0+STAiESHy92",
-            "MS97bmFtZT11c2Vycy8qfS9sb2dpblByb2ZpbGXaQQRuYW1lEqABCg9HZXRT",
-            "c2hQdWJsaWNLZXkSLy5nb29nbGUuY2xvdWQub3Nsb2dpbi52MS5HZXRTc2hQ",
-            "dWJsaWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9u",
-            "LlNzaFB1YmxpY0tleSIxgtPkkwIkEiIvdjEve25hbWU9dXNlcnMvKi9zc2hQ",
-            "dWJsaWNLZXlzLyp92kEEbmFtZRL5AQoSSW1wb3J0U3NoUHVibGljS2V5EjIu",
-            "Z29vZ2xlLmNsb3VkLm9zbG9naW4udjEuSW1wb3J0U3NoUHVibGljS2V5UmVx",
-            "dWVzdBozLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkltcG9ydFNzaFB1Ymxp",
-            "Y0tleVJlc3BvbnNlInqC0+STAjkiJy92MS97cGFyZW50PXVzZXJzLyp9Omlt",
-            "cG9ydFNzaFB1YmxpY0tleToOc3NoX3B1YmxpY19rZXnaQRVwYXJlbnQsc3No",
-            "X3B1YmxpY19rZXnaQSBwYXJlbnQsc3NoX3B1YmxpY19rZXkscHJvamVjdF9p",
-            "ZBLnAQoSVXBkYXRlU3NoUHVibGljS2V5EjIuZ29vZ2xlLmNsb3VkLm9zbG9n",
-            "aW4udjEuVXBkYXRlU3NoUHVibGljS2V5UmVxdWVzdBopLmdvb2dsZS5jbG91",
-            "ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJsaWNLZXkicoLT5JMCNDIiL3YxL3tu",
-            "YW1lPXVzZXJzLyovc3NoUHVibGljS2V5cy8qfToOc3NoX3B1YmxpY19rZXna",
-            "QRNuYW1lLHNzaF9wdWJsaWNfa2V52kEfbmFtZSxzc2hfcHVibGljX2tleSx1",
-            "cGRhdGVfbWFzaxpyykEWb3Nsb2dpbi5nb29nbGVhcGlzLmNvbdJBVmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlQqEBChtjb20u",
-            "Z29vZ2xlLmNsb3VkLm9zbG9naW4udjFCDE9zTG9naW5Qcm90b1ABWj5nb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL29zbG9n",
-            "aW4vdjE7b3Nsb2dpbqoCF0dvb2dsZS5DbG91ZC5Pc0xvZ2luLlYxygIXR29v",
-            "Z2xlXENsb3VkXE9zTG9naW5cVjFiBnByb3RvMw=="));
+            "ZS5Tc2hQdWJsaWNLZXlzRW50cnkaXwoSU3NoUHVibGljS2V5c0VudHJ5EgsK",
+            "A2tleRgBIAEoCRI4CgV2YWx1ZRgCIAEoCzIpLmdvb2dsZS5jbG91ZC5vc2xv",
+            "Z2luLmNvbW1vbi5Tc2hQdWJsaWNLZXk6AjgBIlYKGURlbGV0ZVBvc2l4QWNj",
+            "b3VudFJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNvc2xvZ2luLmdv",
+            "b2dsZWFwaXMuY29tL1Bvc2l4QWNjb3VudCJWChlEZWxldGVTc2hQdWJsaWNL",
+            "ZXlSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojb3Nsb2dpbi5nb29n",
+            "bGVhcGlzLmNvbS9Tc2hQdWJsaWNLZXkiegoWR2V0TG9naW5Qcm9maWxlUmVx",
+            "dWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUSI29zbG9naW4uZ29vZ2xlYXBp",
+            "cy5jb20vUG9zaXhBY2NvdW50EhIKCnByb2plY3RfaWQYAiABKAkSEQoJc3lz",
+            "dGVtX2lkGAMgASgJIlMKFkdldFNzaFB1YmxpY0tleVJlcXVlc3QSOQoEbmFt",
+            "ZRgBIAEoCUIr4EEC+kElCiNvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1NzaFB1",
+            "YmxpY0tleSK0AQoZSW1wb3J0U3NoUHVibGljS2V5UmVxdWVzdBI7CgZwYXJl",
+            "bnQYASABKAlCK+BBAvpBJRIjb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Tc2hQ",
+            "dWJsaWNLZXkSRgoOc3NoX3B1YmxpY19rZXkYAiABKAsyKS5nb29nbGUuY2xv",
+            "dWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5QgPgQQESEgoKcHJvamVj",
+            "dF9pZBgDIAEoCSJaChpJbXBvcnRTc2hQdWJsaWNLZXlSZXNwb25zZRI8Cg1s",
+            "b2dpbl9wcm9maWxlGAEgASgLMiUuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjEu",
+            "TG9naW5Qcm9maWxlIs8BChlVcGRhdGVTc2hQdWJsaWNLZXlSZXF1ZXN0EjkK",
+            "BG5hbWUYASABKAlCK+BBAvpBJQojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9T",
+            "c2hQdWJsaWNLZXkSRgoOc3NoX3B1YmxpY19rZXkYAiABKAsyKS5nb29nbGUu",
+            "Y2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5QgPgQQISLwoLdXBk",
+            "YXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrMtAJ",
+            "Cg5Pc0xvZ2luU2VydmljZRKOAQoSRGVsZXRlUG9zaXhBY2NvdW50EjIuZ29v",
+            "Z2xlLmNsb3VkLm9zbG9naW4udjEuRGVsZXRlUG9zaXhBY2NvdW50UmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIsgtPkkwIfKh0vdjEve25hbWU9",
+            "dXNlcnMvKi9wcm9qZWN0cy8qfdpBBG5hbWUSkwEKEkRlbGV0ZVNzaFB1Ymxp",
+            "Y0tleRIyLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkRlbGV0ZVNzaFB1Ymxp",
+            "Y0tleVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiMYLT5JMCJCoi",
+            "L3YxL3tuYW1lPXVzZXJzLyovc3NoUHVibGljS2V5cy8qfdpBBG5hbWUSmQEK",
+            "D0dldExvZ2luUHJvZmlsZRIvLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxLkdl",
+            "dExvZ2luUHJvZmlsZVJlcXVlc3QaJS5nb29nbGUuY2xvdWQub3Nsb2dpbi52",
+            "MS5Mb2dpblByb2ZpbGUiLoLT5JMCIRIfL3YxL3tuYW1lPXVzZXJzLyp9L2xv",
+            "Z2luUHJvZmlsZdpBBG5hbWUSoAEKD0dldFNzaFB1YmxpY0tleRIvLmdvb2ds",
+            "ZS5jbG91ZC5vc2xvZ2luLnYxLkdldFNzaFB1YmxpY0tleVJlcXVlc3QaKS5n",
+            "b29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5IjGC0+ST",
+            "AiQSIi92MS97bmFtZT11c2Vycy8qL3NzaFB1YmxpY0tleXMvKn3aQQRuYW1l",
+            "EvkBChJJbXBvcnRTc2hQdWJsaWNLZXkSMi5nb29nbGUuY2xvdWQub3Nsb2dp",
+            "bi52MS5JbXBvcnRTc2hQdWJsaWNLZXlSZXF1ZXN0GjMuZ29vZ2xlLmNsb3Vk",
+            "Lm9zbG9naW4udjEuSW1wb3J0U3NoUHVibGljS2V5UmVzcG9uc2UieoLT5JMC",
+            "OSInL3YxL3twYXJlbnQ9dXNlcnMvKn06aW1wb3J0U3NoUHVibGljS2V5Og5z",
+            "c2hfcHVibGljX2tledpBFXBhcmVudCxzc2hfcHVibGljX2tledpBIHBhcmVu",
+            "dCxzc2hfcHVibGljX2tleSxwcm9qZWN0X2lkEucBChJVcGRhdGVTc2hQdWJs",
+            "aWNLZXkSMi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MS5VcGRhdGVTc2hQdWJs",
+            "aWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNz",
+            "aFB1YmxpY0tleSJygtPkkwI0MiIvdjEve25hbWU9dXNlcnMvKi9zc2hQdWJs",
+            "aWNLZXlzLyp9Og5zc2hfcHVibGljX2tledpBE25hbWUsc3NoX3B1YmxpY19r",
+            "ZXnaQR9uYW1lLHNzaF9wdWJsaWNfa2V5LHVwZGF0ZV9tYXNrGnLKQRZvc2xv",
+            "Z2luLmdvb2dsZWFwaXMuY29t0kFWaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2NvbXB1dGVCoQEKG2NvbS5nb29nbGUuY2xvdWQub3Nsb2dp",
+            "bi52MUIMT3NMb2dpblByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvb3Nsb2dpbi92MTtvc2xvZ2luqgIXR29v",
+            "Z2xlLkNsb3VkLk9zTG9naW4uVjHKAhdHb29nbGVcQ2xvdWRcT3NMb2dpblxW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.LoginProfile), global::Google.Cloud.OsLogin.V1.LoginProfile.Parser, new[]{ "Name", "PosixAccounts", "SshPublicKeys", "Suspended" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.LoginProfile), global::Google.Cloud.OsLogin.V1.LoginProfile.Parser, new[]{ "Name", "PosixAccounts", "SshPublicKeys" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest), global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest), global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest.Parser, new[]{ "Name", "ProjectId", "SystemId" }, null, null, null),
@@ -136,7 +137,6 @@ namespace Google.Cloud.OsLogin.V1 {
       name_ = other.name_;
       posixAccounts_ = other.posixAccounts_.Clone();
       sshPublicKeys_ = other.sshPublicKeys_.Clone();
-      suspended_ = other.suspended_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -185,21 +185,6 @@ namespace Google.Cloud.OsLogin.V1 {
       get { return sshPublicKeys_; }
     }
 
-    /// <summary>Field number for the "suspended" field.</summary>
-    public const int SuspendedFieldNumber = 4;
-    private bool suspended_;
-    /// <summary>
-    /// Indicates if the user is suspended. A suspended user cannot log in but
-    /// their profile information is retained.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Suspended {
-      get { return suspended_; }
-      set {
-        suspended_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LoginProfile);
@@ -216,7 +201,6 @@ namespace Google.Cloud.OsLogin.V1 {
       if (Name != other.Name) return false;
       if(!posixAccounts_.Equals(other.posixAccounts_)) return false;
       if (!SshPublicKeys.Equals(other.SshPublicKeys)) return false;
-      if (Suspended != other.Suspended) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -226,7 +210,6 @@ namespace Google.Cloud.OsLogin.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= posixAccounts_.GetHashCode();
       hash ^= SshPublicKeys.GetHashCode();
-      if (Suspended != false) hash ^= Suspended.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -246,10 +229,6 @@ namespace Google.Cloud.OsLogin.V1 {
       }
       posixAccounts_.WriteTo(output, _repeated_posixAccounts_codec);
       sshPublicKeys_.WriteTo(output, _map_sshPublicKeys_codec);
-      if (Suspended != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(Suspended);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -263,9 +242,6 @@ namespace Google.Cloud.OsLogin.V1 {
       }
       size += posixAccounts_.CalculateSize(_repeated_posixAccounts_codec);
       size += sshPublicKeys_.CalculateSize(_map_sshPublicKeys_codec);
-      if (Suspended != false) {
-        size += 1 + 1;
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -282,9 +258,6 @@ namespace Google.Cloud.OsLogin.V1 {
       }
       posixAccounts_.Add(other.posixAccounts_);
       sshPublicKeys_.Add(other.sshPublicKeys_);
-      if (other.Suspended != false) {
-        Suspended = other.Suspended;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -306,10 +279,6 @@ namespace Google.Cloud.OsLogin.V1 {
           }
           case 26: {
             sshPublicKeys_.AddEntriesFrom(input, _map_sshPublicKeys_codec);
-            break;
-          }
-          case 32: {
-            Suspended = input.ReadBool();
             break;
           }
         }
@@ -830,7 +799,7 @@ namespace Google.Cloud.OsLogin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The fingerprint of the public key to retrieve. Public keys are identified
+    /// Required. The fingerprint of the public key to retrieve. Public keys are identified
     /// by their SHA-256 fingerprint. The fingerprint of the public key is in
     /// format `users/{user}/sshPublicKeys/{fingerprint}`.
     /// </summary>
