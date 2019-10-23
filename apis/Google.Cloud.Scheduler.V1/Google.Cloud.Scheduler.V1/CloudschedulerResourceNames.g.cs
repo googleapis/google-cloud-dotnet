@@ -35,9 +35,9 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// <see cref="gcsv::JobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public JobName JobName
+        public gcsv::JobName JobName
         {
-            get => string.IsNullOrEmpty(Name) ? null : JobName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::JobName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -59,9 +59,9 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// <see cref="gcsv::JobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public JobName JobName
+        public gcsv::JobName JobName
         {
-            get => string.IsNullOrEmpty(Name) ? null : JobName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::JobName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -71,9 +71,9 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// <see cref="gcsv::JobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public JobName JobName
+        public gcsv::JobName JobName
         {
-            get => string.IsNullOrEmpty(Name) ? null : JobName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::JobName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -83,9 +83,9 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// <see cref="gcsv::JobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public JobName JobName
+        public gcsv::JobName JobName
         {
-            get => string.IsNullOrEmpty(Name) ? null : JobName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::JobName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -95,9 +95,9 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// <see cref="gcsv::JobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public JobName JobName
+        public gcsv::JobName JobName
         {
-            get => string.IsNullOrEmpty(Name) ? null : JobName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::JobName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }

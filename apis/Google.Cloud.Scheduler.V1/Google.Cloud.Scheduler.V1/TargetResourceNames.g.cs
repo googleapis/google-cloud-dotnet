@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gcsv = Google.Cloud.Scheduler.V1;
 using sys = System;
 
 namespace Google.Cloud.Scheduler.V1
@@ -112,11 +113,11 @@ namespace Google.Cloud.Scheduler.V1
     public partial class PubsubTarget
     {
         /// <summary>
-        /// <see cref="TopicName"/>-typed view over the <see cref="TopicName"/> resource name property.
+        /// <see cref="gcsv::TopicName"/>-typed view over the <see cref="TopicName"/> resource name property.
         /// </summary>
-        public TopicName TopicNameAsTopicName
+        public gcsv::TopicName TopicNameAsTopicName
         {
-            get => string.IsNullOrEmpty(TopicName) ? null : global::Google.Cloud.Scheduler.V1.TopicName.Parse(TopicName);
+            get => string.IsNullOrEmpty(TopicName) ? null : gcsv::TopicName.Parse(TopicName);
             set => TopicName = value?.ToString() ?? "";
         }
     }
