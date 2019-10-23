@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
+using Google.Cloud.OsLogin.Common;
 using System;
 
 namespace Google.Cloud.OsLogin.V1.SmokeTests
