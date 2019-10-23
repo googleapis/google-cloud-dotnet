@@ -14,613 +14,994 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gcoc = Google.Cloud.OsLogin.Common;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.OsLogin.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Cloud.OsLogin.Common;
-    using apis = Google.Cloud.OsLogin.V1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedOsLoginServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedOsLoginServiceClientTest
     {
-        [Fact]
-        public void DeletePosixAccount()
+        [xunit::FactAttribute]
+        public void DeletePosixAccountRequestObject()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            DeletePosixAccountRequest expectedRequest = new DeletePosixAccountRequest
-            {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeletePosixAccount(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[USER]", "[PROJECT]");
-            client.DeletePosixAccount(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeletePosixAccountAsync()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            DeletePosixAccountRequest expectedRequest = new DeletePosixAccountRequest
-            {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[USER]", "[PROJECT]");
-            await client.DeletePosixAccountAsync(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeletePosixAccount2()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
+                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeletePosixAccount(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
             client.DeletePosixAccount(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeletePosixAccountAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeletePosixAccountRequestObjectAsync()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                ProjectName = new ProjectName("[USER]", "[PROJECT]"),
+                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeletePosixAccountAsync(request);
+            await client.DeletePosixAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeletePosixAccountAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSshPublicKey()
+        [xunit::FactAttribute]
+        public void DeletePosixAccount()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            DeleteSshPublicKeyRequest expectedRequest = new DeleteSshPublicKeyRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            client.DeleteSshPublicKey(name);
+            client.DeletePosixAccount(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteSshPublicKeyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeletePosixAccountAsync()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            DeleteSshPublicKeyRequest expectedRequest = new DeleteSshPublicKeyRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            await client.DeleteSshPublicKeyAsync(name);
+            await client.DeletePosixAccountAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeletePosixAccountAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSshPublicKey2()
+        [xunit::FactAttribute]
+        public void DeletePosixAccount_ResourceNames()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeletePosixAccountRequest request = new DeletePosixAccountRequest
+            {
+                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeletePosixAccount(request.PosixAccountName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeletePosixAccountAsync_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeletePosixAccountRequest request = new DeletePosixAccountRequest
+            {
+                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeletePosixAccountAsync(request.PosixAccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeletePosixAccountAsync(request.PosixAccountName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteSshPublicKeyRequestObject()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteSshPublicKey(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteSshPublicKeyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSshPublicKeyRequestObjectAsync()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteSshPublicKeyAsync(request);
+            await client.DeleteSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSshPublicKeyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetLoginProfile()
+        [xunit::FactAttribute]
+        public void DeleteSshPublicKey()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            GetLoginProfileRequest expectedRequest = new GetLoginProfileRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                UserName = new UserName("[USER]"),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            LoginProfile expectedResponse = new LoginProfile
-            {
-                Name = "name2-1052831874",
-                Suspended = false,
-            };
-            mockGrpcClient.Setup(x => x.GetLoginProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            UserName name = new UserName("[USER]");
-            LoginProfile response = client.GetLoginProfile(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteSshPublicKey(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetLoginProfileAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSshPublicKeyAsync()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            GetLoginProfileRequest expectedRequest = new GetLoginProfileRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                UserName = new UserName("[USER]"),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            LoginProfile expectedResponse = new LoginProfile
-            {
-                Name = "name2-1052831874",
-                Suspended = false,
-            };
-            mockGrpcClient.Setup(x => x.GetLoginProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LoginProfile>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            UserName name = new UserName("[USER]");
-            LoginProfile response = await client.GetLoginProfileAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteSshPublicKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSshPublicKeyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetLoginProfile2()
+        [xunit::FactAttribute]
+        public void DeleteSshPublicKey_ResourceNames()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteSshPublicKey(request.SshPublicKeyName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSshPublicKeyAsync_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteSshPublicKeyAsync(request.SshPublicKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSshPublicKeyAsync(request.SshPublicKeyName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetLoginProfileRequestObject()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new UserName("[USER]"),
+                UserName = new gcoc::UserName("[USER]"),
+                ProjectId = "project_id43ad98b0",
+                SystemId = "system_id43548ac1",
             };
             LoginProfile expectedResponse = new LoginProfile
             {
-                Name = "name2-1052831874",
-                Suspended = false,
+                Name = "name1c9368b0",
+                PosixAccounts =
+                {
+                    new gcoc::PosixAccount(),
+                },
+                SshPublicKeys =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new gcoc::SshPublicKey()
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.GetLoginProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetLoginProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
             LoginProfile response = client.GetLoginProfile(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetLoginProfileAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetLoginProfileRequestObjectAsync()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new UserName("[USER]"),
+                UserName = new gcoc::UserName("[USER]"),
+                ProjectId = "project_id43ad98b0",
+                SystemId = "system_id43548ac1",
             };
             LoginProfile expectedResponse = new LoginProfile
             {
-                Name = "name2-1052831874",
-                Suspended = false,
+                Name = "name1c9368b0",
+                PosixAccounts =
+                {
+                    new gcoc::PosixAccount(),
+                },
+                SshPublicKeys =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new gcoc::SshPublicKey()
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LoginProfile>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LoginProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            LoginProfile response = await client.GetLoginProfileAsync(request);
-            Assert.Same(expectedResponse, response);
+            LoginProfile responseCallSettings = await client.GetLoginProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LoginProfile responseCancellationToken = await client.GetLoginProfileAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetLoginProfile()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetLoginProfileRequest request = new GetLoginProfileRequest
+            {
+                UserName = new gcoc::UserName("[USER]"),
+            };
+            LoginProfile expectedResponse = new LoginProfile
+            {
+                Name = "name1c9368b0",
+                PosixAccounts =
+                {
+                    new gcoc::PosixAccount(),
+                },
+                SshPublicKeys =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new gcoc::SshPublicKey()
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetLoginProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            LoginProfile response = client.GetLoginProfile(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetLoginProfileAsync()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetLoginProfileRequest request = new GetLoginProfileRequest
+            {
+                UserName = new gcoc::UserName("[USER]"),
+            };
+            LoginProfile expectedResponse = new LoginProfile
+            {
+                Name = "name1c9368b0",
+                PosixAccounts =
+                {
+                    new gcoc::PosixAccount(),
+                },
+                SshPublicKeys =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new gcoc::SshPublicKey()
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LoginProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            LoginProfile responseCallSettings = await client.GetLoginProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LoginProfile responseCancellationToken = await client.GetLoginProfileAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetLoginProfile_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetLoginProfileRequest request = new GetLoginProfileRequest
+            {
+                UserName = new gcoc::UserName("[USER]"),
+            };
+            LoginProfile expectedResponse = new LoginProfile
+            {
+                Name = "name1c9368b0",
+                PosixAccounts =
+                {
+                    new gcoc::PosixAccount(),
+                },
+                SshPublicKeys =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new gcoc::SshPublicKey()
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetLoginProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            LoginProfile response = client.GetLoginProfile(request.UserName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetLoginProfileAsync_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetLoginProfileRequest request = new GetLoginProfileRequest
+            {
+                UserName = new gcoc::UserName("[USER]"),
+            };
+            LoginProfile expectedResponse = new LoginProfile
+            {
+                Name = "name1c9368b0",
+                PosixAccounts =
+                {
+                    new gcoc::PosixAccount(),
+                },
+                SshPublicKeys =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new gcoc::SshPublicKey()
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetLoginProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LoginProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            LoginProfile responseCallSettings = await client.GetLoginProfileAsync(request.UserName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LoginProfile responseCancellationToken = await client.GetLoginProfileAsync(request.UserName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSshPublicKeyRequestObject()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey response = client.GetSshPublicKey(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSshPublicKeyRequestObjectAsync()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey responseCallSettings = await client.GetSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.GetSshPublicKeyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetSshPublicKey()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            GetSshPublicKeyRequest expectedRequest = new GetSshPublicKeyRequest
-            {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-            };
-            SshPublicKey expectedResponse = new SshPublicKey
-            {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.GetSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            SshPublicKey response = client.GetSshPublicKey(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetSshPublicKeyAsync()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            GetSshPublicKeyRequest expectedRequest = new GetSshPublicKeyRequest
-            {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-            };
-            SshPublicKey expectedResponse = new SshPublicKey
-            {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            SshPublicKey response = await client.GetSshPublicKeyAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetSshPublicKey2()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            SshPublicKey expectedResponse = new SshPublicKey
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            mockGrpcClient.Setup(x => x.GetSshPublicKey(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            SshPublicKey response = client.GetSshPublicKey(request);
-            Assert.Same(expectedResponse, response);
+            gcoc::SshPublicKey response = client.GetSshPublicKey(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetSshPublicKeyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetSshPublicKeyAsync()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            SshPublicKey expectedResponse = new SshPublicKey
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            SshPublicKey response = await client.GetSshPublicKeyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gcoc::SshPublicKey responseCallSettings = await client.GetSshPublicKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.GetSshPublicKeyAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ImportSshPublicKey()
+        [xunit::FactAttribute]
+        public void GetSshPublicKey_ResourceNames()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            ImportSshPublicKeyRequest expectedRequest = new ImportSshPublicKeyRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
-            mockGrpcClient.Setup(x => x.ImportSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            UserName parent = new UserName("[USER]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            ImportSshPublicKeyResponse response = client.ImportSshPublicKey(parent, sshPublicKey);
-            Assert.Same(expectedResponse, response);
+            gcoc::SshPublicKey response = client.GetSshPublicKey(request.SshPublicKeyName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ImportSshPublicKeyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetSshPublicKeyAsync_ResourceNames()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            ImportSshPublicKeyRequest expectedRequest = new ImportSshPublicKeyRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
-            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ImportSshPublicKeyResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            UserName parent = new UserName("[USER]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            ImportSshPublicKeyResponse response = await client.ImportSshPublicKeyAsync(parent, sshPublicKey);
-            Assert.Same(expectedResponse, response);
+            gcoc::SshPublicKey responseCallSettings = await client.GetSshPublicKeyAsync(request.SshPublicKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.GetSshPublicKeyAsync(request.SshPublicKeyName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ImportSshPublicKey2()
+        [xunit::FactAttribute]
+        public void ImportSshPublicKeyRequestObject()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            ImportSshPublicKeyRequest expectedRequest = new ImportSshPublicKeyRequest
-            {
-                ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
-                ProjectId = "projectId-1969970175",
-            };
-            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
-            mockGrpcClient.Setup(x => x.ImportSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            UserName parent = new UserName("[USER]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            string projectId = "projectId-1969970175";
-            ImportSshPublicKeyResponse response = client.ImportSshPublicKey(parent, sshPublicKey, projectId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ImportSshPublicKeyAsync2()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            ImportSshPublicKeyRequest expectedRequest = new ImportSshPublicKeyRequest
-            {
-                ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
-                ProjectId = "projectId-1969970175",
-            };
-            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
-            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ImportSshPublicKeyResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            UserName parent = new UserName("[USER]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            string projectId = "projectId-1969970175";
-            ImportSshPublicKeyResponse response = await client.ImportSshPublicKeyAsync(parent, sshPublicKey, projectId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void ImportSshPublicKey3()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                ProjectId = "project_id43ad98b0",
             };
-            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
-            mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
             ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ImportSshPublicKeyAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task ImportSshPublicKeyRequestObjectAsync()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new UserName("[USER]"),
-                SshPublicKey = new SshPublicKey(),
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                ProjectId = "project_id43ad98b0",
             };
-            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse();
-            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ImportSshPublicKeyResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            ImportSshPublicKeyResponse response = await client.ImportSshPublicKeyAsync(request);
-            Assert.Same(expectedResponse, response);
+            ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateSshPublicKey()
+        [xunit::FactAttribute]
+        public void ImportSshPublicKey1()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new SshPublicKey(),
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
             };
-            SshPublicKey expectedResponse = new SshPublicKey
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                LoginProfile = new LoginProfile(),
             };
-            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            SshPublicKey response = client.UpdateSshPublicKey(name, sshPublicKey);
-            Assert.Same(expectedResponse, response);
+            ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.Parent, request.SshPublicKey);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateSshPublicKeyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ImportSshPublicKey1Async()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new SshPublicKey(),
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
             };
-            SshPublicKey expectedResponse = new SshPublicKey
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                LoginProfile = new LoginProfile(),
             };
-            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            SshPublicKey response = await client.UpdateSshPublicKeyAsync(name, sshPublicKey);
-            Assert.Same(expectedResponse, response);
+            ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void ImportSshPublicKey1_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
+            {
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+            };
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.ParentAsUserName, request.SshPublicKey);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ImportSshPublicKey1Async_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
+            {
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+            };
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ImportSshPublicKey2()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
+            {
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                ProjectId = "project_id43ad98b0",
+            };
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.Parent, request.SshPublicKey, request.ProjectId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ImportSshPublicKey2Async()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
+            {
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                ProjectId = "project_id43ad98b0",
+            };
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, request.ProjectId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.Parent, request.SshPublicKey, request.ProjectId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ImportSshPublicKey2_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
+            {
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                ProjectId = "project_id43ad98b0",
+            };
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            ImportSshPublicKeyResponse response = client.ImportSshPublicKey(request.ParentAsUserName, request.SshPublicKey, request.ProjectId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ImportSshPublicKey2Async_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
+            {
+                ParentAsUserName = new gcoc::UserName("[USER]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                ProjectId = "project_id43ad98b0",
+            };
+            ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
+            {
+                LoginProfile = new LoginProfile(),
+            };
+            mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            ImportSshPublicKeyResponse responseCallSettings = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, request.ProjectId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ImportSshPublicKeyResponse responseCancellationToken = await client.ImportSshPublicKeyAsync(request.ParentAsUserName, request.SshPublicKey, request.ProjectId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSshPublicKeyRequestObject()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey response = client.UpdateSshPublicKey(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSshPublicKeyRequestObjectAsync()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSshPublicKey1()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.Name, request.SshPublicKey);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSshPublicKey1Async()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSshPublicKey1_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.SshPublicKeyName, request.SshPublicKey);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSshPublicKey1Async_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateSshPublicKey2()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
-            {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new SshPublicKey(),
-                UpdateMask = new FieldMask(),
-            };
-            SshPublicKey expectedResponse = new SshPublicKey
-            {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            FieldMask updateMask = new FieldMask();
-            SshPublicKey response = client.UpdateSshPublicKey(name, sshPublicKey, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateSshPublicKeyAsync2()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
-            UpdateSshPublicKeyRequest expectedRequest = new UpdateSshPublicKeyRequest
-            {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new SshPublicKey(),
-                UpdateMask = new FieldMask(),
-            };
-            SshPublicKey expectedResponse = new SshPublicKey
-            {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
-            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
-            SshPublicKey sshPublicKey = new SshPublicKey();
-            FieldMask updateMask = new FieldMask();
-            SshPublicKey response = await client.UpdateSshPublicKeyAsync(name, sshPublicKey, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateSshPublicKey3()
-        {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new SshPublicKey(),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                UpdateMask = new wkt::FieldMask(),
             };
-            SshPublicKey expectedResponse = new SshPublicKey
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            SshPublicKey response = client.UpdateSshPublicKey(request);
-            Assert.Same(expectedResponse, response);
+            gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.Name, request.SshPublicKey, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateSshPublicKeyAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSshPublicKey2Async()
         {
-            Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new Mock<OsLoginService.OsLoginServiceClient>(MockBehavior.Strict);
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                FingerprintName = new FingerprintName("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new SshPublicKey(),
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                UpdateMask = new wkt::FieldMask(),
             };
-            SshPublicKey expectedResponse = new SshPublicKey
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
-                Key = "key106079",
-                ExpirationTimeUsec = 2058878882L,
-                Fingerprint = "fingerprint-1375934236",
-                Name = "name2-1052831874",
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
             };
-            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SshPublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
-            SshPublicKey response = await client.UpdateSshPublicKeyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.Name, request.SshPublicKey, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void UpdateSshPublicKey2_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey response = client.UpdateSshPublicKey(request.SshPublicKeyName, request.SshPublicKey, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSshPublicKey2Async_ResourceNames()
+        {
+            moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
+            UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
+            {
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKey = new gcoc::SshPublicKey(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
+            {
+                Key = "key8a0b6e3c",
+                ExpirationTimeUsec = -3860803259883837145L,
+                Fingerprint = "fingerprint009e6052",
+                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
+            gcoc::SshPublicKey responseCallSettings = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gcoc::SshPublicKey responseCancellationToken = await client.UpdateSshPublicKeyAsync(request.SshPublicKeyName, request.SshPublicKey, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
