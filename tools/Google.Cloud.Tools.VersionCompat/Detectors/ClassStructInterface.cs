@@ -118,15 +118,18 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
         }
 
-        public IEnumerable<Diff> Methods(TypeType typeType)
+        private string MethodSigOrder(MethodDefinition m) => string.Join(";", m.Parameters.Select(x => $"{x.ParameterType.FullName}:{x.Name}"));
+
+        private IEnumerable<Diff> MethodsCtors(TypeType typeType, bool isCtor, Func<TypeDefinition, IEnumerable<MethodDefinition>> methodSelector)
         {
-            var oMethods = _o.Methods.Where(x => !x.IsGetter && !x.IsSetter && !x.IsConstructor).ToImmutableHashSet(SameMethodComparer.Instance);
-            var nMethods = _n.Methods.Where(x => !x.IsGetter && !x.IsSetter && !x.IsConstructor).ToImmutableHashSet(SameMethodComparer.Instance);
-            foreach (var method in oMethods.Union(nMethods).OrderBy(x => x.FullName).ThenBy(x => x.Parameters.Count))
+            var prefixType = isCtor ? "constructor" : "method";
+            var oMethods = methodSelector(_o).ToImmutableHashSet(SameMethodComparer.Instance);
+            var nMethods = methodSelector(_n).ToImmutableHashSet(SameMethodComparer.Instance);
+            foreach (var method in oMethods.Union(nMethods).OrderBy(x => x.FullName).ThenBy(MethodSigOrder))
             {
                 var inO = oMethods.TryGetValue(method, out var o);
                 var inN = nMethods.TryGetValue(method, out var n);
-                var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; method '{o.Show()}'";
+                var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; {prefixType} '{o.Show()}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
                     if (typeType == TypeType.Class || typeType == TypeType.Struct)
@@ -134,16 +137,19 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         // Method present and exported in both types.
                         if (o.IsStatic && !n.IsStatic)
                         {
+                            // Cannot occur for ctors.
                             yield return Diff.Major(Cause.MethodMadeNonStatic, $"{prefix} made non-static.");
                         }
                         else if (!o.IsStatic && n.IsStatic)
                         {
+                            // Cannot occur for ctors.
                             yield return Diff.Major(Cause.MethodMadeStatic, $"{prefix} made static.");
                         }
                         else
                         {
+                            // Method modifiers not relevant for ctors.
                             var diffs = MethodModifiers(o, n, Cause.MethodModifierChanged, prefix)
-                                .Concat(MethodAccessModifiers(o, n, Cause.MethodAccessModifierChanged, prefix));
+                                .Concat(MethodAccessModifiers(o, n, C(Cause.MethodAccessModifierChanged, Cause.CtorAccessModifierChanged), prefix));
                             foreach (var diff in diffs)
                             {
                                 yield return diff;
@@ -152,24 +158,29 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     }
                     if (!SameTypeComparer.Instance.Equals(o.ReturnType, n.ReturnType))
                     {
+                        // Cannot occur for ctors.
                         yield return Diff.Major(Cause.MethodReturnTypeChanged, $"{prefix} return type changed to '{n.ReturnType.Show()}'.");
                     }
                     foreach (var (oParam, nParam) in o.Parameters.Zip(n.Parameters))
                     {
                         if (oParam.Name != nParam.Name)
                         {
-                            yield return Diff.Major(Cause.MethodParameterNameChanged,
+                            yield return Diff.Major(C(Cause.MethodParameterNameChanged, Cause.CtorParameterNameChanged),
                                 $"{prefix} parameter name changed from '{oParam.Name}' to '{nParam.Name}'.");
                         }
                         if (oParam.IsIn != nParam.IsIn || oParam.IsOut != nParam.IsOut)
                         {
-                            yield return Diff.Major(Cause.MethodParameterInOutChanged,
+                            yield return Diff.Major(C(Cause.MethodParameterInOutChanged, Cause.CtorParameterInOutChanged),
                                 $"{prefix} parameter '{oParam.Name}' changed from '{oParam.ShowInOut()}' to '{nParam.ShowInOut()}'.");
                         }
                     }
-                    foreach (var diff in GenericConstraints(isType: false, prefix, o.GenericParameters, n.GenericParameters))
+                    // Cannot occur for ctors
+                    if (!isCtor)
                     {
-                        yield return diff;
+                        foreach (var diff in GenericConstraints(isType: false, prefix, o.GenericParameters, n.GenericParameters))
+                        {
+                            yield return diff;
+                        }
                     }
                 }
                 else
@@ -178,19 +189,26 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (inO && o.IsExported())
                     {
                         yield return inN ?
-                            Diff.Major(Cause.MethodMadeNotExported, $"{prefix} made non-public.") :
-                            Diff.Major(Cause.MethodRemoved, $"{prefix} removed.");
+                            Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
+                            Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
                     }
                     else if (inN && n.IsExported())
                     {
                         var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
                         yield return inO ?
-                            diff(Cause.MethodMadeExported, $"{prefix} made public.") :
-                            diff(Cause.MethodAdded, $"{prefix} added.");
+                            diff(C(Cause.MethodMadeExported, Cause.CtorMadeExported), $"{prefix} made public.") :
+                            diff(C(Cause.MethodAdded, Cause.CtorAdded), $"{prefix} added.");
                     }
                 }
             }
+
+            Cause C(Cause methodCause, Cause ctorCause) => isCtor ? ctorCause : methodCause;
         }
+
+        public IEnumerable<Diff> Ctors(TypeType typeType) => MethodsCtors(typeType, isCtor: true, t => t.InstanceCtors());
+
+        public IEnumerable<Diff> Methods(TypeType typeType) =>
+            MethodsCtors(typeType, isCtor: false, t => t.Methods.Where(x => !x.IsGetter && !x.IsSetter && !x.IsConstructor));
 
         public IEnumerable<Diff> Properties(TypeType typeType)
         {
