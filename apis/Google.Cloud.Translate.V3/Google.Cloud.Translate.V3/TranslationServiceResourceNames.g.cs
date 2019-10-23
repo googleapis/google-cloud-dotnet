@@ -176,9 +176,9 @@ namespace Google.Cloud.Translate.V3
         /// <summary>
         /// <see cref="gctv::GlossaryName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GlossaryName GlossaryName
+        public gctv::GlossaryName GlossaryName
         {
-            get => string.IsNullOrEmpty(Name) ? null : GlossaryName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::GlossaryName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -200,9 +200,9 @@ namespace Google.Cloud.Translate.V3
         /// <summary>
         /// <see cref="gctv::GlossaryName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GlossaryName GlossaryName
+        public gctv::GlossaryName GlossaryName
         {
-            get => string.IsNullOrEmpty(Name) ? null : GlossaryName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::GlossaryName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -212,9 +212,9 @@ namespace Google.Cloud.Translate.V3
         /// <summary>
         /// <see cref="gctv::GlossaryName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GlossaryName GlossaryName
+        public gctv::GlossaryName GlossaryName
         {
-            get => string.IsNullOrEmpty(Name) ? null : GlossaryName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::GlossaryName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }

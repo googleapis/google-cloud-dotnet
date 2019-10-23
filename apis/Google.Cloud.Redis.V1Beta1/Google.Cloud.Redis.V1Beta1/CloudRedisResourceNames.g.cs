@@ -128,9 +128,9 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -152,9 +152,9 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -176,9 +176,9 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -188,9 +188,9 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }

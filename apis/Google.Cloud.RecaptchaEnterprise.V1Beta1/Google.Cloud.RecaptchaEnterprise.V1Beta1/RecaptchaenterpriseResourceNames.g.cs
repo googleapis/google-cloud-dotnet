@@ -134,9 +134,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// <summary>
         /// <see cref="gcrv::AssessmentName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public AssessmentName AssessmentName
+        public gcrv::AssessmentName AssessmentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : AssessmentName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::AssessmentName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -146,9 +146,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// <summary>
         /// <see cref="gcrv::AssessmentName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public AssessmentName AssessmentName
+        public gcrv::AssessmentName AssessmentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : AssessmentName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::AssessmentName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
