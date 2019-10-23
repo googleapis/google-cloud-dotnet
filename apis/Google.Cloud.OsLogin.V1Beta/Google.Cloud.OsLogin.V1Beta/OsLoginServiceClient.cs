@@ -365,16 +365,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The default OsLoginService scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
-        /// <item><description>"https://www.googleapis.com/auth/cloud-platform.read-only"</description></item>
         /// <item><description>"https://www.googleapis.com/auth/compute"</description></item>
-        /// <item><description>"https://www.googleapis.com/auth/compute.readonly"</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
             "https://www.googleapis.com/auth/compute",
-            "https://www.googleapis.com/auth/compute.readonly",
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
@@ -514,7 +510,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes a POSIX account.
         /// </summary>
         /// <param name="name">
-        /// A reference to the POSIX account to update. POSIX accounts are identified
+        /// Required. A reference to the POSIX account to update. POSIX accounts are identified
         /// by the project ID they are associated with. A reference to the POSIX
         /// account is in format `users/{user}/projects/{project}`.
         /// </param>
@@ -537,7 +533,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes a POSIX account.
         /// </summary>
         /// <param name="name">
-        /// A reference to the POSIX account to update. POSIX accounts are identified
+        /// Required. A reference to the POSIX account to update. POSIX accounts are identified
         /// by the project ID they are associated with. A reference to the POSIX
         /// account is in format `users/{user}/projects/{project}`.
         /// </param>
@@ -557,7 +553,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes a POSIX account.
         /// </summary>
         /// <param name="name">
-        /// A reference to the POSIX account to update. POSIX accounts are identified
+        /// Required. A reference to the POSIX account to update. POSIX accounts are identified
         /// by the project ID they are associated with. A reference to the POSIX
         /// account is in format `users/{user}/projects/{project}`.
         /// </param>
@@ -577,7 +573,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes a POSIX account.
         /// </summary>
         /// <param name="name">
-        /// A reference to the POSIX account to update. POSIX accounts are identified
+        /// Required. A reference to the POSIX account to update. POSIX accounts are identified
         /// by the project ID they are associated with. A reference to the POSIX
         /// account is in format `users/{user}/projects/{project}`.
         /// </param>
@@ -600,7 +596,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes a POSIX account.
         /// </summary>
         /// <param name="name">
-        /// A reference to the POSIX account to update. POSIX accounts are identified
+        /// Required. A reference to the POSIX account to update. POSIX accounts are identified
         /// by the project ID they are associated with. A reference to the POSIX
         /// account is in format `users/{user}/projects/{project}`.
         /// </param>
@@ -620,7 +616,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes a POSIX account.
         /// </summary>
         /// <param name="name">
-        /// A reference to the POSIX account to update. POSIX accounts are identified
+        /// Required. A reference to the POSIX account to update. POSIX accounts are identified
         /// by the project ID they are associated with. A reference to the POSIX
         /// account is in format `users/{user}/projects/{project}`.
         /// </param>
@@ -693,7 +689,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -716,7 +712,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -736,7 +732,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -756,7 +752,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -779,7 +775,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -799,7 +795,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Deletes an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -873,7 +869,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// on Google Compute Engine.
         /// </summary>
         /// <param name="name">
-        /// The unique ID for the user in format `users/{user}`.
+        /// Required. The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -895,7 +891,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// on Google Compute Engine.
         /// </summary>
         /// <param name="name">
-        /// The unique ID for the user in format `users/{user}`.
+        /// Required. The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -914,7 +910,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// on Google Compute Engine.
         /// </summary>
         /// <param name="name">
-        /// The unique ID for the user in format `users/{user}`.
+        /// Required. The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -936,7 +932,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// on Google Compute Engine.
         /// </summary>
         /// <param name="name">
-        /// The unique ID for the user in format `users/{user}`.
+        /// Required. The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -958,7 +954,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// on Google Compute Engine.
         /// </summary>
         /// <param name="name">
-        /// The unique ID for the user in format `users/{user}`.
+        /// Required. The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -977,7 +973,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// on Google Compute Engine.
         /// </summary>
         /// <param name="name">
-        /// The unique ID for the user in format `users/{user}`.
+        /// Required. The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1057,7 +1053,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Retrieves an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
+        /// Required. The fingerprint of the public key to retrieve. Public keys are identified
         /// by their SHA-256 fingerprint. The fingerprint of the public key is in
         /// format `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -1080,7 +1076,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Retrieves an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
+        /// Required. The fingerprint of the public key to retrieve. Public keys are identified
         /// by their SHA-256 fingerprint. The fingerprint of the public key is in
         /// format `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -1100,7 +1096,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Retrieves an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
+        /// Required. The fingerprint of the public key to retrieve. Public keys are identified
         /// by their SHA-256 fingerprint. The fingerprint of the public key is in
         /// format `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -1123,7 +1119,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Retrieves an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
+        /// Required. The fingerprint of the public key to retrieve. Public keys are identified
         /// by their SHA-256 fingerprint. The fingerprint of the public key is in
         /// format `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -1146,7 +1142,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Retrieves an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
+        /// Required. The fingerprint of the public key to retrieve. Public keys are identified
         /// by their SHA-256 fingerprint. The fingerprint of the public key is in
         /// format `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -1166,7 +1162,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// Retrieves an SSH public key.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to retrieve. Public keys are identified
+        /// Required. The fingerprint of the public key to retrieve. Public keys are identified
         /// by their SHA-256 fingerprint. The fingerprint of the public key is in
         /// format `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
@@ -1250,7 +1246,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1278,7 +1274,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1303,7 +1299,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1331,7 +1327,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1359,7 +1355,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1384,7 +1380,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1412,7 +1408,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="projectId">
         /// The project ID of the Google Cloud Platform project.
@@ -1445,7 +1441,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="projectId">
         /// The project ID of the Google Cloud Platform project.
@@ -1475,7 +1471,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="projectId">
         /// The project ID of the Google Cloud Platform project.
@@ -1508,7 +1504,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="projectId">
         /// The project ID of the Google Cloud Platform project.
@@ -1541,7 +1537,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="projectId">
         /// The project ID of the Google Cloud Platform project.
@@ -1571,7 +1567,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// The unique ID for the user in format `users/{user}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="projectId">
         /// The project ID of the Google Cloud Platform project.
@@ -1662,12 +1658,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1691,12 +1687,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1717,12 +1713,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1746,12 +1742,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1775,12 +1771,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1801,12 +1797,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1830,12 +1826,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="updateMask">
         /// Mask to control which fields get updated. Updates all if not present.
@@ -1864,12 +1860,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="updateMask">
         /// Mask to control which fields get updated. Updates all if not present.
@@ -1895,12 +1891,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="updateMask">
         /// Mask to control which fields get updated. Updates all if not present.
@@ -1929,12 +1925,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="updateMask">
         /// Mask to control which fields get updated. Updates all if not present.
@@ -1963,12 +1959,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="updateMask">
         /// Mask to control which fields get updated. Updates all if not present.
@@ -1994,12 +1990,12 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// supports patch semantics.
         /// </summary>
         /// <param name="name">
-        /// The fingerprint of the public key to update. Public keys are identified by
+        /// Required. The fingerprint of the public key to update. Public keys are identified by
         /// their SHA-256 fingerprint. The fingerprint of the public key is in format
         /// `users/{user}/sshPublicKeys/{fingerprint}`.
         /// </param>
         /// <param name="sshPublicKey">
-        /// The SSH public key and expiration time.
+        /// Required. The SSH public key and expiration time.
         /// </param>
         /// <param name="updateMask">
         /// Mask to control which fields get updated. Updates all if not present.
