@@ -228,6 +228,12 @@ namespace Google.Cloud.Spanner.V1.Tests
             var sessionPool = new SessionPool(client, options);
             var acquisitionTask1 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
             var acquisitionTask2 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName2, new TransactionOptions(), default);
+
+            // Wait a little in real time because session creation tasks 
+            // are started in a controlled fire and forget manner.
+            // Let's give time for stats to be updated.
+            await Task.Delay(TimeSpan.FromMilliseconds(250));
+
             var stats = sessionPool.GetStatisticsSnapshot();
             Assert.Equal(2, stats.PerDatabaseStatistics.Count);
             Assert.Equal(2, stats.TotalActiveSessionCount);
