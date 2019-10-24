@@ -50,7 +50,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             Assert.Contains(result.ShotLabelAnnotations, lab => lab.Entity.Description == "dinosaur");
         }
 
-        [Fact]
+        [Fact(Skip = "No access to video used in sample.")]
         public void SpeechTranscription()
         {
             // Sample: SpeechTranscription
