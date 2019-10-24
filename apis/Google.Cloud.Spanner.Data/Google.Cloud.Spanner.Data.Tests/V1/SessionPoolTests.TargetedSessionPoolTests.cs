@@ -94,6 +94,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 var pool = CreatePool(true);
                 var client = (SessionTestingSpannerClient) pool.Client;
+
+                // Wait a little in real time, session creation is
+                // launched as a (controlled) fire and forget task. Let's make sure it
+                // advances enough so that stats are updated.
+                await Task.Delay(TimeSpan.FromMilliseconds(250));
                 var stats = pool.GetStatisticsSnapshot();
                 Assert.Equal(10, stats.InFlightCreationCount);
                 Assert.Equal(0, stats.ReadPoolCount);
@@ -691,6 +696,10 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var client = (SessionTestingSpannerClient)pool.Client;
                 client.FailAllRpcs = true;
                 pool.MaintainPool();
+
+                // Wait a little in real time so that the start session creation tasks
+                // have had time to execute, they are started in a fire and forget manner.
+                await Task.Delay(TimeSpan.FromMilliseconds(250));
 
                 await client.Scheduler.RunAsync(async () =>
                 {
