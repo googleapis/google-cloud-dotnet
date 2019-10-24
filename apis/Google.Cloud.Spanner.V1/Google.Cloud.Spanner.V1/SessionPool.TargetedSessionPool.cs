@@ -94,7 +94,12 @@ namespace Google.Cloud.Spanner.V1
             /// Thread-safe read-only access to in-flight session creation count.
             /// </summary>
             internal int InFlightSessionCreationCount => Interlocked.CompareExchange(ref _inFlightSessionCreationCount, 0, 0);
-            
+
+            /// <summary>
+            /// Thread-safe read-only access to live or requested session count.
+            /// </summary>
+            internal int LiveOrRequestedSessionCount => Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
+
             // Statistics maintained purely for diagnostic purposes. This lets us evaluate
             // how effective transaction pre-warming is.
             private long _rwTransactionRequests;
@@ -539,48 +544,21 @@ namespace Google.Cloud.Spanner.V1
             /// </summary>
             private void StartSessionCreationTasksIfNecessary()
             {
-                if (!Healthy || Shutdown)
+                // Let's start the loop on the background as well, since it acquires the lock
+                // on each iteration to check if there are sessions to be created.
+                Parent.ConsumeBackgroundTask(Task.Run(() =>
                 {
-                    return;
-                }
-                // TODO: Refactor code so that _liveOrRequestedSessionCount and _inFlightSessionCreationCount are
-                // updated inside the lock without having all the calls to async methods.
-                lock (_lock)
-                {
-                    int poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
-                    int liveOrRequestedSessionCount = Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
-
-                    // Determine how many more sessions to create.
-                    // We want to make sure that if all existing and new requests for session creation succeed:
-                    // - All queuing callers will have a session
-                    // - The pool will have at least as many entries as the options specify
-                    // However, we don't want to end up with more than the maximum number of active sessions
-                    // in the options.
-
-                    // In reality, the current pool size should be 0 if pendingAcquisitionCount is non-zero, and
-                    // vice versa. However, we don't strictly enforce this, and the maths works out more simply if
-                    // we don't worry about it.
-
-                    // How many more sessions do we need to create in order to get the pool to the minimum size, after satisfying
-                    // pending callers, assuming that all the in-flight session requests succeed, and there are no more requests?
-                    int newSessionsToSatisfyPool = (_pendingAcquisitions.Count + Options.MinimumPooledSessions) - (poolSize + InFlightSessionCreationCount);
-                    // How many more sessions *can* we create without going over the maximum number of active sessions?
-                    int maxPossibleNewSessions = Options.MaximumActiveSessions - liveOrRequestedSessionCount;
-
-                    int remainingNewSessions = Math.Min(newSessionsToSatisfyPool, maxPossibleNewSessions);
-                    while (remainingNewSessions > 0)
+                    while (Healthy && !Shutdown && ShouldCreateMoreSessions(out int _))
                     {
-                        int batchSize = Math.Min(remainingNewSessions, Options.CreateSessionMaximumBatchSize);
-                        Parent.ConsumeBackgroundTask(PrepareNewSessionsAsync(batchSize), "session creation");
-                        remainingNewSessions -= batchSize;
+                        Parent.ConsumeBackgroundTask(PrepareNewSessionsAsync(), "session creation");
                     }
-                }
+                }), "start session creation if necessary");
 
-                async Task PrepareNewSessionsAsync(int batchSize)
+                async Task PrepareNewSessionsAsync()
                 {
                     try
                     {
-                        var sessions = await CreatePooledSessionsAsync(batchSize, CancellationToken.None).ConfigureAwait(false);
+                        var sessions = await CreatePooledSessionsAsync(CancellationToken.None).ConfigureAwait(false);
                         foreach (var session in sessions)
                         {
                             ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
@@ -633,7 +611,7 @@ namespace Google.Cloud.Spanner.V1
                     try
                     {
                         // Not using the cancellation token here so this can go on even if the caller cancels the call.
-                        var sessions = await CreatePooledSessionsAsync(LastUnhealthyBatchSize, CancellationToken.None).ConfigureAwait(false);
+                        var sessions = await CreatePooledSessionsAsync(CancellationToken.None).ConfigureAwait(false);
                         foreach (var session in sessions)
                         {
                             ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
@@ -691,13 +669,25 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
-            private async Task<IList<PooledSession>> CreatePooledSessionsAsync(int batchSize, CancellationToken cancellationToken)
+            private async Task<IList<PooledSession>> CreatePooledSessionsAsync(CancellationToken cancellationToken)
             {
+                int batchSize;
+                lock (_lock)
+                {
+                    if (ShouldCreateMoreSessions(out batchSize))
+                    {
+                        Interlocked.Add(ref _inFlightSessionCreationCount, batchSize);
+                        Interlocked.Add(ref _liveOrRequestedSessionCount, batchSize);
+                    }
+                    else
+                    {
+                        return new List<PooledSession>();
+                    }
+                }
+
                 bool success = false;
                 bool canceled = false;
                 int actualCreatedSessions = 0;
-                Interlocked.Add(ref _inFlightSessionCreationCount, batchSize);
-                Interlocked.Add(ref _liveOrRequestedSessionCount, batchSize);
                 try
                 {
                     var callSettings = Client.Settings.BatchCreateSessionsSettings
@@ -745,23 +735,65 @@ namespace Google.Cloud.Spanner.V1
                 }
                 finally
                 {
-                    // Atomically set _lastUnhealthyBatchSize and determine whether we were previously healthy, but only if either we've succeeded,
-                    // or we failed for a reason other than cancellation. We don't want to go unhealthy just because a caller cancelled
-                    // a cancellation token before we had chance to create the session.
-                    if (success || !canceled)
+                    bool writeHealthChangedLog = false;
+                    lock (_lock)
                     {
-                        bool wasHealthy = Interlocked.Exchange(ref _lastUnhealthyBatchSize, success ? 0 : batchSize) == 0;
-                        if (wasHealthy != success)
+                        // Atomically set _lastUnhealthyBatchSize and determine whether we were previously healthy, but only if either we've succeeded,
+                        // or we failed for a reason other than cancellation. We don't want to go unhealthy just because a caller cancelled
+                        // a cancellation token before we had chance to create the session.
+                        if (success || !canceled)
                         {
-                            Parent._logger.Info(() => $"Session pool for {_databaseName} is now {(success ? "healthy" : "unhealthy")}.");
+                            bool wasHealthy = Interlocked.Exchange(ref _lastUnhealthyBatchSize, success ? 0 : batchSize) == 0;
+                            writeHealthChangedLog = wasHealthy != success;
                         }
+
+                        // We requested batchSize sessions to be created, but in reality actualCreatedSession were created, which are now live.
+                        // Note that actualCreatedSessions might be 0 either because the call failed or because no sessions were created.
+                        Interlocked.Add(ref _liveOrRequestedSessionCount, -batchSize + actualCreatedSessions);
+
+                        Interlocked.Add(ref _inFlightSessionCreationCount, -batchSize);
+                    }
+                    if (writeHealthChangedLog)
+                    {
+                        Parent._logger.Info(() => $"Session pool for {_databaseName} is now {(success ? "healthy" : "unhealthy")}.");
+                    }
+                }
+            }
+
+            private bool ShouldCreateMoreSessions(out int batchSize)
+            {
+                lock (_lock)
+                {
+                    if (Healthy)
+                    {
+                        int poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
+
+                        // Determine how many more sessions to create.
+                        // We want to make sure that if all existing and new requests for session creation succeed:
+                        // - All queuing callers will have a session
+                        // - The pool will have at least as many entries as the options specify
+                        // However, we don't want to end up with more than the maximum number of active sessions
+                        // in the options.
+
+                        // In reality, the current pool size should be 0 if pendingAcquisitionCount is non-zero, and
+                        // vice versa. However, we don't strictly enforce this, and the maths works out more simply if
+                        // we don't worry about it.
+
+                        // How many more sessions do we need to create in order to get the pool to the minimum size, after satisfying
+                        // pending callers, assuming that all the in-flight session requests succeed, and there are no more requests?
+                        int newSessionsToSatisfyPool = (_pendingAcquisitions.Count + Options.MinimumPooledSessions) - (poolSize + InFlightSessionCreationCount);
+                        // How many more sessions *can* we create without going over the maximum number of active sessions?
+                        int maxPossibleNewSessions = Options.MaximumActiveSessions - LiveOrRequestedSessionCount;
+
+                        int remainingNewSessions = Math.Min(newSessionsToSatisfyPool, maxPossibleNewSessions);
+                        batchSize = Math.Min(remainingNewSessions, Options.CreateSessionMaximumBatchSize);
+                    }
+                    else
+                    {
+                        batchSize = LastUnhealthyBatchSize;
                     }
 
-                    // We requested batchSize sessions to be created, but in reality actualCreatedSession were created, which are now live.
-                    // Note that actualCreatedSessions might be 0 either because the call failed or because no sessions were created.
-                    Interlocked.Add(ref _liveOrRequestedSessionCount, -batchSize + actualCreatedSessions);
-
-                    Interlocked.Add(ref _inFlightSessionCreationCount, -batchSize);
+                    return batchSize > 0;
                 }
             }
 
