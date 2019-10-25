@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Apis.Download;
+using Google.Apis.Requests;
+using Google.Apis.Util;
 using System;
 using Xunit;
 
@@ -48,7 +50,10 @@ namespace Google.Cloud.Storage.V1.Tests
                 Generation = 3L,
                 UserProject = "my proj"
             };
-            var uri = options.GetUri("http://url/foo?x=y");
+            var builder = new RequestBuilder { BaseUri = new Uri("http://url/"), Path = "foo" };
+            options.ModifyRequestBuilder(builder);
+            // The replacement here simplifies the tests, to avoid needing to care which query parameter was first.
+            var uri = builder.BuildUri().AbsoluteUri.Replace('?', '&');
             Assert.Contains("&ifGenerationMatch=1", uri);
             Assert.Contains("&ifMetagenerationMatch=2", uri);
             Assert.Contains("&generation=3", uri);
@@ -65,7 +70,10 @@ namespace Google.Cloud.Storage.V1.Tests
                 IfMetagenerationNotMatch = 2L,
                 Generation = 3L
             };
-            var uri = options.GetUri("http://url/foo?x=y");
+            var builder = new RequestBuilder { BaseUri = new Uri("http://url/"), Path = "foo" };
+            options.ModifyRequestBuilder(builder);
+            // The replacement here simplifies the tests, to avoid needing to care which query parameter was first.
+            var uri = builder.BuildUri().AbsoluteUri.Replace('?', '&');
             Assert.Contains("&ifGenerationNotMatch=1", uri);
             Assert.Contains("&ifMetagenerationNotMatch=2", uri);
             Assert.Contains("&generation=3", uri);
@@ -77,12 +85,14 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Throws<ArgumentException>(() =>
             {
                 var options = new DownloadObjectOptions { IfGenerationMatch = 1L, IfGenerationNotMatch = 2L };
-                options.GetUri("http://url/foo?x=y");
+                var builder = new RequestBuilder { BaseUri = new Uri("http://url/"), Path = "foo" };
+                options.ModifyRequestBuilder(builder);
             });
             Assert.Throws<ArgumentException>(() =>
             {
                 var options = new DownloadObjectOptions { IfMetagenerationMatch = 1L, IfMetagenerationNotMatch = 2L };
-                options.GetUri("http://url/foo?x=y");
+                var builder = new RequestBuilder { BaseUri = new Uri("http://url/"), Path = "foo" };
+                options.ModifyRequestBuilder(builder);
             });
         }
     }
