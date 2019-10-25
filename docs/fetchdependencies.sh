@@ -4,8 +4,8 @@ set -e
 source ../toolversions.sh
 install_docfx
 
-declare -r PROTOBUF_BRANCH=3.6.x
-declare -r GRPC_BRANCH=v1.13.x
+declare -r PROTOBUF_BRANCH=3.8.x
+declare -r GRPC_BRANCH=v1.22.x
 
 # Blow away any previous files and clone the repo
 rm -rf dependencies
