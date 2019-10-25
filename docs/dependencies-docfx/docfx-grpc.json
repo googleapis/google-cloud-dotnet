@@ -1,7 +1,7 @@
 {
   "metadata": [
     {
-      "src": [{ "files": ["src/csharp/Grpc.Core/Grpc.Core.csproj"] }],
+      "src": [{ "files": ["src/csharp/Grpc.Core/Grpc.Core.csproj", "src/csharp/Grpc.Core.Api/Grpc.Core.Api.csproj"] }],
       "properties": { "TargetFramework": "net45" },
       "dest": "api/Grpc.Core",
     }
