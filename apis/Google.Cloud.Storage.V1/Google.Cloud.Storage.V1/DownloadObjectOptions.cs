@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Apis.Download;
+using Google.Apis.Requests;
+using Google.Apis.Util;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -98,12 +100,7 @@ namespace Google.Cloud.Storage.V1
             }
         }
 
-        /// <summary>
-        /// Returns the URI to use for a download request, appending any options specified by this object.
-        /// </summary>
-        /// <param name="baseUri">Base URI which may end with a query parameter.</param>
-        /// <returns>The URI including the specified options.</returns>
-        internal string GetUri(string baseUri)
+        internal void ModifyRequestBuilder(RequestBuilder builder)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid
             // options being passed to a public method.
@@ -116,43 +113,28 @@ namespace Google.Cloud.Storage.V1
                 throw new ArgumentException($"Cannot specify {nameof(IfMetagenerationMatch)} and {nameof(IfMetagenerationNotMatch)} in the same options", "options");
             }
 
-            StringBuilder queryBuilder = new StringBuilder();
-            MaybeAppendParameter(queryBuilder, "generation", Generation);
-            MaybeAppendParameter(queryBuilder, "ifGenerationMatch", IfGenerationMatch);
-            MaybeAppendParameter(queryBuilder, "ifGenerationNotMatch", IfGenerationNotMatch);
-            MaybeAppendParameter(queryBuilder, "ifMetagenerationMatch", IfMetagenerationMatch);
-            MaybeAppendParameter(queryBuilder, "ifMetagenerationNotMatch", IfMetagenerationNotMatch);
-            MaybeAppendParameter(queryBuilder, "userProject", UserProject);
-
-            // If we haven't appended any parameters, we don't need to do anything else.
-            if (queryBuilder.Length == 0)
-            {
-                return baseUri;
-            }
-
-            // Otherwise, we might need to change the leading & in the builder to a ?
-            bool alreadyHasQuery = !string.IsNullOrEmpty(new Uri(baseUri).Query);
-            if (!alreadyHasQuery)
-            {
-                queryBuilder[0] = '?';
-            }
-            // And then just return the original URI with the parameters
-            return baseUri + queryBuilder.ToString();
+            MaybeAppendParameter(builder, "generation", Generation);
+            MaybeAppendParameter(builder, "ifGenerationMatch", IfGenerationMatch);
+            MaybeAppendParameter(builder, "ifGenerationNotMatch", IfGenerationNotMatch);
+            MaybeAppendParameter(builder, "ifMetagenerationMatch", IfMetagenerationMatch);
+            MaybeAppendParameter(builder, "ifMetagenerationNotMatch", IfMetagenerationNotMatch);
+            MaybeAppendParameter(builder, "userProject", UserProject);
         }
 
-        private static void MaybeAppendParameter(StringBuilder queryBuilder, string name, long? value)
+        private static void MaybeAppendParameter(RequestBuilder builder, string name, long? value)
         {
             if (value != null)
             {
-                queryBuilder.AppendFormat(CultureInfo.InvariantCulture, "&{0}={1}", name, value.Value);
+                builder.AddParameter(RequestParameterType.Query, name, value.Value.ToString(CultureInfo.InvariantCulture));
             }
         }
 
-        private static void MaybeAppendParameter(StringBuilder queryBuilder, string name, string value)
+        private static void MaybeAppendParameter(RequestBuilder builder, string name, string value)
         {
             if (value != null)
             {
-                queryBuilder.AppendFormat("&{0}={1}", name, Uri.EscapeDataString(value));
+                // Note: RequestBuilder performs Uri.EscapeDataString on the name and value, so we don't need to.
+                builder.AddParameter(RequestParameterType.Query, name, value);
             }
         }
     }

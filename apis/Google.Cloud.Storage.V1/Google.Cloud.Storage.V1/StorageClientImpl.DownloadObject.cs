@@ -14,6 +14,9 @@
 
 using Google.Api.Gax;
 using Google.Apis.Download;
+using Google.Apis.Requests;
+using Google.Apis.Requests.Parameters;
+using Google.Apis.Util;
 using System;
 using System.IO;
 using System.Threading;
@@ -32,8 +35,8 @@ namespace Google.Cloud.Storage.V1
             DownloadObjectOptions options = null,
             IProgress<IDownloadProgress> progress = null)
         {
-            var baseUri = GetBaseUri(bucket, objectName);
-            DownloadObjectImpl(baseUri, destination, options, progress);
+            var builder = CreateRequestBuilder(bucket, objectName);
+            DownloadObjectImpl(builder, destination, options, progress);
         }
 
         /// <inheritdoc />
@@ -45,8 +48,8 @@ namespace Google.Cloud.Storage.V1
             CancellationToken cancellationToken = default,
             IProgress<IDownloadProgress> progress = null)
         {
-            var baseUri = GetBaseUri(bucket, objectName);
-            return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);
+            var builder = CreateRequestBuilder(bucket, objectName);
+            return DownloadObjectAsyncImpl(builder, destination, options, cancellationToken, progress);
         }
 
         /// <inheritdoc />
@@ -56,8 +59,8 @@ namespace Google.Cloud.Storage.V1
             DownloadObjectOptions options = null,
             IProgress<IDownloadProgress> progress = null)
         {
-            var baseUri = GetBaseUri(source);
-            DownloadObjectImpl(baseUri, destination, options, progress);
+            var builder = CreateRequestBuilder(source);
+            DownloadObjectImpl(builder, destination, options, progress);
         }
 
         /// <inheritdoc />
@@ -68,8 +71,8 @@ namespace Google.Cloud.Storage.V1
             CancellationToken cancellationToken = default,
             IProgress<IDownloadProgress> progress = null)
         {
-            var baseUri = GetBaseUri(source);
-            return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);
+            var builder = CreateRequestBuilder(source);
+            return DownloadObjectAsyncImpl(builder, destination, options, cancellationToken, progress);
         }
 
         /// <summary>
@@ -77,11 +80,22 @@ namespace Google.Cloud.Storage.V1
         /// or any GaxPreconditions. The returned string will always have a query parameter, so later query parameters
         /// can unconditionally be appended with an "&amp;" prefix.
         /// </summary>
-        private static string GetBaseUri(string bucket, string objectName)
+        private RequestBuilder CreateRequestBuilder(string bucket, string objectName)
         {
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(objectName, nameof(objectName));
-            return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}";
+
+            var builder = new RequestBuilder()
+            {
+                BaseUri = new Uri(Service.BaseUri),
+                Path = $"b/{bucket}/o/{Uri.EscapeDataString(objectName)}"
+            };
+
+            if (Service.ApiKey != null)
+            {
+                builder.AddParameter(RequestParameterType.Query, "key", Service.ApiKey);
+            }
+            return builder;
         }
 
         /// <summary>
@@ -89,14 +103,14 @@ namespace Google.Cloud.Storage.V1
         /// The returned string will always have a query parameter, so later query parameters
         /// can unconditionally be appended with an "&amp;" prefix.
         /// </summary>
-        private string GetBaseUri(Object source)
+        private RequestBuilder CreateRequestBuilder(Object source)
         {
             ValidateObject(source, nameof(source));
-            return GetBaseUri(source.Bucket, source.Name);
+            return CreateRequestBuilder(source.Bucket, source.Name);
         }
 
         private void DownloadObjectImpl(
-            string baseUri,
+            RequestBuilder requestBuilder,
             Stream destination,
             DownloadObjectOptions options,
             IProgress<IDownloadProgress> progress)
@@ -104,7 +118,8 @@ namespace Google.Cloud.Storage.V1
             // URI will definitely not be null; that's constructed internally.
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
             var downloader = CreateDownloader(options);
-            string uri = options == null ? baseUri : options.GetUri(baseUri);
+            options?.ModifyRequestBuilder(requestBuilder);
+            string uri = requestBuilder.BuildUri().AbsoluteUri;
             if (progress != null)
             {
                 downloader.ProgressChanged += progress.Report;
@@ -118,7 +133,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         private Task DownloadObjectAsyncImpl(
-            string baseUri,
+            RequestBuilder requestBuilder,
             Stream destination,
             DownloadObjectOptions options,
             CancellationToken cancellationToken,
@@ -129,7 +144,8 @@ namespace Google.Cloud.Storage.V1
             {
                 GaxPreconditions.CheckNotNull(destination, nameof(destination));
                 var downloader = CreateDownloader(options);
-                string uri = options == null ? baseUri : options.GetUri(baseUri);
+                options?.ModifyRequestBuilder(requestBuilder);
+                string uri = requestBuilder.BuildUri().AbsoluteUri;
                 if (progress != null)
                 {
                     downloader.ProgressChanged += progress.Report;
