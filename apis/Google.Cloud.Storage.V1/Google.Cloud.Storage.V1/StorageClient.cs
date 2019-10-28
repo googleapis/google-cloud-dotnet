@@ -48,6 +48,8 @@ namespace Google.Cloud.Storage.V1
     {
         private static readonly string[] s_scopes = new[] { StorageService.Scope.DevstorageFullControl };
 
+        private const string EndpointOverride = "https://storage.googleapis.com/storage/v1/";
+
         internal static ScopedCredentialProvider ScopedCredentialProvider { get; } =
             new ScopedCredentialProvider(s_scopes);
 
@@ -83,7 +85,8 @@ namespace Google.Cloud.Storage.V1
             new StorageClientBuilder
             {
                 Credential = credential?.CreateScoped(s_scopes),
-                EncryptionKey = encryptionKey
+                EncryptionKey = encryptionKey,
+                BaseUri = EndpointOverride
             }.BuildAsync();
 
         /// <summary>
@@ -100,7 +103,8 @@ namespace Google.Cloud.Storage.V1
             new StorageClientBuilder
             {
                 Credential = credential?.CreateScoped(s_scopes),
-                EncryptionKey = encryptionKey
+                EncryptionKey = encryptionKey,
+                BaseUri = EndpointOverride
             }.Build();
 
         /// <summary>
@@ -109,7 +113,11 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <returns>The created <see cref="StorageClient"/>.</returns>
         public static StorageClient CreateUnauthenticated() =>
-            new StorageClientBuilder { UnauthenticatedAccess = true }.Build();
+            new StorageClientBuilder
+            {
+                UnauthenticatedAccess = true,
+                BaseUri = EndpointOverride
+            }.Build();
 
         /// <summary>
         /// Dispose of this instance. See the <see cref="StorageClient"/> remarks on when this should be called.
