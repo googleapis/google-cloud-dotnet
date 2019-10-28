@@ -135,6 +135,12 @@ namespace Google.Cloud.Logging.NLog
                 ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             };
             jsonSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+            jsonSettings.Error = (sender, args) =>
+            {
+                // Serialization of properties that throws exceptions should not break everything
+                InternalLogger.Warn(args.ErrorContext.Error, "GoogleStackdriver(Name={0}): Error serializing exception property: {1}", Name, args.ErrorContext.Member);
+                args.ErrorContext.Handled = true;
+            };
             var jsonSerializer = Newtonsoft.Json.JsonSerializer.CreateDefault(jsonSettings);
             return o => {
                 try
