@@ -13,11 +13,10 @@
 // limitations under the License.
 
 // Generated code. DO NOT EDIT!
-
+               
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
-using gcscv = Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -26,6 +25,7 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
+using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -101,14 +101,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <remarks>
         /// The "Default" retry backoff for <see cref="DatabaseAdminClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 1000 milliseconds</description></item>
-        /// <item><description>Maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(1000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(32000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -121,14 +121,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="DatabaseAdminClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(60000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -140,12 +140,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.ListDatabases</c> and
         /// <c>DatabaseAdminClient.ListDatabasesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -168,10 +168,28 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <remarks>
         /// The default <c>DatabaseAdminClient.CreateDatabase</c> and
-        /// <c>DatabaseAdminClient.CreateDatabaseAsync</c> timing is an expiration of one hour with no retry.
+        /// <c>DatabaseAdminClient.CreateDatabaseAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))));
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>DatabaseAdminClient.CreateDatabase</c>.
@@ -179,19 +197,19 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
-        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
-                sys::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -202,12 +220,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.GetDatabase</c> and
         /// <c>DatabaseAdminClient.GetDatabaseAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -232,17 +250,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.UpdateDatabaseDdl</c> and
         /// <c>DatabaseAdminClient.UpdateDatabaseDdlAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -251,7 +268,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -260,19 +277,19 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
-        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateDatabaseDdlOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
-                sys::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -283,17 +300,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.DropDatabase</c> and
         /// <c>DatabaseAdminClient.DropDatabaseAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -302,7 +318,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -313,12 +329,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.GetDatabaseDdl</c> and
         /// <c>DatabaseAdminClient.GetDatabaseDdlAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -343,12 +359,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.SetIamPolicy</c> and
         /// <c>DatabaseAdminClient.SetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -372,17 +388,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.GetIamPolicy</c> and
         /// <c>DatabaseAdminClient.GetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -391,7 +406,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -402,12 +417,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The default <c>DatabaseAdminClient.TestIamPermissions</c> and
         /// <c>DatabaseAdminClient.TestIamPermissionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -646,7 +661,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A pageable asynchronous sequence of <see cref="Database"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(
-            gcscv::InstanceName parent,
+            InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListDatabasesAsync(
@@ -680,7 +695,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A pageable sequence of <see cref="Database"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(
-            gcscv::InstanceName parent,
+            InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListDatabases(
@@ -804,8 +819,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -826,7 +841,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
-            gcscv::InstanceName parent,
+            InstanceName parent,
             string createStatement,
             gaxgrpc::CallSettings callSettings = null) => CreateDatabaseAsync(
                 new CreateDatabaseRequest
@@ -842,8 +857,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -864,7 +879,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
-            gcscv::InstanceName parent,
+            InstanceName parent,
             string createStatement,
             st::CancellationToken cancellationToken) => CreateDatabaseAsync(
                 parent,
@@ -877,8 +892,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -899,7 +914,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(
-            gcscv::InstanceName parent,
+            InstanceName parent,
             string createStatement,
             gaxgrpc::CallSettings callSettings = null) => CreateDatabase(
                 new CreateDatabaseRequest
@@ -915,8 +930,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -953,8 +968,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -988,8 +1003,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -1026,8 +1041,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -1065,8 +1080,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -1120,11 +1135,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Database> GetDatabaseAsync(
-            gcscv::DatabaseName name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetDatabaseAsync(
                 new GetDatabaseRequest
                 {
-                    DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1142,7 +1157,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Database> GetDatabaseAsync(
-            gcscv::DatabaseName name,
+            InstanceName name,
             st::CancellationToken cancellationToken) => GetDatabaseAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1161,11 +1176,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual Database GetDatabase(
-            gcscv::DatabaseName name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetDatabase(
                 new GetDatabaseRequest
                 {
-                    DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1295,14 +1310,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
         /// </param>
         /// <param name="statements">
-        /// DDL statements to be applied to the database.
+        /// Required. DDL statements to be applied to the database.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1311,7 +1325,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             scg::IEnumerable<string> statements,
             gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdlAsync(
                 new UpdateDatabaseDdlRequest
@@ -1328,14 +1342,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
         /// </param>
         /// <param name="statements">
-        /// DDL statements to be applied to the database.
+        /// Required. DDL statements to be applied to the database.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1344,7 +1357,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             scg::IEnumerable<string> statements,
             st::CancellationToken cancellationToken) => UpdateDatabaseDdlAsync(
                 database,
@@ -1358,14 +1371,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
         /// </param>
         /// <param name="statements">
-        /// DDL statements to be applied to the database.
+        /// Required. DDL statements to be applied to the database.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1374,7 +1386,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             scg::IEnumerable<string> statements,
             gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdl(
                 new UpdateDatabaseDdlRequest
@@ -1391,14 +1403,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
         /// </param>
         /// <param name="statements">
-        /// DDL statements to be applied to the database.
+        /// Required. DDL statements to be applied to the database.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1424,14 +1435,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
         /// </param>
         /// <param name="statements">
-        /// DDL statements to be applied to the database.
+        /// Required. DDL statements to be applied to the database.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1454,14 +1464,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
         /// </param>
         /// <param name="statements">
-        /// DDL statements to be applied to the database.
+        /// Required. DDL statements to be applied to the database.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1487,8 +1496,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1526,8 +1534,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1579,7 +1586,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DropDatabaseAsync(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => DropDatabaseAsync(
                 new DropDatabaseRequest
                 {
@@ -1600,7 +1607,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DropDatabaseAsync(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             st::CancellationToken cancellationToken) => DropDatabaseAsync(
                 database,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1615,7 +1622,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DropDatabase(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => DropDatabase(
                 new DropDatabaseRequest
                 {
@@ -1748,7 +1755,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => GetDatabaseDdlAsync(
                 new GetDatabaseDdlRequest
                 {
@@ -1771,7 +1778,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             st::CancellationToken cancellationToken) => GetDatabaseDdlAsync(
                 database,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1791,7 +1798,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual GetDatabaseDdlResponse GetDatabaseDdl(
-            gcscv::DatabaseName database,
+            DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => GetDatabaseDdl(
                 new GetDatabaseDdlRequest
                 {
@@ -1928,11 +1935,110 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            gax::IResourceName resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
+                new iam::SetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
+        ///
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            gax::IResourceName resource,
+            iam::Policy policy,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
+        ///
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy SetIamPolicy(
+            gax::IResourceName resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
+                new iam::SetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
+        ///
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1962,11 +2068,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1993,11 +2099,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2027,11 +2133,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2050,11 +2156,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2072,11 +2178,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2095,8 +2201,87 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
+        ///
+        /// Authorization requires `spanner.databases.getIamPolicy` permission on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            gax::IResourceName resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
+                new iam::GetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
+        ///
+        /// Authorization requires `spanner.databases.getIamPolicy` permission on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            gax::IResourceName resource,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
+        ///
+        /// Authorization requires `spanner.databases.getIamPolicy` permission on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy GetIamPolicy(
+            gax::IResourceName resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
+                new iam::GetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2121,8 +2306,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2144,8 +2330,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2170,8 +2357,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2193,8 +2381,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2215,8 +2404,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2240,10 +2430,112 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            gax::IResourceName resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new iam::TestIamPermissionsRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified database resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            gax::IResourceName resource,
+            scg::IEnumerable<string> permissions,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified database resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            gax::IResourceName resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
+                new iam::TestIamPermissionsRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified database resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2268,17 +2560,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 new iam::TestIamPermissionsRequest
                 {
                     Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
                 },
                 callSettings);
 
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2307,10 +2599,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2335,17 +2627,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 new iam::TestIamPermissionsRequest
                 {
                     Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
                 },
                 callSettings);
 
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2366,10 +2658,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2389,10 +2681,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2574,8 +2866,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -2602,8 +2894,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -2676,8 +2968,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2704,8 +2995,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2812,11 +3102,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2836,11 +3126,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on a database resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on a database resource.
+        /// Replaces any existing policy.
         ///
-        /// Authorization requires `spanner.databases.setIamPolicy` permission on
-        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// Authorization requires `spanner.databases.setIamPolicy`
+        /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2860,8 +3150,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2884,8 +3175,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a database resource. Returns an empty
-        /// policy if a database exists but does not have a policy set.
+        /// Gets the access control policy for a database resource.
+        /// Returns an empty policy if a database exists but does
+        /// not have a policy set.
         ///
         /// Authorization requires `spanner.databases.getIamPolicy` permission on
         /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
@@ -2910,10 +3202,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2935,10 +3227,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.
         ///
-        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
-        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
-        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
-        /// permissions.
+        /// Attempting this RPC on a non-existent Cloud Spanner database will
+        /// result in a NOT_FOUND error if the user has
+        /// `spanner.databases.list` permission on the containing Cloud
+        /// Spanner instance. Otherwise returns an empty set of permissions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

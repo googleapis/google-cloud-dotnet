@@ -20,7 +20,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Spanner.Admin.Database.V1;
-    using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -45,7 +44,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetDatabaseRequest expectedRequest = new GetDatabaseRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Database expectedResponse = new Database
             {
@@ -54,7 +53,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.GetDatabase(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
             Database response = client.GetDatabase(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -68,7 +67,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetDatabaseRequest expectedRequest = new GetDatabaseRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Database expectedResponse = new Database
             {
@@ -77,7 +76,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Database>(Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
             Database response = await client.GetDatabaseAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -91,7 +90,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Database expectedResponse = new Database
             {
@@ -113,7 +112,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetDatabaseRequest request = new GetDatabaseRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Database expectedResponse = new Database
             {
@@ -287,7 +286,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -298,9 +297,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            IResourceName resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             Policy policy = new Policy();
-            Policy response = client.SetIamPolicy(formattedResource, policy);
+            Policy response = client.SetIamPolicy(resource, policy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -313,7 +312,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -324,9 +323,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            IResourceName resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             Policy policy = new Policy();
-            Policy response = await client.SetIamPolicyAsync(formattedResource, policy);
+            Policy response = await client.SetIamPolicyAsync(resource, policy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -339,7 +338,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -363,7 +362,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -387,7 +386,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -397,8 +396,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
-            Policy response = client.GetIamPolicy(formattedResource);
+            IResourceName resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            Policy response = client.GetIamPolicy(resource);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -411,7 +410,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -421,8 +420,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
-            Policy response = await client.GetIamPolicyAsync(formattedResource);
+            IResourceName resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            Policy response = await client.GetIamPolicyAsync(resource);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -435,7 +434,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -458,7 +457,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -481,16 +480,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            IResourceName resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = client.TestIamPermissions(formattedResource, permissions);
+            TestIamPermissionsResponse response = client.TestIamPermissions(resource, permissions);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -503,16 +502,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            IResourceName resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(formattedResource, permissions);
+            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(resource, permissions);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -525,8 +524,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
@@ -545,8 +543,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))
