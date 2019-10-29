@@ -36,8 +36,9 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
             "ZWN0ZWRVcmwYCCABKAkSUAoHaGVhZGVycxgJIAMoCzI/Lmdvb2dsZS5jbG91",
             "ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlNpZ25pbmdWNFRlc3QuSGVhZGVy",
             "c0VudHJ5Gi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBQiyqAilHb29nbGUuQ2xvdWQuU3RvcmFnZS5WMS5UZXN0cy5D",
-            "b25mb3JtYW5jZWIGcHJvdG8z"));
+            "AiABKAk6AjgBQlcKJ2NvbS5nb29nbGUuY2xvdWQuY29uZm9ybWFuY2Uuc3Rv",
+            "cmFnZS52MVABqgIpR29vZ2xlLkNsb3VkLlN0b3JhZ2UuVjEuVGVzdHMuQ29u",
+            "Zm9ybWFuY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -457,7 +458,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       }
       if (other.timestamp_ != null) {
         if (timestamp_ == null) {
-          timestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         Timestamp.MergeFrom(other.Timestamp);
       }
@@ -502,9 +503,9 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
           }
           case 58: {
             if (timestamp_ == null) {
-              timestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(timestamp_);
+            input.ReadMessage(Timestamp);
             break;
           }
           case 66: {

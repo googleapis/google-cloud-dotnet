@@ -908,7 +908,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1.GetDocumentRequest();
+          Request = new global::Google.Cloud.Firestore.V1.GetDocumentRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -929,9 +929,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1.GetDocumentRequest();
+              Request = new global::Google.Cloud.Firestore.V1.GetDocumentRequest();
             }
-            input.ReadMessage(request_);
+            input.ReadMessage(Request);
             break;
           }
         }
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+          Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1162,9 +1162,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 26: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
-            input.ReadMessage(request_);
+            input.ReadMessage(Request);
             break;
           }
           case 32: {
@@ -1389,7 +1389,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.option_ != null) {
         if (option_ == null) {
-          option_ = new global::Google.Cloud.Firestore.Tests.Proto.SetOption();
+          Option = new global::Google.Cloud.Firestore.Tests.Proto.SetOption();
         }
         Option.MergeFrom(other.Option);
       }
@@ -1398,7 +1398,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+          Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1422,9 +1422,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (option_ == null) {
-              option_ = new global::Google.Cloud.Firestore.Tests.Proto.SetOption();
+              Option = new global::Google.Cloud.Firestore.Tests.Proto.SetOption();
             }
-            input.ReadMessage(option_);
+            input.ReadMessage(Option);
             break;
           }
           case 26: {
@@ -1433,9 +1433,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 34: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
-            input.ReadMessage(request_);
+            input.ReadMessage(Request);
             break;
           }
           case 40: {
@@ -1661,7 +1661,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.precondition_ != null) {
         if (precondition_ == null) {
-          precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
+          Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         Precondition.MergeFrom(other.Precondition);
       }
@@ -1670,7 +1670,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+          Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1694,9 +1694,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (precondition_ == null) {
-              precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
+              Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
             }
-            input.ReadMessage(precondition_);
+            input.ReadMessage(Precondition);
             break;
           }
           case 26: {
@@ -1705,9 +1705,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 34: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
-            input.ReadMessage(request_);
+            input.ReadMessage(Request);
             break;
           }
           case 40: {
@@ -1945,7 +1945,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.precondition_ != null) {
         if (precondition_ == null) {
-          precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
+          Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         Precondition.MergeFrom(other.Precondition);
       }
@@ -1953,7 +1953,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       jsonValues_.Add(other.jsonValues_);
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+          Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1977,9 +1977,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (precondition_ == null) {
-              precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
+              Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
             }
-            input.ReadMessage(precondition_);
+            input.ReadMessage(Precondition);
             break;
           }
           case 26: {
@@ -1992,9 +1992,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 42: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
-            input.ReadMessage(request_);
+            input.ReadMessage(Request);
             break;
           }
           case 48: {
@@ -2192,13 +2192,13 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.precondition_ != null) {
         if (precondition_ == null) {
-          precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
+          Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         Precondition.MergeFrom(other.Precondition);
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+          Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -2222,16 +2222,16 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (precondition_ == null) {
-              precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
+              Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
             }
-            input.ReadMessage(precondition_);
+            input.ReadMessage(Precondition);
             break;
           }
           case 26: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
-            input.ReadMessage(request_);
+            input.ReadMessage(Request);
             break;
           }
           case 32: {
@@ -2573,7 +2573,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       clauses_.Add(other.clauses_);
       if (other.query_ != null) {
         if (query_ == null) {
-          query_ = new global::Google.Cloud.Firestore.V1.StructuredQuery();
+          Query = new global::Google.Cloud.Firestore.V1.StructuredQuery();
         }
         Query.MergeFrom(other.Query);
       }
@@ -2601,9 +2601,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 26: {
             if (query_ == null) {
-              query_ = new global::Google.Cloud.Firestore.V1.StructuredQuery();
+              Query = new global::Google.Cloud.Firestore.V1.StructuredQuery();
             }
-            input.ReadMessage(query_);
+            input.ReadMessage(Query);
             break;
           }
           case 32: {
@@ -3347,7 +3347,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.path_ != null) {
         if (path_ == null) {
-          path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+          Path = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
         }
         Path.MergeFrom(other.Path);
       }
@@ -3370,9 +3370,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
             break;
           case 10: {
             if (path_ == null) {
-              path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+              Path = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
             }
-            input.ReadMessage(path_);
+            input.ReadMessage(Path);
             break;
           }
           case 18: {
@@ -3520,7 +3520,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.path_ != null) {
         if (path_ == null) {
-          path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+          Path = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
         }
         Path.MergeFrom(other.Path);
       }
@@ -3540,9 +3540,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
             break;
           case 10: {
             if (path_ == null) {
-              path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+              Path = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
             }
-            input.ReadMessage(path_);
+            input.ReadMessage(Path);
             break;
           }
           case 18: {
@@ -3680,7 +3680,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.docSnapshot_ != null) {
         if (docSnapshot_ == null) {
-          docSnapshot_ = new global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot();
+          DocSnapshot = new global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot();
         }
         DocSnapshot.MergeFrom(other.DocSnapshot);
       }
@@ -3698,9 +3698,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
             break;
           case 10: {
             if (docSnapshot_ == null) {
-              docSnapshot_ = new global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot();
+              DocSnapshot = new global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot();
             }
-            input.ReadMessage(docSnapshot_);
+            input.ReadMessage(DocSnapshot);
             break;
           }
           case 18: {
@@ -4312,7 +4312,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       changes_.Add(other.changes_);
       if (other.readTime_ != null) {
         if (readTime_ == null) {
-          readTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ReadTime.MergeFrom(other.ReadTime);
       }
@@ -4337,9 +4337,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 26: {
             if (readTime_ == null) {
-              readTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(readTime_);
+            input.ReadMessage(ReadTime);
             break;
           }
         }
@@ -4521,7 +4521,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.doc_ != null) {
         if (doc_ == null) {
-          doc_ = new global::Google.Cloud.Firestore.V1.Document();
+          Doc = new global::Google.Cloud.Firestore.V1.Document();
         }
         Doc.MergeFrom(other.Doc);
       }
@@ -4543,14 +4543,14 @@ namespace Google.Cloud.Firestore.Tests.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            kind_ = (global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind) input.ReadEnum();
+            Kind = (global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind) input.ReadEnum();
             break;
           }
           case 18: {
             if (doc_ == null) {
-              doc_ = new global::Google.Cloud.Firestore.V1.Document();
+              Doc = new global::Google.Cloud.Firestore.V1.Document();
             }
-            input.ReadMessage(doc_);
+            input.ReadMessage(Doc);
             break;
           }
           case 24: {
