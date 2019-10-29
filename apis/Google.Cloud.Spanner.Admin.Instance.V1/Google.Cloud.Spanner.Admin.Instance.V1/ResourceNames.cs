@@ -414,17 +414,4 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
     }
 
-    public partial class UpdateInstanceRequest
-    {
-        /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Instance.V1.InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
-        /// </summary>
-        public Google.Cloud.Spanner.Admin.Instance.V1.InstanceName InstanceAsInstanceName
-        {
-            get { return string.IsNullOrEmpty(Instance) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.Parse(Instance); }
-            set { Instance = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
 }

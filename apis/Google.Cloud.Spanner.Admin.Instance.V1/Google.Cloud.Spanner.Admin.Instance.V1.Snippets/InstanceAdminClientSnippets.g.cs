@@ -665,12 +665,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for UpdateInstanceAsync</summary>
         public async Task UpdateInstanceAsync()
         {
-            // Snippet: UpdateInstanceAsync(InstanceName,FieldMask,CallSettings)
-            // Additional: UpdateInstanceAsync(InstanceName,FieldMask,CancellationToken)
+            // Snippet: UpdateInstanceAsync(Instance,FieldMask,CallSettings)
+            // Additional: UpdateInstanceAsync(Instance,FieldMask,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName instance = new InstanceName("[PROJECT]", "[INSTANCE]");
+            Instance instance = new Instance();
             FieldMask fieldMask = new FieldMask();
             // Make the request
             Operation<Instance, UpdateInstanceMetadata> response =
@@ -699,11 +699,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstance()
         {
-            // Snippet: UpdateInstance(InstanceName,FieldMask,CallSettings)
+            // Snippet: UpdateInstance(Instance,FieldMask,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            InstanceName instance = new InstanceName("[PROJECT]", "[INSTANCE]");
+            Instance instance = new Instance();
             FieldMask fieldMask = new FieldMask();
             // Make the request
             Operation<Instance, UpdateInstanceMetadata> response =
@@ -738,7 +738,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
-                InstanceAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                Instance = new Instance(),
                 FieldMask = new FieldMask(),
             };
             // Make the request
@@ -774,7 +774,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
-                InstanceAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                Instance = new Instance(),
                 FieldMask = new FieldMask(),
             };
             // Make the request
