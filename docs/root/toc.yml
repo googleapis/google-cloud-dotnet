@@ -6,3 +6,5 @@
   href: guides/
 - name: GAX API Reference
   href: obj/api/Google.Api.Gax.yml
+- name: Major Version Plans
+  href: major-version.md
