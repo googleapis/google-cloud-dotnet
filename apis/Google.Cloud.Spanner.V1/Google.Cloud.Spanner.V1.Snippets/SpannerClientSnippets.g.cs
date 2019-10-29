@@ -18,7 +18,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Cloud.Spanner.Common.V1;
     using apis = Google.Cloud.Spanner.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -221,14 +220,14 @@ namespace Google.Cloud.Spanner.V1.Snippets
         /// <summary>Snippet for ListSessionsAsync</summary>
         public async Task ListSessionsAsync()
         {
-            // Snippet: ListSessionsAsync(string,string,int?,CallSettings)
+            // Snippet: ListSessionsAsync(DatabaseName,string,int?,CallSettings)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedDatabase = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             PagedAsyncEnumerable<ListSessionsResponse, Session> response =
-                spannerClient.ListSessionsAsync(formattedDatabase);
+                spannerClient.ListSessionsAsync(database);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Session item) =>
@@ -265,14 +264,14 @@ namespace Google.Cloud.Spanner.V1.Snippets
         /// <summary>Snippet for ListSessions</summary>
         public void ListSessions()
         {
-            // Snippet: ListSessions(string,string,int?,CallSettings)
+            // Snippet: ListSessions(DatabaseName,string,int?,CallSettings)
             // Create client
             SpannerClient spannerClient = SpannerClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             PagedEnumerable<ListSessionsResponse, Session> response =
-                spannerClient.ListSessions(formattedDatabase);
+                spannerClient.ListSessions(database);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Session item in response)
@@ -315,7 +314,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             ListSessionsRequest request = new ListSessionsRequest
             {
-                Database = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListSessionsResponse, Session> response =
@@ -362,7 +361,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             ListSessionsRequest request = new ListSessionsRequest
             {
-                Database = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             PagedEnumerable<ListSessionsResponse, Session> response =
@@ -764,7 +763,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
             CommitRequest request = new CommitRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Mutations = { },
             };
             // Make the request
             CommitResponse response = await spannerClient.CommitAsync(request);
@@ -781,7 +779,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
             CommitRequest request = new CommitRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Mutations = { },
             };
             // Make the request
             CommitResponse response = spannerClient.Commit(request);

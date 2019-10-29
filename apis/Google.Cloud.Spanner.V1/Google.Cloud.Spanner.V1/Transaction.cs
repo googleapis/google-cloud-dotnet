@@ -25,9 +25,9 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90bxIRZ29vZ2xl",
-            "LnNwYW5uZXIudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aHmdv",
-            "b2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byLDBAoSVHJhbnNhY3Rpb25PcHRpb25zEkUKCnJl",
+            "LnNwYW5uZXIudjEaHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9h",
+            "bm5vdGF0aW9ucy5wcm90byLDBAoSVHJhbnNhY3Rpb25PcHRpb25zEkUKCnJl",
             "YWRfd3JpdGUYASABKAsyLy5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlv",
             "bk9wdGlvbnMuUmVhZFdyaXRlSAASTwoPcGFydGl0aW9uZWRfZG1sGAMgASgL",
             "MjQuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlBhcnRp",
@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.V1 {
             "bmVyqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRc",
             "U3Bhbm5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly" }, new[]{ "Mode" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null),
@@ -221,8 +221,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// reads should be executed within a transaction or at an exact read
   /// timestamp.
   ///
-  /// See
-  /// [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].
+  /// See [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].
   ///
   /// ### Exact Staleness
   ///
@@ -243,9 +242,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// equivalent boundedly stale concurrency modes. On the other hand,
   /// boundedly stale reads usually return fresher results.
   ///
-  /// See
-  /// [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp]
-  /// and
+  /// See [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp] and
   /// [TransactionOptions.ReadOnly.exact_staleness][google.spanner.v1.TransactionOptions.ReadOnly.exact_staleness].
   ///
   /// ### Bounded Staleness
@@ -275,9 +272,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// which rows will be read, it can only be used with single-use
   /// read-only transactions.
   ///
-  /// See
-  /// [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness]
-  /// and
+  /// See [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness] and
   /// [TransactionOptions.ReadOnly.min_read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.min_read_timestamp].
   ///
   /// ### Old Read Timestamps and Garbage Collection
@@ -995,8 +990,7 @@ namespace Google.Cloud.Spanner.V1 {
         private bool returnReadTimestamp_;
         /// <summary>
         /// If true, the Cloud Spanner-selected read timestamp is included in
-        /// the [Transaction][google.spanner.v1.Transaction] message that describes
-        /// the transaction.
+        /// the [Transaction][google.spanner.v1.Transaction] message that describes the transaction.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ReturnReadTimestamp {
@@ -1423,8 +1417,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// [Read][google.spanner.v1.Spanner.Read] or
   /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] call runs.
   ///
-  /// See [TransactionOptions][google.spanner.v1.TransactionOptions] for more
-  /// information about transactions.
+  /// See [TransactionOptions][google.spanner.v1.TransactionOptions] for more information about transactions.
   /// </summary>
   public sealed partial class TransactionSelector : pb::IMessage<TransactionSelector> {
     private static readonly pb::MessageParser<TransactionSelector> _parser = new pb::MessageParser<TransactionSelector>(() => new TransactionSelector());
@@ -1506,8 +1499,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Begin a new transaction and execute this read or SQL query in
     /// it. The transaction ID of the new transaction is returned in
-    /// [ResultSetMetadata.transaction][google.spanner.v1.ResultSetMetadata.transaction],
-    /// which is a [Transaction][google.spanner.v1.Transaction].
+    /// [ResultSetMetadata.transaction][google.spanner.v1.ResultSetMetadata.transaction], which is a [Transaction][google.spanner.v1.Transaction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.TransactionOptions Begin {

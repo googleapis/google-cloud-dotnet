@@ -25,9 +25,9 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvc3Bhbm5lci92MS9tdXRhdGlvbi5wcm90bxIRZ29vZ2xlLnNw",
-            "YW5uZXIudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aHGdvb2ds",
-            "ZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL2tl",
-            "eXMucHJvdG8ixgMKCE11dGF0aW9uEjMKBmluc2VydBgBIAEoCzIhLmdvb2ds",
+            "YW5uZXIudjEaHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aHGdvb2ds",
+            "ZS9zcGFubmVyL3YxL2tleXMucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
+            "bnMucHJvdG8ixgMKCE11dGF0aW9uEjMKBmluc2VydBgBIAEoCzIhLmdvb2ds",
             "ZS5zcGFubmVyLnYxLk11dGF0aW9uLldyaXRlSAASMwoGdXBkYXRlGAIgASgL",
             "MiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVIABI9ChBpbnNl",
             "cnRfb3JfdXBkYXRlGAMgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRp",
@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.V1 {
             "Z2xlYXBpcy9zcGFubmVyL3YxO3NwYW5uZXKqAhdHb29nbGUuQ2xvdWQuU3Bh",
             "bm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation), global::Google.Cloud.Spanner.V1.Mutation.Parser, new[]{ "Insert", "Update", "InsertOrUpdate", "Replace", "Delete" }, new[]{ "Operation" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Write), global::Google.Cloud.Spanner.V1.Mutation.Types.Write.Parser, new[]{ "Table", "Columns", "Values" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Delete), global::Google.Cloud.Spanner.V1.Mutation.Types.Delete.Parser, new[]{ "Table", "KeySet" }, null, null, null)})
@@ -141,9 +141,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "insert_or_update" field.</summary>
     public const int InsertOrUpdateFieldNumber = 3;
     /// <summary>
-    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row
-    /// already exists, then its column values are overwritten with the ones
-    /// provided. Any column values not explicitly written are preserved.
+    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row already exists, then
+    /// its column values are overwritten with the ones provided. Any
+    /// column values not explicitly written are preserved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write InsertOrUpdate {
@@ -157,11 +157,15 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "replace" field.</summary>
     public const int ReplaceFieldNumber = 4;
     /// <summary>
-    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row
-    /// already exists, it is deleted, and the column values provided are
-    /// inserted instead. Unlike
-    /// [insert_or_update][google.spanner.v1.Mutation.insert_or_update], this
-    /// means any values not explicitly written become `NULL`.
+    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row already exists, it is
+    /// deleted, and the column values provided are inserted
+    /// instead. Unlike [insert_or_update][google.spanner.v1.Mutation.insert_or_update], this means any values not
+    /// explicitly written become `NULL`.
+    ///
+    /// In an interleaved table, if you create the child table with the
+    /// `ON DELETE CASCADE` annotation, then replacing a parent row
+    /// also deletes the child rows. Otherwise, you must delete the
+    /// child rows before you replace the parent row.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write Replace {
@@ -405,9 +409,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Arguments to [insert][google.spanner.v1.Mutation.insert],
-      /// [update][google.spanner.v1.Mutation.update],
-      /// [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
+      /// Arguments to [insert][google.spanner.v1.Mutation.insert], [update][google.spanner.v1.Mutation.update], [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
       /// [replace][google.spanner.v1.Mutation.replace] operations.
       /// </summary>
       public sealed partial class Write : pb::IMessage<Write> {
@@ -466,8 +468,7 @@ namespace Google.Cloud.Spanner.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The names of the columns in
-        /// [table][google.spanner.v1.Mutation.Write.table] to be written.
+        /// The names of the columns in [table][google.spanner.v1.Mutation.Write.table] to be written.
         ///
         /// The list of columns must contain enough columns to allow
         /// Cloud Spanner to derive values for all primary key columns in the
@@ -487,13 +488,11 @@ namespace Google.Cloud.Spanner.V1 {
         /// The values to be written. `values` can contain more than one
         /// list of values. If it does, then multiple rows are written, one
         /// for each entry in `values`. Each list in `values` must have
-        /// exactly as many entries as there are entries in
-        /// [columns][google.spanner.v1.Mutation.Write.columns] above. Sending
-        /// multiple lists is equivalent to sending multiple `Mutation`s, each
-        /// containing one `values` entry and repeating
-        /// [table][google.spanner.v1.Mutation.Write.table] and
-        /// [columns][google.spanner.v1.Mutation.Write.columns]. Individual values in
-        /// each list are encoded as described [here][google.spanner.v1.TypeCode].
+        /// exactly as many entries as there are entries in [columns][google.spanner.v1.Mutation.Write.columns]
+        /// above. Sending multiple lists is equivalent to sending multiple
+        /// `Mutation`s, each containing one `values` entry and repeating
+        /// [table][google.spanner.v1.Mutation.Write.table] and [columns][google.spanner.v1.Mutation.Write.columns]. Individual values in each list are
+        /// encoded as described [here][google.spanner.v1.TypeCode].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> Values {
@@ -658,10 +657,9 @@ namespace Google.Cloud.Spanner.V1 {
         public const int KeySetFieldNumber = 2;
         private global::Google.Cloud.Spanner.V1.KeySet keySet_;
         /// <summary>
-        /// Required. The primary keys of the rows within
-        /// [table][google.spanner.v1.Mutation.Delete.table] to delete. Delete is
-        /// idempotent. The transaction will succeed even if some or all rows do not
-        /// exist.
+        /// Required. The primary keys of the rows within [table][google.spanner.v1.Mutation.Delete.table] to delete.
+        /// Delete is idempotent. The transaction will succeed even if some or all
+        /// rows do not exist.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Spanner.V1.KeySet KeySet {

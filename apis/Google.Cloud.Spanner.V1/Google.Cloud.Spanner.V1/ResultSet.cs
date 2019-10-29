@@ -25,10 +25,10 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvc3Bhbm5lci92MS9yZXN1bHRfc2V0LnByb3RvEhFnb29nbGUu",
-            "c3Bhbm5lci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxocZ29v",
-            "Z2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxoiZ29vZ2xlL3NwYW5uZXIvdjEv",
-            "cXVlcnlfcGxhbi5wcm90bxojZ29vZ2xlL3NwYW5uZXIvdjEvdHJhbnNhY3Rp",
-            "b24ucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL3R5cGUucHJvdG8inwEKCVJl",
+            "c3Bhbm5lci52MRocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxoiZ29v",
+            "Z2xlL3NwYW5uZXIvdjEvcXVlcnlfcGxhbi5wcm90bxojZ29vZ2xlL3NwYW5u",
+            "ZXIvdjEvdHJhbnNhY3Rpb24ucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL3R5",
+            "cGUucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8inwEKCVJl",
             "c3VsdFNldBI2CghtZXRhZGF0YRgBIAEoCzIkLmdvb2dsZS5zcGFubmVyLnYx",
             "LlJlc3VsdFNldE1ldGFkYXRhEigKBHJvd3MYAiADKAsyGi5nb29nbGUucHJv",
             "dG9idWYuTGlzdFZhbHVlEjAKBXN0YXRzGAMgASgLMiEuZ29vZ2xlLnNwYW5u",
@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.V1 {
             "bm5lci92MTtzcGFubmVy+AEBqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHK",
             "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats" }, null, null, null),
@@ -122,10 +122,11 @@ namespace Google.Cloud.Spanner.V1 {
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> rows_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue>();
     /// <summary>
     /// Each element in `rows` is a row whose format is defined by
-    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. The ith
-    /// element in each row matches the ith field in
-    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. Elements
-    /// are encoded based on type as described [here][google.spanner.v1.TypeCode].
+    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. The ith element
+    /// in each row matches the ith field in
+    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. Elements are
+    /// encoded based on type as described
+    /// [here][google.spanner.v1.TypeCode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> Rows {
@@ -141,8 +142,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
     /// DML statements always produce stats containing the number of rows
     /// modified, unless executed using the
-    /// [ExecuteSqlRequest.QueryMode.PLAN][google.spanner.v1.ExecuteSqlRequest.QueryMode.PLAN]
-    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
+    /// [ExecuteSqlRequest.QueryMode.PLAN][google.spanner.v1.ExecuteSqlRequest.QueryMode.PLAN] [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
     /// Other fields may or may not be populated, based on the
     /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
     /// </summary>
@@ -350,10 +350,9 @@ namespace Google.Cloud.Spanner.V1 {
     ///
     /// It is possible that the last value in values is "chunked",
     /// meaning that the rest of the value is sent in subsequent
-    /// `PartialResultSet`(s). This is denoted by the
-    /// [chunked_value][google.spanner.v1.PartialResultSet.chunked_value] field.
-    /// Two or more chunked values can be merged to form a complete value as
-    /// follows:
+    /// `PartialResultSet`(s). This is denoted by the [chunked_value][google.spanner.v1.PartialResultSet.chunked_value]
+    /// field. Two or more chunked values can be merged to form a
+    /// complete value as follows:
     ///
     ///   * `bool/number/null`: cannot be chunked
     ///   * `string`: concatenate the strings
@@ -423,10 +422,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ChunkedValueFieldNumber = 3;
     private bool chunkedValue_;
     /// <summary>
-    /// If true, then the final value in
-    /// [values][google.spanner.v1.PartialResultSet.values] is chunked, and must be
-    /// combined with more values from subsequent `PartialResultSet`s to obtain a
-    /// complete field value.
+    /// If true, then the final value in [values][google.spanner.v1.PartialResultSet.values] is chunked, and must
+    /// be combined with more values from subsequent `PartialResultSet`s
+    /// to obtain a complete field value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ChunkedValue {
@@ -460,9 +458,10 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Query plan and execution statistics for the statement that produced this
     /// streaming result set. These can be requested by setting
-    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode]
-    /// and are sent only once with the last response in the stream. This field
-    /// will also be present in the last response for DML statements.
+    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] and are sent
+    /// only once with the last response in the stream.
+    /// This field will also be present in the last response for DML
+    /// statements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ResultSetStats Stats {
@@ -626,8 +625,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// Metadata about a [ResultSet][google.spanner.v1.ResultSet] or
-  /// [PartialResultSet][google.spanner.v1.PartialResultSet].
+  /// Metadata about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
   public sealed partial class ResultSetMetadata : pb::IMessage<ResultSetMetadata> {
     private static readonly pb::MessageParser<ResultSetMetadata> _parser = new pb::MessageParser<ResultSetMetadata>(() => new ResultSetMetadata());
@@ -813,8 +811,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or
-  /// [PartialResultSet][google.spanner.v1.PartialResultSet].
+  /// Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
   public sealed partial class ResultSetStats : pb::IMessage<ResultSetStats> {
     private static readonly pb::MessageParser<ResultSetStats> _parser = new pb::MessageParser<ResultSetStats>(() => new ResultSetStats());
@@ -864,8 +861,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int QueryPlanFieldNumber = 1;
     private global::Google.Cloud.Spanner.V1.QueryPlan queryPlan_;
     /// <summary>
-    /// [QueryPlan][google.spanner.v1.QueryPlan] for the query associated with this
-    /// result.
+    /// [QueryPlan][google.spanner.v1.QueryPlan] for the query associated with this result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.QueryPlan QueryPlan {
