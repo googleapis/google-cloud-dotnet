@@ -1,0 +1,46 @@
+{
+  "common_resources": [
+    {
+      "type": "cloudresourcemanager.googleapis.com/Project",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "ProjectName"
+    },
+    {
+      "type": "cloudresourcemanager.googleapis.com/Organization",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "OrganizationName"
+    },
+    {
+      "type": "cloudresourcemanager.googleapis.com/Folder",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "FolderName"
+    },
+    {
+      "type": "cloudbilling.googleapis.com/BillingAccount",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "BillingAccountName"
+    },
+    {
+      "type": "locations.googleapis.com/Location",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "LocationName"
+    },
+    {
+      "type": "spanner.googleapis.com/Database",
+      "csharp_package_name": "Google.Cloud.Spanner.Common.V1",
+      "csharp_namespace": "Google.Cloud.Spanner.Common.V1",
+      "csharp_class_name":  "DatabaseName"
+    },
+    {
+      "type": "spanner.googleapis.com/Instance",
+      "csharp_package_name": "Google.Cloud.Spanner.Common.V1",
+      "csharp_namespace": "Google.Cloud.Spanner.Common.V1",
+      "csharp_class_name":  "InstanceName"
+    }
+  ]
+}
