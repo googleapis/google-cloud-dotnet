@@ -751,9 +751,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/spanner/admin/database/v1",
-    "serviceYaml": "spanner_admin_database.yaml",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Database Administration",
@@ -771,9 +770,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/spanner/admin/instance/v1",
-    "serviceYaml": "spanner_admin_instance.yaml",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Instance Administration",
@@ -824,9 +822,8 @@
   
   {
     "id": "Google.Cloud.Spanner.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/spanner/v1",
-    "serviceYaml": "spanner.yaml",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner",
