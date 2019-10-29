@@ -1,0 +1,71 @@
+# Major Version Plan
+
+The current (as of October 2019) versions of all Google Cloud client
+libraries are incompatible with Grpc.Core.Api 2.x - which means
+they're incompatible with anyone trying to use the Microsoft gRPC
+libraries in .NET Core 3.0.
+
+This is effectively a forcing factor for us to make a series of
+breaking changes, and bump the major version of all libraries. While
+we *are* making forced breaking changes, we'll take the opportunity to make
+a few other improvements at the same time.
+
+The bulk of the changes will be within
+[GAX](https://github.com/googleapis/gax-dotnet) as that's where a
+lot of our common code for interacting with gRPC resides, but there
+will be some API-specific changes too.
+
+## Changes
+
+We plan on making the following changes:
+
+- Upgrade the Grpc.Core dependency to the latest 2.x release.
+- Remove the System.Interactive.Async dependency, replacing it with
+  Microsoft.Bcl.AsyncInterfaces.
+- Change our target platforms to .NET 4.6.1 and .NET Standard 2.0
+- Revisit our retry configuration to bring it in line with gRPC
+  "native" retry configuration.
+- Remove all obsolete members from all libraries.
+- Remove all retry-related members that are not generated under by new
+  microgenerator.
+- Where individual APIs have their own copies of common resource
+  names (such as LocationName), update them to use the common
+  resource names instead.
+
+## Considerations around dropping .NET 4.5 support
+
+While dropping support for .NET Standard 1.x is reasonably
+uncontroversial, dropping support for .NET 4.5 may have a greater
+impact on our customers.
+
+The [Microsoft.Bcl.AsyncInterfaces NuGet
+package](https://www.nuget.org/packages/Microsoft.Bcl.AsyncInterfaces)
+does not support .NET 4.5, which makes it hard for us to do so. We
+intend to release the new libraries without .NET 4.5 support as that
+will be the technically-simplest approach, but we have a backup plan
+to reintroduce .NET 4.5 compatiblity if we absolutely have to in
+order to meet customer demands. If this happens, it's very likely
+that we'd only release individual API libraries where there's
+significant demand, to improve the likelihood of being able to drop
+.NET 4.5 in future major versions.
+
+## Timing
+
+Our tentative plan is as follows:
+
+- November 2019:
+  - Create "final for this major version" releases for all APIs
+  - Start merging breaking changes into GAX
+- December 2019:
+  - Create alpha GAX 3.0 packages, but without releasing them to NuGet
+  - Migrate API libraries to GAX 3.0
+  - Publish alpha releases of all APIs and GAX
+- January 2020:
+  - Publish beta releases of all APIs and GAX
+  - If all goes well, publish GA releases of GAX and stable APIs
+
+## Feedback
+
+We welcome feedback on this plan. Please [raise an
+issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+to let us know how this plan will affect you.

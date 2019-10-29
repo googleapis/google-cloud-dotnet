@@ -247,7 +247,7 @@ strongly discourage you from trying.)
 Our plan to mitigate this issue is:
 
 - Use version ranges for Grpc.Core so that the break is at build time
-  rather than execution time, until the next steps are ready.
+  rather than execution time, until the next steps are ready. (Done)
 - Migrate to depend on Grpc.Core 2.x within the Google Cloud client
   libraries.
 - Rerelease all libraries with a major version bump, as taking a major
@@ -256,3 +256,6 @@ Our plan to mitigate this issue is:
 
 We're collecting a few breaking changes to make, all at the same
 time, so that we can get away with a single major version bump.
+
+See [the major version planning document](major-version.md) for more
+details.
