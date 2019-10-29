@@ -31,7 +31,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Additional: AnnotateVideo(string, IEnumerable<Feature>, CallSettings)
             VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.Create();
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> operation = client.AnnotateVideo(
-                "gs://cloudmleap/video/next/gbikes_dinosaur.mp4",
+                "gs://cloud-samples-data/video/gbikes_dinosaur.mp4",
                 new[] { Feature.LabelDetection });
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> resultOperation = operation.PollUntilCompleted();
 
@@ -50,14 +50,14 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             Assert.Contains(result.ShotLabelAnnotations, lab => lab.Entity.Description == "dinosaur");
         }
 
-        [Fact(Skip = "No access to video used in sample.")]
+        [Fact]
         public void SpeechTranscription()
         {
             // Sample: SpeechTranscription
             VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.Create();
             AnnotateVideoRequest request = new AnnotateVideoRequest
             {
-                InputUri = "gs://bucket-name-123/google-next-17-videointelligence-short.mp4",
+                InputUri = "gs://cloud-samples-data/video/googlework_short.mp4",
                 Features = { Feature.SpeechTranscription },
                 VideoContext = new VideoContext
                 {
@@ -86,7 +86,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             IEnumerable<string> allTranscripts = result.SpeechTranscriptions
                 .SelectMany(st => st.Alternatives)
                 .Select(alt => alt.Transcript);
-            Assert.Contains(allTranscripts, t => t.Contains("looks like most of you"));
+            Assert.Contains(allTranscripts, t => t.Contains("Paris is special because"));
         }
     }
 }
