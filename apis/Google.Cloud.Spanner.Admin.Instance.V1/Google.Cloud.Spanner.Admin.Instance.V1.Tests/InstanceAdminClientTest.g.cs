@@ -20,7 +20,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Spanner.Admin.Instance.V1;
-    using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -45,17 +44,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceConfigRequest expectedRequest = new GetInstanceConfigRequest
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
             };
             InstanceConfig expectedResponse = new InstanceConfig
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[CONFIG]");
             InstanceConfig response = client.GetInstanceConfig(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -69,17 +68,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceConfigRequest expectedRequest = new GetInstanceConfigRequest
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
             };
             InstanceConfig expectedResponse = new InstanceConfig
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<InstanceConfig>(Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[CONFIG]");
             InstanceConfig response = await client.GetInstanceConfigAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -93,11 +92,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
             };
             InstanceConfig expectedResponse = new InstanceConfig
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, It.IsAny<CallOptions>()))
@@ -116,11 +115,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
             };
             InstanceConfig expectedResponse = new InstanceConfig
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, It.IsAny<CallOptions>()))
@@ -144,7 +143,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                Config = "config-1354792126",
                 DisplayName = "displayName1615086568",
                 NodeCount = 1539922066,
             };
@@ -170,7 +169,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                Config = "config-1354792126",
                 DisplayName = "displayName1615086568",
                 NodeCount = 1539922066,
             };
@@ -196,7 +195,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                Config = "config-1354792126",
                 DisplayName = "displayName1615086568",
                 NodeCount = 1539922066,
             };
@@ -221,7 +220,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                Config = "config-1354792126",
                 DisplayName = "displayName1615086568",
                 NodeCount = 1539922066,
             };
@@ -315,7 +314,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -326,9 +325,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             Policy policy = new Policy();
-            Policy response = client.SetIamPolicy(formattedResource, policy);
+            Policy response = client.SetIamPolicy(resource, policy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -341,7 +340,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -352,9 +351,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             Policy policy = new Policy();
-            Policy response = await client.SetIamPolicyAsync(formattedResource, policy);
+            Policy response = await client.SetIamPolicyAsync(resource, policy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -367,7 +366,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -391,7 +390,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -415,7 +414,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -425,8 +424,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy response = client.GetIamPolicy(formattedResource);
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
+            Policy response = client.GetIamPolicy(resource);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -439,7 +438,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -449,8 +448,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy response = await client.GetIamPolicyAsync(formattedResource);
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
+            Policy response = await client.GetIamPolicyAsync(resource);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -463,7 +462,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -486,7 +485,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -509,16 +508,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = client.TestIamPermissions(formattedResource, permissions);
+            TestIamPermissionsResponse response = client.TestIamPermissions(resource, permissions);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -531,16 +530,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(formattedResource, permissions);
+            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(resource, permissions);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -553,8 +552,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
@@ -573,8 +571,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
             mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))

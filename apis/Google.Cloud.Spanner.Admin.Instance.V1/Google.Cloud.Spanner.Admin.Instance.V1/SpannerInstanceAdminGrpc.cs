@@ -3,7 +3,7 @@
 //     source: google/spanner/admin/instance/v1/spanner_instance_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -252,9 +253,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// Until completion of the returned operation:
       ///
       ///   * Cancelling the operation sets its metadata's
-      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-      ///     and begins restoring resources to their pre-request values. The
-      ///     operation is guaranteed to succeed at undoing all resource changes,
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
       ///     after which point it terminates with a `CANCELLED` status.
       ///   * All other attempts to modify the instance are rejected.
       ///   * Reading the instance via the API continues to give the pre-request
@@ -746,9 +747,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// Until completion of the returned operation:
       ///
       ///   * Cancelling the operation sets its metadata's
-      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-      ///     and begins restoring resources to their pre-request values. The
-      ///     operation is guaranteed to succeed at undoing all resource changes,
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
       ///     after which point it terminates with a `CANCELLED` status.
       ///   * All other attempts to modify the instance are rejected.
       ///   * Reading the instance via the API continues to give the pre-request
@@ -797,9 +798,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// Until completion of the returned operation:
       ///
       ///   * Cancelling the operation sets its metadata's
-      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-      ///     and begins restoring resources to their pre-request values. The
-      ///     operation is guaranteed to succeed at undoing all resource changes,
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
       ///     after which point it terminates with a `CANCELLED` status.
       ///   * All other attempts to modify the instance are rejected.
       ///   * Reading the instance via the API continues to give the pre-request
@@ -846,9 +847,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// Until completion of the returned operation:
       ///
       ///   * Cancelling the operation sets its metadata's
-      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-      ///     and begins restoring resources to their pre-request values. The
-      ///     operation is guaranteed to succeed at undoing all resource changes,
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
       ///     after which point it terminates with a `CANCELLED` status.
       ///   * All other attempts to modify the instance are rejected.
       ///   * Reading the instance via the API continues to give the pre-request
@@ -897,9 +898,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// Until completion of the returned operation:
       ///
       ///   * Cancelling the operation sets its metadata's
-      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-      ///     and begins restoring resources to their pre-request values. The
-      ///     operation is guaranteed to succeed at undoing all resource changes,
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
       ///     after which point it terminates with a `CANCELLED` status.
       ///   * All other attempts to modify the instance are rejected.
       ///   * Reading the instance via the API continues to give the pre-request

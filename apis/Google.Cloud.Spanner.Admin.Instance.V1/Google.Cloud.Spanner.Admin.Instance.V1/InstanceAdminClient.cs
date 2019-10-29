@@ -16,9 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxres = Google.Api.Gax.ResourceNames;
 using iam = Google.Cloud.Iam.V1;
-using gcscv = Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -27,6 +25,7 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
+using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -103,14 +102,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <remarks>
         /// The "Default" retry backoff for <see cref="InstanceAdminClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 1000 milliseconds</description></item>
-        /// <item><description>Maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(1000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(32000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -123,14 +122,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="InstanceAdminClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(60000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -142,12 +141,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.ListInstanceConfigs</c> and
         /// <c>InstanceAdminClient.ListInstanceConfigsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -172,12 +171,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.GetInstanceConfig</c> and
         /// <c>InstanceAdminClient.GetInstanceConfigAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -202,12 +201,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.ListInstances</c> and
         /// <c>InstanceAdminClient.ListInstancesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -232,12 +231,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.GetInstance</c> and
         /// <c>InstanceAdminClient.GetInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -262,12 +261,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.CreateInstance</c> and
         /// <c>InstanceAdminClient.CreateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -289,19 +288,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
-        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
-                sys::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -312,12 +311,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.UpdateInstance</c> and
         /// <c>InstanceAdminClient.UpdateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -339,19 +338,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
-        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
-                sys::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                sys::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -362,17 +361,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.DeleteInstance</c> and
         /// <c>InstanceAdminClient.DeleteInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -381,7 +379,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -392,12 +390,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.SetIamPolicy</c> and
         /// <c>InstanceAdminClient.SetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -421,17 +419,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.GetIamPolicy</c> and
         /// <c>InstanceAdminClient.GetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -440,7 +437,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -451,12 +448,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The default <c>InstanceAdminClient.TestIamPermissions</c> and
         /// <c>InstanceAdminClient.TestIamPermissionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -696,7 +693,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigsAsync(
@@ -731,7 +728,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigs(
@@ -1055,7 +1052,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
@@ -1089,7 +1086,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstances(
@@ -1221,7 +1218,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Instance> GetInstanceAsync(
-            gcscv::InstanceName name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
                 new GetInstanceRequest
                 {
@@ -1243,7 +1240,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Instance> GetInstanceAsync(
-            gcscv::InstanceName name,
+            InstanceName name,
             st::CancellationToken cancellationToken) => GetInstanceAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1262,7 +1259,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual Instance GetInstance(
-            gcscv::InstanceName name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetInstance(
                 new GetInstanceRequest
                 {
@@ -1431,7 +1428,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
-        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in
         /// length.
         /// </param>
         /// <param name="instance">
@@ -1445,14 +1442,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
-            gaxres::ProjectName parent,
-            gcscv::InstanceName instanceId,
+            ProjectName parent,
+            string instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
                 new CreateInstanceRequest
                 {
                     ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    InstanceIdAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                     Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
                 callSettings);
@@ -1499,7 +1496,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
-        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in
         /// length.
         /// </param>
         /// <param name="instance">
@@ -1513,8 +1510,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
-            gaxres::ProjectName parent,
-            gcscv::InstanceName instanceId,
+            ProjectName parent,
+            string instanceId,
             Instance instance,
             st::CancellationToken cancellationToken) => CreateInstanceAsync(
                 parent,
@@ -1564,7 +1561,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
-        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in
         /// length.
         /// </param>
         /// <param name="instance">
@@ -1578,14 +1575,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
-            gaxres::ProjectName parent,
-            gcscv::InstanceName instanceId,
+            ProjectName parent,
+            string instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstance(
                 new CreateInstanceRequest
                 {
                     ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    InstanceIdAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                     Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
                 callSettings);
@@ -1632,7 +1629,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
-        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in
         /// length.
         /// </param>
         /// <param name="instance">
@@ -1700,7 +1697,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
-        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in
         /// length.
         /// </param>
         /// <param name="instance">
@@ -1765,7 +1762,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
-        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in
         /// length.
         /// </param>
         /// <param name="instance">
@@ -1944,9 +1941,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-        ///     and begins restoring resources to their pre-request values. The
-        ///     operation is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -1973,17 +1970,217 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in
-        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
-        /// be included.
+        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in
-        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should
-        /// be updated. The field mask must always be specified; this prevents any
-        /// future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased
-        /// accidentally by clients that do not know about them.
+        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// The field mask must always be specified; this prevents any future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// about them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
+            InstanceName instance,
+            pbwkt::FieldMask fieldMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateInstanceAsync(
+                new UpdateInstanceRequest
+                {
+                    InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates an instance, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance. If the named instance does not
+        /// exist, returns `NOT_FOUND`.
+        ///
+        /// Immediately upon completion of this request:
+        ///
+        ///   * For resource types for which a decrease in the instance's allocation
+        ///     has been requested, billing is based on the newly-requested level.
+        ///
+        /// Until completion of the returned operation:
+        ///
+        ///   * Cancelling the operation sets its metadata's
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     after which point it terminates with a `CANCELLED` status.
+        ///   * All other attempts to modify the instance are rejected.
+        ///   * Reading the instance via the API continues to give the pre-request
+        ///     resource levels.
+        ///
+        /// Upon completion of the returned operation:
+        ///
+        ///   * Billing begins for all successfully-allocated resources (some types
+        ///     may have lower than the requested levels).
+        ///   * All newly-reserved resources are available for serving the instance's
+        ///     tables.
+        ///   * The instance's new resource levels are readable via the API.
+        ///
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track the instance modification.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+        ///
+        /// Authorization requires `spanner.instances.update` permission on
+        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance to update, which must always include the instance
+        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// The field mask must always be specified; this prevents any future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// about them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
+            InstanceName instance,
+            pbwkt::FieldMask fieldMask,
+            st::CancellationToken cancellationToken) => UpdateInstanceAsync(
+                instance,
+                fieldMask,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an instance, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance. If the named instance does not
+        /// exist, returns `NOT_FOUND`.
+        ///
+        /// Immediately upon completion of this request:
+        ///
+        ///   * For resource types for which a decrease in the instance's allocation
+        ///     has been requested, billing is based on the newly-requested level.
+        ///
+        /// Until completion of the returned operation:
+        ///
+        ///   * Cancelling the operation sets its metadata's
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     after which point it terminates with a `CANCELLED` status.
+        ///   * All other attempts to modify the instance are rejected.
+        ///   * Reading the instance via the API continues to give the pre-request
+        ///     resource levels.
+        ///
+        /// Upon completion of the returned operation:
+        ///
+        ///   * Billing begins for all successfully-allocated resources (some types
+        ///     may have lower than the requested levels).
+        ///   * All newly-reserved resources are available for serving the instance's
+        ///     tables.
+        ///   * The instance's new resource levels are readable via the API.
+        ///
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track the instance modification.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+        ///
+        /// Authorization requires `spanner.instances.update` permission on
+        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance to update, which must always include the instance
+        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// The field mask must always be specified; this prevents any future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// about them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
+            InstanceName instance,
+            pbwkt::FieldMask fieldMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateInstance(
+                new UpdateInstanceRequest
+                {
+                    InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates an instance, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance. If the named instance does not
+        /// exist, returns `NOT_FOUND`.
+        ///
+        /// Immediately upon completion of this request:
+        ///
+        ///   * For resource types for which a decrease in the instance's allocation
+        ///     has been requested, billing is based on the newly-requested level.
+        ///
+        /// Until completion of the returned operation:
+        ///
+        ///   * Cancelling the operation sets its metadata's
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     after which point it terminates with a `CANCELLED` status.
+        ///   * All other attempts to modify the instance are rejected.
+        ///   * Reading the instance via the API continues to give the pre-request
+        ///     resource levels.
+        ///
+        /// Upon completion of the returned operation:
+        ///
+        ///   * Billing begins for all successfully-allocated resources (some types
+        ///     may have lower than the requested levels).
+        ///   * All newly-reserved resources are available for serving the instance's
+        ///     tables.
+        ///   * The instance's new resource levels are readable via the API.
+        ///
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track the instance modification.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+        ///
+        /// Authorization requires `spanner.instances.update` permission on
+        /// resource [name][google.spanner.admin.instance.v1.Instance.name].
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance to update, which must always include the instance
+        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// The field mask must always be specified; this prevents any future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// about them.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2017,9 +2214,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-        ///     and begins restoring resources to their pre-request values. The
-        ///     operation is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -2046,17 +2243,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in
-        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
-        /// be included.
+        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in
-        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should
-        /// be updated. The field mask must always be specified; this prevents any
-        /// future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased
-        /// accidentally by clients that do not know about them.
+        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// The field mask must always be specified; this prevents any future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// about them.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2087,9 +2280,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-        ///     and begins restoring resources to their pre-request values. The
-        ///     operation is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -2116,17 +2309,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in
-        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
-        /// be included.
+        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in
-        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should
-        /// be updated. The field mask must always be specified; this prevents any
-        /// future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased
-        /// accidentally by clients that do not know about them.
+        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// The field mask must always be specified; this prevents any future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// about them.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2160,9 +2349,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-        ///     and begins restoring resources to their pre-request values. The
-        ///     operation is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -2231,9 +2420,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-        ///     and begins restoring resources to their pre-request values. The
-        ///     operation is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -2319,7 +2508,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteInstanceAsync(
-            gcscv::InstanceName name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
                 new DeleteInstanceRequest
                 {
@@ -2351,7 +2540,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteInstanceAsync(
-            gcscv::InstanceName name,
+            InstanceName name,
             st::CancellationToken cancellationToken) => DeleteInstanceAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -2377,7 +2566,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteInstance(
-            gcscv::InstanceName name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
                 new DeleteInstanceRequest
                 {
@@ -2557,6 +2746,105 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             throw new sys::NotImplementedException();
         }
+
+        /// <summary>
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        ///
+        /// Authorization requires `spanner.instances.setIamPolicy` on
+        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            gax::IResourceName resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
+                new iam::SetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        ///
+        /// Authorization requires `spanner.instances.setIamPolicy` on
+        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            gax::IResourceName resource,
+            iam::Policy policy,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        ///
+        /// Authorization requires `spanner.instances.setIamPolicy` on
+        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy SetIamPolicy(
+            gax::IResourceName resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
+                new iam::SetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
 
         /// <summary>
         /// Sets the access control policy on an instance resource. Replaces any
@@ -2743,6 +3031,81 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            gax::IResourceName resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
+                new iam::GetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        ///
+        /// Authorization requires `spanner.instances.getIamPolicy` on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            gax::IResourceName resource,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        ///
+        /// Authorization requires `spanner.instances.getIamPolicy` on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy GetIamPolicy(
+            gax::IResourceName resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
+                new iam::GetIamPolicyRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        ///
+        /// Authorization requires `spanner.instances.getIamPolicy` on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
             string resource,
             gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
                 new iam::GetIamPolicyRequest
@@ -2893,13 +3256,115 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            gax::IResourceName resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new iam::TestIamPermissionsRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified instance resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+        /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+        /// permission on the containing Google Cloud Project. Otherwise returns an
+        /// empty set of permissions.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            gax::IResourceName resource,
+            scg::IEnumerable<string> permissions,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified instance resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+        /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+        /// permission on the containing Google Cloud Project. Otherwise returns an
+        /// empty set of permissions.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            gax::IResourceName resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
+                new iam::TestIamPermissionsRequest
+                {
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified instance resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+        /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+        /// permission on the containing Google Cloud Project. Otherwise returns an
+        /// empty set of permissions.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
             scg::IEnumerable<string> permissions,
             gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new iam::TestIamPermissionsRequest
                 {
                     Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
                 },
                 callSettings);
 
@@ -2966,7 +3431,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 new iam::TestIamPermissionsRequest
                 {
                     Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Permissions = { permissions ?? linq::Enumerable.Empty<string>() }, // Optional
                 },
                 callSettings);
 
@@ -3455,9 +3920,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-        ///     and begins restoring resources to their pre-request values. The
-        ///     operation is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -3515,9 +3980,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
-        ///     and begins restoring resources to their pre-request values. The
-        ///     operation is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+        ///     restoring resources to their pre-request values. The operation
+        ///     is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request

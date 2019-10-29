@@ -18,10 +18,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Spanner.Admin.Instance.V1;
-    using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -227,7 +225,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[CONFIG]");
             // Make the request
             InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(name);
             // End snippet
@@ -240,7 +238,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[CONFIG]");
             // Make the request
             InstanceConfig response = instanceAdminClient.GetInstanceConfig(name);
             // End snippet
@@ -256,7 +254,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
             };
             // Make the request
             InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(request);
@@ -272,7 +270,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[CONFIG]"),
             };
             // Make the request
             InstanceConfig response = instanceAdminClient.GetInstanceConfig(request);
@@ -524,13 +522,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync()
         {
-            // Snippet: CreateInstanceAsync(ProjectName,InstanceName,Instance,CallSettings)
-            // Additional: CreateInstanceAsync(ProjectName,InstanceName,Instance,CancellationToken)
+            // Snippet: CreateInstanceAsync(ProjectName,string,Instance,CallSettings)
+            // Additional: CreateInstanceAsync(ProjectName,string,Instance,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
-            InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
+            string instanceId = "";
             Instance instance = new Instance();
             // Make the request
             Operation<Instance, CreateInstanceMetadata> response =
@@ -559,12 +557,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstance()
         {
-            // Snippet: CreateInstance(ProjectName,InstanceName,Instance,CallSettings)
+            // Snippet: CreateInstance(ProjectName,string,Instance,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
-            InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
+            string instanceId = "";
             Instance instance = new Instance();
             // Make the request
             Operation<Instance, CreateInstanceMetadata> response =
@@ -600,7 +598,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             CreateInstanceRequest request = new CreateInstanceRequest
             {
                 ParentAsProjectName = new ProjectName("[PROJECT]"),
-                InstanceIdAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceId = "",
                 Instance = new Instance(),
             };
             // Make the request
@@ -637,7 +635,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             CreateInstanceRequest request = new CreateInstanceRequest
             {
                 ParentAsProjectName = new ProjectName("[PROJECT]"),
-                InstanceIdAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceId = "",
                 Instance = new Instance(),
             };
             // Make the request
@@ -667,12 +665,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for UpdateInstanceAsync</summary>
         public async Task UpdateInstanceAsync()
         {
-            // Snippet: UpdateInstanceAsync(Instance,FieldMask,CallSettings)
-            // Additional: UpdateInstanceAsync(Instance,FieldMask,CancellationToken)
+            // Snippet: UpdateInstanceAsync(InstanceName,FieldMask,CallSettings)
+            // Additional: UpdateInstanceAsync(InstanceName,FieldMask,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            Instance instance = new Instance();
+            InstanceName instance = new InstanceName("[PROJECT]", "[INSTANCE]");
             FieldMask fieldMask = new FieldMask();
             // Make the request
             Operation<Instance, UpdateInstanceMetadata> response =
@@ -701,11 +699,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstance()
         {
-            // Snippet: UpdateInstance(Instance,FieldMask,CallSettings)
+            // Snippet: UpdateInstance(InstanceName,FieldMask,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            Instance instance = new Instance();
+            InstanceName instance = new InstanceName("[PROJECT]", "[INSTANCE]");
             FieldMask fieldMask = new FieldMask();
             // Make the request
             Operation<Instance, UpdateInstanceMetadata> response =
@@ -740,7 +738,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
-                Instance = new Instance(),
+                InstanceAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 FieldMask = new FieldMask(),
             };
             // Make the request
@@ -776,7 +774,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
-                Instance = new Instance(),
+                InstanceAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 FieldMask = new FieldMask(),
             };
             // Make the request
@@ -866,29 +864,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync()
         {
-            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
-            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
+            // Snippet: SetIamPolicyAsync(IResourceName,Policy,CallSettings)
+            // Additional: SetIamPolicyAsync(IResourceName,Policy,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             Policy policy = new Policy();
             // Make the request
-            Policy response = await instanceAdminClient.SetIamPolicyAsync(formattedResource, policy);
+            Policy response = await instanceAdminClient.SetIamPolicyAsync(resource, policy);
             // End snippet
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy()
         {
-            // Snippet: SetIamPolicy(string,Policy,CallSettings)
+            // Snippet: SetIamPolicy(IResourceName,Policy,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             Policy policy = new Policy();
             // Make the request
-            Policy response = instanceAdminClient.SetIamPolicy(formattedResource, policy);
+            Policy response = instanceAdminClient.SetIamPolicy(resource, policy);
             // End snippet
         }
 
@@ -902,7 +900,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -919,7 +917,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -930,27 +928,27 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync()
         {
-            // Snippet: GetIamPolicyAsync(string,CallSettings)
-            // Additional: GetIamPolicyAsync(string,CancellationToken)
+            // Snippet: GetIamPolicyAsync(IResourceName,CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            Policy response = await instanceAdminClient.GetIamPolicyAsync(formattedResource);
+            Policy response = await instanceAdminClient.GetIamPolicyAsync(resource);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy()
         {
-            // Snippet: GetIamPolicy(string,CallSettings)
+            // Snippet: GetIamPolicy(IResourceName,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            Policy response = instanceAdminClient.GetIamPolicy(formattedResource);
+            Policy response = instanceAdminClient.GetIamPolicy(resource);
             // End snippet
         }
 
@@ -964,7 +962,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             Policy response = await instanceAdminClient.GetIamPolicyAsync(request);
@@ -980,7 +978,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             Policy response = instanceAdminClient.GetIamPolicy(request);
@@ -990,29 +988,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync()
         {
-            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
-            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
+            // Snippet: TestIamPermissionsAsync(IResourceName,IEnumerable<string>,CallSettings)
+            // Additional: TestIamPermissionsAsync(IResourceName,IEnumerable<string>,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             IEnumerable<string> permissions = new List<string>();
             // Make the request
-            TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
+            TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(resource, permissions);
             // End snippet
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions()
         {
-            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
+            // Snippet: TestIamPermissions(IResourceName,IEnumerable<string>,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IResourceName resource = new InstanceName("[PROJECT]", "[INSTANCE]");
             IEnumerable<string> permissions = new List<string>();
             // Make the request
-            TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(formattedResource, permissions);
+            TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(resource, permissions);
             // End snippet
         }
 
@@ -1026,8 +1024,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(request);
@@ -1043,8 +1040,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(request);
