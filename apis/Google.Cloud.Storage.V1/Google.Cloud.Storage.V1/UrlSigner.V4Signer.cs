@@ -144,7 +144,11 @@ namespace Google.Cloud.Storage.V1
                     _resourcePath = $"/{bucket}";
                     if (!string.IsNullOrEmpty(objectName))
                     {
-                        _resourcePath += $"/{Uri.EscapeDataString(objectName)}";
+                        // EscapeDataString escapes slashes, which we *don't* want to escape here. The simplest option is to
+                        // split the path into segments by slashes, escape each segment, then join the escaped segments together again.
+                        var segments = objectName.Split('/');
+                        var escaped = string.Join("/", segments.Select(Uri.EscapeDataString));
+                        _resourcePath = _resourcePath + "/" + escaped;
                     }
 
                     var canonicalRequest = $"{requestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\nUNSIGNED-PAYLOAD";
