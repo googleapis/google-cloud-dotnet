@@ -14,231 +14,330 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gcscv = Google.Cloud.Spanner.Common.V1;
+using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Spanner.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Cloud.Spanner.Common.V1;
-    using apis = Google.Cloud.Spanner.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedSpannerClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedSpannerClientTest
     {
-        [Fact]
-        public void CreateSession()
+        [xunit::FactAttribute]
+        public void CreateSessionRequestObject()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            CreateSessionRequest expectedRequest = new CreateSessionRequest
-            {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-            };
-            Session expectedResponse = new Session
-            {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-            };
-            mockGrpcClient.Setup(x => x.CreateSession(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
-            Session response = client.CreateSession(database);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateSessionAsync()
-        {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            CreateSessionRequest expectedRequest = new CreateSessionRequest
-            {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-            };
-            Session expectedResponse = new Session
-            {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-            };
-            mockGrpcClient.Setup(x => x.CreateSessionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
-            Session response = await client.CreateSessionAsync(database);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateSession2()
-        {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                Session = new Session(),
             };
             Session expectedResponse = new Session
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateSession(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             Session response = client.CreateSession(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateSessionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateSessionRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                Session = new Session(),
             };
             Session expectedResponse = new Session
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateSessionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            Session response = await client.CreateSessionAsync(request);
-            Assert.Same(expectedResponse, response);
+            Session responseCallSettings = await client.CreateSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Session responseCancellationToken = await client.CreateSessionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void BatchCreateSessions()
+        [xunit::FactAttribute]
+        public void CreateSession()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            BatchCreateSessionsRequest expectedRequest = new BatchCreateSessionsRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                SessionCount = 185691686,
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
-            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
-            mockGrpcClient.Setup(x => x.BatchCreateSessions(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
-            int sessionCount = 185691686;
-            BatchCreateSessionsResponse response = client.BatchCreateSessions(database, sessionCount);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task BatchCreateSessionsAsync()
-        {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            BatchCreateSessionsRequest expectedRequest = new BatchCreateSessionsRequest
+            Session expectedResponse = new Session
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                SessionCount = 185691686,
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
             };
-            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
-            mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<BatchCreateSessionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
-            int sessionCount = 185691686;
-            BatchCreateSessionsResponse response = await client.BatchCreateSessionsAsync(database, sessionCount);
-            Assert.Same(expectedResponse, response);
+            Session response = client.CreateSession(request.Database);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void BatchCreateSessions2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateSessionAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CreateSessionRequest request = new CreateSessionRequest
+            {
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session responseCallSettings = await client.CreateSessionAsync(request.Database, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Session responseCancellationToken = await client.CreateSessionAsync(request.Database, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateSession_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CreateSessionRequest request = new CreateSessionRequest
+            {
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session response = client.CreateSession(request.DatabaseAsDatabaseName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateSessionAsync_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CreateSessionRequest request = new CreateSessionRequest
+            {
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session responseCallSettings = await client.CreateSessionAsync(request.DatabaseAsDatabaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Session responseCancellationToken = await client.CreateSessionAsync(request.DatabaseAsDatabaseName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchCreateSessionsRequestObject()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                SessionCount = 185691686,
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionTemplate = new Session(),
+                SessionCount = 418101156,
             };
-            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
-            mockGrpcClient.Setup(x => x.BatchCreateSessions(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
+            {
+                Session = { new Session(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchCreateSessions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             BatchCreateSessionsResponse response = client.BatchCreateSessions(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task BatchCreateSessionsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task BatchCreateSessionsRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                SessionCount = 185691686,
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionTemplate = new Session(),
+                SessionCount = 418101156,
             };
-            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse();
-            mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<BatchCreateSessionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
+            {
+                Session = { new Session(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateSessionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            BatchCreateSessionsResponse response = await client.BatchCreateSessionsAsync(request);
-            Assert.Same(expectedResponse, response);
+            BatchCreateSessionsResponse responseCallSettings = await client.BatchCreateSessionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchCreateSessionsResponse responseCancellationToken = await client.BatchCreateSessionsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetSession()
+        [xunit::FactAttribute]
+        public void BatchCreateSessions()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            GetSessionRequest expectedRequest = new GetSessionRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 418101156,
             };
-            Session expectedResponse = new Session
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Session = { new Session(), },
             };
-            mockGrpcClient.Setup(x => x.GetSession(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.BatchCreateSessions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            Session response = client.GetSession(name);
-            Assert.Same(expectedResponse, response);
+            BatchCreateSessionsResponse response = client.BatchCreateSessions(request.Database, request.SessionCount);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetSessionAsync()
+        [xunit::FactAttribute]
+        public async stt::Task BatchCreateSessionsAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            GetSessionRequest expectedRequest = new GetSessionRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 418101156,
             };
-            Session expectedResponse = new Session
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Session = { new Session(), },
             };
-            mockGrpcClient.Setup(x => x.GetSessionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateSessionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            Session response = await client.GetSessionAsync(name);
-            Assert.Same(expectedResponse, response);
+            BatchCreateSessionsResponse responseCallSettings = await client.BatchCreateSessionsAsync(request.Database, request.SessionCount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchCreateSessionsResponse responseCancellationToken = await client.BatchCreateSessionsAsync(request.Database, request.SessionCount, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetSession2()
+        [xunit::FactAttribute]
+        public void BatchCreateSessions_ResourceNames()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 418101156,
+            };
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
+            {
+                Session = { new Session(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchCreateSessions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            BatchCreateSessionsResponse response = client.BatchCreateSessions(request.DatabaseAsDatabaseName, request.SessionCount);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchCreateSessionsAsync_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            {
+                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SessionCount = 418101156,
+            };
+            BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
+            {
+                Session = { new Session(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchCreateSessionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateSessionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            BatchCreateSessionsResponse responseCallSettings = await client.BatchCreateSessionsAsync(request.DatabaseAsDatabaseName, request.SessionCount, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchCreateSessionsResponse responseCancellationToken = await client.BatchCreateSessionsAsync(request.DatabaseAsDatabaseName, request.SessionCount, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSessionRequestObject()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
@@ -246,19 +345,27 @@ namespace Google.Cloud.Spanner.V1.Tests
             Session expectedResponse = new Session
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetSession(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             Session response = client.GetSession(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetSessionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetSessionRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
@@ -266,247 +373,436 @@ namespace Google.Cloud.Spanner.V1.Tests
             Session expectedResponse = new Session
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetSessionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            Session response = await client.GetSessionAsync(request);
-            Assert.Same(expectedResponse, response);
+            Session responseCallSettings = await client.GetSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Session responseCancellationToken = await client.GetSessionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSession()
+        [xunit::FactAttribute]
+        public void GetSession()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            DeleteSessionRequest expectedRequest = new DeleteSessionRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            GetSessionRequest request = new GetSessionRequest
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSession(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            client.DeleteSession(name);
+            Session response = client.GetSession(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteSessionAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetSessionAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            DeleteSessionRequest expectedRequest = new DeleteSessionRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            GetSessionRequest request = new GetSessionRequest
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSessionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            await client.DeleteSessionAsync(name);
+            Session responseCallSettings = await client.GetSessionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Session responseCancellationToken = await client.GetSessionAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSession2()
+        [xunit::FactAttribute]
+        public void GetSession_ResourceNames()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            GetSessionRequest request = new GetSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session response = client.GetSession(request.SessionName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSessionAsync_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            GetSessionRequest request = new GetSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                ApproximateLastUseTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Session>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session responseCallSettings = await client.GetSessionAsync(request.SessionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Session responseCancellationToken = await client.GetSessionAsync(request.SessionName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteSessionRequestObject()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSession(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             client.DeleteSession(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteSessionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSessionRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteSessionAsync(request);
+            await client.DeleteSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSessionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ExecuteSql()
+        [xunit::FactAttribute]
+        public void DeleteSession()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            DeleteSessionRequest request = new DeleteSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            client.DeleteSession(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSessionAsync()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            DeleteSessionRequest request = new DeleteSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteSessionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSessionAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteSession_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            DeleteSessionRequest request = new DeleteSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            client.DeleteSession(request.SessionName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSessionAsync_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            DeleteSessionRequest request = new DeleteSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteSessionAsync(request.SessionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSessionAsync(request.SessionName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ExecuteSqlRequestObject()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteSqlRequest request = new ExecuteSqlRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Sql = "sql114126",
+                Transaction = new TransactionSelector(),
+                Sql = "sqlb6745cac",
+                Params = new wkt::Struct(),
+                ParamTypes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Type()
+                    },
+                },
+                ResumeToken = proto::ByteString.CopyFromUtf8("resume_tokena048d43b"),
+                QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
+                PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
+                Seqno = 4367695630312265944L,
             };
-            ResultSet expectedResponse = new ResultSet();
-            mockGrpcClient.Setup(x => x.ExecuteSql(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ResultSet expectedResponse = new ResultSet
+            {
+                Metadata = new ResultSetMetadata(),
+                Rows =
+                {
+                    new wkt::ListValue(),
+                },
+                Stats = new ResultSetStats(),
+            };
+            mockGrpcClient.Setup(x => x.ExecuteSql(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             ResultSet response = client.ExecuteSql(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ExecuteSqlAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ExecuteSqlRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteSqlRequest request = new ExecuteSqlRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Sql = "sql114126",
+                Transaction = new TransactionSelector(),
+                Sql = "sqlb6745cac",
+                Params = new wkt::Struct(),
+                ParamTypes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Type()
+                    },
+                },
+                ResumeToken = proto::ByteString.CopyFromUtf8("resume_tokena048d43b"),
+                QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
+                PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
+                Seqno = 4367695630312265944L,
             };
-            ResultSet expectedResponse = new ResultSet();
-            mockGrpcClient.Setup(x => x.ExecuteSqlAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ResultSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ResultSet expectedResponse = new ResultSet
+            {
+                Metadata = new ResultSetMetadata(),
+                Rows =
+                {
+                    new wkt::ListValue(),
+                },
+                Stats = new ResultSetStats(),
+            };
+            mockGrpcClient.Setup(x => x.ExecuteSqlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResultSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            ResultSet response = await client.ExecuteSqlAsync(request);
-            Assert.Same(expectedResponse, response);
+            ResultSet responseCallSettings = await client.ExecuteSqlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ResultSet responseCancellationToken = await client.ExecuteSqlAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ExecuteBatchDml()
+        [xunit::FactAttribute]
+        public void ExecuteBatchDmlRequestObject()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
-                Statements = { },
-                Seqno = 109325920L,
+                Statements =
+                {
+                    new ExecuteBatchDmlRequest.Types.Statement(),
+                },
+                Seqno = 4367695630312265944L,
             };
-            ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse();
-            mockGrpcClient.Setup(x => x.ExecuteBatchDml(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse
+            {
+                ResultSets = { new ResultSet(), },
+                Status = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.ExecuteBatchDml(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             ExecuteBatchDmlResponse response = client.ExecuteBatchDml(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ExecuteBatchDmlAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ExecuteBatchDmlRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
-                Statements = { },
-                Seqno = 109325920L,
+                Statements =
+                {
+                    new ExecuteBatchDmlRequest.Types.Statement(),
+                },
+                Seqno = 4367695630312265944L,
             };
-            ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse();
-            mockGrpcClient.Setup(x => x.ExecuteBatchDmlAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ExecuteBatchDmlResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse
+            {
+                ResultSets = { new ResultSet(), },
+                Status = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.ExecuteBatchDmlAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExecuteBatchDmlResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            ExecuteBatchDmlResponse response = await client.ExecuteBatchDmlAsync(request);
-            Assert.Same(expectedResponse, response);
+            ExecuteBatchDmlResponse responseCallSettings = await client.ExecuteBatchDmlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ExecuteBatchDmlResponse responseCancellationToken = await client.ExecuteBatchDmlAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Read()
+        [xunit::FactAttribute]
+        public void ReadRequestObject()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ReadRequest request = new ReadRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Table = "table110115790",
-                Columns = { },
+                Transaction = new TransactionSelector(),
+                Table = "tabledee1b9aa",
+                Index = "index552d996a",
+                Columns = { "columnsa784ca54", },
                 KeySet = new KeySet(),
+                Limit = 7494001492025909162L,
+                ResumeToken = proto::ByteString.CopyFromUtf8("resume_tokena048d43b"),
+                PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
             };
-            ResultSet expectedResponse = new ResultSet();
-            mockGrpcClient.Setup(x => x.Read(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ResultSet expectedResponse = new ResultSet
+            {
+                Metadata = new ResultSetMetadata(),
+                Rows =
+                {
+                    new wkt::ListValue(),
+                },
+                Stats = new ResultSetStats(),
+            };
+            mockGrpcClient.Setup(x => x.Read(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             ResultSet response = client.Read(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ReadAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ReadRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ReadRequest request = new ReadRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Table = "table110115790",
-                Columns = { },
+                Transaction = new TransactionSelector(),
+                Table = "tabledee1b9aa",
+                Index = "index552d996a",
+                Columns = { "columnsa784ca54", },
                 KeySet = new KeySet(),
+                Limit = 7494001492025909162L,
+                ResumeToken = proto::ByteString.CopyFromUtf8("resume_tokena048d43b"),
+                PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
             };
-            ResultSet expectedResponse = new ResultSet();
-            mockGrpcClient.Setup(x => x.ReadAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ResultSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ResultSet expectedResponse = new ResultSet
+            {
+                Metadata = new ResultSetMetadata(),
+                Rows =
+                {
+                    new wkt::ListValue(),
+                },
+                Stats = new ResultSetStats(),
+            };
+            mockGrpcClient.Setup(x => x.ReadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResultSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            ResultSet response = await client.ReadAsync(request);
-            Assert.Same(expectedResponse, response);
+            ResultSet responseCallSettings = await client.ReadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ResultSet responseCancellationToken = await client.ReadAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void BeginTransaction()
+        [xunit::FactAttribute]
+        public void BeginTransactionRequestObject()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
-            {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Options = new TransactionOptions(),
-            };
-            Transaction expectedResponse = new Transaction
-            {
-                Id = ByteString.CopyFromUtf8("27"),
-            };
-            mockGrpcClient.Setup(x => x.BeginTransaction(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions options = new TransactionOptions();
-            Transaction response = client.BeginTransaction(session, options);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task BeginTransactionAsync()
-        {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
-            {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Options = new TransactionOptions(),
-            };
-            Transaction expectedResponse = new Transaction
-            {
-                Id = ByteString.CopyFromUtf8("27"),
-            };
-            mockGrpcClient.Setup(x => x.BeginTransactionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Transaction>(Task.FromResult(expectedResponse), null, null, null, null));
-            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions options = new TransactionOptions();
-            Transaction response = await client.BeginTransactionAsync(session, options);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void BeginTransaction2()
-        {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
@@ -514,20 +810,20 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             Transaction expectedResponse = new Transaction
             {
-                Id = ByteString.CopyFromUtf8("27"),
+                Id = proto::ByteString.CopyFromUtf8("id74b70bb8"),
+                ReadTimestamp = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.BeginTransaction(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             Transaction response = client.BeginTransaction(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task BeginTransactionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task BeginTransactionRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
@@ -535,285 +831,543 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             Transaction expectedResponse = new Transaction
             {
-                Id = ByteString.CopyFromUtf8("27"),
+                Id = proto::ByteString.CopyFromUtf8("id74b70bb8"),
+                ReadTimestamp = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Transaction>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Transaction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            Transaction response = await client.BeginTransactionAsync(request);
-            Assert.Same(expectedResponse, response);
+            Transaction responseCallSettings = await client.BeginTransactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Transaction responseCancellationToken = await client.BeginTransactionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Commit()
+        [xunit::FactAttribute]
+        public void BeginTransaction()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = ByteString.CopyFromUtf8("28"),
-                Mutations = { },
+                Options = new TransactionOptions(),
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            Transaction expectedResponse = new Transaction
+            {
+                Id = proto::ByteString.CopyFromUtf8("id74b70bb8"),
+                ReadTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = ByteString.CopyFromUtf8("28");
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = client.Commit(session, transactionId, mutations);
-            Assert.Same(expectedResponse, response);
+            Transaction response = client.BeginTransaction(request.Session, request.Options);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CommitAsync()
+        [xunit::FactAttribute]
+        public async stt::Task BeginTransactionAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = ByteString.CopyFromUtf8("28"),
-                Mutations = { },
+                Options = new TransactionOptions(),
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Transaction expectedResponse = new Transaction
+            {
+                Id = proto::ByteString.CopyFromUtf8("id74b70bb8"),
+                ReadTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Transaction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = ByteString.CopyFromUtf8("28");
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = await client.CommitAsync(session, transactionId, mutations);
-            Assert.Same(expectedResponse, response);
+            Transaction responseCallSettings = await client.BeginTransactionAsync(request.Session, request.Options, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Transaction responseCancellationToken = await client.BeginTransactionAsync(request.Session, request.Options, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Commit2()
+        [xunit::FactAttribute]
+        public void BeginTransaction_ResourceNames()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                SingleUseTransaction = new TransactionOptions(),
-                Mutations = { },
+                Options = new TransactionOptions(),
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            Transaction expectedResponse = new Transaction
+            {
+                Id = proto::ByteString.CopyFromUtf8("id74b70bb8"),
+                ReadTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions singleUseTransaction = new TransactionOptions();
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = client.Commit(session, singleUseTransaction, mutations);
-            Assert.Same(expectedResponse, response);
+            Transaction response = client.BeginTransaction(request.SessionAsSessionName, request.Options);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CommitAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task BeginTransactionAsync_ResourceNames()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                SingleUseTransaction = new TransactionOptions(),
-                Mutations = { },
+                Options = new TransactionOptions(),
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Transaction expectedResponse = new Transaction
+            {
+                Id = proto::ByteString.CopyFromUtf8("id74b70bb8"),
+                ReadTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Transaction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions singleUseTransaction = new TransactionOptions();
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = await client.CommitAsync(session, singleUseTransaction, mutations);
-            Assert.Same(expectedResponse, response);
+            Transaction responseCallSettings = await client.BeginTransactionAsync(request.SessionAsSessionName, request.Options, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Transaction responseCancellationToken = await client.BeginTransactionAsync(request.SessionAsSessionName, request.Options, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Commit3()
+        [xunit::FactAttribute]
+        public void CommitRequestObject()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Mutations = { },
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { new Mutation(), },
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.Commit(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             CommitResponse response = client.Commit(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CommitAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task CommitRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Mutations = { },
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { new Mutation(), },
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.CommitAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            CommitResponse response = await client.CommitAsync(request);
-            Assert.Same(expectedResponse, response);
+            CommitResponse responseCallSettings = await client.CommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Rollback()
+        [xunit::FactAttribute]
+        public void Commit1()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            RollbackRequest expectedRequest = new RollbackRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = ByteString.CopyFromUtf8("28"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+                Mutations = { new Mutation(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.Rollback(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = ByteString.CopyFromUtf8("28");
-            client.Rollback(session, transactionId);
+            CommitResponse response = client.Commit(request.Session, request.TransactionId, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RollbackAsync()
+        [xunit::FactAttribute]
+        public async stt::Task Commit1Async()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
-            RollbackRequest expectedRequest = new RollbackRequest
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = ByteString.CopyFromUtf8("28"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+                Mutations = { new Mutation(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RollbackAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = ByteString.CopyFromUtf8("28");
-            await client.RollbackAsync(session, transactionId);
+            CommitResponse responseCallSettings = await client.CommitAsync(request.Session, request.TransactionId, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request.Session, request.TransactionId, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Rollback2()
+        [xunit::FactAttribute]
+        public void Commit1_ResourceNames()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+                Mutations = { new Mutation(), },
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = client.Commit(request.SessionAsSessionName, request.TransactionId, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task Commit1Async_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+                Mutations = { new Mutation(), },
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse responseCallSettings = await client.CommitAsync(request.SessionAsSessionName, request.TransactionId, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request.SessionAsSessionName, request.TransactionId, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void Commit2()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { new Mutation(), },
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = client.Commit(request.Session, request.SingleUseTransaction, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task Commit2Async()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { new Mutation(), },
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse responseCallSettings = await client.CommitAsync(request.Session, request.SingleUseTransaction, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request.Session, request.SingleUseTransaction, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void Commit2_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { new Mutation(), },
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = client.Commit(request.SessionAsSessionName, request.SingleUseTransaction, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task Commit2Async_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { new Mutation(), },
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                CommitTimestamp = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse responseCallSettings = await client.CommitAsync(request.SessionAsSessionName, request.SingleUseTransaction, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request.SessionAsSessionName, request.SingleUseTransaction, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RollbackRequestObject()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = ByteString.CopyFromUtf8("28"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.Rollback(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             client.Rollback(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RollbackAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RollbackRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = ByteString.CopyFromUtf8("28"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RollbackAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            await client.RollbackAsync(request);
+            await client.RollbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RollbackAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void PartitionQuery()
+        [xunit::FactAttribute]
+        public void Rollback()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            client.Rollback(request.Session, request.TransactionId);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RollbackAsync()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            await client.RollbackAsync(request.Session, request.TransactionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RollbackAsync(request.Session, request.TransactionId, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void Rollback_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            client.Rollback(request.SessionAsSessionName, request.TransactionId);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RollbackAsync_ResourceNames()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            await client.RollbackAsync(request.SessionAsSessionName, request.TransactionId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RollbackAsync(request.SessionAsSessionName, request.TransactionId, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PartitionQueryRequestObject()
+        {
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionQueryRequest request = new PartitionQueryRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Sql = "sql114126",
+                Transaction = new TransactionSelector(),
+                Sql = "sqlb6745cac",
+                Params = new wkt::Struct(),
+                ParamTypes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Type()
+                    },
+                },
+                PartitionOptions = new PartitionOptions(),
             };
-            PartitionResponse expectedResponse = new PartitionResponse();
-            mockGrpcClient.Setup(x => x.PartitionQuery(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            PartitionResponse expectedResponse = new PartitionResponse
+            {
+                Partitions = { new Partition(), },
+                Transaction = new Transaction(),
+            };
+            mockGrpcClient.Setup(x => x.PartitionQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             PartitionResponse response = client.PartitionQuery(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PartitionQueryAsync()
+        [xunit::FactAttribute]
+        public async stt::Task PartitionQueryRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionQueryRequest request = new PartitionQueryRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Sql = "sql114126",
+                Transaction = new TransactionSelector(),
+                Sql = "sqlb6745cac",
+                Params = new wkt::Struct(),
+                ParamTypes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Type()
+                    },
+                },
+                PartitionOptions = new PartitionOptions(),
             };
-            PartitionResponse expectedResponse = new PartitionResponse();
-            mockGrpcClient.Setup(x => x.PartitionQueryAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<PartitionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            PartitionResponse expectedResponse = new PartitionResponse
+            {
+                Partitions = { new Partition(), },
+                Transaction = new Transaction(),
+            };
+            mockGrpcClient.Setup(x => x.PartitionQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PartitionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            PartitionResponse response = await client.PartitionQueryAsync(request);
-            Assert.Same(expectedResponse, response);
+            PartitionResponse responseCallSettings = await client.PartitionQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PartitionResponse responseCancellationToken = await client.PartitionQueryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void PartitionRead()
+        [xunit::FactAttribute]
+        public void PartitionReadRequestObject()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionReadRequest request = new PartitionReadRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Table = "table110115790",
+                Transaction = new TransactionSelector(),
+                Table = "tabledee1b9aa",
+                Index = "index552d996a",
+                Columns = { "columnsa784ca54", },
                 KeySet = new KeySet(),
+                PartitionOptions = new PartitionOptions(),
             };
-            PartitionResponse expectedResponse = new PartitionResponse();
-            mockGrpcClient.Setup(x => x.PartitionRead(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            PartitionResponse expectedResponse = new PartitionResponse
+            {
+                Partitions = { new Partition(), },
+                Transaction = new Transaction(),
+            };
+            mockGrpcClient.Setup(x => x.PartitionRead(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             PartitionResponse response = client.PartitionRead(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PartitionReadAsync()
+        [xunit::FactAttribute]
+        public async stt::Task PartitionReadRequestObjectAsync()
         {
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionReadRequest request = new PartitionReadRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Table = "table110115790",
+                Transaction = new TransactionSelector(),
+                Table = "tabledee1b9aa",
+                Index = "index552d996a",
+                Columns = { "columnsa784ca54", },
                 KeySet = new KeySet(),
+                PartitionOptions = new PartitionOptions(),
             };
-            PartitionResponse expectedResponse = new PartitionResponse();
-            mockGrpcClient.Setup(x => x.PartitionReadAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<PartitionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            PartitionResponse expectedResponse = new PartitionResponse
+            {
+                Partitions = { new Partition(), },
+                Transaction = new Transaction(),
+            };
+            mockGrpcClient.Setup(x => x.PartitionReadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PartitionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            PartitionResponse response = await client.PartitionReadAsync(request);
-            Assert.Same(expectedResponse, response);
+            PartitionResponse responseCallSettings = await client.PartitionReadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PartitionResponse responseCancellationToken = await client.PartitionReadAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
     }
 }

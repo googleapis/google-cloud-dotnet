@@ -14,83 +14,29 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcscv = Google.Cloud.Spanner.Common.V1;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Cloud.Iam.V1;
-    using apis = Google.Cloud.Spanner.Admin.Instance.V1;
-    using Google.Cloud.Spanner.Common.V1;
-    using Google.LongRunning;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedInstanceAdminClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedInstanceAdminClientTest
     {
-        [Fact]
-        public void GetInstanceConfig()
+        [xunit::FactAttribute]
+        public void GetInstanceConfigRequestObject()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceConfigRequest expectedRequest = new GetInstanceConfigRequest
-            {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-            };
-            InstanceConfig expectedResponse = new InstanceConfig
-            {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetInstanceConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
-            InstanceConfig response = client.GetInstanceConfig(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetInstanceConfigAsync()
-        {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceConfigRequest expectedRequest = new GetInstanceConfigRequest
-            {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-            };
-            InstanceConfig expectedResponse = new InstanceConfig
-            {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<InstanceConfig>(Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
-            InstanceConfig response = await client.GetInstanceConfigAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetInstanceConfig2()
-        {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
                 InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
@@ -98,22 +44,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             InstanceConfig expectedResponse = new InstanceConfig
             {
                 InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                Replicas = { new ReplicaInfo(), },
             };
-            mockGrpcClient.Setup(x => x.GetInstanceConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
             InstanceConfig response = client.GetInstanceConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetInstanceConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceConfigRequestObjectAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
                 InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
@@ -121,469 +66,887 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             InstanceConfig expectedResponse = new InstanceConfig
             {
                 InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                Replicas = { new ReplicaInfo(), },
             };
-            mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<InstanceConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceConfig response = await client.GetInstanceConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            InstanceConfig responseCallSettings = await client.GetInstanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InstanceConfig responseCancellationToken = await client.GetInstanceConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetInstance()
+        [xunit::FactAttribute]
+        public void GetInstanceConfig()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceRequest expectedRequest = new GetInstanceRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
             };
-            Instance expectedResponse = new Instance
+            InstanceConfig expectedResponse = new InstanceConfig
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
-                NodeCount = 1539922066,
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                Replicas = { new ReplicaInfo(), },
             };
-            mockGrpcClient.Setup(x => x.GetInstance(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            Instance response = client.GetInstance(name);
-            Assert.Same(expectedResponse, response);
+            InstanceConfig response = client.GetInstanceConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetInstanceAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceConfigAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceRequest expectedRequest = new GetInstanceRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
             };
-            Instance expectedResponse = new Instance
+            InstanceConfig expectedResponse = new InstanceConfig
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
-                NodeCount = 1539922066,
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                Replicas = { new ReplicaInfo(), },
             };
-            mockGrpcClient.Setup(x => x.GetInstanceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            Instance response = await client.GetInstanceAsync(name);
-            Assert.Same(expectedResponse, response);
+            InstanceConfig responseCallSettings = await client.GetInstanceConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InstanceConfig responseCancellationToken = await client.GetInstanceConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetInstance2()
+        [xunit::FactAttribute]
+        public void GetInstanceConfig_ResourceNames()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceConfigRequest request = new GetInstanceConfigRequest
+            {
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+            };
+            InstanceConfig expectedResponse = new InstanceConfig
+            {
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                Replicas = { new ReplicaInfo(), },
+            };
+            mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            InstanceConfig response = client.GetInstanceConfig(request.InstanceConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceConfigAsync_ResourceNames()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceConfigRequest request = new GetInstanceConfigRequest
+            {
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+            };
+            InstanceConfig expectedResponse = new InstanceConfig
+            {
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                Replicas = { new ReplicaInfo(), },
+            };
+            mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            InstanceConfig responseCallSettings = await client.GetInstanceConfigAsync(request.InstanceConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InstanceConfig responseCancellationToken = await client.GetInstanceConfigAsync(request.InstanceConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInstanceRequestObject()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
                 ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
-                NodeCount = 1539922066,
+                DisplayName = "display_name137f65c2",
+                NodeCount = -1659500730,
+                State = Instance.Types.State.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.GetInstance(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
             Instance response = client.GetInstance(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetInstanceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceRequestObjectAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
                 ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-                DisplayName = "displayName1615086568",
-                NodeCount = 1539922066,
+                DisplayName = "display_name137f65c2",
+                NodeCount = -1659500730,
+                State = Instance.Types.State.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Instance response = await client.GetInstanceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Instance responseCallSettings = await client.GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteInstance()
+        [xunit::FactAttribute]
+        public void GetInstance()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteInstanceRequest expectedRequest = new DeleteInstanceRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstance(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            client.DeleteInstance(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteInstanceAsync()
-        {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteInstanceRequest expectedRequest = new DeleteInstanceRequest
+            Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                NodeCount = -1659500730,
+                State = Instance.Types.State.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            await client.DeleteInstanceAsync(name);
+            Instance response = client.GetInstance(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteInstance2()
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                NodeCount = -1659500730,
+                State = Instance.Types.State.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance responseCallSettings = await client.GetInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInstance_ResourceNames()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                NodeCount = -1659500730,
+                State = Instance.Types.State.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance response = client.GetInstance(request.InstanceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceAsync_ResourceNames()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+                ConfigAsInstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                NodeCount = -1659500730,
+                State = Instance.Types.State.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance responseCallSettings = await client.GetInstanceAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request.InstanceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteInstanceRequestObject()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstance(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
             client.DeleteInstance(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteInstanceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteInstanceRequestObjectAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteInstanceAsync(request);
+            await client.DeleteInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteInstanceAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void DeleteInstance()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteInstance(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteInstanceAsync()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteInstanceAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteInstance_ResourceNames()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteInstance(request.InstanceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteInstanceAsync_ResourceNames()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = new gcscv::InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteInstanceAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteInstanceAsync(request.InstanceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetIamPolicyRequestObject()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.SetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetIamPolicy()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy policy = new Policy();
-            Policy response = client.SetIamPolicy(formattedResource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy policy = new Policy();
-            Policy response = await client.SetIamPolicyAsync(formattedResource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetIamPolicy2()
+        [xunit::FactAttribute]
+        public void SetIamPolicy_ResourceNames()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.SetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync_ResourceNames()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.SetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetIamPolicyRequestObject()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.GetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIamPolicy()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy response = client.GetIamPolicy(formattedResource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.Resource);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy response = await client.GetIamPolicyAsync(formattedResource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetIamPolicy2()
+        [xunit::FactAttribute]
+        public void GetIamPolicy_ResourceNames()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.GetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync_ResourceNames()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.GetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void TestIamPermissionsRequestObject()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsRequestObjectAsync()
+        {
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void TestIamPermissions()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = client.TestIamPermissions(formattedResource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsAsync()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(formattedResource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void TestIamPermissions2()
+        [xunit::FactAttribute]
+        public void TestIamPermissions_ResourceNames()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = client.TestIamPermissions(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsAsync_ResourceNames()
         {
-            Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new Mock<InstanceAdmin.InstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
     }
 }
