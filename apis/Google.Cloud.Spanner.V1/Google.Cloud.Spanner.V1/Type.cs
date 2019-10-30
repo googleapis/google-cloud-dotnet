@@ -175,9 +175,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ArrayElementTypeFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.Type arrayElementType_;
     /// <summary>
-    /// If [code][google.spanner.v1.Type.code] ==
-    /// [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type` is the
-    /// type of the array elements.
+    /// If [code][google.spanner.v1.Type.code] == [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type`
+    /// is the type of the array elements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.Type ArrayElementType {
@@ -191,9 +190,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StructTypeFieldNumber = 3;
     private global::Google.Cloud.Spanner.V1.StructType structType_;
     /// <summary>
-    /// If [code][google.spanner.v1.Type.code] ==
-    /// [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type` provides
-    /// type information for the struct's fields.
+    /// If [code][google.spanner.v1.Type.code] == [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type`
+    /// provides type information for the struct's fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.StructType StructType {
@@ -332,8 +330,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// `StructType` defines the fields of a
-  /// [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
+  /// `StructType` defines the fields of a [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
   /// </summary>
   public sealed partial class StructType : pb::IMessage<StructType> {
     private static readonly pb::MessageParser<StructType> _parser = new pb::MessageParser<StructType>(() => new StructType());
@@ -378,9 +375,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// The list of fields that make up this struct. Order is
     /// significant, because values of this struct type are represented as
     /// lists, where the order of field values matches the order of
-    /// fields in the [StructType][google.spanner.v1.StructType]. In turn, the
-    /// order of fields matches the order of columns in a read request, or the
-    /// order of fields in the `SELECT` clause of a query.
+    /// fields in the [StructType][google.spanner.v1.StructType]. In turn, the order of fields
+    /// matches the order of columns in a read request, or the order of
+    /// fields in the `SELECT` clause of a query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.StructType.Types.Field> Fields {

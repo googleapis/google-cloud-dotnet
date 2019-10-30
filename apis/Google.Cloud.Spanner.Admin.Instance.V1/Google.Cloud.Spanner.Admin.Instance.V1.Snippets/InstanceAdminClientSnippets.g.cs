@@ -17,37 +17,80 @@
 namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
-    using apis = Google.Cloud.Spanner.Admin.Instance.V1;
     using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedInstanceAdminClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedInstanceAdminClientSnippets
     {
-        /// <summary>Snippet for ListInstanceConfigsAsync</summary>
-        public async Task ListInstanceConfigsAsync()
+        /// <summary>Snippet for ListInstanceConfigs</summary>
+        public void ListInstanceConfigs_RequestObject()
         {
-            // Snippet: ListInstanceConfigsAsync(ProjectName,string,int?,CallSettings)
+            // Snippet: ListInstanceConfigs(ListInstanceConfigsRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstanceConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstanceConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstanceConfigs</summary>
+        public async Task ListInstanceConfigsAsync_RequestObject()
+        {
+            // Snippet: ListInstanceConfigsAsync(ListInstanceConfigsRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
             // Make the request
-            PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
-                instanceAdminClient.ListInstanceConfigsAsync(parent);
+            PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((InstanceConfig item) =>
@@ -63,6 +106,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (InstanceConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -74,6 +118,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (InstanceConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -84,14 +129,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for ListInstanceConfigs</summary>
         public void ListInstanceConfigs()
         {
-            // Snippet: ListInstanceConfigs(ProjectName,string,int?,CallSettings)
+            // Snippet: ListInstanceConfigs(string, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
-                instanceAdminClient.ListInstanceConfigs(parent);
+            PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (InstanceConfig item in response)
@@ -107,6 +151,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (InstanceConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -118,6 +163,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (InstanceConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -125,20 +171,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstanceConfigsAsync</summary>
-        public async Task ListInstanceConfigsAsync_RequestObject()
+        /// <summary>Snippet for ListInstanceConfigs</summary>
+        public async Task ListInstanceConfigsAsync()
         {
-            // Snippet: ListInstanceConfigsAsync(ListInstanceConfigsRequest,CallSettings)
+            // Snippet: ListInstanceConfigsAsync(string, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-            };
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
-                instanceAdminClient.ListInstanceConfigsAsync(request);
+            PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((InstanceConfig item) =>
@@ -154,6 +196,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (InstanceConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -165,6 +208,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (InstanceConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -173,19 +217,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstanceConfigs</summary>
-        public void ListInstanceConfigs_RequestObject()
+        public void ListInstanceConfigs_ResourceNames()
         {
-            // Snippet: ListInstanceConfigs(ListInstanceConfigsRequest,CallSettings)
+            // Snippet: ListInstanceConfigs(ProjectName, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-            };
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
-                instanceAdminClient.ListInstanceConfigs(request);
+            PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (InstanceConfig item in response)
@@ -201,6 +241,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (InstanceConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -212,6 +253,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (InstanceConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -219,38 +261,72 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetInstanceConfigAsync</summary>
-        public async Task GetInstanceConfigAsync()
+        /// <summary>Snippet for ListInstanceConfigs</summary>
+        public async Task ListInstanceConfigsAsync_ResourceNames()
         {
-            // Snippet: GetInstanceConfigAsync(InstanceConfigName,CallSettings)
-            // Additional: GetInstanceConfigAsync(InstanceConfigName,CancellationToken)
+            // Snippet: ListInstanceConfigsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(name);
+            PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstanceConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstanceConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetInstanceConfig</summary>
-        public void GetInstanceConfig()
+        public void GetInstanceConfig_RequestObject()
         {
-            // Snippet: GetInstanceConfig(InstanceConfigName,CallSettings)
+            // Snippet: GetInstanceConfig(GetInstanceConfigRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            GetInstanceConfigRequest request = new GetInstanceConfigRequest
+            {
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
+            };
             // Make the request
-            InstanceConfig response = instanceAdminClient.GetInstanceConfig(name);
+            InstanceConfig response = instanceAdminClient.GetInstanceConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetInstanceConfigAsync</summary>
         public async Task GetInstanceConfigAsync_RequestObject()
         {
-            // Snippet: GetInstanceConfigAsync(GetInstanceConfigRequest,CallSettings)
-            // Additional: GetInstanceConfigAsync(GetInstanceConfigRequest,CancellationToken)
+            // Snippet: GetInstanceConfigAsync(GetInstanceConfigRequest, CallSettings)
+            // Additional: GetInstanceConfigAsync(GetInstanceConfigRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -264,32 +340,122 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceConfig</summary>
-        public void GetInstanceConfig_RequestObject()
+        public void GetInstanceConfig()
         {
-            // Snippet: GetInstanceConfig(GetInstanceConfigRequest,CallSettings)
+            // Snippet: GetInstanceConfig(string, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            GetInstanceConfigRequest request = new GetInstanceConfigRequest
-            {
-                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
-            };
+            string name = "projects/[PROJECT]/instanceConfigs/[INSTANCE_CONFIG]";
             // Make the request
-            InstanceConfig response = instanceAdminClient.GetInstanceConfig(request);
+            InstanceConfig response = instanceAdminClient.GetInstanceConfig(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstancesAsync</summary>
-        public async Task ListInstancesAsync()
+        /// <summary>Snippet for GetInstanceConfigAsync</summary>
+        public async Task GetInstanceConfigAsync()
         {
-            // Snippet: ListInstancesAsync(ProjectName,string,int?,CallSettings)
+            // Snippet: GetInstanceConfigAsync(string, CallSettings)
+            // Additional: GetInstanceConfigAsync(string, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            string name = "projects/[PROJECT]/instanceConfigs/[INSTANCE_CONFIG]";
             // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
-                instanceAdminClient.ListInstancesAsync(parent);
+            InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceConfig</summary>
+        public void GetInstanceConfig_ResourceNames()
+        {
+            // Snippet: GetInstanceConfig(InstanceConfigName, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            // Make the request
+            InstanceConfig response = instanceAdminClient.GetInstanceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstanceConfigAsync</summary>
+        public async Task GetInstanceConfigAsync_ResourceNames()
+        {
+            // Snippet: GetInstanceConfigAsync(InstanceConfigName, CallSettings)
+            // Additional: GetInstanceConfigAsync(InstanceConfigName, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
+            // Make the request
+            InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstances</summary>
+        public void ListInstances_RequestObject()
+        {
+            // Snippet: ListInstances(ListInstancesRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListInstancesRequest request = new ListInstancesRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstances(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Instance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Instance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Instance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Instance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstances</summary>
+        public async Task ListInstancesAsync_RequestObject()
+        {
+            // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListInstancesRequest request = new ListInstancesRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Instance item) =>
@@ -305,6 +471,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Instance item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -316,6 +483,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Instance item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -326,14 +494,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstances()
         {
-            // Snippet: ListInstances(ProjectName,string,int?,CallSettings)
+            // Snippet: ListInstances(string, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response =
-                instanceAdminClient.ListInstances(parent);
+            PagedEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstances(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Instance item in response)
@@ -349,6 +516,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Instance item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -360,6 +528,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Instance item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -367,20 +536,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstancesAsync</summary>
-        public async Task ListInstancesAsync_RequestObject()
+        /// <summary>Snippet for ListInstances</summary>
+        public async Task ListInstancesAsync()
         {
-            // Snippet: ListInstancesAsync(ListInstancesRequest,CallSettings)
+            // Snippet: ListInstancesAsync(string, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-            };
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
-                instanceAdminClient.ListInstancesAsync(request);
+            PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Instance item) =>
@@ -396,6 +561,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Instance item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -407,6 +573,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Instance item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -415,19 +582,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public void ListInstances_RequestObject()
+        public void ListInstances_ResourceNames()
         {
-            // Snippet: ListInstances(ListInstancesRequest,CallSettings)
+            // Snippet: ListInstances(ProjectName, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-            };
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response =
-                instanceAdminClient.ListInstances(request);
+            PagedEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstances(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Instance item in response)
@@ -443,6 +606,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Instance item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -454,6 +618,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Instance item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -461,38 +626,72 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetInstanceAsync</summary>
-        public async Task GetInstanceAsync()
+        /// <summary>Snippet for ListInstances</summary>
+        public async Task ListInstancesAsync_ResourceNames()
         {
-            // Snippet: GetInstanceAsync(InstanceName,CallSettings)
-            // Additional: GetInstanceAsync(InstanceName,CancellationToken)
+            // Snippet: ListInstancesAsync(ProjectName, string, int?, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            Instance response = await instanceAdminClient.GetInstanceAsync(name);
+            PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Instance item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Instance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Instance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance()
+        public void GetInstance_RequestObject()
         {
-            // Snippet: GetInstance(InstanceName,CallSettings)
+            // Snippet: GetInstance(GetInstanceRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
             // Make the request
-            Instance response = instanceAdminClient.GetInstance(name);
+            Instance response = instanceAdminClient.GetInstance(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetInstanceAsync</summary>
         public async Task GetInstanceAsync_RequestObject()
         {
-            // Snippet: GetInstanceAsync(GetInstanceRequest,CallSettings)
-            // Additional: GetInstanceAsync(GetInstanceRequest,CancellationToken)
+            // Snippet: GetInstanceAsync(GetInstanceRequest, CallSettings)
+            // Additional: GetInstanceAsync(GetInstanceRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -506,81 +705,84 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance_RequestObject()
+        public void GetInstance()
         {
-            // Snippet: GetInstance(GetInstanceRequest,CallSettings)
+            // Snippet: GetInstance(string, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            GetInstanceRequest request = new GetInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-            };
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            Instance response = instanceAdminClient.GetInstance(request);
+            Instance response = instanceAdminClient.GetInstance(name);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateInstanceAsync</summary>
-        public async Task CreateInstanceAsync()
+        /// <summary>Snippet for GetInstanceAsync</summary>
+        public async Task GetInstanceAsync()
         {
-            // Snippet: CreateInstanceAsync(ProjectName,InstanceName,Instance,CallSettings)
-            // Additional: CreateInstanceAsync(ProjectName,InstanceName,Instance,CancellationToken)
+            // Snippet: GetInstanceAsync(string, CallSettings)
+            // Additional: GetInstanceAsync(string, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
-            InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
-            Instance instance = new Instance();
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
-                await instanceAdminClient.CreateInstanceAsync(parent, instanceId, instance);
+            Instance response = await instanceAdminClient.GetInstanceAsync(name);
+            // End snippet
+        }
 
-            // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            Instance result = completedResponse.Result;
+        /// <summary>Snippet for GetInstance</summary>
+        public void GetInstance_ResourceNames()
+        {
+            // Snippet: GetInstance(InstanceName, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            Instance response = instanceAdminClient.GetInstance(name);
+            // End snippet
+        }
 
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
-                await instanceAdminClient.PollOnceCreateInstanceAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
-            }
+        /// <summary>Snippet for GetInstanceAsync</summary>
+        public async Task GetInstanceAsync_ResourceNames()
+        {
+            // Snippet: GetInstanceAsync(InstanceName, CallSettings)
+            // Additional: GetInstanceAsync(InstanceName, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            Instance response = await instanceAdminClient.GetInstanceAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for CreateInstance</summary>
-        public void CreateInstance()
+        public void CreateInstance_RequestObject()
         {
-            // Snippet: CreateInstance(ProjectName,InstanceName,Instance,CallSettings)
+            // Snippet: CreateInstance(CreateInstanceRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
-            InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
-            Instance instance = new Instance();
+            CreateInstanceRequest request = new CreateInstanceRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                InstanceId = "",
+                Instance = new Instance(),
+            };
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
-                instanceAdminClient.CreateInstance(parent, instanceId, instance);
+            Operation<Instance, CreateInstanceMetadata> response = instanceAdminClient.CreateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<Instance, CreateInstanceMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
-                instanceAdminClient.PollOnceCreateInstance(operationName);
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -593,31 +795,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync_RequestObject()
         {
-            // Snippet: CreateInstanceAsync(CreateInstanceRequest,CallSettings)
+            // Snippet: CreateInstanceAsync(CreateInstanceRequest, CallSettings)
+            // Additional: CreateInstanceAsync(CreateInstanceRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
             CreateInstanceRequest request = new CreateInstanceRequest
             {
                 ParentAsProjectName = new ProjectName("[PROJECT]"),
-                InstanceIdAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceId = "",
                 Instance = new Instance(),
             };
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
-                await instanceAdminClient.CreateInstanceAsync(request);
+            Operation<Instance, CreateInstanceMetadata> response = await instanceAdminClient.CreateInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<Instance, CreateInstanceMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
-                await instanceAdminClient.PollOnceCreateInstanceAsync(operationName);
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -628,33 +828,27 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for CreateInstance</summary>
-        public void CreateInstance_RequestObject()
+        public void CreateInstance()
         {
-            // Snippet: CreateInstance(CreateInstanceRequest,CallSettings)
+            // Snippet: CreateInstance(string, string, Instance, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            CreateInstanceRequest request = new CreateInstanceRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                InstanceIdAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                Instance = new Instance(),
-            };
+            string parent = "projects/[PROJECT]";
+            string instanceId = "";
+            Instance instance = new Instance();
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
-                instanceAdminClient.CreateInstance(request);
+            Operation<Instance, CreateInstanceMetadata> response = instanceAdminClient.CreateInstance(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<Instance, CreateInstanceMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
-                instanceAdminClient.PollOnceCreateInstance(operationName);
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -664,31 +858,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateInstanceAsync</summary>
-        public async Task UpdateInstanceAsync()
+        /// <summary>Snippet for CreateInstanceAsync</summary>
+        public async Task CreateInstanceAsync()
         {
-            // Snippet: UpdateInstanceAsync(Instance,FieldMask,CallSettings)
-            // Additional: UpdateInstanceAsync(Instance,FieldMask,CancellationToken)
+            // Snippet: CreateInstanceAsync(string, string, Instance, CallSettings)
+            // Additional: CreateInstanceAsync(string, string, Instance, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string instanceId = "";
             Instance instance = new Instance();
-            FieldMask fieldMask = new FieldMask();
             // Make the request
-            Operation<Instance, UpdateInstanceMetadata> response =
-                await instanceAdminClient.UpdateInstanceAsync(instance, fieldMask);
+            Operation<Instance, CreateInstanceMetadata> response = await instanceAdminClient.CreateInstanceAsync(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, UpdateInstanceMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<Instance, CreateInstanceMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
-                await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -698,30 +890,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateInstance</summary>
-        public void UpdateInstance()
+        /// <summary>Snippet for CreateInstance</summary>
+        public void CreateInstance_ResourceNames()
         {
-            // Snippet: UpdateInstance(Instance,FieldMask,CallSettings)
+            // Snippet: CreateInstance(ProjectName, string, Instance, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
+            ProjectName parent = new ProjectName("[PROJECT]");
+            string instanceId = "";
             Instance instance = new Instance();
-            FieldMask fieldMask = new FieldMask();
             // Make the request
-            Operation<Instance, UpdateInstanceMetadata> response =
-                instanceAdminClient.UpdateInstance(instance, fieldMask);
+            Operation<Instance, CreateInstanceMetadata> response = instanceAdminClient.CreateInstance(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, UpdateInstanceMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<Instance, CreateInstanceMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
-                instanceAdminClient.PollOnceUpdateInstance(operationName);
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -731,33 +921,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateInstanceAsync</summary>
-        public async Task UpdateInstanceAsync_RequestObject()
+        /// <summary>Snippet for CreateInstanceAsync</summary>
+        public async Task CreateInstanceAsync_ResourceNames()
         {
-            // Snippet: UpdateInstanceAsync(UpdateInstanceRequest,CallSettings)
+            // Snippet: CreateInstanceAsync(ProjectName, string, Instance, CallSettings)
+            // Additional: CreateInstanceAsync(ProjectName, string, Instance, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateInstanceRequest request = new UpdateInstanceRequest
-            {
-                Instance = new Instance(),
-                FieldMask = new FieldMask(),
-            };
+            ProjectName parent = new ProjectName("[PROJECT]");
+            string instanceId = "";
+            Instance instance = new Instance();
             // Make the request
-            Operation<Instance, UpdateInstanceMetadata> response =
-                await instanceAdminClient.UpdateInstanceAsync(request);
+            Operation<Instance, CreateInstanceMetadata> response = await instanceAdminClient.CreateInstanceAsync(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, UpdateInstanceMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<Instance, CreateInstanceMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
-                await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -770,7 +956,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstance_RequestObject()
         {
-            // Snippet: UpdateInstance(UpdateInstanceRequest,CallSettings)
+            // Snippet: UpdateInstance(UpdateInstanceRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
@@ -780,20 +966,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
-            Operation<Instance, UpdateInstanceMetadata> response =
-                instanceAdminClient.UpdateInstance(request);
+            Operation<Instance, UpdateInstanceMetadata> response = instanceAdminClient.UpdateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, UpdateInstanceMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<Instance, UpdateInstanceMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
-                instanceAdminClient.PollOnceUpdateInstance(operationName);
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse = instanceAdminClient.PollOnceUpdateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -803,38 +986,122 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteInstanceAsync</summary>
-        public async Task DeleteInstanceAsync()
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
+        public async Task UpdateInstanceAsync_RequestObject()
         {
-            // Snippet: DeleteInstanceAsync(InstanceName,CallSettings)
-            // Additional: DeleteInstanceAsync(InstanceName,CancellationToken)
+            // Snippet: UpdateInstanceAsync(UpdateInstanceRequest, CallSettings)
+            // Additional: UpdateInstanceAsync(UpdateInstanceRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            UpdateInstanceRequest request = new UpdateInstanceRequest
+            {
+                Instance = new Instance(),
+                FieldMask = new FieldMask(),
+            };
             // Make the request
-            await instanceAdminClient.DeleteInstanceAsync(name);
+            Operation<Instance, UpdateInstanceMetadata> response = await instanceAdminClient.UpdateInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, UpdateInstanceMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse = await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstance</summary>
+        public void UpdateInstance()
+        {
+            // Snippet: UpdateInstance(Instance, FieldMask, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            Instance instance = new Instance();
+            FieldMask fieldMask = new FieldMask();
+            // Make the request
+            Operation<Instance, UpdateInstanceMetadata> response = instanceAdminClient.UpdateInstance(instance, fieldMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, UpdateInstanceMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse = instanceAdminClient.PollOnceUpdateInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
+        public async Task UpdateInstanceAsync()
+        {
+            // Snippet: UpdateInstanceAsync(Instance, FieldMask, CallSettings)
+            // Additional: UpdateInstanceAsync(Instance, FieldMask, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            Instance instance = new Instance();
+            FieldMask fieldMask = new FieldMask();
+            // Make the request
+            Operation<Instance, UpdateInstanceMetadata> response = await instanceAdminClient.UpdateInstanceAsync(instance, fieldMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, UpdateInstanceMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse = await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
         /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance()
+        public void DeleteInstance_RequestObject()
         {
-            // Snippet: DeleteInstance(InstanceName,CallSettings)
+            // Snippet: DeleteInstance(DeleteInstanceRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
             // Make the request
-            instanceAdminClient.DeleteInstance(name);
+            instanceAdminClient.DeleteInstance(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteInstanceAsync</summary>
         public async Task DeleteInstanceAsync_RequestObject()
         {
-            // Snippet: DeleteInstanceAsync(DeleteInstanceRequest,CallSettings)
-            // Additional: DeleteInstanceAsync(DeleteInstanceRequest,CancellationToken)
+            // Snippet: DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)
+            // Additional: DeleteInstanceAsync(DeleteInstanceRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -848,61 +1115,87 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance_RequestObject()
+        public void DeleteInstance()
         {
-            // Snippet: DeleteInstance(DeleteInstanceRequest,CallSettings)
+            // Snippet: DeleteInstance(string, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-            };
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            instanceAdminClient.DeleteInstance(request);
+            instanceAdminClient.DeleteInstance(name);
             // End snippet
         }
 
-        /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync()
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        public async Task DeleteInstanceAsync()
         {
-            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
-            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
+            // Snippet: DeleteInstanceAsync(string, CallSettings)
+            // Additional: DeleteInstanceAsync(string, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy policy = new Policy();
+            string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            Policy response = await instanceAdminClient.SetIamPolicyAsync(formattedResource, policy);
+            await instanceAdminClient.DeleteInstanceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstance</summary>
+        public void DeleteInstance_ResourceNames()
+        {
+            // Snippet: DeleteInstance(InstanceName, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            instanceAdminClient.DeleteInstance(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        public async Task DeleteInstanceAsync_ResourceNames()
+        {
+            // Snippet: DeleteInstanceAsync(InstanceName, CallSettings)
+            // Additional: DeleteInstanceAsync(InstanceName, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            await instanceAdminClient.DeleteInstanceAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy()
+        public void SetIamPolicy_RequestObject()
         {
-            // Snippet: SetIamPolicy(string,Policy,CallSettings)
+            // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy policy = new Policy();
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+            };
             // Make the request
-            Policy response = instanceAdminClient.SetIamPolicy(formattedResource, policy);
+            Policy response = instanceAdminClient.SetIamPolicy(request);
             // End snippet
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync_RequestObject()
         {
-            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
-            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -911,60 +1204,92 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicy()
         {
-            // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
+            // Snippet: SetIamPolicy(string, Policy, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
-            };
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
             // Make the request
-            Policy response = instanceAdminClient.SetIamPolicy(request);
+            Policy response = instanceAdminClient.SetIamPolicy(resource, policy);
             // End snippet
         }
 
-        /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync()
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
         {
-            // Snippet: GetIamPolicyAsync(string,CallSettings)
-            // Additional: GetIamPolicyAsync(string,CancellationToken)
+            // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
             // Make the request
-            Policy response = await instanceAdminClient.GetIamPolicyAsync(formattedResource);
+            Policy response = await instanceAdminClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy_ResourceNames()
+        {
+            // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = instanceAdminClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync_ResourceNames()
+        {
+            // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await instanceAdminClient.SetIamPolicyAsync(resource, policy);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy()
+        public void GetIamPolicy_RequestObject()
         {
-            // Snippet: GetIamPolicy(string,CallSettings)
+            // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
             // Make the request
-            Policy response = instanceAdminClient.GetIamPolicy(formattedResource);
+            Policy response = instanceAdminClient.GetIamPolicy(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync_RequestObject()
         {
-            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
-            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
             };
             // Make the request
             Policy response = await instanceAdminClient.GetIamPolicyAsync(request);
@@ -972,62 +1297,88 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicy()
         {
-            // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
+            // Snippet: GetIamPolicy(string, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-            };
+            string resource = "a/wildcard/resource";
             // Make the request
-            Policy response = instanceAdminClient.GetIamPolicy(request);
+            Policy response = instanceAdminClient.GetIamPolicy(resource);
             // End snippet
         }
 
-        /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync()
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
         {
-            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
-            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
+            // Snippet: GetIamPolicyAsync(string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            IEnumerable<string> permissions = new List<string>();
+            string resource = "a/wildcard/resource";
             // Make the request
-            TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
+            Policy response = await instanceAdminClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy_ResourceNames()
+        {
+            // Snippet: GetIamPolicy(IResourceName, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = instanceAdminClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync_ResourceNames()
+        {
+            // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = await instanceAdminClient.GetIamPolicyAsync(resource);
             // End snippet
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions()
+        public void TestIamPermissions_RequestObject()
         {
-            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            IEnumerable<string> permissions = new List<string>();
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
             // Make the request
-            TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(formattedResource, permissions);
+            TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(request);
             // End snippet
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync_RequestObject()
         {
-            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
-            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Permissions = { "", },
             };
             // Make the request
             TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(request);
@@ -1035,21 +1386,61 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissions()
         {
-            // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)
+            // Snippet: TestIamPermissions(string, IEnumerable<string>, CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
-            };
+            string resource = "a/wildcard/resource";
+            IEnumerable<string> permissions = new string[] { "", };
             // Make the request
-            TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(request);
+            TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(resource, permissions);
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions_ResourceNames()
+        {
+            // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync_ResourceNames()
+        {
+            // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
+            // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
     }
 }
