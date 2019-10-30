@@ -677,7 +677,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new Type() }, },
+                ParamTypes = { { "", new V1.Type() }, },
                 ResumeToken = ByteString.Empty,
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
@@ -702,7 +702,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new Type() }, },
+                ParamTypes = { { "", new V1.Type() }, },
                 ResumeToken = ByteString.Empty,
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
@@ -726,7 +726,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new Type() }, },
+                ParamTypes = { { "", new V1.Type() }, },
                 ResumeToken = ByteString.Empty,
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
@@ -1235,7 +1235,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new Type() }, },
+                ParamTypes = { { "", new V1.Type() }, },
                 PartitionOptions = new PartitionOptions(),
             };
             // Make the request
@@ -1257,7 +1257,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new Type() }, },
+                ParamTypes = { { "", new V1.Type() }, },
                 PartitionOptions = new PartitionOptions(),
             };
             // Make the request
