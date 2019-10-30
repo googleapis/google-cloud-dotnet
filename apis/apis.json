@@ -763,7 +763,7 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.LongRunning": "1.1.0",
-      "Google.Cloud.Iam.V1": "1.2.0",
+      "Google.Cloud.Iam.V1": "project",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
@@ -782,7 +782,7 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.LongRunning": "1.1.0",
-      "Google.Cloud.Iam.V1": "1.2.0",
+      "Google.Cloud.Iam.V1": "project",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
