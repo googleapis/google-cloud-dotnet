@@ -35,10 +35,10 @@ namespace Google.Cloud.SampleUtil
 			// Create a dictionary, so that we can easily look up a sample entry point with
 			// a sample file name.
 			var samples = assembly
-			    .DefinedTypes
-			    .Select(t => GetEntryPoint(t))
-			    .Where(ep => ep != null && ep != assembly.EntryPoint)
-			    .ToDictionary(ep => ep.DeclaringType.Name.Replace("Main", string.Empty), ep => ep);
+				.DefinedTypes
+				.Select(t => GetEntryPoint(t))
+				.Where(ep => ep != null && ep != assembly.EntryPoint)
+				.ToDictionary(ep => ep.DeclaringType.Name.Replace("Main", string.Empty), ep => ep);
 
 			MethodBase main = samples[sample];
 			if (main == null)
@@ -46,65 +46,65 @@ namespace Google.Cloud.SampleUtil
 				throw new ArgumentException($"Can't find sample: {sample}");
 			}
 			try
-            {
+			{
 				Task task = main.Invoke(null, new object[] { args }) as Task;
-	            if (task != null)
-	            {
-	                task.GetAwaiter().GetResult();
-	            }
-	        }
-	        catch (Exception e)
-            {
-                // Normally we fail due to an exception within the
-                // code invoked via reflection.
-                // Unwrap the TargetInvocationException that would otherwise
-                // be wrapped in.
-                if (e is TargetInvocationException tie)
-                {
-                    e = tie.InnerException;
-                }
-                Console.WriteLine("Exception: {0}", e);
-            }
+				if (task != null)
+				{
+					task.GetAwaiter().GetResult();
+				}
+			}
+			catch (Exception e)
+			{
+				// Normally we fail due to an exception within the
+				// code invoked via reflection.
+				// Unwrap the TargetInvocationException that would otherwise
+				// be wrapped in.
+				if (e is TargetInvocationException tie)
+				{
+					e = tie.InnerException;
+				}
+				Console.WriteLine("Exception: {0}", e);
+			}
 		}
 
 		/// <summary>
-        /// Returns the entry point for a sample, or null if no entry points can be used.
-        /// An entry point taking string[] is preferred to one with no parameters.
-        /// </summary>
-	    private static MethodBase GetEntryPoint(TypeInfo type)
-	    {
-	    	if (type.IsGenericTypeDefinition || type.IsGenericType)
-            {
-                return null;
-            }
-            var methods = type.DeclaredMethods
-                .Where(m => m.IsStatic && m.Name == "Main" && !m.IsGenericMethodDefinition);
+		/// Returns the entry point for a sample, or null if no entry points can be used.
+		/// An entry point taking string[] is preferred to one with no parameters.
+		/// </summary>
+		private static MethodBase GetEntryPoint(TypeInfo type)
+		{
+			if (type.IsGenericTypeDefinition || type.IsGenericType)
+			{
+				return null;
+			}
+			var methods = type.DeclaredMethods
+				.Where(m => m.IsStatic && m.Name == "Main" && !m.IsGenericMethodDefinition);
 
-            MethodInfo parameterless = null;
-            MethodInfo stringArrayParameter = null;
+			MethodInfo parameterless = null;
+			MethodInfo stringArrayParameter = null;
 
-            foreach (MethodInfo method in methods)
-            {
-                ParameterInfo[] parameters = method.GetParameters();
-                if (parameters.Length == 0)
-                {
-                    parameterless = method;
-                }
-                else
-                {
-                    if (parameters.Length == 1 &&
-                        !parameters[0].IsOut &&
-                        !parameters[0].IsOptional &&
-                        parameters[0].ParameterType == typeof(string[]))
-                    {
-                        stringArrayParameter = method;
-                    }
-                }
-            }
+			foreach (MethodInfo method in methods)
+			{
+				ParameterInfo[] parameters = method.GetParameters();
+				if (parameters.Length == 0)
+				{
+					parameterless = method;
+				}
+				else
+				{
+					if (parameters.Length == 1 &&
+						!parameters[0].IsOut &&
+						!parameters[0].IsOptional &&
+						parameters[0].ParameterType == typeof(string[]))
+					{
+						stringArrayParameter = method;
+					}
+				}
+			}
 
-            // Entry point of a sample should always have parameters, but allow one
-            // without parameters to be more resilient to sample style changes.
-            return stringArrayParameter ?? parameterless;
-	    }
+			// Entry point of a sample should always have parameters, but allow one
+			// without parameters to be more resilient to sample style changes.
+			return stringArrayParameter ?? parameterless;
+		}
 	}
 }
