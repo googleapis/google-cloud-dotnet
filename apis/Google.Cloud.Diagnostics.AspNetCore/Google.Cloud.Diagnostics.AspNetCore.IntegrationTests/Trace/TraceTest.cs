@@ -327,6 +327,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var uri = $"/Trace/{_testId}";
             // Not the best ever stress test but we are limited by read quotas anyway.
             var requests = 300;
+            // Entry availability SLO is 90% in 10 seconds and 99% in 5 minutes. We are waiting for 10
+            // seconds max so let's only expect 90% of entries to be visible.
+            var minExpectedRequests = 9 * requests / 10;
             IList<Task<HttpResponseMessage>> responseTasks = new List<Task<HttpResponseMessage>>(300);
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestTimedBufferHighQpsApplication>()))
             using (var client = server.CreateClient())
@@ -339,8 +342,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await Task.WhenAll(responseTasks);
             }
 
-            var traces = _polling.GetTraces(uri, _startTime, minEntries: requests);
-            Assert.Equal(requests, traces.Count());
+            var traces = _polling.GetTraces(uri, _startTime, minEntries: minExpectedRequests);
+            Assert.InRange(traces.Count(), minExpectedRequests, requests);
         }
 
         [Fact]
