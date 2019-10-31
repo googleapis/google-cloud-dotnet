@@ -29,28 +29,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture = fixture;
         }
 
-        [Theory]
-        [InlineData(StorageClasses.Archive)]
-        [InlineData(StorageClasses.Coldline)]
-        [InlineData(StorageClasses.DurableReducedAvailability)]
-        [InlineData(StorageClasses.MultiRegional)]
-        [InlineData(StorageClasses.Nearline)]
-        [InlineData(StorageClasses.Regional)]
-        [InlineData(StorageClasses.Standard)]
-        public void CreateBucketWithStorageClass(string storageClass)
-        {
-            string bucketName = $"{_fixture.BucketPrefix}-with-class-{storageClass.ToLowerInvariant()}";
-            var client = _fixture.Client;
-
-            var bucket = client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName, StorageClass = storageClass });
-            StorageFixture.SleepAfterBucketCreateDelete();
-            _fixture.RegisterBucketToDelete(bucketName);
-
-            Assert.Equal(storageClass, bucket.StorageClass);
-            bucket = client.GetBucket(bucketName);
-            Assert.Equal(storageClass, bucket.StorageClass);
-        }
-
         // Multi-step test to check:
         // - Create a bucket with a storage class of regional
         // - That storage class is used when creating a new object
