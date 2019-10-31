@@ -171,7 +171,6 @@ generate_gapicgenerator() {
   args+=(--output=$API_TMP_DIR)
   args+=(--language=csharp)
   args+=(--package=$PROTO_PACKAGE)
-  args+=(--dev_samples)
 
   # Suppress protobuf warnings in Java 9/10. By the time they
   # become a problem, we won't be using Java...
