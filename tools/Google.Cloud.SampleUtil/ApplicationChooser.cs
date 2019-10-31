@@ -21,8 +21,23 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.SampleUtil
 {
+    /// <summary>
+    /// Class allowing a user to choose a sample to run, after
+    /// examining an assembly for all classes containing a static Main method, either
+    /// parameterless or with a string array parameter.
+    /// The ApplicationChooser is designed to run in both interactive mode (not 
+    /// implemented yet) and non-interactive mode.
+    /// In the interactive mode, the options are presented in a list ordered 
+    /// first by those with a Description attribute (by that description) and 
+    /// then those without (ordered by name).
+    /// In the non-interactive mode, the ApplicationChooser will invoke the sample
+    /// with the sample file name (the first positional commandline argument).
+    /// </summary>
     public class ApplicationChooser
     {
+        /// <summary>
+        /// Looks up a sample based on its name, and invoke it with the remaining arguments.
+        /// </summary>	
         public static void Run(string[] args)
         {
             if (args.Length == 0)
@@ -32,8 +47,8 @@ namespace Google.Cloud.SampleUtil
             string sample = args[0];
             var assembly = Assembly.GetEntryAssembly();
 
-            // Create a dictionary, so that we can easily look up a sample entry point with
-            // a sample file name.
+            // Create a dictionary, so that we can easily look up a sample entry point based on
+            // the filename of the sample.
             var samples = assembly
                           .DefinedTypes
                           .Select(t => GetEntryPoint(t))
