@@ -55,10 +55,5 @@ namespace Google.Cloud.Storage.V1
         /// and better performance/availability.
         /// </summary>
         public const string DurableReducedAvailability = "DURABLE_REDUCED_AVAILABILITY";
-
-        /// <summary>
-        /// Name for the Archive storage class.
-        /// </summary>
-        public const string Archive = "ARCHIVE";
     }
 }
