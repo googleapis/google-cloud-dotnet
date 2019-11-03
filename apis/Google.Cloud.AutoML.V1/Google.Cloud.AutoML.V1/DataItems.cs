@@ -25,51 +25,49 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvYXV0b21sL3YxL2RhdGFfaXRlbXMucHJvdG8SFmdv",
-            "b2dsZS5jbG91ZC5hdXRvbWwudjEaJWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
-            "Z2VvbWV0cnkucHJvdG8aH2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvaW8ucHJv",
-            "dG8aKWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvdGV4dF9zZWdtZW50LnByb3Rv",
-            "Ghlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGh5nb29nbGUvcHJvdG9idWYv",
-            "ZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
-            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ihQEKBUltYWdlEhUKC2lt",
-            "YWdlX2J5dGVzGAEgASgMSAASRgoSaW1hZ2VfaW5wdXRfY29uZmlnGAcgASgL",
-            "MiguZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5JbWFnZUlucHV0Q29uZmlnSAAS",
-            "FQoNdGh1bWJuYWlsX3VyaRgEIAEoCUIGCgRkYXRhIkYKC1RleHRTbmlwcGV0",
-            "Eg8KB2NvbnRlbnQYASABKAkSEQoJbWltZV90eXBlGAIgASgJEhMKC2NvbnRl",
-            "bnRfdXJpGAQgASgJIuoBChJEb2N1bWVudERpbWVuc2lvbnMSTgoEdW5pdBgB",
-            "IAEoDjJALmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRG9jdW1lbnREaW1lbnNp",
-            "b25zLkRvY3VtZW50RGltZW5zaW9uVW5pdBINCgV3aWR0aBgCIAEoAhIOCgZo",
-            "ZWlnaHQYAyABKAIiZQoVRG9jdW1lbnREaW1lbnNpb25Vbml0EicKI0RPQ1VN",
-            "RU5UX0RJTUVOU0lPTl9VTklUX1VOU1BFQ0lGSUVEEAASCAoESU5DSBABEg4K",
-            "CkNFTlRJTUVURVIQAhIJCgVQT0lOVBADItYFCghEb2N1bWVudBJBCgxpbnB1",
-            "dF9jb25maWcYASABKAsyKy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkRvY3Vt",
-            "ZW50SW5wdXRDb25maWcSOgoNZG9jdW1lbnRfdGV4dBgCIAEoCzIjLmdvb2ds",
-            "ZS5jbG91ZC5hdXRvbWwudjEuVGV4dFNuaXBwZXQSNwoGbGF5b3V0GAMgAygL",
-            "MicuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Eb2N1bWVudC5MYXlvdXQSRwoT",
-            "ZG9jdW1lbnRfZGltZW5zaW9ucxgEIAEoCzIqLmdvb2dsZS5jbG91ZC5hdXRv",
-            "bWwudjEuRG9jdW1lbnREaW1lbnNpb25zEhIKCnBhZ2VfY291bnQYBSABKAUa",
-            "tAMKBkxheW91dBI5Cgx0ZXh0X3NlZ21lbnQYASABKAsyIy5nb29nbGUuY2xv",
-            "dWQuYXV0b21sLnYxLlRleHRTZWdtZW50EhMKC3BhZ2VfbnVtYmVyGAIgASgF",
-            "EjsKDWJvdW5kaW5nX3BvbHkYAyABKAsyJC5nb29nbGUuY2xvdWQuYXV0b21s",
-            "LnYxLkJvdW5kaW5nUG9seRJSChF0ZXh0X3NlZ21lbnRfdHlwZRgEIAEoDjI3",
-            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRG9jdW1lbnQuTGF5b3V0LlRleHRT",
-            "ZWdtZW50VHlwZSLIAQoPVGV4dFNlZ21lbnRUeXBlEiEKHVRFWFRfU0VHTUVO",
-            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFVE9LRU4QARINCglQQVJBR1JBUEgQ",
-            "AhIOCgpGT1JNX0ZJRUxEEAMSEwoPRk9STV9GSUVMRF9OQU1FEAQSFwoTRk9S",
-            "TV9GSUVMRF9DT05URU5UUxAFEgkKBVRBQkxFEAYSEAoMVEFCTEVfSEVBREVS",
-            "EAcSDQoJVEFCTEVfUk9XEAgSDgoKVEFCTEVfQ0VMTBAJIr4BCg5FeGFtcGxl",
-            "UGF5bG9hZBIuCgVpbWFnZRgBIAEoCzIdLmdvb2dsZS5jbG91ZC5hdXRvbWwu",
-            "djEuSW1hZ2VIABI7Cgx0ZXh0X3NuaXBwZXQYAiABKAsyIy5nb29nbGUuY2xv",
-            "dWQuYXV0b21sLnYxLlRleHRTbmlwcGV0SAASNAoIZG9jdW1lbnQYBCABKAsy",
-            "IC5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkRvY3VtZW50SABCCQoHcGF5bG9h",
-            "ZEKqAQoaY29tLmdvb2dsZS5jbG91ZC5hdXRvbWwudjFQAVo8Z29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hdXRvbWwvdjE7",
-            "YXV0b21sqgIWR29vZ2xlLkNsb3VkLkF1dG9NTC5WMcoCFkdvb2dsZVxDbG91",
-            "ZFxBdXRvTUxcVjHqAhlHb29nbGU6OkNsb3VkOjpBdXRvTUw6OlYxYgZwcm90",
-            "bzM="));
+            "b2dsZS5jbG91ZC5hdXRvbWwudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
+            "cHJvdG8aJWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvZ2VvbWV0cnkucHJvdG8a",
+            "H2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvaW8ucHJvdG8aKWdvb2dsZS9jbG91",
+            "ZC9hdXRvbWwvdjEvdGV4dF9zZWdtZW50LnByb3RvGhlnb29nbGUvcHJvdG9i",
+            "dWYvYW55LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8a",
+            "HGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8iPQoFSW1hZ2USFQoLaW1h",
+            "Z2VfYnl0ZXMYASABKAxIABIVCg10aHVtYm5haWxfdXJpGAQgASgJQgYKBGRh",
+            "dGEiRgoLVGV4dFNuaXBwZXQSDwoHY29udGVudBgBIAEoCRIRCgltaW1lX3R5",
+            "cGUYAiABKAkSEwoLY29udGVudF91cmkYBCABKAki6gEKEkRvY3VtZW50RGlt",
+            "ZW5zaW9ucxJOCgR1bml0GAEgASgOMkAuZ29vZ2xlLmNsb3VkLmF1dG9tbC52",
+            "MS5Eb2N1bWVudERpbWVuc2lvbnMuRG9jdW1lbnREaW1lbnNpb25Vbml0Eg0K",
+            "BXdpZHRoGAIgASgCEg4KBmhlaWdodBgDIAEoAiJlChVEb2N1bWVudERpbWVu",
+            "c2lvblVuaXQSJwojRE9DVU1FTlRfRElNRU5TSU9OX1VOSVRfVU5TUEVDSUZJ",
+            "RUQQABIICgRJTkNIEAESDgoKQ0VOVElNRVRFUhACEgkKBVBPSU5UEAMi1gUK",
+            "CERvY3VtZW50EkEKDGlucHV0X2NvbmZpZxgBIAEoCzIrLmdvb2dsZS5jbG91",
+            "ZC5hdXRvbWwudjEuRG9jdW1lbnRJbnB1dENvbmZpZxI6Cg1kb2N1bWVudF90",
+            "ZXh0GAIgASgLMiMuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5UZXh0U25pcHBl",
+            "dBI3CgZsYXlvdXQYAyADKAsyJy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkRv",
+            "Y3VtZW50LkxheW91dBJHChNkb2N1bWVudF9kaW1lbnNpb25zGAQgASgLMiou",
+            "Z29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Eb2N1bWVudERpbWVuc2lvbnMSEgoK",
+            "cGFnZV9jb3VudBgFIAEoBRq0AwoGTGF5b3V0EjkKDHRleHRfc2VnbWVudBgB",
+            "IAEoCzIjLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuVGV4dFNlZ21lbnQSEwoL",
+            "cGFnZV9udW1iZXIYAiABKAUSOwoNYm91bmRpbmdfcG9seRgDIAEoCzIkLmdv",
+            "b2dsZS5jbG91ZC5hdXRvbWwudjEuQm91bmRpbmdQb2x5ElIKEXRleHRfc2Vn",
+            "bWVudF90eXBlGAQgASgOMjcuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Eb2N1",
+            "bWVudC5MYXlvdXQuVGV4dFNlZ21lbnRUeXBlIsgBCg9UZXh0U2VnbWVudFR5",
+            "cGUSIQodVEVYVF9TRUdNRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVUT0tF",
+            "ThABEg0KCVBBUkFHUkFQSBACEg4KCkZPUk1fRklFTEQQAxITCg9GT1JNX0ZJ",
+            "RUxEX05BTUUQBBIXChNGT1JNX0ZJRUxEX0NPTlRFTlRTEAUSCQoFVEFCTEUQ",
+            "BhIQCgxUQUJMRV9IRUFERVIQBxINCglUQUJMRV9ST1cQCBIOCgpUQUJMRV9D",
+            "RUxMEAkivgEKDkV4YW1wbGVQYXlsb2FkEi4KBWltYWdlGAEgASgLMh0uZ29v",
+            "Z2xlLmNsb3VkLmF1dG9tbC52MS5JbWFnZUgAEjsKDHRleHRfc25pcHBldBgC",
+            "IAEoCzIjLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuVGV4dFNuaXBwZXRIABI0",
+            "Cghkb2N1bWVudBgEIAEoCzIgLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRG9j",
+            "dW1lbnRIAEIJCgdwYXlsb2FkQqoBChpjb20uZ29vZ2xlLmNsb3VkLmF1dG9t",
+            "bC52MVABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL2F1dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01M",
+            "LlYxygIWR29vZ2xlXENsb3VkXEF1dG9NTFxWMeoCGUdvb2dsZTo6Q2xvdWQ6",
+            "OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.GeometryReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.GeometryReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Image), global::Google.Cloud.AutoML.V1.Image.Parser, new[]{ "ImageBytes", "ImageInputConfig", "ThumbnailUri" }, new[]{ "Data" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Image), global::Google.Cloud.AutoML.V1.Image.Parser, new[]{ "ImageBytes", "ThumbnailUri" }, new[]{ "Data" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSnippet), global::Google.Cloud.AutoML.V1.TextSnippet.Parser, new[]{ "Content", "MimeType", "ContentUri" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions), global::Google.Cloud.AutoML.V1.DocumentDimensions.Parser, new[]{ "Unit", "Width", "Height" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document), global::Google.Cloud.AutoML.V1.Document.Parser, new[]{ "InputConfig", "DocumentText", "Layout", "DocumentDimensions", "PageCount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout), global::Google.Cloud.AutoML.V1.Document.Types.Layout.Parser, new[]{ "TextSegment", "PageNumber", "BoundingPoly", "TextSegmentType" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType) }, null)}),
@@ -114,9 +112,6 @@ namespace Google.Cloud.AutoML.V1 {
         case DataOneofCase.ImageBytes:
           ImageBytes = other.ImageBytes;
           break;
-        case DataOneofCase.ImageInputConfig:
-          ImageInputConfig = other.ImageInputConfig.Clone();
-          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -143,20 +138,6 @@ namespace Google.Cloud.AutoML.V1 {
       }
     }
 
-    /// <summary>Field number for the "image_input_config" field.</summary>
-    public const int ImageInputConfigFieldNumber = 7;
-    /// <summary>
-    /// An input config specifying the content of the image.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.AutoML.V1.ImageInputConfig ImageInputConfig {
-      get { return dataCase_ == DataOneofCase.ImageInputConfig ? (global::Google.Cloud.AutoML.V1.ImageInputConfig) data_ : null; }
-      set {
-        data_ = value;
-        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ImageInputConfig;
-      }
-    }
-
     /// <summary>Field number for the "thumbnail_uri" field.</summary>
     public const int ThumbnailUriFieldNumber = 4;
     private string thumbnailUri_ = "";
@@ -176,7 +157,6 @@ namespace Google.Cloud.AutoML.V1 {
     public enum DataOneofCase {
       None = 0,
       ImageBytes = 1,
-      ImageInputConfig = 7,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -204,7 +184,6 @@ namespace Google.Cloud.AutoML.V1 {
         return true;
       }
       if (ImageBytes != other.ImageBytes) return false;
-      if (!object.Equals(ImageInputConfig, other.ImageInputConfig)) return false;
       if (ThumbnailUri != other.ThumbnailUri) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -214,7 +193,6 @@ namespace Google.Cloud.AutoML.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (dataCase_ == DataOneofCase.ImageBytes) hash ^= ImageBytes.GetHashCode();
-      if (dataCase_ == DataOneofCase.ImageInputConfig) hash ^= ImageInputConfig.GetHashCode();
       if (ThumbnailUri.Length != 0) hash ^= ThumbnailUri.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
@@ -238,10 +216,6 @@ namespace Google.Cloud.AutoML.V1 {
         output.WriteRawTag(34);
         output.WriteString(ThumbnailUri);
       }
-      if (dataCase_ == DataOneofCase.ImageInputConfig) {
-        output.WriteRawTag(58);
-        output.WriteMessage(ImageInputConfig);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -252,9 +226,6 @@ namespace Google.Cloud.AutoML.V1 {
       int size = 0;
       if (dataCase_ == DataOneofCase.ImageBytes) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ImageBytes);
-      }
-      if (dataCase_ == DataOneofCase.ImageInputConfig) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImageInputConfig);
       }
       if (ThumbnailUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ThumbnailUri);
@@ -277,12 +248,6 @@ namespace Google.Cloud.AutoML.V1 {
         case DataOneofCase.ImageBytes:
           ImageBytes = other.ImageBytes;
           break;
-        case DataOneofCase.ImageInputConfig:
-          if (ImageInputConfig == null) {
-            ImageInputConfig = new global::Google.Cloud.AutoML.V1.ImageInputConfig();
-          }
-          ImageInputConfig.MergeFrom(other.ImageInputConfig);
-          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -302,15 +267,6 @@ namespace Google.Cloud.AutoML.V1 {
           }
           case 34: {
             ThumbnailUri = input.ReadString();
-            break;
-          }
-          case 58: {
-            global::Google.Cloud.AutoML.V1.ImageInputConfig subBuilder = new global::Google.Cloud.AutoML.V1.ImageInputConfig();
-            if (dataCase_ == DataOneofCase.ImageInputConfig) {
-              subBuilder.MergeFrom(ImageInputConfig);
-            }
-            input.ReadMessage(subBuilder);
-            ImageInputConfig = subBuilder;
             break;
           }
         }
@@ -377,9 +333,11 @@ namespace Google.Cloud.AutoML.V1 {
     public const int MimeTypeFieldNumber = 2;
     private string mimeType_ = "";
     /// <summary>
-    /// Optional. The format of [content][google.cloud.automl.v1.TextSnippet.content]. Currently the only two allowed
-    /// values are "text/html" and "text/plain". If left blank, the format is
-    /// automatically determined from the type of the uploaded [content][google.cloud.automl.v1.TextSnippet.content].
+    /// Optional. The format of
+    /// [content][google.cloud.automl.v1.TextSnippet.content]. Currently the only
+    /// two allowed values are "text/html" and "text/plain". If left blank, the
+    /// format is automatically determined from the type of the uploaded
+    /// [content][google.cloud.automl.v1.TextSnippet.content].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MimeType {
@@ -1018,7 +976,9 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Describes the layout information of a [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the document.
+      /// Describes the layout information of a
+      /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the
+      /// document.
       /// </summary>
       public sealed partial class Layout : pb::IMessage<Layout> {
         private static readonly pb::MessageParser<Layout> _parser = new pb::MessageParser<Layout>(() => new Layout());
@@ -1062,7 +1022,7 @@ namespace Google.Cloud.AutoML.V1 {
         private global::Google.Cloud.AutoML.V1.TextSegment textSegment_;
         /// <summary>
         /// Text Segment that represents a segment in
-        /// [document_text][google.cloud.automl.v1p1beta.Document.document_text].
+        /// [document_text][google.cloud.automl.v1.Document.document_text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.AutoML.V1.TextSegment TextSegment {
@@ -1076,8 +1036,9 @@ namespace Google.Cloud.AutoML.V1 {
         public const int PageNumberFieldNumber = 2;
         private int pageNumber_;
         /// <summary>
-        /// Page number of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the original document, starts
-        /// from 1.
+        /// Page number of the
+        /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in
+        /// the original document, starts from 1.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int PageNumber {
@@ -1091,13 +1052,14 @@ namespace Google.Cloud.AutoML.V1 {
         public const int BoundingPolyFieldNumber = 3;
         private global::Google.Cloud.AutoML.V1.BoundingPoly boundingPoly_;
         /// <summary>
-        /// The position of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the page.
-        /// Contains exactly 4
+        /// The position of the
+        /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in
+        /// the page. Contains exactly 4
         ///
-        /// [normalized_vertices][google.cloud.automl.v1p1beta.BoundingPoly.normalized_vertices]
+        /// [normalized_vertices][google.cloud.automl.v1.BoundingPoly.normalized_vertices]
         /// and they are connected by edges in the order provided, which will
         /// represent a rectangle parallel to the frame. The
-        /// [NormalizedVertex-s][google.cloud.automl.v1p1beta.NormalizedVertex] are
+        /// [NormalizedVertex-s][google.cloud.automl.v1.NormalizedVertex] are
         /// relative to the page.
         /// Coordinates are based on top-left as point (0,0).
         /// </summary>
@@ -1113,7 +1075,9 @@ namespace Google.Cloud.AutoML.V1 {
         public const int TextSegmentTypeFieldNumber = 4;
         private global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType textSegmentType_ = 0;
         /// <summary>
-        /// The type of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in document.
+        /// The type of the
+        /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in
+        /// document.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType TextSegmentType {
