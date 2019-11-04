@@ -43,7 +43,7 @@ namespace Google.Cloud.Vision.V1.SmokeTests
                             {
                                 Source = new ImageSource
                                 {
-                                    GcsImageUri = "gs://gapic-toolkit/President_Barack_Obama.jpg",
+                                    GcsImageUri = "gs://cloud-samples-data/vision/face_detection/celebrity_recognition/sergey.jpg",
                                 },
                             },
                     Features = {
