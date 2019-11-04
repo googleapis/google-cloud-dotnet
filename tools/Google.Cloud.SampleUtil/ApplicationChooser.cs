@@ -42,7 +42,7 @@ namespace Google.Cloud.SampleUtil
         {
             if (args.Length == 0)
             {
-                throw new NotImplementedException("Interative mode isn't implemented yet.");
+                throw new NotImplementedException("Interactive mode isn't implemented yet.");
             }
             string sample = args[0];
             var assembly = Assembly.GetEntryAssembly();
@@ -53,7 +53,7 @@ namespace Google.Cloud.SampleUtil
                           .DefinedTypes
                           .Select(t => GetEntryPoint(t))
                           .Where(ep => ep != null && ep != assembly.EntryPoint)
-                          .ToDictionary(ep => ep.DeclaringType.Name.Replace("Main", string.Empty), ep => ep);
+                          .ToDictionary(ep => GetSampleSourceFile(ep.DeclaringType.Name));
 
             MethodBase main = samples[sample];
             if (main == null)
@@ -120,6 +120,20 @@ namespace Google.Cloud.SampleUtil
             // Entry point of a sample should always have parameters, but allow one
             // without parameters to be more resilient to sample style changes.
             return stringArrayParameter ?? parameterless;
+        }
+
+        /// <summary>
+        /// Returns the source file name of a sample from the declaring type of it's Main.
+        /// Normally the declaring type should end with "Main", and all we need to do
+        /// is removing it.
+        /// </summary>
+        private static String GetSampleSourceFile(String declaringType)
+        {
+            if (declaringType.EndsWith("Main"))
+            {
+                return declaringType.Substring(0, declaringType.LastIndexOf("Main"));
+            }
+            throw new ArgumentException($"Expecting input to end with `Main`, got {declaringType}");
         }
     }
 }

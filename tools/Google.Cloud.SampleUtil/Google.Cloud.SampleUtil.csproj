@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>Google.Cloud.SampleUtil</PackageId>
+    <IsPackable>false</IsPackable>
     <Description>Utilities for running code samples.</Description>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
