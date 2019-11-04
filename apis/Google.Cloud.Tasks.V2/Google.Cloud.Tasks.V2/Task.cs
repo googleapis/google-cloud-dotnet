@@ -29,32 +29,33 @@ namespace Google.Cloud.Tasks.V2 {
             "bGUvY2xvdWQvdGFza3MvdjIvdGFyZ2V0LnByb3RvGh5nb29nbGUvcHJvdG9i",
             "dWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
             "cHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhxnb29nbGUvYXBpL2Fu",
-            "bm90YXRpb25zLnByb3RvIvgECgRUYXNrEgwKBG5hbWUYASABKAkSTgoXYXBw",
+            "bm90YXRpb25zLnByb3RvIrQFCgRUYXNrEgwKBG5hbWUYASABKAkSTgoXYXBw",
             "X2VuZ2luZV9odHRwX3JlcXVlc3QYAiABKAsyKy5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjIuQXBwRW5naW5lSHR0cFJlcXVlc3RIABIxCg1zY2hlZHVsZV90aW1l",
-            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtjcmVhdGVf",
-            "dGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoRZGlz",
-            "cGF0Y2hfZGVhZGxpbmUYBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SFgoOZGlzcGF0Y2hfY291bnQYByABKAUSFgoOcmVzcG9uc2VfY291bnQY",
-            "CCABKAUSNQoNZmlyc3RfYXR0ZW1wdBgJIAEoCzIeLmdvb2dsZS5jbG91ZC50",
-            "YXNrcy52Mi5BdHRlbXB0EjQKDGxhc3RfYXR0ZW1wdBgKIAEoCzIeLmdvb2ds",
-            "ZS5jbG91ZC50YXNrcy52Mi5BdHRlbXB0Ei4KBHZpZXcYCyABKA4yIC5nb29n",
-            "bGUuY2xvdWQudGFza3MudjIuVGFzay5WaWV3IjEKBFZpZXcSFAoQVklFV19V",
-            "TlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVMTBACOmjqQWUKHmNsb3Vk",
-            "dGFza3MuZ29vZ2xlYXBpcy5jb20vVGFzaxJDcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3F1ZXVlcy97cXVldWV9L3Rhc2tzL3t0",
-            "YXNrfUIOCgxtZXNzYWdlX3R5cGUizwEKB0F0dGVtcHQSMQoNc2NoZWR1bGVf",
-            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNZGlz",
-            "cGF0Y2hfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "MQoNcmVzcG9uc2VfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASKwoPcmVzcG9uc2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXNCZAoZY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MkIJVGFza1Byb3Rv",
-            "UAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvdGFza3MvdjI7dGFza3NiBnByb3RvMw=="));
+            "a3MudjIuQXBwRW5naW5lSHR0cFJlcXVlc3RIABI6CgxodHRwX3JlcXVlc3QY",
+            "AyABKAsyIi5nb29nbGUuY2xvdWQudGFza3MudjIuSHR0cFJlcXVlc3RIABIx",
+            "Cg1zY2hlZHVsZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIvCgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASNAoRZGlzcGF0Y2hfZGVhZGxpbmUYBiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SFgoOZGlzcGF0Y2hfY291bnQYByABKAUSFgoO",
+            "cmVzcG9uc2VfY291bnQYCCABKAUSNQoNZmlyc3RfYXR0ZW1wdBgJIAEoCzIe",
+            "Lmdvb2dsZS5jbG91ZC50YXNrcy52Mi5BdHRlbXB0EjQKDGxhc3RfYXR0ZW1w",
+            "dBgKIAEoCzIeLmdvb2dsZS5jbG91ZC50YXNrcy52Mi5BdHRlbXB0Ei4KBHZp",
+            "ZXcYCyABKA4yIC5nb29nbGUuY2xvdWQudGFza3MudjIuVGFzay5WaWV3IjEK",
+            "BFZpZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVM",
+            "TBACOmjqQWUKHmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vVGFzaxJDcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3F1ZXVlcy97",
+            "cXVldWV9L3Rhc2tzL3t0YXNrfUIOCgxtZXNzYWdlX3R5cGUizwEKB0F0dGVt",
+            "cHQSMQoNc2NoZWR1bGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASMQoNZGlzcGF0Y2hfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASMQoNcmVzcG9uc2VfdGltZRgDIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoPcmVzcG9uc2Vfc3RhdHVzGAQgASgL",
+            "MhIuZ29vZ2xlLnJwYy5TdGF0dXNCZAoZY29tLmdvb2dsZS5jbG91ZC50YXNr",
+            "cy52MkIJVGFza1Byb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvdGFza3MvdjI7dGFza3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Task), global::Google.Cloud.Tasks.V2.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "MessageType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2.Task.Types.View) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Task), global::Google.Cloud.Tasks.V2.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "HttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "MessageType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2.Task.Types.View) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Attempt), global::Google.Cloud.Tasks.V2.Attempt.Parser, new[]{ "ScheduleTime", "DispatchTime", "ResponseTime", "ResponseStatus" }, null, null, null)
           }));
     }
@@ -102,6 +103,9 @@ namespace Google.Cloud.Tasks.V2 {
       switch (other.MessageTypeCase) {
         case MessageTypeOneofCase.AppEngineHttpRequest:
           AppEngineHttpRequest = other.AppEngineHttpRequest.Clone();
+          break;
+        case MessageTypeOneofCase.HttpRequest:
+          HttpRequest = other.HttpRequest.Clone();
           break;
       }
 
@@ -162,6 +166,22 @@ namespace Google.Cloud.Tasks.V2 {
       }
     }
 
+    /// <summary>Field number for the "http_request" field.</summary>
+    public const int HttpRequestFieldNumber = 3;
+    /// <summary>
+    /// HTTP request that is sent to the worker.
+    ///
+    /// An HTTP task is a task that has [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Tasks.V2.HttpRequest HttpRequest {
+      get { return messageTypeCase_ == MessageTypeOneofCase.HttpRequest ? (global::Google.Cloud.Tasks.V2.HttpRequest) messageType_ : null; }
+      set {
+        messageType_ = value;
+        messageTypeCase_ = value == null ? MessageTypeOneofCase.None : MessageTypeOneofCase.HttpRequest;
+      }
+    }
+
     /// <summary>Field number for the "schedule_time" field.</summary>
     public const int ScheduleTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp scheduleTime_;
@@ -209,6 +229,9 @@ namespace Google.Cloud.Tasks.V2 {
     /// requests.
     ///
     /// The default and maximum values depend on the type of request:
+    ///
+    /// * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10 minutes. The deadline
+    ///   must be in the interval [15 seconds, 30 minutes].
     ///
     /// * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0 indicates that the
     ///   request has the default deadline. The default deadline depends on the
@@ -317,6 +340,7 @@ namespace Google.Cloud.Tasks.V2 {
     public enum MessageTypeOneofCase {
       None = 0,
       AppEngineHttpRequest = 2,
+      HttpRequest = 3,
     }
     private MessageTypeOneofCase messageTypeCase_ = MessageTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -345,6 +369,7 @@ namespace Google.Cloud.Tasks.V2 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(AppEngineHttpRequest, other.AppEngineHttpRequest)) return false;
+      if (!object.Equals(HttpRequest, other.HttpRequest)) return false;
       if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(DispatchDeadline, other.DispatchDeadline)) return false;
@@ -362,6 +387,7 @@ namespace Google.Cloud.Tasks.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (messageTypeCase_ == MessageTypeOneofCase.AppEngineHttpRequest) hash ^= AppEngineHttpRequest.GetHashCode();
+      if (messageTypeCase_ == MessageTypeOneofCase.HttpRequest) hash ^= HttpRequest.GetHashCode();
       if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (dispatchDeadline_ != null) hash ^= DispatchDeadline.GetHashCode();
@@ -391,6 +417,10 @@ namespace Google.Cloud.Tasks.V2 {
       if (messageTypeCase_ == MessageTypeOneofCase.AppEngineHttpRequest) {
         output.WriteRawTag(18);
         output.WriteMessage(AppEngineHttpRequest);
+      }
+      if (messageTypeCase_ == MessageTypeOneofCase.HttpRequest) {
+        output.WriteRawTag(26);
+        output.WriteMessage(HttpRequest);
       }
       if (scheduleTime_ != null) {
         output.WriteRawTag(34);
@@ -437,6 +467,9 @@ namespace Google.Cloud.Tasks.V2 {
       }
       if (messageTypeCase_ == MessageTypeOneofCase.AppEngineHttpRequest) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppEngineHttpRequest);
+      }
+      if (messageTypeCase_ == MessageTypeOneofCase.HttpRequest) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpRequest);
       }
       if (scheduleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleTime);
@@ -522,6 +555,12 @@ namespace Google.Cloud.Tasks.V2 {
           }
           AppEngineHttpRequest.MergeFrom(other.AppEngineHttpRequest);
           break;
+        case MessageTypeOneofCase.HttpRequest:
+          if (HttpRequest == null) {
+            HttpRequest = new global::Google.Cloud.Tasks.V2.HttpRequest();
+          }
+          HttpRequest.MergeFrom(other.HttpRequest);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -546,6 +585,15 @@ namespace Google.Cloud.Tasks.V2 {
             }
             input.ReadMessage(subBuilder);
             AppEngineHttpRequest = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Tasks.V2.HttpRequest subBuilder = new global::Google.Cloud.Tasks.V2.HttpRequest();
+            if (messageTypeCase_ == MessageTypeOneofCase.HttpRequest) {
+              subBuilder.MergeFrom(HttpRequest);
+            }
+            input.ReadMessage(subBuilder);
+            HttpRequest = subBuilder;
             break;
           }
           case 34: {
