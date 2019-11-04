@@ -909,7 +909,7 @@
     "serviceYaml": "cloudtasks_v2.yaml",
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
-    "version": "1.1.0-beta01",
+    "version": "1.1.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Tasks API (v2), which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
