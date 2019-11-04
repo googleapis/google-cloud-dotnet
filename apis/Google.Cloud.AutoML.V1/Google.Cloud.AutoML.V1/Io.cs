@@ -33,33 +33,30 @@ namespace Google.Cloud.AutoML.V1 {
             "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCAoGc291cmNl",
             "ImEKF0JhdGNoUHJlZGljdElucHV0Q29uZmlnEjwKCmdjc19zb3VyY2UYASAB",
             "KAsyIS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkdjc1NvdXJjZUID4EECSABC",
-            "CAoGc291cmNlIkkKEEltYWdlSW5wdXRDb25maWcSNQoKZ2NzX3NvdXJjZRgB",
-            "IAEoCzIhLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2NzU291cmNlIkwKE0Rv",
-            "Y3VtZW50SW5wdXRDb25maWcSNQoKZ2NzX3NvdXJjZRgBIAEoCzIhLmdvb2ds",
-            "ZS5jbG91ZC5hdXRvbWwudjEuR2NzU291cmNlImUKDE91dHB1dENvbmZpZxJG",
-            "Cg9nY3NfZGVzdGluYXRpb24YASABKAsyJi5nb29nbGUuY2xvdWQuYXV0b21s",
-            "LnYxLkdjc0Rlc3RpbmF0aW9uQgPgQQJIAEINCgtkZXN0aW5hdGlvbiJxChhC",
-            "YXRjaFByZWRpY3RPdXRwdXRDb25maWcSRgoPZ2NzX2Rlc3RpbmF0aW9uGAEg",
-            "ASgLMiYuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5HY3NEZXN0aW5hdGlvbkID",
-            "4EECSABCDQoLZGVzdGluYXRpb24iggIKF01vZGVsRXhwb3J0T3V0cHV0Q29u",
-            "ZmlnEkYKD2djc19kZXN0aW5hdGlvbhgBIAEoCzImLmdvb2dsZS5jbG91ZC5h",
-            "dXRvbWwudjEuR2NzRGVzdGluYXRpb25CA+BBAkgAEhQKDG1vZGVsX2Zvcm1h",
-            "dBgEIAEoCRJLCgZwYXJhbXMYAiADKAsyOy5nb29nbGUuY2xvdWQuYXV0b21s",
-            "LnYxLk1vZGVsRXhwb3J0T3V0cHV0Q29uZmlnLlBhcmFtc0VudHJ5Gi0KC1Bh",
-            "cmFtc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCDQoL",
-            "ZGVzdGluYXRpb24iJAoJR2NzU291cmNlEhcKCmlucHV0X3VyaXMYASADKAlC",
-            "A+BBAiIwCg5HY3NEZXN0aW5hdGlvbhIeChFvdXRwdXRfdXJpX3ByZWZpeBgB",
-            "IAEoCUID4EECQqoBChpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjxn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1",
-            "dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29v",
-            "Z2xlXENsb3VkXEF1dG9NTFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6",
-            "VjFiBnByb3RvMw=="));
+            "CAoGc291cmNlIkwKE0RvY3VtZW50SW5wdXRDb25maWcSNQoKZ2NzX3NvdXJj",
+            "ZRgBIAEoCzIhLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2NzU291cmNlImUK",
+            "DE91dHB1dENvbmZpZxJGCg9nY3NfZGVzdGluYXRpb24YASABKAsyJi5nb29n",
+            "bGUuY2xvdWQuYXV0b21sLnYxLkdjc0Rlc3RpbmF0aW9uQgPgQQJIAEINCgtk",
+            "ZXN0aW5hdGlvbiJxChhCYXRjaFByZWRpY3RPdXRwdXRDb25maWcSRgoPZ2Nz",
+            "X2Rlc3RpbmF0aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5H",
+            "Y3NEZXN0aW5hdGlvbkID4EECSABCDQoLZGVzdGluYXRpb24iggIKF01vZGVs",
+            "RXhwb3J0T3V0cHV0Q29uZmlnEkYKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIm",
+            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2NzRGVzdGluYXRpb25CA+BBAkgA",
+            "EhQKDG1vZGVsX2Zvcm1hdBgEIAEoCRJLCgZwYXJhbXMYAiADKAsyOy5nb29n",
+            "bGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsRXhwb3J0T3V0cHV0Q29uZmlnLlBh",
+            "cmFtc0VudHJ5Gi0KC1BhcmFtc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAFCDQoLZGVzdGluYXRpb24iJAoJR2NzU291cmNlEhcKCmlu",
+            "cHV0X3VyaXMYASADKAlCA+BBAiIwCg5HY3NEZXN0aW5hdGlvbhIeChFvdXRw",
+            "dXRfdXJpX3ByZWZpeBgBIAEoCUID4EECQqoBChpjb20uZ29vZ2xlLmNsb3Vk",
+            "LmF1dG9tbC52MVABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL2F1dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQu",
+            "QXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9NTFxWMeoCGUdvb2dsZTo6",
+            "Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.InputConfig), global::Google.Cloud.AutoML.V1.InputConfig.Parser, new[]{ "GcsSource", "Params" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictInputConfig), global::Google.Cloud.AutoML.V1.BatchPredictInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageInputConfig), global::Google.Cloud.AutoML.V1.ImageInputConfig.Parser, new[]{ "GcsSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentInputConfig), global::Google.Cloud.AutoML.V1.DocumentInputConfig.Parser, new[]{ "GcsSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.OutputConfig), global::Google.Cloud.AutoML.V1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig), global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
@@ -997,148 +994,6 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Input configuration of an [Document][google.cloud.automl.v1.Image].
-  /// </summary>
-  public sealed partial class ImageInputConfig : pb::IMessage<ImageInputConfig> {
-    private static readonly pb::MessageParser<ImageInputConfig> _parser = new pb::MessageParser<ImageInputConfig>(() => new ImageInputConfig());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ImageInputConfig> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ImageInputConfig() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ImageInputConfig(ImageInputConfig other) : this() {
-      gcsSource_ = other.gcsSource_ != null ? other.gcsSource_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ImageInputConfig Clone() {
-      return new ImageInputConfig(this);
-    }
-
-    /// <summary>Field number for the "gcs_source" field.</summary>
-    public const int GcsSourceFieldNumber = 1;
-    private global::Google.Cloud.AutoML.V1.GcsSource gcsSource_;
-    /// <summary>
-    /// The Google Cloud Storage location of the document file. Only a single path
-    /// should be given.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.AutoML.V1.GcsSource GcsSource {
-      get { return gcsSource_; }
-      set {
-        gcsSource_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ImageInputConfig);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ImageInputConfig other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(GcsSource, other.GcsSource)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (gcsSource_ != null) hash ^= GcsSource.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (gcsSource_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(GcsSource);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (gcsSource_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ImageInputConfig other) {
-      if (other == null) {
-        return;
-      }
-      if (other.gcsSource_ != null) {
-        if (gcsSource_ == null) {
-          GcsSource = new global::Google.Cloud.AutoML.V1.GcsSource();
-        }
-        GcsSource.MergeFrom(other.GcsSource);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (gcsSource_ == null) {
-              GcsSource = new global::Google.Cloud.AutoML.V1.GcsSource();
-            }
-            input.ReadMessage(GcsSource);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
   /// Input configuration of a [Document][google.cloud.automl.v1.Document].
   /// </summary>
   public sealed partial class DocumentInputConfig : pb::IMessage<DocumentInputConfig> {
@@ -1149,7 +1004,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1364,7 +1219,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1632,7 +1487,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1804,7 +1659,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2064,7 +1919,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2193,7 +2048,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AutoML.V1.IoReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

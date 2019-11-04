@@ -353,15 +353,15 @@ namespace Google.Cloud.AutoML.V1 {
     /// Empty if AutoML does not preprocess the input example.
     /// * For Text Extraction:
     ///   If the input is a .pdf file, the OCR'ed text will be provided in
-    ///   [document_text][google.cloud.automl.v1p1beta.Document.document_text].
+    ///   [document_text][google.cloud.automl.v1.Document.document_text].
     ///
     /// * For Text Classification:
     ///   If the input is a .pdf file, the OCR'ed trucated text will be provided in
-    ///   [document_text][google.cloud.automl.v1p1beta.Document.document_text].
+    ///   [document_text][google.cloud.automl.v1.Document.document_text].
     ///
     /// * For Text Sentiment:
     ///   If the input is a .pdf file, the OCR'ed trucated text will be provided in
-    ///   [document_text][google.cloud.automl.v1p1beta.Document.document_text].
+    ///   [document_text][google.cloud.automl.v1.Document.document_text].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.ExamplePayload PreprocessedInput {
