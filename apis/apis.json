@@ -435,7 +435,7 @@
     "serviceYaml": "firestore_v1.yaml",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com",
-    "version": "1.1.0-beta01",
+    "version": "1.1.0-beta02",
     "type": "grpc",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.1;net452",
