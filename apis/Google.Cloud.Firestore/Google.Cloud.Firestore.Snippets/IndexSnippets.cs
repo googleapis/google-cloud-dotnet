@@ -68,5 +68,19 @@ namespace Google.Cloud.Firestore.Snippets
             }
             // End sample
         }
+
+        [Fact]
+        public void DetectEmulator()
+        {
+            string projectId = _fixture.ProjectId;
+            // Sample: EmulatorDetection
+            FirestoreDb db = new FirestoreDbBuilder
+            {
+                ProjectId = projectId,
+                EmulatorDetection = EmulatorDetection.ProductionOrEmulator
+            }.Build();
+            // Use db as normal
+            // End sample
+        }
     }
 }
