@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.IntegrationTests.Models;
+using Google.Cloud.Firestore.V1;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -63,7 +66,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             // Currently, only the default database is supported... so we create all our collections with a randomly-generated prefix.
             // When multiple databases are supported, we'll create a new one per test run.
             CollectionPrefix = IdGenerator.FromGuid(prefix: "test-");
-            FirestoreDb = FirestoreDb.Create(ProjectId);
+            FirestoreDb = new FirestoreDbBuilder { ProjectId = ProjectId, EmulatorDetection = EmulatorDetection.ProductionOrEmulator }.Build();
             NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
             HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "-high-scores");
             ArrayQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-array-query");
