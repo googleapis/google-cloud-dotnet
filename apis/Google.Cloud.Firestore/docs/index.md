@@ -21,3 +21,29 @@ From there, you can create, fetch and modify documents, and run queries.
 {{sample:Index.GettingStarted}}
 
 See the [user guide](userguide.md) for more samples.
+
+# Connecting to the emulator
+
+To connect to the [Firestore
+Emulator](https://cloud.google.com/sdk/gcloud/reference/beta/emulators/firestore/),
+you need to:
+
+- Connect to the emulator endpoint
+- Use `ChannelCredentials.Insecure` as the channel credentials
+- Specify an "Authorization: Bearer owner" header on each request
+
+As of version 1.1.0-beta02, the library has support for detecting
+the emulator via the environment variable and connecting to it
+automatically, if requested. This is configured via
+`FirestoreDbBuilder`, which can also be used to configure custom
+credentials easily.
+
+The following code creates a `FirestoreDb` which will use the
+emulator when the environment variables are present, but will
+otherwise connect to the production environment.
+
+{{sample:Index.EmulatorDetection}}
+
+See the
+[EmulatorDetection](obj/api/Google.Cloud.Firestore.EmulatorDetection.yml)
+enum for details of the other possible values.
