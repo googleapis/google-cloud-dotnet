@@ -37,7 +37,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "Google.Cloud.AnalyzersTesting", @"..\..\..\tools\Google.Cloud.AnalyzersTesting\Google.Cloud.AnalyzersTesting.csproj" },
             { "Google.Cloud.ClientTesting", @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" },
             { "Google.Cloud.Diagnostics.Common.Tests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" },
-            { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
+            { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" },
+            { "Google.Cloud.SampleUtil", @"..\..\..\tools\Google.Cloud.SampleUtil\Google.Cloud.SampleUtil.csproj"}
         };
 
         private const string DefaultRestTargetFrameworks = "netstandard1.3;netstandard2.0;net45";
@@ -93,7 +94,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
         {
-            { "CommandLineParser", "2.6.0" }
+            { "CommandLineParser", "2.6.0" },
+            { "Google.Cloud.SampleUtil", "project"}
         };
 
         private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
@@ -488,7 +490,8 @@ shell.run(
                     new XElement("TargetFramework", "netcoreapp2.1"),
                     new XElement("OutputType", "Exe"),
                     new XElement("LangVersion", "latest"),
-                    new XElement("IsPackable", false));
+                    new XElement("IsPackable", false),
+                    new XElement("StartupObject", api.Id + ".Samples.Program"));
 
             string project = Path.GetFileName(directory);
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
