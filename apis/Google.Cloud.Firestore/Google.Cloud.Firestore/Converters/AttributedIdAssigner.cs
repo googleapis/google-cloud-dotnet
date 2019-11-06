@@ -81,8 +81,7 @@ namespace Google.Cloud.Firestore.Converters
             foreach (var property in typeInfo.GetProperties(BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
             {
                 string typeName = property.DeclaringType.FullName;
-                FirestoreDocumentIdAttribute idAttribute = property.GetCustomAttribute<FirestoreDocumentIdAttribute>(inherit: true);
-                if (idAttribute == null)
+                if (!property.IsDefined(typeof(FirestoreDocumentIdAttribute), inherit: true))
                 {
                     continue;
                 }
