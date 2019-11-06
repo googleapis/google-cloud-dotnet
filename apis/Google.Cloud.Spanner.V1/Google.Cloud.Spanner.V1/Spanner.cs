@@ -398,7 +398,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The request for [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
+  /// The request for
+  /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
   /// </summary>
   public sealed partial class BatchCreateSessionsRequest : pb::IMessage<BatchCreateSessionsRequest> {
     private static readonly pb::MessageParser<BatchCreateSessionsRequest> _parser = new pb::MessageParser<BatchCreateSessionsRequest>(() => new BatchCreateSessionsRequest());
@@ -472,7 +473,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// The API may return fewer than the requested number of sessions. If a
     /// specific number of sessions are desired, the client can make additional
     /// calls to BatchCreateSessions (adjusting
-    /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+    /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+    /// as necessary).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SessionCount {
@@ -605,7 +607,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The response for [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
+  /// The response for
+  /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
   /// </summary>
   public sealed partial class BatchCreateSessionsResponse : pb::IMessage<BatchCreateSessionsResponse> {
     private static readonly pb::MessageParser<BatchCreateSessionsResponse> _parser = new pb::MessageParser<BatchCreateSessionsResponse>(() => new BatchCreateSessionsResponse());
@@ -1182,7 +1185,8 @@ namespace Google.Cloud.Spanner.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// If non-empty, `page_token` should contain a
-    /// [next_page_token][google.spanner.v1.ListSessionsResponse.next_page_token] from a previous
+    /// [next_page_token][google.spanner.v1.ListSessionsResponse.next_page_token]
+    /// from a previous
     /// [ListSessionsResponse][google.spanner.v1.ListSessionsResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1404,8 +1408,8 @@ namespace Google.Cloud.Spanner.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// `next_page_token` can be sent in a subsequent
-    /// [ListSessions][google.spanner.v1.Spanner.ListSessions] call to fetch more of the matching
-    /// sessions.
+    /// [ListSessions][google.spanner.v1.Spanner.ListSessions] call to fetch more
+    /// of the matching sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1773,7 +1777,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// It is not always possible for Cloud Spanner to infer the right SQL type
     /// from a JSON value.  For example, values of type `BYTES` and values
-    /// of type `STRING` both appear in [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
+    /// of type `STRING` both appear in
+    /// [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
     ///
     /// In these cases, `param_types` can be used to specify the exact
     /// SQL type for some or all of the SQL statement parameters. See the
@@ -1791,10 +1796,10 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// If this request is resuming a previously interrupted SQL statement
     /// execution, `resume_token` should be copied from the last
-    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
-    /// enables the new SQL statement execution to resume where the last one left
-    /// off. The rest of the request parameters must exactly match the
-    /// request that yielded this token.
+    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the
+    /// interruption. Doing this enables the new SQL statement execution to resume
+    /// where the last one left off. The rest of the request parameters must
+    /// exactly match the request that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString ResumeToken {
@@ -1809,8 +1814,11 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode queryMode_ = 0;
     /// <summary>
     /// Used to control the amount of debugging information returned in
-    /// [ResultSetStats][google.spanner.v1.ResultSetStats]. If [partition_token][google.spanner.v1.ExecuteSqlRequest.partition_token] is set, [query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] can only
-    /// be set to [QueryMode.NORMAL][google.spanner.v1.ExecuteSqlRequest.QueryMode.NORMAL].
+    /// [ResultSetStats][google.spanner.v1.ResultSetStats]. If
+    /// [partition_token][google.spanner.v1.ExecuteSqlRequest.partition_token] is
+    /// set, [query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] can only
+    /// be set to
+    /// [QueryMode.NORMAL][google.spanner.v1.ExecuteSqlRequest.QueryMode.NORMAL].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode QueryMode {
@@ -2182,10 +2190,10 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement> statements_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement>();
     /// <summary>
-    /// Required. The list of statements to execute in this batch. Statements are executed
-    /// serially, such that the effects of statement `i` are visible to statement
-    /// `i+1`. Each statement must be a DML statement. Execution stops at the
-    /// first failed statement; the remaining statements are not executed.
+    /// Required. The list of statements to execute in this batch. Statements are
+    /// executed serially, such that the effects of statement `i` are visible to
+    /// statement `i+1`. Each statement must be a DML statement. Execution stops at
+    /// the first failed statement; the remaining statements are not executed.
     ///
     /// Callers must provide at least one statement.
     /// </summary>
@@ -2198,9 +2206,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SeqnoFieldNumber = 4;
     private long seqno_;
     /// <summary>
-    /// Required. A per-transaction sequence number used to identify this request. This field
-    /// makes each request idempotent such that if the request is received multiple
-    /// times, at most one will succeed.
+    /// Required. A per-transaction sequence number used to identify this request.
+    /// This field makes each request idempotent such that if the request is
+    /// received multiple times, at most one will succeed.
     ///
     /// The sequence number must be monotonically increasing within the
     /// transaction. If a request arrives for the first time with an out-of-order
@@ -2434,7 +2442,9 @@ namespace Google.Cloud.Spanner.V1 {
         /// <summary>
         /// It is not always possible for Cloud Spanner to infer the right SQL type
         /// from a JSON value.  For example, values of type `BYTES` and values
-        /// of type `STRING` both appear in [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as JSON strings.
+        /// of type `STRING` both appear in
+        /// [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as
+        /// JSON strings.
         ///
         /// In these cases, `param_types` can be used to specify the exact
         /// SQL type for some or all of the SQL statement parameters. See the
@@ -2567,30 +2577,37 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The response for [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]. Contains a list
-  /// of [ResultSet][google.spanner.v1.ResultSet] messages, one for each DML statement that has successfully
-  /// executed, in the same order as the statements in the request. If a statement
-  /// fails, the status in the response body identifies the cause of the failure.
+  /// The response for
+  /// [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]. Contains a list
+  /// of [ResultSet][google.spanner.v1.ResultSet] messages, one for each DML
+  /// statement that has successfully executed, in the same order as the statements
+  /// in the request. If a statement fails, the status in the response body
+  /// identifies the cause of the failure.
   ///
   /// To check for DML statements that failed, use the following approach:
   ///
-  /// 1. Check the status in the response message. The [google.rpc.Code][google.rpc.Code] enum
+  /// 1. Check the status in the response message. The
+  /// [google.rpc.Code][google.rpc.Code] enum
   ///    value `OK` indicates that all statements were executed successfully.
   /// 2. If the status was not `OK`, check the number of result sets in the
-  ///    response. If the response contains `N` [ResultSet][google.spanner.v1.ResultSet] messages, then
-  ///    statement `N+1` in the request failed.
+  ///    response. If the response contains `N`
+  ///    [ResultSet][google.spanner.v1.ResultSet] messages, then statement `N+1` in
+  ///    the request failed.
   ///
   /// Example 1:
   ///
   /// * Request: 5 DML statements, all executed successfully.
-  /// * Response: 5 [ResultSet][google.spanner.v1.ResultSet] messages, with the status `OK`.
+  /// * Response: 5 [ResultSet][google.spanner.v1.ResultSet] messages, with the
+  /// status `OK`.
   ///
   /// Example 2:
   ///
   /// * Request: 5 DML statements. The third statement has a syntax error.
-  /// * Response: 2 [ResultSet][google.spanner.v1.ResultSet] messages, and a syntax error (`INVALID_ARGUMENT`)
-  ///   status. The number of [ResultSet][google.spanner.v1.ResultSet] messages indicates that the third
-  ///   statement failed, and the fourth and fifth statements were not executed.
+  /// * Response: 2 [ResultSet][google.spanner.v1.ResultSet] messages, and a syntax
+  /// error (`INVALID_ARGUMENT`)
+  ///   status. The number of [ResultSet][google.spanner.v1.ResultSet] messages
+  ///   indicates that the third statement failed, and the fourth and fifth
+  ///   statements were not executed.
   /// </summary>
   public sealed partial class ExecuteBatchDmlResponse : pb::IMessage<ExecuteBatchDmlResponse> {
     private static readonly pb::MessageParser<ExecuteBatchDmlResponse> _parser = new pb::MessageParser<ExecuteBatchDmlResponse>(() => new ExecuteBatchDmlResponse());
@@ -2633,13 +2650,15 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.ResultSet.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet> resultSets_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet>();
     /// <summary>
-    /// One [ResultSet][google.spanner.v1.ResultSet] for each statement in the request that ran successfully,
-    /// in the same order as the statements in the request. Each [ResultSet][google.spanner.v1.ResultSet] does
-    /// not contain any rows. The [ResultSetStats][google.spanner.v1.ResultSetStats] in each [ResultSet][google.spanner.v1.ResultSet] contain
-    /// the number of rows modified by the statement.
+    /// One [ResultSet][google.spanner.v1.ResultSet] for each statement in the
+    /// request that ran successfully, in the same order as the statements in the
+    /// request. Each [ResultSet][google.spanner.v1.ResultSet] does not contain any
+    /// rows. The [ResultSetStats][google.spanner.v1.ResultSetStats] in each
+    /// [ResultSet][google.spanner.v1.ResultSet] contain the number of rows
+    /// modified by the statement.
     ///
-    /// Only the first [ResultSet][google.spanner.v1.ResultSet] in the response contains valid
-    /// [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
+    /// Only the first [ResultSet][google.spanner.v1.ResultSet] in the response
+    /// contains valid [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet> ResultSets {
@@ -3014,15 +3033,16 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SqlFieldNumber = 3;
     private string sql_ = "";
     /// <summary>
-    /// Required. The query request to generate partitions for. The request will fail if
-    /// the query is not root partitionable. The query plan of a root
+    /// Required. The query request to generate partitions for. The request will
+    /// fail if the query is not root partitionable. The query plan of a root
     /// partitionable query has a single distributed union operator. A distributed
     /// union operator conceptually divides one or more tables into multiple
     /// splits, remotely evaluates a subquery independently on each split, and
     /// then unions all results.
     ///
     /// This must not contain DML commands, such as INSERT, UPDATE, or
-    /// DELETE. Use [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] with a
+    /// DELETE. Use
+    /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] with a
     /// PartitionedDml transaction for large, partition-friendly DML operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3066,7 +3086,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// It is not always possible for Cloud Spanner to infer the right SQL type
     /// from a JSON value.  For example, values of type `BYTES` and values
-    /// of type `STRING` both appear in [params][google.spanner.v1.PartitionQueryRequest.params] as JSON strings.
+    /// of type `STRING` both appear in
+    /// [params][google.spanner.v1.PartitionQueryRequest.params] as JSON strings.
     ///
     /// In these cases, `param_types` can be used to specify the exact
     /// SQL type for some or all of the SQL query parameters. See the
@@ -3357,9 +3378,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int IndexFieldNumber = 4;
     private string index_ = "";
     /// <summary>
-    /// If non-empty, the name of an index on [table][google.spanner.v1.PartitionReadRequest.table]. This index is
-    /// used instead of the table primary key when interpreting [key_set][google.spanner.v1.PartitionReadRequest.key_set]
-    /// and sorting result rows. See [key_set][google.spanner.v1.PartitionReadRequest.key_set] for further information.
+    /// If non-empty, the name of an index on
+    /// [table][google.spanner.v1.PartitionReadRequest.table]. This index is used
+    /// instead of the table primary key when interpreting
+    /// [key_set][google.spanner.v1.PartitionReadRequest.key_set] and sorting
+    /// result rows. See [key_set][google.spanner.v1.PartitionReadRequest.key_set]
+    /// for further information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Index {
@@ -3375,8 +3399,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The columns of [table][google.spanner.v1.PartitionReadRequest.table] to be returned for each row matching
-    /// this request.
+    /// The columns of [table][google.spanner.v1.PartitionReadRequest.table] to be
+    /// returned for each row matching this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Columns {
@@ -3388,8 +3412,11 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.KeySet keySet_;
     /// <summary>
     /// Required. `key_set` identifies the rows to be yielded. `key_set` names the
-    /// primary keys of the rows in [table][google.spanner.v1.PartitionReadRequest.table] to be yielded, unless [index][google.spanner.v1.PartitionReadRequest.index]
-    /// is present. If [index][google.spanner.v1.PartitionReadRequest.index] is present, then [key_set][google.spanner.v1.PartitionReadRequest.key_set] instead names
+    /// primary keys of the rows in
+    /// [table][google.spanner.v1.PartitionReadRequest.table] to be yielded, unless
+    /// [index][google.spanner.v1.PartitionReadRequest.index] is present. If
+    /// [index][google.spanner.v1.PartitionReadRequest.index] is present, then
+    /// [key_set][google.spanner.v1.PartitionReadRequest.key_set] instead names
     /// index keys in [index][google.spanner.v1.PartitionReadRequest.index].
     ///
     /// It is not an error for the `key_set` to name rows that do not
@@ -4004,9 +4031,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int IndexFieldNumber = 4;
     private string index_ = "";
     /// <summary>
-    /// If non-empty, the name of an index on [table][google.spanner.v1.ReadRequest.table]. This index is
-    /// used instead of the table primary key when interpreting [key_set][google.spanner.v1.ReadRequest.key_set]
-    /// and sorting result rows. See [key_set][google.spanner.v1.ReadRequest.key_set] for further information.
+    /// If non-empty, the name of an index on
+    /// [table][google.spanner.v1.ReadRequest.table]. This index is used instead of
+    /// the table primary key when interpreting
+    /// [key_set][google.spanner.v1.ReadRequest.key_set] and sorting result rows.
+    /// See [key_set][google.spanner.v1.ReadRequest.key_set] for further
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Index {
@@ -4022,8 +4052,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. The columns of [table][google.spanner.v1.ReadRequest.table] to be returned for each row matching
-    /// this request.
+    /// Required. The columns of [table][google.spanner.v1.ReadRequest.table] to be
+    /// returned for each row matching this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Columns {
@@ -4035,14 +4065,18 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.KeySet keySet_;
     /// <summary>
     /// Required. `key_set` identifies the rows to be yielded. `key_set` names the
-    /// primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to be yielded, unless [index][google.spanner.v1.ReadRequest.index]
-    /// is present. If [index][google.spanner.v1.ReadRequest.index] is present, then [key_set][google.spanner.v1.ReadRequest.key_set] instead names
-    /// index keys in [index][google.spanner.v1.ReadRequest.index].
+    /// primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to
+    /// be yielded, unless [index][google.spanner.v1.ReadRequest.index] is present.
+    /// If [index][google.spanner.v1.ReadRequest.index] is present, then
+    /// [key_set][google.spanner.v1.ReadRequest.key_set] instead names index keys
+    /// in [index][google.spanner.v1.ReadRequest.index].
     ///
-    /// If the [partition_token][google.spanner.v1.ReadRequest.partition_token] field is empty, rows are yielded
-    /// in table primary key order (if [index][google.spanner.v1.ReadRequest.index] is empty) or index key order
-    /// (if [index][google.spanner.v1.ReadRequest.index] is non-empty).  If the [partition_token][google.spanner.v1.ReadRequest.partition_token] field is not
-    /// empty, rows will be yielded in an unspecified order.
+    /// If the [partition_token][google.spanner.v1.ReadRequest.partition_token]
+    /// field is empty, rows are yielded in table primary key order (if
+    /// [index][google.spanner.v1.ReadRequest.index] is empty) or index key order
+    /// (if [index][google.spanner.v1.ReadRequest.index] is non-empty).  If the
+    /// [partition_token][google.spanner.v1.ReadRequest.partition_token] field is
+    /// not empty, rows will be yielded in an unspecified order.
     ///
     /// It is not an error for the `key_set` to name rows that do not
     /// exist in the database. Read yields nothing for nonexistent rows.
@@ -4077,9 +4111,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// If this request is resuming a previously interrupted read,
     /// `resume_token` should be copied from the last
-    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
-    /// enables the new read to resume where the last read left off. The
-    /// rest of the request parameters must exactly match the request
+    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the
+    /// interruption. Doing this enables the new read to resume where the last read
+    /// left off. The rest of the request parameters must exactly match the request
     /// that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4325,7 +4359,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The request for [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].
+  /// The request for
+  /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
