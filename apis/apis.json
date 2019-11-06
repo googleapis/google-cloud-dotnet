@@ -351,31 +351,6 @@
   },
 
   {
-    "id": "Google.Cloud.EntityFrameworkCore.Spanner",
-    "version": "1.0.0-alpha12",
-    "type": "other",
-    "targetFrameworks": "netstandard2.0",
-    "testTargetFrameworks": "netcoreapp2.0;net461",
-    "description": "Google EntityFrameworkCore Provider for Google Cloud Spanner.",
-    "tags": [ "Spanner", "ADO", "EntityFramework" ],
-    "dependencies": {
-      "Google.Cloud.Spanner.Data": "project",
-      "Google.Cloud.Spanner.V1": "project",
-      "Google.Cloud.Spanner.Admin.Database.V1": "project",
-      "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Microsoft.EntityFrameworkCore.Relational": "2.0.1"
-    },
-    "testDependencies": {
-      "Microsoft.EntityFrameworkCore.Relational.Specification.Tests": "2.0.1",
-      "Microsoft.EntityFrameworkCore.Specification.Tests": "2.0.1",
-      "Microsoft.Extensions.Configuration": "2.0.0",
-      "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
-      "Microsoft.Extensions.Configuration.Json": "2.0.0",
-      "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.0"
-    }
-  },
-  
-  {
     "id": "Google.Cloud.ErrorReporting.V1Beta1",
     "generator": "gapic",
     "protoPath": "google/devtools/clouderrorreporting/v1beta1",
