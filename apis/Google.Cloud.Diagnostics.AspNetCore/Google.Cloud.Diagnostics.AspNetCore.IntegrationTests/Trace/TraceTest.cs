@@ -19,9 +19,11 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +71,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
                 TraceEntryVerifiers.AssertSpanLabelsContains(
                     trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+
+                Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
+            }
+        }  
+        
+        [Fact]
+        public async Task Trace_DummyNameProvider()
+        {
+            var uri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
+            // our dummy provider prefixes with /Dummy
+            var expectedTraceName = $"/Dummy{uri}";
+            var childSpanName = EntryData.GetMessage(nameof(TraceController.Trace), _testId);
+
+            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestCustomNameProviderNoBufferHighQpsApplication>()))
+            using (var client = server.CreateClient())
+            {
+                var response = await client.GetAsync(uri);
+
+                var trace = _polling.GetTrace(expectedTraceName, _startTime);
+                
+                TraceEntryVerifiers.AssertParentChildSpan(trace, expectedTraceName, childSpanName);
+                TraceEntryVerifiers.AssertSpanLabelsContains(
+                    trace.Spans.First(s => s.Name == expectedTraceName), TraceEntryData.HttpGetSuccessLabels);
 
                 Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
             }
@@ -418,6 +443,42 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public override double GetSampleRate() => 1_000_000;
         public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
     }
+    
+    /// <summary>
+    /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
+    /// This app does not use a buffer and will sample 1,000,000 QPS.
+    /// This will allow all calls to be traced and push them to the Trace API immediately.
+    /// And it overrides the default trace name provider with a useless dummy
+    /// </summary>
+    public class TraceTestCustomNameProviderNoBufferHighQpsApplication : AbstractTraceTestApplication
+    {
+        public override double GetSampleRate() => 1_000_000;
+        public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
+
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            base.ConfigureServices(services);
+
+            services.Replace(
+                new ServiceDescriptor(
+                    typeof(ICloudTraceNameProvider),
+                    typeof(DummyCloudTraceNameProvider),
+                    ServiceLifetime.Transient)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Useless dummy cloud trace name provider that simply prefixes the
+    /// route with /Dummy
+    /// </summary>
+    public class DummyCloudTraceNameProvider : ICloudTraceNameProvider
+    {
+        public Task<string> GetTraceNameAsync(HttpContext httpContext)
+        {
+            return Task.FromResult($"/Dummy{httpContext.Request.Path}");
+        }
+    }
 
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
@@ -454,7 +515,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public virtual RetryOptions GetRetryOptions() => null;
 
-        public void ConfigureServices(IServiceCollection services)
+        public virtual void ConfigureServices(IServiceCollection services)
         {
             var traceOptions = Common.TraceOptions.Create(GetSampleRate(), GetBufferOptions(), GetRetryOptions());
             services.AddGoogleTrace(options =>
