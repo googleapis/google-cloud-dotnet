@@ -117,7 +117,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddSingleton(tracerFactory);
             services.AddHttpContextAccessor();
             services.AddSingleton(ManagedTracer.CreateDelegatingTracer(ContextTracerManager.GetCurrentTracer));
-
+            services.AddTransient<ICloudTraceNameProvider, DefaultCloudTraceNameProvider>();
+            
             // On .Net Standard 2.0 or higher, we can use the System.Net.Http.IHttpClientFactory defined in Microsoft.Extensions.Http,
             // for which we need a DelagatingHandler with no InnerHandler set. This is the recommended way.
             // It should be registered as follows.

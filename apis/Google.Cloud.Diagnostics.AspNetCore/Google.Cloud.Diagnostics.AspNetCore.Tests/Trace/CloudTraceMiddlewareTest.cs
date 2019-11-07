@@ -67,7 +67,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer());
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
             await middleware.Invoke(context, _traceHeaderContext);
 
             // Since the current tracer is AsyncLocal<>, it will be back to the default after awaiting the middleware invoke
@@ -92,7 +92,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
             await Assert.ThrowsAsync<DivideByZeroException>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
@@ -117,7 +117,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
             await Assert.ThrowsAsync<AggregateException>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
@@ -137,7 +137,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
             await middleware.Invoke(context, _traceHeaderContext);
 
             // Since the current tracer is AsyncLocal<>, it will be back to the default after awaiting the middleware invoke
