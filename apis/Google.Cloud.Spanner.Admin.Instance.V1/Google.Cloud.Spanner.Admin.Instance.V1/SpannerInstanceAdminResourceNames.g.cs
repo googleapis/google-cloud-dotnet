@@ -131,6 +131,27 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
     }
 
+    public partial class Instance
+    {
+        /// <summary>
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="InstanceConfigName"/>-typed view over the <see cref="Config"/> resource name property.
+        /// </summary>
+        public InstanceConfigName ConfigAsInstanceConfigName
+        {
+            get => string.IsNullOrEmpty(Config) ? null : InstanceConfigName.Parse(Config);
+            set => Config = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListInstanceConfigsRequest
     {
         /// <summary>
