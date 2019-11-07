@@ -28,6 +28,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </summary>
     internal sealed class CloudTraceMiddleware
     {
+        private readonly ICloudTraceNameProvider _nameProvider;
         private readonly RequestDelegate _next;
         private readonly Func<TraceHeaderContext, IManagedTracer> _tracerFactory;
 
@@ -36,9 +37,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="next">The next request delegate. Must not be null.</param>
         /// <param name="tracerFactory">A factory to create <see cref="IManagedTracer"/>s. Must not be null.</param>
+        /// <param name="nameProvider">The cloud trace name provider used for naming the root trace span</param>
         public CloudTraceMiddleware(
-            RequestDelegate next, Func<TraceHeaderContext, IManagedTracer> tracerFactory)
+            RequestDelegate next, Func<TraceHeaderContext, IManagedTracer> tracerFactory, ICloudTraceNameProvider nameProvider)
         {
+            _nameProvider = nameProvider;
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
             _tracerFactory = GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory));
         }
@@ -76,7 +79,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
                 // Trace the delegate and annotate it with information from the current
                 // HTTP context.
-                var span = tracer.StartSpan(httpContext.Request.Path);
+                var traceName = await _nameProvider.GetTraceNameAsync(httpContext).ConfigureAwait(false);
+                var span = tracer.StartSpan(traceName);
                 try
                 {
                     await _next(httpContext).ConfigureAwait(false);
