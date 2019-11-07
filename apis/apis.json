@@ -40,7 +40,7 @@
     "serviceYaml": "automl_v1.yaml",
     "productName": "Google AutoML",
     "productUrl": "https://cloud.google.com/automl/",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0-beta03",
     "type": "grpc",
     "description": "Recommended Google client library to access the AutoML API, which allows you to train high-quality custom machine learning models with minimal effort and machine learning expertise.",
     "dependencies": {
