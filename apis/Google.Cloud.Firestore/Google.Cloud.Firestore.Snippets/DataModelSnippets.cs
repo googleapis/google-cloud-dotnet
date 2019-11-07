@@ -273,6 +273,78 @@ namespace Google.Cloud.Firestore.Snippets
         }
         // End sample
 
+        // Sample: ComplexConverterIgnoresNull
+        [FirestoreData(ConverterType = typeof(CustomPersonConverter))]
+        public class CustomPerson
+        {
+            // Note: no [FirestoreProperty] attributes. The converter
+            // is doing all the work.
+            public string FirstName { get; }
+            public string MiddleName { get; }
+            public string LastName { get; }
+
+            public CustomPerson(string firstName, string middleName, string lastName)
+            {
+                FirstName = firstName;
+                MiddleName = middleName;
+                LastName = lastName;
+            }
+        }
+
+        public class CustomPersonConverter : IFirestoreConverter<CustomPerson>
+        {
+            public object ToFirestore(CustomPerson value)
+            {
+                IDictionary<string, object> map = new Dictionary<string, object>
+                {
+                    { "FirstName", value.FirstName },
+                    { "LastName", value.LastName },
+                };
+                if (value.MiddleName != null)
+                {
+                    map.Add("MiddleName", value.MiddleName);
+                }
+                return map;
+            }
+
+            public CustomPerson FromFirestore(object value)
+            {
+                if (value is IDictionary<string, object> map)
+                {
+                    // Any exceptions thrown here will be propagated directly. You may wish to be more
+                    // careful, if you need to control the exact exception thrown used when the
+                    // data is incomplete or has the wrong type.
+                    return new CustomPerson(
+                        (string)map["FirstName"],
+                        map.ContainsKey("MiddleName") ? (string)map["MiddleName"] : null,
+                        (string)map["LastName"]);
+                }
+                throw new ArgumentException($"Unexpected data: {value.GetType()}");
+            }
+        }
+        // End sample
+
+        [Fact]
+        public async Task ComplexConverterIgnoresNull()
+        {
+            string projectId = _fixture.ProjectId;
+            FirestoreDb db = FirestoreDb.Create(projectId);
+
+            CollectionReference collection = db.Collection("persons");
+
+            var noMiddleNameDocTask = collection.AddAsync(new CustomPerson("John", null, "Doe"));
+            var withMiddleNameDocTask = collection.AddAsync(new CustomPerson("John", "Unknown", "Doe"));
+
+            // Obtain the document from the backend to confirm that it has been stored correctly.
+            var noMiddleNameSnapshotTask = (await noMiddleNameDocTask).GetSnapshotAsync();
+            var withMiddleNameSnapshotTask = (await withMiddleNameDocTask).GetSnapshotAsync();
+
+            DocumentSnapshot noMiddleNameSnapshot = await noMiddleNameSnapshotTask;
+            Assert.False(noMiddleNameSnapshot.ContainsField("MiddleName"));
+            DocumentSnapshot withMiddleNameSnapshot = await withMiddleNameSnapshotTask;
+            Assert.True(withMiddleNameSnapshot.ContainsField("MiddleName"));
+        }
+
         // Sample: SnapshotAttributes
         [FirestoreData]
         public class ChatRoom

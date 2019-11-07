@@ -307,6 +307,11 @@ for a non-nullable value type, the converter will automatically be
 used for the corresponding nullable value type too, with null values
 being handled transparently.
 
+Also note that you can still write your own document converter that deals with null values
+for specific properties of a .NET type.
+
+{{sample:DataModel.ComplexConverterIgnoresNull}}
+
 ## Enum conversions
 
 By default, C# enum values are converted to their underlying integer
