@@ -300,7 +300,6 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     {
                         yield return diff;
                     }
-
                 }
                 else
                 {
