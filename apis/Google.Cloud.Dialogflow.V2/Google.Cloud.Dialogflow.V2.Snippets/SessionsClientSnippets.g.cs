@@ -112,7 +112,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<StreamingDetectIntentResponse> responseStream = duplexStream.ResponseStream;
+                var responseStream = duplexStream.GrpcCall.ResponseStream;
                 while (await responseStream.MoveNext())
                 {
                     StreamingDetectIntentResponse response = responseStream.Current;
