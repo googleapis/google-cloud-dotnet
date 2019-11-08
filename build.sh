@@ -4,6 +4,14 @@ set -e
 
 cd $(dirname $0)
 
+# Temporary measure: clone and build GAX locally
+# We don't have public releases for GAX 3.x yet.
+
+if [[ ! -d gax-dotnet/nuget ]]
+then
+  ./fetch-latest-gax.sh
+fi
+
 source toolversions.sh
 
 # Disable automatic test reporting to AppVeyor.
