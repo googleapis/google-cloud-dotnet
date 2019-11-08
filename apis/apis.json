@@ -118,7 +118,7 @@
     "description": "Common code used by Bigtable V2 APIs",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax": "2.10.0",
+      "Google.Api.Gax": "default",
       "Google.Protobuf": "3.8.0"
     }
   },
@@ -530,7 +530,7 @@
       "Google.Api.Gax.Grpc": "2.10.0",
       "Google.Cloud.Logging.V2": "2.3.0",
       "Google.Cloud.DevTools.Common": "1.0.0",
-      "Grpc.Core": "1.22.1"
+      "Grpc.Core": "default"
     },
     "testDependencies": {
       "Google.Api.Gax.Testing": "2.10.0"
@@ -610,7 +610,7 @@
     "tags": [ "OsLogin", "Login" ],
     "dependencies": {
       "Google.Api.CommonProtos": "1.7.0",
-      "Google.Api.Gax": "2.10.0"
+      "Google.Api.Gax": "default"
     }
   },
 
@@ -977,8 +977,8 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API, synthesizes natural-sounding speech by applying powerful neural network models.",
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Grpc.Core": "1.22.1"
+      "Google.Api.Gax.Grpc": "default",
+      "Grpc.Core": "default"
     },
     "tags": [ "Speech", "Text-to-speech" ]
   },
