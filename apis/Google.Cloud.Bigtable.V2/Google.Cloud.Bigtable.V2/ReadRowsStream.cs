@@ -25,8 +25,14 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public class ReadRowsStream : IAsyncEnumerable<Row>
     {
-        private readonly RowAsyncEnumerator _enumerator;
-        private int _enumeratorCount;
+        private readonly object _lock = new object();
+        // State is guarded by _lock.
+        private RowAsyncEnumerator _enumerator;
+
+        private readonly BigtableClientImpl _client;
+        private readonly ReadRowsRequest _originalRequest;
+        private readonly CallSettings _callSettings;
+        private readonly RetrySettings _retrySettings;
 
         internal ReadRowsStream(
             BigtableClientImpl client,
@@ -34,23 +40,39 @@ namespace Google.Cloud.Bigtable.V2
             CallSettings callSettings,
             RetrySettings retrySettings)
         {
-            _enumerator = new RowAsyncEnumerator(client, originalRequest, callSettings, retrySettings);
+            _client = client;
+            _originalRequest = originalRequest;
+            _callSettings = callSettings;
+            _retrySettings = retrySettings;
         }
 
         /// <summary>
         /// The underlying gRPC duplex streaming call.
         /// </summary>
-        public AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => _enumerator.GrpcCall;
+        [Obsolete("This was public in v1, but would only be usable after calling GetAsyncEnumerator() and starting to enumerate. Removing it is a breaking change for v2; we can reinstate it if desired.")]
+        internal AsyncServerStreamingCall<ReadRowsResponse> GrpcCall
+        {
+            get
+            {
+                lock (_lock)
+                {
+                    return _enumerator?.GrpcCall;
+                }
+            }
+        }
 
         /// <inheritdoc/>
-        public IAsyncEnumerator<Row> GetEnumerator()
+        public IAsyncEnumerator<Row> GetAsyncEnumerator(CancellationToken cancellationToken)
         {
-            if (Interlocked.CompareExchange(ref _enumeratorCount, 1, 0) == 1)
+            lock (_lock)
             {
-                throw new InvalidOperationException($"The {nameof(ReadRowsStream)} can only be iterated once");
+                if (_enumerator != null)
+                {
+                    throw new InvalidOperationException($"The {nameof(ReadRowsStream)} can only be iterated once");
+                }
+                _enumerator = new RowAsyncEnumerator(_client, _originalRequest, _callSettings, _retrySettings, cancellationToken);
+                return _enumerator;
             }
-
-            return _enumerator;
         }
     }
 }

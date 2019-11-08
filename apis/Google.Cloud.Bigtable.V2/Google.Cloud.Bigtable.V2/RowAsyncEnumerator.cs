@@ -32,6 +32,7 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     internal sealed class RowAsyncEnumerator : IAsyncEnumerator<Row>
     {
+        private readonly CancellationToken _cancellationToken;
         private readonly CallSettings _callSettings;
         private readonly BigtableClientImpl _client;
         private CellInfo _currentCell;
@@ -47,11 +48,13 @@ namespace Google.Cloud.Bigtable.V2
             BigtableClientImpl client,
             ReadRowsRequest originalRequest,
             CallSettings callSettings,
-            RetrySettings retrySettings)
+            RetrySettings retrySettings,
+            CancellationToken cancellationToken)
         {
             _client = client;
             _callSettings = callSettings;
             _retrySettings = retrySettings;
+            _cancellationToken = cancellationToken;
 
             _requestManager = new BigtableReadRowsRequestManager(originalRequest);
         }
@@ -68,9 +71,13 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         public bool HadSplitCell { get; private set; }
 
-        public void Dispose() => GrpcCall?.Dispose();
+        public ValueTask DisposeAsync()
+        {
+            GrpcCall?.Dispose();
+            return default;
+        }
 
-        public async Task<bool> MoveNext(CancellationToken cancellationToken)
+        public async ValueTask<bool> MoveNextAsync()
         {
             if (_stream == null)
             {
@@ -87,10 +94,10 @@ namespace Google.Cloud.Bigtable.V2
                     _singleResponseRowEnumerator?.Dispose();
                     _singleResponseRowEnumerator = null;
 
-                    if (await _stream.ResponseStream.MoveNext(cancellationToken).ConfigureAwait(false))
+                    if (await _stream.GrpcCall.ResponseStream.MoveNext(_cancellationToken).ConfigureAwait(false))
                     {
-                        cancellationToken.ThrowIfCancellationRequested();
-                        _singleResponseRowEnumerator = MergeResponseChunks(_stream.ResponseStream.Current);
+                        _cancellationToken.ThrowIfCancellationRequested();
+                        _singleResponseRowEnumerator = MergeResponseChunks(_stream.GrpcCall.ResponseStream.Current);
                     }
                     else
                     {
@@ -115,7 +122,7 @@ namespace Google.Cloud.Bigtable.V2
             // that same row.
             if (_singleResponseRowEnumerator != null)
             {
-                cancellationToken.ThrowIfCancellationRequested();
+                _cancellationToken.ThrowIfCancellationRequested();
                 Current = _singleResponseRowEnumerator.Current;
                 return true;
             }
