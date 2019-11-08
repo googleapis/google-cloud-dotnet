@@ -82,14 +82,19 @@ namespace Google.Cloud.Storage.V1
                     await GetBucketAsync(bucket, preconditionOptions, cancellationToken).ConfigureAwait(false);
                 }
                 var objects = ListObjectsAsync(bucket, null, new ListObjectsOptions { Versions = true, UserProject = userProject });
-                using (var iterator = objects.GetEnumerator())
+                var iterator = objects.GetAsyncEnumerator();
+                try
                 {
-                    while (await iterator.MoveNext(cancellationToken).ConfigureAwait(false))
+                    while (await iterator.MoveNextAsync().ConfigureAwait(false))
                     {
                         var obj = iterator.Current;
                         var deleteObjectOptions = new DeleteObjectOptions { UserProject = userProject, Generation = obj.Generation };
                         await DeleteObjectAsync(obj, deleteObjectOptions, cancellationToken).ConfigureAwait(false);
                     }
+                }
+                finally
+                {
+                    await iterator.DisposeAsync().ConfigureAwait(false);
                 }
             }
             await deleteBucketRequest.ExecuteAsync(cancellationToken).ConfigureAwait(false);

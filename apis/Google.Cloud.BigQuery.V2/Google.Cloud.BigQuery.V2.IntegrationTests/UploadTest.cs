@@ -271,7 +271,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 job.ThrowOnAnyError();
             }
             var table = await client.GetTableAsync(tableReference);
-            var rows = await table.ListRowsAsync().ToList();
+            var rows = await table.ListRowsAsync().ToListAsync();
             Assert.Equal(1, rows.Count);
             Assert.Equal(100, (long)rows[0]["re"]);
             Assert.Equal(200, (long)rows[0]["im"]);
@@ -299,7 +299,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 job.ThrowOnAnyError();
             }
             var table = await client.GetTableAsync(tableReference);
-            var rows = await table.ListRowsAsync().ToList();
+            var rows = await table.ListRowsAsync().ToListAsync();
             Assert.Equal(1, rows.Count);
             Assert.Equal(100, (long)rows[0]["re"]);
             Assert.Equal(200, (long)rows[0]["im"]);
