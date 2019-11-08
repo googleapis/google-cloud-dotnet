@@ -1,9 +1,13 @@
 # Version history
 
-# 3.0.0-beta09, 2019-02-28
+# 3.0.0-beta16, 2019-11-11
 
 New features since 2.0.0:
 
+- Add ICloudTraceNameProvider to allow custom names for root trace.
+- Remove service name and version requirement for error reporting.
+- Upgrade to ASP.NET Core 2.1.
+- Accept options for logging, tracing and error reporting on UseGoogleDiagnostics method.
 - Add the ASP.NET trace identifier to trace labels.
 - Extension method for IWebHostBuilder for reading monitored resource data from host builder context.
 - When logging exceptions, we have stopped logging HTTP Status Code information since we were storing inconsistent values.
