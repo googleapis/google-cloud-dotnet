@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc.Testing;
 using Google.Cloud.Firestore.V1;
+using Grpc.Core;
 using System.Collections.Generic;
 using System.Linq;
 using static Google.Cloud.Firestore.V1.FirestoreClient;
@@ -24,12 +26,12 @@ namespace Google.Cloud.Firestore.Tests
     /// </summary>
     internal class FakeQueryStream : RunQueryStream
     {
-        private readonly IEnumerable<RunQueryResponse> _responses;
+        internal FakeQueryStream(IEnumerable<RunQueryResponse> responses)
+        {
+            var adapter = new AsyncStreamAdapter<RunQueryResponse>(responses.ToAsyncEnumerable().GetAsyncEnumerator(default));
+            GrpcCall = new AsyncServerStreamingCall<RunQueryResponse>(adapter, null, null, null, () => { });
+        }
 
-        internal FakeQueryStream(IEnumerable<RunQueryResponse> responses) =>
-            _responses = responses;
-
-        public override IAsyncEnumerator<RunQueryResponse> ResponseStream =>
-            _responses.ToAsyncEnumerable().GetEnumerator();
+        public override AsyncServerStreamingCall<RunQueryResponse> GrpcCall { get; }
     }
 }
