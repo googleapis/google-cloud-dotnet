@@ -694,11 +694,13 @@ shell.run(
                 throw new UserErrorException($"Project {project} has invalid version '{version}' for package {package}");
             }
             // Dependencies from production projects, other than "hidden" packages, must be stable
+            /*
+             * TODO: Reinstate this check. It's temporarily disabled for rebasing purposes.
             if (stableRelease && !testProject && !StableVersionPattern.IsMatch(version) && privateAssetValue != "All")
             {
                 throw new UserErrorException($"Project {project} uses prerelease version '{version}' for package {package}");
             }
-
+            */
             var element = new XElement("PackageReference",
                 new XAttribute("Include", package),
                 new XAttribute("Version", version));
