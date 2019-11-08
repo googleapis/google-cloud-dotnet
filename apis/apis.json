@@ -157,7 +157,7 @@
     "serviceYaml": "dataproc.yaml",
     "productName": "Google Cloud Dataproc",
     "productUrl": "https://cloud.google.com/dataproc/docs/concepts/overview",
-    "version": "1.1.0-beta00",
+    "version": "1.1.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Dataproc API, which manages Hadoop-based clusters and jobs on Google Cloud Platform.",
     "tags": [ "Dataproc", "Hadoop" ],
