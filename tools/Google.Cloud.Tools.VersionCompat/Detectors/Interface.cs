@@ -28,7 +28,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 .Concat(classStructInterface.ImplementedInterfaces())
                 .Concat(classStructInterface.GenericConstraints())
                 .Concat(classStructInterface.Methods(TypeType.Interface))
-                .Concat(classStructInterface.Properties(TypeType.Interface));
+                .Concat(classStructInterface.Properties(TypeType.Interface))
+                .Concat(classStructInterface.Obsoleteness());
         }
     }
 }

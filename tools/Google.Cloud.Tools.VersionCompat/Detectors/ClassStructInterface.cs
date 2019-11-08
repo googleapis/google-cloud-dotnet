@@ -118,6 +118,50 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
         }
 
+        public IEnumerable<Diff> Obsoleteness() => Obsoleteness(_o, _n, $"Class '{_o.Show()}'");
+
+        private IEnumerable<Diff> Obsoleteness(ICustomAttributeProvider o, ICustomAttributeProvider n, string prefix)
+        {
+            var oObs = o.HasCustomAttributes ? o.CustomAttributes.FirstOrDefault(x => x.AttributeType.FullName == typeof(ObsoleteAttribute).FullName) : null;
+            var oIsError = IsError(oObs);
+            var nObs = n.HasCustomAttributes ? n.CustomAttributes.FirstOrDefault(x => x.AttributeType.FullName == typeof(ObsoleteAttribute).FullName) : null;
+            var nIsError = IsError(nObs);
+            if (oObs is null && nObs is object)
+            {
+                yield return nIsError ?
+                    Diff.Major(Cause.ObsoleteChanged, $"{prefix} has become 'Obsolete(error:true)'.") :
+                    Diff.Minor(Cause.ObsoleteChanged, $"{prefix} has become 'Obsolete'.");
+            }
+            else if (oObs is object && nObs is null)
+            {
+                yield return Diff.Minor(Cause.ObsoleteChanged, $"{prefix} has become non-'Obsolete'.");
+            }
+            else if (oObs is object && nObs is object)
+            {
+                if (!oIsError && nIsError)
+                {
+                    yield return Diff.Major(Cause.ObsoleteChanged, $" changed from 'Obsolete(error:false)' to 'Obsolete(error:true)'.");
+                }
+                else if (oIsError && !nIsError)
+                {
+                    yield return Diff.Minor(Cause.ObsoleteChanged, $" changed from 'Obsolete(error:true)' to 'Obsolete(error:false)'.");
+                }
+            }
+
+            bool IsError(CustomAttribute obs)
+            {
+                if (obs is object)
+                {
+                    if (obs.HasConstructorArguments && obs.ConstructorArguments.Count == 2)
+                    {
+                        // (string, bool) ctor
+                        return (bool)obs.ConstructorArguments[1].Value;
+                    }
+                }
+                return false;
+            }
+        }
+
         private string MethodSigOrder(MethodDefinition m) => string.Join(";", m.Parameters.Select(x => $"{x.ParameterType.FullName}:{x.Name}"));
 
         private IEnumerable<Diff> MethodsCtors(TypeType typeType, bool isCtor, Func<TypeDefinition, IEnumerable<MethodDefinition>> methodSelector)
@@ -181,6 +225,10 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         {
                             yield return diff;
                         }
+                    }
+                    foreach (var diff in Obsoleteness(o, n, prefix))
+                    {
+                        yield return diff;
                     }
                 }
                 else
@@ -248,6 +296,11 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         yield return Diff.Major(Cause.PropertyTypeChanged, $"{prefix} return type changed to '{n.PropertyType.Show()}'.");
                     }
                     // No need to check parameter names, or in/out/ref.
+                    foreach (var diff in Obsoleteness(o, n, prefix))
+                    {
+                        yield return diff;
+                    }
+
                 }
                 else
                 {
