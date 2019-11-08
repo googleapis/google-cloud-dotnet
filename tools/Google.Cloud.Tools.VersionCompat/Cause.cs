@@ -63,5 +63,6 @@ namespace Google.Cloud.Tools.VersionCompat
         EnumValueRemoved,
         EnumValueChanged,
         EnumUnderlyingTypeChanged,
+        ObsoleteChanged,
     }
 }

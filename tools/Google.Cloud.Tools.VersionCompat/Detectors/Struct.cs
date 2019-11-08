@@ -30,7 +30,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 .Concat(classStructInterface.GenericConstraints())
                 .Concat(classStructInterface.Ctors(TypeType.Struct))
                 .Concat(classStructInterface.Methods(TypeType.Struct))
-                .Concat(classStructInterface.Properties(TypeType.Struct));
+                .Concat(classStructInterface.Properties(TypeType.Struct))
+                .Concat(classStructInterface.Obsoleteness());
         }
     }
 }

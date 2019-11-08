@@ -51,6 +51,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         $"Enum '{o.Show()}' entry '{entry.Name} value changed from {oEntry.Constant} to {nEntry.Constant}.");
                 }
             }
+            // TODO: Obsoleteness
         }
     }
 }
