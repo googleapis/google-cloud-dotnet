@@ -505,7 +505,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var results = await client.ExecuteQueryAsync(sql, parameters: null, resultsOptions: new GetQueryResultsOptions { PageSize = 5, StartIndex = 7 });
             // Iterate over multiple pages automatically to get all results. The query has 20 results, but
             // we're asking to start at index 7, so we actually see 13.
-            var rows = await results.GetRowsAsync().ToList();
+            var rows = await results.GetRowsAsync().ToListAsync();
             Assert.Equal(13, rows.Count);
 
             // Now try getting one page at a time, in the same way we would if we were in a web application.
