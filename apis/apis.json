@@ -177,6 +177,9 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [ "Datastore" ],
+    "dependencies": {
+      "System.Linq.Async": "4.0.0"
+    },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "default"
     }

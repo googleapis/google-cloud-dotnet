@@ -149,7 +149,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // End snippet
 
             // This will run the query again, admittedly...
-            List<Entity> entities = await results.ToList();
+            List<Entity> entities = await results.ToListAsync();
             Assert.Equal(1, entities.Count);
             Entity book = entities[0];
             Assert.Equal("Jane Austen", (string)book["author"]);
@@ -213,7 +213,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // End snippet
 
             // This will run the query again, admittedly...
-            List<Entity> entities = await results.ToList();
+            List<Entity> entities = await results.ToListAsync();
             Assert.Equal(1, entities.Count);
             Entity book = entities[0];
             Assert.Equal("Jane Austen", (string)book["author"]);
