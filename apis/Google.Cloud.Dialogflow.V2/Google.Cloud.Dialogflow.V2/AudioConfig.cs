@@ -26,46 +26,47 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9hdWRpb19jb25maWcucHJv",
             "dG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGh9nb29nbGUvYXBpL2Zp",
-            "ZWxkX2JlaGF2aW9yLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24u",
-            "cHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i/gEKEElucHV0",
-            "QXVkaW9Db25maWcSQQoOYXVkaW9fZW5jb2RpbmcYASABKA4yKS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5BdWRpb0VuY29kaW5nEhkKEXNhbXBsZV9y",
-            "YXRlX2hlcnR6GAIgASgFEhUKDWxhbmd1YWdlX2NvZGUYAyABKAkSFAoMcGhy",
-            "YXNlX2hpbnRzGAQgAygJEkUKDW1vZGVsX3ZhcmlhbnQYCiABKA4yLi5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TcGVlY2hNb2RlbFZhcmlhbnQSGAoQ",
-            "c2luZ2xlX3V0dGVyYW5jZRgIIAEoCCJmChRWb2ljZVNlbGVjdGlvblBhcmFt",
-            "cxIMCgRuYW1lGAEgASgJEkAKC3NzbWxfZ2VuZGVyGAIgASgOMisuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3NtbFZvaWNlR2VuZGVyIrMBChZTeW50",
-            "aGVzaXplU3BlZWNoQ29uZmlnEhUKDXNwZWFraW5nX3JhdGUYASABKAESDQoF",
-            "cGl0Y2gYAiABKAESFgoOdm9sdW1lX2dhaW5fZGIYAyABKAESGgoSZWZmZWN0",
-            "c19wcm9maWxlX2lkGAUgAygJEj8KBXZvaWNlGAQgASgLMjAuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuVm9pY2VTZWxlY3Rpb25QYXJhbXMizQEKEU91",
-            "dHB1dEF1ZGlvQ29uZmlnEkcKDmF1ZGlvX2VuY29kaW5nGAEgASgOMi8uZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuT3V0cHV0QXVkaW9FbmNvZGluZxIZ",
-            "ChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRJUChhzeW50aGVzaXplX3NwZWVj",
-            "aF9jb25maWcYAyABKAsyMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5T",
-            "eW50aGVzaXplU3BlZWNoQ29uZmlnKvsBCg1BdWRpb0VuY29kaW5nEh4KGkFV",
-            "RElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASHAoYQVVESU9fRU5DT0RJTkdf",
-            "TElORUFSXzE2EAESFwoTQVVESU9fRU5DT0RJTkdfRkxBQxACEhgKFEFVRElP",
-            "X0VOQ09ESU5HX01VTEFXEAMSFgoSQVVESU9fRU5DT0RJTkdfQU1SEAQSGQoV",
-            "QVVESU9fRU5DT0RJTkdfQU1SX1dCEAUSGwoXQVVESU9fRU5DT0RJTkdfT0dH",
-            "X09QVVMQBhIpCiVBVURJT19FTkNPRElOR19TUEVFWF9XSVRIX0hFQURFUl9C",
-            "WVRFEAcqdgoSU3BlZWNoTW9kZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9W",
-            "QVJJQU5UX1VOU1BFQ0lGSUVEEAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAES",
-            "EAoMVVNFX1NUQU5EQVJEEAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxW",
-            "b2ljZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAA",
-            "EhoKFlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dF",
-            "TkRFUl9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMq",
-            "pAEKE091dHB1dEF1ZGlvRW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09E",
-            "SU5HX1VOU1BFQ0lGSUVEEAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJ",
-            "TkVBUl8xNhABEh0KGU9VVFBVVF9BVURJT19FTkNPRElOR19NUDMQAhIiCh5P",
-            "VVRQVVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQA0KfAQoeY29tLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyQhBBdWRpb0NvbmZpZ1Byb3RvUAFaRGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlh",
-            "bG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQu",
-            "RGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
+            "Gh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8i/gEKEElucHV0QXVkaW9Db25maWcSQQoOYXVk",
+            "aW9fZW5jb2RpbmcYASABKA4yKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5BdWRpb0VuY29kaW5nEhkKEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFEhUK",
+            "DWxhbmd1YWdlX2NvZGUYAyABKAkSFAoMcGhyYXNlX2hpbnRzGAQgAygJEkUK",
+            "DW1vZGVsX3ZhcmlhbnQYCiABKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5TcGVlY2hNb2RlbFZhcmlhbnQSGAoQc2luZ2xlX3V0dGVyYW5jZRgI",
+            "IAEoCCJmChRWb2ljZVNlbGVjdGlvblBhcmFtcxIMCgRuYW1lGAEgASgJEkAK",
+            "C3NzbWxfZ2VuZGVyGAIgASgOMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuU3NtbFZvaWNlR2VuZGVyIrMBChZTeW50aGVzaXplU3BlZWNoQ29uZmln",
+            "EhUKDXNwZWFraW5nX3JhdGUYASABKAESDQoFcGl0Y2gYAiABKAESFgoOdm9s",
+            "dW1lX2dhaW5fZGIYAyABKAESGgoSZWZmZWN0c19wcm9maWxlX2lkGAUgAygJ",
+            "Ej8KBXZvaWNlGAQgASgLMjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "Vm9pY2VTZWxlY3Rpb25QYXJhbXMizQEKEU91dHB1dEF1ZGlvQ29uZmlnEkcK",
+            "DmF1ZGlvX2VuY29kaW5nGAEgASgOMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cudjIuT3V0cHV0QXVkaW9FbmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0",
+            "ehgCIAEoBRJUChhzeW50aGVzaXplX3NwZWVjaF9jb25maWcYAyABKAsyMi5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TeW50aGVzaXplU3BlZWNoQ29u",
+            "ZmlnKvsBCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BF",
+            "Q0lGSUVEEAASHAoYQVVESU9fRU5DT0RJTkdfTElORUFSXzE2EAESFwoTQVVE",
+            "SU9fRU5DT0RJTkdfRkxBQxACEhgKFEFVRElPX0VOQ09ESU5HX01VTEFXEAMS",
+            "FgoSQVVESU9fRU5DT0RJTkdfQU1SEAQSGQoVQVVESU9fRU5DT0RJTkdfQU1S",
+            "X1dCEAUSGwoXQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQBhIpCiVBVURJT19F",
+            "TkNPRElOR19TUEVFWF9XSVRIX0hFQURFUl9CWVRFEAcqdgoSU3BlZWNoTW9k",
+            "ZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9WQVJJQU5UX1VOU1BFQ0lGSUVE",
+            "EAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAESEAoMVVNFX1NUQU5EQVJEEAIS",
+            "EAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxWb2ljZUdlbmRlchIhCh1TU01M",
+            "X1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoKFlNTTUxfVk9JQ0VfR0VO",
+            "REVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhIdChlT",
+            "U01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMqpAEKE091dHB1dEF1ZGlvRW5j",
+            "b2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAAS",
+            "IwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEh0KGU9VVFBV",
+            "VF9BVURJT19FTkNPRElOR19NUDMQAhIiCh5PVVRQVVRfQVVESU9fRU5DT0RJ",
+            "TkdfT0dHX09QVVMQA0KfAQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LnYyQhBBdWRpb0NvbmZpZ1Byb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dm",
+            "bG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "PhraseHints", "ModelVariant", "SingleUtterance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null),
@@ -587,7 +588,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Optional. The name of the voice. If not set, the service will choose a
-    /// voice based on the other parameters such as language_code and gender.
+    /// voice based on the other parameters such as language_code and
+    /// [ssml_gender][google.cloud.dialogflow.v2.VoiceSelectionParams.ssml_gender].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -603,7 +605,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The preferred gender of the voice. If not set, the service will
     /// choose a voice based on the other parameters such as language_code and
-    /// name. Note that this is only a preference, not requirement. If a
+    /// [name][google.cloud.dialogflow.v2.VoiceSelectionParams.name]. Note that this is only a preference, not requirement. If a
     /// voice of the appropriate gender is not available, the synthesizer should
     /// substitute a voice with a different gender rather than failing the request.
     /// </summary>
