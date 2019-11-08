@@ -1696,7 +1696,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [pbr::OriginalName("RESUME_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// The profile contents in HR-XML format.
-        /// See http://schemas.liquid-technologies.com/hr-xml/2007-04-15/ for more
+        /// See https://schemas.liquid-technologies.com/hr-xml/2007-04-15/ for more
         /// information about Human Resources XML.
         /// </summary>
         [pbr::OriginalName("HRXML")] Hrxml = 1,
@@ -2984,7 +2984,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// or LANDLINE number. The [phone
         /// usage][google.cloud.talent.v4beta1.ContactInfoUsage] should be set to
         /// PERSONAL for these phone types. Some more information can be found here:
-        /// http://en.wikipedia.org/wiki/Personal_Numbers
+        /// https://en.wikipedia.org/wiki/Personal_Numbers
         /// </summary>
         [pbr::OriginalName("VIRTUAL")] Virtual = 7,
         /// <summary>

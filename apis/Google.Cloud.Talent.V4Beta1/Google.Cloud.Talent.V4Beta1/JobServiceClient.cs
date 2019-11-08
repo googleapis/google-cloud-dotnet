@@ -2356,7 +2356,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
-        /// The jobs to be updated.
+        /// Required. The jobs to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2386,7 +2386,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
-        /// The jobs to be updated.
+        /// Required. The jobs to be updated.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2413,7 +2413,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created. For example, "projects/foo".
         /// </param>
         /// <param name="jobs">
-        /// The jobs to be updated.
+        /// Required. The jobs to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
