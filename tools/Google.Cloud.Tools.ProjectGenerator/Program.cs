@@ -51,8 +51,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
-        private const string DefaultGaxVersion = "2.10.0";
-        private const string GrpcVersion = "1.22.1";
+        private const string DefaultGaxVersion = "3.0.0-alpha00";
+        private const string GrpcVersion = "2.24.0";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
@@ -80,7 +80,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "xunit", "2.4.1" },
             { "xunit.runner.visualstudio", "2.4.1" },
             { "Xunit.SkippableFact", "1.3.12" },
-            { "Moq", "4.12.0" }
+            { "Moq", "4.12.0" },
+            { "System.Linq.Async", "4.0.0" }
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
