@@ -55,3 +55,6 @@ build_timing_log.txt
 
 # Currently, we don't want to keep synthtool metadata. (This may change.)
 synth.metadata
+
+# Temporary local GAX
+gax-dotnet
