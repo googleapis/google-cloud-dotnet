@@ -681,7 +681,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var query = db.Collection("col").Select("Name").Offset(3);
             // Just for variety, we'll provide a transaction ID this time...
-            var documents = await query.StreamAsync(ByteString.CopyFrom(1, 2, 3, 4), CancellationToken.None).ToList();
+            var documents = await query.StreamAsync(ByteString.CopyFrom(1, 2, 3, 4), CancellationToken.None).ToListAsync();
             Assert.Equal(2, documents.Count);
 
             var doc1 = documents[0];
@@ -717,7 +717,7 @@ namespace Google.Cloud.Firestore.Tests
             mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var query = db.Collection("col").Select("Name");
-            var documents = await query.StreamAsync().ToList();
+            var documents = await query.StreamAsync().ToListAsync();
             Assert.Empty(documents);
             mock.VerifyAll();
         }
