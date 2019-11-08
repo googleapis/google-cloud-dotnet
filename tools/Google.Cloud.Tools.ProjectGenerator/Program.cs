@@ -41,9 +41,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "Google.Cloud.SampleUtil", @"..\..\..\tools\Google.Cloud.SampleUtil\Google.Cloud.SampleUtil.csproj"}
         };
 
-        private const string DefaultRestTargetFrameworks = "netstandard1.3;netstandard2.0;net45";
-        private const string DefaultGrpcTargetFrameworks = "netstandard1.5;netstandard2.0;net45";
-        private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net452";
+        private const string DefaultRestTargetFrameworks = "netstandard2.0;net461";
+        private const string DefaultGrpcTargetFrameworks = "netstandard2.0;net461";
+        private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net461";
 
         private const string AnalyzersTargetFramework = "netstandard1.3";
         private const string AnalyzersTestTargetFramework = "netcoreapp2.0";
