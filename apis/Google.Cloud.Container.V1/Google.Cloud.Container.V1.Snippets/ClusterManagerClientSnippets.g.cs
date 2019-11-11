@@ -22,41 +22,55 @@
 namespace Google.Cloud.Container.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Container.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedClusterManagerClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedClusterManagerClientSnippets
     {
-        /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync()
+        /// <summary>Snippet for ListClusters</summary>
+        public void ListClusters_RequestObject()
         {
-            // Snippet: ListClustersAsync(string,string,CallSettings)
-            // Additional: ListClustersAsync(string,string,CancellationToken)
+            // Snippet: ListClusters(ListClustersRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            ListClustersRequest request = new ListClustersRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                Parent = "",
+            };
+            // Make the request
+            ListClustersResponse response = clusterManagerClient.ListClusters(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClustersAsync</summary>
+        public async Task ListClustersAsync_RequestObject()
+        {
+            // Snippet: ListClustersAsync(ListClustersRequest, CallSettings)
+            // Additional: ListClustersAsync(ListClustersRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
+            ListClustersRequest request = new ListClustersRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                Parent = "",
+            };
             // Make the request
-            ListClustersResponse response = await clusterManagerClient.ListClustersAsync(projectId, zone);
+            ListClustersResponse response = await clusterManagerClient.ListClustersAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListClusters</summary>
         public void ListClusters()
         {
-            // Snippet: ListClusters(string,string,CallSettings)
+            // Snippet: ListClusters(string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -68,60 +82,63 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync_RequestObject()
+        public async Task ListClustersAsync()
         {
-            // Snippet: ListClustersAsync(ListClustersRequest,CallSettings)
-            // Additional: ListClustersAsync(ListClustersRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            ListClustersRequest request = new ListClustersRequest
-            {
-                ProjectId = "",
-                Zone = "",
-            };
-            // Make the request
-            ListClustersResponse response = await clusterManagerClient.ListClustersAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListClusters</summary>
-        public void ListClusters_RequestObject()
-        {
-            // Snippet: ListClusters(ListClustersRequest,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            ListClustersRequest request = new ListClustersRequest
-            {
-                ProjectId = "",
-                Zone = "",
-            };
-            // Make the request
-            ListClustersResponse response = clusterManagerClient.ListClusters(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetClusterAsync</summary>
-        public async Task GetClusterAsync()
-        {
-            // Snippet: GetClusterAsync(string,string,string,CallSettings)
-            // Additional: GetClusterAsync(string,string,string,CancellationToken)
+            // Snippet: ListClustersAsync(string, string, CallSettings)
+            // Additional: ListClustersAsync(string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
-            string clusterId = "";
             // Make the request
-            Cluster response = await clusterManagerClient.GetClusterAsync(projectId, zone, clusterId);
+            ListClustersResponse response = await clusterManagerClient.ListClustersAsync(projectId, zone);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCluster</summary>
+        public void GetCluster_RequestObject()
+        {
+            // Snippet: GetCluster(GetClusterRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Name = "",
+            };
+            // Make the request
+            Cluster response = clusterManagerClient.GetCluster(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClusterAsync</summary>
+        public async Task GetClusterAsync_RequestObject()
+        {
+            // Snippet: GetClusterAsync(GetClusterRequest, CallSettings)
+            // Additional: GetClusterAsync(GetClusterRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Name = "",
+            };
+            // Make the request
+            Cluster response = await clusterManagerClient.GetClusterAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetCluster</summary>
         public void GetCluster()
         {
-            // Snippet: GetCluster(string,string,string,CallSettings)
+            // Snippet: GetCluster(string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -134,96 +151,25 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetClusterAsync</summary>
-        public async Task GetClusterAsync_RequestObject()
+        public async Task GetClusterAsync()
         {
-            // Snippet: GetClusterAsync(GetClusterRequest,CallSettings)
-            // Additional: GetClusterAsync(GetClusterRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-            };
-            // Make the request
-            Cluster response = await clusterManagerClient.GetClusterAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetCluster</summary>
-        public void GetCluster_RequestObject()
-        {
-            // Snippet: GetCluster(GetClusterRequest,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-            };
-            // Make the request
-            Cluster response = clusterManagerClient.GetCluster(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateClusterAsync</summary>
-        public async Task CreateClusterAsync()
-        {
-            // Snippet: CreateClusterAsync(string,string,Cluster,CallSettings)
-            // Additional: CreateClusterAsync(string,string,Cluster,CancellationToken)
+            // Snippet: GetClusterAsync(string, string, string, CallSettings)
+            // Additional: GetClusterAsync(string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
-            Cluster cluster = new Cluster();
+            string clusterId = "";
             // Make the request
-            apis::Operation response = await clusterManagerClient.CreateClusterAsync(projectId, zone, cluster);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateCluster</summary>
-        public void CreateCluster()
-        {
-            // Snippet: CreateCluster(string,string,Cluster,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            Cluster cluster = new Cluster();
-            // Make the request
-            apis::Operation response = clusterManagerClient.CreateCluster(projectId, zone, cluster);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateClusterAsync</summary>
-        public async Task CreateClusterAsync_RequestObject()
-        {
-            // Snippet: CreateClusterAsync(CreateClusterRequest,CallSettings)
-            // Additional: CreateClusterAsync(CreateClusterRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateClusterRequest request = new CreateClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                Cluster = new Cluster(),
-            };
-            // Make the request
-            apis::Operation response = await clusterManagerClient.CreateClusterAsync(request);
+            Cluster response = await clusterManagerClient.GetClusterAsync(projectId, zone, clusterId);
             // End snippet
         }
 
         /// <summary>Snippet for CreateCluster</summary>
         public void CreateCluster_RequestObject()
         {
-            // Snippet: CreateCluster(CreateClusterRequest,CallSettings)
+            // Snippet: CreateCluster(CreateClusterRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -232,69 +178,68 @@ namespace Google.Cloud.Container.V1.Snippets
                 ProjectId = "",
                 Zone = "",
                 Cluster = new Cluster(),
+                Parent = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.CreateCluster(request);
+            Operation response = clusterManagerClient.CreateCluster(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync()
+        /// <summary>Snippet for CreateClusterAsync</summary>
+        public async Task CreateClusterAsync_RequestObject()
         {
-            // Snippet: UpdateClusterAsync(string,string,string,ClusterUpdate,CallSettings)
-            // Additional: UpdateClusterAsync(string,string,string,ClusterUpdate,CancellationToken)
+            // Snippet: CreateClusterAsync(CreateClusterRequest, CallSettings)
+            // Additional: CreateClusterAsync(CreateClusterRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            ClusterUpdate update = new ClusterUpdate();
+            CreateClusterRequest request = new CreateClusterRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                Cluster = new Cluster(),
+                Parent = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.UpdateClusterAsync(projectId, zone, clusterId, update);
+            Operation response = await clusterManagerClient.CreateClusterAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateCluster</summary>
-        public void UpdateCluster()
+        /// <summary>Snippet for CreateCluster</summary>
+        public void CreateCluster()
         {
-            // Snippet: UpdateCluster(string,string,string,ClusterUpdate,CallSettings)
+            // Snippet: CreateCluster(string, string, Cluster, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
-            string clusterId = "";
-            ClusterUpdate update = new ClusterUpdate();
+            Cluster cluster = new Cluster();
             // Make the request
-            apis::Operation response = clusterManagerClient.UpdateCluster(projectId, zone, clusterId, update);
+            Operation response = clusterManagerClient.CreateCluster(projectId, zone, cluster);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync_RequestObject()
+        /// <summary>Snippet for CreateClusterAsync</summary>
+        public async Task CreateClusterAsync()
         {
-            // Snippet: UpdateClusterAsync(UpdateClusterRequest,CallSettings)
-            // Additional: UpdateClusterAsync(UpdateClusterRequest,CancellationToken)
+            // Snippet: CreateClusterAsync(string, string, Cluster, CallSettings)
+            // Additional: CreateClusterAsync(string, string, Cluster, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateClusterRequest request = new UpdateClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Update = new ClusterUpdate(),
-            };
+            string projectId = "";
+            string zone = "";
+            Cluster cluster = new Cluster();
             // Make the request
-            apis::Operation response = await clusterManagerClient.UpdateClusterAsync(request);
+            Operation response = await clusterManagerClient.CreateClusterAsync(projectId, zone, cluster);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateCluster</summary>
         public void UpdateCluster_RequestObject()
         {
-            // Snippet: UpdateCluster(UpdateClusterRequest,CallSettings)
+            // Snippet: UpdateCluster(UpdateClusterRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -304,38 +249,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 Update = new ClusterUpdate(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.UpdateCluster(request);
+            Operation response = clusterManagerClient.UpdateCluster(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateNodePoolAsync</summary>
-        public async Task UpdateNodePoolAsync_RequestObject()
+        /// <summary>Snippet for UpdateClusterAsync</summary>
+        public async Task UpdateClusterAsync_RequestObject()
         {
-            // Snippet: UpdateNodePoolAsync(UpdateNodePoolRequest,CallSettings)
-            // Additional: UpdateNodePoolAsync(UpdateNodePoolRequest,CancellationToken)
+            // Snippet: UpdateClusterAsync(UpdateClusterRequest, CallSettings)
+            // Additional: UpdateClusterAsync(UpdateClusterRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateNodePoolRequest request = new UpdateNodePoolRequest
+            UpdateClusterRequest request = new UpdateClusterRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                NodePoolId = "",
-                NodeVersion = "",
-                ImageType = "",
+                Update = new ClusterUpdate(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
+            Operation response = await clusterManagerClient.UpdateClusterAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCluster</summary>
+        public void UpdateCluster()
+        {
+            // Snippet: UpdateCluster(string, string, string, ClusterUpdate, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            ClusterUpdate update = new ClusterUpdate();
+            // Make the request
+            Operation response = clusterManagerClient.UpdateCluster(projectId, zone, clusterId, update);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateClusterAsync</summary>
+        public async Task UpdateClusterAsync()
+        {
+            // Snippet: UpdateClusterAsync(string, string, string, ClusterUpdate, CallSettings)
+            // Additional: UpdateClusterAsync(string, string, string, ClusterUpdate, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            ClusterUpdate update = new ClusterUpdate();
+            // Make the request
+            Operation response = await clusterManagerClient.UpdateClusterAsync(projectId, zone, clusterId, update);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateNodePool</summary>
         public void UpdateNodePool_RequestObject()
         {
-            // Snippet: UpdateNodePool(UpdateNodePoolRequest,CallSettings)
+            // Snippet: UpdateNodePool(UpdateNodePoolRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -347,37 +325,40 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodePoolId = "",
                 NodeVersion = "",
                 ImageType = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.UpdateNodePool(request);
+            Operation response = clusterManagerClient.UpdateNodePool(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetNodePoolAutoscalingAsync</summary>
-        public async Task SetNodePoolAutoscalingAsync_RequestObject()
+        /// <summary>Snippet for UpdateNodePoolAsync</summary>
+        public async Task UpdateNodePoolAsync_RequestObject()
         {
-            // Snippet: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest,CallSettings)
-            // Additional: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest,CancellationToken)
+            // Snippet: UpdateNodePoolAsync(UpdateNodePoolRequest, CallSettings)
+            // Additional: UpdateNodePoolAsync(UpdateNodePoolRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
+            UpdateNodePoolRequest request = new UpdateNodePoolRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
                 NodePoolId = "",
-                Autoscaling = new NodePoolAutoscaling(),
+                NodeVersion = "",
+                ImageType = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetNodePoolAutoscalingAsync(request);
+            Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for SetNodePoolAutoscaling</summary>
         public void SetNodePoolAutoscaling_RequestObject()
         {
-            // Snippet: SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest,CallSettings)
+            // Snippet: SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -388,69 +369,39 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
                 NodePoolId = "",
                 Autoscaling = new NodePoolAutoscaling(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetNodePoolAutoscaling(request);
+            Operation response = clusterManagerClient.SetNodePoolAutoscaling(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetLoggingServiceAsync</summary>
-        public async Task SetLoggingServiceAsync()
+        /// <summary>Snippet for SetNodePoolAutoscalingAsync</summary>
+        public async Task SetNodePoolAutoscalingAsync_RequestObject()
         {
-            // Snippet: SetLoggingServiceAsync(string,string,string,string,CallSettings)
-            // Additional: SetLoggingServiceAsync(string,string,string,string,CancellationToken)
+            // Snippet: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest, CallSettings)
+            // Additional: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            string loggingService = "";
-            // Make the request
-            apis::Operation response = await clusterManagerClient.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetLoggingService</summary>
-        public void SetLoggingService()
-        {
-            // Snippet: SetLoggingService(string,string,string,string,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            string loggingService = "";
-            // Make the request
-            apis::Operation response = clusterManagerClient.SetLoggingService(projectId, zone, clusterId, loggingService);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetLoggingServiceAsync</summary>
-        public async Task SetLoggingServiceAsync_RequestObject()
-        {
-            // Snippet: SetLoggingServiceAsync(SetLoggingServiceRequest,CallSettings)
-            // Additional: SetLoggingServiceAsync(SetLoggingServiceRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            SetLoggingServiceRequest request = new SetLoggingServiceRequest
+            SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                LoggingService = "",
+                NodePoolId = "",
+                Autoscaling = new NodePoolAutoscaling(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetLoggingServiceAsync(request);
+            Operation response = await clusterManagerClient.SetNodePoolAutoscalingAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for SetLoggingService</summary>
         public void SetLoggingService_RequestObject()
         {
-            // Snippet: SetLoggingService(SetLoggingServiceRequest,CallSettings)
+            // Snippet: SetLoggingService(SetLoggingServiceRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -460,69 +411,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 LoggingService = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetLoggingService(request);
+            Operation response = clusterManagerClient.SetLoggingService(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetMonitoringServiceAsync</summary>
-        public async Task SetMonitoringServiceAsync()
+        /// <summary>Snippet for SetLoggingServiceAsync</summary>
+        public async Task SetLoggingServiceAsync_RequestObject()
         {
-            // Snippet: SetMonitoringServiceAsync(string,string,string,string,CallSettings)
-            // Additional: SetMonitoringServiceAsync(string,string,string,string,CancellationToken)
+            // Snippet: SetLoggingServiceAsync(SetLoggingServiceRequest, CallSettings)
+            // Additional: SetLoggingServiceAsync(SetLoggingServiceRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            string monitoringService = "";
+            SetLoggingServiceRequest request = new SetLoggingServiceRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                LoggingService = "",
+                Name = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
+            Operation response = await clusterManagerClient.SetLoggingServiceAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetMonitoringService</summary>
-        public void SetMonitoringService()
+        /// <summary>Snippet for SetLoggingService</summary>
+        public void SetLoggingService()
         {
-            // Snippet: SetMonitoringService(string,string,string,string,CallSettings)
+            // Snippet: SetLoggingService(string, string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            string monitoringService = "";
+            string loggingService = "";
             // Make the request
-            apis::Operation response = clusterManagerClient.SetMonitoringService(projectId, zone, clusterId, monitoringService);
+            Operation response = clusterManagerClient.SetLoggingService(projectId, zone, clusterId, loggingService);
             // End snippet
         }
 
-        /// <summary>Snippet for SetMonitoringServiceAsync</summary>
-        public async Task SetMonitoringServiceAsync_RequestObject()
+        /// <summary>Snippet for SetLoggingServiceAsync</summary>
+        public async Task SetLoggingServiceAsync()
         {
-            // Snippet: SetMonitoringServiceAsync(SetMonitoringServiceRequest,CallSettings)
-            // Additional: SetMonitoringServiceAsync(SetMonitoringServiceRequest,CancellationToken)
+            // Snippet: SetLoggingServiceAsync(string, string, string, string, CallSettings)
+            // Additional: SetLoggingServiceAsync(string, string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                MonitoringService = "",
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            string loggingService = "";
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetMonitoringServiceAsync(request);
+            Operation response = await clusterManagerClient.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
             // End snippet
         }
 
         /// <summary>Snippet for SetMonitoringService</summary>
         public void SetMonitoringService_RequestObject()
         {
-            // Snippet: SetMonitoringService(SetMonitoringServiceRequest,CallSettings)
+            // Snippet: SetMonitoringService(SetMonitoringServiceRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -532,69 +485,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 MonitoringService = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetMonitoringService(request);
+            Operation response = clusterManagerClient.SetMonitoringService(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetAddonsConfigAsync</summary>
-        public async Task SetAddonsConfigAsync()
+        /// <summary>Snippet for SetMonitoringServiceAsync</summary>
+        public async Task SetMonitoringServiceAsync_RequestObject()
         {
-            // Snippet: SetAddonsConfigAsync(string,string,string,AddonsConfig,CallSettings)
-            // Additional: SetAddonsConfigAsync(string,string,string,AddonsConfig,CancellationToken)
+            // Snippet: SetMonitoringServiceAsync(SetMonitoringServiceRequest, CallSettings)
+            // Additional: SetMonitoringServiceAsync(SetMonitoringServiceRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            AddonsConfig addonsConfig = new AddonsConfig();
+            SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                MonitoringService = "",
+                Name = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
+            Operation response = await clusterManagerClient.SetMonitoringServiceAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetAddonsConfig</summary>
-        public void SetAddonsConfig()
+        /// <summary>Snippet for SetMonitoringService</summary>
+        public void SetMonitoringService()
         {
-            // Snippet: SetAddonsConfig(string,string,string,AddonsConfig,CallSettings)
+            // Snippet: SetMonitoringService(string, string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            AddonsConfig addonsConfig = new AddonsConfig();
+            string monitoringService = "";
             // Make the request
-            apis::Operation response = clusterManagerClient.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
+            Operation response = clusterManagerClient.SetMonitoringService(projectId, zone, clusterId, monitoringService);
             // End snippet
         }
 
-        /// <summary>Snippet for SetAddonsConfigAsync</summary>
-        public async Task SetAddonsConfigAsync_RequestObject()
+        /// <summary>Snippet for SetMonitoringServiceAsync</summary>
+        public async Task SetMonitoringServiceAsync()
         {
-            // Snippet: SetAddonsConfigAsync(SetAddonsConfigRequest,CallSettings)
-            // Additional: SetAddonsConfigAsync(SetAddonsConfigRequest,CancellationToken)
+            // Snippet: SetMonitoringServiceAsync(string, string, string, string, CallSettings)
+            // Additional: SetMonitoringServiceAsync(string, string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetAddonsConfigRequest request = new SetAddonsConfigRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                AddonsConfig = new AddonsConfig(),
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            string monitoringService = "";
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetAddonsConfigAsync(request);
+            Operation response = await clusterManagerClient.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
             // End snippet
         }
 
         /// <summary>Snippet for SetAddonsConfig</summary>
         public void SetAddonsConfig_RequestObject()
         {
-            // Snippet: SetAddonsConfig(SetAddonsConfigRequest,CallSettings)
+            // Snippet: SetAddonsConfig(SetAddonsConfigRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -604,69 +559,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 AddonsConfig = new AddonsConfig(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetAddonsConfig(request);
+            Operation response = clusterManagerClient.SetAddonsConfig(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetLocationsAsync</summary>
-        public async Task SetLocationsAsync()
+        /// <summary>Snippet for SetAddonsConfigAsync</summary>
+        public async Task SetAddonsConfigAsync_RequestObject()
         {
-            // Snippet: SetLocationsAsync(string,string,string,IEnumerable<string>,CallSettings)
-            // Additional: SetLocationsAsync(string,string,string,IEnumerable<string>,CancellationToken)
+            // Snippet: SetAddonsConfigAsync(SetAddonsConfigRequest, CallSettings)
+            // Additional: SetAddonsConfigAsync(SetAddonsConfigRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            IEnumerable<string> locations = new List<string>();
+            SetAddonsConfigRequest request = new SetAddonsConfigRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                AddonsConfig = new AddonsConfig(),
+                Name = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetLocationsAsync(projectId, zone, clusterId, locations);
+            Operation response = await clusterManagerClient.SetAddonsConfigAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetLocations</summary>
-        public void SetLocations()
+        /// <summary>Snippet for SetAddonsConfig</summary>
+        public void SetAddonsConfig()
         {
-            // Snippet: SetLocations(string,string,string,IEnumerable<string>,CallSettings)
+            // Snippet: SetAddonsConfig(string, string, string, AddonsConfig, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            IEnumerable<string> locations = new List<string>();
+            AddonsConfig addonsConfig = new AddonsConfig();
             // Make the request
-            apis::Operation response = clusterManagerClient.SetLocations(projectId, zone, clusterId, locations);
+            Operation response = clusterManagerClient.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
             // End snippet
         }
 
-        /// <summary>Snippet for SetLocationsAsync</summary>
-        public async Task SetLocationsAsync_RequestObject()
+        /// <summary>Snippet for SetAddonsConfigAsync</summary>
+        public async Task SetAddonsConfigAsync()
         {
-            // Snippet: SetLocationsAsync(SetLocationsRequest,CallSettings)
-            // Additional: SetLocationsAsync(SetLocationsRequest,CancellationToken)
+            // Snippet: SetAddonsConfigAsync(string, string, string, AddonsConfig, CallSettings)
+            // Additional: SetAddonsConfigAsync(string, string, string, AddonsConfig, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetLocationsRequest request = new SetLocationsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Locations = { },
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            AddonsConfig addonsConfig = new AddonsConfig();
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetLocationsAsync(request);
+            Operation response = await clusterManagerClient.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
             // End snippet
         }
 
         /// <summary>Snippet for SetLocations</summary>
         public void SetLocations_RequestObject()
         {
-            // Snippet: SetLocations(SetLocationsRequest,CallSettings)
+            // Snippet: SetLocations(SetLocationsRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -675,70 +632,72 @@ namespace Google.Cloud.Container.V1.Snippets
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                Locations = { },
+                Locations = { "", },
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetLocations(request);
+            Operation response = clusterManagerClient.SetLocations(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateMasterAsync</summary>
-        public async Task UpdateMasterAsync()
+        /// <summary>Snippet for SetLocationsAsync</summary>
+        public async Task SetLocationsAsync_RequestObject()
         {
-            // Snippet: UpdateMasterAsync(string,string,string,string,CallSettings)
-            // Additional: UpdateMasterAsync(string,string,string,string,CancellationToken)
+            // Snippet: SetLocationsAsync(SetLocationsRequest, CallSettings)
+            // Additional: SetLocationsAsync(SetLocationsRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            string masterVersion = "";
+            SetLocationsRequest request = new SetLocationsRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Locations = { "", },
+                Name = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
+            Operation response = await clusterManagerClient.SetLocationsAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateMaster</summary>
-        public void UpdateMaster()
+        /// <summary>Snippet for SetLocations</summary>
+        public void SetLocations()
         {
-            // Snippet: UpdateMaster(string,string,string,string,CallSettings)
+            // Snippet: SetLocations(string, string, string, IEnumerable<string>, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            string masterVersion = "";
+            IEnumerable<string> locations = new string[] { "", };
             // Make the request
-            apis::Operation response = clusterManagerClient.UpdateMaster(projectId, zone, clusterId, masterVersion);
+            Operation response = clusterManagerClient.SetLocations(projectId, zone, clusterId, locations);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateMasterAsync</summary>
-        public async Task UpdateMasterAsync_RequestObject()
+        /// <summary>Snippet for SetLocationsAsync</summary>
+        public async Task SetLocationsAsync()
         {
-            // Snippet: UpdateMasterAsync(UpdateMasterRequest,CallSettings)
-            // Additional: UpdateMasterAsync(UpdateMasterRequest,CancellationToken)
+            // Snippet: SetLocationsAsync(string, string, string, IEnumerable<string>, CallSettings)
+            // Additional: SetLocationsAsync(string, string, string, IEnumerable<string>, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateMasterRequest request = new UpdateMasterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                MasterVersion = "",
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            IEnumerable<string> locations = new string[] { "", };
             // Make the request
-            apis::Operation response = await clusterManagerClient.UpdateMasterAsync(request);
+            Operation response = await clusterManagerClient.SetLocationsAsync(projectId, zone, clusterId, locations);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateMaster</summary>
         public void UpdateMaster_RequestObject()
         {
-            // Snippet: UpdateMaster(UpdateMasterRequest,CallSettings)
+            // Snippet: UpdateMaster(UpdateMasterRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -748,37 +707,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 MasterVersion = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.UpdateMaster(request);
+            Operation response = clusterManagerClient.UpdateMaster(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetMasterAuthAsync</summary>
-        public async Task SetMasterAuthAsync_RequestObject()
+        /// <summary>Snippet for UpdateMasterAsync</summary>
+        public async Task UpdateMasterAsync_RequestObject()
         {
-            // Snippet: SetMasterAuthAsync(SetMasterAuthRequest,CallSettings)
-            // Additional: SetMasterAuthAsync(SetMasterAuthRequest,CancellationToken)
+            // Snippet: UpdateMasterAsync(UpdateMasterRequest, CallSettings)
+            // Additional: UpdateMasterAsync(UpdateMasterRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetMasterAuthRequest request = new SetMasterAuthRequest
+            UpdateMasterRequest request = new UpdateMasterRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                Action = SetMasterAuthRequest.Types.Action.Unknown,
-                Update = new MasterAuth(),
+                MasterVersion = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetMasterAuthAsync(request);
+            Operation response = await clusterManagerClient.UpdateMasterAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMaster</summary>
+        public void UpdateMaster()
+        {
+            // Snippet: UpdateMaster(string, string, string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            string masterVersion = "";
+            // Make the request
+            Operation response = clusterManagerClient.UpdateMaster(projectId, zone, clusterId, masterVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMasterAsync</summary>
+        public async Task UpdateMasterAsync()
+        {
+            // Snippet: UpdateMasterAsync(string, string, string, string, CallSettings)
+            // Additional: UpdateMasterAsync(string, string, string, string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            string masterVersion = "";
+            // Make the request
+            Operation response = await clusterManagerClient.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
             // End snippet
         }
 
         /// <summary>Snippet for SetMasterAuth</summary>
         public void SetMasterAuth_RequestObject()
         {
-            // Snippet: SetMasterAuth(SetMasterAuthRequest,CallSettings)
+            // Snippet: SetMasterAuth(SetMasterAuthRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -789,66 +782,39 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
                 Action = SetMasterAuthRequest.Types.Action.Unknown,
                 Update = new MasterAuth(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetMasterAuth(request);
+            Operation response = clusterManagerClient.SetMasterAuth(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteClusterAsync</summary>
-        public async Task DeleteClusterAsync()
+        /// <summary>Snippet for SetMasterAuthAsync</summary>
+        public async Task SetMasterAuthAsync_RequestObject()
         {
-            // Snippet: DeleteClusterAsync(string,string,string,CallSettings)
-            // Additional: DeleteClusterAsync(string,string,string,CancellationToken)
+            // Snippet: SetMasterAuthAsync(SetMasterAuthRequest, CallSettings)
+            // Additional: SetMasterAuthAsync(SetMasterAuthRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            // Make the request
-            apis::Operation response = await clusterManagerClient.DeleteClusterAsync(projectId, zone, clusterId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteCluster</summary>
-        public void DeleteCluster()
-        {
-            // Snippet: DeleteCluster(string,string,string,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            // Make the request
-            apis::Operation response = clusterManagerClient.DeleteCluster(projectId, zone, clusterId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteClusterAsync</summary>
-        public async Task DeleteClusterAsync_RequestObject()
-        {
-            // Snippet: DeleteClusterAsync(DeleteClusterRequest,CallSettings)
-            // Additional: DeleteClusterAsync(DeleteClusterRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteClusterRequest request = new DeleteClusterRequest
+            SetMasterAuthRequest request = new SetMasterAuthRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
+                Action = SetMasterAuthRequest.Types.Action.Unknown,
+                Update = new MasterAuth(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.DeleteClusterAsync(request);
+            Operation response = await clusterManagerClient.SetMasterAuthAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteCluster</summary>
         public void DeleteCluster_RequestObject()
         {
-            // Snippet: DeleteCluster(DeleteClusterRequest,CallSettings)
+            // Snippet: DeleteCluster(DeleteClusterRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -857,149 +823,189 @@ namespace Google.Cloud.Container.V1.Snippets
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.DeleteCluster(request);
+            Operation response = clusterManagerClient.DeleteCluster(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ListOperationsAsync</summary>
-        public async Task ListOperationsAsync()
+        /// <summary>Snippet for DeleteClusterAsync</summary>
+        public async Task DeleteClusterAsync_RequestObject()
         {
-            // Snippet: ListOperationsAsync(string,string,CallSettings)
-            // Additional: ListOperationsAsync(string,string,CancellationToken)
+            // Snippet: DeleteClusterAsync(DeleteClusterRequest, CallSettings)
+            // Additional: DeleteClusterAsync(DeleteClusterRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
+            DeleteClusterRequest request = new DeleteClusterRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Name = "",
+            };
             // Make the request
-            apis::ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
+            Operation response = await clusterManagerClient.DeleteClusterAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ListOperations</summary>
-        public void ListOperations()
+        /// <summary>Snippet for DeleteCluster</summary>
+        public void DeleteCluster()
         {
-            // Snippet: ListOperations(string,string,CallSettings)
+            // Snippet: DeleteCluster(string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
+            string clusterId = "";
             // Make the request
-            apis::ListOperationsResponse response = clusterManagerClient.ListOperations(projectId, zone);
+            Operation response = clusterManagerClient.DeleteCluster(projectId, zone, clusterId);
             // End snippet
         }
 
-        /// <summary>Snippet for ListOperationsAsync</summary>
-        public async Task ListOperationsAsync_RequestObject()
+        /// <summary>Snippet for DeleteClusterAsync</summary>
+        public async Task DeleteClusterAsync()
         {
-            // Snippet: ListOperationsAsync(apis::ListOperationsRequest,CallSettings)
-            // Additional: ListOperationsAsync(apis::ListOperationsRequest,CancellationToken)
+            // Snippet: DeleteClusterAsync(string, string, string, CallSettings)
+            // Additional: DeleteClusterAsync(string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            apis::ListOperationsRequest request = new apis::ListOperationsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
             // Make the request
-            apis::ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(request);
+            Operation response = await clusterManagerClient.DeleteClusterAsync(projectId, zone, clusterId);
             // End snippet
         }
 
         /// <summary>Snippet for ListOperations</summary>
         public void ListOperations_RequestObject()
         {
-            // Snippet: ListOperations(apis::ListOperationsRequest,CallSettings)
+            // Snippet: ListOperations(ListOperationsRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            apis::ListOperationsRequest request = new apis::ListOperationsRequest
+            ListOperationsRequest request = new ListOperationsRequest
             {
                 ProjectId = "",
                 Zone = "",
+                Parent = "",
             };
             // Make the request
-            apis::ListOperationsResponse response = clusterManagerClient.ListOperations(request);
+            ListOperationsResponse response = clusterManagerClient.ListOperations(request);
             // End snippet
         }
 
-        /// <summary>Snippet for GetOperationAsync</summary>
-        public async Task GetOperationAsync()
+        /// <summary>Snippet for ListOperationsAsync</summary>
+        public async Task ListOperationsAsync_RequestObject()
         {
-            // Snippet: GetOperationAsync(string,string,string,CallSettings)
-            // Additional: GetOperationAsync(string,string,string,CancellationToken)
+            // Snippet: ListOperationsAsync(ListOperationsRequest, CallSettings)
+            // Additional: ListOperationsAsync(ListOperationsRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListOperationsRequest request = new ListOperationsRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                Parent = "",
+            };
+            // Make the request
+            ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOperations</summary>
+        public void ListOperations()
+        {
+            // Snippet: ListOperations(string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            // Make the request
+            ListOperationsResponse response = clusterManagerClient.ListOperations(projectId, zone);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOperationsAsync</summary>
+        public async Task ListOperationsAsync()
+        {
+            // Snippet: ListOperationsAsync(string, string, CallSettings)
+            // Additional: ListOperationsAsync(string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
-            string operationId = "";
             // Make the request
-            apis::Operation response = await clusterManagerClient.GetOperationAsync(projectId, zone, operationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetOperation</summary>
-        public void GetOperation()
-        {
-            // Snippet: GetOperation(string,string,string,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string operationId = "";
-            // Make the request
-            apis::Operation response = clusterManagerClient.GetOperation(projectId, zone, operationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetOperationAsync</summary>
-        public async Task GetOperationAsync_RequestObject()
-        {
-            // Snippet: GetOperationAsync(apis::GetOperationRequest,CallSettings)
-            // Additional: GetOperationAsync(apis::GetOperationRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            apis::GetOperationRequest request = new apis::GetOperationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                OperationId = "",
-            };
-            // Make the request
-            apis::Operation response = await clusterManagerClient.GetOperationAsync(request);
+            ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
             // End snippet
         }
 
         /// <summary>Snippet for GetOperation</summary>
         public void GetOperation_RequestObject()
         {
-            // Snippet: GetOperation(apis::GetOperationRequest,CallSettings)
+            // Snippet: GetOperation(GetOperationRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            apis::GetOperationRequest request = new apis::GetOperationRequest
+            GetOperationRequest request = new GetOperationRequest
             {
                 ProjectId = "",
                 Zone = "",
                 OperationId = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.GetOperation(request);
+            Operation response = clusterManagerClient.GetOperation(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CancelOperationAsync</summary>
-        public async Task CancelOperationAsync()
+        /// <summary>Snippet for GetOperationAsync</summary>
+        public async Task GetOperationAsync_RequestObject()
         {
-            // Snippet: CancelOperationAsync(string,string,string,CallSettings)
-            // Additional: CancelOperationAsync(string,string,string,CancellationToken)
+            // Snippet: GetOperationAsync(GetOperationRequest, CallSettings)
+            // Additional: GetOperationAsync(GetOperationRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetOperationRequest request = new GetOperationRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                OperationId = "",
+                Name = "",
+            };
+            // Make the request
+            Operation response = await clusterManagerClient.GetOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOperation</summary>
+        public void GetOperation()
+        {
+            // Snippet: GetOperation(string, string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string operationId = "";
+            // Make the request
+            Operation response = clusterManagerClient.GetOperation(projectId, zone, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOperationAsync</summary>
+        public async Task GetOperationAsync()
+        {
+            // Snippet: GetOperationAsync(string, string, string, CallSettings)
+            // Additional: GetOperationAsync(string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1007,14 +1013,53 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string operationId = "";
             // Make the request
-            await clusterManagerClient.CancelOperationAsync(projectId, zone, operationId);
+            Operation response = await clusterManagerClient.GetOperationAsync(projectId, zone, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOperation</summary>
+        public void CancelOperation_RequestObject()
+        {
+            // Snippet: CancelOperation(CancelOperationRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                OperationId = "",
+                Name = "",
+            };
+            // Make the request
+            clusterManagerClient.CancelOperation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOperationAsync</summary>
+        public async Task CancelOperationAsync_RequestObject()
+        {
+            // Snippet: CancelOperationAsync(CancelOperationRequest, CallSettings)
+            // Additional: CancelOperationAsync(CancelOperationRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                OperationId = "",
+                Name = "",
+            };
+            // Make the request
+            await clusterManagerClient.CancelOperationAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for CancelOperation</summary>
         public void CancelOperation()
         {
-            // Snippet: CancelOperation(string,string,string,CallSettings)
+            // Snippet: CancelOperation(string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1027,61 +1072,62 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CancelOperationAsync</summary>
-        public async Task CancelOperationAsync_RequestObject()
+        public async Task CancelOperationAsync()
         {
-            // Snippet: CancelOperationAsync(apis::CancelOperationRequest,CallSettings)
-            // Additional: CancelOperationAsync(apis::CancelOperationRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            apis::CancelOperationRequest request = new apis::CancelOperationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                OperationId = "",
-            };
-            // Make the request
-            await clusterManagerClient.CancelOperationAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CancelOperation</summary>
-        public void CancelOperation_RequestObject()
-        {
-            // Snippet: CancelOperation(apis::CancelOperationRequest,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            apis::CancelOperationRequest request = new apis::CancelOperationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                OperationId = "",
-            };
-            // Make the request
-            clusterManagerClient.CancelOperation(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetServerConfigAsync</summary>
-        public async Task GetServerConfigAsync()
-        {
-            // Snippet: GetServerConfigAsync(string,string,CallSettings)
-            // Additional: GetServerConfigAsync(string,string,CancellationToken)
+            // Snippet: CancelOperationAsync(string, string, string, CallSettings)
+            // Additional: CancelOperationAsync(string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
+            string operationId = "";
             // Make the request
-            ServerConfig response = await clusterManagerClient.GetServerConfigAsync(projectId, zone);
+            await clusterManagerClient.CancelOperationAsync(projectId, zone, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServerConfig</summary>
+        public void GetServerConfig_RequestObject()
+        {
+            // Snippet: GetServerConfig(GetServerConfigRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            GetServerConfigRequest request = new GetServerConfigRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                Name = "",
+            };
+            // Make the request
+            ServerConfig response = clusterManagerClient.GetServerConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServerConfigAsync</summary>
+        public async Task GetServerConfigAsync_RequestObject()
+        {
+            // Snippet: GetServerConfigAsync(GetServerConfigRequest, CallSettings)
+            // Additional: GetServerConfigAsync(GetServerConfigRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetServerConfigRequest request = new GetServerConfigRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                Name = "",
+            };
+            // Make the request
+            ServerConfig response = await clusterManagerClient.GetServerConfigAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetServerConfig</summary>
         public void GetServerConfig()
         {
-            // Snippet: GetServerConfig(string,string,CallSettings)
+            // Snippet: GetServerConfig(string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1093,60 +1139,63 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetServerConfigAsync</summary>
-        public async Task GetServerConfigAsync_RequestObject()
+        public async Task GetServerConfigAsync()
         {
-            // Snippet: GetServerConfigAsync(GetServerConfigRequest,CallSettings)
-            // Additional: GetServerConfigAsync(GetServerConfigRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            GetServerConfigRequest request = new GetServerConfigRequest
-            {
-                ProjectId = "",
-                Zone = "",
-            };
-            // Make the request
-            ServerConfig response = await clusterManagerClient.GetServerConfigAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetServerConfig</summary>
-        public void GetServerConfig_RequestObject()
-        {
-            // Snippet: GetServerConfig(GetServerConfigRequest,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            GetServerConfigRequest request = new GetServerConfigRequest
-            {
-                ProjectId = "",
-                Zone = "",
-            };
-            // Make the request
-            ServerConfig response = clusterManagerClient.GetServerConfig(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListNodePoolsAsync</summary>
-        public async Task ListNodePoolsAsync()
-        {
-            // Snippet: ListNodePoolsAsync(string,string,string,CallSettings)
-            // Additional: ListNodePoolsAsync(string,string,string,CancellationToken)
+            // Snippet: GetServerConfigAsync(string, string, CallSettings)
+            // Additional: GetServerConfigAsync(string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
-            string clusterId = "";
             // Make the request
-            ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(projectId, zone, clusterId);
+            ServerConfig response = await clusterManagerClient.GetServerConfigAsync(projectId, zone);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodePools</summary>
+        public void ListNodePools_RequestObject()
+        {
+            // Snippet: ListNodePools(ListNodePoolsRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            ListNodePoolsRequest request = new ListNodePoolsRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Parent = "",
+            };
+            // Make the request
+            ListNodePoolsResponse response = clusterManagerClient.ListNodePools(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodePoolsAsync</summary>
+        public async Task ListNodePoolsAsync_RequestObject()
+        {
+            // Snippet: ListNodePoolsAsync(ListNodePoolsRequest, CallSettings)
+            // Additional: ListNodePoolsAsync(ListNodePoolsRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNodePoolsRequest request = new ListNodePoolsRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Parent = "",
+            };
+            // Make the request
+            ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListNodePools</summary>
         public void ListNodePools()
         {
-            // Snippet: ListNodePools(string,string,string,CallSettings)
+            // Snippet: ListNodePools(string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1159,63 +1208,66 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListNodePoolsAsync</summary>
-        public async Task ListNodePoolsAsync_RequestObject()
+        public async Task ListNodePoolsAsync()
         {
-            // Snippet: ListNodePoolsAsync(ListNodePoolsRequest,CallSettings)
-            // Additional: ListNodePoolsAsync(ListNodePoolsRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            ListNodePoolsRequest request = new ListNodePoolsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-            };
-            // Make the request
-            ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListNodePools</summary>
-        public void ListNodePools_RequestObject()
-        {
-            // Snippet: ListNodePools(ListNodePoolsRequest,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            ListNodePoolsRequest request = new ListNodePoolsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-            };
-            // Make the request
-            ListNodePoolsResponse response = clusterManagerClient.ListNodePools(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetNodePoolAsync</summary>
-        public async Task GetNodePoolAsync()
-        {
-            // Snippet: GetNodePoolAsync(string,string,string,string,CallSettings)
-            // Additional: GetNodePoolAsync(string,string,string,string,CancellationToken)
+            // Snippet: ListNodePoolsAsync(string, string, string, CallSettings)
+            // Additional: ListNodePoolsAsync(string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            string nodePoolId = "";
             // Make the request
-            NodePool response = await clusterManagerClient.GetNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+            ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(projectId, zone, clusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNodePool</summary>
+        public void GetNodePool_RequestObject()
+        {
+            // Snippet: GetNodePool(GetNodePoolRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            GetNodePoolRequest request = new GetNodePoolRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                NodePoolId = "",
+                Name = "",
+            };
+            // Make the request
+            NodePool response = clusterManagerClient.GetNodePool(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNodePoolAsync</summary>
+        public async Task GetNodePoolAsync_RequestObject()
+        {
+            // Snippet: GetNodePoolAsync(GetNodePoolRequest, CallSettings)
+            // Additional: GetNodePoolAsync(GetNodePoolRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNodePoolRequest request = new GetNodePoolRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                NodePoolId = "",
+                Name = "",
+            };
+            // Make the request
+            NodePool response = await clusterManagerClient.GetNodePoolAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetNodePool</summary>
         public void GetNodePool()
         {
-            // Snippet: GetNodePool(string,string,string,string,CallSettings)
+            // Snippet: GetNodePool(string, string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1229,101 +1281,26 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetNodePoolAsync</summary>
-        public async Task GetNodePoolAsync_RequestObject()
+        public async Task GetNodePoolAsync()
         {
-            // Snippet: GetNodePoolAsync(GetNodePoolRequest,CallSettings)
-            // Additional: GetNodePoolAsync(GetNodePoolRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            GetNodePoolRequest request = new GetNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-            };
-            // Make the request
-            NodePool response = await clusterManagerClient.GetNodePoolAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetNodePool</summary>
-        public void GetNodePool_RequestObject()
-        {
-            // Snippet: GetNodePool(GetNodePoolRequest,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            GetNodePoolRequest request = new GetNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-            };
-            // Make the request
-            NodePool response = clusterManagerClient.GetNodePool(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateNodePoolAsync</summary>
-        public async Task CreateNodePoolAsync()
-        {
-            // Snippet: CreateNodePoolAsync(string,string,string,NodePool,CallSettings)
-            // Additional: CreateNodePoolAsync(string,string,string,NodePool,CancellationToken)
+            // Snippet: GetNodePoolAsync(string, string, string, string, CallSettings)
+            // Additional: GetNodePoolAsync(string, string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            NodePool nodePool = new NodePool();
+            string nodePoolId = "";
             // Make the request
-            apis::Operation response = await clusterManagerClient.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateNodePool</summary>
-        public void CreateNodePool()
-        {
-            // Snippet: CreateNodePool(string,string,string,NodePool,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            NodePool nodePool = new NodePool();
-            // Make the request
-            apis::Operation response = clusterManagerClient.CreateNodePool(projectId, zone, clusterId, nodePool);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateNodePoolAsync</summary>
-        public async Task CreateNodePoolAsync_RequestObject()
-        {
-            // Snippet: CreateNodePoolAsync(CreateNodePoolRequest,CallSettings)
-            // Additional: CreateNodePoolAsync(CreateNodePoolRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateNodePoolRequest request = new CreateNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePool = new NodePool(),
-            };
-            // Make the request
-            apis::Operation response = await clusterManagerClient.CreateNodePoolAsync(request);
+            NodePool response = await clusterManagerClient.GetNodePoolAsync(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
         /// <summary>Snippet for CreateNodePool</summary>
         public void CreateNodePool_RequestObject()
         {
-            // Snippet: CreateNodePool(CreateNodePoolRequest,CallSettings)
+            // Snippet: CreateNodePool(CreateNodePoolRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1333,69 +1310,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 NodePool = new NodePool(),
+                Parent = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.CreateNodePool(request);
+            Operation response = clusterManagerClient.CreateNodePool(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteNodePoolAsync</summary>
-        public async Task DeleteNodePoolAsync()
+        /// <summary>Snippet for CreateNodePoolAsync</summary>
+        public async Task CreateNodePoolAsync_RequestObject()
         {
-            // Snippet: DeleteNodePoolAsync(string,string,string,string,CallSettings)
-            // Additional: DeleteNodePoolAsync(string,string,string,string,CancellationToken)
+            // Snippet: CreateNodePoolAsync(CreateNodePoolRequest, CallSettings)
+            // Additional: CreateNodePoolAsync(CreateNodePoolRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            string nodePoolId = "";
+            CreateNodePoolRequest request = new CreateNodePoolRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                NodePool = new NodePool(),
+                Parent = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+            Operation response = await clusterManagerClient.CreateNodePoolAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteNodePool</summary>
-        public void DeleteNodePool()
+        /// <summary>Snippet for CreateNodePool</summary>
+        public void CreateNodePool()
         {
-            // Snippet: DeleteNodePool(string,string,string,string,CallSettings)
+            // Snippet: CreateNodePool(string, string, string, NodePool, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            string nodePoolId = "";
+            NodePool nodePool = new NodePool();
             // Make the request
-            apis::Operation response = clusterManagerClient.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
+            Operation response = clusterManagerClient.CreateNodePool(projectId, zone, clusterId, nodePool);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteNodePoolAsync</summary>
-        public async Task DeleteNodePoolAsync_RequestObject()
+        /// <summary>Snippet for CreateNodePoolAsync</summary>
+        public async Task CreateNodePoolAsync()
         {
-            // Snippet: DeleteNodePoolAsync(DeleteNodePoolRequest,CallSettings)
-            // Additional: DeleteNodePoolAsync(DeleteNodePoolRequest,CancellationToken)
+            // Snippet: CreateNodePoolAsync(string, string, string, NodePool, CallSettings)
+            // Additional: CreateNodePoolAsync(string, string, string, NodePool, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteNodePoolRequest request = new DeleteNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            NodePool nodePool = new NodePool();
             // Make the request
-            apis::Operation response = await clusterManagerClient.DeleteNodePoolAsync(request);
+            Operation response = await clusterManagerClient.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteNodePool</summary>
         public void DeleteNodePool_RequestObject()
         {
-            // Snippet: DeleteNodePool(DeleteNodePoolRequest,CallSettings)
+            // Snippet: DeleteNodePool(DeleteNodePoolRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1405,33 +1384,38 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 NodePoolId = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.DeleteNodePool(request);
+            Operation response = clusterManagerClient.DeleteNodePool(request);
             // End snippet
         }
 
-        /// <summary>Snippet for RollbackNodePoolUpgradeAsync</summary>
-        public async Task RollbackNodePoolUpgradeAsync()
+        /// <summary>Snippet for DeleteNodePoolAsync</summary>
+        public async Task DeleteNodePoolAsync_RequestObject()
         {
-            // Snippet: RollbackNodePoolUpgradeAsync(string,string,string,string,CallSettings)
-            // Additional: RollbackNodePoolUpgradeAsync(string,string,string,string,CancellationToken)
+            // Snippet: DeleteNodePoolAsync(DeleteNodePoolRequest, CallSettings)
+            // Additional: DeleteNodePoolAsync(DeleteNodePoolRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            string nodePoolId = "";
+            DeleteNodePoolRequest request = new DeleteNodePoolRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                NodePoolId = "",
+                Name = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
+            Operation response = await clusterManagerClient.DeleteNodePoolAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for RollbackNodePoolUpgrade</summary>
-        public void RollbackNodePoolUpgrade()
+        /// <summary>Snippet for DeleteNodePool</summary>
+        public void DeleteNodePool()
         {
-            // Snippet: RollbackNodePoolUpgrade(string,string,string,string,CallSettings)
+            // Snippet: DeleteNodePool(string, string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1440,34 +1424,31 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
-            apis::Operation response = clusterManagerClient.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
+            Operation response = clusterManagerClient.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
-        /// <summary>Snippet for RollbackNodePoolUpgradeAsync</summary>
-        public async Task RollbackNodePoolUpgradeAsync_RequestObject()
+        /// <summary>Snippet for DeleteNodePoolAsync</summary>
+        public async Task DeleteNodePoolAsync()
         {
-            // Snippet: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest,CallSettings)
-            // Additional: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest,CancellationToken)
+            // Snippet: DeleteNodePoolAsync(string, string, string, string, CallSettings)
+            // Additional: DeleteNodePoolAsync(string, string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            string nodePoolId = "";
             // Make the request
-            apis::Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(request);
+            Operation response = await clusterManagerClient.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
         /// <summary>Snippet for RollbackNodePoolUpgrade</summary>
         public void RollbackNodePoolUpgrade_RequestObject()
         {
-            // Snippet: RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest,CallSettings)
+            // Snippet: RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1477,37 +1458,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 NodePoolId = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.RollbackNodePoolUpgrade(request);
+            Operation response = clusterManagerClient.RollbackNodePoolUpgrade(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetNodePoolManagementAsync</summary>
-        public async Task SetNodePoolManagementAsync_RequestObject()
+        /// <summary>Snippet for RollbackNodePoolUpgradeAsync</summary>
+        public async Task RollbackNodePoolUpgradeAsync_RequestObject()
         {
-            // Snippet: SetNodePoolManagementAsync(SetNodePoolManagementRequest,CallSettings)
-            // Additional: SetNodePoolManagementAsync(SetNodePoolManagementRequest,CancellationToken)
+            // Snippet: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest, CallSettings)
+            // Additional: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
                 NodePoolId = "",
-                Management = new NodeManagement(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetNodePoolManagementAsync(request);
+            Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackNodePoolUpgrade</summary>
+        public void RollbackNodePoolUpgrade()
+        {
+            // Snippet: RollbackNodePoolUpgrade(string, string, string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            string nodePoolId = "";
+            // Make the request
+            Operation response = clusterManagerClient.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackNodePoolUpgradeAsync</summary>
+        public async Task RollbackNodePoolUpgradeAsync()
+        {
+            // Snippet: RollbackNodePoolUpgradeAsync(string, string, string, string, CallSettings)
+            // Additional: RollbackNodePoolUpgradeAsync(string, string, string, string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            string nodePoolId = "";
+            // Make the request
+            Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
         /// <summary>Snippet for SetNodePoolManagement</summary>
         public void SetNodePoolManagement_RequestObject()
         {
-            // Snippet: SetNodePoolManagement(SetNodePoolManagementRequest,CallSettings)
+            // Snippet: SetNodePoolManagement(SetNodePoolManagementRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1518,37 +1533,39 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
                 NodePoolId = "",
                 Management = new NodeManagement(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetNodePoolManagement(request);
+            Operation response = clusterManagerClient.SetNodePoolManagement(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetLabelsAsync</summary>
-        public async Task SetLabelsAsync_RequestObject()
+        /// <summary>Snippet for SetNodePoolManagementAsync</summary>
+        public async Task SetNodePoolManagementAsync_RequestObject()
         {
-            // Snippet: SetLabelsAsync(SetLabelsRequest,CallSettings)
-            // Additional: SetLabelsAsync(SetLabelsRequest,CancellationToken)
+            // Snippet: SetNodePoolManagementAsync(SetNodePoolManagementRequest, CallSettings)
+            // Additional: SetNodePoolManagementAsync(SetNodePoolManagementRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetLabelsRequest request = new SetLabelsRequest
+            SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                ResourceLabels = { },
-                LabelFingerprint = "",
+                NodePoolId = "",
+                Management = new NodeManagement(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetLabelsAsync(request);
+            Operation response = await clusterManagerClient.SetNodePoolManagementAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for SetLabels</summary>
         public void SetLabels_RequestObject()
         {
-            // Snippet: SetLabels(SetLabelsRequest,CallSettings)
+            // Snippet: SetLabels(SetLabelsRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1557,71 +1574,41 @@ namespace Google.Cloud.Container.V1.Snippets
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                ResourceLabels = { },
+                ResourceLabels = { { "", "" }, },
                 LabelFingerprint = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetLabels(request);
+            Operation response = clusterManagerClient.SetLabels(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetLegacyAbacAsync</summary>
-        public async Task SetLegacyAbacAsync()
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsAsync_RequestObject()
         {
-            // Snippet: SetLegacyAbacAsync(string,string,string,bool,CallSettings)
-            // Additional: SetLegacyAbacAsync(string,string,string,bool,CancellationToken)
+            // Snippet: SetLabelsAsync(SetLabelsRequest, CallSettings)
+            // Additional: SetLabelsAsync(SetLabelsRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            bool enabled = false;
-            // Make the request
-            apis::Operation response = await clusterManagerClient.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetLegacyAbac</summary>
-        public void SetLegacyAbac()
-        {
-            // Snippet: SetLegacyAbac(string,string,string,bool,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            bool enabled = false;
-            // Make the request
-            apis::Operation response = clusterManagerClient.SetLegacyAbac(projectId, zone, clusterId, enabled);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetLegacyAbacAsync</summary>
-        public async Task SetLegacyAbacAsync_RequestObject()
-        {
-            // Snippet: SetLegacyAbacAsync(SetLegacyAbacRequest,CallSettings)
-            // Additional: SetLegacyAbacAsync(SetLegacyAbacRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            SetLegacyAbacRequest request = new SetLegacyAbacRequest
+            SetLabelsRequest request = new SetLabelsRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                Enabled = false,
+                ResourceLabels = { { "", "" }, },
+                LabelFingerprint = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetLegacyAbacAsync(request);
+            Operation response = await clusterManagerClient.SetLabelsAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for SetLegacyAbac</summary>
         public void SetLegacyAbac_RequestObject()
         {
-            // Snippet: SetLegacyAbac(SetLegacyAbacRequest,CallSettings)
+            // Snippet: SetLegacyAbac(SetLegacyAbacRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1631,66 +1618,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 Enabled = false,
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetLegacyAbac(request);
+            Operation response = clusterManagerClient.SetLegacyAbac(request);
             // End snippet
         }
 
-        /// <summary>Snippet for StartIPRotationAsync</summary>
-        public async Task StartIPRotationAsync()
+        /// <summary>Snippet for SetLegacyAbacAsync</summary>
+        public async Task SetLegacyAbacAsync_RequestObject()
         {
-            // Snippet: StartIPRotationAsync(string,string,string,CallSettings)
-            // Additional: StartIPRotationAsync(string,string,string,CancellationToken)
+            // Snippet: SetLegacyAbacAsync(SetLegacyAbacRequest, CallSettings)
+            // Additional: SetLegacyAbacAsync(SetLegacyAbacRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
+            SetLegacyAbacRequest request = new SetLegacyAbacRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Enabled = false,
+                Name = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.StartIPRotationAsync(projectId, zone, clusterId);
+            Operation response = await clusterManagerClient.SetLegacyAbacAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for StartIPRotation</summary>
-        public void StartIPRotation()
+        /// <summary>Snippet for SetLegacyAbac</summary>
+        public void SetLegacyAbac()
         {
-            // Snippet: StartIPRotation(string,string,string,CallSettings)
+            // Snippet: SetLegacyAbac(string, string, string, bool, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
+            bool enabled = false;
             // Make the request
-            apis::Operation response = clusterManagerClient.StartIPRotation(projectId, zone, clusterId);
+            Operation response = clusterManagerClient.SetLegacyAbac(projectId, zone, clusterId, enabled);
             // End snippet
         }
 
-        /// <summary>Snippet for StartIPRotationAsync</summary>
-        public async Task StartIPRotationAsync_RequestObject()
+        /// <summary>Snippet for SetLegacyAbacAsync</summary>
+        public async Task SetLegacyAbacAsync()
         {
-            // Snippet: StartIPRotationAsync(StartIPRotationRequest,CallSettings)
-            // Additional: StartIPRotationAsync(StartIPRotationRequest,CancellationToken)
+            // Snippet: SetLegacyAbacAsync(string, string, string, bool, CallSettings)
+            // Additional: SetLegacyAbacAsync(string, string, string, bool, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            StartIPRotationRequest request = new StartIPRotationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            bool enabled = false;
             // Make the request
-            apis::Operation response = await clusterManagerClient.StartIPRotationAsync(request);
+            Operation response = await clusterManagerClient.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
             // End snippet
         }
 
         /// <summary>Snippet for StartIPRotation</summary>
         public void StartIPRotation_RequestObject()
         {
-            // Snippet: StartIPRotation(StartIPRotationRequest,CallSettings)
+            // Snippet: StartIPRotation(StartIPRotationRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1699,32 +1691,39 @@ namespace Google.Cloud.Container.V1.Snippets
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
+                Name = "",
+                RotateCredentials = false,
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.StartIPRotation(request);
+            Operation response = clusterManagerClient.StartIPRotation(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CompleteIPRotationAsync</summary>
-        public async Task CompleteIPRotationAsync()
+        /// <summary>Snippet for StartIPRotationAsync</summary>
+        public async Task StartIPRotationAsync_RequestObject()
         {
-            // Snippet: CompleteIPRotationAsync(string,string,string,CallSettings)
-            // Additional: CompleteIPRotationAsync(string,string,string,CancellationToken)
+            // Snippet: StartIPRotationAsync(StartIPRotationRequest, CallSettings)
+            // Additional: StartIPRotationAsync(StartIPRotationRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
+            StartIPRotationRequest request = new StartIPRotationRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                Name = "",
+                RotateCredentials = false,
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.CompleteIPRotationAsync(projectId, zone, clusterId);
+            Operation response = await clusterManagerClient.StartIPRotationAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CompleteIPRotation</summary>
-        public void CompleteIPRotation()
+        /// <summary>Snippet for StartIPRotation</summary>
+        public void StartIPRotation()
         {
-            // Snippet: CompleteIPRotation(string,string,string,CallSettings)
+            // Snippet: StartIPRotation(string, string, string, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1732,33 +1731,30 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
-            apis::Operation response = clusterManagerClient.CompleteIPRotation(projectId, zone, clusterId);
+            Operation response = clusterManagerClient.StartIPRotation(projectId, zone, clusterId);
             // End snippet
         }
 
-        /// <summary>Snippet for CompleteIPRotationAsync</summary>
-        public async Task CompleteIPRotationAsync_RequestObject()
+        /// <summary>Snippet for StartIPRotationAsync</summary>
+        public async Task StartIPRotationAsync()
         {
-            // Snippet: CompleteIPRotationAsync(CompleteIPRotationRequest,CallSettings)
-            // Additional: CompleteIPRotationAsync(CompleteIPRotationRequest,CancellationToken)
+            // Snippet: StartIPRotationAsync(string, string, string, CallSettings)
+            // Additional: StartIPRotationAsync(string, string, string, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            CompleteIPRotationRequest request = new CompleteIPRotationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
             // Make the request
-            apis::Operation response = await clusterManagerClient.CompleteIPRotationAsync(request);
+            Operation response = await clusterManagerClient.StartIPRotationAsync(projectId, zone, clusterId);
             // End snippet
         }
 
         /// <summary>Snippet for CompleteIPRotation</summary>
         public void CompleteIPRotation_RequestObject()
         {
-            // Snippet: CompleteIPRotation(CompleteIPRotationRequest,CallSettings)
+            // Snippet: CompleteIPRotation(CompleteIPRotationRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1767,37 +1763,68 @@ namespace Google.Cloud.Container.V1.Snippets
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.CompleteIPRotation(request);
+            Operation response = clusterManagerClient.CompleteIPRotation(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetNodePoolSizeAsync</summary>
-        public async Task SetNodePoolSizeAsync_RequestObject()
+        /// <summary>Snippet for CompleteIPRotationAsync</summary>
+        public async Task CompleteIPRotationAsync_RequestObject()
         {
-            // Snippet: SetNodePoolSizeAsync(SetNodePoolSizeRequest,CallSettings)
-            // Additional: SetNodePoolSizeAsync(SetNodePoolSizeRequest,CancellationToken)
+            // Snippet: CompleteIPRotationAsync(CompleteIPRotationRequest, CallSettings)
+            // Additional: CompleteIPRotationAsync(CompleteIPRotationRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
+            CompleteIPRotationRequest request = new CompleteIPRotationRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                NodePoolId = "",
-                NodeCount = 0,
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetNodePoolSizeAsync(request);
+            Operation response = await clusterManagerClient.CompleteIPRotationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompleteIPRotation</summary>
+        public void CompleteIPRotation()
+        {
+            // Snippet: CompleteIPRotation(string, string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            // Make the request
+            Operation response = clusterManagerClient.CompleteIPRotation(projectId, zone, clusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompleteIPRotationAsync</summary>
+        public async Task CompleteIPRotationAsync()
+        {
+            // Snippet: CompleteIPRotationAsync(string, string, string, CallSettings)
+            // Additional: CompleteIPRotationAsync(string, string, string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            // Make the request
+            Operation response = await clusterManagerClient.CompleteIPRotationAsync(projectId, zone, clusterId);
             // End snippet
         }
 
         /// <summary>Snippet for SetNodePoolSize</summary>
         public void SetNodePoolSize_RequestObject()
         {
-            // Snippet: SetNodePoolSize(SetNodePoolSizeRequest,CallSettings)
+            // Snippet: SetNodePoolSize(SetNodePoolSizeRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1808,69 +1835,39 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
                 NodePoolId = "",
                 NodeCount = 0,
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetNodePoolSize(request);
+            Operation response = clusterManagerClient.SetNodePoolSize(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetNetworkPolicyAsync</summary>
-        public async Task SetNetworkPolicyAsync()
+        /// <summary>Snippet for SetNodePoolSizeAsync</summary>
+        public async Task SetNodePoolSizeAsync_RequestObject()
         {
-            // Snippet: SetNetworkPolicyAsync(string,string,string,NetworkPolicy,CallSettings)
-            // Additional: SetNetworkPolicyAsync(string,string,string,NetworkPolicy,CancellationToken)
+            // Snippet: SetNodePoolSizeAsync(SetNodePoolSizeRequest, CallSettings)
+            // Additional: SetNodePoolSizeAsync(SetNodePoolSizeRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            NetworkPolicy networkPolicy = new NetworkPolicy();
-            // Make the request
-            apis::Operation response = await clusterManagerClient.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetNetworkPolicy</summary>
-        public void SetNetworkPolicy()
-        {
-            // Snippet: SetNetworkPolicy(string,string,string,NetworkPolicy,CallSettings)
-            // Create client
-            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            NetworkPolicy networkPolicy = new NetworkPolicy();
-            // Make the request
-            apis::Operation response = clusterManagerClient.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetNetworkPolicyAsync</summary>
-        public async Task SetNetworkPolicyAsync_RequestObject()
-        {
-            // Snippet: SetNetworkPolicyAsync(SetNetworkPolicyRequest,CallSettings)
-            // Additional: SetNetworkPolicyAsync(SetNetworkPolicyRequest,CancellationToken)
-            // Create client
-            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
-            // Initialize request argument(s)
-            SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
+            SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
             {
                 ProjectId = "",
                 Zone = "",
                 ClusterId = "",
-                NetworkPolicy = new NetworkPolicy(),
+                NodePoolId = "",
+                NodeCount = 0,
+                Name = "",
             };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetNetworkPolicyAsync(request);
+            Operation response = await clusterManagerClient.SetNodePoolSizeAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for SetNetworkPolicy</summary>
         public void SetNetworkPolicy_RequestObject()
         {
-            // Snippet: SetNetworkPolicy(SetNetworkPolicyRequest,CallSettings)
+            // Snippet: SetNetworkPolicy(SetNetworkPolicyRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1880,69 +1877,71 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 NetworkPolicy = new NetworkPolicy(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetNetworkPolicy(request);
+            Operation response = clusterManagerClient.SetNetworkPolicy(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetMaintenancePolicyAsync</summary>
-        public async Task SetMaintenancePolicyAsync()
+        /// <summary>Snippet for SetNetworkPolicyAsync</summary>
+        public async Task SetNetworkPolicyAsync_RequestObject()
         {
-            // Snippet: SetMaintenancePolicyAsync(string,string,string,MaintenancePolicy,CallSettings)
-            // Additional: SetMaintenancePolicyAsync(string,string,string,MaintenancePolicy,CancellationToken)
+            // Snippet: SetNetworkPolicyAsync(SetNetworkPolicyRequest, CallSettings)
+            // Additional: SetNetworkPolicyAsync(SetNetworkPolicyRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string zone = "";
-            string clusterId = "";
-            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
+            SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                NetworkPolicy = new NetworkPolicy(),
+                Name = "",
+            };
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
+            Operation response = await clusterManagerClient.SetNetworkPolicyAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SetMaintenancePolicy</summary>
-        public void SetMaintenancePolicy()
+        /// <summary>Snippet for SetNetworkPolicy</summary>
+        public void SetNetworkPolicy()
         {
-            // Snippet: SetMaintenancePolicy(string,string,string,MaintenancePolicy,CallSettings)
+            // Snippet: SetNetworkPolicy(string, string, string, NetworkPolicy, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string zone = "";
             string clusterId = "";
-            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
+            NetworkPolicy networkPolicy = new NetworkPolicy();
             // Make the request
-            apis::Operation response = clusterManagerClient.SetMaintenancePolicy(projectId, zone, clusterId, maintenancePolicy);
+            Operation response = clusterManagerClient.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
             // End snippet
         }
 
-        /// <summary>Snippet for SetMaintenancePolicyAsync</summary>
-        public async Task SetMaintenancePolicyAsync_RequestObject()
+        /// <summary>Snippet for SetNetworkPolicyAsync</summary>
+        public async Task SetNetworkPolicyAsync()
         {
-            // Snippet: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest,CallSettings)
-            // Additional: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest,CancellationToken)
+            // Snippet: SetNetworkPolicyAsync(string, string, string, NetworkPolicy, CallSettings)
+            // Additional: SetNetworkPolicyAsync(string, string, string, NetworkPolicy, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            SetMaintenancePolicyRequest request = new SetMaintenancePolicyRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                MaintenancePolicy = new MaintenancePolicy(),
-            };
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            NetworkPolicy networkPolicy = new NetworkPolicy();
             // Make the request
-            apis::Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(request);
+            Operation response = await clusterManagerClient.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
             // End snippet
         }
 
         /// <summary>Snippet for SetMaintenancePolicy</summary>
         public void SetMaintenancePolicy_RequestObject()
         {
-            // Snippet: SetMaintenancePolicy(SetMaintenancePolicyRequest,CallSettings)
+            // Snippet: SetMaintenancePolicy(SetMaintenancePolicyRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
@@ -1952,67 +1951,81 @@ namespace Google.Cloud.Container.V1.Snippets
                 Zone = "",
                 ClusterId = "",
                 MaintenancePolicy = new MaintenancePolicy(),
+                Name = "",
             };
             // Make the request
-            apis::Operation response = clusterManagerClient.SetMaintenancePolicy(request);
+            Operation response = clusterManagerClient.SetMaintenancePolicy(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ListUsableSubnetworksAsync</summary>
-        public async Task ListUsableSubnetworksAsync_RequestObject()
+        /// <summary>Snippet for SetMaintenancePolicyAsync</summary>
+        public async Task SetMaintenancePolicyAsync_RequestObject()
         {
-            // Snippet: ListUsableSubnetworksAsync(ListUsableSubnetworksRequest,CallSettings)
+            // Snippet: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest, CallSettings)
+            // Additional: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest, CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            ListUsableSubnetworksRequest request = new ListUsableSubnetworksRequest();
+            SetMaintenancePolicyRequest request = new SetMaintenancePolicyRequest
+            {
+                ProjectId = "",
+                Zone = "",
+                ClusterId = "",
+                MaintenancePolicy = new MaintenancePolicy(),
+                Name = "",
+            };
             // Make the request
-            PagedAsyncEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> response =
-                clusterManagerClient.ListUsableSubnetworksAsync(request);
+            Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(request);
+            // End snippet
+        }
 
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UsableSubnetwork item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
+        /// <summary>Snippet for SetMaintenancePolicy</summary>
+        public void SetMaintenancePolicy()
+        {
+            // Snippet: SetMaintenancePolicy(string, string, string, MaintenancePolicy, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
+            // Make the request
+            Operation response = clusterManagerClient.SetMaintenancePolicy(projectId, zone, clusterId, maintenancePolicy);
+            // End snippet
+        }
 
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUsableSubnetworksResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UsableSubnetwork item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UsableSubnetwork> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UsableSubnetwork item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+        /// <summary>Snippet for SetMaintenancePolicyAsync</summary>
+        public async Task SetMaintenancePolicyAsync()
+        {
+            // Snippet: SetMaintenancePolicyAsync(string, string, string, MaintenancePolicy, CallSettings)
+            // Additional: SetMaintenancePolicyAsync(string, string, string, MaintenancePolicy, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string zone = "";
+            string clusterId = "";
+            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
+            // Make the request
+            Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
             // End snippet
         }
 
         /// <summary>Snippet for ListUsableSubnetworks</summary>
         public void ListUsableSubnetworks_RequestObject()
         {
-            // Snippet: ListUsableSubnetworks(ListUsableSubnetworksRequest,CallSettings)
+            // Snippet: ListUsableSubnetworks(ListUsableSubnetworksRequest, CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            ListUsableSubnetworksRequest request = new ListUsableSubnetworksRequest();
+            ListUsableSubnetworksRequest request = new ListUsableSubnetworksRequest
+            {
+                Parent = "",
+                Filter = "",
+            };
             // Make the request
-            PagedEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> response =
-                clusterManagerClient.ListUsableSubnetworks(request);
+            PagedEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> response = clusterManagerClient.ListUsableSubnetworks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (UsableSubnetwork item in response)
@@ -2028,6 +2041,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (UsableSubnetwork item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -2039,6 +2053,7 @@ namespace Google.Cloud.Container.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (UsableSubnetwork item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -2046,5 +2061,53 @@ namespace Google.Cloud.Container.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListUsableSubnetworks</summary>
+        public async Task ListUsableSubnetworksAsync_RequestObject()
+        {
+            // Snippet: ListUsableSubnetworksAsync(ListUsableSubnetworksRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUsableSubnetworksRequest request = new ListUsableSubnetworksRequest
+            {
+                Parent = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> response = clusterManagerClient.ListUsableSubnetworksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((UsableSubnetwork item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsableSubnetworksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UsableSubnetwork item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UsableSubnetwork> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UsableSubnetwork item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }
