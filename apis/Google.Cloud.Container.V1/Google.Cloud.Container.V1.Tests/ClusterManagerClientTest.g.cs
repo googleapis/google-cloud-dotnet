@@ -19,3338 +19,4371 @@
 // generator includes it automatically.
 #pragma warning disable CS0612 // Type or member is obsolete
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Container.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Container.V1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedClusterManagerClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedClusterManagerClientTest
     {
-        [Fact]
-        public void ListClusters()
+        [xunit::FactAttribute]
+        public void ListClustersRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListClustersRequest expectedRequest = new ListClustersRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-            };
-            ListClustersResponse expectedResponse = new ListClustersResponse();
-            mockGrpcClient.Setup(x => x.ListClusters(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            ListClustersResponse response = client.ListClusters(projectId, zone);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ListClustersAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListClustersRequest expectedRequest = new ListClustersRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-            };
-            ListClustersResponse expectedResponse = new ListClustersResponse();
-            mockGrpcClient.Setup(x => x.ListClustersAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListClustersResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            ListClustersResponse response = await client.ListClustersAsync(projectId, zone);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void ListClusters2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             ListClustersRequest request = new ListClustersRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Parent = "parent7858e4d0",
             };
-            ListClustersResponse expectedResponse = new ListClustersResponse();
-            mockGrpcClient.Setup(x => x.ListClusters(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ListClustersResponse expectedResponse = new ListClustersResponse
+            {
+                Clusters = { new Cluster(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
+            };
+            mockGrpcClient.Setup(x => x.ListClusters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             ListClustersResponse response = client.ListClusters(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListClustersAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ListClustersRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             ListClustersRequest request = new ListClustersRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Parent = "parent7858e4d0",
             };
-            ListClustersResponse expectedResponse = new ListClustersResponse();
-            mockGrpcClient.Setup(x => x.ListClustersAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListClustersResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ListClustersResponse expectedResponse = new ListClustersResponse
+            {
+                Clusters = { new Cluster(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
+            };
+            mockGrpcClient.Setup(x => x.ListClustersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListClustersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            ListClustersResponse response = await client.ListClustersAsync(request);
-            Assert.Same(expectedResponse, response);
+            ListClustersResponse responseCallSettings = await client.ListClustersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListClustersResponse responseCancellationToken = await client.ListClustersAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetCluster()
+        [xunit::FactAttribute]
+        public void ListClusters()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetClusterRequest expectedRequest = new GetClusterRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListClustersRequest request = new ListClustersRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
             };
-            Cluster expectedResponse = new Cluster
+            ListClustersResponse expectedResponse = new ListClustersResponse
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                InitialNodeCount = 1682564205,
-                LoggingService = "loggingService-1700501035",
-                MonitoringService = "monitoringService1469270462",
-                Network = "network1843485230",
-                ClusterIpv4Cidr = "clusterIpv4Cidr-141875831",
-                Subnetwork = "subnetwork-1302785042",
-                EnableKubernetesAlpha = false,
-                LabelFingerprint = "labelFingerprint714995737",
-                SelfLink = "selfLink-1691268851",
-                Zone = "zone2-696322977",
-                Endpoint = "endpoint1741102485",
-                InitialClusterVersion = "initialClusterVersion-276373352",
-                CurrentMasterVersion = "currentMasterVersion-920953983",
-                CurrentNodeVersion = "currentNodeVersion-407476063",
-                CreateTime = "createTime-493574096",
-                StatusMessage = "statusMessage-239442758",
-                NodeIpv4CidrSize = 1181176815,
-                ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
-                CurrentNodeCount = 178977560,
-                ExpireTime = "expireTime-96179731",
-                Location = "location1901043637",
-                EnableTpu = false,
-                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
+                Clusters = { new Cluster(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetCluster(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ListClusters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            Cluster response = client.GetCluster(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
+            ListClustersResponse response = client.ListClusters(request.ProjectId, request.Zone);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetClusterAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ListClustersAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetClusterRequest expectedRequest = new GetClusterRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListClustersRequest request = new ListClustersRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
             };
-            Cluster expectedResponse = new Cluster
+            ListClustersResponse expectedResponse = new ListClustersResponse
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                InitialNodeCount = 1682564205,
-                LoggingService = "loggingService-1700501035",
-                MonitoringService = "monitoringService1469270462",
-                Network = "network1843485230",
-                ClusterIpv4Cidr = "clusterIpv4Cidr-141875831",
-                Subnetwork = "subnetwork-1302785042",
-                EnableKubernetesAlpha = false,
-                LabelFingerprint = "labelFingerprint714995737",
-                SelfLink = "selfLink-1691268851",
-                Zone = "zone2-696322977",
-                Endpoint = "endpoint1741102485",
-                InitialClusterVersion = "initialClusterVersion-276373352",
-                CurrentMasterVersion = "currentMasterVersion-920953983",
-                CurrentNodeVersion = "currentNodeVersion-407476063",
-                CreateTime = "createTime-493574096",
-                StatusMessage = "statusMessage-239442758",
-                NodeIpv4CidrSize = 1181176815,
-                ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
-                CurrentNodeCount = 178977560,
-                ExpireTime = "expireTime-96179731",
-                Location = "location1901043637",
-                EnableTpu = false,
-                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
+                Clusters = { new Cluster(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ListClustersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListClustersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            Cluster response = await client.GetClusterAsync(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
+            ListClustersResponse responseCallSettings = await client.ListClustersAsync(request.ProjectId, request.Zone, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListClustersResponse responseCancellationToken = await client.ListClustersAsync(request.ProjectId, request.Zone, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetCluster2()
+        [xunit::FactAttribute]
+        public void GetClusterRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetClusterRequest request = new GetClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
             };
             Cluster expectedResponse = new Cluster
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                InitialNodeCount = 1682564205,
-                LoggingService = "loggingService-1700501035",
-                MonitoringService = "monitoringService1469270462",
-                Network = "network1843485230",
-                ClusterIpv4Cidr = "clusterIpv4Cidr-141875831",
-                Subnetwork = "subnetwork-1302785042",
-                EnableKubernetesAlpha = false,
-                LabelFingerprint = "labelFingerprint714995737",
-                SelfLink = "selfLink-1691268851",
-                Zone = "zone2-696322977",
-                Endpoint = "endpoint1741102485",
-                InitialClusterVersion = "initialClusterVersion-276373352",
-                CurrentMasterVersion = "currentMasterVersion-920953983",
-                CurrentNodeVersion = "currentNodeVersion-407476063",
-                CreateTime = "createTime-493574096",
-                StatusMessage = "statusMessage-239442758",
-                NodeIpv4CidrSize = 1181176815,
-                ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
-                CurrentNodeCount = 178977560,
-                ExpireTime = "expireTime-96179731",
-                Location = "location1901043637",
-                EnableTpu = false,
-                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
+                Name = "name1c9368b0",
+                Description = "description2cf9da67",
+                InitialNodeCount = -1915714087,
+                NodeConfig = new NodeConfig(),
+                MasterAuth = new MasterAuth(),
+                LoggingService = "logging_servicef4a99d37",
+                MonitoringService = "monitoring_servicedbe039a3",
+                Network = "networkd22ce091",
+                ClusterIpv4Cidr = "cluster_ipv4_cidr15665f62",
+                AddonsConfig = new AddonsConfig(),
+                Subnetwork = "subnetworkf55bf572",
+                NodePools = { new NodePool(), },
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                EnableKubernetesAlpha = true,
+                ResourceLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                LegacyAbac = new LegacyAbac(),
+                NetworkPolicy = new NetworkPolicy(),
+                IpAllocationPolicy = new IPAllocationPolicy(),
+                MasterAuthorizedNetworksConfig = new MasterAuthorizedNetworksConfig(),
+                MaintenancePolicy = new MaintenancePolicy(),
+                BinaryAuthorization = new BinaryAuthorization(),
+                Autoscaling = new ClusterAutoscaling(),
+                NetworkConfig = new NetworkConfig(),
+                DefaultMaxPodsConstraint = new MaxPodsConstraint(),
+                ResourceUsageExportConfig = new ResourceUsageExportConfig(),
+                AuthenticatorGroupsConfig = new AuthenticatorGroupsConfig(),
+                PrivateClusterConfig = new PrivateClusterConfig(),
+                DatabaseEncryption = new DatabaseEncryption(),
+                VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                SelfLink = "self_link7e87f12d",
+                Zone = "zone255f4ea8",
+                Endpoint = "endpoint1bd965ad",
+                InitialClusterVersion = "initial_cluster_version79eeef4e",
+                CurrentMasterVersion = "current_master_version7d3048c2",
+                CurrentNodeVersion = "current_node_versione23796e0",
+                CreateTime = "create_time65626ab1",
+                Status = Cluster.Types.Status.Reconciling,
+                StatusMessage = "status_message2c618f86",
+                NodeIpv4CidrSize = -278265782,
+                ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                CurrentNodeCount = -203923744,
+                ExpireTime = "expire_timece1cc25c",
+                Location = "locatione09d18d5",
+                EnableTpu = true,
+                TpuIpv4CidrBlock = "tpu_ipv4_cidr_block3e3ece05",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetCluster(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             Cluster response = client.GetCluster(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetClusterAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetClusterRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetClusterRequest request = new GetClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
             };
             Cluster expectedResponse = new Cluster
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                InitialNodeCount = 1682564205,
-                LoggingService = "loggingService-1700501035",
-                MonitoringService = "monitoringService1469270462",
-                Network = "network1843485230",
-                ClusterIpv4Cidr = "clusterIpv4Cidr-141875831",
-                Subnetwork = "subnetwork-1302785042",
-                EnableKubernetesAlpha = false,
-                LabelFingerprint = "labelFingerprint714995737",
-                SelfLink = "selfLink-1691268851",
-                Zone = "zone2-696322977",
-                Endpoint = "endpoint1741102485",
-                InitialClusterVersion = "initialClusterVersion-276373352",
-                CurrentMasterVersion = "currentMasterVersion-920953983",
-                CurrentNodeVersion = "currentNodeVersion-407476063",
-                CreateTime = "createTime-493574096",
-                StatusMessage = "statusMessage-239442758",
-                NodeIpv4CidrSize = 1181176815,
-                ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
-                CurrentNodeCount = 178977560,
-                ExpireTime = "expireTime-96179731",
-                Location = "location1901043637",
-                EnableTpu = false,
-                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
+                Name = "name1c9368b0",
+                Description = "description2cf9da67",
+                InitialNodeCount = -1915714087,
+                NodeConfig = new NodeConfig(),
+                MasterAuth = new MasterAuth(),
+                LoggingService = "logging_servicef4a99d37",
+                MonitoringService = "monitoring_servicedbe039a3",
+                Network = "networkd22ce091",
+                ClusterIpv4Cidr = "cluster_ipv4_cidr15665f62",
+                AddonsConfig = new AddonsConfig(),
+                Subnetwork = "subnetworkf55bf572",
+                NodePools = { new NodePool(), },
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                EnableKubernetesAlpha = true,
+                ResourceLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                LegacyAbac = new LegacyAbac(),
+                NetworkPolicy = new NetworkPolicy(),
+                IpAllocationPolicy = new IPAllocationPolicy(),
+                MasterAuthorizedNetworksConfig = new MasterAuthorizedNetworksConfig(),
+                MaintenancePolicy = new MaintenancePolicy(),
+                BinaryAuthorization = new BinaryAuthorization(),
+                Autoscaling = new ClusterAutoscaling(),
+                NetworkConfig = new NetworkConfig(),
+                DefaultMaxPodsConstraint = new MaxPodsConstraint(),
+                ResourceUsageExportConfig = new ResourceUsageExportConfig(),
+                AuthenticatorGroupsConfig = new AuthenticatorGroupsConfig(),
+                PrivateClusterConfig = new PrivateClusterConfig(),
+                DatabaseEncryption = new DatabaseEncryption(),
+                VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                SelfLink = "self_link7e87f12d",
+                Zone = "zone255f4ea8",
+                Endpoint = "endpoint1bd965ad",
+                InitialClusterVersion = "initial_cluster_version79eeef4e",
+                CurrentMasterVersion = "current_master_version7d3048c2",
+                CurrentNodeVersion = "current_node_versione23796e0",
+                CreateTime = "create_time65626ab1",
+                Status = Cluster.Types.Status.Reconciling,
+                StatusMessage = "status_message2c618f86",
+                NodeIpv4CidrSize = -278265782,
+                ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                CurrentNodeCount = -203923744,
+                ExpireTime = "expire_timece1cc25c",
+                Location = "locatione09d18d5",
+                EnableTpu = true,
+                TpuIpv4CidrBlock = "tpu_ipv4_cidr_block3e3ece05",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Cluster response = await client.GetClusterAsync(request);
-            Assert.Same(expectedResponse, response);
+            Cluster responseCallSettings = await client.GetClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Cluster responseCancellationToken = await client.GetClusterAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetCluster()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+            };
+            Cluster expectedResponse = new Cluster
+            {
+                Name = "name1c9368b0",
+                Description = "description2cf9da67",
+                InitialNodeCount = -1915714087,
+                NodeConfig = new NodeConfig(),
+                MasterAuth = new MasterAuth(),
+                LoggingService = "logging_servicef4a99d37",
+                MonitoringService = "monitoring_servicedbe039a3",
+                Network = "networkd22ce091",
+                ClusterIpv4Cidr = "cluster_ipv4_cidr15665f62",
+                AddonsConfig = new AddonsConfig(),
+                Subnetwork = "subnetworkf55bf572",
+                NodePools = { new NodePool(), },
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                EnableKubernetesAlpha = true,
+                ResourceLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                LegacyAbac = new LegacyAbac(),
+                NetworkPolicy = new NetworkPolicy(),
+                IpAllocationPolicy = new IPAllocationPolicy(),
+                MasterAuthorizedNetworksConfig = new MasterAuthorizedNetworksConfig(),
+                MaintenancePolicy = new MaintenancePolicy(),
+                BinaryAuthorization = new BinaryAuthorization(),
+                Autoscaling = new ClusterAutoscaling(),
+                NetworkConfig = new NetworkConfig(),
+                DefaultMaxPodsConstraint = new MaxPodsConstraint(),
+                ResourceUsageExportConfig = new ResourceUsageExportConfig(),
+                AuthenticatorGroupsConfig = new AuthenticatorGroupsConfig(),
+                PrivateClusterConfig = new PrivateClusterConfig(),
+                DatabaseEncryption = new DatabaseEncryption(),
+                VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                SelfLink = "self_link7e87f12d",
+                Zone = "zone255f4ea8",
+                Endpoint = "endpoint1bd965ad",
+                InitialClusterVersion = "initial_cluster_version79eeef4e",
+                CurrentMasterVersion = "current_master_version7d3048c2",
+                CurrentNodeVersion = "current_node_versione23796e0",
+                CreateTime = "create_time65626ab1",
+                Status = Cluster.Types.Status.Reconciling,
+                StatusMessage = "status_message2c618f86",
+                NodeIpv4CidrSize = -278265782,
+                ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                CurrentNodeCount = -203923744,
+                ExpireTime = "expire_timece1cc25c",
+                Location = "locatione09d18d5",
+                EnableTpu = true,
+                TpuIpv4CidrBlock = "tpu_ipv4_cidr_block3e3ece05",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Cluster response = client.GetCluster(request.ProjectId, request.Zone, request.ClusterId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetClusterAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+            };
+            Cluster expectedResponse = new Cluster
+            {
+                Name = "name1c9368b0",
+                Description = "description2cf9da67",
+                InitialNodeCount = -1915714087,
+                NodeConfig = new NodeConfig(),
+                MasterAuth = new MasterAuth(),
+                LoggingService = "logging_servicef4a99d37",
+                MonitoringService = "monitoring_servicedbe039a3",
+                Network = "networkd22ce091",
+                ClusterIpv4Cidr = "cluster_ipv4_cidr15665f62",
+                AddonsConfig = new AddonsConfig(),
+                Subnetwork = "subnetworkf55bf572",
+                NodePools = { new NodePool(), },
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                EnableKubernetesAlpha = true,
+                ResourceLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                LegacyAbac = new LegacyAbac(),
+                NetworkPolicy = new NetworkPolicy(),
+                IpAllocationPolicy = new IPAllocationPolicy(),
+                MasterAuthorizedNetworksConfig = new MasterAuthorizedNetworksConfig(),
+                MaintenancePolicy = new MaintenancePolicy(),
+                BinaryAuthorization = new BinaryAuthorization(),
+                Autoscaling = new ClusterAutoscaling(),
+                NetworkConfig = new NetworkConfig(),
+                DefaultMaxPodsConstraint = new MaxPodsConstraint(),
+                ResourceUsageExportConfig = new ResourceUsageExportConfig(),
+                AuthenticatorGroupsConfig = new AuthenticatorGroupsConfig(),
+                PrivateClusterConfig = new PrivateClusterConfig(),
+                DatabaseEncryption = new DatabaseEncryption(),
+                VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                SelfLink = "self_link7e87f12d",
+                Zone = "zone255f4ea8",
+                Endpoint = "endpoint1bd965ad",
+                InitialClusterVersion = "initial_cluster_version79eeef4e",
+                CurrentMasterVersion = "current_master_version7d3048c2",
+                CurrentNodeVersion = "current_node_versione23796e0",
+                CreateTime = "create_time65626ab1",
+                Status = Cluster.Types.Status.Reconciling,
+                StatusMessage = "status_message2c618f86",
+                NodeIpv4CidrSize = -278265782,
+                ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                CurrentNodeCount = -203923744,
+                ExpireTime = "expire_timece1cc25c",
+                Location = "locatione09d18d5",
+                EnableTpu = true,
+                TpuIpv4CidrBlock = "tpu_ipv4_cidr_block3e3ece05",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Cluster responseCallSettings = await client.GetClusterAsync(request.ProjectId, request.Zone, request.ClusterId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Cluster responseCancellationToken = await client.GetClusterAsync(request.ProjectId, request.Zone, request.ClusterId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateClusterRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CreateClusterRequest request = new CreateClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Cluster = new Cluster(),
+                Parent = "parent7858e4d0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.CreateCluster(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateClusterRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CreateClusterRequest request = new CreateClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Cluster = new Cluster(),
+                Parent = "parent7858e4d0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.CreateClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.CreateClusterAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateCluster()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CreateClusterRequest expectedRequest = new CreateClusterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                Cluster = new Cluster(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.CreateCluster(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            Cluster cluster = new Cluster();
-            apis::Operation response = client.CreateCluster(projectId, zone, cluster);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateClusterAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CreateClusterRequest expectedRequest = new CreateClusterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                Cluster = new Cluster(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.CreateClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            Cluster cluster = new Cluster();
-            apis::Operation response = await client.CreateClusterAsync(projectId, zone, cluster);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateCluster2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             CreateClusterRequest request = new CreateClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
                 Cluster = new Cluster(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateCluster(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.CreateCluster(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.CreateCluster(request.ProjectId, request.Zone, request.Cluster);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateClusterAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateClusterAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             CreateClusterRequest request = new CreateClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
                 Cluster = new Cluster(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.CreateClusterAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.CreateClusterAsync(request.ProjectId, request.Zone, request.Cluster, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.CreateClusterAsync(request.ProjectId, request.Zone, request.Cluster, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void UpdateClusterRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            UpdateClusterRequest request = new UpdateClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Update = new ClusterUpdate(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.UpdateCluster(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateClusterRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            UpdateClusterRequest request = new UpdateClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Update = new ClusterUpdate(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.UpdateClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.UpdateClusterAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateCluster()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            UpdateClusterRequest expectedRequest = new UpdateClusterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Update = new ClusterUpdate(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.UpdateCluster(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            ClusterUpdate update = new ClusterUpdate();
-            apis::Operation response = client.UpdateCluster(projectId, zone, clusterId, update);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateClusterAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            UpdateClusterRequest expectedRequest = new UpdateClusterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Update = new ClusterUpdate(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.UpdateClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            ClusterUpdate update = new ClusterUpdate();
-            apis::Operation response = await client.UpdateClusterAsync(projectId, zone, clusterId, update);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateCluster2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             UpdateClusterRequest request = new UpdateClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 Update = new ClusterUpdate(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateCluster(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.UpdateCluster(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.UpdateCluster(request.ProjectId, request.Zone, request.ClusterId, request.Update);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateClusterAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateClusterAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             UpdateClusterRequest request = new UpdateClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 Update = new ClusterUpdate(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.UpdateClusterAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.UpdateClusterAsync(request.ProjectId, request.Zone, request.ClusterId, request.Update, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.UpdateClusterAsync(request.ProjectId, request.Zone, request.ClusterId, request.Update, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateNodePool()
+        [xunit::FactAttribute]
+        public void UpdateNodePoolRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             UpdateNodePoolRequest request = new UpdateNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-                NodeVersion = "nodeVersion1790136219",
-                ImageType = "imageType-1442758754",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                NodeVersion = "node_version322edae3",
+                ImageType = "image_typef66746e9",
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateNodePool(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.UpdateNodePool(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.UpdateNodePool(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateNodePoolAsync()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateNodePoolRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             UpdateNodePoolRequest request = new UpdateNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-                NodeVersion = "nodeVersion1790136219",
-                ImageType = "imageType-1442758754",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                NodeVersion = "node_version322edae3",
+                ImageType = "image_typef66746e9",
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateNodePoolAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.UpdateNodePoolAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.UpdateNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.UpdateNodePoolAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetNodePoolAutoscaling()
+        [xunit::FactAttribute]
+        public void SetNodePoolAutoscalingRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
                 Autoscaling = new NodePoolAutoscaling(),
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNodePoolAutoscaling(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetNodePoolAutoscaling(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetNodePoolAutoscaling(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetNodePoolAutoscaling(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetNodePoolAutoscalingAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetNodePoolAutoscalingRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
                 Autoscaling = new NodePoolAutoscaling(),
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNodePoolAutoscalingAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetNodePoolAutoscalingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetNodePoolAutoscalingAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetNodePoolAutoscalingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetNodePoolAutoscalingAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetLoggingServiceRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetLoggingServiceRequest request = new SetLoggingServiceRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                LoggingService = "logging_servicef4a99d37",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetLoggingService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetLoggingService(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetLoggingServiceRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetLoggingServiceRequest request = new SetLoggingServiceRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                LoggingService = "logging_servicef4a99d37",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetLoggingServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLoggingServiceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetLoggingService()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetLoggingServiceRequest expectedRequest = new SetLoggingServiceRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                LoggingService = "loggingService-1700501035",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetLoggingService(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string loggingService = "loggingService-1700501035";
-            apis::Operation response = client.SetLoggingService(projectId, zone, clusterId, loggingService);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SetLoggingServiceAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetLoggingServiceRequest expectedRequest = new SetLoggingServiceRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                LoggingService = "loggingService-1700501035",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string loggingService = "loggingService-1700501035";
-            apis::Operation response = await client.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SetLoggingService2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLoggingServiceRequest request = new SetLoggingServiceRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                LoggingService = "loggingService-1700501035",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                LoggingService = "logging_servicef4a99d37",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLoggingService(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetLoggingService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetLoggingService(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetLoggingService(request.ProjectId, request.Zone, request.ClusterId, request.LoggingService);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetLoggingServiceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetLoggingServiceAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLoggingServiceRequest request = new SetLoggingServiceRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                LoggingService = "loggingService-1700501035",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                LoggingService = "logging_servicef4a99d37",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetLoggingServiceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetLoggingServiceAsync(request.ProjectId, request.Zone, request.ClusterId, request.LoggingService, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLoggingServiceAsync(request.ProjectId, request.Zone, request.ClusterId, request.LoggingService, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetMonitoringServiceRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MonitoringService = "monitoring_servicedbe039a3",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetMonitoringService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetMonitoringService(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetMonitoringServiceRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MonitoringService = "monitoring_servicedbe039a3",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetMonitoringServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetMonitoringServiceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetMonitoringService()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetMonitoringServiceRequest expectedRequest = new SetMonitoringServiceRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MonitoringService = "monitoringService1469270462",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetMonitoringService(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string monitoringService = "monitoringService1469270462";
-            apis::Operation response = client.SetMonitoringService(projectId, zone, clusterId, monitoringService);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SetMonitoringServiceAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetMonitoringServiceRequest expectedRequest = new SetMonitoringServiceRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MonitoringService = "monitoringService1469270462",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string monitoringService = "monitoringService1469270462";
-            apis::Operation response = await client.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SetMonitoringService2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MonitoringService = "monitoringService1469270462",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MonitoringService = "monitoring_servicedbe039a3",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetMonitoringService(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetMonitoringService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetMonitoringService(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetMonitoringService(request.ProjectId, request.Zone, request.ClusterId, request.MonitoringService);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetMonitoringServiceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetMonitoringServiceAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MonitoringService = "monitoringService1469270462",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MonitoringService = "monitoring_servicedbe039a3",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetMonitoringServiceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetMonitoringServiceAsync(request.ProjectId, request.Zone, request.ClusterId, request.MonitoringService, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetMonitoringServiceAsync(request.ProjectId, request.Zone, request.ClusterId, request.MonitoringService, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetAddonsConfigRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetAddonsConfigRequest request = new SetAddonsConfigRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                AddonsConfig = new AddonsConfig(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetAddonsConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetAddonsConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetAddonsConfigRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetAddonsConfigRequest request = new SetAddonsConfigRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                AddonsConfig = new AddonsConfig(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetAddonsConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetAddonsConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetAddonsConfig()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetAddonsConfigRequest expectedRequest = new SetAddonsConfigRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                AddonsConfig = new AddonsConfig(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetAddonsConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            AddonsConfig addonsConfig = new AddonsConfig();
-            apis::Operation response = client.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SetAddonsConfigAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetAddonsConfigRequest expectedRequest = new SetAddonsConfigRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                AddonsConfig = new AddonsConfig(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            AddonsConfig addonsConfig = new AddonsConfig();
-            apis::Operation response = await client.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SetAddonsConfig2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetAddonsConfigRequest request = new SetAddonsConfigRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 AddonsConfig = new AddonsConfig(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetAddonsConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetAddonsConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetAddonsConfig(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetAddonsConfig(request.ProjectId, request.Zone, request.ClusterId, request.AddonsConfig);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetAddonsConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetAddonsConfigAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetAddonsConfigRequest request = new SetAddonsConfigRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 AddonsConfig = new AddonsConfig(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetAddonsConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetAddonsConfigAsync(request.ProjectId, request.Zone, request.ClusterId, request.AddonsConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetAddonsConfigAsync(request.ProjectId, request.Zone, request.ClusterId, request.AddonsConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetLocationsRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetLocationsRequest request = new SetLocationsRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetLocations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetLocations(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetLocationsRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetLocationsRequest request = new SetLocationsRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetLocationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetLocationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLocationsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetLocations()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetLocationsRequest expectedRequest = new SetLocationsRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Locations = { },
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetLocations(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            IEnumerable<string> locations = new List<string>();
-            apis::Operation response = client.SetLocations(projectId, zone, clusterId, locations);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SetLocationsAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetLocationsRequest expectedRequest = new SetLocationsRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Locations = { },
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetLocationsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            IEnumerable<string> locations = new List<string>();
-            apis::Operation response = await client.SetLocationsAsync(projectId, zone, clusterId, locations);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SetLocations2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLocationsRequest request = new SetLocationsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Locations = { },
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLocations(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetLocations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetLocations(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetLocations(request.ProjectId, request.Zone, request.ClusterId, request.Locations);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetLocationsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetLocationsAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLocationsRequest request = new SetLocationsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Locations = { },
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLocationsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetLocationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetLocationsAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetLocationsAsync(request.ProjectId, request.Zone, request.ClusterId, request.Locations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLocationsAsync(request.ProjectId, request.Zone, request.ClusterId, request.Locations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void UpdateMasterRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            UpdateMasterRequest request = new UpdateMasterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MasterVersion = "master_versioned94d028",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateMaster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.UpdateMaster(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateMasterRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            UpdateMasterRequest request = new UpdateMasterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MasterVersion = "master_versioned94d028",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateMasterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.UpdateMasterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.UpdateMasterAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateMaster()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            UpdateMasterRequest expectedRequest = new UpdateMasterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MasterVersion = "masterVersion-2139460613",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.UpdateMaster(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string masterVersion = "masterVersion-2139460613";
-            apis::Operation response = client.UpdateMaster(projectId, zone, clusterId, masterVersion);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateMasterAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            UpdateMasterRequest expectedRequest = new UpdateMasterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MasterVersion = "masterVersion-2139460613",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.UpdateMasterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string masterVersion = "masterVersion-2139460613";
-            apis::Operation response = await client.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateMaster2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             UpdateMasterRequest request = new UpdateMasterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MasterVersion = "masterVersion-2139460613",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MasterVersion = "master_versioned94d028",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateMaster(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateMaster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.UpdateMaster(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.UpdateMaster(request.ProjectId, request.Zone, request.ClusterId, request.MasterVersion);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateMasterAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateMasterAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             UpdateMasterRequest request = new UpdateMasterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MasterVersion = "masterVersion-2139460613",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MasterVersion = "master_versioned94d028",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateMasterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateMasterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.UpdateMasterAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.UpdateMasterAsync(request.ProjectId, request.Zone, request.ClusterId, request.MasterVersion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.UpdateMasterAsync(request.ProjectId, request.Zone, request.ClusterId, request.MasterVersion, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetMasterAuth()
+        [xunit::FactAttribute]
+        public void SetMasterAuthRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetMasterAuthRequest request = new SetMasterAuthRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Action = SetMasterAuthRequest.Types.Action.Unknown,
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Action = SetMasterAuthRequest.Types.Action.SetPassword,
                 Update = new MasterAuth(),
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetMasterAuth(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetMasterAuth(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetMasterAuth(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetMasterAuth(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetMasterAuthAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetMasterAuthRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetMasterAuthRequest request = new SetMasterAuthRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Action = SetMasterAuthRequest.Types.Action.Unknown,
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Action = SetMasterAuthRequest.Types.Action.SetPassword,
                 Update = new MasterAuth(),
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetMasterAuthAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetMasterAuthAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetMasterAuthAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetMasterAuthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetMasterAuthAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void DeleteClusterRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            DeleteClusterRequest request = new DeleteClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.DeleteCluster(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteClusterRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            DeleteClusterRequest request = new DeleteClusterRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.DeleteClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.DeleteClusterAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeleteCluster()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            DeleteClusterRequest expectedRequest = new DeleteClusterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.DeleteCluster(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            apis::Operation response = client.DeleteCluster(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteClusterAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            DeleteClusterRequest expectedRequest = new DeleteClusterRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.DeleteClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            apis::Operation response = await client.DeleteClusterAsync(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteCluster2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             DeleteClusterRequest request = new DeleteClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.DeleteCluster(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.DeleteCluster(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.DeleteCluster(request.ProjectId, request.Zone, request.ClusterId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteClusterAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteClusterAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             DeleteClusterRequest request = new DeleteClusterRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.DeleteClusterAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.DeleteClusterAsync(request.ProjectId, request.Zone, request.ClusterId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.DeleteClusterAsync(request.ProjectId, request.Zone, request.ClusterId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void ListOperationsRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListOperationsRequest request = new ListOperationsRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Parent = "parent7858e4d0",
+            };
+            ListOperationsResponse expectedResponse = new ListOperationsResponse
+            {
+                Operations = { new Operation(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
+            };
+            mockGrpcClient.Setup(x => x.ListOperations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            ListOperationsResponse response = client.ListOperations(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ListOperationsRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListOperationsRequest request = new ListOperationsRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Parent = "parent7858e4d0",
+            };
+            ListOperationsResponse expectedResponse = new ListOperationsResponse
+            {
+                Operations = { new Operation(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
+            };
+            mockGrpcClient.Setup(x => x.ListOperationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListOperationsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            ListOperationsResponse responseCallSettings = await client.ListOperationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListOperationsResponse responseCancellationToken = await client.ListOperationsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void ListOperations()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::ListOperationsRequest expectedRequest = new apis::ListOperationsRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListOperationsRequest request = new ListOperationsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
             };
-            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
-            mockGrpcClient.Setup(x => x.ListOperations(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ListOperationsResponse expectedResponse = new ListOperationsResponse
+            {
+                Operations = { new Operation(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
+            };
+            mockGrpcClient.Setup(x => x.ListOperations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            apis::ListOperationsResponse response = client.ListOperations(projectId, zone);
-            Assert.Same(expectedResponse, response);
+            ListOperationsResponse response = client.ListOperations(request.ProjectId, request.Zone);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListOperationsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ListOperationsAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::ListOperationsRequest expectedRequest = new apis::ListOperationsRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListOperationsRequest request = new ListOperationsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
             };
-            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
-            mockGrpcClient.Setup(x => x.ListOperationsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::ListOperationsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ListOperationsResponse expectedResponse = new ListOperationsResponse
+            {
+                Operations = { new Operation(), },
+                MissingZones =
+                {
+                    "missing_zonesc3271512",
+                },
+            };
+            mockGrpcClient.Setup(x => x.ListOperationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListOperationsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            apis::ListOperationsResponse response = await client.ListOperationsAsync(projectId, zone);
-            Assert.Same(expectedResponse, response);
+            ListOperationsResponse responseCallSettings = await client.ListOperationsAsync(request.ProjectId, request.Zone, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListOperationsResponse responseCancellationToken = await client.ListOperationsAsync(request.ProjectId, request.Zone, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListOperations2()
+        [xunit::FactAttribute]
+        public void GetOperationRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::ListOperationsRequest request = new apis::ListOperationsRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
+                Name = "name1c9368b0",
             };
-            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
-            mockGrpcClient.Setup(x => x.ListOperations(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::ListOperationsResponse response = client.ListOperations(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.GetOperation(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListOperationsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetOperationRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::ListOperationsRequest request = new apis::ListOperationsRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
+                Name = "name1c9368b0",
             };
-            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
-            mockGrpcClient.Setup(x => x.ListOperationsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::ListOperationsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::ListOperationsResponse response = await client.ListOperationsAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.GetOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.GetOperationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
         public void GetOperation()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::GetOperationRequest expectedRequest = new apis::GetOperationRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetOperation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string operationId = "operationId-274116877";
-            apis::Operation response = client.GetOperation(projectId, zone, operationId);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.GetOperation(request.ProjectId, request.Zone, request.OperationId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetOperationAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetOperationAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::GetOperationRequest expectedRequest = new apis::GetOperationRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetOperationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string operationId = "operationId-274116877";
-            apis::Operation response = await client.GetOperationAsync(projectId, zone, operationId);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.GetOperationAsync(request.ProjectId, request.Zone, request.OperationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.GetOperationAsync(request.ProjectId, request.Zone, request.OperationId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetOperation2()
+        [xunit::FactAttribute]
+        public void CancelOperationRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::GetOperationRequest request = new apis::GetOperationRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.GetOperation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.GetOperation(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetOperationAsync2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::GetOperationRequest request = new apis::GetOperationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.GetOperationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.GetOperationAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CancelOperation()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::CancelOperationRequest expectedRequest = new apis::CancelOperationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string operationId = "operationId-274116877";
-            client.CancelOperation(projectId, zone, operationId);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CancelOperationAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::CancelOperationRequest expectedRequest = new apis::CancelOperationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string operationId = "operationId-274116877";
-            await client.CancelOperationAsync(projectId, zone, operationId);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CancelOperation2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::CancelOperationRequest request = new apis::CancelOperationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             client.CancelOperation(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CancelOperationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CancelOperationRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            apis::CancelOperationRequest request = new apis::CancelOperationRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                OperationId = "operationId-274116877",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
+                Name = "name1c9368b0",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            await client.CancelOperationAsync(request);
+            await client.CancelOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CancelOperationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetServerConfig()
+        [xunit::FactAttribute]
+        public void CancelOperation()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetServerConfigRequest expectedRequest = new GetServerConfigRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
             };
-            ServerConfig expectedResponse = new ServerConfig
-            {
-                DefaultClusterVersion = "defaultClusterVersion111003029",
-                DefaultImageType = "defaultImageType-918225828",
-            };
-            mockGrpcClient.Setup(x => x.GetServerConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            ServerConfig response = client.GetServerConfig(projectId, zone);
-            Assert.Same(expectedResponse, response);
+            client.CancelOperation(request.ProjectId, request.Zone, request.OperationId);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetServerConfigAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CancelOperationAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetServerConfigRequest expectedRequest = new GetServerConfigRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                OperationId = "operation_id8a494117",
             };
-            ServerConfig expectedResponse = new ServerConfig
-            {
-                DefaultClusterVersion = "defaultClusterVersion111003029",
-                DefaultImageType = "defaultImageType-918225828",
-            };
-            mockGrpcClient.Setup(x => x.GetServerConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServerConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            ServerConfig response = await client.GetServerConfigAsync(projectId, zone);
-            Assert.Same(expectedResponse, response);
+            await client.CancelOperationAsync(request.ProjectId, request.Zone, request.OperationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CancelOperationAsync(request.ProjectId, request.Zone, request.OperationId, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetServerConfig2()
+        [xunit::FactAttribute]
+        public void GetServerConfigRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetServerConfigRequest request = new GetServerConfigRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Name = "name1c9368b0",
             };
             ServerConfig expectedResponse = new ServerConfig
             {
-                DefaultClusterVersion = "defaultClusterVersion111003029",
-                DefaultImageType = "defaultImageType-918225828",
+                DefaultClusterVersion = "default_cluster_version3fc51e3b",
+                ValidNodeVersions =
+                {
+                    "valid_node_versions843ef273",
+                },
+                DefaultImageType = "default_image_typec14f9bb0",
+                ValidImageTypes =
+                {
+                    "valid_image_typesf47060d3",
+                },
+                ValidMasterVersions =
+                {
+                    "valid_master_versionsb8edf3fb",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetServerConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             ServerConfig response = client.GetServerConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetServerConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetServerConfigRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetServerConfigRequest request = new GetServerConfigRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                Name = "name1c9368b0",
             };
             ServerConfig expectedResponse = new ServerConfig
             {
-                DefaultClusterVersion = "defaultClusterVersion111003029",
-                DefaultImageType = "defaultImageType-918225828",
+                DefaultClusterVersion = "default_cluster_version3fc51e3b",
+                ValidNodeVersions =
+                {
+                    "valid_node_versions843ef273",
+                },
+                DefaultImageType = "default_image_typec14f9bb0",
+                ValidImageTypes =
+                {
+                    "valid_image_typesf47060d3",
+                },
+                ValidMasterVersions =
+                {
+                    "valid_master_versionsb8edf3fb",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetServerConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServerConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            ServerConfig response = await client.GetServerConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            ServerConfig responseCallSettings = await client.GetServerConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServerConfig responseCancellationToken = await client.GetServerConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListNodePools()
+        [xunit::FactAttribute]
+        public void GetServerConfig()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListNodePoolsRequest expectedRequest = new ListNodePoolsRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetServerConfigRequest request = new GetServerConfigRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
             };
-            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse();
-            mockGrpcClient.Setup(x => x.ListNodePools(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            ListNodePoolsResponse response = client.ListNodePools(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ListNodePoolsAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListNodePoolsRequest expectedRequest = new ListNodePoolsRequest
+            ServerConfig expectedResponse = new ServerConfig
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                DefaultClusterVersion = "default_cluster_version3fc51e3b",
+                ValidNodeVersions =
+                {
+                    "valid_node_versions843ef273",
+                },
+                DefaultImageType = "default_image_typec14f9bb0",
+                ValidImageTypes =
+                {
+                    "valid_image_typesf47060d3",
+                },
+                ValidMasterVersions =
+                {
+                    "valid_master_versionsb8edf3fb",
+                },
             };
-            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse();
-            mockGrpcClient.Setup(x => x.ListNodePoolsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListNodePoolsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            ListNodePoolsResponse response = await client.ListNodePoolsAsync(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
+            ServerConfig response = client.GetServerConfig(request.ProjectId, request.Zone);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListNodePools2()
+        [xunit::FactAttribute]
+        public async stt::Task GetServerConfigAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetServerConfigRequest request = new GetServerConfigRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+            };
+            ServerConfig expectedResponse = new ServerConfig
+            {
+                DefaultClusterVersion = "default_cluster_version3fc51e3b",
+                ValidNodeVersions =
+                {
+                    "valid_node_versions843ef273",
+                },
+                DefaultImageType = "default_image_typec14f9bb0",
+                ValidImageTypes =
+                {
+                    "valid_image_typesf47060d3",
+                },
+                ValidMasterVersions =
+                {
+                    "valid_master_versionsb8edf3fb",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            ServerConfig responseCallSettings = await client.GetServerConfigAsync(request.ProjectId, request.Zone, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServerConfig responseCancellationToken = await client.GetServerConfigAsync(request.ProjectId, request.Zone, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListNodePoolsRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             ListNodePoolsRequest request = new ListNodePoolsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Parent = "parent7858e4d0",
             };
-            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse();
-            mockGrpcClient.Setup(x => x.ListNodePools(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse
+            {
+                NodePools = { new NodePool(), },
+            };
+            mockGrpcClient.Setup(x => x.ListNodePools(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             ListNodePoolsResponse response = client.ListNodePools(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListNodePoolsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ListNodePoolsRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             ListNodePoolsRequest request = new ListNodePoolsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Parent = "parent7858e4d0",
             };
-            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse();
-            mockGrpcClient.Setup(x => x.ListNodePoolsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListNodePoolsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse
+            {
+                NodePools = { new NodePool(), },
+            };
+            mockGrpcClient.Setup(x => x.ListNodePoolsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListNodePoolsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            ListNodePoolsResponse response = await client.ListNodePoolsAsync(request);
-            Assert.Same(expectedResponse, response);
+            ListNodePoolsResponse responseCallSettings = await client.ListNodePoolsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListNodePoolsResponse responseCancellationToken = await client.ListNodePoolsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetNodePool()
+        [xunit::FactAttribute]
+        public void ListNodePools()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetNodePoolRequest expectedRequest = new GetNodePoolRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListNodePoolsRequest request = new ListNodePoolsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            NodePool expectedResponse = new NodePool
+            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse
             {
-                Name = "name3373707",
-                InitialNodeCount = 1682564205,
-                SelfLink = "selfLink-1691268851",
-                Version = "version351608024",
-                StatusMessage = "statusMessage-239442758",
-                PodIpv4CidrSize = 1098768716,
+                NodePools = { new NodePool(), },
             };
-            mockGrpcClient.Setup(x => x.GetNodePool(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ListNodePools(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string nodePoolId = "nodePoolId1043384033";
-            NodePool response = client.GetNodePool(projectId, zone, clusterId, nodePoolId);
-            Assert.Same(expectedResponse, response);
+            ListNodePoolsResponse response = client.ListNodePools(request.ProjectId, request.Zone, request.ClusterId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetNodePoolAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ListNodePoolsAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetNodePoolRequest expectedRequest = new GetNodePoolRequest
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            ListNodePoolsRequest request = new ListNodePoolsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            NodePool expectedResponse = new NodePool
+            ListNodePoolsResponse expectedResponse = new ListNodePoolsResponse
             {
-                Name = "name3373707",
-                InitialNodeCount = 1682564205,
-                SelfLink = "selfLink-1691268851",
-                Version = "version351608024",
-                StatusMessage = "statusMessage-239442758",
-                PodIpv4CidrSize = 1098768716,
+                NodePools = { new NodePool(), },
             };
-            mockGrpcClient.Setup(x => x.GetNodePoolAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NodePool>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ListNodePoolsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListNodePoolsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string nodePoolId = "nodePoolId1043384033";
-            NodePool response = await client.GetNodePoolAsync(projectId, zone, clusterId, nodePoolId);
-            Assert.Same(expectedResponse, response);
+            ListNodePoolsResponse responseCallSettings = await client.ListNodePoolsAsync(request.ProjectId, request.Zone, request.ClusterId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListNodePoolsResponse responseCancellationToken = await client.ListNodePoolsAsync(request.ProjectId, request.Zone, request.ClusterId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetNodePool2()
+        [xunit::FactAttribute]
+        public void GetNodePoolRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetNodePoolRequest request = new GetNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                Name = "name1c9368b0",
             };
             NodePool expectedResponse = new NodePool
             {
-                Name = "name3373707",
-                InitialNodeCount = 1682564205,
-                SelfLink = "selfLink-1691268851",
-                Version = "version351608024",
-                StatusMessage = "statusMessage-239442758",
-                PodIpv4CidrSize = 1098768716,
+                Name = "name1c9368b0",
+                Config = new NodeConfig(),
+                InitialNodeCount = -1915714087,
+                Autoscaling = new NodePoolAutoscaling(),
+                Management = new NodeManagement(),
+                MaxPodsConstraint = new MaxPodsConstraint(),
+                PodIpv4CidrSize = -551223211,
+                SelfLink = "self_link7e87f12d",
+                Version = "version102ff72a",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                Status = NodePool.Types.Status.RunningWithError,
+                StatusMessage = "status_message2c618f86",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetNodePool(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             NodePool response = client.GetNodePool(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetNodePoolAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetNodePoolRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetNodePoolRequest request = new GetNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                Name = "name1c9368b0",
             };
             NodePool expectedResponse = new NodePool
             {
-                Name = "name3373707",
-                InitialNodeCount = 1682564205,
-                SelfLink = "selfLink-1691268851",
-                Version = "version351608024",
-                StatusMessage = "statusMessage-239442758",
-                PodIpv4CidrSize = 1098768716,
+                Name = "name1c9368b0",
+                Config = new NodeConfig(),
+                InitialNodeCount = -1915714087,
+                Autoscaling = new NodePoolAutoscaling(),
+                Management = new NodeManagement(),
+                MaxPodsConstraint = new MaxPodsConstraint(),
+                PodIpv4CidrSize = -551223211,
+                SelfLink = "self_link7e87f12d",
+                Version = "version102ff72a",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                Status = NodePool.Types.Status.RunningWithError,
+                StatusMessage = "status_message2c618f86",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetNodePoolAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NodePool>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            NodePool response = await client.GetNodePoolAsync(request);
-            Assert.Same(expectedResponse, response);
+            NodePool responseCallSettings = await client.GetNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NodePool responseCancellationToken = await client.GetNodePoolAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetNodePool()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetNodePoolRequest request = new GetNodePoolRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+            };
+            NodePool expectedResponse = new NodePool
+            {
+                Name = "name1c9368b0",
+                Config = new NodeConfig(),
+                InitialNodeCount = -1915714087,
+                Autoscaling = new NodePoolAutoscaling(),
+                Management = new NodeManagement(),
+                MaxPodsConstraint = new MaxPodsConstraint(),
+                PodIpv4CidrSize = -551223211,
+                SelfLink = "self_link7e87f12d",
+                Version = "version102ff72a",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                Status = NodePool.Types.Status.RunningWithError,
+                StatusMessage = "status_message2c618f86",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            NodePool response = client.GetNodePool(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNodePoolAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetNodePoolRequest request = new GetNodePoolRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+            };
+            NodePool expectedResponse = new NodePool
+            {
+                Name = "name1c9368b0",
+                Config = new NodeConfig(),
+                InitialNodeCount = -1915714087,
+                Autoscaling = new NodePoolAutoscaling(),
+                Management = new NodeManagement(),
+                MaxPodsConstraint = new MaxPodsConstraint(),
+                PodIpv4CidrSize = -551223211,
+                SelfLink = "self_link7e87f12d",
+                Version = "version102ff72a",
+                InstanceGroupUrls =
+                {
+                    "instance_group_urlsbc2a92b9",
+                },
+                Status = NodePool.Types.Status.RunningWithError,
+                StatusMessage = "status_message2c618f86",
+                Conditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            NodePool responseCallSettings = await client.GetNodePoolAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NodePool responseCancellationToken = await client.GetNodePoolAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNodePoolRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CreateNodePoolRequest request = new CreateNodePoolRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePool = new NodePool(),
+                Parent = "parent7858e4d0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.CreateNodePool(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNodePoolRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CreateNodePoolRequest request = new CreateNodePoolRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePool = new NodePool(),
+                Parent = "parent7858e4d0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.CreateNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.CreateNodePoolAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateNodePool()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CreateNodePoolRequest expectedRequest = new CreateNodePoolRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePool = new NodePool(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.CreateNodePool(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            NodePool nodePool = new NodePool();
-            apis::Operation response = client.CreateNodePool(projectId, zone, clusterId, nodePool);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateNodePoolAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CreateNodePoolRequest expectedRequest = new CreateNodePoolRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePool = new NodePool(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.CreateNodePoolAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            NodePool nodePool = new NodePool();
-            apis::Operation response = await client.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateNodePool2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             CreateNodePoolRequest request = new CreateNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 NodePool = new NodePool(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateNodePool(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.CreateNodePool(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.CreateNodePool(request.ProjectId, request.Zone, request.ClusterId, request.NodePool);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateNodePoolAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateNodePoolAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             CreateNodePoolRequest request = new CreateNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 NodePool = new NodePool(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateNodePoolAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.CreateNodePoolAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.CreateNodePoolAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePool, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.CreateNodePoolAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePool, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void DeleteNodePoolRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            DeleteNodePoolRequest request = new DeleteNodePoolRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.DeleteNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.DeleteNodePool(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNodePoolRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            DeleteNodePoolRequest request = new DeleteNodePoolRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.DeleteNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.DeleteNodePoolAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeleteNodePool()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            DeleteNodePoolRequest expectedRequest = new DeleteNodePoolRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.DeleteNodePool(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string nodePoolId = "nodePoolId1043384033";
-            apis::Operation response = client.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteNodePoolAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            DeleteNodePoolRequest expectedRequest = new DeleteNodePoolRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string nodePoolId = "nodePoolId1043384033";
-            apis::Operation response = await client.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteNodePool2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             DeleteNodePoolRequest request = new DeleteNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.DeleteNodePool(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.DeleteNodePool(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.DeleteNodePool(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteNodePoolAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNodePoolAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             DeleteNodePoolRequest request = new DeleteNodePoolRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.DeleteNodePoolAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.DeleteNodePoolAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.DeleteNodePoolAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void RollbackNodePoolUpgradeRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.RollbackNodePoolUpgrade(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RollbackNodePoolUpgradeRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.RollbackNodePoolUpgradeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.RollbackNodePoolUpgradeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void RollbackNodePoolUpgrade()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            RollbackNodePoolUpgradeRequest expectedRequest = new RollbackNodePoolUpgradeRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string nodePoolId = "nodePoolId1043384033";
-            apis::Operation response = client.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task RollbackNodePoolUpgradeAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            RollbackNodePoolUpgradeRequest expectedRequest = new RollbackNodePoolUpgradeRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            string nodePoolId = "nodePoolId1043384033";
-            apis::Operation response = await client.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void RollbackNodePoolUpgrade2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.RollbackNodePoolUpgrade(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.RollbackNodePoolUpgrade(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RollbackNodePoolUpgradeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RollbackNodePoolUpgradeAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.RollbackNodePoolUpgradeAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.RollbackNodePoolUpgradeAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.RollbackNodePoolUpgradeAsync(request.ProjectId, request.Zone, request.ClusterId, request.NodePoolId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetNodePoolManagement()
+        [xunit::FactAttribute]
+        public void SetNodePoolManagementRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
                 Management = new NodeManagement(),
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNodePoolManagement(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetNodePoolManagement(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetNodePoolManagement(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetNodePoolManagement(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetNodePoolManagementAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetNodePoolManagementRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
                 Management = new NodeManagement(),
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNodePoolManagementAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetNodePoolManagementAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetNodePoolManagementAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetNodePoolManagementAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetNodePoolManagementAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetLabels()
+        [xunit::FactAttribute]
+        public void SetLabelsRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLabelsRequest request = new SetLabelsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                ResourceLabels = { },
-                LabelFingerprint = "labelFingerprint714995737",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                ResourceLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLabels(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetLabels(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetLabels(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetLabelsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetLabelsRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLabelsRequest request = new SetLabelsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                ResourceLabels = { },
-                LabelFingerprint = "labelFingerprint714995737",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                ResourceLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetLabelsAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLabelsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetLegacyAbacRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetLegacyAbacRequest request = new SetLegacyAbacRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Enabled = true,
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetLegacyAbac(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetLegacyAbac(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetLegacyAbacRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetLegacyAbacRequest request = new SetLegacyAbacRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Enabled = true,
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetLegacyAbacAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLegacyAbacAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetLegacyAbac()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetLegacyAbacRequest expectedRequest = new SetLegacyAbacRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Enabled = false,
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetLegacyAbac(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            bool enabled = false;
-            apis::Operation response = client.SetLegacyAbac(projectId, zone, clusterId, enabled);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SetLegacyAbacAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetLegacyAbacRequest expectedRequest = new SetLegacyAbacRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Enabled = false,
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            bool enabled = false;
-            apis::Operation response = await client.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SetLegacyAbac2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLegacyAbacRequest request = new SetLegacyAbacRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Enabled = false,
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Enabled = true,
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLegacyAbac(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetLegacyAbac(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetLegacyAbac(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetLegacyAbac(request.ProjectId, request.Zone, request.ClusterId, request.Enabled);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetLegacyAbacAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetLegacyAbacAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetLegacyAbacRequest request = new SetLegacyAbacRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                Enabled = false,
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Enabled = true,
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetLegacyAbacAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetLegacyAbacAsync(request.ProjectId, request.Zone, request.ClusterId, request.Enabled, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLegacyAbacAsync(request.ProjectId, request.Zone, request.ClusterId, request.Enabled, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void StartIPRotationRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            StartIPRotationRequest request = new StartIPRotationRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
+                RotateCredentials = false,
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.StartIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.StartIPRotation(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task StartIPRotationRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            StartIPRotationRequest request = new StartIPRotationRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
+                RotateCredentials = false,
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.StartIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.StartIPRotationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.StartIPRotationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void StartIPRotation()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            StartIPRotationRequest expectedRequest = new StartIPRotationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.StartIPRotation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            apis::Operation response = client.StartIPRotation(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task StartIPRotationAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            StartIPRotationRequest expectedRequest = new StartIPRotationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.StartIPRotationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            apis::Operation response = await client.StartIPRotationAsync(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void StartIPRotation2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             StartIPRotationRequest request = new StartIPRotationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.StartIPRotation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.StartIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.StartIPRotation(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.StartIPRotation(request.ProjectId, request.Zone, request.ClusterId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task StartIPRotationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task StartIPRotationAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             StartIPRotationRequest request = new StartIPRotationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.StartIPRotationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.StartIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.StartIPRotationAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.StartIPRotationAsync(request.ProjectId, request.Zone, request.ClusterId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.StartIPRotationAsync(request.ProjectId, request.Zone, request.ClusterId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void CompleteIPRotationRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CompleteIPRotationRequest request = new CompleteIPRotationRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CompleteIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.CompleteIPRotation(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CompleteIPRotationRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            CompleteIPRotationRequest request = new CompleteIPRotationRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.CompleteIPRotationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.CompleteIPRotationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CompleteIPRotation()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CompleteIPRotationRequest expectedRequest = new CompleteIPRotationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.CompleteIPRotation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            apis::Operation response = client.CompleteIPRotation(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CompleteIPRotationAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CompleteIPRotationRequest expectedRequest = new CompleteIPRotationRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            apis::Operation response = await client.CompleteIPRotationAsync(projectId, zone, clusterId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CompleteIPRotation2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             CompleteIPRotationRequest request = new CompleteIPRotationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CompleteIPRotation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CompleteIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.CompleteIPRotation(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.CompleteIPRotation(request.ProjectId, request.Zone, request.ClusterId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CompleteIPRotationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CompleteIPRotationAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             CompleteIPRotationRequest request = new CompleteIPRotationRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.CompleteIPRotationAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.CompleteIPRotationAsync(request.ProjectId, request.Zone, request.ClusterId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.CompleteIPRotationAsync(request.ProjectId, request.Zone, request.ClusterId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetNodePoolSize()
+        [xunit::FactAttribute]
+        public void SetNodePoolSizeRequestObject()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-                NodeCount = 1539922066,
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                NodeCount = -1659500730,
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNodePoolSize(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetNodePoolSize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetNodePoolSize(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetNodePoolSize(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetNodePoolSizeAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetNodePoolSizeRequestObjectAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NodePoolId = "nodePoolId1043384033",
-                NodeCount = 1539922066,
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NodePoolId = "node_pool_id3121d6bc",
+                NodeCount = -1659500730,
+                Name = "name1c9368b0",
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNodePoolSizeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetNodePoolSizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetNodePoolSizeAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetNodePoolSizeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetNodePoolSizeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetNetworkPolicyRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NetworkPolicy = new NetworkPolicy(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetNetworkPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetNetworkPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetNetworkPolicyRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                NetworkPolicy = new NetworkPolicy(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetNetworkPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetNetworkPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetNetworkPolicy()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetNetworkPolicyRequest expectedRequest = new SetNetworkPolicyRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NetworkPolicy = new NetworkPolicy(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetNetworkPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            NetworkPolicy networkPolicy = new NetworkPolicy();
-            apis::Operation response = client.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SetNetworkPolicyAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetNetworkPolicyRequest expectedRequest = new SetNetworkPolicyRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                NetworkPolicy = new NetworkPolicy(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            NetworkPolicy networkPolicy = new NetworkPolicy();
-            apis::Operation response = await client.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SetNetworkPolicy2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 NetworkPolicy = new NetworkPolicy(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNetworkPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetNetworkPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetNetworkPolicy(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetNetworkPolicy(request.ProjectId, request.Zone, request.ClusterId, request.NetworkPolicy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetNetworkPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetNetworkPolicyAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 NetworkPolicy = new NetworkPolicy(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetNetworkPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetNetworkPolicyAsync(request.ProjectId, request.Zone, request.ClusterId, request.NetworkPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetNetworkPolicyAsync(request.ProjectId, request.Zone, request.ClusterId, request.NetworkPolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetMaintenancePolicyRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetMaintenancePolicyRequest request = new SetMaintenancePolicyRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MaintenancePolicy = new MaintenancePolicy(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetMaintenancePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetMaintenancePolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetMaintenancePolicyRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            SetMaintenancePolicyRequest request = new SetMaintenancePolicyRequest
+            {
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
+                MaintenancePolicy = new MaintenancePolicy(),
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetMaintenancePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetMaintenancePolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetMaintenancePolicy()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetMaintenancePolicyRequest expectedRequest = new SetMaintenancePolicyRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MaintenancePolicy = new MaintenancePolicy(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetMaintenancePolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
-            apis::Operation response = client.SetMaintenancePolicy(projectId, zone, clusterId, maintenancePolicy);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task SetMaintenancePolicyAsync()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            SetMaintenancePolicyRequest expectedRequest = new SetMaintenancePolicyRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
-                MaintenancePolicy = new MaintenancePolicy(),
-            };
-            apis::Operation expectedResponse = new apis::Operation
-            {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
-            };
-            mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            string zone = "zone3744684";
-            string clusterId = "clusterId240280960";
-            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
-            apis::Operation response = await client.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void SetMaintenancePolicy2()
-        {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetMaintenancePolicyRequest request = new SetMaintenancePolicyRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 MaintenancePolicy = new MaintenancePolicy(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetMaintenancePolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetMaintenancePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = client.SetMaintenancePolicy(request);
-            Assert.Same(expectedResponse, response);
+            Operation response = client.SetMaintenancePolicy(request.ProjectId, request.Zone, request.ClusterId, request.MaintenancePolicy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetMaintenancePolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetMaintenancePolicyAsync()
         {
-            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             SetMaintenancePolicyRequest request = new SetMaintenancePolicyRequest
             {
-                ProjectId = "projectId-1969970175",
-                Zone = "zone3744684",
-                ClusterId = "clusterId240280960",
+                ProjectId = "project_id43ad98b0",
+                Zone = "zone255f4ea8",
+                ClusterId = "cluster_id121c7ba9",
                 MaintenancePolicy = new MaintenancePolicy(),
             };
-            apis::Operation expectedResponse = new apis::Operation
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
-                Zone = "zone2-696322977",
-                Detail = "detail-1335224239",
-                StatusMessage = "statusMessage-239442758",
-                SelfLink = "selfLink-1691268851",
-                TargetLink = "targetLink-2084812312",
-                Location = "location1901043637",
-                StartTime = "startTime-1573145462",
-                EndTime = "endTime1725551537",
+                Name = "name1c9368b0",
+                Zone = "zone255f4ea8",
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            apis::Operation response = await client.SetMaintenancePolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.SetMaintenancePolicyAsync(request.ProjectId, request.Zone, request.ClusterId, request.MaintenancePolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetMaintenancePolicyAsync(request.ProjectId, request.Zone, request.ClusterId, request.MaintenancePolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
     }
 }
