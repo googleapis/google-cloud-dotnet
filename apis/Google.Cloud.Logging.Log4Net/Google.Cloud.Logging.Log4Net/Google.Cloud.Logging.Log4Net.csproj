@@ -26,7 +26,7 @@
     <PackageReference Include="Google.Api.Gax.Grpc" Version="3.0.0-alpha00" />
     <PackageReference Include="Google.Cloud.DevTools.Common" Version="1.1.0" />
     <PackageReference Include="Google.Cloud.Logging.V2" Version="2.3.0" />
-    <PackageReference Include="Grpc.Core" Version="2.24.0" PrivateAssets="None" />
+    <PackageReference Include="Grpc.Core" Version="2.25.0" PrivateAssets="None" />
     <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
