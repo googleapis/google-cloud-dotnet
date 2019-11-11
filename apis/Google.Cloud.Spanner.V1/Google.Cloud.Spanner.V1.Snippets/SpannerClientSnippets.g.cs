@@ -736,8 +736,8 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<PartialResultSet> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            var responseStream = response.GrpcCall.ResponseStream;
+            while (await responseStream.MoveNext(default))
             {
                 PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -863,8 +863,8 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<PartialResultSet> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            var responseStream = response.GrpcCall.ResponseStream;
+            while (await responseStream.MoveNext(default))
             {
                 PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response
