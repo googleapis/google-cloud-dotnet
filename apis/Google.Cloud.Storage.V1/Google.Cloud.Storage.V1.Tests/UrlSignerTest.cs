@@ -22,7 +22,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-#if NET452
+#if NET461
 using RsaKey = System.Security.Cryptography.RSACryptoServiceProvider;
 #else
 using RsaKey = System.Security.Cryptography.RSA;
