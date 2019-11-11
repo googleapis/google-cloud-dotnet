@@ -84,6 +84,7 @@ namespace Google.Cloud.Container.V1
             SetNodePoolSizeSettings = existing.SetNodePoolSizeSettings;
             SetNetworkPolicySettings = existing.SetNetworkPolicySettings;
             SetMaintenancePolicySettings = existing.SetMaintenancePolicySettings;
+            ListUsableSubnetworksSettings = existing.ListUsableSubnetworksSettings;
             OnCopy(existing);
         }
 
@@ -520,8 +521,7 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -530,7 +530,7 @@ namespace Google.Cloud.Container.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -758,8 +758,7 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -768,7 +767,7 @@ namespace Google.Cloud.Container.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -1033,6 +1032,36 @@ namespace Google.Cloud.Container.V1
             )));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterManagerClient.ListUsableSubnetworks</c> and <c>ClusterManagerClient.ListUsableSubnetworksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ClusterManagerClient.ListUsableSubnetworks</c> and
+        /// <c>ClusterManagerClient.ListUsableSubnetworksAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUsableSubnetworksSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="ClusterManagerSettings"/> object.</returns>
@@ -1236,12 +1265,12 @@ namespace Google.Cloud.Container.V1
         /// zones.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides, or "-" for all zones.
         /// This field has been deprecated and replaced by the parent field.
@@ -1268,12 +1297,12 @@ namespace Google.Cloud.Container.V1
         /// zones.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides, or "-" for all zones.
         /// This field has been deprecated and replaced by the parent field.
@@ -1297,12 +1326,12 @@ namespace Google.Cloud.Container.V1
         /// zones.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides, or "-" for all zones.
         /// This field has been deprecated and replaced by the parent field.
@@ -1387,18 +1416,18 @@ namespace Google.Cloud.Container.V1
         /// Gets the details of a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to retrieve.
+        /// Required. Deprecated. The name of the cluster to retrieve.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -1424,18 +1453,18 @@ namespace Google.Cloud.Container.V1
         /// Gets the details of a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to retrieve.
+        /// Required. Deprecated. The name of the cluster to retrieve.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -1458,18 +1487,18 @@ namespace Google.Cloud.Container.V1
         /// Gets the details of a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to retrieve.
+        /// Required. Deprecated. The name of the cluster to retrieve.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -1555,26 +1584,26 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cluster">
-        /// A [cluster
+        /// Required. A [cluster
         /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
         /// </param>
         /// <param name="callSettings">
@@ -1604,26 +1633,26 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cluster">
-        /// A [cluster
+        /// Required. A [cluster
         /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
         /// </param>
         /// <param name="cancellationToken">
@@ -1650,26 +1679,26 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cluster">
-        /// A [cluster
+        /// Required. A [cluster
         /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
         /// </param>
         /// <param name="callSettings">
@@ -1699,12 +1728,12 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1730,12 +1759,12 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1760,12 +1789,12 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1787,22 +1816,22 @@ namespace Google.Cloud.Container.V1
         /// Updates the settings of a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="update">
-        /// A description of the update.
+        /// Required. A description of the update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1829,22 +1858,22 @@ namespace Google.Cloud.Container.V1
         /// Updates the settings of a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="update">
-        /// A description of the update.
+        /// Required. A description of the update.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1868,22 +1897,22 @@ namespace Google.Cloud.Container.V1
         /// Updates the settings of a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="update">
-        /// A description of the update.
+        /// Required. A description of the update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1963,7 +1992,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Updates the version and/or image type for a specific node pool.
+        /// Updates the version and/or image type for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1982,7 +2011,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Updates the version and/or image type for a specific node pool.
+        /// Updates the version and/or image type for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2000,7 +2029,7 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the version and/or image type for a specific node pool.
+        /// Updates the version and/or image type for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2019,7 +2048,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Sets the autoscaling settings for a specific node pool.
+        /// Sets the autoscaling settings for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2038,7 +2067,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Sets the autoscaling settings for a specific node pool.
+        /// Sets the autoscaling settings for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2056,7 +2085,7 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the autoscaling settings for a specific node pool.
+        /// Sets the autoscaling settings for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2078,22 +2107,22 @@ namespace Google.Cloud.Container.V1
         /// Sets the logging service for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="loggingService">
-        /// The logging service the cluster should use to write metrics.
+        /// Required. The logging service the cluster should use to write metrics.
         /// Currently available options:
         ///
         /// * "logging.googleapis.com" - the Google Cloud Logging service
@@ -2124,22 +2153,22 @@ namespace Google.Cloud.Container.V1
         /// Sets the logging service for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="loggingService">
-        /// The logging service the cluster should use to write metrics.
+        /// Required. The logging service the cluster should use to write metrics.
         /// Currently available options:
         ///
         /// * "logging.googleapis.com" - the Google Cloud Logging service
@@ -2167,22 +2196,22 @@ namespace Google.Cloud.Container.V1
         /// Sets the logging service for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="loggingService">
-        /// The logging service the cluster should use to write metrics.
+        /// Required. The logging service the cluster should use to write metrics.
         /// Currently available options:
         ///
         /// * "logging.googleapis.com" - the Google Cloud Logging service
@@ -2269,24 +2298,26 @@ namespace Google.Cloud.Container.V1
         /// Sets the monitoring service for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="monitoringService">
-        /// The monitoring service the cluster should use to write metrics.
+        /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         ///
+        /// * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring
+        /// service with Kubernetes-native resource model
         /// * "monitoring.googleapis.com" - the Google Cloud Monitoring service
         /// * "none" - no metrics will be exported from the cluster
         /// </param>
@@ -2315,24 +2346,26 @@ namespace Google.Cloud.Container.V1
         /// Sets the monitoring service for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="monitoringService">
-        /// The monitoring service the cluster should use to write metrics.
+        /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         ///
+        /// * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring
+        /// service with Kubernetes-native resource model
         /// * "monitoring.googleapis.com" - the Google Cloud Monitoring service
         /// * "none" - no metrics will be exported from the cluster
         /// </param>
@@ -2358,24 +2391,26 @@ namespace Google.Cloud.Container.V1
         /// Sets the monitoring service for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="monitoringService">
-        /// The monitoring service the cluster should use to write metrics.
+        /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         ///
+        /// * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring
+        /// service with Kubernetes-native resource model
         /// * "monitoring.googleapis.com" - the Google Cloud Monitoring service
         /// * "none" - no metrics will be exported from the cluster
         /// </param>
@@ -2460,22 +2495,22 @@ namespace Google.Cloud.Container.V1
         /// Sets the addons for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="addonsConfig">
-        /// The desired configurations for the various addons available to run in the
+        /// Required. The desired configurations for the various addons available to run in the
         /// cluster.
         /// </param>
         /// <param name="callSettings">
@@ -2503,22 +2538,22 @@ namespace Google.Cloud.Container.V1
         /// Sets the addons for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="addonsConfig">
-        /// The desired configurations for the various addons available to run in the
+        /// Required. The desired configurations for the various addons available to run in the
         /// cluster.
         /// </param>
         /// <param name="cancellationToken">
@@ -2543,22 +2578,22 @@ namespace Google.Cloud.Container.V1
         /// Sets the addons for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="addonsConfig">
-        /// The desired configurations for the various addons available to run in the
+        /// Required. The desired configurations for the various addons available to run in the
         /// cluster.
         /// </param>
         /// <param name="callSettings">
@@ -2642,23 +2677,23 @@ namespace Google.Cloud.Container.V1
         /// Sets the locations for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="locations">
-        /// The desired list of Google Compute Engine
-        /// [locations](/compute/docs/zones#available) in which the cluster's nodes
+        /// Required. The desired list of Google Compute Engine
+        /// [zones](/compute/docs/zones#available) in which the cluster's nodes
         /// should be located. Changing the locations a cluster is in will result
         /// in nodes being either created or removed from the cluster, depending on
         /// whether locations are being added or removed.
@@ -2690,23 +2725,23 @@ namespace Google.Cloud.Container.V1
         /// Sets the locations for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="locations">
-        /// The desired list of Google Compute Engine
-        /// [locations](/compute/docs/zones#available) in which the cluster's nodes
+        /// Required. The desired list of Google Compute Engine
+        /// [zones](/compute/docs/zones#available) in which the cluster's nodes
         /// should be located. Changing the locations a cluster is in will result
         /// in nodes being either created or removed from the cluster, depending on
         /// whether locations are being added or removed.
@@ -2735,23 +2770,23 @@ namespace Google.Cloud.Container.V1
         /// Sets the locations for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="locations">
-        /// The desired list of Google Compute Engine
-        /// [locations](/compute/docs/zones#available) in which the cluster's nodes
+        /// Required. The desired list of Google Compute Engine
+        /// [zones](/compute/docs/zones#available) in which the cluster's nodes
         /// should be located. Changing the locations a cluster is in will result
         /// in nodes being either created or removed from the cluster, depending on
         /// whether locations are being added or removed.
@@ -2839,22 +2874,22 @@ namespace Google.Cloud.Container.V1
         /// Updates the master for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="masterVersion">
-        /// The Kubernetes version to change the master to.
+        /// Required. The Kubernetes version to change the master to.
         ///
         /// Users may specify either explicit versions offered by Kubernetes Engine or
         /// version aliases, which have the following behavior:
@@ -2890,22 +2925,22 @@ namespace Google.Cloud.Container.V1
         /// Updates the master for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="masterVersion">
-        /// The Kubernetes version to change the master to.
+        /// Required. The Kubernetes version to change the master to.
         ///
         /// Users may specify either explicit versions offered by Kubernetes Engine or
         /// version aliases, which have the following behavior:
@@ -2938,22 +2973,22 @@ namespace Google.Cloud.Container.V1
         /// Updates the master for a specific cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to upgrade.
+        /// Required. Deprecated. The name of the cluster to upgrade.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="masterVersion">
-        /// The Kubernetes version to change the master to.
+        /// Required. The Kubernetes version to change the master to.
         ///
         /// Users may specify either explicit versions offered by Kubernetes Engine or
         /// version aliases, which have the following behavior:
@@ -3042,9 +3077,9 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Used to set master auth materials. Currently supports :-
-        /// Changing the admin password for a specific cluster.
-        /// This can be either via password generation or explicitly set the password.
+        /// Sets master auth materials. Currently supports changing the admin password
+        /// or a specific cluster, either via password generation or explicitly setting
+        /// the password.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3063,9 +3098,9 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Used to set master auth materials. Currently supports :-
-        /// Changing the admin password for a specific cluster.
-        /// This can be either via password generation or explicitly set the password.
+        /// Sets master auth materials. Currently supports changing the admin password
+        /// or a specific cluster, either via password generation or explicitly setting
+        /// the password.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3083,9 +3118,9 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to set master auth materials. Currently supports :-
-        /// Changing the admin password for a specific cluster.
-        /// This can be either via password generation or explicitly set the password.
+        /// Sets master auth materials. Currently supports changing the admin password
+        /// or a specific cluster, either via password generation or explicitly setting
+        /// the password.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3110,23 +3145,23 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to delete.
+        /// Required. Deprecated. The name of the cluster to delete.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -3155,23 +3190,23 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to delete.
+        /// Required. Deprecated. The name of the cluster to delete.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -3197,23 +3232,23 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to delete.
+        /// Required. Deprecated. The name of the cluster to delete.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -3242,9 +3277,9 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3269,9 +3304,9 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3295,9 +3330,9 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3319,12 +3354,12 @@ namespace Google.Cloud.Container.V1
         /// Lists all operations in a project in a specific zone or all zones.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
         /// all zones. This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -3349,12 +3384,12 @@ namespace Google.Cloud.Container.V1
         /// Lists all operations in a project in a specific zone or all zones.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
         /// all zones. This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -3376,12 +3411,12 @@ namespace Google.Cloud.Container.V1
         /// Lists all operations in a project in a specific zone or all zones.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
         /// all zones. This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -3462,18 +3497,18 @@ namespace Google.Cloud.Container.V1
         /// Gets the specified operation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
-        /// Deprecated. The server-assigned `name` of the operation.
+        /// Required. Deprecated. The server-assigned `name` of the operation.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -3499,18 +3534,18 @@ namespace Google.Cloud.Container.V1
         /// Gets the specified operation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
-        /// Deprecated. The server-assigned `name` of the operation.
+        /// Required. Deprecated. The server-assigned `name` of the operation.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -3533,18 +3568,18 @@ namespace Google.Cloud.Container.V1
         /// Gets the specified operation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
-        /// Deprecated. The server-assigned `name` of the operation.
+        /// Required. Deprecated. The server-assigned `name` of the operation.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -3626,17 +3661,17 @@ namespace Google.Cloud.Container.V1
         /// Cancels the specified operation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the operation resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
-        /// Deprecated. The server-assigned `name` of the operation.
+        /// Required. Deprecated. The server-assigned `name` of the operation.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -3662,17 +3697,17 @@ namespace Google.Cloud.Container.V1
         /// Cancels the specified operation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the operation resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
-        /// Deprecated. The server-assigned `name` of the operation.
+        /// Required. Deprecated. The server-assigned `name` of the operation.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -3695,17 +3730,17 @@ namespace Google.Cloud.Container.V1
         /// Cancels the specified operation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the operation resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
-        /// Deprecated. The server-assigned `name` of the operation.
+        /// Required. Deprecated. The server-assigned `name` of the operation.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -3778,15 +3813,15 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) to return operations for.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3808,15 +3843,15 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) to return operations for.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3835,15 +3870,15 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) to return operations for.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3865,7 +3900,7 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3884,7 +3919,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3902,7 +3937,7 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3924,18 +3959,18 @@ namespace Google.Cloud.Container.V1
         /// Lists the node pools for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="callSettings">
@@ -3961,18 +3996,18 @@ namespace Google.Cloud.Container.V1
         /// Lists the node pools for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cancellationToken">
@@ -3995,18 +4030,18 @@ namespace Google.Cloud.Container.V1
         /// Lists the node pools for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="callSettings">
@@ -4085,25 +4120,25 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool.
+        /// Required. Deprecated. The name of the node pool.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -4128,25 +4163,25 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool.
+        /// Required. Deprecated. The name of the node pool.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -4168,25 +4203,25 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool.
+        /// Required. Deprecated. The name of the node pool.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -4211,7 +4246,7 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4230,7 +4265,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4248,7 +4283,7 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4270,22 +4305,22 @@ namespace Google.Cloud.Container.V1
         /// Creates a node pool for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="nodePool">
-        /// The node pool to create.
+        /// Required. The node pool to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -4312,22 +4347,22 @@ namespace Google.Cloud.Container.V1
         /// Creates a node pool for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="nodePool">
-        /// The node pool to create.
+        /// Required. The node pool to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -4351,22 +4386,22 @@ namespace Google.Cloud.Container.V1
         /// Creates a node pool for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="nodePool">
-        /// The node pool to create.
+        /// Required. The node pool to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -4449,22 +4484,22 @@ namespace Google.Cloud.Container.V1
         /// Deletes a node pool from a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool to delete.
+        /// Required. Deprecated. The name of the node pool to delete.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -4492,22 +4527,22 @@ namespace Google.Cloud.Container.V1
         /// Deletes a node pool from a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool to delete.
+        /// Required. Deprecated. The name of the node pool to delete.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -4532,22 +4567,22 @@ namespace Google.Cloud.Container.V1
         /// Deletes a node pool from a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool to delete.
+        /// Required. Deprecated. The name of the node pool to delete.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -4628,26 +4663,26 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to rollback.
+        /// Required. Deprecated. The name of the cluster to rollback.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool to rollback.
+        /// Required. Deprecated. The name of the node pool to rollback.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -4672,26 +4707,26 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to rollback.
+        /// Required. Deprecated. The name of the cluster to rollback.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool to rollback.
+        /// Required. Deprecated. The name of the node pool to rollback.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -4713,26 +4748,26 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to rollback.
+        /// Required. Deprecated. The name of the cluster to rollback.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="nodePoolId">
-        /// Deprecated. The name of the node pool to rollback.
+        /// Required. Deprecated. The name of the node pool to rollback.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -4757,8 +4792,8 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4777,8 +4812,8 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4796,8 +4831,8 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4931,22 +4966,22 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables the ABAC authorization mechanism on a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to update.
+        /// Required. Deprecated. The name of the cluster to update.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="enabled">
-        /// Whether ABAC authorization will be enabled in the cluster.
+        /// Required. Whether ABAC authorization will be enabled in the cluster.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -4973,22 +5008,22 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables the ABAC authorization mechanism on a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to update.
+        /// Required. Deprecated. The name of the cluster to update.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="enabled">
-        /// Whether ABAC authorization will be enabled in the cluster.
+        /// Required. Whether ABAC authorization will be enabled in the cluster.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -5012,22 +5047,22 @@ namespace Google.Cloud.Container.V1
         /// Enables or disables the ABAC authorization mechanism on a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster to update.
+        /// Required. Deprecated. The name of the cluster to update.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="enabled">
-        /// Whether ABAC authorization will be enabled in the cluster.
+        /// Required. Whether ABAC authorization will be enabled in the cluster.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -5107,21 +5142,21 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -5144,21 +5179,21 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -5178,21 +5213,21 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -5215,7 +5250,7 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5234,7 +5269,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5252,7 +5287,7 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5274,18 +5309,18 @@ namespace Google.Cloud.Container.V1
         /// Completes master IP rotation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -5311,18 +5346,18 @@ namespace Google.Cloud.Container.V1
         /// Completes master IP rotation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">
@@ -5345,18 +5380,18 @@ namespace Google.Cloud.Container.V1
         /// Completes master IP rotation.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">
@@ -5491,25 +5526,25 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="networkPolicy">
-        /// Configuration options for the NetworkPolicy feature.
+        /// Required. Configuration options for the NetworkPolicy feature.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -5533,25 +5568,25 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="networkPolicy">
-        /// Configuration options for the NetworkPolicy feature.
+        /// Required. Configuration options for the NetworkPolicy feature.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -5572,25 +5607,25 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// Deprecated. The Google Developers Console [project ID or project
+        /// Required. Deprecated. The Google Developers Console [project ID or project
         /// number](https://developers.google.com/console/help/new/#projectnumber).
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="zone">
-        /// Deprecated. The name of the Google Compute Engine
+        /// Required. Deprecated. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="clusterId">
-        /// Deprecated. The name of the cluster.
+        /// Required. Deprecated. The name of the cluster.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="networkPolicy">
-        /// Configuration options for the NetworkPolicy feature.
+        /// Required. Configuration options for the NetworkPolicy feature.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -5614,7 +5649,7 @@ namespace Google.Cloud.Container.V1
                 callSettings);
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5633,7 +5668,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5651,7 +5686,7 @@ namespace Google.Cloud.Container.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5673,19 +5708,19 @@ namespace Google.Cloud.Container.V1
         /// Sets the maintenance policy for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// The Google Developers Console [project ID or project
+        /// Required. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// </param>
         /// <param name="zone">
-        /// The name of the Google Compute Engine
+        /// Required. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// </param>
         /// <param name="clusterId">
-        /// The name of the cluster to update.
+        /// Required. The name of the cluster to update.
         /// </param>
         /// <param name="maintenancePolicy">
-        /// The maintenance policy to be set for the cluster. An empty field
+        /// Required. The maintenance policy to be set for the cluster. An empty field
         /// clears the existing maintenance policy.
         /// </param>
         /// <param name="callSettings">
@@ -5713,19 +5748,19 @@ namespace Google.Cloud.Container.V1
         /// Sets the maintenance policy for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// The Google Developers Console [project ID or project
+        /// Required. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// </param>
         /// <param name="zone">
-        /// The name of the Google Compute Engine
+        /// Required. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// </param>
         /// <param name="clusterId">
-        /// The name of the cluster to update.
+        /// Required. The name of the cluster to update.
         /// </param>
         /// <param name="maintenancePolicy">
-        /// The maintenance policy to be set for the cluster. An empty field
+        /// Required. The maintenance policy to be set for the cluster. An empty field
         /// clears the existing maintenance policy.
         /// </param>
         /// <param name="cancellationToken">
@@ -5750,19 +5785,19 @@ namespace Google.Cloud.Container.V1
         /// Sets the maintenance policy for a cluster.
         /// </summary>
         /// <param name="projectId">
-        /// The Google Developers Console [project ID or project
+        /// Required. The Google Developers Console [project ID or project
         /// number](https://support.google.com/cloud/answer/6158840).
         /// </param>
         /// <param name="zone">
-        /// The name of the Google Compute Engine
+        /// Required. The name of the Google Compute Engine
         /// [zone](/compute/docs/zones#available) in which the cluster
         /// resides.
         /// </param>
         /// <param name="clusterId">
-        /// The name of the cluster to update.
+        /// Required. The name of the cluster to update.
         /// </param>
         /// <param name="maintenancePolicy">
-        /// The maintenance policy to be set for the cluster. An empty field
+        /// Required. The maintenance policy to be set for the cluster. An empty field
         /// clears the existing maintenance policy.
         /// </param>
         /// <param name="callSettings">
@@ -5842,6 +5877,44 @@ namespace Google.Cloud.Container.V1
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists subnetworks that are usable for creating clusters in a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="UsableSubnetwork"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> ListUsableSubnetworksAsync(
+            ListUsableSubnetworksRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists subnetworks that are usable for creating clusters in a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="UsableSubnetwork"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> ListUsableSubnetworks(
+            ListUsableSubnetworksRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -5879,6 +5952,7 @@ namespace Google.Cloud.Container.V1
         private readonly gaxgrpc::ApiCall<SetNodePoolSizeRequest, Operation> _callSetNodePoolSize;
         private readonly gaxgrpc::ApiCall<SetNetworkPolicyRequest, Operation> _callSetNetworkPolicy;
         private readonly gaxgrpc::ApiCall<SetMaintenancePolicyRequest, Operation> _callSetMaintenancePolicy;
+        private readonly gaxgrpc::ApiCall<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse> _callListUsableSubnetworks;
 
         /// <summary>
         /// Constructs a client wrapper for the ClusterManager service, with the specified gRPC client and settings.
@@ -5980,6 +6054,9 @@ namespace Google.Cloud.Container.V1
             _callSetMaintenancePolicy = clientHelper.BuildApiCall<SetMaintenancePolicyRequest, Operation>(
                 GrpcClient.SetMaintenancePolicyAsync, GrpcClient.SetMaintenancePolicy, effectiveSettings.SetMaintenancePolicySettings)
                 .WithGoogleRequestParam("name", request => request.Name);
+            _callListUsableSubnetworks = clientHelper.BuildApiCall<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse>(
+                GrpcClient.ListUsableSubnetworksAsync, GrpcClient.ListUsableSubnetworks, effectiveSettings.ListUsableSubnetworksSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListClusters);
             Modify_ListClustersApiCall(ref _callListClusters);
             Modify_ApiCall(ref _callGetCluster);
@@ -6040,6 +6117,8 @@ namespace Google.Cloud.Container.V1
             Modify_SetNetworkPolicyApiCall(ref _callSetNetworkPolicy);
             Modify_ApiCall(ref _callSetMaintenancePolicy);
             Modify_SetMaintenancePolicyApiCall(ref _callSetMaintenancePolicy);
+            Modify_ApiCall(ref _callListUsableSubnetworks);
+            Modify_ListUsableSubnetworksApiCall(ref _callListUsableSubnetworks);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6083,6 +6162,7 @@ namespace Google.Cloud.Container.V1
         partial void Modify_SetNodePoolSizeApiCall(ref gaxgrpc::ApiCall<SetNodePoolSizeRequest, Operation> call);
         partial void Modify_SetNetworkPolicyApiCall(ref gaxgrpc::ApiCall<SetNetworkPolicyRequest, Operation> call);
         partial void Modify_SetMaintenancePolicyApiCall(ref gaxgrpc::ApiCall<SetMaintenancePolicyRequest, Operation> call);
+        partial void Modify_ListUsableSubnetworksApiCall(ref gaxgrpc::ApiCall<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse> call);
         partial void OnConstruction(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -6123,6 +6203,7 @@ namespace Google.Cloud.Container.V1
         partial void Modify_SetNodePoolSizeRequest(ref SetNodePoolSizeRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SetNetworkPolicyRequest(ref SetNetworkPolicyRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SetMaintenancePolicyRequest(ref SetMaintenancePolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListUsableSubnetworksRequest(ref ListUsableSubnetworksRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all clusters owned by a project in either the specified zone or all
@@ -6214,12 +6295,12 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6246,12 +6327,12 @@ namespace Google.Cloud.Container.V1
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// One firewall is added for the cluster. After cluster creation,
-        /// the cluster creates routes for each node to allow the containers
+        /// the Kubelet creates routes for each node to allow the containers
         /// on that node to communicate with all other instances in the
         /// cluster.
         ///
         /// Finally, an entry is added to the project's global metadata indicating
-        /// which CIDR range is being used by the cluster.
+        /// which CIDR range the cluster is using.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6311,7 +6392,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Updates the version and/or image type for a specific node pool.
+        /// Updates the version and/or image type for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6331,7 +6412,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Updates the version and/or image type for a specific node pool.
+        /// Updates the version and/or image type for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6351,7 +6432,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Sets the autoscaling settings for a specific node pool.
+        /// Sets the autoscaling settings for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6371,7 +6452,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Sets the autoscaling settings for a specific node pool.
+        /// Sets the autoscaling settings for the specified node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6591,9 +6672,9 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Used to set master auth materials. Currently supports :-
-        /// Changing the admin password for a specific cluster.
-        /// This can be either via password generation or explicitly set the password.
+        /// Sets master auth materials. Currently supports changing the admin password
+        /// or a specific cluster, either via password generation or explicitly setting
+        /// the password.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6613,9 +6694,9 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Used to set master auth materials. Currently supports :-
-        /// Changing the admin password for a specific cluster.
-        /// This can be either via password generation or explicitly set the password.
+        /// Sets master auth materials. Currently supports changing the admin password
+        /// or a specific cluster, either via password generation or explicitly setting
+        /// the password.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6641,9 +6722,9 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6669,9 +6750,9 @@ namespace Google.Cloud.Container.V1
         /// Firewalls and routes that were configured during cluster creation
         /// are also deleted.
         ///
-        /// Other Google Compute Engine resources that might be in use by the cluster
-        /// (e.g. load balancer resources) will not be deleted if they weren't present
-        /// at the initial create time.
+        /// Other Google Compute Engine resources that might be in use by the cluster,
+        /// such as load balancer resources, are not deleted if they weren't present
+        /// when the cluster was initially created.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6808,7 +6889,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6828,7 +6909,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Returns configuration info about the Kubernetes Engine service.
+        /// Returns configuration info about the Google Kubernetes Engine service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6888,7 +6969,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6908,7 +6989,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Retrieves the node pool requested.
+        /// Retrieves the requested node pool.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -7008,8 +7089,8 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -7029,8 +7110,8 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Roll back the previously Aborted or Failed NodePool upgrade.
-        /// This will be an no-op if the last upgrade successfully completed.
+        /// Rolls back a previously Aborted or Failed NodePool upgrade.
+        /// This makes no changes if the last upgrade successfully completed.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -7170,7 +7251,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -7190,7 +7271,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Start master IP rotation.
+        /// Starts master IP rotation.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -7290,7 +7371,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -7310,7 +7391,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Enables/Disables Network Policy for a cluster.
+        /// Enables or disables Network Policy for a cluster.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -7369,9 +7450,61 @@ namespace Google.Cloud.Container.V1
             return _callSetMaintenancePolicy.Sync(request, callSettings);
         }
 
+        /// <summary>
+        /// Lists subnetworks that are usable for creating clusters in a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="UsableSubnetwork"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> ListUsableSubnetworksAsync(
+            ListUsableSubnetworksRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsableSubnetworksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse, UsableSubnetwork>(_callListUsableSubnetworks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists subnetworks that are usable for creating clusters in a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="UsableSubnetwork"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> ListUsableSubnetworks(
+            ListUsableSubnetworksRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsableSubnetworksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse, UsableSubnetwork>(_callListUsableSubnetworks, request, callSettings);
+        }
+
     }
 
     // Partial classes to enable page-streaming
+
+    public partial class ListUsableSubnetworksRequest : gaxgrpc::IPageRequest { }
+    public partial class ListUsableSubnetworksResponse : gaxgrpc::IPageResponse<UsableSubnetwork>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public scg::IEnumerator<UsableSubnetwork> GetEnumerator() => Subnetworks.GetEnumerator();
+
+        /// <inheritdoc/>
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
 
 
 }
