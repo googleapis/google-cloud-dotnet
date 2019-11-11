@@ -3,7 +3,7 @@
 //     source: google/container/v1/cluster_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -69,6 +69,8 @@ namespace Google.Cloud.Container.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNodePoolSizeRequest> __Marshaller_google_container_v1_SetNodePoolSizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNodePoolSizeRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest> __Marshaller_google_container_v1_SetNetworkPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetNetworkPolicyRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest> __Marshaller_google_container_v1_SetMaintenancePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest> __Marshaller_google_container_v1_ListUsableSubnetworksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse> __Marshaller_google_container_v1_ListUsableSubnetworksResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse>(
         grpc::MethodType.Unary,
@@ -280,6 +282,13 @@ namespace Google.Cloud.Container.V1 {
         __Marshaller_google_container_v1_SetMaintenancePolicyRequest,
         __Marshaller_google_container_v1_Operation);
 
+    static readonly grpc::Method<global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest, global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse> __Method_ListUsableSubnetworks = new grpc::Method<global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest, global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUsableSubnetworks",
+        __Marshaller_google_container_v1_ListUsableSubnetworksRequest,
+        __Marshaller_google_container_v1_ListUsableSubnetworksResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -321,12 +330,12 @@ namespace Google.Cloud.Container.V1 {
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
-      /// the cluster creates routes for each node to allow the containers
+      /// the Kubelet creates routes for each node to allow the containers
       /// on that node to communicate with all other instances in the
       /// cluster.
       ///
       /// Finally, an entry is added to the project's global metadata indicating
-      /// which CIDR range is being used by the cluster.
+      /// which CIDR range the cluster is using.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -348,7 +357,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Updates the version and/or image type for a specific node pool.
+      /// Updates the version and/or image type for the specified node pool.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -359,7 +368,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Sets the autoscaling settings for a specific node pool.
+      /// Sets the autoscaling settings for the specified node pool.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -425,9 +434,9 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password for a specific cluster.
-      /// This can be either via password generation or explicitly set the password.
+      /// Sets master auth materials. Currently supports changing the admin password
+      /// or a specific cluster, either via password generation or explicitly setting
+      /// the password.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -444,9 +453,9 @@ namespace Google.Cloud.Container.V1 {
       /// Firewalls and routes that were configured during cluster creation
       /// are also deleted.
       ///
-      /// Other Google Compute Engine resources that might be in use by the cluster
-      /// (e.g. load balancer resources) will not be deleted if they weren't present
-      /// at the initial create time.
+      /// Other Google Compute Engine resources that might be in use by the cluster,
+      /// such as load balancer resources, are not deleted if they weren't present
+      /// when the cluster was initially created.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -490,7 +499,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Returns configuration info about the Kubernetes Engine service.
+      /// Returns configuration info about the Google Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -512,7 +521,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Retrieves the node pool requested.
+      /// Retrieves the requested node pool.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -545,8 +554,8 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Roll back the previously Aborted or Failed NodePool upgrade.
-      /// This will be an no-op if the last upgrade successfully completed.
+      /// Rolls back a previously Aborted or Failed NodePool upgrade.
+      /// This makes no changes if the last upgrade successfully completed.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -590,7 +599,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Start master IP rotation.
+      /// Starts master IP rotation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -623,7 +632,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Enables/Disables Network Policy for a cluster.
+      /// Enables or disables Network Policy for a cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -640,6 +649,17 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.Operation> SetMaintenancePolicy(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists subnetworks that are usable for creating clusters in a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse> ListUsableSubnetworks(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -769,12 +789,12 @@ namespace Google.Cloud.Container.V1 {
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
-      /// the cluster creates routes for each node to allow the containers
+      /// the Kubelet creates routes for each node to allow the containers
       /// on that node to communicate with all other instances in the
       /// cluster.
       ///
       /// Finally, an entry is added to the project's global metadata indicating
-      /// which CIDR range is being used by the cluster.
+      /// which CIDR range the cluster is using.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -793,12 +813,12 @@ namespace Google.Cloud.Container.V1 {
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
-      /// the cluster creates routes for each node to allow the containers
+      /// the Kubelet creates routes for each node to allow the containers
       /// on that node to communicate with all other instances in the
       /// cluster.
       ///
       /// Finally, an entry is added to the project's global metadata indicating
-      /// which CIDR range is being used by the cluster.
+      /// which CIDR range the cluster is using.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -815,12 +835,12 @@ namespace Google.Cloud.Container.V1 {
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
-      /// the cluster creates routes for each node to allow the containers
+      /// the Kubelet creates routes for each node to allow the containers
       /// on that node to communicate with all other instances in the
       /// cluster.
       ///
       /// Finally, an entry is added to the project's global metadata indicating
-      /// which CIDR range is being used by the cluster.
+      /// which CIDR range the cluster is using.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -839,12 +859,12 @@ namespace Google.Cloud.Container.V1 {
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
-      /// the cluster creates routes for each node to allow the containers
+      /// the Kubelet creates routes for each node to allow the containers
       /// on that node to communicate with all other instances in the
       /// cluster.
       ///
       /// Finally, an entry is added to the project's global metadata indicating
-      /// which CIDR range is being used by the cluster.
+      /// which CIDR range the cluster is using.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -898,7 +918,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCluster, null, options, request);
       }
       /// <summary>
-      /// Updates the version and/or image type for a specific node pool.
+      /// Updates the version and/or image type for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -910,7 +930,7 @@ namespace Google.Cloud.Container.V1 {
         return UpdateNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the version and/or image type for a specific node pool.
+      /// Updates the version and/or image type for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -920,7 +940,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateNodePool, null, options, request);
       }
       /// <summary>
-      /// Updates the version and/or image type for a specific node pool.
+      /// Updates the version and/or image type for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -932,7 +952,7 @@ namespace Google.Cloud.Container.V1 {
         return UpdateNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the version and/or image type for a specific node pool.
+      /// Updates the version and/or image type for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -942,7 +962,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateNodePool, null, options, request);
       }
       /// <summary>
-      /// Sets the autoscaling settings for a specific node pool.
+      /// Sets the autoscaling settings for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -954,7 +974,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNodePoolAutoscaling(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the autoscaling settings for a specific node pool.
+      /// Sets the autoscaling settings for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -964,7 +984,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetNodePoolAutoscaling, null, options, request);
       }
       /// <summary>
-      /// Sets the autoscaling settings for a specific node pool.
+      /// Sets the autoscaling settings for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -976,7 +996,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNodePoolAutoscalingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the autoscaling settings for a specific node pool.
+      /// Sets the autoscaling settings for the specified node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1206,9 +1226,9 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateMaster, null, options, request);
       }
       /// <summary>
-      /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password for a specific cluster.
-      /// This can be either via password generation or explicitly set the password.
+      /// Sets master auth materials. Currently supports changing the admin password
+      /// or a specific cluster, either via password generation or explicitly setting
+      /// the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1220,9 +1240,9 @@ namespace Google.Cloud.Container.V1 {
         return SetMasterAuth(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password for a specific cluster.
-      /// This can be either via password generation or explicitly set the password.
+      /// Sets master auth materials. Currently supports changing the admin password
+      /// or a specific cluster, either via password generation or explicitly setting
+      /// the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1232,9 +1252,9 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetMasterAuth, null, options, request);
       }
       /// <summary>
-      /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password for a specific cluster.
-      /// This can be either via password generation or explicitly set the password.
+      /// Sets master auth materials. Currently supports changing the admin password
+      /// or a specific cluster, either via password generation or explicitly setting
+      /// the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1246,9 +1266,9 @@ namespace Google.Cloud.Container.V1 {
         return SetMasterAuthAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password for a specific cluster.
-      /// This can be either via password generation or explicitly set the password.
+      /// Sets master auth materials. Currently supports changing the admin password
+      /// or a specific cluster, either via password generation or explicitly setting
+      /// the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1264,9 +1284,9 @@ namespace Google.Cloud.Container.V1 {
       /// Firewalls and routes that were configured during cluster creation
       /// are also deleted.
       ///
-      /// Other Google Compute Engine resources that might be in use by the cluster
-      /// (e.g. load balancer resources) will not be deleted if they weren't present
-      /// at the initial create time.
+      /// Other Google Compute Engine resources that might be in use by the cluster,
+      /// such as load balancer resources, are not deleted if they weren't present
+      /// when the cluster was initially created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1284,9 +1304,9 @@ namespace Google.Cloud.Container.V1 {
       /// Firewalls and routes that were configured during cluster creation
       /// are also deleted.
       ///
-      /// Other Google Compute Engine resources that might be in use by the cluster
-      /// (e.g. load balancer resources) will not be deleted if they weren't present
-      /// at the initial create time.
+      /// Other Google Compute Engine resources that might be in use by the cluster,
+      /// such as load balancer resources, are not deleted if they weren't present
+      /// when the cluster was initially created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1302,9 +1322,9 @@ namespace Google.Cloud.Container.V1 {
       /// Firewalls and routes that were configured during cluster creation
       /// are also deleted.
       ///
-      /// Other Google Compute Engine resources that might be in use by the cluster
-      /// (e.g. load balancer resources) will not be deleted if they weren't present
-      /// at the initial create time.
+      /// Other Google Compute Engine resources that might be in use by the cluster,
+      /// such as load balancer resources, are not deleted if they weren't present
+      /// when the cluster was initially created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1322,9 +1342,9 @@ namespace Google.Cloud.Container.V1 {
       /// Firewalls and routes that were configured during cluster creation
       /// are also deleted.
       ///
-      /// Other Google Compute Engine resources that might be in use by the cluster
-      /// (e.g. load balancer resources) will not be deleted if they weren't present
-      /// at the initial create time.
+      /// Other Google Compute Engine resources that might be in use by the cluster,
+      /// such as load balancer resources, are not deleted if they weren't present
+      /// when the cluster was initially created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1466,7 +1486,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CancelOperation, null, options, request);
       }
       /// <summary>
-      /// Returns configuration info about the Kubernetes Engine service.
+      /// Returns configuration info about the Google Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1478,7 +1498,7 @@ namespace Google.Cloud.Container.V1 {
         return GetServerConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns configuration info about the Kubernetes Engine service.
+      /// Returns configuration info about the Google Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1488,7 +1508,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetServerConfig, null, options, request);
       }
       /// <summary>
-      /// Returns configuration info about the Kubernetes Engine service.
+      /// Returns configuration info about the Google Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1500,7 +1520,7 @@ namespace Google.Cloud.Container.V1 {
         return GetServerConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns configuration info about the Kubernetes Engine service.
+      /// Returns configuration info about the Google Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1554,7 +1574,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListNodePools, null, options, request);
       }
       /// <summary>
-      /// Retrieves the node pool requested.
+      /// Retrieves the requested node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1566,7 +1586,7 @@ namespace Google.Cloud.Container.V1 {
         return GetNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the node pool requested.
+      /// Retrieves the requested node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1576,7 +1596,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetNodePool, null, options, request);
       }
       /// <summary>
-      /// Retrieves the node pool requested.
+      /// Retrieves the requested node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1588,7 +1608,7 @@ namespace Google.Cloud.Container.V1 {
         return GetNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the node pool requested.
+      /// Retrieves the requested node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1686,8 +1706,8 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNodePool, null, options, request);
       }
       /// <summary>
-      /// Roll back the previously Aborted or Failed NodePool upgrade.
-      /// This will be an no-op if the last upgrade successfully completed.
+      /// Rolls back a previously Aborted or Failed NodePool upgrade.
+      /// This makes no changes if the last upgrade successfully completed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1699,8 +1719,8 @@ namespace Google.Cloud.Container.V1 {
         return RollbackNodePoolUpgrade(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Roll back the previously Aborted or Failed NodePool upgrade.
-      /// This will be an no-op if the last upgrade successfully completed.
+      /// Rolls back a previously Aborted or Failed NodePool upgrade.
+      /// This makes no changes if the last upgrade successfully completed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1710,8 +1730,8 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_RollbackNodePoolUpgrade, null, options, request);
       }
       /// <summary>
-      /// Roll back the previously Aborted or Failed NodePool upgrade.
-      /// This will be an no-op if the last upgrade successfully completed.
+      /// Rolls back a previously Aborted or Failed NodePool upgrade.
+      /// This makes no changes if the last upgrade successfully completed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1723,8 +1743,8 @@ namespace Google.Cloud.Container.V1 {
         return RollbackNodePoolUpgradeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Roll back the previously Aborted or Failed NodePool upgrade.
-      /// This will be an no-op if the last upgrade successfully completed.
+      /// Rolls back a previously Aborted or Failed NodePool upgrade.
+      /// This makes no changes if the last upgrade successfully completed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1866,7 +1886,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetLegacyAbac, null, options, request);
       }
       /// <summary>
-      /// Start master IP rotation.
+      /// Starts master IP rotation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1878,7 +1898,7 @@ namespace Google.Cloud.Container.V1 {
         return StartIPRotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Start master IP rotation.
+      /// Starts master IP rotation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1888,7 +1908,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_StartIPRotation, null, options, request);
       }
       /// <summary>
-      /// Start master IP rotation.
+      /// Starts master IP rotation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1900,7 +1920,7 @@ namespace Google.Cloud.Container.V1 {
         return StartIPRotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Start master IP rotation.
+      /// Starts master IP rotation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1998,7 +2018,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetNodePoolSize, null, options, request);
       }
       /// <summary>
-      /// Enables/Disables Network Policy for a cluster.
+      /// Enables or disables Network Policy for a cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2010,7 +2030,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNetworkPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Enables/Disables Network Policy for a cluster.
+      /// Enables or disables Network Policy for a cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2020,7 +2040,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetNetworkPolicy, null, options, request);
       }
       /// <summary>
-      /// Enables/Disables Network Policy for a cluster.
+      /// Enables or disables Network Policy for a cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2032,7 +2052,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNetworkPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Enables/Disables Network Policy for a cluster.
+      /// Enables or disables Network Policy for a cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2085,6 +2105,50 @@ namespace Google.Cloud.Container.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetMaintenancePolicy, null, options, request);
       }
+      /// <summary>
+      /// Lists subnetworks that are usable for creating clusters in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse ListUsableSubnetworks(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUsableSubnetworks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists subnetworks that are usable for creating clusters in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse ListUsableSubnetworks(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUsableSubnetworks, null, options, request);
+      }
+      /// <summary>
+      /// Lists subnetworks that are usable for creating clusters in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse> ListUsableSubnetworksAsync(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUsableSubnetworksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists subnetworks that are usable for creating clusters in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse> ListUsableSubnetworksAsync(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUsableSubnetworks, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override ClusterManagerClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -2126,7 +2190,8 @@ namespace Google.Cloud.Container.V1 {
           .AddMethod(__Method_CompleteIPRotation, serviceImpl.CompleteIPRotation)
           .AddMethod(__Method_SetNodePoolSize, serviceImpl.SetNodePoolSize)
           .AddMethod(__Method_SetNetworkPolicy, serviceImpl.SetNetworkPolicy)
-          .AddMethod(__Method_SetMaintenancePolicy, serviceImpl.SetMaintenancePolicy).Build();
+          .AddMethod(__Method_SetMaintenancePolicy, serviceImpl.SetMaintenancePolicy)
+          .AddMethod(__Method_ListUsableSubnetworks, serviceImpl.ListUsableSubnetworks).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -2165,6 +2230,7 @@ namespace Google.Cloud.Container.V1 {
       serviceBinder.AddMethod(__Method_SetNodePoolSize, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNodePoolSizeRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNodePoolSize));
       serviceBinder.AddMethod(__Method_SetNetworkPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNetworkPolicy));
       serviceBinder.AddMethod(__Method_SetMaintenancePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetMaintenancePolicy));
+      serviceBinder.AddMethod(__Method_ListUsableSubnetworks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest, global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse>(serviceImpl.ListUsableSubnetworks));
     }
 
   }

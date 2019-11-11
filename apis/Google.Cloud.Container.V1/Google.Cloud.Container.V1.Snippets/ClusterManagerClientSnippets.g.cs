@@ -1958,5 +1958,93 @@ namespace Google.Cloud.Container.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListUsableSubnetworksAsync</summary>
+        public async Task ListUsableSubnetworksAsync_RequestObject()
+        {
+            // Snippet: ListUsableSubnetworksAsync(ListUsableSubnetworksRequest,CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUsableSubnetworksRequest request = new ListUsableSubnetworksRequest();
+            // Make the request
+            PagedAsyncEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> response =
+                clusterManagerClient.ListUsableSubnetworksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((UsableSubnetwork item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsableSubnetworksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UsableSubnetwork item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UsableSubnetwork> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UsableSubnetwork item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsableSubnetworks</summary>
+        public void ListUsableSubnetworks_RequestObject()
+        {
+            // Snippet: ListUsableSubnetworks(ListUsableSubnetworksRequest,CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            ListUsableSubnetworksRequest request = new ListUsableSubnetworksRequest();
+            // Make the request
+            PagedEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> response =
+                clusterManagerClient.ListUsableSubnetworks(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (UsableSubnetwork item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUsableSubnetworksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UsableSubnetwork item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UsableSubnetwork> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UsableSubnetwork item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
     }
 }

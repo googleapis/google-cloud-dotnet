@@ -149,6 +149,8 @@ namespace Google.Cloud.Container.V1.Tests
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
                 Location = "location1901043637",
+                EnableTpu = false,
+                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
             };
             mockGrpcClient.Setup(x => x.GetCluster(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -196,6 +198,8 @@ namespace Google.Cloud.Container.V1.Tests
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
                 Location = "location1901043637",
+                EnableTpu = false,
+                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -243,6 +247,8 @@ namespace Google.Cloud.Container.V1.Tests
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
                 Location = "location1901043637",
+                EnableTpu = false,
+                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -287,6 +293,8 @@ namespace Google.Cloud.Container.V1.Tests
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
                 Location = "location1901043637",
+                EnableTpu = false,
+                TpuIpv4CidrBlock = "tpuIpv4CidrBlock1137906646",
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -2006,6 +2014,7 @@ namespace Google.Cloud.Container.V1.Tests
                 SelfLink = "selfLink-1691268851",
                 Version = "version351608024",
                 StatusMessage = "statusMessage-239442758",
+                PodIpv4CidrSize = 1098768716,
             };
             mockGrpcClient.Setup(x => x.GetNodePool(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -2037,6 +2046,7 @@ namespace Google.Cloud.Container.V1.Tests
                 SelfLink = "selfLink-1691268851",
                 Version = "version351608024",
                 StatusMessage = "statusMessage-239442758",
+                PodIpv4CidrSize = 1098768716,
             };
             mockGrpcClient.Setup(x => x.GetNodePoolAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<NodePool>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -2068,6 +2078,7 @@ namespace Google.Cloud.Container.V1.Tests
                 SelfLink = "selfLink-1691268851",
                 Version = "version351608024",
                 StatusMessage = "statusMessage-239442758",
+                PodIpv4CidrSize = 1098768716,
             };
             mockGrpcClient.Setup(x => x.GetNodePool(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -2095,6 +2106,7 @@ namespace Google.Cloud.Container.V1.Tests
                 SelfLink = "selfLink-1691268851",
                 Version = "version351608024",
                 StatusMessage = "statusMessage-239442758",
+                PodIpv4CidrSize = 1098768716,
             };
             mockGrpcClient.Setup(x => x.GetNodePoolAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<NodePool>(Task.FromResult(expectedResponse), null, null, null, null));
