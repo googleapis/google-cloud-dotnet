@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.V1
     /// <summary>
     /// Implements buffering, retry and resume for the results of executing streaming SQL calls.
     /// </summary>
-    internal sealed class SqlResultStream : IAsyncEnumerator<PartialResultSet>
+    internal sealed class SqlResultStream : IAsyncStreamReader<PartialResultSet>
     {
         /// <summary>
         /// The default maximum buffer size. Currently this isn't user-tweakable; we don't expect to see more than this many
