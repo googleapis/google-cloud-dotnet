@@ -14,7 +14,7 @@
     <PackageReference Include="Google.Api.Gax.Testing" Version="3.0.0-alpha00" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
-    <PackageReference Include="Grpc.Core.Testing" Version="2.24.0" />
+    <PackageReference Include="Grpc.Core.Testing" Version="2.25.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Moq" Version="4.12.0" />
     <PackageReference Include="System.Linq.Async" Version="4.0.0" />
