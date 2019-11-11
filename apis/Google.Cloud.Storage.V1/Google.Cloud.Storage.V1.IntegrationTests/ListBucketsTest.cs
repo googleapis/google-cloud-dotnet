@@ -54,7 +54,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
-            var task = _fixture.Client.ListBucketsAsync(_fixture.ProjectId).ToList(cts.Token);
+            var task = _fixture.Client.ListBucketsAsync(_fixture.ProjectId).ToListAsync(cts.Token);
             cts.Cancel();
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);
         }
@@ -64,7 +64,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             IEnumerable<Bucket> actual = _fixture.Client.ListBuckets(_fixture.ProjectId, options);
             AssertBucketNames(actual, expectedBucketNames);
-            actual = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, options).ToList();
+            actual = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, options).ToListAsync();
             AssertBucketNames(actual, expectedBucketNames);
         }
 
