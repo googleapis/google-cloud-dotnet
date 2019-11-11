@@ -137,9 +137,8 @@
 
   {
     "id": "Google.Cloud.Container.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/container/v1",
-    "serviceYaml": "container_v1.yaml",
     "productName": "Google Kubernetes Engine API",
     "productUrl": "https://cloud.google.com/kubernetes-engine/docs/reference/rest/",
     "version": "1.1.0-beta00",
