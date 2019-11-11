@@ -711,8 +711,6 @@ namespace Google.Cloud.Speech.V1
             public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
 
             public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
-
-            public override scg::IAsyncEnumerator<StreamingRecognizeResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
