@@ -819,7 +819,7 @@
   {
     "id": "Google.Cloud.Spanner.Data",
     "targetFrameworks": "netstandard2.0;net461",
-    "testTargetFrameworks": "netcoreapp2.0;net461",
+    "testTargetFrameworks": "netcoreapp2.1;net461",
     "version": "2.1.0",
     "type": "other",
     "description": "Google ADO.NET Provider for Google Cloud Spanner.",
