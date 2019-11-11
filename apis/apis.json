@@ -13,7 +13,7 @@
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "asset", "inventory", "assets" ]
   },
@@ -48,7 +48,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "automl", "ml" ]
   },
@@ -65,7 +65,7 @@
     "description": "Recommended Google client library to access the BigQuery Data Transfer API, which transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "BigQuery", "DataTransfer" ]
   },
@@ -103,7 +103,7 @@
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.3.0",
       "Google.Cloud.Bigtable.Common.V2": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "3.0.0-alpha00"
@@ -137,7 +137,7 @@
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Api.Gax.Grpc.Gcp": "3.0.0-alpha00",
       "Google.Cloud.Bigtable.Common.V2": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "3.0.0-alpha00",
@@ -156,7 +156,7 @@
     "description": "Recommended Google client library to access the Google Kubernetes Engine API, used for building and managing container based applications, powered by the open source Kubernetes technology.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "Kubernetes" ]
   },
@@ -175,7 +175,7 @@
     "dependencies": {
       "Google.LongRunning": "1.1.0",
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -191,7 +191,7 @@
     "tags": [ "Datastore" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "3.0.0-alpha00"
@@ -211,7 +211,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.DevTools.Common": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -243,7 +243,7 @@
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Iam.V1": "1.3.0",
       "Grafeas.V1": "project",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
   
@@ -260,7 +260,7 @@
       "Microsoft.AspNet.WebApi.Core": "5.2.7",
       "Microsoft.AspNet.WebPages": "3.2.7",
       "Microsoft.AspNet.Mvc": "5.2.7",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -351,7 +351,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.4"
@@ -370,7 +370,7 @@
     "description": "Recommended Google client library to access the Google Data Loss Prevention API, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "DLP", "data loss prevention", "privacy", "pii" ]
   },
@@ -403,7 +403,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
   
@@ -419,11 +419,11 @@
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
       "Google.Cloud.Firestore.V1": "project",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Testing": "3.0.0-alpha00",
-      "Grpc.Core.Testing": "2.24.0",
+      "Grpc.Core.Testing": "2.25.0",
       "System.ValueTuple": "4.5.0",
       "Xunit.Combinatorial": "1.2.7"
     }
@@ -445,7 +445,7 @@
     "dependencies": {
       "Google.LongRunning": "1.1.0",
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -459,7 +459,7 @@
     "tags": [ "IAM", "Identity", "Access" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -477,7 +477,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Iam.V1": "1.3.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -492,7 +492,7 @@
     "description": "Recommended Google client library to access the Google Cloud Natural Language API, which provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "Language" ]
   },
@@ -510,7 +510,7 @@
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Logging.V2": "2.3.0",
       "Google.Cloud.DevTools.Common": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Testing": "3.0.0-alpha00"
@@ -530,7 +530,7 @@
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Logging.V2": "2.3.0",
       "Google.Cloud.DevTools.Common": "1.0.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Testing": "3.0.0-alpha00"
@@ -565,7 +565,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Logging.Type": "project",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -595,7 +595,7 @@
     "tags": [ "Monitoring", "Stackdriver" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -671,7 +671,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Iam.V1": "1.3.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "testDependencies": {
       "System.ValueTuple": "4.4.0"
@@ -703,7 +703,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -735,7 +735,7 @@
     "tags": [ "scheduler", "cron" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -769,7 +769,7 @@
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Iam.V1": "1.3.0",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "security", "data risk" ]
   },
@@ -881,7 +881,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -948,7 +948,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.Cloud.Iam.V1": "1.3.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -978,7 +978,7 @@
     "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API, synthesizes natural-sounding speech by applying powerful neural network models.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "Speech", "Text-to-speech" ]
   },
@@ -994,7 +994,7 @@
     "description": "Recommended Google client library to access the Google Cloud Trace API, which sends and retrieves trace data from Google Cloud Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Cloud Trace for display, reporting, and analysis.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "Tracing", "Trace" ]
   },
@@ -1010,7 +1010,7 @@
     "description": "Recommended Google client library to access the Google Cloud Trace V2 API, which sends and retrieves trace data from Google Cloud Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Cloud Trace for display, reporting, and analysis.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "Tracing", "Trace" ]
   },
@@ -1027,7 +1027,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     },
     "tags": [ "Translate", "Translation" ]
   },
@@ -1059,7 +1059,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -1076,7 +1076,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   },
 
@@ -1121,7 +1121,7 @@
     "tags": [ "audit", "metadata", "artifact", "grafeas" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.24.0"
+      "Grpc.Core": "2.25.0"
     }
   }
 ]
