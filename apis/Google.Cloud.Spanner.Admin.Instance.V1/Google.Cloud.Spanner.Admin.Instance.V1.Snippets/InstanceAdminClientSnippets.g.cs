@@ -681,6 +681,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             GetInstanceRequest request = new GetInstanceRequest
             {
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                FieldMask = new FieldMask(),
             };
             // Make the request
             Instance response = instanceAdminClient.GetInstance(request);
@@ -698,6 +699,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             GetInstanceRequest request = new GetInstanceRequest
             {
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                FieldMask = new FieldMask(),
             };
             // Make the request
             Instance response = await instanceAdminClient.GetInstanceAsync(request);
