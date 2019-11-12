@@ -55,7 +55,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
             public ReadRowsResponse Current { get; set; }
 
-            public void Dispose() => _underlyingStream.DisposeAsync();
+            // No-op rather than starting asynchronous disposal. This is only ever for an array anyway.
+            public void Dispose() { }
 
             public async Task<bool> MoveNext(CancellationToken cancellationToken)
             {
