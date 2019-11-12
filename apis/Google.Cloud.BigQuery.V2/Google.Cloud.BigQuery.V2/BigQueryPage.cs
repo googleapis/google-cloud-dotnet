@@ -31,7 +31,8 @@ namespace Google.Cloud.BigQuery.V2
         public JobReference JobReference { get; }
 
         /// <summary>
-        /// Reference to the table this result set was fetched from.
+        /// Reference to the table this result set may has been fetched from.
+        /// May be null. (For example, script queries don't store results in tables.)
         /// </summary>
         public TableReference TableReference { get; }
 
@@ -59,7 +60,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="rows">The rows returned in the query. Must not be null.</param>
         /// <param name="schema">The schema of the results. Must not be null.</param>
         /// <param name="jobReference">Reference to the job this result set was fetched from. Must not be null.</param>
-        /// <param name="tableReference">Reference to the table this result set was fetched from. Must not be null.</param>
+        /// <param name="tableReference">Reference to the table this result set may has been fetched from.
+        /// May be null. (For example, script queries don't store results in tables.)</param>
         /// <param name="nextPageToken">The page token to use to fetch further results. May be null, indicating
         /// that there are no more results.</param>
         public BigQueryPage(List<BigQueryRow> rows, TableSchema schema, JobReference jobReference, TableReference tableReference, string nextPageToken)
@@ -67,7 +69,7 @@ namespace Google.Cloud.BigQuery.V2
             Rows = GaxPreconditions.CheckNotNull(rows, nameof(rows));
             Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema));
             JobReference = GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            TableReference = GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            TableReference = tableReference;
             NextPageToken = nextPageToken;
         }
 
@@ -79,7 +81,7 @@ namespace Google.Cloud.BigQuery.V2
             Rows = page.ToList();
             Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema));
             JobReference = GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            TableReference = GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            TableReference = tableReference;
             NextPageToken = page.NextPageToken;
         }
     }

@@ -676,6 +676,21 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void ScriptQuery()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            string sql = "DECLARE accumulator INT64 DEFAULT 5; SELECT accumulator;";
+            var results = client.ExecuteQuery(sql, null).ThrowOnAnyError();
+
+            Assert.True(results.SafeTotalRows.HasValue);
+            Assert.Equal<ulong>(1, results.SafeTotalRows.Value);
+
+            var row = results.Single();
+            Assert.Equal((long)5, row[0]);
+        }
+
+        [Fact]
         public void GisQuery()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);

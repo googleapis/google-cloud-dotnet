@@ -81,7 +81,6 @@ namespace Google.Cloud.BigQuery.V2
         internal override BigQueryResults GetQueryResults(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             DateTime start = Clock.GetCurrentDateTimeUtc();
             while (true)
@@ -112,7 +111,6 @@ namespace Google.Cloud.BigQuery.V2
         internal override async Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             DateTime start = Clock.GetCurrentDateTimeUtc();
             while (true)
