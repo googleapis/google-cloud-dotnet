@@ -46,21 +46,6 @@ namespace Google.Cloud.Bigtable.V2
             _retrySettings = retrySettings;
         }
 
-        /// <summary>
-        /// The underlying gRPC duplex streaming call.
-        /// </summary>
-        [Obsolete("This was public in v1, but would only be usable after calling GetAsyncEnumerator() and starting to enumerate. Removing it is a breaking change for v2; we can reinstate it if desired.")]
-        internal AsyncServerStreamingCall<ReadRowsResponse> GrpcCall
-        {
-            get
-            {
-                lock (_lock)
-                {
-                    return _enumerator?.GrpcCall;
-                }
-            }
-        }
-
         /// <inheritdoc/>
         public IAsyncEnumerator<Row> GetAsyncEnumerator(CancellationToken cancellationToken)
         {

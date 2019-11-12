@@ -77,7 +77,6 @@ namespace Google.Cloud.Spanner.V1
                 return;
             }
             IsClosed = true;
-            (_resultStream as IDisposable)?.Dispose();
             StreamClosed?.Invoke(this, new StreamClosedEventArgs());
         }
 
