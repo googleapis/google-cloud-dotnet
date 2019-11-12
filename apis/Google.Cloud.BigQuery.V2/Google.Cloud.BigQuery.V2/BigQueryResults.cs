@@ -46,6 +46,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// The reference to the table containing the query results.
+        /// May be null. (For example, script queries don't store results in tables.)
         /// </summary>
         public TableReference TableReference { get; }
 
@@ -101,7 +102,8 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="client">The client to use for further operations. Must not be null.</param>
         /// <param name="response">The response to a GetQueryResults API call. Must not be null.</param>
-        /// <param name="tableReference">A reference to the table containing the results.</param>
+        /// <param name="tableReference">A reference to the table containing the results.
+        /// May be null. (For example, script queries don't store results in tables.)</param>
         /// <param name="options">Options to use when listing rows. May be null.</param>
         [Obsolete("Please use the constructor accepting a GetQueryResultsOptions instead")]
         public BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, ListRowsOptions options)
@@ -118,13 +120,14 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="client">The client to use for further operations. Must not be null.</param>
         /// <param name="response">The response to a GetQueryResults API call. Must not be null.</param>
-        /// <param name="tableReference">A reference to the table containing the results.</param>
+        /// <param name="tableReference">A reference to the table containing the results.
+        /// May be null. (For example, script queries don't store results in tables.)</param>
         /// <param name="options">Options to use when fetching results. May be null.</param>
         public BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, GetQueryResultsOptions options)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _response = GaxPreconditions.CheckNotNull(response, nameof(response));
-            TableReference = GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            TableReference = tableReference;
             _options = options;
             _fieldNames = response.Schema?.IndexFieldNames();
         }

@@ -86,23 +86,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public async Task GetQueryResults_NoDestinationTable()
-        {
-            var resource = new Job
-            {
-                JobReference = new JobReference { ProjectId = "project", JobId = "job" },
-                Configuration = new JobConfiguration
-                {
-                    DryRun = true,
-                    Query = new JobConfigurationQuery { } // No destination table
-                }
-            };
-            var job = new BigQueryJob(new SimpleClient(), resource);
-            Assert.Throws<InvalidOperationException>(() => job.GetQueryResults());
-            await Assert.ThrowsAsync<InvalidOperationException>(() => job.GetQueryResultsAsync());
-        }
-
-        [Fact]
         public async Task GetQueryResults_NoJobReference()
         {
             var resource = new Job
