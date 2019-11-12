@@ -722,7 +722,7 @@ namespace Google.Cloud.Container.V1 {
     private string machineType_ = "";
     /// <summary>
     /// The name of a Google Compute Engine [machine
-    /// type](/compute/docs/machine-types) (e.g.
+    /// type](https://cloud.google.com/compute/docs/machine-types) (e.g.
     /// `n1-standard-1`).
     ///
     /// If unspecified, the default machine type is
@@ -769,7 +769,7 @@ namespace Google.Cloud.Container.V1 {
     /// persistent storage on your nodes.
     /// * `https://www.googleapis.com/auth/devstorage.read_only` is required for
     /// communicating with **gcr.io**
-    /// (the [Google Container Registry](/container-registry/)).
+    /// (the [Google Container Registry](https://cloud.google.com/container-registry/)).
     ///
     /// If unspecified, no scopes are added, unless Cloud Logging or Cloud
     /// Monitoring are enabled, in which case their required scopes will be added.
@@ -5119,7 +5119,7 @@ namespace Google.Cloud.Container.V1 {
     private string network_ = "";
     /// <summary>
     /// The name of the Google Compute Engine
-    /// [network](/compute/docs/networks-and-firewalls#networks) to which the
+    /// [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
     /// cluster is connected. If left unspecified, the `default` network
     /// will be used.
     /// </summary>
@@ -5167,7 +5167,7 @@ namespace Google.Cloud.Container.V1 {
     private string subnetwork_ = "";
     /// <summary>
     /// The name of the Google Compute Engine
-    /// [subnetwork](/compute/docs/subnetworks) to which the
+    /// [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the
     /// cluster is connected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5200,7 +5200,7 @@ namespace Google.Cloud.Container.V1 {
     private readonly pbc::RepeatedField<string> locations_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// The list of Google Compute Engine
-    /// [zones](/compute/docs/zones#available) in which the cluster's nodes
+    /// [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
     /// should be located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5473,7 +5473,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// [Output only] The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field is deprecated, use location instead.
     /// </summary>
@@ -5550,7 +5550,7 @@ namespace Google.Cloud.Container.V1 {
     private string currentNodeVersion_ = "";
     /// <summary>
     /// [Output only] Deprecated, use
-    /// [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
+    /// [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
     /// instead. The current version of the node software components. If they are
     /// currently at multiple versions because they're in the process of being
     /// upgraded, this reflects the minimum version of all nodes.
@@ -5693,8 +5693,8 @@ namespace Google.Cloud.Container.V1 {
     private string location_ = "";
     /// <summary>
     /// [Output only] The name of the Google Compute Engine
-    /// [zone](/compute/docs/regions-zones/regions-zones#available) or
-    /// [region](/compute/docs/regions-zones/regions-zones#available) in which
+    /// [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+    /// [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
     /// the cluster resides.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6879,7 +6879,7 @@ namespace Google.Cloud.Container.V1 {
     private readonly pbc::RepeatedField<string> desiredLocations_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// The desired list of Google Compute Engine
-    /// [zones](/compute/docs/zones#available) in which the cluster's nodes
+    /// [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
     /// should be located. Changing the locations a cluster is in will result
     /// in nodes being either created or removed from the cluster, depending on
     /// whether locations are being added or removed.
@@ -7458,7 +7458,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the operation
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation
     /// is taking place.
     /// This field is deprecated, use location instead.
     /// </summary>
@@ -7560,8 +7560,8 @@ namespace Google.Cloud.Container.V1 {
     private string location_ = "";
     /// <summary>
     /// [Output only] The name of the Google Compute Engine
-    /// [zone](/compute/docs/regions-zones/regions-zones#available) or
-    /// [region](/compute/docs/regions-zones/regions-zones#available) in which
+    /// [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+    /// [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
     /// the cluster resides.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8059,7 +8059,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the parent field.
     /// </summary>
@@ -8077,7 +8077,7 @@ namespace Google.Cloud.Container.V1 {
     private global::Google.Cloud.Container.V1.Cluster cluster_;
     /// <summary>
     /// Required. A [cluster
-    /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
+    /// resource](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Container.V1.Cluster Cluster {
@@ -8302,7 +8302,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -8541,7 +8541,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -8818,7 +8818,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -9161,7 +9161,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -9469,7 +9469,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -9741,7 +9741,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -10016,7 +10016,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -10292,7 +10292,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -10328,7 +10328,7 @@ namespace Google.Cloud.Container.V1 {
     private readonly pbc::RepeatedField<string> locations_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. The desired list of Google Compute Engine
-    /// [zones](/compute/docs/zones#available) in which the cluster's nodes
+    /// [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
     /// should be located. Changing the locations a cluster is in will result
     /// in nodes being either created or removed from the cluster, depending on
     /// whether locations are being added or removed.
@@ -10559,7 +10559,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -10838,7 +10838,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -11174,7 +11174,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -11411,7 +11411,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides, or "-" for all zones.
     /// This field has been deprecated and replaced by the parent field.
     /// </summary>
@@ -11770,7 +11770,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -12007,7 +12007,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
     /// all zones. This field has been deprecated and replaced by the parent field.
     /// </summary>
     [global::System.ObsoleteAttribute]
@@ -12213,7 +12213,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the operation resides.
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
     [global::System.ObsoleteAttribute]
@@ -12600,7 +12600,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) to return operations for.
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
     [global::System.ObsoleteAttribute]
@@ -13041,7 +13041,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the parent field.
     /// </summary>
@@ -13317,7 +13317,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -13588,7 +13588,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the parent field.
     /// </summary>
@@ -13827,7 +13827,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -14170,7 +14170,7 @@ namespace Google.Cloud.Container.V1 {
     private readonly pbc::RepeatedField<string> instanceGroupUrls_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// [Output only] The resource URLs of the [managed instance
-    /// groups](/compute/docs/instance-groups/creating-groups-of-managed-instances)
+    /// groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances)
     /// associated with this node pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16019,7 +16019,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -16329,7 +16329,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -16633,7 +16633,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -17061,7 +17061,7 @@ namespace Google.Cloud.Container.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> autoprovisioningLocations_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The list of Google Compute Engine [zones](/compute/docs/zones#available)
+    /// The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available)
     /// in which the NodePool's nodes can be created by NAP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17849,7 +17849,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -18146,7 +18146,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -18416,7 +18416,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -18684,7 +18684,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -18917,7 +18917,7 @@ namespace Google.Cloud.Container.V1 {
     private string acceleratorType_ = "";
     /// <summary>
     /// The accelerator type resource name. List of supported accelerators
-    /// [here](/compute/docs/gpus)
+    /// [here](https://cloud.google.com/compute/docs/gpus)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AcceleratorType {
@@ -19090,7 +19090,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. Deprecated. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// This field has been deprecated and replaced by the name field.
     /// </summary>
@@ -19363,7 +19363,7 @@ namespace Google.Cloud.Container.V1 {
     private string zone_ = "";
     /// <summary>
     /// Required. The name of the Google Compute Engine
-    /// [zone](/compute/docs/zones#available) in which the cluster
+    /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
     /// resides.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19824,7 +19824,7 @@ namespace Google.Cloud.Container.V1 {
     private string network_ = "";
     /// <summary>
     /// Output only. The relative name of the Google Compute Engine
-    /// [network][google.container.v1.NetworkConfig.network](/compute/docs/networks-and-firewalls#networks) to which
+    /// [network][google.container.v1.NetworkConfig.network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which
     /// the cluster is connected.
     /// Example: projects/my-project/global/networks/my-network
     /// </summary>
@@ -19841,7 +19841,7 @@ namespace Google.Cloud.Container.V1 {
     private string subnetwork_ = "";
     /// <summary>
     /// Output only. The relative name of the Google Compute Engine
-    /// [subnetwork](/compute/docs/vpc) to which the cluster is connected.
+    /// [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
     /// Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

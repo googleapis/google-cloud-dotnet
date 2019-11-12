@@ -631,7 +631,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides, or "-" for all zones.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -655,7 +655,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides, or "-" for all zones.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -679,7 +679,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides, or "-" for all zones.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -725,7 +725,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -753,7 +753,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -781,7 +781,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -799,7 +799,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
@@ -820,7 +820,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
@@ -841,7 +841,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
@@ -862,7 +862,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
@@ -879,13 +879,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cluster">
         /// Required. A [cluster
-        /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
+        /// resource](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -902,7 +902,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
@@ -919,13 +919,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cluster">
         /// Required. A [cluster
-        /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
+        /// resource](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -942,7 +942,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
@@ -959,13 +959,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cluster">
         /// Required. A [cluster
-        /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
+        /// resource](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters)
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1180,7 +1180,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1252,7 +1252,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1309,7 +1309,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1347,7 +1347,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1385,7 +1385,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1444,7 +1444,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1477,7 +1477,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1510,7 +1510,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1564,7 +1564,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1574,7 +1574,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="locations">
         /// Required. The desired list of Google Compute Engine
-        /// [zones](/compute/docs/zones#available) in which the cluster's nodes
+        /// [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
         /// should be located. Changing the locations a cluster is in will result
         /// in nodes being either created or removed from the cluster, depending on
         /// whether locations are being added or removed.
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1615,7 +1615,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="locations">
         /// Required. The desired list of Google Compute Engine
-        /// [zones](/compute/docs/zones#available) in which the cluster's nodes
+        /// [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
         /// should be located. Changing the locations a cluster is in will result
         /// in nodes being either created or removed from the cluster, depending on
         /// whether locations are being added or removed.
@@ -1646,7 +1646,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1656,7 +1656,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="locations">
         /// Required. The desired list of Google Compute Engine
-        /// [zones](/compute/docs/zones#available) in which the cluster's nodes
+        /// [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
         /// should be located. Changing the locations a cluster is in will result
         /// in nodes being either created or removed from the cluster, depending on
         /// whether locations are being added or removed.
@@ -1705,7 +1705,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1746,7 +1746,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1787,7 +1787,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1914,7 +1914,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1950,7 +1950,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -1986,7 +1986,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2036,7 +2036,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
         /// all zones. This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2058,7 +2058,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
         /// all zones. This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2080,7 +2080,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
         /// all zones. This field has been deprecated and replaced by the parent field.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2125,7 +2125,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2153,7 +2153,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2181,7 +2181,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2231,7 +2231,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the operation resides.
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
@@ -2258,7 +2258,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the operation resides.
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
@@ -2285,7 +2285,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the operation resides.
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="operationId">
@@ -2334,7 +2334,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) to return operations for.
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2356,7 +2356,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) to return operations for.
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2378,7 +2378,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) to return operations for.
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2423,7 +2423,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -2451,7 +2451,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -2479,7 +2479,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -2529,7 +2529,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2562,7 +2562,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2595,7 +2595,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2649,7 +2649,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -2681,7 +2681,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -2713,7 +2713,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the parent field.
         /// </param>
@@ -2766,7 +2766,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2799,7 +2799,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2832,7 +2832,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2890,7 +2890,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2924,7 +2924,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -2958,7 +2958,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3066,7 +3066,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3098,7 +3098,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3130,7 +3130,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3183,7 +3183,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3211,7 +3211,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3239,7 +3239,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3289,7 +3289,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3317,7 +3317,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3345,7 +3345,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3422,7 +3422,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3454,7 +3454,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3486,7 +3486,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. Deprecated. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// This field has been deprecated and replaced by the name field.
         /// </param>
@@ -3538,7 +3538,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// </param>
         /// <param name="clusterId">
@@ -3568,7 +3568,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// </param>
         /// <param name="clusterId">
@@ -3598,7 +3598,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="zone">
         /// Required. The name of the Google Compute Engine
-        /// [zone](/compute/docs/zones#available) in which the cluster
+        /// [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
         /// resides.
         /// </param>
         /// <param name="clusterId">
@@ -3989,7 +3989,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
@@ -4013,7 +4013,7 @@ namespace Google.Cloud.Container.V1
         /// Compute Engine instances.
         /// 
         /// By default, the cluster is created in the project's
-        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
         /// 
         /// One firewall is added for the cluster. After cluster creation,
         /// the Kubelet creates routes for each node to allow the containers
