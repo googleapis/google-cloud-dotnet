@@ -61,49 +61,54 @@ namespace Google.Cloud.Monitoring.V3 {
             "bhgCIAEoCRIsChBleGVjdXRpb25fZXJyb3JzGAMgAygLMhIuZ29vZ2xlLnJw",
             "Yy5TdGF0dXMiXgoXQ3JlYXRlVGltZVNlcmllc1JlcXVlc3QSDAoEbmFtZRgD",
             "IAEoCRI1Cgt0aW1lX3NlcmllcxgCIAMoCzIgLmdvb2dsZS5tb25pdG9yaW5n",
-            "LnYzLlRpbWVTZXJpZXMicgoVQ3JlYXRlVGltZVNlcmllc0Vycm9yEjUKC3Rp",
+            "LnYzLlRpbWVTZXJpZXMiegoVQ3JlYXRlVGltZVNlcmllc0Vycm9yEjkKC3Rp",
             "bWVfc2VyaWVzGAEgASgLMiAuZ29vZ2xlLm1vbml0b3JpbmcudjMuVGltZVNl",
-            "cmllcxIiCgZzdGF0dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1czLSDAoN",
-            "TWV0cmljU2VydmljZRLdAQogTGlzdE1vbml0b3JlZFJlc291cmNlRGVzY3Jp",
-            "cHRvcnMSPS5nb29nbGUubW9uaXRvcmluZy52My5MaXN0TW9uaXRvcmVkUmVz",
-            "b3VyY2VEZXNjcmlwdG9yc1JlcXVlc3QaPi5nb29nbGUubW9uaXRvcmluZy52",
-            "My5MaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yc1Jlc3BvbnNlIjqC",
-            "0+STAjQSMi92My97bmFtZT1wcm9qZWN0cy8qfS9tb25pdG9yZWRSZXNvdXJj",
-            "ZURlc2NyaXB0b3JzEsQBCh5HZXRNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0",
-            "b3ISOy5nb29nbGUubW9uaXRvcmluZy52My5HZXRNb25pdG9yZWRSZXNvdXJj",
-            "ZURlc2NyaXB0b3JSZXF1ZXN0GicuZ29vZ2xlLmFwaS5Nb25pdG9yZWRSZXNv",
-            "dXJjZURlc2NyaXB0b3IiPILT5JMCNhI0L3YzL3tuYW1lPXByb2plY3RzLyov",
-            "bW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9ycy8qfRKxAQoVTGlzdE1ldHJp",
-            "Y0Rlc2NyaXB0b3JzEjIuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdE1ldHJp",
-            "Y0Rlc2NyaXB0b3JzUmVxdWVzdBozLmdvb2dsZS5tb25pdG9yaW5nLnYzLkxp",
-            "c3RNZXRyaWNEZXNjcmlwdG9yc1Jlc3BvbnNlIi+C0+STAikSJy92My97bmFt",
-            "ZT1wcm9qZWN0cy8qfS9tZXRyaWNEZXNjcmlwdG9ycxKZAQoTR2V0TWV0cmlj",
-            "RGVzY3JpcHRvchIwLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdldE1ldHJpY0Rl",
-            "c2NyaXB0b3JSZXF1ZXN0GhwuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9y",
-            "IjKC0+STAiwSKi92My97bmFtZT1wcm9qZWN0cy8qL21ldHJpY0Rlc2NyaXB0",
-            "b3JzLyoqfRKvAQoWQ3JlYXRlTWV0cmljRGVzY3JpcHRvchIzLmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLkNyZWF0ZU1ldHJpY0Rlc2NyaXB0b3JSZXF1ZXN0Ghwu",
-            "Z29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yIkKC0+STAjwiJy92My97bmFt",
-            "ZT1wcm9qZWN0cy8qfS9tZXRyaWNEZXNjcmlwdG9yczoRbWV0cmljX2Rlc2Ny",
-            "aXB0b3ISmQEKFkRlbGV0ZU1ldHJpY0Rlc2NyaXB0b3ISMy5nb29nbGUubW9u",
-            "aXRvcmluZy52My5EZWxldGVNZXRyaWNEZXNjcmlwdG9yUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSIygtPkkwIsKiovdjMve25hbWU9cHJvamVj",
-            "dHMvKi9tZXRyaWNEZXNjcmlwdG9ycy8qKn0SlQEKDkxpc3RUaW1lU2VyaWVz",
-            "EisuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdFRpbWVTZXJpZXNSZXF1ZXN0",
-            "GiwuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdFRpbWVTZXJpZXNSZXNwb25z",
-            "ZSIogtPkkwIiEiAvdjMve25hbWU9cHJvamVjdHMvKn0vdGltZVNlcmllcxKG",
-            "AQoQQ3JlYXRlVGltZVNlcmllcxItLmdvb2dsZS5tb25pdG9yaW5nLnYzLkNy",
-            "ZWF0ZVRpbWVTZXJpZXNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IiuC0+STAiUiIC92My97bmFtZT1wcm9qZWN0cy8qfS90aW1lU2VyaWVzOgEq",
-            "GtoBykEZbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbdJBugFodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRvcmluZyxodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL21vbml0b3JpbmcucmVhZCxodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL21vbml0b3Jpbmcud3JpdGVCqgEK",
-            "GGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ISTWV0cmljU2VydmljZVByb3Rv",
-            "UAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbW9u",
-            "aXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNsb3VkLk1vbml0b3Jp",
-            "bmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM2IGcHJvdG8z"));
+            "cmllc0ICGAESJgoGc3RhdHVzGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNC",
+            "AhgBItgBChdDcmVhdGVUaW1lU2VyaWVzU3VtbWFyeRIZChF0b3RhbF9wb2lu",
+            "dF9jb3VudBgBIAEoBRIbChNzdWNjZXNzX3BvaW50X2NvdW50GAIgASgFEkMK",
+            "BmVycm9ycxgDIAMoCzIzLmdvb2dsZS5tb25pdG9yaW5nLnYzLkNyZWF0ZVRp",
+            "bWVTZXJpZXNTdW1tYXJ5LkVycm9yGkAKBUVycm9yEiIKBnN0YXR1cxgBIAEo",
+            "CzISLmdvb2dsZS5ycGMuU3RhdHVzEhMKC3BvaW50X2NvdW50GAIgASgFMtIM",
+            "Cg1NZXRyaWNTZXJ2aWNlEt0BCiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNj",
+            "cmlwdG9ycxI9Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3RNb25pdG9yZWRS",
+            "ZXNvdXJjZURlc2NyaXB0b3JzUmVxdWVzdBo+Lmdvb2dsZS5tb25pdG9yaW5n",
+            "LnYzLkxpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2Ui",
+            "OoLT5JMCNBIyL3YzL3tuYW1lPXByb2plY3RzLyp9L21vbml0b3JlZFJlc291",
+            "cmNlRGVzY3JpcHRvcnMSxAEKHkdldE1vbml0b3JlZFJlc291cmNlRGVzY3Jp",
+            "cHRvchI7Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkdldE1vbml0b3JlZFJlc291",
+            "cmNlRGVzY3JpcHRvclJlcXVlc3QaJy5nb29nbGUuYXBpLk1vbml0b3JlZFJl",
+            "c291cmNlRGVzY3JpcHRvciI8gtPkkwI2EjQvdjMve25hbWU9cHJvamVjdHMv",
+            "Ki9tb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzLyp9ErEBChVMaXN0TWV0",
+            "cmljRGVzY3JpcHRvcnMSMi5nb29nbGUubW9uaXRvcmluZy52My5MaXN0TWV0",
+            "cmljRGVzY3JpcHRvcnNSZXF1ZXN0GjMuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "TGlzdE1ldHJpY0Rlc2NyaXB0b3JzUmVzcG9uc2UiL4LT5JMCKRInL3YzL3tu",
+            "YW1lPXByb2plY3RzLyp9L21ldHJpY0Rlc2NyaXB0b3JzEpkBChNHZXRNZXRy",
+            "aWNEZXNjcmlwdG9yEjAuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0TWV0cmlj",
+            "RGVzY3JpcHRvclJlcXVlc3QaHC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0",
+            "b3IiMoLT5JMCLBIqL3YzL3tuYW1lPXByb2plY3RzLyovbWV0cmljRGVzY3Jp",
+            "cHRvcnMvKip9Eq8BChZDcmVhdGVNZXRyaWNEZXNjcmlwdG9yEjMuZ29vZ2xl",
+            "Lm1vbml0b3JpbmcudjMuQ3JlYXRlTWV0cmljRGVzY3JpcHRvclJlcXVlc3Qa",
+            "HC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3IiQoLT5JMCPCInL3YzL3tu",
+            "YW1lPXByb2plY3RzLyp9L21ldHJpY0Rlc2NyaXB0b3JzOhFtZXRyaWNfZGVz",
+            "Y3JpcHRvchKZAQoWRGVsZXRlTWV0cmljRGVzY3JpcHRvchIzLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkRlbGV0ZU1ldHJpY0Rlc2NyaXB0b3JSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IjKC0+STAiwqKi92My97bmFtZT1wcm9q",
+            "ZWN0cy8qL21ldHJpY0Rlc2NyaXB0b3JzLyoqfRKVAQoOTGlzdFRpbWVTZXJp",
+            "ZXMSKy5nb29nbGUubW9uaXRvcmluZy52My5MaXN0VGltZVNlcmllc1JlcXVl",
+            "c3QaLC5nb29nbGUubW9uaXRvcmluZy52My5MaXN0VGltZVNlcmllc1Jlc3Bv",
+            "bnNlIiiC0+STAiISIC92My97bmFtZT1wcm9qZWN0cy8qfS90aW1lU2VyaWVz",
+            "EoYBChBDcmVhdGVUaW1lU2VyaWVzEi0uZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "Q3JlYXRlVGltZVNlcmllc1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiK4LT5JMCJSIgL3YzL3tuYW1lPXByb2plY3RzLyp9L3RpbWVTZXJpZXM6",
+            "ASoa2gHKQRltb25pdG9yaW5nLmdvb2dsZWFwaXMuY29t0kG6AWh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9tb25pdG9yaW5nLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRvcmluZy5yZWFkLGh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRvcmluZy53cml0ZUKq",
+            "AQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhJNZXRyaWNTZXJ2aWNlUHJv",
+            "dG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9t",
+            "b25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9uaXRv",
+            "cmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.AlertReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -118,7 +123,8 @@ namespace Google.Cloud.Monitoring.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Parser, new[]{ "Name", "Filter", "Interval", "Aggregation", "OrderBy", "View", "PageSize", "PageToken" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse), global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.Parser, new[]{ "TimeSeries", "NextPageToken", "ExecutionErrors" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Parser, new[]{ "Name", "TimeSeries" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError.Parser, new[]{ "TimeSeries", "Status" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError.Parser, new[]{ "TimeSeries", "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Parser, new[]{ "TotalPointCount", "SuccessPointCount", "Errors" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error.Parser, new[]{ "Status", "PointCount" }, null, null, null)})
           }));
     }
     #endregion
@@ -1609,9 +1615,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int AggregationFieldNumber = 5;
     private global::Google.Cloud.Monitoring.V3.Aggregation aggregation_;
     /// <summary>
-    /// By default, the raw time series data is returned.
-    /// Use this field to combine multiple time series for different
-    /// views of the data.
+    /// Specifies the alignment of data points in individual time series as
+    /// well as how to combine the retrieved time series across specified labels.
+    ///
+    /// By default (if no `aggregation` is explicitly specified), the raw time
+    /// series data is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.Aggregation Aggregation {
@@ -1626,7 +1634,7 @@ namespace Google.Cloud.Monitoring.V3 {
     private string orderBy_ = "";
     /// <summary>
     /// Unsupported: must be left blank. The points in each time series are
-    /// returned in reverse time order.
+    /// currently returned in reverse time order (most recent to oldest).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -2265,7 +2273,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// Describes the result of a failed request to write data to a time series.
+  /// DEPRECATED. Used to hold per-time-series error status.
   /// </summary>
   public sealed partial class CreateTimeSeriesError : pb::IMessage<CreateTimeSeriesError> {
     private static readonly pb::MessageParser<CreateTimeSeriesError> _parser = new pb::MessageParser<CreateTimeSeriesError>(() => new CreateTimeSeriesError());
@@ -2306,11 +2314,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int TimeSeriesFieldNumber = 1;
     private global::Google.Cloud.Monitoring.V3.TimeSeries timeSeries_;
     /// <summary>
-    /// The time series, including the `Metric`, `MonitoredResource`,
-    /// and `Point`s (including timestamp and value) that resulted
-    /// in the error. This field provides all of the context that
-    /// would be needed to retry the operation.
+    /// DEPRECATED. Time series ID that resulted in the `status` error.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.TimeSeries TimeSeries {
       get { return timeSeries_; }
@@ -2323,8 +2329,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int StatusFieldNumber = 2;
     private global::Google.Rpc.Status status_;
     /// <summary>
-    /// The status of the requested write operation.
+    /// DEPRECATED. The status of the requested write operation for `time_series`.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Status {
       get { return status_; }
@@ -2442,6 +2449,374 @@ namespace Google.Cloud.Monitoring.V3 {
         }
       }
     }
+
+  }
+
+  /// <summary>
+  /// Summary of the result of a failed request to write data to a time series.
+  /// </summary>
+  public sealed partial class CreateTimeSeriesSummary : pb::IMessage<CreateTimeSeriesSummary> {
+    private static readonly pb::MessageParser<CreateTimeSeriesSummary> _parser = new pb::MessageParser<CreateTimeSeriesSummary>(() => new CreateTimeSeriesSummary());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateTimeSeriesSummary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateTimeSeriesSummary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateTimeSeriesSummary(CreateTimeSeriesSummary other) : this() {
+      totalPointCount_ = other.totalPointCount_;
+      successPointCount_ = other.successPointCount_;
+      errors_ = other.errors_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateTimeSeriesSummary Clone() {
+      return new CreateTimeSeriesSummary(this);
+    }
+
+    /// <summary>Field number for the "total_point_count" field.</summary>
+    public const int TotalPointCountFieldNumber = 1;
+    private int totalPointCount_;
+    /// <summary>
+    /// The number of points in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TotalPointCount {
+      get { return totalPointCount_; }
+      set {
+        totalPointCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "success_point_count" field.</summary>
+    public const int SuccessPointCountFieldNumber = 2;
+    private int successPointCount_;
+    /// <summary>
+    /// The number of points that were successfully written.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SuccessPointCount {
+      get { return successPointCount_; }
+      set {
+        successPointCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "errors" field.</summary>
+    public const int ErrorsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error> _repeated_errors_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error> errors_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error>();
+    /// <summary>
+    /// The number of points that failed to be written. Order is not guaranteed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error> Errors {
+      get { return errors_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateTimeSeriesSummary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateTimeSeriesSummary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TotalPointCount != other.TotalPointCount) return false;
+      if (SuccessPointCount != other.SuccessPointCount) return false;
+      if(!errors_.Equals(other.errors_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TotalPointCount != 0) hash ^= TotalPointCount.GetHashCode();
+      if (SuccessPointCount != 0) hash ^= SuccessPointCount.GetHashCode();
+      hash ^= errors_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (TotalPointCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TotalPointCount);
+      }
+      if (SuccessPointCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SuccessPointCount);
+      }
+      errors_.WriteTo(output, _repeated_errors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TotalPointCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalPointCount);
+      }
+      if (SuccessPointCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SuccessPointCount);
+      }
+      size += errors_.CalculateSize(_repeated_errors_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateTimeSeriesSummary other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TotalPointCount != 0) {
+        TotalPointCount = other.TotalPointCount;
+      }
+      if (other.SuccessPointCount != 0) {
+        SuccessPointCount = other.SuccessPointCount;
+      }
+      errors_.Add(other.errors_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TotalPointCount = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            SuccessPointCount = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            errors_.AddEntriesFrom(input, _repeated_errors_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CreateTimeSeriesSummary message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Detailed information about an error category.
+      /// </summary>
+      public sealed partial class Error : pb::IMessage<Error> {
+        private static readonly pb::MessageParser<Error> _parser = new pb::MessageParser<Error>(() => new Error());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Error> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Error() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Error(Error other) : this() {
+          status_ = other.status_ != null ? other.status_.Clone() : null;
+          pointCount_ = other.pointCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Error Clone() {
+          return new Error(this);
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 1;
+        private global::Google.Rpc.Status status_;
+        /// <summary>
+        /// The status of the requested write operation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Rpc.Status Status {
+          get { return status_; }
+          set {
+            status_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "point_count" field.</summary>
+        public const int PointCountFieldNumber = 2;
+        private int pointCount_;
+        /// <summary>
+        /// The number of points that couldn't be written because of `status`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int PointCount {
+          get { return pointCount_; }
+          set {
+            pointCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Error);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Error other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Status, other.Status)) return false;
+          if (PointCount != other.PointCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (status_ != null) hash ^= Status.GetHashCode();
+          if (PointCount != 0) hash ^= PointCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (status_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Status);
+          }
+          if (PointCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(PointCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (status_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+          }
+          if (PointCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(PointCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Error other) {
+          if (other == null) {
+            return;
+          }
+          if (other.status_ != null) {
+            if (status_ == null) {
+              Status = new global::Google.Rpc.Status();
+            }
+            Status.MergeFrom(other.Status);
+          }
+          if (other.PointCount != 0) {
+            PointCount = other.PointCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (status_ == null) {
+                  Status = new global::Google.Rpc.Status();
+                }
+                input.ReadMessage(Status);
+                break;
+              }
+              case 16: {
+                PointCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
 
   }
 
