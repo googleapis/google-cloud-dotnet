@@ -1,9 +1,14 @@
 # Version history
 
-# 1.4.0-beta01, 2019-04-24
+# 1.4.0-beta06, 2019-11-13
 
 Changes since 1.3.0:
 
+- Loosen the restriction on JobConfigurationQuery.DestinationTable not being null.
+- Provide option for using Avro logical types for load/extract.
+- Adds creation time filtering to BigQuery job listing.
+- Client builder.
+- Implement support for BigQuery GEOGRAPHY type.
 - netstandard2.0 target
 - Reimplemented query handling using GetQueryResults RPC instead of ListRows,
   resulting in a performance improvement
