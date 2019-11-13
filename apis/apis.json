@@ -1097,7 +1097,7 @@
     "generator": "gapic",
     "protoPath": "google/longrunning",
     "serviceYaml": "longrunning/longrunning.yaml",
-    "version": "1.2.0-beta01",
+    "version": "2.0.0-beta00",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "LongRunning" ],
