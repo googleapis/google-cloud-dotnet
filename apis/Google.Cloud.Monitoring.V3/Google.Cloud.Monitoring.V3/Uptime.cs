@@ -1906,8 +1906,11 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Used to perform string matching. It allows substring and regular
-      /// expressions, together with their negations.
+      /// Optional. Used to perform content matching. This allows matching based on
+      /// substrings and regular expressions, together with their negations. Only the
+      /// first 4&amp;nbsp;MB of an HTTP or HTTPS check's response (and the first
+      /// 1&amp;nbsp;MB of a TCP check's response) are examined for purposes of content
+      /// matching.
       /// </summary>
       public sealed partial class ContentMatcher : pb::IMessage<ContentMatcher> {
         private static readonly pb::MessageParser<ContentMatcher> _parser = new pb::MessageParser<ContentMatcher>(() => new ContentMatcher());
@@ -1948,7 +1951,8 @@ namespace Google.Cloud.Monitoring.V3 {
         public const int ContentFieldNumber = 1;
         private string content_ = "";
         /// <summary>
-        /// String or regex content to match (max 1024 bytes)
+        /// String or regex content to match. Maximum 1024 bytes. An empty `content`
+        /// string indicates no content matching is to be performed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Content {
@@ -2086,26 +2090,26 @@ namespace Google.Cloud.Monitoring.V3 {
             /// </summary>
             [pbr::OriginalName("CONTENT_MATCHER_OPTION_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// Selects substring matching (there is a match if the output contains
-            /// the `content` string).  This is the default value for checks without
+            /// Selects substring matching. The match succeeds if the output contains
+            /// the `content` string.  This is the default value for checks without
             /// a `matcher` option, or where the value of `matcher` is
             /// `CONTENT_MATCHER_OPTION_UNSPECIFIED`.
             /// </summary>
             [pbr::OriginalName("CONTAINS_STRING")] ContainsString = 1,
             /// <summary>
-            /// Selects negation of substring matching (there is a match if the output
-            /// does NOT contain the `content` string).
+            /// Selects negation of substring matching. The match succeeds if the
+            /// output does _NOT_ contain the `content` string.
             /// </summary>
             [pbr::OriginalName("NOT_CONTAINS_STRING")] NotContainsString = 2,
             /// <summary>
-            /// Selects regular expression matching (there is a match of the output
-            /// matches the regular expression specified in the `content` string).
+            /// Selects regular-expression matching. The match succeeds of the output
+            /// matches the regular expression specified in the `content` string.
             /// </summary>
             [pbr::OriginalName("MATCHES_REGEX")] MatchesRegex = 3,
             /// <summary>
-            /// Selects negation of regular expression matching (there is a match if
-            /// the output does NOT match the regular expression specified in the
-            /// `content` string).
+            /// Selects negation of regular-expression matching. The match succeeds if
+            /// the output does _NOT_ match the regular expression specified in the
+            /// `content` string.
             /// </summary>
             [pbr::OriginalName("NOT_MATCHES_REGEX")] NotMatchesRegex = 4,
           }

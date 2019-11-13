@@ -1341,7 +1341,7 @@ namespace Google.Cloud.Monitoring.V3 {
             /// identifies which time series should be compared with the threshold.
             ///
             /// The filter is similar to the one that is specified in the
-            /// [`MetricService.ListTimeSeries`
+            /// [`ListTimeSeries`
             /// request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that
             /// call is useful to verify the time series that will be retrieved /
             /// processed) and must specify the metric type and optionally may contain
@@ -1369,8 +1369,7 @@ namespace Google.Cloud.Monitoring.V3 {
             /// members of a group of resrouces). Multiple aggregations
             /// are applied in the order specified.
             ///
-            /// This field is similar to the one in the
-            /// [`MetricService.ListTimeSeries`
+            /// This field is similar to the one in the [`ListTimeSeries`
             /// request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It
             /// is advisable to use the `ListTimeSeries` method when debugging this
             /// field.
@@ -1745,7 +1744,7 @@ namespace Google.Cloud.Monitoring.V3 {
             /// identifies which time series should be compared with the threshold.
             ///
             /// The filter is similar to the one that is specified in the
-            /// [`MetricService.ListTimeSeries`
+            /// [`ListTimeSeries`
             /// request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that
             /// call is useful to verify the time series that will be retrieved /
             /// processed) and must specify the metric type and optionally may contain
@@ -1773,8 +1772,7 @@ namespace Google.Cloud.Monitoring.V3 {
             /// members of a group of resrouces). Multiple aggregations
             /// are applied in the order specified.
             ///
-            /// This field is similar to the
-            /// one in the [`MetricService.ListTimeSeries`
+            /// This field is similar to the one in the [`ListTimeSeries`
             /// request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It
             /// is advisable to use the `ListTimeSeries` method when debugging this
             /// field.
