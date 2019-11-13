@@ -105,13 +105,20 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
-        /// for "None" <see cref="SubscriberServiceApiClient"/> RPC methods.
+        /// for "StreamingPull" <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "None" RPC methods.
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "StreamingPull" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.ResourceExhausted"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
         /// </remarks>
-        public static sys::Predicate<grpccore::RpcException> NoneRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes();
+        public static sys::Predicate<grpccore::RpcException> StreamingPullRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
