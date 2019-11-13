@@ -64,7 +64,7 @@ namespace Google.Cloud.AutoML.V1 {
             "b2dsZS5jbG91ZC5hdXRvbWwudjFCFlByZWRpY3Rpb25TZXJ2aWNlUHJvdG9Q",
             "AVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
             "ZC9hdXRvbWwvdjE7YXV0b21sqgIWR29vZ2xlLkNsb3VkLkF1dG9NTC5WMcoC",
-            "Fkdvb2dsZVxDbG91ZFxBdXRvTUxcVjHqAhlHb29nbGU6OkNsb3VkOjpBdXRv",
+            "Fkdvb2dsZVxDbG91ZFxBdXRvTWxcVjHqAhlHb29nbGU6OkNsb3VkOjpBdXRv",
             "TUw6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },

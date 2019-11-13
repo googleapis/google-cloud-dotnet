@@ -44,7 +44,7 @@ namespace Google.Cloud.AutoML.V1 {
             "ZXJhZ2VfcHJlY2lzaW9uGAMgASgCQqoBChpjb20uZ29vZ2xlLmNsb3VkLmF1",
             "dG9tbC52MVABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
             "cGlzL2Nsb3VkL2F1dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0",
-            "b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9NTFxWMeoCGUdvb2dsZTo6Q2xv",
+            "b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xv",
             "dWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
