@@ -8,5 +8,4 @@ then
   exit 1
 fi
 
-dotnet restore tools > /dev/null
-dotnet run -p tools/Google.Cloud.Tools.TagReleases/Google.Cloud.Tools.TagReleases.csproj $1
+dotnet run -p tools/Google.Cloud.Tools.TagReleases -- $1
