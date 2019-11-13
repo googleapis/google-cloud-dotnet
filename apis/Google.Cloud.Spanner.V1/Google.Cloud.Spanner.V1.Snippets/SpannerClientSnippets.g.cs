@@ -23,6 +23,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -736,8 +737,8 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
 
             // Read streaming responses from server until complete
-            var responseStream = response.GrpcCall.ResponseStream;
-            while (await responseStream.MoveNext(default))
+            IAsyncEnumerator<PartialResultSet> responseStream = response.GetResponseStream(CancellationToken.None);
+            while (await responseStream.MoveNextAsync())
             {
                 PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -863,8 +864,8 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
 
             // Read streaming responses from server until complete
-            var responseStream = response.GrpcCall.ResponseStream;
-            while (await responseStream.MoveNext(default))
+            IAsyncEnumerator<PartialResultSet> responseStream = response.GetResponseStream(CancellationToken.None);
+            while (await responseStream.MoveNextAsync())
             {
                 PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response

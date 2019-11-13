@@ -19,6 +19,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
     using Google.LongRunning;
     using Google.Protobuf;
     using System.Collections.Generic;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -231,8 +232,8 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                var responseStream = response.GrpcCall.ResponseStream;
-                while (await responseStream.MoveNext(default))
+                IAsyncEnumerator<StreamingRecognizeResponse> responseStream = response.GetResponseStream(CancellationToken.None);
+                while (await responseStream.MoveNextAsync())
                 {
                     StreamingRecognizeResponse responseItem = responseStream.Current;
                     // Do something with streamed response
