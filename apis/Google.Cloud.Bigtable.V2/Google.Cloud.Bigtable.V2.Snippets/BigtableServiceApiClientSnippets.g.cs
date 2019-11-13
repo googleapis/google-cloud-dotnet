@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRowAsync</summary>
-        public async Task MutateRowAsync()
+        public async Task MutateRowAsync1()
         {
             // Snippet: MutateRowAsync(TableName,ByteString,IEnumerable<Mutation>,CallSettings)
             // Additional: MutateRowAsync(TableName,ByteString,IEnumerable<Mutation>,CancellationToken)
@@ -101,7 +101,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRow</summary>
-        public void MutateRow()
+        public void MutateRow1()
         {
             // Snippet: MutateRow(TableName,ByteString,IEnumerable<Mutation>,CallSettings)
             // Create client
@@ -112,6 +112,39 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateRowAsync</summary>
+        public async Task MutateRowAsync2()
+        {
+            // Snippet: MutateRowAsync(TableName,ByteString,IEnumerable<Mutation>,string,CallSettings)
+            // Additional: MutateRowAsync(TableName,ByteString,IEnumerable<Mutation>,string,CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.Empty;
+            IEnumerable<Mutation> mutations = new List<Mutation>();
+            string appProfileId = "";
+            // Make the request
+            MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateRow</summary>
+        public void MutateRow2()
+        {
+            // Snippet: MutateRow(TableName,ByteString,IEnumerable<Mutation>,string,CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.Empty;
+            IEnumerable<Mutation> mutations = new List<Mutation>();
+            string appProfileId = "";
+            // Make the request
+            MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations, appProfileId);
             // End snippet
         }
 
@@ -179,7 +212,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRowAsync</summary>
-        public async Task CheckAndMutateRowAsync()
+        public async Task CheckAndMutateRowAsync1()
         {
             // Snippet: CheckAndMutateRowAsync(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
             // Additional: CheckAndMutateRowAsync(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,CancellationToken)
@@ -197,7 +230,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRow</summary>
-        public void CheckAndMutateRow()
+        public void CheckAndMutateRow1()
         {
             // Snippet: CheckAndMutateRow(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
             // Create client
@@ -210,6 +243,43 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             IEnumerable<Mutation> falseMutations = new List<Mutation>();
             // Make the request
             CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckAndMutateRowAsync</summary>
+        public async Task CheckAndMutateRowAsync2()
+        {
+            // Snippet: CheckAndMutateRowAsync(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,string,CallSettings)
+            // Additional: CheckAndMutateRowAsync(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,string,CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.Empty;
+            RowFilter predicateFilter = new RowFilter();
+            IEnumerable<Mutation> trueMutations = new List<Mutation>();
+            IEnumerable<Mutation> falseMutations = new List<Mutation>();
+            string appProfileId = "";
+            // Make the request
+            CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckAndMutateRow</summary>
+        public void CheckAndMutateRow2()
+        {
+            // Snippet: CheckAndMutateRow(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,string,CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.Empty;
+            RowFilter predicateFilter = new RowFilter();
+            IEnumerable<Mutation> trueMutations = new List<Mutation>();
+            IEnumerable<Mutation> falseMutations = new List<Mutation>();
+            string appProfileId = "";
+            // Make the request
+            CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
             // End snippet
         }
 
@@ -249,7 +319,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
-        public async Task ReadModifyWriteRowAsync()
+        public async Task ReadModifyWriteRowAsync1()
         {
             // Snippet: ReadModifyWriteRowAsync(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
             // Additional: ReadModifyWriteRowAsync(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,CancellationToken)
@@ -265,7 +335,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRow</summary>
-        public void ReadModifyWriteRow()
+        public void ReadModifyWriteRow1()
         {
             // Snippet: ReadModifyWriteRow(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
             // Create client
@@ -276,6 +346,39 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
             // Make the request
             ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
+        public async Task ReadModifyWriteRowAsync2()
+        {
+            // Snippet: ReadModifyWriteRowAsync(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,string,CallSettings)
+            // Additional: ReadModifyWriteRowAsync(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,string,CancellationToken)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.Empty;
+            IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
+            string appProfileId = "";
+            // Make the request
+            ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadModifyWriteRow</summary>
+        public void ReadModifyWriteRow2()
+        {
+            // Snippet: ReadModifyWriteRow(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,string,CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.Empty;
+            IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
+            string appProfileId = "";
+            // Make the request
+            ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules, appProfileId);
             // End snippet
         }
 

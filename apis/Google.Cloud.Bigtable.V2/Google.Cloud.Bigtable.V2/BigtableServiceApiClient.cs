@@ -88,162 +88,42 @@ namespace Google.Cloud.Bigtable.V2
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
-        /// "IdempotentParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// "Default" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "IdempotentParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// The "Default" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "IdempotentParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
+        /// The "Default" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 10 milliseconds</description></item>
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 2.0</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static gaxgrpc::BackoffSettings GetIdempotentParamsRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(10),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(100),
             maxDelay: sys::TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 2.0
+            delayMultiplier: 1.3
         );
 
         /// <summary>
-        /// "IdempotentParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// "Default" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "IdempotentParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// The "Default" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "IdempotentParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
+        /// The "Default" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static gaxgrpc::BackoffSettings GetIdempotentParamsTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(20000),
             maxDelay: sys::TimeSpan.FromMilliseconds(20000),
-            delayMultiplier: 1.0
-        );
-
-        /// <summary>
-        /// "NonIdempotentParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "NonIdempotentParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "NonIdempotentParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 10 milliseconds</description></item>
-        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 2.0</description></item>
-        /// </list>
-        /// </remarks>
-        public static gaxgrpc::BackoffSettings GetNonIdempotentParamsRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(10),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 2.0
-        );
-
-        /// <summary>
-        /// "NonIdempotentParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "NonIdempotentParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "NonIdempotentParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
-        /// </list>
-        /// </remarks>
-        public static gaxgrpc::BackoffSettings GetNonIdempotentParamsTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(20000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
-            delayMultiplier: 1.0
-        );
-
-        /// <summary>
-        /// "ReadRowsParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "ReadRowsParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "ReadRowsParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 10 milliseconds</description></item>
-        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 2.0</description></item>
-        /// </list>
-        /// </remarks>
-        public static gaxgrpc::BackoffSettings GetReadRowsParamsRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(10),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 2.0
-        );
-
-        /// <summary>
-        /// "ReadRowsParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "ReadRowsParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "ReadRowsParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial timeout: 300000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 300000 milliseconds</description></item>
-        /// </list>
-        /// </remarks>
-        public static gaxgrpc::BackoffSettings GetReadRowsParamsTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(300000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(300000),
-            delayMultiplier: 1.0
-        );
-
-        /// <summary>
-        /// "MutateRowsParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "MutateRowsParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "MutateRowsParams" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 10 milliseconds</description></item>
-        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 2.0</description></item>
-        /// </list>
-        /// </remarks>
-        public static gaxgrpc::BackoffSettings GetMutateRowsParamsRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(10),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 2.0
-        );
-
-        /// <summary>
-        /// "MutateRowsParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "MutateRowsParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "MutateRowsParams" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
-        /// </list>
-        /// </remarks>
-        public static gaxgrpc::BackoffSettings GetMutateRowsParamsTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(60000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
@@ -251,10 +131,10 @@ namespace Google.Cloud.Bigtable.V2
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>BigtableServiceApiClient.ReadRows</c>.
         /// </summary>
         /// <remarks>
-        /// Default RPC expiration is 43200000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ReadRowsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(43200000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>BigtableServiceApiClient.SampleRowKeys</c>.
@@ -273,8 +153,8 @@ namespace Google.Cloud.Bigtable.V2
         /// The default <c>BigtableServiceApiClient.MutateRow</c> and
         /// <c>BigtableServiceApiClient.MutateRowAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 10 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -282,17 +162,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings MutateRowSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetIdempotentParamsRetryBackoff(),
-                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -312,8 +191,8 @@ namespace Google.Cloud.Bigtable.V2
         /// The default <c>BigtableServiceApiClient.CheckAndMutateRow</c> and
         /// <c>BigtableServiceApiClient.CheckAndMutateRowAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 10 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -323,13 +202,13 @@ namespace Google.Cloud.Bigtable.V2
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 20000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CheckAndMutateRowSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
-                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)),
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -341,8 +220,8 @@ namespace Google.Cloud.Bigtable.V2
         /// The default <c>BigtableServiceApiClient.ReadModifyWriteRow</c> and
         /// <c>BigtableServiceApiClient.ReadModifyWriteRowAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 10 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -352,13 +231,13 @@ namespace Google.Cloud.Bigtable.V2
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 20000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ReadModifyWriteRowSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
-                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)),
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -574,7 +453,7 @@ namespace Google.Cloud.Bigtable.V2
         /// ReadRowsResponse documentation for details.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table from which to read.
+        /// Required. The unique name of the table from which to read.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -601,7 +480,7 @@ namespace Google.Cloud.Bigtable.V2
         /// ReadRowsResponse documentation for details.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table from which to read.
+        /// Required. The unique name of the table from which to read.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -617,6 +496,72 @@ namespace Google.Cloud.Bigtable.V2
                 new ReadRowsRequest
                 {
                     TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Streams back the contents of all requested rows in key order, optionally
+        /// applying the same Reader filter to each. Depending on their size,
+        /// rows and cells may be broken up across multiple responses, but
+        /// atomicity of each row will still be preserved. See the
+        /// ReadRowsResponse documentation for details.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual ReadRowsStream ReadRows(
+            gcbcv::TableName tableName,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => ReadRows(
+                new ReadRowsRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Streams back the contents of all requested rows in key order, optionally
+        /// applying the same Reader filter to each. Depending on their size,
+        /// rows and cells may be broken up across multiple responses, but
+        /// atomicity of each row will still be preserved. See the
+        /// ReadRowsResponse documentation for details.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual ReadRowsStream ReadRows(
+            string tableName,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => ReadRows(
+                new ReadRowsRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    AppProfileId = appProfileId ?? "", // Optional
                 },
                 callSettings);
 
@@ -657,7 +602,7 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table from which to sample row keys.
+        /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -683,7 +628,7 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table from which to sample row keys.
+        /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -699,6 +644,70 @@ namespace Google.Cloud.Bigtable.V2
                 new SampleRowKeysRequest
                 {
                     TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to sample row keys.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual SampleRowKeysStream SampleRowKeys(
+            gcbcv::TableName tableName,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => SampleRowKeys(
+                new SampleRowKeysRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to sample row keys.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual SampleRowKeysStream SampleRowKeys(
+            string tableName,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => SampleRowKeys(
+                new SampleRowKeysRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    AppProfileId = appProfileId ?? "", // Optional
                 },
                 callSettings);
 
@@ -736,15 +745,18 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// Required. The unique name of the table to which the mutation should be applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="mutations">
-        /// Changes to be atomically applied to the specified row. Entries are applied
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
         /// Must contain at least one entry and at most 100000.
         /// </param>
@@ -772,15 +784,18 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// Required. The unique name of the table to which the mutation should be applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="mutations">
-        /// Changes to be atomically applied to the specified row. Entries are applied
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
         /// Must contain at least one entry and at most 100000.
         /// </param>
@@ -805,15 +820,18 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// Required. The unique name of the table to which the mutation should be applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="mutations">
-        /// Changes to be atomically applied to the specified row. Entries are applied
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
         /// Must contain at least one entry and at most 100000.
         /// </param>
@@ -841,15 +859,18 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// Required. The unique name of the table to which the mutation should be applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="mutations">
-        /// Changes to be atomically applied to the specified row. Entries are applied
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
         /// Must contain at least one entry and at most 100000.
         /// </param>
@@ -877,15 +898,18 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// Required. The unique name of the table to which the mutation should be applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="mutations">
-        /// Changes to be atomically applied to the specified row. Entries are applied
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
         /// Must contain at least one entry and at most 100000.
         /// </param>
@@ -910,15 +934,18 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// Required. The unique name of the table to which the mutation should be applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="mutations">
-        /// Changes to be atomically applied to the specified row. Entries are applied
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
         /// Must contain at least one entry and at most 100000.
         /// </param>
@@ -938,6 +965,270 @@ namespace Google.Cloud.Bigtable.V2
                     TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
                     RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutation should be applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="mutations">
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
+        /// in order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<Mutation> mutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => MutateRowAsync(
+                new MutateRowRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutation should be applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="mutations">
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
+        /// in order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<Mutation> mutations,
+            string appProfileId,
+            st::CancellationToken cancellationToken) => MutateRowAsync(
+                tableName,
+                rowKey,
+                mutations,
+                appProfileId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutation should be applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="mutations">
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
+        /// in order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual MutateRowResponse MutateRow(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<Mutation> mutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => MutateRow(
+                new MutateRowRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutation should be applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="mutations">
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
+        /// in order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(
+            string tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<Mutation> mutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => MutateRowAsync(
+                new MutateRowRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutation should be applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="mutations">
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
+        /// in order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(
+            string tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<Mutation> mutations,
+            string appProfileId,
+            st::CancellationToken cancellationToken) => MutateRowAsync(
+                tableName,
+                rowKey,
+                mutations,
+                appProfileId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutation should be applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="mutations">
+        /// Required. Changes to be atomically applied to the specified row. Entries are applied
+        /// in order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual MutateRowResponse MutateRow(
+            string tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<Mutation> mutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => MutateRow(
+                new MutateRowRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    AppProfileId = appProfileId ?? "", // Optional
                 },
                 callSettings);
 
@@ -1006,10 +1297,10 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutations should be applied.
+        /// Required. The unique name of the table to which the mutations should be applied.
         /// </param>
         /// <param name="entries">
-        /// The row keys and corresponding mutations to be applied in bulk.
+        /// Required. The row keys and corresponding mutations to be applied in bulk.
         /// Each entry is applied as an atomic mutation, but the entries may be
         /// applied in arbitrary order (even between entries for the same row).
         /// At least one entry must be specified, and in total the entries can
@@ -1038,10 +1329,10 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutations should be applied.
+        /// Required. The unique name of the table to which the mutations should be applied.
         /// </param>
         /// <param name="entries">
-        /// The row keys and corresponding mutations to be applied in bulk.
+        /// Required. The row keys and corresponding mutations to be applied in bulk.
         /// Each entry is applied as an atomic mutation, but the entries may be
         /// applied in arbitrary order (even between entries for the same row).
         /// At least one entry must be specified, and in total the entries can
@@ -1061,6 +1352,82 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
                     Entries = { gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutations should be applied.
+        /// </param>
+        /// <param name="entries">
+        /// Required. The row keys and corresponding mutations to be applied in bulk.
+        /// Each entry is applied as an atomic mutation, but the entries may be
+        /// applied in arbitrary order (even between entries for the same row).
+        /// At least one entry must be specified, and in total the entries can
+        /// contain at most 100000 mutations.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual MutateRowsStream MutateRows(
+            gcbcv::TableName tableName,
+            scg::IEnumerable<MutateRowsRequest.Types.Entry> entries,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => MutateRows(
+                new MutateRowsRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    Entries = { gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the mutations should be applied.
+        /// </param>
+        /// <param name="entries">
+        /// Required. The row keys and corresponding mutations to be applied in bulk.
+        /// Each entry is applied as an atomic mutation, but the entries may be
+        /// applied in arbitrary order (even between entries for the same row).
+        /// At least one entry must be specified, and in total the entries can
+        /// contain at most 100000 mutations.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual MutateRowsStream MutateRows(
+            string tableName,
+            scg::IEnumerable<MutateRowsRequest.Types.Entry> entries,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => MutateRows(
+                new MutateRowsRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    Entries = { gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
+                    AppProfileId = appProfileId ?? "", // Optional
                 },
                 callSettings);
 
@@ -1096,13 +1463,16 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the conditional mutation should be
+        /// Required. The unique name of the table to which the conditional mutation should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1151,13 +1521,16 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the conditional mutation should be
+        /// Required. The unique name of the table to which the conditional mutation should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1203,13 +1576,16 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the conditional mutation should be
+        /// Required. The unique name of the table to which the conditional mutation should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1258,13 +1634,16 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the conditional mutation should be
+        /// Required. The unique name of the table to which the conditional mutation should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1313,13 +1692,16 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the conditional mutation should be
+        /// Required. The unique name of the table to which the conditional mutation should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1365,13 +1747,16 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the conditional mutation should be
+        /// Required. The unique name of the table to which the conditional mutation should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1413,6 +1798,384 @@ namespace Google.Cloud.Bigtable.V2
                     PredicateFilter = predicateFilter, // Optional
                     TrueMutations = { trueMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
                     FalseMutations = { falseMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the conditional mutation should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// yields at least one cell when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `false_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// does not yield any cells when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `true_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            RowFilter predicateFilter,
+            scg::IEnumerable<Mutation> trueMutations,
+            scg::IEnumerable<Mutation> falseMutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => CheckAndMutateRowAsync(
+                new CheckAndMutateRowRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    PredicateFilter = predicateFilter, // Optional
+                    TrueMutations = { trueMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    FalseMutations = { falseMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the conditional mutation should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// yields at least one cell when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `false_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// does not yield any cells when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `true_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            RowFilter predicateFilter,
+            scg::IEnumerable<Mutation> trueMutations,
+            scg::IEnumerable<Mutation> falseMutations,
+            string appProfileId,
+            st::CancellationToken cancellationToken) => CheckAndMutateRowAsync(
+                tableName,
+                rowKey,
+                predicateFilter,
+                trueMutations,
+                falseMutations,
+                appProfileId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the conditional mutation should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// yields at least one cell when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `false_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// does not yield any cells when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `true_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CheckAndMutateRowResponse CheckAndMutateRow(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            RowFilter predicateFilter,
+            scg::IEnumerable<Mutation> trueMutations,
+            scg::IEnumerable<Mutation> falseMutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => CheckAndMutateRow(
+                new CheckAndMutateRowRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    PredicateFilter = predicateFilter, // Optional
+                    TrueMutations = { trueMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    FalseMutations = { falseMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the conditional mutation should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// yields at least one cell when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `false_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// does not yield any cells when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `true_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
+            string tableName,
+            pb::ByteString rowKey,
+            RowFilter predicateFilter,
+            scg::IEnumerable<Mutation> trueMutations,
+            scg::IEnumerable<Mutation> falseMutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => CheckAndMutateRowAsync(
+                new CheckAndMutateRowRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    PredicateFilter = predicateFilter, // Optional
+                    TrueMutations = { trueMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    FalseMutations = { falseMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the conditional mutation should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// yields at least one cell when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `false_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// does not yield any cells when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `true_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
+            string tableName,
+            pb::ByteString rowKey,
+            RowFilter predicateFilter,
+            scg::IEnumerable<Mutation> trueMutations,
+            scg::IEnumerable<Mutation> falseMutations,
+            string appProfileId,
+            st::CancellationToken cancellationToken) => CheckAndMutateRowAsync(
+                tableName,
+                rowKey,
+                predicateFilter,
+                trueMutations,
+                falseMutations,
+                appProfileId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the conditional mutation should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the conditional mutation should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// yields at least one cell when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `false_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if `predicate_filter`
+        /// does not yield any cells when applied to `row_key`. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if `true_mutations` is empty, and at most
+        /// 100000.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CheckAndMutateRowResponse CheckAndMutateRow(
+            string tableName,
+            pb::ByteString rowKey,
+            RowFilter predicateFilter,
+            scg::IEnumerable<Mutation> trueMutations,
+            scg::IEnumerable<Mutation> falseMutations,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => CheckAndMutateRow(
+                new CheckAndMutateRowRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    PredicateFilter = predicateFilter, // Optional
+                    TrueMutations = { trueMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    FalseMutations = { falseMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    AppProfileId = appProfileId ?? "", // Optional
                 },
                 callSettings);
 
@@ -1480,16 +2243,19 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the read/modify/write rules should be
+        /// Required. The unique name of the table to which the read/modify/write rules should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="rules">
-        /// Rules specifying how the specified row's contents are to be transformed
+        /// Required. Rules specifying how the specified row's contents are to be transformed
         /// into writes. Entries are applied in order, meaning that earlier rules will
         /// affect the results of later ones.
         /// </param>
@@ -1520,16 +2286,19 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the read/modify/write rules should be
+        /// Required. The unique name of the table to which the read/modify/write rules should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="rules">
-        /// Rules specifying how the specified row's contents are to be transformed
+        /// Required. Rules specifying how the specified row's contents are to be transformed
         /// into writes. Entries are applied in order, meaning that earlier rules will
         /// affect the results of later ones.
         /// </param>
@@ -1557,16 +2326,19 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the read/modify/write rules should be
+        /// Required. The unique name of the table to which the read/modify/write rules should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="rules">
-        /// Rules specifying how the specified row's contents are to be transformed
+        /// Required. Rules specifying how the specified row's contents are to be transformed
         /// into writes. Entries are applied in order, meaning that earlier rules will
         /// affect the results of later ones.
         /// </param>
@@ -1597,16 +2369,19 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the read/modify/write rules should be
+        /// Required. The unique name of the table to which the read/modify/write rules should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="rules">
-        /// Rules specifying how the specified row's contents are to be transformed
+        /// Required. Rules specifying how the specified row's contents are to be transformed
         /// into writes. Entries are applied in order, meaning that earlier rules will
         /// affect the results of later ones.
         /// </param>
@@ -1637,16 +2412,19 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the read/modify/write rules should be
+        /// Required. The unique name of the table to which the read/modify/write rules should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="rules">
-        /// Rules specifying how the specified row's contents are to be transformed
+        /// Required. Rules specifying how the specified row's contents are to be transformed
         /// into writes. Entries are applied in order, meaning that earlier rules will
         /// affect the results of later ones.
         /// </param>
@@ -1674,16 +2452,19 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// The unique name of the table to which the read/modify/write rules should be
+        /// Required. The unique name of the table to which the read/modify/write rules should be
         /// applied.
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
         /// </param>
         /// <param name="rules">
-        /// Rules specifying how the specified row's contents are to be transformed
+        /// Required. Rules specifying how the specified row's contents are to be transformed
         /// into writes. Entries are applied in order, meaning that earlier rules will
         /// affect the results of later ones.
         /// </param>
@@ -1703,6 +2484,294 @@ namespace Google.Cloud.Bigtable.V2
                     TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
                     RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     Rules = { gax::GaxPreconditions.CheckNotNull(rules, nameof(rules)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the read/modify/write rules should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="rules">
+        /// Required. Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<ReadModifyWriteRule> rules,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRowAsync(
+                new ReadModifyWriteRowRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Rules = { gax::GaxPreconditions.CheckNotNull(rules, nameof(rules)) },
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the read/modify/write rules should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="rules">
+        /// Required. Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<ReadModifyWriteRule> rules,
+            string appProfileId,
+            st::CancellationToken cancellationToken) => ReadModifyWriteRowAsync(
+                tableName,
+                rowKey,
+                rules,
+                appProfileId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the read/modify/write rules should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="rules">
+        /// Required. Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
+            gcbcv::TableName tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<ReadModifyWriteRule> rules,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRow(
+                new ReadModifyWriteRowRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Rules = { gax::GaxPreconditions.CheckNotNull(rules, nameof(rules)) },
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the read/modify/write rules should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="rules">
+        /// Required. Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
+            string tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<ReadModifyWriteRule> rules,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRowAsync(
+                new ReadModifyWriteRowRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Rules = { gax::GaxPreconditions.CheckNotNull(rules, nameof(rules)) },
+                    AppProfileId = appProfileId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the read/modify/write rules should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="rules">
+        /// Required. Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
+            string tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<ReadModifyWriteRule> rules,
+            string appProfileId,
+            st::CancellationToken cancellationToken) => ReadModifyWriteRowAsync(
+                tableName,
+                rowKey,
+                rules,
+                appProfileId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table to which the read/modify/write rules should be
+        /// applied.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="rowKey">
+        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        ///
+        /// Classified as IDENTIFYING_ID to provide context around data accesses for
+        /// auditing systems.
+        /// </param>
+        /// <param name="rules">
+        /// Required. Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
+            string tableName,
+            pb::ByteString rowKey,
+            scg::IEnumerable<ReadModifyWriteRule> rules,
+            string appProfileId,
+            gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRow(
+                new ReadModifyWriteRowRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    Rules = { gax::GaxPreconditions.CheckNotNull(rules, nameof(rules)) },
+                    AppProfileId = appProfileId ?? "", // Optional
                 },
                 callSettings);
 

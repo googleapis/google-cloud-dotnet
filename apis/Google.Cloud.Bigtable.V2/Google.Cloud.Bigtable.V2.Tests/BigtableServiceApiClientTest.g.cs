@@ -83,6 +83,54 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public void MutateRow2()
         {
             Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            MutateRowRequest expectedRequest = new MutateRowRequest
+            {
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = ByteString.CopyFromUtf8("122"),
+                Mutations = { },
+                AppProfileId = "appProfileId1262094415",
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse();
+            mockGrpcClient.Setup(x => x.MutateRow(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.CopyFromUtf8("122");
+            IEnumerable<Mutation> mutations = new List<Mutation>();
+            string appProfileId = "appProfileId1262094415";
+            MutateRowResponse response = client.MutateRow(tableName, rowKey, mutations, appProfileId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task MutateRowAsync2()
+        {
+            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            MutateRowRequest expectedRequest = new MutateRowRequest
+            {
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = ByteString.CopyFromUtf8("122"),
+                Mutations = { },
+                AppProfileId = "appProfileId1262094415",
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse();
+            mockGrpcClient.Setup(x => x.MutateRowAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<MutateRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.CopyFromUtf8("122");
+            IEnumerable<Mutation> mutations = new List<Mutation>();
+            string appProfileId = "appProfileId1262094415";
+            MutateRowResponse response = await client.MutateRowAsync(tableName, rowKey, mutations, appProfileId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void MutateRow3()
+        {
+            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
@@ -99,7 +147,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public async Task MutateRowAsync2()
+        public async Task MutateRowAsync3()
         {
             Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
@@ -179,6 +227,68 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public void CheckAndMutateRow2()
         {
             Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            CheckAndMutateRowRequest expectedRequest = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = ByteString.CopyFromUtf8("122"),
+                PredicateFilter = new RowFilter(),
+                TrueMutations = { },
+                FalseMutations = { },
+                AppProfileId = "appProfileId1262094415",
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRow(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.CopyFromUtf8("122");
+            RowFilter predicateFilter = new RowFilter();
+            IEnumerable<Mutation> trueMutations = new List<Mutation>();
+            IEnumerable<Mutation> falseMutations = new List<Mutation>();
+            string appProfileId = "appProfileId1262094415";
+            CheckAndMutateRowResponse response = client.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CheckAndMutateRowAsync2()
+        {
+            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            CheckAndMutateRowRequest expectedRequest = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = ByteString.CopyFromUtf8("122"),
+                PredicateFilter = new RowFilter(),
+                TrueMutations = { },
+                FalseMutations = { },
+                AppProfileId = "appProfileId1262094415",
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CheckAndMutateRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.CopyFromUtf8("122");
+            RowFilter predicateFilter = new RowFilter();
+            IEnumerable<Mutation> trueMutations = new List<Mutation>();
+            IEnumerable<Mutation> falseMutations = new List<Mutation>();
+            string appProfileId = "appProfileId1262094415";
+            CheckAndMutateRowResponse response = await client.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CheckAndMutateRow3()
+        {
+            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
@@ -197,7 +307,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public async Task CheckAndMutateRowAsync2()
+        public async Task CheckAndMutateRowAsync3()
         {
             Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
@@ -265,6 +375,54 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public void ReadModifyWriteRow2()
         {
             Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            ReadModifyWriteRowRequest expectedRequest = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = ByteString.CopyFromUtf8("122"),
+                Rules = { },
+                AppProfileId = "appProfileId1262094415",
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse();
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.CopyFromUtf8("122");
+            IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
+            string appProfileId = "appProfileId1262094415";
+            ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(tableName, rowKey, rules, appProfileId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ReadModifyWriteRowAsync2()
+        {
+            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            ReadModifyWriteRowRequest expectedRequest = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = ByteString.CopyFromUtf8("122"),
+                Rules = { },
+                AppProfileId = "appProfileId1262094415",
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse();
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ReadModifyWriteRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ByteString rowKey = ByteString.CopyFromUtf8("122");
+            IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
+            string appProfileId = "appProfileId1262094415";
+            ReadModifyWriteRowResponse response = await client.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void ReadModifyWriteRow3()
+        {
+            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
@@ -281,7 +439,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public async Task ReadModifyWriteRowAsync2()
+        public async Task ReadModifyWriteRowAsync3()
         {
             Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
