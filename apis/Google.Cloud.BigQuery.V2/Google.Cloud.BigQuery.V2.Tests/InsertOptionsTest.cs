@@ -24,11 +24,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var options = new InsertOptions
             {
-                AllowUnknownFields = true
+                AllowUnknownFields = true,
+                SkipInvalidRows = true,
+                TemplateSuffix = "fromTemplate"
             };
             TableDataInsertAllRequest request = new TableDataInsertAllRequest();
             options.ModifyRequest(request);
             Assert.Equal(true, request.IgnoreUnknownValues);
+            Assert.Equal(true, request.SkipInvalidRows);
+            Assert.Equal("fromTemplate", request.TemplateSuffix);
         }
     }
 }

@@ -30,11 +30,42 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? AllowUnknownFields { get; set; }
 
+        /// <summary>
+        /// Insert all valid rows of a request, even if invalid rows exist.
+        /// If false, the entire request will fail if any invalid rows exist.
+        /// If not set, this is effectively false. This property is unset by default.
+        /// </summary>
+        public bool? SkipInvalidRows { get; set; }
+
+        /// <summary>
+        /// If true, insert errors don't lead to an exception.
+        /// This property has no effect on which rows are inserted and which are not.
+        /// The default value is false.
+        /// </summary>
+        public bool SuppressInsertErrors { get; set; }
+
+        /// <summary>
+        /// If specified, treats the destination table as a base template, and inserts the
+        /// rows into an instance table named "{destination}{templateSuffix}". BigQuery will
+        /// manage creation of the instance table, using the schema of the base template
+        /// table. See https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables
+        /// for considerations when working with templates tables.
+        /// </summary>
+        public string TemplateSuffix { get; set; }
+
         internal void ModifyRequest(TableDataInsertAllRequest body)
         {
             if (AllowUnknownFields != null)
             {
                 body.IgnoreUnknownValues = AllowUnknownFields;
+            }
+            if (SkipInvalidRows != null)
+            {
+                body.SkipInvalidRows = SkipInvalidRows;
+            }
+            if (TemplateSuffix != null)
+            {
+                body.TemplateSuffix = TemplateSuffix;
             }
         }
     }
