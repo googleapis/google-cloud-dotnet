@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Datastore.V1
@@ -61,15 +62,15 @@ namespace Google.Cloud.Datastore.V1
             // This takes slightly more memory than we really need, due to extra
             // cursors etc, but that's likely to be insignificant compared with the
             // entity data, and is immediately eligible for garbage collection.
-            var responses = await _responses.ToList().ConfigureAwait(false);
+            var responses = await _responses.ToListAsync().ConfigureAwait(false);
             var entities = responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity)).ToList().AsReadOnly();
             var lastBatch = responses.Last().Batch;
             return new DatastoreQueryResults(entities, lastBatch.MoreResults, lastBatch.EndCursor);
         }
 
         /// <inheritdoc />
-        public IAsyncEnumerator<Entity> GetEnumerator() =>
-            _responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity).ToAsyncEnumerable()).GetEnumerator();
+        public IAsyncEnumerator<Entity> GetAsyncEnumerator(CancellationToken cancellationToken) =>
+            _responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity).ToAsyncEnumerable()).GetAsyncEnumerator(cancellationToken);
 
         /// <summary>
         /// This method is for advanced use cases only, where more diagnostic information is required;

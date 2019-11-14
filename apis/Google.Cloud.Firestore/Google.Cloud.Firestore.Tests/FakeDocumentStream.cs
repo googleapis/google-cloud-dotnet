@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc.Testing;
 using Google.Cloud.Firestore.V1;
+using Grpc.Core;
 using System.Collections.Generic;
 using System.Linq;
 using static Google.Cloud.Firestore.V1.FirestoreClient;
@@ -24,12 +26,12 @@ namespace Google.Cloud.Firestore.Tests
     /// </summary>
     internal class FakeDocumentStream : BatchGetDocumentsStream
     {
-        private readonly IEnumerable<BatchGetDocumentsResponse> _responses;
+        internal FakeDocumentStream(IEnumerable<BatchGetDocumentsResponse> responses)
+        {
+            var adapter = new AsyncStreamAdapter<BatchGetDocumentsResponse>(responses.ToAsyncEnumerable().GetAsyncEnumerator(default));
+            GrpcCall = new AsyncServerStreamingCall<BatchGetDocumentsResponse>(adapter, null, null, null, () => { });
+        }
 
-        internal FakeDocumentStream(IEnumerable<BatchGetDocumentsResponse> responses) =>
-            _responses = responses;
-
-        public override IAsyncEnumerator<BatchGetDocumentsResponse> ResponseStream =>
-            _responses.ToAsyncEnumerable().GetEnumerator();
+        public override AsyncServerStreamingCall<BatchGetDocumentsResponse> GrpcCall { get; }
     }
 }

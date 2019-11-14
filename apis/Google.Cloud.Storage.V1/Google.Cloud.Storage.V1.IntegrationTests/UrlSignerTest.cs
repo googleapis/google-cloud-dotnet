@@ -58,7 +58,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     // Verify that the URL works initially.
                     var response = await fixture.HttpClient.DeleteAsync(url);
                     await VerifyResponseAsync(response);
-                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefaultAsync(o => o.Name == name);
                     Assert.Null(obj);
 
                     // Restore the object. 
@@ -69,7 +69,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     // Verify that the URL no longer works.
                     var response = await fixture.HttpClient.DeleteAsync(url);
                     Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefaultAsync(o => o.Name == name);
                     Assert.NotNull(obj);
 
                     // Cleanup
@@ -120,7 +120,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     var document = XDocument.Parse(result);
                     var ns = document.Root.GetDefaultNamespace();
                     var keys = document.Root.Elements(ns + "Contents").Select(contents => contents.Element(ns + "Key").Value).ToList();
-                    var objectNames = await fixture.Client.ListObjectsAsync(bucket, null).Select(o => o.Name).ToList();
+                    var objectNames = await fixture.Client.ListObjectsAsync(bucket, null).Select(o => o.Name).ToListAsync();
                     Assert.Equal(objectNames, keys);
                 },
                 afterDelay: async () =>
@@ -379,7 +379,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     content = createPutContent();
                     response = await fixture.HttpClient.PutAsync(url, content);
                     Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefaultAsync(o => o.Name == name);
                     Assert.Null(obj);
                 };
             }
@@ -499,7 +499,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     request.RequestUri = new Uri(url);
                     var response = await fixture.HttpClient.SendAsync(request);
                     Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefaultAsync(o => o.Name == name);
                     Assert.Null(obj);
                 },
                 caller);
@@ -539,7 +539,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     Assert.Equal(UploadStatus.Failed, progress.Status);
                     Assert.IsType<GoogleApiException>(progress.Exception);
 
-                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefaultAsync(o => o.Name == name);
                     Assert.Null(obj);
                 },
                 caller);
@@ -577,7 +577,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     // Verify that the URL no longer works.
                     await Assert.ThrowsAsync<GoogleApiException>(() => SignedUrlResumableUpload.InitiateSessionAsync(url));
 
-                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefaultAsync(o => o.Name == name);
                     Assert.Null(obj);
                 },
                 caller);

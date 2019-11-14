@@ -69,9 +69,9 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                     PositionalBindings = { parentKey }
                 };
                 var lazyResults = transaction.RunQueryLazilyAsync(query);
-                Assert.Equal(1, await lazyResults.Count());
+                Assert.Equal(1, await lazyResults.CountAsync());
                 lazyResults = transaction.RunQueryLazilyAsync(gql);
-                Assert.Equal(1, await lazyResults.Count());
+                Assert.Equal(1, await lazyResults.CountAsync());
 
                 var eagerResults = await transaction.RunQueryAsync(query);
                 Assert.Equal(1, eagerResults.Entities.Count);

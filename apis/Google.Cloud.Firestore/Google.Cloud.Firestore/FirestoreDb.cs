@@ -301,30 +301,28 @@ namespace Google.Cloud.Firestore
             Func<BatchGetDocumentsRequest, CallSettings, Task<List<DocumentSnapshot>>> function = async (req, settings) =>
             {
                 var stream = Client.BatchGetDocuments(req, settings);
-                using (var responseStream = stream.ResponseStream)
-                {
-                    List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
+                var responseStream = stream.GrpcCall.ResponseStream;
+                List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
 
-                    // Note: no need to worry about passing the cancellation token in here, as we've passed it into the overall call.
-                    // If the token is cancelled, the call will be aborted.
-                    while (await responseStream.MoveNext().ConfigureAwait(false))
+                // Note: no need to worry about passing the cancellation token in here, as we've passed it into the overall call.
+                // If the token is cancelled, the call will be aborted.
+                while (await responseStream.MoveNext().ConfigureAwait(false))
+                {
+                    var response = responseStream.Current;
+                    var readTime = Timestamp.FromProto(response.ReadTime);
+                    switch (response.ResultCase)
                     {
-                        var response = responseStream.Current;
-                        var readTime = Timestamp.FromProto(response.ReadTime);
-                        switch (response.ResultCase)
-                        {
-                            case BatchGetDocumentsResponse.ResultOneofCase.Found:
-                                snapshots.Add(DocumentSnapshot.ForDocument(this, response.Found, readTime));
-                                break;
-                            case BatchGetDocumentsResponse.ResultOneofCase.Missing:
-                                snapshots.Add(DocumentSnapshot.ForMissingDocument(this, response.Missing, readTime));
-                                break;
-                            default:
-                                throw new InvalidOperationException($"Unknown response type: {response.ResultCase}");
-                        }
+                        case BatchGetDocumentsResponse.ResultOneofCase.Found:
+                            snapshots.Add(DocumentSnapshot.ForDocument(this, response.Found, readTime));
+                            break;
+                        case BatchGetDocumentsResponse.ResultOneofCase.Missing:
+                            snapshots.Add(DocumentSnapshot.ForMissingDocument(this, response.Missing, readTime));
+                            break;
+                        default:
+                            throw new InvalidOperationException($"Unknown response type: {response.ResultCase}");
                     }
-                    return snapshots;
                 }
+                return snapshots;
             };
 
             var retryingTask = RetryHelper.Retry(function, request, callSettings, clock, scheduler);

@@ -899,7 +899,25 @@ namespace Google.Cloud.Bigtable.V2
                 filter,
                 callSettings: callSettings);
 
-            return await response.SingleOrDefault().ConfigureAwait(false);
+            // Equivalent to using SingleOrDefaultAsync, but avoids a System.Linq.Async dependency.
+            var enumerator = response.GetAsyncEnumerator(default);
+            try
+            {
+                if (!await enumerator.MoveNextAsync().ConfigureAwait(false))
+                {
+                    return default;
+                }
+                var row = enumerator.Current;
+                if (await enumerator.MoveNextAsync().ConfigureAwait(false))
+                {
+                    throw new InvalidOperationException("Expected only a single row.");
+                }
+                return row;
+            }
+            finally
+            {
+                await enumerator.DisposeAsync().ConfigureAwait(false);
+            }
         }
 
         /// <summary>
@@ -1008,7 +1026,7 @@ namespace Google.Cloud.Bigtable.V2
             async Task<ProcessingStatus> ProcessCurrentStream(BigtableServiceApiClient.MutateRowsStream stream)
             {
                 var cancellationToken = effectiveCallSettings.CancellationToken ?? default;
-                var responseStream = stream.ResponseStream;
+                var responseStream = stream.GrpcCall.ResponseStream;
                 while (await responseStream.MoveNext(cancellationToken).ConfigureAwait(false))
                 {
                     requestManager.SetStatus(responseStream.Current);
