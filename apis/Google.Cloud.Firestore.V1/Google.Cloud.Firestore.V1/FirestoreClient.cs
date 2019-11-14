@@ -2166,9 +2166,6 @@ namespace Google.Cloud.Firestore.V1
 
             /// <inheritdoc/>
             public override grpccore::AsyncServerStreamingCall<BatchGetDocumentsResponse> GrpcCall { get; }
-
-            /// <inheritdoc/>
-            public override scg::IAsyncEnumerator<BatchGetDocumentsResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2321,9 +2318,6 @@ namespace Google.Cloud.Firestore.V1
 
             /// <inheritdoc/>
             public override grpccore::AsyncServerStreamingCall<RunQueryResponse> GrpcCall { get; }
-
-            /// <inheritdoc/>
-            public override scg::IAsyncEnumerator<RunQueryResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2407,10 +2401,6 @@ namespace Google.Cloud.Firestore.V1
             /// <inheritdoc/>
             public override stt::Task WriteCompleteAsync() =>
                 _writeBuffer.WriteCompleteAsync();
-
-            /// <inheritdoc/>
-            public override scg::IAsyncEnumerator<WriteResponse> ResponseStream =>
-                GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2494,10 +2484,6 @@ namespace Google.Cloud.Firestore.V1
             /// <inheritdoc/>
             public override stt::Task WriteCompleteAsync() =>
                 _writeBuffer.WriteCompleteAsync();
-
-            /// <inheritdoc/>
-            public override scg::IAsyncEnumerator<ListenResponse> ResponseStream =>
-                GrpcCall.ResponseStream;
         }
 
         /// <summary>
