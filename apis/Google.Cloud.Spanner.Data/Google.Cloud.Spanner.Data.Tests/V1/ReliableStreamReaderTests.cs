@@ -158,7 +158,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         private static ReliableStreamReader CreateReader(PartialResultSet[] results, ResultSetMetadata metadata = null)
         {
             results[0].Metadata = metadata ?? CreateSingleStringFieldMetadata();
-            return new ReliableStreamReader(new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetEnumerator()), Logger.DefaultLogger);
+            return new ReliableStreamReader(new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default)), Logger.DefaultLogger);
         }
 
         private static ResultSetMetadata CreateSingleStringFieldMetadata() =>

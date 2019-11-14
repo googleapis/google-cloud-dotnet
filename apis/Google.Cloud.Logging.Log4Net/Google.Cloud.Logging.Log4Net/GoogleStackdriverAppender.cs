@@ -409,16 +409,9 @@ namespace Google.Cloud.Logging.Log4Net
                 {
                     try
                     {
-#if NET45 || NETSTANDARD2_0
-                            return AppDomain.CurrentDomain.GetAssemblies()
-                                .SelectMany(a => a.GetTypes())
-                                .FirstOrDefault(t => t.FullName == fullTypeName);
-#elif NETSTANDARD1_5
-                            // TODO: Support type lookup in netstandard
-                            return null;
-#else
-#error Unsupported platform.
-#endif
+                        return AppDomain.CurrentDomain.GetAssemblies()
+                            .SelectMany(a => a.GetTypes())
+                            .FirstOrDefault(t => t.FullName == fullTypeName);
                     }
                     catch
                     {

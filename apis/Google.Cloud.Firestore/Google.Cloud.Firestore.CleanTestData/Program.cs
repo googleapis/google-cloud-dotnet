@@ -24,7 +24,7 @@ namespace Google.Cloud.Firestore.CleanTestData
         {
             string project = Environment.GetEnvironmentVariable("FIRESTORE_TEST_PROJECT");
             var db = FirestoreDb.Create(project);
-            var collections = await db.ListRootCollectionsAsync().ToList();
+            var collections = await db.ListRootCollectionsAsync().ToListAsync();
             foreach (var collection in collections)
             {
                 if (collection.Id.StartsWith("test-"))
@@ -36,13 +36,13 @@ namespace Google.Cloud.Firestore.CleanTestData
             async Task DeleteCollectionAsync(CollectionReference collection)
             {
                 Console.WriteLine($"Deleting {collection.Id}");
-                var allDocs = await collection.ListDocumentsAsync().ToList();
+                var allDocs = await collection.ListDocumentsAsync().ToListAsync();
                 // Note: one batch per collection is less efficient than filling the batch each time,
                 // but it's not a big problem.
                 var batch = db.StartBatch();
                 foreach (var doc in allDocs)
                 {
-                    foreach (var child in await doc.ListCollectionsAsync().ToList())
+                    foreach (var child in await doc.ListCollectionsAsync().ToListAsync())
                     {
                         await DeleteCollectionAsync(child);
                     }

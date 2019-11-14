@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc.Testing;
 using Grpc.Core;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,17 +22,17 @@ namespace Google.Cloud.Bigtable.V2.Tests
     public class MockMutateRowsStream : BigtableServiceApiClient.MutateRowsStream
     {
         private readonly MutateRowsResponse[] _responses;
-        private IAsyncEnumerator<MutateRowsResponse> _responseStream;
+        private readonly AsyncServerStreamingCall<MutateRowsResponse> _call;
 
         public MockMutateRowsStream(params MutateRowsResponse[] responses)
         {
             _responses = responses;
-            _responseStream = responses.ToAsyncEnumerable().GetEnumerator();
+            var adapter = new AsyncStreamAdapter<MutateRowsResponse>(responses.ToAsyncEnumerable().GetAsyncEnumerator(default));
+            _call = new AsyncServerStreamingCall<MutateRowsResponse>(adapter, null, null, null, () => { });
         }
 
         public IEnumerable<MutateRowsResponse> Responses => _responses;
 
-        public override AsyncServerStreamingCall<MutateRowsResponse> GrpcCall => null;
-        public override IAsyncEnumerator<MutateRowsResponse> ResponseStream => _responseStream;
+        public override AsyncServerStreamingCall<MutateRowsResponse> GrpcCall => _call;
     }
 }

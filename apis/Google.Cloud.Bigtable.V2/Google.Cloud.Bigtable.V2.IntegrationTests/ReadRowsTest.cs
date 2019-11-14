@@ -60,9 +60,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     tableName,
                     new RowSet { RowKeys = { rowKey.Value } },
                     RowFilters.CellsPerColumnLimit(1));
-                using (var enumerator = (RowAsyncEnumerator)response.GetEnumerator())
+                var enumerator = (RowAsyncEnumerator) response.GetAsyncEnumerator(default);
+                try
                 {
-                    while (await enumerator.MoveNext(default))
+                    while (await enumerator.MoveNextAsync())
                     {
                         var row = enumerator.Current;
                         Assert.Equal(rowKey.Value, row.Key);
@@ -72,11 +73,15 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                             "large_value",
                             allData.ToArray());
                     }
-                
+
                     if (enumerator.HadSplitCell)
                     {
                         return;
                     }
+                }
+                finally
+                {
+                    await enumerator.DisposeAsync();
                 }
 
                 rnd.NextBytes(buffer);
@@ -461,7 +466,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Assert.Equal(rowKey.Value, row.Key);
             });
 
-            Assert.Throws<InvalidOperationException>(() => response.GetEnumerator());
+            Assert.Throws<InvalidOperationException>(() => response.GetAsyncEnumerator(default));
         }
 
         [Fact]

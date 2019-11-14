@@ -270,18 +270,21 @@ namespace Google.Cloud.BigQuery.V2
 
             public AsyncRowEnumerable(BigQueryResults parent) => _parent = parent;
 
-            public IAsyncEnumerator<BigQueryRow> GetEnumerator() => new AsyncRowEnumerator(_parent);
+            public IAsyncEnumerator<BigQueryRow> GetAsyncEnumerator(CancellationToken cancellationToken) =>
+                new AsyncRowEnumerator(_parent, cancellationToken);
         }
 
         private sealed class AsyncRowEnumerator : IAsyncEnumerator<BigQueryRow>
         {
             private readonly GetQueryResultsOptions _options;
             private readonly BigQueryResults _parent;
+            private readonly CancellationToken _cancellationToken;
             private IEnumerator<BigQueryRow> _underlyingEnumerator;
 
-            public AsyncRowEnumerator(BigQueryResults parent)
+            public AsyncRowEnumerator(BigQueryResults parent, CancellationToken cancellationToken)
             {
                 _parent = parent;
+                _cancellationToken = cancellationToken;
                 _options = parent._options?.Clone() ?? new GetQueryResultsOptions();
                 _options.StartIndex = null;
                 _options.PageToken = parent._response.PageToken;
@@ -290,9 +293,9 @@ namespace Google.Cloud.BigQuery.V2
 
             public BigQueryRow Current => _underlyingEnumerator.Current;
 
-            public async Task<bool> MoveNext(CancellationToken cancellationToken)
+            public async ValueTask<bool> MoveNextAsync()
             {
-                cancellationToken.ThrowIfCancellationRequested();
+                _cancellationToken.ThrowIfCancellationRequested();
                 // Keep asking for rows until we've got one, or we've run out of pages.
                 while (!_underlyingEnumerator.MoveNext())
                 {
@@ -300,7 +303,7 @@ namespace Google.Cloud.BigQuery.V2
                     {
                         return false;
                     }
-                    var nextResponse = await _parent._client.GetRawQueryResultsAsync(_parent.JobReference, _options, timeoutBase: null, cancellationToken).ConfigureAwait(false);
+                    var nextResponse = await _parent._client.GetRawQueryResultsAsync(_parent.JobReference, _options, timeoutBase: null, _cancellationToken).ConfigureAwait(false);
                     // Set the page token for the next time we need to fetch
                     _options.PageToken = nextResponse.PageToken;
                     _underlyingEnumerator = _parent.ConvertResponseRows(nextResponse).GetEnumerator();
@@ -308,10 +311,7 @@ namespace Google.Cloud.BigQuery.V2
                 return true;
             }
 
-            public void Dispose()
-            {
-                // No-op
-            }
+            public ValueTask DisposeAsync() => default;
         }
 
         private IEnumerable<BigQueryRow> ConvertResponseRows(GetQueryResultsResponse response) =>

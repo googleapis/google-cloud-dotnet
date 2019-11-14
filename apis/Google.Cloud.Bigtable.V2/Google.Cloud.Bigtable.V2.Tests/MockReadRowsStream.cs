@@ -23,12 +23,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
     public class MockReadRowsStream : BigtableServiceApiClient.ReadRowsStream
     {
         private readonly ReadRowsResponse[] _responses;
-        private IAsyncEnumerator<ReadRowsResponse> _responseStream;
+        private readonly AsyncServerStreamingCall<ReadRowsResponse> _call;
 
         public MockReadRowsStream(params ReadRowsResponse[] responses)
         {
             _responses = responses;
-            _responseStream = new Enumerator(this, responses.ToAsyncEnumerable().GetEnumerator());
+            var reader = new ResponseReader(this, responses.ToAsyncEnumerable().GetAsyncEnumerator());
+            _call = new AsyncServerStreamingCall<ReadRowsResponse>(reader, null, () => Status.DefaultSuccess, null, () => { });
         }
 
         public IEnumerable<ReadRowsResponse> Responses => _responses;
@@ -39,15 +40,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// </summary>
         public bool ShouldErrorAtEnd { get; set; }
 
-        public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => null;
-        public override IAsyncEnumerator<ReadRowsResponse> ResponseStream => _responseStream;
+        public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => _call;
 
-        private class Enumerator : IAsyncEnumerator<ReadRowsResponse>
+        private class ResponseReader : IAsyncStreamReader<ReadRowsResponse>
         {
             private readonly MockReadRowsStream _owner;
             private IAsyncEnumerator<ReadRowsResponse> _underlyingStream;
 
-            public Enumerator(MockReadRowsStream owner, IAsyncEnumerator<ReadRowsResponse> underlyingStream)
+            public ResponseReader(MockReadRowsStream owner, IAsyncEnumerator<ReadRowsResponse> underlyingStream)
             {
                 _owner = owner;
                 _underlyingStream = underlyingStream;
@@ -55,11 +55,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
             public ReadRowsResponse Current { get; set; }
 
-            public void Dispose() => _underlyingStream.Dispose();
+            // No-op rather than starting asynchronous disposal. This is only ever for an array anyway.
+            public void Dispose() { }
 
             public async Task<bool> MoveNext(CancellationToken cancellationToken)
             {
-                if (await _underlyingStream.MoveNext(cancellationToken))
+                if (await _underlyingStream.MoveNextAsync(cancellationToken))
                 {
                     Current = _underlyingStream.Current;
                     return true;
