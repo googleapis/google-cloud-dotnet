@@ -341,7 +341,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             FirestoreClient.BatchGetDocumentsStream streamingResponse = firestoreClient.BatchGetDocuments(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<BatchGetDocumentsResponse> responseStream = streamingResponse.ResponseStream;
+            var responseStream = streamingResponse.GrpcCall.ResponseStream;
             while (await responseStream.MoveNext())
             {
                 BatchGetDocumentsResponse response = responseStream.Current;
@@ -554,7 +554,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             FirestoreClient.RunQueryStream streamingResponse = firestoreClient.RunQuery(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<RunQueryResponse> responseStream = streamingResponse.ResponseStream;
+            var responseStream = streamingResponse.GrpcCall.ResponseStream;
             while (await responseStream.MoveNext())
             {
                 RunQueryResponse response = responseStream.Current;
@@ -579,7 +579,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<WriteResponse> responseStream = duplexStream.ResponseStream;
+                var responseStream = duplexStream.GrpcCall.ResponseStream;
                 while (await responseStream.MoveNext())
                 {
                     WriteResponse response = responseStream.Current;
@@ -625,7 +625,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<ListenResponse> responseStream = duplexStream.ResponseStream;
+                var responseStream = duplexStream.GrpcCall.ResponseStream;
                 while (await responseStream.MoveNext())
                 {
                     ListenResponse response = responseStream.Current;

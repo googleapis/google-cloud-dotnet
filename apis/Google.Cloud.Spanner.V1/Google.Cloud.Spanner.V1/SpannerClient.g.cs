@@ -2874,8 +2874,6 @@ namespace Google.Cloud.Spanner.V1
             public ExecuteStreamingSqlStreamImpl(grpccore::AsyncServerStreamingCall<PartialResultSet> call) => GrpcCall = call;
 
             public override grpccore::AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
-
-            public override scg::IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2997,8 +2995,6 @@ namespace Google.Cloud.Spanner.V1
             public StreamingReadStreamImpl(grpccore::AsyncServerStreamingCall<PartialResultSet> call) => GrpcCall = call;
 
             public override grpccore::AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
-
-            public override scg::IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
