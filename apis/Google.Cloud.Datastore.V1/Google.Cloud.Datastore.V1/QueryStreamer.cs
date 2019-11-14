@@ -83,34 +83,36 @@ namespace Google.Cloud.Datastore.V1
                 _parent = parent;
             }
 
-            public IAsyncEnumerator<RunQueryResponse> GetEnumerator()
-                => new AsyncQueryEnumerator(_parent);
+            public IAsyncEnumerator<RunQueryResponse> GetAsyncEnumerator(CancellationToken cancellationToken)
+                => new AsyncQueryEnumerator(_parent, cancellationToken);
 
             private class AsyncQueryEnumerator : IAsyncEnumerator<RunQueryResponse>
             {
                 private readonly QueryStreamer _parent;
+                private readonly CancellationToken _cancellationToken;
                 private RunQueryRequest _request;
                 private bool _finished;
 
-                public AsyncQueryEnumerator(QueryStreamer _parent)
+                public AsyncQueryEnumerator(QueryStreamer parent, CancellationToken cancellationToken)
                 {
-                    this._parent = _parent;
+                    _parent = parent;
+                    _cancellationToken = cancellationToken;
                     _request = _parent._initialRequest.Clone();
                 }
 
                 public RunQueryResponse Current { get; private set; }
 
-                public async Task<bool> MoveNext(CancellationToken cancellationToken)
+                public async ValueTask<bool> MoveNextAsync()
                 {
-                    cancellationToken.ThrowIfCancellationRequested();
+                    _cancellationToken.ThrowIfCancellationRequested();
                     if (_finished)
                     {
                         return false;
                     }
                     CallSettings effectiveCallSettings = _parent._callSettings;
-                    if (cancellationToken != default)
+                    if (_cancellationToken != default)
                     {
-                        effectiveCallSettings = effectiveCallSettings.WithCancellationToken(cancellationToken);
+                        effectiveCallSettings = effectiveCallSettings.WithCancellationToken(_cancellationToken);
                     }
                     var response = await _parent._apiCall.Async(_request, effectiveCallSettings).ConfigureAwait(false);
                     _finished = !MoreResultsAvailable(response);
@@ -119,7 +121,7 @@ namespace Google.Cloud.Datastore.V1
                     return true;
                 }
 
-                public void Dispose() { }
+                public ValueTask DisposeAsync() => default;
             }
         }
     }

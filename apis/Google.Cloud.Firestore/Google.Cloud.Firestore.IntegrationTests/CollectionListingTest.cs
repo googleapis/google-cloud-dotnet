@@ -38,7 +38,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             batch.Create(collection2.Document(), new { Name = "doc2" });
             await batch.CommitAsync();
 
-            var rootCollections = await db.ListRootCollectionsAsync().ToList();
+            var rootCollections = await db.ListRootCollectionsAsync().ToListAsync();
             Assert.Contains(collection1, rootCollections);
             Assert.Contains(collection2, rootCollections);
         }
@@ -53,7 +53,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             await col1.AddAsync(new { Name = "doc1" });
             await col2.AddAsync(new { Name = "doc2" });
 
-            var collections = await doc.ListCollectionsAsync().ToList();
+            var collections = await doc.ListCollectionsAsync().ToListAsync();
             Assert.Equal(new[] { col1, col2 }, collections.OrderBy(c => c.Path));
         }
 
@@ -77,7 +77,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             await presentOuterDoc.CreateAsync(new { Value = 5 });
             await innerDoc.CreateAsync(new { Value = 10 });
 
-            var docs = await outerCol.ListDocumentsAsync().ToList();
+            var docs = await outerCol.ListDocumentsAsync().ToListAsync();
             Assert.Equal(new[] { missingOuterDoc, presentOuterDoc }, docs);
 
             // Check that the missing document really doesn't exist
@@ -85,11 +85,11 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.False(missingSnapshot.Exists);
 
             // We should be able to find the nested collection within it...
-            var nestedCollections = await missingOuterDoc.ListCollectionsAsync().ToList();
+            var nestedCollections = await missingOuterDoc.ListCollectionsAsync().ToListAsync();
             Assert.Equal(new[] { innerCol }, nestedCollections);
 
             // And the nested *existing* document within that.
-            var nestedDocuments = await innerCol.ListDocumentsAsync().ToList();
+            var nestedDocuments = await innerCol.ListDocumentsAsync().ToListAsync();
             Assert.Equal(new[] { innerDoc }, nestedDocuments);
         }
 

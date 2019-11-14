@@ -231,7 +231,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     // If a resume token is presented, that means we need to skip all responses up to *and including* that one - so skip while we haven't seen it, then skip an extra one.
                     : _results.SkipWhile(r => r.ResumeToken != request.ResumeToken).Skip(1);
                 callResults = callResults.Select(_filter);
-                var asyncResults = new AsyncStreamAdapter<PartialResultSet>(callResults.ToAsyncEnumerable().GetEnumerator());
+                var asyncResults = new AsyncStreamAdapter<PartialResultSet>(callResults.ToAsyncEnumerable().GetAsyncEnumerator(default));
 
                 var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
                     // These arguments are all for aspects of gRPC streaming we don't care about.
