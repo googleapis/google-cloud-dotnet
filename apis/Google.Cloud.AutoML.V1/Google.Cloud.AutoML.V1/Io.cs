@@ -50,7 +50,7 @@ namespace Google.Cloud.AutoML.V1 {
             "dXRfdXJpX3ByZWZpeBgBIAEoCUID4EECQqoBChpjb20uZ29vZ2xlLmNsb3Vk",
             "LmF1dG9tbC52MVABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
             "bGVhcGlzL2Nsb3VkL2F1dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQu",
-            "QXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9NTFxWMeoCGUdvb2dsZTo6",
+            "QXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6",
             "Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
