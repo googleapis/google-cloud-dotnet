@@ -669,8 +669,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<StreamingPullResponse> responseStream = duplexStream.ResponseStream;
-                while (await responseStream.MoveNext())
+                AsyncResponseStream<StreamingPullResponse> responseStream = duplexStream.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
                 {
                     StreamingPullResponse response = responseStream.Current;
                     // Do something with streamed response
