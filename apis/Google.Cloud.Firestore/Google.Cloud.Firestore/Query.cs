@@ -633,9 +633,15 @@ namespace Google.Cloud.Firestore
         /// <remarks>
         /// Each time you iterate over the sequence, a new query will be performed.
         /// </remarks>
-        /// <param name="cancellationToken">A cancellation token for the operation.</param>
+        /// <param name="cancellationToken">The cancellation token to apply to the streaming operation. Note that even if this is
+        /// <see cref="CancellationToken.None"/>, a cancellation token can still be applied when iterating over
+        /// the stream, by passing it into <see cref="IAsyncEnumerable{T}.GetAsyncEnumerator(CancellationToken)"/>.
+        /// If a cancellation token is passed both to this method and GetAsyncEnumerator,
+        /// then cancelling either of the tokens will result in the operation being cancelled.
+        /// </param>
         /// <returns>An asynchronous sequence of document snapshots matching the query.</returns>
-        public IAsyncEnumerable<DocumentSnapshot> StreamAsync(CancellationToken cancellationToken = default) => StreamAsync(null, cancellationToken);
+        public IAsyncEnumerable<DocumentSnapshot> StreamAsync(CancellationToken cancellationToken = default) =>
+            StreamAsync(transactionId: null, cancellationToken);
 
         internal IAsyncEnumerable<DocumentSnapshot> StreamAsync(ByteString transactionId, CancellationToken cancellationToken) =>
              StreamResponsesAsync(transactionId, cancellationToken)
@@ -650,7 +656,7 @@ namespace Google.Cloud.Firestore
                 request.Transaction = transactionId;
             }
             var settings = CallSettings.FromCancellationToken(cancellationToken);
-            return AsyncEnumerable.Create(token => Database.Client.RunQuery(request, settings).GetResponseStream(token));
+            return Database.Client.RunQuery(request, settings).GetResponseStream();
         }
 
         // Helper methods for cursor-related functionality
