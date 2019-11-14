@@ -28,7 +28,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         [Fact]
         public async Task FirestoreDbGetAllDocumentsAsync_WithFieldMask()
         {
-            var docs = await _fixture.HighScoreCollection.ListDocumentsAsync().ToList();
+            var docs = await _fixture.HighScoreCollection.ListDocumentsAsync().ToListAsync();
             var fieldMask = new FieldMask("Name", "Score");
             var snapshots = await _fixture.FirestoreDb.GetAllSnapshotsAsync(docs, fieldMask);
             var models = snapshots.Select(s => s.ConvertTo<HighScore>()).ToList();
@@ -38,7 +38,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         [Fact]
         public async Task TransactionGetAllDocumentsAsync_WithFieldMask()
         {
-            var docs = await _fixture.HighScoreCollection.ListDocumentsAsync().ToList();
+            var docs = await _fixture.HighScoreCollection.ListDocumentsAsync().ToListAsync();
             var fieldMask = new FieldMask("Name", "Score");
             await _fixture.FirestoreDb.RunTransactionAsync(async t =>
             {
