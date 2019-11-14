@@ -144,13 +144,14 @@ namespace Google.Cloud.BigQuery.V2
                 return;
             }
             var response = request.Execute();
-            HandleInsertAllResponse(response);
+            HandleInsertAllResponse(response, options);
         }
 
-        private void HandleInsertAllResponse(TableDataInsertAllResponse response)
+        private void HandleInsertAllResponse(TableDataInsertAllResponse response, InsertOptions options)
         {
             var errors = response.InsertErrors;
-            if (errors?.Count > 0)
+            bool shouldThrow = options == null || !options.SuppressInsertErrors;
+            if (errors?.Count > 0 && shouldThrow)
             {
                 var exception = new GoogleApiException(Service.Name, "Error inserting data")
                 {
@@ -289,7 +290,7 @@ namespace Google.Cloud.BigQuery.V2
                 return;
             }
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            HandleInsertAllResponse(response);
+            HandleInsertAllResponse(response, options);
         }
 
         /// <summary>

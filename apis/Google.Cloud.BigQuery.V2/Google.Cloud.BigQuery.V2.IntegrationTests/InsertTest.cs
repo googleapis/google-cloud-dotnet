@@ -70,18 +70,87 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Contains(rowsAfter, r => (string)r["player"] == "Lisa");
         }
 
-        [Fact]
-        public void InsertRow_BadData()
+        public static IEnumerable<object[]> BadDataThrowsOptions
+        {
+            get
+            {
+                yield return new object[] { null };
+                yield return new object[] { new InsertOptions() };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true } };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = false } };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = false } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = false } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = true } };
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(BadDataThrowsOptions))]
+        public void InsertRow_BadData_Throws(InsertOptions options)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
-            var table = dataset.GetTable(_fixture.HighScoreTableId);
-            var row = new BigQueryInsertRow { { "noSuchField", 10 } };
-            Assert.Throws<GoogleApiException>(() => table.InsertRow(row));
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "year", BigQueryDbType.Int64 } }.Build());
+            var rows = new BigQueryInsertRow[]
+            {
+                new BigQueryInsertRow { { "noSuchField", 10 } },
+                new BigQueryInsertRow { {"year", "Unknown"} }
+            };
+            Assert.Throws<GoogleApiException>(() => table.InsertRows(rows, options));
+        }
+
+        public static IEnumerable<object[]> BadDataSilentOptions
+        {
+            get
+            {
+                yield return new object[] { new InsertOptions { SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = false, SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = true, SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = false, SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = true, SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = false, SuppressInsertErrors = true } };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = true, SuppressInsertErrors = true } };
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(BadDataSilentOptions))]
+        public void InsertRow_BadData_Silent(InsertOptions options)
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "year", BigQueryDbType.Int64 } }.Build());
+            var rows = new BigQueryInsertRow[]
+            {
+                new BigQueryInsertRow { { "noSuchField", 10 } },
+                new BigQueryInsertRow { {"year", "Unknown"} }
+            };
+            table.InsertRows(rows, options);
         }
 
         [Fact]
-        public void InsertRow_BadData_IgnoreBadData()
+        public void InsertRow_BadTable()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var options = new InsertOptions { AllowUnknownFields = true, SkipInvalidRows = true, SuppressInsertErrors = true };
+            var row = new BigQueryInsertRow { { "noSuchField", 10 } };
+            // This should still throw because the error is not on inserting a specific row.
+            var exception = Assert.Throws<GoogleApiException>(() => client.InsertRow(_fixture.DatasetId, "noSuchTable", row));
+        }
+
+        [Fact]
+        public void InsertRow_BadData_IgnoreExtraColumn()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -92,10 +161,102 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var row = new BigQueryInsertRow { { "noSuchField", 10 } };
 
+            // Even though SuppressInsertErrors is false, this won't throw
+            // because server side, unknown fields are ignored silently.
             var options = new InsertOptions { AllowUnknownFields = true };
             _fixture.InsertAndWait(table, () => table.InsertRow(row, options), 1);
         }
 
+        [Fact]
+        public void InsertRow_BadData_IgnoreBadRows_Silent()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "year", BigQueryDbType.Int64 } }.Build());
+
+            var rows = new BigQueryInsertRow[]
+            {
+                new BigQueryInsertRow { { "year", 2019 } },
+                new BigQueryInsertRow { { "noSuchField", 10 } },
+                new BigQueryInsertRow { { "year", "Unknown" } },
+            };
+
+            var options = new InsertOptions { SkipInvalidRows = true, SuppressInsertErrors = true};
+            // Only one row inserted, we are not ignoring unknown fields so the last two rows are bad.
+            _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 1);
+        }
+
+        [Fact]
+        public void InsertRow_BadData_IgnoreBadRows_Throws()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "year", BigQueryDbType.Int64 } }.Build());
+
+            var rows = new BigQueryInsertRow[]
+            {
+                new BigQueryInsertRow { { "year", 2019 } },
+                new BigQueryInsertRow { { "noSuchField", 10 } },
+                new BigQueryInsertRow { { "year", "Unknown" } }
+            };
+
+            var options = new InsertOptions { SkipInvalidRows = true, SuppressInsertErrors = false };
+            var exception = Assert.Throws<GoogleApiException>(() => table.InsertRows(rows, options));
+            Assert.Equal(2, exception.Error.Errors.Count);
+            Assert.Contains(exception.Error.Errors, e => e.Message.Contains("Row 1"));
+            Assert.Contains(exception.Error.Errors, e => e.Message.Contains("Row 2"));
+        }
+
+        [Fact]
+        public void InsertRow_BadData_IgnoreUnknownAndBadRows_Silent()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "year", BigQueryDbType.Int64 } }.Build());
+
+            var rows = new BigQueryInsertRow[]
+            {
+                new BigQueryInsertRow { { "year", 2019 } },
+                new BigQueryInsertRow { { "noSuchField", 10 } },
+                new BigQueryInsertRow { { "year", "Unknown" } },
+            };
+
+            var options = new InsertOptions { AllowUnknownFields = true, SkipInvalidRows = true, SuppressInsertErrors = true };
+            // Now two rows are inserted, we are ignoring unknown fields so only the last row is bad.
+            _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 2);
+        }
+
+        [Fact]
+        public void InsertRow_BadData_IgnoreUnknownAndBadRows_Throws()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "year", BigQueryDbType.Int64 } }.Build());
+
+            var rows = new BigQueryInsertRow[]
+            {
+                new BigQueryInsertRow { { "year", 2019 } },
+                new BigQueryInsertRow { { "noSuchField", 10 } },
+                new BigQueryInsertRow { { "year", "Unknown" } }
+            };
+
+            var options = new InsertOptions { AllowUnknownFields = true, SkipInvalidRows = true, SuppressInsertErrors = false };
+            var exception = Assert.Throws<GoogleApiException>(() => table.InsertRows(rows, options));
+            Assert.Equal(1, exception.Error.Errors.Count);
+            Assert.Contains("Row 2", exception.Error.Errors[0].Message);
+        }
 
         [Fact]
         public void InsertRow_RecordField()
