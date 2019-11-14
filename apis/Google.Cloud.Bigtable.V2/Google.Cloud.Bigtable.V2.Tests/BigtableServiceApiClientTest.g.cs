@@ -14,290 +14,686 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
+using proto = Google.Protobuf;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Bigtable.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Cloud.Bigtable.Common.V2;
-    using apis = Google.Cloud.Bigtable.V2;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedBigtableServiceApiClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedBigtableServiceApiClientTest
     {
-        [Fact]
-        public void MutateRow()
+        [xunit::FactAttribute]
+        public void MutateRowRequestObject()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
-            MutateRowRequest expectedRequest = new MutateRowRequest
-            {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Mutations = { },
-            };
-            MutateRowResponse expectedResponse = new MutateRowResponse();
-            mockGrpcClient.Setup(x => x.MutateRow(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = ByteString.CopyFromUtf8("122");
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            MutateRowResponse response = client.MutateRow(tableName, rowKey, mutations);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task MutateRowAsync()
-        {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
-            MutateRowRequest expectedRequest = new MutateRowRequest
-            {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Mutations = { },
-            };
-            MutateRowResponse expectedResponse = new MutateRowResponse();
-            mockGrpcClient.Setup(x => x.MutateRowAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MutateRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = ByteString.CopyFromUtf8("122");
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            MutateRowResponse response = await client.MutateRowAsync(tableName, rowKey, mutations);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void MutateRow2()
-        {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Mutations = { },
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+                AppProfileId = "app_profile_id57fb0442",
             };
-            MutateRowResponse expectedResponse = new MutateRowResponse();
-            mockGrpcClient.Setup(x => x.MutateRow(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
             MutateRowResponse response = client.MutateRow(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task MutateRowAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task MutateRowRequestObjectAsync()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Mutations = { },
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+                AppProfileId = "app_profile_id57fb0442",
             };
-            MutateRowResponse expectedResponse = new MutateRowResponse();
-            mockGrpcClient.Setup(x => x.MutateRowAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MutateRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            MutateRowResponse response = await client.MutateRowAsync(request);
-            Assert.Same(expectedResponse, response);
+            MutateRowResponse responseCallSettings = await client.MutateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CheckAndMutateRow()
+        [xunit::FactAttribute]
+        public void MutateRow1()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
-            CheckAndMutateRowRequest expectedRequest = new CheckAndMutateRowRequest
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                PredicateFilter = new RowFilter(),
-                TrueMutations = { },
-                FalseMutations = { },
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
             };
-            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
-            {
-                PredicateMatched = true,
-            };
-            mockGrpcClient.Setup(x => x.CheckAndMutateRow(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = ByteString.CopyFromUtf8("122");
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new List<Mutation>();
-            IEnumerable<Mutation> falseMutations = new List<Mutation>();
-            CheckAndMutateRowResponse response = client.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
-            Assert.Same(expectedResponse, response);
+            MutateRowResponse response = client.MutateRow(request.TableName, request.RowKey, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CheckAndMutateRowAsync()
+        [xunit::FactAttribute]
+        public async stt::Task MutateRow1Async()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
-            CheckAndMutateRowRequest expectedRequest = new CheckAndMutateRowRequest
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                PredicateFilter = new RowFilter(),
-                TrueMutations = { },
-                FalseMutations = { },
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
             };
-            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
-            {
-                PredicateMatched = true,
-            };
-            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CheckAndMutateRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = ByteString.CopyFromUtf8("122");
-            RowFilter predicateFilter = new RowFilter();
-            IEnumerable<Mutation> trueMutations = new List<Mutation>();
-            IEnumerable<Mutation> falseMutations = new List<Mutation>();
-            CheckAndMutateRowResponse response = await client.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
-            Assert.Same(expectedResponse, response);
+            MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CheckAndMutateRow2()
+        [xunit::FactAttribute]
+        public void MutateRow1_ResourceNames()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            MutateRowResponse response = client.MutateRow(request.TableNameAsTableName, request.RowKey, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MutateRow1Async_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MutateRow2()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            MutateRowResponse response = client.MutateRow(request.TableName, request.RowKey, request.Mutations, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MutateRow2Async()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableName, request.RowKey, request.Mutations, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MutateRow2_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            MutateRowResponse response = client.MutateRow(request.TableNameAsTableName, request.RowKey, request.Mutations, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MutateRow2Async_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            MutateRowRequest request = new MutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Mutations = { new Mutation(), },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            MutateRowResponse expectedResponse = new MutateRowResponse { };
+            mockGrpcClient.Setup(x => x.MutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            MutateRowResponse responseCallSettings = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MutateRowResponse responseCancellationToken = await client.MutateRowAsync(request.TableNameAsTableName, request.RowKey, request.Mutations, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CheckAndMutateRowRequestObject()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+                AppProfileId = "app_profile_id57fb0442",
             };
             CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
             {
                 PredicateMatched = true,
             };
-            mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
             CheckAndMutateRowResponse response = client.CheckAndMutateRow(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CheckAndMutateRowAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CheckAndMutateRowRequestObjectAsync()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+                AppProfileId = "app_profile_id57fb0442",
             };
             CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
             {
                 PredicateMatched = true,
             };
-            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CheckAndMutateRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            CheckAndMutateRowResponse response = await client.CheckAndMutateRowAsync(request);
-            Assert.Same(expectedResponse, response);
+            CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ReadModifyWriteRow()
+        [xunit::FactAttribute]
+        public void CheckAndMutateRow1()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
-            ReadModifyWriteRowRequest expectedRequest = new ReadModifyWriteRowRequest
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Rules = { },
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
             };
-            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse();
-            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = ByteString.CopyFromUtf8("122");
-            IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
-            ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(tableName, rowKey, rules);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ReadModifyWriteRowAsync()
-        {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
-            ReadModifyWriteRowRequest expectedRequest = new ReadModifyWriteRowRequest
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Rules = { },
+                PredicateMatched = true,
             };
-            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse();
-            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReadModifyWriteRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = ByteString.CopyFromUtf8("122");
-            IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
-            ReadModifyWriteRowResponse response = await client.ReadModifyWriteRowAsync(tableName, rowKey, rules);
-            Assert.Same(expectedResponse, response);
+            CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ReadModifyWriteRow2()
+        [xunit::FactAttribute]
+        public async stt::Task CheckAndMutateRow1Async()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CheckAndMutateRow1_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CheckAndMutateRow1Async_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CheckAndMutateRow2()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CheckAndMutateRow2Async()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CheckAndMutateRow2_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            CheckAndMutateRowResponse response = client.CheckAndMutateRow(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CheckAndMutateRow2Async_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                TrueMutations = { new Mutation(), },
+                FalseMutations = { new Mutation(), },
+                PredicateFilter = new RowFilter(),
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            CheckAndMutateRowResponse expectedResponse = new CheckAndMutateRowResponse
+            {
+                PredicateMatched = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckAndMutateRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckAndMutateRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            CheckAndMutateRowResponse responseCallSettings = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckAndMutateRowResponse responseCancellationToken = await client.CheckAndMutateRowAsync(request.TableNameAsTableName, request.RowKey, request.PredicateFilter, request.TrueMutations, request.FalseMutations, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReadModifyWriteRowRequestObject()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Rules = { },
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+                AppProfileId = "app_profile_id57fb0442",
             };
-            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse();
-            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
             ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ReadModifyWriteRowAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ReadModifyWriteRowRequestObjectAsync()
         {
-            Mock<Bigtable.BigtableClient> mockGrpcClient = new Mock<Bigtable.BigtableClient>(MockBehavior.Strict);
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = ByteString.CopyFromUtf8("122"),
-                Rules = { },
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+                AppProfileId = "app_profile_id57fb0442",
             };
-            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse();
-            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReadModifyWriteRowResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
-            ReadModifyWriteRowResponse response = await client.ReadModifyWriteRowAsync(request);
-            Assert.Same(expectedResponse, response);
+            ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void ReadModifyWriteRow1()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableName, request.RowKey, request.Rules);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReadModifyWriteRow1Async()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReadModifyWriteRow1_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableNameAsTableName, request.RowKey, request.Rules);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReadModifyWriteRow1Async_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReadModifyWriteRow2()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableName, request.RowKey, request.Rules, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReadModifyWriteRow2Async()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableName, request.RowKey, request.Rules, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReadModifyWriteRow2_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse response = client.ReadModifyWriteRow(request.TableNameAsTableName, request.RowKey, request.Rules, request.AppProfileId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReadModifyWriteRow2Async_ResourceNames()
+        {
+            moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
+            ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
+                Rules =
+                {
+                    new ReadModifyWriteRule(),
+                },
+                AppProfileId = "app_profile_id57fb0442",
+            };
+            ReadModifyWriteRowResponse expectedResponse = new ReadModifyWriteRowResponse { Row = new Row(), };
+            mockGrpcClient.Setup(x => x.ReadModifyWriteRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadModifyWriteRowResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableServiceApiClient client = new BigtableServiceApiClientImpl(mockGrpcClient.Object, null);
+            ReadModifyWriteRowResponse responseCallSettings = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, request.AppProfileId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReadModifyWriteRowResponse responseCancellationToken = await client.ReadModifyWriteRowAsync(request.TableNameAsTableName, request.RowKey, request.Rules, request.AppProfileId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
