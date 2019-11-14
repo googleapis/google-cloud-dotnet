@@ -30,7 +30,7 @@
     <None Include="../../../LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Condition="'$(TargetFramework)' == 'net45'" Include="Microsoft.CSharp" />
+    <Reference Condition="'$(TargetFramework)' == 'net461'" Include="Microsoft.CSharp" />
     <PackageReference Condition="'$(TargetFramework)' == 'netstandard2.0'" Include="Microsoft.CSharp" Version="4.5.0" />
   </ItemGroup>
 </Project>
