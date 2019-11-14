@@ -46,10 +46,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             BigtableByteString previousRowKey;
             long previousByteOffset = 0;
             bool hasResponses = false;
-            while (await stream.ResponseStream.MoveNext())
+            while (await stream.GrpcCall.ResponseStream.MoveNext(default))
             {
                 hasResponses = true;
-                var sample = stream.ResponseStream.Current;
+                var sample = stream.GrpcCall.ResponseStream.Current;
                 Assert.True(previousRowKey <= sample.RowKey);
                 Assert.True(previousByteOffset <= sample.OffsetBytes);
                 previousRowKey = sample.RowKey;

@@ -334,7 +334,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 service.Projects.List(),
                 new ProjectList { Projects = new[] { new ProjectsData { ProjectReference = reference } } });
             var result = client.ListProjectsAsync();
-            var dataset = await result.Single();
+            var dataset = await result.SingleAsync();
             Assert.Equal(projectId, dataset.Reference.ProjectId);
         }
 
@@ -383,7 +383,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 service.Datasets.List(projectId),
                 new DatasetList { Datasets = new[] { new DatasetsData { DatasetReference = datasetReference } } });
             var result = client.ListDatasetsAsync(projectReference);
-            var dataset = await result.Single();
+            var dataset = await result.SingleAsync();
             Assert.Equal(projectId, dataset.Reference.ProjectId);
             Assert.Equal(datasetId, dataset.Reference.DatasetId);
         }
@@ -484,7 +484,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 service.Jobs.List(projectId),
                 new JobList { Jobs = new[] { new JobsData { JobReference = jobReference } } });
             var result = client.ListJobsAsync(projectReference);
-            var job = await result.Single();
+            var job = await result.SingleAsync();
             Assert.Equal(projectId, job.Reference.ProjectId);
             Assert.Equal(jobId, job.Reference.JobId);
         }
