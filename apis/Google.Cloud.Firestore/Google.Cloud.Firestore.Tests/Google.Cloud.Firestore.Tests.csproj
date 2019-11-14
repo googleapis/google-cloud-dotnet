@@ -11,6 +11,7 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="3.0.0-alpha00" />
     <PackageReference Include="Google.Api.Gax.Testing" Version="3.0.0-alpha00" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
