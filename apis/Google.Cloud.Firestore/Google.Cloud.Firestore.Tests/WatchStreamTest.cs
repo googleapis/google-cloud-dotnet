@@ -494,7 +494,7 @@ namespace Google.Cloud.Firestore.Tests
             }
         }
 
-        private class FakeResponseList : IAsyncEnumerator<ListenResponse>
+        private class FakeResponseList : IAsyncStreamReader<ListenResponse>
         {
             private readonly List<Func<ListenResponse>> _responses;
             private int _index = -1;
@@ -507,8 +507,6 @@ namespace Google.Cloud.Firestore.Tests
                 _responses = responses;
                 _hangingCallback = hangingCallback;
             }
-
-            public void Dispose() { }
 
             public async Task<bool> MoveNext(CancellationToken cancellationToken)
             {
@@ -547,14 +545,10 @@ namespace Google.Cloud.Firestore.Tests
             {
                 _expectedRequest = expectedRequest;
                 _responses = responses;
-                // We only use the gRPC call for disposal. This is a bit unpleasant (rather than providing a reader/writer etc) but
-                // it's simple and enough for what we need.
-                _grpcCall = TestCalls.AsyncDuplexStreamingCall<ListenRequest, ListenResponse>(null, null, null, null, null, () => Disposed = true);
+                _grpcCall = TestCalls.AsyncDuplexStreamingCall<ListenRequest, ListenResponse>(null, responses, null, null, null, () => Disposed = true);
             }
 
             public override AsyncDuplexStreamingCall<ListenRequest, ListenResponse> GrpcCall => _grpcCall;
-
-            public override IAsyncEnumerator<ListenResponse> ResponseStream => _responses;
 
             public override Task TryWriteAsync(ListenRequest message, WriteOptions options) =>
                 TryWriteAsync(message);

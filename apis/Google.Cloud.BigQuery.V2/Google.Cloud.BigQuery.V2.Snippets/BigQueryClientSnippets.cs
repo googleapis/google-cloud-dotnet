@@ -1286,7 +1286,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Snippet: ListDatasetsAsync(*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-            List<BigQueryDataset> datasets = await client.ListDatasetsAsync().Take(20).ToList();
+            List<BigQueryDataset> datasets = await client.ListDatasetsAsync().Take(20).ToListAsync();
             foreach (BigQueryDataset dataset in datasets)
             {
                 Console.WriteLine(dataset.FullyQualifiedId);
@@ -1294,7 +1294,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // End snippet
 
             // We only show 20 above, but let's validate that the complete list includes the dataset we want.
-            List<string> ids = await client.ListDatasetsAsync().Select(ds => ds.Reference.DatasetId).ToList();
+            List<string> ids = await client.ListDatasetsAsync().Select(ds => ds.Reference.DatasetId).ToListAsync();
             Assert.Contains(_fixture.GameDatasetId, ids);
         }
 
@@ -1312,7 +1312,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Snippet: ListTablesAsync(string,ListTablesOptions)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-            List<BigQueryTable> tables = await client.ListTablesAsync(datasetId).Take(20).ToList();
+            List<BigQueryTable> tables = await client.ListTablesAsync(datasetId).Take(20).ToListAsync();
             foreach (BigQueryTable table in tables)
             {
                 Console.WriteLine(table.FullyQualifiedId);
@@ -1411,7 +1411,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.
-            Assert.True(await result.Count() >= 7);
+            Assert.True(await result.CountAsync() >= 7);
         }
 
         // See-also: ListRowsAsync(string, string, *, *)
@@ -1644,7 +1644,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Snippet: ListJobsAsync(ListJobsOptions)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-            List<BigQueryJob> jobs = await client.ListJobsAsync().Take(20).ToList();
+            List<BigQueryJob> jobs = await client.ListJobsAsync().Take(20).ToListAsync();
             foreach (BigQueryJob job in jobs)
             {
                 Console.WriteLine(job.Reference.JobId);
@@ -1790,8 +1790,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             job.ThrowOnAnyError();
             var newTable = await client.GetTableAsync(newTableReference);
 
-            var sourceRows = await table.ListRowsAsync().Count();
-            var newTableRows = await newTable.ListRowsAsync().Count();
+            var sourceRows = await table.ListRowsAsync().CountAsync();
+            var newTableRows = await newTable.ListRowsAsync().CountAsync();
             Assert.Equal(sourceRows, newTableRows);
         }
 
@@ -1863,7 +1863,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 Console.WriteLine($"{project.ProjectId}: {project.FriendlyName}");
             });
             // End snippet
-            Assert.Contains(_fixture.ProjectId, await projects.Select(p => p.ProjectId).ToList());
+            Assert.Contains(_fixture.ProjectId, await projects.Select(p => p.ProjectId).ToListAsync());
         }
 
         [Fact]
