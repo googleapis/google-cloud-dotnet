@@ -97,7 +97,7 @@ install_microgenerator() {
     git -C gapic-generator-csharp pull -q
     git -C gapic-generator-csharp submodule update
   else
-    git clone --recursive https://github.com/googleapis/gapic-generator-csharp
+    git clone --recursive https://github.com/googleapis/gapic-generator-csharp -b next-major-version
   fi
 
   case "$OSTYPE" in
