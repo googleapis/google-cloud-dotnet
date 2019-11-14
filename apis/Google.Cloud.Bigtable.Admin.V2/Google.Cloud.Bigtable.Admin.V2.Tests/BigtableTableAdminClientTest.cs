@@ -148,8 +148,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
             InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
             PagedAsyncEnumerable<ListTablesResponse, Table> responseAsync = client.ListTablesAsync(name);
-            Assert.Same(expectedTableResponse, await responseAsync.Single());
-            List<ListTablesResponse> response = await responseAsync.AsRawResponses().ToList();
+            Assert.Same(expectedTableResponse, await responseAsync.SingleAsync());
+            List<ListTablesResponse> response = await responseAsync.AsRawResponses().ToListAsync();
             Assert.Same(expextedListTablesResponse, response.Single());
             mockGrpcClient.VerifyAll();
         }
@@ -201,8 +201,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<ListTablesResponse>(Task.FromResult(expextedListTablesResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
             PagedAsyncEnumerable<ListTablesResponse, Table> responseAsync = client.ListTablesAsync(request);
-            Assert.Same(expectedTableResponse, await responseAsync.Single());
-            List<ListTablesResponse> response = await responseAsync.AsRawResponses().ToList();
+            Assert.Same(expectedTableResponse, await responseAsync.SingleAsync());
+            List<ListTablesResponse> response = await responseAsync.AsRawResponses().ToListAsync();
             Assert.Same(expextedListTablesResponse, response.Single());
             mockGrpcClient.VerifyAll();
         }
