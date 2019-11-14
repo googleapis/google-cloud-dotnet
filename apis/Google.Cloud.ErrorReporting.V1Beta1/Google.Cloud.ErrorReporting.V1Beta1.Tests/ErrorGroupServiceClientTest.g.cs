@@ -39,17 +39,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
             GetGroupRequest expectedRequest = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.GetGroup(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
+            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
             ErrorGroup response = client.GetGroup(groupName);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -61,17 +61,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
             GetGroupRequest expectedRequest = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ErrorGroup>(Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
+            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
             ErrorGroup response = await client.GetGroupAsync(groupName);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -83,11 +83,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, It.IsAny<CallOptions>()))
@@ -104,11 +104,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, It.IsAny<CallOptions>()))
@@ -129,7 +129,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(expectedRequest, It.IsAny<CallOptions>()))
@@ -151,7 +151,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
@@ -173,7 +173,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(request, It.IsAny<CallOptions>()))
@@ -194,7 +194,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
                 GroupId = "groupId506361563",
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, It.IsAny<CallOptions>()))

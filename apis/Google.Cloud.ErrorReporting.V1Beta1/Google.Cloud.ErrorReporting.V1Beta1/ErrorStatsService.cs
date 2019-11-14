@@ -27,86 +27,97 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "CkVnb29nbGUvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92MWJldGEx",
             "L2Vycm9yX3N0YXRzX3NlcnZpY2UucHJvdG8SK2dvb2dsZS5kZXZ0b29scy5j",
             "bG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aOGdvb2dsZS9kZXZ0b29scy9jbG91ZGVycm9ycmVwb3J0",
-            "aW5nL3YxYmV0YTEvY29tbW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
-            "YXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "oQQKFUxpc3RHcm91cFN0YXRzUmVxdWVzdBIUCgxwcm9qZWN0X25hbWUYASAB",
-            "KAkSEAoIZ3JvdXBfaWQYAiADKAkSWQoOc2VydmljZV9maWx0ZXIYAyABKAsy",
-            "QS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGEx",
-            "LlNlcnZpY2VDb250ZXh0RmlsdGVyEk8KCnRpbWVfcmFuZ2UYBSABKAsyOy5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlF1",
-            "ZXJ5VGltZVJhbmdlEjcKFHRpbWVkX2NvdW50X2R1cmF0aW9uGAYgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uElMKCWFsaWdubWVudBgHIAEoDjJA",
-            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEu",
-            "VGltZWRDb3VudEFsaWdubWVudBIyCg5hbGlnbm1lbnRfdGltZRgIIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASSwoFb3JkZXIYCSABKA4yPC5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkVy",
-            "cm9yR3JvdXBPcmRlchIRCglwYWdlX3NpemUYCyABKAUSEgoKcGFnZV90b2tl",
-            "bhgMIAEoCSLAAQoWTGlzdEdyb3VwU3RhdHNSZXNwb25zZRJXChFlcnJvcl9n",
-            "cm91cF9zdGF0cxgBIAMoCzI8Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
-            "cmVwb3J0aW5nLnYxYmV0YTEuRXJyb3JHcm91cFN0YXRzEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCRI0ChB0aW1lX3JhbmdlX2JlZ2luGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCKGBAoPRXJyb3JHcm91cFN0YXRzEkYK",
-            "BWdyb3VwGAEgASgLMjcuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBv",
-            "cnRpbmcudjFiZXRhMS5FcnJvckdyb3VwEg0KBWNvdW50GAIgASgDEhwKFGFm",
-            "ZmVjdGVkX3VzZXJzX2NvdW50GAMgASgDEk0KDHRpbWVkX2NvdW50cxgEIAMo",
-            "CzI3Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0",
-            "YTEuVGltZWRDb3VudBIzCg9maXJzdF9zZWVuX3RpbWUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEjIKDmxhc3Rfc2Vlbl90aW1lGAYgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJWChFhZmZlY3RlZF9zZXJ2",
-            "aWNlcxgHIAMoCzI7Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0",
-            "aW5nLnYxYmV0YTEuU2VydmljZUNvbnRleHQSHQoVbnVtX2FmZmVjdGVkX3Nl",
-            "cnZpY2VzGAggASgFEk8KDnJlcHJlc2VudGF0aXZlGAkgASgLMjcuZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJvckV2",
-            "ZW50InkKClRpbWVkQ291bnQSDQoFY291bnQYASABKAMSLgoKc3RhcnRfdGlt",
-            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
-            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIo4CChFMaXN0",
-            "RXZlbnRzUmVxdWVzdBIUCgxwcm9qZWN0X25hbWUYASABKAkSEAoIZ3JvdXBf",
-            "aWQYAiABKAkSWQoOc2VydmljZV9maWx0ZXIYAyABKAsyQS5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlNlcnZpY2VDb250",
-            "ZXh0RmlsdGVyEk8KCnRpbWVfcmFuZ2UYBCABKAsyOy5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlF1ZXJ5VGltZVJhbmdl",
-            "EhEKCXBhZ2Vfc2l6ZRgGIAEoBRISCgpwYWdlX3Rva2VuGAcgASgJIrIBChJM",
-            "aXN0RXZlbnRzUmVzcG9uc2USTQoMZXJyb3JfZXZlbnRzGAEgAygLMjcuZ29v",
+            "dGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUv",
+            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
+            "LnByb3RvGjhnb29nbGUvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92",
+            "MWJldGExL2NvbW1vbi5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9u",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoMFChVM",
+            "aXN0R3JvdXBTdGF0c1JlcXVlc3QSSQoMcHJvamVjdF9uYW1lGAEgASgJQjPg",
+            "QQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1By",
+            "b2plY3QSFQoIZ3JvdXBfaWQYAiADKAlCA+BBARJeCg5zZXJ2aWNlX2ZpbHRl",
+            "chgDIAEoCzJBLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5n",
+            "LnYxYmV0YTEuU2VydmljZUNvbnRleHRGaWx0ZXJCA+BBARJUCgp0aW1lX3Jh",
+            "bmdlGAUgASgLMjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRp",
+            "bmcudjFiZXRhMS5RdWVyeVRpbWVSYW5nZUID4EEBEjwKFHRpbWVkX2NvdW50",
+            "X2R1cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPg",
+            "QQESWAoJYWxpZ25tZW50GAcgASgOMkAuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
+            "ZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5UaW1lZENvdW50QWxpZ25tZW50QgPg",
+            "QQESNwoOYWxpZ25tZW50X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQESUAoFb3JkZXIYCSABKA4yPC5nb29nbGUuZGV2dG9v",
+            "bHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkVycm9yR3JvdXBPcmRl",
+            "ckID4EEBEhYKCXBhZ2Vfc2l6ZRgLIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
+            "DCABKAlCA+BBASLAAQoWTGlzdEdyb3VwU3RhdHNSZXNwb25zZRJXChFlcnJv",
+            "cl9ncm91cF9zdGF0cxgBIAMoCzI8Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVy",
+            "cm9ycmVwb3J0aW5nLnYxYmV0YTEuRXJyb3JHcm91cFN0YXRzEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCRI0ChB0aW1lX3JhbmdlX2JlZ2luGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKGBAoPRXJyb3JHcm91cFN0YXRz",
+            "EkYKBWdyb3VwGAEgASgLMjcuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3Jy",
+            "ZXBvcnRpbmcudjFiZXRhMS5FcnJvckdyb3VwEg0KBWNvdW50GAIgASgDEhwK",
+            "FGFmZmVjdGVkX3VzZXJzX2NvdW50GAMgASgDEk0KDHRpbWVkX2NvdW50cxgE",
+            "IAMoCzI3Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYx",
+            "YmV0YTEuVGltZWRDb3VudBIzCg9maXJzdF9zZWVuX3RpbWUYBSABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEjIKDmxhc3Rfc2Vlbl90aW1lGAYg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJWChFhZmZlY3RlZF9z",
+            "ZXJ2aWNlcxgHIAMoCzI7Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVw",
+            "b3J0aW5nLnYxYmV0YTEuU2VydmljZUNvbnRleHQSHQoVbnVtX2FmZmVjdGVk",
+            "X3NlcnZpY2VzGAggASgFEk8KDnJlcHJlc2VudGF0aXZlGAkgASgLMjcuZ29v",
             "Z2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJv",
-            "ckV2ZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRI0ChB0aW1lX3Jhbmdl",
-            "X2JlZ2luGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLnAQoO",
-            "UXVlcnlUaW1lUmFuZ2USUgoGcGVyaW9kGAEgASgOMkIuZ29vZ2xlLmRldnRv",
-            "b2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5RdWVyeVRpbWVSYW5n",
-            "ZS5QZXJpb2QigAEKBlBlcmlvZBIWChJQRVJJT0RfVU5TUEVDSUZJRUQQABIR",
-            "Cg1QRVJJT0RfMV9IT1VSEAESEgoOUEVSSU9EXzZfSE9VUlMQAhIQCgxQRVJJ",
-            "T0RfMV9EQVkQAxIRCg1QRVJJT0RfMV9XRUVLEAQSEgoOUEVSSU9EXzMwX0RB",
-            "WVMQBSJPChRTZXJ2aWNlQ29udGV4dEZpbHRlchIPCgdzZXJ2aWNlGAIgASgJ",
-            "Eg8KB3ZlcnNpb24YAyABKAkSFQoNcmVzb3VyY2VfdHlwZRgEIAEoCSIrChNE",
-            "ZWxldGVFdmVudHNSZXF1ZXN0EhQKDHByb2plY3RfbmFtZRgBIAEoCSIWChRE",
-            "ZWxldGVFdmVudHNSZXNwb25zZSp1ChNUaW1lZENvdW50QWxpZ25tZW50EiUK",
-            "IUVSUk9SX0NPVU5UX0FMSUdOTUVOVF9VTlNQRUNJRklFRBAAEhsKF0FMSUdO",
-            "TUVOVF9FUVVBTF9ST1VOREVEEAESGgoWQUxJR05NRU5UX0VRVUFMX0FUX0VO",
-            "RBACKn0KD0Vycm9yR3JvdXBPcmRlchIbChdHUk9VUF9PUkRFUl9VTlNQRUNJ",
-            "RklFRBAAEg4KCkNPVU5UX0RFU0MQARISCg5MQVNUX1NFRU5fREVTQxACEhAK",
-            "DENSRUFURURfREVTQxADEhcKE0FGRkVDVEVEX1VTRVJTX0RFU0MQBDLyBAoR",
-            "RXJyb3JTdGF0c1NlcnZpY2US0AEKDkxpc3RHcm91cFN0YXRzEkIuZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5MaXN0R3Jv",
-            "dXBTdGF0c1JlcXVlc3QaQy5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJl",
-            "cG9ydGluZy52MWJldGExLkxpc3RHcm91cFN0YXRzUmVzcG9uc2UiNYLT5JMC",
-            "LxItL3YxYmV0YTEve3Byb2plY3RfbmFtZT1wcm9qZWN0cy8qfS9ncm91cFN0",
-            "YXRzEsABCgpMaXN0RXZlbnRzEj4uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJy",
-            "b3JyZXBvcnRpbmcudjFiZXRhMS5MaXN0RXZlbnRzUmVxdWVzdBo/Lmdvb2ds",
-            "ZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuTGlzdEV2",
-            "ZW50c1Jlc3BvbnNlIjGC0+STAisSKS92MWJldGExL3twcm9qZWN0X25hbWU9",
-            "cHJvamVjdHMvKn0vZXZlbnRzEsYBCgxEZWxldGVFdmVudHMSQC5nb29nbGUu",
-            "ZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkRlbGV0ZUV2",
-            "ZW50c1JlcXVlc3QaQS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9y",
-            "dGluZy52MWJldGExLkRlbGV0ZUV2ZW50c1Jlc3BvbnNlIjGC0+STAisqKS92",
-            "MWJldGExL3twcm9qZWN0X25hbWU9cHJvamVjdHMvKn0vZXZlbnRzQvcBCi9j",
-            "b20uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRh",
-            "MUIWRXJyb3JTdGF0c1NlcnZpY2VQcm90b1ABWl5nb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRvb2xzL2Nsb3VkZXJyb3JyZXBv",
-            "cnRpbmcvdjFiZXRhMTtjbG91ZGVycm9ycmVwb3J0aW5nqgIjR29vZ2xlLkNs",
-            "b3VkLkVycm9yUmVwb3J0aW5nLlYxQmV0YTHKAiNHb29nbGVcQ2xvdWRcRXJy",
-            "b3JSZXBvcnRpbmdcVjFiZXRhMWIGcHJvdG8z"));
+            "ckV2ZW50InkKClRpbWVkQ291bnQSDQoFY291bnQYASABKAMSLgoKc3RhcnRf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5k",
+            "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wItwCChFM",
+            "aXN0RXZlbnRzUmVxdWVzdBJJCgxwcm9qZWN0X25hbWUYASABKAlCM+BBAvpB",
+            "LQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVj",
+            "dBIVCghncm91cF9pZBgCIAEoCUID4EECEl4KDnNlcnZpY2VfZmlsdGVyGAMg",
+            "ASgLMkEuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFi",
+            "ZXRhMS5TZXJ2aWNlQ29udGV4dEZpbHRlckID4EEBElQKCnRpbWVfcmFuZ2UY",
+            "BCABKAsyOy5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52",
+            "MWJldGExLlF1ZXJ5VGltZVJhbmdlQgPgQQESFgoJcGFnZV9zaXplGAYgASgF",
+            "QgPgQQESFwoKcGFnZV90b2tlbhgHIAEoCUID4EEBIrIBChJMaXN0RXZlbnRz",
+            "UmVzcG9uc2USTQoMZXJyb3JfZXZlbnRzGAEgAygLMjcuZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJvckV2ZW50EhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCRI0ChB0aW1lX3JhbmdlX2JlZ2luGAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLnAQoOUXVlcnlUaW1l",
+            "UmFuZ2USUgoGcGVyaW9kGAEgASgOMkIuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
+            "ZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5RdWVyeVRpbWVSYW5nZS5QZXJpb2Qi",
+            "gAEKBlBlcmlvZBIWChJQRVJJT0RfVU5TUEVDSUZJRUQQABIRCg1QRVJJT0Rf",
+            "MV9IT1VSEAESEgoOUEVSSU9EXzZfSE9VUlMQAhIQCgxQRVJJT0RfMV9EQVkQ",
+            "AxIRCg1QRVJJT0RfMV9XRUVLEAQSEgoOUEVSSU9EXzMwX0RBWVMQBSJeChRT",
+            "ZXJ2aWNlQ29udGV4dEZpbHRlchIUCgdzZXJ2aWNlGAIgASgJQgPgQQESFAoH",
+            "dmVyc2lvbhgDIAEoCUID4EEBEhoKDXJlc291cmNlX3R5cGUYBCABKAlCA+BB",
+            "ASJgChNEZWxldGVFdmVudHNSZXF1ZXN0EkkKDHByb2plY3RfbmFtZRgBIAEo",
+            "CUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNv",
+            "bS9Qcm9qZWN0IhYKFERlbGV0ZUV2ZW50c1Jlc3BvbnNlKnUKE1RpbWVkQ291",
+            "bnRBbGlnbm1lbnQSJQohRVJST1JfQ09VTlRfQUxJR05NRU5UX1VOU1BFQ0lG",
+            "SUVEEAASGwoXQUxJR05NRU5UX0VRVUFMX1JPVU5ERUQQARIaChZBTElHTk1F",
+            "TlRfRVFVQUxfQVRfRU5EEAIqfQoPRXJyb3JHcm91cE9yZGVyEhsKF0dST1VQ",
+            "X09SREVSX1VOU1BFQ0lGSUVEEAASDgoKQ09VTlRfREVTQxABEhIKDkxBU1Rf",
+            "U0VFTl9ERVNDEAISEAoMQ1JFQVRFRF9ERVNDEAMSFwoTQUZGRUNURURfVVNF",
+            "UlNfREVTQxAEMosGChFFcnJvclN0YXRzU2VydmljZRLqAQoOTGlzdEdyb3Vw",
+            "U3RhdHMSQi5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52",
+            "MWJldGExLkxpc3RHcm91cFN0YXRzUmVxdWVzdBpDLmdvb2dsZS5kZXZ0b29s",
+            "cy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuTGlzdEdyb3VwU3RhdHNS",
+            "ZXNwb25zZSJPgtPkkwIvEi0vdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2pl",
+            "Y3RzLyp9L2dyb3VwU3RhdHPaQRdwcm9qZWN0X25hbWUsdGltZV9yYW5nZRLY",
+            "AQoKTGlzdEV2ZW50cxI+Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVw",
+            "b3J0aW5nLnYxYmV0YTEuTGlzdEV2ZW50c1JlcXVlc3QaPy5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkxpc3RFdmVudHNS",
+            "ZXNwb25zZSJJgtPkkwIrEikvdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2pl",
+            "Y3RzLyp9L2V2ZW50c9pBFXByb2plY3RfbmFtZSxncm91cF9pZBLVAQoMRGVs",
+            "ZXRlRXZlbnRzEkAuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRp",
+            "bmcudjFiZXRhMS5EZWxldGVFdmVudHNSZXF1ZXN0GkEuZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5EZWxldGVFdmVudHNS",
+            "ZXNwb25zZSJAgtPkkwIrKikvdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2pl",
+            "Y3RzLyp9L2V2ZW50c9pBDHByb2plY3RfbmFtZRpWykEiY2xvdWRlcnJvcnJl",
+            "cG9ydGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C+gEKL2NvbS5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExQhZFcnJvclN0YXRz",
+            "U2VydmljZVByb3RvUAFaXmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92MWJldGEx",
+            "O2Nsb3VkZXJyb3JyZXBvcnRpbmf4AQGqAiNHb29nbGUuQ2xvdWQuRXJyb3JS",
+            "ZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2dsZVxDbG91ZFxFcnJvclJlcG9ydGlu",
+            "Z1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment), typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser, new[]{ "ProjectName", "GroupId", "ServiceFilter", "TimeRange", "TimedCountDuration", "Alignment", "AlignmentTime", "Order", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser, new[]{ "ErrorGroupStats", "NextPageToken", "TimeRangeBegin" }, null, null, null),
@@ -232,7 +243,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ProjectNameFieldNumber = 1;
     private string projectName_ = "";
     /// <summary>
-    /// [Required] The resource name of the Google Cloud Platform project. Written
+    /// Required. The resource name of the Google Cloud Platform project. Written
     /// as &lt;code>projects/&lt;/code> plus the
     /// &lt;a href="https://support.google.com/cloud/answer/6158840">Google Cloud
     /// Platform project ID&lt;/a>.
@@ -253,7 +264,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> groupId_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// [Optional] List all &lt;code>ErrorGroupStats&lt;/code> with these IDs.
+    /// Optional. List all &lt;code>ErrorGroupStats&lt;/code> with these IDs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> GroupId {
@@ -264,7 +275,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFilterFieldNumber = 3;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter serviceFilter_;
     /// <summary>
-    /// [Optional] List only &lt;code>ErrorGroupStats&lt;/code> which belong to a service
+    /// Optional. List only &lt;code>ErrorGroupStats&lt;/code> which belong to a service
     /// context that matches the filter.
     /// Data for all service contexts is returned if this field is not specified.
     /// </summary>
@@ -280,13 +291,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimeRangeFieldNumber = 5;
     private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
-    /// [Optional] List data for the given time range.
-    /// If not set a default time range is used. The field time_range_begin
-    /// in the response will specify the beginning of this time range.
+    /// Optional. List data for the given time range.
+    /// If not set, a default time range is used. The field
+    /// &lt;code>time_range_begin&lt;/code> in the response will specify the beginning
+    /// of this time range.
     /// Only &lt;code>ErrorGroupStats&lt;/code> with a non-zero count in the given time
-    /// range are returned, unless the request contains an explicit group_id list.
-    /// If a group_id list is given, also &lt;code>ErrorGroupStats&lt;/code> with zero
-    /// occurrences are returned.
+    /// range are returned, unless the request contains an explicit
+    /// &lt;code>group_id&lt;/code> list. If a &lt;code>group_id&lt;/code> list is given, also
+    /// &lt;code>ErrorGroupStats&lt;/code> with zero occurrences are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange TimeRange {
@@ -300,7 +312,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimedCountDurationFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Duration timedCountDuration_;
     /// <summary>
-    /// [Optional] The preferred duration for a single returned `TimedCount`.
+    /// Optional. The preferred duration for a single returned `TimedCount`.
     /// If not set, no timed counts are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -315,7 +327,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int AlignmentFieldNumber = 7;
     private global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment alignment_ = 0;
     /// <summary>
-    /// [Optional] The alignment of the timed counts to be returned.
+    /// Optional. The alignment of the timed counts to be returned.
     /// Default is `ALIGNMENT_EQUAL_AT_END`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -330,7 +342,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int AlignmentTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp alignmentTime_;
     /// <summary>
-    /// [Optional] Time where the timed counts shall be aligned if rounded
+    /// Optional. Time where the timed counts shall be aligned if rounded
     /// alignment is chosen. Default is 00:00 UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -345,7 +357,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int OrderFieldNumber = 9;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder order_ = 0;
     /// <summary>
-    /// [Optional] The sort order in which the results are returned.
+    /// Optional. The sort order in which the results are returned.
     /// Default is `COUNT_DESC`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -360,7 +372,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageSizeFieldNumber = 11;
     private int pageSize_;
     /// <summary>
-    /// [Optional] The maximum number of results to return per response.
+    /// Optional. The maximum number of results to return per response.
     /// Default is 20.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -375,7 +387,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageTokenFieldNumber = 12;
     private string pageToken_ = "";
     /// <summary>
-    /// [Optional] A `next_page_token` provided by a previous response. To view
+    /// Optional. A `next_page_token` provided by a previous response. To view
     /// additional results, pass this token along with the identical query
     /// parameters as the first request.
     /// </summary>
@@ -1509,7 +1521,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ProjectNameFieldNumber = 1;
     private string projectName_ = "";
     /// <summary>
-    /// [Required] The resource name of the Google Cloud Platform project. Written
+    /// Required. The resource name of the Google Cloud Platform project. Written
     /// as `projects/` plus the
     /// [Google Cloud Platform project
     /// ID](https://support.google.com/cloud/answer/6158840).
@@ -1527,7 +1539,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupIdFieldNumber = 2;
     private string groupId_ = "";
     /// <summary>
-    /// [Required] The group for which events shall be returned.
+    /// Required. The group for which events shall be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupId {
@@ -1541,7 +1553,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFilterFieldNumber = 3;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter serviceFilter_;
     /// <summary>
-    /// [Optional] List only ErrorGroups which belong to a service context that
+    /// Optional. List only ErrorGroups which belong to a service context that
     /// matches the filter.
     /// Data for all service contexts is returned if this field is not specified.
     /// </summary>
@@ -1557,7 +1569,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimeRangeFieldNumber = 4;
     private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
-    /// [Optional] List only data for the given time range.
+    /// Optional. List only data for the given time range.
     /// If not set a default time range is used. The field time_range_begin
     /// in the response will specify the beginning of this time range.
     /// </summary>
@@ -1573,7 +1585,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageSizeFieldNumber = 6;
     private int pageSize_;
     /// <summary>
-    /// [Optional] The maximum number of results to return per response.
+    /// Optional. The maximum number of results to return per response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1587,7 +1599,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageTokenFieldNumber = 7;
     private string pageToken_ = "";
     /// <summary>
-    /// [Optional] A `next_page_token` provided by a previous response.
+    /// Optional. A `next_page_token` provided by a previous response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -2194,7 +2206,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFieldNumber = 2;
     private string service_ = "";
     /// <summary>
-    /// [Optional] The exact value to match against
+    /// Optional. The exact value to match against
     /// [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2209,7 +2221,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int VersionFieldNumber = 3;
     private string version_ = "";
     /// <summary>
-    /// [Optional] The exact value to match against
+    /// Optional. The exact value to match against
     /// [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2224,7 +2236,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ResourceTypeFieldNumber = 4;
     private string resourceType_ = "";
     /// <summary>
-    /// [Optional] The exact value to match against
+    /// Optional. The exact value to match against
     /// [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2392,7 +2404,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ProjectNameFieldNumber = 1;
     private string projectName_ = "";
     /// <summary>
-    /// [Required] The resource name of the Google Cloud Platform project. Written
+    /// Required. The resource name of the Google Cloud Platform project. Written
     /// as `projects/` plus the
     /// [Google Cloud Platform project
     /// ID](https://support.google.com/cloud/answer/6158840).

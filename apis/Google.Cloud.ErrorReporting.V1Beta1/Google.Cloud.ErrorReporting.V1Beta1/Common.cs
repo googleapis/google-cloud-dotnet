@@ -26,43 +26,47 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           string.Concat(
             "Cjhnb29nbGUvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92MWJldGEx",
             "L2NvbW1vbi5wcm90bxIrZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBv",
-            "cnRpbmcudjFiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoj",
-            "Z29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8igQEKCkVycm9yR3JvdXASDAoEbmFt",
-            "ZRgBIAEoCRIQCghncm91cF9pZBgCIAEoCRJTCg90cmFja2luZ19pc3N1ZXMY",
-            "AyADKAsyOi5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52",
-            "MWJldGExLlRyYWNraW5nSXNzdWUiHAoNVHJhY2tpbmdJc3N1ZRILCgN1cmwY",
-            "ASABKAki7wEKCkVycm9yRXZlbnQSLgoKZXZlbnRfdGltZRgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASVAoPc2VydmljZV9jb250ZXh0GAIg",
-            "ASgLMjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFi",
-            "ZXRhMS5TZXJ2aWNlQ29udGV4dBIPCgdtZXNzYWdlGAMgASgJEkoKB2NvbnRl",
-            "eHQYBSABKAsyOS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGlu",
-            "Zy52MWJldGExLkVycm9yQ29udGV4dCJJCg5TZXJ2aWNlQ29udGV4dBIPCgdz",
-            "ZXJ2aWNlGAIgASgJEg8KB3ZlcnNpb24YAyABKAkSFQoNcmVzb3VyY2VfdHlw",
-            "ZRgEIAEoCSLJAQoMRXJyb3JDb250ZXh0ElUKDGh0dHBfcmVxdWVzdBgBIAEo",
-            "CzI/Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0",
-            "YTEuSHR0cFJlcXVlc3RDb250ZXh0EgwKBHVzZXIYAiABKAkSVAoPcmVwb3J0",
-            "X2xvY2F0aW9uGAMgASgLMjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3Jy",
-            "ZXBvcnRpbmcudjFiZXRhMS5Tb3VyY2VMb2NhdGlvbiKIAQoSSHR0cFJlcXVl",
-            "c3RDb250ZXh0Eg4KBm1ldGhvZBgBIAEoCRILCgN1cmwYAiABKAkSEgoKdXNl",
-            "cl9hZ2VudBgDIAEoCRIQCghyZWZlcnJlchgEIAEoCRIcChRyZXNwb25zZV9z",
-            "dGF0dXNfY29kZRgFIAEoBRIRCglyZW1vdGVfaXAYBiABKAkiTwoOU291cmNl",
-            "TG9jYXRpb24SEQoJZmlsZV9wYXRoGAEgASgJEhMKC2xpbmVfbnVtYmVyGAIg",
-            "ASgFEhUKDWZ1bmN0aW9uX25hbWUYBCABKAlC7AEKL2NvbS5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExQgtDb21tb25Qcm90",
-            "b1ABWl5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Rl",
-            "dnRvb2xzL2Nsb3VkZXJyb3JyZXBvcnRpbmcvdjFiZXRhMTtjbG91ZGVycm9y",
-            "cmVwb3J0aW5nqgIjR29vZ2xlLkNsb3VkLkVycm9yUmVwb3J0aW5nLlYxQmV0",
-            "YTHKAiNHb29nbGVcQ2xvdWRcRXJyb3JSZXBvcnRpbmdcVjFiZXRhMWIGcHJv",
-            "dG8z"));
+            "cnRpbmcudjFiZXRhMRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxotZ29v",
+            "Z2xlL2FwcGVuZ2luZS9sb2dnaW5nL3YxL3JlcXVlc3RfbG9nLnByb3RvGh9n",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fu",
+            "bm90YXRpb25zLnByb3RvItgBCgpFcnJvckdyb3VwEgwKBG5hbWUYASABKAkS",
+            "EAoIZ3JvdXBfaWQYAiABKAkSUwoPdHJhY2tpbmdfaXNzdWVzGAMgAygLMjou",
+            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5U",
+            "cmFja2luZ0lzc3VlOlXqQVIKLWNsb3VkZXJyb3JyZXBvcnRpbmcuZ29vZ2xl",
+            "YXBpcy5jb20vRXJyb3JHcm91cBIhcHJvamVjdHMve3Byb2plY3R9L2dyb3Vw",
+            "cy97Z3JvdXB9IhwKDVRyYWNraW5nSXNzdWUSCwoDdXJsGAEgASgJIu8BCgpF",
+            "cnJvckV2ZW50Ei4KCmV2ZW50X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wElQKD3NlcnZpY2VfY29udGV4dBgCIAEoCzI7Lmdvb2ds",
+            "ZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuU2Vydmlj",
+            "ZUNvbnRleHQSDwoHbWVzc2FnZRgDIAEoCRJKCgdjb250ZXh0GAUgASgLMjku",
+            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5F",
+            "cnJvckNvbnRleHQiSQoOU2VydmljZUNvbnRleHQSDwoHc2VydmljZRgCIAEo",
+            "CRIPCgd2ZXJzaW9uGAMgASgJEhUKDXJlc291cmNlX3R5cGUYBCABKAkikgIK",
+            "DEVycm9yQ29udGV4dBJVCgxodHRwX3JlcXVlc3QYASABKAsyPy5nb29nbGUu",
+            "ZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkh0dHBSZXF1",
+            "ZXN0Q29udGV4dBIMCgR1c2VyGAIgASgJElQKD3JlcG9ydF9sb2NhdGlvbhgD",
+            "IAEoCzI7Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYx",
+            "YmV0YTEuU291cmNlTG9jYXRpb24SRwoRc291cmNlX3JlZmVyZW5jZXMYBCAD",
+            "KAsyLC5nb29nbGUuYXBwZW5naW5lLmxvZ2dpbmcudjEuU291cmNlUmVmZXJl",
+            "bmNlIogBChJIdHRwUmVxdWVzdENvbnRleHQSDgoGbWV0aG9kGAEgASgJEgsK",
+            "A3VybBgCIAEoCRISCgp1c2VyX2FnZW50GAMgASgJEhAKCHJlZmVycmVyGAQg",
+            "ASgJEhwKFHJlc3BvbnNlX3N0YXR1c19jb2RlGAUgASgFEhEKCXJlbW90ZV9p",
+            "cBgGIAEoCSJPCg5Tb3VyY2VMb2NhdGlvbhIRCglmaWxlX3BhdGgYASABKAkS",
+            "EwoLbGluZV9udW1iZXIYAiABKAUSFQoNZnVuY3Rpb25fbmFtZRgEIAEoCULv",
+            "AQovY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYx",
+            "YmV0YTFCC0NvbW1vblByb3RvUAFaXmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92",
+            "MWJldGExO2Nsb3VkZXJyb3JyZXBvcnRpbmf4AQGqAiNHb29nbGUuQ2xvdWQu",
+            "RXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2dsZVxDbG91ZFxFcnJvclJl",
+            "cG9ydGluZ1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Appengine.Logging.V1.RequestLogReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser, new[]{ "Name", "GroupId", "TrackingIssues" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue), global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser, new[]{ "Url" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Parser, new[]{ "Service", "Version", "ResourceType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext.Parser, new[]{ "HttpRequest", "User", "ReportLocation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext.Parser, new[]{ "HttpRequest", "User", "ReportLocation", "SourceReferences" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext), global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext.Parser, new[]{ "Method", "Url", "UserAgent", "Referrer", "ResponseStatusCode", "RemoteIp" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation), global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation.Parser, new[]{ "FilePath", "LineNumber", "FunctionName" }, null, null, null)
           }));
@@ -712,6 +716,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// <summary>
     /// Represents the source code version that the developer provided,
     /// which could represent a version label or a Git SHA-1 hash, for example.
+    /// For App Engine standard environment, the version is set to the version of
+    /// the app.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Version {
@@ -889,6 +895,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       httpRequest_ = other.httpRequest_ != null ? other.httpRequest_.Clone() : null;
       user_ = other.user_;
       reportLocation_ = other.reportLocation_ != null ? other.reportLocation_.Clone() : null;
+      sourceReferences_ = other.sourceReferences_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -941,8 +948,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// report the error, usually the place where it was logged.
     /// For a logged exception this would be the source line where the
     /// exception is logged, usually close to the place where it was
-    /// caught. This value is in contrast to `Exception.cause_location`,
-    /// which describes the source line where the exception was thrown.
+    /// caught.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation ReportLocation {
@@ -950,6 +956,20 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       set {
         reportLocation_ = value;
       }
+    }
+
+    /// <summary>Field number for the "source_references" field.</summary>
+    public const int SourceReferencesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Appengine.Logging.V1.SourceReference> _repeated_sourceReferences_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Appengine.Logging.V1.SourceReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Appengine.Logging.V1.SourceReference> sourceReferences_ = new pbc::RepeatedField<global::Google.Appengine.Logging.V1.SourceReference>();
+    /// <summary>
+    /// Source code that was used to build the executable which has
+    /// caused the given error message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Appengine.Logging.V1.SourceReference> SourceReferences {
+      get { return sourceReferences_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -968,6 +988,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       if (!object.Equals(HttpRequest, other.HttpRequest)) return false;
       if (User != other.User) return false;
       if (!object.Equals(ReportLocation, other.ReportLocation)) return false;
+      if(!sourceReferences_.Equals(other.sourceReferences_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -977,6 +998,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       if (httpRequest_ != null) hash ^= HttpRequest.GetHashCode();
       if (User.Length != 0) hash ^= User.GetHashCode();
       if (reportLocation_ != null) hash ^= ReportLocation.GetHashCode();
+      hash ^= sourceReferences_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1002,6 +1024,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(ReportLocation);
       }
+      sourceReferences_.WriteTo(output, _repeated_sourceReferences_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1019,6 +1042,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       if (reportLocation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReportLocation);
       }
+      size += sourceReferences_.CalculateSize(_repeated_sourceReferences_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1045,6 +1069,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         }
         ReportLocation.MergeFrom(other.ReportLocation);
       }
+      sourceReferences_.Add(other.sourceReferences_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1072,6 +1097,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
               ReportLocation = new global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation();
             }
             input.ReadMessage(ReportLocation);
+            break;
+          }
+          case 34: {
+            sourceReferences_.AddEntriesFrom(input, _repeated_sourceReferences_codec);
             break;
           }
         }
@@ -1377,11 +1406,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  /// Indicates a location in the source code of the service for which
-  /// errors are reported.
-  /// This data should be provided by the application when reporting an error,
-  /// unless the error report has been generated automatically from Google App
-  /// Engine logs. All fields are optional.
+  /// Indicates a location in the source code of the service for which errors are
+  /// reported. `functionName` must be provided by the application when reporting
+  /// an error, unless the error report contains a `message` with a supported
+  /// exception stack trace. All fields are optional for the later case.
   /// </summary>
   public sealed partial class SourceLocation : pb::IMessage<SourceLocation> {
     private static readonly pb::MessageParser<SourceLocation> _parser = new pb::MessageParser<SourceLocation>(() => new SourceLocation());

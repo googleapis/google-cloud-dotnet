@@ -167,8 +167,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -177,7 +176,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -383,7 +382,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// [Required] The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
         /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
@@ -399,11 +398,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ErrorGroup> GetGroupAsync(
-            GroupName groupName,
+            ErrorGroupName groupName,
             gaxgrpc::CallSettings callSettings = null) => GetGroupAsync(
                 new GetGroupRequest
                 {
-                    GroupNameAsGroupName = gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
+                    GroupNameAsErrorGroupName = gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
                 },
                 callSettings);
 
@@ -411,7 +410,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// [Required] The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
         /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
@@ -427,7 +426,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ErrorGroup> GetGroupAsync(
-            GroupName groupName,
+            ErrorGroupName groupName,
             st::CancellationToken cancellationToken) => GetGroupAsync(
                 groupName,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -436,7 +435,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// [Required] The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
         /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
@@ -452,11 +451,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual ErrorGroup GetGroup(
-            GroupName groupName,
+            ErrorGroupName groupName,
             gaxgrpc::CallSettings callSettings = null) => GetGroup(
                 new GetGroupRequest
                 {
-                    GroupNameAsGroupName = gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
+                    GroupNameAsErrorGroupName = gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
                 },
                 callSettings);
 
@@ -464,7 +463,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// [Required] The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
         /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
@@ -492,7 +491,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// [Required] The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
         /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
@@ -517,7 +516,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// [Required] The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
         /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
@@ -602,7 +601,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        /// [Required] The group which replaces the resource on the server.
+        /// Required. The group which replaces the resource on the server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -624,7 +623,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        /// [Required] The group which replaces the resource on the server.
+        /// Required. The group which replaces the resource on the server.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -643,7 +642,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        /// [Required] The group which replaces the resource on the server.
+        /// Required. The group which replaces the resource on the server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

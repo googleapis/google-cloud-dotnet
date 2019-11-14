@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -351,23 +350,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840). Example:
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -376,7 +375,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReportErrorEventResponse> ReportErrorEventAsync(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             ReportedErrorEvent @event,
             gaxgrpc::CallSettings callSettings = null) => ReportErrorEventAsync(
                 new ReportErrorEventRequest
@@ -389,23 +388,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840). Example:
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -414,7 +413,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReportErrorEventResponse> ReportErrorEventAsync(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             ReportedErrorEvent @event,
             st::CancellationToken cancellationToken) => ReportErrorEventAsync(
                 projectName,
@@ -424,23 +423,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840). Example:
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -449,7 +448,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual ReportErrorEventResponse ReportErrorEvent(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             ReportedErrorEvent @event,
             gaxgrpc::CallSettings callSettings = null) => ReportErrorEvent(
                 new ReportErrorEventRequest
@@ -462,23 +461,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840). Example:
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -500,23 +499,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840). Example:
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -535,23 +534,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840). Example:
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -573,13 +572,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -600,13 +599,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -626,13 +625,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -703,13 +702,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -731,13 +730,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Report an individual error event.
         ///
-        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
-        /// &lt;strong&gt;or&lt;/strong&gt; an
-        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// This endpoint accepts **either** an OAuth token,
+        /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
         /// for authentication. To use an API key, append it to the URL as the value of
         /// a `key` parameter. For example:
-        /// &lt;pre&gt;POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        ///
+        /// `POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

@@ -36,12 +36,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         /// <summary>Snippet for GetGroupAsync</summary>
         public async Task GetGroupAsync()
         {
-            // Snippet: GetGroupAsync(GroupName,CallSettings)
-            // Additional: GetGroupAsync(GroupName,CancellationToken)
+            // Snippet: GetGroupAsync(ErrorGroupName,CallSettings)
+            // Additional: GetGroupAsync(ErrorGroupName,CancellationToken)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
+            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
             // Make the request
             ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(groupName);
             // End snippet
@@ -50,11 +50,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         /// <summary>Snippet for GetGroup</summary>
         public void GetGroup()
         {
-            // Snippet: GetGroup(GroupName,CallSettings)
+            // Snippet: GetGroup(ErrorGroupName,CallSettings)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
+            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
             // Make the request
             ErrorGroup response = errorGroupServiceClient.GetGroup(groupName);
             // End snippet
@@ -70,7 +70,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(request);
@@ -86,7 +86,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             ErrorGroup response = errorGroupServiceClient.GetGroup(request);

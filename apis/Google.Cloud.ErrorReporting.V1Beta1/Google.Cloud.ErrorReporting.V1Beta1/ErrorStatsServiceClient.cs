@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -199,8 +198,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -209,7 +207,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -415,7 +413,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as &lt;code&gt;projects/&lt;/code&gt; plus the
         /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
         /// Platform project ID&lt;/a&gt;.
@@ -423,13 +421,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
-        /// [Optional] List data for the given time range.
-        /// If not set a default time range is used. The field time_range_begin
-        /// in the response will specify the beginning of this time range.
+        /// Optional. List data for the given time range.
+        /// If not set, a default time range is used. The field
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
+        /// of this time range.
         /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
-        /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
-        /// occurrences are returned.
+        /// range are returned, unless the request contains an explicit
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -446,7 +445,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
@@ -454,7 +453,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 new ListGroupStatsRequest
                 {
                     ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
-                    TimeRange = gax::GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
+                    TimeRange = timeRange, // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -464,7 +463,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as &lt;code&gt;projects/&lt;/code&gt; plus the
         /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
         /// Platform project ID&lt;/a&gt;.
@@ -472,13 +471,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
-        /// [Optional] List data for the given time range.
-        /// If not set a default time range is used. The field time_range_begin
-        /// in the response will specify the beginning of this time range.
+        /// Optional. List data for the given time range.
+        /// If not set, a default time range is used. The field
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
+        /// of this time range.
         /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
-        /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
-        /// occurrences are returned.
+        /// range are returned, unless the request contains an explicit
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -495,7 +495,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
@@ -503,7 +503,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 new ListGroupStatsRequest
                 {
                     ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
-                    TimeRange = gax::GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
+                    TimeRange = timeRange, // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -513,7 +513,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as &lt;code&gt;projects/&lt;/code&gt; plus the
         /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
         /// Platform project ID&lt;/a&gt;.
@@ -521,13 +521,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
-        /// [Optional] List data for the given time range.
-        /// If not set a default time range is used. The field time_range_begin
-        /// in the response will specify the beginning of this time range.
+        /// Optional. List data for the given time range.
+        /// If not set, a default time range is used. The field
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
+        /// of this time range.
         /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
-        /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
-        /// occurrences are returned.
+        /// range are returned, unless the request contains an explicit
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -552,7 +553,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 new ListGroupStatsRequest
                 {
                     ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
-                    TimeRange = gax::GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
+                    TimeRange = timeRange, // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -562,7 +563,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as &lt;code&gt;projects/&lt;/code&gt; plus the
         /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
         /// Platform project ID&lt;/a&gt;.
@@ -570,13 +571,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
-        /// [Optional] List data for the given time range.
-        /// If not set a default time range is used. The field time_range_begin
-        /// in the response will specify the beginning of this time range.
+        /// Optional. List data for the given time range.
+        /// If not set, a default time range is used. The field
+        /// &lt;code&gt;time_range_begin&lt;/code&gt; in the response will specify the beginning
+        /// of this time range.
         /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
-        /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
-        /// occurrences are returned.
+        /// range are returned, unless the request contains an explicit
+        /// &lt;code&gt;group_id&lt;/code&gt; list. If a &lt;code&gt;group_id&lt;/code&gt; list is given, also
+        /// &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -601,7 +603,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 new ListGroupStatsRequest
                 {
                     ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
-                    TimeRange = gax::GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
+                    TimeRange = timeRange, // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -649,14 +651,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        /// [Required] The group for which events shall be returned.
+        /// Required. The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -673,7 +675,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
@@ -691,14 +693,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        /// [Required] The group for which events shall be returned.
+        /// Required. The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -715,7 +717,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
@@ -733,14 +735,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        /// [Required] The group for which events shall be returned.
+        /// Required. The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -775,14 +777,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        /// [Required] The group for which events shall be returned.
+        /// Required. The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -855,7 +857,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
@@ -868,7 +870,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             gaxgrpc::CallSettings callSettings = null) => DeleteEventsAsync(
                 new DeleteEventsRequest
                 {
@@ -880,7 +882,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
@@ -893,7 +895,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             st::CancellationToken cancellationToken) => DeleteEventsAsync(
                 projectName,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -902,7 +904,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
@@ -915,7 +917,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual DeleteEventsResponse DeleteEvents(
-            gaxres::ProjectName projectName,
+            ProjectName projectName,
             gaxgrpc::CallSettings callSettings = null) => DeleteEvents(
                 new DeleteEventsRequest
                 {
@@ -927,7 +929,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
@@ -952,7 +954,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
@@ -974,7 +976,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// Required. The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).

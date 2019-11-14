@@ -18,7 +18,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.ErrorReporting.V1Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
