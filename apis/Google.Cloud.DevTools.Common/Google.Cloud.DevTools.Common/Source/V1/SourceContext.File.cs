@@ -106,11 +106,7 @@ namespace Google.Cloud.DevTools.Source.V1
 
         private static string GetFilePath()
         {
-#if NETSTANDARD1_3
-            string root = AppContext.BaseDirectory;
-#else
             string root = AppDomain.CurrentDomain.BaseDirectory;
-#endif
             var fullPath = Path.Combine(root, SourceContextFileName);
             return s_fileExistsFunc(fullPath) ? fullPath : null;
         }

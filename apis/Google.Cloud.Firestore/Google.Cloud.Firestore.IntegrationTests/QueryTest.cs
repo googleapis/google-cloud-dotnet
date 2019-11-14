@@ -174,7 +174,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var allDocs = await _fixture.HighScoreCollection.StreamAsync()
                 .Select(doc => doc.Reference)
                 .OrderBy(x => x.Path, StringComparer.Ordinal)
-                .ToList();
+                .ToListAsync();
             var startInclusive = allDocs[1];
             var endExclusive = allDocs[4];
             var query = _fixture.HighScoreCollection.OrderBy(FieldPath.DocumentId)
@@ -183,7 +183,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var results = await query.StreamAsync()
                 .Select(doc => doc.Reference)
                 .OrderBy(x => x.Path, StringComparer.Ordinal)
-                .ToList();
+                .ToListAsync();
             Assert.Equal(allDocs.Skip(1).Take(3), results);
         }
 
