@@ -658,7 +658,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 new ReadRowsRequest { TableNameAsTableName = new TableName("project", "instance", "table") };
             var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
                 new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
-            await Assert.ThrowsAsync<NotImplementedException>(() => client.ReadRows(request).ToList());
+            await Assert.ThrowsAsync<NotImplementedException>(() => client.ReadRows(request).ToListAsync().AsTask());
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
         }
 
@@ -674,7 +674,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
             var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
                 new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
-            await Assert.ThrowsAsync<NotImplementedException>(() => client.ReadRows(requestWithAppProfileId).ToList());
+            await Assert.ThrowsAsync<NotImplementedException>(() => client.ReadRows(requestWithAppProfileId).ToListAsync().AsTask());
             Assert.NotEqual(appProfileIdOnClient, requestWithAppProfileId.AppProfileId);
             Assert.Equal(appProfileIdOnRequest, requestWithAppProfileId.AppProfileId);
         }
