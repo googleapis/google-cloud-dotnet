@@ -606,9 +606,11 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 TableReference = new TableReference { DatasetId = "dataset", TableId = "id", ProjectId = "project" },
                 TimePartitioning = new TimePartitioning { ExpirationMs = 10000, Type = "DAY" },
                 Type = "VIEW",
-                View = new TableList.TablesData.ViewData { UseLegacySql = true }
+                View = new TableList.TablesData.ViewData { UseLegacySql = true },
+                Clustering = new Clustering { Fields = new[] { "ClusterCol1", "ClusterCol2" } },
+                CreationTime = (int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds,
+                ExpirationTime = (int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds
             };
-
             var tableResource = BigQueryClientImpl.TablePageManager.ConvertResource(listResource);
             Assert.Equal("friendly name", tableResource.FriendlyName);
             Assert.Equal("id", tableResource.Id);
@@ -617,6 +619,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Same(listResource.TableReference, tableResource.TableReference);
             Assert.Equal("VIEW", tableResource.Type);
             Assert.True(tableResource.View.UseLegacySql);
+            Assert.Equal(listResource.Clustering.Fields, tableResource.Clustering.Fields);
+            Assert.Equal(listResource.CreationTime, tableResource.CreationTime);
+            Assert.Equal(listResource.ExpirationTime, tableResource.ExpirationTime);
         }
 
         [Fact]

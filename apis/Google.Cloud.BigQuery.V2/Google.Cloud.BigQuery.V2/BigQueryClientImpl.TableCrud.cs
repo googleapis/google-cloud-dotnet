@@ -49,6 +49,9 @@ namespace Google.Cloud.BigQuery.V2
             internal static Table ConvertResource(TableList.TablesData resource) =>
                 new Table
                 {
+                    Clustering = resource.Clustering,
+                    CreationTime = resource.CreationTime,
+                    ExpirationTime = resource.ExpirationTime,
                     FriendlyName = resource.FriendlyName,
                     Id = resource.Id,
                     Kind = resource.Kind,
