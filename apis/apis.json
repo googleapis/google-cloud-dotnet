@@ -118,7 +118,7 @@
     "id": "Google.Cloud.Bigtable.V2",
     "generator": "gapic",
     "protoPath": "google/bigtable/v2",
-    "serviceYaml": "bigtable.yaml",
+    "serviceYaml": "bigtable_v2.yaml",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
     "version": "1.1.0-beta01",
