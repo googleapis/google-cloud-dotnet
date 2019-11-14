@@ -315,7 +315,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             Task pullingTask = Task.Run(async () =>
             {
                 int messagesSeen = 0;
-                IAsyncEnumerator<StreamingPullResponse> responseStream = stream.GetResponseStream(CancellationToken.None);
+                AsyncResponseStream<StreamingPullResponse> responseStream = stream.GetResponseStream();
 
                 // Handle responses as we see them.
                 while (await responseStream.MoveNextAsync())

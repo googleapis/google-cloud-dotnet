@@ -2320,8 +2320,6 @@ namespace Google.Cloud.Bigtable.V2
             public ReadRowsStreamImpl(grpccore::AsyncServerStreamingCall<ReadRowsResponse> call) => GrpcCall = call;
 
             public override grpccore::AsyncServerStreamingCall<ReadRowsResponse> GrpcCall { get; }
-
-            public override scg::IAsyncEnumerator<ReadRowsResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2347,8 +2345,6 @@ namespace Google.Cloud.Bigtable.V2
             public SampleRowKeysStreamImpl(grpccore::AsyncServerStreamingCall<SampleRowKeysResponse> call) => GrpcCall = call;
 
             public override grpccore::AsyncServerStreamingCall<SampleRowKeysResponse> GrpcCall { get; }
-
-            public override scg::IAsyncEnumerator<SampleRowKeysResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2399,8 +2395,6 @@ namespace Google.Cloud.Bigtable.V2
             public MutateRowsStreamImpl(grpccore::AsyncServerStreamingCall<MutateRowsResponse> call) => GrpcCall = call;
 
             public override grpccore::AsyncServerStreamingCall<MutateRowsResponse> GrpcCall { get; }
-
-            public override scg::IAsyncEnumerator<MutateRowsResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
