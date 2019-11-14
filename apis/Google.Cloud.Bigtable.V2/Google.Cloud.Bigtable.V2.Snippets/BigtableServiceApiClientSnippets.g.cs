@@ -16,6 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Protobuf;
     using System.Collections.Generic;
@@ -43,8 +44,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -65,8 +67,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -87,8 +90,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -110,8 +114,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -133,8 +138,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -159,8 +165,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<SampleRowKeysResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -181,8 +188,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<SampleRowKeysResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -203,8 +211,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<SampleRowKeysResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -226,8 +235,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<SampleRowKeysResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -249,8 +259,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<SampleRowKeysResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<SampleRowKeysResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 SampleRowKeysResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -446,8 +457,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<MutateRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -472,8 +484,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<MutateRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -498,8 +511,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<MutateRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -525,8 +539,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<MutateRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -552,8 +567,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<MutateRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<MutateRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 MutateRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
