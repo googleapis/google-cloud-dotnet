@@ -152,12 +152,12 @@ namespace Google.Cloud.Firestore
                             _state.OnStreamInitialization(cause);
                         }
                         // Wait for a response or end-of-stream
-                        var next = await underlyingStream.ResponseStream.MoveNext(_networkCancellationTokenSource.Token).ConfigureAwait(false);
+                        var next = await underlyingStream.GrpcCall.ResponseStream.MoveNext(_networkCancellationTokenSource.Token).ConfigureAwait(false);
 
                         // If the server provided a response, return it
                         if (next)
                         {
-                            return underlyingStream.ResponseStream.Current;
+                            return underlyingStream.GrpcCall.ResponseStream.Current;
                         }
                         // Otherwise, close the current stream and restart.
                         await CloseStreamAsync().ConfigureAwait(false);

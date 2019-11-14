@@ -82,7 +82,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.
-            Assert.True(await result.Count() >= 7);
+            Assert.True(await result.CountAsync() >= 7);
         }
 
         [Fact]
