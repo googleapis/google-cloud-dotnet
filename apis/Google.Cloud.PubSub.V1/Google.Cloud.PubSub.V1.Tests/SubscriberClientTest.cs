@@ -80,7 +80,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             public static string MakeMsgId(int batchIndex, int msgIndex) => $"{batchIndex:D4}.{msgIndex:D4}";
 
-            private class En : IAsyncEnumerator<StreamingPullResponse>
+            private class En : IAsyncStreamReader<StreamingPullResponse>
             {
                 public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, bool useMsgAsId, CancellationToken? ct)
                 {
@@ -156,7 +156,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     _taskHelper = taskHelper;
                     _scheduler = scheduler;
                     _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
-                    _en = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct);
+                    var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct);
+                    _call = new AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>(null, responseStream, Task.FromResult(new Metadata()), null, null, null);
                     _clock = clock;
                     _writeCompletes = writeCompletes;
                     _streamPings = streamPings;
@@ -166,12 +167,12 @@ namespace Google.Cloud.PubSub.V1.Tests
                 private readonly TaskHelper _taskHelper;
                 private readonly IScheduler _scheduler;
                 private readonly TimeSpan _writeAsyncPreDelay;
-                private readonly IAsyncEnumerator<StreamingPullResponse> _en;
+                private readonly AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> _call;
                 private readonly IClock _clock;
                 private readonly List<DateTime> _writeCompletes;
                 private readonly List<DateTime> _streamPings;
 
-                public override IAsyncEnumerator<StreamingPullResponse> ResponseStream => _en;
+                public override AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> GrpcCall => _call;
 
                 public override Task WriteAsync(StreamingPullRequest message)
                 {
