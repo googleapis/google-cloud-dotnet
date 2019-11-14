@@ -174,6 +174,9 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [ "Datastore" ],
+    "dependencies": {
+      "System.Linq.Async": "4.0.0"
+    },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "default"
     }
@@ -381,7 +384,7 @@
     "id": "Google.Cloud.Firestore",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com/docs/firestore/",
-    "version": "1.1.0",
+    "version": "1.2.0-beta00",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -389,11 +392,13 @@
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
       "Google.Cloud.Firestore.V1": "project",
-      "Grpc.Core": "1.22.1"
+      "Grpc.Core": "default",
+      "System.Linq.Async": "4.0.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.10.0",
-      "Grpc.Core.Testing": "1.22.1",
+      "Google.Api.Gax.Testing": "default",
+      "Google.Api.Gax.Grpc.Testing": "default",
+      "Grpc.Core.Testing": "default",
       "System.ValueTuple": "4.5.0",
       "Xunit.Combinatorial": "1.2.7"
     }
