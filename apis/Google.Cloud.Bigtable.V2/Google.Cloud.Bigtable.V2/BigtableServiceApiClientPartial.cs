@@ -291,9 +291,9 @@ namespace Google.Cloud.Bigtable.V2
                 CancellationToken cancellationToken = default)
             {
                 var responses = new List<SampleRowKeysResponse>();
-                while (await ResponseStream.MoveNext(cancellationToken).ConfigureAwait(false))
+                while (await GrpcCall.ResponseStream.MoveNext(cancellationToken).ConfigureAwait(false))
                 {
-                    responses.Add(ResponseStream.Current);
+                    responses.Add(GrpcCall.ResponseStream.Current);
                 }
                 return responses;
             }

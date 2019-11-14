@@ -133,7 +133,7 @@ namespace Google.Cloud.Datastore.V1.Tests
 
         private async Task AssertEntitiesAsync(QueryStreamer streamer, int offset, int limit)
         {
-            var entities = await streamer.Async().SelectMany(response => response.Batch.EntityResults.ToAsyncEnumerable()).Select(er => er.Entity).ToList();
+            var entities = await streamer.Async().SelectMany(response => response.Batch.EntityResults.ToAsyncEnumerable()).Select(er => er.Entity).ToListAsync();
             Assert.Equal(FakeServer.Entities.Skip(offset).Take(limit), entities);
         }
 

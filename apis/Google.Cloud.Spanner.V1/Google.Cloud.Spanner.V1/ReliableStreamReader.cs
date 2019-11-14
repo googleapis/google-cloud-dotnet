@@ -15,8 +15,8 @@
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     public sealed class ReliableStreamReader : IDisposable
     {
-        private readonly IAsyncEnumerator<PartialResultSet> _resultStream;
+        private readonly IAsyncStreamReader<PartialResultSet> _resultStream;
         private readonly Logger _logger;
 
         private bool _initialized = false;
@@ -43,7 +43,7 @@ namespace Google.Cloud.Spanner.V1
         private bool _cachedValueIsValid;
         private Value _cachedValue;
 
-        internal ReliableStreamReader(IAsyncEnumerator<PartialResultSet> resultStream, Logger logger)
+        internal ReliableStreamReader(IAsyncStreamReader<PartialResultSet> resultStream, Logger logger)
         {
             _resultStream = GaxPreconditions.CheckNotNull(resultStream, nameof(resultStream));
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
@@ -77,7 +77,6 @@ namespace Google.Cloud.Spanner.V1
                 return;
             }
             IsClosed = true;
-            _resultStream.Dispose();
             StreamClosed?.Invoke(this, new StreamClosedEventArgs());
         }
 
