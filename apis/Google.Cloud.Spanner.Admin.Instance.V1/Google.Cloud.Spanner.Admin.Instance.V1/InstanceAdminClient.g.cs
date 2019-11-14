@@ -28,7 +28,6 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
@@ -2338,7 +2337,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 Permissions =
                 {
-                    permissions ?? linq::Enumerable.Empty<string>(),
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
                 },
             }, callSettings);
 
@@ -2368,7 +2367,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 Permissions =
                 {
-                    permissions ?? linq::Enumerable.Empty<string>(),
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
                 },
             }, callSettings);
 
@@ -2421,7 +2420,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                 Permissions =
                 {
-                    permissions ?? linq::Enumerable.Empty<string>(),
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
                 },
             }, callSettings);
 
@@ -2451,7 +2450,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                 Permissions =
                 {
-                    permissions ?? linq::Enumerable.Empty<string>(),
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
                 },
             }, callSettings);
 
