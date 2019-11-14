@@ -283,8 +283,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private static void FixClientBuilder()
         {
             var layout = DirectoryLayout.ForApi("Google.Cloud.Bigtable.V2");
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Bigtable.V2", "BigtableServiceApiClient.cs"))
-                .RemoveProperty("BigtableServiceApiClient", "ChannelPool")
+            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Bigtable.V2", "BigtableServiceApiClient.g.cs"))
                 .RemoveMethod("BigtableServiceApiClientBuilder", "GetChannelPool")
                 .Save();
         }
@@ -459,13 +458,10 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     content = content
                         .Replace(
                             endingText,
-                            endingText.AddTextTokens(XmlTextLiteral("If the ")))
+                            endingText.AddTextTokens(XmlTextLiteral(" If the ")))
                         .Add(
                             SeeTag(_requestParameterSyntax.Type.CrefMember(AppProfileIdPropertyName)))
-                        .Add(XmlText(
-                            XmlTextLiteral(" has not been specified, it will be initialized from the value stored in the client."),
-                            XmlTextNewLine("\n", continueXmlDocumentationComment: false),
-                            endingText.TextTokens.Last()));
+                        .Add(XmlText(XmlTextLiteral(" has not been specified, it will be initialized from the value stored in the client.")));
                 }
 
                 return node.WithContent(content);

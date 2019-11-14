@@ -15,8 +15,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Gcp;
-using Google.Apis.Auth.OAuth2;
-using Grpc.Auth;
 using Grpc.Core;
 using Grpc.Gcp;
 using System;
@@ -55,12 +53,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <seealso cref="MutateRowsSettings"/>
         public RetrySettings MutateRowsRetrySettings { get; set; } =
             new RetrySettings(
-                retryBackoff: GetNonIdempotentParamsRetryBackoff(),
-                timeoutBackoff: GetNonIdempotentParamsTimeoutBackoff(),
+                retryBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(10), maxDelay: TimeSpan.FromMilliseconds(60000), delayMultiplier: 2.0),
+                timeoutBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(20000), maxDelay: TimeSpan.FromMilliseconds(20000), delayMultiplier: 1.0),
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable)
             );
-
+        
         /// <summary>
         /// <see cref="RetrySettings"/> for calls to <c>BigtableClient.ReadRows</c> when the stream
         /// of results ends prematurely.
@@ -85,10 +83,10 @@ namespace Google.Cloud.Bigtable.V2
         /// <seealso cref="ReadRowsSettings"/>
         public RetrySettings ReadRowsRetrySettings { get; set; } =
             new RetrySettings(
-                retryBackoff: GetIdempotentParamsRetryBackoff(),
-                timeoutBackoff: GetIdempotentParamsTimeoutBackoff(),
+                retryBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(10), maxDelay: TimeSpan.FromMilliseconds(60000), delayMultiplier: 2.0),
+                timeoutBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(20000), maxDelay: TimeSpan.FromMilliseconds(20000), delayMultiplier: 1.0),
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable)
             );
 
         /// <summary>
@@ -267,8 +265,6 @@ namespace Google.Cloud.Bigtable.V2
 
     public partial class BigtableServiceApiClient
     {
-        internal static GcpCallInvokerPool CallInvokerPool => s_callInvokerPool;
-
         /// <summary>
         /// Gets the value which specifies routing for replication.
         /// If null or empty, the "default" application profile will be used by the server.
