@@ -18,42 +18,41 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpcgcp = Google.Api.Gax.Grpc.Gcp;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
-using pb = Google.Protobuf;
-using pbwkt = Google.Protobuf.WellKnownTypes;
+using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
+using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
-using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using linq = System.Linq;
+using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using Google.Api.Gax;
 
 namespace Google.Cloud.Bigtable.V2
 {
-    /// <summary>
-    /// Bigtable client wrapper, for convenient use.
-    /// </summary>
+    /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
     public partial class BigtableClient
     {
         /// <summary>Streams back the contents of all requested rows in key order, optionally applying the same Reader filter to each.</summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="ReadRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The server stream.
-        /// </returns>
-        public virtual ReadRowsStream ReadRows(
-            ReadRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ReadRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ReadRowsStream ReadRows(ReadRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-        }
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="SampleRowKeysRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
 
         /// <summary>
         /// Returns a sample of row keys in the table. The returned row keys will
@@ -64,22 +63,15 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableName">
         /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
         /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The server stream.
-        /// </returns>
-        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
-            gcbcv::TableName tableName,
-            gaxgrpc::CallSettings callSettings = null) => SampleRowKeys(
-                new SampleRowKeysRequest
-                {
-                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
-                },
-                callSettings);
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(string tableName, gaxgrpc::CallSettings callSettings = null) =>
+            SampleRowKeys(new SampleRowKeysRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+            }, callSettings);
 
         /// <summary>
         /// Returns a sample of row keys in the table. The returned row keys will
@@ -90,22 +82,15 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableName">
         /// Required. The unique name of the table from which to sample row keys.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
         /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The server stream.
-        /// </returns>
-        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
-            string tableName,
-            gaxgrpc::CallSettings callSettings = null) => SampleRowKeys(
-                new SampleRowKeysRequest
-                {
-                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
-                },
-                callSettings);
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+            SampleRowKeys(new SampleRowKeysRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+            }, callSettings);
 
         /// <summary>
         /// Returns a sample of row keys in the table. The returned row keys will
@@ -113,198 +98,136 @@ namespace Google.Cloud.Bigtable.V2
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="SampleRowKeysRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to sample row keys.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
         /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
         /// </param>
-        /// <returns>
-        /// The server stream.
-        /// </returns>
-        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
-            SampleRowKeysRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            SampleRowKeys(new SampleRowKeysRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to sample row keys.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/tables/&amp;lt;table&amp;gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            SampleRowKeys(new SampleRowKeysRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
 
         /// <summary>
         /// Mutates a row atomically. Cells already present in the row are left
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="MutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<MutateRowResponse> MutateRowAsync(
-            MutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Mutates a row atomically. Cells already present in the row are left
-        /// unchanged unless explicitly changed by `mutation`.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="MutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<MutateRowResponse> MutateRowAsync(
-            MutateRowRequest request,
-            st::CancellationToken cancellationToken) => MutateRowAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Mutates a row atomically. Cells already present in the row are left
-        /// unchanged unless explicitly changed by `mutation`.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="MutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual MutateRowResponse MutateRow(
-            MutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Mutates multiple rows in a batch. Each individual row is mutated
-        /// atomically as in MutateRow, but the entire batch is not executed
-        /// atomically.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="MutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual MutateRowsResponse MutateRows(
-            MutateRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
+        public virtual MutateRowResponse MutateRow(MutateRowRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-        }
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="MutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(MutateRowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="MutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(MutateRowRequest request, st::CancellationToken cancellationToken) =>
+            MutateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Mutates multiple rows in a batch. Each individual row is mutated
         /// atomically as in MutateRow, but the entire batch is not executed
         /// atomically.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual stt::Task<MutateRowsResponse> MutateRowsAsync(
-            MutateRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
+        public virtual MutateRowsResponse MutateRows(MutateRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-        }
 
         /// <summary>
         /// Mutates multiple rows in a batch. Each individual row is mutated
         /// atomically as in MutateRow, but the entire batch is not executed
         /// atomically.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual stt::Task<MutateRowsResponse> MutateRowsAsync(MutateRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>The RPC response.</returns>
-        public virtual stt::Task<MutateRowsResponse> MutateRowsAsync(
-            MutateRowsRequest request,
-            st::CancellationToken cancellationToken) => MutateRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<MutateRowsResponse> MutateRowsAsync(MutateRowsRequest request, st::CancellationToken cancellationToken) => MutateRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="CheckAndMutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            CheckAndMutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="CheckAndMutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CheckAndMutateRowResponse CheckAndMutateRow(CheckAndMutateRowRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-        }
 
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="CheckAndMutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            CheckAndMutateRowRequest request,
-            st::CancellationToken cancellationToken) => CheckAndMutateRowAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Mutates a row atomically based on the output of a predicate Reader filter.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="CheckAndMutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual CheckAndMutateRowResponse CheckAndMutateRow(
-            CheckAndMutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="CheckAndMutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(CheckAndMutateRowRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-        }
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="CheckAndMutateRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(CheckAndMutateRowRequest request, st::CancellationToken cancellationToken) =>
+            CheckAndMutateRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Modifies a row atomically on the server. The method reads the latest
@@ -313,22 +236,11 @@ namespace Google.Cloud.Bigtable.V2
         /// timestamp is the greater of the existing timestamp or the current server
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="ReadModifyWriteRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            ReadModifyWriteRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ReadModifyWriteRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(ReadModifyWriteRowRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-        }
 
         /// <summary>
         /// Modifies a row atomically on the server. The method reads the latest
@@ -337,21 +249,11 @@ namespace Google.Cloud.Bigtable.V2
         /// timestamp is the greater of the existing timestamp or the current server
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="ReadModifyWriteRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            ReadModifyWriteRowRequest request,
-            st::CancellationToken cancellationToken) => ReadModifyWriteRowAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ReadModifyWriteRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
 
         /// <summary>
         /// Modifies a row atomically on the server. The method reads the latest
@@ -360,77 +262,44 @@ namespace Google.Cloud.Bigtable.V2
         /// timestamp is the greater of the existing timestamp or the current server
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// If the <see cref="ReadModifyWriteRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
-            ReadModifyWriteRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ReadModifyWriteRowRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, st::CancellationToken cancellationToken) =>
+            ReadModifyWriteRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
-    /// <summary>
-    /// Bigtable client wrapper, for convenient use.
-    /// </summary>
+    /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
     public sealed partial class BigtableClientImpl : BigtableClient
     {
         /// <inheritdoc/>
-        public override ReadRowsStream ReadRows(
-            ReadRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null) => ReadRowsImpl(request, callSettings);
+        public override ReadRowsStream ReadRows(ReadRowsRequest request, gaxgrpc::CallSettings callSettings = null) => ReadRowsImpl(request, callSettings);
 
         /// <inheritdoc/>
-        public override BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
-            SampleRowKeysRequest request,
-            gaxgrpc::CallSettings callSettings = null) => _client.SampleRowKeys(request, callSettings);
+        public override BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, gaxgrpc::CallSettings callSettings = null) => _client.SampleRowKeys(request, callSettings);
 
         /// <inheritdoc/>
-        public override stt::Task<MutateRowResponse> MutateRowAsync(
-            MutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null) => _client.MutateRowAsync(request, callSettings);
+        public override MutateRowResponse MutateRow(MutateRowRequest request, gaxgrpc::CallSettings callSettings = null) => _client.MutateRow(request, callSettings);
 
         /// <inheritdoc/>
-        public override MutateRowResponse MutateRow(
-            MutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null) => _client.MutateRow(request, callSettings);
+        public override stt::Task<MutateRowResponse> MutateRowAsync(MutateRowRequest request, gaxgrpc::CallSettings callSettings = null) => _client.MutateRowAsync(request, callSettings);
 
         /// <inheritdoc/>
-        public override MutateRowsResponse MutateRows(
-            MutateRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null) => stt::Task.Run(() => MutateRowsAsync(request, callSettings)).ResultWithUnwrappedExceptions();
+        public override MutateRowsResponse MutateRows(MutateRowsRequest request, gaxgrpc::CallSettings callSettings = null) => stt::Task.Run(() => MutateRowsAsync(request, callSettings)).ResultWithUnwrappedExceptions();
 
         /// <inheritdoc/>
-        public override stt::Task<MutateRowsResponse> MutateRowsAsync(
-            MutateRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null) => MutateRowsImpl(request, callSettings);
+        public override stt::Task<MutateRowsResponse> MutateRowsAsync(MutateRowsRequest request, gaxgrpc::CallSettings callSettings = null) => MutateRowsImpl(request, callSettings);
 
         /// <inheritdoc/>
-        public override stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            CheckAndMutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null) => _client.CheckAndMutateRowAsync(request, callSettings);
+        public override CheckAndMutateRowResponse CheckAndMutateRow(CheckAndMutateRowRequest request, gaxgrpc::CallSettings callSettings = null) => _client.CheckAndMutateRow(request, callSettings);
 
         /// <inheritdoc/>
-        public override CheckAndMutateRowResponse CheckAndMutateRow(
-            CheckAndMutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null) => _client.CheckAndMutateRow(request, callSettings);
+        public override stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(CheckAndMutateRowRequest request, gaxgrpc::CallSettings callSettings = null) => _client.CheckAndMutateRowAsync(request, callSettings);
 
         /// <inheritdoc/>
-        public override stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            ReadModifyWriteRowRequest request,
-            gaxgrpc::CallSettings callSettings = null) => _client.ReadModifyWriteRowAsync(request, callSettings);
+        public override ReadModifyWriteRowResponse ReadModifyWriteRow(ReadModifyWriteRowRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ReadModifyWriteRow(request, callSettings);
 
         /// <inheritdoc/>
-        public override ReadModifyWriteRowResponse ReadModifyWriteRow(
-            ReadModifyWriteRowRequest request,
-            gaxgrpc::CallSettings callSettings = null) => _client.ReadModifyWriteRow(request, callSettings);
+        public override stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ReadModifyWriteRowAsync(request, callSettings);
     }
 }
