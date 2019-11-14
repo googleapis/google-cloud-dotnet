@@ -95,7 +95,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // If we find this fails in CI, we'll need to work out an alternative plan.
             Assert.NotEqual(serviceAccountEmail, alternativeServiceAccountEmail);
 
-            Assert.Empty(await client.ListHmacKeysAsync(projectId).ToList());
+            Assert.Empty(await client.ListHmacKeysAsync(projectId).ToListAsync());
             var key = await client.CreateHmacKeyAsync(projectId, serviceAccountEmail);
             string accessId = key.Metadata.AccessId;
 
@@ -104,12 +104,12 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Convert.FromBase64String(key.Secret);
 
             // We should now be able to find the key when listing it, either with no filter or filtering by the right email address.
-            var listed = Assert.Single(await client.ListHmacKeysAsync(projectId).ToList());
+            var listed = Assert.Single(await client.ListHmacKeysAsync(projectId).ToListAsync());
             Assert.Equal(accessId, listed.AccessId);
-            listed = Assert.Single(await client.ListHmacKeysAsync(projectId, serviceAccountEmail).ToList());
+            listed = Assert.Single(await client.ListHmacKeysAsync(projectId, serviceAccountEmail).ToListAsync());
             Assert.Equal(accessId, listed.AccessId);
             // But not when filtering with the wrong email address
-            Assert.Empty(await client.ListHmacKeysAsync(projectId, alternativeServiceAccountEmail).ToList());
+            Assert.Empty(await client.ListHmacKeysAsync(projectId, alternativeServiceAccountEmail).ToListAsync());
 
             // We should be able to update the key to disable it.
             // Note: We shouldn't need to create this ourselves...
@@ -132,8 +132,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(HmacKeyStates.Deleted, deleted.State);
 
             // The deleted key should not show normally in list operations, but should show if we ask for deleted ones
-            Assert.Empty(await client.ListHmacKeysAsync(projectId).ToList());
-            Assert.Single(await client.ListHmacKeysAsync(projectId, options: new ListHmacKeysOptions { ShowDeletedKeys = true }).ToList(),
+            Assert.Empty(await client.ListHmacKeysAsync(projectId).ToListAsync());
+            Assert.Single(await client.ListHmacKeysAsync(projectId, options: new ListHmacKeysOptions { ShowDeletedKeys = true }).ToListAsync(),
                 k => k.AccessId == accessId);
         }
 

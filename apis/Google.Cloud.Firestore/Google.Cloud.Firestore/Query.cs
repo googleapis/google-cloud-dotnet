@@ -650,7 +650,7 @@ namespace Google.Cloud.Firestore
                 request.Transaction = transactionId;
             }
             var settings = CallSettings.FromCancellationToken(cancellationToken);
-            return AsyncEnumerable.CreateEnumerable(() => Database.Client.RunQuery(request, settings).ResponseStream);
+            return AsyncEnumerable.Create(token => Database.Client.RunQuery(request, settings).GetResponseStream(token));
         }
 
         // Helper methods for cursor-related functionality

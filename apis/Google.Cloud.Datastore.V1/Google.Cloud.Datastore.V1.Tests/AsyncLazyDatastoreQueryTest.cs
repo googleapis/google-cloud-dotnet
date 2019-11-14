@@ -80,14 +80,14 @@ namespace Google.Cloud.Datastore.V1.Tests
         public async Task AsEntities()
         {
             var query = new AsyncLazyDatastoreQuery(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
-            Assert.Equal(_entities, await query.ToList());
+            Assert.Equal(_entities, await query.ToListAsync());
         }
 
         [Fact]
         public async Task AsResponses()
         {
             var query = new AsyncLazyDatastoreQuery(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
-            Assert.Equal(_responses, await query.AsResponses().ToList());
+            Assert.Equal(_responses, await query.AsResponses().ToListAsync());
         }
 
         [Fact]

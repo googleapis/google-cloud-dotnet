@@ -55,7 +55,7 @@ namespace Google.Cloud.Bigtable.V2.Tests.Conformance
             }
             else
             {
-                responses = await stream.ToList();
+                responses = await stream.ToListAsync();
             }
 
             var results = from row in responses

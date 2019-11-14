@@ -1032,7 +1032,7 @@ namespace Google.Cloud.PubSub.V1
                 {
                     // Call MoveNext to receive more messages.
                     // Cancellation is handled by the cancellation-token passed when the stream is created.
-                    var moveNextTask = _pull.ResponseStream.MoveNext(CancellationToken.None);
+                    var moveNextTask = _pull.GrpcCall.ResponseStream.MoveNext(CancellationToken.None);
                     Add(moveNextTask, Next(true, () => HandlePullMessageData(moveNextTask)));
                 }
             }
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.PubSub.V1
                     StreamingPullResponse current;
                     try
                     {
-                        current = _pull.ResponseStream.Current;
+                        current = _pull.GrpcCall.ResponseStream.Current;
                     }
                     catch (Exception e) when (e.As<RpcException>()?.IsRecoverable() ?? false)
                     {
