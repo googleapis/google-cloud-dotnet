@@ -390,7 +390,7 @@ namespace Google.Cloud.Trace.V2
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="spans">
-        /// A list of new spans. The span names must not match existing
+        /// Required. A list of new spans. The span names must not match existing
         /// spans, or the results are undefined.
         /// </param>
         /// <param name="callSettings">
@@ -419,7 +419,7 @@ namespace Google.Cloud.Trace.V2
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="spans">
-        /// A list of new spans. The span names must not match existing
+        /// Required. A list of new spans. The span names must not match existing
         /// spans, or the results are undefined.
         /// </param>
         /// <param name="cancellationToken">
@@ -445,7 +445,7 @@ namespace Google.Cloud.Trace.V2
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="spans">
-        /// A list of new spans. The span names must not match existing
+        /// Required. A list of new spans. The span names must not match existing
         /// spans, or the results are undefined.
         /// </param>
         /// <param name="callSettings">
@@ -471,7 +471,7 @@ namespace Google.Cloud.Trace.V2
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="spans">
-        /// A list of new spans. The span names must not match existing
+        /// Required. A list of new spans. The span names must not match existing
         /// spans, or the results are undefined.
         /// </param>
         /// <param name="callSettings">
@@ -500,7 +500,7 @@ namespace Google.Cloud.Trace.V2
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="spans">
-        /// A list of new spans. The span names must not match existing
+        /// Required. A list of new spans. The span names must not match existing
         /// spans, or the results are undefined.
         /// </param>
         /// <param name="cancellationToken">
@@ -526,7 +526,7 @@ namespace Google.Cloud.Trace.V2
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="spans">
-        /// A list of new spans. The span names must not match existing
+        /// Required. A list of new spans. The span names must not match existing
         /// spans, or the results are undefined.
         /// </param>
         /// <param name="callSettings">

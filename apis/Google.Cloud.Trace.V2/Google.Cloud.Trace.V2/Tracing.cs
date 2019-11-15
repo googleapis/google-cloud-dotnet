@@ -26,24 +26,30 @@ namespace Google.Cloud.Trace.V2 {
           string.Concat(
             "Citnb29nbGUvZGV2dG9vbHMvY2xvdWR0cmFjZS92Mi90cmFjaW5nLnByb3Rv",
             "Eh1nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MhocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxopZ29vZ2xlL2RldnRvb2xzL2Nsb3VkdHJhY2Uv",
-            "djIvdHJhY2UucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJaChZCYXRjaFdyaXRl",
-            "U3BhbnNSZXF1ZXN0EgwKBG5hbWUYASABKAkSMgoFc3BhbnMYAiADKAsyIy5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52Mi5TcGFuMq8CCgxUcmFjZVNl",
-            "cnZpY2USlAEKD0JhdGNoV3JpdGVTcGFucxI1Lmdvb2dsZS5kZXZ0b29scy5j",
-            "bG91ZHRyYWNlLnYyLkJhdGNoV3JpdGVTcGFuc1JlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiMoLT5JMCLCInL3YyL3tuYW1lPXByb2plY3RzLyp9",
-            "L3RyYWNlczpiYXRjaFdyaXRlOgEqEocBCgpDcmVhdGVTcGFuEiMuZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkdHJhY2UudjIuU3BhbhojLmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZHRyYWNlLnYyLlNwYW4iL4LT5JMCKSIkL3YyL3tuYW1lPXByb2pl",
-            "Y3RzLyovdHJhY2VzLyp9L3NwYW5zOgEqQqwBCiFjb20uZ29vZ2xlLmRldnRv",
-            "b2xzLmNsb3VkdHJhY2UudjJCDFRyYWNpbmdQcm90b1ABWkdnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRvb2xzL2Nsb3VkdHJh",
-            "Y2UvdjI7Y2xvdWR0cmFjZaoCFUdvb2dsZS5DbG91ZC5UcmFjZS5WMsoCFUdv",
-            "b2dsZVxDbG91ZFxUcmFjZVxWMmIGcHJvdG8z"));
+            "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
+            "b3VyY2UucHJvdG8aKWdvb2dsZS9kZXZ0b29scy9jbG91ZHRyYWNlL3YyL3Ry",
+            "YWNlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ilAEKFkJhdGNoV3JpdGVTcGFu",
+            "c1JlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNl",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EjcKBXNwYW5zGAIgAygL",
+            "MiMuZ29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjIuU3BhbkID4EECMroD",
+            "CgxUcmFjZVNlcnZpY2USoQEKD0JhdGNoV3JpdGVTcGFucxI1Lmdvb2dsZS5k",
+            "ZXZ0b29scy5jbG91ZHRyYWNlLnYyLkJhdGNoV3JpdGVTcGFuc1JlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiP4LT5JMCLCInL3YyL3tuYW1lPXBy",
+            "b2plY3RzLyp9L3RyYWNlczpiYXRjaFdyaXRlOgEq2kEKbmFtZSxzcGFucxKJ",
+            "AQoKQ3JlYXRlU3BhbhIjLmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYy",
+            "LlNwYW4aIy5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52Mi5TcGFuIjGC",
+            "0+STAisiJi92Mi97bmFtZT1wcm9qZWN0cy8qL3RyYWNlcy8qL3NwYW5zLyp9",
+            "OgEqGnrKQRljbG91ZHRyYWNlLmdvb2dsZWFwaXMuY29t0kFbaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3RyYWNlLmFwcGVuZEKsAQohY29t",
+            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYyQgxUcmFjaW5nUHJvdG9Q",
+            "AVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9kZXZ0",
+            "b29scy9jbG91ZHRyYWNlL3YyO2Nsb3VkdHJhY2WqAhVHb29nbGUuQ2xvdWQu",
+            "VHJhY2UuVjLKAhVHb29nbGVcQ2xvdWRcVHJhY2VcVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Trace.V2.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Trace.V2.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.BatchWriteSpansRequest), global::Google.Cloud.Trace.V2.BatchWriteSpansRequest.Parser, new[]{ "Name", "Spans" }, null, null, null)
           }));
@@ -111,7 +117,7 @@ namespace Google.Cloud.Trace.V2 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Trace.V2.Span.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V2.Span> spans_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V2.Span>();
     /// <summary>
-    /// A list of new spans. The span names must not match existing
+    /// Required. A list of new spans. The span names must not match existing
     /// spans, or the results are undefined.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
