@@ -547,7 +547,7 @@ namespace Google.Cloud.Firestore
 
         internal async Task<QuerySnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
-            var responses = StreamResponsesAsync(transactionId);
+            var responses = StreamResponsesAsync(transactionId, cancellationToken);
             Timestamp? readTime = null;
             List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
             await responses.ForEachAsync(response =>
@@ -579,22 +579,30 @@ namespace Google.Cloud.Firestore
         /// <remarks>
         /// Each time you iterate over the sequence, a new query will be performed.
         /// </remarks>
+        /// <param name="cancellationToken">The cancellation token to apply to the streaming operation. Note that even if this is
+        /// <see cref="CancellationToken.None"/>, a cancellation token can still be applied when iterating over
+        /// the stream, by passing it into <see cref="IAsyncEnumerable{T}.GetAsyncEnumerator(CancellationToken)"/>.
+        /// If a cancellation token is passed both to this method and GetAsyncEnumerator,
+        /// then cancelling either of the tokens will result in the operation being cancelled.
+        /// </param>
         /// <returns>An asynchronous sequence of document snapshots matching the query.</returns>
-        public IAsyncEnumerable<DocumentSnapshot> StreamAsync() => StreamAsync(null);
+        public IAsyncEnumerable<DocumentSnapshot> StreamAsync(CancellationToken cancellationToken = default) =>
+            StreamAsync(transactionId: null, cancellationToken);
 
-        internal IAsyncEnumerable<DocumentSnapshot> StreamAsync(ByteString transactionId) =>
-             StreamResponsesAsync(transactionId)
+        internal IAsyncEnumerable<DocumentSnapshot> StreamAsync(ByteString transactionId, CancellationToken cancellationToken) =>
+             StreamResponsesAsync(transactionId, cancellationToken)
                 .Where(resp => resp.Document != null)
                 .Select(resp => DocumentSnapshot.ForDocument(Database, resp.Document, Timestamp.FromProto(resp.ReadTime)));
 
-        private IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId)
+        private IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
             var request = new RunQueryRequest { StructuredQuery = ToStructuredQuery(), Parent = ParentPath };
             if (transactionId != null)
             {
                 request.Transaction = transactionId;
             }
-            return AsyncEnumerable.Create(token => Database.Client.RunQuery(request).GetResponseStream());
+            var settings = CallSettings.FromCancellationToken(cancellationToken);
+            return Database.Client.RunQuery(request, settings).GetResponseStream();
         }
 
         // Helper methods for cursor-related functionality
