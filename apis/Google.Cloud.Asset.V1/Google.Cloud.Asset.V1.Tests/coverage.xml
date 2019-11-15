@@ -7,6 +7,12 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Asset.V1</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.OrgPolicy.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Identity.AccessContextManager.V1</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>

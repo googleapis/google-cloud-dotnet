@@ -1,4 +1,52 @@
 [
+  
+  {
+    "id": "Google.Cloud.OrgPolicy.V1",
+    "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
+    "version": "1.0.0-alpha00",
+    "productName": "TODO",
+    "productUrl": "TODO",
+    "generator": "proto",
+    "protoPath": "google/cloud/orgpolicy/v1",
+    "type": "other",
+    "description": "TODO",
+    "dependencies": {
+      "Google.Api.CommonProtos": "1.6.0"
+    },
+    "tags": [ "audit", "metadata", "artifact", "grafeas"  ]
+  },
+  
+  
+  {
+    "id": "Google.Identity.AccessContextManager.Type",
+    "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
+    "version": "1.0.0-alpha00",
+    "generator": "proto",
+    "productName": "TODO",
+    "productUrl": "TODO",
+    "protoPath": "google/identity/accesscontextmanager/type",
+    "description": "TODO",
+    "type": "other",
+    "dependencies": {
+      "Google.Api.CommonProtos": "1.6.0"
+    },
+    "tags": []
+  },
+  {
+    "id": "Google.Identity.AccessContextManager.V1",
+    "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
+    "version": "1.0.0-alpha00",
+    "generator": "proto",
+    "productName": "TODO",
+    "productUrl": "TODO",
+    "protoPath": "google/identity/accesscontextmanager/v1",
+    "description": "TODO",
+    "type": "other",
+    "dependencies": {
+      "Google.Identity.AccessContextManager.Type": "project"
+    },
+    "tags": []
+  },
   {
     "id": "Google.Cloud.Asset.V1",
     "generator": "gapic",
@@ -11,7 +59,9 @@
     "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
     "dependencies": {
       "Google.LongRunning": "1.1.0",
-      "Google.Cloud.Iam.V1": "1.2.0"
+      "Google.Cloud.Iam.V1": "1.2.0",
+      "Google.Cloud.OrgPolicy.V1": "project",
+      "Google.Identity.AccessContextManager.V1": "project"
     },
     "tags": [ "asset", "inventory", "assets" ]
   },

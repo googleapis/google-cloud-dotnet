@@ -42,7 +42,9 @@ fetch_github_repos() {
   then
     if [ -d "googleapis" ]
     then
-      git -C googleapis pull -q
+      echo "Not updating - local changes!"
+      # git -C googleapis pull -q
+      # git -C googleapis checkout 0b6f19d55d80e50bd5b85f56574310e2ae43040b
     else
       # Auto-detect whether we're cloning the public or private googleapis repo.
       git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
