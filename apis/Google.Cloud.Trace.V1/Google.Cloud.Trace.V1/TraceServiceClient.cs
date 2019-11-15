@@ -49,9 +49,9 @@ namespace Google.Cloud.Trace.V1
         private TraceServiceSettings(TraceServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            PatchTracesSettings = existing.PatchTracesSettings;
-            GetTraceSettings = existing.GetTraceSettings;
             ListTracesSettings = existing.ListTracesSettings;
+            GetTraceSettings = existing.GetTraceSettings;
+            PatchTracesSettings = existing.PatchTracesSettings;
             OnCopy(existing);
         }
 
@@ -91,14 +91,14 @@ namespace Google.Cloud.Trace.V1
         /// The "Default" retry backoff for <see cref="TraceServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(100),
-            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
-            delayMultiplier: 1.2
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
         );
 
         /// <summary>
@@ -111,43 +111,43 @@ namespace Google.Cloud.Trace.V1
         /// The "Default" timeout backoff for <see cref="TraceServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(20000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(30000),
-            delayMultiplier: 1.5
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
         );
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>TraceServiceClient.PatchTraces</c> and <c>TraceServiceClient.PatchTracesAsync</c>.
+        /// <c>TraceServiceClient.ListTraces</c> and <c>TraceServiceClient.ListTracesAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>TraceServiceClient.PatchTraces</c> and
-        /// <c>TraceServiceClient.PatchTracesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// The default <c>TraceServiceClient.ListTraces</c> and
+        /// <c>TraceServiceClient.ListTracesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public gaxgrpc::CallSettings PatchTracesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+        public gaxgrpc::CallSettings ListTracesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -160,55 +160,54 @@ namespace Google.Cloud.Trace.V1
         /// <c>TraceServiceClient.GetTraceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings GetTraceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>TraceServiceClient.ListTraces</c> and <c>TraceServiceClient.ListTracesAsync</c>.
+        /// <c>TraceServiceClient.PatchTraces</c> and <c>TraceServiceClient.PatchTracesAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>TraceServiceClient.ListTraces</c> and
-        /// <c>TraceServiceClient.ListTracesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// The default <c>TraceServiceClient.PatchTraces</c> and
+        /// <c>TraceServiceClient.PatchTracesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public gaxgrpc::CallSettings ListTracesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+        public gaxgrpc::CallSettings PatchTracesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(45000)),
-                retryFilter: IdempotentRetryFilter
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -415,6 +414,241 @@ namespace Google.Cloud.Trace.V1
         }
 
         /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. ID of the Cloud project where the trace data is stored.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
+            string projectId,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTracesAsync(
+                new ListTracesRequest
+                {
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. ID of the Cloud project where the trace data is stored.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(
+            string projectId,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTraces(
+                new ListTracesRequest
+                {
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
+            ListTracesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(
+            ListTracesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. ID of the Cloud project where the trace data is stored.
+        /// </param>
+        /// <param name="traceId">
+        /// Required. ID of the trace to return.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Trace> GetTraceAsync(
+            string projectId,
+            string traceId,
+            gaxgrpc::CallSettings callSettings = null) => GetTraceAsync(
+                new GetTraceRequest
+                {
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    TraceId = gax::GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. ID of the Cloud project where the trace data is stored.
+        /// </param>
+        /// <param name="traceId">
+        /// Required. ID of the trace to return.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Trace> GetTraceAsync(
+            string projectId,
+            string traceId,
+            st::CancellationToken cancellationToken) => GetTraceAsync(
+                projectId,
+                traceId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. ID of the Cloud project where the trace data is stored.
+        /// </param>
+        /// <param name="traceId">
+        /// Required. ID of the trace to return.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Trace GetTrace(
+            string projectId,
+            string traceId,
+            gaxgrpc::CallSettings callSettings = null) => GetTrace(
+                new GetTraceRequest
+                {
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    TraceId = gax::GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Trace> GetTraceAsync(
+            GetTraceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Trace> GetTraceAsync(
+            GetTraceRequest request,
+            st::CancellationToken cancellationToken) => GetTraceAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Trace GetTrace(
+            GetTraceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
         /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
         /// of a trace that you send matches that of an existing trace, any fields
         /// in the existing trace and its spans are overwritten by the provided values,
@@ -422,10 +656,10 @@ namespace Google.Cloud.Trace.V1
         /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
+        /// Required. ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        /// The body of the message.
+        /// Required. The body of the message.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -452,10 +686,10 @@ namespace Google.Cloud.Trace.V1
         /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
+        /// Required. ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        /// The body of the message.
+        /// Required. The body of the message.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -479,10 +713,10 @@ namespace Google.Cloud.Trace.V1
         /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
+        /// Required. ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        /// The body of the message.
+        /// Required. The body of the message.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -563,241 +797,6 @@ namespace Google.Cloud.Trace.V1
             throw new sys::NotImplementedException();
         }
 
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="traceId">
-        /// ID of the trace to return.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Trace> GetTraceAsync(
-            string projectId,
-            string traceId,
-            gaxgrpc::CallSettings callSettings = null) => GetTraceAsync(
-                new GetTraceRequest
-                {
-                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    TraceId = gax::GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="traceId">
-        /// ID of the trace to return.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Trace> GetTraceAsync(
-            string projectId,
-            string traceId,
-            st::CancellationToken cancellationToken) => GetTraceAsync(
-                projectId,
-                traceId,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="traceId">
-        /// ID of the trace to return.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Trace GetTrace(
-            string projectId,
-            string traceId,
-            gaxgrpc::CallSettings callSettings = null) => GetTrace(
-                new GetTraceRequest
-                {
-                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    TraceId = gax::GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Trace> GetTraceAsync(
-            GetTraceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Trace> GetTraceAsync(
-            GetTraceRequest request,
-            st::CancellationToken cancellationToken) => GetTraceAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Trace GetTrace(
-            GetTraceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Returns of a list of traces that match the specified filter conditions.
-        /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
-            string projectId,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListTracesAsync(
-                new ListTracesRequest
-                {
-                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Returns of a list of traces that match the specified filter conditions.
-        /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Trace"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(
-            string projectId,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListTraces(
-                new ListTracesRequest
-                {
-                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Returns of a list of traces that match the specified filter conditions.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
-            ListTracesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Returns of a list of traces that match the specified filter conditions.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Trace"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(
-            ListTracesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
     }
 
     /// <summary>
@@ -805,9 +804,9 @@ namespace Google.Cloud.Trace.V1
     /// </summary>
     public sealed partial class TraceServiceClientImpl : TraceServiceClient
     {
-        private readonly gaxgrpc::ApiCall<PatchTracesRequest, pbwkt::Empty> _callPatchTraces;
-        private readonly gaxgrpc::ApiCall<GetTraceRequest, Trace> _callGetTrace;
         private readonly gaxgrpc::ApiCall<ListTracesRequest, ListTracesResponse> _callListTraces;
+        private readonly gaxgrpc::ApiCall<GetTraceRequest, Trace> _callGetTrace;
+        private readonly gaxgrpc::ApiCall<PatchTracesRequest, pbwkt::Empty> _callPatchTraces;
 
         /// <summary>
         /// Constructs a client wrapper for the TraceService service, with the specified gRPC client and settings.
@@ -819,20 +818,20 @@ namespace Google.Cloud.Trace.V1
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, pbwkt::Empty>(
-                GrpcClient.PatchTracesAsync, GrpcClient.PatchTraces, effectiveSettings.PatchTracesSettings)
-                .WithGoogleRequestParam("project_id", request => request.ProjectId);
-            _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(
-                GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
             _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(
                 GrpcClient.ListTracesAsync, GrpcClient.ListTraces, effectiveSettings.ListTracesSettings)
                 .WithGoogleRequestParam("project_id", request => request.ProjectId);
-            Modify_ApiCall(ref _callPatchTraces);
-            Modify_PatchTracesApiCall(ref _callPatchTraces);
-            Modify_ApiCall(ref _callGetTrace);
-            Modify_GetTraceApiCall(ref _callGetTrace);
+            _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(
+                GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
+            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, pbwkt::Empty>(
+                GrpcClient.PatchTracesAsync, GrpcClient.PatchTraces, effectiveSettings.PatchTracesSettings)
+                .WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListTraces);
             Modify_ListTracesApiCall(ref _callListTraces);
+            Modify_ApiCall(ref _callGetTrace);
+            Modify_GetTraceApiCall(ref _callGetTrace);
+            Modify_ApiCall(ref _callPatchTraces);
+            Modify_PatchTracesApiCall(ref _callPatchTraces);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -846,9 +845,9 @@ namespace Google.Cloud.Trace.V1
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_PatchTracesApiCall(ref gaxgrpc::ApiCall<PatchTracesRequest, pbwkt::Empty> call);
-        partial void Modify_GetTraceApiCall(ref gaxgrpc::ApiCall<GetTraceRequest, Trace> call);
         partial void Modify_ListTracesApiCall(ref gaxgrpc::ApiCall<ListTracesRequest, ListTracesResponse> call);
+        partial void Modify_GetTraceApiCall(ref gaxgrpc::ApiCall<GetTraceRequest, Trace> call);
+        partial void Modify_PatchTracesApiCall(ref gaxgrpc::ApiCall<PatchTracesRequest, pbwkt::Empty> call);
         partial void OnConstruction(TraceService.TraceServiceClient grpcClient, TraceServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -859,9 +858,89 @@ namespace Google.Cloud.Trace.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_PatchTracesRequest(ref PatchTracesRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_GetTraceRequest(ref GetTraceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListTracesRequest(ref ListTracesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetTraceRequest(ref GetTraceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_PatchTracesRequest(ref PatchTracesRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
+            ListTracesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTracesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(
+            ListTracesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTracesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Trace> GetTraceAsync(
+            GetTraceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTraceRequest(ref request, ref callSettings);
+            return _callGetTrace.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Trace GetTrace(
+            GetTraceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTraceRequest(ref request, ref callSettings);
+            return _callGetTrace.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -906,86 +985,6 @@ namespace Google.Cloud.Trace.V1
         {
             Modify_PatchTracesRequest(ref request, ref callSettings);
             _callPatchTraces.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<Trace> GetTraceAsync(
-            GetTraceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetTraceRequest(ref request, ref callSettings);
-            return _callGetTrace.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets a single trace by its ID.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Trace GetTrace(
-            GetTraceRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetTraceRequest(ref request, ref callSettings);
-            return _callGetTrace.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns of a list of traces that match the specified filter conditions.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
-        /// </returns>
-        public override gax::PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
-            ListTracesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListTracesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns of a list of traces that match the specified filter conditions.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Trace"/> resources.
-        /// </returns>
-        public override gax::PagedEnumerable<ListTracesResponse, Trace> ListTraces(
-            ListTracesRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListTracesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
         }
 
     }
