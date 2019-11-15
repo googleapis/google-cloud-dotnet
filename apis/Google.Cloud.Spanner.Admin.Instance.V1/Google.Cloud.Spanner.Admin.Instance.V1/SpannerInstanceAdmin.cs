@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlLlN0",
             "YXRlEkYKBmxhYmVscxgHIAMoCzI2Lmdvb2dsZS5zcGFubmVyLmFkbWluLmlu",
             "c3RhbmNlLnYxLkluc3RhbmNlLkxhYmVsc0VudHJ5EhUKDWVuZHBvaW50X3Vy",
-            "bHMYCCADKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "aXMYCCADKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
             "GAIgASgJOgI4ASI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
             "CENSRUFUSU5HEAESCQoFUkVBRFkQAjpN6kFKCh9zcGFubmVyLmdvb2dsZWFw",
             "aXMuY29tL0luc3RhbmNlEidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2Vz",
@@ -147,7 +147,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo), global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Parser, new[]{ "Location", "Type", "DefaultLeaderLocation" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser, new[]{ "Name", "DisplayName", "Replicas" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "State", "Labels", "EndpointUrls" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "State", "Labels", "EndpointUris" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) }, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser, new[]{ "InstanceConfigs", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser, new[]{ "Name" }, null, null, null),
@@ -637,7 +637,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       nodeCount_ = other.nodeCount_;
       state_ = other.state_;
       labels_ = other.labels_.Clone();
-      endpointUrls_ = other.endpointUrls_.Clone();
+      endpointUris_ = other.endpointUris_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -765,24 +765,24 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       get { return labels_; }
     }
 
-    /// <summary>Field number for the "endpoint_urls" field.</summary>
-    public const int EndpointUrlsFieldNumber = 8;
-    private static readonly pb::FieldCodec<string> _repeated_endpointUrls_codec
+    /// <summary>Field number for the "endpoint_uris" field.</summary>
+    public const int EndpointUrisFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_endpointUris_codec
         = pb::FieldCodec.ForString(66);
-    private readonly pbc::RepeatedField<string> endpointUrls_ = new pbc::RepeatedField<string>();
+    private readonly pbc::RepeatedField<string> endpointUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. The endpoint URLs based on the instance config.
+    /// Output only. The endpoint URIs based on the instance config.
     /// For example, instances located in a specific cloud region (or multi region)
-    /// such as nam3, would have a nam3 specific endpoint URL.
-    /// This URL is to be used implictly by SDK clients, with fallback to default
-    /// URL. These endpoints are intended to optimize the network routing between
+    /// such as nam3, would have a nam3 specific endpoint URI.
+    /// This URI is to be used implictly by SDK clients, with fallback to default
+    /// URI. These endpoints are intended to optimize the network routing between
     /// the client and the instance's serving resources.
-    /// If multiple endpoints are present,
-    /// client may establish connections using any of the given URLs.
+    /// If multiple endpoints are present, client may establish connections using
+    /// any of the given URIs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> EndpointUrls {
-      get { return endpointUrls_; }
+    public pbc::RepeatedField<string> EndpointUris {
+      get { return endpointUris_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -804,7 +804,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (NodeCount != other.NodeCount) return false;
       if (State != other.State) return false;
       if (!Labels.Equals(other.Labels)) return false;
-      if(!endpointUrls_.Equals(other.endpointUrls_)) return false;
+      if(!endpointUris_.Equals(other.endpointUris_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -817,7 +817,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (NodeCount != 0) hash ^= NodeCount.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       hash ^= Labels.GetHashCode();
-      hash ^= endpointUrls_.GetHashCode();
+      hash ^= endpointUris_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -852,7 +852,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteEnum((int) State);
       }
       labels_.WriteTo(output, _map_labels_codec);
-      endpointUrls_.WriteTo(output, _repeated_endpointUrls_codec);
+      endpointUris_.WriteTo(output, _repeated_endpointUris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -877,7 +877,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       size += labels_.CalculateSize(_map_labels_codec);
-      size += endpointUrls_.CalculateSize(_repeated_endpointUrls_codec);
+      size += endpointUris_.CalculateSize(_repeated_endpointUris_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -905,7 +905,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         State = other.State;
       }
       labels_.Add(other.labels_);
-      endpointUrls_.Add(other.endpointUrls_);
+      endpointUris_.Add(other.endpointUris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -942,7 +942,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             break;
           }
           case 66: {
-            endpointUrls_.AddEntriesFrom(input, _repeated_endpointUrls_codec);
+            endpointUris_.AddEntriesFrom(input, _repeated_endpointUris_codec);
             break;
           }
         }
