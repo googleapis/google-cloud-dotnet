@@ -25,12 +25,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void ModifyRequest()
         {
+            EncryptionConfiguration config = new EncryptionConfiguration { KmsKeyName = "dataset_default_key" };
             var options = new CreateDatasetOptions
             {
                 DefaultTableExpiration = TimeSpan.FromSeconds(10),
                 Description = "A description",
                 FriendlyName = "A friendly name",
-                Location = "EU"
+                Location = "EU",
+                DefaultEncryptionConfiguration = config,
+                DefaultPartitionExpiration = TimeSpan.FromSeconds(20)
             };
             Dataset dataset = new Dataset { Location = "US" };
             InsertRequest request = new InsertRequest(new BigqueryService(), dataset, "project");
@@ -39,6 +42,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("A description", dataset.Description);
             Assert.Equal("A friendly name", dataset.FriendlyName);
             Assert.Equal("EU", dataset.Location);
+            Assert.Equal(20 * 1000, dataset.DefaultPartitionExpirationMs);
+            Assert.Equal(config, dataset.DefaultEncryptionConfiguration);
         }
 
         [Fact]
