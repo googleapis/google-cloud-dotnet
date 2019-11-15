@@ -194,9 +194,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                         "value60c16320"
                     },
                 },
-                EndpointUrls =
+                EndpointUris =
                 {
-                    "endpoint_urls13799ad7",
+                    "endpoint_uris93f83605",
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -230,9 +230,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                         "value60c16320"
                     },
                 },
-                EndpointUrls =
+                EndpointUris =
                 {
-                    "endpoint_urls13799ad7",
+                    "endpoint_uris93f83605",
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -267,9 +267,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                         "value60c16320"
                     },
                 },
-                EndpointUrls =
+                EndpointUris =
                 {
-                    "endpoint_urls13799ad7",
+                    "endpoint_uris93f83605",
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -302,9 +302,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                         "value60c16320"
                     },
                 },
-                EndpointUrls =
+                EndpointUris =
                 {
-                    "endpoint_urls13799ad7",
+                    "endpoint_uris93f83605",
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -339,9 +339,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                         "value60c16320"
                     },
                 },
-                EndpointUrls =
+                EndpointUris =
                 {
-                    "endpoint_urls13799ad7",
+                    "endpoint_uris93f83605",
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -374,9 +374,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                         "value60c16320"
                     },
                 },
-                EndpointUrls =
+                EndpointUris =
                 {
-                    "endpoint_urls13799ad7",
+                    "endpoint_uris93f83605",
                 },
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
