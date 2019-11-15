@@ -226,7 +226,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_LINEAR_16")] Linear16 = 1,
     /// <summary>
-    /// MP3 audio.
+    /// MP3 audio at 32kbps.
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MP3")] Mp3 = 2,
     /// <summary>
