@@ -26,51 +26,59 @@ namespace Google.Cloud.Trace.V1 {
           string.Concat(
             "Cilnb29nbGUvZGV2dG9vbHMvY2xvdWR0cmFjZS92MS90cmFjZS5wcm90bxId",
             "Z29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjEaHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJmCgVUcmFjZRISCgpw",
-            "cm9qZWN0X2lkGAEgASgJEhAKCHRyYWNlX2lkGAIgASgJEjcKBXNwYW5zGAMg",
-            "AygLMiguZ29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjEuVHJhY2VTcGFu",
-            "Ij4KBlRyYWNlcxI0CgZ0cmFjZXMYASADKAsyJC5nb29nbGUuZGV2dG9vbHMu",
-            "Y2xvdWR0cmFjZS52MS5UcmFjZSKdAwoJVHJhY2VTcGFuEg8KB3NwYW5faWQY",
-            "ASABKAYSPwoEa2luZBgCIAEoDjIxLmdvb2dsZS5kZXZ0b29scy5jbG91ZHRy",
-            "YWNlLnYxLlRyYWNlU3Bhbi5TcGFuS2luZBIMCgRuYW1lGAMgASgJEi4KCnN0",
-            "YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwK",
-            "CGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIW",
-            "Cg5wYXJlbnRfc3Bhbl9pZBgGIAEoBhJECgZsYWJlbHMYByADKAsyNC5nb29n",
+            "b3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29n",
+            "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
+            "cmNlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iZgoFVHJhY2USEgoKcHJvamVj",
+            "dF9pZBgBIAEoCRIQCgh0cmFjZV9pZBgCIAEoCRI3CgVzcGFucxgDIAMoCzIo",
+            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYxLlRyYWNlU3BhbiI+CgZU",
+            "cmFjZXMSNAoGdHJhY2VzGAEgAygLMiQuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
+            "dHJhY2UudjEuVHJhY2UiogMKCVRyYWNlU3BhbhIPCgdzcGFuX2lkGAEgASgG",
+            "Ej8KBGtpbmQYAiABKA4yMS5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52",
+            "MS5UcmFjZVNwYW4uU3BhbktpbmQSDAoEbmFtZRgDIAEoCRIuCgpzdGFydF90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRf",
+            "dGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGwoOcGFy",
+            "ZW50X3NwYW5faWQYBiABKAZCA+BBARJECgZsYWJlbHMYByADKAsyNC5nb29n",
             "bGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5UcmFjZVNwYW4uTGFiZWxzRW50",
             "cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
             "OgI4ASJFCghTcGFuS2luZBIZChVTUEFOX0tJTkRfVU5TUEVDSUZJRUQQABIO",
-            "CgpSUENfU0VSVkVSEAESDgoKUlBDX0NMSUVOVBACIucCChFMaXN0VHJhY2Vz",
-            "UmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEkcKBHZpZXcYAiABKA4yOS5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5MaXN0VHJhY2VzUmVxdWVz",
-            "dC5WaWV3VHlwZRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgE",
-            "IAEoCRIuCgpzdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIsCghlbmRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASDgoGZmlsdGVyGAcgASgJEhAKCG9yZGVyX2J5GAggASgJIk4K",
-            "CFZpZXdUeXBlEhkKFVZJRVdfVFlQRV9VTlNQRUNJRklFRBAAEgsKB01JTklN",
-            "QUwQARIMCghST09UU1BBThACEgwKCENPTVBMRVRFEAMiYwoSTGlzdFRyYWNl",
-            "c1Jlc3BvbnNlEjQKBnRyYWNlcxgBIAMoCzIkLmdvb2dsZS5kZXZ0b29scy5j",
-            "bG91ZHRyYWNlLnYxLlRyYWNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI3",
-            "Cg9HZXRUcmFjZVJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIQCgh0cmFj",
-            "ZV9pZBgCIAEoCSJfChJQYXRjaFRyYWNlc1JlcXVlc3QSEgoKcHJvamVjdF9p",
-            "ZBgBIAEoCRI1CgZ0cmFjZXMYAiABKAsyJS5nb29nbGUuZGV2dG9vbHMuY2xv",
-            "dWR0cmFjZS52MS5UcmFjZXMy0QMKDFRyYWNlU2VydmljZRKbAQoKTGlzdFRy",
+            "CgpSUENfU0VSVkVSEAESDgoKUlBDX0NMSUVOVBACIoADChFMaXN0VHJhY2Vz",
+            "UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISTAoEdmlldxgCIAEo",
+            "DjI5Lmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYxLkxpc3RUcmFjZXNS",
+            "ZXF1ZXN0LlZpZXdUeXBlQgPgQQESFgoJcGFnZV9zaXplGAMgASgFQgPgQQES",
+            "EgoKcGFnZV90b2tlbhgEIAEoCRIuCgpzdGFydF90aW1lGAUgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgGIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoGZmlsdGVyGAcgASgJQgPgQQES",
+            "FQoIb3JkZXJfYnkYCCABKAlCA+BBASJOCghWaWV3VHlwZRIZChVWSUVXX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABILCgdNSU5JTUFMEAESDAoIUk9PVFNQQU4QAhIM",
+            "CghDT01QTEVURRADImMKEkxpc3RUcmFjZXNSZXNwb25zZRI0CgZ0cmFjZXMY",
+            "ASADKAsyJC5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5UcmFjZRIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiQQoPR2V0VHJhY2VSZXF1ZXN0EhcK",
+            "CnByb2plY3RfaWQYASABKAlCA+BBAhIVCgh0cmFjZV9pZBgCIAEoCUID4EEC",
+            "ImkKElBhdGNoVHJhY2VzUmVxdWVzdBIXCgpwcm9qZWN0X2lkGAEgASgJQgPg",
+            "QQISOgoGdHJhY2VzGAIgASgLMiUuZ29vZ2xlLmRldnRvb2xzLmNsb3VkdHJh",
+            "Y2UudjEuVHJhY2VzQgPgQQIytQUKDFRyYWNlU2VydmljZRKoAQoKTGlzdFRy",
             "YWNlcxIwLmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYxLkxpc3RUcmFj",
             "ZXNSZXF1ZXN0GjEuZ29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjEuTGlz",
-            "dFRyYWNlc1Jlc3BvbnNlIiiC0+STAiISIC92MS9wcm9qZWN0cy97cHJvamVj",
-            "dF9pZH0vdHJhY2VzEpUBCghHZXRUcmFjZRIuLmdvb2dsZS5kZXZ0b29scy5j",
-            "bG91ZHRyYWNlLnYxLkdldFRyYWNlUmVxdWVzdBokLmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZHRyYWNlLnYxLlRyYWNlIjOC0+STAi0SKy92MS9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH0vdHJhY2VzL3t0cmFjZV9pZH0SigEKC1BhdGNoVHJhY2Vz",
-            "EjEuZ29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjEuUGF0Y2hUcmFjZXNS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjCC0+STAioyIC92MS9w",
-            "cm9qZWN0cy97cHJvamVjdF9pZH0vdHJhY2VzOgZ0cmFjZXNCqgEKIWNvbS5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MUIKVHJhY2VQcm90b1ABWkdn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRvb2xz",
-            "L2Nsb3VkdHJhY2UvdjE7Y2xvdWR0cmFjZaoCFUdvb2dsZS5DbG91ZC5UcmFj",
-            "ZS5WMcoCFUdvb2dsZVxDbG91ZFxUcmFjZVxWMWIGcHJvdG8z"));
+            "dFRyYWNlc1Jlc3BvbnNlIjWC0+STAiISIC92MS9wcm9qZWN0cy97cHJvamVj",
+            "dF9pZH0vdHJhY2Vz2kEKcHJvamVjdF9pZBKrAQoIR2V0VHJhY2USLi5nb29n",
+            "bGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5HZXRUcmFjZVJlcXVlc3QaJC5n",
+            "b29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5UcmFjZSJJgtPkkwItEisv",
+            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9L3RyYWNlcy97dHJhY2VfaWR92kET",
+            "cHJvamVjdF9pZCx0cmFjZV9pZBKeAQoLUGF0Y2hUcmFjZXMSMS5nb29nbGUu",
+            "ZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5QYXRjaFRyYWNlc1JlcXVlc3QaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiRILT5JMCKjIgL3YxL3Byb2plY3RzL3tw",
+            "cm9qZWN0X2lkfS90cmFjZXM6BnRyYWNlc9pBEXByb2plY3RfaWQsdHJhY2Vz",
+            "GqoBykEZY2xvdWR0cmFjZS5nb29nbGVhcGlzLmNvbdJBigFodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdHJhY2UuYXBwZW5kLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdHJhY2UucmVhZG9ubHlCqgEKIWNv",
+            "bS5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MUIKVHJhY2VQcm90b1AB",
+            "Wkdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRv",
+            "b2xzL2Nsb3VkdHJhY2UvdjE7Y2xvdWR0cmFjZaoCFUdvb2dsZS5DbG91ZC5U",
+            "cmFjZS5WMcoCFUdvb2dsZVxDbG91ZFxUcmFjZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Trace), global::Google.Cloud.Trace.V1.Trace.Parser, new[]{ "ProjectId", "TraceId", "Spans" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Traces), global::Google.Cloud.Trace.V1.Traces.Parser, new[]{ "Traces_" }, null, null, null),
@@ -145,7 +153,8 @@ namespace Google.Cloud.Trace.V1 {
     private string traceId_ = "";
     /// <summary>
     /// Globally unique identifier for the trace. This identifier is a 128-bit
-    /// numeric value formatted as a 32-byte hex string.
+    /// numeric value formatted as a 32-byte hex string. For example,
+    /// `382d4f4c6b7bb2f4a972559d9085001d`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TraceId {
@@ -456,7 +465,7 @@ namespace Google.Cloud.Trace.V1 {
     private ulong spanId_;
     /// <summary>
     /// Identifier for the span. Must be a 64-bit integer other than 0 and
-    /// unique within a trace.
+    /// unique within a trace. For example, `2205310701640571284`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong SpanId {
@@ -488,7 +497,7 @@ namespace Google.Cloud.Trace.V1 {
     /// <summary>
     /// Name of the span. Must be less than 128 bytes. The span name is sanitized
     /// and displayed in the Stackdriver Trace tool in the
-    /// {% dynamic print site_values.console_name %}.
+    /// Google Cloud Platform Console.
     /// The name may be a method name or some other per-call site name.
     /// For the same executable and the same call point, a best practice is
     /// to use a consistent name, which makes it easier to correlate
@@ -534,7 +543,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ParentSpanIdFieldNumber = 6;
     private ulong parentSpanId_;
     /// <summary>
-    /// ID of the parent span, if any. Optional.
+    /// Optional. ID of the parent span, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong ParentSpanId {
@@ -853,7 +862,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// ID of the Cloud project where the trace data is stored.
+    /// Required. ID of the Cloud project where the trace data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -867,7 +876,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ViewFieldNumber = 2;
     private global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType view_ = 0;
     /// <summary>
-    /// Type of data returned for traces in the list. Optional. Default is
+    /// Optional. Type of data returned for traces in the list. Default is
     /// `MINIMAL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -882,9 +891,9 @@ namespace Google.Cloud.Trace.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of traces to return. If not specified or &lt;= 0, the
+    /// Optional. Maximum number of traces to return. If not specified or &lt;= 0, the
     /// implementation selects a reasonable value.  The implementation may
-    /// return fewer traces than the requested page size. Optional.
+    /// return fewer traces than the requested page size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -899,7 +908,7 @@ namespace Google.Cloud.Trace.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// Token identifying the page of results to return. If provided, use the
-    /// value of the `next_page_token` field from a previous request. Optional.
+    /// value of the `next_page_token` field from a previous request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -943,7 +952,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int FilterFieldNumber = 7;
     private string filter_ = "";
     /// <summary>
-    /// An optional filter against labels for the request.
+    /// Optional. A filter against labels for the request.
     ///
     /// By default, searches use prefix matching. To specify exact match, prepend
     /// a plus symbol (`+`) to the search term.
@@ -986,7 +995,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int OrderByFieldNumber = 8;
     private string orderBy_ = "";
     /// <summary>
-    /// Field used to sort the returned traces. Optional.
+    /// Optional. Field used to sort the returned traces.
     /// Can be one of the following:
     ///
     /// *   `trace_id`
@@ -1293,7 +1302,7 @@ namespace Google.Cloud.Trace.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Trace.V1.Trace.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> traces_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace>();
     /// <summary>
-    /// List of trace records returned.
+    /// List of trace records as specified by the view parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> Traces {
@@ -1451,7 +1460,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// ID of the Cloud project where the trace data is stored.
+    /// Required. ID of the Cloud project where the trace data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1465,7 +1474,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int TraceIdFieldNumber = 2;
     private string traceId_ = "";
     /// <summary>
-    /// ID of the trace to return.
+    /// Required. ID of the trace to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TraceId {
@@ -1617,7 +1626,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// ID of the Cloud project where the trace data is stored.
+    /// Required. ID of the Cloud project where the trace data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1631,7 +1640,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int TracesFieldNumber = 2;
     private global::Google.Cloud.Trace.V1.Traces traces_;
     /// <summary>
-    /// The body of the message.
+    /// Required. The body of the message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Trace.V1.Traces Traces {

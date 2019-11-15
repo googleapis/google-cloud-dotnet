@@ -33,134 +33,6 @@ namespace Google.Cloud.Trace.V1.Snippets
     /// <summary>Generated snippets</summary>
     public class GeneratedTraceServiceClientSnippets
     {
-        /// <summary>Snippet for PatchTracesAsync</summary>
-        public async Task PatchTracesAsync()
-        {
-            // Snippet: PatchTracesAsync(string,Traces,CallSettings)
-            // Additional: PatchTracesAsync(string,Traces,CancellationToken)
-            // Create client
-            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string projectId = "";
-            Traces traces = new Traces();
-            // Make the request
-            await traceServiceClient.PatchTracesAsync(projectId, traces);
-            // End snippet
-        }
-
-        /// <summary>Snippet for PatchTraces</summary>
-        public void PatchTraces()
-        {
-            // Snippet: PatchTraces(string,Traces,CallSettings)
-            // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            Traces traces = new Traces();
-            // Make the request
-            traceServiceClient.PatchTraces(projectId, traces);
-            // End snippet
-        }
-
-        /// <summary>Snippet for PatchTracesAsync</summary>
-        public async Task PatchTracesAsync_RequestObject()
-        {
-            // Snippet: PatchTracesAsync(PatchTracesRequest,CallSettings)
-            // Additional: PatchTracesAsync(PatchTracesRequest,CancellationToken)
-            // Create client
-            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PatchTracesRequest request = new PatchTracesRequest
-            {
-                ProjectId = "",
-                Traces = new Traces(),
-            };
-            // Make the request
-            await traceServiceClient.PatchTracesAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for PatchTraces</summary>
-        public void PatchTraces_RequestObject()
-        {
-            // Snippet: PatchTraces(PatchTracesRequest,CallSettings)
-            // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-            // Initialize request argument(s)
-            PatchTracesRequest request = new PatchTracesRequest
-            {
-                ProjectId = "",
-                Traces = new Traces(),
-            };
-            // Make the request
-            traceServiceClient.PatchTraces(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetTraceAsync</summary>
-        public async Task GetTraceAsync()
-        {
-            // Snippet: GetTraceAsync(string,string,CallSettings)
-            // Additional: GetTraceAsync(string,string,CancellationToken)
-            // Create client
-            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string projectId = "";
-            string traceId = "";
-            // Make the request
-            Trace response = await traceServiceClient.GetTraceAsync(projectId, traceId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetTrace</summary>
-        public void GetTrace()
-        {
-            // Snippet: GetTrace(string,string,CallSettings)
-            // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            string traceId = "";
-            // Make the request
-            Trace response = traceServiceClient.GetTrace(projectId, traceId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetTraceAsync</summary>
-        public async Task GetTraceAsync_RequestObject()
-        {
-            // Snippet: GetTraceAsync(GetTraceRequest,CallSettings)
-            // Additional: GetTraceAsync(GetTraceRequest,CancellationToken)
-            // Create client
-            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GetTraceRequest request = new GetTraceRequest
-            {
-                ProjectId = "",
-                TraceId = "",
-            };
-            // Make the request
-            Trace response = await traceServiceClient.GetTraceAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetTrace</summary>
-        public void GetTrace_RequestObject()
-        {
-            // Snippet: GetTrace(GetTraceRequest,CallSettings)
-            // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-            // Initialize request argument(s)
-            GetTraceRequest request = new GetTraceRequest
-            {
-                ProjectId = "",
-                TraceId = "",
-            };
-            // Make the request
-            Trace response = traceServiceClient.GetTrace(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for ListTracesAsync</summary>
         public async Task ListTracesAsync()
         {
@@ -340,6 +212,134 @@ namespace Google.Cloud.Trace.V1.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTraceAsync</summary>
+        public async Task GetTraceAsync()
+        {
+            // Snippet: GetTraceAsync(string,string,CallSettings)
+            // Additional: GetTraceAsync(string,string,CancellationToken)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string traceId = "";
+            // Make the request
+            Trace response = await traceServiceClient.GetTraceAsync(projectId, traceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrace</summary>
+        public void GetTrace()
+        {
+            // Snippet: GetTrace(string,string,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string traceId = "";
+            // Make the request
+            Trace response = traceServiceClient.GetTrace(projectId, traceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTraceAsync</summary>
+        public async Task GetTraceAsync_RequestObject()
+        {
+            // Snippet: GetTraceAsync(GetTraceRequest,CallSettings)
+            // Additional: GetTraceAsync(GetTraceRequest,CancellationToken)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = "",
+                TraceId = "",
+            };
+            // Make the request
+            Trace response = await traceServiceClient.GetTraceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrace</summary>
+        public void GetTrace_RequestObject()
+        {
+            // Snippet: GetTrace(GetTraceRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = "",
+                TraceId = "",
+            };
+            // Make the request
+            Trace response = traceServiceClient.GetTrace(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchTracesAsync</summary>
+        public async Task PatchTracesAsync()
+        {
+            // Snippet: PatchTracesAsync(string,Traces,CallSettings)
+            // Additional: PatchTracesAsync(string,Traces,CancellationToken)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            Traces traces = new Traces();
+            // Make the request
+            await traceServiceClient.PatchTracesAsync(projectId, traces);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchTraces</summary>
+        public void PatchTraces()
+        {
+            // Snippet: PatchTraces(string,Traces,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            Traces traces = new Traces();
+            // Make the request
+            traceServiceClient.PatchTraces(projectId, traces);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchTracesAsync</summary>
+        public async Task PatchTracesAsync_RequestObject()
+        {
+            // Snippet: PatchTracesAsync(PatchTracesRequest,CallSettings)
+            // Additional: PatchTracesAsync(PatchTracesRequest,CancellationToken)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = "",
+                Traces = new Traces(),
+            };
+            // Make the request
+            await traceServiceClient.PatchTracesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchTraces</summary>
+        public void PatchTraces_RequestObject()
+        {
+            // Snippet: PatchTraces(PatchTracesRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = "",
+                Traces = new Traces(),
+            };
+            // Make the request
+            traceServiceClient.PatchTraces(request);
             // End snippet
         }
 
