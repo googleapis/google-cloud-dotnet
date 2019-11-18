@@ -925,9 +925,8 @@
 
   {
     "id": "Google.Cloud.Trace.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/devtools/cloudtrace/v1",
-    "serviceYaml": "cloudtrace_v1.yaml",
     "productName": "Stackdriver Trace",
     "productUrl": "https://cloud.google.com/trace/",
     "version": "1.2.0-beta01",
