@@ -27,28 +27,33 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "CkVnb29nbGUvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92MWJldGEx",
             "L2Vycm9yX2dyb3VwX3NlcnZpY2UucHJvdG8SK2dvb2dsZS5kZXZ0b29scy5j",
             "bG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aOGdvb2dsZS9kZXZ0b29scy9jbG91ZGVycm9ycmVwb3J0",
-            "aW5nL3YxYmV0YTEvY29tbW9uLnByb3RvIiUKD0dldEdyb3VwUmVxdWVzdBIS",
-            "Cgpncm91cF9uYW1lGAEgASgJIlwKElVwZGF0ZUdyb3VwUmVxdWVzdBJGCgVn",
-            "cm91cBgBIAEoCzI3Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0",
-            "aW5nLnYxYmV0YTEuRXJyb3JHcm91cDKOAwoRRXJyb3JHcm91cFNlcnZpY2US",
-            "tAEKCEdldEdyb3VwEjwuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBv",
-            "cnRpbmcudjFiZXRhMS5HZXRHcm91cFJlcXVlc3QaNy5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkVycm9yR3JvdXAiMYLT",
-            "5JMCKxIpL3YxYmV0YTEve2dyb3VwX25hbWU9cHJvamVjdHMvKi9ncm91cHMv",
-            "Kn0SwQEKC1VwZGF0ZUdyb3VwEj8uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJy",
-            "b3JyZXBvcnRpbmcudjFiZXRhMS5VcGRhdGVHcm91cFJlcXVlc3QaNy5nb29n",
-            "bGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkVycm9y",
-            "R3JvdXAiOILT5JMCMhopL3YxYmV0YTEve2dyb3VwLm5hbWU9cHJvamVjdHMv",
-            "Ki9ncm91cHMvKn06BWdyb3VwQvcBCi9jb20uZ29vZ2xlLmRldnRvb2xzLmNs",
-            "b3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMUIWRXJyb3JHcm91cFNlcnZpY2VQ",
-            "cm90b1ABWl5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2RldnRvb2xzL2Nsb3VkZXJyb3JyZXBvcnRpbmcvdjFiZXRhMTtjbG91ZGVy",
-            "cm9ycmVwb3J0aW5nqgIjR29vZ2xlLkNsb3VkLkVycm9yUmVwb3J0aW5nLlYx",
-            "QmV0YTHKAiNHb29nbGVcQ2xvdWRcRXJyb3JSZXBvcnRpbmdcVjFiZXRhMWIG",
-            "cHJvdG8z"));
+            "dGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUv",
+            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
+            "LnByb3RvGjhnb29nbGUvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92",
+            "MWJldGExL2NvbW1vbi5wcm90byJcCg9HZXRHcm91cFJlcXVlc3QSSQoKZ3Jv",
+            "dXBfbmFtZRgBIAEoCUI14EEC+kEvCi1jbG91ZGVycm9ycmVwb3J0aW5nLmdv",
+            "b2dsZWFwaXMuY29tL0Vycm9yR3JvdXAiYQoSVXBkYXRlR3JvdXBSZXF1ZXN0",
+            "EksKBWdyb3VwGAEgASgLMjcuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3Jy",
+            "ZXBvcnRpbmcudjFiZXRhMS5FcnJvckdyb3VwQgPgQQIy+wMKEUVycm9yR3Jv",
+            "dXBTZXJ2aWNlEsEBCghHZXRHcm91cBI8Lmdvb2dsZS5kZXZ0b29scy5jbG91",
+            "ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuR2V0R3JvdXBSZXF1ZXN0GjcuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJv",
+            "ckdyb3VwIj6C0+STAisSKS92MWJldGExL3tncm91cF9uYW1lPXByb2plY3Rz",
+            "LyovZ3JvdXBzLyp92kEKZ3JvdXBfbmFtZRLJAQoLVXBkYXRlR3JvdXASPy5n",
+            "b29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlVw",
+            "ZGF0ZUdyb3VwUmVxdWVzdBo3Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
+            "cmVwb3J0aW5nLnYxYmV0YTEuRXJyb3JHcm91cCJAgtPkkwIyGikvdjFiZXRh",
+            "MS97Z3JvdXAubmFtZT1wcm9qZWN0cy8qL2dyb3Vwcy8qfToFZ3JvdXDaQQVn",
+            "cm91cBpWykEiY2xvdWRlcnJvcnJlcG9ydGluZy5nb29nbGVhcGlzLmNvbdJB",
+            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm1C+gEKL2NvbS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGlu",
+            "Zy52MWJldGExQhZFcnJvckdyb3VwU2VydmljZVByb3RvUAFaXmdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRl",
+            "cnJvcnJlcG9ydGluZy92MWJldGExO2Nsb3VkZXJyb3JyZXBvcnRpbmf4AQGq",
+            "AiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2ds",
+            "ZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser, new[]{ "GroupName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser, new[]{ "Group" }, null, null, null)
@@ -99,7 +104,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupNameFieldNumber = 1;
     private string groupName_ = "";
     /// <summary>
-    /// [Required] The group resource name. Written as
+    /// Required. The group resource name. Written as
     /// &lt;code>projects/&lt;var>projectID&lt;/var>/groups/&lt;var>group_name&lt;/var>&lt;/code>.
     /// Call
     /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
@@ -241,7 +246,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupFieldNumber = 1;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup group_;
     /// <summary>
-    /// [Required] The group which replaces the resource on the server.
+    /// Required. The group which replaces the resource on the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup Group {

@@ -26,37 +26,38 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           string.Concat(
             "Cjhnb29nbGUvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92MWJldGEx",
             "L2NvbW1vbi5wcm90bxIrZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBv",
-            "cnRpbmcudjFiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoj",
-            "Z29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8igQEKCkVycm9yR3JvdXASDAoEbmFt",
-            "ZRgBIAEoCRIQCghncm91cF9pZBgCIAEoCRJTCg90cmFja2luZ19pc3N1ZXMY",
-            "AyADKAsyOi5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52",
-            "MWJldGExLlRyYWNraW5nSXNzdWUiHAoNVHJhY2tpbmdJc3N1ZRILCgN1cmwY",
-            "ASABKAki7wEKCkVycm9yRXZlbnQSLgoKZXZlbnRfdGltZRgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASVAoPc2VydmljZV9jb250ZXh0GAIg",
-            "ASgLMjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFi",
-            "ZXRhMS5TZXJ2aWNlQ29udGV4dBIPCgdtZXNzYWdlGAMgASgJEkoKB2NvbnRl",
-            "eHQYBSABKAsyOS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGlu",
-            "Zy52MWJldGExLkVycm9yQ29udGV4dCJJCg5TZXJ2aWNlQ29udGV4dBIPCgdz",
-            "ZXJ2aWNlGAIgASgJEg8KB3ZlcnNpb24YAyABKAkSFQoNcmVzb3VyY2VfdHlw",
-            "ZRgEIAEoCSLJAQoMRXJyb3JDb250ZXh0ElUKDGh0dHBfcmVxdWVzdBgBIAEo",
-            "CzI/Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0",
-            "YTEuSHR0cFJlcXVlc3RDb250ZXh0EgwKBHVzZXIYAiABKAkSVAoPcmVwb3J0",
-            "X2xvY2F0aW9uGAMgASgLMjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3Jy",
-            "ZXBvcnRpbmcudjFiZXRhMS5Tb3VyY2VMb2NhdGlvbiKIAQoSSHR0cFJlcXVl",
-            "c3RDb250ZXh0Eg4KBm1ldGhvZBgBIAEoCRILCgN1cmwYAiABKAkSEgoKdXNl",
-            "cl9hZ2VudBgDIAEoCRIQCghyZWZlcnJlchgEIAEoCRIcChRyZXNwb25zZV9z",
-            "dGF0dXNfY29kZRgFIAEoBRIRCglyZW1vdGVfaXAYBiABKAkiTwoOU291cmNl",
-            "TG9jYXRpb24SEQoJZmlsZV9wYXRoGAEgASgJEhMKC2xpbmVfbnVtYmVyGAIg",
-            "ASgFEhUKDWZ1bmN0aW9uX25hbWUYBCABKAlC7AEKL2NvbS5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExQgtDb21tb25Qcm90",
-            "b1ABWl5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Rl",
-            "dnRvb2xzL2Nsb3VkZXJyb3JyZXBvcnRpbmcvdjFiZXRhMTtjbG91ZGVycm9y",
-            "cmVwb3J0aW5nqgIjR29vZ2xlLkNsb3VkLkVycm9yUmVwb3J0aW5nLlYxQmV0",
-            "YTHKAiNHb29nbGVcQ2xvdWRcRXJyb3JSZXBvcnRpbmdcVjFiZXRhMWIGcHJv",
-            "dG8z"));
+            "cnRpbmcudjFiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoZ",
+            "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
+            "bWVzdGFtcC5wcm90byLYAQoKRXJyb3JHcm91cBIMCgRuYW1lGAEgASgJEhAK",
+            "CGdyb3VwX2lkGAIgASgJElMKD3RyYWNraW5nX2lzc3VlcxgDIAMoCzI6Lmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuVHJh",
+            "Y2tpbmdJc3N1ZTpV6kFSCi1jbG91ZGVycm9ycmVwb3J0aW5nLmdvb2dsZWFw",
+            "aXMuY29tL0Vycm9yR3JvdXASIXByb2plY3RzL3twcm9qZWN0fS9ncm91cHMv",
+            "e2dyb3VwfSIcCg1UcmFja2luZ0lzc3VlEgsKA3VybBgBIAEoCSLvAQoKRXJy",
+            "b3JFdmVudBIuCgpldmVudF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBJUCg9zZXJ2aWNlX2NvbnRleHQYAiABKAsyOy5nb29nbGUu",
+            "ZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlNlcnZpY2VD",
+            "b250ZXh0Eg8KB21lc3NhZ2UYAyABKAkSSgoHY29udGV4dBgFIAEoCzI5Lmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuRXJy",
+            "b3JDb250ZXh0IkkKDlNlcnZpY2VDb250ZXh0Eg8KB3NlcnZpY2UYAiABKAkS",
+            "DwoHdmVyc2lvbhgDIAEoCRIVCg1yZXNvdXJjZV90eXBlGAQgASgJIskBCgxF",
+            "cnJvckNvbnRleHQSVQoMaHR0cF9yZXF1ZXN0GAEgASgLMj8uZ29vZ2xlLmRl",
+            "dnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5IdHRwUmVxdWVz",
+            "dENvbnRleHQSDAoEdXNlchgCIAEoCRJUCg9yZXBvcnRfbG9jYXRpb24YAyAB",
+            "KAsyOy5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJl",
+            "dGExLlNvdXJjZUxvY2F0aW9uIogBChJIdHRwUmVxdWVzdENvbnRleHQSDgoG",
+            "bWV0aG9kGAEgASgJEgsKA3VybBgCIAEoCRISCgp1c2VyX2FnZW50GAMgASgJ",
+            "EhAKCHJlZmVycmVyGAQgASgJEhwKFHJlc3BvbnNlX3N0YXR1c19jb2RlGAUg",
+            "ASgFEhEKCXJlbW90ZV9pcBgGIAEoCSJPCg5Tb3VyY2VMb2NhdGlvbhIRCglm",
+            "aWxlX3BhdGgYASABKAkSEwoLbGluZV9udW1iZXIYAiABKAUSFQoNZnVuY3Rp",
+            "b25fbmFtZRgEIAEoCULvAQovY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVy",
+            "cm9ycmVwb3J0aW5nLnYxYmV0YTFCC0NvbW1vblByb3RvUAFaXmdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRl",
+            "cnJvcnJlcG9ydGluZy92MWJldGExO2Nsb3VkZXJyb3JyZXBvcnRpbmf4AQGq",
+            "AiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2ds",
+            "ZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser, new[]{ "Name", "GroupId", "TrackingIssues" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue), global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser, new[]{ "Url" }, null, null, null),
@@ -712,6 +713,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// <summary>
     /// Represents the source code version that the developer provided,
     /// which could represent a version label or a Git SHA-1 hash, for example.
+    /// For App Engine standard environment, the version is set to the version of
+    /// the app.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Version {
@@ -941,8 +944,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// report the error, usually the place where it was logged.
     /// For a logged exception this would be the source line where the
     /// exception is logged, usually close to the place where it was
-    /// caught. This value is in contrast to `Exception.cause_location`,
-    /// which describes the source line where the exception was thrown.
+    /// caught.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation ReportLocation {
@@ -1377,11 +1379,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  /// Indicates a location in the source code of the service for which
-  /// errors are reported.
-  /// This data should be provided by the application when reporting an error,
-  /// unless the error report has been generated automatically from Google App
-  /// Engine logs. All fields are optional.
+  /// Indicates a location in the source code of the service for which errors are
+  /// reported. `functionName` must be provided by the application when reporting
+  /// an error, unless the error report contains a `message` with a supported
+  /// exception stack trace. All fields are optional for the later case.
   /// </summary>
   public sealed partial class SourceLocation : pb::IMessage<SourceLocation> {
     private static readonly pb::MessageParser<SourceLocation> _parser = new pb::MessageParser<SourceLocation>(() => new SourceLocation());

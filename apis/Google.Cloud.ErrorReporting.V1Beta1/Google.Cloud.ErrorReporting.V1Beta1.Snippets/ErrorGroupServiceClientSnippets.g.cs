@@ -16,61 +16,38 @@
 
 namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.ErrorReporting.V1Beta1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedErrorGroupServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedErrorGroupServiceClientSnippets
     {
-        /// <summary>Snippet for GetGroupAsync</summary>
-        public async Task GetGroupAsync()
-        {
-            // Snippet: GetGroupAsync(GroupName,CallSettings)
-            // Additional: GetGroupAsync(GroupName,CancellationToken)
-            // Create client
-            ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
-            // Make the request
-            ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(groupName);
-            // End snippet
-        }
-
         /// <summary>Snippet for GetGroup</summary>
-        public void GetGroup()
+        public void GetGroup_RequestObject()
         {
-            // Snippet: GetGroup(GroupName,CallSettings)
+            // Snippet: GetGroup(GetGroupRequest, CallSettings)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+            };
             // Make the request
-            ErrorGroup response = errorGroupServiceClient.GetGroup(groupName);
+            ErrorGroup response = errorGroupServiceClient.GetGroup(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetGroupAsync</summary>
         public async Task GetGroupAsync_RequestObject()
         {
-            // Snippet: GetGroupAsync(GetGroupRequest,CallSettings)
-            // Additional: GetGroupAsync(GetGroupRequest,CancellationToken)
+            // Snippet: GetGroupAsync(GetGroupRequest, CallSettings)
+            // Additional: GetGroupAsync(GetGroupRequest, CancellationToken)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(request);
@@ -78,53 +55,80 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetGroup</summary>
-        public void GetGroup_RequestObject()
+        public void GetGroup()
         {
-            // Snippet: GetGroup(GetGroupRequest,CallSettings)
+            // Snippet: GetGroup(string, CallSettings)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            GetGroupRequest request = new GetGroupRequest
-            {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-            };
+            string groupName = "projects/[PROJECT]/groups/[GROUP]";
             // Make the request
-            ErrorGroup response = errorGroupServiceClient.GetGroup(request);
+            ErrorGroup response = errorGroupServiceClient.GetGroup(groupName);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateGroupAsync</summary>
-        public async Task UpdateGroupAsync()
+        /// <summary>Snippet for GetGroupAsync</summary>
+        public async Task GetGroupAsync()
         {
-            // Snippet: UpdateGroupAsync(ErrorGroup,CallSettings)
-            // Additional: UpdateGroupAsync(ErrorGroup,CancellationToken)
+            // Snippet: GetGroupAsync(string, CallSettings)
+            // Additional: GetGroupAsync(string, CancellationToken)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ErrorGroup group = new ErrorGroup();
+            string groupName = "projects/[PROJECT]/groups/[GROUP]";
             // Make the request
-            ErrorGroup response = await errorGroupServiceClient.UpdateGroupAsync(group);
+            ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(groupName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGroup</summary>
+        public void GetGroup_ResourceNames()
+        {
+            // Snippet: GetGroup(ErrorGroupName, CallSettings)
+            // Create client
+            ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
+            // Initialize request argument(s)
+            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
+            // Make the request
+            ErrorGroup response = errorGroupServiceClient.GetGroup(groupName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGroupAsync</summary>
+        public async Task GetGroupAsync_ResourceNames()
+        {
+            // Snippet: GetGroupAsync(ErrorGroupName, CallSettings)
+            // Additional: GetGroupAsync(ErrorGroupName, CancellationToken)
+            // Create client
+            ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
+            // Make the request
+            ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(groupName);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateGroup</summary>
-        public void UpdateGroup()
+        public void UpdateGroup_RequestObject()
         {
-            // Snippet: UpdateGroup(ErrorGroup,CallSettings)
+            // Snippet: UpdateGroup(UpdateGroupRequest, CallSettings)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            ErrorGroup group = new ErrorGroup();
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                Group = new ErrorGroup(),
+            };
             // Make the request
-            ErrorGroup response = errorGroupServiceClient.UpdateGroup(group);
+            ErrorGroup response = errorGroupServiceClient.UpdateGroup(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateGroupAsync</summary>
         public async Task UpdateGroupAsync_RequestObject()
         {
-            // Snippet: UpdateGroupAsync(UpdateGroupRequest,CallSettings)
-            // Additional: UpdateGroupAsync(UpdateGroupRequest,CancellationToken)
+            // Snippet: UpdateGroupAsync(UpdateGroupRequest, CallSettings)
+            // Additional: UpdateGroupAsync(UpdateGroupRequest, CancellationToken)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -138,20 +142,30 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateGroup</summary>
-        public void UpdateGroup_RequestObject()
+        public void UpdateGroup()
         {
-            // Snippet: UpdateGroup(UpdateGroupRequest,CallSettings)
+            // Snippet: UpdateGroup(ErrorGroup, CallSettings)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            UpdateGroupRequest request = new UpdateGroupRequest
-            {
-                Group = new ErrorGroup(),
-            };
+            ErrorGroup group = new ErrorGroup();
             // Make the request
-            ErrorGroup response = errorGroupServiceClient.UpdateGroup(request);
+            ErrorGroup response = errorGroupServiceClient.UpdateGroup(group);
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroupAsync</summary>
+        public async Task UpdateGroupAsync()
+        {
+            // Snippet: UpdateGroupAsync(ErrorGroup, CallSettings)
+            // Additional: UpdateGroupAsync(ErrorGroup, CancellationToken)
+            // Create client
+            ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ErrorGroup group = new ErrorGroup();
+            // Make the request
+            ErrorGroup response = await errorGroupServiceClient.UpdateGroupAsync(group);
+            // End snippet
+        }
     }
 }

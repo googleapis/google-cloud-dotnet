@@ -3,7 +3,7 @@
 //     source: google/devtools/clouderrorreporting/v1beta1/error_stats_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2016 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code

@@ -14,196 +14,266 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.ErrorReporting.V1Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedErrorGroupServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedErrorGroupServiceClientTest
     {
-        [Fact]
-        public void GetGroup()
+        [xunit::FactAttribute]
+        public void GetGroupRequestObject()
         {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
-            GetGroupRequest expectedRequest = new GetGroupRequest
-            {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-            };
-            ErrorGroup expectedResponse = new ErrorGroup
-            {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
-            };
-            mockGrpcClient.Setup(x => x.GetGroup(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
-            ErrorGroup response = client.GetGroup(groupName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetGroupAsync()
-        {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
-            GetGroupRequest expectedRequest = new GetGroupRequest
-            {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-            };
-            ErrorGroup expectedResponse = new ErrorGroup
-            {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
-            };
-            mockGrpcClient.Setup(x => x.GetGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ErrorGroup>(Task.FromResult(expectedResponse), null, null, null, null));
-            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName groupName = new GroupName("[PROJECT]", "[GROUP]");
-            ErrorGroup response = await client.GetGroupAsync(groupName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetGroup2()
-        {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetGroup(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
             ErrorGroup response = client.GetGroup(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetGroupAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetGroupRequestObjectAsync()
         {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetGroupAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ErrorGroup>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            ErrorGroup response = await client.GetGroupAsync(request);
-            Assert.Same(expectedResponse, response);
+            ErrorGroup responseCallSettings = await client.GetGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ErrorGroup responseCancellationToken = await client.GetGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateGroup()
+        [xunit::FactAttribute]
+        public void GetGroup()
         {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
-            UpdateGroupRequest expectedRequest = new UpdateGroupRequest
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
             {
-                Group = new ErrorGroup(),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateGroup(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            ErrorGroup group = new ErrorGroup();
-            ErrorGroup response = client.UpdateGroup(group);
-            Assert.Same(expectedResponse, response);
+            ErrorGroup response = client.GetGroup(request.GroupName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateGroupAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetGroupAsync()
         {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
-            UpdateGroupRequest expectedRequest = new UpdateGroupRequest
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
             {
-                Group = new ErrorGroup(),
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ErrorGroup>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            ErrorGroup group = new ErrorGroup();
-            ErrorGroup response = await client.UpdateGroupAsync(group);
-            Assert.Same(expectedResponse, response);
+            ErrorGroup responseCallSettings = await client.GetGroupAsync(request.GroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ErrorGroup responseCancellationToken = await client.GetGroupAsync(request.GroupName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateGroup2()
+        [xunit::FactAttribute]
+        public void GetGroup_ResourceNames()
         {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+            };
+            ErrorGroup expectedResponse = new ErrorGroup
+            {
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroup response = client.GetGroup(request.GroupNameAsErrorGroupName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGroupAsync_ResourceNames()
+        {
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+            };
+            ErrorGroup expectedResponse = new ErrorGroup
+            {
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroup responseCallSettings = await client.GetGroupAsync(request.GroupNameAsErrorGroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ErrorGroup responseCancellationToken = await client.GetGroupAsync(request.GroupNameAsErrorGroupName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateGroupRequestObject()
+        {
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
                 Group = new ErrorGroup(),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateGroup(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
             ErrorGroup response = client.UpdateGroup(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateGroupAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGroupRequestObjectAsync()
         {
-            Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new Mock<ErrorGroupService.ErrorGroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
                 Group = new ErrorGroup(),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                GroupId = "groupId506361563",
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ErrorGroup>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
-            ErrorGroup response = await client.UpdateGroupAsync(request);
-            Assert.Same(expectedResponse, response);
+            ErrorGroup responseCallSettings = await client.UpdateGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ErrorGroup responseCancellationToken = await client.UpdateGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void UpdateGroup()
+        {
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                Group = new ErrorGroup(),
+            };
+            ErrorGroup expectedResponse = new ErrorGroup
+            {
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroup response = client.UpdateGroup(request.Group);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGroupAsync()
+        {
+            moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                Group = new ErrorGroup(),
+            };
+            ErrorGroup expectedResponse = new ErrorGroup
+            {
+                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupId = "group_id4f9a930e",
+                TrackingIssues =
+                {
+                    new TrackingIssue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
+            ErrorGroup responseCallSettings = await client.UpdateGroupAsync(request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ErrorGroup responseCancellationToken = await client.UpdateGroupAsync(request.Group, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
