@@ -17,35 +17,90 @@
 namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.ErrorReporting.V1Beta1;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedErrorStatsServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedErrorStatsServiceClientSnippets
     {
-        /// <summary>Snippet for ListGroupStatsAsync</summary>
-        public async Task ListGroupStatsAsync()
+        /// <summary>Snippet for ListGroupStats</summary>
+        public void ListGroupStats_RequestObject()
         {
-            // Snippet: ListGroupStatsAsync(ProjectName,QueryTimeRange,string,int?,CallSettings)
+            // Snippet: ListGroupStats(ListGroupStatsRequest, CallSettings)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
+            // Initialize request argument(s)
+            ListGroupStatsRequest request = new ListGroupStatsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                GroupId = { "", },
+                ServiceFilter = new ServiceContextFilter(),
+                TimeRange = new QueryTimeRange(),
+                TimedCountDuration = new Duration(),
+                Alignment = TimedCountAlignment.ErrorCountAlignmentUnspecified,
+                AlignmentTime = new Timestamp(),
+                Order = ErrorGroupOrder.GroupOrderUnspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStats(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ErrorGroupStats item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGroupStatsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ErrorGroupStats item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorGroupStats> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorGroupStats item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGroupStats</summary>
+        public async Task ListGroupStatsAsync_RequestObject()
+        {
+            // Snippet: ListGroupStatsAsync(ListGroupStatsRequest, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
-            QueryTimeRange timeRange = new QueryTimeRange();
+            ListGroupStatsRequest request = new ListGroupStatsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                GroupId = { "", },
+                ServiceFilter = new ServiceContextFilter(),
+                TimeRange = new QueryTimeRange(),
+                TimedCountDuration = new Duration(),
+                Alignment = TimedCountAlignment.ErrorCountAlignmentUnspecified,
+                AlignmentTime = new Timestamp(),
+                Order = ErrorGroupOrder.GroupOrderUnspecified,
+            };
             // Make the request
-            PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
-                errorStatsServiceClient.ListGroupStatsAsync(projectName, timeRange);
+            PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStatsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ErrorGroupStats item) =>
@@ -61,6 +116,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (ErrorGroupStats item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -72,6 +128,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ErrorGroupStats item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -82,15 +139,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         /// <summary>Snippet for ListGroupStats</summary>
         public void ListGroupStats()
         {
-            // Snippet: ListGroupStats(ProjectName,QueryTimeRange,string,int?,CallSettings)
+            // Snippet: ListGroupStats(string, QueryTimeRange, string, int?, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            string projectName = "projects/[PROJECT]";
             QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
-                errorStatsServiceClient.ListGroupStats(projectName, timeRange);
+            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStats(projectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ErrorGroupStats item in response)
@@ -106,6 +162,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (ErrorGroupStats item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -117,6 +174,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ErrorGroupStats item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -124,21 +182,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupStatsAsync</summary>
-        public async Task ListGroupStatsAsync_RequestObject()
+        /// <summary>Snippet for ListGroupStats</summary>
+        public async Task ListGroupStatsAsync()
         {
-            // Snippet: ListGroupStatsAsync(ListGroupStatsRequest,CallSettings)
+            // Snippet: ListGroupStatsAsync(string, QueryTimeRange, string, int?, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListGroupStatsRequest request = new ListGroupStatsRequest
-            {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
-                TimeRange = new QueryTimeRange(),
-            };
+            string projectName = "projects/[PROJECT]";
+            QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
-                errorStatsServiceClient.ListGroupStatsAsync(request);
+            PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStatsAsync(projectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ErrorGroupStats item) =>
@@ -154,6 +208,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (ErrorGroupStats item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -165,6 +220,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ErrorGroupStats item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -173,20 +229,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListGroupStats</summary>
-        public void ListGroupStats_RequestObject()
+        public void ListGroupStats_ResourceNames()
         {
-            // Snippet: ListGroupStats(ListGroupStatsRequest,CallSettings)
+            // Snippet: ListGroupStats(ProjectName, QueryTimeRange, string, int?, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            ListGroupStatsRequest request = new ListGroupStatsRequest
-            {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
-                TimeRange = new QueryTimeRange(),
-            };
+            ProjectName projectName = new ProjectName("[PROJECT]");
+            QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
-                errorStatsServiceClient.ListGroupStats(request);
+            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStats(projectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ErrorGroupStats item in response)
@@ -202,6 +254,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (ErrorGroupStats item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -213,6 +266,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ErrorGroupStats item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -220,137 +274,45 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEventsAsync</summary>
-        public async Task ListEventsAsync()
+        /// <summary>Snippet for ListGroupStats</summary>
+        public async Task ListGroupStatsAsync_ResourceNames()
         {
-            // Snippet: ListEventsAsync(ProjectName,string,string,int?,CallSettings)
+            // Snippet: ListGroupStatsAsync(ProjectName, QueryTimeRange, string, int?, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName projectName = new ProjectName("[PROJECT]");
-            string groupId = "";
+            QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response =
-                errorStatsServiceClient.ListEventsAsync(projectName, groupId);
+            PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStatsAsync(projectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ErrorEvent item) =>
+            await response.ForEachAsync((ErrorGroupStats item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEventsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((ListGroupStatsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ErrorEvent item in page)
+                foreach (ErrorGroupStats item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ErrorEvent> singlePage = await response.ReadPageAsync(pageSize);
+            Page<ErrorGroupStats> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ErrorEvent item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListEvents</summary>
-        public void ListEvents()
-        {
-            // Snippet: ListEvents(ProjectName,string,string,int?,CallSettings)
-            // Create client
-            ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
-            string groupId = "";
-            // Make the request
-            PagedEnumerable<ListEventsResponse, ErrorEvent> response =
-                errorStatsServiceClient.ListEvents(projectName, groupId);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (ErrorEvent item in response)
+            foreach (ErrorGroupStats item in singlePage)
             {
                 // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEventsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (ErrorEvent item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<ErrorEvent> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ErrorEvent item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListEventsAsync</summary>
-        public async Task ListEventsAsync_RequestObject()
-        {
-            // Snippet: ListEventsAsync(ListEventsRequest,CallSettings)
-            // Create client
-            ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListEventsRequest request = new ListEventsRequest
-            {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
-                GroupId = "",
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response =
-                errorStatsServiceClient.ListEventsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ErrorEvent item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEventsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (ErrorEvent item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<ErrorEvent> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ErrorEvent item in singlePage)
-            {
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -361,7 +323,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         /// <summary>Snippet for ListEvents</summary>
         public void ListEvents_RequestObject()
         {
-            // Snippet: ListEvents(ListEventsRequest,CallSettings)
+            // Snippet: ListEvents(ListEventsRequest, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
@@ -369,10 +331,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             {
                 ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
                 GroupId = "",
+                ServiceFilter = new ServiceContextFilter(),
+                TimeRange = new QueryTimeRange(),
             };
             // Make the request
-            PagedEnumerable<ListEventsResponse, ErrorEvent> response =
-                errorStatsServiceClient.ListEvents(request);
+            PagedEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEvents(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ErrorEvent item in response)
@@ -388,6 +351,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (ErrorEvent item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -399,6 +363,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ErrorEvent item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -406,38 +371,262 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteEventsAsync</summary>
-        public async Task DeleteEventsAsync()
+        /// <summary>Snippet for ListEvents</summary>
+        public async Task ListEventsAsync_RequestObject()
         {
-            // Snippet: DeleteEventsAsync(ProjectName,CallSettings)
-            // Additional: DeleteEventsAsync(ProjectName,CancellationToken)
+            // Snippet: ListEventsAsync(ListEventsRequest, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ListEventsRequest request = new ListEventsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                GroupId = "",
+                ServiceFilter = new ServiceContextFilter(),
+                TimeRange = new QueryTimeRange(),
+            };
             // Make the request
-            DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(projectName);
+            PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEventsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ErrorEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ErrorEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteEvents</summary>
-        public void DeleteEvents()
+        /// <summary>Snippet for ListEvents</summary>
+        public void ListEvents()
         {
-            // Snippet: DeleteEvents(ProjectName,CallSettings)
+            // Snippet: ListEvents(string, string, string, int?, CallSettings)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
+            // Initialize request argument(s)
+            string projectName = "projects/[PROJECT]";
+            string groupId = "";
+            // Make the request
+            PagedEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEvents(projectName, groupId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ErrorEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ErrorEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvents</summary>
+        public async Task ListEventsAsync()
+        {
+            // Snippet: ListEventsAsync(string, string, string, int?, CallSettings)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectName = "projects/[PROJECT]";
+            string groupId = "";
+            // Make the request
+            PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEventsAsync(projectName, groupId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ErrorEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ErrorEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvents</summary>
+        public void ListEvents_ResourceNames()
+        {
+            // Snippet: ListEvents(ProjectName, string, string, int?, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
             ProjectName projectName = new ProjectName("[PROJECT]");
+            string groupId = "";
             // Make the request
-            DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(projectName);
+            PagedEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEvents(projectName, groupId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ErrorEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ErrorEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvents</summary>
+        public async Task ListEventsAsync_ResourceNames()
+        {
+            // Snippet: ListEventsAsync(ProjectName, string, string, int?, CallSettings)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName projectName = new ProjectName("[PROJECT]");
+            string groupId = "";
+            // Make the request
+            PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEventsAsync(projectName, groupId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ErrorEvent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEventsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ErrorEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEvents</summary>
+        public void DeleteEvents_RequestObject()
+        {
+            // Snippet: DeleteEvents(DeleteEventsRequest, CallSettings)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteEventsRequest request = new DeleteEventsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteEventsAsync</summary>
         public async Task DeleteEventsAsync_RequestObject()
         {
-            // Snippet: DeleteEventsAsync(DeleteEventsRequest,CallSettings)
-            // Additional: DeleteEventsAsync(DeleteEventsRequest,CancellationToken)
+            // Snippet: DeleteEventsAsync(DeleteEventsRequest, CallSettings)
+            // Additional: DeleteEventsAsync(DeleteEventsRequest, CancellationToken)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -451,20 +640,57 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteEvents</summary>
-        public void DeleteEvents_RequestObject()
+        public void DeleteEvents()
         {
-            // Snippet: DeleteEvents(DeleteEventsRequest,CallSettings)
+            // Snippet: DeleteEvents(string, CallSettings)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            DeleteEventsRequest request = new DeleteEventsRequest
-            {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
-            };
+            string projectName = "projects/[PROJECT]";
             // Make the request
-            DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(request);
+            DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(projectName);
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteEventsAsync</summary>
+        public async Task DeleteEventsAsync()
+        {
+            // Snippet: DeleteEventsAsync(string, CallSettings)
+            // Additional: DeleteEventsAsync(string, CancellationToken)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectName = "projects/[PROJECT]";
+            // Make the request
+            DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(projectName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEvents</summary>
+        public void DeleteEvents_ResourceNames()
+        {
+            // Snippet: DeleteEvents(ProjectName, CallSettings)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName projectName = new ProjectName("[PROJECT]");
+            // Make the request
+            DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(projectName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEventsAsync</summary>
+        public async Task DeleteEventsAsync_ResourceNames()
+        {
+            // Snippet: DeleteEventsAsync(ProjectName, CallSettings)
+            // Additional: DeleteEventsAsync(ProjectName, CancellationToken)
+            // Create client
+            ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName projectName = new ProjectName("[PROJECT]");
+            // Make the request
+            DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(projectName);
+            // End snippet
+        }
     }
 }

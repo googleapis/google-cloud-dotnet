@@ -14,101 +14,125 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.ErrorReporting.V1Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedReportErrorsServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedReportErrorsServiceClientTest
     {
-        [Fact]
-        public void ReportErrorEvent()
+        [xunit::FactAttribute]
+        public void ReportErrorEventRequestObject()
         {
-            Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new Mock<ReportErrorsService.ReportErrorsServiceClient>(MockBehavior.Strict);
-            ReportErrorEventRequest expectedRequest = new ReportErrorEventRequest
-            {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
-            };
-            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse();
-            mockGrpcClient.Setup(x => x.ReportErrorEvent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName projectName = new ProjectName("[PROJECT]");
-            ReportedErrorEvent @event = new ReportedErrorEvent();
-            ReportErrorEventResponse response = client.ReportErrorEvent(projectName, @event);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ReportErrorEventAsync()
-        {
-            Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new Mock<ReportErrorsService.ReportErrorsServiceClient>(MockBehavior.Strict);
-            ReportErrorEventRequest expectedRequest = new ReportErrorEventRequest
-            {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
-            };
-            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse();
-            mockGrpcClient.Setup(x => x.ReportErrorEventAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReportErrorEventResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName projectName = new ProjectName("[PROJECT]");
-            ReportedErrorEvent @event = new ReportedErrorEvent();
-            ReportErrorEventResponse response = await client.ReportErrorEventAsync(projectName, @event);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void ReportErrorEvent2()
-        {
-            Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new Mock<ReportErrorsService.ReportErrorsServiceClient>(MockBehavior.Strict);
+            moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
-            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse();
-            mockGrpcClient.Setup(x => x.ReportErrorEvent(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
+            mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
             ReportErrorEventResponse response = client.ReportErrorEvent(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ReportErrorEventAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ReportErrorEventRequestObjectAsync()
         {
-            Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new Mock<ReportErrorsService.ReportErrorsServiceClient>(MockBehavior.Strict);
+            moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
-            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse();
-            mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReportErrorEventResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
+            mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
-            ReportErrorEventResponse response = await client.ReportErrorEventAsync(request);
-            Assert.Same(expectedResponse, response);
+            ReportErrorEventResponse responseCallSettings = await client.ReportErrorEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReportErrorEventResponse responseCancellationToken = await client.ReportErrorEventAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void ReportErrorEvent()
+        {
+            moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
+            ReportErrorEventRequest request = new ReportErrorEventRequest
+            {
+                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Event = new ReportedErrorEvent(),
+            };
+            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
+            mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorEventResponse response = client.ReportErrorEvent(request.ProjectName, request.Event);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReportErrorEventAsync()
+        {
+            moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
+            ReportErrorEventRequest request = new ReportErrorEventRequest
+            {
+                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Event = new ReportedErrorEvent(),
+            };
+            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
+            mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorEventResponse responseCallSettings = await client.ReportErrorEventAsync(request.ProjectName, request.Event, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReportErrorEventResponse responseCancellationToken = await client.ReportErrorEventAsync(request.ProjectName, request.Event, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReportErrorEvent_ResourceNames()
+        {
+            moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
+            ReportErrorEventRequest request = new ReportErrorEventRequest
+            {
+                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Event = new ReportedErrorEvent(),
+            };
+            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
+            mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorEventResponse response = client.ReportErrorEvent(request.ProjectNameAsProjectName, request.Event);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReportErrorEventAsync_ResourceNames()
+        {
+            moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
+            ReportErrorEventRequest request = new ReportErrorEventRequest
+            {
+                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                Event = new ReportedErrorEvent(),
+            };
+            ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
+            mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ReportErrorsServiceClient client = new ReportErrorsServiceClientImpl(mockGrpcClient.Object, null);
+            ReportErrorEventResponse responseCallSettings = await client.ReportErrorEventAsync(request.ProjectNameAsProjectName, request.Event, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReportErrorEventResponse responseCancellationToken = await client.ReportErrorEventAsync(request.ProjectNameAsProjectName, request.Event, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

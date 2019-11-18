@@ -16,58 +16,34 @@
 
 namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.ErrorReporting.V1Beta1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedReportErrorsServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedReportErrorsServiceClientSnippets
     {
-        /// <summary>Snippet for ReportErrorEventAsync</summary>
-        public async Task ReportErrorEventAsync()
-        {
-            // Snippet: ReportErrorEventAsync(ProjectName,ReportedErrorEvent,CallSettings)
-            // Additional: ReportErrorEventAsync(ProjectName,ReportedErrorEvent,CancellationToken)
-            // Create client
-            ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
-            ReportedErrorEvent @event = new ReportedErrorEvent();
-            // Make the request
-            ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(projectName, @event);
-            // End snippet
-        }
-
         /// <summary>Snippet for ReportErrorEvent</summary>
-        public void ReportErrorEvent()
+        public void ReportErrorEvent_RequestObject()
         {
-            // Snippet: ReportErrorEvent(ProjectName,ReportedErrorEvent,CallSettings)
+            // Snippet: ReportErrorEvent(ReportErrorEventRequest, CallSettings)
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
-            ReportedErrorEvent @event = new ReportedErrorEvent();
+            ReportErrorEventRequest request = new ReportErrorEventRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                Event = new ReportedErrorEvent(),
+            };
             // Make the request
-            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(projectName, @event);
+            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(request);
             // End snippet
         }
 
         /// <summary>Snippet for ReportErrorEventAsync</summary>
         public async Task ReportErrorEventAsync_RequestObject()
         {
-            // Snippet: ReportErrorEventAsync(ReportErrorEventRequest,CallSettings)
-            // Additional: ReportErrorEventAsync(ReportErrorEventRequest,CancellationToken)
+            // Snippet: ReportErrorEventAsync(ReportErrorEventRequest, CallSettings)
+            // Additional: ReportErrorEventAsync(ReportErrorEventRequest, CancellationToken)
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -82,21 +58,61 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportErrorEvent</summary>
-        public void ReportErrorEvent_RequestObject()
+        public void ReportErrorEvent()
         {
-            // Snippet: ReportErrorEvent(ReportErrorEventRequest,CallSettings)
+            // Snippet: ReportErrorEvent(string, ReportedErrorEvent, CallSettings)
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
-            ReportErrorEventRequest request = new ReportErrorEventRequest
-            {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
-            };
+            string projectName = "projects/[PROJECT]";
+            ReportedErrorEvent event = new ReportedErrorEvent();
             // Make the request
-            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(request);
+            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(projectName, event);
             // End snippet
         }
 
+        /// <summary>Snippet for ReportErrorEventAsync</summary>
+        public async Task ReportErrorEventAsync()
+        {
+            // Snippet: ReportErrorEventAsync(string, ReportedErrorEvent, CallSettings)
+            // Additional: ReportErrorEventAsync(string, ReportedErrorEvent, CancellationToken)
+            // Create client
+            ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectName = "projects/[PROJECT]";
+            ReportedErrorEvent event = new ReportedErrorEvent();
+            // Make the request
+            ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(projectName, event);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportErrorEvent</summary>
+        public void ReportErrorEvent_ResourceNames()
+        {
+            // Snippet: ReportErrorEvent(ProjectName, ReportedErrorEvent, CallSettings)
+            // Create client
+            ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName projectName = new ProjectName("[PROJECT]");
+            ReportedErrorEvent event = new ReportedErrorEvent();
+            // Make the request
+            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(projectName, event);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportErrorEventAsync</summary>
+        public async Task ReportErrorEventAsync_ResourceNames()
+        {
+            // Snippet: ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CallSettings)
+            // Additional: ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CancellationToken)
+            // Create client
+            ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName projectName = new ProjectName("[PROJECT]");
+            ReportedErrorEvent event = new ReportedErrorEvent();
+            // Make the request
+            ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(projectName, event);
+            // End snippet
+        }
     }
 }
