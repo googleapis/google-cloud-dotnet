@@ -14,149 +14,206 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Trace.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.Trace.V2;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedTraceServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedTraceServiceClientTest
     {
-        [Fact]
-        public void BatchWriteSpans()
+        [xunit::FactAttribute]
+        public void BatchWriteSpansRequestObject()
         {
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
-            BatchWriteSpansRequest expectedRequest = new BatchWriteSpansRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Spans = { },
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.BatchWriteSpans(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<apis::Span> spans = new List<apis::Span>();
-            client.BatchWriteSpans(name, spans);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task BatchWriteSpansAsync()
-        {
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
-            BatchWriteSpansRequest expectedRequest = new BatchWriteSpansRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Spans = { },
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<apis::Span> spans = new List<apis::Span>();
-            await client.BatchWriteSpansAsync(name, spans);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void BatchWriteSpans2()
-        {
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Spans = { },
+                ProjectName = new gagr::ProjectName("[PROJECT]"),
+                Spans = { new Span(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.BatchWriteSpans(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
             client.BatchWriteSpans(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task BatchWriteSpansAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task BatchWriteSpansRequestObjectAsync()
         {
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Spans = { },
+                ProjectName = new gagr::ProjectName("[PROJECT]"),
+                Spans = { new Span(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
-            await client.BatchWriteSpansAsync(request);
+            await client.BatchWriteSpansAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.BatchWriteSpansAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateSpan()
+        [xunit::FactAttribute]
+        public void BatchWriteSpans()
         {
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
-            apis::Span request = new apis::Span
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
+            BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
-                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
-                SpanId = "spanId-2011840976",
-                DisplayName = new TruncatableString(),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                ProjectName = new gagr::ProjectName("[PROJECT]"),
+                Spans = { new Span(), },
             };
-            apis::Span expectedResponse = new apis::Span
-            {
-                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
-                SpanId = "spanId2-643891741",
-                ParentSpanId = "parentSpanId-1757797477",
-            };
-            mockGrpcClient.Setup(x => x.CreateSpan(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
-            apis::Span response = client.CreateSpan(request);
-            Assert.Same(expectedResponse, response);
+            client.BatchWriteSpans(request.Name, request.Spans);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateSpanAsync()
+        [xunit::FactAttribute]
+        public async stt::Task BatchWriteSpansAsync()
         {
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
-            apis::Span request = new apis::Span
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
+            BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
-                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
-                SpanId = "spanId-2011840976",
-                DisplayName = new TruncatableString(),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                ProjectName = new gagr::ProjectName("[PROJECT]"),
+                Spans = { new Span(), },
             };
-            apis::Span expectedResponse = new apis::Span
-            {
-                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
-                SpanId = "spanId2-643891741",
-                ParentSpanId = "parentSpanId-1757797477",
-            };
-            mockGrpcClient.Setup(x => x.CreateSpanAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Span>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
-            apis::Span response = await client.CreateSpanAsync(request);
-            Assert.Same(expectedResponse, response);
+            await client.BatchWriteSpansAsync(request.Name, request.Spans, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.BatchWriteSpansAsync(request.Name, request.Spans, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void BatchWriteSpans_ResourceNames()
+        {
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
+            BatchWriteSpansRequest request = new BatchWriteSpansRequest
+            {
+                ProjectName = new gagr::ProjectName("[PROJECT]"),
+                Spans = { new Span(), },
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            client.BatchWriteSpans(request.ProjectName, request.Spans);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchWriteSpansAsync_ResourceNames()
+        {
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
+            BatchWriteSpansRequest request = new BatchWriteSpansRequest
+            {
+                ProjectName = new gagr::ProjectName("[PROJECT]"),
+                Spans = { new Span(), },
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            await client.BatchWriteSpansAsync(request.ProjectName, request.Spans, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.BatchWriteSpansAsync(request.ProjectName, request.Spans, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateSpanRequestObject()
+        {
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
+            Span request = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "span_id47c232d3",
+                ParentSpanId = "parent_span_ide637f6a2",
+                DisplayName = new TruncatableString(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                Attributes = new Span.Types.Attributes(),
+                StackTrace = new StackTrace(),
+                TimeEvents = new Span.Types.TimeEvents(),
+                Links = new Span.Types.Links(),
+                Status = new gr::Status(),
+                SameProcessAsParentSpan = new bool?(),
+                ChildSpanCount = new int?(),
+            };
+            Span expectedResponse = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "span_id47c232d3",
+                ParentSpanId = "parent_span_ide637f6a2",
+                DisplayName = new TruncatableString(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                Attributes = new Span.Types.Attributes(),
+                StackTrace = new StackTrace(),
+                TimeEvents = new Span.Types.TimeEvents(),
+                Links = new Span.Types.Links(),
+                Status = new gr::Status(),
+                SameProcessAsParentSpan = new bool?(),
+                ChildSpanCount = new int?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateSpan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            Span response = client.CreateSpan(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateSpanRequestObjectAsync()
+        {
+            moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
+            Span request = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "span_id47c232d3",
+                ParentSpanId = "parent_span_ide637f6a2",
+                DisplayName = new TruncatableString(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                Attributes = new Span.Types.Attributes(),
+                StackTrace = new StackTrace(),
+                TimeEvents = new Span.Types.TimeEvents(),
+                Links = new Span.Types.Links(),
+                Status = new gr::Status(),
+                SameProcessAsParentSpan = new bool?(),
+                ChildSpanCount = new int?(),
+            };
+            Span expectedResponse = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "span_id47c232d3",
+                ParentSpanId = "parent_span_ide637f6a2",
+                DisplayName = new TruncatableString(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                Attributes = new Span.Types.Attributes(),
+                StackTrace = new StackTrace(),
+                TimeEvents = new Span.Types.TimeEvents(),
+                Links = new Span.Types.Links(),
+                Status = new gr::Status(),
+                SameProcessAsParentSpan = new bool?(),
+                ChildSpanCount = new int?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateSpanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Span>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            Span responseCallSettings = await client.CreateSpanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Span responseCancellationToken = await client.CreateSpanAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
