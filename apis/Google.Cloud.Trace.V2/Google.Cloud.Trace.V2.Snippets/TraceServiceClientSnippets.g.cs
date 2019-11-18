@@ -16,65 +16,44 @@
 
 namespace Google.Cloud.Trace.V2.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.Trace.V2;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
+    using Google.Rpc;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedTraceServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedTraceServiceClientSnippets
     {
-        /// <summary>Snippet for BatchWriteSpansAsync</summary>
-        public async Task BatchWriteSpansAsync()
-        {
-            // Snippet: BatchWriteSpansAsync(ProjectName,IEnumerable<apis::Span>,CallSettings)
-            // Additional: BatchWriteSpansAsync(ProjectName,IEnumerable<apis::Span>,CancellationToken)
-            // Create client
-            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<apis::Span> spans = new List<apis::Span>();
-            // Make the request
-            await traceServiceClient.BatchWriteSpansAsync(name, spans);
-            // End snippet
-        }
-
         /// <summary>Snippet for BatchWriteSpans</summary>
-        public void BatchWriteSpans()
+        public void BatchWriteSpans_RequestObject()
         {
-            // Snippet: BatchWriteSpans(ProjectName,IEnumerable<apis::Span>,CallSettings)
+            // Snippet: BatchWriteSpans(BatchWriteSpansRequest, CallSettings)
             // Create client
             TraceServiceClient traceServiceClient = TraceServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<apis::Span> spans = new List<apis::Span>();
+            BatchWriteSpansRequest request = new BatchWriteSpansRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                Spans = { new Span(), },
+            };
             // Make the request
-            traceServiceClient.BatchWriteSpans(name, spans);
+            traceServiceClient.BatchWriteSpans(request);
             // End snippet
         }
 
         /// <summary>Snippet for BatchWriteSpansAsync</summary>
         public async Task BatchWriteSpansAsync_RequestObject()
         {
-            // Snippet: BatchWriteSpansAsync(BatchWriteSpansRequest,CallSettings)
-            // Additional: BatchWriteSpansAsync(BatchWriteSpansRequest,CancellationToken)
+            // Snippet: BatchWriteSpansAsync(BatchWriteSpansRequest, CallSettings)
+            // Additional: BatchWriteSpansAsync(BatchWriteSpansRequest, CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
                 ProjectName = new ProjectName("[PROJECT]"),
-                Spans = { },
+                Spans = { new Span(), },
             };
             // Make the request
             await traceServiceClient.BatchWriteSpansAsync(request);
@@ -82,62 +61,118 @@ namespace Google.Cloud.Trace.V2.Snippets
         }
 
         /// <summary>Snippet for BatchWriteSpans</summary>
-        public void BatchWriteSpans_RequestObject()
+        public void BatchWriteSpans()
         {
-            // Snippet: BatchWriteSpans(BatchWriteSpansRequest,CallSettings)
+            // Snippet: BatchWriteSpans(string, IEnumerable<Span>, CallSettings)
             // Create client
             TraceServiceClient traceServiceClient = TraceServiceClient.Create();
             // Initialize request argument(s)
-            BatchWriteSpansRequest request = new BatchWriteSpansRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Spans = { },
-            };
+            string name = "projects/[PROJECT]";
+            IEnumerable<Span> spans = new Span[] { new Span(), };
             // Make the request
-            traceServiceClient.BatchWriteSpans(request);
+            traceServiceClient.BatchWriteSpans(name, spans);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateSpanAsync</summary>
-        public async Task CreateSpanAsync_RequestObject()
+        /// <summary>Snippet for BatchWriteSpansAsync</summary>
+        public async Task BatchWriteSpansAsync()
         {
-            // Snippet: CreateSpanAsync(apis::Span,CallSettings)
-            // Additional: CreateSpanAsync(apis::Span,CancellationToken)
+            // Snippet: BatchWriteSpansAsync(string, IEnumerable<Span>, CallSettings)
+            // Additional: BatchWriteSpansAsync(string, IEnumerable<Span>, CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            apis::Span request = new apis::Span
-            {
-                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
-                SpanId = "",
-                DisplayName = new TruncatableString(),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
-            };
+            string name = "projects/[PROJECT]";
+            IEnumerable<Span> spans = new Span[] { new Span(), };
             // Make the request
-            apis::Span response = await traceServiceClient.CreateSpanAsync(request);
+            await traceServiceClient.BatchWriteSpansAsync(name, spans);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWriteSpans</summary>
+        public void BatchWriteSpans_ResourceNames()
+        {
+            // Snippet: BatchWriteSpans(ProjectName, IEnumerable<Span>, CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName name = new ProjectName("[PROJECT]");
+            IEnumerable<Span> spans = new Span[] { new Span(), };
+            // Make the request
+            traceServiceClient.BatchWriteSpans(name, spans);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWriteSpansAsync</summary>
+        public async Task BatchWriteSpansAsync_ResourceNames()
+        {
+            // Snippet: BatchWriteSpansAsync(ProjectName, IEnumerable<Span>, CallSettings)
+            // Additional: BatchWriteSpansAsync(ProjectName, IEnumerable<Span>, CancellationToken)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName name = new ProjectName("[PROJECT]");
+            IEnumerable<Span> spans = new Span[] { new Span(), };
+            // Make the request
+            await traceServiceClient.BatchWriteSpansAsync(name, spans);
             // End snippet
         }
 
         /// <summary>Snippet for CreateSpan</summary>
         public void CreateSpan_RequestObject()
         {
-            // Snippet: CreateSpan(apis::Span,CallSettings)
+            // Snippet: CreateSpan(Span, CallSettings)
             // Create client
             TraceServiceClient traceServiceClient = TraceServiceClient.Create();
             // Initialize request argument(s)
-            apis::Span request = new apis::Span
+            Span request = new Span
             {
                 SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "",
+                ParentSpanId = "",
                 DisplayName = new TruncatableString(),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
+                Attributes = new Span.Types.Attributes(),
+                StackTrace = new StackTrace(),
+                TimeEvents = new Span.Types.TimeEvents(),
+                Links = new Span.Types.Links(),
+                Status = new Status(),
+                SameProcessAsParentSpan = new bool?(),
+                ChildSpanCount = new int?(),
             };
             // Make the request
-            apis::Span response = traceServiceClient.CreateSpan(request);
+            Span response = traceServiceClient.CreateSpan(request);
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSpanAsync</summary>
+        public async Task CreateSpanAsync_RequestObject()
+        {
+            // Snippet: CreateSpanAsync(Span, CallSettings)
+            // Additional: CreateSpanAsync(Span, CancellationToken)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Span request = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "",
+                ParentSpanId = "",
+                DisplayName = new TruncatableString(),
+                StartTime = new Timestamp(),
+                EndTime = new Timestamp(),
+                Attributes = new Span.Types.Attributes(),
+                StackTrace = new StackTrace(),
+                TimeEvents = new Span.Types.TimeEvents(),
+                Links = new Span.Types.Links(),
+                Status = new Status(),
+                SameProcessAsParentSpan = new bool?(),
+                ChildSpanCount = new int?(),
+            };
+            // Make the request
+            Span response = await traceServiceClient.CreateSpanAsync(request);
+            // End snippet
+        }
     }
 }
