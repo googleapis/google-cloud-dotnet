@@ -350,9 +350,8 @@
 
   {
     "id": "Google.Cloud.ErrorReporting.V1Beta1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/devtools/clouderrorreporting/v1beta1",
-    "serviceYaml": "errorreporting.yaml",
     "productName": "Stackdriver Error Reporting",
     "productUrl": "https://cloud.google.com/error-reporting/",
     "version": "1.0.0-beta09",
