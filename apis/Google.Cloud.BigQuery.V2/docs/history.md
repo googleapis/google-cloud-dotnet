@@ -1,9 +1,12 @@
 # Version history
 
-# 1.4.0-beta06, 2019-11-13
+# 1.4.0-beta07, 2019-11-19
 
 Changes since 1.3.0:
 
+- Add TemplateSuffix, SkipInvalidRows and SuppressInsertErrors to InsertOptions.
+- Add DefaultPartitionExpiration and DefaultEncryptionConfiguration to CreateDatasetOptions.
+- Add table CreationTime, ExpirationTime and Clustering info to ListTables output.
 - Loosen the restriction on JobConfigurationQuery.DestinationTable not being null.
 - Provide option for using Avro logical types for load/extract.
 - Adds creation time filtering to BigQuery job listing.
