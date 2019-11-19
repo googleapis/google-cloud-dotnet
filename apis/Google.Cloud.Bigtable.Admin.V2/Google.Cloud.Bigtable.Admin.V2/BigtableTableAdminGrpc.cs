@@ -371,7 +371,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Gets the access control policy for an instance resource. Returns an empty
+      /// Gets the access control policy for a table resource. Returns an empty
       /// policy if an table exists but does not have a policy set.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSnapshot, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for an instance resource. Returns an empty
+      /// Gets the access control policy for a table resource. Returns an empty
       /// policy if an table exists but does not have a policy set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for an instance resource. Returns an empty
+      /// Gets the access control policy for a table resource. Returns an empty
       /// policy if an table exists but does not have a policy set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1203,7 +1203,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for an instance resource. Returns an empty
+      /// Gets the access control policy for a table resource. Returns an empty
       /// policy if an table exists but does not have a policy set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for an instance resource. Returns an empty
+      /// Gets the access control policy for a table resource. Returns an empty
       /// policy if an table exists but does not have a policy set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

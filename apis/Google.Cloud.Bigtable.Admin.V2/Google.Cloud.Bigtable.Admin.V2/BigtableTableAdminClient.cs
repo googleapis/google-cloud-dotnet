@@ -2372,7 +2372,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="resource">
@@ -2395,7 +2395,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="resource">
@@ -2415,7 +2415,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="resource">
@@ -2438,7 +2438,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="request">
@@ -2458,7 +2458,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="request">
@@ -2477,7 +2477,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="request">
@@ -3257,7 +3257,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="request">
@@ -3278,7 +3278,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for an instance resource. Returns an empty
+        /// Gets the access control policy for a table resource. Returns an empty
         /// policy if an table exists but does not have a policy set.
         /// </summary>
         /// <param name="request">
