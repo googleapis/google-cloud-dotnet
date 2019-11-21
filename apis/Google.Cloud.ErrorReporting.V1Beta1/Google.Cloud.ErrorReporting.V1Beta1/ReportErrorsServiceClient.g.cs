@@ -253,7 +253,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public virtual ReportErrorsService.ReportErrorsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -270,7 +270,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -287,7 +287,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -304,7 +304,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ReportErrorEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -322,7 +322,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// Required. The error @event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -334,7 +334,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -352,7 +352,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// Required. The error @event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -364,7 +364,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -382,7 +382,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// Required. The error @event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -390,7 +390,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ReportErrorEventAsync(projectName, @event, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -408,7 +408,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// Required. The error @event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -420,7 +420,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -438,7 +438,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// Required. The error @event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -450,7 +450,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -468,7 +468,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `projects/my-project-123`.
         /// </param>
         /// <param name="event">
-        /// Required. The error @event to be reported.
+        /// Required. The error event to be reported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -510,7 +510,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         partial void Modify_ReportErrorEventRequest(ref ReportErrorEventRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -530,7 +530,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         }
 
         /// <summary>
-        /// Report an individual error @event.
+        /// Report an individual error event.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
