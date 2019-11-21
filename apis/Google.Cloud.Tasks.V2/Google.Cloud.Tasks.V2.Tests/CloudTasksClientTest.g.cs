@@ -14,1190 +14,2089 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Tasks.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Cloud.Iam.V1;
-    using apis = Google.Cloud.Tasks.V2;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedCloudTasksClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedCloudTasksClientTest
     {
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetQueueRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetQueueRequest request = new GetQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.GetQueue(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetQueueRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetQueueRequest request = new GetQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.GetQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.GetQueueAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetQueue()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetQueueRequest expectedRequest = new GetQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.GetQueue(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = client.GetQueue(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetQueueAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetQueueRequest expectedRequest = new GetQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.GetQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = await client.GetQueueAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetQueue2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetQueue(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = client.GetQueue(request);
-            Assert.Same(expectedResponse, response);
+            Queue response = client.GetQueue(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetQueueAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetQueueAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetQueueAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = await client.GetQueueAsync(request);
-            Assert.Same(expectedResponse, response);
+            Queue responseCallSettings = await client.GetQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.GetQueueAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetQueue_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetQueueRequest request = new GetQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.GetQueue(request.QueueName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetQueueAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetQueueRequest request = new GetQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.GetQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.GetQueueAsync(request.QueueName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateQueueRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateQueueRequest request = new CreateQueueRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Queue = new Queue(),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.CreateQueue(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateQueueRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateQueueRequest request = new CreateQueueRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Queue = new Queue(),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.CreateQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.CreateQueueAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateQueue()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            CreateQueueRequest expectedRequest = new CreateQueueRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Queue = new apis::Queue(),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.CreateQueue(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            apis::Queue queue = new apis::Queue();
-            apis::Queue response = client.CreateQueue(parent, queue);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateQueueAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            CreateQueueRequest expectedRequest = new CreateQueueRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Queue = new apis::Queue(),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.CreateQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            apis::Queue queue = new apis::Queue();
-            apis::Queue response = await client.CreateQueueAsync(parent, queue);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateQueue2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Queue = new apis::Queue(),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Queue = new Queue(),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateQueue(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = client.CreateQueue(request);
-            Assert.Same(expectedResponse, response);
+            Queue response = client.CreateQueue(request.Parent, request.Queue);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateQueueAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateQueueAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Queue = new apis::Queue(),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Queue = new Queue(),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateQueueAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = await client.CreateQueueAsync(request);
-            Assert.Same(expectedResponse, response);
+            Queue responseCallSettings = await client.CreateQueueAsync(request.Parent, request.Queue, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.CreateQueueAsync(request.Parent, request.Queue, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void CreateQueue_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateQueueRequest request = new CreateQueueRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Queue = new Queue(),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.CreateQueue(request.ParentAsLocationName, request.Queue);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateQueueAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateQueueRequest request = new CreateQueueRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Queue = new Queue(),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.CreateQueueAsync(request.ParentAsLocationName, request.Queue, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.CreateQueueAsync(request.ParentAsLocationName, request.Queue, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateQueueRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            UpdateQueueRequest request = new UpdateQueueRequest
+            {
+                Queue = new Queue(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.UpdateQueue(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateQueueRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            UpdateQueueRequest request = new UpdateQueueRequest
+            {
+                Queue = new Queue(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.UpdateQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.UpdateQueueAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateQueue()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            UpdateQueueRequest expectedRequest = new UpdateQueueRequest
-            {
-                Queue = new apis::Queue(),
-                UpdateMask = new FieldMask(),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.UpdateQueue(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue queue = new apis::Queue();
-            FieldMask updateMask = new FieldMask();
-            apis::Queue response = client.UpdateQueue(queue, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateQueueAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            UpdateQueueRequest expectedRequest = new UpdateQueueRequest
-            {
-                Queue = new apis::Queue(),
-                UpdateMask = new FieldMask(),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.UpdateQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue queue = new apis::Queue();
-            FieldMask updateMask = new FieldMask();
-            apis::Queue response = await client.UpdateQueueAsync(queue, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateQueue2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
-                Queue = new apis::Queue(),
+                Queue = new Queue(),
+                UpdateMask = new wkt::FieldMask(),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateQueue(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = client.UpdateQueue(request);
-            Assert.Same(expectedResponse, response);
+            Queue response = client.UpdateQueue(request.Queue, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateQueueAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateQueueAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
-                Queue = new apis::Queue(),
+                Queue = new Queue(),
+                UpdateMask = new wkt::FieldMask(),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = await client.UpdateQueueAsync(request);
-            Assert.Same(expectedResponse, response);
+            Queue responseCallSettings = await client.UpdateQueueAsync(request.Queue, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.UpdateQueueAsync(request.Queue, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteQueue()
+        [xunit::FactAttribute]
+        public void DeleteQueueRequestObject()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            DeleteQueueRequest expectedRequest = new DeleteQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteQueue(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            client.DeleteQueue(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteQueueAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            DeleteQueueRequest expectedRequest = new DeleteQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            await client.DeleteQueueAsync(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteQueue2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteQueue(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
             client.DeleteQueue(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteQueueAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteQueueRequestObjectAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteQueueAsync(request);
+            await client.DeleteQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteQueueAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void DeleteQueue()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteQueueRequest request = new DeleteQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            client.DeleteQueue(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteQueueAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteQueueRequest request = new DeleteQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteQueueAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteQueue_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteQueueRequest request = new DeleteQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            client.DeleteQueue(request.QueueName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteQueueAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteQueueRequest request = new DeleteQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteQueueAsync(request.QueueName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PurgeQueueRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PurgeQueueRequest request = new PurgeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.PurgeQueue(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PurgeQueueRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PurgeQueueRequest request = new PurgeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.PurgeQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.PurgeQueueAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void PurgeQueue()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            PurgeQueueRequest expectedRequest = new PurgeQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.PurgeQueue(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = client.PurgeQueue(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task PurgeQueueAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            PurgeQueueRequest expectedRequest = new PurgeQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.PurgeQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = await client.PurgeQueueAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void PurgeQueue2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.PurgeQueue(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = client.PurgeQueue(request);
-            Assert.Same(expectedResponse, response);
+            Queue response = client.PurgeQueue(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PurgeQueueAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task PurgeQueueAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = await client.PurgeQueueAsync(request);
-            Assert.Same(expectedResponse, response);
+            Queue responseCallSettings = await client.PurgeQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.PurgeQueueAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void PurgeQueue_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PurgeQueueRequest request = new PurgeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.PurgeQueue(request.QueueName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PurgeQueueAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PurgeQueueRequest request = new PurgeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.PurgeQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.PurgeQueueAsync(request.QueueName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PauseQueueRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PauseQueueRequest request = new PauseQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.PauseQueue(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PauseQueueRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PauseQueueRequest request = new PauseQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.PauseQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.PauseQueueAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void PauseQueue()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            PauseQueueRequest expectedRequest = new PauseQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.PauseQueue(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = client.PauseQueue(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task PauseQueueAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            PauseQueueRequest expectedRequest = new PauseQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.PauseQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = await client.PauseQueueAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void PauseQueue2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.PauseQueue(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = client.PauseQueue(request);
-            Assert.Same(expectedResponse, response);
+            Queue response = client.PauseQueue(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PauseQueueAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task PauseQueueAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.PauseQueueAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = await client.PauseQueueAsync(request);
-            Assert.Same(expectedResponse, response);
+            Queue responseCallSettings = await client.PauseQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.PauseQueueAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void PauseQueue_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PauseQueueRequest request = new PauseQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.PauseQueue(request.QueueName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PauseQueueAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            PauseQueueRequest request = new PauseQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.PauseQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.PauseQueueAsync(request.QueueName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ResumeQueueRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            ResumeQueueRequest request = new ResumeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.ResumeQueue(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ResumeQueueRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            ResumeQueueRequest request = new ResumeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.ResumeQueueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.ResumeQueueAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void ResumeQueue()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            ResumeQueueRequest expectedRequest = new ResumeQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.ResumeQueue(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = client.ResumeQueue(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ResumeQueueAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            ResumeQueueRequest expectedRequest = new ResumeQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            apis::Queue expectedResponse = new apis::Queue
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            mockGrpcClient.Setup(x => x.ResumeQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Queue response = await client.ResumeQueueAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void ResumeQueue2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.ResumeQueue(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = client.ResumeQueue(request);
-            Assert.Same(expectedResponse, response);
+            Queue response = client.ResumeQueue(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ResumeQueueAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ResumeQueueAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
-            apis::Queue expectedResponse = new apis::Queue
+            Queue expectedResponse = new Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Queue response = await client.ResumeQueueAsync(request);
-            Assert.Same(expectedResponse, response);
+            Queue responseCallSettings = await client.ResumeQueueAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.ResumeQueueAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void ResumeQueue_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            ResumeQueueRequest request = new ResumeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue response = client.ResumeQueue(request.QueueName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ResumeQueueAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            ResumeQueueRequest request = new ResumeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
+            Queue expectedResponse = new Queue
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                AppEngineRoutingOverride = new AppEngineRouting(),
+                RateLimits = new RateLimits(),
+                RetryConfig = new RetryConfig(),
+                State = Queue.Types.State.Paused,
+                PurgeTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Queue responseCallSettings = await client.ResumeQueueAsync(request.QueueName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Queue responseCancellationToken = await client.ResumeQueueAsync(request.QueueName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIamPolicyRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.GetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIamPolicy()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            Policy response = client.GetIamPolicy(resource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.Resource);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            Policy response = await client.GetIamPolicyAsync(resource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetIamPolicy2()
+        [xunit::FactAttribute]
+        public void GetIamPolicy_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.GetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.GetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetIamPolicyRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.SetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetIamPolicy()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            Policy policy = new Policy();
-            Policy response = client.SetIamPolicy(resource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            Policy policy = new Policy();
-            Policy response = await client.SetIamPolicyAsync(resource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetIamPolicy2()
+        [xunit::FactAttribute]
+        public void SetIamPolicy_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.SetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.SetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void TestIamPermissionsRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void TestIamPermissions()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = client.TestIamPermissions(resource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(resource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void TestIamPermissions2()
+        [xunit::FactAttribute]
+        public void TestIamPermissions_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = client.TestIamPermissions(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsAsync_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetTaskRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetTaskRequest request = new GetTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = Task.Types.View.Basic,
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task response = client.GetTask(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTaskRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetTaskRequest request = new GetTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = Task.Types.View.Basic,
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task responseCallSettings = await client.GetTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.GetTaskAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetTask()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetTaskRequest expectedRequest = new GetTaskRequest
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-            };
-            apis::Task expectedResponse = new apis::Task
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
-            };
-            mockGrpcClient.Setup(x => x.GetTask(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
-            apis::Task response = client.GetTask(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetTaskAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            GetTaskRequest expectedRequest = new GetTaskRequest
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-            };
-            apis::Task expectedResponse = new apis::Task
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
-            };
-            mockGrpcClient.Setup(x => x.GetTaskAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Task>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
-            apis::Task response = await client.GetTaskAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetTask2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
-            apis::Task expectedResponse = new apis::Task
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            mockGrpcClient.Setup(x => x.GetTask(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Task response = client.GetTask(request);
-            Assert.Same(expectedResponse, response);
+            Task response = client.GetTask(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTaskAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTaskAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
-            apis::Task expectedResponse = new apis::Task
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            mockGrpcClient.Setup(x => x.GetTaskAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Task>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Task response = await client.GetTaskAsync(request);
-            Assert.Same(expectedResponse, response);
+            Task responseCallSettings = await client.GetTaskAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.GetTaskAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetTask_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetTaskRequest request = new GetTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task response = client.GetTask(request.TaskName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTaskAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            GetTaskRequest request = new GetTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task responseCallSettings = await client.GetTaskAsync(request.TaskName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.GetTaskAsync(request.TaskName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTaskRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateTaskRequest request = new CreateTaskRequest
+            {
+                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Task = new Task(),
+                ResponseView = Task.Types.View.Basic,
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task response = client.CreateTask(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTaskRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateTaskRequest request = new CreateTaskRequest
+            {
+                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Task = new Task(),
+                ResponseView = Task.Types.View.Basic,
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task responseCallSettings = await client.CreateTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.CreateTaskAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateTask()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            CreateTaskRequest expectedRequest = new CreateTaskRequest
-            {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new apis::Task(),
-            };
-            apis::Task expectedResponse = new apis::Task
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
-            };
-            mockGrpcClient.Setup(x => x.CreateTask(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Task task = new apis::Task();
-            apis::Task response = client.CreateTask(parent, task);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateTaskAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            CreateTaskRequest expectedRequest = new CreateTaskRequest
-            {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new apis::Task(),
-            };
-            apis::Task expectedResponse = new apis::Task
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
-            };
-            mockGrpcClient.Setup(x => x.CreateTaskAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Task>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Task task = new apis::Task();
-            apis::Task response = await client.CreateTaskAsync(parent, task);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateTask2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new apis::Task(),
+                Task = new Task(),
             };
-            apis::Task expectedResponse = new apis::Task
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            mockGrpcClient.Setup(x => x.CreateTask(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Task response = client.CreateTask(request);
-            Assert.Same(expectedResponse, response);
+            Task response = client.CreateTask(request.Parent, request.Task);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateTaskAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTaskAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new apis::Task(),
+                Task = new Task(),
             };
-            apis::Task expectedResponse = new apis::Task
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            mockGrpcClient.Setup(x => x.CreateTaskAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Task>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Task response = await client.CreateTaskAsync(request);
-            Assert.Same(expectedResponse, response);
+            Task responseCallSettings = await client.CreateTaskAsync(request.Parent, request.Task, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.CreateTaskAsync(request.Parent, request.Task, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTask()
+        [xunit::FactAttribute]
+        public void CreateTask_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            DeleteTaskRequest expectedRequest = new DeleteTaskRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateTaskRequest request = new CreateTaskRequest
+            {
+                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Task = new Task(),
+            };
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTask(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
-            client.DeleteTask(name);
+            Task response = client.CreateTask(request.ParentAsQueueName, request.Task);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteTaskAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTaskAsync_ResourceNames()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            DeleteTaskRequest expectedRequest = new DeleteTaskRequest
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            CreateTaskRequest request = new CreateTaskRequest
+            {
+                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Task = new Task(),
+            };
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTaskAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
-            await client.DeleteTaskAsync(name);
+            Task responseCallSettings = await client.CreateTaskAsync(request.ParentAsQueueName, request.Task, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.CreateTaskAsync(request.ParentAsQueueName, request.Task, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTask2()
+        [xunit::FactAttribute]
+        public void DeleteTaskRequestObject()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTask(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
             client.DeleteTask(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteTaskAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTaskRequestObjectAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteTaskAsync(request);
+            await client.DeleteTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTaskAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void DeleteTask()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteTaskRequest request = new DeleteTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTask(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTaskAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteTaskRequest request = new DeleteTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTaskAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTaskAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTask_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteTaskRequest request = new DeleteTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTask(request.TaskName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTaskAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            DeleteTaskRequest request = new DeleteTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTaskAsync(request.TaskName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTaskAsync(request.TaskName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RunTaskRequestObject()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            RunTaskRequest request = new RunTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = Task.Types.View.Basic,
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task response = client.RunTask(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunTaskRequestObjectAsync()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            RunTaskRequest request = new RunTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = Task.Types.View.Basic,
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task responseCallSettings = await client.RunTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.RunTaskAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void RunTask()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            RunTaskRequest expectedRequest = new RunTaskRequest
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-            };
-            apis::Task expectedResponse = new apis::Task
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
-            };
-            mockGrpcClient.Setup(x => x.RunTask(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
-            apis::Task response = client.RunTask(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task RunTaskAsync()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
-            RunTaskRequest expectedRequest = new RunTaskRequest
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-            };
-            apis::Task expectedResponse = new apis::Task
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
-            };
-            mockGrpcClient.Setup(x => x.RunTaskAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Task>(Task.FromResult(expectedResponse), null, null, null, null));
-            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
-            apis::Task response = await client.RunTaskAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void RunTask2()
-        {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
-            apis::Task expectedResponse = new apis::Task
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            mockGrpcClient.Setup(x => x.RunTask(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Task response = client.RunTask(request);
-            Assert.Same(expectedResponse, response);
+            Task response = client.RunTask(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RunTaskAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RunTaskAsync()
         {
-            Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
-            apis::Task expectedResponse = new apis::Task
+            Task expectedResponse = new Task
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                DispatchCount = 1217252086,
-                ResponseCount = 424727441,
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
             };
-            mockGrpcClient.Setup(x => x.RunTaskAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Task>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
-            apis::Task response = await client.RunTaskAsync(request);
-            Assert.Same(expectedResponse, response);
+            Task responseCallSettings = await client.RunTaskAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.RunTaskAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void RunTask_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            RunTaskRequest request = new RunTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task response = client.RunTask(request.TaskName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunTaskAsync_ResourceNames()
+        {
+            moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
+            RunTaskRequest request = new RunTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            Task expectedResponse = new Task
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                AppEngineHttpRequest = new AppEngineHttpRequest(),
+                HttpRequest = new HttpRequest(),
+                ScheduleTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                DispatchDeadline = new wkt::Duration(),
+                DispatchCount = 341017545,
+                ResponseCount = -1236920575,
+                FirstAttempt = new Attempt(),
+                LastAttempt = new Attempt(),
+                View = Task.Types.View.Basic,
+            };
+            mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
+            Task responseCallSettings = await client.RunTaskAsync(request.TaskName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Task responseCancellationToken = await client.RunTaskAsync(request.TaskName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
