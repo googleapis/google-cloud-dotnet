@@ -66,7 +66,7 @@ namespace Google.Cloud.Trace.V2
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.20000004768372</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds.</description></item>
         /// <item><description>Initial timeout: 120000 milliseconds.</description></item>
         /// <item><description>Timeout multiplier: 1</description></item>
@@ -74,7 +74,7 @@ namespace Google.Cloud.Trace.V2
         /// <item><description>Total timeout: 120 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateSpanSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(1000), delayMultiplier: 1.2000000476837158), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(120000), maxDelay: sys::TimeSpan.FromMilliseconds(120000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded))));
+        public gaxgrpc::CallSettings CreateSpanSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(1000), delayMultiplier: 1.2), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(120000), maxDelay: sys::TimeSpan.FromMilliseconds(120000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded))));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TraceServiceSettings"/> object.</returns>
