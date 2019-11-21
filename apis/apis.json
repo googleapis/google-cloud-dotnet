@@ -876,9 +876,8 @@
 
   {
     "id": "Google.Cloud.Tasks.V2",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/tasks/v2",
-    "serviceYaml": "cloudtasks_v2.yaml",
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
     "version": "1.1.0-beta02",
