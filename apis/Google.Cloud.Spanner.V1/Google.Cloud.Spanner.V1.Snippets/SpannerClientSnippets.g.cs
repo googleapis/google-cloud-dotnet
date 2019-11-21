@@ -24,6 +24,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcsv = Google.Cloud.Spanner.V1;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedSpannerClientSnippets
@@ -677,7 +678,13 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new V1.Type() }, },
+                ParamTypes =
+                {
+                    {
+                        "",
+                        new gcsv::Type()
+                    },
+                },
                 ResumeToken = ByteString.Empty,
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
@@ -702,7 +709,13 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new V1.Type() }, },
+                ParamTypes =
+                {
+                    {
+                        "",
+                        new gcsv::Type()
+                    },
+                },
                 ResumeToken = ByteString.Empty,
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
@@ -726,7 +739,13 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new V1.Type() }, },
+                ParamTypes =
+                {
+                    {
+                        "",
+                        new gcsv::Type()
+                    },
+                },
                 ResumeToken = ByteString.Empty,
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
@@ -1235,7 +1254,13 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new V1.Type() }, },
+                ParamTypes =
+                {
+                    {
+                        "",
+                        new gcsv::Type()
+                    },
+                },
                 PartitionOptions = new PartitionOptions(),
             };
             // Make the request
@@ -1257,7 +1282,13 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Transaction = new TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
-                ParamTypes = { { "", new V1.Type() }, },
+                ParamTypes =
+                {
+                    {
+                        "",
+                        new gcsv::Type()
+                    },
+                },
                 PartitionOptions = new PartitionOptions(),
             };
             // Make the request
