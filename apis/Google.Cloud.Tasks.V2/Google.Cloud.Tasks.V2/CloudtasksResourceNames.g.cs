@@ -14,7 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-using gagr = Google.Api.Gax.ResourceNames;
 using gctv = Google.Cloud.Tasks.V2;
 
 namespace Google.Cloud.Tasks.V2
@@ -22,11 +21,11 @@ namespace Google.Cloud.Tasks.V2
     public partial class ListQueuesRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -46,11 +45,11 @@ namespace Google.Cloud.Tasks.V2
     public partial class CreateQueueRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
