@@ -17,37 +17,84 @@
 namespace Google.Cloud.Tasks.V2Beta3.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
-    using apis = Google.Cloud.Tasks.V2Beta3;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
+    using gctv = Google.Cloud.Tasks.V2Beta3;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedCloudTasksClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedCloudTasksClientSnippets
     {
-        /// <summary>Snippet for ListQueuesAsync</summary>
-        public async Task ListQueuesAsync()
+        /// <summary>Snippet for ListQueues</summary>
+        public void ListQueues_RequestObject()
         {
-            // Snippet: ListQueuesAsync(LocationName,string,int?,CallSettings)
+            // Snippet: ListQueues(ListQueuesRequest, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            ListQueuesRequest request = new ListQueuesRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueues(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Queue item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQueuesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Queue item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Queue> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Queue item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQueues</summary>
+        public async Task ListQueuesAsync_RequestObject()
+        {
+            // Snippet: ListQueuesAsync(ListQueuesRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            ListQueuesRequest request = new ListQueuesRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
             // Make the request
-            PagedAsyncEnumerable<ListQueuesResponse, apis::Queue> response =
-                cloudTasksClient.ListQueuesAsync(parent);
+            PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((apis::Queue item) =>
+            await response.ForEachAsync((Queue item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -58,19 +105,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Queue item in page)
+                foreach (Queue item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Queue> singlePage = await response.ReadPageAsync(pageSize);
+            Page<Queue> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Queue item in singlePage)
+            foreach (Queue item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -81,17 +130,16 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         /// <summary>Snippet for ListQueues</summary>
         public void ListQueues()
         {
-            // Snippet: ListQueues(LocationName,string,int?,CallSettings)
+            // Snippet: ListQueues(string, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListQueuesResponse, apis::Queue> response =
-                cloudTasksClient.ListQueues(parent);
+            PagedEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueues(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (apis::Queue item in response)
+            foreach (Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -102,19 +150,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Queue item in page)
+                foreach (Queue item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Queue> singlePage = response.ReadPage(pageSize);
+            Page<Queue> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Queue item in singlePage)
+            foreach (Queue item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -122,23 +172,19 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListQueuesAsync</summary>
-        public async Task ListQueuesAsync_RequestObject()
+        /// <summary>Snippet for ListQueues</summary>
+        public async Task ListQueuesAsync()
         {
-            // Snippet: ListQueuesAsync(ListQueuesRequest,CallSettings)
+            // Snippet: ListQueuesAsync(string, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ListQueuesRequest request = new ListQueuesRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListQueuesResponse, apis::Queue> response =
-                cloudTasksClient.ListQueuesAsync(request);
+            PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((apis::Queue item) =>
+            await response.ForEachAsync((Queue item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -149,19 +195,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Queue item in page)
+                foreach (Queue item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Queue> singlePage = await response.ReadPageAsync(pageSize);
+            Page<Queue> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Queue item in singlePage)
+            foreach (Queue item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -170,22 +218,18 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListQueues</summary>
-        public void ListQueues_RequestObject()
+        public void ListQueues_ResourceNames()
         {
-            // Snippet: ListQueues(ListQueuesRequest,CallSettings)
+            // Snippet: ListQueues(LocationName, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            ListQueuesRequest request = new ListQueuesRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-            };
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListQueuesResponse, apis::Queue> response =
-                cloudTasksClient.ListQueues(request);
+            PagedEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueues(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (apis::Queue item in response)
+            foreach (Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -196,19 +240,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Queue item in page)
+                foreach (Queue item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Queue> singlePage = response.ReadPage(pageSize);
+            Page<Queue> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Queue item in singlePage)
+            foreach (Queue item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -216,54 +262,55 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetQueueAsync</summary>
-        public async Task GetQueueAsync()
+        /// <summary>Snippet for ListQueues</summary>
+        public async Task ListQueuesAsync_ResourceNames()
         {
-            // Snippet: GetQueueAsync(QueueName,CallSettings)
-            // Additional: GetQueueAsync(QueueName,CancellationToken)
+            // Snippet: ListQueuesAsync(LocationName, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             // Make the request
-            apis::Queue response = await cloudTasksClient.GetQueueAsync(name);
-            // End snippet
-        }
+            PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(parent);
 
-        /// <summary>Snippet for GetQueue</summary>
-        public void GetQueue()
-        {
-            // Snippet: GetQueue(QueueName,CallSettings)
-            // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
-            // Initialize request argument(s)
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            // Make the request
-            apis::Queue response = cloudTasksClient.GetQueue(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetQueueAsync</summary>
-        public async Task GetQueueAsync_RequestObject()
-        {
-            // Snippet: GetQueueAsync(GetQueueRequest,CallSettings)
-            // Additional: GetQueueAsync(GetQueueRequest,CancellationToken)
-            // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
-            // Initialize request argument(s)
-            GetQueueRequest request = new GetQueueRequest
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Queue item) =>
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
-            // Make the request
-            apis::Queue response = await cloudTasksClient.GetQueueAsync(request);
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQueuesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Queue item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Queue> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Queue item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetQueue</summary>
         public void GetQueue_RequestObject()
         {
-            // Snippet: GetQueue(GetQueueRequest,CallSettings)
+            // Snippet: GetQueue(GetQueueRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
@@ -272,168 +319,259 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            apis::Queue response = cloudTasksClient.GetQueue(request);
+            Queue response = cloudTasksClient.GetQueue(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateQueueAsync</summary>
-        public async Task CreateQueueAsync()
+        /// <summary>Snippet for GetQueueAsync</summary>
+        public async Task GetQueueAsync_RequestObject()
         {
-            // Snippet: CreateQueueAsync(LocationName,apis::Queue,CallSettings)
-            // Additional: CreateQueueAsync(LocationName,apis::Queue,CancellationToken)
+            // Snippet: GetQueueAsync(GetQueueRequest, CallSettings)
+            // Additional: GetQueueAsync(GetQueueRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            apis::Queue queue = new apis::Queue();
+            GetQueueRequest request = new GetQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
             // Make the request
-            apis::Queue response = await cloudTasksClient.CreateQueueAsync(parent, queue);
+            Queue response = await cloudTasksClient.GetQueueAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateQueue</summary>
-        public void CreateQueue()
+        /// <summary>Snippet for GetQueue</summary>
+        public void GetQueue()
         {
-            // Snippet: CreateQueue(LocationName,apis::Queue,CallSettings)
+            // Snippet: GetQueue(string, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            apis::Queue queue = new apis::Queue();
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            apis::Queue response = cloudTasksClient.CreateQueue(parent, queue);
+            Queue response = cloudTasksClient.GetQueue(name);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateQueueAsync</summary>
-        public async Task CreateQueueAsync_RequestObject()
+        /// <summary>Snippet for GetQueueAsync</summary>
+        public async Task GetQueueAsync()
         {
-            // Snippet: CreateQueueAsync(CreateQueueRequest,CallSettings)
-            // Additional: CreateQueueAsync(CreateQueueRequest,CancellationToken)
+            // Snippet: GetQueueAsync(string, CallSettings)
+            // Additional: GetQueueAsync(string, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            CreateQueueRequest request = new CreateQueueRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Queue = new apis::Queue(),
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            apis::Queue response = await cloudTasksClient.CreateQueueAsync(request);
+            Queue response = await cloudTasksClient.GetQueueAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueue</summary>
+        public void GetQueue_ResourceNames()
+        {
+            // Snippet: GetQueue(QueueName, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            // Make the request
+            Queue response = cloudTasksClient.GetQueue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueueAsync</summary>
+        public async Task GetQueueAsync_ResourceNames()
+        {
+            // Snippet: GetQueueAsync(QueueName, CallSettings)
+            // Additional: GetQueueAsync(QueueName, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            // Make the request
+            Queue response = await cloudTasksClient.GetQueueAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for CreateQueue</summary>
         public void CreateQueue_RequestObject()
         {
-            // Snippet: CreateQueue(CreateQueueRequest,CallSettings)
+            // Snippet: CreateQueue(CreateQueueRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Queue = new apis::Queue(),
+                Queue = new Queue(),
             };
             // Make the request
-            apis::Queue response = cloudTasksClient.CreateQueue(request);
+            Queue response = cloudTasksClient.CreateQueue(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateQueueAsync</summary>
-        public async Task UpdateQueueAsync()
+        /// <summary>Snippet for CreateQueueAsync</summary>
+        public async Task CreateQueueAsync_RequestObject()
         {
-            // Snippet: UpdateQueueAsync(apis::Queue,FieldMask,CallSettings)
-            // Additional: UpdateQueueAsync(apis::Queue,FieldMask,CancellationToken)
+            // Snippet: CreateQueueAsync(CreateQueueRequest, CallSettings)
+            // Additional: CreateQueueAsync(CreateQueueRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            apis::Queue queue = new apis::Queue();
-            FieldMask updateMask = new FieldMask();
+            CreateQueueRequest request = new CreateQueueRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                Queue = new Queue(),
+            };
             // Make the request
-            apis::Queue response = await cloudTasksClient.UpdateQueueAsync(queue, updateMask);
+            Queue response = await cloudTasksClient.CreateQueueAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateQueue</summary>
-        public void UpdateQueue()
+        /// <summary>Snippet for CreateQueue</summary>
+        public void CreateQueue()
         {
-            // Snippet: UpdateQueue(apis::Queue,FieldMask,CallSettings)
+            // Snippet: CreateQueue(string, Queue, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            apis::Queue queue = new apis::Queue();
-            FieldMask updateMask = new FieldMask();
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Queue queue = new Queue();
             // Make the request
-            apis::Queue response = cloudTasksClient.UpdateQueue(queue, updateMask);
+            Queue response = cloudTasksClient.CreateQueue(parent, queue);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateQueueAsync</summary>
-        public async Task UpdateQueueAsync_RequestObject()
+        /// <summary>Snippet for CreateQueueAsync</summary>
+        public async Task CreateQueueAsync()
         {
-            // Snippet: UpdateQueueAsync(UpdateQueueRequest,CallSettings)
-            // Additional: UpdateQueueAsync(UpdateQueueRequest,CancellationToken)
+            // Snippet: CreateQueueAsync(string, Queue, CallSettings)
+            // Additional: CreateQueueAsync(string, Queue, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateQueueRequest request = new UpdateQueueRequest
-            {
-                Queue = new apis::Queue(),
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Queue queue = new Queue();
             // Make the request
-            apis::Queue response = await cloudTasksClient.UpdateQueueAsync(request);
+            Queue response = await cloudTasksClient.CreateQueueAsync(parent, queue);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQueue</summary>
+        public void CreateQueue_ResourceNames()
+        {
+            // Snippet: CreateQueue(LocationName, Queue, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            Queue queue = new Queue();
+            // Make the request
+            Queue response = cloudTasksClient.CreateQueue(parent, queue);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQueueAsync</summary>
+        public async Task CreateQueueAsync_ResourceNames()
+        {
+            // Snippet: CreateQueueAsync(LocationName, Queue, CallSettings)
+            // Additional: CreateQueueAsync(LocationName, Queue, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            Queue queue = new Queue();
+            // Make the request
+            Queue response = await cloudTasksClient.CreateQueueAsync(parent, queue);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateQueue</summary>
         public void UpdateQueue_RequestObject()
         {
-            // Snippet: UpdateQueue(UpdateQueueRequest,CallSettings)
+            // Snippet: UpdateQueue(UpdateQueueRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             UpdateQueueRequest request = new UpdateQueueRequest
             {
-                Queue = new apis::Queue(),
+                Queue = new Queue(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            apis::Queue response = cloudTasksClient.UpdateQueue(request);
+            Queue response = cloudTasksClient.UpdateQueue(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteQueueAsync</summary>
-        public async Task DeleteQueueAsync()
+        /// <summary>Snippet for UpdateQueueAsync</summary>
+        public async Task UpdateQueueAsync_RequestObject()
         {
-            // Snippet: DeleteQueueAsync(QueueName,CallSettings)
-            // Additional: DeleteQueueAsync(QueueName,CancellationToken)
+            // Snippet: UpdateQueueAsync(UpdateQueueRequest, CallSettings)
+            // Additional: UpdateQueueAsync(UpdateQueueRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            UpdateQueueRequest request = new UpdateQueueRequest
+            {
+                Queue = new Queue(),
+                UpdateMask = new FieldMask(),
+            };
             // Make the request
-            await cloudTasksClient.DeleteQueueAsync(name);
+            Queue response = await cloudTasksClient.UpdateQueueAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQueue</summary>
+        public void UpdateQueue()
+        {
+            // Snippet: UpdateQueue(Queue, FieldMask, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            Queue queue = new Queue();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Queue response = cloudTasksClient.UpdateQueue(queue, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQueueAsync</summary>
+        public async Task UpdateQueueAsync()
+        {
+            // Snippet: UpdateQueueAsync(Queue, FieldMask, CallSettings)
+            // Additional: UpdateQueueAsync(Queue, FieldMask, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            Queue queue = new Queue();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Queue response = await cloudTasksClient.UpdateQueueAsync(queue, updateMask);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteQueue</summary>
-        public void DeleteQueue()
+        public void DeleteQueue_RequestObject()
         {
-            // Snippet: DeleteQueue(QueueName,CallSettings)
+            // Snippet: DeleteQueue(DeleteQueueRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            DeleteQueueRequest request = new DeleteQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
             // Make the request
-            cloudTasksClient.DeleteQueue(name);
+            cloudTasksClient.DeleteQueue(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteQueueAsync</summary>
         public async Task DeleteQueueAsync_RequestObject()
         {
-            // Snippet: DeleteQueueAsync(DeleteQueueRequest,CallSettings)
-            // Additional: DeleteQueueAsync(DeleteQueueRequest,CancellationToken)
+            // Snippet: DeleteQueueAsync(DeleteQueueRequest, CallSettings)
+            // Additional: DeleteQueueAsync(DeleteQueueRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
@@ -447,69 +585,63 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteQueue</summary>
-        public void DeleteQueue_RequestObject()
+        public void DeleteQueue()
         {
-            // Snippet: DeleteQueue(DeleteQueueRequest,CallSettings)
+            // Snippet: DeleteQueue(string, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            DeleteQueueRequest request = new DeleteQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            cloudTasksClient.DeleteQueue(request);
+            cloudTasksClient.DeleteQueue(name);
             // End snippet
         }
 
-        /// <summary>Snippet for PurgeQueueAsync</summary>
-        public async Task PurgeQueueAsync()
+        /// <summary>Snippet for DeleteQueueAsync</summary>
+        public async Task DeleteQueueAsync()
         {
-            // Snippet: PurgeQueueAsync(QueueName,CallSettings)
-            // Additional: PurgeQueueAsync(QueueName,CancellationToken)
+            // Snippet: DeleteQueueAsync(string, CallSettings)
+            // Additional: DeleteQueueAsync(string, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            apis::Queue response = await cloudTasksClient.PurgeQueueAsync(name);
+            await cloudTasksClient.DeleteQueueAsync(name);
             // End snippet
         }
 
-        /// <summary>Snippet for PurgeQueue</summary>
-        public void PurgeQueue()
+        /// <summary>Snippet for DeleteQueue</summary>
+        public void DeleteQueue_ResourceNames()
         {
-            // Snippet: PurgeQueue(QueueName,CallSettings)
+            // Snippet: DeleteQueue(QueueName, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            apis::Queue response = cloudTasksClient.PurgeQueue(name);
+            cloudTasksClient.DeleteQueue(name);
             // End snippet
         }
 
-        /// <summary>Snippet for PurgeQueueAsync</summary>
-        public async Task PurgeQueueAsync_RequestObject()
+        /// <summary>Snippet for DeleteQueueAsync</summary>
+        public async Task DeleteQueueAsync_ResourceNames()
         {
-            // Snippet: PurgeQueueAsync(PurgeQueueRequest,CallSettings)
-            // Additional: PurgeQueueAsync(PurgeQueueRequest,CancellationToken)
+            // Snippet: DeleteQueueAsync(QueueName, CallSettings)
+            // Additional: DeleteQueueAsync(QueueName, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            PurgeQueueRequest request = new PurgeQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
+            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            apis::Queue response = await cloudTasksClient.PurgeQueueAsync(request);
+            await cloudTasksClient.DeleteQueueAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for PurgeQueue</summary>
         public void PurgeQueue_RequestObject()
         {
-            // Snippet: PurgeQueue(PurgeQueueRequest,CallSettings)
+            // Snippet: PurgeQueue(PurgeQueueRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
@@ -518,58 +650,85 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            apis::Queue response = cloudTasksClient.PurgeQueue(request);
+            Queue response = cloudTasksClient.PurgeQueue(request);
             // End snippet
         }
 
-        /// <summary>Snippet for PauseQueueAsync</summary>
-        public async Task PauseQueueAsync()
+        /// <summary>Snippet for PurgeQueueAsync</summary>
+        public async Task PurgeQueueAsync_RequestObject()
         {
-            // Snippet: PauseQueueAsync(QueueName,CallSettings)
-            // Additional: PauseQueueAsync(QueueName,CancellationToken)
+            // Snippet: PurgeQueueAsync(PurgeQueueRequest, CallSettings)
+            // Additional: PurgeQueueAsync(PurgeQueueRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            PurgeQueueRequest request = new PurgeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
             // Make the request
-            apis::Queue response = await cloudTasksClient.PauseQueueAsync(name);
+            Queue response = await cloudTasksClient.PurgeQueueAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for PauseQueue</summary>
-        public void PauseQueue()
+        /// <summary>Snippet for PurgeQueue</summary>
+        public void PurgeQueue()
         {
-            // Snippet: PauseQueue(QueueName,CallSettings)
+            // Snippet: PurgeQueue(string, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            // Make the request
+            Queue response = cloudTasksClient.PurgeQueue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeQueueAsync</summary>
+        public async Task PurgeQueueAsync()
+        {
+            // Snippet: PurgeQueueAsync(string, CallSettings)
+            // Additional: PurgeQueueAsync(string, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            // Make the request
+            Queue response = await cloudTasksClient.PurgeQueueAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeQueue</summary>
+        public void PurgeQueue_ResourceNames()
+        {
+            // Snippet: PurgeQueue(QueueName, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            apis::Queue response = cloudTasksClient.PauseQueue(name);
+            Queue response = cloudTasksClient.PurgeQueue(name);
             // End snippet
         }
 
-        /// <summary>Snippet for PauseQueueAsync</summary>
-        public async Task PauseQueueAsync_RequestObject()
+        /// <summary>Snippet for PurgeQueueAsync</summary>
+        public async Task PurgeQueueAsync_ResourceNames()
         {
-            // Snippet: PauseQueueAsync(PauseQueueRequest,CallSettings)
-            // Additional: PauseQueueAsync(PauseQueueRequest,CancellationToken)
+            // Snippet: PurgeQueueAsync(QueueName, CallSettings)
+            // Additional: PurgeQueueAsync(QueueName, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            PauseQueueRequest request = new PauseQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
+            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            apis::Queue response = await cloudTasksClient.PauseQueueAsync(request);
+            Queue response = await cloudTasksClient.PurgeQueueAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for PauseQueue</summary>
         public void PauseQueue_RequestObject()
         {
-            // Snippet: PauseQueue(PauseQueueRequest,CallSettings)
+            // Snippet: PauseQueue(PauseQueueRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
@@ -578,58 +737,85 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            apis::Queue response = cloudTasksClient.PauseQueue(request);
+            Queue response = cloudTasksClient.PauseQueue(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ResumeQueueAsync</summary>
-        public async Task ResumeQueueAsync()
+        /// <summary>Snippet for PauseQueueAsync</summary>
+        public async Task PauseQueueAsync_RequestObject()
         {
-            // Snippet: ResumeQueueAsync(QueueName,CallSettings)
-            // Additional: ResumeQueueAsync(QueueName,CancellationToken)
+            // Snippet: PauseQueueAsync(PauseQueueRequest, CallSettings)
+            // Additional: PauseQueueAsync(PauseQueueRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            PauseQueueRequest request = new PauseQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
             // Make the request
-            apis::Queue response = await cloudTasksClient.ResumeQueueAsync(name);
+            Queue response = await cloudTasksClient.PauseQueueAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ResumeQueue</summary>
-        public void ResumeQueue()
+        /// <summary>Snippet for PauseQueue</summary>
+        public void PauseQueue()
         {
-            // Snippet: ResumeQueue(QueueName,CallSettings)
+            // Snippet: PauseQueue(string, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            // Make the request
+            Queue response = cloudTasksClient.PauseQueue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseQueueAsync</summary>
+        public async Task PauseQueueAsync()
+        {
+            // Snippet: PauseQueueAsync(string, CallSettings)
+            // Additional: PauseQueueAsync(string, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            // Make the request
+            Queue response = await cloudTasksClient.PauseQueueAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseQueue</summary>
+        public void PauseQueue_ResourceNames()
+        {
+            // Snippet: PauseQueue(QueueName, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            apis::Queue response = cloudTasksClient.ResumeQueue(name);
+            Queue response = cloudTasksClient.PauseQueue(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ResumeQueueAsync</summary>
-        public async Task ResumeQueueAsync_RequestObject()
+        /// <summary>Snippet for PauseQueueAsync</summary>
+        public async Task PauseQueueAsync_ResourceNames()
         {
-            // Snippet: ResumeQueueAsync(ResumeQueueRequest,CallSettings)
-            // Additional: ResumeQueueAsync(ResumeQueueRequest,CancellationToken)
+            // Snippet: PauseQueueAsync(QueueName, CallSettings)
+            // Additional: PauseQueueAsync(QueueName, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ResumeQueueRequest request = new ResumeQueueRequest
-            {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
+            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            apis::Queue response = await cloudTasksClient.ResumeQueueAsync(request);
+            Queue response = await cloudTasksClient.PauseQueueAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for ResumeQueue</summary>
         public void ResumeQueue_RequestObject()
         {
-            // Snippet: ResumeQueue(ResumeQueueRequest,CallSettings)
+            // Snippet: ResumeQueue(ResumeQueueRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
@@ -638,48 +824,110 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            apis::Queue response = cloudTasksClient.ResumeQueue(request);
+            Queue response = cloudTasksClient.ResumeQueue(request);
             // End snippet
         }
 
-        /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync()
+        /// <summary>Snippet for ResumeQueueAsync</summary>
+        public async Task ResumeQueueAsync_RequestObject()
         {
-            // Snippet: GetIamPolicyAsync(QueueName,CallSettings)
-            // Additional: GetIamPolicyAsync(QueueName,CancellationToken)
+            // Snippet: ResumeQueueAsync(ResumeQueueRequest, CallSettings)
+            // Additional: ResumeQueueAsync(ResumeQueueRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            ResumeQueueRequest request = new ResumeQueueRequest
+            {
+                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+            };
             // Make the request
-            Policy response = await cloudTasksClient.GetIamPolicyAsync(resource);
+            Queue response = await cloudTasksClient.ResumeQueueAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeQueue</summary>
+        public void ResumeQueue()
+        {
+            // Snippet: ResumeQueue(string, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            // Make the request
+            Queue response = cloudTasksClient.ResumeQueue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeQueueAsync</summary>
+        public async Task ResumeQueueAsync()
+        {
+            // Snippet: ResumeQueueAsync(string, CallSettings)
+            // Additional: ResumeQueueAsync(string, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            // Make the request
+            Queue response = await cloudTasksClient.ResumeQueueAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeQueue</summary>
+        public void ResumeQueue_ResourceNames()
+        {
+            // Snippet: ResumeQueue(QueueName, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            // Make the request
+            Queue response = cloudTasksClient.ResumeQueue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeQueueAsync</summary>
+        public async Task ResumeQueueAsync_ResourceNames()
+        {
+            // Snippet: ResumeQueueAsync(QueueName, CallSettings)
+            // Additional: ResumeQueueAsync(QueueName, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            QueueName name = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            // Make the request
+            Queue response = await cloudTasksClient.ResumeQueueAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy()
+        public void GetIamPolicy_RequestObject()
         {
-            // Snippet: GetIamPolicy(QueueName,CallSettings)
+            // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
             // Make the request
-            Policy response = cloudTasksClient.GetIamPolicy(resource);
+            Policy response = cloudTasksClient.GetIamPolicy(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync_RequestObject()
         {
-            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
-            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
             };
             // Make the request
             Policy response = await cloudTasksClient.GetIamPolicyAsync(request);
@@ -687,61 +935,87 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicy()
         {
-            // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
+            // Snippet: GetIamPolicy(string, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
+            string resource = "a/wildcard/resource";
             // Make the request
-            Policy response = cloudTasksClient.GetIamPolicy(request);
+            Policy response = cloudTasksClient.GetIamPolicy(resource);
             // End snippet
         }
 
-        /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync()
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
         {
-            // Snippet: SetIamPolicyAsync(QueueName,Policy,CallSettings)
-            // Additional: SetIamPolicyAsync(QueueName,Policy,CancellationToken)
+            // Snippet: GetIamPolicyAsync(string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            Policy policy = new Policy();
+            string resource = "a/wildcard/resource";
             // Make the request
-            Policy response = await cloudTasksClient.SetIamPolicyAsync(resource, policy);
+            Policy response = await cloudTasksClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy_ResourceNames()
+        {
+            // Snippet: GetIamPolicy(IResourceName, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = cloudTasksClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync_ResourceNames()
+        {
+            // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = await cloudTasksClient.GetIamPolicyAsync(resource);
             // End snippet
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy()
+        public void SetIamPolicy_RequestObject()
         {
-            // Snippet: SetIamPolicy(QueueName,Policy,CallSettings)
+            // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            Policy policy = new Policy();
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+            };
             // Make the request
-            Policy response = cloudTasksClient.SetIamPolicy(resource, policy);
+            Policy response = cloudTasksClient.SetIamPolicy(request);
             // End snippet
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync_RequestObject()
         {
-            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
-            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -750,63 +1024,92 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicy()
         {
-            // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
+            // Snippet: SetIamPolicy(string, Policy, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Policy = new Policy(),
-            };
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
             // Make the request
-            Policy response = cloudTasksClient.SetIamPolicy(request);
+            Policy response = cloudTasksClient.SetIamPolicy(resource, policy);
             // End snippet
         }
 
-        /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync()
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
         {
-            // Snippet: TestIamPermissionsAsync(QueueName,IEnumerable<string>,CallSettings)
-            // Additional: TestIamPermissionsAsync(QueueName,IEnumerable<string>,CancellationToken)
+            // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            IEnumerable<string> permissions = new List<string>();
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
             // Make the request
-            TestIamPermissionsResponse response = await cloudTasksClient.TestIamPermissionsAsync(resource, permissions);
+            Policy response = await cloudTasksClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy_ResourceNames()
+        {
+            // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = cloudTasksClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync_ResourceNames()
+        {
+            // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await cloudTasksClient.SetIamPolicyAsync(resource, policy);
             // End snippet
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions()
+        public void TestIamPermissions_RequestObject()
         {
-            // Snippet: TestIamPermissions(QueueName,IEnumerable<string>,CallSettings)
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            IEnumerable<string> permissions = new List<string>();
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
             // Make the request
-            TestIamPermissionsResponse response = cloudTasksClient.TestIamPermissions(resource, permissions);
+            TestIamPermissionsResponse response = cloudTasksClient.TestIamPermissions(request);
             // End snippet
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync_RequestObject()
         {
-            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
-            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Permissions = { },
+                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                Permissions = { "", },
             };
             // Make the request
             TestIamPermissionsResponse response = await cloudTasksClient.TestIamPermissionsAsync(request);
@@ -814,36 +1117,129 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissions()
         {
-            // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)
+            // Snippet: TestIamPermissions(string, IEnumerable<string>, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Permissions = { },
-            };
+            string resource = "a/wildcard/resource";
+            IEnumerable<string> permissions = new string[] { "", };
             // Make the request
-            TestIamPermissionsResponse response = cloudTasksClient.TestIamPermissions(request);
+            TestIamPermissionsResponse response = cloudTasksClient.TestIamPermissions(resource, permissions);
             // End snippet
         }
 
-        /// <summary>Snippet for ListTasksAsync</summary>
-        public async Task ListTasksAsync()
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
         {
-            // Snippet: ListTasksAsync(QueueName,string,int?,CallSettings)
+            // Snippet: TestIamPermissionsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, IEnumerable<string>, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            string resource = "a/wildcard/resource";
+            IEnumerable<string> permissions = new string[] { "", };
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, apis::Task> response =
-                cloudTasksClient.ListTasksAsync(parent);
+            TestIamPermissionsResponse response = await cloudTasksClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions_ResourceNames()
+        {
+            // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = cloudTasksClient.TestIamPermissions(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync_ResourceNames()
+        {
+            // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
+            // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = await cloudTasksClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTasks</summary>
+        public void ListTasks_RequestObject()
+        {
+            // Snippet: ListTasks(ListTasksRequest, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            ListTasksRequest request = new ListTasksRequest
+            {
+                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResponseView = gctv::Task.Types.View.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((apis::Task item) =>
+            foreach (gctv::Task item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTasksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gctv::Task item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gctv::Task> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gctv::Task item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTasks</summary>
+        public async Task ListTasksAsync_RequestObject()
+        {
+            // Snippet: ListTasksAsync(ListTasksRequest, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTasksRequest request = new ListTasksRequest
+            {
+                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ResponseView = gctv::Task.Types.View.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gctv::Task item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -854,19 +1250,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Task item in page)
+                foreach (gctv::Task item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Task> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gctv::Task> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Task item in singlePage)
+            foreach (gctv::Task item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -877,17 +1275,16 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         /// <summary>Snippet for ListTasks</summary>
         public void ListTasks()
         {
-            // Snippet: ListTasks(QueueName,string,int?,CallSettings)
+            // Snippet: ListTasks(string, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            PagedEnumerable<ListTasksResponse, apis::Task> response =
-                cloudTasksClient.ListTasks(parent);
+            PagedEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (apis::Task item in response)
+            foreach (gctv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -898,19 +1295,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Task item in page)
+                foreach (gctv::Task item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Task> singlePage = response.ReadPage(pageSize);
+            Page<gctv::Task> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Task item in singlePage)
+            foreach (gctv::Task item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -918,23 +1317,19 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTasksAsync</summary>
-        public async Task ListTasksAsync_RequestObject()
+        /// <summary>Snippet for ListTasks</summary>
+        public async Task ListTasksAsync()
         {
-            // Snippet: ListTasksAsync(ListTasksRequest,CallSettings)
+            // Snippet: ListTasksAsync(string, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
-            {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, apis::Task> response =
-                cloudTasksClient.ListTasksAsync(request);
+            PagedAsyncEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((apis::Task item) =>
+            await response.ForEachAsync((gctv::Task item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -945,19 +1340,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Task item in page)
+                foreach (gctv::Task item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Task> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gctv::Task> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Task item in singlePage)
+            foreach (gctv::Task item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -966,22 +1363,18 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListTasks</summary>
-        public void ListTasks_RequestObject()
+        public void ListTasks_ResourceNames()
         {
-            // Snippet: ListTasks(ListTasksRequest,CallSettings)
+            // Snippet: ListTasks(QueueName, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
-            {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-            };
+            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            PagedEnumerable<ListTasksResponse, apis::Task> response =
-                cloudTasksClient.ListTasks(request);
+            PagedEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (apis::Task item in response)
+            foreach (gctv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -992,19 +1385,21 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Task item in page)
+                foreach (gctv::Task item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Task> singlePage = response.ReadPage(pageSize);
+            Page<gctv::Task> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Task item in singlePage)
+            foreach (gctv::Task item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -1012,162 +1407,256 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetTaskAsync</summary>
-        public async Task GetTaskAsync()
+        /// <summary>Snippet for ListTasks</summary>
+        public async Task ListTasksAsync_ResourceNames()
         {
-            // Snippet: GetTaskAsync(TaskName,CallSettings)
-            // Additional: GetTaskAsync(TaskName,CancellationToken)
+            // Snippet: ListTasksAsync(QueueName, string, int?, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            apis::Task response = await cloudTasksClient.GetTaskAsync(name);
-            // End snippet
-        }
+            PagedAsyncEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
 
-        /// <summary>Snippet for GetTask</summary>
-        public void GetTask()
-        {
-            // Snippet: GetTask(TaskName,CallSettings)
-            // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
-            // Initialize request argument(s)
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
-            // Make the request
-            apis::Task response = cloudTasksClient.GetTask(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetTaskAsync</summary>
-        public async Task GetTaskAsync_RequestObject()
-        {
-            // Snippet: GetTaskAsync(GetTaskRequest,CallSettings)
-            // Additional: GetTaskAsync(GetTaskRequest,CancellationToken)
-            // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
-            // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gctv::Task item) =>
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-            };
-            // Make the request
-            apis::Task response = await cloudTasksClient.GetTaskAsync(request);
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gctv::Task item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gctv::Task> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gctv::Task item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetTask</summary>
         public void GetTask_RequestObject()
         {
-            // Snippet: GetTask(GetTaskRequest,CallSettings)
+            // Snippet: GetTask(GetTaskRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
-            apis::Task response = cloudTasksClient.GetTask(request);
+            gctv::Task response = cloudTasksClient.GetTask(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateTaskAsync</summary>
-        public async Task CreateTaskAsync()
+        /// <summary>Snippet for GetTaskAsync</summary>
+        public async Task GetTaskAsync_RequestObject()
         {
-            // Snippet: CreateTaskAsync(QueueName,apis::Task,CallSettings)
-            // Additional: CreateTaskAsync(QueueName,apis::Task,CancellationToken)
+            // Snippet: GetTaskAsync(GetTaskRequest, CallSettings)
+            // Additional: GetTaskAsync(GetTaskRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Task task = new apis::Task();
+            GetTaskRequest request = new GetTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = gctv::Task.Types.View.Unspecified,
+            };
             // Make the request
-            apis::Task response = await cloudTasksClient.CreateTaskAsync(parent, task);
+            gctv::Task response = await cloudTasksClient.GetTaskAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateTask</summary>
-        public void CreateTask()
+        /// <summary>Snippet for GetTask</summary>
+        public void GetTask()
         {
-            // Snippet: CreateTask(QueueName,apis::Task,CallSettings)
+            // Snippet: GetTask(string, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
-            apis::Task task = new apis::Task();
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
-            apis::Task response = cloudTasksClient.CreateTask(parent, task);
+            gctv::Task response = cloudTasksClient.GetTask(name);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateTaskAsync</summary>
-        public async Task CreateTaskAsync_RequestObject()
+        /// <summary>Snippet for GetTaskAsync</summary>
+        public async Task GetTaskAsync()
         {
-            // Snippet: CreateTaskAsync(CreateTaskRequest,CallSettings)
-            // Additional: CreateTaskAsync(CreateTaskRequest,CancellationToken)
+            // Snippet: GetTaskAsync(string, CallSettings)
+            // Additional: GetTaskAsync(string, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            CreateTaskRequest request = new CreateTaskRequest
-            {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new apis::Task(),
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
-            apis::Task response = await cloudTasksClient.CreateTaskAsync(request);
+            gctv::Task response = await cloudTasksClient.GetTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTask</summary>
+        public void GetTask_ResourceNames()
+        {
+            // Snippet: GetTask(TaskName, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            // Make the request
+            gctv::Task response = cloudTasksClient.GetTask(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTaskAsync</summary>
+        public async Task GetTaskAsync_ResourceNames()
+        {
+            // Snippet: GetTaskAsync(TaskName, CallSettings)
+            // Additional: GetTaskAsync(TaskName, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            // Make the request
+            gctv::Task response = await cloudTasksClient.GetTaskAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for CreateTask</summary>
         public void CreateTask_RequestObject()
         {
-            // Snippet: CreateTask(CreateTaskRequest,CallSettings)
+            // Snippet: CreateTask(CreateTaskRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new apis::Task(),
+                Task = new gctv::Task(),
+                ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
-            apis::Task response = cloudTasksClient.CreateTask(request);
+            gctv::Task response = cloudTasksClient.CreateTask(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteTaskAsync</summary>
-        public async Task DeleteTaskAsync()
+        /// <summary>Snippet for CreateTaskAsync</summary>
+        public async Task CreateTaskAsync_RequestObject()
         {
-            // Snippet: DeleteTaskAsync(TaskName,CallSettings)
-            // Additional: DeleteTaskAsync(TaskName,CancellationToken)
+            // Snippet: CreateTaskAsync(CreateTaskRequest, CallSettings)
+            // Additional: CreateTaskAsync(CreateTaskRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            CreateTaskRequest request = new CreateTaskRequest
+            {
+                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Task = new gctv::Task(),
+                ResponseView = gctv::Task.Types.View.Unspecified,
+            };
             // Make the request
-            await cloudTasksClient.DeleteTaskAsync(name);
+            gctv::Task response = await cloudTasksClient.CreateTaskAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTask</summary>
+        public void CreateTask()
+        {
+            // Snippet: CreateTask(string, Task, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            gctv::Task task = new gctv::Task();
+            // Make the request
+            gctv::Task response = cloudTasksClient.CreateTask(parent, task);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTaskAsync</summary>
+        public async Task CreateTaskAsync()
+        {
+            // Snippet: CreateTaskAsync(string, Task, CallSettings)
+            // Additional: CreateTaskAsync(string, Task, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            gctv::Task task = new gctv::Task();
+            // Make the request
+            gctv::Task response = await cloudTasksClient.CreateTaskAsync(parent, task);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTask</summary>
+        public void CreateTask_ResourceNames()
+        {
+            // Snippet: CreateTask(QueueName, Task, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::Task task = new gctv::Task();
+            // Make the request
+            gctv::Task response = cloudTasksClient.CreateTask(parent, task);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTaskAsync</summary>
+        public async Task CreateTaskAsync_ResourceNames()
+        {
+            // Snippet: CreateTaskAsync(QueueName, Task, CallSettings)
+            // Additional: CreateTaskAsync(QueueName, Task, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            QueueName parent = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::Task task = new gctv::Task();
+            // Make the request
+            gctv::Task response = await cloudTasksClient.CreateTaskAsync(parent, task);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTask</summary>
-        public void DeleteTask()
+        public void DeleteTask_RequestObject()
         {
-            // Snippet: DeleteTask(TaskName,CallSettings)
+            // Snippet: DeleteTask(DeleteTaskRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            DeleteTaskRequest request = new DeleteTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
             // Make the request
-            cloudTasksClient.DeleteTask(name);
+            cloudTasksClient.DeleteTask(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTaskAsync</summary>
         public async Task DeleteTaskAsync_RequestObject()
         {
-            // Snippet: DeleteTaskAsync(DeleteTaskRequest,CallSettings)
-            // Additional: DeleteTaskAsync(DeleteTaskRequest,CancellationToken)
+            // Snippet: DeleteTaskAsync(DeleteTaskRequest, CallSettings)
+            // Additional: DeleteTaskAsync(DeleteTaskRequest, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
@@ -1181,80 +1670,146 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteTask</summary>
-        public void DeleteTask_RequestObject()
+        public void DeleteTask()
         {
-            // Snippet: DeleteTask(DeleteTaskRequest,CallSettings)
+            // Snippet: DeleteTask(string, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
-            DeleteTaskRequest request = new DeleteTaskRequest
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
-            cloudTasksClient.DeleteTask(request);
+            cloudTasksClient.DeleteTask(name);
             // End snippet
         }
 
-        /// <summary>Snippet for RunTaskAsync</summary>
-        public async Task RunTaskAsync()
+        /// <summary>Snippet for DeleteTaskAsync</summary>
+        public async Task DeleteTaskAsync()
         {
-            // Snippet: RunTaskAsync(TaskName,CallSettings)
-            // Additional: RunTaskAsync(TaskName,CancellationToken)
+            // Snippet: DeleteTaskAsync(string, CallSettings)
+            // Additional: DeleteTaskAsync(string, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
-            apis::Task response = await cloudTasksClient.RunTaskAsync(name);
+            await cloudTasksClient.DeleteTaskAsync(name);
             // End snippet
         }
 
-        /// <summary>Snippet for RunTask</summary>
-        public void RunTask()
+        /// <summary>Snippet for DeleteTask</summary>
+        public void DeleteTask_ResourceNames()
         {
-            // Snippet: RunTask(TaskName,CallSettings)
+            // Snippet: DeleteTask(TaskName, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
-            apis::Task response = cloudTasksClient.RunTask(name);
+            cloudTasksClient.DeleteTask(name);
             // End snippet
         }
 
-        /// <summary>Snippet for RunTaskAsync</summary>
-        public async Task RunTaskAsync_RequestObject()
+        /// <summary>Snippet for DeleteTaskAsync</summary>
+        public async Task DeleteTaskAsync_ResourceNames()
         {
-            // Snippet: RunTaskAsync(RunTaskRequest,CallSettings)
-            // Additional: RunTaskAsync(RunTaskRequest,CancellationToken)
+            // Snippet: DeleteTaskAsync(TaskName, CallSettings)
+            // Additional: DeleteTaskAsync(TaskName, CancellationToken)
             // Create client
             CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            RunTaskRequest request = new RunTaskRequest
-            {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-            };
+            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
-            apis::Task response = await cloudTasksClient.RunTaskAsync(request);
+            await cloudTasksClient.DeleteTaskAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for RunTask</summary>
         public void RunTask_RequestObject()
         {
-            // Snippet: RunTask(RunTaskRequest,CallSettings)
+            // Snippet: RunTask(RunTaskRequest, CallSettings)
             // Create client
             CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
             // Initialize request argument(s)
             RunTaskRequest request = new RunTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
-            apis::Task response = cloudTasksClient.RunTask(request);
+            gctv::Task response = cloudTasksClient.RunTask(request);
             // End snippet
         }
 
+        /// <summary>Snippet for RunTaskAsync</summary>
+        public async Task RunTaskAsync_RequestObject()
+        {
+            // Snippet: RunTaskAsync(RunTaskRequest, CallSettings)
+            // Additional: RunTaskAsync(RunTaskRequest, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            RunTaskRequest request = new RunTaskRequest
+            {
+                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                ResponseView = gctv::Task.Types.View.Unspecified,
+            };
+            // Make the request
+            gctv::Task response = await cloudTasksClient.RunTaskAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTask</summary>
+        public void RunTask()
+        {
+            // Snippet: RunTask(string, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
+            // Make the request
+            gctv::Task response = cloudTasksClient.RunTask(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTaskAsync</summary>
+        public async Task RunTaskAsync()
+        {
+            // Snippet: RunTaskAsync(string, CallSettings)
+            // Additional: RunTaskAsync(string, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
+            // Make the request
+            gctv::Task response = await cloudTasksClient.RunTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTask</summary>
+        public void RunTask_ResourceNames()
+        {
+            // Snippet: RunTask(TaskName, CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            // Make the request
+            gctv::Task response = cloudTasksClient.RunTask(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTaskAsync</summary>
+        public async Task RunTaskAsync_ResourceNames()
+        {
+            // Snippet: RunTaskAsync(TaskName, CallSettings)
+            // Additional: RunTaskAsync(TaskName, CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            TaskName name = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            // Make the request
+            gctv::Task response = await cloudTasksClient.RunTaskAsync(name);
+            // End snippet
+        }
     }
 }
