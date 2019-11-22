@@ -15,13 +15,11 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
-using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Transactions;
 using Xunit;
 
 // All samples now use a connection string variable declared before the start of the snippet.
@@ -99,19 +97,24 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            // Sample: InsertDataAsync
+            // Additional: RunWithRetriableTransactionAsync
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                // Sample: InsertDataAsync
-                using (SpannerConnection connection = new SpannerConnection(connectionString))
-                {
-                    await connection.OpenAsync();
+                await connection.OpenAsync();
 
+                // If the transaction is aborted, RunWithRetriableTransactionAsync will
+                // retry the whole unit of work with a fresh transaction each time.
+                await connection.RunWithRetriableTransactionAsync(async transaction =>
+                {
                     SpannerCommand cmd = connection.CreateInsertCommand("TestTable");
                     SpannerParameter keyParameter = cmd.Parameters.Add("Key", SpannerDbType.String);
                     SpannerParameter stringValueParameter = cmd.Parameters.Add("StringValue", SpannerDbType.String);
                     SpannerParameter int64ValueParameter = cmd.Parameters.Add("Int64Value", SpannerDbType.Int64);
+                    cmd.Transaction = transaction;
 
-                    // This executes 5 distinct transactions with one row written per transaction.
+                    // This executes 5 distinct insert commands using the retriable transaction.
+                    // The mutations will be effective once the transaction has committed successfully.
                     for (int i = 0; i < 5; i++)
                     {
                         keyParameter.Value = Guid.NewGuid().ToString("N");
@@ -120,9 +123,9 @@ namespace Google.Cloud.Spanner.Data.Snippets
                         int rowsAffected = await cmd.ExecuteNonQueryAsync();
                         Console.WriteLine($"{rowsAffected} rows written...");
                     }
-                }
-                // End sample
-            });
+                });
+            }
+            // End sample
         }
 
         [Fact]
@@ -130,21 +133,26 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            // Sample: Dml
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                // Sample: Dml
-                using (SpannerConnection connection = new SpannerConnection(connectionString))
-                {
-                    await connection.OpenAsync();
+                await connection.OpenAsync();
 
+                // If the transaction is aborted, RunWithRetriableTransactionAsync will
+                // retry the whole unit of work with a fresh transaction each time.
+                // Please be aware that the whole unit of work needs to be prepared
+                // to be called more than once.
+                await connection.RunWithRetriableTransactionAsync(async transaction =>
+                {
                     SpannerCommand cmd = connection.CreateDmlCommand(
                         "UPDATE TestTable SET StringValue='Updated' WHERE Int64Value=@value");
                     cmd.Parameters.Add("value", SpannerDbType.Int64, 10);
+                    cmd.Transaction = transaction;
                     int rowsAffected = await cmd.ExecuteNonQueryAsync();
                     Console.WriteLine($"{rowsAffected} rows updated...");
-                }
-                // End sample
-            });
+                });
+            }
+            // End sample
         }
 
         [Fact]
@@ -174,14 +182,18 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            // Sample: BatchDml
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                // Sample: BatchDml
-                using (SpannerConnection connection = new SpannerConnection(connectionString))
-                {
-                    await connection.OpenAsync();
+                await connection.OpenAsync();
 
-                    SpannerBatchCommand cmd = connection.CreateBatchDmlCommand();
+                // If the transaction is aborted, RunWithRetriableTransactionAsync will
+                // retry the whole unit of work with a fresh transaction each time.
+                // Please be aware that the whole unit of work needs to be prepared
+                // to be called more than once.
+                await connection.RunWithRetriableTransactionAsync(async (transaction) =>
+                {
+                    SpannerBatchCommand cmd = transaction.CreateBatchDmlCommand();
 
                     cmd.Add(
                         "UPDATE TestTable SET StringValue='Updated' WHERE Int64Value=@value",
@@ -194,9 +206,9 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     IEnumerable<long> rowsAffected = await cmd.ExecuteNonQueryAsync();
                     Console.WriteLine($"{rowsAffected.ElementAt(0)} rows updated...");
                     Console.WriteLine($"{rowsAffected.ElementAt(1)} rows deleted...");
-                }
-                // End sample
-            });
+                });
+            }
+            // End sample
         }
 
         [Fact]
@@ -204,57 +216,72 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            // Sample: CommitTimestamp
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                // Sample: CommitTimestamp
-                using (SpannerConnection connection = new SpannerConnection(connectionString))
+                await connection.OpenAsync();
+
+                string createTableStatement =
+                    @"CREATE TABLE UsersHistory (
+                    Id INT64 NOT NULL,
+                    CommitTs TIMESTAMP NOT NULL OPTIONS
+                        (allow_commit_timestamp=true),
+                    Name STRING(MAX) NOT NULL,
+                    Email STRING(MAX),
+                    Deleted BOOL NOT NULL,
+                    ) PRIMARY KEY(Id, CommitTs DESC)";
+
+                await connection.CreateDdlCommand(createTableStatement).ExecuteNonQueryAsync();
+
+                // Create a command for inserting rows.
+                SpannerCommand cmd = connection.CreateInsertCommand("UsersHistory",
+                    new SpannerParameterCollection
+                    {
+                        { "Id", SpannerDbType.Int64 },
+                        { "CommitTs", SpannerDbType.Timestamp, SpannerParameter.CommitTimestamp },
+                        { "Name", SpannerDbType.String },
+                        { "Deleted", SpannerDbType.Bool , false}
+                    });
+
+                int rowsAffected = 0;
+
+                // If the transaction is aborted, RunWithRetriableTransactionAsync will
+                // retry the whole unit of work with a fresh transaction each time.
+                // Please be aware that the whole unit of work needs to be prepared
+                // to be called more than once.
+                await connection.RunWithRetriableTransactionAsync(async transaction =>
                 {
-                    await connection.OpenAsync();
-
-                    string createTableStatement =
-                        @"CREATE TABLE UsersHistory (
-                        Id INT64 NOT NULL,
-                        CommitTs TIMESTAMP NOT NULL OPTIONS
-                            (allow_commit_timestamp=true),
-                        Name STRING(MAX) NOT NULL,
-                        Email STRING(MAX),
-                        Deleted BOOL NOT NULL,
-                      ) PRIMARY KEY(Id, CommitTs DESC)";
-
-                    await connection.CreateDdlCommand(createTableStatement).ExecuteNonQueryAsync();
-
                     // Insert a first row
-                    SpannerCommand cmd = connection.CreateInsertCommand("UsersHistory",
-                        new SpannerParameterCollection
-                        {
-                            { "Id", SpannerDbType.Int64, 10L },
-                            { "CommitTs", SpannerDbType.Timestamp, SpannerParameter.CommitTimestamp },
-                            { "Name", SpannerDbType.String, "Demo 1" },
-                            { "Deleted", SpannerDbType.Bool, false }
-                        });
-                    int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                    cmd.Parameters["Id"].Value = 10L;
+                    cmd.Parameters["Name"].Value = "Demo 1";
+                    cmd.Transaction = transaction;
+                    rowsAffected += await cmd.ExecuteNonQueryAsync();
+                });
 
+                await connection.RunWithRetriableTransactionAsync(async transaction =>
+                {
                     // Insert a second row
                     cmd.Parameters["Id"].Value = 11L;
                     cmd.Parameters["Name"].Value = "Demo 2";
                     rowsAffected += await cmd.ExecuteNonQueryAsync();
-                    Console.WriteLine($"{rowsAffected} rows written...");
+                });
 
-                    // Display the inserted values
-                    SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM UsersHistory");
-                    using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
+                Console.WriteLine($"{rowsAffected} rows written...");
+
+                // Display the inserted values
+                SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM UsersHistory");
+                using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
                     {
-                        while (await reader.ReadAsync())
-                        {
-                            long id = reader.GetFieldValue<long>("Id");
-                            string name = reader.GetFieldValue<string>("Name");
-                            DateTime timestamp = reader.GetFieldValue<DateTime>("CommitTs");
-                            Console.WriteLine($"{id}: {name} - {timestamp:HH:mm:ss.ffffff}");
-                        }
+                        long id = reader.GetFieldValue<long>("Id");
+                        string name = reader.GetFieldValue<string>("Name");
+                        DateTime timestamp = reader.GetFieldValue<DateTime>("CommitTs");
+                        Console.WriteLine($"{id}: {name} - {timestamp:HH:mm:ss.ffffff}");
                     }
                 }
-                // End sample
-            });
+            }
+            // End sample
         }
 
         [Fact]
@@ -262,15 +289,20 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            // Sample: ReadUpdateDeleteAsync
+            // Additional: CreateUpdateCommand
+            // Additional: CreateDeleteCommand
+            // Additional: CreateSelectCommand
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                // Sample: ReadUpdateDeleteAsync
-                // Additional: CreateUpdateCommand
-                // Additional: CreateDeleteCommand
-                // Additional: CreateSelectCommand
-                using (SpannerConnection connection = new SpannerConnection(connectionString))
+                await connection.OpenAsync();
+
+                // If the transaction is aborted, RunWithRetriableTransactionAsync will
+                // retry the whole unit of work with a fresh transaction each time.
+                // Please be aware that the whole unit of work needs to be prepared
+                // to be called more than once.
+                await connection.RunWithRetriableTransactionAsync(async (transaction) =>
                 {
-                    await connection.OpenAsync();
 
                     // Read the first two keys in the database.
                     List<string> keys = new List<string>();
@@ -294,62 +326,9 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     SpannerCommand deleteCmd = connection.CreateDeleteCommand("TestTable");
                     deleteCmd.Parameters.Add("Key", SpannerDbType.String, keys[1]);
                     await deleteCmd.ExecuteNonQueryAsync();
-                }
-                // End sample
-            });
-        }
-
-        // Sample: SpannerFaultDetectionStrategy
-        private class SpannerFaultDetectionStrategy : ITransientErrorDetectionStrategy
-        {
-            /// <inheritdoc />
-            public bool IsTransient(Exception ex) => ex.IsTransientSpannerFault();
-        }
-        // End sample
-
-        [Fact]
-        public async Task TransactionAsync()
-        {
-            string connectionString = _fixture.ConnectionString;
-
-            // Sample: TransactionAsync
-            // Additional: BeginTransactionAsync
-            RetryPolicy<SpannerFaultDetectionStrategy> retryPolicy =
-                new RetryPolicy<SpannerFaultDetectionStrategy>(RetryStrategy.DefaultExponential);
-
-            await retryPolicy.ExecuteAsync(
-                async () =>
-                {
-                    using (SpannerConnection connection = new SpannerConnection(connectionString))
-                    {
-                        await connection.OpenAsync();
-
-                        using (SpannerTransaction transaction = await connection.BeginTransactionAsync())
-                        {
-                            SpannerCommand cmd = connection.CreateInsertCommand(
-                                "TestTable", new SpannerParameterCollection
-                                {
-                                    {"Key", SpannerDbType.String},
-                                    {"StringValue", SpannerDbType.String},
-                                    {"Int64Value", SpannerDbType.Int64}
-                                });
-                            cmd.Transaction = transaction;
-
-                            // This executes a single transactions with alls row written at once during CommitAsync().
-                            // If a transient fault occurs, this entire method is re-run.
-                            for (int i = 0; i < 5; i++)
-                            {
-                                cmd.Parameters["Key"].Value = Guid.NewGuid().ToString("N");
-                                cmd.Parameters["StringValue"].Value = $"StringValue{i}";
-                                cmd.Parameters["Int64Value"].Value = i;
-                                await cmd.ExecuteNonQueryAsync();
-                            }
-
-                            await transaction.CommitAsync();
-                        }
-                    }
                 });
-            // End sample
+                // End sample
+            }
         }
 
         [Fact]
@@ -447,50 +426,6 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     Console.WriteLine(stats);
                 }
             }
-            // End sample
-        }
-
-        [Fact]
-        public async Task TransactionScopeAsync()
-        {
-            string connectionString = _fixture.ConnectionString;
-
-            // Sample: TransactionScopeAsync
-            // Additional: CreateInsertCommand
-            RetryPolicy<SpannerFaultDetectionStrategy> retryPolicy =
-                new RetryPolicy<SpannerFaultDetectionStrategy>(RetryStrategy.DefaultExponential);
-
-            await retryPolicy.ExecuteAsync(
-                async () =>
-                {
-                    using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                    {
-                        using (SpannerConnection connection = new SpannerConnection(connectionString))
-                        {
-                            await connection.OpenAsync();
-
-                            SpannerCommand cmd = connection.CreateInsertCommand(
-                                "TestTable", new SpannerParameterCollection
-                                {
-                                    {"Key", SpannerDbType.String},
-                                    {"StringValue", SpannerDbType.String},
-                                    {"Int64Value", SpannerDbType.Int64}
-                                });
-
-                            // This executes a single transactions with alls row written at once during scope.Complete().
-                            // If a transient fault occurs, this entire method is re-run.
-                            for (int i = 0; i < 5; i++)
-                            {
-                                cmd.Parameters["Key"].Value = Guid.NewGuid().ToString("N");
-                                cmd.Parameters["StringValue"].Value = $"StringValue{i}";
-                                cmd.Parameters["Int64Value"].Value = i;
-                                await cmd.ExecuteNonQueryAsync();
-                            }
-
-                            scope.Complete();
-                        }
-                    }
-                });
             // End sample
         }
 

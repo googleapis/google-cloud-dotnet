@@ -51,8 +51,14 @@ DML can be executed in standard mode using `ExecuteNonQuery` or `ExecuteNonQuery
 
 {{sample:SpannerConnection.Dml}}
 
-If you execute DML within a transaction, queries are able to observe the changes already made by DML statements,
+It is recommended that you execute DML statements within a retriable transaction.
+Queries within the same transaction are able to observe the changes already made by DML statements,
 and later DML statements can use the values created or updated by earlier ones.
+Also, if the transaction is aborted at any point, the whole unit of work will be retried automatically. 
+Note that the code executing within a retriable transaction needs to be prepared to be called more
+than once.
+Please read the [Cloud Spanner user documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/TransactionOptions)
+for details on when and why transactions can be aborted.
 
 Some DML statements can be executed in a *partitioned* manner, enabling an efficient
 update of large data sets. `ExecutePartitionedUpdate` or `ExecutePartitionedUpdateAsync`:
@@ -77,8 +83,14 @@ visible to all subsequent statements in the batch.
 When one of the statemens in the batch fails, execution is halted and all subsequent statements are not
 executed. A `SpannerBatchNonQueryException` will be thrown that contains both information about the error
 and the number of rows affected by each of the statements that executed before the failed one. If you are executing
-the batch DML command inside a transaction you can simply commit the transaction when `SpannerBatchNonQueryException`
+the batch DML command inside a non-retriable transaction you can simply commit the transaction when `SpannerBatchNonQueryException`
 is thrown if partial success is acceptable in your application.
+It is recommended to run Batch DML within a retriable transaction. If the transaction
+aborts the whole unit of work will be retried automatically.
+Note that the code executing within a retriable transaction needs to be prepared to be called more
+than once.
+Please read the [Cloud Spanner user documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/TransactionOptions)
+for details on when and why transactions can be aborted.
 
 ### Direct row modifications
 
@@ -104,6 +116,12 @@ deletes a row using a `DELETE` command:
 
 When direct row modifications are performed in a transaction, they are only applied when the transaction is committed.
 Queries within the transaction will not observe any changes.
+It is recommended to run direct row modifications within a retriable transaction. If the transaction
+aborts the whole unit of work will be retried automatically.
+Note that the code executing within a retriable transaction needs to be prepared to be called more
+than once.
+Please read the [Cloud Spanner user documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/TransactionOptions)
+for details on when and why transactions can be aborted.
 
 ### Using a commit timestamp
 
@@ -128,28 +146,19 @@ Cloud Spanner is fully ACID compliant.
 
 Retries should be implemented at the transaction level (as opposed to individual call level)
 because there is a chance in high stress situations that a Cloud Spanner session (transaction)
-can be canceled due to causing a deadlock. In this case, the entire transaction should be
-retried and run on a new session.
+can be aborted due to causing a deadlock. In this case, the entire transaction should be
+retried. The methods `SpannerConnection.RunWithRetriableTransactionAsync(...)` will take care of
+automatically retrying the entire callback passed as a paremeter using a fresh transaction
+if previous attempts aborted.
 
-Use the extension method IsTransientSpannerFault() on Exception to create your detection
-strategy for the TransientFaultApplication Block.
+- The callback doesn't need to handle the transaction lifecycle.
+- The callback needs to set the transaction received on all the commands it creates.
+- The callback might be called more than once, so the code should be written bearing this in mind.
 
-{{sample:SpannerConnection.SpannerFaultDetectionStrategy}}
+Please read the [Cloud Spanner user documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/TransactionOptions)
+for details on when and why transactions can be aborted.
 
- You should execute the entire transaction within a RetryPolicy. Generally, we recommend
- using exponential backoff as shown below.
-
-{{sample:SpannerConnection.TransactionAsync}}
-
-## TransactionScope support (.NET 4.5+, Single resource only)
-In addition to supporting setting Transaction on individual commands, Spanner also supports
-TransactionScope and implicit transactions given that only a single resource is involved.
-
-Spanner does not support public two phase commit to commit multiple resources in a
-single transaction.
-
-{{sample:SpannerConnection.TransactionScopeAsync}}
-
+{{sample:SpannerConnection.InsertDataAsync}}
 
 ## Session pool management
 
