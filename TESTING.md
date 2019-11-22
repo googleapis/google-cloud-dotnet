@@ -40,16 +40,56 @@ be a bug in a test which wipes all the data in the project. It is
 *very strongly* recommended that you only run tests against projects
 which do not contain any production data or services.
 
-Running tests
-=============
+Running tests via scripts
+=========================
 
 The `build.sh` script will run unit tests, and
 `runintegrationtests.sh` will run integration tests and snippets.
-(TODO: smoke tests too...) Consult the scripts for details on how to
-run.
+(TODO: smoke tests too...)
 
 Additionally, you can just use `dotnet test` in any test project,
 optionally specifying a test filter and/or target framework.
+
+Both `build.sh` and `runintegrationtests.sh` accept a list of
+package names to build/test. So for example, to build and run all
+the unit and integration tests and snippets for
+`Google.Cloud.Bigtable.V2` you could run:
+
+- `$ ./build.sh Google.Cloud.Bigtable.V2`
+- `$ ./runintegrationtests.sh Google.Cloud.Bigtable.V2`
+
+Consult the scripts for more options, such as building without
+testing, or rerunning failed tests.
+
+Running tests directly
+======================
+
+If you're working with a single API, it may be more convenient to
+run the tests directly rather than using the scripts. It's usually
+simplest to change to the API's root directory, and use `dotnet`
+from there:
+
+- `$ cd apis/Google.Cloud.Bigtable.V2`
+- `$ dotnet test Google.Cloud.Bigtable.V2.Tests` (run the unit tests)
+- `$ dotnet test Google.Cloud.Bigtable.V2.IntegrationTests` (run the integration tests)
+- `$ dotnet test Google.Cloud.Bigtable.V2.Snippets` (run the snippets)
+
+`dotnet test` always checks whether anything needs to be rebuilt
+before it runs the tests, so no separate `dotnet build` step is
+required.
+
+Note that not all test types are present for all APIs.
+
+Where a `SmokeTests` directory is present, this is not in the form
+of a regular test - instead, it's a standalone application,
+accepting the Google Cloud project ID as a command line argument. For example, to
+run the smoke test for `Google.Cloud.Vision.V1`, you might run:
+
+- `$ cd apis/Google.Cloud.Vision.V1`
+- `$ dotnet run -p Google.Cloud.Vision.V1.SmokeTests -- your-project-name`
+
+(The `--` is to separate `dotnet` arguments from the arguments to
+pass to the application.)
 
 Common environment variables
 ============================
