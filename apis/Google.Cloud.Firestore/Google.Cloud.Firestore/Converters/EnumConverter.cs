@@ -26,11 +26,11 @@ namespace Google.Cloud.Firestore.Converters
     /// </summary>
     internal sealed class EnumConverter : ConverterBase
     {
-        private TypeCode typeCode;
+        private readonly TypeCode _typeCode;
 
         internal EnumConverter(BclType targetType) : base(targetType)
         {
-            typeCode = BclType.GetTypeCode(TargetType);
+            _typeCode = BclType.GetTypeCode(TargetType);
         }
 
         protected override object DeserializeInteger(DeserializationContext context, long value)
@@ -42,49 +42,37 @@ namespace Google.Cloud.Firestore.Converters
         public override Value Serialize(SerializationContext context, object value) =>
             new Value { IntegerValue = EnumToInt64(value) };
 
-        private long EnumToInt64(object value) {
-            switch (typeCode) {
-                case TypeCode.Byte:
-                    return checked((byte) value);
-                case TypeCode.SByte:
-                    return checked((sbyte) value);
-                case TypeCode.Int16:
-                    return checked((short) value);
-                case TypeCode.UInt16:
-                    return checked((ushort) value);
-                case TypeCode.Int32:
-                    return checked((int) value);
-                case TypeCode.UInt32:
-                    return checked((uint) value);
-                case TypeCode.Int64:
-                    return checked((long) value);
-                case TypeCode.UInt64:
-                    return checked((long) (ulong) value);
+        private long EnumToInt64(object value)
+        {
+            switch (_typeCode)
+            {
+                case TypeCode.Byte: return checked((byte) value);
+                case TypeCode.SByte: return checked((sbyte) value);
+                case TypeCode.Int16: return checked((short) value);
+                case TypeCode.UInt16: return checked((ushort) value);
+                case TypeCode.Int32: return checked((int) value);
+                case TypeCode.UInt32: return checked((uint) value);
+                case TypeCode.Int64: return checked((long) value);
+                case TypeCode.UInt64: return checked((long) (ulong) value);
                 default:
-                    throw new InvalidOperationException($"Unexpected underlying type code for enum: {typeCode}");
+                    throw new InvalidOperationException($"Unexpected underlying type code for enum: {_typeCode}");
             }
         }
 
-        private object Int64ToEnumBaseType(long value) {
-            switch (typeCode) {
-                case TypeCode.Byte:
-                    return checked((byte) value);
-                case TypeCode.SByte:
-                    return checked((sbyte) value);
-                case TypeCode.Int16:
-                    return checked((short) value);
-                case TypeCode.UInt16:
-                    return checked((ushort) value);
-                case TypeCode.Int32:
-                    return checked((int) value);
-                case TypeCode.UInt32:
-                    return checked((uint) value);
-                case TypeCode.Int64:
-                    return value;
-                case TypeCode.UInt64:
-                    return checked((ulong) value);
+        private object Int64ToEnumBaseType(long value)
+        {
+            switch (_typeCode)
+            {
+                case TypeCode.Byte: return checked((byte) value);
+                case TypeCode.SByte: return checked((sbyte) value);
+                case TypeCode.Int16: return checked((short) value);
+                case TypeCode.UInt16: return checked((ushort) value);
+                case TypeCode.Int32: return checked((int) value);
+                case TypeCode.UInt32: return checked((uint) value);
+                case TypeCode.Int64: return value;
+                case TypeCode.UInt64: return checked((ulong) value);
                 default:
-                    throw new InvalidOperationException($"Unexpected underlying type code for enum: {typeCode}");
+                    throw new InvalidOperationException($"Unexpected underlying type code for enum: {_typeCode}");
             }
         }
     }
