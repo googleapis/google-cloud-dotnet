@@ -26,94 +26,65 @@ namespace Google.Cloud.Firestore.Converters
     /// </summary>
     internal sealed class EnumConverter : ConverterBase
     {
-        private static readonly ConcurrentDictionary<BclType, PrimitiveConverter> s_primitiveConverters =
-            new ConcurrentDictionary<BclType, PrimitiveConverter>();
-
-        private readonly PrimitiveConverter _converter;
+        private TypeCode typeCode;
 
         internal EnumConverter(BclType targetType) : base(targetType)
         {
-            _converter = s_primitiveConverters.GetOrAdd(targetType, t => PrimitiveConverter.ForType(t));
+            typeCode = BclType.GetTypeCode(TargetType);
         }
 
-        protected override object DeserializeInteger(DeserializationContext context, long value) => _converter.Int64ToEnum(value);
-
-        public override Value Serialize(SerializationContext context, object value) => new Value { IntegerValue = _converter.EnumToInt64(value) };
-
-        // This is really ugly in terms of repetition, but reasonably simple. I've failed to come up with anything cleaner :(
-        private abstract class PrimitiveConverter
+        protected override object DeserializeInteger(DeserializationContext context, long value)
         {
-            private static readonly Dictionary<TypeCode, BclType> s_genericTypes = new Dictionary<TypeCode, BclType>
-            {
-                { TypeCode.Byte, typeof(ByteEnumConverter<>) },
-                { TypeCode.SByte, typeof(SByteEnumConverter<>) },
-                { TypeCode.Int16, typeof(Int16EnumConverter<>) },
-                { TypeCode.UInt16, typeof(UInt16EnumConverter<>) },
-                { TypeCode.Int32, typeof(Int32EnumConverter<>) },
-                { TypeCode.UInt32, typeof(UInt32EnumConverter<>) },
-                { TypeCode.Int64, typeof(Int64EnumConverter<>) },
-                { TypeCode.UInt64, typeof(UInt64EnumConverter<>) },
-            };
+            object baseValue = Int64ToEnumBaseType(value);
+            return Enum.ToObject(TargetType, baseValue);
+        }
 
-            internal abstract object Int64ToEnum(long value);
-            internal abstract long EnumToInt64(object value);
+        public override Value Serialize(SerializationContext context, object value) =>
+            new Value { IntegerValue = EnumToInt64(value) };
 
-            internal static PrimitiveConverter ForType(BclType type)
-            {
-                TypeCode underlyingTypeCode = BclType.GetTypeCode(type.GetTypeInfo().GetEnumUnderlyingType());
-                if (!s_genericTypes.TryGetValue(underlyingTypeCode, out var genericConverterType))
-                {
-                    throw new InvalidOperationException($"Unexpected underlying type code for enum: {underlyingTypeCode}");
-                }
-                return (PrimitiveConverter) Activator.CreateInstance(genericConverterType.MakeGenericType(type));
+        private long EnumToInt64(object value) {
+            switch (typeCode) {
+                case TypeCode.Byte:
+                    return checked((byte) value);
+                case TypeCode.SByte:
+                    return checked((sbyte) value);
+                case TypeCode.Int16:
+                    return checked((short) value);
+                case TypeCode.UInt16:
+                    return checked((ushort) value);
+                case TypeCode.Int32:
+                    return checked((int) value);
+                case TypeCode.UInt32:
+                    return checked((uint) value);
+                case TypeCode.Int64:
+                    return checked((long) value);
+                case TypeCode.UInt64:
+                    return checked((long) (ulong) value);
+                default:
+                    throw new InvalidOperationException($"Unexpected underlying type code for enum: {typeCode}");
             }
+        }
 
-            private sealed class ByteEnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => checked((byte) value);
-                internal override object Int64ToEnum(long value) => (T) (object) checked((byte) value);
-            }
-
-            private sealed class SByteEnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => checked((sbyte) value);
-                internal override object Int64ToEnum(long value) => (T) (object) checked((sbyte) value);
-            }
-
-            private sealed class Int16EnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => checked((short) value);
-                internal override object Int64ToEnum(long value) => (T) (object) checked((short) value);
-            }
-
-            private sealed class UInt16EnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => checked((ushort) value);
-                internal override object Int64ToEnum(long value) => (T) (object) checked((ushort) value);
-            }
-
-            private sealed class Int32EnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => checked((int) value);
-                internal override object Int64ToEnum(long value) => (T) (object) checked((int) value);
-            }
-
-            private sealed class UInt32EnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => checked((uint) value);
-                internal override object Int64ToEnum(long value) => (T) (object) checked((uint) value);
-            }
-
-            private sealed class Int64EnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => (long) value;
-                internal override object Int64ToEnum(long value) => (T) (object) value;
-            }
-
-            private sealed class UInt64EnumConverter<T> : PrimitiveConverter
-            {
-                internal override long EnumToInt64(object value) => checked((long) (ulong) value);
-                internal override object Int64ToEnum(long value) => (T) (object) checked((ulong) value);
+        private object Int64ToEnumBaseType(long value) {
+            switch (typeCode) {
+                case TypeCode.Byte:
+                    return checked((byte) value);
+                case TypeCode.SByte:
+                    return checked((sbyte) value);
+                case TypeCode.Int16:
+                    return checked((short) value);
+                case TypeCode.UInt16:
+                    return checked((ushort) value);
+                case TypeCode.Int32:
+                    return checked((int) value);
+                case TypeCode.UInt32:
+                    return checked((uint) value);
+                case TypeCode.Int64:
+                    return value;
+                case TypeCode.UInt64:
+                    return checked((ulong) value);
+                default:
+                    throw new InvalidOperationException($"Unexpected underlying type code for enum: {typeCode}");
             }
         }
     }
