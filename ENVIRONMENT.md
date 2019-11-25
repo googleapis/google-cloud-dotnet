@@ -8,10 +8,10 @@ for those scripts.
 
 Installing some of the dependencies can be tricky, particularly on
 restricted internal versions of Linux. For that reason, we provide a
-[Dockerfile](docker/Dockerfile) to get started with. The typical
-procedure would be:
+[Dockerfile](docker/Dockerfile) to get started with, which has
+`bash` as an entry point. The typical procedure would be:
 
-- `git clone https://github.com/googleapis/google-cloud-dotnet.git`
+- `git clone --recursive https://github.com/googleapis/google-cloud-dotnet.git`
 - `cd google-cloud-dotnet`
 - `docker build -t google-cloud-dotnet docker`
 - `docker run -v $PWD:/google-cloud-dotnet -it google-cloud-dotnet`

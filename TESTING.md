@@ -40,6 +40,24 @@ be a bug in a test which wipes all the data in the project. It is
 *very strongly* recommended that you only run tests against projects
 which do not contain any production data or services.
 
+Initializing conformance test data
+==================================
+
+Cross-language conformance tests are defined in a [separate
+repository](https://github.com/googleapis/conformance-tests) which
+is referenced as a submodule within the google-cloud-dotnet
+repository.
+
+To ensure the submodule is suitably initialized and updated (so that
+the conformance test data is available locally) run this command:
+
+```sh
+git submodule update --init
+```
+
+(If your local `conformance-tests` directory contains files including a
+`README.md`, that probably means all is well.)
+
 Running tests via scripts
 =========================
 
