@@ -14,599 +14,623 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Datastore.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Datastore.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedDatastoreClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedDatastoreClientTest
     {
-        [Fact]
-        public void Lookup()
+        [xunit::FactAttribute]
+        public void LookupRequestObject()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            LookupRequest expectedRequest = new LookupRequest
-            {
-                ProjectId = "projectId-1969970175",
-                ReadOptions = new ReadOptions(),
-                Keys = { },
-            };
-            LookupResponse expectedResponse = new LookupResponse();
-            mockGrpcClient.Setup(x => x.Lookup(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            ReadOptions readOptions = new ReadOptions();
-            IEnumerable<Key> keys = new List<Key>();
-            LookupResponse response = client.Lookup(projectId, readOptions, keys);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task LookupAsync()
-        {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            LookupRequest expectedRequest = new LookupRequest
-            {
-                ProjectId = "projectId-1969970175",
-                ReadOptions = new ReadOptions(),
-                Keys = { },
-            };
-            LookupResponse expectedResponse = new LookupResponse();
-            mockGrpcClient.Setup(x => x.LookupAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LookupResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            ReadOptions readOptions = new ReadOptions();
-            IEnumerable<Key> keys = new List<Key>();
-            LookupResponse response = await client.LookupAsync(projectId, readOptions, keys);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void Lookup2()
-        {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             LookupRequest request = new LookupRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                ReadOptions = new ReadOptions(),
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
             };
-            LookupResponse expectedResponse = new LookupResponse();
-            mockGrpcClient.Setup(x => x.Lookup(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            LookupResponse expectedResponse = new LookupResponse
+            {
+                Found = { new EntityResult(), },
+                Missing = { new EntityResult(), },
+                Deferred = { new Key(), },
+            };
+            mockGrpcClient.Setup(x => x.Lookup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
             LookupResponse response = client.Lookup(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task LookupAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task LookupRequestObjectAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             LookupRequest request = new LookupRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                ReadOptions = new ReadOptions(),
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
             };
-            LookupResponse expectedResponse = new LookupResponse();
-            mockGrpcClient.Setup(x => x.LookupAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LookupResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            LookupResponse expectedResponse = new LookupResponse
+            {
+                Found = { new EntityResult(), },
+                Missing = { new EntityResult(), },
+                Deferred = { new Key(), },
+            };
+            mockGrpcClient.Setup(x => x.LookupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LookupResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            LookupResponse response = await client.LookupAsync(request);
-            Assert.Same(expectedResponse, response);
+            LookupResponse responseCallSettings = await client.LookupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LookupResponse responseCancellationToken = await client.LookupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void RunQuery()
+        [xunit::FactAttribute]
+        public void Lookup()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            LookupRequest request = new LookupRequest
+            {
+                ReadOptions = new ReadOptions(),
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
+            };
+            LookupResponse expectedResponse = new LookupResponse
+            {
+                Found = { new EntityResult(), },
+                Missing = { new EntityResult(), },
+                Deferred = { new Key(), },
+            };
+            mockGrpcClient.Setup(x => x.Lookup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            LookupResponse response = client.Lookup(request.ProjectId, request.ReadOptions, request.Keys);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task LookupAsync()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            LookupRequest request = new LookupRequest
+            {
+                ReadOptions = new ReadOptions(),
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
+            };
+            LookupResponse expectedResponse = new LookupResponse
+            {
+                Found = { new EntityResult(), },
+                Missing = { new EntityResult(), },
+                Deferred = { new Key(), },
+            };
+            mockGrpcClient.Setup(x => x.LookupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LookupResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            LookupResponse responseCallSettings = await client.LookupAsync(request.ProjectId, request.ReadOptions, request.Keys, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LookupResponse responseCancellationToken = await client.LookupAsync(request.ProjectId, request.ReadOptions, request.Keys, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RunQueryRequestObject()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             RunQueryRequest request = new RunQueryRequest
             {
-                ProjectId = "projectId-1969970175",
+                ReadOptions = new ReadOptions(),
                 PartitionId = new PartitionId(),
+                Query = new Query(),
+                GqlQuery = new GqlQuery(),
+                ProjectId = "project_id43ad98b0",
             };
-            RunQueryResponse expectedResponse = new RunQueryResponse();
-            mockGrpcClient.Setup(x => x.RunQuery(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            RunQueryResponse expectedResponse = new RunQueryResponse
+            {
+                Batch = new QueryResultBatch(),
+                Query = new Query(),
+            };
+            mockGrpcClient.Setup(x => x.RunQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
             RunQueryResponse response = client.RunQuery(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RunQueryAsync()
+        [xunit::FactAttribute]
+        public async stt::Task RunQueryRequestObjectAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             RunQueryRequest request = new RunQueryRequest
             {
-                ProjectId = "projectId-1969970175",
+                ReadOptions = new ReadOptions(),
                 PartitionId = new PartitionId(),
+                Query = new Query(),
+                GqlQuery = new GqlQuery(),
+                ProjectId = "project_id43ad98b0",
             };
-            RunQueryResponse expectedResponse = new RunQueryResponse();
-            mockGrpcClient.Setup(x => x.RunQueryAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<RunQueryResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            RunQueryResponse expectedResponse = new RunQueryResponse
+            {
+                Batch = new QueryResultBatch(),
+                Query = new Query(),
+            };
+            mockGrpcClient.Setup(x => x.RunQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunQueryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            RunQueryResponse response = await client.RunQueryAsync(request);
-            Assert.Same(expectedResponse, response);
+            RunQueryResponse responseCallSettings = await client.RunQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RunQueryResponse responseCancellationToken = await client.RunQueryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void BeginTransaction()
+        [xunit::FactAttribute]
+        public void BeginTransactionRequestObject()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
-            {
-                ProjectId = "projectId-1969970175",
-            };
-            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
-            {
-                Transaction = ByteString.CopyFromUtf8("-34"),
-            };
-            mockGrpcClient.Setup(x => x.BeginTransaction(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            BeginTransactionResponse response = client.BeginTransaction(projectId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task BeginTransactionAsync()
-        {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
-            {
-                ProjectId = "projectId-1969970175",
-            };
-            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
-            {
-                Transaction = ByteString.CopyFromUtf8("-34"),
-            };
-            mockGrpcClient.Setup(x => x.BeginTransactionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<BeginTransactionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            BeginTransactionResponse response = await client.BeginTransactionAsync(projectId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void BeginTransaction2()
-        {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                ProjectId = "projectId-1969970175",
+                ProjectId = "project_id43ad98b0",
+                TransactionOptions = new TransactionOptions(),
             };
             BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            mockGrpcClient.Setup(x => x.BeginTransaction(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
             BeginTransactionResponse response = client.BeginTransaction(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task BeginTransactionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task BeginTransactionRequestObjectAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                ProjectId = "projectId-1969970175",
+                ProjectId = "project_id43ad98b0",
+                TransactionOptions = new TransactionOptions(),
             };
             BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<BeginTransactionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            BeginTransactionResponse response = await client.BeginTransactionAsync(request);
-            Assert.Same(expectedResponse, response);
+            BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Commit()
+        [xunit::FactAttribute]
+        public void BeginTransaction()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
             {
-                ProjectId = "projectId-1969970175",
-                Mode = CommitRequest.Types.Mode.Unspecified,
-                Transaction = ByteString.CopyFromUtf8("-34"),
-                Mutations = { },
+                ProjectId = "project_id43ad98b0",
             };
-            CommitResponse expectedResponse = new CommitResponse
+            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
-                IndexUpdates = 1425228195,
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = ByteString.CopyFromUtf8("-34");
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = client.Commit(projectId, mode, transaction, mutations);
-            Assert.Same(expectedResponse, response);
+            BeginTransactionResponse response = client.BeginTransaction(request.ProjectId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CommitAsync()
+        [xunit::FactAttribute]
+        public async stt::Task BeginTransactionAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
             {
-                ProjectId = "projectId-1969970175",
-                Mode = CommitRequest.Types.Mode.Unspecified,
-                Transaction = ByteString.CopyFromUtf8("-34"),
-                Mutations = { },
+                ProjectId = "project_id43ad98b0",
             };
-            CommitResponse expectedResponse = new CommitResponse
+            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
-                IndexUpdates = 1425228195,
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = ByteString.CopyFromUtf8("-34");
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = await client.CommitAsync(projectId, mode, transaction, mutations);
-            Assert.Same(expectedResponse, response);
+            BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request.ProjectId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request.ProjectId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Commit2()
+        [xunit::FactAttribute]
+        public void CommitRequestObject()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Mode = CommitRequest.Types.Mode.Unspecified,
-                Mutations = { },
-            };
-            CommitResponse expectedResponse = new CommitResponse
-            {
-                IndexUpdates = 1425228195,
-            };
-            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = client.Commit(projectId, mode, mutations);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CommitAsync2()
-        {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
-            {
-                ProjectId = "projectId-1969970175",
-                Mode = CommitRequest.Types.Mode.Unspecified,
-                Mutations = { },
-            };
-            CommitResponse expectedResponse = new CommitResponse
-            {
-                IndexUpdates = 1425228195,
-            };
-            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            CommitResponse response = await client.CommitAsync(projectId, mode, mutations);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void Commit3()
-        {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                ProjectId = "projectId-1969970175",
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
                 Mode = CommitRequest.Types.Mode.Unspecified,
-                Mutations = { },
+                Mutations = { new Mutation(), },
+                ProjectId = "project_id43ad98b0",
             };
             CommitResponse expectedResponse = new CommitResponse
             {
-                IndexUpdates = 1425228195,
+                MutationResults =
+                {
+                    new MutationResult(),
+                },
+                IndexUpdates = 1466771529,
             };
-            mockGrpcClient.Setup(x => x.Commit(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
             CommitResponse response = client.Commit(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CommitAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task CommitRequestObjectAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                ProjectId = "projectId-1969970175",
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
                 Mode = CommitRequest.Types.Mode.Unspecified,
-                Mutations = { },
+                Mutations = { new Mutation(), },
+                ProjectId = "project_id43ad98b0",
             };
             CommitResponse expectedResponse = new CommitResponse
             {
-                IndexUpdates = 1425228195,
+                MutationResults =
+                {
+                    new MutationResult(),
+                },
+                IndexUpdates = 1466771529,
             };
-            mockGrpcClient.Setup(x => x.CommitAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            CommitResponse response = await client.CommitAsync(request);
-            Assert.Same(expectedResponse, response);
+            CommitResponse responseCallSettings = await client.CommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Rollback()
+        [xunit::FactAttribute]
+        public void Commit1()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            RollbackRequest expectedRequest = new RollbackRequest
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
             {
-                ProjectId = "projectId-1969970175",
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                Mode = CommitRequest.Types.Mode.Unspecified,
+                Mutations = { new Mutation(), },
+                ProjectId = "project_id43ad98b0",
             };
-            RollbackResponse expectedResponse = new RollbackResponse();
-            mockGrpcClient.Setup(x => x.Rollback(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            ByteString transaction = ByteString.CopyFromUtf8("-34");
-            RollbackResponse response = client.Rollback(projectId, transaction);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task RollbackAsync()
-        {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            RollbackRequest expectedRequest = new RollbackRequest
+            CommitResponse expectedResponse = new CommitResponse
             {
-                ProjectId = "projectId-1969970175",
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                MutationResults =
+                {
+                    new MutationResult(),
+                },
+                IndexUpdates = 1466771529,
             };
-            RollbackResponse expectedResponse = new RollbackResponse();
-            mockGrpcClient.Setup(x => x.RollbackAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<RollbackResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            ByteString transaction = ByteString.CopyFromUtf8("-34");
-            RollbackResponse response = await client.RollbackAsync(projectId, transaction);
-            Assert.Same(expectedResponse, response);
+            CommitResponse response = client.Commit(request.ProjectId, request.Mode, request.Transaction, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Rollback2()
+        [xunit::FactAttribute]
+        public async stt::Task Commit1Async()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                Mode = CommitRequest.Types.Mode.Unspecified,
+                Mutations = { new Mutation(), },
+                ProjectId = "project_id43ad98b0",
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                MutationResults =
+                {
+                    new MutationResult(),
+                },
+                IndexUpdates = 1466771529,
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            CommitResponse responseCallSettings = await client.CommitAsync(request.ProjectId, request.Mode, request.Transaction, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request.ProjectId, request.Mode, request.Transaction, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void Commit2()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                Mode = CommitRequest.Types.Mode.Unspecified,
+                Mutations = { new Mutation(), },
+                ProjectId = "project_id43ad98b0",
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                MutationResults =
+                {
+                    new MutationResult(),
+                },
+                IndexUpdates = 1466771529,
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = client.Commit(request.ProjectId, request.Mode, request.Mutations);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task Commit2Async()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                Mode = CommitRequest.Types.Mode.Unspecified,
+                Mutations = { new Mutation(), },
+                ProjectId = "project_id43ad98b0",
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                MutationResults =
+                {
+                    new MutationResult(),
+                },
+                IndexUpdates = 1466771529,
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            CommitResponse responseCallSettings = await client.CommitAsync(request.ProjectId, request.Mode, request.Mutations, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request.ProjectId, request.Mode, request.Mutations, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RollbackRequestObject()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                ProjectId = "projectId-1969970175",
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                ProjectId = "project_id43ad98b0",
             };
-            RollbackResponse expectedResponse = new RollbackResponse();
-            mockGrpcClient.Setup(x => x.Rollback(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            RollbackResponse expectedResponse = new RollbackResponse { };
+            mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
             RollbackResponse response = client.Rollback(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RollbackAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RollbackRequestObjectAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                ProjectId = "projectId-1969970175",
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                ProjectId = "project_id43ad98b0",
             };
-            RollbackResponse expectedResponse = new RollbackResponse();
-            mockGrpcClient.Setup(x => x.RollbackAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<RollbackResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            RollbackResponse expectedResponse = new RollbackResponse { };
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RollbackResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            RollbackResponse response = await client.RollbackAsync(request);
-            Assert.Same(expectedResponse, response);
+            RollbackResponse responseCallSettings = await client.RollbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RollbackResponse responseCancellationToken = await client.RollbackAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void AllocateIds()
+        [xunit::FactAttribute]
+        public void Rollback()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            AllocateIdsRequest expectedRequest = new AllocateIdsRequest
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                ProjectId = "project_id43ad98b0",
             };
-            AllocateIdsResponse expectedResponse = new AllocateIdsResponse();
-            mockGrpcClient.Setup(x => x.AllocateIds(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            RollbackResponse expectedResponse = new RollbackResponse { };
+            mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            IEnumerable<Key> keys = new List<Key>();
-            AllocateIdsResponse response = client.AllocateIds(projectId, keys);
-            Assert.Same(expectedResponse, response);
+            RollbackResponse response = client.Rollback(request.ProjectId, request.Transaction);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task AllocateIdsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task RollbackAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            AllocateIdsRequest expectedRequest = new AllocateIdsRequest
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                ProjectId = "project_id43ad98b0",
             };
-            AllocateIdsResponse expectedResponse = new AllocateIdsResponse();
-            mockGrpcClient.Setup(x => x.AllocateIdsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AllocateIdsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            RollbackResponse expectedResponse = new RollbackResponse { };
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RollbackResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            IEnumerable<Key> keys = new List<Key>();
-            AllocateIdsResponse response = await client.AllocateIdsAsync(projectId, keys);
-            Assert.Same(expectedResponse, response);
+            RollbackResponse responseCallSettings = await client.RollbackAsync(request.ProjectId, request.Transaction, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RollbackResponse responseCancellationToken = await client.RollbackAsync(request.ProjectId, request.Transaction, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void AllocateIds2()
+        [xunit::FactAttribute]
+        public void AllocateIdsRequestObject()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             AllocateIdsRequest request = new AllocateIdsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
             };
-            AllocateIdsResponse expectedResponse = new AllocateIdsResponse();
-            mockGrpcClient.Setup(x => x.AllocateIds(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
+            mockGrpcClient.Setup(x => x.AllocateIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
             AllocateIdsResponse response = client.AllocateIds(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task AllocateIdsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task AllocateIdsRequestObjectAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             AllocateIdsRequest request = new AllocateIdsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
             };
-            AllocateIdsResponse expectedResponse = new AllocateIdsResponse();
-            mockGrpcClient.Setup(x => x.AllocateIdsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AllocateIdsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
+            mockGrpcClient.Setup(x => x.AllocateIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AllocateIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            AllocateIdsResponse response = await client.AllocateIdsAsync(request);
-            Assert.Same(expectedResponse, response);
+            AllocateIdsResponse responseCallSettings = await client.AllocateIdsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AllocateIdsResponse responseCancellationToken = await client.AllocateIdsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ReserveIds()
+        [xunit::FactAttribute]
+        public void AllocateIds()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            ReserveIdsRequest expectedRequest = new ReserveIdsRequest
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            AllocateIdsRequest request = new AllocateIdsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
             };
-            ReserveIdsResponse expectedResponse = new ReserveIdsResponse();
-            mockGrpcClient.Setup(x => x.ReserveIds(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
+            mockGrpcClient.Setup(x => x.AllocateIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            IEnumerable<Key> keys = new List<Key>();
-            ReserveIdsResponse response = client.ReserveIds(projectId, keys);
-            Assert.Same(expectedResponse, response);
+            AllocateIdsResponse response = client.AllocateIds(request.ProjectId, request.Keys);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ReserveIdsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task AllocateIdsAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
-            ReserveIdsRequest expectedRequest = new ReserveIdsRequest
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            AllocateIdsRequest request = new AllocateIdsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
             };
-            ReserveIdsResponse expectedResponse = new ReserveIdsResponse();
-            mockGrpcClient.Setup(x => x.ReserveIdsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReserveIdsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            AllocateIdsResponse expectedResponse = new AllocateIdsResponse { Keys = { new Key(), }, };
+            mockGrpcClient.Setup(x => x.AllocateIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AllocateIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            string projectId = "projectId-1969970175";
-            IEnumerable<Key> keys = new List<Key>();
-            ReserveIdsResponse response = await client.ReserveIdsAsync(projectId, keys);
-            Assert.Same(expectedResponse, response);
+            AllocateIdsResponse responseCallSettings = await client.AllocateIdsAsync(request.ProjectId, request.Keys, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AllocateIdsResponse responseCancellationToken = await client.AllocateIdsAsync(request.ProjectId, request.Keys, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ReserveIds2()
+        [xunit::FactAttribute]
+        public void ReserveIdsRequestObject()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             ReserveIdsRequest request = new ReserveIdsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
-            ReserveIdsResponse expectedResponse = new ReserveIdsResponse();
-            mockGrpcClient.Setup(x => x.ReserveIds(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
+            mockGrpcClient.Setup(x => x.ReserveIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
             ReserveIdsResponse response = client.ReserveIds(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ReserveIdsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ReserveIdsRequestObjectAsync()
         {
-            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
             ReserveIdsRequest request = new ReserveIdsRequest
             {
-                ProjectId = "projectId-1969970175",
-                Keys = { },
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
+                DatabaseId = "database_idbff1efc9",
             };
-            ReserveIdsResponse expectedResponse = new ReserveIdsResponse();
-            mockGrpcClient.Setup(x => x.ReserveIdsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReserveIdsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
+            mockGrpcClient.Setup(x => x.ReserveIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReserveIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
-            ReserveIdsResponse response = await client.ReserveIdsAsync(request);
-            Assert.Same(expectedResponse, response);
+            ReserveIdsResponse responseCallSettings = await client.ReserveIdsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReserveIdsResponse responseCancellationToken = await client.ReserveIdsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void ReserveIds()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            ReserveIdsRequest request = new ReserveIdsRequest
+            {
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
+            };
+            ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
+            mockGrpcClient.Setup(x => x.ReserveIds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            ReserveIdsResponse response = client.ReserveIds(request.ProjectId, request.Keys);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReserveIdsAsync()
+        {
+            moq::Mock<Datastore.DatastoreClient> mockGrpcClient = new moq::Mock<Datastore.DatastoreClient>(moq::MockBehavior.Strict);
+            ReserveIdsRequest request = new ReserveIdsRequest
+            {
+                Keys = { new Key(), },
+                ProjectId = "project_id43ad98b0",
+            };
+            ReserveIdsResponse expectedResponse = new ReserveIdsResponse { };
+            mockGrpcClient.Setup(x => x.ReserveIdsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReserveIdsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            ReserveIdsResponse responseCallSettings = await client.ReserveIdsAsync(request.ProjectId, request.Keys, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReserveIdsResponse responseCancellationToken = await client.ReserveIdsAsync(request.ProjectId, request.Keys, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

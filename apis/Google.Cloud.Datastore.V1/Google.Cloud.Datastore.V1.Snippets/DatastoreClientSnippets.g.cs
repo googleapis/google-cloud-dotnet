@@ -16,66 +16,44 @@
 
 namespace Google.Cloud.Datastore.V1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Datastore.V1;
     using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedDatastoreClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedDatastoreClientSnippets
     {
-        /// <summary>Snippet for LookupAsync</summary>
-        public async Task LookupAsync()
-        {
-            // Snippet: LookupAsync(string,ReadOptions,IEnumerable<Key>,CallSettings)
-            // Additional: LookupAsync(string,ReadOptions,IEnumerable<Key>,CancellationToken)
-            // Create client
-            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-            // Initialize request argument(s)
-            string projectId = "";
-            ReadOptions readOptions = new ReadOptions();
-            IEnumerable<Key> keys = new List<Key>();
-            // Make the request
-            LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
-            // End snippet
-        }
-
         /// <summary>Snippet for Lookup</summary>
-        public void Lookup()
+        public void Lookup_RequestObject()
         {
-            // Snippet: Lookup(string,ReadOptions,IEnumerable<Key>,CallSettings)
+            // Snippet: Lookup(LookupRequest, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            ReadOptions readOptions = new ReadOptions();
-            IEnumerable<Key> keys = new List<Key>();
+            LookupRequest request = new LookupRequest
+            {
+                ReadOptions = new ReadOptions(),
+                Keys = { new Key(), },
+                ProjectId = "",
+            };
             // Make the request
-            LookupResponse response = datastoreClient.Lookup(projectId, readOptions, keys);
+            LookupResponse response = datastoreClient.Lookup(request);
             // End snippet
         }
 
         /// <summary>Snippet for LookupAsync</summary>
         public async Task LookupAsync_RequestObject()
         {
-            // Snippet: LookupAsync(LookupRequest,CallSettings)
-            // Additional: LookupAsync(LookupRequest,CancellationToken)
+            // Snippet: LookupAsync(LookupRequest, CallSettings)
+            // Additional: LookupAsync(LookupRequest, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             LookupRequest request = new LookupRequest
             {
+                ReadOptions = new ReadOptions(),
+                Keys = { new Key(), },
                 ProjectId = "",
-                Keys = { },
             };
             // Make the request
             LookupResponse response = await datastoreClient.LookupAsync(request);
@@ -83,75 +61,116 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for Lookup</summary>
-        public void Lookup_RequestObject()
+        public void Lookup()
         {
-            // Snippet: Lookup(LookupRequest,CallSettings)
+            // Snippet: Lookup(string, ReadOptions, IEnumerable<Key>, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            LookupRequest request = new LookupRequest
-            {
-                ProjectId = "",
-                Keys = { },
-            };
+            string projectId = "";
+            ReadOptions readOptions = new ReadOptions();
+            IEnumerable<Key> keys = new Key[] { new Key(), };
             // Make the request
-            LookupResponse response = datastoreClient.Lookup(request);
+            LookupResponse response = datastoreClient.Lookup(projectId, readOptions, keys);
             // End snippet
         }
 
-        /// <summary>Snippet for RunQueryAsync</summary>
-        public async Task RunQueryAsync_RequestObject()
+        /// <summary>Snippet for LookupAsync</summary>
+        public async Task LookupAsync()
         {
-            // Snippet: RunQueryAsync(RunQueryRequest,CallSettings)
-            // Additional: RunQueryAsync(RunQueryRequest,CancellationToken)
+            // Snippet: LookupAsync(string, ReadOptions, IEnumerable<Key>, CallSettings)
+            // Additional: LookupAsync(string, ReadOptions, IEnumerable<Key>, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
-            RunQueryRequest request = new RunQueryRequest
-            {
-                ProjectId = "",
-                PartitionId = new PartitionId(),
-            };
+            string projectId = "";
+            ReadOptions readOptions = new ReadOptions();
+            IEnumerable<Key> keys = new Key[] { new Key(), };
             // Make the request
-            RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
+            LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
             // End snippet
         }
 
         /// <summary>Snippet for RunQuery</summary>
         public void RunQuery_RequestObject()
         {
-            // Snippet: RunQuery(RunQueryRequest,CallSettings)
+            // Snippet: RunQuery(RunQueryRequest, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             RunQueryRequest request = new RunQueryRequest
             {
-                ProjectId = "",
+                ReadOptions = new ReadOptions(),
                 PartitionId = new PartitionId(),
+                Query = new Query(),
+                GqlQuery = new GqlQuery(),
+                ProjectId = "",
             };
             // Make the request
             RunQueryResponse response = datastoreClient.RunQuery(request);
             // End snippet
         }
 
-        /// <summary>Snippet for BeginTransactionAsync</summary>
-        public async Task BeginTransactionAsync()
+        /// <summary>Snippet for RunQueryAsync</summary>
+        public async Task RunQueryAsync_RequestObject()
         {
-            // Snippet: BeginTransactionAsync(string,CallSettings)
-            // Additional: BeginTransactionAsync(string,CancellationToken)
+            // Snippet: RunQueryAsync(RunQueryRequest, CallSettings)
+            // Additional: RunQueryAsync(RunQueryRequest, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ReadOptions = new ReadOptions(),
+                PartitionId = new PartitionId(),
+                Query = new Query(),
+                GqlQuery = new GqlQuery(),
+                ProjectId = "",
+            };
             // Make the request
-            BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(projectId);
+            RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BeginTransaction</summary>
+        public void BeginTransaction_RequestObject()
+        {
+            // Snippet: BeginTransaction(BeginTransactionRequest, CallSettings)
+            // Create client
+            DatastoreClient datastoreClient = DatastoreClient.Create();
+            // Initialize request argument(s)
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                ProjectId = "",
+                TransactionOptions = new TransactionOptions(),
+            };
+            // Make the request
+            BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BeginTransactionAsync</summary>
+        public async Task BeginTransactionAsync_RequestObject()
+        {
+            // Snippet: BeginTransactionAsync(BeginTransactionRequest, CallSettings)
+            // Additional: BeginTransactionAsync(BeginTransactionRequest, CancellationToken)
+            // Create client
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                ProjectId = "",
+                TransactionOptions = new TransactionOptions(),
+            };
+            // Make the request
+            BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for BeginTransaction</summary>
         public void BeginTransaction()
         {
-            // Snippet: BeginTransaction(string,CallSettings)
+            // Snippet: BeginTransaction(string, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
@@ -162,115 +181,52 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransactionAsync</summary>
-        public async Task BeginTransactionAsync_RequestObject()
+        public async Task BeginTransactionAsync()
         {
-            // Snippet: BeginTransactionAsync(BeginTransactionRequest,CallSettings)
-            // Additional: BeginTransactionAsync(BeginTransactionRequest,CancellationToken)
-            // Create client
-            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-            // Initialize request argument(s)
-            BeginTransactionRequest request = new BeginTransactionRequest
-            {
-                ProjectId = "",
-            };
-            // Make the request
-            BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BeginTransaction</summary>
-        public void BeginTransaction_RequestObject()
-        {
-            // Snippet: BeginTransaction(BeginTransactionRequest,CallSettings)
-            // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
-            // Initialize request argument(s)
-            BeginTransactionRequest request = new BeginTransactionRequest
-            {
-                ProjectId = "",
-            };
-            // Make the request
-            BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CommitAsync</summary>
-        public async Task CommitAsync1()
-        {
-            // Snippet: CommitAsync(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CallSettings)
-            // Additional: CommitAsync(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CancellationToken)
+            // Snippet: BeginTransactionAsync(string, CallSettings)
+            // Additional: BeginTransactionAsync(string, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
-            CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
+            BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(projectId);
             // End snippet
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit1()
+        public void Commit_RequestObject()
         {
-            // Snippet: Commit(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CallSettings)
+            // Snippet: Commit(CommitRequest, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new List<Mutation>();
+            CommitRequest request = new CommitRequest
+            {
+                Transaction = ByteString.Empty,
+                Mode = CommitRequest.Types.Mode.Unspecified,
+                Mutations = { new Mutation(), },
+                ProjectId = "",
+            };
             // Make the request
-            CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, mutations);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CommitAsync</summary>
-        public async Task CommitAsync2()
-        {
-            // Snippet: CommitAsync(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CallSettings)
-            // Additional: CommitAsync(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CancellationToken)
-            // Create client
-            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-            // Initialize request argument(s)
-            string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            // Make the request
-            CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
-            // End snippet
-        }
-
-        /// <summary>Snippet for Commit</summary>
-        public void Commit2()
-        {
-            // Snippet: Commit(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CallSettings)
-            // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
-            // Initialize request argument(s)
-            string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            IEnumerable<Mutation> mutations = new List<Mutation>();
-            // Make the request
-            CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);
+            CommitResponse response = datastoreClient.Commit(request);
             // End snippet
         }
 
         /// <summary>Snippet for CommitAsync</summary>
         public async Task CommitAsync_RequestObject()
         {
-            // Snippet: CommitAsync(CommitRequest,CallSettings)
-            // Additional: CommitAsync(CommitRequest,CancellationToken)
+            // Snippet: CommitAsync(CommitRequest, CallSettings)
+            // Additional: CommitAsync(CommitRequest, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             CommitRequest request = new CommitRequest
             {
-                ProjectId = "",
+                Transaction = ByteString.Empty,
                 Mode = CommitRequest.Types.Mode.Unspecified,
-                Mutations = { },
+                Mutations = { new Mutation(), },
+                ProjectId = "",
             };
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(request);
@@ -278,42 +234,108 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit_RequestObject()
+        public void Commit1()
         {
-            // Snippet: Commit(CommitRequest,CallSettings)
+            // Snippet: Commit(string, CommitRequest.Types.Mode, ByteString, IEnumerable<Mutation>, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            CommitRequest request = new CommitRequest
-            {
-                ProjectId = "",
-                Mode = CommitRequest.Types.Mode.Unspecified,
-                Mutations = { },
-            };
+            string projectId = "";
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
+            ByteString transaction = ByteString.Empty;
+            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
             // Make the request
-            CommitResponse response = datastoreClient.Commit(request);
+            CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, mutations);
             // End snippet
         }
 
-        /// <summary>Snippet for RollbackAsync</summary>
-        public async Task RollbackAsync()
+        /// <summary>Snippet for CommitAsync</summary>
+        public async Task Commit1Async()
         {
-            // Snippet: RollbackAsync(string,ByteString,CallSettings)
-            // Additional: RollbackAsync(string,ByteString,CancellationToken)
+            // Snippet: CommitAsync(string, CommitRequest.Types.Mode, ByteString, IEnumerable<Mutation>, CallSettings)
+            // Additional: CommitAsync(string, CommitRequest.Types.Mode, ByteString, IEnumerable<Mutation>, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
             ByteString transaction = ByteString.Empty;
+            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
             // Make the request
-            RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
+            CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Commit</summary>
+        public void Commit2()
+        {
+            // Snippet: Commit(string, CommitRequest.Types.Mode, IEnumerable<Mutation>, CallSettings)
+            // Create client
+            DatastoreClient datastoreClient = DatastoreClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
+            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            // Make the request
+            CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitAsync</summary>
+        public async Task Commit2Async()
+        {
+            // Snippet: CommitAsync(string, CommitRequest.Types.Mode, IEnumerable<Mutation>, CallSettings)
+            // Additional: CommitAsync(string, CommitRequest.Types.Mode, IEnumerable<Mutation>, CancellationToken)
+            // Create client
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
+            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            // Make the request
+            CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Rollback</summary>
+        public void Rollback_RequestObject()
+        {
+            // Snippet: Rollback(RollbackRequest, CallSettings)
+            // Create client
+            DatastoreClient datastoreClient = DatastoreClient.Create();
+            // Initialize request argument(s)
+            RollbackRequest request = new RollbackRequest
+            {
+                Transaction = ByteString.Empty,
+                ProjectId = "",
+            };
+            // Make the request
+            RollbackResponse response = datastoreClient.Rollback(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAsync</summary>
+        public async Task RollbackAsync_RequestObject()
+        {
+            // Snippet: RollbackAsync(RollbackRequest, CallSettings)
+            // Additional: RollbackAsync(RollbackRequest, CancellationToken)
+            // Create client
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            RollbackRequest request = new RollbackRequest
+            {
+                Transaction = ByteString.Empty,
+                ProjectId = "",
+            };
+            // Make the request
+            RollbackResponse response = await datastoreClient.RollbackAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for Rollback</summary>
         public void Rollback()
         {
-            // Snippet: Rollback(string,ByteString,CallSettings)
+            // Snippet: Rollback(string, ByteString, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
@@ -325,81 +347,49 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackAsync</summary>
-        public async Task RollbackAsync_RequestObject()
+        public async Task RollbackAsync()
         {
-            // Snippet: RollbackAsync(RollbackRequest,CallSettings)
-            // Additional: RollbackAsync(RollbackRequest,CancellationToken)
-            // Create client
-            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-            // Initialize request argument(s)
-            RollbackRequest request = new RollbackRequest
-            {
-                ProjectId = "",
-                Transaction = ByteString.Empty,
-            };
-            // Make the request
-            RollbackResponse response = await datastoreClient.RollbackAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for Rollback</summary>
-        public void Rollback_RequestObject()
-        {
-            // Snippet: Rollback(RollbackRequest,CallSettings)
-            // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
-            // Initialize request argument(s)
-            RollbackRequest request = new RollbackRequest
-            {
-                ProjectId = "",
-                Transaction = ByteString.Empty,
-            };
-            // Make the request
-            RollbackResponse response = datastoreClient.Rollback(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for AllocateIdsAsync</summary>
-        public async Task AllocateIdsAsync()
-        {
-            // Snippet: AllocateIdsAsync(string,IEnumerable<Key>,CallSettings)
-            // Additional: AllocateIdsAsync(string,IEnumerable<Key>,CancellationToken)
+            // Snippet: RollbackAsync(string, ByteString, CallSettings)
+            // Additional: RollbackAsync(string, ByteString, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
-            IEnumerable<Key> keys = new List<Key>();
+            ByteString transaction = ByteString.Empty;
             // Make the request
-            AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId, keys);
+            RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
             // End snippet
         }
 
         /// <summary>Snippet for AllocateIds</summary>
-        public void AllocateIds()
+        public void AllocateIds_RequestObject()
         {
-            // Snippet: AllocateIds(string,IEnumerable<Key>,CallSettings)
+            // Snippet: AllocateIds(AllocateIdsRequest, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            IEnumerable<Key> keys = new List<Key>();
+            AllocateIdsRequest request = new AllocateIdsRequest
+            {
+                Keys = { new Key(), },
+                ProjectId = "",
+            };
             // Make the request
-            AllocateIdsResponse response = datastoreClient.AllocateIds(projectId, keys);
+            AllocateIdsResponse response = datastoreClient.AllocateIds(request);
             // End snippet
         }
 
         /// <summary>Snippet for AllocateIdsAsync</summary>
         public async Task AllocateIdsAsync_RequestObject()
         {
-            // Snippet: AllocateIdsAsync(AllocateIdsRequest,CallSettings)
-            // Additional: AllocateIdsAsync(AllocateIdsRequest,CancellationToken)
+            // Snippet: AllocateIdsAsync(AllocateIdsRequest, CallSettings)
+            // Additional: AllocateIdsAsync(AllocateIdsRequest, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             AllocateIdsRequest request = new AllocateIdsRequest
             {
+                Keys = { new Key(), },
                 ProjectId = "",
-                Keys = { },
             };
             // Make the request
             AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
@@ -407,63 +397,65 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for AllocateIds</summary>
-        public void AllocateIds_RequestObject()
+        public void AllocateIds()
         {
-            // Snippet: AllocateIds(AllocateIdsRequest,CallSettings)
+            // Snippet: AllocateIds(string, IEnumerable<Key>, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            AllocateIdsRequest request = new AllocateIdsRequest
-            {
-                ProjectId = "",
-                Keys = { },
-            };
+            string projectId = "";
+            IEnumerable<Key> keys = new Key[] { new Key(), };
             // Make the request
-            AllocateIdsResponse response = datastoreClient.AllocateIds(request);
+            AllocateIdsResponse response = datastoreClient.AllocateIds(projectId, keys);
             // End snippet
         }
 
-        /// <summary>Snippet for ReserveIdsAsync</summary>
-        public async Task ReserveIdsAsync()
+        /// <summary>Snippet for AllocateIdsAsync</summary>
+        public async Task AllocateIdsAsync()
         {
-            // Snippet: ReserveIdsAsync(string,IEnumerable<Key>,CallSettings)
-            // Additional: ReserveIdsAsync(string,IEnumerable<Key>,CancellationToken)
+            // Snippet: AllocateIdsAsync(string, IEnumerable<Key>, CallSettings)
+            // Additional: AllocateIdsAsync(string, IEnumerable<Key>, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
-            IEnumerable<Key> keys = new List<Key>();
+            IEnumerable<Key> keys = new Key[] { new Key(), };
             // Make the request
-            ReserveIdsResponse response = await datastoreClient.ReserveIdsAsync(projectId, keys);
+            AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId, keys);
             // End snippet
         }
 
         /// <summary>Snippet for ReserveIds</summary>
-        public void ReserveIds()
+        public void ReserveIds_RequestObject()
         {
-            // Snippet: ReserveIds(string,IEnumerable<Key>,CallSettings)
+            // Snippet: ReserveIds(ReserveIdsRequest, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            IEnumerable<Key> keys = new List<Key>();
+            ReserveIdsRequest request = new ReserveIdsRequest
+            {
+                Keys = { new Key(), },
+                ProjectId = "",
+                DatabaseId = "",
+            };
             // Make the request
-            ReserveIdsResponse response = datastoreClient.ReserveIds(projectId, keys);
+            ReserveIdsResponse response = datastoreClient.ReserveIds(request);
             // End snippet
         }
 
         /// <summary>Snippet for ReserveIdsAsync</summary>
         public async Task ReserveIdsAsync_RequestObject()
         {
-            // Snippet: ReserveIdsAsync(ReserveIdsRequest,CallSettings)
-            // Additional: ReserveIdsAsync(ReserveIdsRequest,CancellationToken)
+            // Snippet: ReserveIdsAsync(ReserveIdsRequest, CallSettings)
+            // Additional: ReserveIdsAsync(ReserveIdsRequest, CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             ReserveIdsRequest request = new ReserveIdsRequest
             {
+                Keys = { new Key(), },
                 ProjectId = "",
-                Keys = { },
+                DatabaseId = "",
             };
             // Make the request
             ReserveIdsResponse response = await datastoreClient.ReserveIdsAsync(request);
@@ -471,21 +463,32 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for ReserveIds</summary>
-        public void ReserveIds_RequestObject()
+        public void ReserveIds()
         {
-            // Snippet: ReserveIds(ReserveIdsRequest,CallSettings)
+            // Snippet: ReserveIds(string, IEnumerable<Key>, CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
-            ReserveIdsRequest request = new ReserveIdsRequest
-            {
-                ProjectId = "",
-                Keys = { },
-            };
+            string projectId = "";
+            IEnumerable<Key> keys = new Key[] { new Key(), };
             // Make the request
-            ReserveIdsResponse response = datastoreClient.ReserveIds(request);
+            ReserveIdsResponse response = datastoreClient.ReserveIds(projectId, keys);
             // End snippet
         }
 
+        /// <summary>Snippet for ReserveIdsAsync</summary>
+        public async Task ReserveIdsAsync()
+        {
+            // Snippet: ReserveIdsAsync(string, IEnumerable<Key>, CallSettings)
+            // Additional: ReserveIdsAsync(string, IEnumerable<Key>, CancellationToken)
+            // Create client
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            IEnumerable<Key> keys = new Key[] { new Key(), };
+            // Make the request
+            ReserveIdsResponse response = await datastoreClient.ReserveIdsAsync(projectId, keys);
+            // End snippet
+        }
     }
 }
