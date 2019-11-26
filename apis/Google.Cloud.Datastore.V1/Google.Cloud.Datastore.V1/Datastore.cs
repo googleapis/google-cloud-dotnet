@@ -25,90 +25,99 @@ namespace Google.Cloud.Datastore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNnb29nbGUvZGF0YXN0b3JlL3YxL2RhdGFzdG9yZS5wcm90bxITZ29vZ2xl",
-            "LmRhdGFzdG9yZS52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxog",
-            "Z29vZ2xlL2RhdGFzdG9yZS92MS9lbnRpdHkucHJvdG8aH2dvb2dsZS9kYXRh",
-            "c3RvcmUvdjEvcXVlcnkucHJvdG8igwEKDUxvb2t1cFJlcXVlc3QSEgoKcHJv",
-            "amVjdF9pZBgIIAEoCRI2CgxyZWFkX29wdGlvbnMYASABKAsyIC5nb29nbGUu",
-            "ZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zEiYKBGtleXMYAyADKAsyGC5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLktleSKiAQoOTG9va3VwUmVzcG9uc2USMAoFZm91",
-            "bmQYASADKAsyIS5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBIy",
-            "CgdtaXNzaW5nGAIgAygLMiEuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlS",
-            "ZXN1bHQSKgoIZGVmZXJyZWQYAyADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYx",
-            "LktleSKEAgoPUnVuUXVlcnlSZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkS",
-            "NgoMcGFydGl0aW9uX2lkGAIgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MS5Q",
-            "YXJ0aXRpb25JZBI2CgxyZWFkX29wdGlvbnMYASABKAsyIC5nb29nbGUuZGF0",
-            "YXN0b3JlLnYxLlJlYWRPcHRpb25zEisKBXF1ZXJ5GAMgASgLMhouZ29vZ2xl",
-            "LmRhdGFzdG9yZS52MS5RdWVyeUgAEjIKCWdxbF9xdWVyeRgHIAEoCzIdLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuR3FsUXVlcnlIAEIMCgpxdWVyeV90eXBlInMK",
-            "EFJ1blF1ZXJ5UmVzcG9uc2USNAoFYmF0Y2gYASABKAsyJS5nb29nbGUuZGF0",
-            "YXN0b3JlLnYxLlF1ZXJ5UmVzdWx0QmF0Y2gSKQoFcXVlcnkYAiABKAsyGi5n",
-            "b29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5InMKF0JlZ2luVHJhbnNhY3Rpb25S",
-            "ZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkSRAoTdHJhbnNhY3Rpb25fb3B0",
-            "aW9ucxgKIAEoCzInLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25P",
-            "cHRpb25zIi8KGEJlZ2luVHJhbnNhY3Rpb25SZXNwb25zZRITCgt0cmFuc2Fj",
-            "dGlvbhgBIAEoDCI6Cg9Sb2xsYmFja1JlcXVlc3QSEgoKcHJvamVjdF9pZBgI",
-            "IAEoCRITCgt0cmFuc2FjdGlvbhgBIAEoDCISChBSb2xsYmFja1Jlc3BvbnNl",
-            "IoMCCg1Db21taXRSZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkSNQoEbW9k",
-            "ZRgFIAEoDjInLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVzdC5N",
-            "b2RlEhUKC3RyYW5zYWN0aW9uGAEgASgMSAASMAoJbXV0YXRpb25zGAYgAygL",
-            "Mh0uZ29vZ2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvbiJGCgRNb2RlEhQKEE1P",
-            "REVfVU5TUEVDSUZJRUQQABIRCg1UUkFOU0FDVElPTkFMEAESFQoRTk9OX1RS",
-            "QU5TQUNUSU9OQUwQAkIWChR0cmFuc2FjdGlvbl9zZWxlY3RvciJmCg5Db21t",
-            "aXRSZXNwb25zZRI9ChBtdXRhdGlvbl9yZXN1bHRzGAMgAygLMiMuZ29vZ2xl",
-            "LmRhdGFzdG9yZS52MS5NdXRhdGlvblJlc3VsdBIVCg1pbmRleF91cGRhdGVz",
-            "GAQgASgFIlAKEkFsbG9jYXRlSWRzUmVxdWVzdBISCgpwcm9qZWN0X2lkGAgg",
-            "ASgJEiYKBGtleXMYASADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleSI9",
-            "ChNBbGxvY2F0ZUlkc1Jlc3BvbnNlEiYKBGtleXMYASADKAsyGC5nb29nbGUu",
-            "ZGF0YXN0b3JlLnYxLktleSJkChFSZXNlcnZlSWRzUmVxdWVzdBISCgpwcm9q",
-            "ZWN0X2lkGAggASgJEhMKC2RhdGFiYXNlX2lkGAkgASgJEiYKBGtleXMYASAD",
-            "KAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleSIUChJSZXNlcnZlSWRzUmVz",
-            "cG9uc2UihwIKCE11dGF0aW9uEi0KBmluc2VydBgEIAEoCzIbLmdvb2dsZS5k",
-            "YXRhc3RvcmUudjEuRW50aXR5SAASLQoGdXBkYXRlGAUgASgLMhsuZ29vZ2xl",
-            "LmRhdGFzdG9yZS52MS5FbnRpdHlIABItCgZ1cHNlcnQYBiABKAsyGy5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLkVudGl0eUgAEioKBmRlbGV0ZRgHIAEoCzIYLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuS2V5SAASFgoMYmFzZV92ZXJzaW9uGAggASgD",
-            "SAFCCwoJb3BlcmF0aW9uQh0KG2NvbmZsaWN0X2RldGVjdGlvbl9zdHJhdGVn",
-            "eSJjCg5NdXRhdGlvblJlc3VsdBIlCgNrZXkYAyABKAsyGC5nb29nbGUuZGF0",
-            "YXN0b3JlLnYxLktleRIPCgd2ZXJzaW9uGAQgASgDEhkKEWNvbmZsaWN0X2Rl",
-            "dGVjdGVkGAUgASgIItUBCgtSZWFkT3B0aW9ucxJMChByZWFkX2NvbnNpc3Rl",
-            "bmN5GAEgASgOMjAuZ29vZ2xlLmRhdGFzdG9yZS52MS5SZWFkT3B0aW9ucy5S",
-            "ZWFkQ29uc2lzdGVuY3lIABIVCgt0cmFuc2FjdGlvbhgCIAEoDEgAIk0KD1Jl",
-            "YWRDb25zaXN0ZW5jeRIgChxSRUFEX0NPTlNJU1RFTkNZX1VOU1BFQ0lGSUVE",
-            "EAASCgoGU1RST05HEAESDAoIRVZFTlRVQUwQAkISChBjb25zaXN0ZW5jeV90",
-            "eXBlIuMBChJUcmFuc2FjdGlvbk9wdGlvbnMSRwoKcmVhZF93cml0ZRgBIAEo",
-            "CzIxLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJl",
-            "YWRXcml0ZUgAEkUKCXJlYWRfb25seRgCIAEoCzIwLmdvb2dsZS5kYXRhc3Rv",
-            "cmUudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRPbmx5SAAaKQoJUmVhZFdy",
-            "aXRlEhwKFHByZXZpb3VzX3RyYW5zYWN0aW9uGAEgASgMGgoKCFJlYWRPbmx5",
-            "QgYKBG1vZGUy7AcKCURhdGFzdG9yZRJ+CgZMb29rdXASIi5nb29nbGUuZGF0",
-            "YXN0b3JlLnYxLkxvb2t1cFJlcXVlc3QaIy5nb29nbGUuZGF0YXN0b3JlLnYx",
-            "Lkxvb2t1cFJlc3BvbnNlIiuC0+STAiUiIC92MS9wcm9qZWN0cy97cHJvamVj",
-            "dF9pZH06bG9va3VwOgEqEoYBCghSdW5RdWVyeRIkLmdvb2dsZS5kYXRhc3Rv",
-            "cmUudjEuUnVuUXVlcnlSZXF1ZXN0GiUuZ29vZ2xlLmRhdGFzdG9yZS52MS5S",
-            "dW5RdWVyeVJlc3BvbnNlIi2C0+STAiciIi92MS9wcm9qZWN0cy97cHJvamVj",
-            "dF9pZH06cnVuUXVlcnk6ASoSpgEKEEJlZ2luVHJhbnNhY3Rpb24SLC5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLkJlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0Gi0uZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5CZWdpblRyYW5zYWN0aW9uUmVzcG9uc2UiNYLT",
-            "5JMCLyIqL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpiZWdpblRyYW5zYWN0",
-            "aW9uOgEqEn4KBkNvbW1pdBIiLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0",
-            "UmVxdWVzdBojLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVzcG9uc2Ui",
-            "K4LT5JMCJSIgL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpjb21taXQ6ASoS",
-            "hgEKCFJvbGxiYWNrEiQuZ29vZ2xlLmRhdGFzdG9yZS52MS5Sb2xsYmFja1Jl",
-            "cXVlc3QaJS5nb29nbGUuZGF0YXN0b3JlLnYxLlJvbGxiYWNrUmVzcG9uc2Ui",
-            "LYLT5JMCJyIiL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpyb2xsYmFjazoB",
-            "KhKSAQoLQWxsb2NhdGVJZHMSJy5nb29nbGUuZGF0YXN0b3JlLnYxLkFsbG9j",
-            "YXRlSWRzUmVxdWVzdBooLmdvb2dsZS5kYXRhc3RvcmUudjEuQWxsb2NhdGVJ",
-            "ZHNSZXNwb25zZSIwgtPkkwIqIiUvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9",
-            "OmFsbG9jYXRlSWRzOgEqEo4BCgpSZXNlcnZlSWRzEiYuZ29vZ2xlLmRhdGFz",
+            "LmRhdGFzdG9yZS52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoX",
+            "Z29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVo",
+            "YXZpb3IucHJvdG8aIGdvb2dsZS9kYXRhc3RvcmUvdjEvZW50aXR5LnByb3Rv",
+            "Gh9nb29nbGUvZGF0YXN0b3JlL3YxL3F1ZXJ5LnByb3RvIo0BCg1Mb29rdXBS",
+            "ZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlCA+BBAhI2CgxyZWFkX29wdGlv",
+            "bnMYASABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zEisK",
+            "BGtleXMYAyADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUID4EECIqIB",
+            "Cg5Mb29rdXBSZXNwb25zZRIwCgVmb3VuZBgBIAMoCzIhLmdvb2dsZS5kYXRh",
+            "c3RvcmUudjEuRW50aXR5UmVzdWx0EjIKB21pc3NpbmcYAiADKAsyIS5nb29n",
+            "bGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBIqCghkZWZlcnJlZBgDIAMo",
+            "CzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5IokCCg9SdW5RdWVyeVJlcXVl",
+            "c3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEjYKDHBhcnRpdGlvbl9pZBgC",
+            "IAEoCzIgLmdvb2dsZS5kYXRhc3RvcmUudjEuUGFydGl0aW9uSWQSNgoMcmVh",
+            "ZF9vcHRpb25zGAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MS5SZWFkT3B0",
+            "aW9ucxIrCgVxdWVyeRgDIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEuUXVl",
+            "cnlIABIyCglncWxfcXVlcnkYByABKAsyHS5nb29nbGUuZGF0YXN0b3JlLnYx",
+            "LkdxbFF1ZXJ5SABCDAoKcXVlcnlfdHlwZSJzChBSdW5RdWVyeVJlc3BvbnNl",
+            "EjQKBWJhdGNoGAEgASgLMiUuZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVyeVJl",
+            "c3VsdEJhdGNoEikKBXF1ZXJ5GAIgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52",
+            "MS5RdWVyeSJ4ChdCZWdpblRyYW5zYWN0aW9uUmVxdWVzdBIXCgpwcm9qZWN0",
+            "X2lkGAggASgJQgPgQQISRAoTdHJhbnNhY3Rpb25fb3B0aW9ucxgKIAEoCzIn",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zIi8KGEJl",
+            "Z2luVHJhbnNhY3Rpb25SZXNwb25zZRITCgt0cmFuc2FjdGlvbhgBIAEoDCJE",
+            "Cg9Sb2xsYmFja1JlcXVlc3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhgK",
+            "C3RyYW5zYWN0aW9uGAEgASgMQgPgQQIiEgoQUm9sbGJhY2tSZXNwb25zZSKI",
+            "AgoNQ29tbWl0UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAggASgJQgPgQQISNQoE",
+            "bW9kZRgFIAEoDjInLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVz",
+            "dC5Nb2RlEhUKC3RyYW5zYWN0aW9uGAEgASgMSAASMAoJbXV0YXRpb25zGAYg",
+            "AygLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvbiJGCgRNb2RlEhQK",
+            "EE1PREVfVU5TUEVDSUZJRUQQABIRCg1UUkFOU0FDVElPTkFMEAESFQoRTk9O",
+            "X1RSQU5TQUNUSU9OQUwQAkIWChR0cmFuc2FjdGlvbl9zZWxlY3RvciJmCg5D",
+            "b21taXRSZXNwb25zZRI9ChBtdXRhdGlvbl9yZXN1bHRzGAMgAygLMiMuZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvblJlc3VsdBIVCg1pbmRleF91cGRh",
+            "dGVzGAQgASgFIloKEkFsbG9jYXRlSWRzUmVxdWVzdBIXCgpwcm9qZWN0X2lk",
+            "GAggASgJQgPgQQISKwoEa2V5cxgBIAMoCzIYLmdvb2dsZS5kYXRhc3RvcmUu",
+            "djEuS2V5QgPgQQIiPQoTQWxsb2NhdGVJZHNSZXNwb25zZRImCgRrZXlzGAEg",
+            "AygLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXkibgoRUmVzZXJ2ZUlkc1Jl",
+            "cXVlc3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhMKC2RhdGFiYXNlX2lk",
+            "GAkgASgJEisKBGtleXMYASADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktl",
+            "eUID4EECIhQKElJlc2VydmVJZHNSZXNwb25zZSKHAgoITXV0YXRpb24SLQoG",
+            "aW5zZXJ0GAQgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlIABIt",
+            "CgZ1cGRhdGUYBSABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgA",
+            "Ei0KBnVwc2VydBgGIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5",
+            "SAASKgoGZGVsZXRlGAcgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXlI",
+            "ABIWCgxiYXNlX3ZlcnNpb24YCCABKANIAUILCglvcGVyYXRpb25CHQobY29u",
+            "ZmxpY3RfZGV0ZWN0aW9uX3N0cmF0ZWd5ImMKDk11dGF0aW9uUmVzdWx0EiUK",
+            "A2tleRgDIAEoCzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5Eg8KB3ZlcnNp",
+            "b24YBCABKAMSGQoRY29uZmxpY3RfZGV0ZWN0ZWQYBSABKAgi1QEKC1JlYWRP",
+            "cHRpb25zEkwKEHJlYWRfY29uc2lzdGVuY3kYASABKA4yMC5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLlJlYWRPcHRpb25zLlJlYWRDb25zaXN0ZW5jeUgAEhUKC3Ry",
+            "YW5zYWN0aW9uGAIgASgMSAAiTQoPUmVhZENvbnNpc3RlbmN5EiAKHFJFQURf",
+            "Q09OU0lTVEVOQ1lfVU5TUEVDSUZJRUQQABIKCgZTVFJPTkcQARIMCghFVkVO",
+            "VFVBTBACQhIKEGNvbnNpc3RlbmN5X3R5cGUi4wEKElRyYW5zYWN0aW9uT3B0",
+            "aW9ucxJHCgpyZWFkX3dyaXRlGAEgASgLMjEuZ29vZ2xlLmRhdGFzdG9yZS52",
+            "MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZFdyaXRlSAASRQoJcmVhZF9vbmx5",
+            "GAIgASgLMjAuZ29vZ2xlLmRhdGFzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlv",
+            "bnMuUmVhZE9ubHlIABopCglSZWFkV3JpdGUSHAoUcHJldmlvdXNfdHJhbnNh",
+            "Y3Rpb24YASABKAwaCgoIUmVhZE9ubHlCBgoEbW9kZTKTCgoJRGF0YXN0b3Jl",
+            "Ep0BCgZMb29rdXASIi5nb29nbGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJlcXVl",
+            "c3QaIy5nb29nbGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJlc3BvbnNlIkqC0+ST",
+            "AiUiIC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06bG9va3VwOgEq2kEccHJv",
+            "amVjdF9pZCxyZWFkX29wdGlvbnMsa2V5cxKGAQoIUnVuUXVlcnkSJC5nb29n",
+            "bGUuZGF0YXN0b3JlLnYxLlJ1blF1ZXJ5UmVxdWVzdBolLmdvb2dsZS5kYXRh",
+            "c3RvcmUudjEuUnVuUXVlcnlSZXNwb25zZSItgtPkkwInIiIvdjEvcHJvamVj",
+            "dHMve3Byb2plY3RfaWR9OnJ1blF1ZXJ5OgEqErMBChBCZWdpblRyYW5zYWN0",
+            "aW9uEiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5CZWdpblRyYW5zYWN0aW9uUmVx",
+            "dWVzdBotLmdvb2dsZS5kYXRhc3RvcmUudjEuQmVnaW5UcmFuc2FjdGlvblJl",
+            "c3BvbnNlIkKC0+STAi8iKi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06YmVn",
+            "aW5UcmFuc2FjdGlvbjoBKtpBCnByb2plY3RfaWQSwgEKBkNvbW1pdBIiLmdv",
+            "b2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVzdBojLmdvb2dsZS5kYXRh",
+            "c3RvcmUudjEuQ29tbWl0UmVzcG9uc2Uib4LT5JMCJSIgL3YxL3Byb2plY3Rz",
+            "L3twcm9qZWN0X2lkfTpjb21taXQ6ASraQSVwcm9qZWN0X2lkLG1vZGUsdHJh",
+            "bnNhY3Rpb24sbXV0YXRpb25z2kEZcHJvamVjdF9pZCxtb2RlLG11dGF0aW9u",
+            "cxKfAQoIUm9sbGJhY2sSJC5nb29nbGUuZGF0YXN0b3JlLnYxLlJvbGxiYWNr",
+            "UmVxdWVzdBolLmdvb2dsZS5kYXRhc3RvcmUudjEuUm9sbGJhY2tSZXNwb25z",
+            "ZSJGgtPkkwInIiIvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OnJvbGxiYWNr",
+            "OgEq2kEWcHJvamVjdF9pZCx0cmFuc2FjdGlvbhKkAQoLQWxsb2NhdGVJZHMS",
+            "Jy5nb29nbGUuZGF0YXN0b3JlLnYxLkFsbG9jYXRlSWRzUmVxdWVzdBooLmdv",
+            "b2dsZS5kYXRhc3RvcmUudjEuQWxsb2NhdGVJZHNSZXNwb25zZSJCgtPkkwIq",
+            "IiUvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OmFsbG9jYXRlSWRzOgEq2kEP",
+            "cHJvamVjdF9pZCxrZXlzEqABCgpSZXNlcnZlSWRzEiYuZ29vZ2xlLmRhdGFz",
             "dG9yZS52MS5SZXNlcnZlSWRzUmVxdWVzdBonLmdvb2dsZS5kYXRhc3RvcmUu",
-            "djEuUmVzZXJ2ZUlkc1Jlc3BvbnNlIi+C0+STAikiJC92MS9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH06cmVzZXJ2ZUlkczoBKkKhAQoXY29tLmdvb2dsZS5kYXRh",
-            "c3RvcmUudjFCDkRhdGFzdG9yZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL3YxO2RhdGFzdG9yZaoC",
-            "GUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRGF0",
-            "YXN0b3JlXFYxYgZwcm90bzM="));
+            "djEuUmVzZXJ2ZUlkc1Jlc3BvbnNlIkGC0+STAikiJC92MS9wcm9qZWN0cy97",
+            "cHJvamVjdF9pZH06cmVzZXJ2ZUlkczoBKtpBD3Byb2plY3RfaWQsa2V5cxp2",
+            "ykEYZGF0YXN0b3JlLmdvb2dsZWFwaXMuY29t0kFYaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2RhdGFzdG9yZUKhAQoXY29tLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjFCDkRhdGFzdG9yZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL3YxO2RhdGFzdG9y",
+            "ZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRc",
+            "RGF0YXN0b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupRequest), global::Google.Cloud.Datastore.V1.LookupRequest.Parser, new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupResponse), global::Google.Cloud.Datastore.V1.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null),
@@ -178,7 +187,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    /// The ID of the project against which to make the request.
+    /// Required. The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -208,7 +217,7 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Datastore.V1.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> keys_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key>();
     /// <summary>
-    /// Keys of entities to look up.
+    /// Required. Keys of entities to look up.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> Keys {
@@ -561,7 +570,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    /// The ID of the project against which to make the request.
+    /// Required. The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -831,8 +840,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
+  /// The response for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
   public sealed partial class RunQueryResponse : pb::IMessage<RunQueryResponse> {
     private static readonly pb::MessageParser<RunQueryResponse> _parser = new pb::MessageParser<RunQueryResponse>(() => new RunQueryResponse());
@@ -1010,8 +1018,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+  /// The request for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
@@ -1052,7 +1059,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    /// The ID of the project against which to make the request.
+    /// Required. The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1183,8 +1190,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+  /// The response for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionResponse : pb::IMessage<BeginTransactionResponse> {
     private static readonly pb::MessageParser<BeginTransactionResponse> _parser = new pb::MessageParser<BeginTransactionResponse>(() => new BeginTransactionResponse());
@@ -1360,7 +1366,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    /// The ID of the project against which to make the request.
+    /// Required. The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1374,7 +1380,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int TransactionFieldNumber = 1;
     private pb::ByteString transaction_ = pb::ByteString.Empty;
     /// <summary>
-    /// The transaction identifier, returned by a call to
+    /// Required. The transaction identifier, returned by a call to
     /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1486,9 +1492,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Datastore.Rollback][google.datastore.v1.Datastore.Rollback]. (an empty
-  /// message).
+  /// The response for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
+  /// (an empty message).
   /// </summary>
   public sealed partial class RollbackResponse : pb::IMessage<RollbackResponse> {
     private static readonly pb::MessageParser<RollbackResponse> _parser = new pb::MessageParser<RollbackResponse>(() => new RollbackResponse());
@@ -1640,7 +1645,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    /// The ID of the project against which to make the request.
+    /// Required. The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -2041,8 +2046,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+  /// The request for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
   public sealed partial class AllocateIdsRequest : pb::IMessage<AllocateIdsRequest> {
     private static readonly pb::MessageParser<AllocateIdsRequest> _parser = new pb::MessageParser<AllocateIdsRequest>(() => new AllocateIdsRequest());
@@ -2083,7 +2087,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    /// The ID of the project against which to make the request.
+    /// Required. The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -2099,7 +2103,7 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Datastore.V1.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> keys_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key>();
     /// <summary>
-    /// A list of keys with incomplete key paths for which to allocate IDs.
+    /// Required. A list of keys with incomplete key paths for which to allocate IDs.
     /// No key may be reserved/read-only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2201,8 +2205,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+  /// The response for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
   public sealed partial class AllocateIdsResponse : pb::IMessage<AllocateIdsResponse> {
     private static readonly pb::MessageParser<AllocateIdsResponse> _parser = new pb::MessageParser<AllocateIdsResponse>(() => new AllocateIdsResponse());
@@ -2330,8 +2333,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
+  /// The request for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
   /// </summary>
   public sealed partial class ReserveIdsRequest : pb::IMessage<ReserveIdsRequest> {
     private static readonly pb::MessageParser<ReserveIdsRequest> _parser = new pb::MessageParser<ReserveIdsRequest>(() => new ReserveIdsRequest());
@@ -2373,7 +2375,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    /// The ID of the project against which to make the request.
+    /// Required. The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -2403,7 +2405,7 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Datastore.V1.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> keys_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key>();
     /// <summary>
-    /// A list of keys with complete key paths whose numeric IDs should not be
+    /// Required. A list of keys with complete key paths whose numeric IDs should not be
     /// auto-allocated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2521,8 +2523,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
+  /// The response for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
   /// </summary>
   public sealed partial class ReserveIdsResponse : pb::IMessage<ReserveIdsResponse> {
     private static readonly pb::MessageParser<ReserveIdsResponse> _parser = new pb::MessageParser<ReserveIdsResponse>(() => new ReserveIdsResponse());
@@ -3425,10 +3426,8 @@ namespace Google.Cloud.Datastore.V1 {
   /// Options for beginning a new transaction.
   ///
   /// Transactions can be created explicitly with calls to
-  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction]
-  /// or implicitly by setting
-  /// [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction]
-  /// in read requests.
+  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction] or implicitly by setting
+  /// [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction] in read requests.
   /// </summary>
   public sealed partial class TransactionOptions : pb::IMessage<TransactionOptions> {
     private static readonly pb::MessageParser<TransactionOptions> _parser = new pb::MessageParser<TransactionOptions>(() => new TransactionOptions());
