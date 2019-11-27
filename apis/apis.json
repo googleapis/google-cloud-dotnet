@@ -992,9 +992,8 @@
 
   {
     "id": "Google.Cloud.Vision.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/vision/v1",
-    "serviceYaml": "vision_v1.yaml",
     "productName": "Google Cloud Vision",
     "productUrl": "https://cloud.google.com/vision",
     "version": "1.7.0-beta00",
