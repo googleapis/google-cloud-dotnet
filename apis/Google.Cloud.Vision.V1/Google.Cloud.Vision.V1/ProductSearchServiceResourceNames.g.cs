@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcvv = Google.Cloud.Vision.V1;
 using sys = System;
 
@@ -367,11 +366,11 @@ namespace Google.Cloud.Vision.V1
     public partial class CreateProductRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -379,11 +378,11 @@ namespace Google.Cloud.Vision.V1
     public partial class ListProductsRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -415,11 +414,11 @@ namespace Google.Cloud.Vision.V1
     public partial class CreateProductSetRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -427,11 +426,11 @@ namespace Google.Cloud.Vision.V1
     public partial class ListProductSetsRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -565,11 +564,11 @@ namespace Google.Cloud.Vision.V1
     public partial class ImportProductSetsRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -577,11 +576,11 @@ namespace Google.Cloud.Vision.V1
     public partial class PurgeProductsRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
