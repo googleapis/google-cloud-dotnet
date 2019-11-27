@@ -14,184 +14,183 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Vision.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Vision.V1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedProductSearchClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedProductSearchClientTest
     {
-        [Fact]
-        public void CreateProductSet()
+        [xunit::FactAttribute]
+        public void CreateProductSetRequestObject()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductSetRequest expectedRequest = new CreateProductSetRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-                ProductSetId = "productSetId4216680",
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            ProductSet productSet = new ProductSet();
-            string productSetId = "productSetId4216680";
-            ProductSet response = client.CreateProductSet(parent, productSet, productSetId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateProductSetAsync()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductSetRequest expectedRequest = new CreateProductSetRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-                ProductSetId = "productSetId4216680",
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            ProductSet productSet = new ProductSet();
-            string productSetId = "productSetId4216680";
-            ProductSet response = await client.CreateProductSetAsync(parent, productSet, productSetId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateProductSet2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
+                ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.CreateProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             ProductSet response = client.CreateProductSet(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateProductSetAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateProductSetRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
+                ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = await client.CreateProductSetAsync(request);
-            Assert.Same(expectedResponse, response);
+            ProductSet responseCallSettings = await client.CreateProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.CreateProductSetAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetProductSet()
+        [xunit::FactAttribute]
+        public void CreateProductSet()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductSetRequest expectedRequest = new GetProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+                ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.GetProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductSet response = client.GetProductSet(name);
-            Assert.Same(expectedResponse, response);
+            ProductSet response = client.CreateProductSet(request.Parent, request.ProductSet, request.ProductSetId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetProductSetAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateProductSetAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductSetRequest expectedRequest = new GetProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+                ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.GetProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductSet response = await client.GetProductSetAsync(name);
-            Assert.Same(expectedResponse, response);
+            ProductSet responseCallSettings = await client.CreateProductSetAsync(request.Parent, request.ProductSet, request.ProductSetId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.CreateProductSetAsync(request.Parent, request.ProductSet, request.ProductSetId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetProductSet2()
+        [xunit::FactAttribute]
+        public void CreateProductSet_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductSetRequest request = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+                ProductSetId = "product_set_idc0ec7b3e",
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = client.CreateProductSet(request.ParentAsLocationName, request.ProductSet, request.ProductSetId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateProductSetAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductSetRequest request = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+                ProductSetId = "product_set_idc0ec7b3e",
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet responseCallSettings = await client.CreateProductSetAsync(request.ParentAsLocationName, request.ProductSet, request.ProductSetId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.CreateProductSetAsync(request.ParentAsLocationName, request.ProductSet, request.ProductSetId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetProductSetRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProductSetRequest request = new GetProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
@@ -199,22 +198,22 @@ namespace Google.Cloud.Vision.V1.Tests
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.GetProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             ProductSet response = client.GetProductSet(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetProductSetAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetProductSetRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProductSetRequest request = new GetProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
@@ -222,358 +221,499 @@ namespace Google.Cloud.Vision.V1.Tests
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.GetProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = await client.GetProductSetAsync(request);
-            Assert.Same(expectedResponse, response);
+            ProductSet responseCallSettings = await client.GetProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.GetProductSetAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateProductSet()
+        [xunit::FactAttribute]
+        public void GetProductSet()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductSetRequest expectedRequest = new UpdateProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductSetRequest request = new GetProductSetRequest
             {
-                ProductSet = new ProductSet(),
-                UpdateMask = new FieldMask(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.UpdateProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet productSet = new ProductSet();
-            FieldMask updateMask = new FieldMask();
-            ProductSet response = client.UpdateProductSet(productSet, updateMask);
-            Assert.Same(expectedResponse, response);
+            ProductSet response = client.GetProductSet(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateProductSetAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetProductSetAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductSetRequest expectedRequest = new UpdateProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductSetRequest request = new GetProductSetRequest
             {
-                ProductSet = new ProductSet(),
-                UpdateMask = new FieldMask(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet productSet = new ProductSet();
-            FieldMask updateMask = new FieldMask();
-            ProductSet response = await client.UpdateProductSetAsync(productSet, updateMask);
-            Assert.Same(expectedResponse, response);
+            ProductSet responseCallSettings = await client.GetProductSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.GetProductSetAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateProductSet2()
+        [xunit::FactAttribute]
+        public void GetProductSet_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductSetRequest request = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = client.GetProductSet(request.ProductSetName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetProductSetAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductSetRequest request = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet responseCallSettings = await client.GetProductSetAsync(request.ProductSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.GetProductSetAsync(request.ProductSetName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateProductSetRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductSetRequest request = new UpdateProductSetRequest
             {
                 ProductSet = new ProductSet(),
+                UpdateMask = new wkt::FieldMask(),
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.UpdateProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             ProductSet response = client.UpdateProductSet(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateProductSetAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateProductSetRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductSetRequest request = new UpdateProductSetRequest
             {
                 ProductSet = new ProductSet(),
+                UpdateMask = new wkt::FieldMask(),
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = await client.UpdateProductSetAsync(request);
-            Assert.Same(expectedResponse, response);
+            ProductSet responseCallSettings = await client.UpdateProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.UpdateProductSetAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteProductSet()
+        [xunit::FactAttribute]
+        public void UpdateProductSet()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateProductSetRequest request = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            client.DeleteProductSet(name);
+            ProductSet response = client.UpdateProductSet(request.ProductSet, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteProductSetAsync()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateProductSetAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateProductSetRequest request = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "display_name137f65c2",
+                IndexTime = new wkt::Timestamp(),
+                IndexError = new gr::Status(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            await client.DeleteProductSetAsync(name);
+            ProductSet responseCallSettings = await client.UpdateProductSetAsync(request.ProductSet, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ProductSet responseCancellationToken = await client.UpdateProductSetAsync(request.ProductSet, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteProductSet2()
+        [xunit::FactAttribute]
+        public void DeleteProductSetRequestObject()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteProductSetRequest request = new DeleteProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             client.DeleteProductSet(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteProductSetAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProductSetRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteProductSetRequest request = new DeleteProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteProductSetAsync(request);
+            await client.DeleteProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProductSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateProduct()
+        [xunit::FactAttribute]
+        public void DeleteProductSet()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductRequest expectedRequest = new CreateProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductSetRequest request = new DeleteProductSetRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
-                ProductId = "productId1753008747",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
-            Product expectedResponse = new Product
-            {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
-            };
-            mockGrpcClient.Setup(x => x.CreateProduct(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            Product product = new Product();
-            string productId = "productId1753008747";
-            Product response = client.CreateProduct(parent, product, productId);
-            Assert.Same(expectedResponse, response);
+            client.DeleteProductSet(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateProductAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProductSetAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductRequest expectedRequest = new CreateProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductSetRequest request = new DeleteProductSetRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
-                ProductId = "productId1753008747",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
-            Product expectedResponse = new Product
-            {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
-            };
-            mockGrpcClient.Setup(x => x.CreateProductAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            Product product = new Product();
-            string productId = "productId1753008747";
-            Product response = await client.CreateProductAsync(parent, product, productId);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteProductSetAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProductSetAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateProduct2()
+        [xunit::FactAttribute]
+        public void DeleteProductSet_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductSetRequest request = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            client.DeleteProductSet(request.ProductSetName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProductSetAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductSetRequest request = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteProductSetAsync(request.ProductSetName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProductSetAsync(request.ProductSetName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateProductRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
+                ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateProduct(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             Product response = client.CreateProduct(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateProductAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateProductRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
+                ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateProductAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            Product response = await client.CreateProductAsync(request);
-            Assert.Same(expectedResponse, response);
+            Product responseCallSettings = await client.CreateProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.CreateProductAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetProduct()
+        [xunit::FactAttribute]
+        public void CreateProduct()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductRequest expectedRequest = new GetProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductRequest request = new CreateProductRequest
             {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Product = new Product(),
+                ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProduct(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            Product response = client.GetProduct(name);
-            Assert.Same(expectedResponse, response);
+            Product response = client.CreateProduct(request.Parent, request.Product, request.ProductId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetProductAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateProductAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductRequest expectedRequest = new GetProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductRequest request = new CreateProductRequest
             {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Product = new Product(),
+                ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProductAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            Product response = await client.GetProductAsync(name);
-            Assert.Same(expectedResponse, response);
+            Product responseCallSettings = await client.CreateProductAsync(request.Parent, request.Product, request.ProductId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.CreateProductAsync(request.Parent, request.Product, request.ProductId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetProduct2()
+        [xunit::FactAttribute]
+        public void CreateProduct_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductRequest request = new CreateProductRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Product = new Product(),
+                ProductId = "product_idde82ea9b",
+            };
+            Product expectedResponse = new Product
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            Product response = client.CreateProduct(request.ParentAsLocationName, request.Product, request.ProductId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateProductAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateProductRequest request = new CreateProductRequest
+            {
+                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                Product = new Product(),
+                ProductId = "product_idde82ea9b",
+            };
+            Product expectedResponse = new Product
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            Product responseCallSettings = await client.CreateProductAsync(request.ParentAsLocationName, request.Product, request.ProductId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.CreateProductAsync(request.ParentAsLocationName, request.Product, request.ProductId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetProductRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
@@ -581,24 +721,26 @@ namespace Google.Cloud.Vision.V1.Tests
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProduct(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             Product response = client.GetProduct(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetProductAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetProductRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
@@ -606,430 +748,604 @@ namespace Google.Cloud.Vision.V1.Tests
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProductAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            Product response = await client.GetProductAsync(request);
-            Assert.Same(expectedResponse, response);
+            Product responseCallSettings = await client.GetProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.GetProductAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateProduct()
+        [xunit::FactAttribute]
+        public void GetProduct()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductRequest expectedRequest = new UpdateProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductRequest request = new GetProductRequest
             {
-                Product = new Product(),
-                UpdateMask = new FieldMask(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProduct(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            Product product = new Product();
-            FieldMask updateMask = new FieldMask();
-            Product response = client.UpdateProduct(product, updateMask);
-            Assert.Same(expectedResponse, response);
+            Product response = client.GetProduct(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateProductAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetProductAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductRequest expectedRequest = new UpdateProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductRequest request = new GetProductRequest
             {
-                Product = new Product(),
-                UpdateMask = new FieldMask(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProductAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            Product product = new Product();
-            FieldMask updateMask = new FieldMask();
-            Product response = await client.UpdateProductAsync(product, updateMask);
-            Assert.Same(expectedResponse, response);
+            Product responseCallSettings = await client.GetProductAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.GetProductAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateProduct2()
+        [xunit::FactAttribute]
+        public void GetProduct_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductRequest request = new GetProductRequest
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            Product expectedResponse = new Product
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            Product response = client.GetProduct(request.ProductName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetProductAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetProductRequest request = new GetProductRequest
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            Product expectedResponse = new Product
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            Product responseCallSettings = await client.GetProductAsync(request.ProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.GetProductAsync(request.ProductName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateProductRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
                 Product = new Product(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProduct(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             Product response = client.UpdateProduct(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateProductAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateProductRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
                 Product = new Product(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ProductCategory = "productCategory-1607451058",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProductAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            Product response = await client.UpdateProductAsync(request);
-            Assert.Same(expectedResponse, response);
+            Product responseCallSettings = await client.UpdateProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.UpdateProductAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteProduct()
+        [xunit::FactAttribute]
+        public void UpdateProduct()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductRequest expectedRequest = new DeleteProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateProductRequest request = new UpdateProductRequest
+            {
+                Product = new Product(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProduct(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            client.DeleteProduct(name);
+            Product response = client.UpdateProduct(request.Product, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteProductAsync()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateProductAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductRequest expectedRequest = new DeleteProductRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateProductRequest request = new UpdateProductRequest
+            {
+                Product = new Product(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Product expectedResponse = new Product
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ProductCategory = "product_category7fba5b40",
+                ProductLabels =
+                {
+                    new Product.Types.KeyValue(),
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            await client.DeleteProductAsync(name);
+            Product responseCallSettings = await client.UpdateProductAsync(request.Product, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Product responseCancellationToken = await client.UpdateProductAsync(request.Product, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteProduct2()
+        [xunit::FactAttribute]
+        public void DeleteProductRequestObject()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProduct(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             client.DeleteProduct(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteProductAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProductRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
                 ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteProductAsync(request);
+            await client.DeleteProductAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProductAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateReferenceImage()
+        [xunit::FactAttribute]
+        public void DeleteProduct()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateReferenceImageRequest expectedRequest = new CreateReferenceImageRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductRequest request = new DeleteProductRequest
             {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
-                ReferenceImageId = "referenceImageId1946713331",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.CreateReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            ReferenceImage referenceImage = new ReferenceImage();
-            string referenceImageId = "referenceImageId1946713331";
-            ReferenceImage response = client.CreateReferenceImage(parent, referenceImage, referenceImageId);
-            Assert.Same(expectedResponse, response);
+            client.DeleteProduct(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateReferenceImageAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProductAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateReferenceImageRequest expectedRequest = new CreateReferenceImageRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductRequest request = new DeleteProductRequest
             {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
-                ReferenceImageId = "referenceImageId1946713331",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            ReferenceImage referenceImage = new ReferenceImage();
-            string referenceImageId = "referenceImageId1946713331";
-            ReferenceImage response = await client.CreateReferenceImageAsync(parent, referenceImage, referenceImageId);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteProductAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProductAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateReferenceImage2()
+        [xunit::FactAttribute]
+        public void DeleteProduct_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductRequest request = new DeleteProductRequest
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            client.DeleteProduct(request.ProductName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProductAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteProductRequest request = new DeleteProductRequest
+            {
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteProductAsync(request.ProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProductAsync(request.ProductName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateReferenceImageRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
+                ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
             };
-            mockGrpcClient.Setup(x => x.CreateReferenceImage(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             ReferenceImage response = client.CreateReferenceImage(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateReferenceImageAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateReferenceImageRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
+                ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
             };
-            mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImage response = await client.CreateReferenceImageAsync(request);
-            Assert.Same(expectedResponse, response);
+            ReferenceImage responseCallSettings = await client.CreateReferenceImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReferenceImage responseCancellationToken = await client.CreateReferenceImageAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteReferenceImage()
+        [xunit::FactAttribute]
+        public void CreateReferenceImage()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateReferenceImageRequest request = new CreateReferenceImageRequest
+            {
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImage = new ReferenceImage(),
+                ReferenceImageId = "reference_image_idda348389",
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            client.DeleteReferenceImage(name);
+            ReferenceImage response = client.CreateReferenceImage(request.Parent, request.ReferenceImage, request.ReferenceImageId);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteReferenceImageAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateReferenceImageAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateReferenceImageRequest request = new CreateReferenceImageRequest
+            {
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImage = new ReferenceImage(),
+                ReferenceImageId = "reference_image_idda348389",
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            await client.DeleteReferenceImageAsync(name);
+            ReferenceImage responseCallSettings = await client.CreateReferenceImageAsync(request.Parent, request.ReferenceImage, request.ReferenceImageId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReferenceImage responseCancellationToken = await client.CreateReferenceImageAsync(request.Parent, request.ReferenceImage, request.ReferenceImageId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteReferenceImage2()
+        [xunit::FactAttribute]
+        public void CreateReferenceImage_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateReferenceImageRequest request = new CreateReferenceImageRequest
+            {
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImage = new ReferenceImage(),
+                ReferenceImageId = "reference_image_idda348389",
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
+            };
+            mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImage response = client.CreateReferenceImage(request.ParentAsProductName, request.ReferenceImage, request.ReferenceImageId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateReferenceImageAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateReferenceImageRequest request = new CreateReferenceImageRequest
+            {
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImage = new ReferenceImage(),
+                ReferenceImageId = "reference_image_idda348389",
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
+            };
+            mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImage responseCallSettings = await client.CreateReferenceImageAsync(request.ParentAsProductName, request.ReferenceImage, request.ReferenceImageId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReferenceImage responseCancellationToken = await client.CreateReferenceImageAsync(request.ParentAsProductName, request.ReferenceImage, request.ReferenceImageId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteReferenceImageRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             client.DeleteReferenceImage(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteReferenceImageAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteReferenceImageRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteReferenceImageAsync(request);
+            await client.DeleteReferenceImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteReferenceImageAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetReferenceImage()
+        [xunit::FactAttribute]
+        public void DeleteReferenceImage()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.GetReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            ReferenceImage response = client.GetReferenceImage(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteReferenceImage(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetReferenceImageAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteReferenceImageAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            ReferenceImage response = await client.GetReferenceImageAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteReferenceImageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteReferenceImageAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetReferenceImage2()
+        [xunit::FactAttribute]
+        public void DeleteReferenceImage_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            client.DeleteReferenceImage(request.ReferenceImageName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteReferenceImageAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteReferenceImageAsync(request.ReferenceImageName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteReferenceImageAsync(request.ReferenceImageName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetReferenceImageRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetReferenceImageRequest request = new GetReferenceImageRequest
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
@@ -1037,22 +1353,21 @@ namespace Google.Cloud.Vision.V1.Tests
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
             };
-            mockGrpcClient.Setup(x => x.GetReferenceImage(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             ReferenceImage response = client.GetReferenceImage(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetReferenceImageAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetReferenceImageRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetReferenceImageRequest request = new GetReferenceImageRequest
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
@@ -1060,175 +1375,318 @@ namespace Google.Cloud.Vision.V1.Tests
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
             };
-            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImage response = await client.GetReferenceImageAsync(request);
-            Assert.Same(expectedResponse, response);
+            ReferenceImage responseCallSettings = await client.GetReferenceImageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReferenceImage responseCancellationToken = await client.GetReferenceImageAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void AddProductToProductSet()
+        [xunit::FactAttribute]
+        public void GetReferenceImage()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            AddProductToProductSetRequest expectedRequest = new AddProductToProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetReferenceImageRequest request = new GetReferenceImageRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.AddProductToProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            client.AddProductToProductSet(name, product);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task AddProductToProductSetAsync()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            AddProductToProductSetRequest expectedRequest = new AddProductToProductSetRequest
+            ReferenceImage expectedResponse = new ReferenceImage
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            await client.AddProductToProductSetAsync(name, product);
+            ReferenceImage response = client.GetReferenceImage(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void AddProductToProductSet2()
+        [xunit::FactAttribute]
+        public async stt::Task GetReferenceImageAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetReferenceImageRequest request = new GetReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
+            };
+            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImage responseCallSettings = await client.GetReferenceImageAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReferenceImage responseCancellationToken = await client.GetReferenceImageAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetReferenceImage_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetReferenceImageRequest request = new GetReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
+            };
+            mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImage response = client.GetReferenceImage(request.ReferenceImageName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetReferenceImageAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetReferenceImageRequest request = new GetReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri3db70593",
+                BoundingPolys = { new BoundingPoly(), },
+            };
+            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImage responseCallSettings = await client.GetReferenceImageAsync(request.ReferenceImageName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReferenceImage responseCancellationToken = await client.GetReferenceImageAsync(request.ReferenceImageName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void AddProductToProductSetRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.AddProductToProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.AddProductToProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             client.AddProductToProductSet(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task AddProductToProductSetAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task AddProductToProductSetRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            await client.AddProductToProductSetAsync(request);
+            await client.AddProductToProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.AddProductToProductSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void RemoveProductFromProductSet()
+        [xunit::FactAttribute]
+        public void AddProductToProductSet()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            RemoveProductFromProductSetRequest expectedRequest = new RemoveProductFromProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.AddProductToProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            client.RemoveProductFromProductSet(name, product);
+            client.AddProductToProductSet(request.Name, request.Product);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RemoveProductFromProductSetAsync()
+        [xunit::FactAttribute]
+        public async stt::Task AddProductToProductSetAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            RemoveProductFromProductSetRequest expectedRequest = new RemoveProductFromProductSetRequest
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            await client.RemoveProductFromProductSetAsync(name, product);
+            await client.AddProductToProductSetAsync(request.Name, request.Product, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.AddProductToProductSetAsync(request.Name, request.Product, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void RemoveProductFromProductSet2()
+        [xunit::FactAttribute]
+        public void AddProductToProductSet_ResourceNames()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AddProductToProductSetRequest request = new AddProductToProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.AddProductToProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            client.AddProductToProductSet(request.ProductSetName, request.ProductAsProductName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AddProductToProductSetAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AddProductToProductSetRequest request = new AddProductToProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            await client.AddProductToProductSetAsync(request.ProductSetName, request.ProductAsProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.AddProductToProductSetAsync(request.ProductSetName, request.ProductAsProductName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RemoveProductFromProductSetRequestObject()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
             client.RemoveProductFromProductSet(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RemoveProductFromProductSetAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RemoveProductFromProductSetRequestObjectAsync()
         {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
             {
                 ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            await client.RemoveProductFromProductSetAsync(request);
+            await client.RemoveProductFromProductSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RemoveProductFromProductSetAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void RemoveProductFromProductSet()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            client.RemoveProductFromProductSet(request.Name, request.Product);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RemoveProductFromProductSetAsync()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            await client.RemoveProductFromProductSetAsync(request.Name, request.Product, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RemoveProductFromProductSetAsync(request.Name, request.Product, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RemoveProductFromProductSet_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            client.RemoveProductFromProductSet(request.ProductSetName, request.ProductAsProductName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RemoveProductFromProductSetAsync_ResourceNames()
+        {
+            moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            await client.RemoveProductFromProductSetAsync(request.ProductSetName, request.ProductAsProductName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RemoveProductFromProductSetAsync(request.ProductSetName, request.ProductAsProductName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

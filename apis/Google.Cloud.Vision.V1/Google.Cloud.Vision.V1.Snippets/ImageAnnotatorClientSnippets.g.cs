@@ -16,62 +16,48 @@
 
 namespace Google.Cloud.Vision.V1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Vision.V1;
     using Google.LongRunning;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedImageAnnotatorClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedImageAnnotatorClientSnippets
     {
-        /// <summary>Snippet for BatchAnnotateImagesAsync</summary>
-        public async Task BatchAnnotateImagesAsync()
-        {
-            // Snippet: BatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>,CallSettings)
-            // Additional: BatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>,CancellationToken)
-            // Create client
-            ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
-            // Initialize request argument(s)
-            IEnumerable<AnnotateImageRequest> requests = new List<AnnotateImageRequest>();
-            // Make the request
-            BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(requests);
-            // End snippet
-        }
-
         /// <summary>Snippet for BatchAnnotateImages</summary>
-        public void BatchAnnotateImages()
+        public void BatchAnnotateImages_RequestObject()
         {
-            // Snippet: BatchAnnotateImages(IEnumerable<AnnotateImageRequest>,CallSettings)
+            // Snippet: BatchAnnotateImages(BatchAnnotateImagesRequest, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            IEnumerable<AnnotateImageRequest> requests = new List<AnnotateImageRequest>();
+            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+            {
+                Requests =
+                {
+                    new AnnotateImageRequest(),
+                },
+                Parent = "",
+            };
             // Make the request
-            BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(requests);
+            BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
             // End snippet
         }
 
         /// <summary>Snippet for BatchAnnotateImagesAsync</summary>
         public async Task BatchAnnotateImagesAsync_RequestObject()
         {
-            // Snippet: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest,CallSettings)
-            // Additional: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest,CancellationToken)
+            // Snippet: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest, CallSettings)
+            // Additional: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest, CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
             BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
             {
-                Requests = { },
+                Requests =
+                {
+                    new AnnotateImageRequest(),
+                },
+                Parent = "",
             };
             // Make the request
             BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);
@@ -79,59 +65,73 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for BatchAnnotateImages</summary>
-        public void BatchAnnotateImages_RequestObject()
+        public void BatchAnnotateImages()
         {
-            // Snippet: BatchAnnotateImages(BatchAnnotateImagesRequest,CallSettings)
+            // Snippet: BatchAnnotateImages(IEnumerable<AnnotateImageRequest>, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+            IEnumerable<AnnotateImageRequest> requests = new AnnotateImageRequest[]
             {
-                Requests = { },
+                new AnnotateImageRequest(),
             };
             // Make the request
-            BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
+            BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(requests);
             // End snippet
         }
 
-        /// <summary>Snippet for BatchAnnotateFilesAsync</summary>
-        public async Task BatchAnnotateFilesAsync()
+        /// <summary>Snippet for BatchAnnotateImagesAsync</summary>
+        public async Task BatchAnnotateImagesAsync()
         {
-            // Snippet: BatchAnnotateFilesAsync(IEnumerable<AnnotateFileRequest>,CallSettings)
-            // Additional: BatchAnnotateFilesAsync(IEnumerable<AnnotateFileRequest>,CancellationToken)
+            // Snippet: BatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>, CallSettings)
+            // Additional: BatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>, CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
-            IEnumerable<AnnotateFileRequest> requests = new List<AnnotateFileRequest>();
+            IEnumerable<AnnotateImageRequest> requests = new AnnotateImageRequest[]
+            {
+                new AnnotateImageRequest(),
+            };
             // Make the request
-            BatchAnnotateFilesResponse response = await imageAnnotatorClient.BatchAnnotateFilesAsync(requests);
+            BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(requests);
             // End snippet
         }
 
         /// <summary>Snippet for BatchAnnotateFiles</summary>
-        public void BatchAnnotateFiles()
+        public void BatchAnnotateFiles_RequestObject()
         {
-            // Snippet: BatchAnnotateFiles(IEnumerable<AnnotateFileRequest>,CallSettings)
+            // Snippet: BatchAnnotateFiles(BatchAnnotateFilesRequest, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            IEnumerable<AnnotateFileRequest> requests = new List<AnnotateFileRequest>();
+            BatchAnnotateFilesRequest request = new BatchAnnotateFilesRequest
+            {
+                Requests =
+                {
+                    new AnnotateFileRequest(),
+                },
+                Parent = "",
+            };
             // Make the request
-            BatchAnnotateFilesResponse response = imageAnnotatorClient.BatchAnnotateFiles(requests);
+            BatchAnnotateFilesResponse response = imageAnnotatorClient.BatchAnnotateFiles(request);
             // End snippet
         }
 
         /// <summary>Snippet for BatchAnnotateFilesAsync</summary>
         public async Task BatchAnnotateFilesAsync_RequestObject()
         {
-            // Snippet: BatchAnnotateFilesAsync(BatchAnnotateFilesRequest,CallSettings)
-            // Additional: BatchAnnotateFilesAsync(BatchAnnotateFilesRequest,CancellationToken)
+            // Snippet: BatchAnnotateFilesAsync(BatchAnnotateFilesRequest, CallSettings)
+            // Additional: BatchAnnotateFilesAsync(BatchAnnotateFilesRequest, CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
             BatchAnnotateFilesRequest request = new BatchAnnotateFilesRequest
             {
-                Requests = { },
+                Requests =
+                {
+                    new AnnotateFileRequest(),
+                },
+                Parent = "",
             };
             // Make the request
             BatchAnnotateFilesResponse response = await imageAnnotatorClient.BatchAnnotateFilesAsync(request);
@@ -139,79 +139,66 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for BatchAnnotateFiles</summary>
-        public void BatchAnnotateFiles_RequestObject()
+        public void BatchAnnotateFiles()
         {
-            // Snippet: BatchAnnotateFiles(BatchAnnotateFilesRequest,CallSettings)
+            // Snippet: BatchAnnotateFiles(IEnumerable<AnnotateFileRequest>, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            BatchAnnotateFilesRequest request = new BatchAnnotateFilesRequest
+            IEnumerable<AnnotateFileRequest> requests = new AnnotateFileRequest[]
             {
-                Requests = { },
+                new AnnotateFileRequest(),
             };
             // Make the request
-            BatchAnnotateFilesResponse response = imageAnnotatorClient.BatchAnnotateFiles(request);
+            BatchAnnotateFilesResponse response = imageAnnotatorClient.BatchAnnotateFiles(requests);
             // End snippet
         }
 
-        /// <summary>Snippet for AsyncBatchAnnotateImagesAsync</summary>
-        public async Task AsyncBatchAnnotateImagesAsync()
+        /// <summary>Snippet for BatchAnnotateFilesAsync</summary>
+        public async Task BatchAnnotateFilesAsync()
         {
-            // Snippet: AsyncBatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>,OutputConfig,CallSettings)
-            // Additional: AsyncBatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>,OutputConfig,CancellationToken)
+            // Snippet: BatchAnnotateFilesAsync(IEnumerable<AnnotateFileRequest>, CallSettings)
+            // Additional: BatchAnnotateFilesAsync(IEnumerable<AnnotateFileRequest>, CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
-            IEnumerable<AnnotateImageRequest> requests = new List<AnnotateImageRequest>();
-            OutputConfig outputConfig = new OutputConfig();
-            // Make the request
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response =
-                await imageAnnotatorClient.AsyncBatchAnnotateImagesAsync(requests, outputConfig);
-
-            // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            AsyncBatchAnnotateImagesResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse =
-                await imageAnnotatorClient.PollOnceAsyncBatchAnnotateImagesAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
+            IEnumerable<AnnotateFileRequest> requests = new AnnotateFileRequest[]
             {
-                // If it has completed, then access the result
-                AsyncBatchAnnotateImagesResponse retrievedResult = retrievedResponse.Result;
-            }
+                new AnnotateFileRequest(),
+            };
+            // Make the request
+            BatchAnnotateFilesResponse response = await imageAnnotatorClient.BatchAnnotateFilesAsync(requests);
             // End snippet
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateImages</summary>
-        public void AsyncBatchAnnotateImages()
+        public void AsyncBatchAnnotateImages_RequestObject()
         {
-            // Snippet: AsyncBatchAnnotateImages(IEnumerable<AnnotateImageRequest>,OutputConfig,CallSettings)
+            // Snippet: AsyncBatchAnnotateImages(AsyncBatchAnnotateImagesRequest, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            IEnumerable<AnnotateImageRequest> requests = new List<AnnotateImageRequest>();
-            OutputConfig outputConfig = new OutputConfig();
+            AsyncBatchAnnotateImagesRequest request = new AsyncBatchAnnotateImagesRequest
+            {
+                Requests =
+                {
+                    new AnnotateImageRequest(),
+                },
+                OutputConfig = new OutputConfig(),
+                Parent = "",
+            };
             // Make the request
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response =
-                imageAnnotatorClient.AsyncBatchAnnotateImages(requests, outputConfig);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateImages(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             AsyncBatchAnnotateImagesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse =
-                imageAnnotatorClient.PollOnceAsyncBatchAnnotateImages(operationName);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse = imageAnnotatorClient.PollOnceAsyncBatchAnnotateImages(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -224,30 +211,32 @@ namespace Google.Cloud.Vision.V1.Snippets
         /// <summary>Snippet for AsyncBatchAnnotateImagesAsync</summary>
         public async Task AsyncBatchAnnotateImagesAsync_RequestObject()
         {
-            // Snippet: AsyncBatchAnnotateImagesAsync(AsyncBatchAnnotateImagesRequest,CallSettings)
+            // Snippet: AsyncBatchAnnotateImagesAsync(AsyncBatchAnnotateImagesRequest, CallSettings)
+            // Additional: AsyncBatchAnnotateImagesAsync(AsyncBatchAnnotateImagesRequest, CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
             AsyncBatchAnnotateImagesRequest request = new AsyncBatchAnnotateImagesRequest
             {
-                Requests = { },
+                Requests =
+                {
+                    new AnnotateImageRequest(),
+                },
                 OutputConfig = new OutputConfig(),
+                Parent = "",
             };
             // Make the request
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response =
-                await imageAnnotatorClient.AsyncBatchAnnotateImagesAsync(request);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateImagesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             AsyncBatchAnnotateImagesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse =
-                await imageAnnotatorClient.PollOnceAsyncBatchAnnotateImagesAsync(operationName);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse = await imageAnnotatorClient.PollOnceAsyncBatchAnnotateImagesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -258,32 +247,29 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateImages</summary>
-        public void AsyncBatchAnnotateImages_RequestObject()
+        public void AsyncBatchAnnotateImages()
         {
-            // Snippet: AsyncBatchAnnotateImages(AsyncBatchAnnotateImagesRequest,CallSettings)
+            // Snippet: AsyncBatchAnnotateImages(IEnumerable<AnnotateImageRequest>, OutputConfig, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            AsyncBatchAnnotateImagesRequest request = new AsyncBatchAnnotateImagesRequest
+            IEnumerable<AnnotateImageRequest> requests = new AnnotateImageRequest[]
             {
-                Requests = { },
-                OutputConfig = new OutputConfig(),
+                new AnnotateImageRequest(),
             };
+            OutputConfig outputConfig = new OutputConfig();
             // Make the request
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response =
-                imageAnnotatorClient.AsyncBatchAnnotateImages(request);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateImages(requests, outputConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             AsyncBatchAnnotateImagesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse =
-                imageAnnotatorClient.PollOnceAsyncBatchAnnotateImages(operationName);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse = imageAnnotatorClient.PollOnceAsyncBatchAnnotateImages(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -293,62 +279,67 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for AsyncBatchAnnotateFilesAsync</summary>
-        public async Task AsyncBatchAnnotateFilesAsync()
+        /// <summary>Snippet for AsyncBatchAnnotateImagesAsync</summary>
+        public async Task AsyncBatchAnnotateImagesAsync()
         {
-            // Snippet: AsyncBatchAnnotateFilesAsync(IEnumerable<AsyncAnnotateFileRequest>,CallSettings)
-            // Additional: AsyncBatchAnnotateFilesAsync(IEnumerable<AsyncAnnotateFileRequest>,CancellationToken)
+            // Snippet: AsyncBatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>, OutputConfig, CallSettings)
+            // Additional: AsyncBatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>, OutputConfig, CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
-            IEnumerable<AsyncAnnotateFileRequest> requests = new List<AsyncAnnotateFileRequest>();
+            IEnumerable<AnnotateImageRequest> requests = new AnnotateImageRequest[]
+            {
+                new AnnotateImageRequest(),
+            };
+            OutputConfig outputConfig = new OutputConfig();
             // Make the request
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response =
-                await imageAnnotatorClient.AsyncBatchAnnotateFilesAsync(requests);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateImagesAsync(requests, outputConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            AsyncBatchAnnotateFilesResponse result = completedResponse.Result;
+            AsyncBatchAnnotateImagesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse =
-                await imageAnnotatorClient.PollOnceAsyncBatchAnnotateFilesAsync(operationName);
+            Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> retrievedResponse = await imageAnnotatorClient.PollOnceAsyncBatchAnnotateImagesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AsyncBatchAnnotateFilesResponse retrievedResult = retrievedResponse.Result;
+                AsyncBatchAnnotateImagesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateFiles</summary>
-        public void AsyncBatchAnnotateFiles()
+        public void AsyncBatchAnnotateFiles_RequestObject()
         {
-            // Snippet: AsyncBatchAnnotateFiles(IEnumerable<AsyncAnnotateFileRequest>,CallSettings)
+            // Snippet: AsyncBatchAnnotateFiles(AsyncBatchAnnotateFilesRequest, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            IEnumerable<AsyncAnnotateFileRequest> requests = new List<AsyncAnnotateFileRequest>();
+            AsyncBatchAnnotateFilesRequest request = new AsyncBatchAnnotateFilesRequest
+            {
+                Requests =
+                {
+                    new AsyncAnnotateFileRequest(),
+                },
+                Parent = "",
+            };
             // Make the request
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response =
-                imageAnnotatorClient.AsyncBatchAnnotateFiles(requests);
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateFiles(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             AsyncBatchAnnotateFilesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse =
-                imageAnnotatorClient.PollOnceAsyncBatchAnnotateFiles(operationName);
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse = imageAnnotatorClient.PollOnceAsyncBatchAnnotateFiles(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -361,29 +352,31 @@ namespace Google.Cloud.Vision.V1.Snippets
         /// <summary>Snippet for AsyncBatchAnnotateFilesAsync</summary>
         public async Task AsyncBatchAnnotateFilesAsync_RequestObject()
         {
-            // Snippet: AsyncBatchAnnotateFilesAsync(AsyncBatchAnnotateFilesRequest,CallSettings)
+            // Snippet: AsyncBatchAnnotateFilesAsync(AsyncBatchAnnotateFilesRequest, CallSettings)
+            // Additional: AsyncBatchAnnotateFilesAsync(AsyncBatchAnnotateFilesRequest, CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
             AsyncBatchAnnotateFilesRequest request = new AsyncBatchAnnotateFilesRequest
             {
-                Requests = { },
+                Requests =
+                {
+                    new AsyncAnnotateFileRequest(),
+                },
+                Parent = "",
             };
             // Make the request
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response =
-                await imageAnnotatorClient.AsyncBatchAnnotateFilesAsync(request);
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateFilesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             AsyncBatchAnnotateFilesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse =
-                await imageAnnotatorClient.PollOnceAsyncBatchAnnotateFilesAsync(operationName);
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse = await imageAnnotatorClient.PollOnceAsyncBatchAnnotateFilesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -394,31 +387,28 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateFiles</summary>
-        public void AsyncBatchAnnotateFiles_RequestObject()
+        public void AsyncBatchAnnotateFiles()
         {
-            // Snippet: AsyncBatchAnnotateFiles(AsyncBatchAnnotateFilesRequest,CallSettings)
+            // Snippet: AsyncBatchAnnotateFiles(IEnumerable<AsyncAnnotateFileRequest>, CallSettings)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
             // Initialize request argument(s)
-            AsyncBatchAnnotateFilesRequest request = new AsyncBatchAnnotateFilesRequest
+            IEnumerable<AsyncAnnotateFileRequest> requests = new AsyncAnnotateFileRequest[]
             {
-                Requests = { },
+                new AsyncAnnotateFileRequest(),
             };
             // Make the request
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response =
-                imageAnnotatorClient.AsyncBatchAnnotateFiles(request);
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateFiles(requests);
 
             // Poll until the returned long-running operation is complete
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             AsyncBatchAnnotateFilesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse =
-                imageAnnotatorClient.PollOnceAsyncBatchAnnotateFiles(operationName);
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse = imageAnnotatorClient.PollOnceAsyncBatchAnnotateFiles(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -428,5 +418,37 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AsyncBatchAnnotateFilesAsync</summary>
+        public async Task AsyncBatchAnnotateFilesAsync()
+        {
+            // Snippet: AsyncBatchAnnotateFilesAsync(IEnumerable<AsyncAnnotateFileRequest>, CallSettings)
+            // Additional: AsyncBatchAnnotateFilesAsync(IEnumerable<AsyncAnnotateFileRequest>, CancellationToken)
+            // Create client
+            ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
+            // Initialize request argument(s)
+            IEnumerable<AsyncAnnotateFileRequest> requests = new AsyncAnnotateFileRequest[]
+            {
+                new AsyncAnnotateFileRequest(),
+            };
+            // Make the request
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateFilesAsync(requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AsyncBatchAnnotateFilesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> retrievedResponse = await imageAnnotatorClient.PollOnceAsyncBatchAnnotateFilesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncBatchAnnotateFilesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
