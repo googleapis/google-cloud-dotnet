@@ -1,0 +1,28 @@
+{
+  "common_resources": [
+    {
+      "type": "cloudresourcemanager.googleapis.com/Project",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "ProjectName"
+    },
+    {
+      "type": "cloudresourcemanager.googleapis.com/Organization",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "OrganizationName"
+    },
+    {
+      "type": "cloudresourcemanager.googleapis.com/Folder",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "FolderName"
+    },
+    {
+      "type": "cloudbilling.googleapis.com/BillingAccount",
+      "csharp_package_name": "Google.Api.Gax",
+      "csharp_namespace": "Google.Api.Gax.ResourceNames",
+      "csharp_class_name":  "BillingAccountName"
+    }
+  ]
+}
