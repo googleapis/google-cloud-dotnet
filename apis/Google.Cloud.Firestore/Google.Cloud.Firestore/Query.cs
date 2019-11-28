@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -297,6 +298,59 @@ namespace Google.Cloud.Firestore
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereArrayContains(FieldPath fieldPath, object value) =>
             Where(fieldPath, FieldOp.ArrayContains, value);
+
+
+        /// <summary>
+        /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
+        /// a field present in the document, with a value which is an array containing at least one value in <paramref name="values"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="values">The values to compare in the filter. Must not be null.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereArrayContainsAny(string fieldPath, IEnumerable values) =>
+            Where(fieldPath, FieldOp.ArrayContainsAny, values);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
+        /// a field present in the document, with a value which is an array containing at least one value in <paramref name="values"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="values">The values to compare in the filter. Must not be null.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereArrayContainsAny(FieldPath fieldPath, IEnumerable values) =>
+            Where(fieldPath, FieldOp.ArrayContainsAny, values);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
+        /// a field present in the document, with a value which is one of the values <paramref name="values"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="values">The values to compare in the filter. Must not be null.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereIn(string fieldPath, IEnumerable values) =>
+            Where(fieldPath, FieldOp.In, values);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
+        /// a field present in the document, with a value which is one of the values <paramref name="values"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="values">The values to compare in the filter. Must not be null.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereIn(FieldPath fieldPath, IEnumerable values) =>
+            Where(fieldPath, FieldOp.In, values);
 
         // Note: the two general Where methods were originally public, accepting a public QueryOperator enum.
         // If we ever want to make them public again, we should reinstate the QueryOperator enum to avoid an API
