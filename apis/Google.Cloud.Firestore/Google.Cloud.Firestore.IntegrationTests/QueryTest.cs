@@ -312,6 +312,45 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Single(actualIds, "cg-doc2");
         }
 
+        [Fact]
+        public async Task WhereIn()
+        {
+            var db = _fixture.FirestoreDb;
+            var collection = _fixture.CreateUniqueCollection();
+            var batch = db.StartBatch();
+            batch.Set(collection.Document("a"), new { zip = 98101 });
+            batch.Set(collection.Document("b"), new { zip = 91102 });
+            batch.Set(collection.Document("c"), new { zip = 98103 });
+            batch.Set(collection.Document("d"), new { zip = new[] { 98101 } });
+            batch.Set(collection.Document("e"), new { zip = new object[] { 98101, new { zip = 98101 } } });
+            batch.Set(collection.Document("f"), new { zip = new { code = 500 } });
+            await batch.CommitAsync();
+
+            var querySnapshot = await collection.WhereIn("zip", new[] { 98101, 98103 }).GetSnapshotAsync();
+            var ids = querySnapshot.Select(d => d.Id).ToList();
+            Assert.Equal(new[] { "a", "c" }, ids);
+        }
+
+        [Fact]
+        public async Task WhereArrayContainsAny()
+        {
+            var db = _fixture.FirestoreDb;
+            var collection = _fixture.CreateUniqueCollection();
+            var batch = db.StartBatch();
+            batch.Set(collection.Document("a"), new { array = new[] { 42 } });
+            batch.Set(collection.Document("b"), new { array = new object[] { "a", 42, "c" } });
+            batch.Set(collection.Document("c"), new { array = new object[] { 41.999, "42", new { a = 42 } } });
+            batch.Set(collection.Document("d"), new { array = new[] { 42 }, array2 = "sigh" });
+            batch.Set(collection.Document("e"), new { array = new[] { 43 } });
+            batch.Set(collection.Document("f"), new { array = new[] { new { a = 42 } } });
+            batch.Set(collection.Document("g"), new { array = 42 });
+            await batch.CommitAsync();
+
+            var querySnapshot = await collection.WhereArrayContainsAny("array", new[] { 42, 43 }).GetSnapshotAsync();
+            var ids = querySnapshot.Select(d => d.Id).ToList();
+            Assert.Equal(new[] { "a", "b", "d", "e" }, ids);
+        }
+
         public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>
         {
             { "StringArray", "x", new[] { "string-x,y", "mixed" } },

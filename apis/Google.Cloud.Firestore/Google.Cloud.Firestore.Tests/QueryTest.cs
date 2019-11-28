@@ -235,7 +235,78 @@ namespace Google.Cloud.Firestore.Tests
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
-        }        
+        }
+
+        [Fact]
+        public void WhereIn_String()
+        {
+            var query = GetEmptyQuery().WhereIn("a.b", new[] { 10, 20 });
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void WhereIn_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereIn(new FieldPath("a", "b"), new[] { 10, 20 });
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void WhereArrayContainsAny_String()
+        {
+            var query = GetEmptyQuery().WhereArrayContainsAny("a.b", new[] { 10, 20 });
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContainsAny, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void WhereArrayContainsAny_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereArrayContainsAny(new FieldPath("a", "b"), new[] { 10, 20 });
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContainsAny, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_FiltersThatProhibitNullValue()
+        {
+            // Just for operations which prohibit them
+            var query = GetEmptyQuery();
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereLessThan("a.b", null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereLessThanOrEqualTo("a.b", null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereGreaterThan("a.b", null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereGreaterThanOrEqualTo("a.b", null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereArrayContains("a.b", null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereIn("a.b", null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereArrayContainsAny("a.b", null));
+
+            var fieldPath = new FieldPath("a", "b");
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereLessThan(fieldPath, null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereLessThanOrEqualTo(fieldPath, null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereGreaterThan(fieldPath, null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereGreaterThanOrEqualTo(fieldPath, null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereArrayContains(fieldPath, null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereIn(fieldPath, null));
+            Assert.ThrowsAny<ArgumentException>(() => query.WhereArrayContainsAny(fieldPath, null));
+        }
 
         // Test for methods which replace previous values
         [Fact]
