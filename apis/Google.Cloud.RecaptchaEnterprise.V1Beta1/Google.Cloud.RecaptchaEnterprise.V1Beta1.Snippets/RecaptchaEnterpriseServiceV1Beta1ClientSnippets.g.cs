@@ -16,7 +16,11 @@
 
 namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
 {
+    using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Protobuf.WellKnownTypes;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -205,6 +209,238 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
             // Make the request
             AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessmentAsync(name, annotation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKey</summary>
+        public void CreateKey_RequestObject()
+        {
+            // Snippet: CreateKey(CreateKeyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            CreateKeyRequest request = new CreateKeyRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Key = new Key(),
+            };
+            // Make the request
+            Key response = recaptchaEnterpriseServiceV1Beta1Client.CreateKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateKeyAsync</summary>
+        public async Task CreateKeyAsync_RequestObject()
+        {
+            // Snippet: CreateKeyAsync(CreateKeyRequest, CallSettings)
+            // Additional: CreateKeyAsync(CreateKeyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            CreateKeyRequest request = new CreateKeyRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                Key = new Key(),
+            };
+            // Make the request
+            Key response = await recaptchaEnterpriseServiceV1Beta1Client.CreateKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeys</summary>
+        public void ListKeys_RequestObject()
+        {
+            // Snippet: ListKeys(ListKeysRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            ListKeysRequest request = new ListKeysRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListKeysResponse, Key> response = recaptchaEnterpriseServiceV1Beta1Client.ListKeys(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Key item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Key item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Key> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Key item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListKeys</summary>
+        public async Task ListKeysAsync_RequestObject()
+        {
+            // Snippet: ListKeysAsync(ListKeysRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            ListKeysRequest request = new ListKeysRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListKeysResponse, Key> response = recaptchaEnterpriseServiceV1Beta1Client.ListKeysAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Key item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeysResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Key item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Key> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Key item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKey</summary>
+        public void GetKey_RequestObject()
+        {
+            // Snippet: GetKey(GetKeyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            GetKeyRequest request = new GetKeyRequest
+            {
+                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Key response = recaptchaEnterpriseServiceV1Beta1Client.GetKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetKeyAsync</summary>
+        public async Task GetKeyAsync_RequestObject()
+        {
+            // Snippet: GetKeyAsync(GetKeyRequest, CallSettings)
+            // Additional: GetKeyAsync(GetKeyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            GetKeyRequest request = new GetKeyRequest
+            {
+                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Key response = await recaptchaEnterpriseServiceV1Beta1Client.GetKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKey</summary>
+        public void UpdateKey_RequestObject()
+        {
+            // Snippet: UpdateKey(UpdateKeyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            UpdateKeyRequest request = new UpdateKeyRequest
+            {
+                Key = new Key(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Key response = recaptchaEnterpriseServiceV1Beta1Client.UpdateKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKeyAsync</summary>
+        public async Task UpdateKeyAsync_RequestObject()
+        {
+            // Snippet: UpdateKeyAsync(UpdateKeyRequest, CallSettings)
+            // Additional: UpdateKeyAsync(UpdateKeyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateKeyRequest request = new UpdateKeyRequest
+            {
+                Key = new Key(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Key response = await recaptchaEnterpriseServiceV1Beta1Client.UpdateKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKey</summary>
+        public void DeleteKey_RequestObject()
+        {
+            // Snippet: DeleteKey(DeleteKeyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
+            // Initialize request argument(s)
+            DeleteKeyRequest request = new DeleteKeyRequest
+            {
+                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            recaptchaEnterpriseServiceV1Beta1Client.DeleteKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteKeyAsync</summary>
+        public async Task DeleteKeyAsync_RequestObject()
+        {
+            // Snippet: DeleteKeyAsync(DeleteKeyRequest, CallSettings)
+            // Additional: DeleteKeyAsync(DeleteKeyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
+            // Initialize request argument(s)
+            DeleteKeyRequest request = new DeleteKeyRequest
+            {
+                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            await recaptchaEnterpriseServiceV1Beta1Client.DeleteKeyAsync(request);
             // End snippet
         }
     }

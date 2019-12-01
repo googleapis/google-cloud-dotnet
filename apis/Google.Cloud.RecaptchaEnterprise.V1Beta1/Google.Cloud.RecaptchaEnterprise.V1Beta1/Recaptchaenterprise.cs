@@ -29,68 +29,139 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             "aGFlbnRlcnByaXNlLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
             "cHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIq0BChdDcmVhdGVB",
-            "c3Nlc3NtZW50UmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xv",
-            "dWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBJNCgph",
-            "c3Nlc3NtZW50GAIgASgLMjQuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVy",
-            "cHJpc2UudjFiZXRhMS5Bc3Nlc3NtZW50QgPgQQIikwIKGUFubm90YXRlQXNz",
-            "ZXNzbWVudFJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEvCi1yZWNhcHRj",
-            "aGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29tL0Fzc2Vzc21lbnQSZwoKYW5u",
-            "b3RhdGlvbhgCIAEoDjJOLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnBy",
-            "aXNlLnYxYmV0YTEuQW5ub3RhdGVBc3Nlc3NtZW50UmVxdWVzdC5Bbm5vdGF0",
-            "aW9uQgPgQQIiSAoKQW5ub3RhdGlvbhIaChZBTk5PVEFUSU9OX1VOU1BFQ0lG",
-            "SUVEEAASDgoKTEVHSVRJTUFURRABEg4KCkZSQVVEVUxFTlQQAiIcChpBbm5v",
-            "dGF0ZUFzc2Vzc21lbnRSZXNwb25zZSLKBAoKQXNzZXNzbWVudBIRCgRuYW1l",
-            "GAEgASgJQgPgQQMSPgoFZXZlbnQYAiABKAsyLy5nb29nbGUuY2xvdWQucmVj",
-            "YXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkV2ZW50EhIKBXNjb3JlGAMgASgC",
-            "QgPgQQMSWAoQdG9rZW5fcHJvcGVydGllcxgEIAEoCzI5Lmdvb2dsZS5jbG91",
-            "ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuVG9rZW5Qcm9wZXJ0aWVz",
-            "QgPgQQMSXwoHcmVhc29ucxgFIAMoDjJJLmdvb2dsZS5jbG91ZC5yZWNhcHRj",
-            "aGFlbnRlcnByaXNlLnYxYmV0YTEuQXNzZXNzbWVudC5DbGFzc2lmaWNhdGlv",
-            "blJlYXNvbkID4EEDIrgBChRDbGFzc2lmaWNhdGlvblJlYXNvbhIlCiFDTEFT",
-            "U0lGSUNBVElPTl9SRUFTT05fVU5TUEVDSUZJRUQQABIOCgpBVVRPTUFUSU9O",
-            "EAESGgoWVU5FWFBFQ1RFRF9FTlZJUk9OTUVOVBACEhQKEFRPT19NVUNIX1RS",
-            "QUZGSUMQAxIdChlVTkVYUEVDVEVEX1VTQUdFX1BBVFRFUk5TEAQSGAoUTE9X",
-            "X0NPTkZJREVOQ0VfU0NPUkUQBTpf6kFcCi1yZWNhcHRjaGFlbnRlcnByaXNl",
-            "Lmdvb2dsZWFwaXMuY29tL0Fzc2Vzc21lbnQSK3Byb2plY3RzL3twcm9qZWN0",
-            "fS9hc3Nlc3NtZW50cy97YXNzZXNzbWVudH0iMgoFRXZlbnQSEgoFdG9rZW4Y",
-            "ASABKAlCA+BBAhIVCghzaXRlX2tleRgCIAEoCUID4EECIugCCg9Ub2tlblBy",
-            "b3BlcnRpZXMSDQoFdmFsaWQYASABKAgSXwoOaW52YWxpZF9yZWFzb24YAiAB",
-            "KA4yRy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGEx",
-            "LlRva2VuUHJvcGVydGllcy5JbnZhbGlkUmVhc29uEi8KC2NyZWF0ZV90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghob3N0bmFt",
-            "ZRgEIAEoCRIOCgZhY3Rpb24YBSABKAkikQEKDUludmFsaWRSZWFzb24SHgoa",
-            "SU5WQUxJRF9SRUFTT05fVU5TUEVDSUZJRUQQABIaChZVTktOT1dOX0lOVkFM",
-            "SURfUkVBU09OEAESDQoJTUFMRk9STUVEEAISCwoHRVhQSVJFRBADEggKBERV",
-            "UEUQBBIRCg1TSVRFX01JU01BVENIEAUSCwoHTUlTU0lORxAGMs0ECiFSZWNh",
-            "cHRjaGFFbnRlcnByaXNlU2VydmljZVYxQmV0YTES3QEKEENyZWF0ZUFzc2Vz",
-            "c21lbnQSQS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJl",
-            "dGExLkNyZWF0ZUFzc2Vzc21lbnRSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLnJl",
-            "Y2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bc3Nlc3NtZW50IlCC0+STAjYi",
-            "KC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXNzZXNzbWVudHM6CmFz",
-            "c2Vzc21lbnTaQRFwYXJlbnQsYXNzZXNzbWVudBLvAQoSQW5ub3RhdGVBc3Nl",
-            "c3NtZW50EkMuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFi",
-            "ZXRhMS5Bbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0GkQuZ29vZ2xlLmNsb3Vk",
-            "LnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bbm5vdGF0ZUFzc2Vzc21l",
-            "bnRSZXNwb25zZSJOgtPkkwI2IjEvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8q",
-            "L2Fzc2Vzc21lbnRzLyp9OmFubm90YXRlOgEq2kEPbmFtZSxhbm5vdGF0aW9u",
-            "GlbKQSJyZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29t0kEuaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL+",
-            "AQomY29tLmdvb2dsZS5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTFCGFJl",
-            "Y2FwdGNoYUVudGVycHJpc2VQcm90b1ABWltnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JlY2FwdGNoYWVudGVycHJpc2Uv",
-            "djFiZXRhMTtyZWNhcHRjaGFlbnRlcnByaXNlogIER0NSRaoCKEdvb2dsZS5D",
-            "bG91ZC5SZWNhcHRjaGFFbnRlcnByaXNlLlYxQmV0YTHKAihHb29nbGVcQ2xv",
-            "dWRcUmVjYXB0Y2hhRW50ZXJwcmlzZVxWMWJldGExYgZwcm90bzM="));
+            "Ghtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1",
+            "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
+            "LnByb3RvIq0BChdDcmVhdGVBc3Nlc3NtZW50UmVxdWVzdBJDCgZwYXJlbnQY",
+            "ASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vUHJvamVjdBJNCgphc3Nlc3NtZW50GAIgASgLMjQuZ29vZ2xlLmNs",
+            "b3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bc3Nlc3NtZW50QgPg",
+            "QQIikwIKGUFubm90YXRlQXNzZXNzbWVudFJlcXVlc3QSQwoEbmFtZRgBIAEo",
+            "CUI14EEC+kEvCi1yZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29t",
+            "L0Fzc2Vzc21lbnQSZwoKYW5ub3RhdGlvbhgCIAEoDjJOLmdvb2dsZS5jbG91",
+            "ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQW5ub3RhdGVBc3Nlc3Nt",
+            "ZW50UmVxdWVzdC5Bbm5vdGF0aW9uQgPgQQIiSAoKQW5ub3RhdGlvbhIaChZB",
+            "Tk5PVEFUSU9OX1VOU1BFQ0lGSUVEEAASDgoKTEVHSVRJTUFURRABEg4KCkZS",
+            "QVVEVUxFTlQQAiIcChpBbm5vdGF0ZUFzc2Vzc21lbnRSZXNwb25zZSLKBAoK",
+            "QXNzZXNzbWVudBIRCgRuYW1lGAEgASgJQgPgQQMSPgoFZXZlbnQYAiABKAsy",
+            "Ly5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkV2",
+            "ZW50EhIKBXNjb3JlGAMgASgCQgPgQQMSWAoQdG9rZW5fcHJvcGVydGllcxgE",
+            "IAEoCzI5Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0",
+            "YTEuVG9rZW5Qcm9wZXJ0aWVzQgPgQQMSXwoHcmVhc29ucxgFIAMoDjJJLmdv",
+            "b2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQXNzZXNz",
+            "bWVudC5DbGFzc2lmaWNhdGlvblJlYXNvbkID4EEDIrgBChRDbGFzc2lmaWNh",
+            "dGlvblJlYXNvbhIlCiFDTEFTU0lGSUNBVElPTl9SRUFTT05fVU5TUEVDSUZJ",
+            "RUQQABIOCgpBVVRPTUFUSU9OEAESGgoWVU5FWFBFQ1RFRF9FTlZJUk9OTUVO",
+            "VBACEhQKEFRPT19NVUNIX1RSQUZGSUMQAxIdChlVTkVYUEVDVEVEX1VTQUdF",
+            "X1BBVFRFUk5TEAQSGAoUTE9XX0NPTkZJREVOQ0VfU0NPUkUQBTpf6kFcCi1y",
+            "ZWNhcHRjaGFlbnRlcnByaXNlLmdvb2dsZWFwaXMuY29tL0Fzc2Vzc21lbnQS",
+            "K3Byb2plY3RzL3twcm9qZWN0fS9hc3Nlc3NtZW50cy97YXNzZXNzbWVudH0i",
+            "hwEKBUV2ZW50EhIKBXRva2VuGAEgASgJQgPgQQESFQoIc2l0ZV9rZXkYAiAB",
+            "KAlCA+BBARIXCgp1c2VyX2FnZW50GAMgASgJQgPgQQESHAoPdXNlcl9pcF9h",
+            "ZGRyZXNzGAQgASgJQgPgQQESHAoPZXhwZWN0ZWRfYWN0aW9uGAUgASgJQgPg",
+            "QQEi6AIKD1Rva2VuUHJvcGVydGllcxINCgV2YWxpZBgBIAEoCBJfCg5pbnZh",
+            "bGlkX3JlYXNvbhgCIAEoDjJHLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRl",
+            "cnByaXNlLnYxYmV0YTEuVG9rZW5Qcm9wZXJ0aWVzLkludmFsaWRSZWFzb24S",
+            "LwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEhAKCGhvc3RuYW1lGAQgASgJEg4KBmFjdGlvbhgFIAEoCSKRAQoNSW52",
+            "YWxpZFJlYXNvbhIeChpJTlZBTElEX1JFQVNPTl9VTlNQRUNJRklFRBAAEhoK",
+            "FlVOS05PV05fSU5WQUxJRF9SRUFTT04QARINCglNQUxGT1JNRUQQAhILCgdF",
+            "WFBJUkVEEAMSCAoERFVQRRAEEhEKDVNJVEVfTUlTTUFUQ0gQBRILCgdNSVNT",
+            "SU5HEAYimAEKEENyZWF0ZUtleVJlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPg",
+            "QQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1By",
+            "b2plY3QSPwoDa2V5GAIgASgLMi0uZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVu",
+            "dGVycHJpc2UudjFiZXRhMS5LZXlCA+BBAiKHAQoPTGlzdEtleXNSZXF1ZXN0",
+            "EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
+            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJoChBMaXN0S2V5c1Jlc3Bv",
+            "bnNlEjsKBGtleXMYASADKAsyLS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50",
+            "ZXJwcmlzZS52MWJldGExLktleRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
+            "TQoNR2V0S2V5UmVxdWVzdBI8CgRuYW1lGAEgASgJQi7gQQL6QSgKJnJlY2Fw",
+            "dGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vS2V5IokBChBVcGRhdGVL",
+            "ZXlSZXF1ZXN0Ej8KA2tleRgBIAEoCzItLmdvb2dsZS5jbG91ZC5yZWNhcHRj",
+            "aGFlbnRlcnByaXNlLnYxYmV0YTEuS2V5QgPgQQISNAoLdXBkYXRlX21hc2sY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEiUAoQRGVs",
+            "ZXRlS2V5UmVxdWVzdBI8CgRuYW1lGAEgASgJQi7gQQL6QSgKJnJlY2FwdGNo",
+            "YWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb20vS2V5IogDCgNLZXkSDAoEbmFt",
+            "ZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSUAoMd2ViX3NldHRpbmdz",
+            "GAMgASgLMjguZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFi",
+            "ZXRhMS5XZWJLZXlTZXR0aW5nc0gAElgKEGFuZHJvaWRfc2V0dGluZ3MYBCAB",
+            "KAsyPC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGEx",
+            "LkFuZHJvaWRLZXlTZXR0aW5nc0gAElAKDGlvc19zZXR0aW5ncxgFIAEoCzI4",
+            "Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuSU9T",
+            "S2V5U2V0dGluZ3NIADpK6kFHCiZyZWNhcHRjaGFlbnRlcnByaXNlLmdvb2ds",
+            "ZWFwaXMuY29tL0tleRIdcHJvamVjdHMve3Byb2plY3R9L2tleXMve2tleX1C",
+            "EwoRcGxhdGZvcm1fc2V0dGluZ3MiugQKDldlYktleVNldHRpbmdzEh8KF2Vu",
+            "Zm9yY2VfYWxsb3dlZF9kb21haW5zGAMgASgIEhcKD2FsbG93ZWRfZG9tYWlu",
+            "cxgBIAMoCRIZChFhbGxvd19hbXBfdHJhZmZpYxgCIAEoCBJnChBpbnRlZ3Jh",
+            "dGlvbl90eXBlGAQgASgOMkguZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVy",
+            "cHJpc2UudjFiZXRhMS5XZWJLZXlTZXR0aW5ncy5JbnRlZ3JhdGlvblR5cGVC",
+            "A+BBAhJ7Ch1jaGFsbGVuZ2Vfc2VjdXJpdHlfcHJlZmVyZW5jZRgFIAEoDjJU",
+            "Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuV2Vi",
+            "S2V5U2V0dGluZ3MuQ2hhbGxlbmdlU2VjdXJpdHlQcmVmZXJlbmNlInQKD0lu",
+            "dGVncmF0aW9uVHlwZRIgChxJTlRFR1JBVElPTl9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASDgoKU0NPUkVfT05MWRABEhYKEkNIRUNLQk9YX0NIQUxMRU5HRRACEhcK",
+            "E0lOVklTSUJMRV9DSEFMTEVOR0UQAyJ3ChtDaGFsbGVuZ2VTZWN1cml0eVBy",
+            "ZWZlcmVuY2USLQopQ0hBTExFTkdFX1NFQ1VSSVRZX1BSRUZFUkVOQ0VfVU5T",
+            "UEVDSUZJRUQQABINCglVU0FCSUxJVFkQARIMCghCQUxBTkNFRBACEgwKCFNF",
+            "Q1VSSVRZEAMiMwoSQW5kcm9pZEtleVNldHRpbmdzEh0KFWFsbG93ZWRfcGFj",
+            "a2FnZV9uYW1lcxgBIAMoCSIsCg5JT1NLZXlTZXR0aW5ncxIaChJhbGxvd2Vk",
+            "X2J1bmRsZV9pZHMYASADKAky/QoKIVJlY2FwdGNoYUVudGVycHJpc2VTZXJ2",
+            "aWNlVjFCZXRhMRLdAQoQQ3JlYXRlQXNzZXNzbWVudBJBLmdvb2dsZS5jbG91",
+            "ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQ3JlYXRlQXNzZXNzbWVu",
+            "dFJlcXVlc3QaNC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52",
+            "MWJldGExLkFzc2Vzc21lbnQiUILT5JMCNiIoL3YxYmV0YTEve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9hc3Nlc3NtZW50czoKYXNzZXNzbWVudNpBEXBhcmVudCxh",
+            "c3Nlc3NtZW50Eu8BChJBbm5vdGF0ZUFzc2Vzc21lbnQSQy5nb29nbGUuY2xv",
+            "dWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkFubm90YXRlQXNzZXNz",
+            "bWVudFJlcXVlc3QaRC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlz",
+            "ZS52MWJldGExLkFubm90YXRlQXNzZXNzbWVudFJlc3BvbnNlIk6C0+STAjYi",
+            "MS92MWJldGExL3tuYW1lPXByb2plY3RzLyovYXNzZXNzbWVudHMvKn06YW5u",
+            "b3RhdGU6ASraQQ9uYW1lLGFubm90YXRpb24SpgEKCUNyZWF0ZUtleRI6Lmdv",
+            "b2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQ3JlYXRl",
+            "S2V5UmVxdWVzdBotLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNl",
+            "LnYxYmV0YTEuS2V5Ii6C0+STAigiIS92MWJldGExL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn0va2V5czoDa2V5EqwBCghMaXN0S2V5cxI5Lmdvb2dsZS5jbG91ZC5y",
+            "ZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuTGlzdEtleXNSZXF1ZXN0Gjou",
+            "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5MaXN0",
+            "S2V5c1Jlc3BvbnNlIimC0+STAiMSIS92MWJldGExL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn0va2V5cxKbAQoGR2V0S2V5EjcuZ29vZ2xlLmNsb3VkLnJlY2FwdGNo",
+            "YWVudGVycHJpc2UudjFiZXRhMS5HZXRLZXlSZXF1ZXN0Gi0uZ29vZ2xlLmNs",
+            "b3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5LZXkiKYLT5JMCIxIh",
+            "L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9rZXlzLyp9EqoBCglVcGRhdGVL",
+            "ZXkSOi5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGEx",
+            "LlVwZGF0ZUtleVJlcXVlc3QaLS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50",
+            "ZXJwcmlzZS52MWJldGExLktleSIygtPkkwIsMiUvdjFiZXRhMS97a2V5Lm5h",
+            "bWU9cHJvamVjdHMvKi9rZXlzLyp9OgNrZXkSigEKCURlbGV0ZUtleRI6Lmdv",
+            "b2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuRGVsZXRl",
+            "S2V5UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIpgtPkkwIjKiEv",
+            "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2tleXMvKn0aVspBInJlY2FwdGNo",
+            "YWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQv4BCiZjb20uZ29vZ2xl",
+            "LnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMUIYUmVjYXB0Y2hhRW50ZXJw",
+            "cmlzZVByb3RvUAFaW2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvcmVjYXB0Y2hhZW50ZXJwcmlzZS92MWJldGExO3JlY2Fw",
+            "dGNoYWVudGVycHJpc2WiAgRHQ1JFqgIoR29vZ2xlLkNsb3VkLlJlY2FwdGNo",
+            "YUVudGVycHJpc2UuVjFCZXRhMcoCKEdvb2dsZVxDbG91ZFxSZWNhcHRjaGFF",
+            "bnRlcnByaXNlXFYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser, new[]{ "Parent", "Assessment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser, new[]{ "Name", "Annotation" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser, new[]{ "Name", "Event", "Score", "TokenProperties", "Reasons" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Types.ClassificationReason) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event.Parser, new[]{ "Token", "SiteKey" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Parser, new[]{ "Valid", "InvalidReason", "CreateTime", "Hostname", "Action" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event.Parser, new[]{ "Token", "SiteKey", "UserAgent", "UserIpAddress", "ExpectedAction" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Parser, new[]{ "Valid", "InvalidReason", "CreateTime", "Hostname", "Action" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest.Parser, new[]{ "Parent", "Key" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse.Parser, new[]{ "Keys", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest.Parser, new[]{ "Key", "UpdateMask" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key.Parser, new[]{ "Name", "DisplayName", "WebSettings", "AndroidSettings", "IosSettings" }, new[]{ "PlatformSettings" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Parser, new[]{ "EnforceAllowedDomains", "AllowedDomains", "AllowAmpTraffic", "IntegrationType", "ChallengeSecurityPreference" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType), typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings.Parser, new[]{ "AllowedPackageNames" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings.Parser, new[]{ "AllowedBundleIds" }, null, null, null)
           }));
     }
     #endregion
@@ -900,6 +971,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public Event(Event other) : this() {
       token_ = other.token_;
       siteKey_ = other.siteKey_;
+      userAgent_ = other.userAgent_;
+      userIpAddress_ = other.userIpAddress_;
+      expectedAction_ = other.expectedAction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -912,7 +986,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int TokenFieldNumber = 1;
     private string token_ = "";
     /// <summary>
-    /// Required. The user response token provided by the reCAPTCHA client-side integration
+    /// Optional. The user response token provided by the reCAPTCHA client-side integration
     /// on your site.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -927,7 +1001,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int SiteKeyFieldNumber = 2;
     private string siteKey_ = "";
     /// <summary>
-    /// Required. The site key that was used to invoke reCAPTCHA on your site and generate
+    /// Optional. The site key that was used to invoke reCAPTCHA on your site and generate
     /// the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -935,6 +1009,51 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       get { return siteKey_; }
       set {
         siteKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "user_agent" field.</summary>
+    public const int UserAgentFieldNumber = 3;
+    private string userAgent_ = "";
+    /// <summary>
+    /// Optional. The user agent present in the request from the user's device related to
+    /// this event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserAgent {
+      get { return userAgent_; }
+      set {
+        userAgent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "user_ip_address" field.</summary>
+    public const int UserIpAddressFieldNumber = 4;
+    private string userIpAddress_ = "";
+    /// <summary>
+    /// Optional. The IP address in the request from the user's device related to this event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserIpAddress {
+      get { return userIpAddress_; }
+      set {
+        userIpAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "expected_action" field.</summary>
+    public const int ExpectedActionFieldNumber = 5;
+    private string expectedAction_ = "";
+    /// <summary>
+    /// Optional. The expected action for this type of event. This should be the same action
+    /// provided at token generation time on client-side platforms already
+    /// integrated with recaptcha enterprise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ExpectedAction {
+      get { return expectedAction_; }
+      set {
+        expectedAction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -953,6 +1072,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (Token != other.Token) return false;
       if (SiteKey != other.SiteKey) return false;
+      if (UserAgent != other.UserAgent) return false;
+      if (UserIpAddress != other.UserIpAddress) return false;
+      if (ExpectedAction != other.ExpectedAction) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -961,6 +1083,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       int hash = 1;
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       if (SiteKey.Length != 0) hash ^= SiteKey.GetHashCode();
+      if (UserAgent.Length != 0) hash ^= UserAgent.GetHashCode();
+      if (UserIpAddress.Length != 0) hash ^= UserIpAddress.GetHashCode();
+      if (ExpectedAction.Length != 0) hash ^= ExpectedAction.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -982,6 +1107,18 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(SiteKey);
       }
+      if (UserAgent.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(UserAgent);
+      }
+      if (UserIpAddress.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(UserIpAddress);
+      }
+      if (ExpectedAction.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ExpectedAction);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -995,6 +1132,15 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (SiteKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SiteKey);
+      }
+      if (UserAgent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserAgent);
+      }
+      if (UserIpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserIpAddress);
+      }
+      if (ExpectedAction.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExpectedAction);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1013,6 +1159,15 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (other.SiteKey.Length != 0) {
         SiteKey = other.SiteKey;
       }
+      if (other.UserAgent.Length != 0) {
+        UserAgent = other.UserAgent;
+      }
+      if (other.UserIpAddress.Length != 0) {
+        UserIpAddress = other.UserIpAddress;
+      }
+      if (other.ExpectedAction.Length != 0) {
+        ExpectedAction = other.ExpectedAction;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1030,6 +1185,18 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
           }
           case 18: {
             SiteKey = input.ReadString();
+            break;
+          }
+          case 26: {
+            UserAgent = input.ReadString();
+            break;
+          }
+          case 34: {
+            UserIpAddress = input.ReadString();
+            break;
+          }
+          case 42: {
+            ExpectedAction = input.ReadString();
             break;
           }
         }
@@ -1342,6 +1509,1877 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// The create key request message.
+  /// </summary>
+  public sealed partial class CreateKeyRequest : pb::IMessage<CreateKeyRequest> {
+    private static readonly pb::MessageParser<CreateKeyRequest> _parser = new pb::MessageParser<CreateKeyRequest>(() => new CreateKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateKeyRequest(CreateKeyRequest other) : this() {
+      parent_ = other.parent_;
+      key_ = other.key_ != null ? other.key_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateKeyRequest Clone() {
+      return new CreateKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the project in which the key will be created, in the
+    /// format "projects/{project_number}".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 2;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key key_;
+    /// <summary>
+    /// Required. Information to create a reCAPTCHA Enterprise key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key Key {
+      get { return key_; }
+      set {
+        key_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Key, other.Key)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (key_ != null) hash ^= Key.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (key_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Key);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (key_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Key);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.key_ != null) {
+        if (key_ == null) {
+          Key = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key();
+        }
+        Key.MergeFrom(other.Key);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (key_ == null) {
+              Key = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key();
+            }
+            input.ReadMessage(Key);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The list keys request message.
+  /// </summary>
+  public sealed partial class ListKeysRequest : pb::IMessage<ListKeysRequest> {
+    private static readonly pb::MessageParser<ListKeysRequest> _parser = new pb::MessageParser<ListKeysRequest>(() => new ListKeysRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListKeysRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListKeysRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListKeysRequest(ListKeysRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListKeysRequest Clone() {
+      return new ListKeysRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the project that contains the keys that will be
+    /// listed, in the format "projects/{project_number}".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of keys to return. Default is 10. Max limit is
+    /// 1000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. The next_page_token value returned from a previous.
+    /// ListKeysRequest, if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListKeysRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListKeysRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListKeysRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Response to request to list keys in a project.
+  /// </summary>
+  public sealed partial class ListKeysResponse : pb::IMessage<ListKeysResponse> {
+    private static readonly pb::MessageParser<ListKeysResponse> _parser = new pb::MessageParser<ListKeysResponse>(() => new ListKeysResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListKeysResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListKeysResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListKeysResponse(ListKeysResponse other) : this() {
+      keys_ = other.keys_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListKeysResponse Clone() {
+      return new ListKeysResponse(this);
+    }
+
+    /// <summary>Field number for the "keys" field.</summary>
+    public const int KeysFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> _repeated_keys_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> keys_ = new pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key>();
+    /// <summary>
+    /// Key details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> Keys {
+      get { return keys_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Token to retrieve the next page of results. It is set to empty if no keys
+    /// remain in results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListKeysResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListKeysResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!keys_.Equals(other.keys_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= keys_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      keys_.WriteTo(output, _repeated_keys_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += keys_.CalculateSize(_repeated_keys_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListKeysResponse other) {
+      if (other == null) {
+        return;
+      }
+      keys_.Add(other.keys_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            keys_.AddEntriesFrom(input, _repeated_keys_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The get key request message.
+  /// </summary>
+  public sealed partial class GetKeyRequest : pb::IMessage<GetKeyRequest> {
+    private static readonly pb::MessageParser<GetKeyRequest> _parser = new pb::MessageParser<GetKeyRequest>(() => new GetKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetKeyRequest(GetKeyRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetKeyRequest Clone() {
+      return new GetKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the requested key, in the format
+    /// "projects/{project_number}/keys/{key_id}".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The update key request message.
+  /// </summary>
+  public sealed partial class UpdateKeyRequest : pb::IMessage<UpdateKeyRequest> {
+    private static readonly pb::MessageParser<UpdateKeyRequest> _parser = new pb::MessageParser<UpdateKeyRequest>(() => new UpdateKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateKeyRequest(UpdateKeyRequest other) : this() {
+      key_ = other.key_ != null ? other.key_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateKeyRequest Clone() {
+      return new UpdateKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key key_;
+    /// <summary>
+    /// Required. The key to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key Key {
+      get { return key_; }
+      set {
+        key_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The mask to control which field of the key get updated. If the mask is not
+    /// present, all fields will be updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Key, other.Key)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (key_ != null) hash ^= Key.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (key_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Key);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (key_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Key);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.key_ != null) {
+        if (key_ == null) {
+          Key = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key();
+        }
+        Key.MergeFrom(other.Key);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (key_ == null) {
+              Key = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key();
+            }
+            input.ReadMessage(Key);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The delete key request message.
+  /// </summary>
+  public sealed partial class DeleteKeyRequest : pb::IMessage<DeleteKeyRequest> {
+    private static readonly pb::MessageParser<DeleteKeyRequest> _parser = new pb::MessageParser<DeleteKeyRequest>(() => new DeleteKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteKeyRequest(DeleteKeyRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteKeyRequest Clone() {
+      return new DeleteKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the key to be deleted, in the format
+    /// "projects/{project_number}/keys/{key_id}".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A key used to identify and configure applications (web and/or mobile) that
+  /// use reCAPTCHA Enterprise.
+  /// </summary>
+  public sealed partial class Key : pb::IMessage<Key> {
+    private static readonly pb::MessageParser<Key> _parser = new pb::MessageParser<Key>(() => new Key());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Key> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Key() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Key(Key other) : this() {
+      name_ = other.name_;
+      displayName_ = other.displayName_;
+      switch (other.PlatformSettingsCase) {
+        case PlatformSettingsOneofCase.WebSettings:
+          WebSettings = other.WebSettings.Clone();
+          break;
+        case PlatformSettingsOneofCase.AndroidSettings:
+          AndroidSettings = other.AndroidSettings.Clone();
+          break;
+        case PlatformSettingsOneofCase.IosSettings:
+          IosSettings = other.IosSettings.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Key Clone() {
+      return new Key(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The resource name for the Key in the format
+    /// "projects/{project_number}/keys/{key_id}".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Human-readable display name of this key. Modifiable by user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "web_settings" field.</summary>
+    public const int WebSettingsFieldNumber = 3;
+    /// <summary>
+    /// Settings for keys that can be used by websites.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings WebSettings {
+      get { return platformSettingsCase_ == PlatformSettingsOneofCase.WebSettings ? (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings) platformSettings_ : null; }
+      set {
+        platformSettings_ = value;
+        platformSettingsCase_ = value == null ? PlatformSettingsOneofCase.None : PlatformSettingsOneofCase.WebSettings;
+      }
+    }
+
+    /// <summary>Field number for the "android_settings" field.</summary>
+    public const int AndroidSettingsFieldNumber = 4;
+    /// <summary>
+    /// Settings for keys that can be used by Android apps.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings AndroidSettings {
+      get { return platformSettingsCase_ == PlatformSettingsOneofCase.AndroidSettings ? (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings) platformSettings_ : null; }
+      set {
+        platformSettings_ = value;
+        platformSettingsCase_ = value == null ? PlatformSettingsOneofCase.None : PlatformSettingsOneofCase.AndroidSettings;
+      }
+    }
+
+    /// <summary>Field number for the "ios_settings" field.</summary>
+    public const int IosSettingsFieldNumber = 5;
+    /// <summary>
+    /// Settings for keys that can be used by iOS apps.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings IosSettings {
+      get { return platformSettingsCase_ == PlatformSettingsOneofCase.IosSettings ? (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings) platformSettings_ : null; }
+      set {
+        platformSettings_ = value;
+        platformSettingsCase_ = value == null ? PlatformSettingsOneofCase.None : PlatformSettingsOneofCase.IosSettings;
+      }
+    }
+
+    private object platformSettings_;
+    /// <summary>Enum of possible cases for the "platform_settings" oneof.</summary>
+    public enum PlatformSettingsOneofCase {
+      None = 0,
+      WebSettings = 3,
+      AndroidSettings = 4,
+      IosSettings = 5,
+    }
+    private PlatformSettingsOneofCase platformSettingsCase_ = PlatformSettingsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlatformSettingsOneofCase PlatformSettingsCase {
+      get { return platformSettingsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearPlatformSettings() {
+      platformSettingsCase_ = PlatformSettingsOneofCase.None;
+      platformSettings_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Key);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Key other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (!object.Equals(WebSettings, other.WebSettings)) return false;
+      if (!object.Equals(AndroidSettings, other.AndroidSettings)) return false;
+      if (!object.Equals(IosSettings, other.IosSettings)) return false;
+      if (PlatformSettingsCase != other.PlatformSettingsCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.WebSettings) hash ^= WebSettings.GetHashCode();
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.AndroidSettings) hash ^= AndroidSettings.GetHashCode();
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.IosSettings) hash ^= IosSettings.GetHashCode();
+      hash ^= (int) platformSettingsCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.WebSettings) {
+        output.WriteRawTag(26);
+        output.WriteMessage(WebSettings);
+      }
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.AndroidSettings) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AndroidSettings);
+      }
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.IosSettings) {
+        output.WriteRawTag(42);
+        output.WriteMessage(IosSettings);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.WebSettings) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebSettings);
+      }
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.AndroidSettings) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AndroidSettings);
+      }
+      if (platformSettingsCase_ == PlatformSettingsOneofCase.IosSettings) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IosSettings);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Key other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      switch (other.PlatformSettingsCase) {
+        case PlatformSettingsOneofCase.WebSettings:
+          if (WebSettings == null) {
+            WebSettings = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings();
+          }
+          WebSettings.MergeFrom(other.WebSettings);
+          break;
+        case PlatformSettingsOneofCase.AndroidSettings:
+          if (AndroidSettings == null) {
+            AndroidSettings = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings();
+          }
+          AndroidSettings.MergeFrom(other.AndroidSettings);
+          break;
+        case PlatformSettingsOneofCase.IosSettings:
+          if (IosSettings == null) {
+            IosSettings = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings();
+          }
+          IosSettings.MergeFrom(other.IosSettings);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings subBuilder = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings();
+            if (platformSettingsCase_ == PlatformSettingsOneofCase.WebSettings) {
+              subBuilder.MergeFrom(WebSettings);
+            }
+            input.ReadMessage(subBuilder);
+            WebSettings = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings subBuilder = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings();
+            if (platformSettingsCase_ == PlatformSettingsOneofCase.AndroidSettings) {
+              subBuilder.MergeFrom(AndroidSettings);
+            }
+            input.ReadMessage(subBuilder);
+            AndroidSettings = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings subBuilder = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings();
+            if (platformSettingsCase_ == PlatformSettingsOneofCase.IosSettings) {
+              subBuilder.MergeFrom(IosSettings);
+            }
+            input.ReadMessage(subBuilder);
+            IosSettings = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Settings specific to keys that can be used by websites.
+  /// </summary>
+  public sealed partial class WebKeySettings : pb::IMessage<WebKeySettings> {
+    private static readonly pb::MessageParser<WebKeySettings> _parser = new pb::MessageParser<WebKeySettings>(() => new WebKeySettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<WebKeySettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WebKeySettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WebKeySettings(WebKeySettings other) : this() {
+      enforceAllowedDomains_ = other.enforceAllowedDomains_;
+      allowedDomains_ = other.allowedDomains_.Clone();
+      allowAmpTraffic_ = other.allowAmpTraffic_;
+      integrationType_ = other.integrationType_;
+      challengeSecurityPreference_ = other.challengeSecurityPreference_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WebKeySettings Clone() {
+      return new WebKeySettings(this);
+    }
+
+    /// <summary>Field number for the "enforce_allowed_domains" field.</summary>
+    public const int EnforceAllowedDomainsFieldNumber = 3;
+    private bool enforceAllowedDomains_;
+    /// <summary>
+    /// Whether allowed_domains is enforced or not.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnforceAllowedDomains {
+      get { return enforceAllowedDomains_; }
+      set {
+        enforceAllowedDomains_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allowed_domains" field.</summary>
+    public const int AllowedDomainsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_allowedDomains_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> allowedDomains_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Domains or subdomains of websites allowed to use the key. All subdomains
+    /// of an allowed domain are automatically allowed. A valid domain requires a
+    /// host and must not include any path, port, query or fragment.
+    /// Examples: 'example.com' or 'subdomain.example.com'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AllowedDomains {
+      get { return allowedDomains_; }
+    }
+
+    /// <summary>Field number for the "allow_amp_traffic" field.</summary>
+    public const int AllowAmpTrafficFieldNumber = 2;
+    private bool allowAmpTraffic_;
+    /// <summary>
+    /// Whether this key can be used on AMP (Accelerated Mobile Pages) websites.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowAmpTraffic {
+      get { return allowAmpTraffic_; }
+      set {
+        allowAmpTraffic_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "integration_type" field.</summary>
+    public const int IntegrationTypeFieldNumber = 4;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType integrationType_ = 0;
+    /// <summary>
+    /// Required. Describes how this key is integrated with the website.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType IntegrationType {
+      get { return integrationType_; }
+      set {
+        integrationType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "challenge_security_preference" field.</summary>
+    public const int ChallengeSecurityPreferenceFieldNumber = 5;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference challengeSecurityPreference_ = 0;
+    /// <summary>
+    /// Settings for the frequency and difficulty at which this key triggers
+    /// captcha challenges. This should only be specified for IntegrationTypes
+    /// CHECKBOX_CHALLENGE and INVISIBLE_CHALLENGE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference ChallengeSecurityPreference {
+      get { return challengeSecurityPreference_; }
+      set {
+        challengeSecurityPreference_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as WebKeySettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(WebKeySettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnforceAllowedDomains != other.EnforceAllowedDomains) return false;
+      if(!allowedDomains_.Equals(other.allowedDomains_)) return false;
+      if (AllowAmpTraffic != other.AllowAmpTraffic) return false;
+      if (IntegrationType != other.IntegrationType) return false;
+      if (ChallengeSecurityPreference != other.ChallengeSecurityPreference) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnforceAllowedDomains != false) hash ^= EnforceAllowedDomains.GetHashCode();
+      hash ^= allowedDomains_.GetHashCode();
+      if (AllowAmpTraffic != false) hash ^= AllowAmpTraffic.GetHashCode();
+      if (IntegrationType != 0) hash ^= IntegrationType.GetHashCode();
+      if (ChallengeSecurityPreference != 0) hash ^= ChallengeSecurityPreference.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      allowedDomains_.WriteTo(output, _repeated_allowedDomains_codec);
+      if (AllowAmpTraffic != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AllowAmpTraffic);
+      }
+      if (EnforceAllowedDomains != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(EnforceAllowedDomains);
+      }
+      if (IntegrationType != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) IntegrationType);
+      }
+      if (ChallengeSecurityPreference != 0) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ChallengeSecurityPreference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnforceAllowedDomains != false) {
+        size += 1 + 1;
+      }
+      size += allowedDomains_.CalculateSize(_repeated_allowedDomains_codec);
+      if (AllowAmpTraffic != false) {
+        size += 1 + 1;
+      }
+      if (IntegrationType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntegrationType);
+      }
+      if (ChallengeSecurityPreference != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChallengeSecurityPreference);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(WebKeySettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnforceAllowedDomains != false) {
+        EnforceAllowedDomains = other.EnforceAllowedDomains;
+      }
+      allowedDomains_.Add(other.allowedDomains_);
+      if (other.AllowAmpTraffic != false) {
+        AllowAmpTraffic = other.AllowAmpTraffic;
+      }
+      if (other.IntegrationType != 0) {
+        IntegrationType = other.IntegrationType;
+      }
+      if (other.ChallengeSecurityPreference != 0) {
+        ChallengeSecurityPreference = other.ChallengeSecurityPreference;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            allowedDomains_.AddEntriesFrom(input, _repeated_allowedDomains_codec);
+            break;
+          }
+          case 16: {
+            AllowAmpTraffic = input.ReadBool();
+            break;
+          }
+          case 24: {
+            EnforceAllowedDomains = input.ReadBool();
+            break;
+          }
+          case 32: {
+            IntegrationType = (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            ChallengeSecurityPreference = (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the WebKeySettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Enum that represents the integration types for web keys.
+      /// </summary>
+      public enum IntegrationType {
+        /// <summary>
+        /// Default type that indicates this enum hasn't been specified. This is not
+        /// a valid IntegrationType, one of the other types must be specified
+        /// instead.
+        /// </summary>
+        [pbr::OriginalName("INTEGRATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Only used to produce scores. It doesn't display the "I'm not a robot"
+        /// checkbox and never shows captcha challenges.
+        /// </summary>
+        [pbr::OriginalName("SCORE_ONLY")] ScoreOnly = 1,
+        /// <summary>
+        /// Displays the "I'm not a robot" checkbox and may show captcha challenges
+        /// after it is checked.
+        /// </summary>
+        [pbr::OriginalName("CHECKBOX_CHALLENGE")] CheckboxChallenge = 2,
+        /// <summary>
+        /// Doesn't display the "I'm not a robot" checkbox, but may show captcha
+        /// challenges after risk analysis.
+        /// </summary>
+        [pbr::OriginalName("INVISIBLE_CHALLENGE")] InvisibleChallenge = 3,
+      }
+
+      /// <summary>
+      /// Enum that represents the possible challenge frequency and difficulty
+      /// configurations for a web key.
+      /// </summary>
+      public enum ChallengeSecurityPreference {
+        /// <summary>
+        /// Default type that indicates this enum hasn't been specified.
+        /// </summary>
+        [pbr::OriginalName("CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Key tends to show fewer and easier challenges.
+        /// </summary>
+        [pbr::OriginalName("USABILITY")] Usability = 1,
+        /// <summary>
+        /// Key tends to show balanced (in amount and difficulty) challenges.
+        /// </summary>
+        [pbr::OriginalName("BALANCED")] Balanced = 2,
+        /// <summary>
+        /// Key tends to show more and harder challenges.
+        /// </summary>
+        [pbr::OriginalName("SECURITY")] Security = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Settings specific to keys that can be used by Android apps.
+  /// </summary>
+  public sealed partial class AndroidKeySettings : pb::IMessage<AndroidKeySettings> {
+    private static readonly pb::MessageParser<AndroidKeySettings> _parser = new pb::MessageParser<AndroidKeySettings>(() => new AndroidKeySettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AndroidKeySettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AndroidKeySettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AndroidKeySettings(AndroidKeySettings other) : this() {
+      allowedPackageNames_ = other.allowedPackageNames_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AndroidKeySettings Clone() {
+      return new AndroidKeySettings(this);
+    }
+
+    /// <summary>Field number for the "allowed_package_names" field.</summary>
+    public const int AllowedPackageNamesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_allowedPackageNames_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> allowedPackageNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Android package names of apps allowed to use the key.
+    /// Example: 'com.companyname.appname'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AllowedPackageNames {
+      get { return allowedPackageNames_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AndroidKeySettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AndroidKeySettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!allowedPackageNames_.Equals(other.allowedPackageNames_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= allowedPackageNames_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      allowedPackageNames_.WriteTo(output, _repeated_allowedPackageNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += allowedPackageNames_.CalculateSize(_repeated_allowedPackageNames_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AndroidKeySettings other) {
+      if (other == null) {
+        return;
+      }
+      allowedPackageNames_.Add(other.allowedPackageNames_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            allowedPackageNames_.AddEntriesFrom(input, _repeated_allowedPackageNames_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Settings specific to keys that can be used by iOS apps.
+  /// </summary>
+  public sealed partial class IOSKeySettings : pb::IMessage<IOSKeySettings> {
+    private static readonly pb::MessageParser<IOSKeySettings> _parser = new pb::MessageParser<IOSKeySettings>(() => new IOSKeySettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IOSKeySettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.RecaptchaenterpriseReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IOSKeySettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IOSKeySettings(IOSKeySettings other) : this() {
+      allowedBundleIds_ = other.allowedBundleIds_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IOSKeySettings Clone() {
+      return new IOSKeySettings(this);
+    }
+
+    /// <summary>Field number for the "allowed_bundle_ids" field.</summary>
+    public const int AllowedBundleIdsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_allowedBundleIds_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> allowedBundleIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// iOS bundle ids of apps allowed to use the key.
+    /// Example: 'com.companyname.productname.appname'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AllowedBundleIds {
+      get { return allowedBundleIds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IOSKeySettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IOSKeySettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!allowedBundleIds_.Equals(other.allowedBundleIds_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= allowedBundleIds_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      allowedBundleIds_.WriteTo(output, _repeated_allowedBundleIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += allowedBundleIds_.CalculateSize(_repeated_allowedBundleIds_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IOSKeySettings other) {
+      if (other == null) {
+        return;
+      }
+      allowedBundleIds_.Add(other.allowedBundleIds_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            allowedBundleIds_.AddEntriesFrom(input, _repeated_allowedBundleIds_codec);
+            break;
+          }
+        }
+      }
+    }
 
   }
 
