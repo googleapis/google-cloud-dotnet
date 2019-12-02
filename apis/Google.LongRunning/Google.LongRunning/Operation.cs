@@ -221,12 +221,16 @@ namespace Google.LongRunning
                 return this;
             }
 
-            // We need to work out the effective timing so that we can truncate any deadline, but anything else
+            // We need to work out the effective expiration so that we can truncate any deadline, but anything else
             // that's in the effective call settings can be left to the normal merging process. In particular,
             // we don't want to include the header mutation that adds the version header, as otherwise we'll end up
             // including it twice.
-            var effectiveTiming = Client.GetEffectiveCallSettingsForGetOperation(callSettings)?.Timing;
-            callSettings = callSettings.WithCallTiming(effectiveTiming);
+            var effectiveExpiration = Client.GetEffectiveCallSettingsForGetOperation(callSettings)?.Expiration;
+            if (effectiveExpiration != null)
+            {
+                callSettings = callSettings.WithExpiration(effectiveExpiration);
+            }
+            // TODO: Retry settings?
 
             Func<DateTime?, Operation<TResponse, TMetadata>> pollAction =
                 deadline =>
@@ -273,12 +277,17 @@ namespace Google.LongRunning
                 return Task.FromResult(this);
             }
 
-            // We need to work out the effective timing so that we can truncate any deadline, but anything else
+            // We need to work out the effective expiration so that we can truncate any deadline, but anything else
             // that's in the effective call settings can be left to the normal merging process. In particular,
             // we don't want to include the header mutation that adds the version header, as otherwise we'll end up
             // including it twice.
-            var effectiveTiming = Client.GetEffectiveCallSettingsForGetOperation(callSettings)?.Timing;
-            callSettings = callSettings.WithCallTiming(effectiveTiming);
+            var effectiveExpiration = Client.GetEffectiveCallSettingsForGetOperation(callSettings)?.Expiration;
+            if (effectiveExpiration != null)
+            {
+                callSettings = callSettings.WithExpiration(effectiveExpiration);
+            }
+            // TODO: Retry settings?
+
             Func<DateTime?, Task<Operation<TResponse, TMetadata>>> pollAction =
                 async deadline =>
                 {
