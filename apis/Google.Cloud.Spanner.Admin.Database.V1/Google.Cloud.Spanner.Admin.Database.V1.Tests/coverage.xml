@@ -7,6 +7,15 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Spanner.Admin.Database.V1</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.LongRunning</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Iam.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Spanner.Common.V1</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
