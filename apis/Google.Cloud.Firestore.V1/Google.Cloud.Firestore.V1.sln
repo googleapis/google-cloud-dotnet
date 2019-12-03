@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1.Tests", "Google.Cloud.Firestore.V1.Tests\Google.Cloud.Firestore.V1.Tests.csproj", "{9DD491AA-4CC1-43F4-AF7D-2654EDAE974D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{44BB0120-ED64-4613-A974-72190271C203}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{9DD491AA-4CC1-43F4-AF7D-2654EDAE974D}.Release|x64.Build.0 = Release|Any CPU
 		{9DD491AA-4CC1-43F4-AF7D-2654EDAE974D}.Release|x86.ActiveCfg = Release|Any CPU
 		{9DD491AA-4CC1-43F4-AF7D-2654EDAE974D}.Release|x86.Build.0 = Release|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Debug|x64.Build.0 = Debug|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Debug|x86.Build.0 = Debug|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Release|x64.ActiveCfg = Release|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Release|x64.Build.0 = Release|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Release|x86.ActiveCfg = Release|Any CPU
+		{44BB0120-ED64-4613-A974-72190271C203}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
