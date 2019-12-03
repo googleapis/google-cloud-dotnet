@@ -660,7 +660,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -675,7 +675,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -738,7 +738,7 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Google.Cloud.Iam.V1": "project",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
@@ -757,7 +757,7 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Google.Cloud.Iam.V1": "project",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
@@ -824,7 +824,7 @@
     "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
     "tags": [ "Speech" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     }
   },
 
@@ -839,7 +839,7 @@
     "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
     "tags": [ "Speech" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     }
   },
 
@@ -962,7 +962,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.",
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     },
     "tags": [ "Translate", "Translation" ]
   },
@@ -991,7 +991,7 @@
     "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     }
   },
 
@@ -1006,7 +1006,7 @@
     "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
     "tags": [ "Vision" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     }
   },
 
@@ -1024,7 +1024,7 @@
   
   {
     "id": "Google.LongRunning",
-    "generator": "gapic",
+    "type": "other",
     "protoPath": "google/longrunning",
     "serviceYaml": "longrunning/longrunning.yaml",
     "version": "2.0.0-beta00",
