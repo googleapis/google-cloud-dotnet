@@ -420,21 +420,13 @@
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
       "Google.Cloud.Firestore.V1": "project",
-<<<<<<< HEAD
-      "Grpc.Core": "2.25.0"
-    },
-    "testDependencies": {
-      "Google.Api.Gax.Testing": "3.0.0-alpha00",
-      "Grpc.Core.Testing": "2.25.0",
-=======
-      "Grpc.Core": "default",
+      "Grpc.Core": "2.25.0",
       "System.Linq.Async": "4.0.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "default",
-      "Google.Api.Gax.Grpc.Testing": "default",
-      "Grpc.Core.Testing": "default",
->>>>>>> Additional project file changes in targets and dependencies
+      "Google.Api.Gax.Testing": "3.0.0-alpha00",
+      "Google.Api.Gax.Grpc.Testing": "3.0.0-alpha00",
+      "Grpc.Core.Testing": "2.25.0",
       "System.ValueTuple": "4.5.0",
       "Xunit.Combinatorial": "1.2.7"
     }
@@ -447,16 +439,20 @@
     "serviceYaml": "firestore_v1.yaml",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com",
-    "version": "1.1.0",
+    "version": "1.2.0-beta00",
     "type": "grpc",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
     "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
+<<<<<<< HEAD
       "Google.LongRunning": "1.1.0",
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Grpc.Core": "2.25.0"
+=======
+      "Google.LongRunning": "1.1.0"
+>>>>>>> Modify Firestore versions for next-major-version
     }
   },
 
