@@ -17,6 +17,7 @@
 namespace Google.Cloud.Spanner.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.Spanner.Common.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -755,8 +756,9 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
 
             // Read streaming responses from server until complete
-            var responseStream = response.GrpcCall.ResponseStream;
-            while (await responseStream.MoveNext(default))
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<PartialResultSet> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -882,8 +884,9 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
 
             // Read streaming responses from server until complete
-            var responseStream = response.GrpcCall.ResponseStream;
-            while (await responseStream.MoveNext(default))
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<PartialResultSet> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response

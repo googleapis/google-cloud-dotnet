@@ -57,8 +57,13 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// <c>PhishingProtectionServiceV1Beta1Client.ReportPhishing</c> and
         /// <c>PhishingProtectionServiceV1Beta1Client.ReportPhishingAsync</c>.
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings ReportPhishingSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReportPhishingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PhishingProtectionServiceV1Beta1Settings"/> object.</returns>
