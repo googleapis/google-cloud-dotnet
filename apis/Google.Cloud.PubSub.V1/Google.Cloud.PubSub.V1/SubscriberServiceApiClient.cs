@@ -5467,6 +5467,10 @@ namespace Google.Cloud.PubSub.V1
             /// <inheritdoc/>
             public override stt::Task WriteCompleteAsync() =>
                 _writeBuffer.WriteCompleteAsync();
+
+            /// <inheritdoc/>
+            public override scg::IAsyncEnumerator<StreamingPullResponse> ResponseStream =>
+                GrpcCall.ResponseStream;
         }
 
         /// <summary>
