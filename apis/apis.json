@@ -191,7 +191,7 @@
     "tags": [ "Datastore" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Grpc.Core": "2.25.0"
+      "Grpc.Core": "2.25.0",
       "System.Linq.Async": "4.0.0"
     },
     "testDependencies": {
@@ -445,13 +445,9 @@
     "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
-<<<<<<< HEAD
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
       "Grpc.Core": "2.25.0"
-=======
-      "Google.LongRunning": "1.1.0"
->>>>>>> Modify Firestore versions for next-major-version
     }
   },
 
@@ -708,7 +704,7 @@
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Grpc.Core": "2.25.0"
     },
     "tags": [ "Redis", "Memorystore" ]
@@ -724,7 +720,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -793,11 +789,9 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Google.LongRunning": "1.1.0",
-      "Google.Cloud.Iam.V1": "1.3.0",
-      "Google.Cloud.Spanner.Common.V1": "2.1.0",
-      "Grpc.Core": "1.22.1"
+      "Google.LongRunning": "project",
+      "Google.Cloud.Iam.V1": "project",
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -814,11 +808,9 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Google.LongRunning": "1.1.0",
-      "Google.Cloud.Iam.V1": "1.3.0",
-      "Google.Cloud.Spanner.Common.V1": "2.1.0",
-      "Grpc.Core": "1.22.1"
+      "Google.LongRunning": "project",
+      "Google.Cloud.Iam.V1": "project",
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -886,7 +878,7 @@
     "tags": [ "Speech" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Grpc.Core": "2.25.0"
     }
   },
@@ -902,7 +894,7 @@
     "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
     "tags": [ "Speech" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "project"
     }
   },
 
@@ -1032,7 +1024,7 @@
     "description": "Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.",
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Grpc.Core": "2.25.0"
     },
     "tags": [ "Translate", "Translation" ]
@@ -1064,7 +1056,7 @@
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Grpc.Core": "2.25.0"
     }
   },
@@ -1081,7 +1073,7 @@
     "tags": [ "Vision" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "3.0.0-alpha00",
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "project",
       "Grpc.Core": "2.25.0"
     }
   },
@@ -1100,7 +1092,7 @@
   
   {
     "id": "Google.LongRunning",
-    "generator": "gapic",
+    "type": "other",
     "protoPath": "google/longrunning",
     "serviceYaml": "longrunning/longrunning.yaml",
     "version": "2.0.0-beta00",

@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 15.0.26124.0
@@ -11,6 +11,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.VideoIntelligence.V1.Tests", "Google.Cloud.VideoIntelligence.V1.Tests\Google.Cloud.VideoIntelligence.V1.Tests.csproj", "{72916478-86EE-4F4C-A114-0BA4D19BF2FE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.VideoIntelligence.V1.SmokeTests", "Google.Cloud.VideoIntelligence.V1.SmokeTests\Google.Cloud.VideoIntelligence.V1.SmokeTests.csproj", "{31BB157A-9159-4B43-84D1-80F4B9DB7F68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{21BAAB4C-0624-4439-963A-81247EA3D96E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +84,18 @@ Global
 		{31BB157A-9159-4B43-84D1-80F4B9DB7F68}.Release|x64.Build.0 = Release|Any CPU
 		{31BB157A-9159-4B43-84D1-80F4B9DB7F68}.Release|x86.ActiveCfg = Release|Any CPU
 		{31BB157A-9159-4B43-84D1-80F4B9DB7F68}.Release|x86.Build.0 = Release|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Debug|x64.Build.0 = Debug|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Debug|x86.Build.0 = Debug|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|x64.ActiveCfg = Release|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|x64.Build.0 = Release|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|x86.ActiveCfg = Release|Any CPU
+		{21BAAB4C-0624-4439-963A-81247EA3D96E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
