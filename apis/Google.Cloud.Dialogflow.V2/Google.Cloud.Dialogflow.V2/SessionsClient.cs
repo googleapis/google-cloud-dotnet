@@ -887,6 +887,10 @@ namespace Google.Cloud.Dialogflow.V2
             /// <inheritdoc/>
             public override stt::Task WriteCompleteAsync() =>
                 _writeBuffer.WriteCompleteAsync();
+
+            /// <inheritdoc/>
+            public override scg::IAsyncEnumerator<StreamingDetectIntentResponse> ResponseStream =>
+                GrpcCall.ResponseStream;
         }
 
     }
