@@ -10,7 +10,7 @@
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Recommended Google client library to access the Google Data Loss Prevention API, provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.</Description>
+    <Description>Recommended Google client library to access the Google Data Loss Prevention API, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.</Description>
     <PackageTags>DLP;data loss prevention;privacy;pii;Google;Cloud</PackageTags>
     <Copyright>Copyright 2019 Google LLC</Copyright>
     <Authors>Google Inc.</Authors>

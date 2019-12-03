@@ -341,7 +341,7 @@
     "productUrl": "https://cloud.google.com/dlp/",
     "version": "1.1.0-beta01",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Google Data Loss Prevention API, provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
+    "description": "Recommended Google client library to access the Google Data Loss Prevention API, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
     "dependencies": {
     },
     "tags": [ "DLP", "data loss prevention", "privacy", "pii" ]
@@ -687,6 +687,22 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Scheduler API (v1), which creates and manages jobs run on a regular recurring schedule.",
     "tags": [ "scheduler", "cron" ]
+  },
+
+  {
+    "id": "Google.Cloud.Secrets.V1Beta1",
+    "generator": "micro",
+    "protoPath": "google/cloud/secrets/v1beta1",
+    "serviceYaml": "secrets_vbeta1.yaml",
+    "productName": "Google Cloud Secret Manager",
+    "productUrl": "TODO",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Secret Manager API.",
+    "dependencies": {
+      "Google.Cloud.Iam.V1": "project"
+    },
+    "tags": [ "secret", "secrets", "security" ]
   },
 
   {
