@@ -35,8 +35,14 @@ namespace Google.Cloud.Spanner.V1.Tests
         private const StatusCode RetriableStatusCode = StatusCode.Unavailable;
         private const StatusCode NonRetriableStatusCode = StatusCode.PermissionDenied;
 
-        private static readonly CallSettings s_simpleCallSettings = CallSettings.FromCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(1)));
-        private static readonly BackoffSettings s_backoffSettings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0);
+        private static readonly CallSettings s_simpleCallSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(1)));
+        private static readonly RetrySettings s_retrySettings = RetrySettings.FromExponentialBackoff(
+            maxAttempts: int.MaxValue,
+            initialBackoff: TimeSpan.FromSeconds(1),
+            maxBackoff: TimeSpan.FromSeconds(15),
+            backoffMultiplier: 2.0,
+            retryFilter: ignored => false,
+            RetrySettings.NoJitter);
 
         [Fact]
         public async Task SimpleSuccess()
@@ -192,8 +198,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         private static SqlResultStream CreateStream(SpannerClient client, int maxBufferSize = 10) =>
-            new SqlResultStream(client, new ExecuteSqlRequest(), new Session(), s_simpleCallSettings, maxBufferSize,
-                s_backoffSettings, RetrySettings.NoJitter);
+            new SqlResultStream(client, new ExecuteSqlRequest(), new Session(), s_simpleCallSettings, maxBufferSize, s_retrySettings);
 
         private static List<PartialResultSet> CreateResultSets(params string[] resumeTokens) =>
             resumeTokens
