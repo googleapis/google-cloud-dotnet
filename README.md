@@ -68,7 +68,7 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google Cloud Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.DevTools.ContainerAnalysis.V1) (beta)
   * This is an implementaiton of the [Grafeas](https://grafeas.io) API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Grafeas.V1) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
-* [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.WebRisk.V1Beta1/index.htmlhttps://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.WebRisk.V1Beta1/) (Beta)
+* [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.WebRisk.V1Beta1/) (Beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
