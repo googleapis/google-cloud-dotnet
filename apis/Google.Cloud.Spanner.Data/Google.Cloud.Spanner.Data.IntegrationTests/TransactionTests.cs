@@ -33,7 +33,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task IncrementByOneAsync(SpannerConnection connection, bool orphanTransaction = false)
         {
-            var backoffSettings = new BackoffSettings(TimeSpan.FromMilliseconds(250), TimeSpan.FromSeconds(5), 1.5);
+            var retrySettings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromMilliseconds(250),
+                maxBackoff: TimeSpan.FromSeconds(5),
+                backoffMultiplier: 1.5,
+                retryFilter: ignored => false,
+                RetrySettings.RandomJitter);
             TimeSpan nextDelay = TimeSpan.Zero;
             SpannerException spannerException;
             DateTime deadline = DateTime.UtcNow.AddSeconds(30);
@@ -71,8 +77,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 // Keep trying for up to 30 seconds
                 catch (SpannerException ex) when (ex.IsRetryable && DateTime.UtcNow < deadline)
                 {
-                    nextDelay = backoffSettings.NextDelay(nextDelay);
-                    await Task.Delay(RetrySettings.RandomJitter.GetDelay(nextDelay));
+                    nextDelay = retrySettings.NextBackoff(nextDelay);
+                    await Task.Delay(retrySettings.BackoffJitter.GetDelay(nextDelay));
                     spannerException = ex;
                 }
             }
