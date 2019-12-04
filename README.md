@@ -53,6 +53,8 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Tasks](https://cloud.google.com/tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
 * [Stackdriver Trace v1](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (GA)
 * [Stackdriver Trace v2](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V2/) (GA)
+* [Google Cloud Translate](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translate.V3/) (GA)
+  * This uses the gRPC transport for access to the Translate V3 API, whereas Google.Cloud.Translation.V2 uses the HTTP/JSON transport for access to the Translate V2 API.
 * [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
 * [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.TextToSpeech.V1/) (GA)
 * [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
@@ -66,8 +68,6 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google Cloud Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.DevTools.ContainerAnalysis.V1) (beta)
   * This is an implementaiton of the [Grafeas](https://grafeas.io) API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Grafeas.V1) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
-* [Google Cloud Translate](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translate.V3/) (beta)
-  * This uses the gRPC transport for access to the Translate V3 API, whereas Google.Cloud.Translation.V2 uses the HTTP/JSON transport for access to the Translate V2 API.
 * [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.WebRisk.V1Beta1/index.htmlhttps://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.WebRisk.V1Beta1/) (Beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:

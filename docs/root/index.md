@@ -56,6 +56,7 @@ GA:
 - [Google.Cloud.TextToSpeech.V1](Google.Cloud.TextToSpeech.V1/index.html)
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
 - [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html)
+- [Google.Cloud.Translate.V3](Google.Cloud.Translate.V3/index.html)
 - [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 - [Google.Cloud.VideoIntelligence.V1](Google.Cloud.VideoIntelligence.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
@@ -69,7 +70,6 @@ Beta:
 - [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
-- [Google.Cloud.Translate.V3](Google.Cloud.Translate.V3/index.html)
 - [Grafeas.V1](Grafeas.V1/index.html)
 - [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html)
 
