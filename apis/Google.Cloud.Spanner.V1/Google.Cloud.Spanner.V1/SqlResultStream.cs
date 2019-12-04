@@ -36,15 +36,21 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         private const int DefaultMaxBufferSize = 512;
         // Note: these settings are taken from the Java code (SpannerImpl.newBackoff, which uses the default ExponentialBackoff multiplier of 1.5)
-        private static readonly BackoffSettings s_defaultBackoffSettings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(32), 1.5);
+        private static readonly RetrySettings s_defaultRetrySettings = RetrySettings.FromExponentialBackoff(
+            maxAttempts: int.MaxValue,
+            initialBackoff: TimeSpan.FromSeconds(1),
+            maxBackoff: TimeSpan.FromSeconds(32),
+            backoffMultiplier: 1.5,
+            // We don't use the predicate in our code
+            retryFilter: ignored => false,
+            backoffJitter: RandomJitter);
 
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
         private readonly ExecuteSqlRequest _request;
         private readonly Session _session;
         private readonly CallSettings _callSettings;
-        private readonly BackoffSettings _backoffSettings;
-        private readonly IJitter _backoffJitter;
+        private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
 
         /// <summary>
@@ -59,7 +65,7 @@ namespace Google.Cloud.Spanner.V1
         /// Constructor for normal usage, with default buffer size, backoff settings and jitter.
         /// </summary>
         internal SqlResultStream(SpannerClient client, ExecuteSqlRequest request, Session session, CallSettings callSettings)
-            : this(client, request, session, callSettings, DefaultMaxBufferSize, s_defaultBackoffSettings, RetrySettings.RandomJitter)
+            : this(client, request, session, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
         }
 
@@ -72,8 +78,7 @@ namespace Google.Cloud.Spanner.V1
             Session session,
             CallSettings callSettings,
             int maxBufferSize,
-            BackoffSettings backoffSettings,
-            IJitter backoffJitter)
+            RetrySettings retrySettings)
         {
             _buffer = new LinkedList<PartialResultSet>();
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
@@ -81,8 +86,7 @@ namespace Google.Cloud.Spanner.V1
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             _callSettings = callSettings;
             _maxBufferSize = GaxPreconditions.CheckArgumentRange(maxBufferSize, nameof(maxBufferSize), 1, 10_000);
-            _backoffSettings = GaxPreconditions.CheckNotNull(backoffSettings, nameof(backoffSettings));
-            _backoffJitter = GaxPreconditions.CheckNotNull(backoffJitter, nameof(backoffJitter));
+            _retrySettings = GaxPreconditions.CheckNotNull(retrySettings, nameof(retrySettings));
         }
 
         public PartialResultSet Current { get; private set; }
@@ -106,7 +110,7 @@ namespace Google.Cloud.Spanner.V1
         private async Task<PartialResultSet> ComputeNextAsync(CancellationToken cancellationToken)
         {
             // The retry state is local to the method as we're not trying to handle callers retrying.
-            RetryState retryState = new RetryState(_client.Settings.Scheduler ?? SystemScheduler.Instance, _backoffSettings, _backoffJitter);
+            RetryState retryState = new RetryState(_client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings);
 
             while (true)
             {
@@ -197,28 +201,26 @@ namespace Google.Cloud.Spanner.V1
             private const int DefaultMaxConsecutiveErrors = 1;
 
             private readonly IScheduler _scheduler;
-            private readonly BackoffSettings _backoffSettings;
-            private readonly IJitter _backoffJitter;
+            private readonly RetrySettings _retrySettings;
             private readonly int _maxConsecutiveErrors;
-            private TimeSpan _nextDelay;
+            private TimeSpan _nextBackoff;
+            // TODO: Possibly use RetrySettings.MaxAttempts instead of having this separately?
             private int _consecutiveErrors;
 
-            internal RetryState(IScheduler scheduler, BackoffSettings backoffSettings, IJitter backoffJitter)
-                : this(scheduler, backoffSettings, backoffJitter, DefaultMaxConsecutiveErrors)
+            internal RetryState(IScheduler scheduler, RetrySettings retrySettings)
+                : this(scheduler, retrySettings, DefaultMaxConsecutiveErrors)
             {
             }
 
-            internal RetryState(IScheduler scheduler, BackoffSettings backoffSettings, IJitter backoffJitter, int maxConsecutiveErrors)
+            internal RetryState(IScheduler scheduler, RetrySettings retrySettings, int maxConsecutiveErrors)
             {
                 _scheduler = scheduler;
-                _backoffSettings = backoffSettings;
-                _backoffJitter = backoffJitter;
+                _retrySettings = retrySettings;
                 _maxConsecutiveErrors = maxConsecutiveErrors;
                 Reset();
             }
 
-            internal RetryState Clone() =>
-                new RetryState(_scheduler, _backoffSettings, _backoffJitter);
+            internal RetryState Clone() => new RetryState(_scheduler, _retrySettings);
 
             /// <summary>
             /// Indicates whether the given exception can be retried in the current state.
@@ -254,10 +256,10 @@ namespace Google.Cloud.Spanner.V1
             {
                 _consecutiveErrors++;
                 TimeSpan? delayFromException = GetRetryDelay(exception);
-                await _scheduler.Delay(_backoffJitter.GetDelay(delayFromException ?? _nextDelay), cancellationToken).ConfigureAwait(false);
+                await _scheduler.Delay(_retrySettings.BackoffJitter.GetDelay(delayFromException ?? _nextBackoff), cancellationToken).ConfigureAwait(false);
                 if (delayFromException == null)
                 {
-                    _nextDelay = _backoffSettings.NextDelay(_nextDelay);
+                    _nextBackoff = _retrySettings.NextBackoff(_nextBackoff);
                 }
             }
 
@@ -268,7 +270,7 @@ namespace Google.Cloud.Spanner.V1
             internal void Reset()
             {
                 _consecutiveErrors = 0;
-                _nextDelay = _backoffSettings.Delay;
+                _nextBackoff = _retrySettings.InitialBackoff;
             }
 
             private TimeSpan? GetRetryDelay(RpcException e)

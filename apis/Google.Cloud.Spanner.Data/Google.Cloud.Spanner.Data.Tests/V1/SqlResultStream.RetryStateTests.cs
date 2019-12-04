@@ -28,6 +28,15 @@ namespace Google.Cloud.Spanner.V1.Tests
 {
     public class RetryStateTests
     {
+        // The retry settings used by various tests:
+        private static readonly RetrySettings s_retrySettings = RetrySettings.FromExponentialBackoff(
+            maxAttempts: int.MaxValue, // Ignored in SqlResultStream
+            initialBackoff: TimeSpan.FromSeconds(1),
+            maxBackoff: TimeSpan.FromSeconds(15),
+            backoffMultiplier: 2.0,
+            ignored => false, // Ignored in SqlResultStream
+            RetrySettings.NoJitter);
+
         [Theory]
         [InlineData(StatusCode.PermissionDenied, false)]
         [InlineData(StatusCode.Aborted, false)]
@@ -71,8 +80,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var state = new RetryState(
                 new NoOpScheduler(),
-                new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0),
-                RetrySettings.NoJitter,
+                s_retrySettings,
                 maxConsecutiveErrors: 2);
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
@@ -90,8 +98,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var state = new RetryState(
                 new NoOpScheduler(),
-                new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0),
-                RetrySettings.NoJitter,
+                s_retrySettings,
                 maxConsecutiveErrors: 2);
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
@@ -110,9 +117,15 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact]
-        public async Task RecordErrorAndWait_BackoffSettingsObeyed()
+        public async Task RecordErrorAndWait_RetrySettingsObeyed()
         {
-            var settings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), 2.0);
+            RetrySettings retrySettings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue, // Ignored in SqlResultStream
+                initialBackoff: TimeSpan.FromSeconds(1),
+                maxBackoff: TimeSpan.FromSeconds(5),
+                backoffMultiplier: 2.0,
+                ignored => false, // Ignored in SqlResultStream
+                RetrySettings.NoJitter);
             var mock = new Mock<IScheduler>(MockBehavior.Strict);
             mock.Setup(s => s.Delay(TimeSpan.FromSeconds(1), default)).Returns(Task.FromResult(0));
             mock.Setup(s => s.Delay(TimeSpan.FromSeconds(2), default)).Returns(Task.FromResult(0));
@@ -124,7 +137,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
-            var state = new RetryState(mock.Object, settings, RetrySettings.NoJitter, maxConsecutiveErrors: 5);
+            var state = new RetryState(mock.Object, retrySettings, maxConsecutiveErrors: 5);
 
             await state.RecordErrorAndWaitAsync(exception, default);
             await state.RecordErrorAndWaitAsync(exception, default);
@@ -137,7 +150,6 @@ namespace Google.Cloud.Spanner.V1.Tests
         [Fact]
         public async Task RecordErrorAndWait_RetryInfo()
         {
-            var settings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), 2.0);
             var mock = new Mock<IScheduler>(MockBehavior.Strict);
             // Delay taken from retry info
             mock.Setup(s => s.Delay(TimeSpan.FromSeconds(3), default)).Returns(Task.FromResult(0));
@@ -153,7 +165,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception1 = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
             var exception2 = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
-            RetryState state = new RetryState(mock.Object, settings, RetrySettings.NoJitter, maxConsecutiveErrors: 5);
+            RetryState state = new RetryState(mock.Object, s_retrySettings, maxConsecutiveErrors: 5);
 
             Assert.True(state.CanRetry(exception1));
             await state.RecordErrorAndWaitAsync(exception1, default);
@@ -164,7 +176,6 @@ namespace Google.Cloud.Spanner.V1.Tests
 
         private static RetryState CreateSimpleRetryState() => new RetryState(
             new Mock<IScheduler>(MockBehavior.Strict).Object,
-            new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0),
-            RetrySettings.NoJitter);
+            s_retrySettings);
     }
 }
