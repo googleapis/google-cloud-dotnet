@@ -858,7 +858,7 @@ namespace Google.Cloud.Firestore.V1
         /// Updates or inserts a document.
         /// </summary>
         /// <param name="document">
-        /// The updated document.
+        /// Required. The updated document.
         /// Creates the document if it does not already exist.
         /// </param>
         /// <param name="updateMask">
@@ -891,7 +891,7 @@ namespace Google.Cloud.Firestore.V1
         /// Updates or inserts a document.
         /// </summary>
         /// <param name="document">
-        /// The updated document.
+        /// Required. The updated document.
         /// Creates the document if it does not already exist.
         /// </param>
         /// <param name="updateMask">
@@ -921,7 +921,7 @@ namespace Google.Cloud.Firestore.V1
         /// Updates or inserts a document.
         /// </summary>
         /// <param name="document">
-        /// The updated document.
+        /// Required. The updated document.
         /// Creates the document if it does not already exist.
         /// </param>
         /// <param name="updateMask">
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Firestore.V1
         /// Deletes a document.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the Document to delete. In the format:
+        /// Required. The resource name of the Document to delete. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// </param>
         /// <param name="callSettings">
@@ -1032,7 +1032,7 @@ namespace Google.Cloud.Firestore.V1
         /// Deletes a document.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the Document to delete. In the format:
+        /// Required. The resource name of the Document to delete. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Firestore.V1
         /// Deletes a document.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the Document to delete. In the format:
+        /// Required. The resource name of the Document to delete. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// </param>
         /// <param name="callSettings">
@@ -1070,7 +1070,7 @@ namespace Google.Cloud.Firestore.V1
         /// Deletes a document.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the Document to delete. In the format:
+        /// Required. The resource name of the Document to delete. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// </param>
         /// <param name="callSettings">
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.Firestore.V1
         /// Deletes a document.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the Document to delete. In the format:
+        /// Required. The resource name of the Document to delete. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1111,7 +1111,7 @@ namespace Google.Cloud.Firestore.V1
         /// Deletes a document.
         /// </summary>
         /// <param name="name">
-        /// The resource name of the Document to delete. In the format:
+        /// Required. The resource name of the Document to delete. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// </param>
         /// <param name="callSettings">
@@ -1212,7 +1212,7 @@ namespace Google.Cloud.Firestore.V1
         /// Starts a new transaction.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1234,7 +1234,7 @@ namespace Google.Cloud.Firestore.V1
         /// Starts a new transaction.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1253,7 +1253,7 @@ namespace Google.Cloud.Firestore.V1
         /// Starts a new transaction.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1331,7 +1331,7 @@ namespace Google.Cloud.Firestore.V1
         /// Commits a transaction, while optionally updating documents.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="writes">
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.Firestore.V1
         /// Commits a transaction, while optionally updating documents.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="writes">
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.Firestore.V1
         /// Commits a transaction, while optionally updating documents.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="writes">
@@ -1471,11 +1471,11 @@ namespace Google.Cloud.Firestore.V1
         /// Rolls back a transaction.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="transaction">
-        /// The transaction to roll back.
+        /// Required. The transaction to roll back.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1498,11 +1498,11 @@ namespace Google.Cloud.Firestore.V1
         /// Rolls back a transaction.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="transaction">
-        /// The transaction to roll back.
+        /// Required. The transaction to roll back.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1522,11 +1522,11 @@ namespace Google.Cloud.Firestore.V1
         /// Rolls back a transaction.
         /// </summary>
         /// <param name="database">
-        /// The database name. In the format:
+        /// Required. The database name. In the format:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="transaction">
-        /// The transaction to roll back.
+        /// Required. The transaction to roll back.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1677,7 +1677,7 @@ namespace Google.Cloud.Firestore.V1
         /// Lists all the collection IDs underneath a document.
         /// </summary>
         /// <param name="parent">
-        /// The parent document. In the format:
+        /// Required. The parent document. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// For example:
         /// `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
@@ -1713,7 +1713,7 @@ namespace Google.Cloud.Firestore.V1
         /// Lists all the collection IDs underneath a document.
         /// </summary>
         /// <param name="parent">
-        /// The parent document. In the format:
+        /// Required. The parent document. In the format:
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// For example:
         /// `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
