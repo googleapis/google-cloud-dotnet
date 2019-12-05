@@ -607,11 +607,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="index">
-        /// The composite index to create.
+        /// Required. The composite index to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -636,11 +636,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="index">
-        /// The composite index to create.
+        /// Required. The composite index to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -662,11 +662,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="index">
-        /// The composite index to create.
+        /// Required. The composite index to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -691,11 +691,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="index">
-        /// The composite index to create.
+        /// Required. The composite index to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -720,11 +720,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="index">
-        /// The composite index to create.
+        /// Required. The composite index to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -746,11 +746,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="index">
-        /// The composite index to create.
+        /// Required. The composite index to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -835,7 +835,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Lists composite indexes.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -869,7 +869,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Lists composite indexes.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -903,7 +903,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Lists composite indexes.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -937,7 +937,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Lists composite indexes.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1113,7 +1113,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1213,7 +1213,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1273,7 +1273,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1292,7 +1292,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a composite index.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1368,7 +1368,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// that a subset of the data has already been imported to Cloud Firestore.
         /// </summary>
         /// <param name="name">
-        /// Database to import into. Should be of the form:
+        /// Required. Database to import into. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1394,7 +1394,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// that a subset of the data has already been imported to Cloud Firestore.
         /// </summary>
         /// <param name="name">
-        /// Database to import into. Should be of the form:
+        /// Required. Database to import into. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1417,7 +1417,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// that a subset of the data has already been imported to Cloud Firestore.
         /// </summary>
         /// <param name="name">
-        /// Database to import into. Should be of the form:
+        /// Required. Database to import into. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1443,7 +1443,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// that a subset of the data has already been imported to Cloud Firestore.
         /// </summary>
         /// <param name="name">
-        /// Database to import into. Should be of the form:
+        /// Required. Database to import into. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1469,7 +1469,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// that a subset of the data has already been imported to Cloud Firestore.
         /// </summary>
         /// <param name="name">
-        /// Database to import into. Should be of the form:
+        /// Required. Database to import into. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1492,7 +1492,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// that a subset of the data has already been imported to Cloud Firestore.
         /// </summary>
         /// <param name="name">
-        /// Database to import into. Should be of the form:
+        /// Required. Database to import into. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Database to export. Should be of the form:
+        /// Required. Database to export. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1618,7 +1618,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Database to export. Should be of the form:
+        /// Required. Database to export. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1644,7 +1644,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Database to export. Should be of the form:
+        /// Required. Database to export. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1673,7 +1673,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Database to export. Should be of the form:
+        /// Required. Database to export. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1702,7 +1702,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Database to export. Should be of the form:
+        /// Required. Database to export. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1728,7 +1728,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Cloud Storage.
         /// </summary>
         /// <param name="name">
-        /// Database to export. Should be of the form:
+        /// Required. Database to export. Should be of the form:
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1827,7 +1827,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets the metadata and configuration for a Field.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1849,7 +1849,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets the metadata and configuration for a Field.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1868,7 +1868,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets the metadata and configuration for a Field.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1890,7 +1890,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets the metadata and configuration for a Field.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
         /// </param>
         /// <param name="callSettings">
@@ -1912,7 +1912,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets the metadata and configuration for a Field.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
         /// </param>
         /// <param name="cancellationToken">
@@ -1931,7 +1931,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Gets the metadata and configuration for a Field.
         /// </summary>
         /// <param name="name">
-        /// A name of the form
+        /// Required. A name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
         /// </param>
         /// <param name="callSettings">
@@ -2014,7 +2014,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// `indexConfig.usesAncestorConfig:false`.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -2053,7 +2053,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// `indexConfig.usesAncestorConfig:false`.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -2092,7 +2092,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// `indexConfig.usesAncestorConfig:false`.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -2131,7 +2131,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// `indexConfig.usesAncestorConfig:false`.
         /// </summary>
         /// <param name="parent">
-        /// A parent name of the form
+        /// Required. A parent name of the form
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
         /// </param>
         /// <param name="pageToken">
@@ -2225,7 +2225,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`.
         /// </summary>
         /// <param name="field">
-        /// The field to be updated.
+        /// Required. The field to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2258,7 +2258,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`.
         /// </summary>
         /// <param name="field">
-        /// The field to be updated.
+        /// Required. The field to be updated.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2288,7 +2288,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`.
         /// </summary>
         /// <param name="field">
-        /// The field to be updated.
+        /// Required. The field to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
