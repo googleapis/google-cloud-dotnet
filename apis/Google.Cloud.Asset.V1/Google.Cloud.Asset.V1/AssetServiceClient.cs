@@ -53,6 +53,11 @@ namespace Google.Cloud.Asset.V1
             ExportAssetsSettings = existing.ExportAssetsSettings;
             ExportAssetsOperationsSettings = existing.ExportAssetsOperationsSettings?.Clone();
             BatchGetAssetsHistorySettings = existing.BatchGetAssetsHistorySettings;
+            CreateFeedSettings = existing.CreateFeedSettings;
+            GetFeedSettings = existing.GetFeedSettings;
+            ListFeedsSettings = existing.ListFeedsSettings;
+            UpdateFeedSettings = existing.UpdateFeedSettings;
+            DeleteFeedSettings = existing.DeleteFeedSettings;
             OnCopy(existing);
         }
 
@@ -195,6 +200,154 @@ namespace Google.Cloud.Asset.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings BatchGetAssetsHistorySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.CreateFeed</c> and <c>AssetServiceClient.CreateFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AssetServiceClient.CreateFeed</c> and
+        /// <c>AssetServiceClient.CreateFeedAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateFeedSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.GetFeed</c> and <c>AssetServiceClient.GetFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AssetServiceClient.GetFeed</c> and
+        /// <c>AssetServiceClient.GetFeedAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFeedSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.ListFeeds</c> and <c>AssetServiceClient.ListFeedsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AssetServiceClient.ListFeeds</c> and
+        /// <c>AssetServiceClient.ListFeedsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListFeedsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.UpdateFeed</c> and <c>AssetServiceClient.UpdateFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AssetServiceClient.UpdateFeed</c> and
+        /// <c>AssetServiceClient.UpdateFeedAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateFeedSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.DeleteFeed</c> and <c>AssetServiceClient.DeleteFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AssetServiceClient.DeleteFeed</c> and
+        /// <c>AssetServiceClient.DeleteFeedAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFeedSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -553,6 +706,634 @@ namespace Google.Cloud.Asset.V1
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this feed
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> CreateFeedAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => CreateFeedAsync(
+                new CreateFeedRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this feed
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> CreateFeedAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => CreateFeedAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project/folder/organization where this feed
+        /// should be created in. It can only be an organization number (such as
+        /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+        /// (such as "projects/my-project-id")", or a project number (such as
+        /// "projects/12345").
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Feed CreateFeed(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => CreateFeed(
+                new CreateFeedRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> CreateFeedAsync(
+            CreateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> CreateFeedAsync(
+            CreateFeedRequest request,
+            st::CancellationToken cancellationToken) => CreateFeedAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Feed CreateFeed(
+            CreateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Feed and it must be in the format of:
+        /// projects/project_number/feeds/feed_id
+        /// folders/folder_number/feeds/feed_id
+        /// organizations/organization_number/feeds/feed_id
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> GetFeedAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetFeedAsync(
+                new GetFeedRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Feed and it must be in the format of:
+        /// projects/project_number/feeds/feed_id
+        /// folders/folder_number/feeds/feed_id
+        /// organizations/organization_number/feeds/feed_id
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> GetFeedAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetFeedAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Feed and it must be in the format of:
+        /// projects/project_number/feeds/feed_id
+        /// folders/folder_number/feeds/feed_id
+        /// organizations/organization_number/feeds/feed_id
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Feed GetFeed(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetFeed(
+                new GetFeedRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> GetFeedAsync(
+            GetFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> GetFeedAsync(
+            GetFeedRequest request,
+            st::CancellationToken cancellationToken) => GetFeedAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Feed GetFeed(
+            GetFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose feeds are to be
+        /// listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListFeedsResponse> ListFeedsAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ListFeedsAsync(
+                new ListFeedsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose feeds are to be
+        /// listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListFeedsResponse> ListFeedsAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => ListFeedsAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent project/folder/organization whose feeds are to be
+        /// listed. It can only be using project/folder/organization number (such as
+        /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ListFeedsResponse ListFeeds(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ListFeeds(
+                new ListFeedsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListFeedsResponse> ListFeedsAsync(
+            ListFeedsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListFeedsResponse> ListFeedsAsync(
+            ListFeedsRequest request,
+            st::CancellationToken cancellationToken) => ListFeedsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ListFeedsResponse ListFeeds(
+            ListFeedsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="feed">
+        /// Required. The new values of feed details. It must match an existing feed and the
+        /// field `name` must be in the format of:
+        /// projects/project_number/feeds/feed_id or
+        /// folders/folder_number/feeds/feed_id or
+        /// organizations/organization_number/feeds/feed_id.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> UpdateFeedAsync(
+            Feed feed,
+            gaxgrpc::CallSettings callSettings = null) => UpdateFeedAsync(
+                new UpdateFeedRequest
+                {
+                    Feed = gax::GaxPreconditions.CheckNotNull(feed, nameof(feed)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="feed">
+        /// Required. The new values of feed details. It must match an existing feed and the
+        /// field `name` must be in the format of:
+        /// projects/project_number/feeds/feed_id or
+        /// folders/folder_number/feeds/feed_id or
+        /// organizations/organization_number/feeds/feed_id.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> UpdateFeedAsync(
+            Feed feed,
+            st::CancellationToken cancellationToken) => UpdateFeedAsync(
+                feed,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="feed">
+        /// Required. The new values of feed details. It must match an existing feed and the
+        /// field `name` must be in the format of:
+        /// projects/project_number/feeds/feed_id or
+        /// folders/folder_number/feeds/feed_id or
+        /// organizations/organization_number/feeds/feed_id.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Feed UpdateFeed(
+            Feed feed,
+            gaxgrpc::CallSettings callSettings = null) => UpdateFeed(
+                new UpdateFeedRequest
+                {
+                    Feed = gax::GaxPreconditions.CheckNotNull(feed, nameof(feed)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> UpdateFeedAsync(
+            UpdateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Feed> UpdateFeedAsync(
+            UpdateFeedRequest request,
+            st::CancellationToken cancellationToken) => UpdateFeedAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Feed UpdateFeed(
+            UpdateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feed and it must be in the format of:
+        /// projects/project_number/feeds/feed_id
+        /// folders/folder_number/feeds/feed_id
+        /// organizations/organization_number/feeds/feed_id
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteFeedAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteFeedAsync(
+                new DeleteFeedRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feed and it must be in the format of:
+        /// projects/project_number/feeds/feed_id
+        /// folders/folder_number/feeds/feed_id
+        /// organizations/organization_number/feeds/feed_id
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteFeedAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteFeedAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feed and it must be in the format of:
+        /// projects/project_number/feeds/feed_id
+        /// folders/folder_number/feeds/feed_id
+        /// organizations/organization_number/feeds/feed_id
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteFeed(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteFeed(
+                new DeleteFeedRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteFeedAsync(
+            DeleteFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteFeedAsync(
+            DeleteFeedRequest request,
+            st::CancellationToken cancellationToken) => DeleteFeedAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteFeed(
+            DeleteFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -562,6 +1343,11 @@ namespace Google.Cloud.Asset.V1
     {
         private readonly gaxgrpc::ApiCall<ExportAssetsRequest, lro::Operation> _callExportAssets;
         private readonly gaxgrpc::ApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse> _callBatchGetAssetsHistory;
+        private readonly gaxgrpc::ApiCall<CreateFeedRequest, Feed> _callCreateFeed;
+        private readonly gaxgrpc::ApiCall<GetFeedRequest, Feed> _callGetFeed;
+        private readonly gaxgrpc::ApiCall<ListFeedsRequest, ListFeedsResponse> _callListFeeds;
+        private readonly gaxgrpc::ApiCall<UpdateFeedRequest, Feed> _callUpdateFeed;
+        private readonly gaxgrpc::ApiCall<DeleteFeedRequest, pbwkt::Empty> _callDeleteFeed;
 
         /// <summary>
         /// Constructs a client wrapper for the AssetService service, with the specified gRPC client and settings.
@@ -581,10 +1367,35 @@ namespace Google.Cloud.Asset.V1
             _callBatchGetAssetsHistory = clientHelper.BuildApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse>(
                 GrpcClient.BatchGetAssetsHistoryAsync, GrpcClient.BatchGetAssetsHistory, effectiveSettings.BatchGetAssetsHistorySettings)
                 .WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateFeed = clientHelper.BuildApiCall<CreateFeedRequest, Feed>(
+                GrpcClient.CreateFeedAsync, GrpcClient.CreateFeed, effectiveSettings.CreateFeedSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
+            _callGetFeed = clientHelper.BuildApiCall<GetFeedRequest, Feed>(
+                GrpcClient.GetFeedAsync, GrpcClient.GetFeed, effectiveSettings.GetFeedSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
+            _callListFeeds = clientHelper.BuildApiCall<ListFeedsRequest, ListFeedsResponse>(
+                GrpcClient.ListFeedsAsync, GrpcClient.ListFeeds, effectiveSettings.ListFeedsSettings)
+                .WithGoogleRequestParam("parent", request => request.Parent);
+            _callUpdateFeed = clientHelper.BuildApiCall<UpdateFeedRequest, Feed>(
+                GrpcClient.UpdateFeedAsync, GrpcClient.UpdateFeed, effectiveSettings.UpdateFeedSettings)
+                .WithGoogleRequestParam("feed.name", request => request.Feed?.Name);
+            _callDeleteFeed = clientHelper.BuildApiCall<DeleteFeedRequest, pbwkt::Empty>(
+                GrpcClient.DeleteFeedAsync, GrpcClient.DeleteFeed, effectiveSettings.DeleteFeedSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportAssets);
             Modify_ExportAssetsApiCall(ref _callExportAssets);
             Modify_ApiCall(ref _callBatchGetAssetsHistory);
             Modify_BatchGetAssetsHistoryApiCall(ref _callBatchGetAssetsHistory);
+            Modify_ApiCall(ref _callCreateFeed);
+            Modify_CreateFeedApiCall(ref _callCreateFeed);
+            Modify_ApiCall(ref _callGetFeed);
+            Modify_GetFeedApiCall(ref _callGetFeed);
+            Modify_ApiCall(ref _callListFeeds);
+            Modify_ListFeedsApiCall(ref _callListFeeds);
+            Modify_ApiCall(ref _callUpdateFeed);
+            Modify_UpdateFeedApiCall(ref _callUpdateFeed);
+            Modify_ApiCall(ref _callDeleteFeed);
+            Modify_DeleteFeedApiCall(ref _callDeleteFeed);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -600,6 +1411,11 @@ namespace Google.Cloud.Asset.V1
         // Allows per-RPC-method modification of the underlying ApiCall object.
         partial void Modify_ExportAssetsApiCall(ref gaxgrpc::ApiCall<ExportAssetsRequest, lro::Operation> call);
         partial void Modify_BatchGetAssetsHistoryApiCall(ref gaxgrpc::ApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse> call);
+        partial void Modify_CreateFeedApiCall(ref gaxgrpc::ApiCall<CreateFeedRequest, Feed> call);
+        partial void Modify_GetFeedApiCall(ref gaxgrpc::ApiCall<GetFeedRequest, Feed> call);
+        partial void Modify_ListFeedsApiCall(ref gaxgrpc::ApiCall<ListFeedsRequest, ListFeedsResponse> call);
+        partial void Modify_UpdateFeedApiCall(ref gaxgrpc::ApiCall<UpdateFeedRequest, Feed> call);
+        partial void Modify_DeleteFeedApiCall(ref gaxgrpc::ApiCall<DeleteFeedRequest, pbwkt::Empty> call);
         partial void OnConstruction(AssetService.AssetServiceClient grpcClient, AssetServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -612,6 +1428,11 @@ namespace Google.Cloud.Asset.V1
         // before the underlying RPC is performed.
         partial void Modify_ExportAssetsRequest(ref ExportAssetsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_BatchGetAssetsHistoryRequest(ref BatchGetAssetsHistoryRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateFeedRequest(ref CreateFeedRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetFeedRequest(ref GetFeedRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListFeedsRequest(ref ListFeedsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateFeedRequest(ref UpdateFeedRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteFeedRequest(ref DeleteFeedRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Exports assets with time and resource types to a given Cloud Storage
@@ -716,6 +1537,205 @@ namespace Google.Cloud.Asset.V1
         {
             Modify_BatchGetAssetsHistoryRequest(ref request, ref callSettings);
             return _callBatchGetAssetsHistory.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Feed> CreateFeedAsync(
+            CreateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeedRequest(ref request, ref callSettings);
+            return _callCreateFeed.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a feed in a parent project/folder/organization to listen to its
+        /// asset updates.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Feed CreateFeed(
+            CreateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeedRequest(ref request, ref callSettings);
+            return _callCreateFeed.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Feed> GetFeedAsync(
+            GetFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeedRequest(ref request, ref callSettings);
+            return _callGetFeed.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Feed GetFeed(
+            GetFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeedRequest(ref request, ref callSettings);
+            return _callGetFeed.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ListFeedsResponse> ListFeedsAsync(
+            ListFeedsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeedsRequest(ref request, ref callSettings);
+            return _callListFeeds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all asset feeds in a parent project/folder/organization.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ListFeedsResponse ListFeeds(
+            ListFeedsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeedsRequest(ref request, ref callSettings);
+            return _callListFeeds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Feed> UpdateFeedAsync(
+            UpdateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFeedRequest(ref request, ref callSettings);
+            return _callUpdateFeed.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an asset feed configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Feed UpdateFeed(
+            UpdateFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFeedRequest(ref request, ref callSettings);
+            return _callUpdateFeed.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task DeleteFeedAsync(
+            DeleteFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeedRequest(ref request, ref callSettings);
+            return _callDeleteFeed.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an asset feed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void DeleteFeed(
+            DeleteFeedRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeedRequest(ref request, ref callSettings);
+            _callDeleteFeed.Sync(request, callSettings);
         }
 
     }
