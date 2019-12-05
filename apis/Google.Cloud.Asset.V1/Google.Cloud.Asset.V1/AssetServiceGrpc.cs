@@ -35,6 +35,14 @@ namespace Google.Cloud.Asset.V1 {
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.CreateFeedRequest> __Marshaller_google_cloud_asset_v1_CreateFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.Feed> __Marshaller_google_cloud_asset_v1_Feed = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.Feed.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.GetFeedRequest> __Marshaller_google_cloud_asset_v1_GetFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.GetFeedRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsRequest> __Marshaller_google_cloud_asset_v1_ListFeedsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.ListFeedsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsResponse> __Marshaller_google_cloud_asset_v1_ListFeedsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.ListFeedsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.UpdateFeedRequest> __Marshaller_google_cloud_asset_v1_UpdateFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.DeleteFeedRequest> __Marshaller_google_cloud_asset_v1_DeleteFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation> __Method_ExportAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
@@ -49,6 +57,41 @@ namespace Google.Cloud.Asset.V1 {
         "BatchGetAssetsHistory",
         __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryRequest,
         __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.CreateFeedRequest, global::Google.Cloud.Asset.V1.Feed> __Method_CreateFeed = new grpc::Method<global::Google.Cloud.Asset.V1.CreateFeedRequest, global::Google.Cloud.Asset.V1.Feed>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateFeed",
+        __Marshaller_google_cloud_asset_v1_CreateFeedRequest,
+        __Marshaller_google_cloud_asset_v1_Feed);
+
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.GetFeedRequest, global::Google.Cloud.Asset.V1.Feed> __Method_GetFeed = new grpc::Method<global::Google.Cloud.Asset.V1.GetFeedRequest, global::Google.Cloud.Asset.V1.Feed>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFeed",
+        __Marshaller_google_cloud_asset_v1_GetFeedRequest,
+        __Marshaller_google_cloud_asset_v1_Feed);
+
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.ListFeedsRequest, global::Google.Cloud.Asset.V1.ListFeedsResponse> __Method_ListFeeds = new grpc::Method<global::Google.Cloud.Asset.V1.ListFeedsRequest, global::Google.Cloud.Asset.V1.ListFeedsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListFeeds",
+        __Marshaller_google_cloud_asset_v1_ListFeedsRequest,
+        __Marshaller_google_cloud_asset_v1_ListFeedsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.UpdateFeedRequest, global::Google.Cloud.Asset.V1.Feed> __Method_UpdateFeed = new grpc::Method<global::Google.Cloud.Asset.V1.UpdateFeedRequest, global::Google.Cloud.Asset.V1.Feed>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateFeed",
+        __Marshaller_google_cloud_asset_v1_UpdateFeedRequest,
+        __Marshaller_google_cloud_asset_v1_Feed);
+
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.DeleteFeedRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteFeed = new grpc::Method<global::Google.Cloud.Asset.V1.DeleteFeedRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFeed",
+        __Marshaller_google_cloud_asset_v1_DeleteFeedRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -87,6 +130,62 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> BatchGetAssetsHistory(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a feed in a parent project/folder/organization to listen to its
+      /// asset updates.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.Feed> CreateFeed(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about an asset feed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.Feed> GetFeed(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all asset feeds in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.ListFeedsResponse> ListFeeds(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an asset feed configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.Feed> UpdateFeed(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an asset feed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeed(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -240,6 +339,230 @@ namespace Google.Cloud.Asset.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchGetAssetsHistory, null, options, request);
       }
+      /// <summary>
+      /// Creates a feed in a parent project/folder/organization to listen to its
+      /// asset updates.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.Feed CreateFeed(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a feed in a parent project/folder/organization to listen to its
+      /// asset updates.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.Feed CreateFeed(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateFeed, null, options, request);
+      }
+      /// <summary>
+      /// Creates a feed in a parent project/folder/organization to listen to its
+      /// asset updates.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> CreateFeedAsync(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a feed in a parent project/folder/organization to listen to its
+      /// asset updates.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> CreateFeedAsync(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateFeed, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.Feed GetFeed(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.Feed GetFeed(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFeed, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> GetFeedAsync(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> GetFeedAsync(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFeed, null, options, request);
+      }
+      /// <summary>
+      /// Lists all asset feeds in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.ListFeedsResponse ListFeeds(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFeeds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all asset feeds in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.ListFeedsResponse ListFeeds(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListFeeds, null, options, request);
+      }
+      /// <summary>
+      /// Lists all asset feeds in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListFeedsResponse> ListFeedsAsync(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFeedsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all asset feeds in a parent project/folder/organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListFeedsResponse> ListFeedsAsync(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListFeeds, null, options, request);
+      }
+      /// <summary>
+      /// Updates an asset feed configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.Feed UpdateFeed(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an asset feed configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.Feed UpdateFeed(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateFeed, null, options, request);
+      }
+      /// <summary>
+      /// Updates an asset feed configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> UpdateFeedAsync(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an asset feed configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> UpdateFeedAsync(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateFeed, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFeed(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFeed(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFeed, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeedAsync(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an asset feed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeedAsync(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFeed, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AssetServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -253,7 +576,12 @@ namespace Google.Cloud.Asset.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ExportAssets, serviceImpl.ExportAssets)
-          .AddMethod(__Method_BatchGetAssetsHistory, serviceImpl.BatchGetAssetsHistory).Build();
+          .AddMethod(__Method_BatchGetAssetsHistory, serviceImpl.BatchGetAssetsHistory)
+          .AddMethod(__Method_CreateFeed, serviceImpl.CreateFeed)
+          .AddMethod(__Method_GetFeed, serviceImpl.GetFeed)
+          .AddMethod(__Method_ListFeeds, serviceImpl.ListFeeds)
+          .AddMethod(__Method_UpdateFeed, serviceImpl.UpdateFeed)
+          .AddMethod(__Method_DeleteFeed, serviceImpl.DeleteFeed).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -264,6 +592,11 @@ namespace Google.Cloud.Asset.V1 {
     {
       serviceBinder.AddMethod(__Method_ExportAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportAssets));
       serviceBinder.AddMethod(__Method_BatchGetAssetsHistory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse>(serviceImpl.BatchGetAssetsHistory));
+      serviceBinder.AddMethod(__Method_CreateFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.CreateFeedRequest, global::Google.Cloud.Asset.V1.Feed>(serviceImpl.CreateFeed));
+      serviceBinder.AddMethod(__Method_GetFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.GetFeedRequest, global::Google.Cloud.Asset.V1.Feed>(serviceImpl.GetFeed));
+      serviceBinder.AddMethod(__Method_ListFeeds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.ListFeedsRequest, global::Google.Cloud.Asset.V1.ListFeedsResponse>(serviceImpl.ListFeeds));
+      serviceBinder.AddMethod(__Method_UpdateFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.UpdateFeedRequest, global::Google.Cloud.Asset.V1.Feed>(serviceImpl.UpdateFeed));
+      serviceBinder.AddMethod(__Method_DeleteFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.DeleteFeedRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFeed));
     }
 
   }

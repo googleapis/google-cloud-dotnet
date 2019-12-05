@@ -48,31 +48,67 @@ namespace Google.Cloud.Asset.V1 {
             "ZG93GAQgASgLMiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlRpbWVXaW5kb3dC",
             "A+BBASJVCh1CYXRjaEdldEFzc2V0c0hpc3RvcnlSZXNwb25zZRI0CgZhc3Nl",
             "dHMYASADKAsyJC5nb29nbGUuY2xvdWQuYXNzZXQudjEuVGVtcG9yYWxBc3Nl",
-            "dCKrAQoMT3V0cHV0Q29uZmlnEkAKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIl",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5HY3NEZXN0aW5hdGlvbkgAEkoKFGJp",
-            "Z3F1ZXJ5X2Rlc3RpbmF0aW9uGAIgASgLMiouZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb25IAEINCgtkZXN0aW5hdGlvbiJDCg5H",
-            "Y3NEZXN0aW5hdGlvbhINCgN1cmkYASABKAlIABIUCgp1cmlfcHJlZml4GAIg",
-            "ASgJSABCDAoKb2JqZWN0X3VyaSJOChNCaWdRdWVyeURlc3RpbmF0aW9uEhQK",
-            "B2RhdGFzZXQYASABKAlCA+BBAhISCgV0YWJsZRgCIAEoCUID4EECEg0KBWZv",
-            "cmNlGAMgASgIKmwKC0NvbnRlbnRUeXBlEhwKGENPTlRFTlRfVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEgwKCFJFU09VUkNFEAESDgoKSUFNX1BPTElDWRACEg4KCk9S",
-            "R19QT0xJQ1kQBBIRCg1BQ0NFU1NfUE9MSUNZEAUy8wMKDEFzc2V0U2Vydmlj",
-            "ZRLeAQoMRXhwb3J0QXNzZXRzEiouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4",
-            "cG9ydEFzc2V0c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIoIBgtPkkwIiIh0vdjEve3BhcmVudD0qLyp9OmV4cG9ydEFzc2V0czoB",
-            "KspBVwoqZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0c1Jlc3Bv",
-            "bnNlEilnb29nbGUuY2xvdWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVz",
-            "dBKyAQoVQmF0Y2hHZXRBc3NldHNIaXN0b3J5EjMuZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3QaNC5nb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVzcG9uc2Ui",
-            "LoLT5JMCKBImL3YxL3twYXJlbnQ9Ki8qfTpiYXRjaEdldEFzc2V0c0hpc3Rv",
-            "cnkaTcpBGWNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpwBChljb20u",
-            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxQhFBc3NldFNlcnZpY2VQcm90b1ABWjpn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Fz",
-            "c2V0L3YxO2Fzc2V0qgIVR29vZ2xlLkNsb3VkLkFzc2V0LlYxygIVR29vZ2xl",
-            "XENsb3VkXEFzc2V0XFYxYgZwcm90bzM="));
+            "dCJuChFDcmVhdGVGZWVkUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIU",
+            "CgdmZWVkX2lkGAIgASgJQgPgQQISLgoEZmVlZBgDIAEoCzIbLmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5GZWVkQgPgQQIiRgoOR2V0RmVlZFJlcXVlc3QSNAoE",
+            "bmFtZRgBIAEoCUIm4EEC+kEgCh5jbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t",
+            "L0ZlZWQiJwoQTGlzdEZlZWRzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BB",
+            "AiI/ChFMaXN0RmVlZHNSZXNwb25zZRIqCgVmZWVkcxgBIAMoCzIbLmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5GZWVkInkKEVVwZGF0ZUZlZWRSZXF1ZXN0Ei4K",
+            "BGZlZWQYASABKAsyGy5nb29nbGUuY2xvdWQuYXNzZXQudjEuRmVlZEID4EEC",
+            "EjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFza0ID4EECIkkKEURlbGV0ZUZlZWRSZXF1ZXN0EjQKBG5hbWUYASABKAlC",
+            "JuBBAvpBIAoeY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9GZWVkIqsBCgxP",
+            "dXRwdXRDb25maWcSQAoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMiUuZ29vZ2xl",
+            "LmNsb3VkLmFzc2V0LnYxLkdjc0Rlc3RpbmF0aW9uSAASSgoUYmlncXVlcnlf",
+            "ZGVzdGluYXRpb24YAiABKAsyKi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmln",
+            "UXVlcnlEZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0aW9uIkMKDkdjc0Rlc3Rp",
+            "bmF0aW9uEg0KA3VyaRgBIAEoCUgAEhQKCnVyaV9wcmVmaXgYAiABKAlIAEIM",
+            "CgpvYmplY3RfdXJpIk4KE0JpZ1F1ZXJ5RGVzdGluYXRpb24SFAoHZGF0YXNl",
+            "dBgBIAEoCUID4EECEhIKBXRhYmxlGAIgASgJQgPgQQISDQoFZm9yY2UYAyAB",
+            "KAgiIgoRUHVic3ViRGVzdGluYXRpb24SDQoFdG9waWMYASABKAkiaQoQRmVl",
+            "ZE91dHB1dENvbmZpZxJGChJwdWJzdWJfZGVzdGluYXRpb24YASABKAsyKC5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuUHVic3ViRGVzdGluYXRpb25IAEINCgtk",
+            "ZXN0aW5hdGlvbiLbAgoERmVlZBIRCgRuYW1lGAEgASgJQgPgQQISEwoLYXNz",
+            "ZXRfbmFtZXMYAiADKAkSEwoLYXNzZXRfdHlwZXMYAyADKAkSOAoMY29udGVu",
+            "dF90eXBlGAQgASgOMiIuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkNvbnRlbnRU",
+            "eXBlEkgKEmZlZWRfb3V0cHV0X2NvbmZpZxgFIAEoCzInLmdvb2dsZS5jbG91",
+            "ZC5hc3NldC52MS5GZWVkT3V0cHV0Q29uZmlnQgPgQQI6kQHqQY0BCh5jbG91",
+            "ZGFzc2V0Lmdvb2dsZWFwaXMuY29tL0ZlZWQSH3Byb2plY3RzL3twcm9qZWN0",
+            "fS9mZWVkcy97ZmVlZH0SHWZvbGRlcnMve2ZvbGRlcn0vZmVlZHMve2ZlZWR9",
+            "Eilvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2ZlZWRzL3tmZWVkfSAB",
+            "KmwKC0NvbnRlbnRUeXBlEhwKGENPTlRFTlRfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EgwKCFJFU09VUkNFEAESDgoKSUFNX1BPTElDWRACEg4KCk9SR19QT0xJQ1kQ",
+            "BBIRCg1BQ0NFU1NfUE9MSUNZEAUy8AgKDEFzc2V0U2VydmljZRLeAQoMRXhw",
+            "b3J0QXNzZXRzEiouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0",
+            "c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoIBgtPk",
+            "kwIiIh0vdjEve3BhcmVudD0qLyp9OmV4cG9ydEFzc2V0czoBKspBVwoqZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0c1Jlc3BvbnNlEilnb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVzdBKyAQoVQmF0",
+            "Y2hHZXRBc3NldHNIaXN0b3J5EjMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJh",
+            "dGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3QaNC5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuQmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVzcG9uc2UiLoLT5JMCKBIm",
+            "L3YxL3twYXJlbnQ9Ki8qfTpiYXRjaEdldEFzc2V0c0hpc3RvcnkSfwoKQ3Jl",
+            "YXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5DcmVhdGVGZWVkUmVx",
+            "dWVzdBobLmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkIiqC0+STAhsiFi92",
+            "MS97cGFyZW50PSovKn0vZmVlZHM6ASraQQZwYXJlbnQSdAoHR2V0RmVlZBIl",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5HZXRGZWVkUmVxdWVzdBobLmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5GZWVkIiWC0+STAhgSFi92MS97bmFtZT0qLyov",
+            "ZmVlZHMvKn3aQQRuYW1lEocBCglMaXN0RmVlZHMSJy5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuTGlzdEZlZWRzUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5MaXN0RmVlZHNSZXNwb25zZSIngtPkkwIYEhYvdjEve3BhcmVudD0q",
+            "Lyp9L2ZlZWRz2kEGcGFyZW50EoIBCgpVcGRhdGVGZWVkEiguZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLlVwZGF0ZUZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLkZlZWQiLYLT5JMCIDIbL3YxL3tmZWVkLm5hbWU9Ki8qL2Zl",
+            "ZWRzLyp9OgEq2kEEZmVlZBJ1CgpEZWxldGVGZWVkEiguZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLkRlbGV0ZUZlZWRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5IiWC0+STAhgqFi92MS97bmFtZT0qLyovZmVlZHMvKn3aQQRuYW1l",
+            "Gk3KQRljbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKcAQoZY29tLmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVo6Z29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hc3Nl",
+            "dC92MTthc3NldKoCFUdvb2dsZS5DbG91ZC5Bc3NldC5WMcoCFUdvb2dsZVxD",
+            "bG91ZFxBc3NldFxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -80,9 +116,18 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsResponse), global::Google.Cloud.Asset.V1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.CreateFeedRequest), global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser, new[]{ "Parent", "FeedId", "Feed" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GetFeedRequest), global::Google.Cloud.Asset.V1.GetFeedRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ListFeedsRequest), global::Google.Cloud.Asset.V1.ListFeedsRequest.Parser, new[]{ "Parent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ListFeedsResponse), global::Google.Cloud.Asset.V1.ListFeedsResponse.Parser, new[]{ "Feeds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.UpdateFeedRequest), global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser, new[]{ "Feed", "UpdateMask" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.DeleteFeedRequest), global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputConfig), global::Google.Cloud.Asset.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination" }, new[]{ "Destination" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsDestination), global::Google.Cloud.Asset.V1.GcsDestination.Parser, new[]{ "Uri", "UriPrefix" }, new[]{ "ObjectUri" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.PubsubDestination), global::Google.Cloud.Asset.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.FeedOutputConfig), global::Google.Cloud.Asset.V1.FeedOutputConfig.Parser, new[]{ "PubsubDestination" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Feed), global::Google.Cloud.Asset.V1.Feed.Parser, new[]{ "Name", "AssetNames", "AssetTypes", "ContentType", "FeedOutputConfig" }, null, null, null)
           }));
     }
     #endregion
@@ -945,6 +990,936 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
+  /// Create asset feed request.
+  /// </summary>
+  public sealed partial class CreateFeedRequest : pb::IMessage<CreateFeedRequest> {
+    private static readonly pb::MessageParser<CreateFeedRequest> _parser = new pb::MessageParser<CreateFeedRequest>(() => new CreateFeedRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateFeedRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateFeedRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateFeedRequest(CreateFeedRequest other) : this() {
+      parent_ = other.parent_;
+      feedId_ = other.feedId_;
+      feed_ = other.feed_ != null ? other.feed_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateFeedRequest Clone() {
+      return new CreateFeedRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the project/folder/organization where this feed
+    /// should be created in. It can only be an organization number (such as
+    /// "organizations/123"), a folder number (such as "folders/123"), a project ID
+    /// (such as "projects/my-project-id")", or a project number (such as
+    /// "projects/12345").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "feed_id" field.</summary>
+    public const int FeedIdFieldNumber = 2;
+    private string feedId_ = "";
+    /// <summary>
+    /// Required. This is the client-assigned asset feed identifier and it needs to
+    /// be unique under a specific parent project/folder/organization.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FeedId {
+      get { return feedId_; }
+      set {
+        feedId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "feed" field.</summary>
+    public const int FeedFieldNumber = 3;
+    private global::Google.Cloud.Asset.V1.Feed feed_;
+    /// <summary>
+    /// Required. The feed details. The field `name` must be empty and it will be generated
+    /// in the format of:
+    /// projects/project_number/feeds/feed_id
+    /// folders/folder_number/feeds/feed_id
+    /// organizations/organization_number/feeds/feed_id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.Feed Feed {
+      get { return feed_; }
+      set {
+        feed_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateFeedRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateFeedRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (FeedId != other.FeedId) return false;
+      if (!object.Equals(Feed, other.Feed)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (FeedId.Length != 0) hash ^= FeedId.GetHashCode();
+      if (feed_ != null) hash ^= Feed.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (FeedId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FeedId);
+      }
+      if (feed_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Feed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (FeedId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedId);
+      }
+      if (feed_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Feed);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateFeedRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.FeedId.Length != 0) {
+        FeedId = other.FeedId;
+      }
+      if (other.feed_ != null) {
+        if (feed_ == null) {
+          Feed = new global::Google.Cloud.Asset.V1.Feed();
+        }
+        Feed.MergeFrom(other.Feed);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            FeedId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (feed_ == null) {
+              Feed = new global::Google.Cloud.Asset.V1.Feed();
+            }
+            input.ReadMessage(Feed);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Get asset feed request.
+  /// </summary>
+  public sealed partial class GetFeedRequest : pb::IMessage<GetFeedRequest> {
+    private static readonly pb::MessageParser<GetFeedRequest> _parser = new pb::MessageParser<GetFeedRequest>(() => new GetFeedRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetFeedRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetFeedRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetFeedRequest(GetFeedRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetFeedRequest Clone() {
+      return new GetFeedRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the Feed and it must be in the format of:
+    /// projects/project_number/feeds/feed_id
+    /// folders/folder_number/feeds/feed_id
+    /// organizations/organization_number/feeds/feed_id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetFeedRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetFeedRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetFeedRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// List asset feeds request.
+  /// </summary>
+  public sealed partial class ListFeedsRequest : pb::IMessage<ListFeedsRequest> {
+    private static readonly pb::MessageParser<ListFeedsRequest> _parser = new pb::MessageParser<ListFeedsRequest>(() => new ListFeedsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListFeedsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListFeedsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListFeedsRequest(ListFeedsRequest other) : this() {
+      parent_ = other.parent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListFeedsRequest Clone() {
+      return new ListFeedsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent project/folder/organization whose feeds are to be
+    /// listed. It can only be using project/folder/organization number (such as
+    /// "folders/12345")", or a project ID (such as "projects/my-project-id").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListFeedsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListFeedsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListFeedsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ListFeedsResponse : pb::IMessage<ListFeedsResponse> {
+    private static readonly pb::MessageParser<ListFeedsResponse> _parser = new pb::MessageParser<ListFeedsResponse>(() => new ListFeedsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListFeedsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListFeedsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListFeedsResponse(ListFeedsResponse other) : this() {
+      feeds_ = other.feeds_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListFeedsResponse Clone() {
+      return new ListFeedsResponse(this);
+    }
+
+    /// <summary>Field number for the "feeds" field.</summary>
+    public const int FeedsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.Feed> _repeated_feeds_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Asset.V1.Feed.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.Feed> feeds_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.Feed>();
+    /// <summary>
+    /// A list of feeds.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.Feed> Feeds {
+      get { return feeds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListFeedsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListFeedsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!feeds_.Equals(other.feeds_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= feeds_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      feeds_.WriteTo(output, _repeated_feeds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += feeds_.CalculateSize(_repeated_feeds_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListFeedsResponse other) {
+      if (other == null) {
+        return;
+      }
+      feeds_.Add(other.feeds_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            feeds_.AddEntriesFrom(input, _repeated_feeds_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Update asset feed request.
+  /// </summary>
+  public sealed partial class UpdateFeedRequest : pb::IMessage<UpdateFeedRequest> {
+    private static readonly pb::MessageParser<UpdateFeedRequest> _parser = new pb::MessageParser<UpdateFeedRequest>(() => new UpdateFeedRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateFeedRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateFeedRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateFeedRequest(UpdateFeedRequest other) : this() {
+      feed_ = other.feed_ != null ? other.feed_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateFeedRequest Clone() {
+      return new UpdateFeedRequest(this);
+    }
+
+    /// <summary>Field number for the "feed" field.</summary>
+    public const int FeedFieldNumber = 1;
+    private global::Google.Cloud.Asset.V1.Feed feed_;
+    /// <summary>
+    /// Required. The new values of feed details. It must match an existing feed and the
+    /// field `name` must be in the format of:
+    /// projects/project_number/feeds/feed_id or
+    /// folders/folder_number/feeds/feed_id or
+    /// organizations/organization_number/feeds/feed_id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.Feed Feed {
+      get { return feed_; }
+      set {
+        feed_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Required. Only updates the `feed` fields indicated by this mask.
+    /// The field mask must not be empty, and it must not contain fields that
+    /// are immutable or only set by the server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateFeedRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateFeedRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Feed, other.Feed)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (feed_ != null) hash ^= Feed.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (feed_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Feed);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (feed_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Feed);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateFeedRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.feed_ != null) {
+        if (feed_ == null) {
+          Feed = new global::Google.Cloud.Asset.V1.Feed();
+        }
+        Feed.MergeFrom(other.Feed);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (feed_ == null) {
+              Feed = new global::Google.Cloud.Asset.V1.Feed();
+            }
+            input.ReadMessage(Feed);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DeleteFeedRequest : pb::IMessage<DeleteFeedRequest> {
+    private static readonly pb::MessageParser<DeleteFeedRequest> _parser = new pb::MessageParser<DeleteFeedRequest>(() => new DeleteFeedRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteFeedRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteFeedRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteFeedRequest(DeleteFeedRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteFeedRequest Clone() {
+      return new DeleteFeedRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the feed and it must be in the format of:
+    /// projects/project_number/feeds/feed_id
+    /// folders/folder_number/feeds/feed_id
+    /// organizations/organization_number/feeds/feed_id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteFeedRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteFeedRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteFeedRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Output configuration for export assets destination.
   /// </summary>
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig> {
@@ -955,7 +1930,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1171,7 +2146,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1380,7 +2355,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1566,6 +2541,587 @@ namespace Google.Cloud.Asset.V1 {
           }
           case 24: {
             Force = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A Cloud Pubsub destination.
+  /// </summary>
+  public sealed partial class PubsubDestination : pb::IMessage<PubsubDestination> {
+    private static readonly pb::MessageParser<PubsubDestination> _parser = new pb::MessageParser<PubsubDestination>(() => new PubsubDestination());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PubsubDestination> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PubsubDestination() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PubsubDestination(PubsubDestination other) : this() {
+      topic_ = other.topic_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PubsubDestination Clone() {
+      return new PubsubDestination(this);
+    }
+
+    /// <summary>Field number for the "topic" field.</summary>
+    public const int TopicFieldNumber = 1;
+    private string topic_ = "";
+    /// <summary>
+    /// The name of the Cloud Pub/Sub topic to publish to.
+    /// For example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Topic {
+      get { return topic_; }
+      set {
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PubsubDestination);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PubsubDestination other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Topic != other.Topic) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Topic.Length != 0) hash ^= Topic.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Topic.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Topic);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Topic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PubsubDestination other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Topic.Length != 0) {
+        Topic = other.Topic;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Topic = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Output configuration for asset feed destination.
+  /// </summary>
+  public sealed partial class FeedOutputConfig : pb::IMessage<FeedOutputConfig> {
+    private static readonly pb::MessageParser<FeedOutputConfig> _parser = new pb::MessageParser<FeedOutputConfig>(() => new FeedOutputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FeedOutputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeedOutputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeedOutputConfig(FeedOutputConfig other) : this() {
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.PubsubDestination:
+          PubsubDestination = other.PubsubDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeedOutputConfig Clone() {
+      return new FeedOutputConfig(this);
+    }
+
+    /// <summary>Field number for the "pubsub_destination" field.</summary>
+    public const int PubsubDestinationFieldNumber = 1;
+    /// <summary>
+    /// Destination on Cloud Pubsub.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.PubsubDestination PubsubDestination {
+      get { return destinationCase_ == DestinationOneofCase.PubsubDestination ? (global::Google.Cloud.Asset.V1.PubsubDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.PubsubDestination;
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      PubsubDestination = 1,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FeedOutputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FeedOutputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PubsubDestination, other.PubsubDestination)) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.PubsubDestination) hash ^= PubsubDestination.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (destinationCase_ == DestinationOneofCase.PubsubDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PubsubDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.PubsubDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PubsubDestination);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FeedOutputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.PubsubDestination:
+          if (PubsubDestination == null) {
+            PubsubDestination = new global::Google.Cloud.Asset.V1.PubsubDestination();
+          }
+          PubsubDestination.MergeFrom(other.PubsubDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Asset.V1.PubsubDestination subBuilder = new global::Google.Cloud.Asset.V1.PubsubDestination();
+            if (destinationCase_ == DestinationOneofCase.PubsubDestination) {
+              subBuilder.MergeFrom(PubsubDestination);
+            }
+            input.ReadMessage(subBuilder);
+            PubsubDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// An asset feed used to export asset updates to a destinations.
+  /// An asset feed filter controls what updates are exported.
+  /// The asset feed must be created within a project, organization, or
+  /// folder. Supported destinations are:
+  /// Cloud Pub/Sub topics.
+  /// </summary>
+  public sealed partial class Feed : pb::IMessage<Feed> {
+    private static readonly pb::MessageParser<Feed> _parser = new pb::MessageParser<Feed>(() => new Feed());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Feed> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Feed() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Feed(Feed other) : this() {
+      name_ = other.name_;
+      assetNames_ = other.assetNames_.Clone();
+      assetTypes_ = other.assetTypes_.Clone();
+      contentType_ = other.contentType_;
+      feedOutputConfig_ = other.feedOutputConfig_ != null ? other.feedOutputConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Feed Clone() {
+      return new Feed(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The format will be
+    /// projects/{project_number}/feeds/{client-assigned_feed_identifier} or
+    /// folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
+    /// organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
+    ///
+    /// The client-assigned feed identifier must be unique within the parent
+    /// project/folder/organization.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "asset_names" field.</summary>
+    public const int AssetNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_assetNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> assetNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A list of the full names of the assets to receive updates. You must specify
+    /// either or both of asset_names and asset_types. Only asset updates matching
+    /// specified asset_names and asset_types are exported to the feed. For
+    /// example:
+    /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
+    /// See [Resource
+    /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+    /// for more info.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AssetNames {
+      get { return assetNames_; }
+    }
+
+    /// <summary>Field number for the "asset_types" field.</summary>
+    public const int AssetTypesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_assetTypes_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A list of types of the assets to receive updates. You must specify either
+    /// or both of asset_names and asset_types. Only asset updates matching
+    /// specified asset_names and asset_types are exported to the feed.
+    /// For example:
+    /// "compute.googleapis.com/Disk" See [Introduction to Cloud Asset
+    /// Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
+    /// for all supported asset types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AssetTypes {
+      get { return assetTypes_; }
+    }
+
+    /// <summary>Field number for the "content_type" field.</summary>
+    public const int ContentTypeFieldNumber = 4;
+    private global::Google.Cloud.Asset.V1.ContentType contentType_ = 0;
+    /// <summary>
+    /// Asset content type. If not specified, no content but the asset name and
+    /// type will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.ContentType ContentType {
+      get { return contentType_; }
+      set {
+        contentType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "feed_output_config" field.</summary>
+    public const int FeedOutputConfigFieldNumber = 5;
+    private global::Google.Cloud.Asset.V1.FeedOutputConfig feedOutputConfig_;
+    /// <summary>
+    /// Required. Feed output configuration defining where the asset updates are
+    /// published to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.FeedOutputConfig FeedOutputConfig {
+      get { return feedOutputConfig_; }
+      set {
+        feedOutputConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Feed);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Feed other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!assetNames_.Equals(other.assetNames_)) return false;
+      if(!assetTypes_.Equals(other.assetTypes_)) return false;
+      if (ContentType != other.ContentType) return false;
+      if (!object.Equals(FeedOutputConfig, other.FeedOutputConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= assetNames_.GetHashCode();
+      hash ^= assetTypes_.GetHashCode();
+      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (feedOutputConfig_ != null) hash ^= FeedOutputConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      assetNames_.WriteTo(output, _repeated_assetNames_codec);
+      assetTypes_.WriteTo(output, _repeated_assetTypes_codec);
+      if (ContentType != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ContentType);
+      }
+      if (feedOutputConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FeedOutputConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += assetNames_.CalculateSize(_repeated_assetNames_codec);
+      size += assetTypes_.CalculateSize(_repeated_assetTypes_codec);
+      if (ContentType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
+      }
+      if (feedOutputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FeedOutputConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Feed other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      assetNames_.Add(other.assetNames_);
+      assetTypes_.Add(other.assetTypes_);
+      if (other.ContentType != 0) {
+        ContentType = other.ContentType;
+      }
+      if (other.feedOutputConfig_ != null) {
+        if (feedOutputConfig_ == null) {
+          FeedOutputConfig = new global::Google.Cloud.Asset.V1.FeedOutputConfig();
+        }
+        FeedOutputConfig.MergeFrom(other.FeedOutputConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            assetNames_.AddEntriesFrom(input, _repeated_assetNames_codec);
+            break;
+          }
+          case 26: {
+            assetTypes_.AddEntriesFrom(input, _repeated_assetTypes_codec);
+            break;
+          }
+          case 32: {
+            ContentType = (global::Google.Cloud.Asset.V1.ContentType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (feedOutputConfig_ == null) {
+              FeedOutputConfig = new global::Google.Cloud.Asset.V1.FeedOutputConfig();
+            }
+            input.ReadMessage(FeedOutputConfig);
             break;
           }
         }

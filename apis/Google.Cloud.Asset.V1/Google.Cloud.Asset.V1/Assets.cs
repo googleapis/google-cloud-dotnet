@@ -25,33 +25,34 @@ namespace Google.Cloud.Asset.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXNzZXQvdjEvYXNzZXRzLnByb3RvEhVnb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aGmdvb2dsZS9pYW0vdjEvcG9s",
-            "aWN5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGhxnb29nbGUv",
-            "cHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIoABCg1UZW1wb3JhbEFzc2V0EjEKBndpbmRvdxgBIAEoCzIh",
+            "Y2xvdWQuYXNzZXQudjEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aGmdv",
+            "b2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55",
+            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
+            "b25zLnByb3RvIoABCg1UZW1wb3JhbEFzc2V0EjEKBndpbmRvdxgBIAEoCzIh",
             "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5UaW1lV2luZG93Eg8KB2RlbGV0ZWQY",
             "AiABKAgSKwoFYXNzZXQYAyABKAsyHC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
             "QXNzZXQiagoKVGltZVdpbmRvdxIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAisAEKBUFzc2V0EgwKBG5hbWUYASAB",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiwwEKBUFzc2V0EgwKBG5hbWUYASAB",
             "KAkSEgoKYXNzZXRfdHlwZRgCIAEoCRIxCghyZXNvdXJjZRgDIAEoCzIfLmdv",
             "b2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZRIpCgppYW1fcG9saWN5GAQg",
-            "ASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3k6J+pBJAofY2xvdWRhc3NldC5n",
-            "b29nbGVhcGlzLmNvbS9Bc3NldBIBKiKgAQoIUmVzb3VyY2USDwoHdmVyc2lv",
-            "bhgBIAEoCRIeChZkaXNjb3ZlcnlfZG9jdW1lbnRfdXJpGAIgASgJEhYKDmRp",
-            "c2NvdmVyeV9uYW1lGAMgASgJEhQKDHJlc291cmNlX3VybBgEIAEoCRIOCgZw",
-            "YXJlbnQYBSABKAkSJQoEZGF0YRgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJ1Y3RCmAEKGWNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFCCkFzc2V0UHJv",
-            "dG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9hc3NldC92MTthc3NldPgBAaoCFUdvb2dsZS5DbG91ZC5Bc3NldC5W",
-            "McoCFUdvb2dsZVxDbG91ZFxBc3NldFxWMWIGcHJvdG8z"));
+            "ASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kSEQoJYW5jZXN0b3JzGAogAygJ",
+            "OifqQSQKH2Nsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20vQXNzZXQSASoioAEK",
+            "CFJlc291cmNlEg8KB3ZlcnNpb24YASABKAkSHgoWZGlzY292ZXJ5X2RvY3Vt",
+            "ZW50X3VyaRgCIAEoCRIWCg5kaXNjb3ZlcnlfbmFtZRgDIAEoCRIUCgxyZXNv",
+            "dXJjZV91cmwYBCABKAkSDgoGcGFyZW50GAUgASgJEiUKBGRhdGEYBiABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QpgBChljb20uZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxQgpBc3NldFByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXNzZXQvdjE7YXNzZXT4AQGqAhVH",
+            "b29nbGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TemporalAsset), global::Google.Cloud.Asset.V1.TemporalAsset.Parser, new[]{ "Window", "Deleted", "Asset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TimeWindow), global::Google.Cloud.Asset.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "Name", "AssetType", "Resource", "IamPolicy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "Name", "AssetType", "Resource", "IamPolicy", "Ancestors" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Resource), global::Google.Cloud.Asset.V1.Resource.Parser, new[]{ "Version", "DiscoveryDocumentUri", "DiscoveryName", "ResourceUrl", "Parent", "Data" }, null, null, null)
           }));
     }
@@ -481,6 +482,7 @@ namespace Google.Cloud.Asset.V1 {
       assetType_ = other.assetType_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       iamPolicy_ = other.iamPolicy_ != null ? other.iamPolicy_.Clone() : null;
+      ancestors_ = other.ancestors_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -550,6 +552,24 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "ancestors" field.</summary>
+    public const int AncestorsFieldNumber = 10;
+    private static readonly pb::FieldCodec<string> _repeated_ancestors_codec
+        = pb::FieldCodec.ForString(82);
+    private readonly pbc::RepeatedField<string> ancestors_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+    /// represented as a list of relative resource names. Ancestry path starts with
+    /// the closest CRM ancestor and ends at root. If the asset is a CRM
+    /// project/folder/organization, this starts from the asset itself.
+    ///
+    /// Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Ancestors {
+      get { return ancestors_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Asset);
@@ -567,6 +587,7 @@ namespace Google.Cloud.Asset.V1 {
       if (AssetType != other.AssetType) return false;
       if (!object.Equals(Resource, other.Resource)) return false;
       if (!object.Equals(IamPolicy, other.IamPolicy)) return false;
+      if(!ancestors_.Equals(other.ancestors_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -577,6 +598,7 @@ namespace Google.Cloud.Asset.V1 {
       if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (iamPolicy_ != null) hash ^= IamPolicy.GetHashCode();
+      hash ^= ancestors_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -606,6 +628,7 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(IamPolicy);
       }
+      ancestors_.WriteTo(output, _repeated_ancestors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -626,6 +649,7 @@ namespace Google.Cloud.Asset.V1 {
       if (iamPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IamPolicy);
       }
+      size += ancestors_.CalculateSize(_repeated_ancestors_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -655,6 +679,7 @@ namespace Google.Cloud.Asset.V1 {
         }
         IamPolicy.MergeFrom(other.IamPolicy);
       }
+      ancestors_.Add(other.ancestors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -686,6 +711,10 @@ namespace Google.Cloud.Asset.V1 {
               IamPolicy = new global::Google.Cloud.Iam.V1.Policy();
             }
             input.ReadMessage(IamPolicy);
+            break;
+          }
+          case 82: {
+            ancestors_.AddEntriesFrom(input, _repeated_ancestors_codec);
             break;
           }
         }
