@@ -43,9 +43,13 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
                 tags = new HashSet<string>(repo.Tags.Select(tag => tag.FriendlyName));
             }
 
-            var changes = apis.Where(api => !api.Version.EndsWith("00") && !tags.Contains($"{api.Id}-{api.Version}"));
+            List<ApiMetadata> apisToCheck = args.Length == 0
+                ? apis.Where(api => !api.Version.EndsWith("00") && !tags.Contains($"{api.Id}-{api.Version}")).ToList()
+                // Note: this basically validates the command line arguments. The failure isn't great when the API isn't found,
+                // but that could be worse.
+                : args.Select(arg => apis.Single(api => api.Id == arg)).ToList();
 
-            foreach (var api in changes)
+            foreach (var api in apisToCheck)
             {
                 if (IgnoredApis.Contains(api.Id))
                 {
