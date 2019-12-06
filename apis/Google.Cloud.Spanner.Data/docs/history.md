@@ -1,6 +1,6 @@
 # Version history
 
-# 2.0.0, 2019-06-03
+# Version 2.0.0, released 2019-06-03
 
 New features:
 
@@ -27,6 +27,6 @@ Breaking changes:
 - The libraries no longer target netstandard1.5; only netstandard2.0
   and net45 are supported
 
-# 1.0.0, 2017-12-05
+# Version 1.0.0, released 2017-12-05
 
 Initial release.

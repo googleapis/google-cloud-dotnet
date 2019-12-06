@@ -1,13 +1,13 @@
 # Version history
 
-# 2.4.0-beta01, 2019-04-08
+# Version 2.4.0-beta01, released 2019-04-08
 
 New features since 2.3.0:
 
 - Beta support for V4 signing URLs
 - Add `IncludeTrailingDelimiter` to `ListObjectsOptions`
 
-# 2.3.0, 2019-02-11
+# Version 2.3.0, released 2019-02-11
 
 New features since 2.2.0:
 
@@ -16,7 +16,7 @@ New features since 2.2.0:
 - Deprecate URL signing without an expiry; the default is now in 2038 (the end of "Unix time in seconds")
 - Allow an Origin header to be specified in UploadObjectOptions for CORS scenarios
 
-# 2.2.0, 2018-08-28
+# Version 2.2.0, released 2018-08-28
 
 New features since 2.1.0:
 
@@ -26,7 +26,7 @@ New features since 2.1.0:
 - Support for [customer-managed encryption
   keys](https://cloud.google.com/storage/docs/encryption/customer-managed-keys)
 
-# 2.1.0, 2018-01-02
+# Version 2.1.0, released 2018-01-02
 
 New features:
 
@@ -40,7 +40,7 @@ New features:
   guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis)
   for more information)
 
-# 2.0.0, 2017-06-22
+# Version 2.0.0, released 2017-06-22
 
 Major version bump due to updating Google.Api.Gax.Rest dependency to
 2.0.0, but this is unlikely to actually be a breaking change for
@@ -50,6 +50,6 @@ New features:
 
 - Support for fetching and setting bucket IAM policies
 
-# 1.0.0, 2017-03-30
+# Version 1.0.0, released 2017-03-30
 
 Initial release.
