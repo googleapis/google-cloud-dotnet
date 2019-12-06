@@ -52,7 +52,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Scheduler.V1",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.RenameRetryCode", "Google.Cloud.Tools.RenameRetryCode\Google.Cloud.Tools.RenameRetryCode.csproj", "{C94F2585-CC16-47D4-A7B4-ACB599057925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.CheckVersionCompatibility", "Google.Cloud.Tools.CheckVersionCompatibility\Google.Cloud.Tools.CheckVersionCompatibility.csproj", "{416C9A5E-B09B-42BC-A6B3-886308671E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.CheckVersionCompatibility", "Google.Cloud.Tools.CheckVersionCompatibility\Google.Cloud.Tools.CheckVersionCompatibility.csproj", "{416C9A5E-B09B-42BC-A6B3-886308671E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.UpdateReleaseNotes", "Google.Cloud.Tools.UpdateReleaseNotes\Google.Cloud.Tools.UpdateReleaseNotes.csproj", "{E66FC669-1F15-4158-8980-4958565F84EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -376,6 +378,18 @@ Global
 		{416C9A5E-B09B-42BC-A6B3-886308671E61}.Release|x64.Build.0 = Release|Any CPU
 		{416C9A5E-B09B-42BC-A6B3-886308671E61}.Release|x86.ActiveCfg = Release|Any CPU
 		{416C9A5E-B09B-42BC-A6B3-886308671E61}.Release|x86.Build.0 = Release|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Debug|x64.Build.0 = Debug|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Debug|x86.Build.0 = Debug|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Release|x64.ActiveCfg = Release|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Release|x64.Build.0 = Release|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{E66FC669-1F15-4158-8980-4958565F84EE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
