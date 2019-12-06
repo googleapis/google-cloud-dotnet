@@ -144,5 +144,311 @@ namespace Google.Cloud.Asset.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateFeedAsync</summary>
+        public async Task CreateFeedAsync()
+        {
+            // Snippet: CreateFeedAsync(string,CallSettings)
+            // Additional: CreateFeedAsync(string,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            Feed response = await assetServiceClient.CreateFeedAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeed</summary>
+        public void CreateFeed()
+        {
+            // Snippet: CreateFeed(string,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            Feed response = assetServiceClient.CreateFeed(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeedAsync</summary>
+        public async Task CreateFeedAsync_RequestObject()
+        {
+            // Snippet: CreateFeedAsync(CreateFeedRequest,CallSettings)
+            // Additional: CreateFeedAsync(CreateFeedRequest,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateFeedRequest request = new CreateFeedRequest
+            {
+                Parent = "",
+                FeedId = "",
+                Feed = new Feed(),
+            };
+            // Make the request
+            Feed response = await assetServiceClient.CreateFeedAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeed</summary>
+        public void CreateFeed_RequestObject()
+        {
+            // Snippet: CreateFeed(CreateFeedRequest,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            CreateFeedRequest request = new CreateFeedRequest
+            {
+                Parent = "",
+                FeedId = "",
+                Feed = new Feed(),
+            };
+            // Make the request
+            Feed response = assetServiceClient.CreateFeed(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedAsync</summary>
+        public async Task GetFeedAsync()
+        {
+            // Snippet: GetFeedAsync(string,CallSettings)
+            // Additional: GetFeedAsync(string,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            // Make the request
+            Feed response = await assetServiceClient.GetFeedAsync(formattedName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeed</summary>
+        public void GetFeed()
+        {
+            // Snippet: GetFeed(string,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            // Make the request
+            Feed response = assetServiceClient.GetFeed(formattedName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedAsync</summary>
+        public async Task GetFeedAsync_RequestObject()
+        {
+            // Snippet: GetFeedAsync(GetFeedRequest,CallSettings)
+            // Additional: GetFeedAsync(GetFeedRequest,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFeedRequest request = new GetFeedRequest
+            {
+                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+            };
+            // Make the request
+            Feed response = await assetServiceClient.GetFeedAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeed</summary>
+        public void GetFeed_RequestObject()
+        {
+            // Snippet: GetFeed(GetFeedRequest,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            GetFeedRequest request = new GetFeedRequest
+            {
+                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+            };
+            // Make the request
+            Feed response = assetServiceClient.GetFeed(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedsAsync</summary>
+        public async Task ListFeedsAsync()
+        {
+            // Snippet: ListFeedsAsync(string,CallSettings)
+            // Additional: ListFeedsAsync(string,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListFeedsResponse response = await assetServiceClient.ListFeedsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeeds</summary>
+        public void ListFeeds()
+        {
+            // Snippet: ListFeeds(string,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListFeedsResponse response = assetServiceClient.ListFeeds(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedsAsync</summary>
+        public async Task ListFeedsAsync_RequestObject()
+        {
+            // Snippet: ListFeedsAsync(ListFeedsRequest,CallSettings)
+            // Additional: ListFeedsAsync(ListFeedsRequest,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFeedsRequest request = new ListFeedsRequest
+            {
+                Parent = "",
+            };
+            // Make the request
+            ListFeedsResponse response = await assetServiceClient.ListFeedsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeeds</summary>
+        public void ListFeeds_RequestObject()
+        {
+            // Snippet: ListFeeds(ListFeedsRequest,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            ListFeedsRequest request = new ListFeedsRequest
+            {
+                Parent = "",
+            };
+            // Make the request
+            ListFeedsResponse response = assetServiceClient.ListFeeds(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeedAsync</summary>
+        public async Task UpdateFeedAsync()
+        {
+            // Snippet: UpdateFeedAsync(Feed,CallSettings)
+            // Additional: UpdateFeedAsync(Feed,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Feed feed = new Feed();
+            // Make the request
+            Feed response = await assetServiceClient.UpdateFeedAsync(feed);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeed</summary>
+        public void UpdateFeed()
+        {
+            // Snippet: UpdateFeed(Feed,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            Feed feed = new Feed();
+            // Make the request
+            Feed response = assetServiceClient.UpdateFeed(feed);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeedAsync</summary>
+        public async Task UpdateFeedAsync_RequestObject()
+        {
+            // Snippet: UpdateFeedAsync(UpdateFeedRequest,CallSettings)
+            // Additional: UpdateFeedAsync(UpdateFeedRequest,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFeedRequest request = new UpdateFeedRequest
+            {
+                Feed = new Feed(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Feed response = await assetServiceClient.UpdateFeedAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeed</summary>
+        public void UpdateFeed_RequestObject()
+        {
+            // Snippet: UpdateFeed(UpdateFeedRequest,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateFeedRequest request = new UpdateFeedRequest
+            {
+                Feed = new Feed(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Feed response = assetServiceClient.UpdateFeed(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedAsync</summary>
+        public async Task DeleteFeedAsync()
+        {
+            // Snippet: DeleteFeedAsync(string,CallSettings)
+            // Additional: DeleteFeedAsync(string,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            // Make the request
+            await assetServiceClient.DeleteFeedAsync(formattedName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeed</summary>
+        public void DeleteFeed()
+        {
+            // Snippet: DeleteFeed(string,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            // Make the request
+            assetServiceClient.DeleteFeed(formattedName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedAsync</summary>
+        public async Task DeleteFeedAsync_RequestObject()
+        {
+            // Snippet: DeleteFeedAsync(DeleteFeedRequest,CallSettings)
+            // Additional: DeleteFeedAsync(DeleteFeedRequest,CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFeedRequest request = new DeleteFeedRequest
+            {
+                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+            };
+            // Make the request
+            await assetServiceClient.DeleteFeedAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeed</summary>
+        public void DeleteFeed_RequestObject()
+        {
+            // Snippet: DeleteFeed(DeleteFeedRequest,CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteFeedRequest request = new DeleteFeedRequest
+            {
+                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+            };
+            // Make the request
+            assetServiceClient.DeleteFeed(request);
+            // End snippet
+        }
+
     }
 }
