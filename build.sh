@@ -112,7 +112,7 @@ fi
 log_build_action "(Start) build.sh"
 log_build_action "Building analyzers"
 
-dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
+dotnet publish -nologo -clp:NoSummary -v quiet -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
 
 # Then build the requested APIs, working out the test projects as we go.
 > AllTests.txt
@@ -127,7 +127,7 @@ do
   fi
 
   log_build_action "Building $apidir"
-  dotnet build -c Release $apidir
+  dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
 
   # On Linux, we don't have desktop .NET, so any projects which only
   # support desktop .NET are going to be broken. Just don't add them.
@@ -153,7 +153,7 @@ then
       echo "(Running with coverage)"
       (cd "$testdir"; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode)
     else
-      dotnet test -c Release --no-build $testproject
+      dotnet test -nologo -c Release --no-build $testproject
     fi
   done < AllTests.txt
 fi

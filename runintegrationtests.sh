@@ -106,7 +106,7 @@ do
   then
     (cd $testdir; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
   else
-    (cd $testdir; dotnet test -c Release --no-build || echo "$testdir" >> $FAILURE_TEMP_FILE)
+    (cd $testdir; dotnet test -nologo -c Release --no-build || echo "$testdir" >> $FAILURE_TEMP_FILE)
   fi
 done
 log_build_action "(End) Integration tests"
