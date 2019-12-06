@@ -67,8 +67,8 @@ mkdir output
 mkdir output/assembled
 
 # Build the tools once, then we can run them without restoring/building each time
-dotnet build ../tools/Google.Cloud.Tools.GenerateDocfxSources -v quiet
-dotnet build ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -v quiet
+dotnet build ../tools/Google.Cloud.Tools.GenerateDocfxSources -v quiet -nologo -clp:NoSummary
+dotnet build ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -v quiet -nologo -clp:NoSummary
 
 apis=$@
 if [ -z "$apis" ]
