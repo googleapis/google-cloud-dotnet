@@ -184,6 +184,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -215,6 +216,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -246,6 +248,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -275,6 +278,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -304,6 +308,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -335,6 +340,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -366,6 +372,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -395,6 +402,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -489,6 +497,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -518,6 +527,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -547,6 +557,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -575,6 +586,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -681,6 +693,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferRun(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -706,6 +719,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -731,6 +745,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferRun(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -755,6 +770,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
+                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
             };
             mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
