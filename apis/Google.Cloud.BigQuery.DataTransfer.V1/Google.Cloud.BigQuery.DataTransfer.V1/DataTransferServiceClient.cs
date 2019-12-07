@@ -753,7 +753,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -776,7 +777,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -796,7 +798,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -819,7 +822,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -842,7 +846,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -862,7 +867,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -944,7 +950,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
-        /// Must be in the form: `projects/{project_id}`
+        /// Must be in the form: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -979,7 +986,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
-        /// Must be in the form: `projects/{project_id}`
+        /// Must be in the form: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1014,7 +1022,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
-        /// Must be in the form: `projects/{project_id}`
+        /// Must be in the form: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1049,7 +1058,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
-        /// Must be in the form: `projects/{project_id}`
+        /// Must be in the form: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1123,9 +1133,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format projects/{project_id}/locations/{location_id}
-        /// If specified location and location of the destination bigquery dataset
-        /// do not match - the request will fail.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Required. Data transfer configuration to create.
@@ -1152,9 +1162,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format projects/{project_id}/locations/{location_id}
-        /// If specified location and location of the destination bigquery dataset
-        /// do not match - the request will fail.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Required. Data transfer configuration to create.
@@ -1178,9 +1188,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format projects/{project_id}/locations/{location_id}
-        /// If specified location and location of the destination bigquery dataset
-        /// do not match - the request will fail.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Required. Data transfer configuration to create.
@@ -1207,9 +1217,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format projects/{project_id}/locations/{location_id}
-        /// If specified location and location of the destination bigquery dataset
-        /// do not match - the request will fail.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Required. Data transfer configuration to create.
@@ -1236,9 +1246,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format projects/{project_id}/locations/{location_id}
-        /// If specified location and location of the destination bigquery dataset
-        /// do not match - the request will fail.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Required. Data transfer configuration to create.
@@ -1262,9 +1272,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format projects/{project_id}/locations/{location_id}
-        /// If specified location and location of the destination bigquery dataset
-        /// do not match - the request will fail.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Required. Data transfer configuration to create.
@@ -1485,7 +1495,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1508,7 +1519,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1528,7 +1540,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1548,7 +1561,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1571,7 +1585,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1591,7 +1606,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1666,7 +1682,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1688,7 +1705,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1707,7 +1725,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1729,7 +1748,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1751,7 +1771,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1770,7 +1791,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1848,7 +1870,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
-        /// should be returned: `projects/{project_id}`.
+        /// should be returned: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1882,7 +1905,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
-        /// should be returned: `projects/{project_id}`.
+        /// should be returned: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1916,7 +1940,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
-        /// should be returned: `projects/{project_id}`.
+        /// should be returned: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1950,7 +1975,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
-        /// should be returned: `projects/{project_id}`.
+        /// should be returned: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2026,7 +2052,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer configuration name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
         /// Required. Start time of the range of transfer runs. For example,
@@ -2064,7 +2091,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer configuration name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
         /// Required. Start time of the range of transfer runs. For example,
@@ -2099,7 +2127,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer configuration name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
         /// Required. Start time of the range of transfer runs. For example,
@@ -2137,7 +2166,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer configuration name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
         /// Required. Start time of the range of transfer runs. For example,
@@ -2175,7 +2205,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer configuration name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
         /// Required. Start time of the range of transfer runs. For example,
@@ -2210,7 +2241,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer configuration name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="startTime">
         /// Required. Start time of the range of transfer runs. For example,
@@ -2312,7 +2344,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2334,7 +2367,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2353,7 +2387,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2375,7 +2410,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2397,7 +2433,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2416,7 +2453,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2494,7 +2532,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2516,7 +2555,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2535,7 +2575,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2554,7 +2595,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2576,7 +2618,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2595,7 +2638,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
-        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2668,7 +2712,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2703,7 +2748,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2738,7 +2784,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2773,7 +2820,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
         /// Format of transfer configuration resource name is:
-        /// `projects/{project_id}/transferConfigs/{config_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2845,7 +2893,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2879,7 +2928,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2913,7 +2963,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2947,7 +2998,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
-        /// `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+        /// `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or
+        /// `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -3024,7 +3076,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3051,7 +3104,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -3075,7 +3129,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3102,7 +3157,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3129,7 +3185,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -3153,7 +3210,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
-        /// `projects/{project_id}/dataSources/{data_source_id}`
+        /// `projects/{project_id}/dataSources/{data_source_id}` or
+        /// `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

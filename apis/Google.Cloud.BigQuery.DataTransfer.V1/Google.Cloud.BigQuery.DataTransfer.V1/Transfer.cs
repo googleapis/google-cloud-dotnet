@@ -29,62 +29,75 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             "LnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
             "YXBpL3Jlc291cmNlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnBy",
             "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUv",
-            "cnBjL3N0YXR1cy5wcm90byKQAQoPU2NoZWR1bGVPcHRpb25zEh8KF2Rpc2Fi",
-            "bGVfYXV0b19zY2hlZHVsaW5nGAMgASgIEi4KCnN0YXJ0X3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKTBQoOVHJhbnNmZXJDb25m",
-            "aWcSDAoEbmFtZRgBIAEoCRIgChZkZXN0aW5hdGlvbl9kYXRhc2V0X2lkGAIg",
-            "ASgJSAASFAoMZGlzcGxheV9uYW1lGAMgASgJEhYKDmRhdGFfc291cmNlX2lk",
-            "GAUgASgJEicKBnBhcmFtcxgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
-            "Y3QSEAoIc2NoZWR1bGUYByABKAkSUAoQc2NoZWR1bGVfb3B0aW9ucxgYIAEo",
-            "CzI2Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIudjEuU2No",
-            "ZWR1bGVPcHRpb25zEiAKGGRhdGFfcmVmcmVzaF93aW5kb3dfZGF5cxgMIAEo",
-            "BRIQCghkaXNhYmxlZBgNIAEoCBI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI2Cg1uZXh0X3J1bl90aW1l",
-            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKBXN0",
-            "YXRlGAogASgOMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zl",
-            "ci52MS5UcmFuc2ZlclN0YXRlQgPgQQMSDwoHdXNlcl9pZBgLIAEoAxIbCg5k",
-            "YXRhc2V0X3JlZ2lvbhgOIAEoCUID4EEDOm3qQWoKMmJpZ3F1ZXJ5ZGF0YXRy",
-            "YW5zZmVyLmdvb2dsZWFwaXMuY29tL1RyYW5zZmVyQ29uZmlnEjRwcm9qZWN0",
-            "cy97cHJvamVjdH0vdHJhbnNmZXJDb25maWdzL3t0cmFuc2Zlcl9jb25maWd9",
-            "Qg0KC2Rlc3RpbmF0aW9uIsAFCgtUcmFuc2ZlclJ1bhIMCgRuYW1lGAEgASgJ",
-            "EjEKDXNjaGVkdWxlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEiwKCHJ1bl90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIoCgxlcnJvcl9zdGF0dXMYFSABKAsyEi5nb29nbGUucnBjLlN0",
-            "YXR1cxIzCgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAYgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiwKBnBhcmFtcxgJIAEoCzIX",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAxIlChZkZXN0aW5hdGlvbl9k",
-            "YXRhc2V0X2lkGAIgASgJQgPgQQNIABIbCg5kYXRhX3NvdXJjZV9pZBgHIAEo",
-            "CUID4EEDEkMKBXN0YXRlGAggASgOMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LmRhdGF0cmFuc2Zlci52MS5UcmFuc2ZlclN0YXRlEg8KB3VzZXJfaWQYCyAB",
-            "KAMSFQoIc2NoZWR1bGUYDCABKAlCA+BBAzqLAepBhwEKL2JpZ3F1ZXJ5ZGF0",
-            "YXRyYW5zZmVyLmdvb2dsZWFwaXMuY29tL1RyYW5zZmVyUnVuElRwcm9qZWN0",
+            "cnBjL3N0YXR1cy5wcm90byIwChBFbWFpbFByZWZlcmVuY2VzEhwKFGVuYWJs",
+            "ZV9mYWlsdXJlX2VtYWlsGAEgASgIIpABCg9TY2hlZHVsZU9wdGlvbnMSHwoX",
+            "ZGlzYWJsZV9hdXRvX3NjaGVkdWxpbmcYAyABKAgSLgoKc3RhcnRfdGltZRgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wItcGCg5UcmFuc2Zl",
+            "ckNvbmZpZxIMCgRuYW1lGAEgASgJEiAKFmRlc3RpbmF0aW9uX2RhdGFzZXRf",
+            "aWQYAiABKAlIABIUCgxkaXNwbGF5X25hbWUYAyABKAkSFgoOZGF0YV9zb3Vy",
+            "Y2VfaWQYBSABKAkSJwoGcGFyYW1zGAkgASgLMhcuZ29vZ2xlLnByb3RvYnVm",
+            "LlN0cnVjdBIQCghzY2hlZHVsZRgHIAEoCRJQChBzY2hlZHVsZV9vcHRpb25z",
+            "GBggASgLMjYuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52",
+            "MS5TY2hlZHVsZU9wdGlvbnMSIAoYZGF0YV9yZWZyZXNoX3dpbmRvd19kYXlz",
+            "GAwgASgFEhAKCGRpc2FibGVkGA0gASgIEjQKC3VwZGF0ZV90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjYKDW5leHRfcnVu",
+            "X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "SAoFc3RhdGUYCiABKA4yNC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXRy",
+            "YW5zZmVyLnYxLlRyYW5zZmVyU3RhdGVCA+BBAxIPCgd1c2VyX2lkGAsgASgD",
+            "EhsKDmRhdGFzZXRfcmVnaW9uGA4gASgJQgPgQQMSIQoZbm90aWZpY2F0aW9u",
+            "X3B1YnN1Yl90b3BpYxgPIAEoCRJSChFlbWFpbF9wcmVmZXJlbmNlcxgSIAEo",
+            "CzI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIudjEuRW1h",
+            "aWxQcmVmZXJlbmNlczq5AepBtQEKMmJpZ3F1ZXJ5ZGF0YXRyYW5zZmVyLmdv",
+            "b2dsZWFwaXMuY29tL1RyYW5zZmVyQ29uZmlnEjRwcm9qZWN0cy97cHJvamVj",
+            "dH0vdHJhbnNmZXJDb25maWdzL3t0cmFuc2Zlcl9jb25maWd9Eklwcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdHJhbnNmZXJDb25m",
-            "aWdzL3t0cmFuc2Zlcl9jb25maWd9L3J1bnMve3J1bn1CDQoLZGVzdGluYXRp",
-            "b24iigIKD1RyYW5zZmVyTWVzc2FnZRIwCgxtZXNzYWdlX3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElgKCHNldmVyaXR5GAIgASgO",
-            "MkYuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFu",
-            "c2Zlck1lc3NhZ2UuTWVzc2FnZVNldmVyaXR5EhQKDG1lc3NhZ2VfdGV4dBgD",
-            "IAEoCSJVCg9NZXNzYWdlU2V2ZXJpdHkSIAocTUVTU0FHRV9TRVZFUklUWV9V",
-            "TlNQRUNJRklFRBAAEggKBElORk8QARILCgdXQVJOSU5HEAISCQoFRVJST1IQ",
-            "AypLCgxUcmFuc2ZlclR5cGUSHQoZVFJBTlNGRVJfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEgkKBUJBVENIEAESDQoJU1RSRUFNSU5HEAIaAhgBKnMKDVRyYW5zZmVy",
-            "U3RhdGUSHgoaVFJBTlNGRVJfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5E",
-            "SU5HEAISCwoHUlVOTklORxADEg0KCVNVQ0NFRURFRBAEEgoKBkZBSUxFRBAF",
-            "Eg0KCUNBTkNFTExFRBAGQucBCiljb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LmRhdGF0cmFuc2Zlci52MUINVHJhbnNmZXJQcm90b1ABWlFnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L2Rh",
-            "dGF0cmFuc2Zlci92MTtkYXRhdHJhbnNmZXKiAgVHQ0JEVKoCJUdvb2dsZS5D",
-            "bG91ZC5CaWdRdWVyeS5EYXRhVHJhbnNmZXIuVjHKAiVHb29nbGVcQ2xvdWRc",
-            "QmlnUXVlcnlcRGF0YVRyYW5zZmVyXFYxYgZwcm90bzM="));
+            "aWdzL3t0cmFuc2Zlcl9jb25maWd9Qg0KC2Rlc3RpbmF0aW9uIvoGCgtUcmFu",
+            "c2ZlclJ1bhIMCgRuYW1lGAEgASgJEjEKDXNjaGVkdWxlX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCHJ1bl90aW1lGAogASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIoCgxlcnJvcl9zdGF0dXMY",
+            "FSABKAsyEi5nb29nbGUucnBjLlN0YXR1cxIzCgpzdGFydF90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
+            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3Vw",
+            "ZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEiwKBnBhcmFtcxgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
+            "A+BBAxIlChZkZXN0aW5hdGlvbl9kYXRhc2V0X2lkGAIgASgJQgPgQQNIABIb",
+            "Cg5kYXRhX3NvdXJjZV9pZBgHIAEoCUID4EEDEkMKBXN0YXRlGAggASgOMjQu",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFuc2Zl",
+            "clN0YXRlEg8KB3VzZXJfaWQYCyABKAMSFQoIc2NoZWR1bGUYDCABKAlCA+BB",
+            "AxImChlub3RpZmljYXRpb25fcHVic3ViX3RvcGljGBcgASgJQgPgQQMSVwoR",
+            "ZW1haWxfcHJlZmVyZW5jZXMYGSABKAsyNy5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuZGF0YXRyYW5zZmVyLnYxLkVtYWlsUHJlZmVyZW5jZXNCA+BBAzrEAepB",
+            "wAEKJ2JpZ3F1ZXJ5ZGF0YXRyYW5zZmVyLmdvb2dsZWFwaXMuY29tL1J1bhI/",
+            "cHJvamVjdHMve3Byb2plY3R9L3RyYW5zZmVyQ29uZmlncy97dHJhbnNmZXJf",
+            "Y29uZmlnfS9ydW5zL3tydW59ElRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vdHJhbnNmZXJDb25maWdzL3t0cmFuc2Zlcl9jb25m",
+            "aWd9L3J1bnMve3J1bn1CDQoLZGVzdGluYXRpb24iigIKD1RyYW5zZmVyTWVz",
+            "c2FnZRIwCgxtZXNzYWdlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wElgKCHNldmVyaXR5GAIgASgOMkYuZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFuc2Zlck1lc3NhZ2UuTWVzc2Fn",
+            "ZVNldmVyaXR5EhQKDG1lc3NhZ2VfdGV4dBgDIAEoCSJVCg9NZXNzYWdlU2V2",
+            "ZXJpdHkSIAocTUVTU0FHRV9TRVZFUklUWV9VTlNQRUNJRklFRBAAEggKBElO",
+            "Rk8QARILCgdXQVJOSU5HEAISCQoFRVJST1IQAypLCgxUcmFuc2ZlclR5cGUS",
+            "HQoZVFJBTlNGRVJfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUJBVENIEAESDQoJ",
+            "U1RSRUFNSU5HEAIaAhgBKnMKDVRyYW5zZmVyU3RhdGUSHgoaVFJBTlNGRVJf",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAISCwoHUlVOTklORxAD",
+            "Eg0KCVNVQ0NFRURFRBAEEgoKBkZBSUxFRBAFEg0KCUNBTkNFTExFRBAGQs8C",
+            "Ciljb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MUIN",
+            "VHJhbnNmZXJQcm90b1ABWlFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L2RhdGF0cmFuc2Zlci92MTtkYXRh",
+            "dHJhbnNmZXKiAgVHQ0JEVKoCJUdvb2dsZS5DbG91ZC5CaWdRdWVyeS5EYXRh",
+            "VHJhbnNmZXIuVjHKAiVHb29nbGVcQ2xvdWRcQmlnUXVlcnlcRGF0YVRyYW5z",
+            "ZmVyXFYx6kFlCiZiaWdxdWVyeWRhdGF0cmFuc2Zlci5nb29nbGUuY29tL1Bh",
+            "cmVudBIScHJvamVjdHMve3Byb2plY3R9Eidwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences), global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences.Parser, new[]{ "EnableFailureEmail" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions.Parser, new[]{ "DisableAutoScheduling", "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion", "NotificationPubsubTopic", "EmailPreferences" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule", "NotificationPubsubTopic", "EmailPreferences" }, new[]{ "Destination" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Parser, new[]{ "MessageTime", "Severity", "MessageText" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) }, null)
           }));
     }
@@ -146,6 +159,142 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
   #region Messages
   /// <summary>
+  /// Represents preferences for sending email notifications for transfer run
+  /// events.
+  /// </summary>
+  public sealed partial class EmailPreferences : pb::IMessage<EmailPreferences> {
+    private static readonly pb::MessageParser<EmailPreferences> _parser = new pb::MessageParser<EmailPreferences>(() => new EmailPreferences());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<EmailPreferences> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EmailPreferences() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EmailPreferences(EmailPreferences other) : this() {
+      enableFailureEmail_ = other.enableFailureEmail_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EmailPreferences Clone() {
+      return new EmailPreferences(this);
+    }
+
+    /// <summary>Field number for the "enable_failure_email" field.</summary>
+    public const int EnableFailureEmailFieldNumber = 1;
+    private bool enableFailureEmail_;
+    /// <summary>
+    /// If true, email notifications will be sent on transfer run failures.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableFailureEmail {
+      get { return enableFailureEmail_; }
+      set {
+        enableFailureEmail_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as EmailPreferences);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(EmailPreferences other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnableFailureEmail != other.EnableFailureEmail) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnableFailureEmail != false) hash ^= EnableFailureEmail.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (EnableFailureEmail != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableFailureEmail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnableFailureEmail != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(EmailPreferences other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnableFailureEmail != false) {
+        EnableFailureEmail = other.EnableFailureEmail;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EnableFailureEmail = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Options customizing the data transfer schedule.
   /// </summary>
   public sealed partial class ScheduleOptions : pb::IMessage<ScheduleOptions> {
@@ -156,7 +305,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -380,7 +529,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -410,6 +559,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       state_ = other.state_;
       userId_ = other.userId_;
       datasetRegion_ = other.datasetRegion_;
+      notificationPubsubTopic_ = other.notificationPubsubTopic_;
+      emailPreferences_ = other.emailPreferences_ != null ? other.emailPreferences_.Clone() : null;
       switch (other.DestinationCase) {
         case DestinationOneofCase.DestinationDatasetId:
           DestinationDatasetId = other.DestinationDatasetId;
@@ -643,6 +794,36 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+    /// <summary>Field number for the "notification_pubsub_topic" field.</summary>
+    public const int NotificationPubsubTopicFieldNumber = 15;
+    private string notificationPubsubTopic_ = "";
+    /// <summary>
+    /// Pub/Sub topic where notifications will be sent after transfer runs
+    /// associated with this transfer config finish.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NotificationPubsubTopic {
+      get { return notificationPubsubTopic_; }
+      set {
+        notificationPubsubTopic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "email_preferences" field.</summary>
+    public const int EmailPreferencesFieldNumber = 18;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences emailPreferences_;
+    /// <summary>
+    /// Email notifications will be sent according to these preferences
+    /// to the email address of the user who owns this transfer config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences EmailPreferences {
+      get { return emailPreferences_; }
+      set {
+        emailPreferences_ = value;
+      }
+    }
+
     private object destination_;
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
@@ -688,6 +869,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != other.State) return false;
       if (UserId != other.UserId) return false;
       if (DatasetRegion != other.DatasetRegion) return false;
+      if (NotificationPubsubTopic != other.NotificationPubsubTopic) return false;
+      if (!object.Equals(EmailPreferences, other.EmailPreferences)) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -709,6 +892,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != 0) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (DatasetRegion.Length != 0) hash ^= DatasetRegion.GetHashCode();
+      if (NotificationPubsubTopic.Length != 0) hash ^= NotificationPubsubTopic.GetHashCode();
+      if (emailPreferences_ != null) hash ^= EmailPreferences.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -775,6 +960,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(114);
         output.WriteString(DatasetRegion);
       }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(NotificationPubsubTopic);
+      }
+      if (emailPreferences_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(EmailPreferences);
+      }
       if (scheduleOptions_ != null) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(ScheduleOptions);
@@ -828,6 +1021,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (DatasetRegion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetRegion);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NotificationPubsubTopic);
+      }
+      if (emailPreferences_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EmailPreferences);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -890,6 +1089,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.DatasetRegion.Length != 0) {
         DatasetRegion = other.DatasetRegion;
+      }
+      if (other.NotificationPubsubTopic.Length != 0) {
+        NotificationPubsubTopic = other.NotificationPubsubTopic;
+      }
+      if (other.emailPreferences_ != null) {
+        if (emailPreferences_ == null) {
+          EmailPreferences = new global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences();
+        }
+        EmailPreferences.MergeFrom(other.EmailPreferences);
       }
       switch (other.DestinationCase) {
         case DestinationOneofCase.DestinationDatasetId:
@@ -969,6 +1177,17 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             DatasetRegion = input.ReadString();
             break;
           }
+          case 122: {
+            NotificationPubsubTopic = input.ReadString();
+            break;
+          }
+          case 146: {
+            if (emailPreferences_ == null) {
+              EmailPreferences = new global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences();
+            }
+            input.ReadMessage(EmailPreferences);
+            break;
+          }
           case 194: {
             if (scheduleOptions_ == null) {
               ScheduleOptions = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
@@ -993,7 +1212,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1022,6 +1241,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       state_ = other.state_;
       userId_ = other.userId_;
       schedule_ = other.schedule_;
+      notificationPubsubTopic_ = other.notificationPubsubTopic_;
+      emailPreferences_ = other.emailPreferences_ != null ? other.emailPreferences_.Clone() : null;
       switch (other.DestinationCase) {
         case DestinationOneofCase.DestinationDatasetId:
           DestinationDatasetId = other.DestinationDatasetId;
@@ -1228,6 +1449,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+    /// <summary>Field number for the "notification_pubsub_topic" field.</summary>
+    public const int NotificationPubsubTopicFieldNumber = 23;
+    private string notificationPubsubTopic_ = "";
+    /// <summary>
+    /// Output only. Pub/Sub topic where a notification will be sent after this
+    /// transfer run finishes
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NotificationPubsubTopic {
+      get { return notificationPubsubTopic_; }
+      set {
+        notificationPubsubTopic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "email_preferences" field.</summary>
+    public const int EmailPreferencesFieldNumber = 25;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences emailPreferences_;
+    /// <summary>
+    /// Output only. Email notifications will be sent according to these
+    /// preferences to the email address of the user who owns the transfer config
+    /// this run was derived from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences EmailPreferences {
+      get { return emailPreferences_; }
+      set {
+        emailPreferences_ = value;
+      }
+    }
+
     private object destination_;
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
@@ -1272,6 +1524,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != other.State) return false;
       if (UserId != other.UserId) return false;
       if (Schedule != other.Schedule) return false;
+      if (NotificationPubsubTopic != other.NotificationPubsubTopic) return false;
+      if (!object.Equals(EmailPreferences, other.EmailPreferences)) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1292,6 +1546,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != 0) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
+      if (NotificationPubsubTopic.Length != 0) hash ^= NotificationPubsubTopic.GetHashCode();
+      if (emailPreferences_ != null) hash ^= EmailPreferences.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1358,6 +1614,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(ErrorStatus);
       }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(186, 1);
+        output.WriteString(NotificationPubsubTopic);
+      }
+      if (emailPreferences_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(EmailPreferences);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1404,6 +1668,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (Schedule.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Schedule);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(NotificationPubsubTopic);
+      }
+      if (emailPreferences_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EmailPreferences);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1472,6 +1742,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.Schedule.Length != 0) {
         Schedule = other.Schedule;
+      }
+      if (other.NotificationPubsubTopic.Length != 0) {
+        NotificationPubsubTopic = other.NotificationPubsubTopic;
+      }
+      if (other.emailPreferences_ != null) {
+        if (emailPreferences_ == null) {
+          EmailPreferences = new global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences();
+        }
+        EmailPreferences.MergeFrom(other.EmailPreferences);
       }
       switch (other.DestinationCase) {
         case DestinationOneofCase.DestinationDatasetId:
@@ -1563,6 +1842,17 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             input.ReadMessage(ErrorStatus);
             break;
           }
+          case 186: {
+            NotificationPubsubTopic = input.ReadString();
+            break;
+          }
+          case 202: {
+            if (emailPreferences_ == null) {
+              EmailPreferences = new global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences();
+            }
+            input.ReadMessage(EmailPreferences);
+            break;
+          }
         }
       }
     }
@@ -1580,7 +1870,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
