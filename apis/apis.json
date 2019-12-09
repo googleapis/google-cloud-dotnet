@@ -202,14 +202,14 @@
 
   {
     "id": "Google.Cloud.DevTools.Common",
-    "version": "1.1.0-beta00",
+    "version": "1.1.0",
     "type": "other",
     "targetFrameworks": "netstandard1.3;netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.1;net452",
     "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
     "tags": [ "Tools" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0"
+      "Google.Api.CommonProtos": "1.7.0"
     }
   },
 
