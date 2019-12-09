@@ -150,8 +150,8 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
             var newMetadata = VersionCompat.Program.LoadFile(sourceAssembly);
 
             var diff = VersionCompat.Program.Check(oldMetadata, newMetadata, null);
-            diff.PrintDifferences(Level.Major);
-            diff.PrintDifferences(Level.Minor);
+            diff.PrintDifferences(Level.Major, FormatDetail.Brief);
+            diff.PrintDifferences(Level.Minor, FormatDetail.Brief);
             Console.WriteLine($"Diff level: {diff.Level}");
             Console.WriteLine();
             return diff.Level;

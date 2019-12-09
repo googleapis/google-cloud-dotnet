@@ -61,7 +61,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
         protected Diff Test(Level expectedLevel, Cause expectedCause, string diffContains = null, [CallerMemberName] string callerMemberName = null)
         {
             var result = RunTest(callerMemberName);
-            var diffs = diffContains == null ? result.All : result.All.Where(x => x.Msg.Contains(diffContains)).ToImmutableList();
+            var diffs = diffContains == null ? result.All : result.All.Where(x => x.ToString(FormatDetail.Full).Contains(diffContains)).ToImmutableList();
             Assert.Single(diffs);
             Assert.Equal(expectedLevel, diffs[0].Level);
             Assert.Equal(expectedCause, diffs[0].Cause);

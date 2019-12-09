@@ -178,6 +178,11 @@ namespace Google.Cloud.Tools.VersionCompat
                 "`Major` - only show major breakage; `Minor` - show only minor non-breaking changes; " +
                 "`None` - don't output any details of changes.")]
             public OutputBehavior OutputBehavior { get; private set; }
+
+            [Option("format-detail", Required = false, Default = FormatDetail.Full,
+                HelpText = "Format detail: `Full` - emit full, precise diffs; " +
+                "`Brief` - emit brief diffs (e.g. omit namespaces). ")]
+            public FormatDetail FormatDetail { get; private set; }
         }
 
         private static int Main(string[] args)
@@ -217,11 +222,11 @@ namespace Google.Cloud.Tools.VersionCompat
 
             if ((options.OutputBehavior & OutputBehavior.Major) != 0)
             {
-                diffs.PrintDifferences(Level.Major);
+                diffs.PrintDifferences(Level.Major, options.FormatDetail);
             }
             if ((options.OutputBehavior & OutputBehavior.Minor) != 0)
             {
-                diffs.PrintDifferences(Level.Minor);
+                diffs.PrintDifferences(Level.Minor, options.FormatDetail);
             }
 
             int exitCode;

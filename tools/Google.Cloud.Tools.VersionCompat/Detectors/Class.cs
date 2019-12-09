@@ -13,10 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
-using Google.Cloud.Tools.VersionCompat.Utils;
 using Mono.Cecil;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.Detectors
@@ -54,7 +52,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             var toSealed = !_o.IsSealedOnly() && oDerivable && _n.IsSealedOnly();
             if (toStatic || toAbstract || toSealed)
             {
-                yield return Diff.Major(Cause.ClassModifierChanged, $"Class '{_o.Show()}' modifiers changed from '{_o.ShowSas()}' to '{_n.ShowSas()}'");
+                yield return Diff.Major(Cause.ClassModifierChanged, $"Class '{_o}' modifiers changed from '{_o.ShowSas()}' to '{_n.ShowSas()}'");
             }
             var nInstantiable = _n.InstanceCtors().Any(ctor => ctor.IsPublic);
             var _nDerivable = _n.InstanceCtors().Any(ctor => ctor.IsExported());
@@ -63,7 +61,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             var fromSealed = _o.IsSealedOnly() && !_n.IsSealedOnly() && _nDerivable;
             if (fromStatic || fromAbstract || fromSealed)
             {
-                yield return Diff.Minor(Cause.ClassModifierChanged, $"Class '{_n.Show()} modifiers changed from '{_o.ShowSas()}' to '{_n.ShowSas()}'");
+                yield return Diff.Minor(Cause.ClassModifierChanged, $"Class '{_n} modifiers changed from '{_o.ShowSas()}' to '{_n.ShowSas()}'");
             }
         }
 
@@ -77,11 +75,11 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             {
                 if (_o.BaseType.IsObject() && !_n.IsAbstractOnly())
                 {
-                    yield return Diff.Minor(Cause.ClassBaseClassChanged, $"Class '{_n.Show()} changed base-class from '{_o.BaseType.Show()}' to '{_n.BaseType.Show()}'");
+                    yield return Diff.Minor(Cause.ClassBaseClassChanged, $"Class '{_n}' changed base-class from '{_o.BaseType}' to '{_n.BaseType}'");
                 }
                 else
                 {
-                    yield return Diff.Major(Cause.ClassBaseClassChanged, $"Class '{_n.Show()} changed base-class from '{_o.BaseType.Show()}' to '{_n.BaseType.Show()}'");
+                    yield return Diff.Major(Cause.ClassBaseClassChanged, $"Class '{_n}' changed base-class from '{_o.BaseType}' to '{_n.BaseType}'");
                 }
             }
         }
