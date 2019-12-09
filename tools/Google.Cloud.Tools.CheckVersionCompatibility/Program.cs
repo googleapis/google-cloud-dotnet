@@ -61,6 +61,7 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
                 var previousVersions = tags
                     .Where(tag => tag.StartsWith(prefix))
                     .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
+                    .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
                     .Select(v => new StructuredVersion(v))
                     .OrderBy(v => v)
                     .ToList();
