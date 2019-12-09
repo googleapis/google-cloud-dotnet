@@ -1,0 +1,9 @@
+# Version history
+
+# Version 1.1.0, released 2019-12-09
+
+- [Commit bf4d39c](https://github.com/googleapis/google-cloud-dotnet/commit/bf4d39c): Some settings are now obsolete, and will be removed in the next major version.
+
+# Version 1.0.0, released 2019-07-10
+
+Initial GA release.
