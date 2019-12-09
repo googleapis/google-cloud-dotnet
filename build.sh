@@ -31,7 +31,6 @@ nobuild=false
 while (( "$#" )); do
   if [[ "$1" == "--notests" ]]
   then 
-    echo "Not running tests..."
     runtests=false
   elif [[ "$1" == "--diff" ]]
   then
