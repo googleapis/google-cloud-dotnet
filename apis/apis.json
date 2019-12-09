@@ -901,12 +901,14 @@
     "protoPath": "google/cloud/tasks/v2",
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
-    "version": "1.1.0-beta02",
+    "version": "1.1.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Tasks API (v2), which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
     "dependencies": {
-      "Google.Cloud.Iam.V1": "project"
+      "Google.Api.Gax.Grpc": "2.10.0",
+      "Google.Cloud.Iam.V1": "1.3.0",
+      "Grpc.Core": "1.22.1"
     }
   },
 
