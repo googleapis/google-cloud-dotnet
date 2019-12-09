@@ -41,18 +41,18 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 .ToImmutableHashSet(SameTypeComparer.Instance);
             foreach (var added in nExportedInterfaces.Except(oExportedInterfaces))
             {
-                yield return Diff.Major(Cause.TypeImplementedInterfaceAdded, $"{_n.TypeType().Show()} '{_n.Show()}' implemented interface added '{added.Show()}'");
+                yield return Diff.Major(Cause.TypeImplementedInterfaceAdded, $"{_n.TypeType()} '{_n}' implemented interface added '{added}'");
             }
             foreach (var removed in oExportedInterfaces.Except(nExportedInterfaces))
             {
-                yield return Diff.Major(Cause.TypeImplementedInterfaceRemoved, $"{_n.TypeType().Show()} '{_n.Show()}' implemented interface removed '{removed.Show()}'");
+                yield return Diff.Major(Cause.TypeImplementedInterfaceRemoved, $"{_n.TypeType()} '{_n}' implemented interface removed '{removed}'");
             }
         }
 
         public IEnumerable<Diff> GenericConstraints() =>
-            GenericConstraints(isType: true, $"{_n.TypeType().Show()} '{_n.Show()}'", _o.GenericParameters, _n.GenericParameters);
+            GenericConstraints(isType: true, $"{_n.TypeType()} '{_n}'", _o.GenericParameters, _n.GenericParameters);
 
-        private IEnumerable<Diff> GenericConstraints(bool isType, string prefix,
+        private IEnumerable<Diff> GenericConstraints(bool isType, FormattableString prefix,
             IList<GenericParameter> oGenericParameters, IList<GenericParameter> nGenericParameters)
         {
             var (causeConstraint, causeVariance) = isType ?
@@ -66,27 +66,27 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     (!o.HasDefaultConstructorConstraint && n.HasDefaultConstructorConstraint) ||
                     !n.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsSubsetOf(o.Constraints))
                 {
-                    yield return Diff.Major(causeConstraint, $"{prefix} changed constraint on generic parameter '{n.Show()}'");
+                    yield return Diff.Major(causeConstraint, $"{prefix} changed constraint on generic parameter '{n}'");
                 }
                 if ((!n.HasReferenceTypeConstraint && o.HasReferenceTypeConstraint) ||
                     (!n.HasNotNullableValueTypeConstraint && o.HasNotNullableValueTypeConstraint) ||
                     (!n.HasDefaultConstructorConstraint && o.HasDefaultConstructorConstraint) ||
                     !o.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsSubsetOf(n.Constraints))
                 {
-                    yield return Diff.Minor(causeConstraint, $"{prefix} changed constraint on generic parameter '{n.Show()}'");
+                    yield return Diff.Minor(causeConstraint, $"{prefix} changed constraint on generic parameter '{n}'");
                 }
                 if ((o.IsCovariant && !n.IsCovariant) || (o.IsContravariant && !n.IsContravariant))
                 {
-                    yield return Diff.Major(causeVariance, $"{prefix} changed variance on generic parameter '{n.Show()}'");
+                    yield return Diff.Major(causeVariance, $"{prefix} changed variance on generic parameter '{n}'");
                 }
                 if ((!o.IsCovariant && n.IsCovariant) || (o.IsContravariant && !n.IsContravariant))
                 {
-                    yield return Diff.Minor(causeVariance, $"{prefix} changed variance on generic parameter '{n.Show()}'");
+                    yield return Diff.Minor(causeVariance, $"{prefix} changed variance on generic parameter '{n}'");
                 }
             }
         }
 
-        private IEnumerable<Diff> MethodModifiers(MethodDefinition o, MethodDefinition n, Cause cause, string prefix)
+        private IEnumerable<Diff> MethodModifiers(MethodDefinition o, MethodDefinition n, Cause cause, FormattableString prefix)
         {
             if ((o.IsVirtual && !n.IsVirtual) ||
                 (!o.IsAbstract && n.IsAbstract) ||
@@ -102,7 +102,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
         }
 
-        private IEnumerable<Diff> MethodAccessModifiers(MethodDefinition o, MethodDefinition n, Cause cause, string prefix)
+        private IEnumerable<Diff> MethodAccessModifiers(MethodDefinition o, MethodDefinition n, Cause cause, FormattableString prefix)
         {
             var oIsCallable = o != null && o.IsPublic;
             var oIsDerivable = o != null && o.IsExported();
@@ -118,9 +118,9 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
         }
 
-        public IEnumerable<Diff> Obsoleteness() => Obsoleteness(_o, _n, $"Class '{_o.Show()}'");
+        public IEnumerable<Diff> Obsoleteness() => Obsoleteness(_o, _n, $"Class '{_o}'");
 
-        private IEnumerable<Diff> Obsoleteness(ICustomAttributeProvider o, ICustomAttributeProvider n, string prefix)
+        private IEnumerable<Diff> Obsoleteness(ICustomAttributeProvider o, ICustomAttributeProvider n, FormattableString prefix)
         {
             var oObs = o.HasCustomAttributes ? o.CustomAttributes.FirstOrDefault(x => x.AttributeType.FullName == typeof(ObsoleteAttribute).FullName) : null;
             var oIsError = IsError(oObs);
@@ -173,7 +173,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             {
                 var inO = oMethods.TryGetValue(method, out var o);
                 var inN = nMethods.TryGetValue(method, out var n);
-                var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; {prefixType} '{o.Show()}'";
+                FormattableString prefix = $"{_o.TypeType()} '{_o}'; {prefixType} '{o}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
                     if (typeType == TypeType.Class || typeType == TypeType.Struct)
@@ -203,7 +203,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (!SameTypeComparer.Instance.Equals(o.ReturnType, n.ReturnType))
                     {
                         // Cannot occur for ctors.
-                        yield return Diff.Major(Cause.MethodReturnTypeChanged, $"{prefix} return type changed to '{n.ReturnType.Show()}'.");
+                        yield return Diff.Major(Cause.MethodReturnTypeChanged, $"{prefix} return type changed to '{n.ReturnType}'.");
                     }
                     foreach (var (oParam, nParam) in o.Parameters.Zip(n.Parameters))
                     {
@@ -242,7 +242,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     }
                     else if (inN && n.IsExported())
                     {
-                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>)Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(C(Cause.MethodMadeExported, Cause.CtorMadeExported), $"{prefix} made public.") :
                             diff(C(Cause.MethodAdded, Cause.CtorAdded), $"{prefix} added.");
@@ -266,7 +266,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             {
                 var inO = oProps.TryGetValue(prop, out var o);
                 var inN = nProps.TryGetValue(prop, out var n);
-                var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; property '{o.Show()}'";
+                FormattableString prefix = $"{_o.TypeType()} '{_o}'; property '{o}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
                     if (typeType == TypeType.Class || typeType == TypeType.Struct)
@@ -293,7 +293,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     }
                     if (!SameTypeComparer.Instance.Equals(o.PropertyType, n.PropertyType))
                     {
-                        yield return Diff.Major(Cause.PropertyTypeChanged, $"{prefix} return type changed to '{n.PropertyType.Show()}'.");
+                        yield return Diff.Major(Cause.PropertyTypeChanged, $"{prefix} return type changed to '{n.PropertyType}'.");
                     }
                     // No need to check parameter names, or in/out/ref.
                     foreach (var diff in Obsoleteness(o, n, prefix))
@@ -312,7 +312,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     }
                     else if (inN && n.IsExported())
                     {
-                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>)Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(Cause.PropertyMadeExported, $"{prefix} made public.") :
                             diff(Cause.PropertyAdded, $"{prefix} added.");

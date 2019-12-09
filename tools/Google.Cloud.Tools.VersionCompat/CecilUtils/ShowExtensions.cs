@@ -21,20 +21,20 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 {
     internal static class ShowExtensions
     {
-        private static string Show(this IList<GenericParameter> ps) =>
-            ps.Any() ? $"<{string.Join(", ", ps.Select(Show))}>" : "";
+        private static string Show(this IList<GenericParameter> ps, FormatDetail detail) =>
+            ps.Any() ? $"<{string.Join(", ", ps.Select(p => p.Show(detail)))}>" : "";
 
-        private static string ShowGenArgs(this IList<TypeReference> types) =>
-            types.Any() ? $"<{string.Join(", ", types.Select(Show))}>" : "";
+        private static string ShowGenArgs(this IList<TypeReference> types, FormatDetail detail) =>
+            types.Any() ? $"<{string.Join(", ", types.Select(type => type.Show(detail)))}>" : "";
 
-        private static string Show(this IList<ParameterDefinition> ps, char open, char close, bool openCloseIfEmpty) =>
-            ps.Any() ? $"{open}{string.Join(", ", ps.Select(Show))}{close}" : openCloseIfEmpty ? $"{open}{close}" : "";
+        private static string Show(this IList<ParameterDefinition> ps, char open, char close, bool openCloseIfEmpty, FormatDetail detail) =>
+            ps.Any() ? $"{open}{string.Join(", ", ps.Select(p => p.Show(detail)))}{close}" : openCloseIfEmpty ? $"{open}{close}" : "";
 
-        private static string Show(this ParameterDefinition p)
+        private static string Show(this ParameterDefinition p, FormatDetail detail)
         {
             var sb = new StringBuilder();
             sb.Append(p.IsIn && p.IsOut ? "ref " : p.IsIn ? "in " : p.IsOut ? "out " : "");
-            sb.Append(Show(p.ParameterType));
+            sb.Append(Show(p.ParameterType, detail));
             sb.Append(' ');
             sb.Append(p.Name);
             if (p.IsOptional)
@@ -45,19 +45,21 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             return sb.ToString();
         }
 
-        public static string Show(this TypeReference type)
+        public static string Show(this TypeReference type, FormatDetail detail)
         {
             if (type.FullName == "System.Void")
             {
                 return "void";
             }
-            var prefix = type.DeclaringType != null ? Show(type.DeclaringType) : type.Namespace;
+            var prefix = type.DeclaringType != null
+                ? Show(type.DeclaringType, detail) + "."
+                : detail == FormatDetail.Full ? type.Namespace : "";
             switch (type)
             {
                 case GenericInstanceType generic:
-                    return $"{prefix}.{type.Name.Split('`')[0]}{generic.GenericArguments.ShowGenArgs()}";
+                    return $"{prefix}{type.Name.Split('`')[0]}{generic.GenericArguments.ShowGenArgs(detail)}";
                 default:
-                    return $"{prefix}.{type.Name}";
+                    return $"{prefix}{type.Name}";
             }
         }
 
@@ -67,11 +69,11 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             type.IsSealedOnly() ? "sealed" :
             "<none>";
 
-        public static string Show(this MethodDefinition method) =>
-            $"{method.ReturnType.Show()} {method.Name}{method.GenericParameters.Show()}{method.Parameters.Show('(', ')', true)}";
+        public static string Show(this MethodDefinition method, FormatDetail detail) =>
+            $"{method.ReturnType.Show(detail)} {method.Name}{method.GenericParameters.Show(detail)}{method.Parameters.Show('(', ')', true, detail)}";
 
-        public static string Show(this PropertyDefinition property) =>
-            $"{property.PropertyType.Show()} {property.Name}{property.Parameters.Show('[', ']', false)} " +
+        public static string Show(this PropertyDefinition property, FormatDetail detail) =>
+            $"{property.PropertyType.Show(detail)} {property.Name}{property.Parameters.Show('[', ']', false, detail)} " +
             $"{{ {(property.GetMethod != null ? "get; " : "")}{(property.SetMethod != null ? "set; " : "")}}}";
 
         public static string Show(this TypeType typeType) => typeType.ToString();

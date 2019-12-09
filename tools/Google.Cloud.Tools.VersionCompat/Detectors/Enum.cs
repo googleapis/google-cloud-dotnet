@@ -29,7 +29,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             if (!SameTypeComparer.Instance.Equals(oUnderlyingType, nUnderlyingType))
             {
                 yield return Diff.Major(Cause.EnumUnderlyingTypeChanged,
-                    $"Enum '{o.Show()}' underlying type changed from '{o.GetElementType().Show()}' to '{n.GetElementType().Show()}'.");
+                    $"Enum '{o}' underlying type changed from '{o.GetElementType()}' to '{n.GetElementType()}'.");
             }
             var oEntries = o.Fields.Where(x => x.IsStatic).ToImmutableHashSet(SameFieldComparer.Instance);
             var nEntries = n.Fields.Where(x => x.IsStatic).ToImmutableHashSet(SameFieldComparer.Instance);
@@ -39,16 +39,16 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 var inN = nEntries.TryGetValue(entry, out var nEntry);
                 if (inO && !inN)
                 {
-                    yield return Diff.Major(Cause.EnumValueRemoved, $"Enum '{o.Show()}' entry '{entry.Name}' removed.");
+                    yield return Diff.Major(Cause.EnumValueRemoved, $"Enum '{o}' entry '{entry.Name}' removed.");
                 }
                 else if (inN && !inO)
                 {
-                    yield return Diff.Minor(Cause.EnumValueAdded, $"Enum '{o.Show()}' entry '{entry.Name}' added.");
+                    yield return Diff.Minor(Cause.EnumValueAdded, $"Enum '{o}' entry '{entry.Name}' added.");
                 }
                 else if (!Equals(oEntry.Constant, nEntry.Constant))
                 {
                     yield return Diff.Major(Cause.EnumValueChanged,
-                        $"Enum '{o.Show()}' entry '{entry.Name} value changed from {oEntry.Constant} to {nEntry.Constant}.");
+                        $"Enum '{o}' entry '{entry.Name} value changed from {oEntry.Constant} to {nEntry.Constant}.");
                 }
             }
             // TODO: Obsoleteness

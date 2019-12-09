@@ -39,7 +39,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (oType != nType)
                     {
                         // Type of type changed.
-                        yield return Diff.Major(Cause.TypeTypeChanged, $"'{o.Show()}' changed type from {oType.Show()} to {nType.Show()}.");
+                        yield return Diff.Major(Cause.TypeTypeChanged, $"'{o}' changed type from {oType} to {nType}.");
                     }
                     else
                     {
@@ -70,14 +70,14 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (inO && o.IsExported())
                     {
                         yield return inN ?
-                            Diff.Major(Cause.TypeMadeNotExported, $"{oType.Show()} '{o.Show()}' made non-public.") :
-                            Diff.Major(Cause.TypeRemoved, $"{oType.Show()} '{o.Show()}' removed.");
+                            Diff.Major(Cause.TypeMadeNotExported, $"{oType} '{o}' made non-public.") :
+                            Diff.Major(Cause.TypeRemoved, $"{oType} '{o}' removed.");
                     }
                     else if (inN && n.IsExported())
                     {
                         yield return inO ?
-                            Diff.Minor(Cause.TypeMadeExported, $"{nType.Show()} '{n.Show()}' made public.") :
-                            Diff.Minor(Cause.TypeAdded, $"{nType.Show()} '{n.Show()}' added."); ;
+                            Diff.Minor(Cause.TypeMadeExported, $"{nType} '{n}' made public.") :
+                            Diff.Minor(Cause.TypeAdded, $"{nType} '{n}' added."); ;
                     }
                 }
             }

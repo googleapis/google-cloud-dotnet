@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.VersionCompat
         public IEnumerable<Diff> Minor => All.Where(x => x.Level == Level.Minor);
         public Level Level => Major.Any() ? Level.Major : Minor.Any() ? Level.Minor : Level.Identical;
 
-        public void PrintDifferences(Level level)
+        public void PrintDifferences(Level level, FormatDetail detail)
         {
             var diffs = All.Where(x => x.Level == level);
             if (!diffs.Any())
@@ -36,7 +36,7 @@ namespace Google.Cloud.Tools.VersionCompat
             Console.WriteLine($"{level} changes:");
             foreach (var diff in All.Where(x => x.Level == level))
             {
-                Console.WriteLine(diff);
+                Console.WriteLine(diff.ToString(detail));
             }
             Console.WriteLine();
         }
