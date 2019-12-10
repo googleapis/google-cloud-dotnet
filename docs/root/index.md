@@ -25,6 +25,7 @@ GA:
 - [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html)
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
+- [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html)
 - [Google.Cloud.Dialogflow.V2](Google.Cloud.Dialogflow.V2/index.html)
 - [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html)
   - The Google.Cloud.Dlp.V2Beta1 package has now been deprecated, and is unlisted on nuget.org.
@@ -63,14 +64,13 @@ GA:
   - Additionally, the following libraries are available for access to beta API functionality:
     - [Google.Cloud.Vision.V1P1Beta1](Google.Cloud.Vision.V1P1Beta1/index.html)
     - [Google.Cloud.Vision.V1P2Beta1](Google.Cloud.Vision.V1P2Beta1/index.html)
+- [Grafeas.V1](Grafeas.V1/index.html)
 
 Beta:
 
 - [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
-- [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
-- [Grafeas.V1](Grafeas.V1/index.html)
 - [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html)
 
 Alpha:
