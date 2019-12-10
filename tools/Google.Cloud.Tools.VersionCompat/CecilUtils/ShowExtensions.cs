@@ -53,7 +53,7 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             }
             var prefix = type.DeclaringType != null
                 ? Show(type.DeclaringType, detail) + "."
-                : detail == FormatDetail.Full ? type.Namespace : "";
+                : detail == FormatDetail.Full ? type.Namespace + "." : "";
             switch (type)
             {
                 case GenericInstanceType generic:
