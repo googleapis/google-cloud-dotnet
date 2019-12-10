@@ -36,6 +36,7 @@ GA:
 - Google Cloud Firestore:
   - [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html): High-level client library for Google Cloud Firestore (recommended)
   - [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html): Low-level access to Firestore API
+  - [Google.Cloud.Firestore.Admin.V1](Google.Cloud.Firestore.Admin.V1/index.html): Admin API
 - [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html)
 - [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)

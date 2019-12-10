@@ -31,9 +31,10 @@ The following libraries are available at a [GA](#versioning) quality level:
   * [V2 API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2/) (GA)
   * The Google.Cloud.Dlp.V2Beta1 package has now been deprecated, and is unlisted on nuget.org.
     Please update to Google.Cloud.Dlp.V2.
-* [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both GA:
+* [Google Cloud Firestore](https://cloud.google.com/firestore/): three packages are available, all GA:
   * [Google.Cloud.Firestore](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
   * [Google.Cloud.Firestore.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1/): Low-level access to Firestore API
+  * [Google.Cloud.Firestore.Admin.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.Admin.V1/): Admin API (e.g. for index management)
 * [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Kms.V1/) (GA)
 * [Google Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/) (GA)
   * Integration with Log4Net is provided via [Google.Cloud.Logging.Log4Net](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.Log4Net/) (GA)
