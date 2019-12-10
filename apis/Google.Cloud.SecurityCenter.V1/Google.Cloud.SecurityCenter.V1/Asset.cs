@@ -26,33 +26,35 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvYXNzZXQucHJvdG8S",
             "Hmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxozZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVy",
-            "L3YxL3NlY3VyaXR5X21hcmtzLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3Ry",
-            "dWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIs8F",
-            "CgVBc3NldBIMCgRuYW1lGAEgASgJEmIKGnNlY3VyaXR5X2NlbnRlcl9wcm9w",
-            "ZXJ0aWVzGAIgASgLMj4uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "LkFzc2V0LlNlY3VyaXR5Q2VudGVyUHJvcGVydGllcxJaChNyZXNvdXJjZV9w",
-            "cm9wZXJ0aWVzGAcgAygLMj0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYxLkFzc2V0LlJlc291cmNlUHJvcGVydGllc0VudHJ5EkUKDnNlY3VyaXR5",
-            "X21hcmtzGAggASgLMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "LlNlY3VyaXR5TWFya3MSLwoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAogASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJDCgppYW1fcG9saWN5GAsgASgLMi8u",
-            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkFzc2V0LklhbVBvbGlj",
-            "eRqUAQoYU2VjdXJpdHlDZW50ZXJQcm9wZXJ0aWVzEhUKDXJlc291cmNlX25h",
-            "bWUYASABKAkSFQoNcmVzb3VyY2VfdHlwZRgCIAEoCRIXCg9yZXNvdXJjZV9w",
-            "YXJlbnQYAyABKAkSGAoQcmVzb3VyY2VfcHJvamVjdBgEIAEoCRIXCg9yZXNv",
-            "dXJjZV9vd25lcnMYBSADKAkaIAoJSWFtUG9saWN5EhMKC3BvbGljeV9ibG9i",
-            "GAEgASgJGlEKF1Jlc291cmNlUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAFC",
-            "2gEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1",
-            "cml0eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5T",
-            "ZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRl",
-            "clxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJv",
-            "dG8z"));
+            "bm5vdGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoz",
+            "Z29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL3NlY3VyaXR5X21hcmtz",
+            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqYGCgVBc3NldBIMCgRuYW1lGAEg",
+            "ASgJEmIKGnNlY3VyaXR5X2NlbnRlcl9wcm9wZXJ0aWVzGAIgASgLMj4uZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkFzc2V0LlNlY3VyaXR5Q2Vu",
+            "dGVyUHJvcGVydGllcxJaChNyZXNvdXJjZV9wcm9wZXJ0aWVzGAcgAygLMj0u",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkFzc2V0LlJlc291cmNl",
+            "UHJvcGVydGllc0VudHJ5EkUKDnNlY3VyaXR5X21hcmtzGAggASgLMi0uZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlNlY3VyaXR5TWFya3MSLwoL",
+            "Y3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "Ei8KC3VwZGF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBJDCgppYW1fcG9saWN5GAsgASgLMi8uZ29vZ2xlLmNsb3VkLnNlY3Vy",
+            "aXR5Y2VudGVyLnYxLkFzc2V0LklhbVBvbGljeRqUAQoYU2VjdXJpdHlDZW50",
+            "ZXJQcm9wZXJ0aWVzEhUKDXJlc291cmNlX25hbWUYASABKAkSFQoNcmVzb3Vy",
+            "Y2VfdHlwZRgCIAEoCRIXCg9yZXNvdXJjZV9wYXJlbnQYAyABKAkSGAoQcmVz",
+            "b3VyY2VfcHJvamVjdBgEIAEoCRIXCg9yZXNvdXJjZV9vd25lcnMYBSADKAka",
+            "IAoJSWFtUG9saWN5EhMKC3BvbGljeV9ibG9iGAEgASgJGlEKF1Jlc291cmNl",
+            "UHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAE6VepBUgojc2VjdXJpdHljZW50",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vQXNzZXQSK29yZ2FuaXphdGlvbnMve29yZ2Fu",
+            "aXphdGlvbn0vYXNzZXRzL3thc3NldH1C2gEKImNvbS5nb29nbGUuY2xvdWQu",
+            "c2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtzZWN1cml0",
+            "eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdv",
+            "b2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6",
+            "OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset), global::Google.Cloud.SecurityCenter.V1.Asset.Parser, new[]{ "Name", "SecurityCenterProperties", "ResourceProperties", "SecurityMarks", "CreateTime", "UpdateTime", "IamPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties), global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties.Parser, new[]{ "ResourceName", "ResourceType", "ResourceParent", "ResourceProject", "ResourceOwners" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy), global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy.Parser, new[]{ "PolicyBlob" }, null, null, null),
@@ -118,7 +120,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// The relative resource name of this asset. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// Example:
-    /// "organizations/123/assets/456".
+    /// "organizations/{organization_id}/assets/{asset_id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

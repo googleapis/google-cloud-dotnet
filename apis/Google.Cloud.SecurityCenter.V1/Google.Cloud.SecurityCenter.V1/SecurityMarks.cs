@@ -26,17 +26,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "CjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvc2VjdXJpdHlfbWFy",
             "a3MucHJvdG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKUAQoNU2VjdXJpdHlNYXJrcxIM",
-            "CgRuYW1lGAEgASgJEkcKBW1hcmtzGAIgAygLMjguZ29vZ2xlLmNsb3VkLnNl",
-            "Y3VyaXR5Y2VudGVyLnYxLlNlY3VyaXR5TWFya3MuTWFya3NFbnRyeRosCgpN",
-            "YXJrc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFC2gEK",
-            "ImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0",
-            "eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1",
-            "cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxW",
-            "MeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
+            "ZS5wcm90byLTAgoNU2VjdXJpdHlNYXJrcxIMCgRuYW1lGAEgASgJEkcKBW1h",
+            "cmtzGAIgAygLMjguZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlNl",
+            "Y3VyaXR5TWFya3MuTWFya3NFbnRyeRosCgpNYXJrc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6vAHqQbgBCitzZWN1cml0eWNlbnRl",
+            "ci5nb29nbGVhcGlzLmNvbS9TZWN1cml0eU1hcmtzEjlvcmdhbml6YXRpb25z",
+            "L3tvcmdhbml6YXRpb259L2Fzc2V0cy97YXNzZXR9L3NlY3VyaXR5TWFya3MS",
+            "Tm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc291cmNlcy97c291cmNl",
+            "fS9maW5kaW5ncy97ZmluZGluZ30vc2VjdXJpdHlNYXJrc0LaAQoiY29tLmdv",
+            "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MVABWkxnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVy",
+            "L3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2Vu",
+            "dGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29v",
+            "Z2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.SecurityMarks), global::Google.Cloud.SecurityCenter.V1.SecurityMarks.Parser, new[]{ "Name", "Marks" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -93,8 +98,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// The relative resource name of the SecurityMarks. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// Examples:
-    /// "organizations/123/assets/456/securityMarks"
-    /// "organizations/123/sources/456/findings/789/securityMarks".
+    /// "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+    /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -112,10 +117,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>
     /// Mutable user specified security marks belonging to the parent resource.
     /// Constraints are as follows:
-    ///   - Keys and values are treated as case insensitive
-    ///   - Keys must be between 1 - 256 characters (inclusive)
-    ///   - Keys must be letters, numbers, underscores, or dashes
-    ///   - Values have leading and trailing whitespace trimmed, remaining
+    ///
+    ///   * Keys and values are treated as case insensitive
+    ///   * Keys must be between 1 - 256 characters (inclusive)
+    ///   * Keys must be letters, numbers, underscores, or dashes
+    ///   * Values have leading and trailing whitespace trimmed, remaining
     ///     characters must be between 1 - 4096 characters (inclusive)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

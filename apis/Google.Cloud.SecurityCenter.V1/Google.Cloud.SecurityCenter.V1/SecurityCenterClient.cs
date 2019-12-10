@@ -894,11 +894,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a source.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new source's parent. Its format should be
+        /// Required. Resource name of the new source's parent. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// The Source being created, only the display_name and description will be
+        /// Required. The Source being created, only the display_name and description will be
         /// used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">
@@ -922,11 +922,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a source.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new source's parent. Its format should be
+        /// Required. Resource name of the new source's parent. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// The Source being created, only the display_name and description will be
+        /// Required. The Source being created, only the display_name and description will be
         /// used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">
@@ -947,11 +947,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a source.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new source's parent. Its format should be
+        /// Required. Resource name of the new source's parent. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// The Source being created, only the display_name and description will be
+        /// Required. The Source being created, only the display_name and description will be
         /// used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">
@@ -975,11 +975,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a source.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new source's parent. Its format should be
+        /// Required. Resource name of the new source's parent. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// The Source being created, only the display_name and description will be
+        /// Required. The Source being created, only the display_name and description will be
         /// used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">
@@ -1003,11 +1003,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a source.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new source's parent. Its format should be
+        /// Required. Resource name of the new source's parent. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// The Source being created, only the display_name and description will be
+        /// Required. The Source being created, only the display_name and description will be
         /// used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">
@@ -1028,11 +1028,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a source.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new source's parent. Its format should be
+        /// Required. Resource name of the new source's parent. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// The Source being created, only the display_name and description will be
+        /// Required. The Source being created, only the display_name and description will be
         /// used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">
@@ -1113,16 +1113,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// to succeed.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new finding's parent. Its format should be
+        /// Required. Resource name of the new finding's parent. Its format should be
         /// "organizations/[organization_id]/sources/[source_id]".
         /// </param>
         /// <param name="findingId">
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be alphanumeric and less than or equal to 32 characters and
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// The Finding being created. The name and security_marks will be ignored as
+        /// Required. The Finding being created. The name and security_marks will be ignored as
         /// they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">
@@ -1149,16 +1149,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// to succeed.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new finding's parent. Its format should be
+        /// Required. Resource name of the new finding's parent. Its format should be
         /// "organizations/[organization_id]/sources/[source_id]".
         /// </param>
         /// <param name="findingId">
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be alphanumeric and less than or equal to 32 characters and
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// The Finding being created. The name and security_marks will be ignored as
+        /// Required. The Finding being created. The name and security_marks will be ignored as
         /// they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">
@@ -1182,16 +1182,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// to succeed.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new finding's parent. Its format should be
+        /// Required. Resource name of the new finding's parent. Its format should be
         /// "organizations/[organization_id]/sources/[source_id]".
         /// </param>
         /// <param name="findingId">
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be alphanumeric and less than or equal to 32 characters and
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// The Finding being created. The name and security_marks will be ignored as
+        /// Required. The Finding being created. The name and security_marks will be ignored as
         /// they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">
@@ -1218,16 +1218,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// to succeed.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new finding's parent. Its format should be
+        /// Required. Resource name of the new finding's parent. Its format should be
         /// "organizations/[organization_id]/sources/[source_id]".
         /// </param>
         /// <param name="findingId">
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be alphanumeric and less than or equal to 32 characters and
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// The Finding being created. The name and security_marks will be ignored as
+        /// Required. The Finding being created. The name and security_marks will be ignored as
         /// they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">
@@ -1254,16 +1254,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// to succeed.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new finding's parent. Its format should be
+        /// Required. Resource name of the new finding's parent. Its format should be
         /// "organizations/[organization_id]/sources/[source_id]".
         /// </param>
         /// <param name="findingId">
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be alphanumeric and less than or equal to 32 characters and
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// The Finding being created. The name and security_marks will be ignored as
+        /// Required. The Finding being created. The name and security_marks will be ignored as
         /// they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">
@@ -1287,16 +1287,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// to succeed.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the new finding's parent. Its format should be
+        /// Required. Resource name of the new finding's parent. Its format should be
         /// "organizations/[organization_id]/sources/[source_id]".
         /// </param>
         /// <param name="findingId">
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be alphanumeric and less than or equal to 32 characters and
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// The Finding being created. The name and security_marks will be ignored as
+        /// Required. The Finding being created. The name and security_marks will be ignored as
         /// they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">
@@ -1563,7 +1563,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the organization to get organization settings for. Its format is
+        /// Required. Name of the organization to get organization settings for. Its format is
         /// "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">
@@ -1585,7 +1585,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the organization to get organization settings for. Its format is
+        /// Required. Name of the organization to get organization settings for. Its format is
         /// "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">
@@ -1604,7 +1604,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the organization to get organization settings for. Its format is
+        /// Required. Name of the organization to get organization settings for. Its format is
         /// "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">
@@ -1626,7 +1626,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the organization to get organization settings for. Its format is
+        /// Required. Name of the organization to get organization settings for. Its format is
         /// "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">
@@ -1648,7 +1648,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the organization to get organization settings for. Its format is
+        /// Required. Name of the organization to get organization settings for. Its format is
         /// "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">
@@ -1667,7 +1667,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Name of the organization to get organization settings for. Its format is
+        /// Required. Name of the organization to get organization settings for. Its format is
         /// "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">
@@ -1745,7 +1745,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets a source.
         /// </summary>
         /// <param name="name">
-        /// Relative resource name of the source. Its format is
+        /// Required. Relative resource name of the source. Its format is
         /// "organizations/[organization_id]/source/[source_id]".
         /// </param>
         /// <param name="callSettings">
@@ -1767,7 +1767,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets a source.
         /// </summary>
         /// <param name="name">
-        /// Relative resource name of the source. Its format is
+        /// Required. Relative resource name of the source. Its format is
         /// "organizations/[organization_id]/source/[source_id]".
         /// </param>
         /// <param name="cancellationToken">
@@ -1786,7 +1786,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets a source.
         /// </summary>
         /// <param name="name">
-        /// Relative resource name of the source. Its format is
+        /// Required. Relative resource name of the source. Its format is
         /// "organizations/[organization_id]/source/[source_id]".
         /// </param>
         /// <param name="callSettings">
@@ -1808,7 +1808,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets a source.
         /// </summary>
         /// <param name="name">
-        /// Relative resource name of the source. Its format is
+        /// Required. Relative resource name of the source. Its format is
         /// "organizations/[organization_id]/source/[source_id]".
         /// </param>
         /// <param name="callSettings">
@@ -1830,7 +1830,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets a source.
         /// </summary>
         /// <param name="name">
-        /// Relative resource name of the source. Its format is
+        /// Required. Relative resource name of the source. Its format is
         /// "organizations/[organization_id]/source/[source_id]".
         /// </param>
         /// <param name="cancellationToken">
@@ -1849,7 +1849,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets a source.
         /// </summary>
         /// <param name="name">
-        /// Relative resource name of the source. Its format is
+        /// Required. Relative resource name of the source. Its format is
         /// "organizations/[organization_id]/source/[source_id]".
         /// </param>
         /// <param name="callSettings">
@@ -1968,16 +1968,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
-        /// Name of the source to groupBy. Its format is
+        /// Required. Name of the source to groupBy. Its format is
         /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
         /// all sources provide a source_id of `-`. For example:
-        /// organizations/123/sources/-
+        /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Expression that defines what assets fields to use for grouping (including
+        /// Required. Expression that defines what assets fields to use for grouping (including
         /// `state_change`). The string value should follow SQL syntax: comma separated
         /// list of fields. For example: "parent,resource_name".
         ///
@@ -2026,16 +2026,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
-        /// Name of the source to groupBy. Its format is
+        /// Required. Name of the source to groupBy. Its format is
         /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
         /// all sources provide a source_id of `-`. For example:
-        /// organizations/123/sources/-
+        /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Expression that defines what assets fields to use for grouping (including
+        /// Required. Expression that defines what assets fields to use for grouping (including
         /// `state_change`). The string value should follow SQL syntax: comma separated
         /// list of fields. For example: "parent,resource_name".
         ///
@@ -2084,16 +2084,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
-        /// Name of the source to groupBy. Its format is
+        /// Required. Name of the source to groupBy. Its format is
         /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
         /// all sources provide a source_id of `-`. For example:
-        /// organizations/123/sources/-
+        /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Expression that defines what assets fields to use for grouping (including
+        /// Required. Expression that defines what assets fields to use for grouping (including
         /// `state_change`). The string value should follow SQL syntax: comma separated
         /// list of fields. For example: "parent,resource_name".
         ///
@@ -2142,16 +2142,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
-        /// Name of the source to groupBy. Its format is
+        /// Required. Name of the source to groupBy. Its format is
         /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
         /// all sources provide a source_id of `-`. For example:
-        /// organizations/123/sources/-
+        /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Expression that defines what assets fields to use for grouping (including
+        /// Required. Expression that defines what assets fields to use for grouping (including
         /// `state_change`). The string value should follow SQL syntax: comma separated
         /// list of fields. For example: "parent,resource_name".
         ///
@@ -2200,7 +2200,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2223,7 +2223,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2283,7 +2283,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists an organization or source's findings.
         ///
         /// To list across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2305,7 +2305,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists an organization or source's findings.
         ///
         /// To list across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2327,7 +2327,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent of sources to list. Its format should be
+        /// Required. Resource name of the parent of sources to list. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
@@ -2361,7 +2361,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent of sources to list. Its format should be
+        /// Required. Resource name of the parent of sources to list. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
@@ -2395,7 +2395,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent of sources to list. Its format should be
+        /// Required. Resource name of the parent of sources to list. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
@@ -2429,7 +2429,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent of sources to list. Its format should be
+        /// Required. Resource name of the parent of sources to list. Its format should be
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
@@ -2506,7 +2506,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Name of the organization to run asset discovery for. Its format is
+        /// Required. Name of the organization to run asset discovery for. Its format is
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">
@@ -2533,7 +2533,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Name of the organization to run asset discovery for. Its format is
+        /// Required. Name of the organization to run asset discovery for. Its format is
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">
@@ -2557,7 +2557,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Name of the organization to run asset discovery for. Its format is
+        /// Required. Name of the organization to run asset discovery for. Its format is
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">
@@ -2584,7 +2584,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Name of the organization to run asset discovery for. Its format is
+        /// Required. Name of the organization to run asset discovery for. Its format is
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">
@@ -2611,7 +2611,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Name of the organization to run asset discovery for. Its format is
+        /// Required. Name of the organization to run asset discovery for. Its format is
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">
@@ -2635,7 +2635,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Name of the organization to run asset discovery for. Its format is
+        /// Required. Name of the organization to run asset discovery for. Its format is
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">
@@ -2739,16 +2739,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// The relative resource name of the finding. See:
+        /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/123/sources/456/finding/789".
+        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
         /// </param>
         /// <param name="state">
-        /// The desired State of the finding.
+        /// Required. The desired State of the finding.
         /// </param>
         /// <param name="startTime">
-        /// The time at which the updated state takes effect.
+        /// Required. The time at which the updated state takes effect.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2773,16 +2773,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// The relative resource name of the finding. See:
+        /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/123/sources/456/finding/789".
+        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
         /// </param>
         /// <param name="state">
-        /// The desired State of the finding.
+        /// Required. The desired State of the finding.
         /// </param>
         /// <param name="startTime">
-        /// The time at which the updated state takes effect.
+        /// Required. The time at which the updated state takes effect.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2804,16 +2804,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// The relative resource name of the finding. See:
+        /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/123/sources/456/finding/789".
+        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
         /// </param>
         /// <param name="state">
-        /// The desired State of the finding.
+        /// Required. The desired State of the finding.
         /// </param>
         /// <param name="startTime">
-        /// The time at which the updated state takes effect.
+        /// Required. The time at which the updated state takes effect.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2838,16 +2838,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// The relative resource name of the finding. See:
+        /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/123/sources/456/finding/789".
+        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
         /// </param>
         /// <param name="state">
-        /// The desired State of the finding.
+        /// Required. The desired State of the finding.
         /// </param>
         /// <param name="startTime">
-        /// The time at which the updated state takes effect.
+        /// Required. The time at which the updated state takes effect.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2872,16 +2872,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// The relative resource name of the finding. See:
+        /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/123/sources/456/finding/789".
+        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
         /// </param>
         /// <param name="state">
-        /// The desired State of the finding.
+        /// Required. The desired State of the finding.
         /// </param>
         /// <param name="startTime">
-        /// The time at which the updated state takes effect.
+        /// Required. The time at which the updated state takes effect.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2903,16 +2903,16 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates the state of a finding.
         /// </summary>
         /// <param name="name">
-        /// The relative resource name of the finding. See:
+        /// Required. The relative resource name of the finding. See:
         /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
         /// Example:
-        /// "organizations/123/sources/456/finding/789".
+        /// "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
         /// </param>
         /// <param name="state">
-        /// The desired State of the finding.
+        /// Required. The desired State of the finding.
         /// </param>
         /// <param name="startTime">
-        /// The time at which the updated state takes effect.
+        /// Required. The time at which the updated state takes effect.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3454,7 +3454,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// The finding resource to update or create if it does not already exist.
+        /// Required. The finding resource to update or create if it does not already exist.
         /// parent, security_marks, and update_time will be ignored.
         ///
         /// In the case of creation, the finding id portion of the name must be
@@ -3481,7 +3481,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// The finding resource to update or create if it does not already exist.
+        /// Required. The finding resource to update or create if it does not already exist.
         /// parent, security_marks, and update_time will be ignored.
         ///
         /// In the case of creation, the finding id portion of the name must be
@@ -3505,7 +3505,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// The finding resource to update or create if it does not already exist.
+        /// Required. The finding resource to update or create if it does not already exist.
         /// parent, security_marks, and update_time will be ignored.
         ///
         /// In the case of creation, the finding id portion of the name must be
@@ -3590,7 +3590,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates an organization's settings.
         /// </summary>
         /// <param name="organizationSettings">
-        /// The organization settings resource to update.
+        /// Required. The organization settings resource to update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3611,7 +3611,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates an organization's settings.
         /// </summary>
         /// <param name="organizationSettings">
-        /// The organization settings resource to update.
+        /// Required. The organization settings resource to update.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -3629,7 +3629,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates an organization's settings.
         /// </summary>
         /// <param name="organizationSettings">
-        /// The organization settings resource to update.
+        /// Required. The organization settings resource to update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3706,7 +3706,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates a source.
         /// </summary>
         /// <param name="source">
-        /// The source resource to update.
+        /// Required. The source resource to update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3727,7 +3727,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates a source.
         /// </summary>
         /// <param name="source">
-        /// The source resource to update.
+        /// Required. The source resource to update.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -3745,7 +3745,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates a source.
         /// </summary>
         /// <param name="source">
-        /// The source resource to update.
+        /// Required. The source resource to update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3822,7 +3822,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates security marks.
         /// </summary>
         /// <param name="securityMarks">
-        /// The security marks resource to update.
+        /// Required. The security marks resource to update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -3843,7 +3843,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates security marks.
         /// </summary>
         /// <param name="securityMarks">
-        /// The security marks resource to update.
+        /// Required. The security marks resource to update.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -3861,7 +3861,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Updates security marks.
         /// </summary>
         /// <param name="securityMarks">
-        /// The security marks resource to update.
+        /// Required. The security marks resource to update.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -4371,7 +4371,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4395,7 +4395,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         ///
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4458,7 +4458,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists an organization or source's findings.
         ///
         /// To list across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4481,7 +4481,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists an organization or source's findings.
         ///
         /// To list across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/123/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

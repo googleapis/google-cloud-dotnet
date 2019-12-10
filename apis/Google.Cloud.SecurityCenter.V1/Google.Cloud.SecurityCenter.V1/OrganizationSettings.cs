@@ -26,24 +26,27 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cjpnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvb3JnYW5pemF0aW9u",
             "X3NldHRpbmdzLnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
-            "djEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iqgMKFE9yZ2FuaXph",
-            "dGlvblNldHRpbmdzEgwKBG5hbWUYASABKAkSHgoWZW5hYmxlX2Fzc2V0X2Rp",
-            "c2NvdmVyeRgCIAEoCBJpChZhc3NldF9kaXNjb3ZlcnlfY29uZmlnGAMgASgL",
-            "MkkuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLk9yZ2FuaXphdGlv",
-            "blNldHRpbmdzLkFzc2V0RGlzY292ZXJ5Q29uZmlnGuwBChRBc3NldERpc2Nv",
-            "dmVyeUNvbmZpZxITCgtwcm9qZWN0X2lkcxgBIAMoCRJvCg5pbmNsdXNpb25f",
-            "bW9kZRgCIAEoDjJXLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5P",
-            "cmdhbml6YXRpb25TZXR0aW5ncy5Bc3NldERpc2NvdmVyeUNvbmZpZy5JbmNs",
-            "dXNpb25Nb2RlIk4KDUluY2x1c2lvbk1vZGUSHgoaSU5DTFVTSU9OX01PREVf",
-            "VU5TUEVDSUZJRUQQABIQCgxJTkNMVURFX09OTFkQARILCgdFWENMVURFEAJK",
-            "BAgEEAVKBAgFEAZC2gEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
-            "ZXIudjFQAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoCHkdv",
-            "b2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxT",
-            "ZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2Vu",
-            "dGVyOjpWMWIGcHJvdG8z"));
+            "djEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkv",
+            "cmVzb3VyY2UucHJvdG8iigQKFE9yZ2FuaXphdGlvblNldHRpbmdzEgwKBG5h",
+            "bWUYASABKAkSHgoWZW5hYmxlX2Fzc2V0X2Rpc2NvdmVyeRgCIAEoCBJpChZh",
+            "c3NldF9kaXNjb3ZlcnlfY29uZmlnGAMgASgLMkkuZ29vZ2xlLmNsb3VkLnNl",
+            "Y3VyaXR5Y2VudGVyLnYxLk9yZ2FuaXphdGlvblNldHRpbmdzLkFzc2V0RGlz",
+            "Y292ZXJ5Q29uZmlnGuwBChRBc3NldERpc2NvdmVyeUNvbmZpZxITCgtwcm9q",
+            "ZWN0X2lkcxgBIAMoCRJvCg5pbmNsdXNpb25fbW9kZRgCIAEoDjJXLmdvb2ds",
+            "ZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5Pcmdhbml6YXRpb25TZXR0aW5n",
+            "cy5Bc3NldERpc2NvdmVyeUNvbmZpZy5JbmNsdXNpb25Nb2RlIk4KDUluY2x1",
+            "c2lvbk1vZGUSHgoaSU5DTFVTSU9OX01PREVfVU5TUEVDSUZJRUQQABIQCgxJ",
+            "TkNMVURFX09OTFkQARILCgdFWENMVURFEAI6aupBZwoyc2VjdXJpdHljZW50",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vT3JnYW5pemF0aW9uU2V0dGluZ3MSMW9yZ2Fu",
+            "aXphdGlvbnMve29yZ2FuaXphdGlvbn0vb3JnYW5pemF0aW9uU2V0dGluZ3NC",
+            "2gEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1",
+            "cml0eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5T",
+            "ZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRl",
+            "clxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser, new[]{ "Name", "EnableAssetDiscovery", "AssetDiscoveryConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Parser, new[]{ "ProjectIds", "InclusionMode" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode) }, null)})
           }));
@@ -99,7 +102,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// The relative resource name of the settings. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// Example:
-    /// "organizations/123/organizationSettings".
+    /// "organizations/{organization_id}/organizationSettings".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
