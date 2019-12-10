@@ -819,11 +819,11 @@
     "id": "Google.Cloud.Spanner.Common.V1",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net45",
-    "version": "2.1.0-beta01",
+    "version": "2.1.0",
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax": "default"
+      "Google.Api.Gax": "2.10.0"
     }
   },
   
