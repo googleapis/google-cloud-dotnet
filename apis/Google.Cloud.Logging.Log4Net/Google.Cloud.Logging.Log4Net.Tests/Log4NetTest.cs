@@ -105,7 +105,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             {
                 var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
                 fakeClient.Setup(x => x.WriteLogEntriesAsync(
-                    null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
+                    (LogNameOneof) null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
                     .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
                 var appender = new GoogleStackdriverAppender(fakeClient.Object,
                     scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock(), platform)
@@ -120,9 +120,18 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                     appender.DisableResourceTypeDetection = true;
                     appender.ResourceType = "global";
                 }
-                if (maxMemoryCount != null) appender.MaxMemoryCount = maxMemoryCount.Value;
-                if (maxMemorySize != null) appender.MaxMemorySize = maxMemorySize.Value;
-                if (maxUploadBatchSize != null) appender.MaxUploadBatchSize = maxUploadBatchSize.Value;
+                if (maxMemoryCount != null)
+                {
+                    appender.MaxMemoryCount = maxMemoryCount.Value;
+                }
+                if (maxMemorySize != null)
+                {
+                    appender.MaxMemorySize = maxMemorySize.Value;
+                }
+                if (maxUploadBatchSize != null)
+                {
+                    appender.MaxUploadBatchSize = maxUploadBatchSize.Value;
+                }
                 foreach (var metadata in withMetadata ?? Enumerable.Empty<MetaDataType>())
                 {
                     appender.AddWithMetaData(metadata);
