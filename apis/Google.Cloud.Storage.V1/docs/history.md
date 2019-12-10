@@ -1,11 +1,15 @@
 # Version history
 
-# Version 2.4.0-beta01, released 2019-04-08
+# Version 2.4.0, released 2019-12-10
 
 New features since 2.3.0:
 
-- Beta support for V4 signing URLs
+- Opt-in support for V4 signing URLs
 - Add `IncludeTrailingDelimiter` to `ListObjectsOptions`
+- Default endpoint is now storage.googleapis.com
+- Added GetBucketIamPolicyOptions.RequestedPolicyVersion in anticipation of IAM conditions
+- Added StorageClientBuilder for simplified configuration
+- Added support for HMAC keys associated with service accounts in GCS
 
 # Version 2.3.0, released 2019-02-11
 
