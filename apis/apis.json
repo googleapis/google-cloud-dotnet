@@ -60,10 +60,12 @@
     "serviceYaml": "bigquerydatatransfer_v1.yaml",
     "productName": "Google BigQuery Data Transfer",
     "productUrl": "https://cloud.google.com/bigquery/transfer/",
-    "version": "1.1.0-beta00",
+    "version": "1.1.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the BigQuery Data Transfer API, which transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.",
     "dependencies": {
+      "Google.Api.Gax.Grpc": "2.10.0",
+      "Grpc.Core": "1.22.1"
     },
     "tags": [ "BigQuery", "DataTransfer" ]
   },
