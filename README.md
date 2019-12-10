@@ -13,6 +13,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) - [V1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1) (GA)
   * Additionally, the following library is available for access to beta API functionality:
   * [V1Beta1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1Beta1/) (beta)
+* [Google Cloud AutoML](https://cloud.google.com/automl/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.AutoML.V1/) (GA)
 * [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (GA)
 * [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.V2/) (GA)
 * [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.V2/) (GA)
