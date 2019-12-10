@@ -17,6 +17,7 @@ supported here.
 GA:
 
 - [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html)
+- [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html)
 - [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html)
 - [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
 - [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
