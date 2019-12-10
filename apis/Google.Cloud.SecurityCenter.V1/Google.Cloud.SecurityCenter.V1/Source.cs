@@ -26,16 +26,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Citnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvc291cmNlLnByb3Rv",
             "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8iRwoGU291cmNlEgwKBG5hbWUYASABKAkSFAoM",
-            "ZGlzcGxheV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJSgQIBBAF",
-            "QtoBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxUAFaTGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2Vj",
-            "dXJpdHljZW50ZXIvdjE7c2VjdXJpdHljZW50ZXKqAh5Hb29nbGUuQ2xvdWQu",
-            "U2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50",
-            "ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6VjFiBnBy",
-            "b3RvMw=="));
+            "YW5ub3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i",
+            "mwEKBlNvdXJjZRIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEo",
+            "CRITCgtkZXNjcmlwdGlvbhgDIAEoCTpY6kFVCiRzZWN1cml0eWNlbnRlci5n",
+            "b29nbGVhcGlzLmNvbS9Tb3VyY2USLW9yZ2FuaXphdGlvbnMve29yZ2FuaXph",
+            "dGlvbn0vc291cmNlcy97c291cmNlfULaAQoiY29tLmdvb2dsZS5jbG91ZC5z",
+            "ZWN1cml0eWNlbnRlci52MVABWkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5",
+            "Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29v",
+            "Z2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
+            "U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Source), global::Google.Cloud.SecurityCenter.V1.Source.Parser, new[]{ "Name", "DisplayName", "Description" }, null, null, null)
           }));
@@ -47,7 +49,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Cloud Security Command Center's (Cloud SCC) finding source. A finding source
   /// is an entity or a mechanism that can produce a finding. A source is like a
-  /// container of findings that come from the same scanner, logger, monitor, etc.
+  /// container of findings that come from the same scanner, logger, monitor, and
+  /// other tools.
   /// </summary>
   public sealed partial class Source : pb::IMessage<Source> {
     private static readonly pb::MessageParser<Source> _parser = new pb::MessageParser<Source>(() => new Source());
@@ -92,7 +95,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// The relative resource name of this source. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// Example:
-    /// "organizations/123/sources/456"
+    /// "organizations/{organization_id}/sources/{source_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -106,13 +109,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// The source’s display name.
-    /// A source’s display name must be unique amongst its siblings, for example,
+    /// The source's display name.
+    /// A source's display name must be unique amongst its siblings, for example,
     /// two sources with the same parent can't share the same display name.
-    /// The display name must start and end with a letter or digit, may contain
-    /// letters, digits, spaces, hyphens, and underscores, and can be no longer
-    /// than 32 characters. This is captured by the regular expression:
-    /// [\p{L}\p{N}]({\p{L}\p{N}_- ]{0,30}[\p{L}\p{N}])?.
+    /// The display name must have a length between 1 and 64 characters
+    /// (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -128,11 +129,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>
     /// The description of the source (max of 1024 characters).
     /// Example:
-    /// "Cloud Security Scanner is a web security scanner for common
+    /// "Web Security Scanner is a web security scanner for common
     /// vulnerabilities in App Engine applications. It can automatically
     /// scan and detect four common vulnerabilities, including cross-site-scripting
     /// (XSS), Flash injection, mixed content (HTTP in HTTPS), and
-    /// outdated/insecure libraries."
+    /// outdated or insecure libraries."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {

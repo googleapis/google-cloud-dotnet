@@ -26,29 +26,33 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZmluZGluZy5wcm90",
             "bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxGhxnb29nbGUvYXBp",
-            "L2Fubm90YXRpb25zLnByb3RvGjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50",
-            "ZXIvdjEvc2VjdXJpdHlfbWFya3MucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
-            "dHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "sQQKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkSFQoN",
-            "cmVzb3VyY2VfbmFtZRgDIAEoCRI8CgVzdGF0ZRgEIAEoDjItLmdvb2dsZS5j",
-            "bG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlN0YXRlEhAKCGNhdGVn",
-            "b3J5GAUgASgJEhQKDGV4dGVybmFsX3VyaRgGIAEoCRJYChFzb3VyY2VfcHJv",
-            "cGVydGllcxgHIAMoCzI9Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
-            "MS5GaW5kaW5nLlNvdXJjZVByb3BlcnRpZXNFbnRyeRJFCg5zZWN1cml0eV9t",
-            "YXJrcxgIIAEoCzItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5T",
-            "ZWN1cml0eU1hcmtzEi4KCmV2ZW50X3RpbWUYCSABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEi8KC2NyZWF0ZV90aW1lGAogASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBpPChVTb3VyY2VQcm9wZXJ0aWVzRW50cnkS",
-            "CwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVm",
-            "LlZhbHVlOgI4ASI4CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoK",
-            "BkFDVElWRRABEgwKCElOQUNUSVZFEAJC2gEKImNvbS5nb29nbGUuY2xvdWQu",
-            "c2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtzZWN1cml0",
-            "eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdv",
-            "b2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6",
-            "OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
+            "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjNnb29nbGUvY2xv",
+            "dWQvc2VjdXJpdHljZW50ZXIvdjEvc2VjdXJpdHlfbWFya3MucHJvdG8aHGdv",
+            "b2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8ipAUKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZw",
+            "YXJlbnQYAiABKAkSFQoNcmVzb3VyY2VfbmFtZRgDIAEoCRI8CgVzdGF0ZRgE",
+            "IAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5n",
+            "LlN0YXRlEhAKCGNhdGVnb3J5GAUgASgJEhQKDGV4dGVybmFsX3VyaRgGIAEo",
+            "CRJYChFzb3VyY2VfcHJvcGVydGllcxgHIAMoCzI9Lmdvb2dsZS5jbG91ZC5z",
+            "ZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlNvdXJjZVByb3BlcnRpZXNFbnRy",
+            "eRJKCg5zZWN1cml0eV9tYXJrcxgIIAEoCzItLmdvb2dsZS5jbG91ZC5zZWN1",
+            "cml0eWNlbnRlci52MS5TZWN1cml0eU1hcmtzQgPgQQMSLgoKZXZlbnRfdGlt",
+            "ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRl",
+            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGk8KFVNv",
+            "dXJjZVByb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiAB",
+            "KAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6AjgBIjgKBVN0YXRlEhUKEVNU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAjps",
+            "6kFpCiVzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBv",
+            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0v",
+            "ZmluZGluZ3Mve2ZpbmRpbmd9QtoBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3Vy",
+            "aXR5Y2VudGVyLnYxUAFaTGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2VjdXJpdHljZW50",
+            "ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVc",
+            "Q2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1",
+            "cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State) }, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -60,10 +64,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Cloud Security Command Center (Cloud SCC) finding.
   ///
-  /// A finding is a record of assessment data (security, risk, health or privacy)
-  /// ingested into Cloud SCC for presentation, notification, analysis,
-  /// policy testing, and enforcement. For example, an XSS vulnerability in an
-  /// App Engine application is a finding.
+  /// A finding is a record of assessment data like security, risk, health, or
+  /// privacy, that is ingested into Cloud SCC for presentation, notification,
+  /// analysis, policy testing, and enforcement. For example, a
+  /// cross-site scripting (XSS) vulnerability in an App Engine application is a
+  /// finding.
   /// </summary>
   public sealed partial class Finding : pb::IMessage<Finding> {
     private static readonly pb::MessageParser<Finding> _parser = new pb::MessageParser<Finding>(() => new Finding());
@@ -115,7 +120,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// The relative resource name of this finding. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// Example:
-    /// "organizations/123/sources/456/findings/789"
+    /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -133,7 +138,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// This field is immutable after creation time.
     /// For example:
-    /// "organizations/123/sources/456"
+    /// "organizations/{organization_id}/sources/{source_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -147,9 +152,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ResourceNameFieldNumber = 3;
     private string resourceName_ = "";
     /// <summary>
-    /// The full resource name of the Google Cloud Platform (GCP) resource this
-    /// finding is for. See:
+    /// For findings on Google Cloud Platform (GCP) resources, the full resource
+    /// name of the GCP resource this finding is for. See:
     /// https://cloud.google.com/apis/design/resource_names#full_resource_name
+    /// When the finding is for a non-GCP resource, the resourceName can be a
+    /// customer or partner defined string.
     /// This field is immutable after creation time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -243,8 +250,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp eventTime_;
     /// <summary>
     /// The time at which the event took place. For example, if the finding
-    /// represents an open firewall it would capture the time the open firewall was
-    /// detected.
+    /// represents an open firewall it would capture the time the detector believes
+    /// the firewall became open. The accuracy is determined by the detector.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EventTime {

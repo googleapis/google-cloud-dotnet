@@ -271,7 +271,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -296,7 +296,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// Lists an organization or source's findings.
       ///
       /// To list across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -713,7 +713,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -729,7 +729,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -743,7 +743,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -759,7 +759,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -816,7 +816,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// Lists an organization or source's findings.
       ///
       /// To list across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -831,7 +831,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// Lists an organization or source's findings.
       ///
       /// To list across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -844,7 +844,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// Lists an organization or source's findings.
       ///
       /// To list across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -859,7 +859,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// Lists an organization or source's findings.
       ///
       /// To list across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/123/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
