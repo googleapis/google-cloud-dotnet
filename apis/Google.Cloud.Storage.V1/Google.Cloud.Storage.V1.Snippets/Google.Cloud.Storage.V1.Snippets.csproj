@@ -14,7 +14,6 @@
     <PackageReference Include="Google.Api.Gax.Testing" Version="2.10.0" />
     <PackageReference Include="Google.Apis.Iam.v1" Version="1.42.0.1779" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
-    <PackageReference Include="Google.Cloud.Iam.V1" Version="1.2.0" />
     <ProjectReference Include="..\..\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj" />
     <ProjectReference Include="..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />

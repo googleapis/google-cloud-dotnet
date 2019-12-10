@@ -900,7 +900,6 @@
       "Google.Api.Gax.Rest": "2.10.0"
     },
     "testDependencies": {
-      "Google.Cloud.Iam.V1": "1.2.0",
       "Google.Cloud.PubSub.V1": "project",
       "Google.Api.Gax.Testing": "2.10.0",
       "Google.Apis.Iam.v1": "1.42.0.1779"
