@@ -139,9 +139,9 @@ do
   done
 done
 
-log_build_action "(Start) Unit tests"
 if [[ "$runtests" = true ]]
 then
+  log_build_action "(Start) Unit tests"
   # Could use xargs, but this is more flexible
   while read testproject
   do  
@@ -155,7 +155,7 @@ then
       dotnet test -nologo -c Release --no-build $testproject
     fi
   done < AllTests.txt
+  log_build_action "(End) Unit tests"
 fi
 
-log_build_action "(End) Unit tests"
 log_build_action "(End) build.sh"
