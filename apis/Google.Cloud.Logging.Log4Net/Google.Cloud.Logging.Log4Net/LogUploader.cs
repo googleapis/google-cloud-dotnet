@@ -121,7 +121,7 @@ namespace Google.Cloud.Logging.Log4Net
                 // Upload entries to the Cloud Logging server
                 try
                 {
-                    await _client.WriteLogEntriesAsync(null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken).ConfigureAwait(false);
+                    await _client.WriteLogEntriesAsync((LogNameOneof) null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken).ConfigureAwait(false);
                     await _logQ.RemoveUntilAsync(entries.Last().Id, cancellationToken).ConfigureAwait(false);
                     lock (_lock)
                     {
