@@ -758,12 +758,14 @@
     "serviceYaml": "securitycenter_v1.yaml",
     "productName": "Google Cloud Security Command Center",
     "productUrl": "https://cloud.google.com/security-command-center/",
-    "version": "1.1.0-beta00",
+    "version": "1.1.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
     "dependencies": {
-      "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.LongRunning": "1.1.0"
+      "Google.Api.Gax.Grpc": "2.10.0",
+      "Google.Cloud.Iam.V1": "1.3.0",
+      "Google.LongRunning": "1.1.0",
+      "Grpc.Core": "1.22.1"
     },
     "tags": [ "security", "data risk" ]
   },
