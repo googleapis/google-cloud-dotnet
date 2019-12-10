@@ -7,6 +7,9 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Logging.V2</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Logging.Type</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>

@@ -523,13 +523,13 @@
     "id": "Google.Cloud.Logging.Type",
     "generator": "proto",
     "protoPath": "google/logging/type",
-    "version": "2.1.0-beta00",
+    "version": "2.1.0",
     "type": "other",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
     "description": "Version-agnostic types for the Google Stackdriver Logging API.",
     "tags": [ "Logging", "Stackdriver" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0"
+      "Google.Api.CommonProtos": "1.7.0"
     }
   },
 
@@ -540,12 +540,14 @@
     "serviceYaml": "logging.yaml",
     "productName": "Stackdriver Logging",
     "productUrl": "https://cloud.google.com/logging/",
-    "version": "2.3.0-beta01",
+    "version": "2.3.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [ "Logging", "Stackdriver" ],
     "dependencies": {
-      "Google.Cloud.Logging.Type": "2.0.0"
+      "Google.Api.Gax.Grpc": "2.10.0",
+      "Google.Cloud.Logging.Type": "project",
+      "Grpc.Core": "1.22.1"
     }
   },
 
