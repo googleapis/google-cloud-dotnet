@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{6449DA09-A7E9-4BEB-8317-6DCA29A7207B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Dataproc.V1.Tests", "Google.Cloud.Dataproc.V1.Tests\Google.Cloud.Dataproc.V1.Tests.csproj", "{2600D62F-4233-451E-AFE9-A7951242B827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{DD347F5A-3F21-44A6-9E47-E38057903E22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,5 +88,17 @@ Global
 		{2600D62F-4233-451E-AFE9-A7951242B827}.Release|x64.Build.0 = Release|x64
 		{2600D62F-4233-451E-AFE9-A7951242B827}.Release|x86.ActiveCfg = Release|x86
 		{2600D62F-4233-451E-AFE9-A7951242B827}.Release|x86.Build.0 = Release|x86
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Debug|x64.Build.0 = Debug|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Debug|x86.Build.0 = Debug|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Release|x64.ActiveCfg = Release|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Release|x64.Build.0 = Release|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD347F5A-3F21-44A6-9E47-E38057903E22}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
