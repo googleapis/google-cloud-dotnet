@@ -56,17 +56,32 @@ significant demand, to improve the likelihood of being able to drop
 
 Our tentative plan is as follows:
 
-- November 2019:
-  - Create "final for this major version" releases for all APIs
-  - Start merging breaking changes into GAX
-- December 2019:
-  - Create alpha GAX 3.0 packages, but without releasing them to NuGet
-  - Migrate API libraries to GAX 3.0
-  - Publish alpha releases of all APIs and GAX
-- January 2020:
-  - Publish beta releases of all APIs and GAX
-- February 2020:
-  - If all goes well, publish GA releases of GAX and stable APIs
+Already done:
+
+- Release final GAX packages for the 2.x line (2.10.0)
+- Change "master" branch in GAX to be the next-major-version
+- Update GAX target frameworks
+- Update GAX dependencies, rewriting code where necessary
+- Remove obsolete members in GAX
+- Change retry representation in GAX
+- Create next-major-version branch in google-cloud-dotnet
+- Create next-major-version branch in the generator
+- Update all dependencies to GAX 3.0 (fetched locally for build)
+- Migrate API libraries to GAX 3.0
+
+In progress, aiming for end-of-2019:
+
+- Create "final for this major version" releases for all APIs.
+  (We're nearly finished with this; just a few APIs to go.)
+- Migrate all APIs to the microgenerator
+- Check any remaining obsolete members and resource names, e.g.
+  where LocationName doesn't use GAX
+
+Coming up in 2020:
+
+- Early January: publish alpha releases of all APIs and GAX
+- If all goes well, in late January: publish beta releases of all APIs and GAX
+- Based on betas, but hopefully mid/late February: public GA releases of all APIs and GAX
 
 ## Feedback
 
