@@ -7,6 +7,15 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Bigtable.Admin.V2</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.LongRunning</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Iam.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Bigtable.Common.V2</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
