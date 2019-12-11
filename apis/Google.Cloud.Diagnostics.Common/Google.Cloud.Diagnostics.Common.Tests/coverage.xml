@@ -7,6 +7,12 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Diagnostics.Common</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Logging.V2</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Trace.V1</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
