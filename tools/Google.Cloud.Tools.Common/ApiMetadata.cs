@@ -69,6 +69,13 @@ namespace Google.Cloud.Tools.Common
 
         public StructuredVersion StructuredVersion => new StructuredVersion(Version);
 
+        /// <summary>
+        /// The release level to record in .repo-metadata.json, if this differs from the one
+        /// inferred from the JSON. (For example, we will have 2.0.0-alpha00 versions that didn't
+        /// have a 1.0.0.)
+        /// </summary>
+        public string ReleaseLevelOverride { get; set; }
+
         // TODO: Optimize to do this lazily if it's ever an issue
         public bool CanHaveGaRelease
         {

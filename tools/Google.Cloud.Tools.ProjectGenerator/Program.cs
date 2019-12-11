@@ -320,16 +320,18 @@ shell.run(
         private static void GenerateMetadataFile(string apiRoot, ApiMetadata api)
         {
             var version = api.StructuredVersion;
-            // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
-            // TODO: Check that this is actually appropriate.
-            if ((version.Prerelease ?? "").EndsWith("00") && version.Major == 1 && version.Minor == 0)
+            string versionBasedReleaseLevel = 
+                // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
+                (version.Prerelease ?? "").EndsWith("00") && version.Major == 1 && version.Minor == 0 ? "none"
+                // If it's not a prerelease now, or it's ever got to 1.0, it's generally "ga"
+                : version.Major > 1 || version.Minor > 0 || version.Prerelease == null ? "ga"
+                : version.Prerelease.StartsWith("beta") ? "beta" : "alpha";
+
+            string releaseLevel = api.ReleaseLevelOverride ?? versionBasedReleaseLevel;
+            if (releaseLevel == "none")
             {
                 return;
             }
-            string releaseLevel =
-                // If it's not a prerelease now, or it's ever got to 1.0, it's generally "ga"
-                version.Major > 1 || version.Minor > 0 || version.Prerelease == null ? "ga"
-                : version.Prerelease.StartsWith("beta") ? "beta" : "alpha";
             var metadata = new
             {
                 distribution_name = api.Id,
@@ -337,6 +339,7 @@ shell.run(
             };
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
             File.WriteAllText(Path.Combine(apiRoot, ".repo-metadata.json"), json);
+
         }
 
         private static void GenerateMainProject(ApiMetadata api, string directory, HashSet<string> apiNames)
