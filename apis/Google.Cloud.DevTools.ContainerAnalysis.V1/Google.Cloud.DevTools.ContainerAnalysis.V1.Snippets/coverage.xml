@@ -8,6 +8,9 @@
         <ModuleMask>Google.Cloud.DevTools.ContainerAnalysis.V1</ModuleMask>
       </FilterEntry>
       <FilterEntry>
+        <ModuleMask>Google.Cloud.Iam.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
         <ModuleMask>Grafeas.V1</ModuleMask>
       </FilterEntry>
     </IncludeFilters>
