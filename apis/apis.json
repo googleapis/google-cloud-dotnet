@@ -26,6 +26,7 @@
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1beta1).",
     "dependencies": {
@@ -304,6 +305,7 @@
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore.Analyzers",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "analyzers",
     "targetFrameworks": "netstandard1.3",
     "testTargetFrameworks": "netcoreapp2.0",
@@ -382,6 +384,7 @@
     "productName": "Stackdriver Error Reporting",
     "productUrl": "https://cloud.google.com/error-reporting/",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
     "tags": [ "ErrorReporting", "Stackdriver" ]
@@ -576,6 +579,7 @@
     "productName": "Google Compute Engine Metadata Server",
     "productUrl": "https://cloud.google.com/compute/docs/storing-retrieving-metadata",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "alpha",
     "type": "rest",
     "description": "Google Compute Engine Metadata v1 client library",
     "tags": [ "Metadata" ],
@@ -640,6 +644,7 @@
     "productName": "Google Cloud OS Login API",
     "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to manages OS login configuration for Google account users.",
     "tags": [ "OsLogin", "Login" ],
@@ -655,6 +660,7 @@
     "productName": "Cloud Phishing Protection",
     "productUrl": "https://cloud.google.com/phishing-protection/",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "none",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Phishing Protection API.",
     "tags": [ "Phishing", "Security" ]
@@ -688,6 +694,7 @@
     "productName": "Google Cloud reCAPTCHA Enterprise",
     "productUrl": "https://cloud.google.com/recaptcha-enterprise/",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "none",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API.",
     "tags": [ "reCAPTCHA" ]
@@ -717,6 +724,7 @@
     "productName": "Google Cloud Memorystore for Redis",
     "productUrl": "https://cloud.google.com/memorystore/",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
     "dependencies": {
@@ -749,6 +757,7 @@
     "productName": "Secret Manager",
     "productUrl": "https://cloud.google.com/secret-manager",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to access the Secret Manager API.",
     "dependencies": {
@@ -890,6 +899,7 @@
     "productName": "Google Cloud Speech",
     "productUrl": "https://cloud.google.com/speech",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
     "tags": [ "Speech" ],
@@ -925,6 +935,7 @@
     "productName": "Google Cloud Talent Solution",
     "productUrl": "https://cloud.google.com/talent-solution/",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Talent solution API which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
     "tags": [ "Talent", "Jobs" ],
@@ -957,6 +968,7 @@
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Tasks API (v2beta3), which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
@@ -1085,6 +1097,7 @@
     "productName": "Google Cloud Web Risk",
     "productUrl": "https://cloud.google.com/web-risk/",
     "version": "2.0.0-alpha00",
+    "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Web Risk API, which lets client applications check URLs against Google's constantly updated lists of unsafe web resources.",
     "tags": [ "security", "phishing", "malware", "safety", "risk", "url" ]
