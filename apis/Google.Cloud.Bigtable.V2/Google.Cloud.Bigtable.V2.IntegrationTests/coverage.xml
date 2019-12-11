@@ -7,6 +7,9 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Bigtable.V2</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Bigtable.Common.V2</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
