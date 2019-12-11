@@ -231,8 +231,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int CombinerFieldNumber = 6;
     private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType combiner_ = 0;
     /// <summary>
-    /// How to combine the results of multiple conditions
-    /// to determine if an incident should be opened.
+    /// How to combine the results of multiple conditions to determine if an
+    /// incident should be opened.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType Combiner {
