@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>3.0.0</Version>
+    <Version>4.0.0-alpha00</Version>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard2.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
@@ -24,9 +24,8 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="3.0.0-alpha00" />
-    <PackageReference Include="Google.Cloud.Logging.V2" Version="2.2.0" />
-    <PackageReference Include="Google.Cloud.Trace.V1" Version="1.1.0" />
-    <PackageReference Include="Grpc.Core" Version="1.22.1" PrivateAssets="None" />
+    <ProjectReference Include="..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="2.1.1" />
