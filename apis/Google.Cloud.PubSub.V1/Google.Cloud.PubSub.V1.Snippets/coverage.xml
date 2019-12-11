@@ -7,6 +7,9 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.PubSub.V1</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Iam.V1</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
