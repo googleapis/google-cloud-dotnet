@@ -1,0 +1,42 @@
+--- a/googleapis/google/longrunning/operations.proto
++++ b/googleapis/google/longrunning/operations.proto
+@@ -18,6 +18,7 @@ syntax = "proto3";
+ package google.longrunning;
+ 
+ import "google/api/annotations.proto";
++import "google/api/client.proto";
+ import "google/protobuf/any.proto";
+ import "google/protobuf/duration.proto";
+ import "google/protobuf/empty.proto";
+@@ -66,6 +67,7 @@ service Operations {
+     option (google.api.http) = {
+       get: "/v1/{name=operations}"
+     };
++    option (google.api.method_signature) = "name,filter";
+   }
+ 
+   // Gets the latest state of a long-running operation.  Clients can use this
+@@ -75,6 +77,7 @@ service Operations {
+     option (google.api.http) = {
+       get: "/v1/{name=operations/**}"
+     };
++    option (google.api.method_signature) = "name";
+   }
+ 
+   // Deletes a long-running operation. This method indicates that the client is
+@@ -85,6 +88,7 @@ service Operations {
+     option (google.api.http) = {
+       delete: "/v1/{name=operations/**}"
+     };
++    option (google.api.method_signature) = "name";
+   }
+ 
+   // Starts asynchronous cancellation on a long-running operation.  The server
+@@ -102,6 +106,7 @@ service Operations {
+       post: "/v1/{name=operations/**}:cancel"
+       body: "*"
+     };
++    option (google.api.method_signature) = "name";
+   }
+ 
+   // Waits for the specified long-running operation until it is done or reaches
