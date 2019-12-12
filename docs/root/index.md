@@ -72,7 +72,10 @@ Beta:
 
 - [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
+- [Google.Cloud.OsLogin.V1Beta](Google.Cloud.OsLogin.V1Beta/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
+- [Google.Cloud.Secrets.V1Beta1](Google.Cloud.Secrets.V1Beta1/index.html)
+- [Google.Cloud.Speech.V1P1Beta1](Google.Cloud.Speech.V1P1Beta1/index.html)
 - [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html)
 
 Alpha:
