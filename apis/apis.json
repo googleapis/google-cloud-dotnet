@@ -1105,9 +1105,8 @@
   
   {
     "id": "Google.LongRunning",
-    "type": "other",
+    "generator": "micro",
     "protoPath": "google/longrunning",
-    "serviceYaml": "longrunning/longrunning.yaml",
     "version": "2.0.0-alpha00",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
