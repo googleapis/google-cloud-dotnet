@@ -801,7 +801,7 @@
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Instance Administration",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "2.1.0-beta01",
+    "version": "2.1.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
