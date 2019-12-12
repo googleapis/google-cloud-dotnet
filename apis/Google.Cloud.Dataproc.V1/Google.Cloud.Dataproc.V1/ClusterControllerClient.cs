@@ -604,7 +604,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="cluster">
         /// Required. The cluster to create.
@@ -638,7 +638,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="cluster">
         /// Required. The cluster to create.
@@ -669,7 +669,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="cluster">
         /// Required. The cluster to create.
@@ -779,7 +779,7 @@ namespace Google.Cloud.Dataproc.V1
         /// cluster belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -873,7 +873,7 @@ namespace Google.Cloud.Dataproc.V1
         /// cluster belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -964,7 +964,7 @@ namespace Google.Cloud.Dataproc.V1
         /// cluster belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1199,7 +1199,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1339,7 +1339,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1368,7 +1368,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1456,7 +1456,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1534,7 +1534,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter constraining the clusters to list. Filters are
@@ -1596,7 +1596,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter constraining the clusters to list. Filters are
@@ -1702,7 +1702,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1740,7 +1740,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.
@@ -1775,7 +1775,7 @@ namespace Google.Cloud.Dataproc.V1
         /// belongs to.
         /// </param>
         /// <param name="region">
-        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// Required. The Dataproc region in which to handle the request.
         /// </param>
         /// <param name="clusterName">
         /// Required. The cluster name.

@@ -401,7 +401,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job for running
+  /// A Dataproc job for running
   /// [Apache Hadoop
   /// MapReduce](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
   /// jobs on [Apache Hadoop
@@ -555,7 +555,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Hadoop.
-    /// Properties that conflict with values set by the Cloud Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API may be
     /// overwritten. Can include properties set in /etc/hadoop/conf/*-site and
     /// classes in user code.
     /// </summary>
@@ -770,7 +770,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job for running [Apache Spark](http://spark.apache.org/)
+  /// A Dataproc job for running [Apache Spark](http://spark.apache.org/)
   /// applications on YARN.
   /// </summary>
   public sealed partial class SparkJob : pb::IMessage<SparkJob> {
@@ -915,7 +915,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Spark.
-    /// Properties that conflict with values set by the Cloud Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API may be
     /// overwritten. Can include properties set in
     /// /etc/spark/conf/spark-defaults.conf and classes in user code.
     /// </summary>
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job for running
+  /// A Dataproc job for running
   /// [Apache
   /// PySpark](https://spark.apache.org/docs/0.9.0/python-programming-guide.html)
   /// applications on YARN.
@@ -1269,7 +1269,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure PySpark.
-    /// Properties that conflict with values set by the Cloud Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API may be
     /// overwritten. Can include properties set in
     /// /etc/spark/conf/spark-defaults.conf and classes in user code.
     /// </summary>
@@ -1593,7 +1593,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job for running [Apache Hive](https://hive.apache.org/)
+  /// A Dataproc job for running [Apache Hive](https://hive.apache.org/)
   /// queries on YARN.
   /// </summary>
   public sealed partial class HiveJob : pb::IMessage<HiveJob> {
@@ -1707,7 +1707,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names and values, used to configure Hive.
-    /// Properties that conflict with values set by the Cloud Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API may be
     /// overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml,
     /// /etc/hive/conf/hive-site.xml, and classes in user code.
     /// </summary>
@@ -1907,7 +1907,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job for running [Apache Spark
+  /// A Dataproc job for running [Apache Spark
   /// SQL](http://spark.apache.org/sql/) queries.
   /// </summary>
   public sealed partial class SparkSqlJob : pb::IMessage<SparkSqlJob> {
@@ -2006,7 +2006,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure
     /// Spark SQL's SparkConf. Properties that conflict with values set by the
-    /// Cloud Dataproc API may be overwritten.
+    /// Dataproc API may be overwritten.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
@@ -2222,7 +2222,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job for running [Apache Pig](https://pig.apache.org/)
+  /// A Dataproc job for running [Apache Pig](https://pig.apache.org/)
   /// queries on YARN.
   /// </summary>
   public sealed partial class PigJob : pb::IMessage<PigJob> {
@@ -2337,7 +2337,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Pig.
-    /// Properties that conflict with values set by the Cloud Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API may be
     /// overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml,
     /// /etc/pig/conf/pig.properties, and classes in user code.
     /// </summary>
@@ -2572,7 +2572,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// Cloud Dataproc job config.
+  /// Dataproc job config.
   /// </summary>
   public sealed partial class JobPlacement : pb::IMessage<JobPlacement> {
     private static readonly pb::MessageParser<JobPlacement> _parser = new pb::MessageParser<JobPlacement>(() => new JobPlacement());
@@ -2627,7 +2627,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ClusterUuidFieldNumber = 2;
     private string clusterUuid_ = "";
     /// <summary>
-    /// Output only. A cluster UUID generated by the Cloud Dataproc service when
+    /// Output only. A cluster UUID generated by the Dataproc service when
     /// the job is submitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2739,7 +2739,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// Cloud Dataproc job status.
+  /// Dataproc job status.
   /// </summary>
   public sealed partial class JobStatus : pb::IMessage<JobStatus> {
     private static readonly pb::MessageParser<JobStatus> _parser = new pb::MessageParser<JobStatus>(() => new JobStatus());
@@ -3051,7 +3051,7 @@ namespace Google.Cloud.Dataproc.V1 {
         [pbr::OriginalName("QUEUED")] Queued = 2,
         /// <summary>
         /// The agent-reported status is out of date, which may be caused by a
-        /// loss of communication between the agent and Cloud Dataproc. If the
+        /// loss of communication between the agent and Dataproc. If the
         /// agent does not send a timely update, the job will fail.
         ///
         /// Applies to RUNNING state.
@@ -3522,7 +3522,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job resource.
+  /// A Dataproc job resource.
   /// </summary>
   public sealed partial class Job : pb::IMessage<Job> {
     private static readonly pb::MessageParser<Job> _parser = new pb::MessageParser<Job>(() => new Job());
@@ -4433,7 +4433,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int RegionFieldNumber = 3;
     private string region_ = "";
     /// <summary>
-    /// Required. The Cloud Dataproc region in which to handle the request.
+    /// Required. The Dataproc region in which to handle the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Region {
@@ -4677,7 +4677,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int RegionFieldNumber = 3;
     private string region_ = "";
     /// <summary>
-    /// Required. The Cloud Dataproc region in which to handle the request.
+    /// Required. The Dataproc region in which to handle the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Region {
@@ -4879,7 +4879,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int RegionFieldNumber = 6;
     private string region_ = "";
     /// <summary>
-    /// Required. The Cloud Dataproc region in which to handle the request.
+    /// Required. The Dataproc region in which to handle the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Region {
@@ -5243,7 +5243,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int RegionFieldNumber = 2;
     private string region_ = "";
     /// <summary>
-    /// Required. The Cloud Dataproc region in which to handle the request.
+    /// Required. The Dataproc region in which to handle the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Region {
@@ -5678,7 +5678,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int RegionFieldNumber = 3;
     private string region_ = "";
     /// <summary>
-    /// Required. The Cloud Dataproc region in which to handle the request.
+    /// Required. The Dataproc region in which to handle the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Region {
@@ -5876,7 +5876,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int RegionFieldNumber = 3;
     private string region_ = "";
     /// <summary>
-    /// Required. The Cloud Dataproc region in which to handle the request.
+    /// Required. The Dataproc region in which to handle the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Region {

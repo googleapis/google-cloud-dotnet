@@ -222,7 +222,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
   #region Messages
   /// <summary>
-  /// A Cloud Dataproc workflow template resource.
+  /// A Dataproc workflow template resource.
   /// </summary>
   public sealed partial class WorkflowTemplate : pb::IMessage<WorkflowTemplate> {
     private static readonly pb::MessageParser<WorkflowTemplate> _parser = new pb::MessageParser<WorkflowTemplate>(() => new WorkflowTemplate());
@@ -2484,7 +2484,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc workflow template resource.
+  /// A Dataproc workflow template resource.
   /// </summary>
   public sealed partial class WorkflowMetadata : pb::IMessage<WorkflowMetadata> {
     private static readonly pb::MessageParser<WorkflowMetadata> _parser = new pb::MessageParser<WorkflowMetadata>(() => new WorkflowMetadata());
