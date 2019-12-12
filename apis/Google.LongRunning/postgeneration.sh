@@ -2,5 +2,5 @@
 
 set -e
 
-# Undo the change made in pregeneration.sh
+# Undo the changes made in pregeneration.sh and pregeneration.patch
 git -C ../../googleapis checkout google/longrunning/longrunning_gapic.yaml
