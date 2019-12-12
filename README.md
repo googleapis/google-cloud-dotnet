@@ -42,6 +42,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (GA)
 * [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/) (GA)
 * [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (GA)
+  * The [V1Beta API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1Beta/) is also available (beta)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (GA)
 * [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1/) (GA)
   * The [V1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) is also available (beta)
@@ -53,6 +54,7 @@ The following libraries are available at a [GA](#versioning) quality level:
   * [Google.Cloud.Spanner.Admin.Database.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Database.V1/): Database administration API
   * [Google.Cloud.Spanner.Admin.Instance.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Instance.V1/): Instance administration API
 * [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1/) (GA)
+  * The [V1P1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1P1Beta1/) is also available (beta)
 * [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/) (GA)
 * [Google Cloud Tasks](https://cloud.google.com/tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
 * [Stackdriver Trace v1](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (GA)
@@ -70,6 +72,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 The following libraries are available at a [beta](#versioning) quality level:
 
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
+* [Secret Manager](https://cloud.google.com/secret-manager) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Secrets.V1Beta1/) (beta)
 * [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.WebRisk.V1Beta1/) (Beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
