@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.1.0, released 2019-12-12
+
+- [Commit 0740a76](https://github.com/googleapis/google-cloud-dotnet/commit/0740a76): Adds support for retriable transactions
+- Transparent support for batch creation of sessions (to make session creation more efficient)
+
 # Version 2.0.0, released 2019-06-03
 
 New features:
