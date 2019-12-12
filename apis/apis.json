@@ -301,7 +301,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore.Analyzers",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0",
     "type": "analyzers",
     "targetFrameworks": "netstandard1.3",
     "testTargetFrameworks": "netcoreapp2.0",
