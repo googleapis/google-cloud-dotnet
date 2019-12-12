@@ -26,7 +26,7 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// The API interface for managing Workflow Templates in the
-  /// Cloud Dataproc API.
+  /// Dataproc API.
   /// </summary>
   public static partial class WorkflowTemplateService
   {
