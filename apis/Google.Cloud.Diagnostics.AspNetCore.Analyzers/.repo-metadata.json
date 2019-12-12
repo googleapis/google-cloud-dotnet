@@ -1,4 +1,4 @@
 {
   "distribution_name": "Google.Cloud.Diagnostics.AspNetCore.Analyzers",
-  "release_level": "beta"
+  "release_level": "ga"
 }

@@ -1,5 +1,5 @@
 # Version history
 
-# Version 1.0.0-beta02, released 2018-05-08
+# Version 1.0.0, released 2019-12-12
 
-(No release history recorded.)
+Initial GA release.
