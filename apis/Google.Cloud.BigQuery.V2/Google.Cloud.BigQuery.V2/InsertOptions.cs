@@ -53,6 +53,16 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string TemplateSuffix { get; set; }
 
+        /// <summary>
+        /// When true allows <see cref="BigQueryInsertRow.InsertId"/> to be
+        /// unspecified. This in turns allows for faster inserts, at the expense
+        /// of possible record duplication if the operation needs to be retried.
+        /// See https://cloud.google.com/bigquery/quotas#streaming_inserts for
+        /// more information.
+        /// The default value is false.
+        /// </summary>
+        public bool AllowEmptyInsertIds { get; set; }
+
         internal void ModifyRequest(TableDataInsertAllRequest body)
         {
             if (AllowUnknownFields != null)

@@ -42,7 +42,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var list = new List<T>();
             var row = new BigQueryInsertRow { { name, list } };
             list.Add(value);
-            Assert.Throws<InvalidOperationException>(() => row.ToRowsData());
+            Assert.Throws<InvalidOperationException>(() => row.ToRowsData(false));
         }
 
         private void AssertInvalid(string name, object value)
@@ -54,7 +54,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void ToRowsData_NoSpecifiedInsertId()
+        public void ToRowsData_NoSpecifiedInsertId_NoEmptyInsertIdAllowed()
         {
             var row = new BigQueryInsertRow
             {
@@ -63,12 +63,30 @@ namespace Google.Cloud.BigQuery.V2.Tests
             };
             Assert.Equal("value1", row["field1"]);
             row["field3"] = 2;
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal("value1", rowData.Json["field1"]);
             Assert.Null(rowData.Json["field2"]);
             Assert.Equal(2, rowData.Json["field3"]);
             // The insert ID should be populated automatically if not supplied by the user.
             Assert.NotNull(rowData.InsertId);
+        }
+
+        [Fact]
+        public void ToRowsData_NoSpecifiedInsertId_EmptyInsertIdAllowed()
+        {
+            var row = new BigQueryInsertRow
+            {
+                { "field1", "value1" },
+                { "field2", null }
+            };
+            Assert.Equal("value1", row["field1"]);
+            row["field3"] = 2;
+            var rowData = row.ToRowsData(true);
+            Assert.Equal("value1", rowData.Json["field1"]);
+            Assert.Null(rowData.Json["field2"]);
+            Assert.Equal(2, rowData.Json["field3"]);
+            // The insert ID won't be populated automatically.
+            Assert.Null(rowData.InsertId);
         }
 
         [Fact]
@@ -78,7 +96,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 { "field1", "value1" },
             };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal("value1", rowData.Json["field1"]);
             Assert.Equal("my-id", rowData.InsertId);
         }
@@ -115,7 +133,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             object value = Activator.CreateInstance(type);
             var row = new BigQueryInsertRow { { "field", value } };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal(value, rowData.Json["field"]);
         }
 
@@ -124,7 +142,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             object value = BigQueryNumeric.Parse("123.456");
             var row = new BigQueryInsertRow { { "field", value } };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal("123.456", rowData.Json["field"]);
         }
 
@@ -136,7 +154,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 // 3am UTC
                 { "field", new DateTimeOffset(2000, 1, 1, 5, 0, 0, TimeSpan.FromHours(2)) },
             };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal("2000-01-01T03:00:00Z", rowData.Json["field"]);
         }
 
@@ -160,7 +178,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 { "field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Unspecified) },
             };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal("2000-01-01T05:00:00", rowData.Json["field"]);
         }
 
@@ -171,7 +189,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 { "field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Utc) },
             };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal("2000-01-01T05:00:00Z", rowData.Json["field"]);
         }
 
@@ -182,7 +200,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 { "field", new TimeSpan(1, 2, 3) },
             };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal("01:02:03", rowData.Json["field"]);
         }
 
@@ -191,7 +209,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var nested = new BigQueryInsertRow { { "inner", "value" } };
             var outer = new BigQueryInsertRow { { "outer", nested } };
-            var rowData = outer.ToRowsData();
+            var rowData = outer.ToRowsData(false);
             var obj = (IDictionary<string, object>)rowData.Json["outer"];
             Assert.Equal("value", obj["inner"]);
         }
@@ -200,7 +218,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void RepeatedValue()
         {
             var row = new BigQueryInsertRow { { "numbers", new[] { 1, 2 } } };
-            var rowData = row.ToRowsData();
+            var rowData = row.ToRowsData(false);
             Assert.Equal(new object[] { 1, 2 }, rowData.Json["numbers"]);
         }
 
@@ -208,7 +226,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void RepeatedValue_NullRejectedOnConversion()
         {
             var row = new BigQueryInsertRow { { "names", new[] { "a", null, "b" } } };
-            Assert.Throws<InvalidOperationException>(() => row.ToRowsData());
+            Assert.Throws<InvalidOperationException>(() => row.ToRowsData(false));
         }
 
         [Fact]
