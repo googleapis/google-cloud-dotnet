@@ -324,7 +324,7 @@ namespace Google.Cloud.BigQuery.V2
             var insertRows = rows.Select(row =>
             {
                 GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
-                return row.ToRowsData();
+                return row.ToRowsData(options?.AllowEmptyInsertIds ?? false);
             }).ToList();
             var body = new TableDataInsertAllRequest
             {
@@ -334,7 +334,10 @@ namespace Google.Cloud.BigQuery.V2
             hasRows = body.Rows.Any();
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            // We ensure that every row has an insert ID, so we can always retry.
+            // Even though empty InsertIds might be allowed, this can be retried as per guidance from
+            // the API team. Previous de-duplicating was on a best effort basis anyways and client code
+            // needs to explicitly allow for empty InsertId and should be aware that doing so will be at
+            // the expense of de-duplication efforts.
             RetryHandler.MarkAsRetriable(request);
             return request;
         }

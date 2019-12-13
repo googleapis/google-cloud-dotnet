@@ -101,8 +101,11 @@ namespace Google.Cloud.BigQuery.V2
         /// To help ensure data consistency, you can supply an <see cref="InsertId" /> for each inserted row.
         /// BigQuery remembers this ID for at least one minute. If you try to stream the same set of rows within
         /// that time period and the insertId property is set, BigQuery uses the property to de-duplicate
-        /// your data on a best effort basis. If no ID is specified, one will be generated to allow all
-        /// insert operations to be retried.
+        /// your data on a best effort basis. By default if no ID is specified, one will be generated to allow
+        /// de-duplicating efforts if insert operations need to be retried.
+        /// You can allow empty <see cref="InsertId"/> by setting <see cref="InsertOptions.AllowEmptyInsertIds"/> to true.
+        /// This will allow for faster row inserts at the expense of possible record duplication if the operation needs to be retried.
+        /// See https://cloud.google.com/bigquery/quotas#streaming_inserts for more information.
         /// </summary>
         public string InsertId { get; set; }
 
@@ -184,12 +187,10 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Converts an insert row into the API representation.
         /// </summary>
-        internal TableDataInsertAllRequest.RowsData ToRowsData()
+        internal TableDataInsertAllRequest.RowsData ToRowsData(bool allowEmptyInsertIds)
             => new TableDataInsertAllRequest.RowsData
             {
-                // Always provide an insert ID. If this logic is changed, the CreateInsertAllRequest() method
-                // will need to be changed, as we now assume every insert has an ID.
-                InsertId = InsertId ?? Guid.NewGuid().ToString(),
+                InsertId = allowEmptyInsertIds ? InsertId : InsertId ?? Guid.NewGuid().ToString(),
                 Json = GetJsonValues()
             };
 

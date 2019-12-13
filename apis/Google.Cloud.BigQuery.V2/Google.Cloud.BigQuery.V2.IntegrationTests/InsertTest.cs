@@ -13,12 +13,9 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Threading;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
@@ -68,6 +65,30 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var rowsAfter = table.ListRows().ToList();
             Assert.Contains(rowsAfter, r => (string)r["player"] == "Jenny");
             Assert.Contains(rowsAfter, r => (string)r["player"] == "Lisa");
+        }
+
+        [Fact]
+        public void InsertRows_AllowEmptyInsertIds()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var table = dataset.GetTable(_fixture.HighScoreTableId);
+            var options = new InsertOptions { AllowEmptyInsertIds = true };
+
+            var rows = new[]
+            {
+                BuildRow("Helen", 125, new DateTime(2012, 5, 22, 1, 20, 30, DateTimeKind.Utc)),
+                BuildRow("Henry", 90, new DateTime(2011, 10, 12, 0, 0, 0, DateTimeKind.Utc))
+            };
+
+            _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 2);
+
+            Assert.Null(rows[0].InsertId);
+            Assert.Null(rows[1].InsertId);
+
+            var rowsAfter = table.ListRows().ToList();
+            Assert.Contains(rowsAfter, r => (string)r["player"] == "Helen");
+            Assert.Contains(rowsAfter, r => (string)r["player"] == "Henry");
         }
 
         public static IEnumerable<object[]> BadDataThrowsOptions
