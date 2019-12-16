@@ -1,16 +1,17 @@
 # Version history
 
-# Version 1.4.0-beta07, released 2019-11-19
+# Version 1.4.0, released 2019-12-16
 
-Changes since 1.3.0:
+New features since 1.3.0:
 
+- [Commit 1074e9f](https://github.com/googleapis/google-cloud-dotnet/commit/1074e9f): Support for empty InsertIds when inserting rows.
 - Add TemplateSuffix, SkipInvalidRows and SuppressInsertErrors to InsertOptions.
 - Add DefaultPartitionExpiration and DefaultEncryptionConfiguration to CreateDatasetOptions.
 - Add table CreationTime, ExpirationTime and Clustering info to ListTables output.
 - Loosen the restriction on JobConfigurationQuery.DestinationTable not being null.
 - Provide option for using Avro logical types for load/extract.
 - Adds creation time filtering to BigQuery job listing.
-- Client builder.
+- New type BigQueryClientBuilder to simplify configuration.
 - Implement support for BigQuery GEOGRAPHY type.
 - netstandard2.0 target
 - Reimplemented query handling using GetQueryResults RPC instead of ListRows,
