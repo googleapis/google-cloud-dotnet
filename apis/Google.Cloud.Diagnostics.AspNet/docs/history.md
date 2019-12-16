@@ -1,10 +1,10 @@
 # Version history
 
-# Version 3.0.0, released 2019-16-12
+# Version 3.0.0, released 2019-12-16
 
 Note that this is the last version to depend on GAX 2.x and
 Grpc.Core 1.x, and may be the last release of this package. If
-thereis significant demand for a version of this package depending
+there is significant demand for a version of this package depending
 on GAX 3.x and Grpc.Core 2.x, we may create a new release for it,
 but otherwise this package will be retired.
 
