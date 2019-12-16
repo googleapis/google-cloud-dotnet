@@ -14,242 +14,288 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.LongRunning.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedOperationsClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedOperationsClientTest
     {
-        [Fact]
-        public void GetOperation()
+        [xunit::FactAttribute]
+        public void GetOperationRequestObject()
         {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            GetOperationRequest expectedRequest = new GetOperationRequest
-            {
-                Name = "name3373707",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.GetOperation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            string name = "name3373707";
-            Operation response = client.GetOperation(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetOperationAsync()
-        {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            GetOperationRequest expectedRequest = new GetOperationRequest
-            {
-                Name = "name3373707",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.GetOperationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            string name = "name3373707";
-            Operation response = await client.GetOperationAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetOperation2()
-        {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
             GetOperationRequest request = new GetOperationRequest
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
             };
             Operation expectedResponse = new Operation
             {
-                Name = "name2-1052831874",
+                Name = "name1c9368b0",
+                Metadata = new wkt::Any(),
                 Done = true,
+                Error = new gr::Status(),
+                Response = new wkt::Any(),
             };
-            mockGrpcClient.Setup(x => x.GetOperation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
             Operation response = client.GetOperation(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetOperationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetOperationRequestObjectAsync()
         {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
             GetOperationRequest request = new GetOperationRequest
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
             };
             Operation expectedResponse = new Operation
             {
-                Name = "name2-1052831874",
+                Name = "name1c9368b0",
+                Metadata = new wkt::Any(),
                 Done = true,
+                Error = new gr::Status(),
+                Response = new wkt::Any(),
             };
-            mockGrpcClient.Setup(x => x.GetOperationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.GetOperationAsync(request);
-            Assert.Same(expectedResponse, response);
+            Operation responseCallSettings = await client.GetOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.GetOperationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CancelOperation()
+        [xunit::FactAttribute]
+        public void GetOperation()
         {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            CancelOperationRequest expectedRequest = new CancelOperationRequest
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            string name = "name3373707";
-            client.CancelOperation(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CancelOperationAsync()
-        {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            CancelOperationRequest expectedRequest = new CancelOperationRequest
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
+                Metadata = new wkt::Any(),
+                Done = true,
+                Error = new gr::Status(),
+                Response = new wkt::Any(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            string name = "name3373707";
-            await client.CancelOperationAsync(name);
+            Operation response = client.GetOperation(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CancelOperation2()
+        [xunit::FactAttribute]
+        public async stt::Task GetOperationAsync()
         {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            CancelOperationRequest request = new CancelOperationRequest
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            client.CancelOperation(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CancelOperationAsync2()
-        {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            CancelOperationRequest request = new CancelOperationRequest
+            Operation expectedResponse = new Operation
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
+                Metadata = new wkt::Any(),
+                Done = true,
+                Error = new gr::Status(),
+                Response = new wkt::Any(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CancelOperationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            await client.CancelOperationAsync(request);
+            Operation responseCallSettings = await client.GetOperationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.GetOperationAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteOperation()
+        [xunit::FactAttribute]
+        public void DeleteOperationRequestObject()
         {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            DeleteOperationRequest expectedRequest = new DeleteOperationRequest
-            {
-                Name = "name3373707",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteOperation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            string name = "name3373707";
-            client.DeleteOperation(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteOperationAsync()
-        {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
-            DeleteOperationRequest expectedRequest = new DeleteOperationRequest
-            {
-                Name = "name3373707",
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteOperationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            string name = "name3373707";
-            await client.DeleteOperationAsync(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteOperation2()
-        {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
             DeleteOperationRequest request = new DeleteOperationRequest
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteOperation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
             client.DeleteOperation(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteOperationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteOperationRequestObjectAsync()
         {
-            Mock<Operations.OperationsClient> mockGrpcClient = new Mock<Operations.OperationsClient>(MockBehavior.Strict);
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
             DeleteOperationRequest request = new DeleteOperationRequest
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteOperationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteOperationAsync(request);
+            await client.DeleteOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteOperationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteOperation()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            DeleteOperationRequest request = new DeleteOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteOperation(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteOperationAsync()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            DeleteOperationRequest request = new DeleteOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteOperationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteOperationAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CancelOperationRequestObject()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            client.CancelOperation(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CancelOperationRequestObjectAsync()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            await client.CancelOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CancelOperationAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CancelOperation()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            client.CancelOperation(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CancelOperationAsync()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            await client.CancelOperationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CancelOperationAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void WaitOperationRequestObject()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            WaitOperationRequest request = new WaitOperationRequest
+            {
+                Name = "name1c9368b0",
+                Timeout = new wkt::Duration(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Metadata = new wkt::Any(),
+                Done = true,
+                Error = new gr::Status(),
+                Response = new wkt::Any(),
+            };
+            mockGrpcClient.Setup(x => x.WaitOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.WaitOperation(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task WaitOperationRequestObjectAsync()
+        {
+            moq::Mock<Operations.OperationsClient> mockGrpcClient = new moq::Mock<Operations.OperationsClient>(moq::MockBehavior.Strict);
+            WaitOperationRequest request = new WaitOperationRequest
+            {
+                Name = "name1c9368b0",
+                Timeout = new wkt::Duration(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+                Metadata = new wkt::Any(),
+                Done = true,
+                Error = new gr::Status(),
+                Response = new wkt::Any(),
+            };
+            mockGrpcClient.Setup(x => x.WaitOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.WaitOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.WaitOperationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
