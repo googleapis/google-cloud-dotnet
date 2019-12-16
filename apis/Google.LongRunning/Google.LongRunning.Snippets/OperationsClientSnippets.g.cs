@@ -17,94 +17,69 @@
 namespace Google.LongRunning.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedOperationsClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedOperationsClientSnippets
     {
-        /// <summary>Snippet for GetOperationAsync</summary>
-        public async Task GetOperationAsync()
+        /// <summary>Snippet for ListOperations</summary>
+        public void ListOperations_RequestObject()
         {
-            // Snippet: GetOperationAsync(string,CallSettings)
-            // Additional: GetOperationAsync(string,CancellationToken)
-            // Create client
-            OperationsClient operationsClient = await OperationsClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "";
-            // Make the request
-            Operation response = await operationsClient.GetOperationAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetOperation</summary>
-        public void GetOperation()
-        {
-            // Snippet: GetOperation(string,CallSettings)
+            // Snippet: ListOperations(ListOperationsRequest, CallSettings)
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            ListOperationsRequest request = new ListOperationsRequest { Filter = "", Name = "", };
             // Make the request
-            Operation response = operationsClient.GetOperation(name);
+            PagedEnumerable<ListOperationsResponse, Operation> response = operationsClient.ListOperations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Operation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
-        /// <summary>Snippet for GetOperationAsync</summary>
-        public async Task GetOperationAsync_RequestObject()
+        /// <summary>Snippet for ListOperations</summary>
+        public async Task ListOperationsAsync_RequestObject()
         {
-            // Snippet: GetOperationAsync(GetOperationRequest,CallSettings)
-            // Additional: GetOperationAsync(GetOperationRequest,CancellationToken)
+            // Snippet: ListOperationsAsync(ListOperationsRequest, CallSettings)
             // Create client
             OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
-            GetOperationRequest request = new GetOperationRequest
-            {
-                Name = "",
-            };
+            ListOperationsRequest request = new ListOperationsRequest { Filter = "", Name = "", };
             // Make the request
-            Operation response = await operationsClient.GetOperationAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetOperation</summary>
-        public void GetOperation_RequestObject()
-        {
-            // Snippet: GetOperation(GetOperationRequest,CallSettings)
-            // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
-            // Initialize request argument(s)
-            GetOperationRequest request = new GetOperationRequest
-            {
-                Name = "",
-            };
-            // Make the request
-            Operation response = operationsClient.GetOperation(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListOperationsAsync</summary>
-        public async Task ListOperationsAsync()
-        {
-            // Snippet: ListOperationsAsync(string,string,string,int?,CallSettings)
-            // Create client
-            OperationsClient operationsClient = await OperationsClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "";
-            string filter = "";
-            // Make the request
-            PagedAsyncEnumerable<ListOperationsResponse, Operation> response =
-                operationsClient.ListOperationsAsync(name, filter);
+            PagedAsyncEnumerable<ListOperationsResponse, Operation> response = operationsClient.ListOperationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Operation item) =>
@@ -120,6 +95,7 @@ namespace Google.LongRunning.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Operation item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -131,6 +107,7 @@ namespace Google.LongRunning.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Operation item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -141,15 +118,14 @@ namespace Google.LongRunning.Snippets
         /// <summary>Snippet for ListOperations</summary>
         public void ListOperations()
         {
-            // Snippet: ListOperations(string,string,string,int?,CallSettings)
+            // Snippet: ListOperations(string, string, string, int?, CallSettings)
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
             string name = "";
             string filter = "";
             // Make the request
-            PagedEnumerable<ListOperationsResponse, Operation> response =
-                operationsClient.ListOperations(name, filter);
+            PagedEnumerable<ListOperationsResponse, Operation> response = operationsClient.ListOperations(name, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Operation item in response)
@@ -165,6 +141,7 @@ namespace Google.LongRunning.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Operation item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -176,6 +153,7 @@ namespace Google.LongRunning.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Operation item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -183,21 +161,17 @@ namespace Google.LongRunning.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListOperationsAsync</summary>
-        public async Task ListOperationsAsync_RequestObject()
+        /// <summary>Snippet for ListOperations</summary>
+        public async Task ListOperationsAsync()
         {
-            // Snippet: ListOperationsAsync(ListOperationsRequest,CallSettings)
+            // Snippet: ListOperationsAsync(string, string, string, int?, CallSettings)
             // Create client
             OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
-            ListOperationsRequest request = new ListOperationsRequest
-            {
-                Name = "",
-                Filter = "",
-            };
+            string name = "";
+            string filter = "";
             // Make the request
-            PagedAsyncEnumerable<ListOperationsResponse, Operation> response =
-                operationsClient.ListOperationsAsync(request);
+            PagedAsyncEnumerable<ListOperationsResponse, Operation> response = operationsClient.ListOperationsAsync(name, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Operation item) =>
@@ -213,6 +187,7 @@ namespace Google.LongRunning.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Operation item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -224,139 +199,99 @@ namespace Google.LongRunning.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Operation item in singlePage)
             {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListOperations</summary>
-        public void ListOperations_RequestObject()
-        {
-            // Snippet: ListOperations(ListOperationsRequest,CallSettings)
-            // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
-            // Initialize request argument(s)
-            ListOperationsRequest request = new ListOperationsRequest
-            {
-                Name = "",
-                Filter = "",
-            };
-            // Make the request
-            PagedEnumerable<ListOperationsResponse, Operation> response =
-                operationsClient.ListOperations(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (Operation item in response)
-            {
                 // Do something with each item
                 Console.WriteLine(item);
             }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListOperationsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Operation item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Operation> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Operation item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
-        /// <summary>Snippet for CancelOperationAsync</summary>
-        public async Task CancelOperationAsync()
+        /// <summary>Snippet for GetOperation</summary>
+        public void GetOperation_RequestObject()
         {
-            // Snippet: CancelOperationAsync(string,CallSettings)
-            // Additional: CancelOperationAsync(string,CancellationToken)
+            // Snippet: GetOperation(GetOperationRequest, CallSettings)
             // Create client
-            OperationsClient operationsClient = await OperationsClient.CreateAsync();
+            OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            GetOperationRequest request = new GetOperationRequest { Name = "", };
             // Make the request
-            await operationsClient.CancelOperationAsync(name);
+            Operation response = operationsClient.GetOperation(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CancelOperation</summary>
-        public void CancelOperation()
+        /// <summary>Snippet for GetOperationAsync</summary>
+        public async Task GetOperationAsync_RequestObject()
         {
-            // Snippet: CancelOperation(string,CallSettings)
+            // Snippet: GetOperationAsync(GetOperationRequest, CallSettings)
+            // Additional: GetOperationAsync(GetOperationRequest, CancellationToken)
+            // Create client
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetOperationRequest request = new GetOperationRequest { Name = "", };
+            // Make the request
+            Operation response = await operationsClient.GetOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOperation</summary>
+        public void GetOperation()
+        {
+            // Snippet: GetOperation(string, CallSettings)
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            operationsClient.CancelOperation(name);
+            Operation response = operationsClient.GetOperation(name);
             // End snippet
         }
 
-        /// <summary>Snippet for CancelOperationAsync</summary>
-        public async Task CancelOperationAsync_RequestObject()
+        /// <summary>Snippet for GetOperationAsync</summary>
+        public async Task GetOperationAsync()
         {
-            // Snippet: CancelOperationAsync(CancelOperationRequest,CallSettings)
-            // Additional: CancelOperationAsync(CancelOperationRequest,CancellationToken)
+            // Snippet: GetOperationAsync(string, CallSettings)
+            // Additional: GetOperationAsync(string, CancellationToken)
             // Create client
             OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
-            CancelOperationRequest request = new CancelOperationRequest
-            {
-                Name = "",
-            };
+            string name = "";
             // Make the request
-            await operationsClient.CancelOperationAsync(request);
+            Operation response = await operationsClient.GetOperationAsync(name);
             // End snippet
         }
 
-        /// <summary>Snippet for CancelOperation</summary>
-        public void CancelOperation_RequestObject()
+        /// <summary>Snippet for DeleteOperation</summary>
+        public void DeleteOperation_RequestObject()
         {
-            // Snippet: CancelOperation(CancelOperationRequest,CallSettings)
+            // Snippet: DeleteOperation(DeleteOperationRequest, CallSettings)
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            CancelOperationRequest request = new CancelOperationRequest
-            {
-                Name = "",
-            };
+            DeleteOperationRequest request = new DeleteOperationRequest { Name = "", };
             // Make the request
-            operationsClient.CancelOperation(request);
+            operationsClient.DeleteOperation(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteOperationAsync</summary>
-        public async Task DeleteOperationAsync()
+        public async Task DeleteOperationAsync_RequestObject()
         {
-            // Snippet: DeleteOperationAsync(string,CallSettings)
-            // Additional: DeleteOperationAsync(string,CancellationToken)
+            // Snippet: DeleteOperationAsync(DeleteOperationRequest, CallSettings)
+            // Additional: DeleteOperationAsync(DeleteOperationRequest, CancellationToken)
             // Create client
             OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            DeleteOperationRequest request = new DeleteOperationRequest { Name = "", };
             // Make the request
-            await operationsClient.DeleteOperationAsync(name);
+            await operationsClient.DeleteOperationAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteOperation</summary>
         public void DeleteOperation()
         {
-            // Snippet: DeleteOperation(string,CallSettings)
+            // Snippet: DeleteOperation(string, CallSettings)
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
@@ -367,37 +302,106 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for DeleteOperationAsync</summary>
-        public async Task DeleteOperationAsync_RequestObject()
+        public async Task DeleteOperationAsync()
         {
-            // Snippet: DeleteOperationAsync(DeleteOperationRequest,CallSettings)
-            // Additional: DeleteOperationAsync(DeleteOperationRequest,CancellationToken)
+            // Snippet: DeleteOperationAsync(string, CallSettings)
+            // Additional: DeleteOperationAsync(string, CancellationToken)
             // Create client
             OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteOperationRequest request = new DeleteOperationRequest
-            {
-                Name = "",
-            };
+            string name = "";
             // Make the request
-            await operationsClient.DeleteOperationAsync(request);
+            await operationsClient.DeleteOperationAsync(name);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteOperation</summary>
-        public void DeleteOperation_RequestObject()
+        /// <summary>Snippet for CancelOperation</summary>
+        public void CancelOperation_RequestObject()
         {
-            // Snippet: DeleteOperation(DeleteOperationRequest,CallSettings)
+            // Snippet: CancelOperation(CancelOperationRequest, CallSettings)
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            DeleteOperationRequest request = new DeleteOperationRequest
-            {
-                Name = "",
-            };
+            CancelOperationRequest request = new CancelOperationRequest { Name = "", };
             // Make the request
-            operationsClient.DeleteOperation(request);
+            operationsClient.CancelOperation(request);
             // End snippet
         }
 
+        /// <summary>Snippet for CancelOperationAsync</summary>
+        public async Task CancelOperationAsync_RequestObject()
+        {
+            // Snippet: CancelOperationAsync(CancelOperationRequest, CallSettings)
+            // Additional: CancelOperationAsync(CancelOperationRequest, CancellationToken)
+            // Create client
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelOperationRequest request = new CancelOperationRequest { Name = "", };
+            // Make the request
+            await operationsClient.CancelOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOperation</summary>
+        public void CancelOperation()
+        {
+            // Snippet: CancelOperation(string, CallSettings)
+            // Create client
+            OperationsClient operationsClient = OperationsClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            operationsClient.CancelOperation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOperationAsync</summary>
+        public async Task CancelOperationAsync()
+        {
+            // Snippet: CancelOperationAsync(string, CallSettings)
+            // Additional: CancelOperationAsync(string, CancellationToken)
+            // Create client
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            await operationsClient.CancelOperationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for WaitOperation</summary>
+        public void WaitOperation_RequestObject()
+        {
+            // Snippet: WaitOperation(WaitOperationRequest, CallSettings)
+            // Create client
+            OperationsClient operationsClient = OperationsClient.Create();
+            // Initialize request argument(s)
+            WaitOperationRequest request = new WaitOperationRequest
+            {
+                Name = "",
+                Timeout = new Duration(),
+            };
+            // Make the request
+            Operation response = operationsClient.WaitOperation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for WaitOperationAsync</summary>
+        public async Task WaitOperationAsync_RequestObject()
+        {
+            // Snippet: WaitOperationAsync(WaitOperationRequest, CallSettings)
+            // Additional: WaitOperationAsync(WaitOperationRequest, CancellationToken)
+            // Create client
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            WaitOperationRequest request = new WaitOperationRequest
+            {
+                Name = "",
+                Timeout = new Duration(),
+            };
+            // Make the request
+            Operation response = await operationsClient.WaitOperationAsync(request);
+            // End snippet
+        }
     }
 }
