@@ -22,8 +22,8 @@ namespace Google.Cloud.Iam.V1
         /// </summary>
         public gax::IResourceName ResourceAsResourceName
         {
-            get { return string.IsNullOrEmpty(Resource) ? null : gax::UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
+            get => string.IsNullOrEmpty(Resource) ? null : gax::UnparsedResourceName.Parse(Resource);
+            set => Resource = value?.ToString() ?? "";
         }
     }
 
@@ -34,8 +34,8 @@ namespace Google.Cloud.Iam.V1
         /// </summary>
         public gax::IResourceName ResourceAsResourceName
         {
-            get { return string.IsNullOrEmpty(Resource) ? null : gax::UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
+            get => string.IsNullOrEmpty(Resource) ? null : gax::UnparsedResourceName.Parse(Resource);
+            set => Resource = value?.ToString() ?? "";
         }
     }
 
@@ -46,8 +46,8 @@ namespace Google.Cloud.Iam.V1
         /// </summary>
         public gax::IResourceName ResourceAsResourceName
         {
-            get { return string.IsNullOrEmpty(Resource) ? null : gax::UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
+            get => string.IsNullOrEmpty(Resource) ? null : gax::UnparsedResourceName.Parse(Resource);
+            set => Resource = value?.ToString() ?? "";
         }
     }
 }
