@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.3.1, released 2019-12-16
+
+- [Commit 3ac2779](https://github.com/googleapis/google-cloud-dotnet/commit/3ac2779): Regenerate without retry for streaming calls. Fixes [issue 3902](https://github.com/googleapis/google-cloud-dotnet/issues/3902).
+
 # Version 1.3.0, released 2019-12-09
 
 - [Commit bdb68ed](https://github.com/googleapis/google-cloud-dotnet/commit/bdb68ed): SpeakerDiarizationConfig.SpeakerTag is now obsolete.
