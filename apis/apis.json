@@ -248,7 +248,7 @@
   
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "3.0.0-beta16",
+    "version": "3.0.0",
     "type": "other",
     "targetFrameworks": "net461",
     "testTargetFrameworks": "net461",
@@ -259,7 +259,7 @@
       "Microsoft.AspNet.WebApi.Core": "5.2.7",
       "Microsoft.AspNet.WebPages": "3.2.7",
       "Microsoft.AspNet.Mvc": "5.2.7",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.22.1"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -270,7 +270,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "3.0.0-beta16",
+    "version": "3.0.0",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -278,8 +278,8 @@
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
-      "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0-beta02",
-      "Grpc.Core": "default",
+      "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0",
+      "Grpc.Core": "1.22.1",
       "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
       "Microsoft.AspNetCore.Http": "2.1.1",
       "Microsoft.AspNetCore.Http.Extensions": "2.1.1",
@@ -288,7 +288,7 @@
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-      "Google.Api.Gax.Testing": "default",
+      "Google.Api.Gax.Testing": "2.10.0",
       "Microsoft.AspNetCore.Mvc": "2.1.3",
       "Microsoft.AspNetCore.TestHost": "2.1.1",
       "Microsoft.Extensions.Http": "2.1.1"
@@ -315,16 +315,17 @@
 
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "3.0.0-beta16",
+    "version": "3.0.0",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "default",
+      "Google.Api.Gax.Grpc": "2.10.0",
       "Google.Cloud.Logging.V2": "2.2.0",
       "Google.Cloud.Trace.V1": "1.1.0",
+      "Grpc.Core": "1.22.1",
       "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
       "Microsoft.Extensions.Http": "2.1.1",
       "System.Diagnostics.StackTrace": "4.3.0"

@@ -1,6 +1,13 @@
 # Version history
 
-# Version 3.0.0-beta16, released 2019-11-11
+# Version 3.0.0, released 2019-12-16
+
+This is the last version of this package to depend on GAX 2.x and
+Grpc.Core 1.x. We expect to release a new version depending on GAX
+3.x and Grpc.Core 2.x, but without other significant changes, early in 2020.
+Beyond that version, there are multiple directions this package
+could take based on customer feedback, demand for an ASP.NET
+package, and the progress of other diagnostic approaches.
 
 New features since 2.0.0:
 
