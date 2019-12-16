@@ -117,7 +117,7 @@ install_microgenerator() {
       echo "Unknown OSTYPE: $OSTYPE"
       exit 1
   esac
-  (cd gapic-generator-csharp; dotnet publish -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
+  (cd gapic-generator-csharp; dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
   
   export GAPIC_PLUGIN=$REPO_ROOT/gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/$RUNTIME/publish/Google.Api.Generator$EXTENSION
 }

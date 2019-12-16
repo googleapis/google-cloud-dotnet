@@ -225,7 +225,7 @@ generate_api() {
   if [[ $CHECK_COMPATIBILITY == "true" && -d $PACKAGE_DIR ]]
   then
     echo "Building existing version of $PACKAGE for compatibility checking"
-    dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
+    dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
     cp $PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll $OUTDIR
   fi
   echo "Generating $PACKAGE"
@@ -282,7 +282,7 @@ generate_api() {
     if [[ -f $OUTDIR/$PACKAGE.dll ]]
     then
       echo "Building new version of $PACKAGE for compatibility checking"
-      dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
+      dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
       echo ""
       echo "Changes in $PACKAGE:"
       dotnet run --no-build -p tools/Google.Cloud.Tools.VersionCompat -- \
@@ -318,7 +318,7 @@ if [[ $1 == "--check_compatibility" ]]
 then
   CHECK_COMPATIBILITY=true
   # Build the tool once so it doesn't interfere with output later
-  dotnet build tools/Google.Cloud.Tools.VersionCompat
+  dotnet build tools/Google.Cloud.Tools.VersionCompat -v quiet -nologo -clp:NoSummary
   shift
 fi
 
