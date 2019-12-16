@@ -768,9 +768,8 @@
 
   {
     "id": "Google.Cloud.SecurityCenter.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/securitycenter/v1",
-    "serviceYaml": "securitycenter_v1.yaml",
     "productName": "Google Cloud Security Command Center",
     "productUrl": "https://cloud.google.com/security-command-center/",
     "version": "2.0.0-alpha00",
