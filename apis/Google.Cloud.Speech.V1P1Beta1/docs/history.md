@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.0.0-beta05, released 2019-12-16
+
+- [Commit 3ac2779](https://github.com/googleapis/google-cloud-dotnet/commit/3ac2779): Regenerate without retry for streaming calls. Fixes [issue 3902](https://github.com/googleapis/google-cloud-dotnet/issues/3902).
+
 # Version 1.0.0-beta04, released 2019-12-09
 
 - Some retry settings have been removed
