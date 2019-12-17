@@ -23,4 +23,4 @@ cd ..
 
 old_dll=tmp/lib/netstandard1.*/$1.dll
 new_dll=apis/$1/$1/bin/Release/netstandard1.*/$1.dll
-dotnet run -p tools/Google.Cloud.Tools.VersionCompat -- $old_dll $new_dll
+dotnet run -p tools/Google.Cloud.Tools.CompareVersions -- --file1=$old_dll --file2=$new_dll

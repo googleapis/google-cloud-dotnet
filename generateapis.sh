@@ -286,8 +286,8 @@ generate_api() {
       echo ""
       echo "Changes in $PACKAGE:"
       dotnet run --no-build -p tools/Google.Cloud.Tools.VersionCompat -- \
-        $OUTDIR/$PACKAGE.dll \
-        $PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll
+        --file1=$OUTDIR/$PACKAGE.dll \
+        --file2=$PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll
     else
       echo ""
       echo "$PACKAGE is a new API."

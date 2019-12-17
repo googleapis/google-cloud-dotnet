@@ -135,7 +135,7 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
             AssemblyDefinition oldMetadata;
             try
             {
-                oldMetadata = VersionCompat.Program.LoadPackageAsync(api.Id, version.ToString(), null, null).Result;
+                oldMetadata = Assemblies.LoadPackageAsync(api.Id, version.ToString(), null, null).Result;
             }
             catch (Exception e)
             {
@@ -148,9 +148,9 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
                 return Level.Identical;
             }
             var sourceAssembly = Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", "netstandard2.0", $"{api.Id}.dll");
-            var newMetadata = VersionCompat.Program.LoadFile(sourceAssembly);
+            var newMetadata = Assemblies.LoadFile(sourceAssembly);
 
-            var diff = VersionCompat.Program.Check(oldMetadata, newMetadata, null);
+            var diff = Assemblies.Compare(oldMetadata, newMetadata, null);
             diff.PrintDifferences(Level.Major, FormatDetail.Brief);
             diff.PrintDifferences(Level.Minor, FormatDetail.Brief);
             Console.WriteLine($"Diff level: {diff.Level}");

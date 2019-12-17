@@ -40,7 +40,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
             var typeName = GetType().Name;
             var testNamespace = $"{typeof(TestBase).Namespace}.{typeName.Substring(0, typeName.Length - "Test".Length)}.{callerMemberName}";
             // Run version compatibility checker.
-            return Program.Check(older, newer, testNamespace);
+            return Assemblies.Compare(older, newer, testNamespace);
         }
 
         protected void TestNone([CallerMemberName] string callerMemberName = null)
