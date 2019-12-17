@@ -129,7 +129,7 @@ project itself:
 
 ## Releasing
 
-Releasing consists of five steps:
+Releasing consists of these steps:
 
 - Updating the version number in GitHub (via standard pull requests)
 - Creating a release tag and GitHub release
@@ -137,24 +137,106 @@ Releasing consists of five steps:
 - Pushing the package to nuget.org
 - Updating the documentation in GitHub (in the `gh-pages` branch)
 
-### Current process
+The last three of these are typically performed by a Kokoro release
+job.
 
-- After the version number is committed, run `tagreleases.sh` from the
-  root directory to tag all updated versions.
-- Confirm that you wish to create the given tags.
-- On a Google corp machine, trigger a Kokoro release build. (This
-  can only be performed by Googlers.)
-  - If you want to release anything other than the current head
-    of `master`, specify the commitish that was tagged.
-  - The Kokoro build will build the packages, run integration
-    tests, build the docs, then (on success) push the packages
-    to NuGet and the docs to GitHub pages.
-- If you wish to perform a manual build, use the command line
-  displayed by `tagreleases.sh` to run `buildrelease.sh`, which
-  then displays final instructions for pushing to nuget.org and
-  updating the docs.
+### Detailed steps
+
+**Create the release PR**
+
+1. Edit the API catalog (`apis/apis.json`). Find the package you
+want to release (by ID) and edit the version key to the new release
+version. Usually this will be a bump of prerelease (e.g.
+1.0.0-beta03 to 1.0.0-beta04) or a minor version bump (e.g. 1.3.0 to
+1.4.0). You may update any dependencies at the same time.
+
+2. Run `generateprojects.sh` from the root directory. This should
+indicate that it has updated the project file for the package you're
+releasing.
+
+3. If this is the first release of a package, or it's been updated
+from beta to GA, update `README.md` and `docs/root/index.md`
+accordingly.
+
+4. Update the version history for the package (in
+`apis/{package_id}/docs/history.md`). There is a script in the root
+directory to help with this: run `prepare-release.sh` passing in the
+package ID, which will perform version comparisons and perform an
+initial edit on the file, but you'll need to edit the file manually
+afterwards to make the history as useful as possible. (The tool is
+very new, and we hope to reduce the manual edit requirements over
+time.)
+
+5. Commit the changes. The first line of the commit message should
+be "Release {package_id} version {version}". Optionally, add release
+notes as the rest of the commit message, potentially by copying from
+the `history.md` file you've just edited. ([Sample
+commit](https://github.com/googleapis/google-cloud-dotnet/commit/3b580a6a0e8248daec4c84f6a45d0e07c094013d))
+
+6. Create a pull request for the commit, and get it reviewed.
+
+Sample session when releasing Google.Cloud.Speech.V1:
+
+```text
+$ git checkout -b release-speech
+$ pico apis/apis.json
+$ ./generateprojects.sh
+$ ./prepare-release.sh Google.Cloud.Speech.V1
+$ pico apis/Google.Cloud.Speech.V1/docs/history.md
+$ git commit -a
+$ git push
+```
+
+**Tagging the release**
+
+Prerequisite: the PR above has been reviewed and merged into the
+master branch.
+
+1. Checkout the master branch and pull the latest code, which should
+now include the changes you've made.
+
+2. Run `tagreleases.sh` in the root directory, specifying a github
+access token. This will ask you to confirm that you want to create a
+release.
+
+Sample session:
+
+```text
+$ git checkout master
+$ git pull upstream master
+$ ./tagreleases.sh your_access_token_here
+```
 
 Note that `tagreleases.sh` checks that there are no project
 references from APIs being released now to APIs that *aren't* being
 released. Without this check, it's possible for a released version
 to depend on unreleased changes.
+
+**Building and publishing the release**
+
+On a Google corp machine, trigger a Kokoro release build. (This
+can only be performed by Googlers.)
+
+If you want to release anything other than the current head of
+`master`, specify the commitish that was tagged (either the commit
+itself, or the tag that's listed on the [releases
+page](https://github.com/googleapis/google-cloud-dotnet/releases).
+
+The Kokoro build will:
+
+- Fetch the commit
+- See which tags are present for that commit (to work out which packages need releasing)
+- For all those packages:
+  - Build
+  - Run unit tests
+  - Run integration/snippet tests
+  - Build documentation
+  - Push packages to nuget.org
+  - Push documentation to GitHub packages
+  - Push documentation to googelapis.dev
+
+If you wish to perform a manual build instead, use
+the command line displayed by `tagreleases.sh` to run
+`buildrelease.sh`, which then displays final instructions for
+pushing to nuget.org and updating the docs.
+
