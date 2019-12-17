@@ -651,6 +651,34 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
+        public void LeaseMaxExtension()
+        {
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
+                ServerAction.Inf()
+            } };
+            using (var fake = Fake.Create(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10)))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        // Emulate a hanging message-processing task.
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(24), ct));
+                        return SubscriberClient.Reply.Ack;
+                    });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(12), CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(doneTask);
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    // Check that the lease was extended for 60 minutes only.
+                    // +1 is due to initial lease extension at time=0
+                    Assert.Equal((int)SubscriberClient.DefaultMaxTotalAckExtension.TotalSeconds / 20 + 1, fake.Subscribers[0].Extends.Count);
+                });
+            }
+        }
+
+        [Fact]
         public void SlowUplinkThrottlesPull()
         {
             const int msgCount = 20;
@@ -793,6 +821,12 @@ namespace Google.Cloud.PubSub.V1.Tests
                 AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultAckDeadline.Ticks / 2)
             };
             new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension2, null);
+
+            var settingsMaxExtension = new SubscriberClient.Settings
+            {
+                MaxTotalAckExtension = TimeSpan.FromMinutes(20)
+            };
+            new SubscriberClientImpl(subscriptionName, clients, settingsMaxExtension, null);
         }
 
         [Fact]
@@ -842,6 +876,13 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             var ex8 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckExtension2, null));
             Assert.Equal("AckExtensionWindow", ex8.ParamName);
+
+            var settingsBadMaxExtension = new SubscriberClient.Settings
+            {
+                MaxTotalAckExtension = TimeSpan.FromMinutes(-20)
+            };
+            var ex9 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadMaxExtension, null));
+            //Assert.Equal("MaxTotalAckExtension", ex9.ParamName); There's a bug in GaxPreconditions.CheckNonNegativeDelay() which uses the wrong paramName
         }
     }
 }

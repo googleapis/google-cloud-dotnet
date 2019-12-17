@@ -154,22 +154,20 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        // All defaults taken from Java (reference) implementation.
-
         /// <summary>
         /// Default <see cref="BatchingSettings"/> for <see cref="PublisherClient"/>.
         /// Default values are:
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 100;
-        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 10,000;
-        /// <see cref="BatchingSettings.DelayThreshold"/> = 1 millisecond;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 1,000,000;
+        /// <see cref="BatchingSettings.DelayThreshold"/> = 10 milliseconds;
         /// </summary>
-        public static BatchingSettings DefaultBatchingSettings { get; } = new BatchingSettings(100L, 10_000L, TimeSpan.FromMilliseconds(1));
+        public static BatchingSettings DefaultBatchingSettings { get; } = new BatchingSettings(100L, 1_000_000L, TimeSpan.FromMilliseconds(10));
 
         /// <summary>
         /// The absolute maximum <see cref="BatchingSettings"/> supported by the service.
         /// Maximum values are:
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 1,000;
-        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 9,500,000;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 10,000,000;
         /// </summary>
         public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
 

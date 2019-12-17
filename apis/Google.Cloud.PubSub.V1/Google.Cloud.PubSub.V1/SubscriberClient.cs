@@ -78,6 +78,7 @@ namespace Google.Cloud.PubSub.V1
                 AckDeadline = other.AckDeadline;
                 AckExtensionWindow = other.AckExtensionWindow;
                 Scheduler = other.Scheduler;
+                MaxTotalAckExtension = other.MaxTotalAckExtension;
             }
 
             /// <summary>
@@ -101,6 +102,12 @@ namespace Google.Cloud.PubSub.V1
             public TimeSpan? AckExtensionWindow { get; set; }
 
             /// <summary>
+            /// Maximum duration for which a message ACK deadline will be extended.
+            /// If <c>null</c>, uses the default of <see cref="DefaultMaxTotalAckExtension"/>.
+            /// </summary>
+            public TimeSpan? MaxTotalAckExtension { get; set; }
+
+            /// <summary>
             /// The <see cref="IScheduler"/> used to schedule delays.
             /// If <c>null</c>, the default <see cref="SystemScheduler"/> is used.
             /// This is usually only used for testing.
@@ -112,6 +119,10 @@ namespace Google.Cloud.PubSub.V1
                 GaxPreconditions.CheckArgumentRange(AckDeadline, nameof(AckDeadline), MinimumAckDeadline, MaximumAckDeadline);
                 var maxAckExtension = TimeSpan.FromTicks((AckDeadline ?? DefaultAckDeadline).Ticks / 2);
                 GaxPreconditions.CheckArgumentRange(AckExtensionWindow, nameof(AckExtensionWindow), MinimumAckExtensionWindow, maxAckExtension);
+                if (MaxTotalAckExtension is TimeSpan maxTotalAckExtension)
+                {
+                    GaxPreconditions.CheckNonNegativeDelay(maxTotalAckExtension, nameof(MaxTotalAckExtension));
+                }
             }
 
             /// <summary>
@@ -181,10 +192,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Default <see cref="FlowControlSettings"/> for <see cref="SubscriberClient"/>.
-        /// Allows 10,000 outstanding messages; and 20Mb outstanding bytes.
+        /// Allows 1,000 outstanding messages; and 100Mb outstanding bytes.
         /// </summary>
         /// <returns>Default <see cref="FlowControlSettings"/> for <see cref="SubscriberClient"/>.</returns>
-        public static FlowControlSettings DefaultFlowControlSettings { get; } = new FlowControlSettings(10_000, 20_000_000);
+        public static FlowControlSettings DefaultFlowControlSettings { get; } = new FlowControlSettings(1_000, 100_000_000);
 
         /// <summary>
         /// The service-defined minimum message ACKnowledgement deadline of 10 seconds.
@@ -207,9 +218,14 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan MinimumAckExtensionWindow { get; } = TimeSpan.FromMilliseconds(50);
 
         /// <summary>
-        /// The default message ACKnowlegdment extension window of 15 seconds.
+        /// The default message ACKnowlegdement extension window of 15 seconds.
         /// </summary>
         public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(15);
+
+        /// <summary>
+        /// The default maximum total ACKnowledgement extension of 60 minutes.
+        /// </summary>
+        public static TimeSpan DefaultMaxTotalAckExtension { get; } = TimeSpan.FromMinutes(60);
 
         /// <summary>
         /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.
@@ -352,6 +368,7 @@ namespace Google.Cloud.PubSub.V1
             // These values are validated in Settings.Validate() above, so no need to re-validate here.
             _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
             _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
+            _maxExtensionDuration = settings.MaxTotalAckExtension ?? DefaultMaxTotalAckExtension;
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
@@ -363,6 +380,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly SubscriberServiceApiClient[] _clients;
         private readonly Func<Task> _shutdown;
         private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends
+        private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
         private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
         private readonly int _maxAckExtendQueue; // Maximum count of acks/extends to push to server in a single messages
         private readonly IScheduler _scheduler;
@@ -809,6 +827,7 @@ namespace Google.Cloud.PubSub.V1
                 _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
                 _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
                 _autoExtendInterval = subscriber._autoExtendInterval;
+                _maxExtensionDuration = subscriber._maxExtensionDuration;
                 _extendQueueThrottleInterval = TimeSpan.FromTicks((long)((TimeSpan.FromSeconds(_modifyDeadlineSeconds) - _autoExtendInterval).Ticks * 0.5));
                 _maxAckExtendSendCount = Math.Max(10, subscriber._maxAckExtendQueue / 4);
                 _maxConcurrentPush = 3; // Fairly arbitrary.
@@ -829,6 +848,7 @@ namespace Google.Cloud.PubSub.V1
             private readonly SubscriptionName _subscriptionName;
             private readonly int _modifyDeadlineSeconds; // Seconds to add to deadling on lease extension.
             private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends.
+            private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
             private readonly TimeSpan _extendQueueThrottleInterval; // Throttle pull if items in the extend queue are older than this.
             private readonly int _maxAckExtendQueueSize; // Soft limit on push queue sizes. Used to throttle pulls.
             private readonly int _maxAckExtendSendCount; // Maximum number of ids to include in an ack/nack/extend push RPC.
@@ -1046,7 +1066,7 @@ namespace Google.Cloud.PubSub.V1
                     // Get all ack-ids, used to extend leases as required.
                     var msgIds = new HashSet<string>(msgs.Select(x => x.AckId));
                     // Send an initial "lease-extension"; which starts the server timer.
-                    HandleExtendLease(msgIds);
+                    HandleExtendLease(msgIds, null);
                     // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
                     // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
                     Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
@@ -1099,34 +1119,105 @@ namespace Google.Cloud.PubSub.V1
                 }
             }
 
-            private void HandleExtendLease(HashSet<string> msgIds)
+            private class LeaseCancellation : IDisposable
+            {
+                public LeaseCancellation(CancellationTokenSource softStopCts) =>
+                    _cts = CancellationTokenSource.CreateLinkedTokenSource(softStopCts.Token);
+
+                private readonly object _lock = new object();
+                private CancellationTokenSource _cts;
+
+                public CancellationToken Token
+                {
+                    get
+                    {
+                        lock (_lock)
+                        {
+                            return _cts?.Token ?? CancellationToken.None;
+                        }
+                    }
+                }
+
+                public void Dispose()
+                {
+                    lock (_lock)
+                    {
+                        _cts.Dispose();
+                        _cts = null;
+                    }
+                }
+
+                public bool IsDisposed
+                {
+                    get
+                    {
+                        lock (_lock)
+                        {
+                            return _cts == null;
+                        }
+                    }
+                }
+
+                public void Cancel()
+                {
+                    CancellationTokenSource cts2;
+                    lock (_lock)
+                    {
+                        cts2 = _cts;
+                    }
+                    cts2?.Cancel();
+                }
+            }
+
+            private void HandleExtendLease(HashSet<string> msgIds, LeaseCancellation cancellation)
             {
                 if (_softStopCts.IsCancellationRequested)
                 {
                     // No further lease extensions once stop is requested.
                     return;
                 }
-                bool anyMsgIds;
-                lock (msgIds)
+                if (cancellation == null)
                 {
-                    anyMsgIds = msgIds.Count > 0;
-                    if (anyMsgIds)
+                    // Create a task to cancel lease-extension once max-lease-extension time has been reached.
+                    cancellation = new LeaseCancellation(_softStopCts);
+                    Add(_scheduler.Delay(_maxExtensionDuration, cancellation.Token), Next(false, () =>
                     {
-                        lock (_lock)
+                        cancellation.Dispose();
+                        lock (msgIds)
                         {
-                            _extendQueue.Enqueue(msgIds.Select(x => new TimedId(_extendThrottleHigh + 1, x)));
+                            msgIds.Clear();
+                        }
+                    }));
+                }
+                if (!cancellation.IsDisposed)
+                {
+                    bool anyMsgIds;
+                    lock (msgIds)
+                    {
+                        anyMsgIds = msgIds.Count > 0;
+                        if (anyMsgIds)
+                        {
+                            lock (_lock)
+                            {
+                                _extendQueue.Enqueue(msgIds.Select(x => new TimedId(_extendThrottleHigh + 1, x)));
+                            }
                         }
                     }
-                }
-                if (anyMsgIds)
-                {
-                    // Ids have been added to _extendQueue, so trigger a push.
-                    _eventPush.Set();
-                    // Some ids still exist, schedule another extension.
-                    Add(_scheduler.Delay(_autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds)));
-                    // Increment _extendThrottles.
-                    _extendThrottleHigh += 1;
-                    Add(_scheduler.Delay(_extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
+                    if (anyMsgIds)
+                    {
+                        // Ids have been added to _extendQueue, so trigger a push.
+                        _eventPush.Set();
+                        // Some ids still exist, schedule another extension.
+                        Add(_scheduler.Delay(_autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
+                        // Increment _extendThrottles.
+                        _extendThrottleHigh += 1;
+                        Add(_scheduler.Delay(_extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
+                    }
+                    else
+                    {
+                        // All messages have been handled in this chunk, so cancel the max-lease-time monitoring.
+                        cancellation.Cancel();
+                    }
                 }
             }
 
