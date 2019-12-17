@@ -8,6 +8,9 @@ then
   exit 1
 fi
 
+# Make sure we have all the tags locally.
+git fetch --all --tags -f -q
+
 echo "Building $1"
 ./build.sh $1 --notests
 echo ""
