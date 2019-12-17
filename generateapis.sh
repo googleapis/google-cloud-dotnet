@@ -105,7 +105,7 @@ generate_microgenerator() {
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $API_SRC_DIR/*.proto \
-    $GOOGLEAPIS/google/cloud/common_resources.proto
+    $GOOGLEAPIS/google/cloud/common_resources.proto \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
   # The microgenerator currently creates Google.Cloud directories due to being given
