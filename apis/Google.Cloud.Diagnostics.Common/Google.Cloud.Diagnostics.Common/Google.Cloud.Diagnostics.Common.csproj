@@ -19,7 +19,6 @@
     <PackageProjectUrl>https://github.com/googleapis/google-cloud-dotnet</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
-    <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
