@@ -218,7 +218,7 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan MinimumAckExtensionWindow { get; } = TimeSpan.FromMilliseconds(50);
 
         /// <summary>
-        /// The default message ACKnowlegdement extension window of 15 seconds.
+        /// The default message ACKnowledgement extension window of 15 seconds.
         /// </summary>
         public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(15);
 
@@ -1119,7 +1119,7 @@ namespace Google.Cloud.PubSub.V1
                 }
             }
 
-            private class LeaseCancellation : IDisposable
+            private class LeaseCancellation
             {
                 public LeaseCancellation(CancellationTokenSource softStopCts) =>
                     _cts = CancellationTokenSource.CreateLinkedTokenSource(softStopCts.Token);
@@ -1165,7 +1165,9 @@ namespace Google.Cloud.PubSub.V1
                     {
                         cts2 = _cts;
                     }
+                    // Cancel outside of lock, as continuations may be executed synchronously.
                     cts2?.Cancel();
+                    // No need to dispose of `_cts` here, as `Dispose()` will always be called.
                 }
             }
 
@@ -1176,12 +1178,17 @@ namespace Google.Cloud.PubSub.V1
                     // No further lease extensions once stop is requested.
                     return;
                 }
+                // The first call to this method happens as soon as messages in this chunk start to be processed.
+                // This triggers the server to start its lease timer.
                 if (cancellation == null)
                 {
-                    // Create a task to cancel lease-extension once max-lease-extension time has been reached.
+                    // Create a task to cancel lease-extension once `_maxExtensionDuration` has been reached.
+                    // This set up once for each chunk of received messages, and passed through to each future call to this method.
                     cancellation = new LeaseCancellation(_softStopCts);
                     Add(_scheduler.Delay(_maxExtensionDuration, cancellation.Token), Next(false, () =>
                     {
+                        // This is executed when `_maxExtensionDuration` has expired, or when `cancellation` is cancelled,
+                        // Which ensures `cancellation` is aways disposed of.
                         cancellation.Dispose();
                         lock (msgIds)
                         {
@@ -1191,6 +1198,7 @@ namespace Google.Cloud.PubSub.V1
                 }
                 if (!cancellation.IsDisposed)
                 {
+                    // If `_maxExtensionDuration` has not expired, then schedule a further lease extension.
                     bool anyMsgIds;
                     lock (msgIds)
                     {
@@ -1208,6 +1216,7 @@ namespace Google.Cloud.PubSub.V1
                         // Ids have been added to _extendQueue, so trigger a push.
                         _eventPush.Set();
                         // Some ids still exist, schedule another extension.
+                        // The overall `_maxExtensionDuration` is maintained by passing through the existing `cancellation`.
                         Add(_scheduler.Delay(_autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
                         // Increment _extendThrottles.
                         _extendThrottleHigh += 1;
@@ -1216,6 +1225,7 @@ namespace Google.Cloud.PubSub.V1
                     else
                     {
                         // All messages have been handled in this chunk, so cancel the max-lease-time monitoring.
+                        // This will also cause `cancellation` to be disposed in the anonymous function above.
                         cancellation.Cancel();
                     }
                 }
