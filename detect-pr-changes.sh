@@ -10,8 +10,8 @@ mkdir tmpgit/old
 mkdir tmpgit/new
 
 # First build everything, so we can get straight to the good stuff at the end of the log.
-dotnet build tools/Google.Cloud.Tools.VersionCompat
-dotnet build tools/Google.Cloud.Tools.CheckVersionCompatibility
+dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CompareVersions
+dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CheckVersionCompatibility
 
 for api in $apis
 do
@@ -26,8 +26,8 @@ do
   then
     echo "Building $api"
     apidir=apis/$api/$api
-    dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false tmpgit/$apidir 
-    dotnet build -c Release -f netstandard2.0 -v quiet -p:SourceLinkCreate=false $apidir
+    dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false tmpgit/$apidir 
+    dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $apidir
     asm=apis/$api/$api/bin/Release/netstandard2.0/$api.dll
     cp tmpgit/$asm tmpgit/old
     cp $asm tmpgit/new
@@ -57,7 +57,7 @@ do
     echo "$api was deleted"
   else
     echo "Checking $api for changes"
-    dotnet run --no-build -p tools/Google.Cloud.Tools.VersionCompat -- tmpgit/old/$api.dll tmpgit/new/$api.dll
+    dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
   fi
   echo "---------------------"
 done  
