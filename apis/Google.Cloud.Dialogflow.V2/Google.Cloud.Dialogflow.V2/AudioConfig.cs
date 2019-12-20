@@ -28,47 +28,56 @@ namespace Google.Cloud.Dialogflow.V2 {
             "dG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
             "Gh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8i/gEKEElucHV0QXVkaW9Db25maWcSQQoOYXVk",
-            "aW9fZW5jb2RpbmcYASABKA4yKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "Mi5BdWRpb0VuY29kaW5nEhkKEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFEhUK",
-            "DWxhbmd1YWdlX2NvZGUYAyABKAkSFAoMcGhyYXNlX2hpbnRzGAQgAygJEkUK",
-            "DW1vZGVsX3ZhcmlhbnQYCiABKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52Mi5TcGVlY2hNb2RlbFZhcmlhbnQSGAoQc2luZ2xlX3V0dGVyYW5jZRgI",
-            "IAEoCCJmChRWb2ljZVNlbGVjdGlvblBhcmFtcxIMCgRuYW1lGAEgASgJEkAK",
-            "C3NzbWxfZ2VuZGVyGAIgASgOMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuU3NtbFZvaWNlR2VuZGVyIrMBChZTeW50aGVzaXplU3BlZWNoQ29uZmln",
-            "EhUKDXNwZWFraW5nX3JhdGUYASABKAESDQoFcGl0Y2gYAiABKAESFgoOdm9s",
-            "dW1lX2dhaW5fZGIYAyABKAESGgoSZWZmZWN0c19wcm9maWxlX2lkGAUgAygJ",
-            "Ej8KBXZvaWNlGAQgASgLMjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "Vm9pY2VTZWxlY3Rpb25QYXJhbXMizQEKEU91dHB1dEF1ZGlvQ29uZmlnEkcK",
-            "DmF1ZGlvX2VuY29kaW5nGAEgASgOMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuT3V0cHV0QXVkaW9FbmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0",
-            "ehgCIAEoBRJUChhzeW50aGVzaXplX3NwZWVjaF9jb25maWcYAyABKAsyMi5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TeW50aGVzaXplU3BlZWNoQ29u",
-            "ZmlnKvsBCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BF",
-            "Q0lGSUVEEAASHAoYQVVESU9fRU5DT0RJTkdfTElORUFSXzE2EAESFwoTQVVE",
-            "SU9fRU5DT0RJTkdfRkxBQxACEhgKFEFVRElPX0VOQ09ESU5HX01VTEFXEAMS",
-            "FgoSQVVESU9fRU5DT0RJTkdfQU1SEAQSGQoVQVVESU9fRU5DT0RJTkdfQU1S",
-            "X1dCEAUSGwoXQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQBhIpCiVBVURJT19F",
-            "TkNPRElOR19TUEVFWF9XSVRIX0hFQURFUl9CWVRFEAcqdgoSU3BlZWNoTW9k",
-            "ZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9WQVJJQU5UX1VOU1BFQ0lGSUVE",
-            "EAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAESEAoMVVNFX1NUQU5EQVJEEAIS",
-            "EAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxWb2ljZUdlbmRlchIhCh1TU01M",
-            "X1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoKFlNTTUxfVk9JQ0VfR0VO",
-            "REVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhIdChlT",
-            "U01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMqpAEKE091dHB1dEF1ZGlvRW5j",
-            "b2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAAS",
-            "IwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEh0KGU9VVFBV",
-            "VF9BVURJT19FTkNPRElOR19NUDMQAhIiCh5PVVRQVVRfQVVESU9fRU5DT0RJ",
-            "TkdfT0dHX09QVVMQA0KfAQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyQhBBdWRpb0NvbmZpZ1Byb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dm",
-            "bG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJv",
-            "dG8z"));
+            "YW5ub3RhdGlvbnMucHJvdG8iLwoNU3BlZWNoQ29udGV4dBIPCgdwaHJhc2Vz",
+            "GAEgAygJEg0KBWJvb3N0GAIgASgCIpIBCg5TcGVlY2hXb3JkSW5mbxIMCgR3",
+            "b3JkGAMgASgJEi8KDHN0YXJ0X29mZnNldBgBIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbhItCgplbmRfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uEhIKCmNvbmZpZGVuY2UYBCABKAIigQMKEElucHV0",
+            "QXVkaW9Db25maWcSQQoOYXVkaW9fZW5jb2RpbmcYASABKA4yKS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5BdWRpb0VuY29kaW5nEhkKEXNhbXBsZV9y",
+            "YXRlX2hlcnR6GAIgASgFEhUKDWxhbmd1YWdlX2NvZGUYAyABKAkSHQoQZW5h",
+            "YmxlX3dvcmRfaW5mbxgNIAEoCEID4EEBEhsKDHBocmFzZV9oaW50cxgEIAMo",
+            "CUIFGAHgQQESRwoPc3BlZWNoX2NvbnRleHRzGAsgAygLMikuZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjIuU3BlZWNoQ29udGV4dEID4EEBEhIKBW1vZGVs",
+            "GAcgASgJQgPgQQESRQoNbW9kZWxfdmFyaWFudBgKIAEoDjIuLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyLlNwZWVjaE1vZGVsVmFyaWFudBIYChBzaW5n",
+            "bGVfdXR0ZXJhbmNlGAggASgIImYKFFZvaWNlU2VsZWN0aW9uUGFyYW1zEgwK",
+            "BG5hbWUYASABKAkSQAoLc3NtbF9nZW5kZXIYAiABKA4yKy5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52Mi5Tc21sVm9pY2VHZW5kZXIiswEKFlN5bnRoZXNp",
+            "emVTcGVlY2hDb25maWcSFQoNc3BlYWtpbmdfcmF0ZRgBIAEoARINCgVwaXRj",
+            "aBgCIAEoARIWCg52b2x1bWVfZ2Fpbl9kYhgDIAEoARIaChJlZmZlY3RzX3By",
+            "b2ZpbGVfaWQYBSADKAkSPwoFdm9pY2UYBCABKAsyMC5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtcyLNAQoRT3V0cHV0",
+            "QXVkaW9Db25maWcSRwoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nEhkKEXNh",
+            "bXBsZV9yYXRlX2hlcnR6GAIgASgFElQKGHN5bnRoZXNpemVfc3BlZWNoX2Nv",
+            "bmZpZxgDIAEoCzIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN5bnRo",
+            "ZXNpemVTcGVlY2hDb25maWcq+wEKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9f",
+            "RU5DT0RJTkdfVU5TUEVDSUZJRUQQABIcChhBVURJT19FTkNPRElOR19MSU5F",
+            "QVJfMTYQARIXChNBVURJT19FTkNPRElOR19GTEFDEAISGAoUQVVESU9fRU5D",
+            "T0RJTkdfTVVMQVcQAxIWChJBVURJT19FTkNPRElOR19BTVIQBBIZChVBVURJ",
+            "T19FTkNPRElOR19BTVJfV0IQBRIbChdBVURJT19FTkNPRElOR19PR0dfT1BV",
+            "UxAGEikKJUFVRElPX0VOQ09ESU5HX1NQRUVYX1dJVEhfSEVBREVSX0JZVEUQ",
+            "Byp2ChJTcGVlY2hNb2RlbFZhcmlhbnQSJAogU1BFRUNIX01PREVMX1ZBUklB",
+            "TlRfVU5TUEVDSUZJRUQQABIWChJVU0VfQkVTVF9BVkFJTEFCTEUQARIQCgxV",
+            "U0VfU1RBTkRBUkQQAhIQCgxVU0VfRU5IQU5DRUQQAyqNAQoPU3NtbFZvaWNl",
+            "R2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAASGgoW",
+            "U1NNTF9WT0lDRV9HRU5ERVJfTUFMRRABEhwKGFNTTUxfVk9JQ0VfR0VOREVS",
+            "X0ZFTUFMRRACEh0KGVNTTUxfVk9JQ0VfR0VOREVSX05FVVRSQUwQAyqkAQoT",
+            "T3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdf",
+            "VU5TUEVDSUZJRUQQABIjCh9PVVRQVVRfQVVESU9fRU5DT0RJTkdfTElORUFS",
+            "XzE2EAESHQoZT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QMxACEiIKHk9VVFBV",
+            "VF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADQp8BCh5jb20uZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjJCEEF1ZGlvQ29uZmlnUHJvdG9QAVpEZ29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dm",
+            "bG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFs",
+            "b2dmbG93LlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "PhraseHints", "ModelVariant", "SingleUtterance" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechContext), global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null)
@@ -242,6 +251,433 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   #region Messages
   /// <summary>
+  /// Hints for the speech recognizer to help with recognition in a specific
+  /// conversation state.
+  /// </summary>
+  public sealed partial class SpeechContext : pb::IMessage<SpeechContext> {
+    private static readonly pb::MessageParser<SpeechContext> _parser = new pb::MessageParser<SpeechContext>(() => new SpeechContext());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SpeechContext> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechContext() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechContext(SpeechContext other) : this() {
+      phrases_ = other.phrases_.Clone();
+      boost_ = other.boost_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechContext Clone() {
+      return new SpeechContext(this);
+    }
+
+    /// <summary>Field number for the "phrases" field.</summary>
+    public const int PhrasesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_phrases_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> phrases_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of strings containing words and phrases that the speech
+    /// recognizer should recognize with higher likelihood.
+    ///
+    /// This list can be used to:
+    /// * improve accuracy for words and phrases you expect the user to say,
+    ///   e.g. typical commands for your Dialogflow agent
+    /// * add additional words to the speech recognizer vocabulary
+    /// * ...
+    ///
+    /// See the [Cloud Speech
+    /// documentation](https://cloud.google.com/speech-to-text/quotas) for usage
+    /// limits.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Phrases {
+      get { return phrases_; }
+    }
+
+    /// <summary>Field number for the "boost" field.</summary>
+    public const int BoostFieldNumber = 2;
+    private float boost_;
+    /// <summary>
+    /// Optional. Boost for this context compared to other contexts:
+    /// * If the boost is positive, Dialogflow will increase the probability that
+    ///   the phrases in this context are recognized over similar sounding phrases.
+    /// * If the boost is unspecified or non-positive, Dialogflow will not apply
+    ///   any boost.
+    ///
+    /// Dialogflow recommends that you use boosts in the range (0, 20] and that you
+    /// find a value that fits your use case with binary search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Boost {
+      get { return boost_; }
+      set {
+        boost_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SpeechContext);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SpeechContext other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!phrases_.Equals(other.phrases_)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Boost, other.Boost)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= phrases_.GetHashCode();
+      if (Boost != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Boost);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      phrases_.WriteTo(output, _repeated_phrases_codec);
+      if (Boost != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Boost);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += phrases_.CalculateSize(_repeated_phrases_codec);
+      if (Boost != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SpeechContext other) {
+      if (other == null) {
+        return;
+      }
+      phrases_.Add(other.phrases_);
+      if (other.Boost != 0F) {
+        Boost = other.Boost;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            phrases_.AddEntriesFrom(input, _repeated_phrases_codec);
+            break;
+          }
+          case 21: {
+            Boost = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Information for a word recognized by the speech recognizer.
+  /// </summary>
+  public sealed partial class SpeechWordInfo : pb::IMessage<SpeechWordInfo> {
+    private static readonly pb::MessageParser<SpeechWordInfo> _parser = new pb::MessageParser<SpeechWordInfo>(() => new SpeechWordInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SpeechWordInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechWordInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechWordInfo(SpeechWordInfo other) : this() {
+      word_ = other.word_;
+      startOffset_ = other.startOffset_ != null ? other.startOffset_.Clone() : null;
+      endOffset_ = other.endOffset_ != null ? other.endOffset_.Clone() : null;
+      confidence_ = other.confidence_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechWordInfo Clone() {
+      return new SpeechWordInfo(this);
+    }
+
+    /// <summary>Field number for the "word" field.</summary>
+    public const int WordFieldNumber = 3;
+    private string word_ = "";
+    /// <summary>
+    /// The word this info is for.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Word {
+      get { return word_; }
+      set {
+        word_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_offset" field.</summary>
+    public const int StartOffsetFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Duration startOffset_;
+    /// <summary>
+    /// Time offset relative to the beginning of the audio that corresponds to the
+    /// start of the spoken word. This is an experimental feature and the accuracy
+    /// of the time offset can vary.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration StartOffset {
+      get { return startOffset_; }
+      set {
+        startOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_offset" field.</summary>
+    public const int EndOffsetFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration endOffset_;
+    /// <summary>
+    /// Time offset relative to the beginning of the audio that corresponds to the
+    /// end of the spoken word. This is an experimental feature and the accuracy of
+    /// the time offset can vary.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration EndOffset {
+      get { return endOffset_; }
+      set {
+        endOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 4;
+    private float confidence_;
+    /// <summary>
+    /// The Speech confidence between 0.0 and 1.0 for this word. A higher number
+    /// indicates an estimated greater likelihood that the recognized word is
+    /// correct. The default of 0.0 is a sentinel value indicating that confidence
+    /// was not set.
+    ///
+    /// This field is not guaranteed to be fully stable over time for the same
+    /// audio input. Users should also not rely on it to always be provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SpeechWordInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SpeechWordInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Word != other.Word) return false;
+      if (!object.Equals(StartOffset, other.StartOffset)) return false;
+      if (!object.Equals(EndOffset, other.EndOffset)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Word.Length != 0) hash ^= Word.GetHashCode();
+      if (startOffset_ != null) hash ^= StartOffset.GetHashCode();
+      if (endOffset_ != null) hash ^= EndOffset.GetHashCode();
+      if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (startOffset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartOffset);
+      }
+      if (endOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndOffset);
+      }
+      if (Word.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Word);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Word.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Word);
+      }
+      if (startOffset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartOffset);
+      }
+      if (endOffset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndOffset);
+      }
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SpeechWordInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Word.Length != 0) {
+        Word = other.Word;
+      }
+      if (other.startOffset_ != null) {
+        if (startOffset_ == null) {
+          StartOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        StartOffset.MergeFrom(other.StartOffset);
+      }
+      if (other.endOffset_ != null) {
+        if (endOffset_ == null) {
+          EndOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        EndOffset.MergeFrom(other.EndOffset);
+      }
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startOffset_ == null) {
+              StartOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(StartOffset);
+            break;
+          }
+          case 18: {
+            if (endOffset_ == null) {
+              EndOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EndOffset);
+            break;
+          }
+          case 26: {
+            Word = input.ReadString();
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Instructs the speech recognizer how to process the audio content.
   /// </summary>
   public sealed partial class InputAudioConfig : pb::IMessage<InputAudioConfig> {
@@ -252,7 +688,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -272,7 +708,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       audioEncoding_ = other.audioEncoding_;
       sampleRateHertz_ = other.sampleRateHertz_;
       languageCode_ = other.languageCode_;
+      enableWordInfo_ = other.enableWordInfo_;
       phraseHints_ = other.phraseHints_.Clone();
+      speechContexts_ = other.speechContexts_.Clone();
+      model_ = other.model_;
       modelVariant_ = other.modelVariant_;
       singleUtterance_ = other.singleUtterance_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -333,6 +772,23 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "enable_word_info" field.</summary>
+    public const int EnableWordInfoFieldNumber = 13;
+    private bool enableWordInfo_;
+    /// <summary>
+    /// Optional. If `true`, Dialogflow returns [SpeechWordInfo][google.cloud.dialogflow.v2.SpeechWordInfo] in
+    /// [StreamingRecognitionResult][google.cloud.dialogflow.v2.StreamingRecognitionResult] with information about the recognized speech
+    /// words, e.g. start and end time offsets. If false or unspecified, Speech
+    /// doesn't return any word-level information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableWordInfo {
+      get { return enableWordInfo_; }
+      set {
+        enableWordInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "phrase_hints" field.</summary>
     public const int PhraseHintsFieldNumber = 4;
     private static readonly pb::FieldCodec<string> _repeated_phraseHints_codec
@@ -345,10 +801,56 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// See [the Cloud Speech
     /// documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
     /// for more details.
+    ///
+    /// This field is deprecated. Please use [speech_contexts]() instead. If you
+    /// specify both [phrase_hints]() and [speech_contexts](), Dialogflow will
+    /// treat the [phrase_hints]() as a single additional [SpeechContext]().
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> PhraseHints {
       get { return phraseHints_; }
+    }
+
+    /// <summary>Field number for the "speech_contexts" field.</summary>
+    public const int SpeechContextsFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dialogflow.V2.SpeechContext> _repeated_speechContexts_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SpeechContext> speechContexts_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SpeechContext>();
+    /// <summary>
+    /// Optional. Context information to assist speech recognition.
+    ///
+    /// See [the Cloud Speech
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SpeechContext> SpeechContexts {
+      get { return speechContexts_; }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 7;
+    private string model_ = "";
+    /// <summary>
+    /// Optional. Which Speech model to select for the given request. Select the
+    /// model best suited to your domain to get best results. If a model is not
+    /// explicitly specified, then we auto-select a model based on the parameters
+    /// in the InputAudioConfig.
+    /// If enhanced speech model is enabled for the agent and an enhanced
+    /// version of the specified model for the language does not exist, then the
+    /// speech is recognized using the standard version of the specified model.
+    /// Refer to
+    /// [Cloud Speech API
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "model_variant" field.</summary>
@@ -404,7 +906,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (AudioEncoding != other.AudioEncoding) return false;
       if (SampleRateHertz != other.SampleRateHertz) return false;
       if (LanguageCode != other.LanguageCode) return false;
+      if (EnableWordInfo != other.EnableWordInfo) return false;
       if(!phraseHints_.Equals(other.phraseHints_)) return false;
+      if(!speechContexts_.Equals(other.speechContexts_)) return false;
+      if (Model != other.Model) return false;
       if (ModelVariant != other.ModelVariant) return false;
       if (SingleUtterance != other.SingleUtterance) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -416,7 +921,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (AudioEncoding != 0) hash ^= AudioEncoding.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (EnableWordInfo != false) hash ^= EnableWordInfo.GetHashCode();
       hash ^= phraseHints_.GetHashCode();
+      hash ^= speechContexts_.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (ModelVariant != 0) hash ^= ModelVariant.GetHashCode();
       if (SingleUtterance != false) hash ^= SingleUtterance.GetHashCode();
       if (_unknownFields != null) {
@@ -445,6 +953,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteString(LanguageCode);
       }
       phraseHints_.WriteTo(output, _repeated_phraseHints_codec);
+      if (Model.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Model);
+      }
       if (SingleUtterance != false) {
         output.WriteRawTag(64);
         output.WriteBool(SingleUtterance);
@@ -452,6 +964,11 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (ModelVariant != 0) {
         output.WriteRawTag(80);
         output.WriteEnum((int) ModelVariant);
+      }
+      speechContexts_.WriteTo(output, _repeated_speechContexts_codec);
+      if (EnableWordInfo != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(EnableWordInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -470,7 +987,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
+      if (EnableWordInfo != false) {
+        size += 1 + 1;
+      }
       size += phraseHints_.CalculateSize(_repeated_phraseHints_codec);
+      size += speechContexts_.CalculateSize(_repeated_speechContexts_codec);
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
       if (ModelVariant != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelVariant);
       }
@@ -497,7 +1021,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
+      if (other.EnableWordInfo != false) {
+        EnableWordInfo = other.EnableWordInfo;
+      }
       phraseHints_.Add(other.phraseHints_);
+      speechContexts_.Add(other.speechContexts_);
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
       if (other.ModelVariant != 0) {
         ModelVariant = other.ModelVariant;
       }
@@ -531,12 +1062,24 @@ namespace Google.Cloud.Dialogflow.V2 {
             phraseHints_.AddEntriesFrom(input, _repeated_phraseHints_codec);
             break;
           }
+          case 58: {
+            Model = input.ReadString();
+            break;
+          }
           case 64: {
             SingleUtterance = input.ReadBool();
             break;
           }
           case 80: {
             ModelVariant = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            speechContexts_.AddEntriesFrom(input, _repeated_speechContexts_codec);
+            break;
+          }
+          case 104: {
+            EnableWordInfo = input.ReadBool();
             break;
           }
         }
@@ -556,7 +1099,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -728,7 +1271,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -999,7 +1542,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

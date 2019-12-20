@@ -638,8 +638,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Read-only after creation. The unique identifier of the parent intent in the
     /// chain of followup intents. You can set this field when creating an intent,
-    /// for example with [CreateIntent][] or [BatchUpdateIntents][], in order to
-    /// make this intent a followup intent.
+    /// for example with [CreateIntent][google.cloud.dialogflow.v2.Intents.CreateIntent] or
+    /// [BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents], in order to make this
+    /// intent a followup intent.
     ///
     /// It identifies the parent followup intent.
     /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
