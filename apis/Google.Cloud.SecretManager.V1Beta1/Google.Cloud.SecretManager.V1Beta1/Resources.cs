@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.Secrets.V1Beta1 {
+namespace Google.Cloud.SecretManager.V1Beta1 {
 
   /// <summary>Holder for reflection information generated from google/cloud/secrets/v1beta1/resources.proto</summary>
   public static partial class ResourcesReflection {
@@ -53,19 +53,21 @@ namespace Google.Cloud.Secrets.V1Beta1 {
             "b29nbGUuY2xvdWQuc2VjcmV0cy52MWJldGExLlJlcGxpY2F0aW9uLlVzZXJN",
             "YW5hZ2VkLlJlcGxpY2FCA+BBAhobCgdSZXBsaWNhEhAKCGxvY2F0aW9uGAEg",
             "ASgJQg0KC3JlcGxpY2F0aW9uIh0KDVNlY3JldFBheWxvYWQSDAoEZGF0YRgB",
-            "IAEoDELAAQogY29tLmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTFCDlJl",
-            "c291cmNlc1Byb3RvUAFaQ2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvc2VjcmV0cy92MWJldGExO3NlY3JldHP4AQGiAgNH",
-            "U02qAhxHb29nbGUuQ2xvdWQuU2VjcmV0cy5WMUJldGExygIcR29vZ2xlXENs",
-            "b3VkXFNlY3JldHNcVjFiZXRhMWIGcHJvdG8z"));
+            "IAEoDEKGAgomY29tLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxYmV0",
+            "YTFCDlJlc291cmNlc1Byb3RvUAFaT2dvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjcmV0bWFuYWdlci92MWJldGExO3Nl",
+            "Y3JldG1hbmFnZXL4AQGiAgNHU02qAiJHb29nbGUuQ2xvdWQuU2VjcmV0TWFu",
+            "YWdlci5WMUJldGExygIiR29vZ2xlXENsb3VkXFNlY3JldE1hbmFnZXJcVjFi",
+            "ZXRhMeoCJUdvb2dsZTo6Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYxYmV0YTFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.Secret), global::Google.Cloud.Secrets.V1Beta1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.SecretVersion), global::Google.Cloud.Secrets.V1Beta1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State" }, null, new[]{ typeof(global::Google.Cloud.Secrets.V1Beta1.SecretVersion.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.Replication), global::Google.Cloud.Secrets.V1Beta1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.Replication.Types.Automatic), global::Google.Cloud.Secrets.V1Beta1.Replication.Types.Automatic.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged), global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.SecretPayload), global::Google.Cloud.Secrets.V1Beta1.SecretPayload.Parser, new[]{ "Data" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Secret), global::Google.Cloud.SecretManager.V1Beta1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretVersion), global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication), global::Google.Cloud.SecretManager.V1Beta1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretPayload), global::Google.Cloud.SecretManager.V1Beta1.SecretPayload.Parser, new[]{ "Data" }, null, null, null)
           }));
     }
     #endregion
@@ -87,7 +89,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -132,14 +134,14 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "replication" field.</summary>
     public const int ReplicationFieldNumber = 2;
-    private global::Google.Cloud.Secrets.V1Beta1.Replication replication_;
+    private global::Google.Cloud.SecretManager.V1Beta1.Replication replication_;
     /// <summary>
     /// Required. Immutable. The replication policy of the secret data attached to the [Secret][google.cloud.secrets.v1beta1.Secret].
     ///
     /// The replication policy cannot be changed after the Secret has been created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.Replication Replication {
+    public global::Google.Cloud.SecretManager.V1Beta1.Replication Replication {
       get { return replication_; }
       set {
         replication_ = value;
@@ -270,7 +272,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
       }
       if (other.replication_ != null) {
         if (replication_ == null) {
-          Replication = new global::Google.Cloud.Secrets.V1Beta1.Replication();
+          Replication = new global::Google.Cloud.SecretManager.V1Beta1.Replication();
         }
         Replication.MergeFrom(other.Replication);
       }
@@ -298,7 +300,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
           }
           case 18: {
             if (replication_ == null) {
-              Replication = new global::Google.Cloud.Secrets.V1Beta1.Replication();
+              Replication = new global::Google.Cloud.SecretManager.V1Beta1.Replication();
             }
             input.ReadMessage(Replication);
             break;
@@ -331,7 +333,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -410,12 +412,12 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 4;
-    private global::Google.Cloud.Secrets.V1Beta1.SecretVersion.Types.State state_ = 0;
+    private global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State state_ = 0;
     /// <summary>
     /// Output only. The current state of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.SecretVersion.Types.State State {
+    public global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State State {
       get { return state_; }
       set {
         state_ = value;
@@ -557,7 +559,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
             break;
           }
           case 32: {
-            State = (global::Google.Cloud.Secrets.V1Beta1.SecretVersion.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State) input.ReadEnum();
             break;
           }
         }
@@ -609,7 +611,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -649,8 +651,8 @@ namespace Google.Cloud.Secrets.V1Beta1 {
     /// The [Secret][google.cloud.secrets.v1beta1.Secret] will automatically be replicated without any restrictions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.Replication.Types.Automatic Automatic {
-      get { return replicationCase_ == ReplicationOneofCase.Automatic ? (global::Google.Cloud.Secrets.V1Beta1.Replication.Types.Automatic) replication_ : null; }
+    public global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic Automatic {
+      get { return replicationCase_ == ReplicationOneofCase.Automatic ? (global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic) replication_ : null; }
       set {
         replication_ = value;
         replicationCase_ = value == null ? ReplicationOneofCase.None : ReplicationOneofCase.Automatic;
@@ -663,8 +665,8 @@ namespace Google.Cloud.Secrets.V1Beta1 {
     /// The [Secret][google.cloud.secrets.v1beta1.Secret] will only be replicated into the locations specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged UserManaged {
-      get { return replicationCase_ == ReplicationOneofCase.UserManaged ? (global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged) replication_ : null; }
+    public global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged UserManaged {
+      get { return replicationCase_ == ReplicationOneofCase.UserManaged ? (global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged) replication_ : null; }
       set {
         replication_ = value;
         replicationCase_ = value == null ? ReplicationOneofCase.None : ReplicationOneofCase.UserManaged;
@@ -764,13 +766,13 @@ namespace Google.Cloud.Secrets.V1Beta1 {
       switch (other.ReplicationCase) {
         case ReplicationOneofCase.Automatic:
           if (Automatic == null) {
-            Automatic = new global::Google.Cloud.Secrets.V1Beta1.Replication.Types.Automatic();
+            Automatic = new global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic();
           }
           Automatic.MergeFrom(other.Automatic);
           break;
         case ReplicationOneofCase.UserManaged:
           if (UserManaged == null) {
-            UserManaged = new global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged();
+            UserManaged = new global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged();
           }
           UserManaged.MergeFrom(other.UserManaged);
           break;
@@ -788,7 +790,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::Google.Cloud.Secrets.V1Beta1.Replication.Types.Automatic subBuilder = new global::Google.Cloud.Secrets.V1Beta1.Replication.Types.Automatic();
+            global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic subBuilder = new global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic();
             if (replicationCase_ == ReplicationOneofCase.Automatic) {
               subBuilder.MergeFrom(Automatic);
             }
@@ -797,7 +799,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
             break;
           }
           case 18: {
-            global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged subBuilder = new global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged();
+            global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged subBuilder = new global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged();
             if (replicationCase_ == ReplicationOneofCase.UserManaged) {
               subBuilder.MergeFrom(UserManaged);
             }
@@ -825,7 +827,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Secrets.V1Beta1.Replication.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.SecretManager.V1Beta1.Replication.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -930,7 +932,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Secrets.V1Beta1.Replication.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.SecretManager.V1Beta1.Replication.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -958,16 +960,16 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
         /// <summary>Field number for the "replicas" field.</summary>
         public const int ReplicasFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Types.Replica> _repeated_replicas_codec
-            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Types.Replica.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Types.Replica> replicas_ = new pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Types.Replica>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica> _repeated_replicas_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica> replicas_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica>();
         /// <summary>
         /// Required. The list of Replicas for this [Secret][google.cloud.secrets.v1beta1.Secret].
         ///
         /// Cannot be empty.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Types.Replica> Replicas {
+        public pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica> Replicas {
           get { return replicas_; }
         }
 
@@ -1061,7 +1063,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.Secrets.V1Beta1.Replication.Types.UserManaged.Descriptor.NestedTypes[0]; }
+              get { return global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1208,7 +1210,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
