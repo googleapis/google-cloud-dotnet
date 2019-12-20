@@ -26,7 +26,7 @@ using st = System.Threading;
 using stt = System.Threading.Tasks;
 using xunit = Xunit;
 
-namespace Google.Cloud.Secrets.V1Beta1.Tests
+namespace Google.Cloud.SecretManager.V1Beta1.Tests
 {
     /// <summary>Generated unit tests.</summary>
     public sealed class GeneratedSecretManagerServiceClientTest

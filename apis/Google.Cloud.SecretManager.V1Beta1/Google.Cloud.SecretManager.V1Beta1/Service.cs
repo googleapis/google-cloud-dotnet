@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.Secrets.V1Beta1 {
+namespace Google.Cloud.SecretManager.V1Beta1 {
 
   /// <summary>Holder for reflection information generated from google/cloud/secrets/v1beta1/service.proto</summary>
   public static partial class ServiceReflection {
@@ -134,30 +134,31 @@ namespace Google.Cloud.Secrets.V1Beta1 {
             "aXNzaW9uc1Jlc3BvbnNlIkaC0+STAkAiOy92MWJldGExL3tyZXNvdXJjZT1w",
             "cm9qZWN0cy8qL3NlY3JldHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGlDK",
             "QRxzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK+AQogY29tLmdv",
-            "b2dsZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTFCDFNlY3JldHNQcm90b1ABWkNn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Nl",
-            "Y3JldHMvdjFiZXRhMTtzZWNyZXRz+AEBogIDR1NNqgIcR29vZ2xlLkNsb3Vk",
-            "LlNlY3JldHMuVjFCZXRhMcoCHEdvb2dsZVxDbG91ZFxTZWNyZXRzXFYxYmV0",
-            "YTFiBnByb3RvMw=="));
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKEAgomY29tLmdv",
+            "b2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxYmV0YTFCDFNlcnZpY2VQcm90",
+            "b1ABWk9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL3NlY3JldG1hbmFnZXIvdjFiZXRhMTtzZWNyZXRtYW5hZ2Vy+AEBogID",
+            "R1NNqgIiR29vZ2xlLkNsb3VkLlNlY3JldE1hbmFnZXIuVjFCZXRhMcoCIkdv",
+            "b2dsZVxDbG91ZFxTZWNyZXRNYW5hZ2VyXFYxYmV0YTHqAiVHb29nbGU6OkNs",
+            "b3VkOjpTZWNyZXRNYW5hZ2VyOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Secrets.V1Beta1.ResourcesReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecretManager.V1Beta1.ResourcesReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.ListSecretsRequest), global::Google.Cloud.Secrets.V1Beta1.ListSecretsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.ListSecretsResponse), global::Google.Cloud.Secrets.V1Beta1.ListSecretsResponse.Parser, new[]{ "Secrets", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.CreateSecretRequest), global::Google.Cloud.Secrets.V1Beta1.CreateSecretRequest.Parser, new[]{ "Parent", "SecretId", "Secret" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.AddSecretVersionRequest), global::Google.Cloud.Secrets.V1Beta1.AddSecretVersionRequest.Parser, new[]{ "Parent", "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.GetSecretRequest), global::Google.Cloud.Secrets.V1Beta1.GetSecretRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.ListSecretVersionsRequest), global::Google.Cloud.Secrets.V1Beta1.ListSecretVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.ListSecretVersionsResponse), global::Google.Cloud.Secrets.V1Beta1.ListSecretVersionsResponse.Parser, new[]{ "Versions", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.GetSecretVersionRequest), global::Google.Cloud.Secrets.V1Beta1.GetSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.UpdateSecretRequest), global::Google.Cloud.Secrets.V1Beta1.UpdateSecretRequest.Parser, new[]{ "Secret", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.AccessSecretVersionRequest), global::Google.Cloud.Secrets.V1Beta1.AccessSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.AccessSecretVersionResponse), global::Google.Cloud.Secrets.V1Beta1.AccessSecretVersionResponse.Parser, new[]{ "Name", "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.DeleteSecretRequest), global::Google.Cloud.Secrets.V1Beta1.DeleteSecretRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.DisableSecretVersionRequest), global::Google.Cloud.Secrets.V1Beta1.DisableSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.EnableSecretVersionRequest), global::Google.Cloud.Secrets.V1Beta1.EnableSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Secrets.V1Beta1.DestroySecretVersionRequest), global::Google.Cloud.Secrets.V1Beta1.DestroySecretVersionRequest.Parser, new[]{ "Name" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.ListSecretsRequest), global::Google.Cloud.SecretManager.V1Beta1.ListSecretsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.ListSecretsResponse), global::Google.Cloud.SecretManager.V1Beta1.ListSecretsResponse.Parser, new[]{ "Secrets", "NextPageToken", "TotalSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.CreateSecretRequest), global::Google.Cloud.SecretManager.V1Beta1.CreateSecretRequest.Parser, new[]{ "Parent", "SecretId", "Secret" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.AddSecretVersionRequest), global::Google.Cloud.SecretManager.V1Beta1.AddSecretVersionRequest.Parser, new[]{ "Parent", "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.GetSecretRequest), global::Google.Cloud.SecretManager.V1Beta1.GetSecretRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.ListSecretVersionsRequest), global::Google.Cloud.SecretManager.V1Beta1.ListSecretVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.ListSecretVersionsResponse), global::Google.Cloud.SecretManager.V1Beta1.ListSecretVersionsResponse.Parser, new[]{ "Versions", "NextPageToken", "TotalSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.GetSecretVersionRequest), global::Google.Cloud.SecretManager.V1Beta1.GetSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.UpdateSecretRequest), global::Google.Cloud.SecretManager.V1Beta1.UpdateSecretRequest.Parser, new[]{ "Secret", "UpdateMask" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.AccessSecretVersionRequest), global::Google.Cloud.SecretManager.V1Beta1.AccessSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.AccessSecretVersionResponse), global::Google.Cloud.SecretManager.V1Beta1.AccessSecretVersionResponse.Parser, new[]{ "Name", "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.DeleteSecretRequest), global::Google.Cloud.SecretManager.V1Beta1.DeleteSecretRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.DisableSecretVersionRequest), global::Google.Cloud.SecretManager.V1Beta1.DisableSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.EnableSecretVersionRequest), global::Google.Cloud.SecretManager.V1Beta1.EnableSecretVersionRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.DestroySecretVersionRequest), global::Google.Cloud.SecretManager.V1Beta1.DestroySecretVersionRequest.Parser, new[]{ "Name" }, null, null, null)
           }));
     }
     #endregion
@@ -175,7 +176,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -376,7 +377,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -406,15 +407,15 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "secrets" field.</summary>
     public const int SecretsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Secrets.V1Beta1.Secret> _repeated_secrets_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Secrets.V1Beta1.Secret.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.Secret> secrets_ = new pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.Secret>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.SecretManager.V1Beta1.Secret> _repeated_secrets_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1Beta1.Secret.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Secret> secrets_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Secret>();
     /// <summary>
     /// The list of [Secrets][google.cloud.secrets.v1beta1.Secret] sorted in reverse by create_time (newest
     /// first).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.Secret> Secrets {
+    public pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Secret> Secrets {
       get { return secrets_; }
     }
 
@@ -567,7 +568,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -626,12 +627,12 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "secret" field.</summary>
     public const int SecretFieldNumber = 3;
-    private global::Google.Cloud.Secrets.V1Beta1.Secret secret_;
+    private global::Google.Cloud.SecretManager.V1Beta1.Secret secret_;
     /// <summary>
     /// A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.Secret Secret {
+    public global::Google.Cloud.SecretManager.V1Beta1.Secret Secret {
       get { return secret_; }
       set {
         secret_ = value;
@@ -724,7 +725,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
       }
       if (other.secret_ != null) {
         if (secret_ == null) {
-          Secret = new global::Google.Cloud.Secrets.V1Beta1.Secret();
+          Secret = new global::Google.Cloud.SecretManager.V1Beta1.Secret();
         }
         Secret.MergeFrom(other.Secret);
       }
@@ -749,7 +750,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
           }
           case 26: {
             if (secret_ == null) {
-              Secret = new global::Google.Cloud.Secrets.V1Beta1.Secret();
+              Secret = new global::Google.Cloud.SecretManager.V1Beta1.Secret();
             }
             input.ReadMessage(Secret);
             break;
@@ -771,7 +772,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -815,12 +816,12 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::Google.Cloud.Secrets.V1Beta1.SecretPayload payload_;
+    private global::Google.Cloud.SecretManager.V1Beta1.SecretPayload payload_;
     /// <summary>
     /// Required. The secret payload of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.SecretPayload Payload {
+    public global::Google.Cloud.SecretManager.V1Beta1.SecretPayload Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -901,7 +902,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::Google.Cloud.Secrets.V1Beta1.SecretPayload();
+          Payload = new global::Google.Cloud.SecretManager.V1Beta1.SecretPayload();
         }
         Payload.MergeFrom(other.Payload);
       }
@@ -922,7 +923,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::Google.Cloud.Secrets.V1Beta1.SecretPayload();
+              Payload = new global::Google.Cloud.SecretManager.V1Beta1.SecretPayload();
             }
             input.ReadMessage(Payload);
             break;
@@ -944,7 +945,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1079,7 +1080,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1281,7 +1282,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1311,15 +1312,15 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "versions" field.</summary>
     public const int VersionsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Secrets.V1Beta1.SecretVersion> _repeated_versions_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Secrets.V1Beta1.SecretVersion.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.SecretVersion> versions_ = new pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.SecretVersion>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.SecretManager.V1Beta1.SecretVersion> _repeated_versions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.SecretVersion> versions_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.SecretVersion>();
     /// <summary>
     /// The list of [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] sorted in reverse by
     /// create_time (newest first).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Secrets.V1Beta1.SecretVersion> Versions {
+    public pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.SecretVersion> Versions {
       get { return versions_; }
     }
 
@@ -1472,7 +1473,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1610,7 +1611,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1639,12 +1640,12 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "secret" field.</summary>
     public const int SecretFieldNumber = 1;
-    private global::Google.Cloud.Secrets.V1Beta1.Secret secret_;
+    private global::Google.Cloud.SecretManager.V1Beta1.Secret secret_;
     /// <summary>
     /// Required. [Secret][google.cloud.secrets.v1beta1.Secret] with updated field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.Secret Secret {
+    public global::Google.Cloud.SecretManager.V1Beta1.Secret Secret {
       get { return secret_; }
       set {
         secret_ = value;
@@ -1736,7 +1737,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
       }
       if (other.secret_ != null) {
         if (secret_ == null) {
-          Secret = new global::Google.Cloud.Secrets.V1Beta1.Secret();
+          Secret = new global::Google.Cloud.SecretManager.V1Beta1.Secret();
         }
         Secret.MergeFrom(other.Secret);
       }
@@ -1759,7 +1760,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
             break;
           case 10: {
             if (secret_ == null) {
-              Secret = new global::Google.Cloud.Secrets.V1Beta1.Secret();
+              Secret = new global::Google.Cloud.SecretManager.V1Beta1.Secret();
             }
             input.ReadMessage(Secret);
             break;
@@ -1788,7 +1789,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1924,7 +1925,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1968,12 +1969,12 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::Google.Cloud.Secrets.V1Beta1.SecretPayload payload_;
+    private global::Google.Cloud.SecretManager.V1Beta1.SecretPayload payload_;
     /// <summary>
     /// Secret payload
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Secrets.V1Beta1.SecretPayload Payload {
+    public global::Google.Cloud.SecretManager.V1Beta1.SecretPayload Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -2054,7 +2055,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::Google.Cloud.Secrets.V1Beta1.SecretPayload();
+          Payload = new global::Google.Cloud.SecretManager.V1Beta1.SecretPayload();
         }
         Payload.MergeFrom(other.Payload);
       }
@@ -2075,7 +2076,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::Google.Cloud.Secrets.V1Beta1.SecretPayload();
+              Payload = new global::Google.Cloud.SecretManager.V1Beta1.SecretPayload();
             }
             input.ReadMessage(Payload);
             break;
@@ -2097,7 +2098,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2233,7 +2234,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2369,7 +2370,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2505,7 +2506,7 @@ namespace Google.Cloud.Secrets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Secrets.V1Beta1.ServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.SecretManager.V1Beta1.ServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

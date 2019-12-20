@@ -15,10 +15,10 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using gcsv = Google.Cloud.Secrets.V1Beta1;
+using gcsv = Google.Cloud.SecretManager.V1Beta1;
 using sys = System;
 
-namespace Google.Cloud.Secrets.V1Beta1
+namespace Google.Cloud.SecretManager.V1Beta1
 {
     /// <summary>Resource name for the <c>Secret</c> resource.</summary>
     public sealed partial class SecretName : gax::IResourceName, sys::IEquatable<SecretName>

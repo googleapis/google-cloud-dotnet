@@ -15,9 +15,9 @@
 // Generated code. DO NOT EDIT!
 
 using gagr = Google.Api.Gax.ResourceNames;
-using gcsv = Google.Cloud.Secrets.V1Beta1;
+using gcsv = Google.Cloud.SecretManager.V1Beta1;
 
-namespace Google.Cloud.Secrets.V1Beta1
+namespace Google.Cloud.SecretManager.V1Beta1
 {
     public partial class ListSecretsRequest
     {

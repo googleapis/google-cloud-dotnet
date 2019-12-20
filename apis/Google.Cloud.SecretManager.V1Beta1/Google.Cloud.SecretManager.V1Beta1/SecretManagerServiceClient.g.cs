@@ -30,7 +30,7 @@ using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
-namespace Google.Cloud.Secrets.V1Beta1
+namespace Google.Cloud.SecretManager.V1Beta1
 {
     /// <summary>Settings for <see cref="SecretManagerServiceClient"/> instances.</summary>
     public sealed partial class SecretManagerServiceSettings : gaxgrpc::ServiceSettingsBase
