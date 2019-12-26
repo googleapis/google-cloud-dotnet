@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Admin.Database.V1;
+using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -176,6 +177,41 @@ namespace Google.Cloud.Spanner.Data
                 var transaction = new EphemeralTransaction(Connection, s_partitionedDmlTransactionOptions);
                 // Note: no commit here. PDML transactions are implicitly committed as they go along.
                 return await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
+            }
+
+            internal async Task<string> GetInstanceEndpointUriAsync()
+            {
+                // Get default endpoint.
+                InstanceAdminClient instanceAdminClient =
+                    await InstanceAdminClient.CreateAsync().ConfigureAwait(false);
+                // Create request for instance with endpoints.
+                GetInstanceRequest request = new GetInstanceRequest
+                {
+                    InstanceName = new InstanceName(Connection.Project, Connection.SpannerInstance),
+                    FieldMask = new FieldMask { Paths = { "endpoint_uris" } }
+                };
+                try
+                {
+                    // Get list of available endpoints from GetInstanceRequest.
+                    // Retry to call the GetInstance method with endpoints by exponential back off.
+                    Instance instance = instanceAdminClient.GetInstance(request);
+                    return instance.EndpointUris.Count == 0 ? null : instance.EndpointUris[0];
+                }
+                catch (RpcException gRpcException)
+                {
+                    if (gRpcException.StatusCode == StatusCode.PermissionDenied)
+                    {
+#pragma warning disable CS1030 // #warning directive
+#warning PermissionDenied exception
+                        // Print warning message with PermissionDenied
+                        // status in Debug mode.
+                        Console.WriteLine(gRpcException.Message);
+#pragma warning restore CS1030 // #warning directive
+                        return null;
+                    }
+                    // Translate rpc errors into a Spanner exception.
+                    throw;
+                }
             }
 
             private void ValidateConnectionAndCommandTextBuilder()

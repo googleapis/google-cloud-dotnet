@@ -278,7 +278,7 @@ namespace Google.Cloud.Spanner.Data
         public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-            
+
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
@@ -639,6 +639,15 @@ namespace Google.Cloud.Spanner.Data
                     OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
                     try
                     {
+                        bool isRouteEnable = GetResourceBasedRoutingFlag();
+                        if (isRouteEnable)
+                        {
+                            using (SpannerCommand spannerCommand = new SpannerCommand(this))
+                            {
+                                string endpointUri = await spannerCommand.ExecuteGetInstanceEndpointUriAsync().ConfigureAwait(false);
+                                OverrideSpannerClientEndpoints(endpointUri);
+                            }
+                        }
                         _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
                     }
                     finally
@@ -874,5 +883,27 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
+
+        private static bool GetResourceBasedRoutingFlag()
+        {
+            // Check for the presence of an environment variable
+            // if present, redefine the endpoint.
+            string resourceBaseRouteValue =
+                Environment.GetEnvironmentVariable("GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING")?.ToLower();
+            bool isRouteEnable = !string.IsNullOrEmpty(resourceBaseRouteValue) &&
+                resourceBaseRouteValue.Equals("true");
+            return isRouteEnable;
+        }
+
+        /// <summary>
+        /// Override the available endpoint list for the current instance.
+        /// </summary>
+        private void OverrideSpannerClientEndpoints(string endpointUri)
+        {
+            if (!string.IsNullOrEmpty(endpointUri))
+            {
+                Builder.EndPoint.WithHost(endpointUri);
+            }
+        }
     }
 }
