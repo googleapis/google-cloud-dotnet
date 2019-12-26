@@ -278,7 +278,6 @@ namespace Google.Cloud.Spanner.Data
         public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
@@ -639,8 +638,8 @@ namespace Google.Cloud.Spanner.Data
                     OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
                     try
                     {
-                        bool isRouteEnable = GetResourceBasedRoutingFlag();
-                        if (isRouteEnable)
+                        bool isResourceBasedRoutingEnabled = GetResourceBasedRoutingFlag();
+                        if (isResourceBasedRoutingEnabled)
                         {
                             using (SpannerCommand spannerCommand = new SpannerCommand(this))
                             {
@@ -793,7 +792,7 @@ namespace Google.Cloud.Spanner.Data
         private Action GetTransactionEnlister()
         {
             Transaction current = Transaction.Current;
-            return current == null ? (Action) null : () => EnlistTransaction(current);
+            return current == null ? (Action)null : () => EnlistTransaction(current);
         }
 
         /// <summary>
@@ -884,25 +883,29 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
 
+        /// <summary>
+        /// Get Resource based routing flag from environment variable.
+        /// </summary>
+        /// <returns>resource based routing flage</returns>
         private static bool GetResourceBasedRoutingFlag()
         {
-            // Check for the presence of an environment variable
-            // if present, redefine the endpoint.
-            string resourceBaseRouteValue =
+            string resourceBaseRoutingFlagValue =
                 Environment.GetEnvironmentVariable("GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING")?.ToLower();
-            bool isRouteEnable = !string.IsNullOrEmpty(resourceBaseRouteValue) &&
-                resourceBaseRouteValue.Equals("true");
-            return isRouteEnable;
+            return !string.IsNullOrEmpty(resourceBaseRoutingFlagValue) &&
+                resourceBaseRoutingFlagValue.Equals("true");
         }
 
         /// <summary>
-        /// Override the available endpoint list for the current instance.
+        /// Override the default endpointUri with available endpointUri.
         /// </summary>
+        /// <param name="endpointUri"></param>
         private void OverrideSpannerClientEndpoints(string endpointUri)
         {
             if (!string.IsNullOrEmpty(endpointUri))
             {
-                Builder.EndPoint.WithHost(endpointUri);
+                var newBuilder = Builder.Clone();
+                newBuilder.Host = endpointUri;
+                TrySetNewConnectionInfo(newBuilder);
             }
         }
     }

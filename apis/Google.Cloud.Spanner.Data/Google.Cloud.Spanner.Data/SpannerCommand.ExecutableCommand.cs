@@ -181,7 +181,6 @@ namespace Google.Cloud.Spanner.Data
 
             internal async Task<string> GetInstanceEndpointUriAsync()
             {
-                // Get default endpoint.
                 InstanceAdminClient instanceAdminClient =
                     await InstanceAdminClient.CreateAsync().ConfigureAwait(false);
                 // Create request for instance with endpoints.
@@ -192,8 +191,7 @@ namespace Google.Cloud.Spanner.Data
                 };
                 try
                 {
-                    // Get list of available endpoints from GetInstanceRequest.
-                    // Retry to call the GetInstance method with endpoints by exponential back off.
+                    // Get list of available endpointUris from GetInstance.
                     Instance instance = instanceAdminClient.GetInstance(request);
                     return instance.EndpointUris.Count == 0 ? null : instance.EndpointUris[0];
                 }
@@ -209,7 +207,6 @@ namespace Google.Cloud.Spanner.Data
 #pragma warning restore CS1030 // #warning directive
                         return null;
                     }
-                    // Translate rpc errors into a Spanner exception.
                     throw;
                 }
             }
