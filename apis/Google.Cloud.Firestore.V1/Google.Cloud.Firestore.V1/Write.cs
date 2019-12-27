@@ -28,45 +28,47 @@ namespace Google.Cloud.Firestore.V1 {
             "ZXN0b3JlLnYxGiBnb29nbGUvZmlyZXN0b3JlL3YxL2NvbW1vbi5wcm90bxoi",
             "Z29vZ2xlL2ZpcmVzdG9yZS92MS9kb2N1bWVudC5wcm90bxofZ29vZ2xlL3By",
             "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90byKJAgoFV3JpdGUSLwoGdXBkYXRlGAEgASgLMh0uZ29vZ2xlLmZp",
+            "cy5wcm90byLbAgoFV3JpdGUSLwoGdXBkYXRlGAEgASgLMh0uZ29vZ2xlLmZp",
             "cmVzdG9yZS52MS5Eb2N1bWVudEgAEhAKBmRlbGV0ZRgCIAEoCUgAEjsKCXRy",
             "YW5zZm9ybRgGIAEoCzImLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRU",
             "cmFuc2Zvcm1IABI2Cgt1cGRhdGVfbWFzaxgDIAEoCzIhLmdvb2dsZS5maXJl",
-            "c3RvcmUudjEuRG9jdW1lbnRNYXNrEjsKEGN1cnJlbnRfZG9jdW1lbnQYBCAB",
-            "KAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLlByZWNvbmRpdGlvbkILCglvcGVy",
-            "YXRpb24i5QQKEURvY3VtZW50VHJhbnNmb3JtEhAKCGRvY3VtZW50GAEgASgJ",
-            "Ek8KEGZpZWxkX3RyYW5zZm9ybXMYAiADKAsyNS5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLkRvY3VtZW50VHJhbnNmb3JtLkZpZWxkVHJhbnNmb3JtGuwDCg5GaWVs",
-            "ZFRyYW5zZm9ybRISCgpmaWVsZF9wYXRoGAEgASgJEmAKE3NldF90b19zZXJ2",
-            "ZXJfdmFsdWUYAiABKA4yQS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50",
-            "VHJhbnNmb3JtLkZpZWxkVHJhbnNmb3JtLlNlcnZlclZhbHVlSAASLwoJaW5j",
-            "cmVtZW50GAMgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZUgAEi0K",
-            "B21heGltdW0YBCABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVlSAAS",
-            "LQoHbWluaW11bRgFIAEoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWVI",
-            "ABJCChdhcHBlbmRfbWlzc2luZ19lbGVtZW50cxgGIAEoCzIfLmdvb2dsZS5m",
-            "aXJlc3RvcmUudjEuQXJyYXlWYWx1ZUgAEkAKFXJlbW92ZV9hbGxfZnJvbV9h",
-            "cnJheRgHIAEoCzIfLmdvb2dsZS5maXJlc3RvcmUudjEuQXJyYXlWYWx1ZUgA",
-            "Ij0KC1NlcnZlclZhbHVlEhwKGFNFUlZFUl9WQUxVRV9VTlNQRUNJRklFRBAA",
-            "EhAKDFJFUVVFU1RfVElNRRABQhAKDnRyYW5zZm9ybV90eXBlInUKC1dyaXRl",
-            "UmVzdWx0Ei8KC3VwZGF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBI1ChF0cmFuc2Zvcm1fcmVzdWx0cxgCIAMoCzIaLmdvb2ds",
-            "ZS5maXJlc3RvcmUudjEuVmFsdWUicQoORG9jdW1lbnRDaGFuZ2USLwoIZG9j",
-            "dW1lbnQYASABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50EhIK",
-            "CnRhcmdldF9pZHMYBSADKAUSGgoScmVtb3ZlZF90YXJnZXRfaWRzGAYgAygF",
-            "Im0KDkRvY3VtZW50RGVsZXRlEhAKCGRvY3VtZW50GAEgASgJEhoKEnJlbW92",
-            "ZWRfdGFyZ2V0X2lkcxgGIAMoBRItCglyZWFkX3RpbWUYBCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wIm0KDkRvY3VtZW50UmVtb3ZlEhAKCGRv",
-            "Y3VtZW50GAEgASgJEhoKEnJlbW92ZWRfdGFyZ2V0X2lkcxgCIAMoBRItCgly",
-            "ZWFkX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIjMK",
-            "D0V4aXN0ZW5jZUZpbHRlchIRCgl0YXJnZXRfaWQYASABKAUSDQoFY291bnQY",
-            "AiABKAVCpAEKF2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQgpXcml0ZVByb3Rv",
-            "UAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZmly",
-            "ZXN0b3JlL3YxO2ZpcmVzdG9yZaICBEdDRlOqAhlHb29nbGUuQ2xvdWQuRmly",
-            "ZXN0b3JlLlYxygIZR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxWMWIGcHJvdG8z"));
+            "c3RvcmUudjEuRG9jdW1lbnRNYXNrElAKEXVwZGF0ZV90cmFuc2Zvcm1zGAcg",
+            "AygLMjUuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudFRyYW5zZm9ybS5G",
+            "aWVsZFRyYW5zZm9ybRI7ChBjdXJyZW50X2RvY3VtZW50GAQgASgLMiEuZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5QcmVjb25kaXRpb25CCwoJb3BlcmF0aW9uIuUE",
+            "ChFEb2N1bWVudFRyYW5zZm9ybRIQCghkb2N1bWVudBgBIAEoCRJPChBmaWVs",
+            "ZF90cmFuc2Zvcm1zGAIgAygLMjUuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1",
+            "bWVudFRyYW5zZm9ybS5GaWVsZFRyYW5zZm9ybRrsAwoORmllbGRUcmFuc2Zv",
+            "cm0SEgoKZmllbGRfcGF0aBgBIAEoCRJgChNzZXRfdG9fc2VydmVyX3ZhbHVl",
+            "GAIgASgOMkEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudFRyYW5zZm9y",
+            "bS5GaWVsZFRyYW5zZm9ybS5TZXJ2ZXJWYWx1ZUgAEi8KCWluY3JlbWVudBgD",
+            "IAEoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWVIABItCgdtYXhpbXVt",
+            "GAQgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZUgAEi0KB21pbmlt",
+            "dW0YBSABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVlSAASQgoXYXBw",
+            "ZW5kX21pc3NpbmdfZWxlbWVudHMYBiABKAsyHy5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxLkFycmF5VmFsdWVIABJAChVyZW1vdmVfYWxsX2Zyb21fYXJyYXkYByAB",
+            "KAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5VmFsdWVIACI9CgtTZXJ2",
+            "ZXJWYWx1ZRIcChhTRVJWRVJfVkFMVUVfVU5TUEVDSUZJRUQQABIQCgxSRVFV",
+            "RVNUX1RJTUUQAUIQCg50cmFuc2Zvcm1fdHlwZSJ1CgtXcml0ZVJlc3VsdBIv",
+            "Cgt1cGRhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASNQoRdHJhbnNmb3JtX3Jlc3VsdHMYAiADKAsyGi5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLlZhbHVlInEKDkRvY3VtZW50Q2hhbmdlEi8KCGRvY3VtZW50GAEg",
+            "ASgLMh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudBISCgp0YXJnZXRf",
+            "aWRzGAUgAygFEhoKEnJlbW92ZWRfdGFyZ2V0X2lkcxgGIAMoBSJtCg5Eb2N1",
+            "bWVudERlbGV0ZRIQCghkb2N1bWVudBgBIAEoCRIaChJyZW1vdmVkX3Rhcmdl",
+            "dF9pZHMYBiADKAUSLQoJcmVhZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcCJtCg5Eb2N1bWVudFJlbW92ZRIQCghkb2N1bWVudBgB",
+            "IAEoCRIaChJyZW1vdmVkX3RhcmdldF9pZHMYAiADKAUSLQoJcmVhZF90aW1l",
+            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIzCg9FeGlzdGVu",
+            "Y2VGaWx0ZXISEQoJdGFyZ2V0X2lkGAEgASgFEg0KBWNvdW50GAIgASgFQqQB",
+            "Chdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIKV3JpdGVQcm90b1ABWjxnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2ZpcmVzdG9yZS92",
+            "MTtmaXJlc3RvcmWiAgRHQ0ZTqgIZR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5W",
+            "McoCGUdvb2dsZVxDbG91ZFxGaXJlc3RvcmVcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Write), global::Google.Cloud.Firestore.V1.Write.Parser, new[]{ "Update", "Delete", "Transform", "UpdateMask", "CurrentDocument" }, new[]{ "Operation" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Write), global::Google.Cloud.Firestore.V1.Write.Parser, new[]{ "Update", "Delete", "Transform", "UpdateMask", "UpdateTransforms", "CurrentDocument" }, new[]{ "Operation" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Parser, new[]{ "Document", "FieldTransforms" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Parser, new[]{ "FieldPath", "SetToServerValue", "Increment", "Maximum", "Minimum", "AppendMissingElements", "RemoveAllFromArray" }, new[]{ "TransformType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) }, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteResult), global::Google.Cloud.Firestore.V1.WriteResult.Parser, new[]{ "UpdateTime", "TransformResults" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentChange), global::Google.Cloud.Firestore.V1.DocumentChange.Parser, new[]{ "Document", "TargetIds", "RemovedTargetIds" }, null, null, null),
@@ -108,6 +110,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Write(Write other) : this() {
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      updateTransforms_ = other.updateTransforms_.Clone();
       currentDocument_ = other.currentDocument_ != null ? other.currentDocument_.Clone() : null;
       switch (other.OperationCase) {
         case OperationOneofCase.Update:
@@ -198,6 +201,23 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "update_transforms" field.</summary>
+    public const int UpdateTransformsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform> _repeated_updateTransforms_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform> updateTransforms_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform>();
+    /// <summary>
+    /// The transforms to perform after update.
+    ///
+    /// This field can be set only when the operation is `update`. If present, this
+    /// write is equivalent to performing `update` and `transform` to the same
+    /// document atomically and in order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform> UpdateTransforms {
+      get { return updateTransforms_; }
+    }
+
     /// <summary>Field number for the "current_document" field.</summary>
     public const int CurrentDocumentFieldNumber = 4;
     private global::Google.Cloud.Firestore.V1.Precondition currentDocument_;
@@ -251,6 +271,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Delete != other.Delete) return false;
       if (!object.Equals(Transform, other.Transform)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if(!updateTransforms_.Equals(other.updateTransforms_)) return false;
       if (!object.Equals(CurrentDocument, other.CurrentDocument)) return false;
       if (OperationCase != other.OperationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -263,6 +284,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (operationCase_ == OperationOneofCase.Delete) hash ^= Delete.GetHashCode();
       if (operationCase_ == OperationOneofCase.Transform) hash ^= Transform.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      hash ^= updateTransforms_.GetHashCode();
       if (currentDocument_ != null) hash ^= CurrentDocument.GetHashCode();
       hash ^= (int) operationCase_;
       if (_unknownFields != null) {
@@ -298,6 +320,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Transform);
       }
+      updateTransforms_.WriteTo(output, _repeated_updateTransforms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -318,6 +341,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
       }
+      size += updateTransforms_.CalculateSize(_repeated_updateTransforms_codec);
       if (currentDocument_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurrentDocument);
       }
@@ -338,6 +362,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
+      updateTransforms_.Add(other.updateTransforms_);
       if (other.currentDocument_ != null) {
         if (currentDocument_ == null) {
           CurrentDocument = new global::Google.Cloud.Firestore.V1.Precondition();
@@ -407,6 +432,10 @@ namespace Google.Cloud.Firestore.V1 {
             }
             input.ReadMessage(subBuilder);
             Transform = subBuilder;
+            break;
+          }
+          case 58: {
+            updateTransforms_.AddEntriesFrom(input, _repeated_updateTransforms_codec);
             break;
           }
         }

@@ -3005,7 +3005,8 @@ namespace Google.Cloud.Firestore.V1 {
     public const int CommitTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp commitTime_;
     /// <summary>
-    /// The time at which the commit occurred.
+    /// The time at which the commit occurred. Any read with an equal or greater
+    /// `read_time` is guaranteed to see the effects of the commit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CommitTime {
@@ -4252,7 +4253,8 @@ namespace Google.Cloud.Firestore.V1 {
     public const int CommitTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp commitTime_;
     /// <summary>
-    /// The time at which the commit occurred.
+    /// The time at which the commit occurred. Any read with an equal or greater
+    /// `read_time` is guaranteed to see the effects of the write.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CommitTime {
