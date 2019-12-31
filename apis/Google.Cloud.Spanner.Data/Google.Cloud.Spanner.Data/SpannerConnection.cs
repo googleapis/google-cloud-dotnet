@@ -644,7 +644,10 @@ namespace Google.Cloud.Spanner.Data
                             using (SpannerCommand spannerCommand = new SpannerCommand(this))
                             {
                                 string endpointUri = await spannerCommand.ExecuteGetInstanceEndpointUriAsync().ConfigureAwait(false);
-                                OverrideSpannerClientEndpoints(endpointUri);
+                                if (!string.IsNullOrEmpty(endpointUri))
+                                {
+                                    OverrideSpannerClientEndpoints(endpointUri);
+                                }
                             }
                         }
                         _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
@@ -901,12 +904,9 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="endpointUri"></param>
         private void OverrideSpannerClientEndpoints(string endpointUri)
         {
-            if (!string.IsNullOrEmpty(endpointUri))
-            {
-                var newBuilder = Builder.Clone();
-                newBuilder.Host = endpointUri;
-                TrySetNewConnectionInfo(newBuilder);
-            }
+            var newBuilder = Builder.Clone();
+            newBuilder.Host = endpointUri;
+            TrySetNewConnectionInfo(newBuilder);
         }
     }
 }
