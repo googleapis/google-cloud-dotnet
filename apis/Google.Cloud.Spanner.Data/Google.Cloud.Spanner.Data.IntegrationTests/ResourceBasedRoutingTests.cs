@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+﻿// Copyright 2020 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,13 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using gcscv = Google.Cloud.Spanner.Common.V1;
-using wkt = Google.Protobuf.WellKnownTypes;
-using stt = System.Threading.Tasks;
-using Xunit;
 using Google.Cloud.Spanner.Admin.Instance.V1;
-using System.Linq;
 using System;
+using Xunit;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -32,29 +29,24 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async stt.Task Should_Override_Endpoint()
         {
-            var resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(ResourceBasedRouteVariableName);
+            string resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(ResourceBasedRouteVariableName);
 
             //enable Resource based routing
             Environment.SetEnvironmentVariable(ResourceBasedRouteVariableName, "true");
 
-            GetInstanceRequest request = new GetInstanceRequest
-            {
-                InstanceName = new gcscv::InstanceName(_fixture.ProjectId, _fixture.Database.SpannerInstance),
-                FieldMask = new wkt.FieldMask { Paths = { "endpoint_uris" } }
-            };
-
             //default endpoint
             string expectedHost = InstanceAdminClient.DefaultEndpoint.Host;
-            //get instance EndpointUris
-            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
-            var instance = await instanceAdminClient.GetInstanceAsync(request);
 
-            if (instance.EndpointUris.Any())
+            using (SpannerConnection connection = _fixture.GetConnection())
             {
-                expectedHost = instance.EndpointUris.FirstOrDefault();
-            }
-            using (var connection = _fixture.GetConnection())
-            {
+                using (SpannerCommand command = new SpannerCommand(connection))
+                {
+                    string instanceEndpointUri = await command.ExecuteGetInstanceEndpointUriAsync();
+                    if (!string.IsNullOrWhiteSpace(instanceEndpointUri))
+                    {
+                        expectedHost = instanceEndpointUri;
+                    }
+                }
                 //resource based routing will override the endpoint if available while open the connection.
                 connection.Open();
                 Assert.Equal(expectedHost, connection.Builder.Host);

@@ -23,8 +23,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void OpenWithNoDatabase_InvalidCredentials()
         {
-            var resourceBasedRoutingFlag = Environment.GetEnvironmentVariable("GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING");
-            Environment.SetEnvironmentVariable("GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING", "false");
+            const string ResourceBasedRouteVariableName = "GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING";
+            var resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(ResourceBasedRouteVariableName);
+            Environment.SetEnvironmentVariable(ResourceBasedRouteVariableName, "false");
             var builder = new SpannerConnectionStringBuilder
             {
                 DataSource = "projects/project_id/instances/instance_id",
@@ -34,7 +35,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.Throws<FileNotFoundException>(() => connection.Open());
             }
-            Environment.SetEnvironmentVariable("GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING", resourceBasedRoutingFlag);
+            Environment.SetEnvironmentVariable(ResourceBasedRouteVariableName, resourceBasedRoutingFlag);
         }
     }
 }
