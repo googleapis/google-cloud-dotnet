@@ -12,7 +12,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Google Stackdriver Instrumentation Libraries for ASP.NET Core.</Description>
     <PackageTags>Error;Reporting;Stackdriver;ExceptionLogger;Trace;Diagnostics;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2019 Google LLC</Copyright>
+    <Copyright>Copyright 2020 Google LLC</Copyright>
     <Authors>Google Inc.</Authors>
     <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
