@@ -77,11 +77,13 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListQueuesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListQueuesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.GetQueue</c>
@@ -92,35 +94,27 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetQueueSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetQueueSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudTasksClient.CreateQueue</c> and <c>CloudTasksClient.CreateQueueAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateQueueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings CreateQueueSettings { get; set; }
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudTasksClient.UpdateQueue</c> and <c>CloudTasksClient.UpdateQueueAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateQueueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings UpdateQueueSettings { get; set; }
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -131,47 +125,34 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteQueueSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteQueueSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.PurgeQueue</c>
         ///  and <c>CloudTasksClient.PurgeQueueAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings PurgeQueueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings PurgeQueueSettings { get; set; }
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.PauseQueue</c>
         ///  and <c>CloudTasksClient.PauseQueueAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings PauseQueueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings PauseQueueSettings { get; set; }
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudTasksClient.ResumeQueue</c> and <c>CloudTasksClient.ResumeQueueAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ResumeQueueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings ResumeQueueSettings { get; set; }
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -182,23 +163,20 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudTasksClient.SetIamPolicy</c> and <c>CloudTasksClient.SetIamPolicyAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; }
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -209,11 +187,13 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.ListTasks</c>
@@ -224,11 +204,13 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListTasksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListTasksSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.GetTask</c>
@@ -239,23 +221,20 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetTaskSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetTaskSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.CreateTask</c>
         ///  and <c>CloudTasksClient.CreateTaskAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings CreateTaskSettings { get; set; }
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.DeleteTask</c>
@@ -266,23 +245,20 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 25 seconds.</description></item>
+        /// <item><description>Initial timeout: 10000 milliseconds.</description></item>
+        /// <item><description>Timeout multiplier: 1</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Total timeout: 10 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteTaskSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(25000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteTaskSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(retryBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(100), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1.3), timeoutBackoff: new gaxgrpc::BackoffSettings(delay: sys::TimeSpan.FromMilliseconds(10000), maxDelay: sys::TimeSpan.FromMilliseconds(10000), delayMultiplier: 1), totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)), retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable))));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.RunTask</c>
         ///  and <c>CloudTasksClient.RunTaskAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings RunTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings RunTaskSettings { get; set; }
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudTasksSettings"/> object.</returns>
