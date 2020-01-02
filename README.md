@@ -72,7 +72,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 The following libraries are available at a [beta](#versioning) quality level:
 
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
-* [Secret Manager](https://cloud.google.com/secret-manager) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Secrets.V1Beta1/) (beta)
+* [Secret Manager](https://cloud.google.com/secret-manager) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.SecretManager.V1Beta1/) (beta)
 * [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.WebRisk.V1Beta1/) (Beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
