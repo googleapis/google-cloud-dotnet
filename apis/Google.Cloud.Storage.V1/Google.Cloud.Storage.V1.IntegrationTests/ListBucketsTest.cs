@@ -59,6 +59,22 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);
         }
 
+        [Fact]
+        public void PartialResponses()
+        {
+            var options = new ListBucketsOptions { Fields = "items(name,location),nextPageToken" };
+            var buckets = _fixture.Client.ListBuckets(_fixture.ProjectId, options).ToList();
+            foreach (var bucket in buckets)
+            {
+                // These fields are requested
+                Assert.NotNull(bucket.Name);
+                Assert.NotNull(bucket.Location);
+                // These are not
+                Assert.Null(bucket.LocationType);
+                Assert.Null(bucket.ETag);
+            }
+        }
+
         // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
         private async Task AssertBuckets(ListBucketsOptions options, params string[] expectedBucketNames)
         {
