@@ -149,7 +149,7 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerCommand(string commandText, SpannerParameterCollection parameters = null)
         {
             SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(commandText);
-            if (parameters != null)
+            if(parameters != null)
             {
                 Parameters = parameters;
             }
@@ -223,7 +223,7 @@ namespace Google.Cloud.Spanner.Data
         protected override DbConnection DbConnection
         {
             get => SpannerConnection;
-            set => SpannerConnection = (SpannerConnection)value;
+            set => SpannerConnection = (SpannerConnection) value;
         }
 
         /// <inheritdoc />
@@ -235,7 +235,7 @@ namespace Google.Cloud.Spanner.Data
         protected override DbTransaction DbTransaction
         {
             get => _transaction;
-            set => _transaction = (SpannerTransaction)value;
+            set => _transaction = (SpannerTransaction) value;
         }
 
         // Visible for testing
@@ -260,7 +260,7 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <inheritdoc />
-        public override void Cancel() => _synchronousCancellationTokenSource.Cancel();
+        public override void Cancel() =>_synchronousCancellationTokenSource.Cancel();
 
         /// <inheritdoc />
         public override int ExecuteNonQuery() =>
@@ -378,7 +378,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
         public new async Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) =>
-            (SpannerDataReader)await ExecuteDbDataReaderAsync(behavior, cancellationToken).ConfigureAwait(false);
+            (SpannerDataReader) await ExecuteDbDataReaderAsync(behavior, cancellationToken).ConfigureAwait(false);
 
         /// <inheritdoc />
         protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior) =>
