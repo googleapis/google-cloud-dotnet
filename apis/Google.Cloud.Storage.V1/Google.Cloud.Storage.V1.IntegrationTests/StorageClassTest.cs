@@ -35,14 +35,15 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [InlineData(StorageClasses.DurableReducedAvailability)]
         [InlineData(StorageClasses.MultiRegional)]
         [InlineData(StorageClasses.Nearline)]
-        [InlineData(StorageClasses.Regional)]
+        [InlineData(StorageClasses.Regional, "US-EAST1")]
         [InlineData(StorageClasses.Standard)]
-        public void CreateBucketWithStorageClass(string storageClass)
+        public void CreateBucketWithStorageClass(string storageClass, string location = null)
         {
             string bucketName = $"{_fixture.BucketPrefix}-class-{storageClass.ToLowerInvariant()}";
             var client = _fixture.Client;
 
-            var bucket = client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName, StorageClass = storageClass });
+            var bucket = client.CreateBucket(_fixture.ProjectId,
+                new Bucket { Name = bucketName, StorageClass = storageClass, Location = location });
             StorageFixture.SleepAfterBucketCreateDelete();
             _fixture.RegisterBucketToDelete(bucketName);
 
