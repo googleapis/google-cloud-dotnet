@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.TextToSpeech.V1</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.Cloud.Iam.V1</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
