@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Monitoring.V3 {
+namespace Google.Cloud.Monitoring.V3 {
 
   /// <summary>Holder for reflection information generated from google/monitoring/v3/dropped_labels.proto</summary>
   public static partial class DroppedLabelsReflection {
@@ -28,14 +28,15 @@ namespace Google.Monitoring.V3 {
             "Z29vZ2xlLm1vbml0b3JpbmcudjMifAoNRHJvcHBlZExhYmVscxI9CgVsYWJl",
             "bBgBIAMoCzIuLmdvb2dsZS5tb25pdG9yaW5nLnYzLkRyb3BwZWRMYWJlbHMu",
             "TGFiZWxFbnRyeRosCgpMYWJlbEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAFCjQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ISRHJv",
+            "ZRgCIAEoCToCOAFCqgEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ISRHJv",
             "cHBlZExhYmVsc1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nygIaR29vZ2xl",
-            "XENsb3VkXE1vbml0b3JpbmdcVjNiBnByb3RvMw=="));
+            "L2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xl",
+            "LkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmlu",
+            "Z1xWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.DroppedLabels), global::Google.Monitoring.V3.DroppedLabels.Parser, new[]{ "Label" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DroppedLabels), global::Google.Cloud.Monitoring.V3.DroppedLabels.Parser, new[]{ "Label" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -67,7 +68,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.DroppedLabelsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Monitoring.V3.DroppedLabelsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
