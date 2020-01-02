@@ -39,7 +39,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [InlineData(StorageClasses.Standard)]
         public void CreateBucketWithStorageClass(string storageClass)
         {
-            string bucketName = $"{_fixture.BucketPrefix}-with-class-{storageClass.ToLowerInvariant()}";
+            string bucketName = $"{_fixture.BucketPrefix}-class-{storageClass.ToLowerInvariant()}";
             var client = _fixture.Client;
 
             var bucket = client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName, StorageClass = storageClass });
