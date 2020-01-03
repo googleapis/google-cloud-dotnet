@@ -17,83 +17,41 @@
 namespace Google.Cloud.Dataproc.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dataproc.V1;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedClusterControllerClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedClusterControllerClientSnippets
     {
-        /// <summary>Snippet for CreateClusterAsync</summary>
-        public async Task CreateClusterAsync()
-        {
-            // Snippet: CreateClusterAsync(string,string,Cluster,CallSettings)
-            // Additional: CreateClusterAsync(string,string,Cluster,CancellationToken)
-            // Create client
-            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
-            // Initialize request argument(s)
-            string projectId = "";
-            string region = "";
-            Cluster cluster = new Cluster();
-            // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                await clusterControllerClient.CreateClusterAsync(projectId, region, cluster);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            Cluster result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                await clusterControllerClient.PollOnceCreateClusterAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Cluster retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateCluster</summary>
-        public void CreateCluster()
+        public void CreateCluster_RequestObject()
         {
-            // Snippet: CreateCluster(string,string,Cluster,CallSettings)
+            // Snippet: CreateCluster(CreateClusterRequest, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            string region = "";
-            Cluster cluster = new Cluster();
+            CreateClusterRequest request = new CreateClusterRequest
+            {
+                ProjectId = "",
+                Cluster = new Cluster(),
+                Region = "",
+                RequestId = "",
+            };
             // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                clusterControllerClient.CreateCluster(projectId, region, cluster);
+            Operation<Cluster, ClusterOperationMetadata> response = clusterControllerClient.CreateCluster(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                clusterControllerClient.PollOnceCreateCluster(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceCreateCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -106,31 +64,30 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for CreateClusterAsync</summary>
         public async Task CreateClusterAsync_RequestObject()
         {
-            // Snippet: CreateClusterAsync(CreateClusterRequest,CallSettings)
+            // Snippet: CreateClusterAsync(CreateClusterRequest, CallSettings)
+            // Additional: CreateClusterAsync(CreateClusterRequest, CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
             CreateClusterRequest request = new CreateClusterRequest
             {
                 ProjectId = "",
-                Region = "",
                 Cluster = new Cluster(),
+                Region = "",
+                RequestId = "",
             };
             // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                await clusterControllerClient.CreateClusterAsync(request);
+            Operation<Cluster, ClusterOperationMetadata> response = await clusterControllerClient.CreateClusterAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                await clusterControllerClient.PollOnceCreateClusterAsync(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceCreateClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -141,106 +98,27 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCluster</summary>
-        public void CreateCluster_RequestObject()
+        public void CreateCluster()
         {
-            // Snippet: CreateCluster(CreateClusterRequest,CallSettings)
-            // Create client
-            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
-            // Initialize request argument(s)
-            CreateClusterRequest request = new CreateClusterRequest
-            {
-                ProjectId = "",
-                Region = "",
-                Cluster = new Cluster(),
-            };
-            // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                clusterControllerClient.CreateCluster(request);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                response.PollUntilCompleted();
-            // Retrieve the operation result
-            Cluster result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                clusterControllerClient.PollOnceCreateCluster(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Cluster retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync()
-        {
-            // Snippet: UpdateClusterAsync(string,string,string,Cluster,FieldMask,CallSettings)
-            // Additional: UpdateClusterAsync(string,string,string,Cluster,FieldMask,CancellationToken)
-            // Create client
-            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
-            // Initialize request argument(s)
-            string projectId = "";
-            string region = "";
-            string clusterName = "";
-            Cluster cluster = new Cluster();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                await clusterControllerClient.UpdateClusterAsync(projectId, region, clusterName, cluster, updateMask);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            Cluster result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                await clusterControllerClient.PollOnceUpdateClusterAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Cluster retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateCluster</summary>
-        public void UpdateCluster()
-        {
-            // Snippet: UpdateCluster(string,string,string,Cluster,FieldMask,CallSettings)
+            // Snippet: CreateCluster(string, string, Cluster, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string region = "";
-            string clusterName = "";
             Cluster cluster = new Cluster();
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                clusterControllerClient.UpdateCluster(projectId, region, clusterName, cluster, updateMask);
+            Operation<Cluster, ClusterOperationMetadata> response = clusterControllerClient.CreateCluster(projectId, region, cluster);
 
             // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                clusterControllerClient.PollOnceUpdateCluster(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceCreateCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -250,36 +128,29 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync_RequestObject()
+        /// <summary>Snippet for CreateClusterAsync</summary>
+        public async Task CreateClusterAsync()
         {
-            // Snippet: UpdateClusterAsync(UpdateClusterRequest,CallSettings)
+            // Snippet: CreateClusterAsync(string, string, Cluster, CallSettings)
+            // Additional: CreateClusterAsync(string, string, Cluster, CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateClusterRequest request = new UpdateClusterRequest
-            {
-                ProjectId = "",
-                Region = "",
-                ClusterName = "",
-                Cluster = new Cluster(),
-                UpdateMask = new FieldMask(),
-            };
+            string projectId = "";
+            string region = "";
+            Cluster cluster = new Cluster();
             // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                await clusterControllerClient.UpdateClusterAsync(request);
+            Operation<Cluster, ClusterOperationMetadata> response = await clusterControllerClient.CreateClusterAsync(projectId, region, cluster);
 
             // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                await clusterControllerClient.PollOnceUpdateClusterAsync(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceCreateClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -292,33 +163,32 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for UpdateCluster</summary>
         public void UpdateCluster_RequestObject()
         {
-            // Snippet: UpdateCluster(UpdateClusterRequest,CallSettings)
+            // Snippet: UpdateCluster(UpdateClusterRequest, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
             UpdateClusterRequest request = new UpdateClusterRequest
             {
                 ProjectId = "",
-                Region = "",
                 ClusterName = "",
                 Cluster = new Cluster(),
                 UpdateMask = new FieldMask(),
+                Region = "",
+                GracefulDecommissionTimeout = new Duration(),
+                RequestId = "",
             };
             // Make the request
-            Operation<Cluster, ClusterOperationMetadata> response =
-                clusterControllerClient.UpdateCluster(request);
+            Operation<Cluster, ClusterOperationMetadata> response = clusterControllerClient.UpdateCluster(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Cluster, ClusterOperationMetadata> completedResponse =
-                response.PollUntilCompleted();
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
-                clusterControllerClient.PollOnceUpdateCluster(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceUpdateCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -328,102 +198,108 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteClusterAsync</summary>
-        public async Task DeleteClusterAsync()
+        /// <summary>Snippet for UpdateClusterAsync</summary>
+        public async Task UpdateClusterAsync_RequestObject()
         {
-            // Snippet: DeleteClusterAsync(string,string,string,CallSettings)
-            // Additional: DeleteClusterAsync(string,string,string,CancellationToken)
+            // Snippet: UpdateClusterAsync(UpdateClusterRequest, CallSettings)
+            // Additional: UpdateClusterAsync(UpdateClusterRequest, CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string region = "";
-            string clusterName = "";
+            UpdateClusterRequest request = new UpdateClusterRequest
+            {
+                ProjectId = "",
+                ClusterName = "",
+                Cluster = new Cluster(),
+                UpdateMask = new FieldMask(),
+                Region = "",
+                GracefulDecommissionTimeout = new Duration(),
+                RequestId = "",
+            };
             // Make the request
-            Operation<Empty, ClusterOperationMetadata> response =
-                await clusterControllerClient.DeleteClusterAsync(projectId, region, clusterName);
+            Operation<Cluster, ClusterOperationMetadata> response = await clusterControllerClient.UpdateClusterAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ClusterOperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ClusterOperationMetadata> retrievedResponse =
-                await clusterControllerClient.PollOnceDeleteClusterAsync(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceUpdateClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteCluster</summary>
-        public void DeleteCluster()
+        /// <summary>Snippet for UpdateCluster</summary>
+        public void UpdateCluster()
         {
-            // Snippet: DeleteCluster(string,string,string,CallSettings)
+            // Snippet: UpdateCluster(string, string, string, Cluster, FieldMask, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string region = "";
             string clusterName = "";
+            Cluster cluster = new Cluster();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Empty, ClusterOperationMetadata> response =
-                clusterControllerClient.DeleteCluster(projectId, region, clusterName);
+            Operation<Cluster, ClusterOperationMetadata> response = clusterControllerClient.UpdateCluster(projectId, region, clusterName, cluster, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ClusterOperationMetadata> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ClusterOperationMetadata> retrievedResponse =
-                clusterControllerClient.PollOnceDeleteCluster(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceUpdateCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteClusterAsync</summary>
-        public async Task DeleteClusterAsync_RequestObject()
+        /// <summary>Snippet for UpdateClusterAsync</summary>
+        public async Task UpdateClusterAsync()
         {
-            // Snippet: DeleteClusterAsync(DeleteClusterRequest,CallSettings)
+            // Snippet: UpdateClusterAsync(string, string, string, Cluster, FieldMask, CallSettings)
+            // Additional: UpdateClusterAsync(string, string, string, Cluster, FieldMask, CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteClusterRequest request = new DeleteClusterRequest
-            {
-                ProjectId = "",
-                Region = "",
-                ClusterName = "",
-            };
+            string projectId = "";
+            string region = "";
+            string clusterName = "";
+            Cluster cluster = new Cluster();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Empty, ClusterOperationMetadata> response =
-                await clusterControllerClient.DeleteClusterAsync(request);
+            Operation<Cluster, ClusterOperationMetadata> response = await clusterControllerClient.UpdateClusterAsync(projectId, region, clusterName, cluster, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ClusterOperationMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ClusterOperationMetadata> retrievedResponse =
-                await clusterControllerClient.PollOnceDeleteClusterAsync(operationName);
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceUpdateClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -431,43 +307,112 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for DeleteCluster</summary>
         public void DeleteCluster_RequestObject()
         {
-            // Snippet: DeleteCluster(DeleteClusterRequest,CallSettings)
+            // Snippet: DeleteCluster(DeleteClusterRequest, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
             DeleteClusterRequest request = new DeleteClusterRequest
             {
                 ProjectId = "",
-                Region = "",
                 ClusterName = "",
+                Region = "",
+                ClusterUuid = "",
+                RequestId = "",
             };
             // Make the request
-            Operation<Empty, ClusterOperationMetadata> response =
-                clusterControllerClient.DeleteCluster(request);
+            Operation<Empty, ClusterOperationMetadata> response = clusterControllerClient.DeleteCluster(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ClusterOperationMetadata> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ClusterOperationMetadata> retrievedResponse =
-                clusterControllerClient.PollOnceDeleteCluster(operationName);
+            Operation<Empty, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceDeleteCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for GetClusterAsync</summary>
-        public async Task GetClusterAsync()
+        /// <summary>Snippet for DeleteClusterAsync</summary>
+        public async Task DeleteClusterAsync_RequestObject()
         {
-            // Snippet: GetClusterAsync(string,string,string,CallSettings)
-            // Additional: GetClusterAsync(string,string,string,CancellationToken)
+            // Snippet: DeleteClusterAsync(DeleteClusterRequest, CallSettings)
+            // Additional: DeleteClusterAsync(DeleteClusterRequest, CancellationToken)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteClusterRequest request = new DeleteClusterRequest
+            {
+                ProjectId = "",
+                ClusterName = "",
+                Region = "",
+                ClusterUuid = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, ClusterOperationMetadata> response = await clusterControllerClient.DeleteClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceDeleteClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCluster</summary>
+        public void DeleteCluster()
+        {
+            // Snippet: DeleteCluster(string, string, string, CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string clusterName = "";
+            // Make the request
+            Operation<Empty, ClusterOperationMetadata> response = clusterControllerClient.DeleteCluster(projectId, region, clusterName);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceDeleteCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClusterAsync</summary>
+        public async Task DeleteClusterAsync()
+        {
+            // Snippet: DeleteClusterAsync(string, string, string, CallSettings)
+            // Additional: DeleteClusterAsync(string, string, string, CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
@@ -475,14 +420,67 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             string region = "";
             string clusterName = "";
             // Make the request
-            Cluster response = await clusterControllerClient.GetClusterAsync(projectId, region, clusterName);
+            Operation<Empty, ClusterOperationMetadata> response = await clusterControllerClient.DeleteClusterAsync(projectId, region, clusterName);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceDeleteClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCluster</summary>
+        public void GetCluster_RequestObject()
+        {
+            // Snippet: GetCluster(GetClusterRequest, CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
+            // Initialize request argument(s)
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ProjectId = "",
+                ClusterName = "",
+                Region = "",
+            };
+            // Make the request
+            Cluster response = clusterControllerClient.GetCluster(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClusterAsync</summary>
+        public async Task GetClusterAsync_RequestObject()
+        {
+            // Snippet: GetClusterAsync(GetClusterRequest, CallSettings)
+            // Additional: GetClusterAsync(GetClusterRequest, CancellationToken)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ProjectId = "",
+                ClusterName = "",
+                Region = "",
+            };
+            // Make the request
+            Cluster response = await clusterControllerClient.GetClusterAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetCluster</summary>
         public void GetCluster()
         {
-            // Snippet: GetCluster(string,string,string,CallSettings)
+            // Snippet: GetCluster(string, string, string, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
@@ -495,54 +493,86 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for GetClusterAsync</summary>
-        public async Task GetClusterAsync_RequestObject()
+        public async Task GetClusterAsync()
         {
-            // Snippet: GetClusterAsync(GetClusterRequest,CallSettings)
-            // Additional: GetClusterAsync(GetClusterRequest,CancellationToken)
-            // Create client
-            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
-            // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ProjectId = "",
-                Region = "",
-                ClusterName = "",
-            };
-            // Make the request
-            Cluster response = await clusterControllerClient.GetClusterAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetCluster</summary>
-        public void GetCluster_RequestObject()
-        {
-            // Snippet: GetCluster(GetClusterRequest,CallSettings)
-            // Create client
-            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
-            // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ProjectId = "",
-                Region = "",
-                ClusterName = "",
-            };
-            // Make the request
-            Cluster response = clusterControllerClient.GetCluster(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync1()
-        {
-            // Snippet: ListClustersAsync(string,string,string,int?,CallSettings)
+            // Snippet: GetClusterAsync(string, string, string, CallSettings)
+            // Additional: GetClusterAsync(string, string, string, CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string region = "";
+            string clusterName = "";
             // Make the request
-            PagedAsyncEnumerable<ListClustersResponse, Cluster> response =
-                clusterControllerClient.ListClustersAsync(projectId, region);
+            Cluster response = await clusterControllerClient.GetClusterAsync(projectId, region, clusterName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClusters</summary>
+        public void ListClusters_RequestObject()
+        {
+            // Snippet: ListClusters(ListClustersRequest, CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
+            // Initialize request argument(s)
+            ListClustersRequest request = new ListClustersRequest
+            {
+                ProjectId = "",
+                Region = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListClustersResponse, Cluster> response = clusterControllerClient.ListClusters(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Cluster item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListClustersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Cluster item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Cluster> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Cluster item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClusters</summary>
+        public async Task ListClustersAsync_RequestObject()
+        {
+            // Snippet: ListClustersAsync(ListClustersRequest, CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListClustersRequest request = new ListClustersRequest
+            {
+                ProjectId = "",
+                Region = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListClustersResponse, Cluster> response = clusterControllerClient.ListClustersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Cluster item) =>
@@ -558,6 +588,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Cluster item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -569,6 +600,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Cluster item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -579,15 +611,14 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for ListClusters</summary>
         public void ListClusters1()
         {
-            // Snippet: ListClusters(string,string,string,int?,CallSettings)
+            // Snippet: ListClusters(string, string, string, int?, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string region = "";
             // Make the request
-            PagedEnumerable<ListClustersResponse, Cluster> response =
-                clusterControllerClient.ListClusters(projectId, region);
+            PagedEnumerable<ListClustersResponse, Cluster> response = clusterControllerClient.ListClusters(projectId, region);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Cluster item in response)
@@ -603,6 +634,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Cluster item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -614,6 +646,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Cluster item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -621,19 +654,17 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync2()
+        /// <summary>Snippet for ListClusters</summary>
+        public async Task ListClusters1Async()
         {
-            // Snippet: ListClustersAsync(string,string,string,string,int?,CallSettings)
+            // Snippet: ListClustersAsync(string, string, string, int?, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string region = "";
-            string filter = "";
             // Make the request
-            PagedAsyncEnumerable<ListClustersResponse, Cluster> response =
-                clusterControllerClient.ListClustersAsync(projectId: projectId, region: region, filter: filter);
+            PagedAsyncEnumerable<ListClustersResponse, Cluster> response = clusterControllerClient.ListClustersAsync(projectId, region);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Cluster item) =>
@@ -649,6 +680,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Cluster item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -660,6 +692,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Cluster item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -670,7 +703,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for ListClusters</summary>
         public void ListClusters2()
         {
-            // Snippet: ListClusters(string,string,string,string,int?,CallSettings)
+            // Snippet: ListClusters(string, string, string, string, int?, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
@@ -678,8 +711,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             string region = "";
             string filter = "";
             // Make the request
-            PagedEnumerable<ListClustersResponse, Cluster> response =
-                clusterControllerClient.ListClusters(projectId: projectId, region: region, filter: filter);
+            PagedEnumerable<ListClustersResponse, Cluster> response = clusterControllerClient.ListClusters(projectId, region, filter: filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Cluster item in response)
@@ -695,6 +727,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Cluster item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -706,6 +739,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Cluster item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -713,21 +747,18 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync_RequestObject()
+        /// <summary>Snippet for ListClusters</summary>
+        public async Task ListClusters2Async()
         {
-            // Snippet: ListClustersAsync(ListClustersRequest,CallSettings)
+            // Snippet: ListClustersAsync(string, string, string, string, int?, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
-            ListClustersRequest request = new ListClustersRequest
-            {
-                ProjectId = "",
-                Region = "",
-            };
+            string projectId = "";
+            string region = "";
+            string filter = "";
             // Make the request
-            PagedAsyncEnumerable<ListClustersResponse, Cluster> response =
-                clusterControllerClient.ListClustersAsync(request);
+            PagedAsyncEnumerable<ListClustersResponse, Cluster> response = clusterControllerClient.ListClustersAsync(projectId, region, filter: filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Cluster item) =>
@@ -743,6 +774,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Cluster item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -754,122 +786,44 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Cluster item in singlePage)
             {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListClusters</summary>
-        public void ListClusters_RequestObject()
-        {
-            // Snippet: ListClusters(ListClustersRequest,CallSettings)
-            // Create client
-            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
-            // Initialize request argument(s)
-            ListClustersRequest request = new ListClustersRequest
-            {
-                ProjectId = "",
-                Region = "",
-            };
-            // Make the request
-            PagedEnumerable<ListClustersResponse, Cluster> response =
-                clusterControllerClient.ListClusters(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (Cluster item in response)
-            {
                 // Do something with each item
                 Console.WriteLine(item);
             }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListClustersResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Cluster item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Cluster> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Cluster item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for DiagnoseClusterAsync</summary>
-        public async Task DiagnoseClusterAsync()
-        {
-            // Snippet: DiagnoseClusterAsync(string,string,string,CallSettings)
-            // Additional: DiagnoseClusterAsync(string,string,string,CancellationToken)
-            // Create client
-            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
-            // Initialize request argument(s)
-            string projectId = "";
-            string region = "";
-            string clusterName = "";
-            // Make the request
-            Operation<Empty, DiagnoseClusterResults> response =
-                await clusterControllerClient.DiagnoseClusterAsync(projectId, region, clusterName);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse =
-                await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // The long-running operation is now complete.
-            }
             // End snippet
         }
 
         /// <summary>Snippet for DiagnoseCluster</summary>
-        public void DiagnoseCluster()
+        public void DiagnoseCluster_RequestObject()
         {
-            // Snippet: DiagnoseCluster(string,string,string,CallSettings)
+            // Snippet: DiagnoseCluster(DiagnoseClusterRequest, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            string region = "";
-            string clusterName = "";
+            DiagnoseClusterRequest request = new DiagnoseClusterRequest
+            {
+                ProjectId = "",
+                ClusterName = "",
+                Region = "",
+            };
             // Make the request
-            Operation<Empty, DiagnoseClusterResults> response =
-                clusterControllerClient.DiagnoseCluster(projectId, region, clusterName);
+            Operation<Empty, DiagnoseClusterResults> response = clusterControllerClient.DiagnoseCluster(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, DiagnoseClusterResults> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse =
-                clusterControllerClient.PollOnceDiagnoseCluster(operationName);
+            Operation<Empty, DiagnoseClusterResults> retrievedResponse = clusterControllerClient.PollOnceDiagnoseCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -877,72 +831,99 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for DiagnoseClusterAsync</summary>
         public async Task DiagnoseClusterAsync_RequestObject()
         {
-            // Snippet: DiagnoseClusterAsync(DiagnoseClusterRequest,CallSettings)
+            // Snippet: DiagnoseClusterAsync(DiagnoseClusterRequest, CallSettings)
+            // Additional: DiagnoseClusterAsync(DiagnoseClusterRequest, CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)
             DiagnoseClusterRequest request = new DiagnoseClusterRequest
             {
                 ProjectId = "",
-                Region = "",
                 ClusterName = "",
+                Region = "",
             };
             // Make the request
-            Operation<Empty, DiagnoseClusterResults> response =
-                await clusterControllerClient.DiagnoseClusterAsync(request);
+            Operation<Empty, DiagnoseClusterResults> response = await clusterControllerClient.DiagnoseClusterAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, DiagnoseClusterResults> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse =
-                await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
+            Operation<Empty, DiagnoseClusterResults> retrievedResponse = await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
         /// <summary>Snippet for DiagnoseCluster</summary>
-        public void DiagnoseCluster_RequestObject()
+        public void DiagnoseCluster()
         {
-            // Snippet: DiagnoseCluster(DiagnoseClusterRequest,CallSettings)
+            // Snippet: DiagnoseCluster(string, string, string, CallSettings)
             // Create client
             ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
             // Initialize request argument(s)
-            DiagnoseClusterRequest request = new DiagnoseClusterRequest
-            {
-                ProjectId = "",
-                Region = "",
-                ClusterName = "",
-            };
+            string projectId = "";
+            string region = "";
+            string clusterName = "";
             // Make the request
-            Operation<Empty, DiagnoseClusterResults> response =
-                clusterControllerClient.DiagnoseCluster(request);
+            Operation<Empty, DiagnoseClusterResults> response = clusterControllerClient.DiagnoseCluster(projectId, region, clusterName);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, DiagnoseClusterResults> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse =
-                clusterControllerClient.PollOnceDiagnoseCluster(operationName);
+            Operation<Empty, DiagnoseClusterResults> retrievedResponse = clusterControllerClient.PollOnceDiagnoseCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
+        /// <summary>Snippet for DiagnoseClusterAsync</summary>
+        public async Task DiagnoseClusterAsync()
+        {
+            // Snippet: DiagnoseClusterAsync(string, string, string, CallSettings)
+            // Additional: DiagnoseClusterAsync(string, string, string, CancellationToken)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string clusterName = "";
+            // Make the request
+            Operation<Empty, DiagnoseClusterResults> response = await clusterControllerClient.DiagnoseClusterAsync(projectId, region, clusterName);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DiagnoseClusterResults> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DiagnoseClusterResults> retrievedResponse = await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
