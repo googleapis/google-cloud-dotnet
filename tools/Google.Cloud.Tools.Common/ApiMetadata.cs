@@ -70,6 +70,11 @@ namespace Google.Cloud.Tools.Common
         public StructuredVersion StructuredVersion => new StructuredVersion(Version);
 
         /// <summary>
+        /// The path to the API catalog (apis.json).
+        /// </summary>
+        public static string CatalogPath => Path.Combine(DirectoryLayout.DetermineRootDirectory(), "apis", "apis.json");
+
+        /// <summary>
         /// The release level to record in .repo-metadata.json, if this differs from the one
         /// inferred from the JSON. (For example, we will have 2.0.0-alpha00 versions that didn't
         /// have a 1.0.0.)
@@ -95,7 +100,7 @@ namespace Google.Cloud.Tools.Common
         {
             var root = DirectoryLayout.DetermineRootDirectory();
 
-            var json = File.ReadAllText(Path.Combine(root, "apis", "apis.json"));
+            var json = File.ReadAllText(CatalogPath);
             return JsonConvert.DeserializeObject<List<ApiMetadata>>(json);
         }
     }
