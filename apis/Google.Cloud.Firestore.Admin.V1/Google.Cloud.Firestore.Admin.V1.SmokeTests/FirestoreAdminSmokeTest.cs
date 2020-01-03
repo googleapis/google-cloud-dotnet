@@ -33,10 +33,10 @@ namespace Google.Cloud.Firestore.Admin.V1.SmokeTests
             FirestoreAdminClient client = FirestoreAdminClient.Create();
 
             // Initialize request argument
-            ParentName parentName = new ParentName(projectId, "(default)", "collection");
+            CollectionGroupName collectionGroupName = CollectionGroupName.FromProjectDatabaseCollection(projectId, "(default)", "collection");
 
             // Call API method
-            var indexes = client.ListIndexes(parentName);
+            var indexes = client.ListIndexes(collectionGroupName);
 
             // Show the result
             foreach (var index in indexes)
