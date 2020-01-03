@@ -17,79 +17,23 @@
 namespace Google.Cloud.Dataproc.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dataproc.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedAutoscalingPolicyServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedAutoscalingPolicyServiceClientSnippets
     {
-        /// <summary>Snippet for CreateAutoscalingPolicyAsync</summary>
-        public async Task CreateAutoscalingPolicyAsync()
-        {
-            // Snippet: CreateAutoscalingPolicyAsync(string,AutoscalingPolicy,CallSettings)
-            // Additional: CreateAutoscalingPolicyAsync(string,AutoscalingPolicy,CancellationToken)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
-            AutoscalingPolicy policy = new AutoscalingPolicy();
-            // Make the request
-            AutoscalingPolicy response = await autoscalingPolicyServiceClient.CreateAutoscalingPolicyAsync(formattedParent, policy);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateAutoscalingPolicy</summary>
-        public void CreateAutoscalingPolicy()
-        {
-            // Snippet: CreateAutoscalingPolicy(string,AutoscalingPolicy,CallSettings)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
-            // Initialize request argument(s)
-            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
-            AutoscalingPolicy policy = new AutoscalingPolicy();
-            // Make the request
-            AutoscalingPolicy response = autoscalingPolicyServiceClient.CreateAutoscalingPolicy(formattedParent, policy);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateAutoscalingPolicyAsync</summary>
-        public async Task CreateAutoscalingPolicyAsync_RequestObject()
-        {
-            // Snippet: CreateAutoscalingPolicyAsync(CreateAutoscalingPolicyRequest,CallSettings)
-            // Additional: CreateAutoscalingPolicyAsync(CreateAutoscalingPolicyRequest,CancellationToken)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
-            {
-                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
-                Policy = new AutoscalingPolicy(),
-            };
-            // Make the request
-            AutoscalingPolicy response = await autoscalingPolicyServiceClient.CreateAutoscalingPolicyAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateAutoscalingPolicy</summary>
         public void CreateAutoscalingPolicy_RequestObject()
         {
-            // Snippet: CreateAutoscalingPolicy(CreateAutoscalingPolicyRequest,CallSettings)
+            // Snippet: CreateAutoscalingPolicy(CreateAutoscalingPolicyRequest, CallSettings)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
             // Initialize request argument(s)
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
+                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
                 Policy = new AutoscalingPolicy(),
             };
             // Make the request
@@ -97,54 +41,28 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateAutoscalingPolicyAsync</summary>
-        public async Task UpdateAutoscalingPolicyAsync()
+        /// <summary>Snippet for CreateAutoscalingPolicyAsync</summary>
+        public async Task CreateAutoscalingPolicyAsync_RequestObject()
         {
-            // Snippet: UpdateAutoscalingPolicyAsync(AutoscalingPolicy,CallSettings)
-            // Additional: UpdateAutoscalingPolicyAsync(AutoscalingPolicy,CancellationToken)
+            // Snippet: CreateAutoscalingPolicyAsync(CreateAutoscalingPolicyRequest, CallSettings)
+            // Additional: CreateAutoscalingPolicyAsync(CreateAutoscalingPolicyRequest, CancellationToken)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AutoscalingPolicy policy = new AutoscalingPolicy();
-            // Make the request
-            AutoscalingPolicy response = await autoscalingPolicyServiceClient.UpdateAutoscalingPolicyAsync(policy);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAutoscalingPolicy</summary>
-        public void UpdateAutoscalingPolicy()
-        {
-            // Snippet: UpdateAutoscalingPolicy(AutoscalingPolicy,CallSettings)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
-            // Initialize request argument(s)
-            AutoscalingPolicy policy = new AutoscalingPolicy();
-            // Make the request
-            AutoscalingPolicy response = autoscalingPolicyServiceClient.UpdateAutoscalingPolicy(policy);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAutoscalingPolicyAsync</summary>
-        public async Task UpdateAutoscalingPolicyAsync_RequestObject()
-        {
-            // Snippet: UpdateAutoscalingPolicyAsync(UpdateAutoscalingPolicyRequest,CallSettings)
-            // Additional: UpdateAutoscalingPolicyAsync(UpdateAutoscalingPolicyRequest,CancellationToken)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateAutoscalingPolicyRequest request = new UpdateAutoscalingPolicyRequest
+            CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
+                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
                 Policy = new AutoscalingPolicy(),
             };
             // Make the request
-            AutoscalingPolicy response = await autoscalingPolicyServiceClient.UpdateAutoscalingPolicyAsync(request);
+            AutoscalingPolicy response = await autoscalingPolicyServiceClient.CreateAutoscalingPolicyAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateAutoscalingPolicy</summary>
         public void UpdateAutoscalingPolicy_RequestObject()
         {
-            // Snippet: UpdateAutoscalingPolicy(UpdateAutoscalingPolicyRequest,CallSettings)
+            // Snippet: UpdateAutoscalingPolicy(UpdateAutoscalingPolicyRequest, CallSettings)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
             // Initialize request argument(s)
@@ -157,215 +75,69 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetAutoscalingPolicyAsync</summary>
-        public async Task GetAutoscalingPolicyAsync()
+        /// <summary>Snippet for UpdateAutoscalingPolicyAsync</summary>
+        public async Task UpdateAutoscalingPolicyAsync_RequestObject()
         {
-            // Snippet: GetAutoscalingPolicyAsync(string,CallSettings)
-            // Additional: GetAutoscalingPolicyAsync(string,CancellationToken)
+            // Snippet: UpdateAutoscalingPolicyAsync(UpdateAutoscalingPolicyRequest, CallSettings)
+            // Additional: UpdateAutoscalingPolicyAsync(UpdateAutoscalingPolicyRequest, CancellationToken)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString();
-            // Make the request
-            AutoscalingPolicy response = await autoscalingPolicyServiceClient.GetAutoscalingPolicyAsync(formattedName);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAutoscalingPolicy</summary>
-        public void GetAutoscalingPolicy()
-        {
-            // Snippet: GetAutoscalingPolicy(string,CallSettings)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
-            // Initialize request argument(s)
-            string formattedName = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString();
-            // Make the request
-            AutoscalingPolicy response = autoscalingPolicyServiceClient.GetAutoscalingPolicy(formattedName);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetAutoscalingPolicyAsync</summary>
-        public async Task GetAutoscalingPolicyAsync_RequestObject()
-        {
-            // Snippet: GetAutoscalingPolicyAsync(GetAutoscalingPolicyRequest,CallSettings)
-            // Additional: GetAutoscalingPolicyAsync(GetAutoscalingPolicyRequest,CancellationToken)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GetAutoscalingPolicyRequest request = new GetAutoscalingPolicyRequest
+            UpdateAutoscalingPolicyRequest request = new UpdateAutoscalingPolicyRequest
             {
-                Name = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString(),
+                Policy = new AutoscalingPolicy(),
             };
             // Make the request
-            AutoscalingPolicy response = await autoscalingPolicyServiceClient.GetAutoscalingPolicyAsync(request);
+            AutoscalingPolicy response = await autoscalingPolicyServiceClient.UpdateAutoscalingPolicyAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetAutoscalingPolicy</summary>
         public void GetAutoscalingPolicy_RequestObject()
         {
-            // Snippet: GetAutoscalingPolicy(GetAutoscalingPolicyRequest,CallSettings)
+            // Snippet: GetAutoscalingPolicy(GetAutoscalingPolicyRequest, CallSettings)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
             // Initialize request argument(s)
             GetAutoscalingPolicyRequest request = new GetAutoscalingPolicyRequest
             {
-                Name = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString(),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
             AutoscalingPolicy response = autoscalingPolicyServiceClient.GetAutoscalingPolicy(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ListAutoscalingPoliciesAsync</summary>
-        public async Task ListAutoscalingPoliciesAsync()
+        /// <summary>Snippet for GetAutoscalingPolicyAsync</summary>
+        public async Task GetAutoscalingPolicyAsync_RequestObject()
         {
-            // Snippet: ListAutoscalingPoliciesAsync(string,string,int?,CallSettings)
+            // Snippet: GetAutoscalingPolicyAsync(GetAutoscalingPolicyRequest, CallSettings)
+            // Additional: GetAutoscalingPolicyAsync(GetAutoscalingPolicyRequest, CancellationToken)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
-            // Make the request
-            PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response =
-                autoscalingPolicyServiceClient.ListAutoscalingPoliciesAsync(formattedParent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutoscalingPolicy item) =>
+            GetAutoscalingPolicyRequest request = new GetAutoscalingPolicyRequest
             {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutoscalingPoliciesResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AutoscalingPolicy item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AutoscalingPolicy> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AutoscalingPolicy item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAutoscalingPolicies</summary>
-        public void ListAutoscalingPolicies()
-        {
-            // Snippet: ListAutoscalingPolicies(string,string,int?,CallSettings)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
-            // Initialize request argument(s)
-            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
-            // Make the request
-            PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response =
-                autoscalingPolicyServiceClient.ListAutoscalingPolicies(formattedParent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (AutoscalingPolicy item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAutoscalingPoliciesResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AutoscalingPolicy item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AutoscalingPolicy> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AutoscalingPolicy item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListAutoscalingPoliciesAsync</summary>
-        public async Task ListAutoscalingPoliciesAsync_RequestObject()
-        {
-            // Snippet: ListAutoscalingPoliciesAsync(ListAutoscalingPoliciesRequest,CallSettings)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
-            {
-                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response =
-                autoscalingPolicyServiceClient.ListAutoscalingPoliciesAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutoscalingPolicy item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutoscalingPoliciesResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AutoscalingPolicy item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AutoscalingPolicy> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AutoscalingPolicy item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            AutoscalingPolicy response = await autoscalingPolicyServiceClient.GetAutoscalingPolicyAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListAutoscalingPolicies</summary>
         public void ListAutoscalingPolicies_RequestObject()
         {
-            // Snippet: ListAutoscalingPolicies(ListAutoscalingPoliciesRequest,CallSettings)
+            // Snippet: ListAutoscalingPolicies(ListAutoscalingPoliciesRequest, CallSettings)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
             // Initialize request argument(s)
             ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
-                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
+                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
-            PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response =
-                autoscalingPolicyServiceClient.ListAutoscalingPolicies(request);
+            PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response = autoscalingPolicyServiceClient.ListAutoscalingPolicies(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AutoscalingPolicy item in response)
@@ -381,6 +153,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (AutoscalingPolicy item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -392,6 +165,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (AutoscalingPolicy item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -399,65 +173,85 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteAutoscalingPolicyAsync</summary>
-        public async Task DeleteAutoscalingPolicyAsync()
+        /// <summary>Snippet for ListAutoscalingPolicies</summary>
+        public async Task ListAutoscalingPoliciesAsync_RequestObject()
         {
-            // Snippet: DeleteAutoscalingPolicyAsync(string,CallSettings)
-            // Additional: DeleteAutoscalingPolicyAsync(string,CancellationToken)
+            // Snippet: ListAutoscalingPoliciesAsync(ListAutoscalingPoliciesRequest, CallSettings)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString();
-            // Make the request
-            await autoscalingPolicyServiceClient.DeleteAutoscalingPolicyAsync(formattedName);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAutoscalingPolicy</summary>
-        public void DeleteAutoscalingPolicy()
-        {
-            // Snippet: DeleteAutoscalingPolicy(string,CallSettings)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
-            // Initialize request argument(s)
-            string formattedName = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString();
-            // Make the request
-            autoscalingPolicyServiceClient.DeleteAutoscalingPolicy(formattedName);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAutoscalingPolicyAsync</summary>
-        public async Task DeleteAutoscalingPolicyAsync_RequestObject()
-        {
-            // Snippet: DeleteAutoscalingPolicyAsync(DeleteAutoscalingPolicyRequest,CallSettings)
-            // Additional: DeleteAutoscalingPolicyAsync(DeleteAutoscalingPolicyRequest,CancellationToken)
-            // Create client
-            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteAutoscalingPolicyRequest request = new DeleteAutoscalingPolicyRequest
+            ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
-                Name = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString(),
+                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
-            await autoscalingPolicyServiceClient.DeleteAutoscalingPolicyAsync(request);
+            PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response = autoscalingPolicyServiceClient.ListAutoscalingPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AutoscalingPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAutoscalingPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoscalingPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoscalingPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoscalingPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for DeleteAutoscalingPolicy</summary>
         public void DeleteAutoscalingPolicy_RequestObject()
         {
-            // Snippet: DeleteAutoscalingPolicy(DeleteAutoscalingPolicyRequest,CallSettings)
+            // Snippet: DeleteAutoscalingPolicy(DeleteAutoscalingPolicyRequest, CallSettings)
             // Create client
             AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = AutoscalingPolicyServiceClient.Create();
             // Initialize request argument(s)
             DeleteAutoscalingPolicyRequest request = new DeleteAutoscalingPolicyRequest
             {
-                Name = new AutoscalingPolicyName("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]").ToString(),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
             autoscalingPolicyServiceClient.DeleteAutoscalingPolicy(request);
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteAutoscalingPolicyAsync</summary>
+        public async Task DeleteAutoscalingPolicyAsync_RequestObject()
+        {
+            // Snippet: DeleteAutoscalingPolicyAsync(DeleteAutoscalingPolicyRequest, CallSettings)
+            // Additional: DeleteAutoscalingPolicyAsync(DeleteAutoscalingPolicyRequest, CancellationToken)
+            // Create client
+            AutoscalingPolicyServiceClient autoscalingPolicyServiceClient = await AutoscalingPolicyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAutoscalingPolicyRequest request = new DeleteAutoscalingPolicyRequest
+            {
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+            };
+            // Make the request
+            await autoscalingPolicyServiceClient.DeleteAutoscalingPolicyAsync(request);
+            // End snippet
+        }
     }
 }
