@@ -14,399 +14,735 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Dataproc.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dataproc.V1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedWorkflowTemplateServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedWorkflowTemplateServiceClientTest
     {
-        [Fact]
-        public void CreateWorkflowTemplate()
+        [xunit::FactAttribute]
+        public void CreateWorkflowTemplateRequestObject()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateWorkflowTemplateRequest expectedRequest = new CreateWorkflowTemplateRequest
-            {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
-                Template = new WorkflowTemplate(),
-            };
-            WorkflowTemplate expectedResponse = new WorkflowTemplate
-            {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
-            };
-            mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            RegionName parent = new RegionName("[PROJECT]", "[REGION]");
-            WorkflowTemplate template = new WorkflowTemplate();
-            WorkflowTemplate response = client.CreateWorkflowTemplate(parent, template);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateWorkflowTemplateAsync()
-        {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateWorkflowTemplateRequest expectedRequest = new CreateWorkflowTemplateRequest
-            {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
-                Template = new WorkflowTemplate(),
-            };
-            WorkflowTemplate expectedResponse = new WorkflowTemplate
-            {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
-            };
-            mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            RegionName parent = new RegionName("[PROJECT]", "[REGION]");
-            WorkflowTemplate template = new WorkflowTemplate();
-            WorkflowTemplate response = await client.CreateWorkflowTemplateAsync(parent, template);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateWorkflowTemplate2()
-        {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
+                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
             WorkflowTemplate response = client.CreateWorkflowTemplate(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateWorkflowTemplateAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateWorkflowTemplateRequestObjectAsync()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
+                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplate response = await client.CreateWorkflowTemplateAsync(request);
-            Assert.Same(expectedResponse, response);
+            WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetWorkflowTemplate()
+        [xunit::FactAttribute]
+        public void CreateWorkflowTemplate()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetWorkflowTemplateRequest expectedRequest = new GetWorkflowTemplateRequest
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetWorkflowTemplate(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            WorkflowTemplate response = client.GetWorkflowTemplate(name);
-            Assert.Same(expectedResponse, response);
+            WorkflowTemplate response = client.CreateWorkflowTemplate(request.Parent, request.Template);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetWorkflowTemplateAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateWorkflowTemplateAsync()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetWorkflowTemplateRequest expectedRequest = new GetWorkflowTemplateRequest
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            WorkflowTemplate response = await client.GetWorkflowTemplateAsync(name);
-            Assert.Same(expectedResponse, response);
+            WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.Parent, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.Parent, request.Template, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetWorkflowTemplate2()
+        [xunit::FactAttribute]
+        public void CreateWorkflowTemplate_ResourceNames()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
+            {
+                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Template = new WorkflowTemplate(),
+            };
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplate response = client.CreateWorkflowTemplate(request.ParentAsWorkflowTemplateName, request.Template);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateWorkflowTemplateAsync_ResourceNames()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
+            {
+                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Template = new WorkflowTemplate(),
+            };
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.ParentAsWorkflowTemplateName, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.ParentAsWorkflowTemplateName, request.Template, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetWorkflowTemplateRequestObject()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Version = 271578922,
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
             WorkflowTemplate response = client.GetWorkflowTemplate(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetWorkflowTemplateAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetWorkflowTemplateRequestObjectAsync()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Version = 271578922,
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplate response = await client.GetWorkflowTemplateAsync(request);
-            Assert.Same(expectedResponse, response);
+            WorkflowTemplate responseCallSettings = await client.GetWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.GetWorkflowTemplateAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateWorkflowTemplate()
+        [xunit::FactAttribute]
+        public void GetWorkflowTemplate()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateWorkflowTemplateRequest expectedRequest = new UpdateWorkflowTemplateRequest
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
             {
-                Template = new WorkflowTemplate(),
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplate template = new WorkflowTemplate();
-            WorkflowTemplate response = client.UpdateWorkflowTemplate(template);
-            Assert.Same(expectedResponse, response);
+            WorkflowTemplate response = client.GetWorkflowTemplate(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateWorkflowTemplateAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetWorkflowTemplateAsync()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateWorkflowTemplateRequest expectedRequest = new UpdateWorkflowTemplateRequest
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
             {
-                Template = new WorkflowTemplate(),
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplate template = new WorkflowTemplate();
-            WorkflowTemplate response = await client.UpdateWorkflowTemplateAsync(template);
-            Assert.Same(expectedResponse, response);
+            WorkflowTemplate responseCallSettings = await client.GetWorkflowTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.GetWorkflowTemplateAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateWorkflowTemplate2()
+        [xunit::FactAttribute]
+        public void GetWorkflowTemplate_ResourceNames()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+            };
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplate response = client.GetWorkflowTemplate(request.WorkflowTemplateName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetWorkflowTemplateAsync_ResourceNames()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+            };
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplate responseCallSettings = await client.GetWorkflowTemplateAsync(request.WorkflowTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.GetWorkflowTemplateAsync(request.WorkflowTemplateName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateWorkflowTemplateRequestObject()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateWorkflowTemplateRequest request = new UpdateWorkflowTemplateRequest
             {
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
             WorkflowTemplate response = client.UpdateWorkflowTemplate(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateWorkflowTemplateAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateWorkflowTemplateRequestObjectAsync()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateWorkflowTemplateRequest request = new UpdateWorkflowTemplateRequest
             {
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                Id = "id3355",
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
-                Version = 351608024,
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplate response = await client.UpdateWorkflowTemplateAsync(request);
-            Assert.Same(expectedResponse, response);
+            WorkflowTemplate responseCallSettings = await client.UpdateWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.UpdateWorkflowTemplateAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteWorkflowTemplate()
+        [xunit::FactAttribute]
+        public void UpdateWorkflowTemplate()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteWorkflowTemplateRequest expectedRequest = new DeleteWorkflowTemplateRequest
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateWorkflowTemplateRequest request = new UpdateWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Template = new WorkflowTemplate(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            client.DeleteWorkflowTemplate(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteWorkflowTemplateAsync()
-        {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteWorkflowTemplateRequest expectedRequest = new DeleteWorkflowTemplateRequest
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            await client.DeleteWorkflowTemplateAsync(name);
+            WorkflowTemplate response = client.UpdateWorkflowTemplate(request.Template);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteWorkflowTemplate2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateWorkflowTemplateAsync()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateWorkflowTemplateRequest request = new UpdateWorkflowTemplateRequest
+            {
+                Template = new WorkflowTemplate(),
+            };
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplate responseCallSettings = await client.UpdateWorkflowTemplateAsync(request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.UpdateWorkflowTemplateAsync(request.Template, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteWorkflowTemplateRequestObject()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Version = 271578922,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteWorkflowTemplate(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteWorkflowTemplateAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteWorkflowTemplateRequestObjectAsync()
         {
-            Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Version = 271578922,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteWorkflowTemplateAsync(request);
+            await client.DeleteWorkflowTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteWorkflowTemplateAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteWorkflowTemplate()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteWorkflowTemplate(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteWorkflowTemplateAsync()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteWorkflowTemplateAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteWorkflowTemplateAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteWorkflowTemplate_ResourceNames()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteWorkflowTemplate(request.WorkflowTemplateName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteWorkflowTemplateAsync_ResourceNames()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteWorkflowTemplateAsync(request.WorkflowTemplateName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteWorkflowTemplateAsync(request.WorkflowTemplateName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
