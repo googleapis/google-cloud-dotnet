@@ -444,9 +444,8 @@
   },
   {
     "id": "Google.Cloud.Firestore.Admin.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/firestore/admin/v1",
-    "serviceYaml": "firestore_admin_v1.yaml",
     "productName": "Firestore Admin",
     "productUrl": "https://firebase.google.com",
     "targetFrameworks": "netstandard2.0;net461",
