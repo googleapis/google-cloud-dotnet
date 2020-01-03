@@ -20,12 +20,10 @@ namespace Google.Cloud.Scheduler.V1
 {
     public partial class ListJobsRequest
     {
-        /// <summary>
-        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public LocationName ParentAsLocationName
+        /// <summary><see cref="JobName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public JobName ParentAsJobName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : JobName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -44,12 +42,10 @@ namespace Google.Cloud.Scheduler.V1
 
     public partial class CreateJobRequest
     {
-        /// <summary>
-        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public LocationName ParentAsLocationName
+        /// <summary><see cref="JobName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public JobName ParentAsJobName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : JobName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }

@@ -34,7 +34,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             ReadRowsRequest request = new ReadRowsRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Rows = new RowSet(),
                 Filter = new RowFilter(),
                 RowsLimit = 0L,
@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
 
@@ -132,7 +132,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
             BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
@@ -158,7 +158,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             SampleRowKeysRequest request = new SampleRowKeysRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 AppProfileId = "",
             };
             // Make the request, returning a streaming response
@@ -206,7 +206,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
             BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
 
@@ -253,7 +253,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
             BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
@@ -279,7 +279,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 Mutations = { new Mutation(), },
                 AppProfileId = "",
@@ -299,7 +299,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 Mutations = { new Mutation(), },
                 AppProfileId = "",
@@ -347,7 +347,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
             // Make the request
@@ -363,7 +363,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
             // Make the request
@@ -411,7 +411,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
             string appProfileId = "";
@@ -428,7 +428,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
             string appProfileId = "";
@@ -446,7 +446,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             MutateRowsRequest request = new MutateRowsRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Entries =
                 {
                     new MutateRowsRequest.Types.Entry(),
@@ -502,7 +502,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             IEnumerable<MutateRowsRequest.Types.Entry> entries = new MutateRowsRequest.Types.Entry[]
             {
                 new MutateRowsRequest.Types.Entry(),
@@ -557,7 +557,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             IEnumerable<MutateRowsRequest.Types.Entry> entries = new MutateRowsRequest.Types.Entry[]
             {
                 new MutateRowsRequest.Types.Entry(),
@@ -587,7 +587,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -609,7 +609,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -663,7 +663,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
@@ -681,7 +681,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
@@ -735,7 +735,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
@@ -754,7 +754,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new Mutation[] { new Mutation(), };
@@ -774,7 +774,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 Rules =
                 {
@@ -797,7 +797,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.Empty,
                 Rules =
                 {
@@ -854,7 +854,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
             {
@@ -873,7 +873,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
             {
@@ -930,7 +930,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
             {
@@ -950,7 +950,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.Empty;
             IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
             {

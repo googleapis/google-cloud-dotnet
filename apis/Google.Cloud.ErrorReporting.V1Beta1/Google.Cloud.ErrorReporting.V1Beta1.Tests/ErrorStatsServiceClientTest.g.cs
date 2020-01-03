@@ -33,7 +33,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -49,7 +49,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -67,7 +67,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -83,7 +83,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -101,7 +101,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEvents(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -117,7 +117,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse { };
             mockGrpcClient.Setup(x => x.DeleteEventsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeleteEventsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));

@@ -24,88 +24,223 @@ namespace Google.Cloud.Translate.V3
     /// <summary>Resource name for the <c>Glossary</c> resource.</summary>
     public sealed partial class GlossaryName : gax::IResourceName, sys::IEquatable<GlossaryName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/glossaries/{glossary}");
-
-        /// <summary>
-        /// Parses the given <c>Glossary</c> resource name in string form into a new <see cref="GlossaryName"/>
-        /// instance.
-        /// </summary>
-        /// <param name="glossaryName">
-        /// The <c>Glossary</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <returns>The parsed <see cref="GlossaryName"/> if successful.</returns>
-        public static GlossaryName Parse(string glossaryName)
+        /// <summary>The possible contents of <see cref="GlossaryName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(glossaryName, nameof(glossaryName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(glossaryName);
-            return new GlossaryName(resourceName[0], resourceName[1], resourceName[2]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>.
+            /// </summary>
+            ProjectLocationGlossary = 1
         }
 
+        private static gax::PathTemplate s_projectLocationGlossary = new gax::PathTemplate("projects/{project}/locations/{location}/glossaries/{glossary}");
+
+        /// <summary>Creates a <see cref="GlossaryName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="GlossaryName"/> containing the provided <paramref name="unparsedResourceName"/>
+        /// .
+        /// </returns>
+        public static GlossaryName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new GlossaryName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="GlossaryName"/>
-        /// instance.
+        /// Creates a <see cref="GlossaryName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="glossaryId">The <c>Glossary</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="GlossaryName"/> constructed from the provided ids.</returns>
+        public static GlossaryName FromProjectLocationGlossary(string projectId, string locationId, string glossaryId) =>
+            new GlossaryName(ResourceNameType.ProjectLocationGlossary, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), glossaryId: gax::GaxPreconditions.CheckNotNullOrEmpty(glossaryId, nameof(glossaryId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GlossaryName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="glossaryId">The <c>Glossary</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GlossaryName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string glossaryId) =>
+            FormatProjectLocationGlossary(projectId, locationId, glossaryId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GlossaryName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="glossaryId">The <c>Glossary</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GlossaryName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>.
+        /// </returns>
+        public static string FormatProjectLocationGlossary(string projectId, string locationId, string glossaryId) =>
+            s_projectLocationGlossary.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(glossaryId, nameof(glossaryId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="GlossaryName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/glossaries/{glossary}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="glossaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="GlossaryName"/> if successful.</returns>
+        public static GlossaryName Parse(string glossaryName) => Parse(glossaryName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GlossaryName"/> instance; optionally allowing an
+        /// unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="glossaryName"/> is
-        /// <c>null</c>, as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/glossaries/{glossary}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="glossaryName">
-        /// The <c>Glossary</c> resource name in string form. Must not be <c>null</c>.
+        /// <param name="glossaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
         /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="GlossaryName"/>, or <c>null</c> if parsing fails.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string glossaryName, out GlossaryName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(glossaryName, nameof(glossaryName));
-            if (s_template.TryParseName(glossaryName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new GlossaryName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="GlossaryName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="glossaryId">The <c>Glossary</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="GlossaryName"/>.</returns>
-        public static string Format(string projectId, string locationId, string glossaryId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(glossaryId, nameof(glossaryId)));
+        /// <returns>The parsed <see cref="GlossaryName"/> if successful.</returns>
+        public static GlossaryName Parse(string glossaryName, bool allowUnparsed) =>
+            TryParse(glossaryName, allowUnparsed, out GlossaryName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="GlossaryName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="GlossaryName"/> instance.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="glossaryId">The <c>Glossary</c> ID. Must not be <c>null</c>.</param>
-        public GlossaryName(string projectId, string locationId, string glossaryId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/glossaries/{glossary}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="glossaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GlossaryName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string glossaryName, out GlossaryName result) => TryParse(glossaryName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GlossaryName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/glossaries/{glossary}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="glossaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GlossaryName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string glossaryName, bool allowUnparsed, out GlossaryName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
-            GlossaryId = gax::GaxPreconditions.CheckNotNull(glossaryId, nameof(glossaryId));
+            gax::GaxPreconditions.CheckNotNull(glossaryName, nameof(glossaryName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationGlossary.TryParseName(glossaryName, out resourceName))
+            {
+                result = FromProjectLocationGlossary(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(glossaryName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private GlossaryName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string glossaryId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            GlossaryId = glossaryId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
 
-        /// <summary>The <c>Location</c> ID. Never <c>null</c>.</summary>
-        public string LocationId { get; }
+        /// <summary>
+        /// Constructs a new instance of a <see cref="GlossaryName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="glossaryId">The <c>Glossary</c> ID. Must not be <c>null</c> or empty.</param>
+        public GlossaryName(string projectId, string locationId, string glossaryId) : this(ResourceNameType.ProjectLocationGlossary, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), glossaryId: gax::GaxPreconditions.CheckNotNullOrEmpty(glossaryId, nameof(glossaryId)))
+        {
+        }
 
-        /// <summary>The <c>Glossary</c> ID. Never <c>null</c>.</summary>
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c>if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Glossary</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string GlossaryId { get; }
 
-        /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, LocationId, GlossaryId);
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationGlossary: return s_projectLocationGlossary.Expand(ProjectId, LocationId, GlossaryId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();

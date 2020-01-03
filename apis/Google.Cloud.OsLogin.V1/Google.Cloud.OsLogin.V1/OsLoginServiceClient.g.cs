@@ -656,10 +656,10 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual LoginProfile GetLoginProfile(gcoc::UserName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual LoginProfile GetLoginProfile(gcoc::PosixAccountName name, gaxgrpc::CallSettings callSettings = null) =>
             GetLoginProfile(new GetLoginProfileRequest
             {
-                UserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PosixAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -671,10 +671,10 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LoginProfile> GetLoginProfileAsync(gcoc::UserName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<LoginProfile> GetLoginProfileAsync(gcoc::PosixAccountName name, gaxgrpc::CallSettings callSettings = null) =>
             GetLoginProfileAsync(new GetLoginProfileRequest
             {
-                UserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PosixAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -686,7 +686,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LoginProfile> GetLoginProfileAsync(gcoc::UserName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<LoginProfile> GetLoginProfileAsync(gcoc::PosixAccountName name, st::CancellationToken cancellationToken) =>
             GetLoginProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -908,10 +908,10 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ImportSshPublicKeyResponse ImportSshPublicKey(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ImportSshPublicKeyResponse ImportSshPublicKey(gcoc::SshPublicKeyName parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
             ImportSshPublicKey(new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsSshPublicKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 SshPublicKey = sshPublicKey,
             }, callSettings);
 
@@ -928,10 +928,10 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::SshPublicKeyName parent, gcoc::SshPublicKey sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
             ImportSshPublicKeyAsync(new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsSshPublicKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 SshPublicKey = sshPublicKey,
             }, callSettings);
 
@@ -948,7 +948,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::SshPublicKeyName parent, gcoc::SshPublicKey sshPublicKey, st::CancellationToken cancellationToken) =>
             ImportSshPublicKeyAsync(parent, sshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1034,10 +1034,10 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ImportSshPublicKeyResponse ImportSshPublicKey(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, string projectId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ImportSshPublicKeyResponse ImportSshPublicKey(gcoc::SshPublicKeyName parent, gcoc::SshPublicKey sshPublicKey, string projectId, gaxgrpc::CallSettings callSettings = null) =>
             ImportSshPublicKey(new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsSshPublicKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 SshPublicKey = sshPublicKey,
                 ProjectId = projectId ?? "",
             }, callSettings);
@@ -1058,10 +1058,10 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, string projectId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::SshPublicKeyName parent, gcoc::SshPublicKey sshPublicKey, string projectId, gaxgrpc::CallSettings callSettings = null) =>
             ImportSshPublicKeyAsync(new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsSshPublicKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 SshPublicKey = sshPublicKey,
                 ProjectId = projectId ?? "",
             }, callSettings);
@@ -1082,7 +1082,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::UserName parent, gcoc::SshPublicKey sshPublicKey, string projectId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(gcoc::SshPublicKeyName parent, gcoc::SshPublicKey sshPublicKey, string projectId, st::CancellationToken cancellationToken) =>
             ImportSshPublicKeyAsync(parent, sshPublicKey, projectId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

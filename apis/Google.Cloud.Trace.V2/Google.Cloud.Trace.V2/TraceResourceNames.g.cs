@@ -23,82 +23,209 @@ namespace Google.Cloud.Trace.V2
     /// <summary>Resource name for the <c>Span</c> resource.</summary>
     public sealed partial class SpanName : gax::IResourceName, sys::IEquatable<SpanName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/traces/{trace}/spans/{span}");
-
-        /// <summary>
-        /// Parses the given <c>Span</c> resource name in string form into a new <see cref="SpanName"/> instance.
-        /// </summary>
-        /// <param name="spanName">The <c>Span</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="SpanName"/> if successful.</returns>
-        public static SpanName Parse(string spanName)
+        /// <summary>The possible contents of <see cref="SpanName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(spanName, nameof(spanName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(spanName);
-            return new SpanName(resourceName[0], resourceName[1], resourceName[2]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/traces/{trace}/spans/{span}</c>.</summary>
+            ProjectTraceSpan = 1
         }
 
+        private static gax::PathTemplate s_projectTraceSpan = new gax::PathTemplate("projects/{project}/traces/{trace}/spans/{span}");
+
+        /// <summary>Creates a <see cref="SpanName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SpanName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SpanName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SpanName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="SpanName"/> instance.
+        /// Creates a <see cref="SpanName"/> with the pattern <c>projects/{project}/traces/{trace}/spans/{span}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="traceId">The <c>Trace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spanId">The <c>Span</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SpanName"/> constructed from the provided ids.</returns>
+        public static SpanName FromProjectTraceSpan(string projectId, string traceId, string spanId) =>
+            new SpanName(ResourceNameType.ProjectTraceSpan, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), traceId: gax::GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)), spanId: gax::GaxPreconditions.CheckNotNullOrEmpty(spanId, nameof(spanId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SpanName"/> with pattern
+        /// <c>projects/{project}/traces/{trace}/spans/{span}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="traceId">The <c>Trace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spanId">The <c>Span</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SpanName"/> with pattern
+        /// <c>projects/{project}/traces/{trace}/spans/{span}</c>.
+        /// </returns>
+        public static string Format(string projectId, string traceId, string spanId) =>
+            FormatProjectTraceSpan(projectId, traceId, spanId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SpanName"/> with pattern
+        /// <c>projects/{project}/traces/{trace}/spans/{span}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="traceId">The <c>Trace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spanId">The <c>Span</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SpanName"/> with pattern
+        /// <c>projects/{project}/traces/{trace}/spans/{span}</c>.
+        /// </returns>
+        public static string FormatProjectTraceSpan(string projectId, string traceId, string spanId) =>
+            s_projectTraceSpan.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(spanId, nameof(spanId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="SpanName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/traces/{trace}/spans/{span}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="spanName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SpanName"/> if successful.</returns>
+        public static SpanName Parse(string spanName) => Parse(spanName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SpanName"/> instance; optionally allowing an
+        /// unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="spanName"/> is <c>null</c>
-        /// , as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/traces/{trace}/spans/{span}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="spanName">The <c>Span</c> resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="spanName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SpanName"/> if successful.</returns>
+        public static SpanName Parse(string spanName, bool allowUnparsed) =>
+            TryParse(spanName, allowUnparsed, out SpanName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>Tries to parse the given resource name string into a new <see cref="SpanName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/traces/{trace}/spans/{span}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="spanName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="SpanName"/>, or <c>null</c> if parsing fails.
+        /// When this method returns, the parsed <see cref="SpanName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string spanName, out SpanName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(spanName, nameof(spanName));
-            if (s_template.TryParseName(spanName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new SpanName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="SpanName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="traceId">The <c>Trace</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="spanId">The <c>Span</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="SpanName"/>.</returns>
-        public static string Format(string projectId, string traceId, string spanId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(traceId, nameof(traceId)), gax::GaxPreconditions.CheckNotNull(spanId, nameof(spanId)));
+        public static bool TryParse(string spanName, out SpanName result) => TryParse(spanName, false, out result);
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="SpanName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="SpanName"/> instance; optionally
+        /// allowing an unparseable resource name.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="traceId">The <c>Trace</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="spanId">The <c>Span</c> ID. Must not be <c>null</c>.</param>
-        public SpanName(string projectId, string traceId, string spanId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/traces/{trace}/spans/{span}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="spanName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SpanName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string spanName, bool allowUnparsed, out SpanName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            TraceId = gax::GaxPreconditions.CheckNotNull(traceId, nameof(traceId));
-            SpanId = gax::GaxPreconditions.CheckNotNull(spanId, nameof(spanId));
+            gax::GaxPreconditions.CheckNotNull(spanName, nameof(spanName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectTraceSpan.TryParseName(spanName, out resourceName))
+            {
+                result = FromProjectTraceSpan(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(spanName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
+        private SpanName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string spanId = null, string traceId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ProjectId = projectId;
+            SpanId = spanId;
+            TraceId = traceId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SpanName"/> class from the component parts of pattern
+        /// <c>projects/{project}/traces/{trace}/spans/{span}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="traceId">The <c>Trace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spanId">The <c>Span</c> ID. Must not be <c>null</c> or empty.</param>
+        public SpanName(string projectId, string traceId, string spanId) : this(ResourceNameType.ProjectTraceSpan, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), traceId: gax::GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)), spanId: gax::GaxPreconditions.CheckNotNullOrEmpty(spanId, nameof(spanId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c>if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string ProjectId { get; }
 
-        /// <summary>The <c>Trace</c> ID. Never <c>null</c>.</summary>
-        public string TraceId { get; }
-
-        /// <summary>The <c>Span</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>Span</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string SpanId { get; }
 
-        /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        /// <summary>
+        /// The <c>Trace</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string TraceId { get; }
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, TraceId, SpanId);
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectTraceSpan: return s_projectTraceSpan.Expand(ProjectId, TraceId, SpanId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();

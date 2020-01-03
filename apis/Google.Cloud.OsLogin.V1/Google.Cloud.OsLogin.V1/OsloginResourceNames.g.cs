@@ -45,11 +45,11 @@ namespace Google.Cloud.OsLogin.V1
     public partial class GetLoginProfileRequest
     {
         /// <summary>
-        /// <see cref="gcoc::UserName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcoc::PosixAccountName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcoc::UserName UserName
+        public gcoc::PosixAccountName PosixAccountName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::UserName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::PosixAccountName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -69,11 +69,11 @@ namespace Google.Cloud.OsLogin.V1
     public partial class ImportSshPublicKeyRequest
     {
         /// <summary>
-        /// <see cref="gcoc::UserName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gcoc::SshPublicKeyName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gcoc::UserName ParentAsUserName
+        public gcoc::SshPublicKeyName ParentAsSshPublicKeyName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gcoc::UserName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gcoc::SshPublicKeyName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }

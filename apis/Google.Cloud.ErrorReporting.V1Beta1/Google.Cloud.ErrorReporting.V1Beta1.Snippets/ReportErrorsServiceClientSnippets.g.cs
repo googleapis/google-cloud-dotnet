@@ -31,7 +31,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             // Make the request
@@ -49,7 +49,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             // Make the request
@@ -93,7 +93,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             ReportedErrorEvent @event = new ReportedErrorEvent();
             // Make the request
             ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(projectName, @event);
@@ -108,7 +108,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             ReportedErrorEvent @event = new ReportedErrorEvent();
             // Make the request
             ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(projectName, @event);

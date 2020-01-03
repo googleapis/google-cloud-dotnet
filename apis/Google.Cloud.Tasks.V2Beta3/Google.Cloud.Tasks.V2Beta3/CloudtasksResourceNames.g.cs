@@ -14,19 +14,16 @@
 
 // Generated code. DO NOT EDIT!
 
-using gagr = Google.Api.Gax.ResourceNames;
 using gctv = Google.Cloud.Tasks.V2Beta3;
 
 namespace Google.Cloud.Tasks.V2Beta3
 {
     public partial class ListQueuesRequest
     {
-        /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public QueueName ParentAsQueueName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -45,12 +42,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
     public partial class CreateQueueRequest
     {
-        /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public QueueName ParentAsQueueName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -105,10 +100,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
     public partial class ListTasksRequest
     {
-        /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public QueueName ParentAsQueueName
+        /// <summary><see cref="TaskName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TaskName ParentAsTaskName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TaskName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -127,10 +122,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
     public partial class CreateTaskRequest
     {
-        /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public QueueName ParentAsQueueName
+        /// <summary><see cref="TaskName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TaskName ParentAsTaskName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TaskName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }

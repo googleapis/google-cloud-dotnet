@@ -441,10 +441,10 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListJobs(new ListJobsRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -466,10 +466,10 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListJobsAsync(new ListJobsRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -693,10 +693,10 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Job CreateJob(LocationName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Job CreateJob(JobName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
             CreateJob(new CreateJobRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
             }, callSettings);
 
@@ -716,10 +716,10 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Job> CreateJobAsync(LocationName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Job> CreateJobAsync(JobName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
             CreateJobAsync(new CreateJobRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
             }, callSettings);
 
@@ -739,7 +739,7 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Job> CreateJobAsync(LocationName parent, Job job, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Job> CreateJobAsync(JobName parent, Job job, st::CancellationToken cancellationToken) =>
             CreateJobAsync(parent, job, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
