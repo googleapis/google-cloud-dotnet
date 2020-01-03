@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -126,6 +127,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 var root = DirectoryLayout.DetermineRootDirectory();
                 var apis = ApiMetadata.LoadApis();
                 Console.WriteLine($"API catalog contains {apis.Count} entries");
+                // Now we know we can parse the API catalog, let's reformat it.
+                ReformatApiCatalog();
                 HashSet<string> apiNames = new HashSet<string>(apis.Select(api => api.Id));
 
                 foreach (var api in apis)
@@ -148,6 +151,19 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 Console.WriteLine($"Failed: {e}");
                 return 1;
+            }
+        }
+
+        static void ReformatApiCatalog()
+        {
+            string path = ApiMetadata.CatalogPath;
+            string existing = File.ReadAllText(path);
+            JToken parsed = JToken.Parse(existing);
+            string formatted = parsed.ToString(Formatting.Indented);
+            if (existing != formatted)
+            {
+                File.WriteAllText(path, formatted);
+                Console.WriteLine("Reformatted apis.json");
             }
         }
 
