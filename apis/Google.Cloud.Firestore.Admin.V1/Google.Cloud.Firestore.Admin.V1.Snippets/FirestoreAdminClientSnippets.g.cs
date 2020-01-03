@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,98 +17,268 @@
 namespace Google.Cloud.Firestore.Admin.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Firestore.Admin.V1;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
+    using gcfav = Google.Cloud.Firestore.Admin.V1;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedFirestoreAdminClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedFirestoreAdminClientSnippets
     {
-        /// <summary>Snippet for CreateIndexAsync</summary>
-        public async Task CreateIndexAsync()
-        {
-            // Snippet: CreateIndexAsync(ParentName,Index,CallSettings)
-            // Additional: CreateIndexAsync(ParentName,Index,CancellationToken)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
-            Index index = new Index();
-            // Make the request
-            Operation response = await firestoreAdminClient.CreateIndexAsync(parent, index);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateIndex</summary>
-        public void CreateIndex()
+        public void CreateIndex_RequestObject()
         {
-            // Snippet: CreateIndex(ParentName,Index,CallSettings)
+            // Snippet: CreateIndex(CreateIndexRequest, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
-            Index index = new Index();
+            CreateIndexRequest request = new CreateIndexRequest
+            {
+                ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
+                Index = new Index(),
+            };
             // Make the request
-            Operation response = firestoreAdminClient.CreateIndex(parent, index);
+            Operation<Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Index retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
         /// <summary>Snippet for CreateIndexAsync</summary>
         public async Task CreateIndexAsync_RequestObject()
         {
-            // Snippet: CreateIndexAsync(CreateIndexRequest,CallSettings)
-            // Additional: CreateIndexAsync(CreateIndexRequest,CancellationToken)
+            // Snippet: CreateIndexAsync(CreateIndexRequest, CallSettings)
+            // Additional: CreateIndexAsync(CreateIndexRequest, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
             CreateIndexRequest request = new CreateIndexRequest
             {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
+                ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
                 Index = new Index(),
             };
             // Make the request
-            Operation response = await firestoreAdminClient.CreateIndexAsync(request);
+            Operation<Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Index retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
         /// <summary>Snippet for CreateIndex</summary>
-        public void CreateIndex_RequestObject()
+        public void CreateIndex()
         {
-            // Snippet: CreateIndex(CreateIndexRequest,CallSettings)
+            // Snippet: CreateIndex(string, Index, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            CreateIndexRequest request = new CreateIndexRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-                Index = new Index(),
-            };
+            string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
+            Index index = new Index();
             // Make the request
-            Operation response = firestoreAdminClient.CreateIndex(request);
+            Operation<Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(parent, index);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Index retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
-        /// <summary>Snippet for ListIndexesAsync</summary>
-        public async Task ListIndexesAsync()
+        /// <summary>Snippet for CreateIndexAsync</summary>
+        public async Task CreateIndexAsync()
         {
-            // Snippet: ListIndexesAsync(ParentName,string,int?,CallSettings)
+            // Snippet: CreateIndexAsync(string, Index, CallSettings)
+            // Additional: CreateIndexAsync(string, Index, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
+            string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
+            Index index = new Index();
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, Index> response =
-                firestoreAdminClient.ListIndexesAsync(parent);
+            Operation<Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(parent, index);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIndex</summary>
+        public void CreateIndex_ResourceNames()
+        {
+            // Snippet: CreateIndex(CollectionGroupName, Index, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
+            Index index = new Index();
+            // Make the request
+            Operation<Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(parent, index);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIndexAsync</summary>
+        public async Task CreateIndexAsync_ResourceNames()
+        {
+            // Snippet: CreateIndexAsync(CollectionGroupName, Index, CallSettings)
+            // Additional: CreateIndexAsync(CollectionGroupName, Index, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
+            Index index = new Index();
+            // Make the request
+            Operation<Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(parent, index);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIndexes</summary>
+        public void ListIndexes_RequestObject()
+        {
+            // Snippet: ListIndexes(ListIndexesRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            ListIndexesRequest request = new ListIndexesRequest
+            {
+                ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Index item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIndexesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Index item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Index> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Index item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIndexes</summary>
+        public async Task ListIndexesAsync_RequestObject()
+        {
+            // Snippet: ListIndexesAsync(ListIndexesRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListIndexesRequest request = new ListIndexesRequest
+            {
+                ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Index item) =>
@@ -124,6 +294,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Index item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -135,6 +306,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Index item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -145,14 +317,13 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         /// <summary>Snippet for ListIndexes</summary>
         public void ListIndexes()
         {
-            // Snippet: ListIndexes(ParentName,string,int?,CallSettings)
+            // Snippet: ListIndexes(string, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
+            string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
             // Make the request
-            PagedEnumerable<ListIndexesResponse, Index> response =
-                firestoreAdminClient.ListIndexes(parent);
+            PagedEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Index item in response)
@@ -168,6 +339,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Index item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -179,6 +351,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Index item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -186,20 +359,16 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIndexesAsync</summary>
-        public async Task ListIndexesAsync_RequestObject()
+        /// <summary>Snippet for ListIndexes</summary>
+        public async Task ListIndexesAsync()
         {
-            // Snippet: ListIndexesAsync(ListIndexesRequest,CallSettings)
+            // Snippet: ListIndexesAsync(string, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-            };
+            string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, Index> response =
-                firestoreAdminClient.ListIndexesAsync(request);
+            PagedAsyncEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Index item) =>
@@ -215,6 +384,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Index item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -226,6 +396,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Index item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -234,19 +405,15 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListIndexes</summary>
-        public void ListIndexes_RequestObject()
+        public void ListIndexes_ResourceNames()
         {
-            // Snippet: ListIndexes(ListIndexesRequest,CallSettings)
+            // Snippet: ListIndexes(CollectionGroupName, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-            };
+            CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
             // Make the request
-            PagedEnumerable<ListIndexesResponse, Index> response =
-                firestoreAdminClient.ListIndexes(request);
+            PagedEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Index item in response)
@@ -262,6 +429,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Index item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -273,6 +441,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Index item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -280,44 +449,78 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetIndexAsync</summary>
-        public async Task GetIndexAsync()
+        /// <summary>Snippet for ListIndexes</summary>
+        public async Task ListIndexesAsync_ResourceNames()
         {
-            // Snippet: GetIndexAsync(IndexName,CallSettings)
-            // Additional: GetIndexAsync(IndexName,CancellationToken)
+            // Snippet: ListIndexesAsync(CollectionGroupName, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
+            CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
             // Make the request
-            Index response = await firestoreAdminClient.GetIndexAsync(name);
+            PagedAsyncEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Index item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIndexesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Index item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Index> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Index item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetIndex</summary>
-        public void GetIndex()
+        public void GetIndex_RequestObject()
         {
-            // Snippet: GetIndex(IndexName,CallSettings)
+            // Snippet: GetIndex(GetIndexRequest, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
+            GetIndexRequest request = new GetIndexRequest
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+            };
             // Make the request
-            Index response = firestoreAdminClient.GetIndex(name);
+            Index response = firestoreAdminClient.GetIndex(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetIndexAsync</summary>
         public async Task GetIndexAsync_RequestObject()
         {
-            // Snippet: GetIndexAsync(GetIndexRequest,CallSettings)
-            // Additional: GetIndexAsync(GetIndexRequest,CancellationToken)
+            // Snippet: GetIndexAsync(GetIndexRequest, CallSettings)
+            // Additional: GetIndexAsync(GetIndexRequest, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
             GetIndexRequest request = new GetIndexRequest
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             // Make the request
             Index response = await firestoreAdminClient.GetIndexAsync(request);
@@ -325,59 +528,86 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetIndex</summary>
-        public void GetIndex_RequestObject()
+        public void GetIndex()
         {
-            // Snippet: GetIndex(GetIndexRequest,CallSettings)
+            // Snippet: GetIndex(string, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            GetIndexRequest request = new GetIndexRequest
-            {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
-            };
+            string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/indexes/[INDEX]";
             // Make the request
-            Index response = firestoreAdminClient.GetIndex(request);
+            Index response = firestoreAdminClient.GetIndex(name);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteIndexAsync</summary>
-        public async Task DeleteIndexAsync()
+        /// <summary>Snippet for GetIndexAsync</summary>
+        public async Task GetIndexAsync()
         {
-            // Snippet: DeleteIndexAsync(IndexName,CallSettings)
-            // Additional: DeleteIndexAsync(IndexName,CancellationToken)
+            // Snippet: GetIndexAsync(string, CallSettings)
+            // Additional: GetIndexAsync(string, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
+            string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/indexes/[INDEX]";
             // Make the request
-            await firestoreAdminClient.DeleteIndexAsync(name);
+            Index response = await firestoreAdminClient.GetIndexAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIndex</summary>
+        public void GetIndex_ResourceNames()
+        {
+            // Snippet: GetIndex(IndexName, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            IndexName name = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]");
+            // Make the request
+            Index response = firestoreAdminClient.GetIndex(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIndexAsync</summary>
+        public async Task GetIndexAsync_ResourceNames()
+        {
+            // Snippet: GetIndexAsync(IndexName, CallSettings)
+            // Additional: GetIndexAsync(IndexName, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            IndexName name = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]");
+            // Make the request
+            Index response = await firestoreAdminClient.GetIndexAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteIndex</summary>
-        public void DeleteIndex()
+        public void DeleteIndex_RequestObject()
         {
-            // Snippet: DeleteIndex(IndexName,CallSettings)
+            // Snippet: DeleteIndex(DeleteIndexRequest, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
+            DeleteIndexRequest request = new DeleteIndexRequest
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+            };
             // Make the request
-            firestoreAdminClient.DeleteIndex(name);
+            firestoreAdminClient.DeleteIndex(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteIndexAsync</summary>
         public async Task DeleteIndexAsync_RequestObject()
         {
-            // Snippet: DeleteIndexAsync(DeleteIndexRequest,CallSettings)
-            // Additional: DeleteIndexAsync(DeleteIndexRequest,CancellationToken)
+            // Snippet: DeleteIndexAsync(DeleteIndexRequest, CallSettings)
+            // Additional: DeleteIndexAsync(DeleteIndexRequest, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
             DeleteIndexRequest request = new DeleteIndexRequest
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             // Make the request
             await firestoreAdminClient.DeleteIndexAsync(request);
@@ -385,215 +615,338 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteIndex</summary>
-        public void DeleteIndex_RequestObject()
+        public void DeleteIndex()
         {
-            // Snippet: DeleteIndex(DeleteIndexRequest,CallSettings)
+            // Snippet: DeleteIndex(string, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            DeleteIndexRequest request = new DeleteIndexRequest
-            {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
-            };
+            string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/indexes/[INDEX]";
             // Make the request
-            firestoreAdminClient.DeleteIndex(request);
+            firestoreAdminClient.DeleteIndex(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ImportDocumentsAsync</summary>
-        public async Task ImportDocumentsAsync()
+        /// <summary>Snippet for DeleteIndexAsync</summary>
+        public async Task DeleteIndexAsync()
         {
-            // Snippet: ImportDocumentsAsync(DatabaseName,CallSettings)
-            // Additional: ImportDocumentsAsync(DatabaseName,CancellationToken)
+            // Snippet: DeleteIndexAsync(string, CallSettings)
+            // Additional: DeleteIndexAsync(string, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
+            string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/indexes/[INDEX]";
             // Make the request
-            Operation response = await firestoreAdminClient.ImportDocumentsAsync(name);
+            await firestoreAdminClient.DeleteIndexAsync(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ImportDocuments</summary>
-        public void ImportDocuments()
+        /// <summary>Snippet for DeleteIndex</summary>
+        public void DeleteIndex_ResourceNames()
         {
-            // Snippet: ImportDocuments(DatabaseName,CallSettings)
+            // Snippet: DeleteIndex(IndexName, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
+            IndexName name = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]");
             // Make the request
-            Operation response = firestoreAdminClient.ImportDocuments(name);
+            firestoreAdminClient.DeleteIndex(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ImportDocumentsAsync</summary>
-        public async Task ImportDocumentsAsync_RequestObject()
+        /// <summary>Snippet for DeleteIndexAsync</summary>
+        public async Task DeleteIndexAsync_ResourceNames()
         {
-            // Snippet: ImportDocumentsAsync(ImportDocumentsRequest,CallSettings)
-            // Additional: ImportDocumentsAsync(ImportDocumentsRequest,CancellationToken)
+            // Snippet: DeleteIndexAsync(IndexName, CallSettings)
+            // Additional: DeleteIndexAsync(IndexName, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ImportDocumentsRequest request = new ImportDocumentsRequest
-            {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
-            };
+            IndexName name = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]");
             // Make the request
-            Operation response = await firestoreAdminClient.ImportDocumentsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ImportDocuments</summary>
-        public void ImportDocuments_RequestObject()
-        {
-            // Snippet: ImportDocuments(ImportDocumentsRequest,CallSettings)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
-            // Initialize request argument(s)
-            ImportDocumentsRequest request = new ImportDocumentsRequest
-            {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
-            };
-            // Make the request
-            Operation response = firestoreAdminClient.ImportDocuments(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ExportDocumentsAsync</summary>
-        public async Task ExportDocumentsAsync()
-        {
-            // Snippet: ExportDocumentsAsync(DatabaseName,CallSettings)
-            // Additional: ExportDocumentsAsync(DatabaseName,CancellationToken)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
-            // Make the request
-            Operation response = await firestoreAdminClient.ExportDocumentsAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ExportDocuments</summary>
-        public void ExportDocuments()
-        {
-            // Snippet: ExportDocuments(DatabaseName,CallSettings)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
-            // Initialize request argument(s)
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
-            // Make the request
-            Operation response = firestoreAdminClient.ExportDocuments(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ExportDocumentsAsync</summary>
-        public async Task ExportDocumentsAsync_RequestObject()
-        {
-            // Snippet: ExportDocumentsAsync(ExportDocumentsRequest,CallSettings)
-            // Additional: ExportDocumentsAsync(ExportDocumentsRequest,CancellationToken)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            ExportDocumentsRequest request = new ExportDocumentsRequest
-            {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
-            };
-            // Make the request
-            Operation response = await firestoreAdminClient.ExportDocumentsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ExportDocuments</summary>
-        public void ExportDocuments_RequestObject()
-        {
-            // Snippet: ExportDocuments(ExportDocumentsRequest,CallSettings)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
-            // Initialize request argument(s)
-            ExportDocumentsRequest request = new ExportDocumentsRequest
-            {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
-            };
-            // Make the request
-            Operation response = firestoreAdminClient.ExportDocuments(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetFieldAsync</summary>
-        public async Task GetFieldAsync()
-        {
-            // Snippet: GetFieldAsync(FieldName,CallSettings)
-            // Additional: GetFieldAsync(FieldName,CancellationToken)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            FieldName name = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]");
-            // Make the request
-            apis::Field response = await firestoreAdminClient.GetFieldAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetField</summary>
-        public void GetField()
-        {
-            // Snippet: GetField(FieldName,CallSettings)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
-            // Initialize request argument(s)
-            FieldName name = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]");
-            // Make the request
-            apis::Field response = firestoreAdminClient.GetField(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetFieldAsync</summary>
-        public async Task GetFieldAsync_RequestObject()
-        {
-            // Snippet: GetFieldAsync(GetFieldRequest,CallSettings)
-            // Additional: GetFieldAsync(GetFieldRequest,CancellationToken)
-            // Create client
-            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            GetFieldRequest request = new GetFieldRequest
-            {
-                FieldName = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]"),
-            };
-            // Make the request
-            apis::Field response = await firestoreAdminClient.GetFieldAsync(request);
+            await firestoreAdminClient.DeleteIndexAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetField</summary>
         public void GetField_RequestObject()
         {
-            // Snippet: GetField(GetFieldRequest,CallSettings)
+            // Snippet: GetField(GetFieldRequest, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
             GetFieldRequest request = new GetFieldRequest
             {
-                FieldName = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]"),
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
             };
             // Make the request
-            apis::Field response = firestoreAdminClient.GetField(request);
+            gcfav::Field response = firestoreAdminClient.GetField(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ListFieldsAsync</summary>
-        public async Task ListFieldsAsync()
+        /// <summary>Snippet for GetFieldAsync</summary>
+        public async Task GetFieldAsync_RequestObject()
         {
-            // Snippet: ListFieldsAsync(ParentName,string,int?,CallSettings)
+            // Snippet: GetFieldAsync(GetFieldRequest, CallSettings)
+            // Additional: GetFieldAsync(GetFieldRequest, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
+            GetFieldRequest request = new GetFieldRequest
+            {
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
+            };
             // Make the request
-            PagedAsyncEnumerable<ListFieldsResponse, apis::Field> response =
-                firestoreAdminClient.ListFieldsAsync(parent);
+            gcfav::Field response = await firestoreAdminClient.GetFieldAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetField</summary>
+        public void GetField()
+        {
+            // Snippet: GetField(string, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/fields/[FIELD]";
+            // Make the request
+            gcfav::Field response = firestoreAdminClient.GetField(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFieldAsync</summary>
+        public async Task GetFieldAsync()
+        {
+            // Snippet: GetFieldAsync(string, CallSettings)
+            // Additional: GetFieldAsync(string, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/fields/[FIELD]";
+            // Make the request
+            gcfav::Field response = await firestoreAdminClient.GetFieldAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetField</summary>
+        public void GetField_ResourceNames()
+        {
+            // Snippet: GetField(FieldName, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            FieldName name = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]");
+            // Make the request
+            gcfav::Field response = firestoreAdminClient.GetField(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFieldAsync</summary>
+        public async Task GetFieldAsync_ResourceNames()
+        {
+            // Snippet: GetFieldAsync(FieldName, CallSettings)
+            // Additional: GetFieldAsync(FieldName, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            FieldName name = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]");
+            // Make the request
+            gcfav::Field response = await firestoreAdminClient.GetFieldAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateField</summary>
+        public void UpdateField_RequestObject()
+        {
+            // Snippet: UpdateField(UpdateFieldRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateFieldRequest request = new UpdateFieldRequest
+            {
+                Field = new gcfav::Field(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<gcfav::Field, FieldOperationMetadata> response = firestoreAdminClient.UpdateField(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Field, FieldOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Field result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Field, FieldOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceUpdateField(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Field retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFieldAsync</summary>
+        public async Task UpdateFieldAsync_RequestObject()
+        {
+            // Snippet: UpdateFieldAsync(UpdateFieldRequest, CallSettings)
+            // Additional: UpdateFieldAsync(UpdateFieldRequest, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFieldRequest request = new UpdateFieldRequest
+            {
+                Field = new gcfav::Field(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<gcfav::Field, FieldOperationMetadata> response = await firestoreAdminClient.UpdateFieldAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Field, FieldOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Field result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Field, FieldOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceUpdateFieldAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Field retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateField</summary>
+        public void UpdateField()
+        {
+            // Snippet: UpdateField(Field, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::Field field = new gcfav::Field();
+            // Make the request
+            Operation<gcfav::Field, FieldOperationMetadata> response = firestoreAdminClient.UpdateField(field);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Field, FieldOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Field result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Field, FieldOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceUpdateField(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Field retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFieldAsync</summary>
+        public async Task UpdateFieldAsync()
+        {
+            // Snippet: UpdateFieldAsync(Field, CallSettings)
+            // Additional: UpdateFieldAsync(Field, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::Field field = new gcfav::Field();
+            // Make the request
+            Operation<gcfav::Field, FieldOperationMetadata> response = await firestoreAdminClient.UpdateFieldAsync(field);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Field, FieldOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Field result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Field, FieldOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceUpdateFieldAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Field retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFields</summary>
+        public void ListFields_RequestObject()
+        {
+            // Snippet: ListFields(ListFieldsRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            ListFieldsRequest request = new ListFieldsRequest
+            {
+                ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFields(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((apis::Field item) =>
+            foreach (gcfav::Field item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFieldsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcfav::Field item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcfav::Field> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcfav::Field item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFields</summary>
+        public async Task ListFieldsAsync_RequestObject()
+        {
+            // Snippet: ListFieldsAsync(ListFieldsRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFieldsRequest request = new ListFieldsRequest
+            {
+                ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFieldsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcfav::Field item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -604,19 +957,21 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Field item in page)
+                foreach (gcfav::Field item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Field> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfav::Field> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Field item in singlePage)
+            foreach (gcfav::Field item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -627,17 +982,16 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         /// <summary>Snippet for ListFields</summary>
         public void ListFields()
         {
-            // Snippet: ListFields(ParentName,string,int?,CallSettings)
+            // Snippet: ListFields(string, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
+            string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
             // Make the request
-            PagedEnumerable<ListFieldsResponse, apis::Field> response =
-                firestoreAdminClient.ListFields(parent);
+            PagedEnumerable<ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFields(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (apis::Field item in response)
+            foreach (gcfav::Field item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -648,19 +1002,21 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Field item in page)
+                foreach (gcfav::Field item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Field> singlePage = response.ReadPage(pageSize);
+            Page<gcfav::Field> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Field item in singlePage)
+            foreach (gcfav::Field item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -668,23 +1024,19 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFieldsAsync</summary>
-        public async Task ListFieldsAsync_RequestObject()
+        /// <summary>Snippet for ListFields</summary>
+        public async Task ListFieldsAsync()
         {
-            // Snippet: ListFieldsAsync(ListFieldsRequest,CallSettings)
+            // Snippet: ListFieldsAsync(string, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ListFieldsRequest request = new ListFieldsRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-            };
+            string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
             // Make the request
-            PagedAsyncEnumerable<ListFieldsResponse, apis::Field> response =
-                firestoreAdminClient.ListFieldsAsync(request);
+            PagedAsyncEnumerable<ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFieldsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((apis::Field item) =>
+            await response.ForEachAsync((gcfav::Field item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -695,19 +1047,21 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Field item in page)
+                foreach (gcfav::Field item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Field> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfav::Field> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Field item in singlePage)
+            foreach (gcfav::Field item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -716,22 +1070,18 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListFields</summary>
-        public void ListFields_RequestObject()
+        public void ListFields_ResourceNames()
         {
-            // Snippet: ListFields(ListFieldsRequest,CallSettings)
+            // Snippet: ListFields(CollectionGroupName, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            ListFieldsRequest request = new ListFieldsRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-            };
+            CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
             // Make the request
-            PagedEnumerable<ListFieldsResponse, apis::Field> response =
-                firestoreAdminClient.ListFields(request);
+            PagedEnumerable<ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFields(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (apis::Field item in response)
+            foreach (gcfav::Field item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -742,19 +1092,21 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (apis::Field item in page)
+                foreach (gcfav::Field item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<apis::Field> singlePage = response.ReadPage(pageSize);
+            Page<gcfav::Field> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (apis::Field item in singlePage)
+            foreach (gcfav::Field item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -762,65 +1114,423 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateFieldAsync</summary>
-        public async Task UpdateFieldAsync()
+        /// <summary>Snippet for ListFields</summary>
+        public async Task ListFieldsAsync_ResourceNames()
         {
-            // Snippet: UpdateFieldAsync(apis::Field,CallSettings)
-            // Additional: UpdateFieldAsync(apis::Field,CancellationToken)
+            // Snippet: ListFieldsAsync(CollectionGroupName, string, int?, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            apis::Field field = new apis::Field();
+            CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
             // Make the request
-            Operation response = await firestoreAdminClient.UpdateFieldAsync(field);
+            PagedAsyncEnumerable<ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFieldsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcfav::Field item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFieldsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcfav::Field item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcfav::Field> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcfav::Field item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateField</summary>
-        public void UpdateField()
+        /// <summary>Snippet for ExportDocuments</summary>
+        public void ExportDocuments_RequestObject()
         {
-            // Snippet: UpdateField(apis::Field,CallSettings)
+            // Snippet: ExportDocuments(ExportDocumentsRequest, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            apis::Field field = new apis::Field();
+            ExportDocumentsRequest request = new ExportDocumentsRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                CollectionIds = { "", },
+                OutputUriPrefix = "",
+            };
             // Make the request
-            Operation response = firestoreAdminClient.UpdateField(field);
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = firestoreAdminClient.ExportDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceExportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateFieldAsync</summary>
-        public async Task UpdateFieldAsync_RequestObject()
+        /// <summary>Snippet for ExportDocumentsAsync</summary>
+        public async Task ExportDocumentsAsync_RequestObject()
         {
-            // Snippet: UpdateFieldAsync(UpdateFieldRequest,CallSettings)
-            // Additional: UpdateFieldAsync(UpdateFieldRequest,CancellationToken)
+            // Snippet: ExportDocumentsAsync(ExportDocumentsRequest, CallSettings)
+            // Additional: ExportDocumentsAsync(ExportDocumentsRequest, CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateFieldRequest request = new UpdateFieldRequest
+            ExportDocumentsRequest request = new ExportDocumentsRequest
             {
-                Field = new apis::Field(),
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                CollectionIds = { "", },
+                OutputUriPrefix = "",
             };
             // Make the request
-            Operation response = await firestoreAdminClient.UpdateFieldAsync(request);
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = await firestoreAdminClient.ExportDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceExportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateField</summary>
-        public void UpdateField_RequestObject()
+        /// <summary>Snippet for ExportDocuments</summary>
+        public void ExportDocuments()
         {
-            // Snippet: UpdateField(UpdateFieldRequest,CallSettings)
+            // Snippet: ExportDocuments(string, CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            UpdateFieldRequest request = new UpdateFieldRequest
-            {
-                Field = new apis::Field(),
-            };
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
             // Make the request
-            Operation response = firestoreAdminClient.UpdateField(request);
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = firestoreAdminClient.ExportDocuments(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceExportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
+        /// <summary>Snippet for ExportDocumentsAsync</summary>
+        public async Task ExportDocumentsAsync()
+        {
+            // Snippet: ExportDocumentsAsync(string, CallSettings)
+            // Additional: ExportDocumentsAsync(string, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = await firestoreAdminClient.ExportDocumentsAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceExportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDocuments</summary>
+        public void ExportDocuments_ResourceNames()
+        {
+            // Snippet: ExportDocuments(DatabaseName, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName name = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = firestoreAdminClient.ExportDocuments(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceExportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDocumentsAsync</summary>
+        public async Task ExportDocumentsAsync_ResourceNames()
+        {
+            // Snippet: ExportDocumentsAsync(DatabaseName, CallSettings)
+            // Additional: ExportDocumentsAsync(DatabaseName, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName name = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = await firestoreAdminClient.ExportDocumentsAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDocumentsResponse, ExportDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceExportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocuments</summary>
+        public void ImportDocuments_RequestObject()
+        {
+            // Snippet: ImportDocuments(ImportDocumentsRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            ImportDocumentsRequest request = new ImportDocumentsRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                CollectionIds = { "", },
+                InputUriPrefix = "",
+            };
+            // Make the request
+            Operation<Empty, ImportDocumentsMetadata> response = firestoreAdminClient.ImportDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceImportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocumentsAsync</summary>
+        public async Task ImportDocumentsAsync_RequestObject()
+        {
+            // Snippet: ImportDocumentsAsync(ImportDocumentsRequest, CallSettings)
+            // Additional: ImportDocumentsAsync(ImportDocumentsRequest, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportDocumentsRequest request = new ImportDocumentsRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                CollectionIds = { "", },
+                InputUriPrefix = "",
+            };
+            // Make the request
+            Operation<Empty, ImportDocumentsMetadata> response = await firestoreAdminClient.ImportDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceImportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocuments</summary>
+        public void ImportDocuments()
+        {
+            // Snippet: ImportDocuments(string, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Operation<Empty, ImportDocumentsMetadata> response = firestoreAdminClient.ImportDocuments(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceImportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocumentsAsync</summary>
+        public async Task ImportDocumentsAsync()
+        {
+            // Snippet: ImportDocumentsAsync(string, CallSettings)
+            // Additional: ImportDocumentsAsync(string, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Operation<Empty, ImportDocumentsMetadata> response = await firestoreAdminClient.ImportDocumentsAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceImportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocuments</summary>
+        public void ImportDocuments_ResourceNames()
+        {
+            // Snippet: ImportDocuments(DatabaseName, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName name = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<Empty, ImportDocumentsMetadata> response = firestoreAdminClient.ImportDocuments(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDocumentsMetadata> retrievedResponse = firestoreAdminClient.PollOnceImportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocumentsAsync</summary>
+        public async Task ImportDocumentsAsync_ResourceNames()
+        {
+            // Snippet: ImportDocumentsAsync(DatabaseName, CallSettings)
+            // Additional: ImportDocumentsAsync(DatabaseName, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName name = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<Empty, ImportDocumentsMetadata> response = await firestoreAdminClient.ImportDocumentsAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDocumentsMetadata> retrievedResponse = await firestoreAdminClient.PollOnceImportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

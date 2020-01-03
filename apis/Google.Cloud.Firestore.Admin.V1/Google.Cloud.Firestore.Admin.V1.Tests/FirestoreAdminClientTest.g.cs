@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,605 +14,411 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Firestore.Admin.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Firestore.Admin.V1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedFirestoreAdminClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedFirestoreAdminClientTest
     {
-        [Fact]
-        public void CreateIndex()
+        [xunit::FactAttribute]
+        public void GetIndexRequestObject()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            CreateIndexRequest expectedRequest = new CreateIndexRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-                Index = new Index(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name3373707",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.CreateIndex(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
-            Index index = new Index();
-            Operation response = client.CreateIndex(parent, index);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateIndexAsync()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            CreateIndexRequest expectedRequest = new CreateIndexRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-                Index = new Index(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name3373707",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.CreateIndexAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
-            Index index = new Index();
-            Operation response = await client.CreateIndexAsync(parent, index);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateIndex2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            CreateIndexRequest request = new CreateIndexRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-                Index = new Index(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name3373707",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.CreateIndex(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CreateIndex(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateIndexAsync2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            CreateIndexRequest request = new CreateIndexRequest
-            {
-                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
-                Index = new Index(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name3373707",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.CreateIndexAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.CreateIndexAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetIndex()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            GetIndexRequest expectedRequest = new GetIndexRequest
-            {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
-            };
-            Index expectedResponse = new Index
-            {
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.GetIndex(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
-            Index response = client.GetIndex(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetIndexAsync()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            GetIndexRequest expectedRequest = new GetIndexRequest
-            {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
-            };
-            Index expectedResponse = new Index
-            {
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.GetIndexAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Index>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
-            Index response = await client.GetIndexAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetIndex2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             Index expectedResponse = new Index
             {
-                Name = "name2-1052831874",
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                QueryScope = Index.Types.QueryScope.Unspecified,
+                Fields =
+                {
+                    new Index.Types.IndexField(),
+                },
+                State = Index.Types.State.Ready,
             };
-            mockGrpcClient.Setup(x => x.GetIndex(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
             Index response = client.GetIndex(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIndexAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetIndexRequestObjectAsync()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIndexRequest request = new GetIndexRequest
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             Index expectedResponse = new Index
             {
-                Name = "name2-1052831874",
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                QueryScope = Index.Types.QueryScope.Unspecified,
+                Fields =
+                {
+                    new Index.Types.IndexField(),
+                },
+                State = Index.Types.State.Ready,
             };
-            mockGrpcClient.Setup(x => x.GetIndexAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Index>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Index response = await client.GetIndexAsync(request);
-            Assert.Same(expectedResponse, response);
+            Index responseCallSettings = await client.GetIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Index responseCancellationToken = await client.GetIndexAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteIndex()
+        [xunit::FactAttribute]
+        public void GetIndex()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            DeleteIndexRequest expectedRequest = new DeleteIndexRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIndexRequest request = new GetIndexRequest
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIndex(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
-            client.DeleteIndex(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteIndexAsync()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            DeleteIndexRequest expectedRequest = new DeleteIndexRequest
+            Index expectedResponse = new Index
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                QueryScope = Index.Types.QueryScope.Unspecified,
+                Fields =
+                {
+                    new Index.Types.IndexField(),
+                },
+                State = Index.Types.State.Ready,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIndexAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            IndexName name = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]");
-            await client.DeleteIndexAsync(name);
+            Index response = client.GetIndex(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteIndex2()
+        [xunit::FactAttribute]
+        public async stt::Task GetIndexAsync()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIndexRequest request = new GetIndexRequest
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+            };
+            Index expectedResponse = new Index
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                QueryScope = Index.Types.QueryScope.Unspecified,
+                Fields =
+                {
+                    new Index.Types.IndexField(),
+                },
+                State = Index.Types.State.Ready,
+            };
+            mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Index responseCallSettings = await client.GetIndexAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Index responseCancellationToken = await client.GetIndexAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIndex_ResourceNames()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIndexRequest request = new GetIndexRequest
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+            };
+            Index expectedResponse = new Index
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                QueryScope = Index.Types.QueryScope.Unspecified,
+                Fields =
+                {
+                    new Index.Types.IndexField(),
+                },
+                State = Index.Types.State.Ready,
+            };
+            mockGrpcClient.Setup(x => x.GetIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Index response = client.GetIndex(request.IndexName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIndexAsync_ResourceNames()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIndexRequest request = new GetIndexRequest
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+            };
+            Index expectedResponse = new Index
+            {
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                QueryScope = Index.Types.QueryScope.Unspecified,
+                Fields =
+                {
+                    new Index.Types.IndexField(),
+                },
+                State = Index.Types.State.Ready,
+            };
+            mockGrpcClient.Setup(x => x.GetIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Index>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Index responseCallSettings = await client.GetIndexAsync(request.IndexName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Index responseCancellationToken = await client.GetIndexAsync(request.IndexName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteIndexRequestObject()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIndex(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
             client.DeleteIndex(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteIndexAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteIndexRequestObjectAsync()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteIndexRequest request = new DeleteIndexRequest
             {
-                IndexName = new IndexName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[INDEX_ID]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIndexAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteIndexAsync(request);
+            await client.DeleteIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteIndexAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ImportDocuments()
+        [xunit::FactAttribute]
+        public void DeleteIndex()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ImportDocumentsRequest expectedRequest = new ImportDocumentsRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIndexRequest request = new DeleteIndexRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.ImportDocuments(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
-            Operation response = client.ImportDocuments(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteIndex(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ImportDocumentsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteIndexAsync()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ImportDocumentsRequest expectedRequest = new ImportDocumentsRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIndexRequest request = new DeleteIndexRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.ImportDocumentsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
-            Operation response = await client.ImportDocumentsAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteIndexAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteIndexAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ImportDocuments2()
+        [xunit::FactAttribute]
+        public void DeleteIndex_ResourceNames()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ImportDocumentsRequest request = new ImportDocumentsRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIndexRequest request = new DeleteIndexRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.ImportDocuments(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIndex(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.ImportDocuments(request);
-            Assert.Same(expectedResponse, response);
+            client.DeleteIndex(request.IndexName);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ImportDocumentsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteIndexAsync_ResourceNames()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ImportDocumentsRequest request = new ImportDocumentsRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIndexRequest request = new DeleteIndexRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
+                IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.ImportDocumentsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIndexAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.ImportDocumentsAsync(request);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteIndexAsync(request.IndexName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteIndexAsync(request.IndexName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ExportDocuments()
+        [xunit::FactAttribute]
+        public void GetFieldRequestObject()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ExportDocumentsRequest expectedRequest = new ExportDocumentsRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFieldRequest request = new GetFieldRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
             };
-            Operation expectedResponse = new Operation
+            Field expectedResponse = new Field
             {
-                Name = "name2-1052831874",
-                Done = true,
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
+                IndexConfig = new Field.Types.IndexConfig(),
             };
-            mockGrpcClient.Setup(x => x.ExportDocuments(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
-            Operation response = client.ExportDocuments(name);
-            Assert.Same(expectedResponse, response);
+            Field response = client.GetField(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ExportDocumentsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetFieldRequestObjectAsync()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ExportDocumentsRequest expectedRequest = new ExportDocumentsRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFieldRequest request = new GetFieldRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
             };
-            Operation expectedResponse = new Operation
+            Field expectedResponse = new Field
             {
-                Name = "name2-1052831874",
-                Done = true,
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
+                IndexConfig = new Field.Types.IndexConfig(),
             };
-            mockGrpcClient.Setup(x => x.ExportDocumentsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            DatabaseName name = new DatabaseName("[PROJECT]", "[DATABASE]");
-            Operation response = await client.ExportDocumentsAsync(name);
-            Assert.Same(expectedResponse, response);
+            Field responseCallSettings = await client.GetFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Field responseCancellationToken = await client.GetFieldAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ExportDocuments2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ExportDocumentsRequest request = new ExportDocumentsRequest
-            {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.ExportDocuments(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.ExportDocuments(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ExportDocumentsAsync2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            ExportDocumentsRequest request = new ExportDocumentsRequest
-            {
-                DatabaseName = new DatabaseName("[PROJECT]", "[DATABASE]"),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name2-1052831874",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.ExportDocumentsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.ExportDocumentsAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
+        [xunit::FactAttribute]
         public void GetField()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            GetFieldRequest expectedRequest = new GetFieldRequest
-            {
-                FieldName = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]"),
-            };
-            apis::Field expectedResponse = new apis::Field
-            {
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.GetField(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            FieldName name = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]");
-            apis::Field response = client.GetField(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetFieldAsync()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            GetFieldRequest expectedRequest = new GetFieldRequest
-            {
-                FieldName = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]"),
-            };
-            apis::Field expectedResponse = new apis::Field
-            {
-                Name = "name2-1052831874",
-            };
-            mockGrpcClient.Setup(x => x.GetFieldAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Field>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            FieldName name = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]");
-            apis::Field response = await client.GetFieldAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetField2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
-                FieldName = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]"),
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
             };
-            apis::Field expectedResponse = new apis::Field
+            Field expectedResponse = new Field
             {
-                Name = "name2-1052831874",
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
+                IndexConfig = new Field.Types.IndexConfig(),
             };
-            mockGrpcClient.Setup(x => x.GetField(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            apis::Field response = client.GetField(request);
-            Assert.Same(expectedResponse, response);
+            Field response = client.GetField(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetFieldAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetFieldAsync()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFieldRequest request = new GetFieldRequest
             {
-                FieldName = new FieldName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]", "[FIELD_ID]"),
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
             };
-            apis::Field expectedResponse = new apis::Field
+            Field expectedResponse = new Field
             {
-                Name = "name2-1052831874",
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
+                IndexConfig = new Field.Types.IndexConfig(),
             };
-            mockGrpcClient.Setup(x => x.GetFieldAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Field>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            apis::Field response = await client.GetFieldAsync(request);
-            Assert.Same(expectedResponse, response);
+            Field responseCallSettings = await client.GetFieldAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Field responseCancellationToken = await client.GetFieldAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateField()
+        [xunit::FactAttribute]
+        public void GetField_ResourceNames()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            UpdateFieldRequest expectedRequest = new UpdateFieldRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFieldRequest request = new GetFieldRequest
             {
-                Field = new apis::Field(),
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
             };
-            Operation expectedResponse = new Operation
+            Field expectedResponse = new Field
             {
-                Name = "name3373707",
-                Done = true,
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
+                IndexConfig = new Field.Types.IndexConfig(),
             };
-            mockGrpcClient.Setup(x => x.UpdateField(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            apis::Field field = new apis::Field();
-            Operation response = client.UpdateField(field);
-            Assert.Same(expectedResponse, response);
+            Field response = client.GetField(request.FieldName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateFieldAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetFieldAsync_ResourceNames()
         {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            UpdateFieldRequest expectedRequest = new UpdateFieldRequest
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFieldRequest request = new GetFieldRequest
             {
-                Field = new apis::Field(),
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
             };
-            Operation expectedResponse = new Operation
+            Field expectedResponse = new Field
             {
-                Name = "name3373707",
-                Done = true,
+                FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
+                IndexConfig = new Field.Types.IndexConfig(),
             };
-            mockGrpcClient.Setup(x => x.UpdateFieldAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            apis::Field field = new apis::Field();
-            Operation response = await client.UpdateFieldAsync(field);
-            Assert.Same(expectedResponse, response);
+            Field responseCallSettings = await client.GetFieldAsync(request.FieldName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Field responseCancellationToken = await client.GetFieldAsync(request.FieldName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
-        [Fact]
-        public void UpdateField2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            UpdateFieldRequest request = new UpdateFieldRequest
-            {
-                Field = new apis::Field(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name3373707",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.UpdateField(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.UpdateField(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateFieldAsync2()
-        {
-            Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
-            UpdateFieldRequest request = new UpdateFieldRequest
-            {
-                Field = new apis::Field(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Name = "name3373707",
-                Done = true,
-            };
-            mockGrpcClient.Setup(x => x.UpdateFieldAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.UpdateFieldAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
     }
 }
