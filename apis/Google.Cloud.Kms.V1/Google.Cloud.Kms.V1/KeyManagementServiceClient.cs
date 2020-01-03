@@ -83,18 +83,32 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
-        /// for "Idempotent" <see cref="KeyManagementServiceClient"/> RPC methods.
+        /// for "Retryable" <see cref="KeyManagementServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Retryable" RPC methods are:
         /// <list type="bullet">
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> RetryableRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "Idempotent" <see cref="KeyManagementServiceClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
@@ -104,6 +118,16 @@ namespace Google.Cloud.Kms.V1
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "NonRetryable" <see cref="KeyManagementServiceClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonRetryable" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NonRetryableRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -174,7 +198,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -205,7 +229,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -236,7 +260,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -267,7 +291,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -298,7 +322,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -329,7 +353,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -360,7 +384,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -391,7 +415,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -422,7 +446,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -453,7 +477,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -484,7 +508,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -513,7 +537,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
+                retryFilter: NonRetryableRetryFilter
             )));
 
         /// <summary>
@@ -542,7 +566,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
+                retryFilter: NonRetryableRetryFilter
             )));
 
         /// <summary>
@@ -573,7 +597,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -604,7 +628,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -635,7 +659,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -666,7 +690,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -697,7 +721,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -728,7 +752,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -759,7 +783,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -790,7 +814,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -821,7 +845,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -852,7 +876,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -883,7 +907,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -914,7 +938,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
@@ -945,7 +969,7 @@ namespace Google.Cloud.Kms.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: RetryableRetryFilter
             )));
 
         /// <summary>
