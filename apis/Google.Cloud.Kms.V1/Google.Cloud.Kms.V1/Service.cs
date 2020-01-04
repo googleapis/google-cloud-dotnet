@@ -25,184 +25,220 @@ namespace Google.Cloud.Kms.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvY2xvdWQva21zL3YxL3NlcnZpY2UucHJvdG8SE2dvb2dsZS5j",
-            "bG91ZC5rbXMudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aI2dv",
-            "b2dsZS9jbG91ZC9rbXMvdjEvcmVzb3VyY2VzLnByb3RvGiBnb29nbGUvcHJv",
-            "dG9idWYvZmllbGRfbWFzay5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJv",
-            "dG8ibgoTTGlzdEtleVJpbmdzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJ",
-            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVy",
-            "GAQgASgJEhAKCG9yZGVyX2J5GAUgASgJIsIBChVMaXN0Q3J5cHRvS2V5c1Jl",
-            "cXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAMgASgJElAKDHZlcnNpb25fdmlldxgEIAEoDjI6Lmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJz",
-            "aW9uVmlldxIOCgZmaWx0ZXIYBSABKAkSEAoIb3JkZXJfYnkYBiABKAkiwQEK",
-            "HExpc3RDcnlwdG9LZXlWZXJzaW9uc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
-            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEkgKBHZp",
-            "ZXcYBCABKA4yOi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNp",
-            "b24uQ3J5cHRvS2V5VmVyc2lvblZpZXcSDgoGZmlsdGVyGAUgASgJEhAKCG9y",
-            "ZGVyX2J5GAYgASgJInAKFUxpc3RJbXBvcnRKb2JzUmVxdWVzdBIOCgZwYXJl",
-            "bnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJInQKFExpc3RL",
-            "ZXlSaW5nc1Jlc3BvbnNlEi8KCWtleV9yaW5ncxgBIAMoCzIcLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuS2V5UmluZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkS",
-            "EgoKdG90YWxfc2l6ZRgDIAEoBSJ6ChZMaXN0Q3J5cHRvS2V5c1Jlc3BvbnNl",
-            "EjMKC2NyeXB0b19rZXlzGAEgAygLMh4uZ29vZ2xlLmNsb3VkLmttcy52MS5D",
-            "cnlwdG9LZXkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3Np",
-            "emUYAyABKAUikAEKHUxpc3RDcnlwdG9LZXlWZXJzaW9uc1Jlc3BvbnNlEkIK",
-            "E2NyeXB0b19rZXlfdmVyc2lvbnMYASADKAsyJS5nb29nbGUuY2xvdWQua21z",
-            "LnYxLkNyeXB0b0tleVZlcnNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "EhIKCnRvdGFsX3NpemUYAyABKAUiegoWTGlzdEltcG9ydEpvYnNSZXNwb25z",
-            "ZRIzCgtpbXBvcnRfam9icxgBIAMoCzIeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "SW1wb3J0Sm9iEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9z",
-            "aXplGAMgASgFIiEKEUdldEtleVJpbmdSZXF1ZXN0EgwKBG5hbWUYASABKAki",
-            "IwoTR2V0Q3J5cHRvS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJIioKGkdldENy",
-            "eXB0b0tleVZlcnNpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiIwoTR2V0UHVi",
-            "bGljS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJIiMKE0dldEltcG9ydEpvYlJl",
-            "cXVlc3QSDAoEbmFtZRgBIAEoCSJrChRDcmVhdGVLZXlSaW5nUmVxdWVzdBIO",
-            "CgZwYXJlbnQYASABKAkSEwoLa2V5X3JpbmdfaWQYAiABKAkSLgoIa2V5X3Jp",
-            "bmcYAyABKAsyHC5nb29nbGUuY2xvdWQua21zLnYxLktleVJpbmcimgEKFkNy",
-            "ZWF0ZUNyeXB0b0tleVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhUKDWNyeXB0",
-            "b19rZXlfaWQYAiABKAkSMgoKY3J5cHRvX2tleRgDIAEoCzIeLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5EiUKHXNraXBfaW5pdGlhbF92ZXJzaW9u",
-            "X2NyZWF0aW9uGAUgASgIInIKHUNyZWF0ZUNyeXB0b0tleVZlcnNpb25SZXF1",
-            "ZXN0Eg4KBnBhcmVudBgBIAEoCRJBChJjcnlwdG9fa2V5X3ZlcnNpb24YAiAB",
-            "KAsyJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24izgEK",
-            "HUltcG9ydENyeXB0b0tleVZlcnNpb25SZXF1ZXN0Eg4KBnBhcmVudBgBIAEo",
-            "CRJSCglhbGdvcml0aG0YAiABKA4yPy5nb29nbGUuY2xvdWQua21zLnYxLkNy",
-            "eXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvbkFsZ29yaXRobRISCgpp",
-            "bXBvcnRfam9iGAQgASgJEh0KE3JzYV9hZXNfd3JhcHBlZF9rZXkYBSABKAxI",
-            "AEIWChR3cmFwcGVkX2tleV9tYXRlcmlhbCJzChZDcmVhdGVJbXBvcnRKb2JS",
-            "ZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIVCg1pbXBvcnRfam9iX2lkGAIgASgJ",
-            "EjIKCmltcG9ydF9qb2IYAyABKAsyHi5nb29nbGUuY2xvdWQua21zLnYxLklt",
-            "cG9ydEpvYiJ9ChZVcGRhdGVDcnlwdG9LZXlSZXF1ZXN0EjIKCmNyeXB0b19r",
-            "ZXkYASABKAsyHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleRIvCgt1",
-            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
-            "kwEKHVVwZGF0ZUNyeXB0b0tleVZlcnNpb25SZXF1ZXN0EkEKEmNyeXB0b19r",
-            "ZXlfdmVyc2lvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRv",
-            "S2V5VmVyc2lvbhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5GaWVsZE1hc2siWAoORW5jcnlwdFJlcXVlc3QSDAoEbmFtZRgBIAEo",
-            "CRIRCglwbGFpbnRleHQYAiABKAwSJQodYWRkaXRpb25hbF9hdXRoZW50aWNh",
-            "dGVkX2RhdGEYAyABKAwiWQoORGVjcnlwdFJlcXVlc3QSDAoEbmFtZRgBIAEo",
-            "CRISCgpjaXBoZXJ0ZXh0GAIgASgMEiUKHWFkZGl0aW9uYWxfYXV0aGVudGlj",
-            "YXRlZF9kYXRhGAMgASgMIlIKFUFzeW1tZXRyaWNTaWduUmVxdWVzdBIMCgRu",
-            "YW1lGAEgASgJEisKBmRpZ2VzdBgDIAEoCzIbLmdvb2dsZS5jbG91ZC5rbXMu",
-            "djEuRGlnZXN0IjwKGEFzeW1tZXRyaWNEZWNyeXB0UmVxdWVzdBIMCgRuYW1l",
-            "GAEgASgJEhIKCmNpcGhlcnRleHQYAyABKAwiJAoPRGVjcnlwdFJlc3BvbnNl",
-            "EhEKCXBsYWludGV4dBgBIAEoDCIzCg9FbmNyeXB0UmVzcG9uc2USDAoEbmFt",
-            "ZRgBIAEoCRISCgpjaXBoZXJ0ZXh0GAIgASgMIisKFkFzeW1tZXRyaWNTaWdu",
-            "UmVzcG9uc2USEQoJc2lnbmF0dXJlGAEgASgMIi4KGUFzeW1tZXRyaWNEZWNy",
-            "eXB0UmVzcG9uc2USEQoJcGxhaW50ZXh0GAEgASgMIlMKJFVwZGF0ZUNyeXB0",
-            "b0tleVByaW1hcnlWZXJzaW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJEh0KFWNy",
-            "eXB0b19rZXlfdmVyc2lvbl9pZBgCIAEoCSIuCh5EZXN0cm95Q3J5cHRvS2V5",
-            "VmVyc2lvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSIuCh5SZXN0b3JlQ3J5cHRv",
-            "S2V5VmVyc2lvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJICgZEaWdlc3QSEAoG",
-            "c2hhMjU2GAEgASgMSAASEAoGc2hhMzg0GAIgASgMSAASEAoGc2hhNTEyGAMg",
-            "ASgMSABCCAoGZGlnZXN0IikKEExvY2F0aW9uTWV0YWRhdGESFQoNaHNtX2F2",
-            "YWlsYWJsZRgBIAEoCDKXIwoUS2V5TWFuYWdlbWVudFNlcnZpY2USmQEKDExp",
-            "c3RLZXlSaW5ncxIoLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEtleVJpbmdz",
-            "UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEtleVJpbmdzUmVz",
-            "cG9uc2UiNILT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKn0va2V5UmluZ3MSrAEKDkxpc3RDcnlwdG9LZXlzEiouZ29vZ2xlLmNs",
-            "b3VkLmttcy52MS5MaXN0Q3J5cHRvS2V5c1JlcXVlc3QaKy5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkxpc3RDcnlwdG9LZXlzUmVzcG9uc2UiQYLT5JMCOxI5L3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qfS9j",
-            "cnlwdG9LZXlzEtUBChVMaXN0Q3J5cHRvS2V5VmVyc2lvbnMSMS5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlWZXJzaW9uc1JlcXVlc3QaMi5n",
-            "b29nbGUuY2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlWZXJzaW9uc1Jlc3Bv",
-            "bnNlIlWC0+STAk8STS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9L2NyeXB0b0tleVZlcnNpb25z",
-            "EqwBCg5MaXN0SW1wb3J0Sm9icxIqLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlz",
-            "dEltcG9ydEpvYnNSZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0",
-            "SW1wb3J0Sm9ic1Jlc3BvbnNlIkGC0+STAjsSOS92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKn0vaW1wb3J0Sm9icxKIAQoK",
-            "R2V0S2V5UmluZxImLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0S2V5UmluZ1Jl",
-            "cXVlc3QaHC5nb29nbGUuY2xvdWQua21zLnYxLktleVJpbmciNILT5JMCLhIs",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKn0S",
-            "mwEKDEdldENyeXB0b0tleRIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0Q3J5",
-            "cHRvS2V5UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
-            "IkGC0+STAjsSOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tl",
-            "eVJpbmdzLyovY3J5cHRvS2V5cy8qfRLEAQoTR2V0Q3J5cHRvS2V5VmVyc2lv",
-            "bhIvLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0Q3J5cHRvS2V5VmVyc2lvblJl",
-            "cXVlc3QaJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24i",
-            "VYLT5JMCTxJNL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5",
-            "UmluZ3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn0SuQEK",
-            "DEdldFB1YmxpY0tleRIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0UHVibGlj",
-            "S2V5UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuUHVibGljS2V5Il+C",
-            "0+STAlkSVy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJp",
-            "bmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9L3B1Ymxp",
-            "Y0tleRKbAQoMR2V0SW1wb3J0Sm9iEiguZ29vZ2xlLmNsb3VkLmttcy52MS5H",
-            "ZXRJbXBvcnRKb2JSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52MS5JbXBv",
-            "cnRKb2IiQYLT5JMCOxI5L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyova2V5UmluZ3MvKi9pbXBvcnRKb2JzLyp9EpgBCg1DcmVhdGVLZXlSaW5n",
-            "EikuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVLZXlSaW5nUmVxdWVzdBoc",
-            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5UmluZyI+gtPkkwI4IiwvdjEve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9rZXlSaW5nczoIa2V5X3Jp",
-            "bmcSrQEKD0NyZWF0ZUNyeXB0b0tleRIrLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "Q3JlYXRlQ3J5cHRvS2V5UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "Q3J5cHRvS2V5Ik2C0+STAkciOS92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyova2V5UmluZ3MvKn0vY3J5cHRvS2V5czoKY3J5cHRvX2tleRLe",
-            "AQoWQ3JlYXRlQ3J5cHRvS2V5VmVyc2lvbhIyLmdvb2dsZS5jbG91ZC5rbXMu",
-            "djEuQ3JlYXRlQ3J5cHRvS2V5VmVyc2lvblJlcXVlc3QaJS5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24iaYLT5JMCYyJNL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
-            "eXMvKn0vY3J5cHRvS2V5VmVyc2lvbnM6EmNyeXB0b19rZXlfdmVyc2lvbhLU",
-            "AQoWSW1wb3J0Q3J5cHRvS2V5VmVyc2lvbhIyLmdvb2dsZS5jbG91ZC5rbXMu",
-            "djEuSW1wb3J0Q3J5cHRvS2V5VmVyc2lvblJlcXVlc3QaJS5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24iX4LT5JMCWSJUL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
-            "eXMvKn0vY3J5cHRvS2V5VmVyc2lvbnM6aW1wb3J0OgEqEq0BCg9DcmVhdGVJ",
-            "bXBvcnRKb2ISKy5nb29nbGUuY2xvdWQua21zLnYxLkNyZWF0ZUltcG9ydEpv",
-            "YlJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkltcG9ydEpvYiJNgtPk",
-            "kwJHIjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJp",
-            "bmdzLyp9L2ltcG9ydEpvYnM6CmltcG9ydF9qb2ISuAEKD1VwZGF0ZUNyeXB0",
-            "b0tleRIrLmdvb2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlQ3J5cHRvS2V5UmVx",
-            "dWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5IliC0+STAlIy",
-            "RC92MS97Y3J5cHRvX2tleS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "a2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9OgpjcnlwdG9fa2V5EvEBChZVcGRh",
-            "dGVDcnlwdG9LZXlWZXJzaW9uEjIuZ29vZ2xlLmNsb3VkLmttcy52MS5VcGRh",
-            "dGVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5rbXMu",
-            "djEuQ3J5cHRvS2V5VmVyc2lvbiJ8gtPkkwJ2MmAvdjEve2NyeXB0b19rZXlf",
-            "dmVyc2lvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3Mv",
-            "Ki9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06EmNyeXB0b19r",
-            "ZXlfdmVyc2lvbhKjAQoHRW5jcnlwdBIjLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "RW5jcnlwdFJlcXVlc3QaJC5nb29nbGUuY2xvdWQua21zLnYxLkVuY3J5cHRS",
-            "ZXNwb25zZSJNgtPkkwJHIkIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKip9OmVuY3J5cHQ6ASoSogEK",
-            "B0RlY3J5cHQSIy5nb29nbGUuY2xvdWQua21zLnYxLkRlY3J5cHRSZXF1ZXN0",
-            "GiQuZ29vZ2xlLmNsb3VkLmttcy52MS5EZWNyeXB0UmVzcG9uc2UiTILT5JMC",
-            "RiJBL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3Mv",
-            "Ki9jcnlwdG9LZXlzLyp9OmRlY3J5cHQ6ASoS0gEKDkFzeW1tZXRyaWNTaWdu",
+            "bG91ZC5rbXMudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dv",
+            "b2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUv",
+            "Y2xvdWQva21zL3YxL3Jlc291cmNlcy5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
+            "L2ZpZWxkX21hc2sucHJvdG8irQEKE0xpc3RLZXlSaW5nc1JlcXVlc3QSOQoG",
+            "cGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNv",
+            "bS9Mb2NhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rv",
+            "a2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJf",
+            "YnkYBSABKAlCA+BBASL/AQoVTGlzdENyeXB0b0tleXNSZXF1ZXN0EjcKBnBh",
+            "cmVudBgBIAEoCUIn4EEC+kEhCh9jbG91ZGttcy5nb29nbGVhcGlzLmNvbS9L",
+            "ZXlSaW5nEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
+            "AyABKAlCA+BBARJQCgx2ZXJzaW9uX3ZpZXcYBCABKA4yOi5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvblZp",
+            "ZXcSEwoGZmlsdGVyGAUgASgJQgPgQQESFQoIb3JkZXJfYnkYBiABKAlCA+BB",
+            "ASL+AQocTGlzdENyeXB0b0tleVZlcnNpb25zUmVxdWVzdBI3CgZwYXJlbnQY",
+            "ASABKAlCJ+BBAvpBIQofY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vS2V5Umlu",
+            "ZxIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJ",
+            "QgPgQQESSAoEdmlldxgEIAEoDjI6Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5",
+            "cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uVmlldxITCgZmaWx0ZXIY",
+            "BSABKAlCA+BBARIVCghvcmRlcl9ieRgGIAEoCUID4EEBIq0BChVMaXN0SW1w",
+            "b3J0Sm9ic1JlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH2Nsb3Vk",
+            "a21zLmdvb2dsZWFwaXMuY29tL0tleVJpbmcSFgoJcGFnZV9zaXplGAIgASgF",
+            "QgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEo",
+            "CUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEidAoUTGlzdEtleVJpbmdz",
+            "UmVzcG9uc2USLwoJa2V5X3JpbmdzGAEgAygLMhwuZ29vZ2xlLmNsb3VkLmtt",
+            "cy52MS5LZXlSaW5nEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3Rh",
+            "bF9zaXplGAMgASgFInoKFkxpc3RDcnlwdG9LZXlzUmVzcG9uc2USMwoLY3J5",
+            "cHRvX2tleXMYASADKAsyHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tl",
+            "eRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEo",
+            "BSKQAQodTGlzdENyeXB0b0tleVZlcnNpb25zUmVzcG9uc2USQgoTY3J5cHRv",
+            "X2tleV92ZXJzaW9ucxgBIAMoCzIlLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5",
+            "cHRvS2V5VmVyc2lvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90",
+            "YWxfc2l6ZRgDIAEoBSJ6ChZMaXN0SW1wb3J0Sm9ic1Jlc3BvbnNlEjMKC2lt",
+            "cG9ydF9qb2JzGAEgAygLMh4uZ29vZ2xlLmNsb3VkLmttcy52MS5JbXBvcnRK",
+            "b2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyAB",
+            "KAUiSgoRR2V0S2V5UmluZ1JlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEh",
+            "Ch9jbG91ZGttcy5nb29nbGVhcGlzLmNvbS9LZXlSaW5nIk4KE0dldENyeXB0",
+            "b0tleVJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFjbG91ZGttcy5n",
+            "b29nbGVhcGlzLmNvbS9DcnlwdG9LZXkiXAoaR2V0Q3J5cHRvS2V5VmVyc2lv",
+            "blJlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihjbG91ZGttcy5nb29n",
+            "bGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uIlUKE0dldFB1YmxpY0tleVJl",
+            "cXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihjbG91ZGttcy5nb29nbGVh",
+            "cGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uIk4KE0dldEltcG9ydEpvYlJlcXVl",
+            "c3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFjbG91ZGttcy5nb29nbGVhcGlz",
+            "LmNvbS9JbXBvcnRKb2IioAEKFENyZWF0ZUtleVJpbmdSZXF1ZXN0EjkKBnBh",
+            "cmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
+            "TG9jYXRpb24SGAoLa2V5X3JpbmdfaWQYAiABKAlCA+BBAhIzCghrZXlfcmlu",
+            "ZxgDIAEoCzIcLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5UmluZ0ID4EECIs0B",
+            "ChZDcmVhdGVDcnlwdG9LZXlSZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC",
+            "+kEhCh9jbG91ZGttcy5nb29nbGVhcGlzLmNvbS9LZXlSaW5nEhoKDWNyeXB0",
+            "b19rZXlfaWQYAiABKAlCA+BBAhI3CgpjcnlwdG9fa2V5GAMgASgLMh4uZ29v",
+            "Z2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlCA+BBAhIlCh1za2lwX2luaXRp",
+            "YWxfdmVyc2lvbl9jcmVhdGlvbhgFIAEoCCKiAQodQ3JlYXRlQ3J5cHRvS2V5",
+            "VmVyc2lvblJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWNsb3Vk",
+            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJGChJjcnlwdG9fa2V5X3Zl",
+            "cnNpb24YAiABKAsyJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZl",
+            "cnNpb25CA+BBAiKDAgodSW1wb3J0Q3J5cHRvS2V5VmVyc2lvblJlcXVlc3QS",
+            "OQoGcGFyZW50GAEgASgJQingQQL6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMu",
+            "Y29tL0NyeXB0b0tleRJXCglhbGdvcml0aG0YAiABKA4yPy5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvbkFs",
+            "Z29yaXRobUID4EECEhcKCmltcG9ydF9qb2IYBCABKAlCA+BBAhIdChNyc2Ff",
+            "YWVzX3dyYXBwZWRfa2V5GAUgASgMSABCFgoUd3JhcHBlZF9rZXlfbWF0ZXJp",
+            "YWwipgEKFkNyZWF0ZUltcG9ydEpvYlJlcXVlc3QSNwoGcGFyZW50GAEgASgJ",
+            "QifgQQL6QSEKH2Nsb3Vka21zLmdvb2dsZWFwaXMuY29tL0tleVJpbmcSGgoN",
+            "aW1wb3J0X2pvYl9pZBgCIAEoCUID4EECEjcKCmltcG9ydF9qb2IYAyABKAsy",
+            "Hi5nb29nbGUuY2xvdWQua21zLnYxLkltcG9ydEpvYkID4EECIq0BChZVcGRh",
+            "dGVDcnlwdG9LZXlSZXF1ZXN0El0KCmNyeXB0b19rZXkYASABKAsyHi5nb29n",
+            "bGUuY2xvdWQua21zLnYxLkNyeXB0b0tleUIp4EEC+kEjCiFjbG91ZGttcy5n",
+            "b29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSNAoLdXBkYXRlX21hc2sYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiygEKHVVwZGF0ZUNy",
+            "eXB0b0tleVZlcnNpb25SZXF1ZXN0EnMKEmNyeXB0b19rZXlfdmVyc2lvbhgB",
+            "IAEoCzIlLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbkIw",
+            "4EEC+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJz",
+            "aW9uEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFza0ID4EECIo0BCg5FbmNyeXB0UmVxdWVzdBI3CgRuYW1lGAEgASgJ",
+            "QingQQL6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRIW",
+            "CglwbGFpbnRleHQYAiABKAxCA+BBAhIqCh1hZGRpdGlvbmFsX2F1dGhlbnRp",
+            "Y2F0ZWRfZGF0YRgDIAEoDEID4EEBIo4BCg5EZWNyeXB0UmVxdWVzdBI3CgRu",
+            "YW1lGAEgASgJQingQQL6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Ny",
+            "eXB0b0tleRIXCgpjaXBoZXJ0ZXh0GAIgASgMQgPgQQISKgodYWRkaXRpb25h",
+            "bF9hdXRoZW50aWNhdGVkX2RhdGEYAyABKAxCA+BBASKJAQoVQXN5bW1ldHJp",
+            "Y1NpZ25SZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooY2xvdWRrbXMu",
+            "Z29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbhIwCgZkaWdlc3QYAyAB",
+            "KAsyGy5nb29nbGUuY2xvdWQua21zLnYxLkRpZ2VzdEID4EECInMKGEFzeW1t",
+            "ZXRyaWNEZWNyeXB0UmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGNs",
+            "b3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SFwoKY2lw",
+            "aGVydGV4dBgDIAEoDEID4EECIiQKD0RlY3J5cHRSZXNwb25zZRIRCglwbGFp",
+            "bnRleHQYASABKAwiMwoPRW5jcnlwdFJlc3BvbnNlEgwKBG5hbWUYASABKAkS",
+            "EgoKY2lwaGVydGV4dBgCIAEoDCIrChZBc3ltbWV0cmljU2lnblJlc3BvbnNl",
+            "EhEKCXNpZ25hdHVyZRgBIAEoDCIuChlBc3ltbWV0cmljRGVjcnlwdFJlc3Bv",
+            "bnNlEhEKCXBsYWludGV4dBgBIAEoDCKDAQokVXBkYXRlQ3J5cHRvS2V5UHJp",
+            "bWFyeVZlcnNpb25SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5EiIKFWNyeXB0b19rZXlf",
+            "dmVyc2lvbl9pZBgCIAEoCUID4EECImAKHkRlc3Ryb3lDcnlwdG9LZXlWZXJz",
+            "aW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGNsb3Vka21zLmdv",
+            "b2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24iYAoeUmVzdG9yZUNyeXB0",
+            "b0tleVZlcnNpb25SZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbiJICgZEaWdl",
+            "c3QSEAoGc2hhMjU2GAEgASgMSAASEAoGc2hhMzg0GAIgASgMSAASEAoGc2hh",
+            "NTEyGAMgASgMSABCCAoGZGlnZXN0IikKEExvY2F0aW9uTWV0YWRhdGESFQoN",
+            "aHNtX2F2YWlsYWJsZRgBIAEoCDLqJQoUS2V5TWFuYWdlbWVudFNlcnZpY2US",
+            "ogEKDExpc3RLZXlSaW5ncxIoLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEtl",
+            "eVJpbmdzUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEtleVJp",
+            "bmdzUmVzcG9uc2UiPYLT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0va2V5UmluZ3PaQQZwYXJlbnQStQEKDkxpc3RDcnlwdG9L",
+            "ZXlzEiouZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0Q3J5cHRvS2V5c1JlcXVl",
+            "c3QaKy5nb29nbGUuY2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlzUmVzcG9u",
+            "c2UiSoLT5JMCOxI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9rZXlSaW5ncy8qfS9jcnlwdG9LZXlz2kEGcGFyZW50Et4BChVMaXN0Q3J5",
+            "cHRvS2V5VmVyc2lvbnMSMS5nb29nbGUuY2xvdWQua21zLnYxLkxpc3RDcnlw",
+            "dG9LZXlWZXJzaW9uc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQua21zLnYxLkxp",
+            "c3RDcnlwdG9LZXlWZXJzaW9uc1Jlc3BvbnNlIl6C0+STAk8STS92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9L",
+            "ZXlzLyp9L2NyeXB0b0tleVZlcnNpb25z2kEGcGFyZW50ErUBCg5MaXN0SW1w",
+            "b3J0Sm9icxIqLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEltcG9ydEpvYnNS",
+            "ZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0SW1wb3J0Sm9ic1Jl",
+            "c3BvbnNlIkqC0+STAjsSOS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyova2V5UmluZ3MvKn0vaW1wb3J0Sm9ic9pBBnBhcmVudBKPAQoKR2V0",
+            "S2V5UmluZxImLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0S2V5UmluZ1JlcXVl",
+            "c3QaHC5nb29nbGUuY2xvdWQua21zLnYxLktleVJpbmciO4LT5JMCLhIsL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKn3aQQRu",
+            "YW1lEpsBCgxHZXRDcnlwdG9LZXkSKC5nb29nbGUuY2xvdWQua21zLnYxLkdl",
+            "dENyeXB0b0tleVJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0",
+            "b0tleSJBgtPkkwI7EjkvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn0SxAEKE0dldENyeXB0b0tleVZl",
+            "cnNpb24SLy5nb29nbGUuY2xvdWQua21zLnYxLkdldENyeXB0b0tleVZlcnNp",
+            "b25SZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJz",
+            "aW9uIlWC0+STAk8STS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9",
+            "ErkBCgxHZXRQdWJsaWNLZXkSKC5nb29nbGUuY2xvdWQua21zLnYxLkdldFB1",
+            "YmxpY0tleVJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLlB1YmxpY0tl",
+            "eSJfgtPkkwJZElcvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9r",
+            "ZXlSaW5ncy8qL2NyeXB0b0tleXMvKi9jcnlwdG9LZXlWZXJzaW9ucy8qfS9w",
+            "dWJsaWNLZXkSmwEKDEdldEltcG9ydEpvYhIoLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuR2V0SW1wb3J0Sm9iUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "SW1wb3J0Sm9iIkGC0+STAjsSOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2tleVJpbmdzLyovaW1wb3J0Sm9icy8qfRK2AQoNQ3JlYXRlS2V5",
+            "UmluZxIpLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3JlYXRlS2V5UmluZ1JlcXVl",
+            "c3QaHC5nb29nbGUuY2xvdWQua21zLnYxLktleVJpbmciXILT5JMCOCIsL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0va2V5UmluZ3M6CGtl",
+            "eV9yaW5n2kEbcGFyZW50LGtleV9yaW5nX2lkLGtleV9yaW5nEs8BCg9DcmVh",
+            "dGVDcnlwdG9LZXkSKy5nb29nbGUuY2xvdWQua21zLnYxLkNyZWF0ZUNyeXB0",
+            "b0tleVJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleSJv",
+            "gtPkkwJHIjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tl",
+            "eVJpbmdzLyp9L2NyeXB0b0tleXM6CmNyeXB0b19rZXnaQR9wYXJlbnQsY3J5",
+            "cHRvX2tleV9pZCxjcnlwdG9fa2V5EvsBChZDcmVhdGVDcnlwdG9LZXlWZXJz",
+            "aW9uEjIuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVDcnlwdG9LZXlWZXJz",
+            "aW9uUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVy",
+            "c2lvbiKFAYLT5JMCYyJNL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn0vY3J5cHRvS2V5VmVyc2lv",
+            "bnM6EmNyeXB0b19rZXlfdmVyc2lvbtpBGXBhcmVudCxjcnlwdG9fa2V5X3Zl",
+            "cnNpb24S1AEKFkltcG9ydENyeXB0b0tleVZlcnNpb24SMi5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkltcG9ydENyeXB0b0tleVZlcnNpb25SZXF1ZXN0GiUuZ29v",
+            "Z2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9uIl+C0+STAlkiVC92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9j",
+            "cnlwdG9LZXlzLyp9L2NyeXB0b0tleVZlcnNpb25zOmltcG9ydDoBKhLPAQoP",
+            "Q3JlYXRlSW1wb3J0Sm9iEisuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVJ",
+            "bXBvcnRKb2JSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52MS5JbXBvcnRK",
+            "b2Iib4LT5JMCRyI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9rZXlSaW5ncy8qfS9pbXBvcnRKb2JzOgppbXBvcnRfam9i2kEfcGFyZW50",
+            "LGltcG9ydF9qb2JfaWQsaW1wb3J0X2pvYhLRAQoPVXBkYXRlQ3J5cHRvS2V5",
+            "EisuZ29vZ2xlLmNsb3VkLmttcy52MS5VcGRhdGVDcnlwdG9LZXlSZXF1ZXN0",
+            "Gh4uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXkicYLT5JMCUjJEL3Yx",
+            "L3tjcnlwdG9fa2V5Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlS",
+            "aW5ncy8qL2NyeXB0b0tleXMvKn06CmNyeXB0b19rZXnaQRZjcnlwdG9fa2V5",
+            "LHVwZGF0ZV9tYXNrEpMCChZVcGRhdGVDcnlwdG9LZXlWZXJzaW9uEjIuZ29v",
+            "Z2xlLmNsb3VkLmttcy52MS5VcGRhdGVDcnlwdG9LZXlWZXJzaW9uUmVxdWVz",
+            "dBolLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbiKdAYLT",
+            "5JMCdjJgL3YxL3tjcnlwdG9fa2V5X3ZlcnNpb24ubmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tl",
+            "eVZlcnNpb25zLyp9OhJjcnlwdG9fa2V5X3ZlcnNpb27aQR5jcnlwdG9fa2V5",
+            "X3ZlcnNpb24sdXBkYXRlX21hc2sStAEKB0VuY3J5cHQSIy5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkVuY3J5cHRSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmttcy52",
+            "MS5FbmNyeXB0UmVzcG9uc2UiXoLT5JMCRyJCL3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyoqfTplbmNy",
+            "eXB0OgEq2kEObmFtZSxwbGFpbnRleHQStAEKB0RlY3J5cHQSIy5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLkRlY3J5cHRSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmtt",
+            "cy52MS5EZWNyeXB0UmVzcG9uc2UiXoLT5JMCRiJBL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9OmRl",
+            "Y3J5cHQ6ASraQQ9uYW1lLGNpcGhlcnRleHQS4AEKDkFzeW1tZXRyaWNTaWdu",
             "EiouZ29vZ2xlLmNsb3VkLmttcy52MS5Bc3ltbWV0cmljU2lnblJlcXVlc3Qa",
             "Ky5nb29nbGUuY2xvdWQua21zLnYxLkFzeW1tZXRyaWNTaWduUmVzcG9uc2Ui",
-            "Z4LT5JMCYSJcL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5",
+            "dYLT5JMCYSJcL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5",
             "UmluZ3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06YXN5",
-            "bW1ldHJpY1NpZ246ASoS3gEKEUFzeW1tZXRyaWNEZWNyeXB0Ei0uZ29vZ2xl",
-            "LmNsb3VkLmttcy52MS5Bc3ltbWV0cmljRGVjcnlwdFJlcXVlc3QaLi5nb29n",
-            "bGUuY2xvdWQua21zLnYxLkFzeW1tZXRyaWNEZWNyeXB0UmVzcG9uc2UiaoLT",
-            "5JMCZCJfL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5Umlu",
-            "Z3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06YXN5bW1l",
-            "dHJpY0RlY3J5cHQ6ASoS1QEKHVVwZGF0ZUNyeXB0b0tleVByaW1hcnlWZXJz",
-            "aW9uEjkuZ29vZ2xlLmNsb3VkLmttcy52MS5VcGRhdGVDcnlwdG9LZXlQcmlt",
-            "YXJ5VmVyc2lvblJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0",
-            "b0tleSJZgtPkkwJTIk4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn06dXBkYXRlUHJpbWFyeVZlcnNp",
-            "b246ASoS1wEKF0Rlc3Ryb3lDcnlwdG9LZXlWZXJzaW9uEjMuZ29vZ2xlLmNs",
-            "b3VkLmttcy52MS5EZXN0cm95Q3J5cHRvS2V5VmVyc2lvblJlcXVlc3QaJS5n",
-            "b29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24iYILT5JMCWiJV",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9j",
-            "cnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06ZGVzdHJveToBKhLX",
-            "AQoXUmVzdG9yZUNyeXB0b0tleVZlcnNpb24SMy5nb29nbGUuY2xvdWQua21z",
-            "LnYxLlJlc3RvcmVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbiJggtPkkwJaIlUvdjEve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
-            "eXMvKi9jcnlwdG9LZXlWZXJzaW9ucy8qfTpyZXN0b3JlOgEqGnTKQRdjbG91",
-            "ZGttcy5nb29nbGVhcGlzLmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZGttc0KMAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMu",
-            "djFCCEttc1Byb3RvUAFaNmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQva21zL3YxO2ttc/gBAaoCE0dvb2dsZS5DbG91ZC5L",
-            "bXMuVjHKAhNHb29nbGVcQ2xvdWRcS21zXFYxYgZwcm90bzM="));
+            "bW1ldHJpY1NpZ246ASraQQtuYW1lLGRpZ2VzdBLwAQoRQXN5bW1ldHJpY0Rl",
+            "Y3J5cHQSLS5nb29nbGUuY2xvdWQua21zLnYxLkFzeW1tZXRyaWNEZWNyeXB0",
+            "UmVxdWVzdBouLmdvb2dsZS5jbG91ZC5rbXMudjEuQXN5bW1ldHJpY0RlY3J5",
+            "cHRSZXNwb25zZSJ8gtPkkwJkIl8vdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKi9jcnlwdG9LZXlWZXJz",
+            "aW9ucy8qfTphc3ltbWV0cmljRGVjcnlwdDoBKtpBD25hbWUsY2lwaGVydGV4",
+            "dBLyAQodVXBkYXRlQ3J5cHRvS2V5UHJpbWFyeVZlcnNpb24SOS5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLlVwZGF0ZUNyeXB0b0tleVByaW1hcnlWZXJzaW9uUmVx",
+            "dWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5InaC0+STAlMi",
+            "Ti92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyov",
+            "Y3J5cHRvS2V5cy8qfTp1cGRhdGVQcmltYXJ5VmVyc2lvbjoBKtpBGm5hbWUs",
+            "Y3J5cHRvX2tleV92ZXJzaW9uX2lkEt4BChdEZXN0cm95Q3J5cHRvS2V5VmVy",
+            "c2lvbhIzLmdvb2dsZS5jbG91ZC5rbXMudjEuRGVzdHJveUNyeXB0b0tleVZl",
+            "cnNpb25SZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlW",
+            "ZXJzaW9uImeC0+STAloiVS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25z",
+            "Lyp9OmRlc3Ryb3k6ASraQQRuYW1lEt4BChdSZXN0b3JlQ3J5cHRvS2V5VmVy",
+            "c2lvbhIzLmdvb2dsZS5jbG91ZC5rbXMudjEuUmVzdG9yZUNyeXB0b0tleVZl",
+            "cnNpb25SZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlW",
+            "ZXJzaW9uImeC0+STAloiVS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25z",
+            "Lyp9OnJlc3RvcmU6ASraQQRuYW1lGnTKQRdjbG91ZGttcy5nb29nbGVhcGlz",
+            "LmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZGttc0KMAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMudjFCCEttc1Byb3RvUAFa",
+            "Nmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "a21zL3YxO2ttc/gBAaoCE0dvb2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVc",
+            "Q2xvdWRcS21zXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsRequest), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "VersionView", "Filter", "OrderBy" }, null, null, null),
@@ -303,7 +339,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [KeyRings][google.cloud.kms.v1.KeyRing] to include in the
+    /// Optional. Optional limit on the number of [KeyRings][google.cloud.kms.v1.KeyRing] to include in the
     /// response.  Further [KeyRings][google.cloud.kms.v1.KeyRing] can subsequently be obtained by
     /// including the [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token] in a subsequent
     /// request.  If unspecified, the server will pick an appropriate default.
@@ -320,7 +356,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional pagination token, returned earlier via
+    /// Optional. Optional pagination token, returned earlier via
     /// [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -335,7 +371,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Only include resources that match the filter in the response.
+    /// Optional. Only include resources that match the filter in the response. For
+    /// more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -350,7 +389,9 @@ namespace Google.Cloud.Kms.V1 {
     private string orderBy_ = "";
     /// <summary>
     /// Optional. Specify how the results should be sorted. If not specified, the
-    /// results will be sorted in the default order.
+    /// results will be sorted in the default order.  For more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -569,7 +610,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] to include in the
+    /// Optional. Optional limit on the number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] to include in the
     /// response.  Further [CryptoKeys][google.cloud.kms.v1.CryptoKey] can subsequently be obtained by
     /// including the [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token] in a subsequent
     /// request.  If unspecified, the server will pick an appropriate default.
@@ -586,7 +627,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional pagination token, returned earlier via
+    /// Optional. Optional pagination token, returned earlier via
     /// [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -615,7 +656,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Only include resources that match the filter in the response.
+    /// Optional. Only include resources that match the filter in the response. For
+    /// more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -630,7 +674,9 @@ namespace Google.Cloud.Kms.V1 {
     private string orderBy_ = "";
     /// <summary>
     /// Optional. Specify how the results should be sorted. If not specified, the
-    /// results will be sorted in the default order.
+    /// results will be sorted in the default order. For more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -865,7 +911,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to
+    /// Optional. Optional limit on the number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to
     /// include in the response. Further [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] can
     /// subsequently be obtained by including the
     /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token] in a subsequent request.
@@ -883,7 +929,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional pagination token, returned earlier via
+    /// Optional. Optional pagination token, returned earlier via
     /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -912,7 +958,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Only include resources that match the filter in the response.
+    /// Optional. Only include resources that match the filter in the response. For
+    /// more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -927,7 +976,9 @@ namespace Google.Cloud.Kms.V1 {
     private string orderBy_ = "";
     /// <summary>
     /// Optional. Specify how the results should be sorted. If not specified, the
-    /// results will be sorted in the default order.
+    /// results will be sorted in the default order. For more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -1161,7 +1212,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [ImportJobs][google.cloud.kms.v1.ImportJob] to include in the
+    /// Optional. Optional limit on the number of [ImportJobs][google.cloud.kms.v1.ImportJob] to include in the
     /// response. Further [ImportJobs][google.cloud.kms.v1.ImportJob] can subsequently be obtained by
     /// including the [ListImportJobsResponse.next_page_token][google.cloud.kms.v1.ListImportJobsResponse.next_page_token] in a subsequent
     /// request. If unspecified, the server will pick an appropriate default.
@@ -1178,7 +1229,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional pagination token, returned earlier via
+    /// Optional. Optional pagination token, returned earlier via
     /// [ListImportJobsResponse.next_page_token][google.cloud.kms.v1.ListImportJobsResponse.next_page_token].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1193,7 +1244,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Only include resources that match the filter in the response.
+    /// Optional. Only include resources that match the filter in the response. For
+    /// more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -1208,7 +1262,9 @@ namespace Google.Cloud.Kms.V1 {
     private string orderBy_ = "";
     /// <summary>
     /// Optional. Specify how the results should be sorted. If not specified, the
-    /// results will be sorted in the default order.
+    /// results will be sorted in the default order. For more information, see
+    /// [Sorting and filtering list
+    /// results](https://cloud.google.com/kms/docs/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -2169,7 +2225,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.KeyRing.name] of the [KeyRing][google.cloud.kms.v1.KeyRing] to get.
+    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the [KeyRing][google.cloud.kms.v1.KeyRing] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2304,7 +2360,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2439,7 +2495,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+    /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2574,7 +2630,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+    /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
     /// get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2710,7 +2766,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+    /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2877,7 +2933,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int KeyRingFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.KeyRing keyRing_;
     /// <summary>
-    /// A [KeyRing][google.cloud.kms.v1.KeyRing] with initial field values.
+    /// Required. A [KeyRing][google.cloud.kms.v1.KeyRing] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.KeyRing KeyRing {
@@ -3083,7 +3139,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.CryptoKey cryptoKey_;
     /// <summary>
-    /// A [CryptoKey][google.cloud.kms.v1.CryptoKey] with initial field values.
+    /// Required. A [CryptoKey][google.cloud.kms.v1.CryptoKey] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKey CryptoKey {
@@ -3306,7 +3362,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 2;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with initial field values.
+    /// Required. A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion CryptoKeyVersion {
@@ -3532,6 +3588,11 @@ namespace Google.Cloud.Kms.V1 {
     ///       using AES-KWP (RFC 5649).
     ///   &lt;/li>
     /// &lt;/ol>
+    ///
+    /// If importing symmetric key material, it is expected that the unwrapped
+    /// key contains plain bytes. If importing asymmetric key material, it is
+    /// expected that the unwrapped key is in PKCS#8-encoded DER format (the
+    /// PrivateKeyInfo structure from RFC 5208).
     ///
     /// This format is the same as the format produced by PKCS#11 mechanism
     /// CKM_RSA_AES_KEY_WRAP.
@@ -3947,7 +4008,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyFieldNumber = 1;
     private global::Google.Cloud.Kms.V1.CryptoKey cryptoKey_;
     /// <summary>
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] with updated values.
+    /// Required. [CryptoKey][google.cloud.kms.v1.CryptoKey] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKey CryptoKey {
@@ -3961,7 +4022,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required list of fields to be updated in this request.
+    /// Required. List of fields to be updated in this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -4125,7 +4186,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 1;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with updated values.
+    /// Required. [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion CryptoKeyVersion {
@@ -4139,7 +4200,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required list of fields to be updated in this request.
+    /// Required. List of fields to be updated in this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -4343,7 +4404,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int AdditionalAuthenticatedDataFieldNumber = 3;
     private pb::ByteString additionalAuthenticatedData_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional data that, if specified, must also be provided during decryption
+    /// Optional. Optional data that, if specified, must also be provided during decryption
     /// through [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
     ///
     /// The maximum size depends on the key version's
@@ -4550,7 +4611,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int AdditionalAuthenticatedDataFieldNumber = 3;
     private pb::ByteString additionalAuthenticatedData_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional data that must match the data originally supplied in
+    /// Optional. Optional data that must match the data originally supplied in
     /// [EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5196,7 +5257,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in encryption.
+    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in encryption. Check
+    /// this field to verify that the intended resource was used for encryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5632,7 +5694,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5646,7 +5708,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionIdFieldNumber = 2;
     private string cryptoKeyVersionId_ = "";
     /// <summary>
-    /// The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+    /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CryptoKeyVersionId {
@@ -5797,7 +5859,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5932,7 +5994,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
