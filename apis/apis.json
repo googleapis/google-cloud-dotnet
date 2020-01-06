@@ -491,9 +491,8 @@
   },
   {
     "id": "Google.Cloud.Firestore.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/firestore/v1",
-    "serviceYaml": "firestore_v1.yaml",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com",
     "version": "2.0.0-alpha00",
