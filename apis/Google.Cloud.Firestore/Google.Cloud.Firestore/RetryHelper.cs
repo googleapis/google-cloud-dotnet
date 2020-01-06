@@ -31,35 +31,41 @@ namespace Google.Cloud.Firestore
             Func<TRequest, CallSettings, Task<TResponse>> fn,
             TRequest request, CallSettings callSettings, IClock clock, IScheduler scheduler)
         {
-            RetrySettings retrySettings = callSettings.Timing?.Retry;
+            RetrySettings retrySettings = callSettings.Retry;
             if (retrySettings == null)
             {
                 return await fn(request, callSettings).ConfigureAwait(false);
             }
-            DateTime? overallDeadline = retrySettings.TotalExpiration.CalculateDeadline(clock);
-            TimeSpan retryDelay = retrySettings.RetryBackoff.Delay;
-            TimeSpan callTimeout = retrySettings.TimeoutBackoff.Delay;
+            DateTime? overallDeadline = callSettings.Expiration.CalculateDeadline(clock);
+            // Every attempt should use the same deadline, calculated from the start of the call.
+            if (callSettings.Expiration?.Type == ExpirationType.Timeout)
+            {
+                callSettings = callSettings.WithDeadline(overallDeadline.Value);
+            }
+            // Remove retry from the call settings we pass into the function, so that the settings
+            // can be used even for a streaming call.
+            callSettings = callSettings.WithRetry(null);
+
+            TimeSpan backoffDelay = retrySettings.InitialBackoff;
+            int attempt = 0;
             while (true)
             {
-                DateTime attemptDeadline = clock.GetCurrentDateTimeUtc() + callTimeout;
-                // Note: this handles a null total deadline due to "<" returning false if overallDeadline is null.
-                DateTime combinedDeadline = overallDeadline < attemptDeadline ? overallDeadline.Value : attemptDeadline;
-                CallSettings attemptCallSettings = callSettings.WithCallTiming(CallTiming.FromDeadline(combinedDeadline));
                 try
                 {
-                    return await fn(request, attemptCallSettings).ConfigureAwait(false);
+                    attempt++;
+                    var response = await fn(request, callSettings).ConfigureAwait(false);
+                    return response;
                 }
-                catch (RpcException e) when (retrySettings.RetryFilter(e))
+                catch (RpcException e) when (attempt < retrySettings.MaxAttempts && retrySettings.RetryFilter(e))
                 {
-                    TimeSpan actualDelay = retrySettings.DelayJitter.GetDelay(retryDelay);
+                    TimeSpan actualDelay = retrySettings.BackoffJitter.GetDelay(backoffDelay);
                     DateTime expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
                     if (expectedRetryTime > overallDeadline)
                     {
                         throw;
                     }
                     await scheduler.Delay(actualDelay, callSettings.CancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-                    retryDelay = retrySettings.RetryBackoff.NextDelay(retryDelay);
-                    callTimeout = retrySettings.TimeoutBackoff.NextDelay(callTimeout);
+                    backoffDelay = retrySettings.NextBackoff(backoffDelay);
                 }
             }
         }
