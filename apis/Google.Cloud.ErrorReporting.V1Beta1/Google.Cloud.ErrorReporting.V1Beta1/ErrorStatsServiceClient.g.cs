@@ -24,7 +24,6 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -770,13 +769,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             GrpcClient = grpcClient;
             ErrorStatsServiceSettings effectiveSettings = settings ?? ErrorStatsServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(grpcClient.ListGroupStatsAsync, grpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_name={(sysnet::WebUtility.UrlEncode(request.ProjectName))}"));
+            _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(grpcClient.ListGroupStatsAsync, grpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callListGroupStats);
             Modify_ListGroupStatsApiCall(ref _callListGroupStats);
-            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(grpcClient.ListEventsAsync, grpcClient.ListEvents, effectiveSettings.ListEventsSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_name={(sysnet::WebUtility.UrlEncode(request.ProjectName))}"));
+            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(grpcClient.ListEventsAsync, grpcClient.ListEvents, effectiveSettings.ListEventsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callListEvents);
             Modify_ListEventsApiCall(ref _callListEvents);
-            _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(grpcClient.DeleteEventsAsync, grpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_name={(sysnet::WebUtility.UrlEncode(request.ProjectName))}"));
+            _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(grpcClient.DeleteEventsAsync, grpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callDeleteEvents);
             Modify_DeleteEventsApiCall(ref _callDeleteEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
