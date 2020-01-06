@@ -48,8 +48,7 @@ namespace Google.Cloud.Firestore
         // cancellation token provided to Listen, or the cancellation token provided to StopAsync.
         private readonly CancellationTokenSource _callbackCancellationTokenSource;
         private readonly IWatchState _state;
-        private readonly RetrySettings.IJitter _backoffJitter;
-        private readonly BackoffSettings _backoffSettings;
+        private readonly RetrySettings _backoffSettings;
         private readonly Target _target;
         private readonly CallSettings _listenCallSettings;
 
@@ -77,8 +76,13 @@ namespace Google.Cloud.Firestore
             _listenCallSettings = CallSettings.FromHeader(FirestoreClientImpl.ResourcePrefixHeader, db.RootPath);
 
             // TODO: Make these configurable?
-            _backoffSettings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(30), 2.0);
-            _backoffJitter = RetrySettings.RandomJitter;
+            _backoffSettings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromSeconds(1),
+                maxBackoff: TimeSpan.FromSeconds(30),
+                backoffMultiplier: 2.0,
+                retryFilter: _ => false, // Ignored
+                backoffJitter: RetrySettings.RandomJitter);
         }
 
         internal async Task StartAsync()
@@ -145,8 +149,8 @@ namespace Google.Cloud.Firestore
                         // If we're just starting, or we've closed the stream or it broke, restart.
                         if (underlyingStream == null)
                         {
-                            await _scheduler.Delay(_backoffJitter.GetDelay(nextBackoff), _networkCancellationTokenSource.Token).ConfigureAwait(false);
-                            nextBackoff = _backoffSettings.NextDelay(nextBackoff);
+                            await _scheduler.Delay(_backoffSettings.BackoffJitter.GetDelay(nextBackoff), _networkCancellationTokenSource.Token).ConfigureAwait(false);
+                            nextBackoff = _backoffSettings.NextBackoff(nextBackoff);
                             underlyingStream = _db.Client.Listen(_listenCallSettings);
                             await underlyingStream.TryWriteAsync(CreateRequest(_state.ResumeToken)).ConfigureAwait(false);
                             _state.OnStreamInitialization(cause);
@@ -170,7 +174,7 @@ namespace Google.Cloud.Firestore
                         // Extend the back-off if necessary.
                         if (e.Status.StatusCode == StatusCode.ResourceExhausted)
                         {
-                            nextBackoff = _backoffSettings.NextDelay(nextBackoff);
+                            nextBackoff = _backoffSettings.NextBackoff(nextBackoff);
                         }
                         cause = StreamInitializationCause.RpcError;
                     }
