@@ -23,7 +23,6 @@ using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -782,16 +781,16 @@ namespace Google.Cloud.Debugger.V2
             GrpcClient = grpcClient;
             Debugger2Settings effectiveSettings = settings ?? Debugger2Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callSetBreakpoint = clientHelper.BuildApiCall<SetBreakpointRequest, SetBreakpointResponse>(grpcClient.SetBreakpointAsync, grpcClient.SetBreakpoint, effectiveSettings.SetBreakpointSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={(sysnet::WebUtility.UrlEncode(request.DebuggeeId))}"));
+            _callSetBreakpoint = clientHelper.BuildApiCall<SetBreakpointRequest, SetBreakpointResponse>(grpcClient.SetBreakpointAsync, grpcClient.SetBreakpoint, effectiveSettings.SetBreakpointSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             Modify_ApiCall(ref _callSetBreakpoint);
             Modify_SetBreakpointApiCall(ref _callSetBreakpoint);
-            _callGetBreakpoint = clientHelper.BuildApiCall<GetBreakpointRequest, GetBreakpointResponse>(grpcClient.GetBreakpointAsync, grpcClient.GetBreakpoint, effectiveSettings.GetBreakpointSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={(sysnet::WebUtility.UrlEncode(request.DebuggeeId))}&breakpoint_id={(sysnet::WebUtility.UrlEncode(request.BreakpointId))}"));
+            _callGetBreakpoint = clientHelper.BuildApiCall<GetBreakpointRequest, GetBreakpointResponse>(grpcClient.GetBreakpointAsync, grpcClient.GetBreakpoint, effectiveSettings.GetBreakpointSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId).WithGoogleRequestParam("breakpoint_id", request => request.BreakpointId);
             Modify_ApiCall(ref _callGetBreakpoint);
             Modify_GetBreakpointApiCall(ref _callGetBreakpoint);
-            _callDeleteBreakpoint = clientHelper.BuildApiCall<DeleteBreakpointRequest, wkt::Empty>(grpcClient.DeleteBreakpointAsync, grpcClient.DeleteBreakpoint, effectiveSettings.DeleteBreakpointSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={(sysnet::WebUtility.UrlEncode(request.DebuggeeId))}&breakpoint_id={(sysnet::WebUtility.UrlEncode(request.BreakpointId))}"));
+            _callDeleteBreakpoint = clientHelper.BuildApiCall<DeleteBreakpointRequest, wkt::Empty>(grpcClient.DeleteBreakpointAsync, grpcClient.DeleteBreakpoint, effectiveSettings.DeleteBreakpointSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId).WithGoogleRequestParam("breakpoint_id", request => request.BreakpointId);
             Modify_ApiCall(ref _callDeleteBreakpoint);
             Modify_DeleteBreakpointApiCall(ref _callDeleteBreakpoint);
-            _callListBreakpoints = clientHelper.BuildApiCall<ListBreakpointsRequest, ListBreakpointsResponse>(grpcClient.ListBreakpointsAsync, grpcClient.ListBreakpoints, effectiveSettings.ListBreakpointsSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={(sysnet::WebUtility.UrlEncode(request.DebuggeeId))}"));
+            _callListBreakpoints = clientHelper.BuildApiCall<ListBreakpointsRequest, ListBreakpointsResponse>(grpcClient.ListBreakpointsAsync, grpcClient.ListBreakpoints, effectiveSettings.ListBreakpointsSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             Modify_ApiCall(ref _callListBreakpoints);
             Modify_ListBreakpointsApiCall(ref _callListBreakpoints);
             _callListDebuggees = clientHelper.BuildApiCall<ListDebuggeesRequest, ListDebuggeesResponse>(grpcClient.ListDebuggeesAsync, grpcClient.ListDebuggees, effectiveSettings.ListDebuggeesSettings);
