@@ -65,8 +65,8 @@ namespace Google.Cloud.BigQuery.V2
         // Instead, we work out the number of ticks and add that.
         private static readonly Func<string, DateTime> TimestampConverter = v =>
         {
-            double seconds = DoubleConverter(v);
-            long microseconds = (long) (seconds * 1e6);
+            decimal seconds = decimal.Parse(v, NumberStyles.AllowDecimalPoint | NumberStyles.AllowExponent, CultureInfo.InvariantCulture);
+            long microseconds = (long) (seconds * 1e6m);
             long ticks = microseconds * 10;
             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddTicks(ticks);
         };
