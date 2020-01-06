@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,183 +14,218 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Firestore.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Firestore.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedFirestoreClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedFirestoreClientTest
     {
-        [Fact]
-        public void GetDocument()
+        [xunit::FactAttribute]
+        public void GetDocumentRequestObject()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             GetDocumentRequest request = new GetDocumentRequest
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Name = "name1c9368b0",
+                Mask = new DocumentMask(),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                ReadTime = new wkt::Timestamp(),
             };
             Document expectedResponse = new Document
             {
-                Name = "name2-1052831874",
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetDocument(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             Document response = client.GetDocument(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetDocumentAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetDocumentRequestObjectAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             GetDocumentRequest request = new GetDocumentRequest
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Name = "name1c9368b0",
+                Mask = new DocumentMask(),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+                ReadTime = new wkt::Timestamp(),
             };
             Document expectedResponse = new Document
             {
-                Name = "name2-1052831874",
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetDocumentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            Document response = await client.GetDocumentAsync(request);
-            Assert.Same(expectedResponse, response);
+            Document responseCallSettings = await client.GetDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Document responseCancellationToken = await client.GetDocumentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateDocument()
+        [xunit::FactAttribute]
+        public void CreateDocumentRequestObject()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             CreateDocumentRequest request = new CreateDocumentRequest
             {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
-                CollectionId = "collectionId-821242276",
-                DocumentId = "documentId506676927",
+                Parent = "parent7858e4d0",
+                CollectionId = "collection_idd84d1a0a",
+                DocumentId = "document_id10fcfae7",
                 Document = new Document(),
+                Mask = new DocumentMask(),
             };
             Document expectedResponse = new Document
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateDocument(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             Document response = client.CreateDocument(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateDocumentAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateDocumentRequestObjectAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             CreateDocumentRequest request = new CreateDocumentRequest
             {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
-                CollectionId = "collectionId-821242276",
-                DocumentId = "documentId506676927",
+                Parent = "parent7858e4d0",
+                CollectionId = "collection_idd84d1a0a",
+                DocumentId = "document_id10fcfae7",
                 Document = new Document(),
+                Mask = new DocumentMask(),
             };
             Document expectedResponse = new Document
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateDocumentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            Document response = await client.CreateDocumentAsync(request);
-            Assert.Same(expectedResponse, response);
+            Document responseCallSettings = await client.CreateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Document responseCancellationToken = await client.CreateDocumentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateDocument()
+        [xunit::FactAttribute]
+        public void UpdateDocumentRequestObject()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            UpdateDocumentRequest expectedRequest = new UpdateDocumentRequest
-            {
-                Document = new Document(),
-                UpdateMask = new DocumentMask(),
-            };
-            Document expectedResponse = new Document
-            {
-                Name = "name3373707",
-            };
-            mockGrpcClient.Setup(x => x.UpdateDocument(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            Document document = new Document();
-            DocumentMask updateMask = new DocumentMask();
-            Document response = client.UpdateDocument(document, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateDocumentAsync()
-        {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            UpdateDocumentRequest expectedRequest = new UpdateDocumentRequest
-            {
-                Document = new Document(),
-                UpdateMask = new DocumentMask(),
-            };
-            Document expectedResponse = new Document
-            {
-                Name = "name3373707",
-            };
-            mockGrpcClient.Setup(x => x.UpdateDocumentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            Document document = new Document();
-            DocumentMask updateMask = new DocumentMask();
-            Document response = await client.UpdateDocumentAsync(document, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateDocument2()
-        {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             UpdateDocumentRequest request = new UpdateDocumentRequest
             {
                 Document = new Document(),
                 UpdateMask = new DocumentMask(),
+                Mask = new DocumentMask(),
+                CurrentDocument = new Precondition(),
             };
             Document expectedResponse = new Document
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateDocument(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             Document response = client.UpdateDocument(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateDocumentAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateDocumentRequestObjectAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            UpdateDocumentRequest request = new UpdateDocumentRequest
+            {
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
+                Mask = new DocumentMask(),
+                CurrentDocument = new Precondition(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document responseCallSettings = await client.UpdateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Document responseCancellationToken = await client.UpdateDocumentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateDocument()
+        {
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             UpdateDocumentRequest request = new UpdateDocumentRequest
             {
                 Document = new Document(),
@@ -198,311 +233,355 @@ namespace Google.Cloud.Firestore.V1.Tests
             };
             Document expectedResponse = new Document
             {
-                Name = "name3373707",
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateDocumentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            Document response = await client.UpdateDocumentAsync(request);
-            Assert.Same(expectedResponse, response);
+            Document response = client.UpdateDocument(request.Document, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteDocument()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateDocumentAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            DeleteDocumentRequest expectedRequest = new DeleteDocumentRequest
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            UpdateDocumentRequest request = new UpdateDocumentRequest
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteDocument(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
-            client.DeleteDocument(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteDocumentAsync()
-        {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            DeleteDocumentRequest expectedRequest = new DeleteDocumentRequest
+            Document expectedResponse = new Document
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Name = "name1c9368b0",
+                Fields =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new Value()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteDocumentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Document>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
-            await client.DeleteDocumentAsync(name);
+            Document responseCallSettings = await client.UpdateDocumentAsync(request.Document, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Document responseCancellationToken = await client.UpdateDocumentAsync(request.Document, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteDocument2()
+        [xunit::FactAttribute]
+        public void DeleteDocumentRequestObject()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Name = "name1c9368b0",
+                CurrentDocument = new Precondition(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteDocument(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             client.DeleteDocument(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteDocumentAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDocumentRequestObjectAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Name = "name1c9368b0",
+                CurrentDocument = new Precondition(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteDocumentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteDocumentAsync(request);
+            await client.DeleteDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDocumentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void BeginTransaction()
+        [xunit::FactAttribute]
+        public void DeleteDocument()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Name = "name1c9368b0",
             };
-            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
-            {
-                Transaction = ByteString.CopyFromUtf8("-34"),
-            };
-            mockGrpcClient.Setup(x => x.BeginTransaction(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            BeginTransactionResponse response = client.BeginTransaction(formattedDatabase);
-            Assert.Same(expectedResponse, response);
+            client.DeleteDocument(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task BeginTransactionAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDocumentAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Name = "name1c9368b0",
             };
-            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
-            {
-                Transaction = ByteString.CopyFromUtf8("-34"),
-            };
-            mockGrpcClient.Setup(x => x.BeginTransactionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<BeginTransactionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            BeginTransactionResponse response = await client.BeginTransactionAsync(formattedDatabase);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteDocumentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDocumentAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void BeginTransaction2()
+        [xunit::FactAttribute]
+        public void BeginTransactionRequestObject()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Database = "databased8eee011",
+                Options = new TransactionOptions(),
             };
             BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            mockGrpcClient.Setup(x => x.BeginTransaction(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             BeginTransactionResponse response = client.BeginTransaction(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task BeginTransactionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task BeginTransactionRequestObjectAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Database = "databased8eee011",
+                Options = new TransactionOptions(),
             };
             BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<BeginTransactionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            BeginTransactionResponse response = await client.BeginTransactionAsync(request);
-            Assert.Same(expectedResponse, response);
+            BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Commit()
+        [xunit::FactAttribute]
+        public void BeginTransaction()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Writes = { },
+                Database = "databased8eee011",
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            IEnumerable<Write> writes = new List<Write>();
-            CommitResponse response = client.Commit(formattedDatabase, writes);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CommitAsync()
-        {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            CommitRequest expectedRequest = new CommitRequest
+            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Writes = { },
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            IEnumerable<Write> writes = new List<Write>();
-            CommitResponse response = await client.CommitAsync(formattedDatabase, writes);
-            Assert.Same(expectedResponse, response);
+            BeginTransactionResponse response = client.BeginTransaction(request.Database);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Commit2()
+        [xunit::FactAttribute]
+        public async stt::Task BeginTransactionAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                Database = "databased8eee011",
+            };
+            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
+            {
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BeginTransactionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            BeginTransactionResponse responseCallSettings = await client.BeginTransactionAsync(request.Database, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BeginTransactionResponse responseCancellationToken = await client.BeginTransactionAsync(request.Database, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CommitRequestObject()
+        {
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Writes = { },
+                Database = "databased8eee011",
+                Writes = { new Write(), },
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.Commit(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                WriteResults = { new WriteResult(), },
+                CommitTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             CommitResponse response = client.Commit(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CommitAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CommitRequestObjectAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Writes = { },
+                Database = "databased8eee011",
+                Writes = { new Write(), },
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            CommitResponse expectedResponse = new CommitResponse();
-            mockGrpcClient.Setup(x => x.CommitAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            CommitResponse response = await client.CommitAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void Rollback()
-        {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            RollbackRequest expectedRequest = new RollbackRequest
+            CommitResponse expectedResponse = new CommitResponse
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                WriteResults = { new WriteResult(), },
+                CommitTime = new wkt::Timestamp(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.Rollback(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = ByteString.CopyFromUtf8("-34");
-            client.Rollback(formattedDatabase, transaction);
+            CommitResponse responseCallSettings = await client.CommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RollbackAsync()
+        [xunit::FactAttribute]
+        public void Commit()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
-            RollbackRequest expectedRequest = new RollbackRequest
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Database = "databased8eee011",
+                Writes = { new Write(), },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RollbackAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                WriteResults = { new WriteResult(), },
+                CommitTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.Commit(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = ByteString.CopyFromUtf8("-34");
-            await client.RollbackAsync(formattedDatabase, transaction);
+            CommitResponse response = client.Commit(request.Database, request.Writes);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void Rollback2()
+        [xunit::FactAttribute]
+        public async stt::Task CommitAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                Database = "databased8eee011",
+                Writes = { new Write(), },
+            };
+            CommitResponse expectedResponse = new CommitResponse
+            {
+                WriteResults = { new WriteResult(), },
+                CommitTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CommitAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            CommitResponse responseCallSettings = await client.CommitAsync(request.Database, request.Writes, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CommitResponse responseCancellationToken = await client.CommitAsync(request.Database, request.Writes, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RollbackRequestObject()
+        {
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Database = "databased8eee011",
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.Rollback(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             client.Rollback(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task RollbackAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task RollbackRequestObjectAsync()
         {
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = ByteString.CopyFromUtf8("-34"),
+                Database = "databased8eee011",
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.RollbackAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            await client.RollbackAsync(request);
+            await client.RollbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RollbackAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void Rollback()
+        {
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                Database = "databased8eee011",
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.Rollback(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            client.Rollback(request.Database, request.Transaction);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RollbackAsync()
+        {
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                Database = "databased8eee011",
+                Transaction = proto::ByteString.CopyFromUtf8("transaction6ab7d5f4"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            await client.RollbackAsync(request.Database, request.Transaction, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.RollbackAsync(request.Database, request.Transaction, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

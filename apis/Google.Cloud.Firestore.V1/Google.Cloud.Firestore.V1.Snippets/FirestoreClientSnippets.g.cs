@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,117 +18,74 @@ namespace Google.Cloud.Firestore.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Firestore.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedFirestoreClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedFirestoreClientSnippets
     {
-        /// <summary>Snippet for GetDocumentAsync</summary>
-        public async Task GetDocumentAsync_RequestObject()
-        {
-            // Snippet: GetDocumentAsync(GetDocumentRequest,CallSettings)
-            // Additional: GetDocumentAsync(GetDocumentRequest,CancellationToken)
-            // Create client
-            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
-            // Initialize request argument(s)
-            GetDocumentRequest request = new GetDocumentRequest
-            {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
-            };
-            // Make the request
-            Document response = await firestoreClient.GetDocumentAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for GetDocument</summary>
         public void GetDocument_RequestObject()
         {
-            // Snippet: GetDocument(GetDocumentRequest,CallSettings)
+            // Snippet: GetDocument(GetDocumentRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
             GetDocumentRequest request = new GetDocumentRequest
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Name = "",
+                Mask = new DocumentMask(),
+                Transaction = ByteString.Empty,
+                ReadTime = new Timestamp(),
             };
             // Make the request
             Document response = firestoreClient.GetDocument(request);
             // End snippet
         }
 
-        /// <summary>Snippet for ListDocumentsAsync</summary>
-        public async Task ListDocumentsAsync_RequestObject()
+        /// <summary>Snippet for GetDocumentAsync</summary>
+        public async Task GetDocumentAsync_RequestObject()
         {
-            // Snippet: ListDocumentsAsync(ListDocumentsRequest,CallSettings)
+            // Snippet: GetDocumentAsync(GetDocumentRequest, CallSettings)
+            // Additional: GetDocumentAsync(GetDocumentRequest, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            ListDocumentsRequest request = new ListDocumentsRequest
+            GetDocumentRequest request = new GetDocumentRequest
             {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
-                CollectionId = "",
+                Name = "",
+                Mask = new DocumentMask(),
+                Transaction = ByteString.Empty,
+                ReadTime = new Timestamp(),
             };
             // Make the request
-            PagedAsyncEnumerable<ListDocumentsResponse, Document> response =
-                firestoreClient.ListDocumentsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Document item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDocumentsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Document item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Document> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Document item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            Document response = await firestoreClient.GetDocumentAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListDocuments</summary>
         public void ListDocuments_RequestObject()
         {
-            // Snippet: ListDocuments(ListDocumentsRequest,CallSettings)
+            // Snippet: ListDocuments(ListDocumentsRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
             ListDocumentsRequest request = new ListDocumentsRequest
             {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                Parent = "",
                 CollectionId = "",
+                OrderBy = "",
+                Mask = new DocumentMask(),
+                Transaction = ByteString.Empty,
+                ReadTime = new Timestamp(),
+                ShowMissing = false,
             };
             // Make the request
-            PagedEnumerable<ListDocumentsResponse, Document> response =
-                firestoreClient.ListDocuments(request);
+            PagedEnumerable<ListDocumentsResponse, Document> response = firestoreClient.ListDocuments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Document item in response)
@@ -144,6 +101,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Document item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -155,6 +113,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Document item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -162,64 +121,144 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CreateDocumentAsync</summary>
-        public async Task CreateDocumentAsync_RequestObject()
+        /// <summary>Snippet for ListDocuments</summary>
+        public async Task ListDocumentsAsync_RequestObject()
         {
-            // Snippet: CreateDocumentAsync(CreateDocumentRequest,CallSettings)
-            // Additional: CreateDocumentAsync(CreateDocumentRequest,CancellationToken)
+            // Snippet: ListDocumentsAsync(ListDocumentsRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            CreateDocumentRequest request = new CreateDocumentRequest
+            ListDocumentsRequest request = new ListDocumentsRequest
             {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                Parent = "",
                 CollectionId = "",
-                DocumentId = "",
-                Document = new Document(),
+                OrderBy = "",
+                Mask = new DocumentMask(),
+                Transaction = ByteString.Empty,
+                ReadTime = new Timestamp(),
+                ShowMissing = false,
             };
             // Make the request
-            Document response = await firestoreClient.CreateDocumentAsync(request);
+            PagedAsyncEnumerable<ListDocumentsResponse, Document> response = firestoreClient.ListDocumentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Document item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDocumentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Document item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Document> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Document item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for CreateDocument</summary>
         public void CreateDocument_RequestObject()
         {
-            // Snippet: CreateDocument(CreateDocumentRequest,CallSettings)
+            // Snippet: CreateDocument(CreateDocumentRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
             CreateDocumentRequest request = new CreateDocumentRequest
             {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                Parent = "",
                 CollectionId = "",
                 DocumentId = "",
                 Document = new Document(),
+                Mask = new DocumentMask(),
             };
             // Make the request
             Document response = firestoreClient.CreateDocument(request);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateDocumentAsync</summary>
-        public async Task UpdateDocumentAsync()
+        /// <summary>Snippet for CreateDocumentAsync</summary>
+        public async Task CreateDocumentAsync_RequestObject()
         {
-            // Snippet: UpdateDocumentAsync(Document,DocumentMask,CallSettings)
-            // Additional: UpdateDocumentAsync(Document,DocumentMask,CancellationToken)
+            // Snippet: CreateDocumentAsync(CreateDocumentRequest, CallSettings)
+            // Additional: CreateDocumentAsync(CreateDocumentRequest, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            Document document = new Document();
-            DocumentMask updateMask = new DocumentMask();
+            CreateDocumentRequest request = new CreateDocumentRequest
+            {
+                Parent = "",
+                CollectionId = "",
+                DocumentId = "",
+                Document = new Document(),
+                Mask = new DocumentMask(),
+            };
             // Make the request
-            Document response = await firestoreClient.UpdateDocumentAsync(document, updateMask);
+            Document response = await firestoreClient.CreateDocumentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDocument</summary>
+        public void UpdateDocument_RequestObject()
+        {
+            // Snippet: UpdateDocument(UpdateDocumentRequest, CallSettings)
+            // Create client
+            FirestoreClient firestoreClient = FirestoreClient.Create();
+            // Initialize request argument(s)
+            UpdateDocumentRequest request = new UpdateDocumentRequest
+            {
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
+                Mask = new DocumentMask(),
+                CurrentDocument = new Precondition(),
+            };
+            // Make the request
+            Document response = firestoreClient.UpdateDocument(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDocumentAsync</summary>
+        public async Task UpdateDocumentAsync_RequestObject()
+        {
+            // Snippet: UpdateDocumentAsync(UpdateDocumentRequest, CallSettings)
+            // Additional: UpdateDocumentAsync(UpdateDocumentRequest, CancellationToken)
+            // Create client
+            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDocumentRequest request = new UpdateDocumentRequest
+            {
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
+                Mask = new DocumentMask(),
+                CurrentDocument = new Precondition(),
+            };
+            // Make the request
+            Document response = await firestoreClient.UpdateDocumentAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateDocument</summary>
         public void UpdateDocument()
         {
-            // Snippet: UpdateDocument(Document,DocumentMask,CallSettings)
+            // Snippet: UpdateDocument(Document, DocumentMask, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
@@ -231,78 +270,49 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDocumentAsync</summary>
-        public async Task UpdateDocumentAsync_RequestObject()
+        public async Task UpdateDocumentAsync()
         {
-            // Snippet: UpdateDocumentAsync(UpdateDocumentRequest,CallSettings)
-            // Additional: UpdateDocumentAsync(UpdateDocumentRequest,CancellationToken)
+            // Snippet: UpdateDocumentAsync(Document, DocumentMask, CallSettings)
+            // Additional: UpdateDocumentAsync(Document, DocumentMask, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateDocumentRequest request = new UpdateDocumentRequest
-            {
-                Document = new Document(),
-                UpdateMask = new DocumentMask(),
-            };
+            Document document = new Document();
+            DocumentMask updateMask = new DocumentMask();
             // Make the request
-            Document response = await firestoreClient.UpdateDocumentAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateDocument</summary>
-        public void UpdateDocument_RequestObject()
-        {
-            // Snippet: UpdateDocument(UpdateDocumentRequest,CallSettings)
-            // Create client
-            FirestoreClient firestoreClient = FirestoreClient.Create();
-            // Initialize request argument(s)
-            UpdateDocumentRequest request = new UpdateDocumentRequest
-            {
-                Document = new Document(),
-                UpdateMask = new DocumentMask(),
-            };
-            // Make the request
-            Document response = firestoreClient.UpdateDocument(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteDocumentAsync</summary>
-        public async Task DeleteDocumentAsync()
-        {
-            // Snippet: DeleteDocumentAsync(AnyPathName,CallSettings)
-            // Additional: DeleteDocumentAsync(AnyPathName,CancellationToken)
-            // Create client
-            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
-            // Initialize request argument(s)
-            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
-            // Make the request
-            await firestoreClient.DeleteDocumentAsync(name);
+            Document response = await firestoreClient.UpdateDocumentAsync(document, updateMask);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteDocument</summary>
-        public void DeleteDocument()
+        public void DeleteDocument_RequestObject()
         {
-            // Snippet: DeleteDocument(AnyPathName,CallSettings)
+            // Snippet: DeleteDocument(DeleteDocumentRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
+            DeleteDocumentRequest request = new DeleteDocumentRequest
+            {
+                Name = "",
+                CurrentDocument = new Precondition(),
+            };
             // Make the request
-            firestoreClient.DeleteDocument(name);
+            firestoreClient.DeleteDocument(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteDocumentAsync</summary>
         public async Task DeleteDocumentAsync_RequestObject()
         {
-            // Snippet: DeleteDocumentAsync(DeleteDocumentRequest,CallSettings)
-            // Additional: DeleteDocumentAsync(DeleteDocumentRequest,CancellationToken)
+            // Snippet: DeleteDocumentAsync(DeleteDocumentRequest, CallSettings)
+            // Additional: DeleteDocumentAsync(DeleteDocumentRequest, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
+                Name = "",
+                CurrentDocument = new Precondition(),
             };
             // Make the request
             await firestoreClient.DeleteDocumentAsync(request);
@@ -310,85 +320,92 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteDocument</summary>
-        public void DeleteDocument_RequestObject()
+        public void DeleteDocument()
         {
-            // Snippet: DeleteDocument(DeleteDocumentRequest,CallSettings)
+            // Snippet: DeleteDocument(string, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            DeleteDocumentRequest request = new DeleteDocumentRequest
-            {
-                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
-            };
+            string name = "";
             // Make the request
-            firestoreClient.DeleteDocument(request);
+            firestoreClient.DeleteDocument(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDocumentAsync</summary>
+        public async Task DeleteDocumentAsync()
+        {
+            // Snippet: DeleteDocumentAsync(string, CallSettings)
+            // Additional: DeleteDocumentAsync(string, CancellationToken)
+            // Create client
+            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            await firestoreClient.DeleteDocumentAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for BatchGetDocuments</summary>
-        public async Task BatchGetDocuments()
+        public async Task BatchGetDocuments_RequestObject()
         {
-            // Snippet: BatchGetDocuments(BatchGetDocumentsRequest,CallSettings)
+            // Snippet: BatchGetDocuments(BatchGetDocumentsRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
-            // Initialize request argument
+            // Initialize request argument(s)
             BatchGetDocumentsRequest request = new BatchGetDocumentsRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Documents = { },
+                Database = "",
+                Documents = { "", },
+                Mask = new DocumentMask(),
+                Transaction = ByteString.Empty,
+                NewTransaction = new TransactionOptions(),
+                ReadTime = new Timestamp(),
             };
             // Make the request, returning a streaming response
-            FirestoreClient.BatchGetDocumentsStream streamingResponse = firestoreClient.BatchGetDocuments(request);
+            FirestoreClient.BatchGetDocumentsStream response = firestoreClient.BatchGetDocuments(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<BatchGetDocumentsResponse> responseStream = streamingResponse.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<BatchGetDocumentsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
-                BatchGetDocumentsResponse response = responseStream.Current;
+                BatchGetDocumentsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
             // End snippet
         }
 
-        /// <summary>Snippet for BeginTransactionAsync</summary>
-        public async Task BeginTransactionAsync()
-        {
-            // Snippet: BeginTransactionAsync(string,CallSettings)
-            // Additional: BeginTransactionAsync(string,CancellationToken)
-            // Create client
-            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
-            // Initialize request argument(s)
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            // Make the request
-            BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(formattedDatabase);
-            // End snippet
-        }
-
         /// <summary>Snippet for BeginTransaction</summary>
-        public void BeginTransaction()
+        public void BeginTransaction_RequestObject()
         {
-            // Snippet: BeginTransaction(string,CallSettings)
+            // Snippet: BeginTransaction(BeginTransactionRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                Database = "",
+                Options = new TransactionOptions(),
+            };
             // Make the request
-            BeginTransactionResponse response = firestoreClient.BeginTransaction(formattedDatabase);
+            BeginTransactionResponse response = firestoreClient.BeginTransaction(request);
             // End snippet
         }
 
         /// <summary>Snippet for BeginTransactionAsync</summary>
         public async Task BeginTransactionAsync_RequestObject()
         {
-            // Snippet: BeginTransactionAsync(BeginTransactionRequest,CallSettings)
-            // Additional: BeginTransactionAsync(BeginTransactionRequest,CancellationToken)
+            // Snippet: BeginTransactionAsync(BeginTransactionRequest, CallSettings)
+            // Additional: BeginTransactionAsync(BeginTransactionRequest, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Database = "",
+                Options = new TransactionOptions(),
             };
             // Make the request
             BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(request);
@@ -396,62 +413,63 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransaction</summary>
-        public void BeginTransaction_RequestObject()
+        public void BeginTransaction()
         {
-            // Snippet: BeginTransaction(BeginTransactionRequest,CallSettings)
+            // Snippet: BeginTransaction(string, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            BeginTransactionRequest request = new BeginTransactionRequest
-            {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-            };
+            string database = "";
             // Make the request
-            BeginTransactionResponse response = firestoreClient.BeginTransaction(request);
+            BeginTransactionResponse response = firestoreClient.BeginTransaction(database);
             // End snippet
         }
 
-        /// <summary>Snippet for CommitAsync</summary>
-        public async Task CommitAsync()
+        /// <summary>Snippet for BeginTransactionAsync</summary>
+        public async Task BeginTransactionAsync()
         {
-            // Snippet: CommitAsync(string,IEnumerable<Write>,CallSettings)
-            // Additional: CommitAsync(string,IEnumerable<Write>,CancellationToken)
+            // Snippet: BeginTransactionAsync(string, CallSettings)
+            // Additional: BeginTransactionAsync(string, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            IEnumerable<Write> writes = new List<Write>();
+            string database = "";
             // Make the request
-            CommitResponse response = await firestoreClient.CommitAsync(formattedDatabase, writes);
+            BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(database);
             // End snippet
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit()
+        public void Commit_RequestObject()
         {
-            // Snippet: Commit(string,IEnumerable<Write>,CallSettings)
+            // Snippet: Commit(CommitRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            IEnumerable<Write> writes = new List<Write>();
+            CommitRequest request = new CommitRequest
+            {
+                Database = "",
+                Writes = { new Write(), },
+                Transaction = ByteString.Empty,
+            };
             // Make the request
-            CommitResponse response = firestoreClient.Commit(formattedDatabase, writes);
+            CommitResponse response = firestoreClient.Commit(request);
             // End snippet
         }
 
         /// <summary>Snippet for CommitAsync</summary>
         public async Task CommitAsync_RequestObject()
         {
-            // Snippet: CommitAsync(CommitRequest,CallSettings)
-            // Additional: CommitAsync(CommitRequest,CancellationToken)
+            // Snippet: CommitAsync(CommitRequest, CallSettings)
+            // Additional: CommitAsync(CommitRequest, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
             CommitRequest request = new CommitRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Writes = { },
+                Database = "",
+                Writes = { new Write(), },
+                Transaction = ByteString.Empty,
             };
             // Make the request
             CommitResponse response = await firestoreClient.CommitAsync(request);
@@ -459,62 +477,62 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit_RequestObject()
+        public void Commit()
         {
-            // Snippet: Commit(CommitRequest,CallSettings)
+            // Snippet: Commit(string, IEnumerable<Write>, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            CommitRequest request = new CommitRequest
-            {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Writes = { },
-            };
+            string database = "";
+            IEnumerable<Write> writes = new Write[] { new Write(), };
             // Make the request
-            CommitResponse response = firestoreClient.Commit(request);
+            CommitResponse response = firestoreClient.Commit(database, writes);
             // End snippet
         }
 
-        /// <summary>Snippet for RollbackAsync</summary>
-        public async Task RollbackAsync()
+        /// <summary>Snippet for CommitAsync</summary>
+        public async Task CommitAsync()
         {
-            // Snippet: RollbackAsync(string,ByteString,CallSettings)
-            // Additional: RollbackAsync(string,ByteString,CancellationToken)
+            // Snippet: CommitAsync(string, IEnumerable<Write>, CallSettings)
+            // Additional: CommitAsync(string, IEnumerable<Write>, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = ByteString.Empty;
+            string database = "";
+            IEnumerable<Write> writes = new Write[] { new Write(), };
             // Make the request
-            await firestoreClient.RollbackAsync(formattedDatabase, transaction);
+            CommitResponse response = await firestoreClient.CommitAsync(database, writes);
             // End snippet
         }
 
         /// <summary>Snippet for Rollback</summary>
-        public void Rollback()
+        public void Rollback_RequestObject()
         {
-            // Snippet: Rollback(string,ByteString,CallSettings)
+            // Snippet: Rollback(RollbackRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = ByteString.Empty;
+            RollbackRequest request = new RollbackRequest
+            {
+                Database = "",
+                Transaction = ByteString.Empty,
+            };
             // Make the request
-            firestoreClient.Rollback(formattedDatabase, transaction);
+            firestoreClient.Rollback(request);
             // End snippet
         }
 
         /// <summary>Snippet for RollbackAsync</summary>
         public async Task RollbackAsync_RequestObject()
         {
-            // Snippet: RollbackAsync(RollbackRequest,CallSettings)
-            // Additional: RollbackAsync(RollbackRequest,CancellationToken)
+            // Snippet: RollbackAsync(RollbackRequest, CallSettings)
+            // Additional: RollbackAsync(RollbackRequest, CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
             RollbackRequest request = new RollbackRequest
             {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Database = "",
                 Transaction = ByteString.Empty,
             };
             // Make the request
@@ -523,41 +541,58 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for Rollback</summary>
-        public void Rollback_RequestObject()
+        public void Rollback()
         {
-            // Snippet: Rollback(RollbackRequest,CallSettings)
+            // Snippet: Rollback(string, ByteString, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            RollbackRequest request = new RollbackRequest
-            {
-                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = ByteString.Empty,
-            };
+            string database = "";
+            ByteString transaction = ByteString.Empty;
             // Make the request
-            firestoreClient.Rollback(request);
+            firestoreClient.Rollback(database, transaction);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAsync</summary>
+        public async Task RollbackAsync()
+        {
+            // Snippet: RollbackAsync(string, ByteString, CallSettings)
+            // Additional: RollbackAsync(string, ByteString, CancellationToken)
+            // Create client
+            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string database = "";
+            ByteString transaction = ByteString.Empty;
+            // Make the request
+            await firestoreClient.RollbackAsync(database, transaction);
             // End snippet
         }
 
         /// <summary>Snippet for RunQuery</summary>
-        public async Task RunQuery()
+        public async Task RunQuery_RequestObject()
         {
-            // Snippet: RunQuery(RunQueryRequest,CallSettings)
+            // Snippet: RunQuery(RunQueryRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
-            // Initialize request argument
+            // Initialize request argument(s)
             RunQueryRequest request = new RunQueryRequest
             {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                Parent = "",
+                StructuredQuery = new StructuredQuery(),
+                Transaction = ByteString.Empty,
+                NewTransaction = new TransactionOptions(),
+                ReadTime = new Timestamp(),
             };
             // Make the request, returning a streaming response
-            FirestoreClient.RunQueryStream streamingResponse = firestoreClient.RunQuery(request);
+            FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<RunQueryResponse> responseStream = streamingResponse.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<RunQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
-                RunQueryResponse response = responseStream.Current;
+                RunQueryResponse responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -567,22 +602,23 @@ namespace Google.Cloud.Firestore.V1.Snippets
         /// <summary>Snippet for Write</summary>
         public async Task Write()
         {
-            // Snippet: Write(CallSettings,BidirectionalStreamingSettings)
+            // Snippet: Write(CallSettings, BidirectionalStreamingSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize streaming call, retrieving the stream object
-            FirestoreClient.WriteStream duplexStream = firestoreClient.Write();
+            FirestoreClient.WriteStream response = firestoreClient.Write();
 
-            // Sending requests and retrieving responses can be arbitrarily interleaved.
-            // Exact sequence will depend on client/server behavior.
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
 
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<WriteResponse> responseStream = duplexStream.ResponseStream;
-                while (await responseStream.MoveNext())
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<WriteResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
                 {
-                    WriteResponse response = responseStream.Current;
+                    WriteResponse responseItem = responseStream.Current;
                     // Do something with streamed response
                 }
                 // The response stream has completed
@@ -595,17 +631,21 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 // Initialize a request
                 WriteRequest request = new WriteRequest
                 {
-                    Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                    Database = "",
+                    StreamId = "",
+                    Writes = { new Write(), },
+                    StreamToken = ByteString.Empty,
+                    Labels = { { "", "" }, },
                 };
                 // Stream a request to the server
-                await duplexStream.WriteAsync(request);
-
+                await response.WriteAsync(request);
                 // Set "done" to true when sending requests is complete
             }
+
             // Complete writing requests to the stream
-            await duplexStream.WriteCompleteAsync();
-            // Await the response handler.
-            // This will complete once all server responses have been processed.
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
             await responseHandlerTask;
             // End snippet
         }
@@ -613,22 +653,23 @@ namespace Google.Cloud.Firestore.V1.Snippets
         /// <summary>Snippet for Listen</summary>
         public async Task Listen()
         {
-            // Snippet: Listen(CallSettings,BidirectionalStreamingSettings)
+            // Snippet: Listen(CallSettings, BidirectionalStreamingSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize streaming call, retrieving the stream object
-            FirestoreClient.ListenStream duplexStream = firestoreClient.Listen();
+            FirestoreClient.ListenStream response = firestoreClient.Listen();
 
-            // Sending requests and retrieving responses can be arbitrarily interleaved.
-            // Exact sequence will depend on client/server behavior.
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
 
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<ListenResponse> responseStream = duplexStream.ResponseStream;
-                while (await responseStream.MoveNext())
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<ListenResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
                 {
-                    ListenResponse response = responseStream.Current;
+                    ListenResponse responseItem = responseStream.Current;
                     // Do something with streamed response
                 }
                 // The response stream has completed
@@ -641,32 +682,79 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 // Initialize a request
                 ListenRequest request = new ListenRequest
                 {
-                    Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                    Database = "",
+                    AddTarget = new Target(),
+                    RemoveTarget = 0,
+                    Labels = { { "", "" }, },
                 };
                 // Stream a request to the server
-                await duplexStream.WriteAsync(request);
-
+                await response.WriteAsync(request);
                 // Set "done" to true when sending requests is complete
             }
+
             // Complete writing requests to the stream
-            await duplexStream.WriteCompleteAsync();
-            // Await the response handler.
-            // This will complete once all server responses have been processed.
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
             await responseHandlerTask;
             // End snippet
         }
 
-        /// <summary>Snippet for ListCollectionIdsAsync</summary>
-        public async Task ListCollectionIdsAsync()
+        /// <summary>Snippet for ListCollectionIds</summary>
+        public void ListCollectionIds_RequestObject()
         {
-            // Snippet: ListCollectionIdsAsync(string,string,int?,CallSettings)
+            // Snippet: ListCollectionIds(ListCollectionIdsRequest, CallSettings)
+            // Create client
+            FirestoreClient firestoreClient = FirestoreClient.Create();
+            // Initialize request argument(s)
+            ListCollectionIdsRequest request = new ListCollectionIdsRequest { Parent = "", };
+            // Make the request
+            PagedEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIds(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCollectionIdsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCollectionIds</summary>
+        public async Task ListCollectionIdsAsync_RequestObject()
+        {
+            // Snippet: ListCollectionIdsAsync(ListCollectionIdsRequest, CallSettings)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
+            ListCollectionIdsRequest request = new ListCollectionIdsRequest { Parent = "", };
             // Make the request
-            PagedAsyncEnumerable<ListCollectionIdsResponse, string> response =
-                firestoreClient.ListCollectionIdsAsync(formattedParent);
+            PagedAsyncEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIdsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((string item) =>
@@ -682,6 +770,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (string item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -693,6 +782,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (string item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -703,14 +793,13 @@ namespace Google.Cloud.Firestore.V1.Snippets
         /// <summary>Snippet for ListCollectionIds</summary>
         public void ListCollectionIds()
         {
-            // Snippet: ListCollectionIds(string,string,int?,CallSettings)
+            // Snippet: ListCollectionIds(string, string, int?, CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
+            string parent = "";
             // Make the request
-            PagedEnumerable<ListCollectionIdsResponse, string> response =
-                firestoreClient.ListCollectionIds(formattedParent);
+            PagedEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIds(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (string item in response)
@@ -726,6 +815,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (string item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -737,6 +827,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (string item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -744,20 +835,16 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCollectionIdsAsync</summary>
-        public async Task ListCollectionIdsAsync_RequestObject()
+        /// <summary>Snippet for ListCollectionIds</summary>
+        public async Task ListCollectionIdsAsync()
         {
-            // Snippet: ListCollectionIdsAsync(ListCollectionIdsRequest,CallSettings)
+            // Snippet: ListCollectionIdsAsync(string, string, int?, CallSettings)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            ListCollectionIdsRequest request = new ListCollectionIdsRequest
-            {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
-            };
+            string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListCollectionIdsResponse, string> response =
-                firestoreClient.ListCollectionIdsAsync(request);
+            PagedAsyncEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIdsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((string item) =>
@@ -773,6 +860,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (string item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -784,59 +872,12 @@ namespace Google.Cloud.Firestore.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (string item in singlePage)
             {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListCollectionIds</summary>
-        public void ListCollectionIds_RequestObject()
-        {
-            // Snippet: ListCollectionIds(ListCollectionIdsRequest,CallSettings)
-            // Create client
-            FirestoreClient firestoreClient = FirestoreClient.Create();
-            // Initialize request argument(s)
-            ListCollectionIdsRequest request = new ListCollectionIdsRequest
-            {
-                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
-            };
-            // Make the request
-            PagedEnumerable<ListCollectionIdsResponse, string> response =
-                firestoreClient.ListCollectionIds(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (string item in response)
-            {
                 // Do something with each item
                 Console.WriteLine(item);
             }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListCollectionIdsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (string item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<string> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (string item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
-
     }
 }
