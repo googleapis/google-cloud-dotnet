@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.5.0, released 2020-01-06
+
+- [Commit f556739](https://github.com/googleapis/google-cloud-dotnet/commit/f556739): Add Fields parameters to ListObjectsOptions and ListBucketsOptions
+- [Commit 32f8a22](https://github.com/googleapis/google-cloud-dotnet/commit/32f8a22): Add support for Archive storage class.
+
 # Version 2.4.0, released 2019-12-10
 
 New features since 2.3.0:
