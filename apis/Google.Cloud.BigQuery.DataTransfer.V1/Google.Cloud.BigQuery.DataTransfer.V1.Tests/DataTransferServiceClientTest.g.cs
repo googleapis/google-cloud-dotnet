@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,947 +14,1514 @@
 
 // Generated code. DO NOT EDIT!
 
-// This is currently a hand-written addition to the generated file, until the
-// generator includes it automatically (or doesn't use the deprecated members in tests).
-#pragma warning disable CS0612 // Type or member is obsolete
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
 
 namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.BigQuery.DataTransfer.V1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedDataTransferServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedDataTransferServiceClientTest
     {
-        [Fact]
-        public void GetDataSource()
+        [xunit::FactAttribute]
+        public void GetDataSourceRequestObject()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetDataSourceRequest expectedRequest = new GetDataSourceRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
-            DataSource expectedResponse = new DataSource
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-                DataSourceId = "dataSourceId-1015796374",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ClientId = "clientId-1904089585",
-                SupportsMultipleTransfers = true,
-                UpdateDeadlineSeconds = 991471694,
-                DefaultSchedule = "defaultSchedule-800168235",
-                SupportsCustomSchedule = true,
-                HelpUrl = "helpUrl-789431439",
-                DefaultDataRefreshWindowDays = 1804935157,
-                ManualRunsDisabled = true,
-            };
-            mockGrpcClient.Setup(x => x.GetDataSource(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
-            DataSource response = client.GetDataSource(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetDataSourceAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetDataSourceRequest expectedRequest = new GetDataSourceRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
-            DataSource expectedResponse = new DataSource
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-                DataSourceId = "dataSourceId-1015796374",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ClientId = "clientId-1904089585",
-                SupportsMultipleTransfers = true,
-                UpdateDeadlineSeconds = 991471694,
-                DefaultSchedule = "defaultSchedule-800168235",
-                SupportsCustomSchedule = true,
-                HelpUrl = "helpUrl-789431439",
-                DefaultDataRefreshWindowDays = 1804935157,
-                ManualRunsDisabled = true,
-            };
-            mockGrpcClient.Setup(x => x.GetDataSourceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<DataSource>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
-            DataSource response = await client.GetDataSourceAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetDataSource2()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetDataSourceRequest request = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
             DataSource expectedResponse = new DataSource
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-                DataSourceId = "dataSourceId-1015796374",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ClientId = "clientId-1904089585",
-                SupportsMultipleTransfers = true,
-                UpdateDeadlineSeconds = 991471694,
-                DefaultSchedule = "defaultSchedule-800168235",
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+                DataSourceId = "data_source_id4a2ea315",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ClientId = "client_id729dfe2b",
+                Scopes = { "scopes35c99a1e", },
+                UpdateDeadlineSeconds = -1468953716,
+                DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
-                HelpUrl = "helpUrl-789431439",
-                DefaultDataRefreshWindowDays = 1804935157,
+                Parameters =
+                {
+                    new DataSourceParameter(),
+                },
+                HelpUrl = "help_url09eadab7",
+                AuthorizationType = DataSource.Types.AuthorizationType.AuthorizationCode,
+                DataRefreshType = DataSource.Types.DataRefreshType.Unspecified,
+                DefaultDataRefreshWindowDays = 589997002,
                 ManualRunsDisabled = true,
+                MinimumScheduleInterval = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.GetDataSource(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetDataSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             DataSource response = client.GetDataSource(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetDataSourceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetDataSourceRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetDataSourceRequest request = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
             DataSource expectedResponse = new DataSource
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-                DataSourceId = "dataSourceId-1015796374",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-                ClientId = "clientId-1904089585",
-                SupportsMultipleTransfers = true,
-                UpdateDeadlineSeconds = 991471694,
-                DefaultSchedule = "defaultSchedule-800168235",
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+                DataSourceId = "data_source_id4a2ea315",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ClientId = "client_id729dfe2b",
+                Scopes = { "scopes35c99a1e", },
+                UpdateDeadlineSeconds = -1468953716,
+                DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
-                HelpUrl = "helpUrl-789431439",
-                DefaultDataRefreshWindowDays = 1804935157,
+                Parameters =
+                {
+                    new DataSourceParameter(),
+                },
+                HelpUrl = "help_url09eadab7",
+                AuthorizationType = DataSource.Types.AuthorizationType.AuthorizationCode,
+                DataRefreshType = DataSource.Types.DataRefreshType.Unspecified,
+                DefaultDataRefreshWindowDays = 589997002,
                 ManualRunsDisabled = true,
+                MinimumScheduleInterval = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.GetDataSourceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<DataSource>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetDataSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataSource>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSource response = await client.GetDataSourceAsync(request);
-            Assert.Same(expectedResponse, response);
+            DataSource responseCallSettings = await client.GetDataSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataSource responseCancellationToken = await client.GetDataSourceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateTransferConfig()
+        [xunit::FactAttribute]
+        public void GetDataSource()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CreateTransferConfigRequest expectedRequest = new CreateTransferConfigRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetDataSourceRequest request = new GetDataSourceRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                TransferConfig = new TransferConfig(),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
-            TransferConfig expectedResponse = new TransferConfig
+            DataSource expectedResponse = new DataSource
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+                DataSourceId = "data_source_id4a2ea315",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ClientId = "client_id729dfe2b",
+                Scopes = { "scopes35c99a1e", },
+                UpdateDeadlineSeconds = -1468953716,
+                DefaultSchedule = "default_schedule3d57f6d3",
+                SupportsCustomSchedule = true,
+                Parameters =
+                {
+                    new DataSourceParameter(),
+                },
+                HelpUrl = "help_url09eadab7",
+                AuthorizationType = DataSource.Types.AuthorizationType.AuthorizationCode,
+                DataRefreshType = DataSource.Types.DataRefreshType.Unspecified,
+                DefaultDataRefreshWindowDays = 589997002,
+                ManualRunsDisabled = true,
+                MinimumScheduleInterval = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.CreateTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetDataSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            TransferConfig transferConfig = new TransferConfig();
-            TransferConfig response = client.CreateTransferConfig(parent, transferConfig);
-            Assert.Same(expectedResponse, response);
+            DataSource response = client.GetDataSource(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateTransferConfigAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetDataSourceAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CreateTransferConfigRequest expectedRequest = new CreateTransferConfigRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetDataSourceRequest request = new GetDataSourceRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                TransferConfig = new TransferConfig(),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
-            TransferConfig expectedResponse = new TransferConfig
+            DataSource expectedResponse = new DataSource
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+                DataSourceId = "data_source_id4a2ea315",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ClientId = "client_id729dfe2b",
+                Scopes = { "scopes35c99a1e", },
+                UpdateDeadlineSeconds = -1468953716,
+                DefaultSchedule = "default_schedule3d57f6d3",
+                SupportsCustomSchedule = true,
+                Parameters =
+                {
+                    new DataSourceParameter(),
+                },
+                HelpUrl = "help_url09eadab7",
+                AuthorizationType = DataSource.Types.AuthorizationType.AuthorizationCode,
+                DataRefreshType = DataSource.Types.DataRefreshType.Unspecified,
+                DefaultDataRefreshWindowDays = 589997002,
+                ManualRunsDisabled = true,
+                MinimumScheduleInterval = new wkt::Duration(),
             };
-            mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetDataSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataSource>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            TransferConfig transferConfig = new TransferConfig();
-            TransferConfig response = await client.CreateTransferConfigAsync(parent, transferConfig);
-            Assert.Same(expectedResponse, response);
+            DataSource responseCallSettings = await client.GetDataSourceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataSource responseCancellationToken = await client.GetDataSourceAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateTransferConfig2()
+        [xunit::FactAttribute]
+        public void GetDataSource_ResourceNames()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetDataSourceRequest request = new GetDataSourceRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            DataSource expectedResponse = new DataSource
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+                DataSourceId = "data_source_id4a2ea315",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ClientId = "client_id729dfe2b",
+                Scopes = { "scopes35c99a1e", },
+                UpdateDeadlineSeconds = -1468953716,
+                DefaultSchedule = "default_schedule3d57f6d3",
+                SupportsCustomSchedule = true,
+                Parameters =
+                {
+                    new DataSourceParameter(),
+                },
+                HelpUrl = "help_url09eadab7",
+                AuthorizationType = DataSource.Types.AuthorizationType.AuthorizationCode,
+                DataRefreshType = DataSource.Types.DataRefreshType.Unspecified,
+                DefaultDataRefreshWindowDays = 589997002,
+                ManualRunsDisabled = true,
+                MinimumScheduleInterval = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.GetDataSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            DataSource response = client.GetDataSource(request.DataSourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDataSourceAsync_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetDataSourceRequest request = new GetDataSourceRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            DataSource expectedResponse = new DataSource
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+                DataSourceId = "data_source_id4a2ea315",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                ClientId = "client_id729dfe2b",
+                Scopes = { "scopes35c99a1e", },
+                UpdateDeadlineSeconds = -1468953716,
+                DefaultSchedule = "default_schedule3d57f6d3",
+                SupportsCustomSchedule = true,
+                Parameters =
+                {
+                    new DataSourceParameter(),
+                },
+                HelpUrl = "help_url09eadab7",
+                AuthorizationType = DataSource.Types.AuthorizationType.AuthorizationCode,
+                DataRefreshType = DataSource.Types.DataRefreshType.Unspecified,
+                DefaultDataRefreshWindowDays = 589997002,
+                ManualRunsDisabled = true,
+                MinimumScheduleInterval = new wkt::Duration(),
+            };
+            mockGrpcClient.Setup(x => x.GetDataSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataSource>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            DataSource responseCallSettings = await client.GetDataSourceAsync(request.DataSourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataSource responseCancellationToken = await client.GetDataSourceAsync(request.DataSourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTransferConfigRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
+                AuthorizationCode = "authorization_codef52cfb2e",
+                VersionInfo = "version_info0ffd741f",
+                ServiceAccountName = "service_account_name701fbf73",
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.CreateTransferConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             TransferConfig response = client.CreateTransferConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateTransferConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTransferConfigRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                TransferConfig = new TransferConfig(),
+                AuthorizationCode = "authorization_codef52cfb2e",
+                VersionInfo = "version_info0ffd741f",
+                ServiceAccountName = "service_account_name701fbf73",
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig responseCallSettings = await client.CreateTransferConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.CreateTransferConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTransferConfig()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CreateTransferConfigRequest request = new CreateTransferConfigRequest
+            {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfig response = await client.CreateTransferConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            TransferConfig response = client.CreateTransferConfig(request.Parent, request.TransferConfig);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateTransferConfig()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTransferConfigAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            UpdateTransferConfigRequest expectedRequest = new UpdateTransferConfigRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
-                UpdateMask = new FieldMask(),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.UpdateTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfig transferConfig = new TransferConfig();
-            FieldMask updateMask = new FieldMask();
-            TransferConfig response = client.UpdateTransferConfig(transferConfig, updateMask);
-            Assert.Same(expectedResponse, response);
+            TransferConfig responseCallSettings = await client.CreateTransferConfigAsync(request.Parent, request.TransferConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.CreateTransferConfigAsync(request.Parent, request.TransferConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateTransferConfigAsync()
+        [xunit::FactAttribute]
+        public void CreateTransferConfig_ResourceNames()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            UpdateTransferConfigRequest expectedRequest = new UpdateTransferConfigRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
-                UpdateMask = new FieldMask(),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfig transferConfig = new TransferConfig();
-            FieldMask updateMask = new FieldMask();
-            TransferConfig response = await client.UpdateTransferConfigAsync(transferConfig, updateMask);
-            Assert.Same(expectedResponse, response);
+            TransferConfig response = client.CreateTransferConfig(request.ParentAsParentName, request.TransferConfig);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateTransferConfig2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTransferConfigAsync_ResourceNames()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CreateTransferConfigRequest request = new CreateTransferConfigRequest
+            {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                TransferConfig = new TransferConfig(),
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig responseCallSettings = await client.CreateTransferConfigAsync(request.ParentAsParentName, request.TransferConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.CreateTransferConfigAsync(request.ParentAsParentName, request.TransferConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateTransferConfigRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
                 TransferConfig = new TransferConfig(),
-                UpdateMask = new FieldMask(),
+                AuthorizationCode = "authorization_codef52cfb2e",
+                UpdateMask = new wkt::FieldMask(),
+                VersionInfo = "version_info0ffd741f",
+                ServiceAccountName = "service_account_name701fbf73",
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.UpdateTransferConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             TransferConfig response = client.UpdateTransferConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateTransferConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateTransferConfigRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
                 TransferConfig = new TransferConfig(),
-                UpdateMask = new FieldMask(),
+                AuthorizationCode = "authorization_codef52cfb2e",
+                UpdateMask = new wkt::FieldMask(),
+                VersionInfo = "version_info0ffd741f",
+                ServiceAccountName = "service_account_name701fbf73",
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfig response = await client.UpdateTransferConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            TransferConfig responseCallSettings = await client.UpdateTransferConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.UpdateTransferConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTransferConfig()
+        [xunit::FactAttribute]
+        public void UpdateTransferConfig()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferConfigRequest expectedRequest = new DeleteTransferConfigRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfig = new TransferConfig(),
+                UpdateMask = new wkt::FieldMask(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            client.DeleteTransferConfig(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteTransferConfigAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferConfigRequest expectedRequest = new DeleteTransferConfigRequest
+            TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            await client.DeleteTransferConfigAsync(name);
+            TransferConfig response = client.UpdateTransferConfig(request.TransferConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTransferConfig2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateTransferConfigAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
+            {
+                TransferConfig = new TransferConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig responseCallSettings = await client.UpdateTransferConfigAsync(request.TransferConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.UpdateTransferConfigAsync(request.TransferConfig, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTransferConfigRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteTransferConfig(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteTransferConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTransferConfigRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteTransferConfigAsync(request);
+            await client.DeleteTransferConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTransferConfigAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTransferConfig()
+        [xunit::FactAttribute]
+        public void DeleteTransferConfig()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferConfigRequest expectedRequest = new GetTransferConfigRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
-            TransferConfig expectedResponse = new TransferConfig
-            {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
-            };
-            mockGrpcClient.Setup(x => x.GetTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            TransferConfig response = client.GetTransferConfig(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteTransferConfig(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTransferConfigAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTransferConfigAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferConfigRequest expectedRequest = new GetTransferConfigRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
-            TransferConfig expectedResponse = new TransferConfig
-            {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
-            };
-            mockGrpcClient.Setup(x => x.GetTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            TransferConfig response = await client.GetTransferConfigAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteTransferConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTransferConfigAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTransferConfig2()
+        [xunit::FactAttribute]
+        public void DeleteTransferConfig_ResourceNames()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTransferConfig(request.TransferConfigName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTransferConfigAsync_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTransferConfigAsync(request.TransferConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTransferConfigAsync(request.TransferConfigName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTransferConfigRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.GetTransferConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             TransferConfig response = client.GetTransferConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTransferConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTransferConfigRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             TransferConfig expectedResponse = new TransferConfig
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DisplayName = "displayName1615086568",
-                DataSourceId = "dataSourceId-1015796374",
-                Schedule = "schedule-697920873",
-                DataRefreshWindowDays = 327632845,
-                Disabled = true,
-                UserId = 147132913L,
-                DatasetRegion = "datasetRegion959248539",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfig response = await client.GetTransferConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            TransferConfig responseCallSettings = await client.GetTransferConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.GetTransferConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ScheduleTransferRuns()
+        [xunit::FactAttribute]
+        public void GetTransferConfig()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            ScheduleTransferRunsRequest expectedRequest = new ScheduleTransferRunsRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
-            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse();
-            mockGrpcClient.Setup(x => x.ScheduleTransferRuns(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            Timestamp startTime = new Timestamp();
-            Timestamp endTime = new Timestamp();
-            ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(parent, startTime, endTime);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ScheduleTransferRunsAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            ScheduleTransferRunsRequest expectedRequest = new ScheduleTransferRunsRequest
+            TransferConfig expectedResponse = new TransferConfig
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
             };
-            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse();
-            mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ScheduleTransferRunsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            Timestamp startTime = new Timestamp();
-            Timestamp endTime = new Timestamp();
-            ScheduleTransferRunsResponse response = await client.ScheduleTransferRunsAsync(parent, startTime, endTime);
-            Assert.Same(expectedResponse, response);
+            TransferConfig response = client.GetTransferConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ScheduleTransferRuns2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTransferConfigAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferConfigRequest request = new GetTransferConfigRequest
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig responseCallSettings = await client.GetTransferConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.GetTransferConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTransferConfig_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferConfigRequest request = new GetTransferConfigRequest
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.GetTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig response = client.GetTransferConfig(request.TransferConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTransferConfigAsync_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferConfigRequest request = new GetTransferConfigRequest
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig responseCallSettings = await client.GetTransferConfigAsync(request.TransferConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.GetTransferConfigAsync(request.TransferConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ScheduleTransferRunsRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
             };
-            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse();
-            mockGrpcClient.Setup(x => x.ScheduleTransferRuns(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse
+            {
+                Runs = { new TransferRun(), },
+            };
+            mockGrpcClient.Setup(x => x.ScheduleTransferRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ScheduleTransferRunsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ScheduleTransferRunsRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
             };
-            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse();
-            mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ScheduleTransferRunsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse
+            {
+                Runs = { new TransferRun(), },
+            };
+            mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScheduleTransferRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            ScheduleTransferRunsResponse response = await client.ScheduleTransferRunsAsync(request);
-            Assert.Same(expectedResponse, response);
+            ScheduleTransferRunsResponse responseCallSettings = await client.ScheduleTransferRunsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ScheduleTransferRunsResponse responseCancellationToken = await client.ScheduleTransferRunsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTransferRun()
+        [xunit::FactAttribute]
+        public void ScheduleTransferRuns()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferRunRequest expectedRequest = new GetTransferRunRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
             };
-            TransferRun expectedResponse = new TransferRun
+            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                Runs = { new TransferRun(), },
             };
-            mockGrpcClient.Setup(x => x.GetTransferRun(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ScheduleTransferRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            TransferRun response = client.GetTransferRun(name);
-            Assert.Same(expectedResponse, response);
+            ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(request.Parent, request.StartTime, request.EndTime);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTransferRunAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ScheduleTransferRunsAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            GetTransferRunRequest expectedRequest = new GetTransferRunRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
             };
-            TransferRun expectedResponse = new TransferRun
+            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                Runs = { new TransferRun(), },
             };
-            mockGrpcClient.Setup(x => x.GetTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScheduleTransferRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            TransferRun response = await client.GetTransferRunAsync(name);
-            Assert.Same(expectedResponse, response);
+            ScheduleTransferRunsResponse responseCallSettings = await client.ScheduleTransferRunsAsync(request.Parent, request.StartTime, request.EndTime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ScheduleTransferRunsResponse responseCancellationToken = await client.ScheduleTransferRunsAsync(request.Parent, request.StartTime, request.EndTime, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTransferRun2()
+        [xunit::FactAttribute]
+        public void ScheduleTransferRuns_ResourceNames()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+            };
+            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse
+            {
+                Runs = { new TransferRun(), },
+            };
+            mockGrpcClient.Setup(x => x.ScheduleTransferRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(request.ParentAsTransferConfigName, request.StartTime, request.EndTime);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ScheduleTransferRunsAsync_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+            };
+            ScheduleTransferRunsResponse expectedResponse = new ScheduleTransferRunsResponse
+            {
+                Runs = { new TransferRun(), },
+            };
+            mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScheduleTransferRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            ScheduleTransferRunsResponse responseCallSettings = await client.ScheduleTransferRunsAsync(request.ParentAsTransferConfigName, request.StartTime, request.EndTime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ScheduleTransferRunsResponse responseCancellationToken = await client.ScheduleTransferRunsAsync(request.ParentAsTransferConfigName, request.StartTime, request.EndTime, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void StartManualTransferRunsRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                RequestedTimeRange = new StartManualTransferRunsRequest.Types.TimeRange(),
+                RequestedRunTime = new wkt::Timestamp(),
+            };
+            StartManualTransferRunsResponse expectedResponse = new StartManualTransferRunsResponse
+            {
+                Runs = { new TransferRun(), },
+            };
+            mockGrpcClient.Setup(x => x.StartManualTransferRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StartManualTransferRunsResponse response = client.StartManualTransferRuns(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task StartManualTransferRunsRequestObjectAsync()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                RequestedTimeRange = new StartManualTransferRunsRequest.Types.TimeRange(),
+                RequestedRunTime = new wkt::Timestamp(),
+            };
+            StartManualTransferRunsResponse expectedResponse = new StartManualTransferRunsResponse
+            {
+                Runs = { new TransferRun(), },
+            };
+            mockGrpcClient.Setup(x => x.StartManualTransferRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StartManualTransferRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            StartManualTransferRunsResponse responseCallSettings = await client.StartManualTransferRunsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            StartManualTransferRunsResponse responseCancellationToken = await client.StartManualTransferRunsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTransferRunRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferRunRequest request = new GetTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             TransferRun expectedResponse = new TransferRun
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                ScheduleTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                State = TransferState.Unspecified,
+                Params = new wkt::Struct(),
+                RunTime = new wkt::Timestamp(),
+                UserId = -7972883667886640920L,
+                Schedule = "schedule59559879",
+                ErrorStatus = new gr::Status(),
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
             };
-            mockGrpcClient.Setup(x => x.GetTransferRun(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTransferRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             TransferRun response = client.GetTransferRun(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTransferRunAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTransferRunRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferRunRequest request = new GetTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             TransferRun expectedResponse = new TransferRun
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-                DestinationDatasetId = "destinationDatasetId1541564179",
-                DataSourceId = "dataSourceId-1015796374",
-                UserId = 147132913L,
-                Schedule = "schedule-697920873",
-                NotificationPubsubTopic = "notificationPubsubTopic1794281191",
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                ScheduleTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                State = TransferState.Unspecified,
+                Params = new wkt::Struct(),
+                RunTime = new wkt::Timestamp(),
+                UserId = -7972883667886640920L,
+                Schedule = "schedule59559879",
+                ErrorStatus = new gr::Status(),
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
             };
-            mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferRun response = await client.GetTransferRunAsync(request);
-            Assert.Same(expectedResponse, response);
+            TransferRun responseCallSettings = await client.GetTransferRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferRun responseCancellationToken = await client.GetTransferRunAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTransferRun()
+        [xunit::FactAttribute]
+        public void GetTransferRun()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferRunRequest expectedRequest = new DeleteTransferRunRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferRunRequest request = new GetTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRun(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            client.DeleteTransferRun(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteTransferRunAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            DeleteTransferRunRequest expectedRequest = new DeleteTransferRunRequest
+            TransferRun expectedResponse = new TransferRun
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                ScheduleTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                State = TransferState.Unspecified,
+                Params = new wkt::Struct(),
+                RunTime = new wkt::Timestamp(),
+                UserId = -7972883667886640920L,
+                Schedule = "schedule59559879",
+                ErrorStatus = new gr::Status(),
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTransferRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            await client.DeleteTransferRunAsync(name);
+            TransferRun response = client.GetTransferRun(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTransferRun2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTransferRunAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferRunRequest request = new GetTransferRunRequest
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            TransferRun expectedResponse = new TransferRun
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                ScheduleTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                State = TransferState.Unspecified,
+                Params = new wkt::Struct(),
+                RunTime = new wkt::Timestamp(),
+                UserId = -7972883667886640920L,
+                Schedule = "schedule59559879",
+                ErrorStatus = new gr::Status(),
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+            };
+            mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRun responseCallSettings = await client.GetTransferRunAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferRun responseCancellationToken = await client.GetTransferRunAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTransferRun_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferRunRequest request = new GetTransferRunRequest
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            TransferRun expectedResponse = new TransferRun
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                ScheduleTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                State = TransferState.Unspecified,
+                Params = new wkt::Struct(),
+                RunTime = new wkt::Timestamp(),
+                UserId = -7972883667886640920L,
+                Schedule = "schedule59559879",
+                ErrorStatus = new gr::Status(),
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+            };
+            mockGrpcClient.Setup(x => x.GetTransferRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRun response = client.GetTransferRun(request.RunName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTransferRunAsync_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            GetTransferRunRequest request = new GetTransferRunRequest
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            TransferRun expectedResponse = new TransferRun
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                ScheduleTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                State = TransferState.Unspecified,
+                Params = new wkt::Struct(),
+                RunTime = new wkt::Timestamp(),
+                UserId = -7972883667886640920L,
+                Schedule = "schedule59559879",
+                ErrorStatus = new gr::Status(),
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+            };
+            mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferRun responseCallSettings = await client.GetTransferRunAsync(request.RunName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferRun responseCancellationToken = await client.GetTransferRunAsync(request.RunName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTransferRunRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferRunRequest request = new DeleteTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRun(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteTransferRun(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteTransferRunAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTransferRunRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferRunRequest request = new DeleteTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteTransferRunAsync(request);
+            await client.DeleteTransferRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTransferRunAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CheckValidCreds()
+        [xunit::FactAttribute]
+        public void DeleteTransferRun()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CheckValidCredsRequest expectedRequest = new CheckValidCredsRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferRunRequest request = new DeleteTransferRunRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
-            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
-            {
-                HasValidCreds = false,
-            };
-            mockGrpcClient.Setup(x => x.CheckValidCreds(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
-            CheckValidCredsResponse response = client.CheckValidCreds(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteTransferRun(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CheckValidCredsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTransferRunAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            CheckValidCredsRequest expectedRequest = new CheckValidCredsRequest
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferRunRequest request = new DeleteTransferRunRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
-            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
-            {
-                HasValidCreds = false,
-            };
-            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CheckValidCredsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
-            CheckValidCredsResponse response = await client.CheckValidCredsAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteTransferRunAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTransferRunAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CheckValidCreds2()
+        [xunit::FactAttribute]
+        public void DeleteTransferRun_ResourceNames()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferRunRequest request = new DeleteTransferRunRequest
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTransferRun(request.RunName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTransferRunAsync_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            DeleteTransferRunRequest request = new DeleteTransferRunRequest
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTransferRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTransferRunAsync(request.RunName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTransferRunAsync(request.RunName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CheckValidCredsRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CheckValidCredsRequest request = new CheckValidCredsRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
             CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
             {
-                HasValidCreds = false,
+                HasValidCreds = true,
             };
-            mockGrpcClient.Setup(x => x.CheckValidCreds(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CheckValidCreds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             CheckValidCredsResponse response = client.CheckValidCreds(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CheckValidCredsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CheckValidCredsRequestObjectAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CheckValidCredsRequest request = new CheckValidCredsRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
             CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
             {
-                HasValidCreds = false,
+                HasValidCreds = true,
             };
-            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CheckValidCredsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckValidCredsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            CheckValidCredsResponse response = await client.CheckValidCredsAsync(request);
-            Assert.Same(expectedResponse, response);
+            CheckValidCredsResponse responseCallSettings = await client.CheckValidCredsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckValidCredsResponse responseCancellationToken = await client.CheckValidCredsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void StartManualTransferRuns()
+        [xunit::FactAttribute]
+        public void CheckValidCreds()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
-            StartManualTransferRunsResponse expectedResponse = new StartManualTransferRunsResponse();
-            mockGrpcClient.Setup(x => x.StartManualTransferRuns(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CheckValidCredsRequest request = new CheckValidCredsRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCreds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            StartManualTransferRunsResponse response = client.StartManualTransferRuns(request);
-            Assert.Same(expectedResponse, response);
+            CheckValidCredsResponse response = client.CheckValidCreds(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task StartManualTransferRunsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CheckValidCredsAsync()
         {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
-            StartManualTransferRunsResponse expectedResponse = new StartManualTransferRunsResponse();
-            mockGrpcClient.Setup(x => x.StartManualTransferRunsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<StartManualTransferRunsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CheckValidCredsRequest request = new CheckValidCredsRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckValidCredsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            StartManualTransferRunsResponse response = await client.StartManualTransferRunsAsync(request);
-            Assert.Same(expectedResponse, response);
+            CheckValidCredsResponse responseCallSettings = await client.CheckValidCredsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckValidCredsResponse responseCancellationToken = await client.CheckValidCredsAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void CheckValidCreds_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CheckValidCredsRequest request = new CheckValidCredsRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCreds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            CheckValidCredsResponse response = client.CheckValidCreds(request.DataSourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CheckValidCredsAsync_ResourceNames()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CheckValidCredsRequest request = new CheckValidCredsRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
+            CheckValidCredsResponse expectedResponse = new CheckValidCredsResponse
+            {
+                HasValidCreds = true,
+            };
+            mockGrpcClient.Setup(x => x.CheckValidCredsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckValidCredsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            CheckValidCredsResponse responseCallSettings = await client.CheckValidCredsAsync(request.DataSourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckValidCredsResponse responseCancellationToken = await client.CheckValidCredsAsync(request.DataSourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
