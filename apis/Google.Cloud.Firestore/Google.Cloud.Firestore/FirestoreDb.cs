@@ -76,11 +76,14 @@ namespace Google.Cloud.Firestore
             WarningLogger = warningLogger;
 
             // TODO: Validate these settings, and potentially make them configurable
-            _batchGetCallSettings = CallSettings.FromCallTiming(CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: new BackoffSettings(TimeSpan.FromMilliseconds(500), TimeSpan.FromSeconds(5), 2.0),
-                timeoutBackoff: new BackoffSettings(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(3), 2.0),
-                Expiration.FromTimeout(TimeSpan.FromMinutes(10)),
-                RetrySettings.FilterForStatusCodes(StatusCode.Unavailable))));
+            var batchGetRetry = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromMilliseconds(500),
+                maxBackoff: TimeSpan.FromSeconds(5),
+                backoffMultiplier: 2.0,
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable));
+            _batchGetCallSettings = CallSettings.FromRetry(batchGetRetry).WithTimeout(TimeSpan.FromMinutes(10));
+
             SerializationContext = GaxPreconditions.CheckNotNull(serializationContext, nameof(serializationContext));
         }
 
