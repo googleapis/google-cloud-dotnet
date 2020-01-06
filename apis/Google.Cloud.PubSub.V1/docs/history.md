@@ -1,5 +1,10 @@
 # Version history
 
+# Version 1.2.0-beta01, released 2020-01-06
+
+- [Commit d859592](https://github.com/googleapis/google-cloud-dotnet/commit/d859592): Fully enable ordering-keys ([issue 3921](https://github.com/googleapis/google-cloud-dotnet/issues/3921))
+- [Commit e13ab00](https://github.com/googleapis/google-cloud-dotnet/commit/e13ab00): Update default settings; add maximum total lease extension ([issue 3920](https://github.com/googleapis/google-cloud-dotnet/issues/3920))
+
 # Version 1.1.0, released 2019-12-10
 
 Note that support is present in the code for ordering keys, but it's currently disabled; it will be enabled in a future release.
