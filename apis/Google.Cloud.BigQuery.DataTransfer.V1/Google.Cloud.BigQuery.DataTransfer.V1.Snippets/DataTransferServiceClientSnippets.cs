@@ -36,8 +36,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
 
             // Sample: ListAllDataSources
             DataTransferServiceClient client = DataTransferServiceClient.Create();
-            ProjectName project = new ProjectName(projectId);
-            PagedEnumerable<ListDataSourcesResponse, DataSource> sources = client.ListDataSources(ParentNameOneof.From(project));
+            ParentName parent = ParentName.FromProject(projectId);
+            PagedEnumerable<ListDataSourcesResponse, DataSource> sources = client.ListDataSources(parent);
             foreach (DataSource source in sources)
             {
                 Console.WriteLine($"{source.DataSourceId}: {source.DisplayName} ({source.Description})");
