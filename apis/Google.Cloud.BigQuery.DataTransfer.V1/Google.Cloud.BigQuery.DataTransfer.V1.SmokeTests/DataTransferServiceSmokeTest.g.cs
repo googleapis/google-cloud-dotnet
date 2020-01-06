@@ -17,15 +17,7 @@
 namespace Google.Cloud.BigQuery.DataTransfer.V1.SmokeTests
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
 
     public class DataTransferServiceSmokeTest
     {
@@ -44,7 +36,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.SmokeTests
             DataTransferServiceClient client = DataTransferServiceClient.Create();
 
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new LocationName(projectId, "us-central1"));
+            ParentName parent = ParentName.FromProjectLocation(projectId, "us-central1");
 
             // Call API method
             PagedEnumerable<ListDataSourcesResponse, DataSource> pagedResponse = client.ListDataSources(parent);
