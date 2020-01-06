@@ -17,61 +17,41 @@
 namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.BigQuery.DataTransfer.V1;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedDataTransferServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedDataTransferServiceClientSnippets
     {
-        /// <summary>Snippet for GetDataSourceAsync</summary>
-        public async Task GetDataSourceAsync()
-        {
-            // Snippet: GetDataSourceAsync(DataSourceNameOneof,CallSettings)
-            // Additional: GetDataSourceAsync(DataSourceNameOneof,CancellationToken)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
-            // Make the request
-            DataSource response = await dataTransferServiceClient.GetDataSourceAsync(name);
-            // End snippet
-        }
-
         /// <summary>Snippet for GetDataSource</summary>
-        public void GetDataSource()
+        public void GetDataSource_RequestObject()
         {
-            // Snippet: GetDataSource(DataSourceNameOneof,CallSettings)
+            // Snippet: GetDataSource(GetDataSourceRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            GetDataSourceRequest request = new GetDataSourceRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
             // Make the request
-            DataSource response = dataTransferServiceClient.GetDataSource(name);
+            DataSource response = dataTransferServiceClient.GetDataSource(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetDataSourceAsync</summary>
         public async Task GetDataSourceAsync_RequestObject()
         {
-            // Snippet: GetDataSourceAsync(GetDataSourceRequest,CallSettings)
-            // Additional: GetDataSourceAsync(GetDataSourceRequest,CancellationToken)
+            // Snippet: GetDataSourceAsync(GetDataSourceRequest, CallSettings)
+            // Additional: GetDataSourceAsync(GetDataSourceRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetDataSourceRequest request = new GetDataSourceRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
             // Make the request
             DataSource response = await dataTransferServiceClient.GetDataSourceAsync(request);
@@ -79,32 +59,120 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetDataSource</summary>
-        public void GetDataSource_RequestObject()
+        public void GetDataSource()
         {
-            // Snippet: GetDataSource(GetDataSourceRequest,CallSettings)
+            // Snippet: GetDataSource(string, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            GetDataSourceRequest request = new GetDataSourceRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
+            string name = "projects/[PROJECT]/dataSources/[DATA_SOURCE]";
             // Make the request
-            DataSource response = dataTransferServiceClient.GetDataSource(request);
+            DataSource response = dataTransferServiceClient.GetDataSource(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListDataSourcesAsync</summary>
-        public async Task ListDataSourcesAsync()
+        /// <summary>Snippet for GetDataSourceAsync</summary>
+        public async Task GetDataSourceAsync()
         {
-            // Snippet: ListDataSourcesAsync(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: GetDataSourceAsync(string, CallSettings)
+            // Additional: GetDataSourceAsync(string, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            string name = "projects/[PROJECT]/dataSources/[DATA_SOURCE]";
             // Make the request
-            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response =
-                dataTransferServiceClient.ListDataSourcesAsync(parent);
+            DataSource response = await dataTransferServiceClient.GetDataSourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSource</summary>
+        public void GetDataSource_ResourceNames()
+        {
+            // Snippet: GetDataSource(DataSourceName, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            DataSourceName name = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]");
+            // Make the request
+            DataSource response = dataTransferServiceClient.GetDataSource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceAsync</summary>
+        public async Task GetDataSourceAsync_ResourceNames()
+        {
+            // Snippet: GetDataSourceAsync(DataSourceName, CallSettings)
+            // Additional: GetDataSourceAsync(DataSourceName, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSourceName name = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]");
+            // Make the request
+            DataSource response = await dataTransferServiceClient.GetDataSourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSources</summary>
+        public void ListDataSources_RequestObject()
+        {
+            // Snippet: ListDataSources(ListDataSourcesRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            ListDataSourcesRequest request = new ListDataSourcesRequest
+            {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSources(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSources</summary>
+        public async Task ListDataSourcesAsync_RequestObject()
+        {
+            // Snippet: ListDataSourcesAsync(ListDataSourcesRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDataSourcesRequest request = new ListDataSourcesRequest
+            {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSourcesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((DataSource item) =>
@@ -120,6 +188,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (DataSource item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -131,6 +200,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (DataSource item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -141,14 +211,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListDataSources</summary>
         public void ListDataSources()
         {
-            // Snippet: ListDataSources(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: ListDataSources(string, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListDataSourcesResponse, DataSource> response =
-                dataTransferServiceClient.ListDataSources(parent);
+            PagedEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSources(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (DataSource item in response)
@@ -164,6 +233,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (DataSource item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -175,6 +245,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (DataSource item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -182,20 +253,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDataSourcesAsync</summary>
-        public async Task ListDataSourcesAsync_RequestObject()
+        /// <summary>Snippet for ListDataSources</summary>
+        public async Task ListDataSourcesAsync()
         {
-            // Snippet: ListDataSourcesAsync(ListDataSourcesRequest,CallSettings)
+            // Snippet: ListDataSourcesAsync(string, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListDataSourcesRequest request = new ListDataSourcesRequest
-            {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-            };
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response =
-                dataTransferServiceClient.ListDataSourcesAsync(request);
+            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSourcesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((DataSource item) =>
@@ -211,6 +278,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (DataSource item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -222,6 +290,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (DataSource item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -230,19 +299,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListDataSources</summary>
-        public void ListDataSources_RequestObject()
+        public void ListDataSources_ResourceNames()
         {
-            // Snippet: ListDataSources(ListDataSourcesRequest,CallSettings)
+            // Snippet: ListDataSources(ParentName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ListDataSourcesRequest request = new ListDataSourcesRequest
-            {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-            };
+            ParentName parent = ParentName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListDataSourcesResponse, DataSource> response =
-                dataTransferServiceClient.ListDataSources(request);
+            PagedEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSources(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (DataSource item in response)
@@ -258,6 +323,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (DataSource item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -269,6 +335,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (DataSource item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -276,47 +343,86 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CreateTransferConfigAsync</summary>
-        public async Task CreateTransferConfigAsync()
+        /// <summary>Snippet for ListDataSources</summary>
+        public async Task ListDataSourcesAsync_ResourceNames()
         {
-            // Snippet: CreateTransferConfigAsync(ParentNameOneof,TransferConfig,CallSettings)
-            // Additional: CreateTransferConfigAsync(ParentNameOneof,TransferConfig,CancellationToken)
+            // Snippet: ListDataSourcesAsync(ParentName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            TransferConfig transferConfig = new TransferConfig();
+            ParentName parent = ParentName.FromProject("[PROJECT]");
             // Make the request
-            TransferConfig response = await dataTransferServiceClient.CreateTransferConfigAsync(parent, transferConfig);
+            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DataSource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDataSourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for CreateTransferConfig</summary>
-        public void CreateTransferConfig()
+        public void CreateTransferConfig_RequestObject()
         {
-            // Snippet: CreateTransferConfig(ParentNameOneof,TransferConfig,CallSettings)
+            // Snippet: CreateTransferConfig(CreateTransferConfigRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            TransferConfig transferConfig = new TransferConfig();
+            CreateTransferConfigRequest request = new CreateTransferConfigRequest
+            {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                TransferConfig = new TransferConfig(),
+                AuthorizationCode = "",
+                VersionInfo = "",
+                ServiceAccountName = "",
+            };
             // Make the request
-            TransferConfig response = dataTransferServiceClient.CreateTransferConfig(parent, transferConfig);
+            TransferConfig response = dataTransferServiceClient.CreateTransferConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateTransferConfigAsync</summary>
         public async Task CreateTransferConfigAsync_RequestObject()
         {
-            // Snippet: CreateTransferConfigAsync(CreateTransferConfigRequest,CallSettings)
-            // Additional: CreateTransferConfigAsync(CreateTransferConfigRequest,CancellationToken)
+            // Snippet: CreateTransferConfigAsync(CreateTransferConfigRequest, CallSettings)
+            // Additional: CreateTransferConfigAsync(CreateTransferConfigRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
+                AuthorizationCode = "",
+                VersionInfo = "",
+                ServiceAccountName = "",
             };
             // Make the request
             TransferConfig response = await dataTransferServiceClient.CreateTransferConfigAsync(request);
@@ -324,41 +430,108 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTransferConfig</summary>
-        public void CreateTransferConfig_RequestObject()
+        public void CreateTransferConfig()
         {
-            // Snippet: CreateTransferConfig(CreateTransferConfigRequest,CallSettings)
+            // Snippet: CreateTransferConfig(string, TransferConfig, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            CreateTransferConfigRequest request = new CreateTransferConfigRequest
+            string parent = "projects/[PROJECT]";
+            TransferConfig transferConfig = new TransferConfig();
+            // Make the request
+            TransferConfig response = dataTransferServiceClient.CreateTransferConfig(parent, transferConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTransferConfigAsync</summary>
+        public async Task CreateTransferConfigAsync()
+        {
+            // Snippet: CreateTransferConfigAsync(string, TransferConfig, CallSettings)
+            // Additional: CreateTransferConfigAsync(string, TransferConfig, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            TransferConfig transferConfig = new TransferConfig();
+            // Make the request
+            TransferConfig response = await dataTransferServiceClient.CreateTransferConfigAsync(parent, transferConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTransferConfig</summary>
+        public void CreateTransferConfig_ResourceNames()
+        {
+            // Snippet: CreateTransferConfig(ParentName, TransferConfig, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            ParentName parent = ParentName.FromProject("[PROJECT]");
+            TransferConfig transferConfig = new TransferConfig();
+            // Make the request
+            TransferConfig response = dataTransferServiceClient.CreateTransferConfig(parent, transferConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTransferConfigAsync</summary>
+        public async Task CreateTransferConfigAsync_ResourceNames()
+        {
+            // Snippet: CreateTransferConfigAsync(ParentName, TransferConfig, CallSettings)
+            // Additional: CreateTransferConfigAsync(ParentName, TransferConfig, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ParentName parent = ParentName.FromProject("[PROJECT]");
+            TransferConfig transferConfig = new TransferConfig();
+            // Make the request
+            TransferConfig response = await dataTransferServiceClient.CreateTransferConfigAsync(parent, transferConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTransferConfig</summary>
+        public void UpdateTransferConfig_RequestObject()
+        {
+            // Snippet: UpdateTransferConfig(UpdateTransferConfigRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
                 TransferConfig = new TransferConfig(),
+                AuthorizationCode = "",
+                UpdateMask = new FieldMask(),
+                VersionInfo = "",
+                ServiceAccountName = "",
             };
             // Make the request
-            TransferConfig response = dataTransferServiceClient.CreateTransferConfig(request);
+            TransferConfig response = dataTransferServiceClient.UpdateTransferConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateTransferConfigAsync</summary>
-        public async Task UpdateTransferConfigAsync()
+        public async Task UpdateTransferConfigAsync_RequestObject()
         {
-            // Snippet: UpdateTransferConfigAsync(TransferConfig,FieldMask,CallSettings)
-            // Additional: UpdateTransferConfigAsync(TransferConfig,FieldMask,CancellationToken)
+            // Snippet: UpdateTransferConfigAsync(UpdateTransferConfigRequest, CallSettings)
+            // Additional: UpdateTransferConfigAsync(UpdateTransferConfigRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfig transferConfig = new TransferConfig();
-            FieldMask updateMask = new FieldMask();
+            UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
+            {
+                TransferConfig = new TransferConfig(),
+                AuthorizationCode = "",
+                UpdateMask = new FieldMask(),
+                VersionInfo = "",
+                ServiceAccountName = "",
+            };
             // Make the request
-            TransferConfig response = await dataTransferServiceClient.UpdateTransferConfigAsync(transferConfig, updateMask);
+            TransferConfig response = await dataTransferServiceClient.UpdateTransferConfigAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateTransferConfig</summary>
         public void UpdateTransferConfig()
         {
-            // Snippet: UpdateTransferConfig(TransferConfig,FieldMask,CallSettings)
+            // Snippet: UpdateTransferConfig(TransferConfig, FieldMask, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
@@ -370,78 +543,47 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateTransferConfigAsync</summary>
-        public async Task UpdateTransferConfigAsync_RequestObject()
+        public async Task UpdateTransferConfigAsync()
         {
-            // Snippet: UpdateTransferConfigAsync(UpdateTransferConfigRequest,CallSettings)
-            // Additional: UpdateTransferConfigAsync(UpdateTransferConfigRequest,CancellationToken)
+            // Snippet: UpdateTransferConfigAsync(TransferConfig, FieldMask, CallSettings)
+            // Additional: UpdateTransferConfigAsync(TransferConfig, FieldMask, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
-            {
-                TransferConfig = new TransferConfig(),
-                UpdateMask = new FieldMask(),
-            };
+            TransferConfig transferConfig = new TransferConfig();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            TransferConfig response = await dataTransferServiceClient.UpdateTransferConfigAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateTransferConfig</summary>
-        public void UpdateTransferConfig_RequestObject()
-        {
-            // Snippet: UpdateTransferConfig(UpdateTransferConfigRequest,CallSettings)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
-            {
-                TransferConfig = new TransferConfig(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            TransferConfig response = dataTransferServiceClient.UpdateTransferConfig(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteTransferConfigAsync</summary>
-        public async Task DeleteTransferConfigAsync()
-        {
-            // Snippet: DeleteTransferConfigAsync(TransferConfigNameOneof,CallSettings)
-            // Additional: DeleteTransferConfigAsync(TransferConfigNameOneof,CancellationToken)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            // Make the request
-            await dataTransferServiceClient.DeleteTransferConfigAsync(name);
+            TransferConfig response = await dataTransferServiceClient.UpdateTransferConfigAsync(transferConfig, updateMask);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTransferConfig</summary>
-        public void DeleteTransferConfig()
+        public void DeleteTransferConfig_RequestObject()
         {
-            // Snippet: DeleteTransferConfig(TransferConfigNameOneof,CallSettings)
+            // Snippet: DeleteTransferConfig(DeleteTransferConfigRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+            };
             // Make the request
-            dataTransferServiceClient.DeleteTransferConfig(name);
+            dataTransferServiceClient.DeleteTransferConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTransferConfigAsync</summary>
         public async Task DeleteTransferConfigAsync_RequestObject()
         {
-            // Snippet: DeleteTransferConfigAsync(DeleteTransferConfigRequest,CallSettings)
-            // Additional: DeleteTransferConfigAsync(DeleteTransferConfigRequest,CancellationToken)
+            // Snippet: DeleteTransferConfigAsync(DeleteTransferConfigRequest, CallSettings)
+            // Additional: DeleteTransferConfigAsync(DeleteTransferConfigRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             await dataTransferServiceClient.DeleteTransferConfigAsync(request);
@@ -449,59 +591,86 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferConfig</summary>
-        public void DeleteTransferConfig_RequestObject()
+        public void DeleteTransferConfig()
         {
-            // Snippet: DeleteTransferConfig(DeleteTransferConfigRequest,CallSettings)
+            // Snippet: DeleteTransferConfig(string, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
-            {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-            };
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
             // Make the request
-            dataTransferServiceClient.DeleteTransferConfig(request);
+            dataTransferServiceClient.DeleteTransferConfig(name);
             // End snippet
         }
 
-        /// <summary>Snippet for GetTransferConfigAsync</summary>
-        public async Task GetTransferConfigAsync()
+        /// <summary>Snippet for DeleteTransferConfigAsync</summary>
+        public async Task DeleteTransferConfigAsync()
         {
-            // Snippet: GetTransferConfigAsync(TransferConfigNameOneof,CallSettings)
-            // Additional: GetTransferConfigAsync(TransferConfigNameOneof,CancellationToken)
+            // Snippet: DeleteTransferConfigAsync(string, CallSettings)
+            // Additional: DeleteTransferConfigAsync(string, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
             // Make the request
-            TransferConfig response = await dataTransferServiceClient.GetTransferConfigAsync(name);
+            await dataTransferServiceClient.DeleteTransferConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTransferConfig</summary>
+        public void DeleteTransferConfig_ResourceNames()
+        {
+            // Snippet: DeleteTransferConfig(TransferConfigName, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            TransferConfigName name = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
+            // Make the request
+            dataTransferServiceClient.DeleteTransferConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTransferConfigAsync</summary>
+        public async Task DeleteTransferConfigAsync_ResourceNames()
+        {
+            // Snippet: DeleteTransferConfigAsync(TransferConfigName, CallSettings)
+            // Additional: DeleteTransferConfigAsync(TransferConfigName, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TransferConfigName name = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
+            // Make the request
+            await dataTransferServiceClient.DeleteTransferConfigAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetTransferConfig</summary>
-        public void GetTransferConfig()
+        public void GetTransferConfig_RequestObject()
         {
-            // Snippet: GetTransferConfig(TransferConfigNameOneof,CallSettings)
+            // Snippet: GetTransferConfig(GetTransferConfigRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof name = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            GetTransferConfigRequest request = new GetTransferConfigRequest
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+            };
             // Make the request
-            TransferConfig response = dataTransferServiceClient.GetTransferConfig(name);
+            TransferConfig response = dataTransferServiceClient.GetTransferConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetTransferConfigAsync</summary>
         public async Task GetTransferConfigAsync_RequestObject()
         {
-            // Snippet: GetTransferConfigAsync(GetTransferConfigRequest,CallSettings)
-            // Additional: GetTransferConfigAsync(GetTransferConfigRequest,CancellationToken)
+            // Snippet: GetTransferConfigAsync(GetTransferConfigRequest, CallSettings)
+            // Additional: GetTransferConfigAsync(GetTransferConfigRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetTransferConfigRequest request = new GetTransferConfigRequest
             {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
             };
             // Make the request
             TransferConfig response = await dataTransferServiceClient.GetTransferConfigAsync(request);
@@ -509,32 +678,122 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferConfig</summary>
-        public void GetTransferConfig_RequestObject()
+        public void GetTransferConfig()
         {
-            // Snippet: GetTransferConfig(GetTransferConfigRequest,CallSettings)
+            // Snippet: GetTransferConfig(string, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            GetTransferConfigRequest request = new GetTransferConfigRequest
-            {
-                TransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-            };
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
             // Make the request
-            TransferConfig response = dataTransferServiceClient.GetTransferConfig(request);
+            TransferConfig response = dataTransferServiceClient.GetTransferConfig(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferConfigsAsync</summary>
-        public async Task ListTransferConfigsAsync()
+        /// <summary>Snippet for GetTransferConfigAsync</summary>
+        public async Task GetTransferConfigAsync()
         {
-            // Snippet: ListTransferConfigsAsync(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: GetTransferConfigAsync(string, CallSettings)
+            // Additional: GetTransferConfigAsync(string, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
             // Make the request
-            PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response =
-                dataTransferServiceClient.ListTransferConfigsAsync(parent);
+            TransferConfig response = await dataTransferServiceClient.GetTransferConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTransferConfig</summary>
+        public void GetTransferConfig_ResourceNames()
+        {
+            // Snippet: GetTransferConfig(TransferConfigName, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            TransferConfigName name = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
+            // Make the request
+            TransferConfig response = dataTransferServiceClient.GetTransferConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTransferConfigAsync</summary>
+        public async Task GetTransferConfigAsync_ResourceNames()
+        {
+            // Snippet: GetTransferConfigAsync(TransferConfigName, CallSettings)
+            // Additional: GetTransferConfigAsync(TransferConfigName, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TransferConfigName name = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
+            // Make the request
+            TransferConfig response = await dataTransferServiceClient.GetTransferConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferConfigs</summary>
+        public void ListTransferConfigs_RequestObject()
+        {
+            // Snippet: ListTransferConfigs(ListTransferConfigsRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
+            {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TransferConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTransferConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferConfigs</summary>
+        public async Task ListTransferConfigsAsync_RequestObject()
+        {
+            // Snippet: ListTransferConfigsAsync(ListTransferConfigsRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
+            {
+                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((TransferConfig item) =>
@@ -550,6 +809,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -561,6 +821,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -571,14 +832,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferConfigs</summary>
         public void ListTransferConfigs()
         {
-            // Snippet: ListTransferConfigs(ParentNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferConfigs(string, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response =
-                dataTransferServiceClient.ListTransferConfigs(parent);
+            PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (TransferConfig item in response)
@@ -594,6 +854,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -605,6 +866,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -612,20 +874,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferConfigsAsync</summary>
-        public async Task ListTransferConfigsAsync_RequestObject()
+        /// <summary>Snippet for ListTransferConfigs</summary>
+        public async Task ListTransferConfigsAsync()
         {
-            // Snippet: ListTransferConfigsAsync(ListTransferConfigsRequest,CallSettings)
+            // Snippet: ListTransferConfigsAsync(string, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListTransferConfigsRequest request = new ListTransferConfigsRequest
-            {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-            };
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response =
-                dataTransferServiceClient.ListTransferConfigsAsync(request);
+            PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((TransferConfig item) =>
@@ -641,6 +899,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -652,6 +911,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -660,19 +920,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferConfigs</summary>
-        public void ListTransferConfigs_RequestObject()
+        public void ListTransferConfigs_ResourceNames()
         {
-            // Snippet: ListTransferConfigs(ListTransferConfigsRequest,CallSettings)
+            // Snippet: ListTransferConfigs(ParentName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ListTransferConfigsRequest request = new ListTransferConfigsRequest
-            {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-            };
+            ParentName parent = ParentName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response =
-                dataTransferServiceClient.ListTransferConfigs(request);
+            PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (TransferConfig item in response)
@@ -688,6 +944,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -699,6 +956,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -706,48 +964,80 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ScheduleTransferRunsAsync</summary>
-        public async Task ScheduleTransferRunsAsync()
+        /// <summary>Snippet for ListTransferConfigs</summary>
+        public async Task ListTransferConfigsAsync_ResourceNames()
         {
-            // Snippet: ScheduleTransferRunsAsync(TransferConfigNameOneof,Timestamp,Timestamp,CallSettings)
-            // Additional: ScheduleTransferRunsAsync(TransferConfigNameOneof,Timestamp,Timestamp,CancellationToken)
+            // Snippet: ListTransferConfigsAsync(ParentName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            Timestamp startTime = new Timestamp();
-            Timestamp endTime = new Timestamp();
+            ParentName parent = ParentName.FromProject("[PROJECT]");
             // Make the request
-            ScheduleTransferRunsResponse response = await dataTransferServiceClient.ScheduleTransferRunsAsync(parent, startTime, endTime);
+            PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TransferConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTransferConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ScheduleTransferRuns</summary>
-        public void ScheduleTransferRuns()
+        public void ScheduleTransferRuns_RequestObject()
         {
-            // Snippet: ScheduleTransferRuns(TransferConfigNameOneof,Timestamp,Timestamp,CallSettings)
+            // Snippet: ScheduleTransferRuns(ScheduleTransferRunsRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
-            Timestamp startTime = new Timestamp();
-            Timestamp endTime = new Timestamp();
+            ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                StartTime = new Timestamp(),
+                EndTime = new Timestamp(),
+            };
             // Make the request
-            ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(parent, startTime, endTime);
+            ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(request);
             // End snippet
         }
 
         /// <summary>Snippet for ScheduleTransferRunsAsync</summary>
         public async Task ScheduleTransferRunsAsync_RequestObject()
         {
-            // Snippet: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest,CallSettings)
-            // Additional: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest,CancellationToken)
+            // Snippet: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest, CallSettings)
+            // Additional: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
             {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
@@ -757,61 +1047,131 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ScheduleTransferRuns</summary>
-        public void ScheduleTransferRuns_RequestObject()
+        public void ScheduleTransferRuns()
         {
-            // Snippet: ScheduleTransferRuns(ScheduleTransferRunsRequest,CallSettings)
+            // Snippet: ScheduleTransferRuns(string, Timestamp, Timestamp, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
-            {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-                StartTime = new Timestamp(),
-                EndTime = new Timestamp(),
-            };
+            string parent = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
+            Timestamp startTime = new Timestamp();
+            Timestamp endTime = new Timestamp();
             // Make the request
-            ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(request);
+            ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(parent, startTime, endTime);
             // End snippet
         }
 
-        /// <summary>Snippet for GetTransferRunAsync</summary>
-        public async Task GetTransferRunAsync()
+        /// <summary>Snippet for ScheduleTransferRunsAsync</summary>
+        public async Task ScheduleTransferRunsAsync()
         {
-            // Snippet: GetTransferRunAsync(RunNameOneof,CallSettings)
-            // Additional: GetTransferRunAsync(RunNameOneof,CancellationToken)
+            // Snippet: ScheduleTransferRunsAsync(string, Timestamp, Timestamp, CallSettings)
+            // Additional: ScheduleTransferRunsAsync(string, Timestamp, Timestamp, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            string parent = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
+            Timestamp startTime = new Timestamp();
+            Timestamp endTime = new Timestamp();
             // Make the request
-            TransferRun response = await dataTransferServiceClient.GetTransferRunAsync(name);
+            ScheduleTransferRunsResponse response = await dataTransferServiceClient.ScheduleTransferRunsAsync(parent, startTime, endTime);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ScheduleTransferRuns</summary>
+        public void ScheduleTransferRuns_ResourceNames()
+        {
+            // Snippet: ScheduleTransferRuns(TransferConfigName, Timestamp, Timestamp, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            TransferConfigName parent = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
+            Timestamp startTime = new Timestamp();
+            Timestamp endTime = new Timestamp();
+            // Make the request
+            ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(parent, startTime, endTime);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ScheduleTransferRunsAsync</summary>
+        public async Task ScheduleTransferRunsAsync_ResourceNames()
+        {
+            // Snippet: ScheduleTransferRunsAsync(TransferConfigName, Timestamp, Timestamp, CallSettings)
+            // Additional: ScheduleTransferRunsAsync(TransferConfigName, Timestamp, Timestamp, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TransferConfigName parent = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
+            Timestamp startTime = new Timestamp();
+            Timestamp endTime = new Timestamp();
+            // Make the request
+            ScheduleTransferRunsResponse response = await dataTransferServiceClient.ScheduleTransferRunsAsync(parent, startTime, endTime);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartManualTransferRuns</summary>
+        public void StartManualTransferRuns_RequestObject()
+        {
+            // Snippet: StartManualTransferRuns(StartManualTransferRunsRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                RequestedTimeRange = new StartManualTransferRunsRequest.Types.TimeRange(),
+                RequestedRunTime = new Timestamp(),
+            };
+            // Make the request
+            StartManualTransferRunsResponse response = dataTransferServiceClient.StartManualTransferRuns(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartManualTransferRunsAsync</summary>
+        public async Task StartManualTransferRunsAsync_RequestObject()
+        {
+            // Snippet: StartManualTransferRunsAsync(StartManualTransferRunsRequest, CallSettings)
+            // Additional: StartManualTransferRunsAsync(StartManualTransferRunsRequest, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                RequestedTimeRange = new StartManualTransferRunsRequest.Types.TimeRange(),
+                RequestedRunTime = new Timestamp(),
+            };
+            // Make the request
+            StartManualTransferRunsResponse response = await dataTransferServiceClient.StartManualTransferRunsAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetTransferRun</summary>
-        public void GetTransferRun()
+        public void GetTransferRun_RequestObject()
         {
-            // Snippet: GetTransferRun(RunNameOneof,CallSettings)
+            // Snippet: GetTransferRun(GetTransferRunRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            GetTransferRunRequest request = new GetTransferRunRequest
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
             // Make the request
-            TransferRun response = dataTransferServiceClient.GetTransferRun(name);
+            TransferRun response = dataTransferServiceClient.GetTransferRun(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetTransferRunAsync</summary>
         public async Task GetTransferRunAsync_RequestObject()
         {
-            // Snippet: GetTransferRunAsync(GetTransferRunRequest,CallSettings)
-            // Additional: GetTransferRunAsync(GetTransferRunRequest,CancellationToken)
+            // Snippet: GetTransferRunAsync(GetTransferRunRequest, CallSettings)
+            // Additional: GetTransferRunAsync(GetTransferRunRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetTransferRunRequest request = new GetTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             TransferRun response = await dataTransferServiceClient.GetTransferRunAsync(request);
@@ -819,59 +1179,86 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferRun</summary>
-        public void GetTransferRun_RequestObject()
+        public void GetTransferRun()
         {
-            // Snippet: GetTransferRun(GetTransferRunRequest,CallSettings)
+            // Snippet: GetTransferRun(string, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            GetTransferRunRequest request = new GetTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]/runs/[RUN]";
             // Make the request
-            TransferRun response = dataTransferServiceClient.GetTransferRun(request);
+            TransferRun response = dataTransferServiceClient.GetTransferRun(name);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteTransferRunAsync</summary>
-        public async Task DeleteTransferRunAsync()
+        /// <summary>Snippet for GetTransferRunAsync</summary>
+        public async Task GetTransferRunAsync()
         {
-            // Snippet: DeleteTransferRunAsync(RunNameOneof,CallSettings)
-            // Additional: DeleteTransferRunAsync(RunNameOneof,CancellationToken)
+            // Snippet: GetTransferRunAsync(string, CallSettings)
+            // Additional: GetTransferRunAsync(string, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]/runs/[RUN]";
             // Make the request
-            await dataTransferServiceClient.DeleteTransferRunAsync(name);
+            TransferRun response = await dataTransferServiceClient.GetTransferRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTransferRun</summary>
+        public void GetTransferRun_ResourceNames()
+        {
+            // Snippet: GetTransferRun(RunName, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            RunName name = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]");
+            // Make the request
+            TransferRun response = dataTransferServiceClient.GetTransferRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTransferRunAsync</summary>
+        public async Task GetTransferRunAsync_ResourceNames()
+        {
+            // Snippet: GetTransferRunAsync(RunName, CallSettings)
+            // Additional: GetTransferRunAsync(RunName, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RunName name = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]");
+            // Make the request
+            TransferRun response = await dataTransferServiceClient.GetTransferRunAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTransferRun</summary>
-        public void DeleteTransferRun()
+        public void DeleteTransferRun_RequestObject()
         {
-            // Snippet: DeleteTransferRun(RunNameOneof,CallSettings)
+            // Snippet: DeleteTransferRun(DeleteTransferRunRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            RunNameOneof name = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            DeleteTransferRunRequest request = new DeleteTransferRunRequest
+            {
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+            };
             // Make the request
-            dataTransferServiceClient.DeleteTransferRun(name);
+            dataTransferServiceClient.DeleteTransferRun(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTransferRunAsync</summary>
         public async Task DeleteTransferRunAsync_RequestObject()
         {
-            // Snippet: DeleteTransferRunAsync(DeleteTransferRunRequest,CallSettings)
-            // Additional: DeleteTransferRunAsync(DeleteTransferRunRequest,CancellationToken)
+            // Snippet: DeleteTransferRunAsync(DeleteTransferRunRequest, CallSettings)
+            // Additional: DeleteTransferRunAsync(DeleteTransferRunRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteTransferRunRequest request = new DeleteTransferRunRequest
             {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                RunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
             };
             // Make the request
             await dataTransferServiceClient.DeleteTransferRunAsync(request);
@@ -879,32 +1266,130 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferRun</summary>
-        public void DeleteTransferRun_RequestObject()
+        public void DeleteTransferRun()
         {
-            // Snippet: DeleteTransferRun(DeleteTransferRunRequest,CallSettings)
+            // Snippet: DeleteTransferRun(string, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            DeleteTransferRunRequest request = new DeleteTransferRunRequest
-            {
-                RunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]/runs/[RUN]";
             // Make the request
-            dataTransferServiceClient.DeleteTransferRun(request);
+            dataTransferServiceClient.DeleteTransferRun(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferRunsAsync</summary>
-        public async Task ListTransferRunsAsync()
+        /// <summary>Snippet for DeleteTransferRunAsync</summary>
+        public async Task DeleteTransferRunAsync()
         {
-            // Snippet: ListTransferRunsAsync(TransferConfigNameOneof,string,int?,CallSettings)
+            // Snippet: DeleteTransferRunAsync(string, CallSettings)
+            // Additional: DeleteTransferRunAsync(string, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            string name = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]/runs/[RUN]";
             // Make the request
-            PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> response =
-                dataTransferServiceClient.ListTransferRunsAsync(parent);
+            await dataTransferServiceClient.DeleteTransferRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTransferRun</summary>
+        public void DeleteTransferRun_ResourceNames()
+        {
+            // Snippet: DeleteTransferRun(RunName, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            RunName name = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]");
+            // Make the request
+            dataTransferServiceClient.DeleteTransferRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTransferRunAsync</summary>
+        public async Task DeleteTransferRunAsync_ResourceNames()
+        {
+            // Snippet: DeleteTransferRunAsync(RunName, CallSettings)
+            // Additional: DeleteTransferRunAsync(RunName, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RunName name = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]");
+            // Make the request
+            await dataTransferServiceClient.DeleteTransferRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferRuns</summary>
+        public void ListTransferRuns_RequestObject()
+        {
+            // Snippet: ListTransferRuns(ListTransferRunsRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            ListTransferRunsRequest request = new ListTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                States =
+                {
+                    TransferState.Unspecified,
+                },
+                RunAttempt = ListTransferRunsRequest.Types.RunAttempt.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListTransferRunsResponse, TransferRun> response = dataTransferServiceClient.ListTransferRuns(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TransferRun item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTransferRunsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferRun> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferRuns</summary>
+        public async Task ListTransferRunsAsync_RequestObject()
+        {
+            // Snippet: ListTransferRunsAsync(ListTransferRunsRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTransferRunsRequest request = new ListTransferRunsRequest
+            {
+                ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                States =
+                {
+                    TransferState.Unspecified,
+                },
+                RunAttempt = ListTransferRunsRequest.Types.RunAttempt.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> response = dataTransferServiceClient.ListTransferRunsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((TransferRun item) =>
@@ -920,6 +1405,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferRun item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -931,6 +1417,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferRun item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -941,14 +1428,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferRuns</summary>
         public void ListTransferRuns()
         {
-            // Snippet: ListTransferRuns(TransferConfigNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferRuns(string, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            TransferConfigNameOneof parent = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]"));
+            string parent = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
             // Make the request
-            PagedEnumerable<ListTransferRunsResponse, TransferRun> response =
-                dataTransferServiceClient.ListTransferRuns(parent);
+            PagedEnumerable<ListTransferRunsResponse, TransferRun> response = dataTransferServiceClient.ListTransferRuns(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (TransferRun item in response)
@@ -964,6 +1450,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferRun item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -975,6 +1462,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferRun item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -982,20 +1470,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferRunsAsync</summary>
-        public async Task ListTransferRunsAsync_RequestObject()
+        /// <summary>Snippet for ListTransferRuns</summary>
+        public async Task ListTransferRunsAsync()
         {
-            // Snippet: ListTransferRunsAsync(ListTransferRunsRequest,CallSettings)
+            // Snippet: ListTransferRunsAsync(string, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListTransferRunsRequest request = new ListTransferRunsRequest
-            {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-            };
+            string parent = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]";
             // Make the request
-            PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> response =
-                dataTransferServiceClient.ListTransferRunsAsync(request);
+            PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> response = dataTransferServiceClient.ListTransferRunsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((TransferRun item) =>
@@ -1011,6 +1495,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferRun item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -1022,6 +1507,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferRun item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -1030,19 +1516,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferRuns</summary>
-        public void ListTransferRuns_RequestObject()
+        public void ListTransferRuns_ResourceNames()
         {
-            // Snippet: ListTransferRuns(ListTransferRunsRequest,CallSettings)
+            // Snippet: ListTransferRuns(TransferConfigName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ListTransferRunsRequest request = new ListTransferRunsRequest
-            {
-                ParentAsTransferConfigNameOneof = TransferConfigNameOneof.From(new ProjectTransferConfigName("[PROJECT]", "[TRANSFER_CONFIG]")),
-            };
+            TransferConfigName parent = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
-            PagedEnumerable<ListTransferRunsResponse, TransferRun> response =
-                dataTransferServiceClient.ListTransferRuns(request);
+            PagedEnumerable<ListTransferRunsResponse, TransferRun> response = dataTransferServiceClient.ListTransferRuns(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (TransferRun item in response)
@@ -1058,6 +1540,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferRun item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -1069,6 +1552,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferRun item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -1076,134 +1560,44 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferLogsAsync</summary>
-        public async Task ListTransferLogsAsync()
+        /// <summary>Snippet for ListTransferRuns</summary>
+        public async Task ListTransferRunsAsync_ResourceNames()
         {
-            // Snippet: ListTransferLogsAsync(RunNameOneof,string,int?,CallSettings)
+            // Snippet: ListTransferRunsAsync(TransferConfigName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunNameOneof parent = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
+            TransferConfigName parent = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]");
             // Make the request
-            PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> response =
-                dataTransferServiceClient.ListTransferLogsAsync(parent);
+            PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> response = dataTransferServiceClient.ListTransferRunsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TransferMessage item) =>
+            await response.ForEachAsync((TransferRun item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTransferLogsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((ListTransferRunsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (TransferMessage item in page)
+                foreach (TransferRun item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<TransferMessage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<TransferRun> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (TransferMessage item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListTransferLogs</summary>
-        public void ListTransferLogs()
-        {
-            // Snippet: ListTransferLogs(RunNameOneof,string,int?,CallSettings)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
-            // Initialize request argument(s)
-            RunNameOneof parent = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"));
-            // Make the request
-            PagedEnumerable<ListTransferLogsResponse, TransferMessage> response =
-                dataTransferServiceClient.ListTransferLogs(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (TransferMessage item in response)
+            foreach (TransferRun item in singlePage)
             {
                 // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTransferLogsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (TransferMessage item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<TransferMessage> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (TransferMessage item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListTransferLogsAsync</summary>
-        public async Task ListTransferLogsAsync_RequestObject()
-        {
-            // Snippet: ListTransferLogsAsync(ListTransferLogsRequest,CallSettings)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListTransferLogsRequest request = new ListTransferLogsRequest
-            {
-                ParentAsRunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> response =
-                dataTransferServiceClient.ListTransferLogsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TransferMessage item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTransferLogsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (TransferMessage item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<TransferMessage> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (TransferMessage item in singlePage)
-            {
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -1214,17 +1608,20 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         /// <summary>Snippet for ListTransferLogs</summary>
         public void ListTransferLogs_RequestObject()
         {
-            // Snippet: ListTransferLogs(ListTransferLogsRequest,CallSettings)
+            // Snippet: ListTransferLogs(ListTransferLogsRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
             ListTransferLogsRequest request = new ListTransferLogsRequest
             {
-                ParentAsRunNameOneof = RunNameOneof.From(new ProjectRunName("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]")),
+                ParentAsRunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                MessageTypes =
+                {
+                    TransferMessage.Types.MessageSeverity.Unspecified,
+                },
             };
             // Make the request
-            PagedEnumerable<ListTransferLogsResponse, TransferMessage> response =
-                dataTransferServiceClient.ListTransferLogs(request);
+            PagedEnumerable<ListTransferLogsResponse, TransferMessage> response = dataTransferServiceClient.ListTransferLogs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (TransferMessage item in response)
@@ -1240,6 +1637,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TransferMessage item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -1251,6 +1649,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransferMessage item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -1258,44 +1657,265 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CheckValidCredsAsync</summary>
-        public async Task CheckValidCredsAsync()
+        /// <summary>Snippet for ListTransferLogs</summary>
+        public async Task ListTransferLogsAsync_RequestObject()
         {
-            // Snippet: CheckValidCredsAsync(DataSourceNameOneof,CallSettings)
-            // Additional: CheckValidCredsAsync(DataSourceNameOneof,CancellationToken)
+            // Snippet: ListTransferLogsAsync(ListTransferLogsRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            ListTransferLogsRequest request = new ListTransferLogsRequest
+            {
+                ParentAsRunName = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]"),
+                MessageTypes =
+                {
+                    TransferMessage.Types.MessageSeverity.Unspecified,
+                },
+            };
             // Make the request
-            CheckValidCredsResponse response = await dataTransferServiceClient.CheckValidCredsAsync(name);
+            PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> response = dataTransferServiceClient.ListTransferLogsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TransferMessage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTransferLogsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferMessage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferMessage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferMessage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferLogs</summary>
+        public void ListTransferLogs()
+        {
+            // Snippet: ListTransferLogs(string, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]/runs/[RUN]";
+            // Make the request
+            PagedEnumerable<ListTransferLogsResponse, TransferMessage> response = dataTransferServiceClient.ListTransferLogs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TransferMessage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTransferLogsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferMessage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferMessage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferMessage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferLogs</summary>
+        public async Task ListTransferLogsAsync()
+        {
+            // Snippet: ListTransferLogsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/transferConfigs/[TRANSFER_CONFIG]/runs/[RUN]";
+            // Make the request
+            PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> response = dataTransferServiceClient.ListTransferLogsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TransferMessage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTransferLogsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferMessage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferMessage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferMessage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferLogs</summary>
+        public void ListTransferLogs_ResourceNames()
+        {
+            // Snippet: ListTransferLogs(RunName, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            RunName parent = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]");
+            // Make the request
+            PagedEnumerable<ListTransferLogsResponse, TransferMessage> response = dataTransferServiceClient.ListTransferLogs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TransferMessage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTransferLogsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferMessage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferMessage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferMessage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferLogs</summary>
+        public async Task ListTransferLogsAsync_ResourceNames()
+        {
+            // Snippet: ListTransferLogsAsync(RunName, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RunName parent = RunName.FromProjectTransferConfigRun("[PROJECT]", "[TRANSFER_CONFIG]", "[RUN]");
+            // Make the request
+            PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> response = dataTransferServiceClient.ListTransferLogsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TransferMessage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTransferLogsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferMessage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferMessage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferMessage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for CheckValidCreds</summary>
-        public void CheckValidCreds()
+        public void CheckValidCreds_RequestObject()
         {
-            // Snippet: CheckValidCreds(DataSourceNameOneof,CallSettings)
+            // Snippet: CheckValidCreds(CheckValidCredsRequest, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            DataSourceNameOneof name = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]"));
+            CheckValidCredsRequest request = new CheckValidCredsRequest
+            {
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
+            };
             // Make the request
-            CheckValidCredsResponse response = dataTransferServiceClient.CheckValidCreds(name);
+            CheckValidCredsResponse response = dataTransferServiceClient.CheckValidCreds(request);
             // End snippet
         }
 
         /// <summary>Snippet for CheckValidCredsAsync</summary>
         public async Task CheckValidCredsAsync_RequestObject()
         {
-            // Snippet: CheckValidCredsAsync(CheckValidCredsRequest,CallSettings)
-            // Additional: CheckValidCredsAsync(CheckValidCredsRequest,CancellationToken)
+            // Snippet: CheckValidCredsAsync(CheckValidCredsRequest, CallSettings)
+            // Additional: CheckValidCredsAsync(CheckValidCredsRequest, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
             CheckValidCredsRequest request = new CheckValidCredsRequest
             {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
+                DataSourceName = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]"),
             };
             // Make the request
             CheckValidCredsResponse response = await dataTransferServiceClient.CheckValidCredsAsync(request);
@@ -1303,47 +1923,57 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CheckValidCreds</summary>
-        public void CheckValidCreds_RequestObject()
+        public void CheckValidCreds()
         {
-            // Snippet: CheckValidCreds(CheckValidCredsRequest,CallSettings)
+            // Snippet: CheckValidCreds(string, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            CheckValidCredsRequest request = new CheckValidCredsRequest
-            {
-                DataSourceNameOneof = DataSourceNameOneof.From(new ProjectDataSourceName("[PROJECT]", "[DATA_SOURCE]")),
-            };
+            string name = "projects/[PROJECT]/dataSources/[DATA_SOURCE]";
             // Make the request
-            CheckValidCredsResponse response = dataTransferServiceClient.CheckValidCreds(request);
+            CheckValidCredsResponse response = dataTransferServiceClient.CheckValidCreds(name);
             // End snippet
         }
 
-        /// <summary>Snippet for StartManualTransferRunsAsync</summary>
-        public async Task StartManualTransferRunsAsync_RequestObject()
+        /// <summary>Snippet for CheckValidCredsAsync</summary>
+        public async Task CheckValidCredsAsync()
         {
-            // Snippet: StartManualTransferRunsAsync(StartManualTransferRunsRequest,CallSettings)
-            // Additional: StartManualTransferRunsAsync(StartManualTransferRunsRequest,CancellationToken)
+            // Snippet: CheckValidCredsAsync(string, CallSettings)
+            // Additional: CheckValidCredsAsync(string, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
+            string name = "projects/[PROJECT]/dataSources/[DATA_SOURCE]";
             // Make the request
-            StartManualTransferRunsResponse response = await dataTransferServiceClient.StartManualTransferRunsAsync(request);
+            CheckValidCredsResponse response = await dataTransferServiceClient.CheckValidCredsAsync(name);
             // End snippet
         }
 
-        /// <summary>Snippet for StartManualTransferRuns</summary>
-        public void StartManualTransferRuns_RequestObject()
+        /// <summary>Snippet for CheckValidCreds</summary>
+        public void CheckValidCreds_ResourceNames()
         {
-            // Snippet: StartManualTransferRuns(StartManualTransferRunsRequest,CallSettings)
+            // Snippet: CheckValidCreds(DataSourceName, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            StartManualTransferRunsRequest request = new StartManualTransferRunsRequest();
+            DataSourceName name = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]");
             // Make the request
-            StartManualTransferRunsResponse response = dataTransferServiceClient.StartManualTransferRuns(request);
+            CheckValidCredsResponse response = dataTransferServiceClient.CheckValidCreds(name);
             // End snippet
         }
 
+        /// <summary>Snippet for CheckValidCredsAsync</summary>
+        public async Task CheckValidCredsAsync_ResourceNames()
+        {
+            // Snippet: CheckValidCredsAsync(DataSourceName, CallSettings)
+            // Additional: CheckValidCredsAsync(DataSourceName, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSourceName name = DataSourceName.FromProjectDataSource("[PROJECT]", "[DATA_SOURCE]");
+            // Make the request
+            CheckValidCredsResponse response = await dataTransferServiceClient.CheckValidCredsAsync(name);
+            // End snippet
+        }
     }
 }
