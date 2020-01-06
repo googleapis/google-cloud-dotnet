@@ -1,9 +1,8 @@
 [
   {
     "id": "Google.Cloud.Asset.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/asset/v1",
-    "serviceYaml": "cloudasset_v1.yaml",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
     "version": "2.0.0-alpha00",
