@@ -24,7 +24,6 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -563,13 +562,13 @@ namespace Google.Cloud.Trace.V1
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(grpcClient.ListTracesAsync, grpcClient.ListTraces, effectiveSettings.ListTracesSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={(sysnet::WebUtility.UrlEncode(request.ProjectId))}"));
+            _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(grpcClient.ListTracesAsync, grpcClient.ListTraces, effectiveSettings.ListTracesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListTraces);
             Modify_ListTracesApiCall(ref _callListTraces);
-            _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(grpcClient.GetTraceAsync, grpcClient.GetTrace, effectiveSettings.GetTraceSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={(sysnet::WebUtility.UrlEncode(request.ProjectId))}&trace_id={(sysnet::WebUtility.UrlEncode(request.TraceId))}"));
+            _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(grpcClient.GetTraceAsync, grpcClient.GetTrace, effectiveSettings.GetTraceSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trace_id", request => request.TraceId);
             Modify_ApiCall(ref _callGetTrace);
             Modify_GetTraceApiCall(ref _callGetTrace);
-            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, wkt::Empty>(grpcClient.PatchTracesAsync, grpcClient.PatchTraces, effectiveSettings.PatchTracesSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={(sysnet::WebUtility.UrlEncode(request.ProjectId))}"));
+            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, wkt::Empty>(grpcClient.PatchTracesAsync, grpcClient.PatchTraces, effectiveSettings.PatchTracesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callPatchTraces);
             Modify_PatchTracesApiCall(ref _callPatchTraces);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
