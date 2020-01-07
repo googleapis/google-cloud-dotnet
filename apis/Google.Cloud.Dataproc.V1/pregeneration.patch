@@ -1,0 +1,23 @@
+--- a/googleapis/google/cloud/dataproc/v1/autoscaling_policies.proto
++++ b/googleapis/google/cloud/dataproc/v1/autoscaling_policies.proto
+@@ -94,11 +94,20 @@ service AutoscalingPolicyService {
+   }
+ }
+ 
++// The parent virtual resource for resources which can be region or location// based,
++// e.g. autoscaling policies.
++option (google.api.resource_definition) = {
++  type: "dataproc.googleapis.com/RegionOrLocation"
++  pattern: "projects/{project}/regions/{region}"
++  pattern: "projects/{project}/locations/{location}"
++};
++
+ // Describes an autoscaling policy for Dataproc cluster autoscaler.
+ message AutoscalingPolicy {
+   option (google.api.resource) = {
+     type: "dataproc.googleapis.com/AutoscalingPolicy"
+     pattern: "projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}"
++    pattern: "projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}"
+   };
+ 
+   // Required. The policy id.
