@@ -409,7 +409,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentName parent = AgentName.FromProject("[PROJECT]");
             string languageCode = "";
             // Make the request
-            PagedEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntents(parent, languageCode);
+            PagedEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntents(parent: parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Intent item in response)
@@ -455,7 +455,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentName parent = AgentName.FromProject("[PROJECT]");
             string languageCode = "";
             // Make the request
-            PagedAsyncEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntentsAsync(parent, languageCode);
+            PagedAsyncEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntentsAsync(parent: parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Intent item) =>
