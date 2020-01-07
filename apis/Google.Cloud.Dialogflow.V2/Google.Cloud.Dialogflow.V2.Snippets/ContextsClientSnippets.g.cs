@@ -17,33 +17,69 @@
 namespace Google.Cloud.Dialogflow.V2.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedContextsClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedContextsClientSnippets
     {
-        /// <summary>Snippet for ListContextsAsync</summary>
-        public async Task ListContextsAsync()
+        /// <summary>Snippet for ListContexts</summary>
+        public void ListContexts_RequestObject()
         {
-            // Snippet: ListContextsAsync(SessionName,string,int?,CallSettings)
+            // Snippet: ListContexts(ListContextsRequest, CallSettings)
+            // Create client
+            ContextsClient contextsClient = ContextsClient.Create();
+            // Initialize request argument(s)
+            ListContextsRequest request = new ListContextsRequest { Parent = "", };
+            // Make the request
+            PagedEnumerable<ListContextsResponse, Context> response = contextsClient.ListContexts(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Context item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListContextsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Context item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Context> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Context item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContexts</summary>
+        public async Task ListContextsAsync_RequestObject()
+        {
+            // Snippet: ListContextsAsync(ListContextsRequest, CallSettings)
             // Create client
             ContextsClient contextsClient = await ContextsClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
+            ListContextsRequest request = new ListContextsRequest { Parent = "", };
             // Make the request
-            PagedAsyncEnumerable<ListContextsResponse, Context> response =
-                contextsClient.ListContextsAsync(parent);
+            PagedAsyncEnumerable<ListContextsResponse, Context> response = contextsClient.ListContextsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Context item) =>
@@ -59,6 +95,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Context item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -70,6 +107,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Context item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -80,14 +118,13 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for ListContexts</summary>
         public void ListContexts()
         {
-            // Snippet: ListContexts(SessionName,string,int?,CallSettings)
+            // Snippet: ListContexts(string, string, int?, CallSettings)
             // Create client
             ContextsClient contextsClient = ContextsClient.Create();
             // Initialize request argument(s)
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
+            string parent = "";
             // Make the request
-            PagedEnumerable<ListContextsResponse, Context> response =
-                contextsClient.ListContexts(parent);
+            PagedEnumerable<ListContextsResponse, Context> response = contextsClient.ListContexts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Context item in response)
@@ -103,6 +140,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Context item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -114,6 +152,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Context item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -121,20 +160,16 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListContextsAsync</summary>
-        public async Task ListContextsAsync_RequestObject()
+        /// <summary>Snippet for ListContexts</summary>
+        public async Task ListContextsAsync()
         {
-            // Snippet: ListContextsAsync(ListContextsRequest,CallSettings)
+            // Snippet: ListContextsAsync(string, string, int?, CallSettings)
             // Create client
             ContextsClient contextsClient = await ContextsClient.CreateAsync();
             // Initialize request argument(s)
-            ListContextsRequest request = new ListContextsRequest
-            {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-            };
+            string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListContextsResponse, Context> response =
-                contextsClient.ListContextsAsync(request);
+            PagedAsyncEnumerable<ListContextsResponse, Context> response = contextsClient.ListContextsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Context item) =>
@@ -150,6 +185,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Context item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -161,177 +197,57 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Context item in singlePage)
             {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListContexts</summary>
-        public void ListContexts_RequestObject()
-        {
-            // Snippet: ListContexts(ListContextsRequest,CallSettings)
-            // Create client
-            ContextsClient contextsClient = ContextsClient.Create();
-            // Initialize request argument(s)
-            ListContextsRequest request = new ListContextsRequest
-            {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-            };
-            // Make the request
-            PagedEnumerable<ListContextsResponse, Context> response =
-                contextsClient.ListContexts(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (Context item in response)
-            {
                 // Do something with each item
                 Console.WriteLine(item);
             }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListContextsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Context item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Context> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Context item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetContextAsync</summary>
-        public async Task GetContextAsync()
-        {
-            // Snippet: GetContextAsync(ContextName,CallSettings)
-            // Additional: GetContextAsync(ContextName,CancellationToken)
-            // Create client
-            ContextsClient contextsClient = await ContextsClient.CreateAsync();
-            // Initialize request argument(s)
-            ContextName name = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]");
-            // Make the request
-            Context response = await contextsClient.GetContextAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetContext</summary>
-        public void GetContext()
-        {
-            // Snippet: GetContext(ContextName,CallSettings)
-            // Create client
-            ContextsClient contextsClient = ContextsClient.Create();
-            // Initialize request argument(s)
-            ContextName name = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]");
-            // Make the request
-            Context response = contextsClient.GetContext(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetContextAsync</summary>
-        public async Task GetContextAsync_RequestObject()
-        {
-            // Snippet: GetContextAsync(GetContextRequest,CallSettings)
-            // Additional: GetContextAsync(GetContextRequest,CancellationToken)
-            // Create client
-            ContextsClient contextsClient = await ContextsClient.CreateAsync();
-            // Initialize request argument(s)
-            GetContextRequest request = new GetContextRequest
-            {
-                ContextName = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]"),
-            };
-            // Make the request
-            Context response = await contextsClient.GetContextAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetContext</summary>
         public void GetContext_RequestObject()
         {
-            // Snippet: GetContext(GetContextRequest,CallSettings)
+            // Snippet: GetContext(GetContextRequest, CallSettings)
             // Create client
             ContextsClient contextsClient = ContextsClient.Create();
             // Initialize request argument(s)
             GetContextRequest request = new GetContextRequest
             {
-                ContextName = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
             };
             // Make the request
             Context response = contextsClient.GetContext(request);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateContextAsync</summary>
-        public async Task CreateContextAsync()
+        /// <summary>Snippet for GetContextAsync</summary>
+        public async Task GetContextAsync_RequestObject()
         {
-            // Snippet: CreateContextAsync(SessionName,Context,CallSettings)
-            // Additional: CreateContextAsync(SessionName,Context,CancellationToken)
+            // Snippet: GetContextAsync(GetContextRequest, CallSettings)
+            // Additional: GetContextAsync(GetContextRequest, CancellationToken)
             // Create client
             ContextsClient contextsClient = await ContextsClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
-            Context context = new Context();
-            // Make the request
-            Context response = await contextsClient.CreateContextAsync(parent, context);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateContext</summary>
-        public void CreateContext()
-        {
-            // Snippet: CreateContext(SessionName,Context,CallSettings)
-            // Create client
-            ContextsClient contextsClient = ContextsClient.Create();
-            // Initialize request argument(s)
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
-            Context context = new Context();
-            // Make the request
-            Context response = contextsClient.CreateContext(parent, context);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateContextAsync</summary>
-        public async Task CreateContextAsync_RequestObject()
-        {
-            // Snippet: CreateContextAsync(CreateContextRequest,CallSettings)
-            // Additional: CreateContextAsync(CreateContextRequest,CancellationToken)
-            // Create client
-            ContextsClient contextsClient = await ContextsClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateContextRequest request = new CreateContextRequest
+            GetContextRequest request = new GetContextRequest
             {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-                Context = new Context(),
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
             };
             // Make the request
-            Context response = await contextsClient.CreateContextAsync(request);
+            Context response = await contextsClient.GetContextAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateContext</summary>
         public void CreateContext_RequestObject()
         {
-            // Snippet: CreateContext(CreateContextRequest,CallSettings)
+            // Snippet: CreateContext(CreateContextRequest, CallSettings)
             // Create client
             ContextsClient contextsClient = ContextsClient.Create();
             // Initialize request argument(s)
             CreateContextRequest request = new CreateContextRequest
             {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
+                Parent = "",
                 Context = new Context(),
             };
             // Make the request
@@ -339,185 +255,117 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateContextAsync</summary>
-        public async Task UpdateContextAsync()
+        /// <summary>Snippet for CreateContextAsync</summary>
+        public async Task CreateContextAsync_RequestObject()
         {
-            // Snippet: UpdateContextAsync(Context,CallSettings)
-            // Additional: UpdateContextAsync(Context,CancellationToken)
+            // Snippet: CreateContextAsync(CreateContextRequest, CallSettings)
+            // Additional: CreateContextAsync(CreateContextRequest, CancellationToken)
             // Create client
             ContextsClient contextsClient = await ContextsClient.CreateAsync();
             // Initialize request argument(s)
-            Context context = new Context();
-            // Make the request
-            Context response = await contextsClient.UpdateContextAsync(context);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateContext</summary>
-        public void UpdateContext()
-        {
-            // Snippet: UpdateContext(Context,CallSettings)
-            // Create client
-            ContextsClient contextsClient = ContextsClient.Create();
-            // Initialize request argument(s)
-            Context context = new Context();
-            // Make the request
-            Context response = contextsClient.UpdateContext(context);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateContextAsync</summary>
-        public async Task UpdateContextAsync_RequestObject()
-        {
-            // Snippet: UpdateContextAsync(UpdateContextRequest,CallSettings)
-            // Additional: UpdateContextAsync(UpdateContextRequest,CancellationToken)
-            // Create client
-            ContextsClient contextsClient = await ContextsClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateContextRequest request = new UpdateContextRequest
+            CreateContextRequest request = new CreateContextRequest
             {
+                Parent = "",
                 Context = new Context(),
             };
             // Make the request
-            Context response = await contextsClient.UpdateContextAsync(request);
+            Context response = await contextsClient.CreateContextAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateContext</summary>
         public void UpdateContext_RequestObject()
         {
-            // Snippet: UpdateContext(UpdateContextRequest,CallSettings)
+            // Snippet: UpdateContext(UpdateContextRequest, CallSettings)
             // Create client
             ContextsClient contextsClient = ContextsClient.Create();
             // Initialize request argument(s)
             UpdateContextRequest request = new UpdateContextRequest
             {
                 Context = new Context(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Context response = contextsClient.UpdateContext(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteContextAsync</summary>
-        public async Task DeleteContextAsync()
+        /// <summary>Snippet for UpdateContextAsync</summary>
+        public async Task UpdateContextAsync_RequestObject()
         {
-            // Snippet: DeleteContextAsync(ContextName,CallSettings)
-            // Additional: DeleteContextAsync(ContextName,CancellationToken)
+            // Snippet: UpdateContextAsync(UpdateContextRequest, CallSettings)
+            // Additional: UpdateContextAsync(UpdateContextRequest, CancellationToken)
             // Create client
             ContextsClient contextsClient = await ContextsClient.CreateAsync();
             // Initialize request argument(s)
-            ContextName name = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]");
-            // Make the request
-            await contextsClient.DeleteContextAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteContext</summary>
-        public void DeleteContext()
-        {
-            // Snippet: DeleteContext(ContextName,CallSettings)
-            // Create client
-            ContextsClient contextsClient = ContextsClient.Create();
-            // Initialize request argument(s)
-            ContextName name = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]");
-            // Make the request
-            contextsClient.DeleteContext(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteContextAsync</summary>
-        public async Task DeleteContextAsync_RequestObject()
-        {
-            // Snippet: DeleteContextAsync(DeleteContextRequest,CallSettings)
-            // Additional: DeleteContextAsync(DeleteContextRequest,CancellationToken)
-            // Create client
-            ContextsClient contextsClient = await ContextsClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteContextRequest request = new DeleteContextRequest
+            UpdateContextRequest request = new UpdateContextRequest
             {
-                ContextName = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                Context = new Context(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            await contextsClient.DeleteContextAsync(request);
+            Context response = await contextsClient.UpdateContextAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteContext</summary>
         public void DeleteContext_RequestObject()
         {
-            // Snippet: DeleteContext(DeleteContextRequest,CallSettings)
+            // Snippet: DeleteContext(DeleteContextRequest, CallSettings)
             // Create client
             ContextsClient contextsClient = ContextsClient.Create();
             // Initialize request argument(s)
             DeleteContextRequest request = new DeleteContextRequest
             {
-                ContextName = new ContextName("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
             };
             // Make the request
             contextsClient.DeleteContext(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteAllContextsAsync</summary>
-        public async Task DeleteAllContextsAsync()
+        /// <summary>Snippet for DeleteContextAsync</summary>
+        public async Task DeleteContextAsync_RequestObject()
         {
-            // Snippet: DeleteAllContextsAsync(SessionName,CallSettings)
-            // Additional: DeleteAllContextsAsync(SessionName,CancellationToken)
+            // Snippet: DeleteContextAsync(DeleteContextRequest, CallSettings)
+            // Additional: DeleteContextAsync(DeleteContextRequest, CancellationToken)
             // Create client
             ContextsClient contextsClient = await ContextsClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
-            // Make the request
-            await contextsClient.DeleteAllContextsAsync(parent);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAllContexts</summary>
-        public void DeleteAllContexts()
-        {
-            // Snippet: DeleteAllContexts(SessionName,CallSettings)
-            // Create client
-            ContextsClient contextsClient = ContextsClient.Create();
-            // Initialize request argument(s)
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
-            // Make the request
-            contextsClient.DeleteAllContexts(parent);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAllContextsAsync</summary>
-        public async Task DeleteAllContextsAsync_RequestObject()
-        {
-            // Snippet: DeleteAllContextsAsync(DeleteAllContextsRequest,CallSettings)
-            // Additional: DeleteAllContextsAsync(DeleteAllContextsRequest,CancellationToken)
-            // Create client
-            ContextsClient contextsClient = await ContextsClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteAllContextsRequest request = new DeleteAllContextsRequest
+            DeleteContextRequest request = new DeleteContextRequest
             {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
             };
             // Make the request
-            await contextsClient.DeleteAllContextsAsync(request);
+            await contextsClient.DeleteContextAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteAllContexts</summary>
         public void DeleteAllContexts_RequestObject()
         {
-            // Snippet: DeleteAllContexts(DeleteAllContextsRequest,CallSettings)
+            // Snippet: DeleteAllContexts(DeleteAllContextsRequest, CallSettings)
             // Create client
             ContextsClient contextsClient = ContextsClient.Create();
             // Initialize request argument(s)
-            DeleteAllContextsRequest request = new DeleteAllContextsRequest
-            {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-            };
+            DeleteAllContextsRequest request = new DeleteAllContextsRequest { Parent = "", };
             // Make the request
             contextsClient.DeleteAllContexts(request);
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteAllContextsAsync</summary>
+        public async Task DeleteAllContextsAsync_RequestObject()
+        {
+            // Snippet: DeleteAllContextsAsync(DeleteAllContextsRequest, CallSettings)
+            // Additional: DeleteAllContextsAsync(DeleteAllContextsRequest, CancellationToken)
+            // Create client
+            ContextsClient contextsClient = await ContextsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAllContextsRequest request = new DeleteAllContextsRequest { Parent = "", };
+            // Make the request
+            await contextsClient.DeleteAllContextsAsync(request);
+            // End snippet
+        }
     }
 }

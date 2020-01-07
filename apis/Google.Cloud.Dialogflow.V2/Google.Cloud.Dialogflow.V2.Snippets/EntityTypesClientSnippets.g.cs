@@ -17,34 +17,79 @@
 namespace Google.Cloud.Dialogflow.V2.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedEntityTypesClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedEntityTypesClientSnippets
     {
-        /// <summary>Snippet for ListEntityTypesAsync</summary>
-        public async Task ListEntityTypesAsync1()
+        /// <summary>Snippet for ListEntityTypes</summary>
+        public void ListEntityTypes_RequestObject()
         {
-            // Snippet: ListEntityTypesAsync(ProjectAgentName,string,int?,CallSettings)
+            // Snippet: ListEntityTypes(ListEntityTypesRequest, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            ListEntityTypesRequest request = new ListEntityTypesRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            PagedEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EntityType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEntityTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntityType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntityType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntityType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntityTypes</summary>
+        public async Task ListEntityTypesAsync_RequestObject()
+        {
+            // Snippet: ListEntityTypesAsync(ListEntityTypesRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            ListEntityTypesRequest request = new ListEntityTypesRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                LanguageCode = "",
+            };
             // Make the request
-            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response =
-                entityTypesClient.ListEntityTypesAsync(parent);
+            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((EntityType item) =>
@@ -60,6 +105,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (EntityType item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -71,6 +117,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (EntityType item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -81,14 +128,13 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for ListEntityTypes</summary>
         public void ListEntityTypes1()
         {
-            // Snippet: ListEntityTypes(ProjectAgentName,string,int?,CallSettings)
+            // Snippet: ListEntityTypes(string, string, int?, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedEnumerable<ListEntityTypesResponse, EntityType> response =
-                entityTypesClient.ListEntityTypes(parent);
+            PagedEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntityType item in response)
@@ -104,6 +150,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (EntityType item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -115,6 +162,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (EntityType item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -122,18 +170,16 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEntityTypesAsync</summary>
-        public async Task ListEntityTypesAsync2()
+        /// <summary>Snippet for ListEntityTypes</summary>
+        public async Task ListEntityTypes1Async()
         {
-            // Snippet: ListEntityTypesAsync(ProjectAgentName,string,string,int?,CallSettings)
+            // Snippet: ListEntityTypesAsync(string, string, int?, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            string languageCode = "";
+            string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response =
-                entityTypesClient.ListEntityTypesAsync(parent: parent, languageCode: languageCode);
+            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((EntityType item) =>
@@ -149,6 +195,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (EntityType item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -160,6 +207,97 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (EntityType item in singlePage)
             {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntityTypes</summary>
+        public void ListEntityTypes1_ResourceNames()
+        {
+            // Snippet: ListEntityTypes(AgentName, string, int?, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EntityType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEntityTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntityType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntityType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntityType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntityTypes</summary>
+        public async Task ListEntityTypes1Async_ResourceNames()
+        {
+            // Snippet: ListEntityTypesAsync(AgentName, string, int?, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EntityType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEntityTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntityType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntityType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntityType item in singlePage)
+            {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -170,15 +308,14 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for ListEntityTypes</summary>
         public void ListEntityTypes2()
         {
-            // Snippet: ListEntityTypes(ProjectAgentName,string,string,int?,CallSettings)
+            // Snippet: ListEntityTypes(string, string, string, int?, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             string languageCode = "";
             // Make the request
-            PagedEnumerable<ListEntityTypesResponse, EntityType> response =
-                entityTypesClient.ListEntityTypes(parent: parent, languageCode: languageCode);
+            PagedEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypes(parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntityType item in response)
@@ -194,6 +331,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (EntityType item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -205,6 +343,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (EntityType item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -212,20 +351,17 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEntityTypesAsync</summary>
-        public async Task ListEntityTypesAsync_RequestObject()
+        /// <summary>Snippet for ListEntityTypes</summary>
+        public async Task ListEntityTypes2Async()
         {
-            // Snippet: ListEntityTypesAsync(ListEntityTypesRequest,CallSettings)
+            // Snippet: ListEntityTypesAsync(string, string, string, int?, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            ListEntityTypesRequest request = new ListEntityTypesRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-            };
+            string parent = "projects/[PROJECT]/agent";
+            string languageCode = "";
             // Make the request
-            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response =
-                entityTypesClient.ListEntityTypesAsync(request);
+            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypesAsync(parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((EntityType item) =>
@@ -241,6 +377,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (EntityType item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -252,6 +389,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (EntityType item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -260,19 +398,16 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListEntityTypes</summary>
-        public void ListEntityTypes_RequestObject()
+        public void ListEntityTypes2_ResourceNames()
         {
-            // Snippet: ListEntityTypes(ListEntityTypesRequest,CallSettings)
+            // Snippet: ListEntityTypes(AgentName, string, string, int?, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            ListEntityTypesRequest request = new ListEntityTypesRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-            };
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            string languageCode = "";
             // Make the request
-            PagedEnumerable<ListEntityTypesResponse, EntityType> response =
-                entityTypesClient.ListEntityTypes(request);
+            PagedEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypes(parent, languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntityType item in response)
@@ -288,6 +423,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (EntityType item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -299,6 +435,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (EntityType item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -306,73 +443,81 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetEntityTypeAsync</summary>
-        public async Task GetEntityTypeAsync1()
+        /// <summary>Snippet for ListEntityTypes</summary>
+        public async Task ListEntityTypes2Async_ResourceNames()
         {
-            // Snippet: GetEntityTypeAsync(EntityTypeName,CallSettings)
-            // Additional: GetEntityTypeAsync(EntityTypeName,CancellationToken)
+            // Snippet: ListEntityTypesAsync(AgentName, string, string, int?, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            string languageCode = "";
             // Make the request
-            EntityType response = await entityTypesClient.GetEntityTypeAsync(name);
+            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypesAsync(parent, languageCode);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EntityType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEntityTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntityType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntityType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntityType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetEntityType</summary>
-        public void GetEntityType1()
+        public void GetEntityType_RequestObject()
         {
-            // Snippet: GetEntityType(EntityTypeName,CallSettings)
+            // Snippet: GetEntityType(GetEntityTypeRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
+            GetEntityTypeRequest request = new GetEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "",
+            };
             // Make the request
-            EntityType response = entityTypesClient.GetEntityType(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetEntityTypeAsync</summary>
-        public async Task GetEntityTypeAsync2()
-        {
-            // Snippet: GetEntityTypeAsync(EntityTypeName,string,CallSettings)
-            // Additional: GetEntityTypeAsync(EntityTypeName,string,CancellationToken)
-            // Create client
-            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
-            // Initialize request argument(s)
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            string languageCode = "";
-            // Make the request
-            EntityType response = await entityTypesClient.GetEntityTypeAsync(name, languageCode);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetEntityType</summary>
-        public void GetEntityType2()
-        {
-            // Snippet: GetEntityType(EntityTypeName,string,CallSettings)
-            // Create client
-            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
-            // Initialize request argument(s)
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            string languageCode = "";
-            // Make the request
-            EntityType response = entityTypesClient.GetEntityType(name, languageCode);
+            EntityType response = entityTypesClient.GetEntityType(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetEntityTypeAsync</summary>
         public async Task GetEntityTypeAsync_RequestObject()
         {
-            // Snippet: GetEntityTypeAsync(GetEntityTypeRequest,CallSettings)
-            // Additional: GetEntityTypeAsync(GetEntityTypeRequest,CancellationToken)
+            // Snippet: GetEntityTypeAsync(GetEntityTypeRequest, CallSettings)
+            // Additional: GetEntityTypeAsync(GetEntityTypeRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "",
             };
             // Make the request
             EntityType response = await entityTypesClient.GetEntityTypeAsync(request);
@@ -380,44 +525,162 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetEntityType</summary>
-        public void GetEntityType_RequestObject()
+        public void GetEntityType1()
         {
-            // Snippet: GetEntityType(GetEntityTypeRequest,CallSettings)
+            // Snippet: GetEntityType(string, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            GetEntityTypeRequest request = new GetEntityTypeRequest
+            string name = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            // Make the request
+            EntityType response = entityTypesClient.GetEntityType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntityTypeAsync</summary>
+        public async Task GetEntityType1Async()
+        {
+            // Snippet: GetEntityTypeAsync(string, CallSettings)
+            // Additional: GetEntityTypeAsync(string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            // Make the request
+            EntityType response = await entityTypesClient.GetEntityTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntityType</summary>
+        public void GetEntityType1_ResourceNames()
+        {
+            // Snippet: GetEntityType(EntityTypeName, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName name = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            // Make the request
+            EntityType response = entityTypesClient.GetEntityType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntityTypeAsync</summary>
+        public async Task GetEntityType1Async_ResourceNames()
+        {
+            // Snippet: GetEntityTypeAsync(EntityTypeName, CallSettings)
+            // Additional: GetEntityTypeAsync(EntityTypeName, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName name = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            // Make the request
+            EntityType response = await entityTypesClient.GetEntityTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntityType</summary>
+        public void GetEntityType2()
+        {
+            // Snippet: GetEntityType(string, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            string languageCode = "";
+            // Make the request
+            EntityType response = entityTypesClient.GetEntityType(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntityTypeAsync</summary>
+        public async Task GetEntityType2Async()
+        {
+            // Snippet: GetEntityTypeAsync(string, string, CallSettings)
+            // Additional: GetEntityTypeAsync(string, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            string languageCode = "";
+            // Make the request
+            EntityType response = await entityTypesClient.GetEntityTypeAsync(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntityType</summary>
+        public void GetEntityType2_ResourceNames()
+        {
+            // Snippet: GetEntityType(EntityTypeName, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName name = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            string languageCode = "";
+            // Make the request
+            EntityType response = entityTypesClient.GetEntityType(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntityTypeAsync</summary>
+        public async Task GetEntityType2Async_ResourceNames()
+        {
+            // Snippet: GetEntityTypeAsync(EntityTypeName, string, CallSettings)
+            // Additional: GetEntityTypeAsync(EntityTypeName, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName name = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            string languageCode = "";
+            // Make the request
+            EntityType response = await entityTypesClient.GetEntityTypeAsync(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityType</summary>
+        public void CreateEntityType_RequestObject()
+        {
+            // Snippet: CreateEntityType(CreateEntityTypeRequest, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityType = new EntityType(),
+                LanguageCode = "",
             };
             // Make the request
-            EntityType response = entityTypesClient.GetEntityType(request);
+            EntityType response = entityTypesClient.CreateEntityType(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityTypeAsync1()
+        public async Task CreateEntityTypeAsync_RequestObject()
         {
-            // Snippet: CreateEntityTypeAsync(ProjectAgentName,EntityType,CallSettings)
-            // Additional: CreateEntityTypeAsync(ProjectAgentName,EntityType,CancellationToken)
+            // Snippet: CreateEntityTypeAsync(CreateEntityTypeRequest, CallSettings)
+            // Additional: CreateEntityTypeAsync(CreateEntityTypeRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            EntityType entityType = new EntityType();
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityType = new EntityType(),
+                LanguageCode = "",
+            };
             // Make the request
-            EntityType response = await entityTypesClient.CreateEntityTypeAsync(parent, entityType);
+            EntityType response = await entityTypesClient.CreateEntityTypeAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
         public void CreateEntityType1()
         {
-            // Snippet: CreateEntityType(ProjectAgentName,EntityType,CallSettings)
+            // Snippet: CreateEntityType(string, EntityType, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             EntityType entityType = new EntityType();
             // Make the request
             EntityType response = entityTypesClient.CreateEntityType(parent, entityType);
@@ -425,29 +688,57 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityTypeAsync2()
+        public async Task CreateEntityType1Async()
         {
-            // Snippet: CreateEntityTypeAsync(ProjectAgentName,EntityType,string,CallSettings)
-            // Additional: CreateEntityTypeAsync(ProjectAgentName,EntityType,string,CancellationToken)
+            // Snippet: CreateEntityTypeAsync(string, EntityType, CallSettings)
+            // Additional: CreateEntityTypeAsync(string, EntityType, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             EntityType entityType = new EntityType();
-            string languageCode = "";
             // Make the request
-            EntityType response = await entityTypesClient.CreateEntityTypeAsync(parent, entityType, languageCode);
+            EntityType response = await entityTypesClient.CreateEntityTypeAsync(parent, entityType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityType</summary>
+        public void CreateEntityType1_ResourceNames()
+        {
+            // Snippet: CreateEntityType(AgentName, EntityType, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            EntityType entityType = new EntityType();
+            // Make the request
+            EntityType response = entityTypesClient.CreateEntityType(parent, entityType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityTypeAsync</summary>
+        public async Task CreateEntityType1Async_ResourceNames()
+        {
+            // Snippet: CreateEntityTypeAsync(AgentName, EntityType, CallSettings)
+            // Additional: CreateEntityTypeAsync(AgentName, EntityType, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            EntityType entityType = new EntityType();
+            // Make the request
+            EntityType response = await entityTypesClient.CreateEntityTypeAsync(parent, entityType);
             // End snippet
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
         public void CreateEntityType2()
         {
-            // Snippet: CreateEntityType(ProjectAgentName,EntityType,string,CallSettings)
+            // Snippet: CreateEntityType(string, EntityType, string, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             EntityType entityType = new EntityType();
             string languageCode = "";
             // Make the request
@@ -456,58 +747,93 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityTypeAsync_RequestObject()
+        public async Task CreateEntityType2Async()
         {
-            // Snippet: CreateEntityTypeAsync(CreateEntityTypeRequest,CallSettings)
-            // Additional: CreateEntityTypeAsync(CreateEntityTypeRequest,CancellationToken)
+            // Snippet: CreateEntityTypeAsync(string, EntityType, string, CallSettings)
+            // Additional: CreateEntityTypeAsync(string, EntityType, string, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            CreateEntityTypeRequest request = new CreateEntityTypeRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                EntityType = new EntityType(),
-            };
+            string parent = "projects/[PROJECT]/agent";
+            EntityType entityType = new EntityType();
+            string languageCode = "";
             // Make the request
-            EntityType response = await entityTypesClient.CreateEntityTypeAsync(request);
+            EntityType response = await entityTypesClient.CreateEntityTypeAsync(parent, entityType, languageCode);
             // End snippet
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
-        public void CreateEntityType_RequestObject()
+        public void CreateEntityType2_ResourceNames()
         {
-            // Snippet: CreateEntityType(CreateEntityTypeRequest,CallSettings)
+            // Snippet: CreateEntityType(AgentName, EntityType, string, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            CreateEntityTypeRequest request = new CreateEntityTypeRequest
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            EntityType entityType = new EntityType();
+            string languageCode = "";
+            // Make the request
+            EntityType response = entityTypesClient.CreateEntityType(parent, entityType, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityTypeAsync</summary>
+        public async Task CreateEntityType2Async_ResourceNames()
+        {
+            // Snippet: CreateEntityTypeAsync(AgentName, EntityType, string, CallSettings)
+            // Additional: CreateEntityTypeAsync(AgentName, EntityType, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            EntityType entityType = new EntityType();
+            string languageCode = "";
+            // Make the request
+            EntityType response = await entityTypesClient.CreateEntityTypeAsync(parent, entityType, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEntityType</summary>
+        public void UpdateEntityType_RequestObject()
+        {
+            // Snippet: UpdateEntityType(UpdateEntityTypeRequest, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
                 EntityType = new EntityType(),
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            EntityType response = entityTypesClient.CreateEntityType(request);
+            EntityType response = entityTypesClient.UpdateEntityType(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateEntityTypeAsync</summary>
-        public async Task UpdateEntityTypeAsync1()
+        public async Task UpdateEntityTypeAsync_RequestObject()
         {
-            // Snippet: UpdateEntityTypeAsync(EntityType,CallSettings)
-            // Additional: UpdateEntityTypeAsync(EntityType,CancellationToken)
+            // Snippet: UpdateEntityTypeAsync(UpdateEntityTypeRequest, CallSettings)
+            // Additional: UpdateEntityTypeAsync(UpdateEntityTypeRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            EntityType entityType = new EntityType();
+            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
+            {
+                EntityType = new EntityType(),
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
+            };
             // Make the request
-            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(entityType);
+            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateEntityType</summary>
         public void UpdateEntityType1()
         {
-            // Snippet: UpdateEntityType(EntityType,CallSettings)
+            // Snippet: UpdateEntityType(EntityType, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
@@ -518,24 +844,23 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateEntityTypeAsync</summary>
-        public async Task UpdateEntityTypeAsync2()
+        public async Task UpdateEntityType1Async()
         {
-            // Snippet: UpdateEntityTypeAsync(EntityType,string,CallSettings)
-            // Additional: UpdateEntityTypeAsync(EntityType,string,CancellationToken)
+            // Snippet: UpdateEntityTypeAsync(EntityType, CallSettings)
+            // Additional: UpdateEntityTypeAsync(EntityType, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
             EntityType entityType = new EntityType();
-            string languageCode = "";
             // Make the request
-            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(entityType, languageCode);
+            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(entityType);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateEntityType</summary>
         public void UpdateEntityType2()
         {
-            // Snippet: UpdateEntityType(EntityType,string,CallSettings)
+            // Snippet: UpdateEntityType(EntityType, string, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
@@ -547,76 +872,47 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateEntityTypeAsync</summary>
-        public async Task UpdateEntityTypeAsync_RequestObject()
+        public async Task UpdateEntityType2Async()
         {
-            // Snippet: UpdateEntityTypeAsync(UpdateEntityTypeRequest,CallSettings)
-            // Additional: UpdateEntityTypeAsync(UpdateEntityTypeRequest,CancellationToken)
+            // Snippet: UpdateEntityTypeAsync(EntityType, string, CallSettings)
+            // Additional: UpdateEntityTypeAsync(EntityType, string, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
-            {
-                EntityType = new EntityType(),
-            };
+            EntityType entityType = new EntityType();
+            string languageCode = "";
             // Make the request
-            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateEntityType</summary>
-        public void UpdateEntityType_RequestObject()
-        {
-            // Snippet: UpdateEntityType(UpdateEntityTypeRequest,CallSettings)
-            // Create client
-            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
-            // Initialize request argument(s)
-            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
-            {
-                EntityType = new EntityType(),
-            };
-            // Make the request
-            EntityType response = entityTypesClient.UpdateEntityType(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteEntityTypeAsync</summary>
-        public async Task DeleteEntityTypeAsync()
-        {
-            // Snippet: DeleteEntityTypeAsync(EntityTypeName,CallSettings)
-            // Additional: DeleteEntityTypeAsync(EntityTypeName,CancellationToken)
-            // Create client
-            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
-            // Initialize request argument(s)
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            // Make the request
-            await entityTypesClient.DeleteEntityTypeAsync(name);
+            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(entityType, languageCode);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteEntityType</summary>
-        public void DeleteEntityType()
+        public void DeleteEntityType_RequestObject()
         {
-            // Snippet: DeleteEntityType(EntityTypeName,CallSettings)
+            // Snippet: DeleteEntityType(DeleteEntityTypeRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
+            DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+            };
             // Make the request
-            entityTypesClient.DeleteEntityType(name);
+            entityTypesClient.DeleteEntityType(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteEntityTypeAsync</summary>
         public async Task DeleteEntityTypeAsync_RequestObject()
         {
-            // Snippet: DeleteEntityTypeAsync(DeleteEntityTypeRequest,CallSettings)
-            // Additional: DeleteEntityTypeAsync(DeleteEntityTypeRequest,CancellationToken)
+            // Snippet: DeleteEntityTypeAsync(DeleteEntityTypeRequest, CallSettings)
+            // Additional: DeleteEntityTypeAsync(DeleteEntityTypeRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
             };
             // Make the request
             await entityTypesClient.DeleteEntityTypeAsync(request);
@@ -624,82 +920,86 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteEntityType</summary>
-        public void DeleteEntityType_RequestObject()
+        public void DeleteEntityType()
         {
-            // Snippet: DeleteEntityType(DeleteEntityTypeRequest,CallSettings)
+            // Snippet: DeleteEntityType(string, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-            };
+            string name = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
             // Make the request
-            entityTypesClient.DeleteEntityType(request);
+            entityTypesClient.DeleteEntityType(name);
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateEntityTypesAsync</summary>
-        public async Task BatchUpdateEntityTypesAsync_RequestObject()
+        /// <summary>Snippet for DeleteEntityTypeAsync</summary>
+        public async Task DeleteEntityTypeAsync()
         {
-            // Snippet: BatchUpdateEntityTypesAsync(BatchUpdateEntityTypesRequest,CallSettings)
+            // Snippet: DeleteEntityTypeAsync(string, CallSettings)
+            // Additional: DeleteEntityTypeAsync(string, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            BatchUpdateEntityTypesRequest request = new BatchUpdateEntityTypesRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-            };
+            string name = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
             // Make the request
-            Operation<BatchUpdateEntityTypesResponse, Struct> response =
-                await entityTypesClient.BatchUpdateEntityTypesAsync(request);
+            await entityTypesClient.DeleteEntityTypeAsync(name);
+            // End snippet
+        }
 
-            // Poll until the returned long-running operation is complete
-            Operation<BatchUpdateEntityTypesResponse, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            BatchUpdateEntityTypesResponse result = completedResponse.Result;
+        /// <summary>Snippet for DeleteEntityType</summary>
+        public void DeleteEntityType_ResourceNames()
+        {
+            // Snippet: DeleteEntityType(EntityTypeName, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName name = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            // Make the request
+            entityTypesClient.DeleteEntityType(name);
+            // End snippet
+        }
 
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<BatchUpdateEntityTypesResponse, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchUpdateEntityTypesAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                BatchUpdateEntityTypesResponse retrievedResult = retrievedResponse.Result;
-            }
+        /// <summary>Snippet for DeleteEntityTypeAsync</summary>
+        public async Task DeleteEntityTypeAsync_ResourceNames()
+        {
+            // Snippet: DeleteEntityTypeAsync(EntityTypeName, CallSettings)
+            // Additional: DeleteEntityTypeAsync(EntityTypeName, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName name = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            // Make the request
+            await entityTypesClient.DeleteEntityTypeAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for BatchUpdateEntityTypes</summary>
         public void BatchUpdateEntityTypes_RequestObject()
         {
-            // Snippet: BatchUpdateEntityTypes(BatchUpdateEntityTypesRequest,CallSettings)
+            // Snippet: BatchUpdateEntityTypes(BatchUpdateEntityTypesRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
             BatchUpdateEntityTypesRequest request = new BatchUpdateEntityTypesRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityTypeBatchUri = "",
+                EntityTypeBatchInline = new EntityTypeBatch(),
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<BatchUpdateEntityTypesResponse, Struct> response =
-                entityTypesClient.BatchUpdateEntityTypes(request);
+            Operation<BatchUpdateEntityTypesResponse, Struct> response = entityTypesClient.BatchUpdateEntityTypes(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<BatchUpdateEntityTypesResponse, Struct> completedResponse =
-                response.PollUntilCompleted();
+            Operation<BatchUpdateEntityTypesResponse, Struct> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             BatchUpdateEntityTypesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<BatchUpdateEntityTypesResponse, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchUpdateEntityTypes(operationName);
+            Operation<BatchUpdateEntityTypesResponse, Struct> retrievedResponse = entityTypesClient.PollOnceBatchUpdateEntityTypes(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -709,99 +1009,39 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for BatchDeleteEntityTypesAsync</summary>
-        public async Task BatchDeleteEntityTypesAsync()
+        /// <summary>Snippet for BatchUpdateEntityTypesAsync</summary>
+        public async Task BatchUpdateEntityTypesAsync_RequestObject()
         {
-            // Snippet: BatchDeleteEntityTypesAsync(ProjectAgentName,IEnumerable<string>,CallSettings)
-            // Additional: BatchDeleteEntityTypesAsync(ProjectAgentName,IEnumerable<string>,CancellationToken)
+            // Snippet: BatchUpdateEntityTypesAsync(BatchUpdateEntityTypesRequest, CallSettings)
+            // Additional: BatchUpdateEntityTypesAsync(BatchUpdateEntityTypesRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            IEnumerable<string> entityTypeNames = new List<string>();
-            // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchDeleteEntityTypesAsync(parent, entityTypeNames);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchDeleteEntityTypesAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
+            BatchUpdateEntityTypesRequest request = new BatchUpdateEntityTypesRequest
             {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteEntityTypes</summary>
-        public void BatchDeleteEntityTypes()
-        {
-            // Snippet: BatchDeleteEntityTypes(ProjectAgentName,IEnumerable<string>,CallSettings)
-            // Create client
-            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
-            // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            IEnumerable<string> entityTypeNames = new List<string>();
-            // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchDeleteEntityTypes(parent, entityTypeNames);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchDeleteEntityTypes(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteEntityTypesAsync</summary>
-        public async Task BatchDeleteEntityTypesAsync_RequestObject()
-        {
-            // Snippet: BatchDeleteEntityTypesAsync(BatchDeleteEntityTypesRequest,CallSettings)
-            // Create client
-            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
-            // Initialize request argument(s)
-            BatchDeleteEntityTypesRequest request = new BatchDeleteEntityTypesRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                EntityTypeNames = { },
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityTypeBatchUri = "",
+                EntityTypeBatchInline = new EntityTypeBatch(),
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchDeleteEntityTypesAsync(request);
+            Operation<BatchUpdateEntityTypesResponse, Struct> response = await entityTypesClient.BatchUpdateEntityTypesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<BatchUpdateEntityTypesResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchUpdateEntityTypesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchDeleteEntityTypesAsync(operationName);
+            Operation<BatchUpdateEntityTypesResponse, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchUpdateEntityTypesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                BatchUpdateEntityTypesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -809,195 +1049,66 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for BatchDeleteEntityTypes</summary>
         public void BatchDeleteEntityTypes_RequestObject()
         {
-            // Snippet: BatchDeleteEntityTypes(BatchDeleteEntityTypesRequest,CallSettings)
+            // Snippet: BatchDeleteEntityTypes(BatchDeleteEntityTypesRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
             BatchDeleteEntityTypesRequest request = new BatchDeleteEntityTypesRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                EntityTypeNames = { },
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityTypeNames = { "", },
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchDeleteEntityTypes(request);
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntityTypes(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchDeleteEntityTypes(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntityTypes(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
-        public async Task BatchCreateEntitiesAsync1()
+        /// <summary>Snippet for BatchDeleteEntityTypesAsync</summary>
+        public async Task BatchDeleteEntityTypesAsync_RequestObject()
         {
-            // Snippet: BatchCreateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,CallSettings)
-            // Additional: BatchCreateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,CancellationToken)
+            // Snippet: BatchDeleteEntityTypesAsync(BatchDeleteEntityTypesRequest, CallSettings)
+            // Additional: BatchDeleteEntityTypesAsync(BatchDeleteEntityTypesRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
-            // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchCreateEntitiesAsync(parent, entities);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
+            BatchDeleteEntityTypesRequest request = new BatchDeleteEntityTypesRequest
             {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateEntities</summary>
-        public void BatchCreateEntities1()
-        {
-            // Snippet: BatchCreateEntities(EntityTypeName,IEnumerable<EntityType.Types.Entity>,CallSettings)
-            // Create client
-            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
-            // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
-            // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchCreateEntities(parent, entities);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchCreateEntities(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
-        public async Task BatchCreateEntitiesAsync2()
-        {
-            // Snippet: BatchCreateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,string,CallSettings)
-            // Additional: BatchCreateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,string,CancellationToken)
-            // Create client
-            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
-            // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
-            string languageCode = "";
-            // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchCreateEntitiesAsync(parent, entities, languageCode);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateEntities</summary>
-        public void BatchCreateEntities2()
-        {
-            // Snippet: BatchCreateEntities(EntityTypeName,IEnumerable<EntityType.Types.Entity>,string,CallSettings)
-            // Create client
-            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
-            // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
-            string languageCode = "";
-            // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchCreateEntities(parent, entities, languageCode);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchCreateEntities(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
-        public async Task BatchCreateEntitiesAsync_RequestObject()
-        {
-            // Snippet: BatchCreateEntitiesAsync(BatchCreateEntitiesRequest,CallSettings)
-            // Create client
-            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
-            // Initialize request argument(s)
-            BatchCreateEntitiesRequest request = new BatchCreateEntitiesRequest
-            {
-                ParentAsEntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                Entities = { },
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityTypeNames = { "", },
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchCreateEntitiesAsync(request);
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntityTypesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntityTypesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1005,195 +1116,346 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for BatchCreateEntities</summary>
         public void BatchCreateEntities_RequestObject()
         {
-            // Snippet: BatchCreateEntities(BatchCreateEntitiesRequest,CallSettings)
+            // Snippet: BatchCreateEntities(BatchCreateEntitiesRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
             BatchCreateEntitiesRequest request = new BatchCreateEntitiesRequest
             {
-                ParentAsEntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                Entities = { },
+                ParentAsEntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                LanguageCode = "",
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchCreateEntities(request);
+            Operation<Empty, Struct> response = entityTypesClient.BatchCreateEntities(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchCreateEntities(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchCreateEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
-        public async Task BatchUpdateEntitiesAsync1()
+        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
+        public async Task BatchCreateEntitiesAsync_RequestObject()
         {
-            // Snippet: BatchUpdateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,CallSettings)
-            // Additional: BatchUpdateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,CancellationToken)
+            // Snippet: BatchCreateEntitiesAsync(BatchCreateEntitiesRequest, CallSettings)
+            // Additional: BatchCreateEntitiesAsync(BatchCreateEntitiesRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
+            BatchCreateEntitiesRequest request = new BatchCreateEntitiesRequest
+            {
+                ParentAsEntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                LanguageCode = "",
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchUpdateEntitiesAsync(parent, entities);
+            Operation<Empty, Struct> response = await entityTypesClient.BatchCreateEntitiesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateEntities</summary>
-        public void BatchUpdateEntities1()
+        /// <summary>Snippet for BatchCreateEntities</summary>
+        public void BatchCreateEntities1()
         {
-            // Snippet: BatchUpdateEntities(EntityTypeName,IEnumerable<EntityType.Types.Entity>,CallSettings)
+            // Snippet: BatchCreateEntities(string, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchUpdateEntities(parent, entities);
+            Operation<Empty, Struct> response = entityTypesClient.BatchCreateEntities(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchUpdateEntities(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchCreateEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
-        public async Task BatchUpdateEntitiesAsync2()
+        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
+        public async Task BatchCreateEntities1Async()
         {
-            // Snippet: BatchUpdateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,string,CallSettings)
-            // Additional: BatchUpdateEntitiesAsync(EntityTypeName,IEnumerable<EntityType.Types.Entity>,string,CancellationToken)
+            // Snippet: BatchCreateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, CallSettings)
+            // Additional: BatchCreateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
-            string languageCode = "";
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchUpdateEntitiesAsync(parent, entities, languageCode);
+            Operation<Empty, Struct> response = await entityTypesClient.BatchCreateEntitiesAsync(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateEntities</summary>
-        public void BatchUpdateEntities2()
+        /// <summary>Snippet for BatchCreateEntities</summary>
+        public void BatchCreateEntities1_ResourceNames()
         {
-            // Snippet: BatchUpdateEntities(EntityTypeName,IEnumerable<EntityType.Types.Entity>,string,CallSettings)
+            // Snippet: BatchCreateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<EntityType.Types.Entity> entities = new List<EntityType.Types.Entity>();
-            string languageCode = "";
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchUpdateEntities(parent, entities, languageCode);
+            Operation<Empty, Struct> response = entityTypesClient.BatchCreateEntities(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchUpdateEntities(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchCreateEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
-        public async Task BatchUpdateEntitiesAsync_RequestObject()
+        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
+        public async Task BatchCreateEntities1Async_ResourceNames()
         {
-            // Snippet: BatchUpdateEntitiesAsync(BatchUpdateEntitiesRequest,CallSettings)
+            // Snippet: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
+            // Additional: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            BatchUpdateEntitiesRequest request = new BatchUpdateEntitiesRequest
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
             {
-                ParentAsEntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                Entities = { },
+                new EntityType.Types.Entity(),
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchUpdateEntitiesAsync(request);
+            Operation<Empty, Struct> response = await entityTypesClient.BatchCreateEntitiesAsync(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateEntities</summary>
+        public void BatchCreateEntities2()
+        {
+            // Snippet: BatchCreateEntities(string, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchCreateEntities(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchCreateEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
+        public async Task BatchCreateEntities2Async()
+        {
+            // Snippet: BatchCreateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Additional: BatchCreateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchCreateEntitiesAsync(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateEntities</summary>
+        public void BatchCreateEntities2_ResourceNames()
+        {
+            // Snippet: BatchCreateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchCreateEntities(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchCreateEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
+        public async Task BatchCreateEntities2Async_ResourceNames()
+        {
+            // Snippet: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Additional: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchCreateEntitiesAsync(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchCreateEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1201,195 +1463,348 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for BatchUpdateEntities</summary>
         public void BatchUpdateEntities_RequestObject()
         {
-            // Snippet: BatchUpdateEntities(BatchUpdateEntitiesRequest,CallSettings)
+            // Snippet: BatchUpdateEntities(BatchUpdateEntitiesRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
             BatchUpdateEntitiesRequest request = new BatchUpdateEntitiesRequest
             {
-                ParentAsEntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                Entities = { },
+                ParentAsEntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchUpdateEntities(request);
+            Operation<Empty, Struct> response = entityTypesClient.BatchUpdateEntities(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchUpdateEntities(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchUpdateEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
-        public async Task BatchDeleteEntitiesAsync1()
+        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
+        public async Task BatchUpdateEntitiesAsync_RequestObject()
         {
-            // Snippet: BatchDeleteEntitiesAsync(EntityTypeName,IEnumerable<string>,CallSettings)
-            // Additional: BatchDeleteEntitiesAsync(EntityTypeName,IEnumerable<string>,CancellationToken)
+            // Snippet: BatchUpdateEntitiesAsync(BatchUpdateEntitiesRequest, CallSettings)
+            // Additional: BatchUpdateEntitiesAsync(BatchUpdateEntitiesRequest, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<string> entityValues = new List<string>();
+            BatchUpdateEntitiesRequest request = new BatchUpdateEntitiesRequest
+            {
+                ParentAsEntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchDeleteEntitiesAsync(parent, entityValues);
+            Operation<Empty, Struct> response = await entityTypesClient.BatchUpdateEntitiesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchDeleteEntities</summary>
-        public void BatchDeleteEntities1()
+        /// <summary>Snippet for BatchUpdateEntities</summary>
+        public void BatchUpdateEntities1()
         {
-            // Snippet: BatchDeleteEntities(EntityTypeName,IEnumerable<string>,CallSettings)
+            // Snippet: BatchUpdateEntities(string, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<string> entityValues = new List<string>();
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchDeleteEntities(parent, entityValues);
+            Operation<Empty, Struct> response = entityTypesClient.BatchUpdateEntities(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchDeleteEntities(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchUpdateEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
-        public async Task BatchDeleteEntitiesAsync2()
+        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
+        public async Task BatchUpdateEntities1Async()
         {
-            // Snippet: BatchDeleteEntitiesAsync(EntityTypeName,IEnumerable<string>,string,CallSettings)
-            // Additional: BatchDeleteEntitiesAsync(EntityTypeName,IEnumerable<string>,string,CancellationToken)
+            // Snippet: BatchUpdateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, CallSettings)
+            // Additional: BatchUpdateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<string> entityValues = new List<string>();
-            string languageCode = "";
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchDeleteEntitiesAsync(parent, entityValues, languageCode);
+            Operation<Empty, Struct> response = await entityTypesClient.BatchUpdateEntitiesAsync(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchDeleteEntities</summary>
-        public void BatchDeleteEntities2()
+        /// <summary>Snippet for BatchUpdateEntities</summary>
+        public void BatchUpdateEntities1_ResourceNames()
         {
-            // Snippet: BatchDeleteEntities(EntityTypeName,IEnumerable<string>,string,CallSettings)
+            // Snippet: BatchUpdateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
-            EntityTypeName parent = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            IEnumerable<string> entityValues = new List<string>();
-            string languageCode = "";
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchDeleteEntities(parent, entityValues, languageCode);
+            Operation<Empty, Struct> response = entityTypesClient.BatchUpdateEntities(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchDeleteEntities(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchUpdateEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
-        public async Task BatchDeleteEntitiesAsync_RequestObject()
+        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
+        public async Task BatchUpdateEntities1Async_ResourceNames()
         {
-            // Snippet: BatchDeleteEntitiesAsync(BatchDeleteEntitiesRequest,CallSettings)
+            // Snippet: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
+            // Additional: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            BatchDeleteEntitiesRequest request = new BatchDeleteEntitiesRequest
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
             {
-                ParentAsEntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                EntityValues = { },
+                new EntityType.Types.Entity(),
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                await entityTypesClient.BatchDeleteEntitiesAsync(request);
+            Operation<Empty, Struct> response = await entityTypesClient.BatchUpdateEntitiesAsync(parent, entities);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateEntities</summary>
+        public void BatchUpdateEntities2()
+        {
+            // Snippet: BatchUpdateEntities(string, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchUpdateEntities(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchUpdateEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
+        public async Task BatchUpdateEntities2Async()
+        {
+            // Snippet: BatchUpdateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Additional: BatchUpdateEntitiesAsync(string, IEnumerable<EntityType.Types.Entity>, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchUpdateEntitiesAsync(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateEntities</summary>
+        public void BatchUpdateEntities2_ResourceNames()
+        {
+            // Snippet: BatchUpdateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchUpdateEntities(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchUpdateEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
+        public async Task BatchUpdateEntities2Async_ResourceNames()
+        {
+            // Snippet: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
+            // Additional: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<EntityType.Types.Entity> entities = new EntityType.Types.Entity[]
+            {
+                new EntityType.Types.Entity(),
+            };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchUpdateEntitiesAsync(parent, entities, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchUpdateEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1397,36 +1812,318 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for BatchDeleteEntities</summary>
         public void BatchDeleteEntities_RequestObject()
         {
-            // Snippet: BatchDeleteEntities(BatchDeleteEntitiesRequest,CallSettings)
+            // Snippet: BatchDeleteEntities(BatchDeleteEntitiesRequest, CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
             BatchDeleteEntitiesRequest request = new BatchDeleteEntitiesRequest
             {
-                ParentAsEntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                EntityValues = { },
+                ParentAsEntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityValues = { "", },
+                LanguageCode = "",
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                entityTypesClient.BatchDeleteEntities(request);
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntities(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                entityTypesClient.PollOnceBatchDeleteEntities(operationName);
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
+        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
+        public async Task BatchDeleteEntitiesAsync_RequestObject()
+        {
+            // Snippet: BatchDeleteEntitiesAsync(BatchDeleteEntitiesRequest, CallSettings)
+            // Additional: BatchDeleteEntitiesAsync(BatchDeleteEntitiesRequest, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeleteEntitiesRequest request = new BatchDeleteEntitiesRequest
+            {
+                ParentAsEntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityValues = { "", },
+                LanguageCode = "",
+            };
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntitiesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntities</summary>
+        public void BatchDeleteEntities1()
+        {
+            // Snippet: BatchDeleteEntities(string, IEnumerable<string>, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<string> entityValues = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntities(parent, entityValues);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
+        public async Task BatchDeleteEntities1Async()
+        {
+            // Snippet: BatchDeleteEntitiesAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeleteEntitiesAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<string> entityValues = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntitiesAsync(parent, entityValues);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntities</summary>
+        public void BatchDeleteEntities1_ResourceNames()
+        {
+            // Snippet: BatchDeleteEntities(EntityTypeName, IEnumerable<string>, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<string> entityValues = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntities(parent, entityValues);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
+        public async Task BatchDeleteEntities1Async_ResourceNames()
+        {
+            // Snippet: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<string> entityValues = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntitiesAsync(parent, entityValues);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntities</summary>
+        public void BatchDeleteEntities2()
+        {
+            // Snippet: BatchDeleteEntities(string, IEnumerable<string>, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<string> entityValues = new string[] { "", };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntities(parent, entityValues, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
+        public async Task BatchDeleteEntities2Async()
+        {
+            // Snippet: BatchDeleteEntitiesAsync(string, IEnumerable<string>, string, CallSettings)
+            // Additional: BatchDeleteEntitiesAsync(string, IEnumerable<string>, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<string> entityValues = new string[] { "", };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntitiesAsync(parent, entityValues, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntities</summary>
+        public void BatchDeleteEntities2_ResourceNames()
+        {
+            // Snippet: BatchDeleteEntities(EntityTypeName, IEnumerable<string>, string, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<string> entityValues = new string[] { "", };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntities(parent, entityValues, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntities(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
+        public async Task BatchDeleteEntities2Async_ResourceNames()
+        {
+            // Snippet: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, string, CallSettings)
+            // Additional: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, string, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]");
+            IEnumerable<string> entityValues = new string[] { "", };
+            string languageCode = "";
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntitiesAsync(parent, entityValues, languageCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntitiesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
